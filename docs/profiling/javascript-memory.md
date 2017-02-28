@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- FSharp
-- VB
 - CSharp
+- VB
+- FSharp
 - C++
 helpviewer_keywords:
 - dominators, memory analyzer (JavaScript)
@@ -45,6 +45,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: f76e8b2846f0a9dfd37799f6e6f205bee446bbe4
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="javascript-memory"></a>Memória JavaScript
@@ -417,8 +418,3 @@ if (performance && performance.mark) {
   
 ## <a name="see-also"></a>Consulte também  
  [Passo a passo: localizar uma perda de memória (JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

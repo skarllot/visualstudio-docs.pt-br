@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- FSharp
-- VB
 - CSharp
+- VB
+- FSharp
 - C++
 ms.assetid: 24238fc0-40b8-4079-8579-698211db9a26
 caps.latest.revision: 13
@@ -36,6 +36,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: bdfe341252a7c4340a8c0a624d4394124c3efada
 ms.openlocfilehash: d0d021c01cc97a97aa75eda58a17ccd1c2089520
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="memory-usage-without-debugging"></a>Uso de memória sem depuração
@@ -222,8 +223,3 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
  [Ferramentas de Criação de Perfil](../profiling/profiling-tools.md)
  [Práticas recomendadas de desempenho para aplicativos da Windows Store usando C++, C# e Visual Basic](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   
  [Diagnosing memory issues with the new Memory Usage Tool in Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=394706) (Diagnosticando problemas de memória com a nova Ferramenta de Uso de Memória no Visual Studio)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- FSharp
-- VB
 - CSharp
+- VB
+- FSharp
 - C++
 helpviewer_keywords:
 - performance tools, JavaScript [Store apps]
@@ -41,6 +41,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 753b4abd76b56ff46406b3a2f5ab5b8fb008c526
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="walkthrough-improving-ui-responsiveness-html"></a>Passo a passo: Melhorando a capacidade de resposta da interface de usuário (HTML)
@@ -259,8 +260,3 @@ Este passo a passo o orienta no processo de identificação e correção de um p
   
 ## <a name="see-also"></a>Consulte também  
  [Capacidade de Resposta de interface do usuário em HTML](../profiling/html-ui-responsiveness.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

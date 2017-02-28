@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- FSharp
-- VB
 - CSharp
+- VB
+- FSharp
 - C++
 helpviewer_keywords:
 - memory leaks, JavaScript example
@@ -38,6 +38,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 7e848a57962636a8ca346e809f3dadad675a7963
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="walkthrough-find-a-memory-leak-javascript"></a>Instruções passo a passo: localizar uma perda de memória (JavaScript)
@@ -303,8 +304,3 @@ ms.openlocfilehash: 7e848a57962636a8ca346e809f3dadad675a7963
   
 ## <a name="see-also"></a>Consulte também  
  [Memória JavaScript](../profiling/javascript-memory.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
