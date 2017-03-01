@@ -33,6 +33,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: 31f433b28b67dc6f3179be87cb5894b5b3f0aa4f
 ms.openlocfilehash: e0fcd94f2e42f2ce8d454b9d754cfa4ad063d9e0
+ms.lasthandoff: 02/22/2017
 
 ---
 
@@ -498,7 +499,7 @@ csharp_style_inlined_variable_declaration = true:suggestion
 
 | Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| verdadeiro | Prefira usar expressões throw a usar instruções throw. | **C#:** <br>`this.s = ss ?? throw new ArguementNullException(nameof(s));`
+| verdadeiro | Prefira usar expressões throw a usar instruções throw. | **C#:** <br>`this.s = ss ?? throw new ArgumentNullException(nameof(s));`
 | False | Prefira usar instruções throw a usar expressões throw.| **C#:** <br>`if (s==null) {throw new ArgumentNullException(nameof(s));} this.s = s;`
 
 #### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
@@ -524,8 +525,4 @@ csharp_style_throw_expression = true:suggestion
 [*.cs]
 csharp_style_conditional_delegate_call = false:suggestion
 ```
-
-
-<!--HONumber=Feb17_HO4-->
-
 
