@@ -3,6 +3,7 @@
 ## [Guia do iniciante à criação de perfil de desempenho](beginners-guide-to-performance-profiling.md)
 ## [Executando ferramentas de criação de perfil com ou sem o depurador](running-profiling-tools-with-or-without-the-debugger.md)
 ## [Uso de Memória](memory-usage.md)
+### [Eventos heap do ETW nativo personalizados](custom-native-etw-heap-events.md)
 ### [Uso de memória sem depuração](memory-usage-without-debugging2.md)
 ## [Uso da CPU](cpu-usage.md)
 ### [Analisar o uso da CPU em um aplicativo universal do Windows](analyze-cpu-usage-in-a-windows-universal-app.md)
@@ -365,8 +366,3 @@
 ##### [Função CvWriteMessage](cvwritemessage-function.md)
 ### [Utilitário de linha de comando da Visualização Simultânea (CVCollectionCmd)](concurrency-visualizer-command-line-utility-cvcollectioncmd.md)
 ## [Analisar o uso de energia em aplicativos da Store](analyze-energy-use-in-store-apps.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
