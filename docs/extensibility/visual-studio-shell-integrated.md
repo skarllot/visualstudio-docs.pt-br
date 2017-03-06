@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Shell (integrado) | Documentos do Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -30,9 +30,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f4b0ce407a5d72295ead4cd6b4998204f6a8babf
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 4f2ddbc47f9a014acde2850dba5c72ef3a784847
+ms.openlocfilehash: 8edd3a6fcca0c2ddd4d580f0874b737cfbbc40c9
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="visual-studio-shell-integrated"></a>Visual Studio Shell (integrado)
@@ -85,7 +85,7 @@ Shell do Visual Studio integrado inclui o ambiente de desenvolvimento integrado 
   
 -   Designer de Classe  
   
--   DotFuscator preventivo  
+-   [Proteção preemptiva - Dotfuscator](../ide/dotfuscator/index.md)  
   
 -   Recursos de linguagem  
   

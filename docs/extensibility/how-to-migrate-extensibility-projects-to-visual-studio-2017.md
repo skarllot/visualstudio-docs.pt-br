@@ -28,9 +28,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 09f14e5b28a506d4f2112f82ee4fd6b0855a8f93
-ms.openlocfilehash: 67e143e1b95a0e4d881d7d6bccae0d7445897aa2
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 4f93b8c1db59dd8d8a407c82002240641be43018
+ms.openlocfilehash: 1f9248442357c4447703ac6d6dac8a27934904e8
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Como: migrar projetos de extensibilidade para o Visual Studio 2017
@@ -59,7 +59,7 @@ O arquivo de projeto (por exemplo, *. csproj) será atualizado:
 
 >**Observação:** se sua solução não referencia o pacote do Microsoft.VSSDK.BuildTools NuGet, você pode ignorar esta etapa.
 
-Para criar sua extensão na v3 VSIX novas formato (versão 3), sua solução precisa ser compilado com as novas ferramentas de compilação VSSDK. Isso será instalado com o Visual Studio 2017 RC, mas sua extensão de v2 VSIX pode estar mantendo uma referência a uma versão anterior por meio do NuGet. Nesse caso, você precisará instalar manualmente uma atualização do pacote do Microsoft.VSSDK.BuildTools NuGet para sua solução. No momento da versão RC, esse pacote será em estado de "Pré-lançamento".
+Para criar sua extensão na v3 VSIX novas formato (versão 3), sua solução precisa ser compilado com as novas ferramentas de compilação VSSDK. Isso será instalado com o Visual Studio 2017 RC, mas sua extensão do VSIX v2 pode ser mantendo uma referência para uma versão mais antiga por meio do NuGet. Nesse caso, você precisará instalar manualmente uma atualização do pacote do Microsoft.VSSDK.BuildTools NuGet para sua solução. No momento da versão RC, esse pacote será em estado de "Pré-lançamento".
 
 Para atualizar as referências de NuGet para Microsoft.VSSDK.BuildTools:
 
@@ -76,6 +76,8 @@ Para atualizar as referências de NuGet para Microsoft.VSSDK.BuildTools:
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>Faça as alterações para o manifesto de extensão do VSIX
 
 Para garantir que a instalação do usuário do Visual Studio tem todos os assemblies necessários para executar a extensão, especifique todos os componentes de pré-requisito ou pacotes no arquivo de manifesto de extensão. Quando um usuário tenta instalar a extensão, o VSIXInstaller verifica se todos os pré-requisitos estão instalados. Se alguns estiverem ausentes, o usuário precisará instalar os componentes ausentes como parte do processo de instalação de extensão.
+
+>**Observação:** no mínimo, todas as extensões devem especificar o componente de editor do Visual Studio core como um pré-requisito.
 
 * Edite o arquivo de manifesto de extensão (geralmente chamado de source.extension.vsixmanifest).
 * Certifique-se de `InstallationTarget` inclui 15.0.
@@ -215,3 +217,4 @@ Exemplos:
 
 * Se você tiver uma extensão de depurador e sabe que seu projeto possui uma referência ao VSDebugEng.dll e VSDebug.dll, clique no botão de filtro no **binários / nomes de arquivos** cabeçalho.  Pesquise por "VSDebugEng.dll" e selecione Okey.  Em seguida, clique no botão de filtro a **binários / nomes de arquivos** cabeçalho novamente e procure "VSDebug.dll".  Marque a caixa de seleção "Adicionar seleção atual ao filtro" e selecione Okey.  Agora examine a **nome do componente** para localizar um componente mais relacionadas ao tipo de extensão. Neste exemplo, você pode escolher o Just-In-Time do depurador e adicioná-lo ao seu vsixmanifest.
 * Se você souber que seu projeto lida com elementos do depurador, você pode pesquisar no "depurador" na caixa de filtro de pesquisa para ver quais componentes contêm o depurador em seu nome.
+
