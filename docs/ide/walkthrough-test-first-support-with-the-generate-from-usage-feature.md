@@ -34,6 +34,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 349cf26923ebee02162b6a113b39393aea01c58f
+ms.lasthandoff: 03/06/2017
 
 ---
 # <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>Instruções passo a passo: suporte Test-First com a Funcionalidade Gerar a partir do Uso
@@ -192,8 +193,3 @@ Janela Resultados de Teste
  [Escrevendo código](../ide/writing-code-in-the-code-and-text-editor.md)   
  [Usando o IntelliSense](../ide/using-intellisense.md)   
  [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
