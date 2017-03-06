@@ -27,8 +27,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: c8f031247985fa623e23d79a7614330e78196024
-ms.openlocfilehash: 22da86b2a327db88ac5c863f528eaeaf8b000db7
+ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
+ms.openlocfilehash: 10db0535b950f1a1525bab89a6df25e4e3f40012
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
@@ -220,11 +221,6 @@ Se você quiser saber sobre as novas funcionalidades no Visual Studio 2017 RC, c
  [Instalando o Visual Studio 2017 RC](../install/install-visual-studio.md)   
  [Editando o seu código](https://www.visualstudio.com/features/ide-vs)   
  [Novidades no Visual Studio 2017 RC](../ide/whats-new-in-visual-studio.md)   
- [Portabilidade, migração e atualização de projetos do Visual Studio](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)   
+ [Portabilidade, migração e atualização de projetos do Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
  [Fale conosco](../ide/talk-to-us.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
