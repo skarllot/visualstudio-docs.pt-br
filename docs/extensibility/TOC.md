@@ -10,8 +10,6 @@
 ## [Carga de solução leve](lightweight-solution-load-extension-impact.md)
 ## [Perguntas frequentes](faq-2017.md)
 # [Como migrar projetos de extensibilidade para o Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
-# [Novidades no SDK do Visual Studio 2015](what-s-new-in-the-visual-studio-2015-sdk.md)
-# [Como migrar projetos de extensibilidade para o Visual Studio 2015](how-to-migrate-extensibility-projects-to-visual-studio-2015.md)
 # [Ampliar menus e comandos](extending-menus-and-commands.md)
 ## [Criar uma extensão com um comando de menu](creating-an-extension-with-a-menu-command.md)
 ## [Adicionar um menu à barra de menus do Visual Studio](adding-a-menu-to-the-visual-studio-menu-bar.md)
