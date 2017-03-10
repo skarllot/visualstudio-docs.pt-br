@@ -4,8 +4,9 @@ hide_bc: true
 title: "Documentação do Visual Studio"
 description: "Saiba como usar o Visual Studio 2017 para desenvolver aplicativos, serviços e ferramentas na linguagem de sua escolha para suas plataformas e dispositivos."
 translationtype: Human Translation
-ms.sourcegitcommit: c1eb1e58e423ff79928708c1fd83a4342eec489d
-ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 2a782993b8e2787c99c384c6df9c72316fe11521
+ms.lasthandoff: 03/07/2017
 
 ---
 <div id="main" class="v2">
@@ -31,7 +32,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                 </a>
             </li>
             <li>
-                <a href="/visualstudio/ide/get-started-with-visual-studio">
+                <a href="/visualstudio/ide/visual-studio-ide">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -60,7 +61,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Novidades no Visual Studio 2017 RC</h3>
+                                    <h3>Novidades no Visual Studio 2017</h3>
                                 </div>
                             </div>
                         </div>
@@ -200,7 +201,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Python</h3>
+                                                    <h3>Python (Visualização)</h3>
                                                     <p>Desenvolvimento interativo para aplicativos Python, usando estruturas familiares, incluindo Django e Flask.</p>
                                                 </div>
                                             </div>
@@ -245,26 +246,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Ciência de dados e aplicativos analíticos</h3>
-                                                    <p>Linguagens e ferramentas para criar aplicativos de ciência de dados, incluindo Python, R e F#.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
+                            </li>                            
                             <li>
                                 <a href="https://go.microsoft.com/fwlink/?linkid=833075">
                                     <div class="cardSize">
@@ -443,7 +425,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                         <a href="#features1"> </a>
                         <ul id="features1" class="cardsC">
                             <li>
-                                <a href="https://go.microsoft.com/fwlink/?linkid=833076">
+                                <a href="https://docs.microsoft.com/en-us/visualstudio/ide/index-writing-code">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -731,7 +713,7 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
                                             </div>
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833068">
-                                                    <h3>Python</h3>
+                                                    <h3>Python (Visualização)</h3>
                                                     <p>Uma linguagem de programação de alto nível orientada a objeto geralmente usada para o desenvolvimento rápido de aplicativos.</p>
                                                 </a>
                                             </div>
@@ -785,8 +767,4 @@ ms.openlocfilehash: 030d9cf3f28bf03afba94638da7929105e5746db
         </ul>
     </div>
 </div>
-
-
-<!--HONumber=Feb17_HO4-->
-
 

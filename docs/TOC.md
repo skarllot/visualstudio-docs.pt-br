@@ -1,7 +1,7 @@
-# [Bem-vindo ao Visual Studio 2017 RC!](welcome-to-visual-studio.md)
+# [Bem-vindo ao Visual Studio 2017!](welcome-to-visual-studio.md)
 # [Novidades](ide/whats-new-in-visual-studio.md)
 # [Instalação](install/TOC.md)
-# [Visual Studio IDE](ide/visual-studio-ide.md)
+# [Tour pelos recursos de IDE do Visual Studio](ide/visual-studio-ide.md)
 # [Visual Basic](/dotnet/articles/visual-basic)
 # [Visual C#](/dotnet/articles/csharp)
 # [Visual C++](/cpp/top/visual-cpp-in-visual-studio)
@@ -10,12 +10,8 @@
 # [Visual F#](/dotnet/articles/fsharp/)
 # [Acesso a dados](data-tools/TOC.md)
 # [Desenvolvimento móvel multiplataforma](cross-platform/cross-platform-mobile-development-in-visual-studio.md)
+# [Desenvolvimento do Office e do SharePoint](vsto/office-and-sharepoint-development-in-visual-studio.md)
 # [Portar, migrar e atualizar seu código](porting\port-migrate-and-upgrade-visual-studio-projects.md)
 # [Extensibilidade](extensibility/extensibility-in-visual-studio.md)
 # [Fale conosco](ide/talk-to-us.md)
-## [How to Report a Problem with Visual Studio 2017 RC](ide/how-to-report-a-problem-with-visual-studio-2017.md) (Como relatar um problema com o Visual Studio 2017 RC)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
+## [How to Report a Problem with Visual Studio 2017](ide/how-to-report-a-problem-with-visual-studio-2017.md) (Como relatar um problema com o Visual Studio 2017)

@@ -31,6 +31,8 @@
 #### [Analisando a cobertura de código em testes de verificação de build](analyzing-code-coverage-in-build-verification-tests.md)
 #### [Solução de problemas de cobertura de código](troubleshooting-code-coverage.md)
 ### [Usando emuladores para isolar testes de unidade para aplicativos do Sharepoint 2010](using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications.md)
+## [Usar testes de unidade dinâmicos no Visual Studio 2017 Enterprise Edition](live-unit-testing.md)
+### [Perguntas Frequentes sobre os Testes de Unidade Dinâmicos](live-unit-testing-faq.md)
 ## [Usar automação de interface do usuário para testar código](use-ui-automation-to-test-your-code.md)
 ### [Passo a passo: criando, editando e mantendo um teste de IU codificado](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 ### [Testando aplicativos da Windows Store 8.1 com testes de IU codificados](test-windows-store-8-1-apps-with-coded-ui-tests.md)
@@ -58,7 +60,7 @@
 ##### [Exemplo de extensão do Excel: classes de elemento](sample-excel-extension-element-classes.md)
 ##### [Extensão de exemplo do Excel: classe ActionFilter](sample-excel-extension-actionfilter-class.md)
 ### [Atualizando testes de IU codificados por meio do Visual Studio 2010](upgrading-coded-ui-tests-from-visual-studio-2010.md)
-## [Analisando a qualidade do aplicativo](../code-quality)
+## [Analisando a qualidade do aplicativo](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)
 ## [Solução de problemas de ferramentas de qualidade](troubleshooting-quality-tools.md)
 ### [Solução de problemas de análise de código](troubleshooting-code-analysis-issues.md)
 ### [Solução de problemas de métricas de código](troubleshooting-code-metrics-issues.md)
@@ -70,8 +72,3 @@
 ### [Analisar a qualidade do código de aplicativos da Store usando a análise de código estático do Visual Studio](analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)
 #### [Analisar a qualidade do código do Visual Basic e C# em aplicativos da Store usando a análise de código estático do Visual Studio](analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md)
 #### [Analisar a qualidade do código C++ de aplicativos da Store usando a análise de código estático do Visual Studio](analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

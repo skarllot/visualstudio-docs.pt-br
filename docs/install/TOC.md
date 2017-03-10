@@ -4,7 +4,4 @@
 # [Visual Studio Administrator Guide](visual-studio-administrator-guide.md) (Guia do administrador do Visual Studio)
 ## [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
 ## [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)
-
-<!--HONumber=Feb17_HO4-->
-
-
+## [Carga de trabalho do Visual Studio e IDs do componente](workload-and-component-ids.md)

@@ -88,6 +88,7 @@
 ### [Caixa de Ferramentas, Guia Componentes](toolbox-components-tab.md)
 ### [Caixa de Ferramentas, Guia Dados](toolbox-data-tab.md)
 ### [Caixa de Ferramentas, Guia HTML](toolbox-html-tab.md)
+## [Página de opções do Designer XAML](xaml-designer.md)
 # [Opções de linha de comando devenv](devenv-command-line-switches.md)
 ## [-? (devenv.exe)](q-devenv-exe.md)
 ## [-Build (devenv.exe)](build-devenv-exe.md)
@@ -162,8 +163,3 @@
 ## [Produtos e serviços de acessibilidade da Microsoft](accessibility-products-and-services-from-microsoft.md)
 ## [Recursos para projetar aplicativos acessíveis](resources-for-designing-accessible-applications.md)
 ## [Autorização de proxy necessária](proxy-authorization-required.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

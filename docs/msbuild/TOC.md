@@ -1,5 +1,5 @@
 # [MsBuild](msbuild.md)
-## [Novidades do MSBuild 12.0](what-s-new-in-msbuild-12-0.md)
+## [Novidades do MSBuild 15.0](what-s-new-in-msbuild-15-0.md)
 ## [Conceitos do MSBuild](msbuild-concepts.md)
 ### [Propriedades MSBuild](msbuild-properties.md)
 #### [Como usar variáveis de ambiente em um build](how-to-use-environment-variables-in-a-build.md)
@@ -194,8 +194,3 @@
 ### [Caracteres especiais para escape](special-characters-to-escape.md)
 ## [Glossário do MSBuild](msbuild-glossary.md)
 ## [Recursos adicionais do MSBuild](additional-msbuild-resources.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

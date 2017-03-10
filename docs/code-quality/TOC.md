@@ -272,8 +272,8 @@
 ### [Usando conjuntos de regras para especificar as regras do C++ para execução](using-rule-sets-to-specify-the-cpp-rules-to-run.md)
 ### [Usando os verificadores de diretrizes de núcleo do C++](using-the-cpp-core-guidelines-checkers.md)
 ### [Análise de código para visão geral do C/C++](code-analysis-for-c-cpp-overview.md)
-### [Como definir propriedades de análise de código para projetos do C/C++](how-to-set-code-analysis-properties-for-c-cpp-projects.md)
-### [Passo a passo: analisando código C/C++ em busca de defeitos](walkthrough-analyzing-c-cpp-code-for-defects.md)
+### [Como definir as propriedades de análise de código para projetos do C/C++](how-to-set-code-analysis-properties-for-c-cpp-projects.md)
+### [Instruções passo a passo: analisando o código do C/C++ em busca de defeitos](walkthrough-analyzing-c-cpp-code-for-defects.md)
 #### [Amostra de demonstração](demo-sample.md)
 ### [Usando anotações de SAL para reduzir defeitos de código do C/C++](using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 #### [Noções básicas de SAL](understanding-sal.md)
@@ -609,8 +609,3 @@
 # [Solução de problemas de ferramentas de qualidade](troubleshooting-quality-tools.md)
 ## [Solução de problemas de análise de código](troubleshooting-code-analysis-issues.md)
 ## [Solução de problemas de métricas de código](troubleshooting-code-metrics-issues.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
