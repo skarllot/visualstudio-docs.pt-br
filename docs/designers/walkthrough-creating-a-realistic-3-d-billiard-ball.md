@@ -1,222 +1,223 @@
 ---
-title: "Explica&#231;&#227;o passo a passo: Criando uma bola de bilhar real&#237;stica em 3D | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Passo a passo: criando uma bola de bilhar realística em 3D | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: af8eb0f3-bf6a-4d1c-ab47-dcd88ab04efa
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
----
-# Explica&#231;&#227;o passo a passo: Criando uma bola de bilhar real&#237;stica em 3D
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: BrianPeek
+ms.author: brpeek
+manager: ghogen
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 488479f2cf5e1016e1506bbe7e11847fe0eab150
+ms.lasthandoff: 02/22/2017
 
-Essa explicação passo a passo demonstra como criar uma bola de bilhar realística em 3d utilizando o Shader Designer e o Image Editor em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  A aparência 3\-D de bola de bilhar é obtida combinando várias técnicas do sombreador com os recursos de textura apropriados.  
+---
+# <a name="walkthrough-creating-a-realistic-3-d-billiard-ball"></a>Explicação passo a passo: Criando uma bola de bilhar realística em 3D
+Este passo a passo demonstra como criar uma bola de bilhar realística em 3D usando o Designer de Sombreador e o Editor de Imagens em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. A aparência 3D da bola de bilhar é obtida pela combinação de várias técnicas de sombreador com recursos de textura adequados.  
   
- Este documento demonstra estas atividades:  
+ Este documento demonstra essas atividades:  
   
--   Criando a aparência básica de uma bola de bilhar usando a forma e textura.  
+-   Criando a aparência básica de uma bola de bilhar usando forma e textura.  
   
--   Adicionando a profundidade usando o modelo de iluminação Lamberto.  
+-   Adicionando profundidade por meio do modelo de iluminação Lambert.  
   
--   Aprimorar a aparência básica usando realces especulares.  
+-   Aprimorando a aparência básica usando realces especulares.  
   
--   Criando uma noção de espaço refletindo o ambiente.  
+-   Criando um senso de espaço refletindo o ambiente.  
   
-## Pré-requisitos  
- Você precisa dos seguintes componentes e habilidades de concluir esta explicação passo a passo:  
+## <a name="prerequisites"></a>Pré-requisitos  
+ Você precisa dos seguintes componentes e habilidades para concluir este passo a passo:  
   
--   Uma ferramenta para montar texturas em um mapa do cubo, como a Ferramenta de Textura do DirectX incluída no DirectX SDK de junho de 2010.  
+-   Uma ferramenta para criar texturas em um mapa de cubo, como a ferramenta de textura do DirectX que está incluída no SDK do DirectX de junho de 2010.  
   
--   Familiaridade com o Editor de Imagem no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+-   Familiaridade com o Editor de Imagens em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
--   Familiaridade com o Shader Designer no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+-   Familiaridade com o Designer de Sombreador em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
-## Criando a aparência básica com a forma e textura  
- Na computação gráfica, os elementos mais básicos da aparência são a forma e a cor.  Em uma simulação em computador, é comum usar um modelo 3\-D para representar a forma de um objeto do mundo real.  O detalhe de cores é aplicado na superfície do modelo usando um mapa de textura.  
+## <a name="creating-the-basic-appearance-with-shape-and-texture"></a>Criando a aparência básica com forma e textura  
+ Em gráficos de computador, os elementos mais básicos de aparência são forma e cor. Uma simulação de computador, é comum usar um modelo 3D para representar a forma de um objeto real. O detalhe de cor é, então, aplicado para a superfície do modelo usando um mapa de textura.  
   
- Normalmente, você pode precisar pedir a um artista para criar um modelo 3\-D que você pode usar, mas como uma bola de bilhar é uma forma comum \(uma esfera\), o designer do Shader já possui um modelo apropriado incorporado.  
+ Você talvez precise solicitar a criação de um modelo 3D que possa usar, mas como uma bola de bilhar é uma forma comum (uma esfera), o Designer de Sombreador já tem um modelo adequado criado.  
   
- A esfera é a maneira padrão de exibição no Shader Designer; se você estiver atualmente usando uma forma diferente para visualizar seu sombreador, mude de volta para esfera.  
+ A esfera é a forma de visualização padrão no Designer de Sombreador. Se você estiver usando uma forma diferente para visualizar seu sombreador, mude para a esfera.  
   
-#### Para visualizar o sombreador usando uma esfera  
+#### <a name="to-preview-the-shader-by-using-a-sphere"></a>Para visualizar o sombreador usando uma esfera  
   
--   Na barra de ferramentas Designer de Sombreador, escolha **Visualizar com esfera**.  
+-   Na barra de ferramentas do Designer de Sombreador, escolha **Visualização com esfera**.  
   
- Na próxima etapa, você criará um programa de sombreamento que aplica uma textura ao modelo, mas primeiro você tem que criar uma textura que você pode usar.  Essa explicação passo a passo demonstra como criar textura usando o Image Editor, que é uma parte de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], mas você pode usar qualquer editor de imagem que pode salvar a textura em um formato adequado.  
+ Na próxima etapa, você criará um programa sombreador que aplica uma textura ao modelo, mas primeiro você precisa criar uma textura que possa usar. Este passo a passo demonstra como criar a textura usando o Editor de Imagens, que é uma parte do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], mas você pode usar qualquer editor de imagens que possa salvar a textura em um formato adequado.  
   
- Certifique\-se de que a janela **Propriedades** e **Caixa de Ferramentas** são exibidos.  
+ Verifique se a janela **Propriedades** e a **Caixa de Ferramentas** estão sendo exibidas.  
   
-#### Para criar uma textura de bola de bilhar usando o Editor de Imagem  
+#### <a name="to-create-a-billiard-ball-texture-by-using-the-image-editor"></a>Como criar uma textura de bola de bilhar usando o Editor de Imagens  
   
-1.  Crie uma textura para trabalhar.  Para obter informações sobre como adicionar textura ao seu projeto, consulte a seção Introdução em [Editor de Imagem](../designers/image-editor.md).  
+1.  Crie uma textura com a qual trabalhar. Para obter informações sobre como adicionar uma textura em seu projeto, consulte a seção de Introdução em [Editor de Imagens](../designers/image-editor.md).  
   
-2.  Defina o tamanho da imagem de forma que sua largura seja duas vezes sua altura; isso é necessário por causa da maneira que uma textura é mapeada na superfície esférica da bola de bilhar.  Para redimensionar a imagem, na janela **Propriedades** , especifique os novos valores para as propriedades **Largura** e **Altura** .  Por exemplo, defina a largura para 512 e a altura para 256.  
+2.  Defina o tamanho da imagem para que sua largura seja duas vezes sua altura. Isso é necessário devido à maneira em que uma textura é mapeada na superfície esférica da bola de bilhar. Para redimensionar a imagem, na janela **Propriedades**, especifique novos valores para as propriedades **Largura** e **Altura**. Por exemplo, defina a largura para 512 e a altura para 256.  
   
 3.  Desenhe uma textura para a bola de bilhar, tendo em mente como uma textura é mapeada em uma esfera.  
   
-     A textura deve se parecer com isso:  
+     A textura deverá ser parecida com esta:  
   
-     ![A textura da bola de bilhar](../designers/media/gfx_shader_demo_billiard_art_ball_texture.png "gfx\_shader\_demo\_billiard\_art\_ball\_texture")  
+     ![Textura para a bola de bilhar](../designers/media/gfx_shader_demo_billiard_art_ball_texture.png "gfx_shader_demo_billiard_art_ball_texture")  
   
-4.  Um alternativa recomendada é diminuir os requisitos de armazenamento dessa textura.  Você pode fazer isto reduzindo a largura de textura para corresponder a sua altura.  Isso compacta a textura ao longo de sua largura, mas devido à maneira que a textura é mapeada para esfera, ela será expandida quando a bola de bilhar for renderizada.  Após redimensionar, a textura deve ser semelhante a isso:  
+4.  Opcionalmente, você talvez queira diminuir os requisitos de armazenamento dessa textura. Você pode fazer isso reduzindo a largura da textura para corresponder a sua altura. Isso compacta a textura ao longo de sua largura, mas devido à maneira que a textura é mapeada para a esfera, ela será expandida quando a bola de bilhar for renderizada. Após o redimensionamento, a textura deverá ser parecida com esta:  
   
-     ![A textura de bilhar compactada em um quadrado](../designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png "gfx\_shader\_demo\_billiard\_art\_ball\_texture\_square")  
+     ![Textura de bilhar compactada em um quadrado](../designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png "gfx_shader_demo_billiard_art_ball_texture_square")  
   
- Agora você pode criar um sombreador que aplique a textura ao modelo.  
+ Agora você pode criar um sombreador que se aplica a esse tipo de textura para o modelo.  
   
-#### Para criar um sombreador básico de textura  
+#### <a name="to-create-a-basic-texture-shader"></a>Para criar um sombreador de textura básico  
   
-1.  Crie um shader de DGSL para trabalhar.  Para obter informações sobre como adicionar um sombreador DGSL ao seu projeto, consulte a seção Introdução em [Designer de sombreador](../designers/shader-designer.md).  
+1.  Crie um sombreador DGSL com o qual trabalhar. Para obter informações sobre como adicionar um sombreador DGSL ao seu projeto, consulte a seção de Introdução em [Designer de Sombreador](../designers/shader-designer.md).  
   
-     Por padrão, um gráfico do sombreador tem esta aparência:  
+     Por padrão, um gráfico de sombreador tem esta aparência:  
   
-     ![O gráfico de sombreador padrão](../designers/media/gfx_shader_demo_billiard_step_0.png "gfx\_shader\_demo\_billiard\_step\_0")  
+     ![O gráfico de sombreador padrão](../designers/media/gfx_shader_demo_billiard_step_0.png "gfx_shader_demo_billiard_step_0")  
   
-2.  Modifique o sombreador padrão para que ele aplique o valor de um exemplo de textura ao pixel atual.  O elemento gráfico do sombreador deve ser assim:  
+2.  Modifique o sombreador padrão para que ele seja aplicado ao valor de uma amostra de textura ao pixel atual. O gráfico de sombreador deve ter esta aparência:  
   
-     ![Um gráfico de sombreador que se aplica a textura a um objeto](../designers/media/gfx_shader_demo_billiard_step_1.png "gfx\_shader\_demo\_billiard\_step\_1")  
+     ![Um gráfico de sombreador que aplica textura a um objeto](../designers/media/gfx_shader_demo_billiard_step_1.png "gfx_shader_demo_billiard_step_1")  
   
-3.  Aplicar a textura que você criou no procedimento anterior configurando as propriedades de textura.  Defina o valor da propriedade de **Textura** do nó de **Exemplo de Cubemap** como **Textura2** e, depois, especifique o arquivo de textura por meio da propriedade **Nome do arquivo** do grupo de propriedades de **Texture2**.  
+3.  Aplique a textura que você criou no procedimento anterior ao configurar as propriedades de textura. Defina o valor da propriedade **Textura** do nó **Amostra de Textura** em **Texture1** e, em seguida, especifique o arquivo de textura usando a propriedade **Filename** do grupo de propriedades **Texture1** na mesma janela de propriedade.  
   
- Para obter mais informações sobre como aplicar uma textura em seu sombreador, consulte [Como: criar um sombreador de textura básica](../designers/how-to-create-a-basic-texture-shader.md).  
+ Para obter mais informações sobre como aplicar uma textura no seu sombreador, consulte [Como criar um sombreador de textura básica](../designers/how-to-create-a-basic-texture-shader.md).  
   
- Sua bola de bilhar agora deve ser semelhante a isto:  
+ Sua bola de bilhar agora deve ser semelhante a esta:  
   
- ![Um Close&#45;up da bola de bilhar texturizado](../designers/media/gfx_shader_demo_.png "gfx\_shader\_demo\_")  
+ ![Vista de perto da bola de bilhar texturizada](../designers/media/gfx_shader_demo_.png "gfx_shader_demo_")  
   
-## Criando a profundidade com o modelo de iluminação Lamberto  
- Até agora, você criou uma bola de bilhar facilmente reconhecível.  No entanto, ele aparece plano e desinteressante \- mais como uma imagem dos desenhos animados de uma bola de bilhar do que uma réplica convincente.  A aparência plana resulta do sombreador simplista, que se comporta como se cada pixel na superfície da bola de bilhar recebesse a mesma quantidade de luz.  
+## <a name="creating-depth-with-the-lambert-lighting-model"></a>Criando profundidade com o modelo de iluminação Lambert  
+ Até agora, você criou uma bola de bilhar facilmente reconhecível. No entanto, ela é plana e desinteressante — mais como uma imagem de desenho de uma bola de bilhar do que uma réplica convincente. A aparência plana é resultado do sombreador simplista, que se comporta como se cada pixel na superfície da bola de bilhar recebesse a mesma quantidade de luz.  
   
- No mundo real, a luz aparece mais brilhante em superfícies que enfrentam diretamente uma fonte de luz e aparece menos brilhante em superfícies que estão em um ângulo oblíquo em relação à fonte de luz.  Isso ocorre porque a energia nos raios de luz é distribuída pela menor área de superfície quando a superfície encara diretamente a fonte de luz.  Como a superfície sai do foco, a mesma quantidade de energia é distribuída por uma superfície de área cada vez maior.  Uma superfície que esteja longe de uma fonte de luz não recebe nenhuma energia, resultando em uma aparência completamente escura.  Essa variação no brilho através da superfície de um objeto é uma importante indicação visual que ajuda a indicar a forma de um objeto; sem ele, o objeto parece plano.  
+ No mundo real, a luz é mais brilhante em superfícies com uma fonte de luz direta e é menos brilhante em superfícies que estão em um ângulo oblíquo em relação à fonte de luz. Isso ocorre porque a energia nos raios de luz é distribuída entre a área de superfície menor quando a superfície tem fonte de luz direta. À medida que a superfície fica longe da fonte de luz, a mesma quantidade de energia é distribuída em uma área de superfície maior. Uma superfície que fica longe de uma fonte de luz não recebe nenhuma luz, resultando em uma aparência totalmente escura. Essa variação no brilho na superfície de um objeto é uma dica visual importante que ajuda a indicar a forma de um objeto. Sem ela, o objeto fica plano.  
   
- Na computação gráfica, aproximações simplificadas de *modelos de iluminação* de complexos, interações de iluminação do mundo real \- são usadas para replicar a aparência de iluminação do mundo real.  O modelo de iluminação Lambert varia a quantidade de luz refletida de forma difusa na superfície de um objeto conforme descrito no parágrafo anterior.  Você pode adicionar o modelo de iluminação de Lambert ao seu sombreador para dar à bola de bilhar uma aparência 3D mais convincente.  
+ Em gráficos de computador, *modelos de iluminação* — aproximações simplificadas de interações de luz complexas e reais — são usados para replicar a aparência de iluminação do mundo real. O modelo de iluminação Lambert varia a quantidade de luz refletida difusamente na superfície de um objeto, conforme descrito no parágrafo anterior. Você pode adicionar o modelo de iluminação Lambert em seu sombreador para dar à bola de bilhar uma aparência 3D mais convincente.  
   
-#### Para adicionar iluminação Lambert ao seu sombreador  
+#### <a name="to-add-lambert-lighting-to-your-shader"></a>Como adicionar iluminação Lambert ao seu sombreador  
   
--   Modifique o sombreador para modular o valor de exemplo de textura pelo valor de iluminação Lambert.  O gráfico do seu sombreador deve ser assim:  
+-   Modifique seu sombreador para variar o valor da amostra de textura pelo valor de iluminação Lambert. Seu gráfico de sombreador deve ter esta aparência:  
   
-     ![O gráfico de sombreador com iluminação Lambert adicionado](../designers/media/gfx_shader_demo_billiard_step_2.png "gfx\_shader\_demo\_billiard\_step\_2")  
+     ![O gráfico de sombreador com iluminação Lambert adicionada](../designers/media/gfx_shader_demo_billiard_step_2.png "gfx_shader_demo_billiard_step_2")  
   
--   Como opção, você pode ajustar o comportamento da iluminação configurando a propriedade **MaterialDiffuse** do gráfico do sombreador.  Para acessar propriedades do gráfico shader, escolha uma área vazia na superfície de design e então localize a propriedade que você deseja acessar na janela **Propriedades**.  
+-   Opcionalmente, você pode ajustar o comportamento da iluminação configurando a propriedade **MaterialDiffuse** do gráfico do sombreador. Para acessar as propriedades do gráfico do sombreador, escolha uma área vazia da superfície de design e, em seguida, localize a propriedade que você deseja acessar na janela **Propriedades**.  
   
- Para obter mais informações sobre como aplicar iluminação Lamberto em seu sombreador, consulte [Como: criar um sombreador Lambert básico](../designers/how-to-create-a-basic-lambert-shader.md).  
+ Para obter mais informações sobre como aplicar iluminação Lambert no seu sombreador, consulte [Como criar um sombreador Lambert básico](../designers/how-to-create-a-basic-lambert-shader.md).  
   
- Com iluminação de Lambert aplicada, sua bola de bilhar deve ficar semelhante a isto:  
+ Com a iluminação Lambert aplicada, a bola de bilhar deve ser semelhante a esta:  
   
- ![Um Close&#45;up da bola de bilhar texturizados e aceso](../designers/media/gfx_shader_demo_billiard_ball_2.png "gfx\_shader\_demo\_billiard\_ball\_2")  
+ ![Vista de perto da bola de bilhar texturizada e iluminada](../designers/media/gfx_shader_demo_billiard_ball_2.png "gfx_shader_demo_billiard_ball_2")  
   
-## Aprimorar a aparência básica com realces especulares  
- O modelo de iluminação Lambert fornece a sensação de forma e de dimensão que estava faltando no sombreador só de textura.  No entanto, a bola de bilhar ainda tem uma aparência um pouco fosca.  
+## <a name="enhancing-the-basic-appearance-with-specular-highlights"></a>Aprimorando a aparência básica com realces especulares  
+ O modelo de iluminação Lambert fornece o senso de forma e dimensão que estava ausente no sombreador somente textura. No entanto, a bola de bilhar ainda tem uma aparência um pouco fosca.  
   
- Uma bola de bilhar real geralmente possui um acabamento lustroso que reflete uma parte da luz que bate nela.  Parte dessa luz refletida resulta em realces especulares que simulam as propriedades reflexivas de uma superfície.  Dependendo das propriedades da finalização, os destaques podem ser localizados ou amplos, intensos ou sutis.  Essas reflexos especulares são modelados usando a relação entre uma fonte de luz, a orientação da superfície e a posição da câmera — ou seja, o realce é mais intenso quando a orientação da superfície reflete a fonte de luz diretamente na câmera, e é menos intenso quando o reflexo é menos direto.  
+ Uma bola de bilhar real normalmente tem um acetinado que reflete uma parte da luz contida nela. Um pouco da luz refletida resulta em realces especulares, que simulam as propriedades de reflexão de uma superfície. Dependendo das propriedades de acabamento, os realces podem ser localizados ou amplos, intensos ou sutis. Esses reflexos especulares são modelados usando a relação entre uma fonte de luz, a orientação da superfície e a posição da câmera — ou seja, o realce é mais intenso quando a orientação da superfície reflete a fonte de luz diretamente na câmera e é menos intenso quando a reflexão é menos direta.  
   
- O modelo de iluminação Phong amplia o modelo de iluminação Lambert para incluir realces especulares, conforme descrito no parágrafo anterior.  Você pode adicionar o modelo de iluminação Phong ao seu sombreador para dar à bola de bilhar um botão simulado que resulta em uma aparência mais interessante.  
+ O modelo de iluminação Phong se baseia no modelo de iluminação Lambert para incluir realces especulares, conforme descrito no parágrafo anterior. Você pode adicionar o modelo de iluminação Phong ao seu sombreador para dar à bola de bilhar um acabamento simulado que resulta em uma aparência mais interessante.  
   
-#### Para adicionar realces especulares ao seu sombreador  
+#### <a name="to-add-specular-highlights-to-your-shader"></a>Como adicionar realces especulares ao seu sombreador  
   
-1.  Modifique o sombreador para incluir a contribuição especular usando combinação aditiva.  O gráfico do seu sombreador deve ser assim:  
+1.  Modifique seu sombreador para incluir a contribuição especular usando combinação aditiva. Seu gráfico de sombreador deve ter esta aparência:  
   
-     ![O gráfico de sombreador com iluminação especular adicionado](../designers/media/gfx_shader_demo_billiard_step_3.png "gfx\_shader\_demo\_billiard\_step\_3")  
+     ![O gráfico de sombreador com iluminação especular adicionada](../designers/media/gfx_shader_demo_billiard_step_3.png "gfx_shader_demo_billiard_step_3")  
   
-2.  Como alternativa, você pode ajustar o comportamento do realce especular configurando as propriedades especulares \(**MaterialSpecular** e **MaterialSpecularPower**\) do gráfico do sombreador.  Para acessar propriedades do gráfico shader, escolha uma área vazia na superfície de design e, na janela **Propriedades**, localize a propriedade que você deseja acessar.  
+2.  Opcionalmente, você pode ajustar a maneira que o realce especular se comporta ao configurar as propriedades especulares (**MaterialSpecular** e **MaterialSpecularPower**) do gráfico do sombreador. Para acessar as propriedades do gráfico do sombreador, escolha uma área vazia da superfície de design e, em seguida, localize a propriedade que você deseja acessar na janela **Propriedades**.  
   
- Para obter mais informações sobre como aplicar realces especulares em seu sombreador, consulte [Como: criar um sombreador Phong básico](../designers/how-to-create-a-basic-phong-shader.md).  
+ Para obter mais informações sobre como aplicar iluminação especular no seu sombreador, consulte [Como criar um sombreador Phong básico](../designers/how-to-create-a-basic-phong-shader.md).  
   
- Com o realce especular aplicado, sua bola de bilhar deve ficar semelhante a isto:  
+ Com a iluminação especular aplicada, sua bola de bilhar deve ser semelhante a esta:  
   
- ![Adicionado um Close&#45;up de bola de bilhar com especulares](../designers/media/gfx_shader_demo_billiard_ball_3.png "gfx\_shader\_demo\_billiard\_ball\_3")  
+ ![Vista de perto da bola de bilhar com especular adicionado](../designers/media/gfx_shader_demo_billiard_ball_3.png "gfx_shader_demo_billiard_ball_3")  
   
-## Criando uma noção de espaço refletindo o ambiente  
- Com realce especular aplicado, sua bola de bilhar parece consideravelmente convincente.  Tem a forma correta, o trabalho de pintura correta e o acabamento correto.  No entanto, ainda há mais uma técnica que fará sua bola de bilhar se parecer mais com parte do seu ambiente.  
+## <a name="creating-a-sense-of-space-by-reflecting-the-environment"></a>Criando um senso de espaço ao refletir o ambiente  
+ Com os realces especulares aplicados, a bola de bilhar parece muito convincente. Ela tem a forma, o trabalho de pintura e o acabamento corretos. No entanto, ainda há uma técnica que fará com que a bola de bilhar pareça fazer parte de seu ambiente.  
   
- Se você revise uma bola de bilhar real de perto, você pode ver que sua superfície brilhante não exibe apenas reflexos especulares, mas também reflete uma fraca imagem do mundo em torno dele.  Você pode simular esta reflexão usando uma imagem de ambiente como uma textura e combinando com a própria textura de modelo para determinar a cor final de cada pixel.  Dependendo do tipo de finalização que você deseja, é possível combinar mais ou menos da textura de reflexão juntamente com o restante do sombreador.  Por exemplo, um sombreador que simula uma superfície altamente reflexiva como um espelho pode usar somente a textura de reflexo, mas um sombreador que simula um reflexo mais sutil como a encontrada em uma bola de bilhar pode combinar apenas uma pequena parte do valor da textura de reflexão juntamente com o restante do cálculo do sombreador.  
+ Se examinar de perto uma bola de bilhar real, você poderá ver que sua superfície brilhante não exibe apenas realces especulares, mas também reflete, de modo esmaecido, uma imagem do mundo em torno dele. Você pode simular essa reflexão usando uma imagem do ambiente como uma textura e combiná-la com a textura do modelo para determinar a cor final de cada pixel. Dependendo do tipo de acabamento que desejar, você pode combinar mais ou menos da reflexão de textura junto com o restante do sombreador. Por exemplo, um sombreador que simula uma superfície altamente refletiva, como um espelho, pode usar somente a textura de reflexão, mas um sombreador que simula um reflexo mais sutil, como o de uma bola de bilhar, pode combinar apenas uma pequena parte do valor da textura de reflexão junto com o restante do cálculo do sombreador.  
   
- É claro que você não pode aplicar a imagem refletida ao modelo da mesma maneira que aplica o mapa de textura.  Se você fez, o reflexo do mundo moverá com a bola de bilhar como se a reflexão estivesse colada a ele.  Como um reflexo pode vir de qualquer direção, você precisa de uma maneira de fornecer um valor de mapa de reflexão para qualquer ângulo e uma forma de manter o mapa de reflexão orientado de acordo com o mundo.  Para satisfazer esses requisitos você pode usar um tipo especial de textura mapa–chamada *um cubo mapa\-*––que fornece seis texturas organizadas para formar os lados de um cubo.  De dentro deste cubo, você pode apontar em qualquer direção para localizar um valor de textura.  Se as texturas de cada lado do cubo contêm imagens do ambiente, você pode simular qualquer reflexão pela amostragem do local correto sobre a superfície do cubo.  Mantendo o cubo alinhado com o mundo, você terá um reflexo exato do ambiente.  Para determinar onde o cubo deve ser provado, você calcula apenas a reflexão do vetor da câmera fora da superfície do objeto, e em seguida usá\-o como a textura 3d coordena.  O uso de mapas do cubo dessa maneira é uma técnica comum conhecida como *mapeamento de ambiente*.  
+ Obviamente, você não pode aplicar apenas a imagem refletida no modelo da mesma maneira que aplica o mapa de textura do modelo. Se fez isso, a reflexão do mundo será movida com a bola de bilhar como se estivesse colada a ela. Como um reflexo pode vir de qualquer direção, você precisa de uma maneira para fornecer um valor de mapa de reflexão para qualquer ângulo e uma maneira de manter o mapa de reflexão orientado de acordo com o mundo. Para atender a esses requisitos, você pode usar um tipo especial de mapa de textura — chamado de *mapa de cubo* — que fornece seis texturas organizadas para formar os lados de um cubo. De dentro desse cubo, você pode apontar em qualquer direção para localizar um valor de textura. Se as texturas em cada lado do cubo contiverem imagens do ambiente, você poderá simular qualquer reflexão ao fazer a amostragem do local correto na superfície do cubo. Ao manter o cubo alinhado com o mundo, você obterá um reflexo preciso do ambiente. Para determinar onde o cubo deve ser amostrado, calcule a reflexão do vetor da câmera na superfície do objeto e, em seguida, use-o como coordenadas de textura 3D. Usar mapas de cubo dessa forma é uma técnica comum que é conhecida como *mapeamento de ambiente*.  
   
- O mapeamento de ambiente fornece uma aproximação eficiente de reflexos reais, como descrito nos parágrafos anteriores.  Você pode misturar reflexos mapeadas do ambiente em seu sombreador para dar à bola de bilhar um botão simulado que faz a bola de bilhar parecer mais aterrada na cena.  
+ O mapeamento de ambiente fornece uma aproximação eficiente de reflexos reais conforme descrito nos parágrafos anteriores. Você pode misturar os reflexos mapeados de ambiente em seu sombreador para dar à bola de bilhar um acabamento simulado que faz com que a bola de bilhar pareça mais conectada com a cena.  
   
- A primeira etapa é criar uma textura do mapa do cubo.  Em muitos tipos de aplicativos, o conteúdo do mapa em cubo não tem que ser perfeito para ser eficaz, especialmente quando a reflexão é sutil ou não ocupa um espaço proeminente na tela.  Por exemplo, vários jogos usam mapas de cubo pré\-computados para o mapeamento de ambiente e apenas usam o mais próximo de cada objeto refletivo, embora isso significa que o reflexo não está correto.  Mesmo uma boa aproximação é geralmente boa o suficiente para um efeito convincente.  
+ A primeira etapa é criar uma textura de mapa de cubo. Em muitos tipos de aplicativos, o conteúdo do mapa de cubo não precisa ser perfeito para ser eficaz, especialmente quando a reflexão for sutil ou não ocupar um espaço de destaque na tela. Por exemplo, muitos jogos usam mapas de cubo pré-calculados de mapeamento de ambiente e usam apenas o mais próximo de cada objeto reflexivo, embora isso signifique que a reflexão não está correta. Até mesmo uma aproximação grosseira geralmente é boa o bastante para um efeito convincente.  
   
-#### Para criar texturas para um mapa de ambiente usando o editor de imagem  
+#### <a name="to-create-textures-for-an-environment-map-by-using-the-image-editor"></a>Como criar texturas para um mapa de ambiente usando o Editor de Imagens  
   
-1.  Crie uma textura para trabalhar.  Para obter informações sobre como adicionar textura ao seu projeto, consulte a seção Introdução em [Editor de Imagem](../designers/image-editor.md).  
+1.  Crie uma textura com a qual trabalhar. Para obter informações sobre como adicionar uma textura em seu projeto, consulte a seção de Introdução em [Editor de Imagens](../designers/image-editor.md).  
   
-2.  Defina o tamanho da imagem de modo que sua largura seja igual a sua altura e é uma potência de dois em tamanho; isso é necessário por causa da maneira como um mapa do cubo é indexado.  Para redimensionar a imagem, na janela **Propriedades** , especifique os novos valores para as propriedades **Largura** e **Altura** .  Por exemplo, defina o valor das propriedades de **Largura** e de **Altura** para 256.  
+2.  Defina o tamanho da imagem para que a largura seja igual à altura e o lateral tenha um valor ao quadrado. Isso é necessário devido à maneira que um mapa de cubo é indexado. Para redimensionar a imagem, na janela **Propriedades**, especifique novos valores para as propriedades **Largura** e **Altura**. Por exemplo, defina o valor das propriedades **Largura** e **Altura** como 256.  
   
-3.  Use uma cor sólida para preencher a textura.  Essa textura será a parte inferior do mapa do cubo, que corresponde à superfície da mesa de bilhar.  Manter a cor que você usou em mente para a próxima textura.  
+3.  Use uma cor sólida para preencher a textura. Este textura será a parte inferior do mapa de cubo, que corresponde à superfície da tabela de bilhar. Mantenha a cor usada em mente para a próxima textura.  
   
-4.  Crie uma segunda textura que é do mesmo tamanho da primeira.  Esta textura será repetida nos quatro lados do mapa do cubo, que corresponde à superfície e aos lados de uma mesa de bilhar, e à área em torno da mesa de bilhar.  Certificar\-se de desenhar a superfície da tabela de bilhar nesta textura usando a mesma cor da textura inferior.  A textura deve se parecer com isso:  
+4.  Crie uma segunda textura com o mesmo tamanho que a primeira. Essa textura será repetida nos quatro lados do mapa de cubo, que correspondem à superfície e aos lados de uma tabela de bilhar e à área ao redor da tabela de bilhar. Certifique-se de desenhar a superfície da tabela de bilhar nessa textura usando a mesma cor que na textura inferior. A textura deverá ser parecida com esta:  
   
-     ![A textura para os lados do cubemap](../designers/media/gfx_shader_demo_billiard_art_env_texture_side.png "gfx\_shader\_demo\_billiard\_art\_env\_texture\_side")  
+     ![A textura para os lados do mapa de cubo](../designers/media/gfx_shader_demo_billiard_art_env_texture_side.png "gfx_shader_demo_billiard_art_env_texture_side")  
   
-     Lembre\-se de que um mapa de reflexão não tem que ser fotorrealista para ser mais eficiente; por exemplo, o mapa do cubo usado para criar as imagens este artigo contém apenas quatro bolsos em vez de seis.  
+     Lembre-se de que um mapa de reflexão não precisa ser realista para ser eficaz. Por exemplo, o mapa de cubo usado para criar as imagens neste artigo contém apenas quatro cavidades em vez de seis.  
   
-5.  Crie uma terceira textura que é do mesmo tamanho das outras.  Essa textura será a parte superior do mapa do cubo, que corresponde ao teto acima da mesa de bilhar.  Para tornar essa parte de reflexão mais interessante, você pode desenhar uma luz de sobrecarga para reforçar o realce especular que você adicionou ao sombreador no procedimento anterior.  A textura deve se parecer com isso:  
+5.  Crie uma terceira textura com o mesmo tamanho que as outras. Este textura será a parte superior do mapa de cubo, que corresponde à superfície da tabela de bilhar. Para tornar essa parte da reflexão mais interessante, você pode desenhar uma luz acima para reforçar os realces especulares que você adicionou ao sombreador no procedimento anterior. A textura deverá ser parecida com esta:  
   
-     ![A textura na parte superior do cubemap](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png "gfx\_shader\_demo\_billiard\_art\_env\_texture\_top2")  
+     ![A textura para a parte superior do mapa de cubo](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png "gfx_shader_demo_billiard_art_env_texture_top2")  
   
- Agora que criou texturas individuais para as laterais do mapa de cubo, você pode usar uma ferramenta para montá\-las em um mapa de cubo que possa ser armazenado em uma única textura .dds.  Você pode usar qualquer programa que você deseja criar o mapa do cubo como pode salvar o mapa do cubo no formato de textura de .dds.  Essa explicação passo a passo demonstra como criar textura usando a ferramenta de textura de DirectX que é uma parte do DirectX SDK de junho de 2010 .  
+ Agora que criou texturas individuais para os lados do mapa de cubo, você pode usar uma ferramenta para agrupá-las em um mapa de cubo que pode ser armazenado em uma textura .dds única. Você pode usar qualquer programa que deseja que crie o mapa de cubo contanto que ele possa salvar o mapa de cubo no formato de textura .dds. Este passo a passo demonstra como criar a textura usando a ferramenta de textura do DirectX que faz parte do SDK do DirectX de junho de 2010.  
   
-#### Para montar um mapa do cubo usando a ferramenta de textura do DirectX  
+#### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>Como montar um mapa de cubo usando a ferramenta de textura do DirectX  
   
-1.  Na Ferramenta de Textura DirectX, no menu principal, escolher **Arquivo**, **Nova Textura**.  A caixa de diálogo **Nova textura** aparece.  
+1.  Na ferramenta de textura do DirectX, no menu principal, escolha **Arquivo**, **Nova Textura**. A caixa de diálogo **Nova Textura** é exibida.  
   
-2.  No grupo **Tipo de Textura**, escolher **Textura do Cubemap**.  
+2.  No grupo **Tipo de Textura**, escolha **Textura do Mapa de Cubo**.  
   
-3.  No grupo de **Dimensões**, digitar o valor correto para a **Largura** e a **Altura**, e, em seguida, escolher **OK**.  Um novo documento de textura aparece.  Por padrão, a textura mostrada primeiro no documento de textura corresponde à face do cubo **Positivo X**.  
+3.  No grupo **Dimensões**, digite o valor correto para a **Largura** e a **Altura**e, em seguida, escolha **OK**. Um novo documento de textura é exibido. Por padrão, a textura mostrada pela primeira vez no documento de textura corresponde à face do cubo **X positivo**.  
   
-4.  Carregar a textura que você criou para o lado do cubo de textura na face do cubo.  No menu principal, escolha **Arquivo** e **Abrir nesta Face de Mapa de Cubo**. Em seguida, selecione a textura criada para a lateral do cubo e clique em **Abrir**.  
+4.  Carregue a textura que você criou para o lado do cubo de textura na face do cubo. No menu principal, escolha **Arquivo**, **Abrir na Face desse Mapa de Cubo**, selecione a textura que você criou para o lado do cubo e, em seguida, escolha **Abrir**.  
   
-5.  Repita a etapa 4 para as faces de cubo **X Negativo**, **Z Positivo** e **Z Negativo** .  Para fazer isso, você deve exibir a face que deseja carregar.  Para exibir uma face diferente do mapa do cubo, no menu principal, escolha **Exibição**, **Face do Mapa do Cubo**, e selecione a face que você deseja exibir.  
+5.  Repita a etapa 4 para as faces do cubo **X negativo**, **Z positivo** e **Z negativo**. Para fazer isso, você deve exibir a face que deseja carregar. Para exibir uma face de mapa de cubo diferente, no menu principal, escolha **Exibir**, **Face do Mapa de Cubo**e, em seguida, selecione a face que deseja exibir.  
   
-6.  Para a face do cubo **Y Positivo**, carregar a textura que você criou para a parte superior do cubo de textura.  
+6.  Para a face do cubo **Y positivo**, carregue a textura que você criou na parte de cima do cubo de textura.  
   
-7.  Para a face do cubo **Y Negativo**, carregar a textura que você criou para a parte inferior do cubo de textura.  
+7.  Para a face do cubo **Y negativo**, carregue a textura que você criou na parte de baixo do cubo de textura.  
   
 8.  Salve a textura.  
   
- Você pode imaginar o layout do mapa de cubos como este:  
+ Você pode imaginar o layout do mapa de cubo como este:  
   
- ![O layout do mapa de cubo do ambiente](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png "gfx\_shader\_demo\_billiard\_art\_env\_texture\_top")  
+ ![Layout do mapa de cubo do ambiente](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png "gfx_shader_demo_billiard_art_env_texture_top")  
   
- A imagem na parte superior é a face do cubo Y positivo \(\+Y\); no meio, da esquerda para a direita, são as faces do cubo – X, \+Z, \+X, e –Z; na parte inferior, é a face do cubo –Y.  
+ A imagem na parte superior é a face do cubo Y positivo (+ Y); no meio, da esquerda para a direita, é – X, + Z, +X e –Z; na parte inferior, é – Y.  
   
- Agora você pode modificar o sombreador para mesclar o exemplo de mapa de cubo ao restante do sombreador.  
+ Agora você pode modificar o sombreador para mesclar o exemplo de mapa de cubo para o restante do sombreador.  
   
-#### Para adicionar um mapeamento de ambiente ao seu sombreador  
+#### <a name="to-add-environment-mapping-to-your-shader"></a>Como adicionar o mapeamento de ambiente ao sombreador  
   
-1.  Modifique o sombreador para incluir a contribuição de mapeamento de ambiente usando combinação aditiva.  O gráfico do seu sombreador deve ser assim:  
+1.  Modifique seu sombreador para incluir a contribuição do mapeamento de ambiente usando combinação aditiva. Seu gráfico de sombreador deve ter esta aparência:  
   
-     ![Um Close&#45;up de ambos os nós Refletivo tipo de sombreador](../designers/media/gfx_shader_demo_billiard_step_4b.png "gfx\_shader\_demo\_billiard\_step\_4b")  
+     ![Vista de perto dos dois tipos de nó do sombreador reflexivo nós](../designers/media/gfx_shader_demo_billiard_step_4b.png "gfx_shader_demo_billiard_step_4b")  
   
-     Observe que você pode usar um nó **Adicionar Multiplicação** para simplificar o gráfico do sombreador.  
+     Observe que você pode usar um nó de **Adição Múltipla** nó para simplificar o gráfico do sombreador.  
   
      Aqui está uma visão mais detalhada dos nós do sombreador que implementam o mapeamento de ambiente:  
   
-     ![O gráfico de sombreador com mapeamento de ambiente adicionado](../designers/media/gfx_shader_demo_billiard_step_4a.png "gfx\_shader\_demo\_billiard\_step\_4a")  
+     ![O gráfico do sombreador com mapeamento de ambiente adicionado](../designers/media/gfx_shader_demo_billiard_step_4a.png "gfx_shader_demo_billiard_step_4a")  
   
-2.  Aplicar a textura que você criou no procedimento anterior configurando as propriedades de textura do mapa do cubo.  Defina o valor da propriedade de **Textura** do nó de **Exemplo de Cubemap** como **Textura2** e, depois, especifique o arquivo de textura por meio da propriedade **Nome do arquivo** do grupo de propriedades de **Texture2**.  
+2.  Aplique a textura que você criou no procedimento anterior ao configurar as propriedades de textura do mapa de cubo. Defina o valor da propriedade **Textura** do nó **Amostra do Mapa de Cubo** em **Texture2** e, em seguida, especifique o arquivo de textura usando a propriedade **Filename** do grupo de propriedades **Texture2**.  
   
-3.  Como alternativa, você pode ajustar a reflexibilidade da bola de bilhar configurando a propriedade **Saída** do nó **Constante**.  Para acessar propriedades do nó, selecione\-o e, na janela **Propriedades** , localize a propriedade que você deseja acessar.  
+3.  Opcionalmente, você pode ajustar a reflexibilidade da bola de bilhar ao configurar a propriedade **Saída** do nó **Constante**. Para acessar as propriedades do nó, selecione-o na janela **Propriedades** e localize a propriedade que você deseja acessar.  
   
- Com o mapeamento do ambiente aplicado, sua bola de bilhar deve ficar semelhante a isto:  
+ Com o mapeamento de ambiente aplicado, a bola de bilhar deve ser semelhante a esta:  
   
- ![Um Close&#45;up do ambiente mapeado bola de bilhar](../designers/media/gfx_shader_demo_billiard_ball_4.png "gfx\_shader\_demo\_billiard\_ball\_4")  
+ ![Vista de perto da bola de bilhar de ambiente mapeada](../designers/media/gfx_shader_demo_billiard_ball_4.png "gfx_shader_demo_billiard_ball_4")  
   
- Nesta imagem final, observe como os efeitos que você adicionou se reúnem para criar uma bola de bilhar muito convincente.  A forma, a textura e iluminação criam a aparência básica de um objeto 3D, e os realces especulares e reflexos fazem a bola de bilhar ficar mais interessante, e são como parte do seu ambiente.  
+ Nesta imagem final, observe como os efeitos que você adicionou se unem para criar uma bola de bilhar muito convincente. A forma, a textura e a iluminação criam a aparência básica de um objeto 3D e os realces especulares e os reflexos tornam a bola de bilhar mais interessante e fazem com que ela pareça fazer parte do ambiente.  
   
-## Consulte também  
- [Como: exportar um sombreador](../designers/how-to-export-a-shader.md)   
- [Como: aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
- [Designer de sombreador](../designers/shader-designer.md)   
- [Editor de Imagem](../designers/image-editor.md)   
+## <a name="see-also"></a>Consulte também  
+ [Como exportar um sombreador](../designers/how-to-export-a-shader.md)   
+ [Como aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
+ [Designer de Sombreador](../designers/shader-designer.md)   
+ [Editor de imagens](../designers/image-editor.md)   
  [Nós do Designer de Sombreador](../designers/shader-designer-nodes.md)

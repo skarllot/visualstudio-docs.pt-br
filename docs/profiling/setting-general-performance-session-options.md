@@ -1,53 +1,68 @@
 ---
-title: "Definindo op&#231;&#245;es de sess&#227;o de desempenho geral | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.property.general"
+title: "Configurando opções de sessão de desempenho geral | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.property.general
 ms.assetid: 6b60bd1b-2198-4261-b84e-9b2d8494a992
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Definindo op&#231;&#245;es de sess&#227;o de desempenho geral
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 84985fa1c94405d60f4f94b96d97d70c0ee5a9e3
+ms.lasthandoff: 02/22/2017
 
-Você pode definir as convenções de nomenclatura do método e os dados de criação de perfil de coleção para uma sessão de desempenho de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Ferramentas de Criação de Perfil na página de **Geral** da caixa de diálogo propriedades da sessão de desempenho.  Para abrir essa caixa de diálogo de **Desempenho Explorer**, clique com o botão direito do mouse na sessão de desempenho, e clique em **Propriedades**.  
+---
+# <a name="setting-general-performance-session-options"></a>Definindo opções de sessão de desempenho geral
+Você pode definir o método de coleção e convenções de nomenclatura de dados de criação de perfil para uma [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sessão de desempenho de ferramentas de criação de perfil na página **Geral** da caixa de diálogo Propriedades da sessão de desempenho. Para abrir a caixa de diálogo **Gerenciador de Desempenho**, clique com o botão direito do mouse na sessão de desempenho e, em seguida, clique em **Propriedades**.  
   
  **Requisitos**  
   
 -   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
-## Escolhendo métodos de coleta de dados  
- Você define o método da coleção de base selecionando uma das opções em **Analisando a coleção**.  As opções são descritas depois na seguinte tabela:  
+## <a name="choosing-data-collection-methods"></a>Escolhendo os métodos de coleta de dados  
+ Definir o método de coleção base selecionando uma das opções em **Coleção de Perfis**. As opções são descritas seguindo a tabela a seguir:  
   
 |||  
 |-|-|  
-|**Amostragem**.  O método de amostragem coleta informações de perfil em intervalos regulares.  Este método será útil para localizar problemas de utilização do processador e é o método sugerido para iniciar a maioria de investigações de desempenho.|-   [Coletando estatísticas de desempenho usando amostragem](../profiling/collecting-performance-statistics-by-using-sampling.md)|  
-|**Instrumentação**.  O método de instrumentação injeta em uma cópia de um módulo que analisa o código que registra cada entrada, saída, e também chamada de função de funções no módulo executado durante a análise.  Este método será útil para coletar informações de controle de tempo detalhadas sobre uma seção do código e entender o impacto de operações de entrada e saída no desempenho do aplicativo.|-   [Coletando dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)|  
-|**Concorrência**.  O método de simultaneidade coleta dados para cada evento que bloqueia a execução do código, como quando um thread espera acesso a um recurso bloqueado do aplicativo seja liberado.  Este método será útil para analisar aplicativos multi\-threaded.|-   [Coletando dados de simultaneidade do thread e do processo](../profiling/collecting-thread-and-process-concurrency-data.md)|  
+|**Amostragem**. O método de amostragem coleta informações de perfil em intervalos regulares. Este método é útil para localizar problemas de utilização do processador e é o método sugerido para iniciar a maioria das investigações de desempenho.|-   [Coletando estatísticas de desempenho usando amostragem](../profiling/collecting-performance-statistics-by-using-sampling.md)|  
+|**Instrumentação**. O método de instrumentação injeta em uma cópia de um módulo de código que registra cada entrada, saída e a chamada de função das funções no módulo durante uma geração de perfil de criação de perfil. Este método é útil para coletar informações detalhadas de tempo sobre uma seção do seu código e para compreender o impacto das operações de entrada e saída sobre o desempenho do aplicativo.|-   [Coletando dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)|  
+|**Simultaneidade**. O método de simultaneidade coleta dados para cada evento que bloqueia a execução de seu código, como quando um thread aguarda bloqueia o acesso a um recurso de aplicativo para ser liberado. Esse método é útil para analisar aplicativos multi-threaded.|-   [Coletando dados de simultaneidade do thread e do processo](../profiling/collecting-thread-and-process-concurrency-data.md)|  
   
- Você pode coletar dados de memória .NET usando os métodos de amostragem ou a instrumentação.  Você selecionar o tipo de dados em **Analisar de memória .NET**.  
-  
-|||  
-|-|-|  
-|**Coletar informações de alocação do objeto do .NET**.  Por padrão, os dados incluem o número e o tamanho de objetos atribuídos.  Selecione ou desmarque essa caixa de seleção para habilitar ou desabilitar a coleta de dados de memória do .NET.<br /><br /> **Também coletar informações de tempo de vida do objeto do .NET**.  Marque essa caixa de seleção para incluir dados sobre as gerações de coleta de lixo que foram usadas para recuperar os objetos de memória.|-   [Coletando a alocação de memória do .NET e os dados de vida útil](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)|  
-  
- Analisando uma página de sessão é exibida quando você inicia para analisar um aplicativo, onde você pode pausar, retomar e parar, de analisar.  
-  
- ![Profiling session page](../profiling/media/prof_profilingsessionpage.png "PROF\_ProfilingSessionPage")  
-  
-## Definir as opções de Datra Arquivo  
+ Você pode coletar dados de memória do .NET usando os métodos de amostragem ou instrumentação. Selecione o tipo de dados na **criação de perfil de memória do .NET**.  
   
 |||  
 |-|-|  
-|**Relatório**.  Por padrão, o arquivo de dados de perfil .vsp \(\) é fornecido o nome do aplicativo analisado e está localizado na pasta da solução ou do projeto.  Uma cadeia de caracteres de data é acrescentada ao nome também, e um número incrementado é adicionado aos arquivos de dados que de outra forma teriam nomes duplicados.  Você poderá alterar essas opções.|-   [Como: definir opções de nome de arquivo de dados de desempenho](../profiling/how-to-set-performance-data-file-name-options.md)|
+|**Coletar informações de alocação de objeto do .NET**. Por padrão, os dados incluem o número e tamanho dos objetos alocados. Marque ou desmarque esta caixa de seleção para habilitar ou desabilitar a coleta de dados de memória do .NET.<br /><br /> **Também coletar informações de tempo de vida do objeto .NET**. Marque esta caixa de seleção para incluir dados sobre as gerações de coleta de lixo que foram usados para recuperar os objetos de memória.|-   [Coletando a alocação de memória do .NET e os dados de tempo de vida](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)|  
+  
+ Uma página de sessão de criação de perfil aparece quando você começar a criar o perfil de um aplicativo, no qual você pode pausar, retomar e parar criação de perfil.  
+  
+ ![Página de sessão de criação de perfil](../profiling/media/prof_profilingsessionpage.png "PROF_ProfilingSessionPage")  
+  
+## <a name="setting-profiling-datra-file-options"></a>Configurando opções de arquivo de Datra de criação de perfil  
+  
+|||  
+|-|-|  
+|**Relatório**. Por padrão, o arquivo de dados (.vsp) de criação de perfil é dado o nome do aplicativo com perfil e está localizado na pasta de solução ou projeto. Uma cadeia de caracteres de data também é acrescentada ao nome e um número incrementado é adicionado aos arquivos de dados que outra forma, teriam nomes duplicados. Você pode alterar essas opções.|-   [Como definir opções de nome de arquivo de dados de desempenho](../profiling/how-to-set-performance-data-file-name-options.md)|

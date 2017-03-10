@@ -1,91 +1,106 @@
 ---
-title: "Iniciar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Inicializar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f81bde5c-3394-4b79-a315-c2f6491689b3
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Iniciar
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 2e925823fe2e6064a4bc7165a03ee14872ab540b
+ms.lasthandoff: 02/22/2017
 
-A opção de **Launch** inicia o profiler usando o método de amostragem e também inicia o aplicativo especificado.  
+---
+# <a name="launch"></a>Inicializar
+A opção **Inicializar** inicia o criador de perfil usando o método de amostragem e também inicia o aplicativo especificado.  
   
- Para usar a opção de **Launch** , você deve especificar o método de **Sample** na opção de **Start** .  
+ Para usar a opção **Inicializar**, você deve especificar o método de **Amostragem** na opção **Iniciar**.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 VSPerfCmd.exe /Launch:AppName [Options]  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `AppName`  
- O nome do aplicativo iniciar.  Os caminhos completo e parciais do diretório atual têm suporte.  
+ O nome do aplicativo a ser inicializado. Há suporte para caminhos completos e parciais do diretório atual.  
   
-## Opções válidas  
- As seguintes opções de VSPerfCmd podem ser combinadas com a opção de **Launch** em uma única linha de comando.  
+## <a name="valid-options"></a>Opções válidas  
+ As seguintes opções de VSPerfCmd podem ser combinadas com a opção **Inicializar** em uma única linha de comando.  
   
- **Start:** `Method`  
- Inicializa a sessão do profiler de linha de comando e defina o método analisando especificado.  
+ **Iniciar:** `Method`  
+ Inicializa a sessão de criador de perfil de linha de comando e define o método de criação de perfil especificado.  
   
- **GlobalOn**e **GlobalOff**  
- Os resumos \(**GlobalOn**\) ou as pausas \(\)**GlobalOff**criação de perfil, mas não terminam a sessão analisando.  
+ **GlobalOn** e **GlobalOff**  
+ Retoma (**GlobalOn**) ou pausa (**GlobalOff**) a criação de perfil, mas não termina a sessão de criação de perfil.  
   
  **ProcessOn:** `PID` e **ProcessOff**:`PID`  
- Resumos**ProcessOn**\(\) ou pausa \(\)**ProcessOff**criação de perfil para o processo especificado.  
+ Retoma (**ProcessOn**) ou pausa (**ProcessOff**) a criação de perfil para o processo especificado.  
   
  **TargetCLR**  
- Especifica a versão do .NET Framework Common Language Runtime \(CLR\) para analisar quando mais de uma versão é carregada em uma sessão analisando.  Por padrão, a primeira versão carregada é analisado.  
+ Especifica a versão do CLR (Common Language Runtime) do .NET Framework a ser analisada quando mais de uma versão for carregada em uma sessão de criação de perfil. Por padrão, a primeira versão carregada é analisada.  
   
-## Opções exclusivas  
- As seguintes opções só podem ser usadas com a opção de **Launch** .  
+## <a name="exclusive-options"></a>Opções Exclusivas  
+ As opções a seguir só podem ser usadas com a opção **Inicializar**.  
   
  **Console**  
- Inicia o aplicativo especificado de linha de comando em uma nova janela.  
+ Inicia o aplicativo de linha de comando especificado em uma nova janela.  
   
  **Args:** `ArgList`  
- Especifica a lista de argumentos para passar para o aplicativo.  
+ Especifica a lista de argumentos a serem passados para o aplicativo.  
   
  **LineOff**  
- Desabilita a coleção de dados de perfil de dados de nível.  
+ Desabilita a coleta de dados de criação de perfil de nível de linha.  
   
-## Opções de amostragem  
- Uma das opções de intervalo de amostragem pode ser especificado na linha de comando de **Launch** .  O intervalo de amostragem padrão é 10.000.000 ciclos do relógio do processador.  
+## <a name="sampling-options"></a>Opções de amostragem  
+ Uma das seguintes opções de intervalo de amostragem pode ser especificada na linha de comando **Inicializar**. O intervalo de amostragem padrão é 10.000.000 ciclos de relógio do processador.  
   
- **Timer**\[**:**`Cycles`\]**PF**\[**:**`Events`\]**Sys**\[**:**`Events`\]**Counter**\[**:**`Name`,`Reload`,`FriendlyName`\]**GC**\[:**allocation**&#124;**lifetime**\]  
- Especifica o número e o tipo de intervalo de amostragem.  
+ **Temporizador**[**:**`Cycles`]**PF**[**:**`Events`]**Sys**[**:**`Events`]**Contador**[**:**`Name`,`Reload`,`FriendlyName`]**GC**[:**alocação**&#124;**tempo de vida**]  
+ Especifica o número e o tipo do intervalo de amostragem.  
   
--   **Timer** \- Exemplos de cada `Cycles` não paralisou ciclos do relógio do processador.  Se `Cycles` não for especificado, 10.000.000 ciclos são usados.  
+-   **Temporizador** – exemplifica cada ciclo de relógio do processador `Cycles` não interrompido. Se `Cycles` não for especificado, os 10.000.000 ciclos serão usados.  
   
--   **PF** \- Exemplos falhas de cada página de `Events` .  Se `Events` não for especificado, 10 falhas de página.  
+-   **PF** – exemplifica cada `Events` falha de página. Se `Events` não for especificado, 10 falhas de página.  
   
--   **Sys** \- Exemplos de cada chamadas de `Events` o sistema operacional.  Se `Events` não for especificado, 10 chamadas do sistema são usados.  
+-   **Sys** – exemplifica cada `Events` chamadas para o sistema operacional. Se `Events` não for especificado, 10 chamadas do sistema serão usadas.  
   
--   **Counter** \- Exemplos de cada número de `Reload` do contador de desempenho de CPU especificado por `Name`.  Opcionalmente, `FriendlyName` pode especificar uma cadeia de caracteres para usar como o cabeçalho da coluna no profiler relatórios.  
+-   **Contador** – exemplifica cada número `Reload` do contador de desempenho de CPU especificado por `Name`. Opcionalmente, `FriendlyName` pode especificar uma cadeia de caracteres para usar como o cabeçalho de coluna nos relatórios do criador de perfil.  
   
--   **GC** \- coleta dados de memória do .NET.  Por**allocation**\(padrão\), os dados são coletados em cada evento de alocação de memória.  Quando o parâmetro de **lifetime** for especificado, os dados são coletados também em cada evento de coleta de lixo.  
+-   **GC** – Coleta dados da memória de .NET. Por padrão (**alocação**), os dados são coletados em todos os eventos de alocação da memória. Quando o parâmetro **tempo de vida** é especificado, os dados também são coletados em todos os eventos de coleta de lixo.  
   
-## Exemplo  
- Este exemplo demonstra o uso de **Launch** iniciar um aplicativo.  
+## <a name="example"></a>Exemplo  
+ Este exemplo demonstra o uso de **Inicializar** para iniciar um aplicativo.  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web do ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de criação de perfil](../profiling/command-line-profiling-of-services.md)
+ [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)

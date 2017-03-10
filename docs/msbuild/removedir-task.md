@@ -1,51 +1,66 @@
 ---
-title: "Tarefa RemoveDir | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#RemoveDir"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild, Tarefa RemoveDir"
-  - "Tarefa RemoveDir [MSBuild]"
+title: Tarefa RemoveDir | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#RemoveDir
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- RemoveDir task [MSBuild]
+- MSBuild, RemoveDir task
 ms.assetid: 7ab214be-26b2-4bcd-9de8-c1b2091c0b74
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Tarefa RemoveDir
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: 7c6e78f1028b92154ec9e32cd20a9c48b4a6f938
+ms.lasthandoff: 02/22/2017
 
-Remove as pastas especificadas e todos os seus arquivos e subdiretórios.  
+---
+# <a name="removedir-task"></a>Tarefa RemoveDir
+Remove os diretórios especificados e todos os seus arquivos e subdiretórios.  
   
-## Parâmetros  
- A tabela a seguir descreve os parâmetros da `RemoveDir` tarefa.  
+## <a name="parameters"></a>Parâmetros  
+ A tabela a seguir descreve os parâmetros da tarefa `RemoveDir`.  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|`Directories`|Obrigatório <xref:Microsoft.Build.Framework.ITaskItem>`[]` parâmetro.<br /><br /> Especifica os diretórios para excluir.|  
-|`RemovedDirectories`|Opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]` parâmetro de saída.<br /><br /> Contém os diretórios que foram excluídos com êxito.|  
+|---------------|-----------------|  
+|`Directories`|Parâmetro <xref:Microsoft.Build.Framework.ITaskItem>`[]` obrigatório.<br /><br /> Especifica os diretórios que serão excluídos.|  
+|`RemovedDirectories`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Contém os diretórios que foram excluídos com êxito.|  
   
-## Comentários  
- Com os parâmetros listados acima, esta tarefa herda os parâmetros da <xref:Microsoft.Build.Tasks.TaskExtension> herda de classe, que por si só a <xref:Microsoft.Build.Utilities.Task> classe.  Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe TaskExtension \(base\)](../msbuild/taskextension-base-class.md).  
+## <a name="remarks"></a>Comentários  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que, por sua vez, herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
-## Exemplo  
- O exemplo a seguir remove as pastas especificadas pela `OutputDirectory` e `DebugDirectory` propriedades.  Esses caminhos são tratados como relativo ao diretório do projeto.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir remove os diretórios especificados pelas propriedades `OutputDirectory` e `DebugDirectory`. Esses caminhos são tratados como relativos ao diretório do projeto.  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2005">  
   
     <PropertyGroup>  
@@ -61,6 +76,6 @@ Remove as pastas especificadas e todos os seus arquivos e subdiretórios.
 </Project>  
 ```  
   
-## Consulte também  
- [ \(tarefas\)](../msbuild/msbuild-tasks.md)   
+## <a name="see-also"></a>Consulte também  
+ [Tarefas](../msbuild/msbuild-tasks.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)

@@ -1,80 +1,95 @@
 ---
-title: "Status | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Status | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba656fa4-ef9d-4d8c-a3b6-739c3b5d23ae
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Status
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 9045bef26e97cb5188d2dbaf96a59e5c97d9712c
+ms.lasthandoff: 02/22/2017
 
-A opção de VSPerfCmd.exe **Status** exibem informações sobre o estado do profiler e todos os processos que são analisados no momento.  
+---
+# <a name="status"></a>Status
+A opção VSPerfCmd.exe **Status** exibe informações sobre o estado do criador de perfil e todos os processos que estão atualmente sendo perfilados.  
   
- A opção de **Status** deve ser a única opção especificada na linha de comando.  O profiler deverá ser inicializado com a opção de VSPerfCmd.exe **Start** antes que qualquer status pode ser exibido.  
+ A opção **Status** deve ser a única opção especificada na linha de comando. O criador de perfil deve ser inicializado com a opção VSPerfCmd.exe **Status** antes de qualquer status poder ser exibido.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 VSPerfCmd.exe /Status  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  Nenhum  
   
-## Comentários  
- A opção de **Status** exibe as seguintes informações de estado para o profiler.  
+## <a name="remarks"></a>Comentários  
+ A opção **Status** exibe as seguintes informações de estado para o criador de perfil.  
   
- **Output File Name**  
- O caminho e o nome do arquivo de dados atual do profiler.  
+ **Nome do arquivo de saída**  
+ O caminho e o nome do arquivo de dados atual do criador de perfil.  
   
- **Collection Mode**  
- EXEMPLO ou TRACE  
+ **Modo de coleta**  
+ SAMPLE ou TRACE  
   
- **Maximum Processes**  
- O número máximo de processos que podem ser analisados ao mesmo tempo e o número de processos ativos atualmente.  
+ **Processos Máximos**  
+ O número máximo de processos que podem ser perfilados ao mesmo tempo e o número de processos ativos no momento.  
   
- **Maximum Threads**  
- O número máximo de threads que podem ser analisados ao mesmo tempo.  
+ **Threads Máximos**  
+ O número máximo de threads que podem ser perfilados ao mesmo tempo.  
   
- **Number of Buffers**  
- O número de buffers de memória dedicada a gravar dados de perfil.  
+ **Número de Buffers**  
+ O número de buffers de memória dedicada a gravação de dados de criação de perfil.  
   
- **Size of Buffers**  
- O tamanho em bytes de um buffer de memória.  
+ **Tamanho dos Buffers**  
+ O tamanho em bytes do buffer de memória.  
   
- A opção de **Status** exibe as seguintes informações de estado de cada processo que está sendo analisado no momento.  
+ A opção **Status** exibe as seguintes informações de estado para cada processo que está atualmente sendo perfilado.  
   
- **Process**  
- O nome do processo analisado.  
+ **Processo**  
+ O nome do processo perfilado.  
   
- **Process ID**  
+ **ID do Processo**  
  O identificador de sistema do processo.  
   
  **Num Threads**  
- O número de threads atualmente em execução.  
+ Número de threads em execução atualmente.  
   
- **Start\/Stop Count**  
- A contagem interna primário do profiler para controlar a coleta de dados para esse processo.  A contagem deve ser igual à coleta de dados.  A contagem de Iniciar\/parar pode ser manipulada pelas APIs do profiler e a opções **GlobalOn**, **GlobalOff**, **ProcessOn**, **ProcessOff**, **ThreadOn**, e **ThreadOff**de VSPerfCmd.  
+ **Iniciar/Parar Contagem**  
+ A contagem do criador de perfil principal interno para controlar a coleta de dados para esse processo. A contagem deve ser igual a um para coletar dados. Iniciar/Parar Contagem pode ser manipulada por APIs do criador de perfil e as opções de VSPerfCmd **GlobalOn**, **GlobalOff**, **ProcessOn**, **ProcessOff**, **ThreadOn** e **ThreadOff**.  
   
- **Suspend\/Resume Count**  
- A contagem interna secundário do profiler para controlar a coleta de dados para esse processo.  A contagem deve ser menor ou igual a zero para coletar dados.  A contagem de **Suspend\/Resume** pode ser manipulada somente pelas APIs do profiler.  
+ **Suspender/Retomar Contagem**  
+ A contagem do criador de perfil secundário interno para controlar a coleta de dados para esse processo. A contagem deve ser menor ou igual a zero para coletar dados. A opção **Suspender/Retomar** contagem pode ser manipulada somente pela APIs do criador de perfil.  
   
- **Users with access rights to monitor**  
- Lista os nomes de usuários que têm acesso ao profiler.  Os usuários adicionais podem receber acesso usando a opção de VSPerfCmd.exe **Admin**  
+ **Usuários com direitos de acesso para monitorar**  
+ Lista os nomes de usuários que têm acesso para o criador de perfil. Usuários adicionais podem ser concedidos acesso por meio da opção VSPerfCmd.exe **Admin**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web do ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de criação de perfil](../profiling/command-line-profiling-of-services.md)
+ [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)

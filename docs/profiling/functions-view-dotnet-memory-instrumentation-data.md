@@ -1,106 +1,121 @@
 ---
-title: "Exibi&#231;&#227;o de fun&#231;&#245;es - dados de instrumenta&#231;&#227;o da mem&#243;ria de .NET do criador de perfil | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibição Funções"
+title: "Exibição Funções – Dados de instrumentação da memória do .NET | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Functions view
 ms.assetid: cd45b379-394b-4b71-828c-92cd89e46ae0
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Exibi&#231;&#227;o de fun&#231;&#245;es - dados de instrumenta&#231;&#227;o da mem&#243;ria de .NET do criador de perfil
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 73a2d20819d7bed5b48e1e4f2937f89c6b8898d2
+ms.lasthandoff: 02/22/2017
 
-A exibição das funções dos dados de criação de perfil de alocação de memória .NET que foram coletados por meio do método da instrumentação lista as funções que atribuídas a memória durante analisar executado.  Uma linha da função informa o tamanho e número de alocações, e os dados de controle de tempo para a função.  
+---
+# <a name="functions-view---net-memory-instrumentation-data"></a>Exibição Funções – Dados de instrumentação de memória do .NET
+A exibição Funções dos dados de criação de perfil de alocação de memória do .NET que foram coletados usando o método de instrumentação lista as funções que alocaram memória durante a execução da criação de perfil. Uma linha de função informa o tamanho e o número de alocações e dados de temporização para a função.  
   
-## Geral  
+## <a name="general"></a>Geral  
   
-|Coluna|Descrição|  
-|------------|---------------|  
+|Column|Descrição|  
+|------------|-----------------|  
 |**Nome da Função**|O nome da função.|  
-|**Endereço da função**|O endereço da função.|  
-|**Número de Linha da Função**|O número de linhas do início desta função no arquivo fonte.|  
-|**Número de Chamadas**|O número total de chamadas que são feitas nesta função.|  
-|**Source File**|O arquivo de origem que contém a definição dessa função.|  
+|**Endereço da Função**|O endereço da função.|  
+|**Número de linha da função**|O número de linha do início dessa função no arquivo de origem.|  
+|**Número de Chamadas**|O número total de chamadas que são feitas à função.|  
+|**Arquivo de Origem**|O arquivo de origem que contém a definição dessa função.|  
 |**Nome do Módulo**|O nome do módulo que contém a função.|  
-|**Caminho do Módulo**|O caminho do módulo que contém a função.|  
-|**Identificação do Processo**|A identificação do processo \(PID\) da execução de criação de perfil.|  
+|**Caminho do Módulo**|O demarcador do módulo que contém a função.|  
+|**ID do Processo**|A ID de processo (PID) da criação de perfil.|  
 |**Nome do Processo**|O nome do processo.|  
-|**Sobrecarga de Sondagem Exclusiva de Tempo**|A sobrecarga de tempo para essa função devido à instrumentação.  A sondagem da sobrecarga foi subtraída de todos os tempos exclusivos.|  
-|**Sobrecarga de Sondagem Inclusiva de Tempo**|A sobrecarga de tempo para essa função e suas funções filhos devido à instrumentação.  A sobrecarga de sondagem foi subtraída de todos os tempos inclusivos.|  
+|**Sobrecarga de Investigação Exclusiva de Tempo**|A sobrecarga de tempo para essa função causada pela instrumentação. A sobrecarga de investigação foi subtraída de todos os tempos exclusivos.|  
+|**Sobrecarga de Investigação Inclusiva de Tempo**|A sobrecarga de tempo para essa função e suas funções filho causada pela instrumentação. A sobrecarga de investigação foi subtraída de todos os tempos inclusivos.|  
   
-## Valores de memória .NET  
- Os valores inclusivos de memória .NET de uma função indicam o número \(alocações\) e o tamanho \(bytes\) dos objetos criados pela função e pelas funções do filho.  
+## <a name="net-memory-values"></a>Valores de memória do .NET  
+ Os valores de memória do .NET inclusivos de uma função indicam o número (alocações) e o tamanho (bytes) de objetos que foram criados pela função e suas funções filho.  
   
- Os valores exclusivos de memória indicam o número e o tamanho dos objetos criados pela função e não pelas funções filhos.  
+ Os valores de memória exclusivos indicam o número e tamanho dos objetos que foram criados pela função e não por suas funções filho.  
   
-|Coluna|Descrição|  
-|------------|---------------|  
-|**Alocações Inclusivas**|O número total de objetos que foram criados nesta função e funções que eram chamadas por essa função.|  
-|**% de Alocações Inclusivas**|A porcentagem de todos os objetos que foram atribuídos em que foi executado analisar alocações inclusivo dessa função.|  
-|**Alocações Exclusivas**|O número total de objetos que foram criados quando a função estivesse executando o código no corpo da função.  Esse número não inclui objetos que foram criados em funções que eram chamadas por essa função.|  
-|**% de Alocações Exclusivas**|A porcentagem de todos os objetos que foram criados em que foi executado analisar alocações exclusivas dessa função.|  
-|**Bytes Inclusivos**|O número de bytes de memória que foi atribuído nessa função e funções que eram chamadas por essa função.|  
-|**% de Bytes Inclusivos**|A porcentagem de todos os bytes de memória que foi atribuído em que foi executado analisar bytes inclusivos dessa função.|  
-|**Bytes Exclusivos**|O número de bytes de memória que foi atribuído por essa função mas não por funções que eram chamadas por essa função.|  
-|**% de Bytes Exclusivos**|A porcentagem de todos os bytes de memória que foi atribuído em que foi executado analisar bytes exclusivos dessa função.|  
+|Column|Descrição|  
+|------------|-----------------|  
+|**Alocações Inclusivas**|O número total de objetos que foram criados nesta função e em funções que foram chamadas por essa função.|  
+|**% de Alocações Inclusivas**|O percentual de todos os objetos que foram alocados na execução da criação de perfil que eram alocações inclusivas dessa função.|  
+|**Alocações Exclusivas**|O número total de objetos que foram criados quando a função executou código no corpo da função. Esse número não inclui objetos que foram criados em funções que foram chamadas por essa função.|  
+|**% de Alocações Exclusivas**|O percentual de todos os objetos criados na execução de criação de perfil que eram alocações exclusivas dessa função.|  
+|**Bytes Inclusivos**|O número de bytes da memória que foram alocados nesta função e em funções que foram chamadas por essa função.|  
+|**% de Bytes Inclusivos**|O percentual de todos os bytes de memória que foram alocados na execução de criação de perfil que eram bytes inclusivos dessa função.|  
+|**Bytes Exclusivos**|O número de bytes da memória que foram alocados nesta função, mas não em funções que foram chamadas por essa função.|  
+|**% de Bytes Exclusivos**|O percentual de todos os bytes de memória que foram alocados na execução de criação de perfil que eram bytes exclusivos dessa função.|  
   
-## Valores Inclusivos Decorridos  
- Os valores inclusivos decorridos indicam o tempo que uma função estava na pilha de chamada.  O tempo incluem tempo que esteve gastou em funções e filho em chamadas para o sistema operacional, como alternâncias de contexto e operações de entrada\/saída.  
+## <a name="elapsed-inclusive-values"></a>Valores Inclusivos Decorridos  
+ Os valores inclusivos decorridos indicam o tempo que uma função ficou na pilha de chamadas. O tempo inclui o tempo gasto em funções filho e em chamadas para o sistema operacional, como operações de entrada/saída e de mudanças de contexto.  
   
-|Coluna|Descrição|  
-|------------|---------------|  
-|**Tempo Inclusivo Decorrido**|O tempo decorrido total inclusivo de todas as chamadas para essa função.|  
-|**Tempo Inclusivo Decorrido %**|A porcentagem do total decorrido vezes inclusivo de analisar executado que foi gasto durante inclusivas decorridas dessa função.|  
-|**Tempo Inclusivo Decorrido Médio**|A média tempo decorrido inclusivo de uma chamada para essa função.|  
-|**Tempo Inclusivo Decorrido Máximo**|O tempo máximo decorrido inclusivo de uma chamada para essa função.|  
-|**Tempo Inclusivo Decorrido Mínimo**|O tempo decorrido mínimo inclusivo de uma chamada para essa função.|  
+|Column|Descrição|  
+|------------|-----------------|  
+|**Tempo Inclusivo Decorrido**|O tempo inclusivo decorrido total de todas as chamadas feitas a essa função.|  
+|**% de Tempo Inclusivo Decorrido**|O percentual do tempo inclusivo decorrido total da execução da criação de perfil que foi gasto no tempo inclusivo decorrido dessa função.|  
+|**Tempo Inclusivo Decorrido Médio**|O tempo inclusivo decorrido médio de uma chamada feita para essa função.|  
+|**Tempo Inclusivo Decorrido Máximo**|O tempo inclusivo decorrido máximo de uma chamada feita a essa função.|  
+|**Tempo Inclusivo Decorrido Mínimo**|O tempo inclusivo decorrido mínimo de uma chamada feita a essa função.|  
   
-## Valores Exclusivos Decorridos  
- Os valores exclusivos decorridos indicam o tempo que uma função estava executando diretamente na parte superior da pilha de chamadas.  O tempo incluem tempo em chamadas para o sistema operacional, como alternâncias de contexto e operações de entrada\/saída, mas não incluem o tempo gasto em funções que foram filhos.  
+## <a name="elapsed-exclusive-values"></a>Valores Exclusivos Decorridos  
+ Valores exclusivos decorridos indicam o tempo durante o qual uma função estava diretamente em execução no topo da pilha de chamadas. O tempo inclui o tempo em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, mas não inclui o tempo gasto em funções filho.  
   
-|Coluna|Descrição|  
-|------------|---------------|  
-|**Tempo Exclusivo Decorrido**|O tempo decorrido total exclusivas de todas as chamadas para essa função.|  
-|**Tempo Exclusivo Decorrido %**|A porcentagem do total decorrido vezes exclusivas de analisar executado que foi gasto no tempo total decorrido exclusivas dessa função.|  
-|**Tempo Exclusivo Decorrido Médio**|A média tempo decorrido exclusivas de uma chamada para essa função.|  
-|**Tempo Exclusivo Decorrido Máximo**|O tempo máximo decorrido exclusivas de uma chamada para essa função.|  
-|**Tempo Exclusivo Decorrido Mínimo**|O tempo decorrido mínimo exclusivas de uma chamada para essa função.|  
+|Column|Descrição|  
+|------------|-----------------|  
+|**Tempo Exclusivo Decorrido**|O tempo exclusivo decorrido total de todas as chamadas feitas a essa função.|  
+|**% de Tempo Exclusivo Decorrido**|O percentual do tempo exclusivo decorrido total da execução da criação de perfil que foi gasto no tempo exclusivo decorrido total dessa função.|  
+|**Tempo Exclusivo Decorrido Médio**|O tempo exclusivo decorrido médio de uma chamada feita para essa função.|  
+|**Tempo Exclusivo Decorrido Máximo**|O tempo exclusivo decorrido máximo de uma chamada feita a essa função.|  
+|**Tempo Exclusivo Decorrido Mínimo**|O tempo exclusivo decorrido mínimo de uma chamada feita a essa função.|  
   
-## Valores Inclusivos do Aplicativo  
- Os valores inclusivos do aplicativo indicam o tempo que uma função ficou na pilha de chamadas.  O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como interruptores contextuais e operações entrada\/saída, mas inclui o tempo gasto em funções filhas.  
+## <a name="application-inclusive-values"></a>Valores Inclusivos do Aplicativo  
+ Os valores inclusivos do aplicativo indicam o tempo que uma função ficou na pilha de chamadas. O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, mas inclui o tempo gasto em funções filho.  
   
-|Coluna|Descrição|  
-|------------|---------------|  
-|**Tempo Inclusivo do Aplicativo**|As vezes inclusivo do aplicativo total de todas as chamadas para essa função.|  
-|**Tempo Inclusivo do Aplicativo %**|A porcentagem do total decorrido vezes inclusivo de analisar executado que foi gasto durante inclusivo do aplicativo total dessa função.|  
-|**Tempo Inclusivo Médio do Aplicativo**|As vezes inclusivo do aplicativo médio de uma chamada para essa função.|  
-|**Tempo Inclusivo Máximo do Aplicativo**|A hora do aplicativo inclusivo máximo de uma chamada para essa função.|  
-|**Tempo Inclusivo Mínimo do Aplicativo**|A hora do aplicativo inclusivo mínimo de uma chamada para essa função.|  
+|Column|Descrição|  
+|------------|-----------------|  
+|**Tempo Inclusivo do Aplicativo**|O tempo inclusivo do aplicativo total de todas as chamadas para essa função.|  
+|**% de Tempo Inclusivo do Aplicativo**|O percentual do tempo inclusivo decorrido total da execução da criação de perfil que foi gasto no tempo inclusivo do aplicativo total dessa função.|  
+|**Tempo Inclusivo Médio do Aplicativo**|O tempo inclusivo médio do aplicativo de uma chamada para essa função.|  
+|**Tempo Inclusivo Máximo do Aplicativo**|O tempo inclusivo máximo do aplicativo de uma chamada para essa função.|  
+|**Tempo Inclusivo Mínimo do Aplicativo**|O tempo inclusivo mínimo do aplicativo de uma chamada para essa função.|  
   
-## Valores Exclusivos do Aplicativo  
- Os valores exclusivos de aplicativo indica a hora em que uma função executava diretamente na parte superior da pilha de chamadas.  A hora não incluem o tempo que foram gasto em chamadas para o sistema operacional, como o contexto alternam e as operações de entrada\/saída, nem incluem o tempo gasto em funções que foram filhos.  
+## <a name="application-exclusive-values"></a>Valores Exclusivos do Aplicativo  
+ Valores exclusivos do aplicativo indicam o tempo durante o qual uma função estava diretamente em execução no topo da pilha de chamadas. O tempo não inclui o tempo gasto em chamadas para o sistema operacional, como operações de entrada/saída e de mudança de contexto, nem o tempo gasto em funções filho.  
   
-|Coluna|Descrição|  
-|------------|---------------|  
-|**Tempo Exclusivo do Aplicativo**|As vezes exclusivas do aplicativo total de todas as chamadas para essa função.|  
-|**Tempo Exclusivo do Aplicativo %**|A porcentagem do total decorrido vezes exclusivas de analisar executado que foi gasto durante exclusivas do aplicativo total dessa função.|  
-|**Tempo Exclusivo Médio do Aplicativo**|As vezes exclusivas do aplicativo médio de uma chamada para essa função.|  
-|**Tempo Exclusivo Máximo do Aplicativo**|As vezes exclusivas do aplicativo máximo de uma chamada para essa função.|  
-|**Tempo Exclusivo Mínimo do Aplicativo**|As vezes exclusivas do aplicativo mínimo de uma chamada para essa função.|  
+|Column|Descrição|  
+|------------|-----------------|  
+|**Tempo Exclusivo do Aplicativo**|O tempo exclusivo do aplicativo total de todas as chamadas para essa função.|  
+|**% de Tempo Exclusivo do Aplicativo**|O percentual do tempo exclusivo decorrido total da execução da criação de perfil que foi gasto no tempo exclusivo do aplicativo total dessa função.|  
+|**Tempo Exclusivo Médio do Aplicativo**|O tempo exclusivo médio do aplicativo de uma chamada para essa função.|  
+|**Tempo Exclusivo Máximo do Aplicativo**|O tempo exclusivo máximo do aplicativo de uma chamada para essa função.|  
+|**Tempo Exclusivo Mínimo do Aplicativo**|O tempo exclusivo mínimo do aplicativo de uma chamada para essa função.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
- [Exibição de funções \- amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)   
- [Exibição de funções](../profiling/functions-view-instrumentation-data.md)   
- [Exibição de funções](../profiling/functions-view-sampling-data.md)
+ [Exibição de Funções – Amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)   
+ [Exibição de Funções](../profiling/functions-view-instrumentation-data.md)   
+ [Exibição Funções](../profiling/functions-view-sampling-data.md)

@@ -1,98 +1,113 @@
 ---
-title: "Instru&#231;&#245;es passo a passo: usando um arquivo de configura&#231;&#227;o para definir uma fonte de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "arquivos de configuração [Visual Studio ALM], definindo fontes de dados"
-  - "fontes de dados, definindo com arquivos de configuração"
-  - "testes de unidade, passo a passo"
+title: "Passo a passo: usando um arquivo de configuração para definir uma fonte de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration files [Visual Studio ALM], defining data sources
+- unit tests, walkthrough
+- data sources, defining with configuration files
 ms.assetid: 95fa5214-b12e-4e1f-84e5-cc4c2d86b0d7
 caps.latest.revision: 32
-caps.handback.revision: 32
-ms.author: "mlearned"
-manager: "douge"
----
-# Instru&#231;&#245;es passo a passo: usando um arquivo de configura&#231;&#227;o para definir uma fonte de dados
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: mlearned
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 53fa8751ba5f3412041f6c3424def8d8ccb1d68b
+ms.lasthandoff: 02/22/2017
 
-Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo App. config para teste de unidade.  Você aprenderá a criar um arquivo App. config que define uma fonte de dados que pode ser usada pela <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> classe.  Tarefas apresentadas neste passo a passo incluem o seguinte:  
+---
+# <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>Instruções passo a passo: usando um arquivo de configuração para definir uma fonte de dados
+Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo app.config para testes de unidade. Você aprenderá a criar um arquivo app.config que define uma fonte de dados que pode ser usada pela classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>. As tarefas ilustradas nesta explicação passo a passo incluem o seguinte:  
   
--   Criando um arquivo App. config.  
+-   Criando um arquivo app.config.  
   
 -   Definindo uma seção de configuração personalizada.  
   
--   Definindo cadeias de conexão.  
+-   Definindo as cadeias de conexão.  
   
 -   Definindo as fontes de dados.  
   
--   Acessando os dados de fontes usando o <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> classe.  
+-   Acessando as fontes de dados usando a classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para concluir esta explicação passo a passo, será necessário:  
   
--   O Visual Studio Enterprise  
+-   Visual Studio Enterprise  
   
--   Microsoft Access ou no Microsoft Excel para fornecer dados para pelo menos um dos métodos de teste.  
+-   Microsoft Access ou Microsoft Excel para fornecer dados para pelo menos um dos métodos de teste.  
   
--   Uma solução do Visual Studio que contém um projeto de teste.  
+-   Uma solução do Visual Studio que contenha um projeto de teste.  
   
-## Crie o arquivo App. config  
+## <a name="create-the-appconfig-file"></a>Criar o arquivo App.config  
   
-#### Para adicionar um arquivo App. config no projeto  
+#### <a name="to-add-an-appconfig-file-to-the-project"></a>Como adicionar o arquivo app.config no projeto  
   
-1.  Se seu projeto de teste já possui um arquivo App. config, vá para [definir uma seção de configuração personalizada](#DefineCustomConfigurationSection).  
+1.  Se seu projeto de teste já tem um arquivo app.config, vá para [Definir uma seção de configuração personalizada](#DefineCustomConfigurationSection).  
   
-2.  Com o botão direito no seu projeto de teste de **Solution Explorer**, aponte para **Add**, e, em seguida, clique em **Novo Item**.  
+2.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto de teste, aponte para **Adicionar** e clique em **Novo Item**.  
   
-     O **Add New Item** janela é aberta.  
+     A janela **Adicionar Novo Item** é aberta.  
   
-3.  Selecione o **arquivo de configuração do aplicativo** modelo e clique em **Add**.  
+3.  Selecione o modelo de **Arquivo de Configuração de Aplicativo** e clique em **Adicionar**.  
   
-##  <a name="DefineCustomConfigurationSection"></a> Definir uma seção de configuração personalizada  
- Examine o arquivo App. config.  Ele contém pelo menos a declaração XML e um elemento raiz.  
+##  <a name="DefineCustomConfigurationSection"></a> Defina uma seção de configuração personalizada  
+ Examine o arquivo app.config. Ele contém pelo menos a declaração XML e um elemento raiz.  
   
-#### Para adicionar a seção de configuração personalizada para o arquivo App. config  
+#### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>Como adicionar a seção de configuração personalizada para o arquivo app.config  
   
-1.  O elemento raiz do App. config deve ser o `configuration` elemento.  Criar um `configSections` elemento dentro do `configuration` elemento.  O `configSections` deve ser o primeiro elemento no arquivo App. config.  
+1.  O elemento raiz de app.config deve ser o elemento `configuration`. Crie um elemento `configSections` dentro do elemento `configuration`. O `configSections` deve ser o primeiro elemento no arquivo app.config.  
   
-2.  Dentro do `configSections` elemento, criar uma `section` elemento.  
+2.  No elemento `configSections`, crie um elemento `section`.  
   
-3.  No `section` elemento, adicione um atributo chamado `name` e atribua a ela um valor igual `microsoft.visualstudio.testtools`.  Adicione outro atributo chamado `type` e atribua a ela um valor igual `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`  
+3.  No elemento `section`, adicione um atributo chamado `name` e atribua um valor igual a `microsoft.visualstudio.testtools` a ele. Adicione outro atributo chamado `type` e atribua a ele um valor igual a `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`  
   
- O `section` elemento deve ser semelhante a este:  
+ O elemento `section` deverá ser similar a esse:  
   
 ```  
 <section name="microsoft.visualstudio.testtools" type="Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>  
 ```  
   
 > [!NOTE]
->  O nome do assembly deve corresponder a compilação do Microsoft Visual Studio .NET Framework que você está usando.  Defina a versão para 9.0.0.0 se você estiver usando o Visual Studio .NET Framework 3.5.  Se você estiver usando o Visual Studio .NET Framework 2.0, defina a versão para 8.0.0.0.  
+>  O nome do assembly deve corresponder ao build do Microsoft Visual Studio .NET Framework que você está usando. Defina a versão para 9.0.0.0 se você estiver usando o Visual Studio .NET Framework 3.5. Se você estiver usando o Visual Studio .NET Framework 2.0, defina a versão para 8.0.0.0.  
   
-## Definir as cadeias de conexão  
- As cadeias de conexão definem informações específicas de provedor para acessar fontes de dados.  Cadeias de conexão definidas em arquivos de configuração fornecem informações sobre o provedor de dados reutilizáveis através de um aplicativo.  Nesta seção, você criará duas cadeias de caracteres de conexão que serão usadas por fontes de dados que são definidos na seção de configuração personalizado.  
+## <a name="define-connection-strings"></a>Definir as cadeias de conexão  
+ As cadeias de conexão definem as informações específicas do provedor para acessar fontes de dados. As cadeias de conexão definidas em arquivos de configuração fornecem informações do provedor de dados reutilizáveis em um aplicativo. Nesta seção, você criará duas cadeias de conexão que serão usadas por fontes de dados que são definidas na seção de configuração personalizada.  
   
-#### Para definir as cadeias de conexão  
+#### <a name="to-define-connection-strings"></a>Como definir as cadeias de conexão  
   
-1.  Após o `configSections` elemento, criar uma `connectionStrings` elemento.  
+1.  Após o elemento `configSections`, crie um elemento `connectionStrings`.  
   
-2.  Dentro do `connectionStrings` elemento, criar dois `add` elementos.  
+2.  No elemento `connectionStrings`, crie dois elementos `add`.  
   
-3.  Na primeira `add` elemento, crie os seguintes atributos e valores para uma conexão com um banco de dados do Microsoft Access:  
+3.  No primeiro elemento `add`, crie os seguintes atributos e valores para uma conexão a um banco de dados do Microsoft Access:  
   
 |Atributo|Valores|  
-|--------------|-------------|  
+|---------------|------------|  
 |`name`|`"MyJetConn"`|  
 |`connectionString`|`"Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\testdatasource.accdb; Persist Security Info=False;"`|  
 |`providerName`|`"System.Data.OleDb"`|  
   
- No segundo `add` elemento, crie os seguintes atributos e valores para uma conexão com uma planilha do Microsoft Excel:  
+ No segundo elemento `add`, crie os seguintes atributos e valores para uma conexão a uma planilha do Microsoft Excel:  
   
 |||  
 |-|-|  
@@ -100,7 +115,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo A
 |`connectionString`|`"Dsn=Excel Files;dbq=data.xlsx;defaultdir=.; driverid=790;maxbuffersize=2048;pagetimeout=5"`|  
 |`providerName`|`"System.Data.Odbc"`|  
   
- O `connectionStrings` elemento deve ser semelhante a este:  
+ O elemento `connectionStrings` deverá ser similar a esse:  
   
 ```  
 <connectionStrings>  
@@ -109,37 +124,37 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo A
 </connectionStrings>  
 ```  
   
-## Definir fontes de dados  
+## <a name="define-data-sources"></a>Definir fontes de dados  
  A seção de fontes de dados contém quatro atributos que são usados pelo mecanismo de teste para recuperar dados de uma fonte de dados.  
   
--   `name` Define a identidade usada pelo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> para especificar qual fonte de dados usar.  
+-   `name` define a identidade usada pelo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> para especificar qual fonte de dados usar.  
   
--   `connectionString` identifica a seqüência de conexão criada na seção anterior Defina seqüências de conexão.  
+-   `connectionString` identifica a cadeia de conexão criada na seção anterior Definir cadeias de conexão.  
   
--   `dataTableName` Define a tabela ou planilha que contém os dados a serem usados no teste.  
+-   `dataTableName` define a tabela ou a planilha que contém os dados a serem usados no teste.  
   
--   `dataAccessMethod` Define a técnica para acessar valores de dados na fonte de dados.  
+-   `dataAccessMethod` define a técnica para acessar valores de dados na fonte de dados.  
   
- Nesta seção, você irá definir duas fontes de dados para usar em um teste de unidade.  
+ Nesta seção, você definirá duas fontes de dados para usar em um teste de unidade.  
   
-#### Para definir fontes de dados  
+#### <a name="to-define-data-sources"></a>Como definir fontes de dados  
   
-1.  Após o `connectionStrings` elemento, criar uma `microsoft.visualstudio.testtools` elemento.  Esta seção foi criada na seção defina uma seção de configuração personalizada.  
+1.  Após o elemento `connectionStrings`, crie um elemento `microsoft.visualstudio.testtools`. Esta seção foi criada na seção Definir uma configuração personalizada.  
   
-2.  Dentro do `microsoft.visualstudio.testtools` elemento, criar uma `dataSources` elemento.  
+2.  No elemento `microsoft.visualstudio.testtools`, crie um elemento `dataSources`.  
   
-3.  Dentro do `dataSources` elemento, criar dois `add` elementos.  
+3.  No elemento `dataSources`, crie dois elementos `add`.  
   
-4.  Na primeira `add` elemento, crie os seguintes atributos e valores para uma fonte de dados do Microsoft Access:  
+4.  No primeiro elemento `add`, crie os seguintes atributos e valores para uma fonte de dados do Microsoft Access:  
   
 |Atributo|Valores|  
-|--------------|-------------|  
+|---------------|------------|  
 |`name`|`"MyJetDataSource"`|  
 |`connectionString`|`"MyJetConn"`|  
 |`dataTableName`|`"MyDataTable"`|  
 |`dataAccessMethod`|`"Sequential"`|  
   
- No segundo `add` elemento, crie os seguintes atributos e valores de uma fonte de dados do Microsoft Excel:  
+ No segundo elemento `add`, crie os seguintes atributos e valores para uma fonte de dados do Microsoft Excel:  
   
 |||  
 |-|-|  
@@ -148,7 +163,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo A
 |`dataTableName`|`"Sheet1$"`|  
 |`dataAccessMethod`|`"Sequential"`|  
   
- O `microsoft.visualstudio.testtools` elemento deve ser semelhante a este:  
+ O elemento `microsoft.visualstudio.testtools` deverá ser similar a esse:  
   
 ```  
 <microsoft.visualstudio.testtools>  
@@ -159,7 +174,7 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo A
 </microsoft.visualstudio.testtools>  
 ```  
   
- O arquivo App. config final deve parecer semelhante a este:  
+ O arquivo app.config final deve ser semelhante a este:  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -180,48 +195,48 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo A
 </configuration>  
 ```  
   
-## Criar um teste de unidade usando fontes de dados definidas no App. config  
- Agora que um arquivo App. config foi definido, você criará um teste de unidade que usa dados localizados em fontes de dados que são definidas no arquivo App. config.  Nesta seção, você irá:  
+## <a name="create-a-unit-test-using-data-sources-defined-in-appconfig"></a>Criar um teste de unidade usando fontes de dados definidas no app.config  
+ Agora que um arquivo app.config foi definido, você criará um teste de unidade que usa dados localizados em fontes de dados que são definidas no arquivo app.config. Nesta seção, iremos:  
   
--   Crie fontes de dados encontradas no arquivo App. config.  
+-   Criar fontes de dados localizadas no arquivo app.config.  
   
--   Use as fontes de dados em dois métodos de teste que comparam os valores em cada fonte de dados.  
+-   Usar as fontes de dados em dois métodos de teste que comparam os valores em cada fonte de dados.  
   
-#### Para criar uma fonte de dados do Microsoft Access  
+#### <a name="to-create-a-microsoft-access-data-source"></a>Como criar uma fonte de dados do Microsoft Access  
   
-1.  Criar um banco de dados do Microsoft Access chamado `testdatasource.accdb`.  
+1.  Crie um banco de dados do Microsoft Access chamado `testdatasource.accdb`.  
   
-2.  Criar uma tabela e denomine\- `MyDataTable` em `testdatasource.accdb`.  
+2.  Criar uma tabela e nomeie-a como `MyDataTable` em `testdatasource.accdb`.  
   
-3.  Crie dois campos no `MyDataTable` chamado `Arg1` e `Arg2` usando o `Number` tipo de dados.  
+3.  Crie dois campos em `MyDataTable` chamados `Arg1` e `Arg2` usando o tipo de dados `Number`.  
   
-4.  Adicione cinco entidades para `MyDataTable` com os seguintes valores para `Arg1` e `Arg2`, respectivamente: \(10,50\), \(3,2\), \(6,0\), \(0,8\) e \(12312,1000\).  
+4.  Adicione cinco entidades em `MyDataTable` com os seguintes valores para `Arg1` e `Arg2`, respectivamente: (10,50), (3,2), (6,0), (0,8) e (12312,1000).  
   
 5.  Salve e feche o banco de dados.  
   
-6.  Altere a cadeia de conexão para apontar para o local do banco de dados.  Altere o valor de `Data Source` para refletir o local do banco de dados.  
+6.  Altere a cadeia de conexão para apontar para o local do banco de dados. Altere o valor de `Data Source` para refletir o local do banco de dados.  
   
-#### Para criar uma fonte de dados do Microsoft Excel  
+#### <a name="to-create-a-microsoft-excel-data-source"></a>Como criar uma fonte de dados do Microsoft Excel  
   
 1.  Crie uma planilha do Microsoft Excel chamada `data.xlsx`.  
   
-2.  Criar uma planilha chamada `Sheet1` se ele ainda não existir no `data.xlsx`.  
+2.  Crie uma planilha chamada `Sheet1`, se ainda não existir em `data.xlsx`.  
   
-3.  Crie dois cabeçalhos de coluna e os `Val1` e `Val2` em `Sheet1`.  
+3.  Crie dois cabeçalhos de coluna e nomeie-os como `Val1` e `Val2` em `Sheet1`.  
   
-4.  Adicione cinco entidades para `Sheet1` com os seguintes valores para `Val1` e `Val2`, respectivamente: \(1,1\), \(2,2\), \(3,3\), \(4,4\) e \(5,0\).  
+4.  Adicione cinco entidades em `Sheet1` com os seguintes valores para `Val1` e `Val2`, respectivamente: (1,1), (2,2), (3,3), (4,4) e (5,0).  
   
 5.  Salve e feche a planilha.  
   
-6.  Altere a cadeia de conexão para apontar para o local da planilha.  Altere o valor de `dbq` para refletir o local da planilha.  
+6.  Altere a cadeia de conexão para apontar para o local da planilha. Altere o valor de `dbq` para refletir o local da planilha.  
   
-#### Para criar um teste de unidade usando as fontes de dados do App. config  
+#### <a name="to-create-a-unit-test-using-the-appconfig-data-sources"></a>Como criar um teste de unidade usando fontes de dados app.config  
   
 1.  Adicione um teste de unidade ao projeto de teste.  
   
-     Para obter mais informações, consulte [Creating and Running Unit Tests for Existing Code](http://msdn.microsoft.com/pt-br/e8370b93-085b-41c9-8dec-655bd886f173).  
+     Para mais informações, consulte [Criar e executar testes de unidade para código existente](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173).  
   
-2.  Substitua o conteúdo gerado automaticamente do teste de unidade com o seguinte código:  
+2.  Substitua o conteúdo do teste de unidade gerado automaticamente pelo código a seguir:  
   
     ```  
     using System;  
@@ -261,15 +276,15 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo A
     }  
     ```  
   
-3.  Examine os atributos de fonte de dados.  Observe os nomes de configuração do arquivo App. config.  
+3.  Examine os atributos DataSource. Observe os nomes de configuração do arquivo app.config.  
   
 4.  Compile sua solução e execute testes MyTestMethod e MyTestMethod2.  
   
 > [!IMPORTANT]
 >  Implante itens como fontes de dados para que fiquem acessíveis para o teste no diretório de implantação.  
   
-## Consulte também  
- [Teste de unidade de código](../test/unit-test-your-code.md)   
- [Creating and Running Unit Tests for Existing Code](http://msdn.microsoft.com/pt-br/e8370b93-085b-41c9-8dec-655bd886f173)   
+## <a name="see-also"></a>Consulte também  
+ [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)   
+ [Criar e Executar Testes de Unidade para Código Existente](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)   
  [Testando o aplicativo](/devops-test-docs/test/test-apps-early-and-often)   
  [Como criar um teste de unidade orientado a dados](../test/how-to-create-a-data-driven-unit-test.md)

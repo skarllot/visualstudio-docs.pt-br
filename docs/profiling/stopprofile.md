@@ -1,29 +1,44 @@
 ---
-title: "StopProfile | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "StopProfile"
+title: StopProfile | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- StopProfile
 ms.assetid: be75b03c-7af5-4abe-a54a-6ee5479ad877
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# StopProfile
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 4ddbe135d1ec5fef2830abc8487140cd530d1e4d
+ms.lasthandoff: 02/22/2017
 
-A função de `StopProfile` define ao contrário de 0 \(desativado\) para o nível de perfil especificado.  
+---
+# <a name="stopprofile"></a>StopProfile
+A função `StopProfile` define o contador como 0 (off) para o nível de criação de perfil especificado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(  
@@ -31,49 +46,49 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
                        unsigned int dwId);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Level`  
   
- Indica o perfil no nível a que coleta de dados de desempenho pode ser aplicada.  Os seguintes enumeradores de **PROFILE\_CONTROL\_LEVEL** podem ser usados para indicar um dos três níveis a que a coleta de dados de desempenho pode ser aplicada:  
+ Indica o nível de perfil de desempenho que pode ser aplicado a coleta de dados. Os enumeradores seguintes **PROFILE_CONTROL_LEVEL** podem ser usados para indicar um dos três níveis de desempenho aos quais a coleta de dados pode ser aplicada:  
   
 |Enumerador|Descrição|  
-|----------------|---------------|  
-|PROFILE\_GLOBALLEVEL|A configuração de nível global afeta todos os processos e threads em analisar executado.|  
-|PROFILE\_PROCESSLEVEL|Efeito em nível de configuração do processo todos os threads que fazem parte do processo especificado.|  
-|PROFILE\_THREADLEVEL|Executável analisar afeta a configuração de nível do thread especificado.|  
+|----------------|-----------------|  
+|PROFILE_GLOBALLEVEL|A configuração de nível global afeta todos os processos e threads na execução da criação de perfil.|  
+|PROFILE_PROCESSLEVEL|A configuração de nível de processo afeta todos os threads que fazem parte do processo especificado.|  
+|PROFILE_THREADLEVEL|A configuração do nível de criação de perfil do thread afeta o thread especificado.|  
   
  `dwId`  
   
- O identificador do processo ou de thread gerado pelo sistema.  
+ O identificador de processo ou thread gerado pelo sistema.  
   
-## Valor de propriedade\/valor de retorno  
- A função indica êxito ou falha usando a enumeração **PROFILE\_COMMAND\_STATUS**.  O valor de retorno pode ser um dos seguintes:  
+## <a name="property-valuereturn-value"></a>Valor de propriedade/Valor de retorno  
+ A função indica êxito ou falha usando a enumeração de **PROFILE_COMMAND_STATUS**. O valor retornado pode ser um dos seguintes:  
   
 |Enumerador|Descrição|  
-|----------------|---------------|  
-|PROFILE\_ERROR\_ID\_NOEXIST|A ID de perfil do elemento não existe.|  
-|PROFILE\_ERROR\_LEVEL\_NOEXIST|Analisando o nível especificado não existe.|  
-|PROFILE\_ERROR\_MODE\_NEVER|A criação de perfis estava definida como NUNCA quando a função foi chamada.|  
-|PROFILE\_ERROR\_NOT\_YET\_IMPLEMENTED|A chamada de função, analisando do nível, ou uma combinação de chamada e de nível não for implementada.|  
-|PROFILE\_OK|A chamada obteve êxito.|  
+|----------------|-----------------|  
+|PROFILE_ERROR_ID_NOEXIST|A ID de elemento de criação de perfil não existe.|  
+|PROFILE_ERROR_LEVEL_NOEXIST|O nível de criação de perfil especificado não existe.|  
+|PROFILE_ERROR_MODE_NEVER|O modo de criação de perfil foi definido para NUNCA quando a função foi chamada.|  
+|PROFILE_ERROR_NOT_YET_IMPLEMENTED|A chamada de função de criação de perfil, o nível de criação de perfil ou combinação de chamada e nível ainda não foi implementada.|  
+|PROFILE_OK|A chamada foi bem-sucedida.|  
   
-## Comentários  
- StartProfile e StopProfile controlam o estado de Iniciar\/parar para o nível analisando.  O valor padrão de Iniciar\/parar é 1.  O valor inicial pode ser alterado no Registro.  Cada chamada para conjuntos de StartProfile Iniciar\/parar a 1; cada chamada para StopProfile defina\-o como 0.  
+## <a name="remarks"></a>Comentários  
+ StartProfile e StopProfile controlam o estado de início/parada para o nível de criação de perfil. O valor padrão de Iniciar/parar é 1. O valor inicial pode ser alterado no Registro. Cada chamada para StartProfile define Iniciar/Parar como 1; cada chamada para StopProfile define como 0.  
   
- Quando o Iniciar\/parar é maior que 0, o estado de Iniciar\/parar para o nível é ON.  Quando for menor ou igual a 0, o estado de Iniciar\/parar é.  
+ Quando a Iniciar/Parar é maior que 0, o estado de Iniciar/Parar para o nível está como ON. Quando for menor ou igual a 0, o estado de Iniciar/Parar é OFF.  
   
- Quando o estado de Iniciar\/parar e o estado de suspensão\/resumo são ambas ON, o estado de perfil para o nível é ON.  Para que um thread ser analisada, o GAC, o processo, e os estados de nível de thread para o thread devem estar ON.  
+ Quando o estado de Iniciar/Parar e o estado de Suspender/Retomar estiverem em ON, o estado de criação de perfil para o nível será ON. Para um thread ser perfilado, os estados de nível global, processo e thread para o thread devem estar em ON.  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  Microsoft.VisualStudio.Profiler.dll  
   
-## Informações de função  
- Cabeçalho: Declarado em VSPerf.h  
+## <a name="function-information"></a>Informações de Função  
+ Cabeçalho: declarado em VSPerf.h  
   
  Biblioteca de importação: VSPerf.lib  
   
-## Exemplo  
- O exemplo a seguir ilustra o método de StopProfile.  O exemplo assume que uma chamada ao método de StartProfile esteve feito para o mesmo thread ou processo identificado por [PROFILE\_CURRENTID](../profiling/profile-currentid.md).  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir ilustra a chamada para o método StopProfile. O exemplo supõe que uma chamada para o método StartProfile foi feita para o mesmo thread ou processo identificado por [PROFILE_CURRENTID](../profiling/profile-currentid.md).  
   
 ```  
 void ExerciseStopProfile()  
@@ -109,5 +124,5 @@ void ExerciseStopProfile()
 }  
 ```  
   
-## Consulte também  
- [Referência da API do Visual Studio Profiler \(nativo\)](../profiling/visual-studio-profiler-api-reference-native.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência da API do criador de perfil do Visual Studio (nativo)](../profiling/visual-studio-profiler-api-reference-native.md)

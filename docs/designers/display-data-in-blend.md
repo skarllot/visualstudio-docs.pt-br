@@ -1,67 +1,83 @@
 ---
-title: "Exibir dados no Blend | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Exibir dados no Blend | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 87d31b6c-4607-4121-bb7d-cfc80390ab93
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Exibir dados no Blend
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 4f974fdd79d3375b116511cab3862bc2de9ba84f
+ms.lasthandoff: 02/22/2017
 
-Você pode exibir dados de exemplo em seu designer como personalizar o layout de suas páginas. Você pode gerar dados de exemplo do zero ou usando uma classe existente. Você também pode se conectar ao *dados dinâmicos* que aparecem em seu aplicativo quando você executá\-lo.  
+---
+# <a name="display-data-in-blend"></a>Exibir dados no Blend
+É possível exibir dados de exemplo no designer ao personalizar o layout de páginas. É possível gerar dados de exemplo do zero ou usando uma classe existente. Também é possível se conectar a *Dados ao vivo* que aparecerão quando o aplicativo for executado.  
   
  **Neste tópico:**  
   
 -   [Gerar dados de exemplo](#Scratch)  
   
--   [Gerar dados de exemplo de uma classe](#Existing)  
+-   [Gerar dados de exemplo com base na classe](#Existing)  
   
 -   [Mostrar dados ao vivo em um aplicativo WPF](#LiveWPF)  
   
--   [Mostrar dados ao vivo em um aplicativo de armazenamento ou telefone](#LiveStore)  
+-   [Mostrar dados ao vivo em um aplicativo de loja ou telefone](#LiveStore)  
   
 ##  <a name="Scratch"></a> Gerar dados de exemplo  
- Para gerar dados de exemplo, abra um documento XAML. No **dados** painel, escolha o **criar dados de exemplo**![](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76\-7256\-43ce\-b5d9\-4b2edf3d339f") botão e, em seguida, escolha **novos dados de exemplo**.  
+ Para gerar dados de exemplo, abra um documento XAML. No painel **Dados**, escolha o botão **Criar dados de exemplo**![](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76-7256-43ce-b5d9-4b2edf3d339f") e, em seguida, escolha **Novos Dados de Exemplo**.  
   
- Definir a estrutura dos dados no **dados** painel e, em seguida, vinculá\-lo a elementos de interface do usuário em qualquer página.  
+ Defina a estrutura dos dados no painel **Dados** e, então, associe-a aos elementos de interface do usuário em qualquer página.  
   
- ![](../designers/media/496d7ebc-fe46-42f6-95a8-57b0e5be5d49.png "496d7ebc\-fe46\-42f6\-95a8\-57b0e5be5d49")  
+ ![](../designers/media/496d7ebc-fe46-42f6-95a8-57b0e5be5d49.png "496d7ebc-fe46-42f6-95a8-57b0e5be5d49")  
   
- Se desejar que os dados de exemplo são exibidos em suas páginas quando você executa o aplicativo, escolha **Opções de fonte de dados** ![](../designers/media/ae1fd260-4f84-420d-b196-45fde357d81d.png "ae1fd260\-4f84\-420d\-b196\-45fde357d81d"), e, em seguida, escolha **Ativar ao executar aplicativo**.  
+ Caso deseje que os dados de exemplo apareçam nas páginas quando o aplicativo for executado, escolha **Opções de fonte de dados** ![](../designers/media/ae1fd260-4f84-420d-b196-45fde357d81d.png "ae1fd260-4f84-420d-b196-45fde357d81d") e, em seguida, escolha **Habilitar ao Executar o Aplicativo**.  
   
- ![](../designers/media/05d5356d-91bb-4e6b-b3f7-29b76852c4b3.png "05d5356d\-91bb\-4e6b\-b3f7\-29b76852c4b3")  
+ ![](../designers/media/05d5356d-91bb-4e6b-b3f7-29b76852c4b3.png "05d5356d-91bb-4e6b-b3f7-29b76852c4b3")  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [criar dados de exemplo do zero](http://www.bing.com/videos/search?q=blend%20data&qs=n&form=QBVR&pq=blend%20data&sc=8-7&sp=-1&sk=#view=detail&mid=F8F2449A76956D480FD2F8F2449A76956D480FD2).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Criar dados de exemplo do zero](http://www.bing.com/videos/search?q=blend%20data&qs=n&form=QBVR&pq=blend%20data&sc=8-7&sp=-1&sk=#view=detail&mid=F8F2449A76956D480FD2F8F2449A76956D480FD2).  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [mistura de algumas associações de dados com o Blend](https://www.youtube.com/watch?v=LSwPB6CAvjg).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Combinando a vinculação de dados com o Blend](https://www.youtube.com/watch?v=LSwPB6CAvjg).  
   
-##  <a name="Existing"></a> Gerar dados de exemplo de uma classe  
- Se você já tiver criado classes que descrevem a estrutura dos dados, você pode gerar dados de exemplo deles.  
+##  <a name="Existing"></a> Gerar dados de exemplo com base na classe  
+ Se as classes que descrevem a estrutura dos dados já tiver sido criada, é possível geral dados de exemplo com base nelas.  
   
- Para gerar dados de exemplo de uma classe, abra um documento XAML e, em seguida, no **dados** painel, clique o **criar dados de exemplo**![](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76\-7256\-43ce\-b5d9\-4b2edf3d339f") e, em seguida, clique **criar dados de exemplo da classe**.  
+ Para gerar dados de exemplo com base em uma classe, abra um documento XAML e, no painel **Dados**, clique no botão **Criar dados de exemplo**![](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76-7256-43ce-b5d9-4b2edf3d339f") e, em seguida, clique em **Criar Dados de Exemplo da Classe**.  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [criar dados de exemplo de uma classe](http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=video&cd=1&cad=rja&uact=8&ved=0CB0QtwIwAA&url=http%3A%2F%2Fchannel9.msdn.com%2FShows%2FInside%2BWindows%2BPhone%2FIWP54--Windows-Phone-Data-Binding-and-the-Magic-of-XAML&ei=F1oHVNryM4ysogSJ2oDYDw&usg=AFQjCNEYvw1WA1rdF7bfpj5RwMLUs7RCVg).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Criar dados de exemplo com base em uma classe](http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=video&cd=1&cad=rja&uact=8&ved=0CB0QtwIwAA&url=http%3A%2F%2Fchannel9.msdn.com%2FShows%2FInside%2BWindows%2BPhone%2FIWP54--Windows-Phone-Data-Binding-and-the-Magic-of-XAML&ei=F1oHVNryM4ysogSJ2oDYDw&usg=AFQjCNEYvw1WA1rdF7bfpj5RwMLUs7RCVg).  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [mistura de algumas associações de dados com o Blend](https://www.youtube.com/watch?v=LSwPB6CAvjg).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Combinando a vinculação de dados com o Blend](https://www.youtube.com/watch?v=LSwPB6CAvjg).  
   
 ##  <a name="LiveWPF"></a> Mostrar dados ao vivo em um aplicativo WPF  
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [criar uma fonte de dados de objeto](http://www.bing.com/videos/watch/video/using-an-objectdatasource-in-expression-blend/qmavx0xg).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Criar uma fonte de dados de objeto](http://www.bing.com/videos/watch/video/using-an-objectdatasource-in-expression-blend/qmavx0xg).  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [criar uma fonte de dados XML](https://www.youtube.com/watch?v=RjQueappjqk&feature=youtube_gdata).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Criar uma fonte de dados XML](https://www.youtube.com/watch?v=RjQueappjqk&feature=youtube_gdata).  
   
-##  <a name="LiveStore"></a> Mostrar dados ao vivo em um aplicativo de armazenamento ou telefone  
- Consulte [trabalhar com dados e arquivos \(XAML\)](http://msdn.microsoft.com/library/windows/apps/xaml/br229562.aspx).  
+##  <a name="LiveStore"></a> Mostrar dados ao vivo em um aplicativo de Loja ou Telefone  
+ Consulte [Trabalhando com os dados e arquivos (XAML)](http://msdn.microsoft.com/library/windows/apps/xaml/br229562.aspx).  
   
-## Consulte também  
- [Criando uma interface de usuário usando o Blend para Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
+## <a name="see-also"></a>Consulte também  
+ [Criando uma interface do usuário usando o Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

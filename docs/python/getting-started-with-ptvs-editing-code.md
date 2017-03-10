@@ -1,40 +1,55 @@
 ---
-title: "Introdu&#231;&#227;o ao PTVS: editando c&#243;digo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-python"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Introdução ao PTVS: editando código | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-python
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b412c87c-2f09-4e25-9cc8-ab54f4c44412
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "kraigb"
-ms.author: "kraigb"
-manager: "ghogen"
----
-# Introdu&#231;&#227;o ao PTVS: editando c&#243;digo
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kraigb
+ms.author: kraigb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 93edc9e4cfc0d35fa92f4f6509d8145774826ea4
+ms.lasthandoff: 02/22/2017
 
-O PTVS fornece a experiência de editor do Visual Studio produtiva para Python.  
+---
+# <a name="getting-started-with-ptvs-editing-code"></a>Introdução ao PTVS: editando código
+O PTVS fornece a experiência produtiva de editor Visual Studio para o Python.  
   
- Assista a estas instruções em um curto [vídeo do youtube](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
+ É possível assistir a essas instruções em um breve [vídeo no YouTube](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
   
- Inicie com o modelo de projeto vazio aplicativo Python básico.  
+ Comece com o modelo básico de projeto vazio de Aplicativo Python.  
   
- Comece a digitar um `from … import` linha no editor.  Você verá que a lista de preenchimento pop\-up tem uma lista completa dos módulos que estão disponíveis para importação.  Essa lista varia de acordo com sua versão do Python e o que você instalou de bibliotecas.  Use a biblioteca de matemática como exemplo.  Você notará que conforme você digita a lista de filtros de conclusões a esses itens, incluindo os caracteres que você digitou.  Conclua a instrução importando o `sin` identificador.  
+ Comece a digitar uma linha de `from … import` no editor.  Você verá que a lista de preenchimento pop-up tem uma lista completa dos módulos que estão disponíveis para importação.  Essa lista varia de acordo com sua versão do Python e quais bibliotecas que você instalou.  Use a biblioteca de matemática como um exemplo.  Você notará que, conforme você digita, a lista de preenchimento filtra esses itens, incluindo os caracteres digitados.  Conclua a instrução importando o identificador `sin`.  
   
 ```python  
 from math import sin  
   
 ```  
   
- Durante a codificação, se você usar um identificador que é desvinculada, mas que podem ser encontrados nas bibliotecas do PTVS oferece uma correção rápida pop\-up para adicionar a instrução de importação apropriado que é necessário.  Por exemplo, se você digitou `cos`, em seguida, você veria **import from math** oferecidos.  
+ Durante a codificação, se você usar um identificador que seja desvinculado, mas que pode ser encontrado em suas bibliotecas, o PTVS oferece uma correção rápida pop-up para adicionar a instrução de importação adequada de que precisa.  Por exemplo, se você digitou `cos`, então, você verá **importar da matemática**.  
   
- Você pode usar um trecho de código para gerar código.  No menu Editar, escolha o IntelliSense e Insert Snippet.  Agora escolha Python e, em seguida, def  Chamar a função `make_dot_string` e adicione um parâmetro `x`.  Você pode adicionar asserções ao arquivo agora para desenvolvimento orientado por testes e consulte que PTVS já pode oferecer a nova função em listas de conclusão.  
+ Você pode usar um trecho para gerar o código.  No menu Editar, selecione IntelliSense e depois insira Snippet.  Agora, selecione Python e, em seguida, def.  Chame a função `make_dot_string` e adicione um parâmetro `x`.  Agora, já é possível adicionar asserções ao arquivo para desenvolvimento orientado por testes e você verá que o PTVS já oferece a nova função em listas de preenchimento.  
   
 ```python  
 assert make_dot_string(90) == '          o'  
@@ -42,18 +57,18 @@ assert make_dot_string(180) == 'o'
   
 ```  
   
- Agora, volte para a nova função e começar a escrever o seguinte corpo:  
+ Agora, volte para a nova função e comece a escrever o seguinte corpo:  
   
 ```python  
 return " " * int(10 * cos(radians(x)) + 10) + "o"  
   
 ```  
   
- Você verá que o PTVS supõe que o parâmetro é um inteiro porque PTVS analisar os sites de chamada para essa função.  Você também precisará usar a correção rápida para importar `radians`.  
+ Você verá que o PTVS supõe que o parâmetro é um inteiro porque analisou os sites de chamada para essa função.   Você também precisará usar a correção rápida para importar `radians`.  
   
- Use outro trecho para criar um bloco principal digitando `main` no nível superior, invocando a marca inteligente da interface do usuário e usando uma guia para escolher "main de def..."  Escrever um loop básico para chamar `make_dot_string`.  Você verá que o PTVS sabe que a função retorna uma cadeia de caracteres, se você pressionar período e consulte as conclusões oferecidas.  Essas informações de tipo fluirá em todo o programa inteiro, para que onde quer que os valores de terminam, podemos fornecer dicas de ferramenta e conclusões que ajudarão você a melhor compreendam e escrever seu código.  
+ Use outro trecho de código para criar um bloco principal digitando `main` no nível superior, invocando a interface do usuário de smart tag e usando a guia para selecionar "def main..."  Escreva um loop básico para chamar `make_dot_string`.  Você verá o que o PTVS sabe que a função retorna uma cadeia de caracteres se pressionar ponto e verá os preenchimentos disponibilizados.  Essas informações de tipo fluirão em todo seu programa, portanto, sempre que seus valores acabarem, podemos fornecer dicas de ferramenta e preenchimentos que o ajudarão a compreender e escrever mais bem seu código.  
   
- Adicione uma chamada para imprimir e você deve ter um principal semelhante ao seguinte:  
+ Adicione uma chamada para impressão e receberá um principal semelhante ao seguinte:  
   
 ```python  
 def main ():  
@@ -62,10 +77,10 @@ def main ():
         print(s)  
 ```  
   
- Se você pressionar F5, o código é executado em uma janela cmd.exe e você vir um ponto oscilatórios e para trás.  
+ Se pressionar F5, o código será executado em uma janela cmd.exe e você verá um ponto oscilando para frente e para trás.  
   
- Assista a estas instruções em um curto [vídeo do youtube](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
+ É possível assistir a essas instruções em um breve [vídeo no YouTube](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
   
-## Consulte também  
- [Wiki documentação](https://github.com/Microsoft/PTVS/wiki/Editor-Features)   
- [PTVS Introdução e vídeos de mergulho profundo](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+## <a name="see-also"></a>Consulte também  
+ [Documentação do wiki](https://github.com/Microsoft/PTVS/wiki/Editor-Features)   
+ [Introdução ao PTVS e vídeos de aprofundamento](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

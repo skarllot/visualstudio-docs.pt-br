@@ -1,26 +1,41 @@
 ---
-title: "Porcentagem de redu&#231;&#227;o do ru&#237;do | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.threads.filter"
-helpviewer_keywords: 
-  - "Visualizador de Simultaneidade, Porcentagem de redução do ruído"
+title: "Percentual de redução do ruído | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.threads.filter
+helpviewer_keywords:
+- Concurrency Visualizer, Noise Reduction Percentage
 ms.assetid: 1c10cd4c-2fdd-48c9-b562-a334b3b2df6c
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Porcentagem de redu&#231;&#227;o do ru&#237;do
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 0650ce4d0e3634287ae00f227d7be5348e2e581c
+ms.lasthandoff: 02/22/2017
 
-Por padrão, o valor da configuração percentual de redução de ruído é 2.  Somente as entradas que têm uma porcentagem de tempo inclusivos maior ou igual a essa configuração são mostradas na árvore de chamada.  Alterar a configuração, você pode controlar o número de entradas que são exibidos na árvore de chamada.  Por exemplo, alterando o valor como 10 mostrará apenas as entradas de árvore de chamada que têm uma hora inclusivas maior ou igual a 10%.  Aumentando o valor de configuração, poderá enfatizar as entradas que têm maior impacto no desempenho do processo.
+---
+# <a name="noise-reduction-percentage"></a>Porcentagem de redução do ruído
+Por padrão, o valor da configuração de Percentual de Redução do Ruído é 2. Somente as entradas que têm um percentual de tempo inclusivo maior ou igual a essa configuração são mostradas na árvore de chamadas. Ao alterar a configuração, é possível controlar a quantidade de entradas mostradas na árvore de chamadas. Por exemplo, alterar o valor para 10 mostrará apenas as entradas da árvore chamada que têm um tempo inclusivo maior ou igual a 10%. Ao aumentar o valor da configuração, é possível se concentrar em entradas que têm maior impacto sobre o desempenho do processo.

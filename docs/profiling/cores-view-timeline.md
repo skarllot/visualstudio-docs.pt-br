@@ -1,30 +1,45 @@
 ---
-title: "Linha do tempo da exibi&#231;&#227;o de n&#250;cleos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.cores.timeline.threads"
-helpviewer_keywords: 
-  - "Visualizador de Simultaneidade, Linha do tempo da exibição de núcleos"
+title: "Linha do tempo da exibição de núcleos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.cores.timeline.threads
+helpviewer_keywords:
+- Concurrency Visualizer, Cores View Timeline
 ms.assetid: 10f0c666-ac2f-4ac5-9fb5-a88f660ab840
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Linha do tempo da exibi&#231;&#227;o de n&#250;cleos
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: a87d8e504aca8e46d43058ed47f0f21db40711ed
+ms.lasthandoff: 02/22/2017
 
-Cada linha na linha do tempo representa um núcleo o processador lógico no sistema analisado.  Para cada linha, o mostra do eixo horizontal que o thread estivesse executando em um sistema lógica em um determinado momento.  Você pode focalizar uma cor de interesse em uma linha de tempo retornar uma dica de ferramenta que identifica o thread.  Para ajudar a ID do thread, a legenda na parte inferior da janela mostra o que cada cor representa.  Use a ferramenta de zoom para dar e tirar zoom, clicando e arrastando ou pressionar CTRL e movendo a roda de mouse.  A consistência de zoom é mantida quando você alterna entre núcleos exibição e exibição de threads.  
+---
+# <a name="cores-view-timeline"></a>Linha do tempo da exibição de núcleos
+Cada linha na linha do tempo representa um núcleo de processador lógico no sistema com perfil sendo criado. Para cada linha, o eixo horizontal mostra qual thread estava sendo executado em um núcleo lógico em um determinado ponto no tempo. É possível focalizar em uma cor de interesse em uma linha do tempo para retornar uma dica de ferramenta que identifica o thread. Para ajudar na identificação do thread, a legenda na parte inferior da janela mostra o que cada cor representa. Use a ferramenta Zoom para ampliar e reduzir, clicando e arrastando ou pressionando CTRL e movendo a roda do mouse. A consistência de zoom é mantida ao mudar entre a Exibição de Núcleos e Exibição de Threads.  
   
-## Consulte também  
- [Exibição de núcleos](../profiling/cores-view.md)   
- [Controle de zoom \(exibição de threads\)](../profiling/zoom-control-threads-view.md)
+## <a name="see-also"></a>Consulte também  
+ [Exibição de Núcleos](../profiling/cores-view.md)   
+ [Controle de zoom (exibição de Threads)](../profiling/zoom-control-threads-view.md)

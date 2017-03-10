@@ -1,49 +1,64 @@
 ---
-title: "Constructos condicionais do MSBuild | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Elemento <Choose> [MSBuild]"
-  - "Elemento <Otherwise> [MSBuild]"
-  - "Elemento <When> [MSBuild]"
-  - "Elemento Choose [MSBuild]"
-  - "construtores condicionais [MSBuild]"
-  - "MSBuild, construtores condicionais"
-  - "Elemento Otherwise [MSBuild]"
-  - "Elemento When [MSBuild]"
+title: Constructos condicionais do MSBuild | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- <Choose> Element [MSBuild]
+- Choose Element [MSBuild]
+- conditional constructs [MSBuild]
+- MSBuild, conditional constructs
+- <When> Element [MSBuild]
+- <Otherwise> Element [MSBuild]
+- Otherwise Element [MSBuild]
+- When Element [MSBuild]
 ms.assetid: dd54258e-f4fb-448f-9da4-d1817e0cbaf2
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Constructos condicionais do MSBuild
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: 83f7cdbf34d283cbde72d7c58c72558a155a7607
+ms.lasthandoff: 02/22/2017
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]Fornece um mecanismo para um \/ ou processamento com o  [Escolha](../msbuild/choose-element-msbuild.md),  [quando](../msbuild/when-element-msbuild.md), e  [caso contrário](../msbuild/otherwise-element-msbuild.md) elementos.  
+---
+# <a name="msbuild-conditional-constructs"></a>Constructos condicionais do MSBuild
+O [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] fornece um mecanismo para processamento de um/ou outro com os elementos [Choose](../msbuild/choose-element-msbuild.md), [When](../msbuild/when-element-msbuild.md) e [Otherwise](../msbuild/otherwise-element-msbuild.md).  
   
-## Usando o elemento de escolha  
- O `Choose` elemento contém uma série de `When` elementos com `Condition` atributos que são testados em ordem de cima para baixo até ser avaliada como um `true`.  Se mais de um `When` elemento é avaliada como `true`, apenas a primeira é usada.  Um `Otherwise` elemento, se presente, será avaliado se nenhuma condição em uma `When` elemento é avaliada como `true`.  
+## <a name="using-the-choose-element"></a>Usando o elemento Choose  
+ O elemento `Choose` contém uma série de elementos de `When` com atributos `Condition` que são testados na ordem de cima para baixo até que um seja avaliado como `true`. Se mais de um elemento `When` for avaliado como `true`, somente o primeiro será usado. Um elemento `Otherwise`, se presente, será avaliado se nenhuma condição em um elemento `When` for avaliada como `true`.  
   
- `Choose`elementos podem ser usados como elementos filhos do `Project`, `When` e `Otherwise` elementos.  `When`e `Otherwise` elementos podem ter `ItemGroup`, `PropertyGroup`, ou `Choose` elementos filho.  
+ Os elementos `Choose` podem ser usados como elementos filhos dos elementos `Project`, `When` e `Otherwise`. Os elementos `When` e `Otherwise` podem ter elementos filho `ItemGroup`, `PropertyGroup` ou `Choose`.  
   
-## Exemplo  
- O exemplo a seguir usa a `Choose` e `When` elementos para um \/ ou processamento.  As propriedades e os itens do projeto são definidas, dependendo do valor da `Configuration` propriedade.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir usa os elementos `Choose` e `When` para processamento de um/ou outro. As propriedades e os itens do projeto são definidos dependendo do valor da propriedade `Configuration`.  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >  
     <PropertyGroup>  
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>  
@@ -79,8 +94,8 @@ manager: "ghogen"
 </Project>  
 ```  
   
-## Consulte também  
- [Elemento Choose \(MSBuild\)](../msbuild/choose-element-msbuild.md)   
- [Elemento When \(MSBuild\)](../msbuild/when-element-msbuild.md)   
- [Elemento Otherwise \(MSBuild\)](../msbuild/otherwise-element-msbuild.md)   
+## <a name="see-also"></a>Consulte também  
+ [Elemento Choose (MSBuild)](../msbuild/choose-element-msbuild.md)   
+ [Elemento When (MSBuild)](../msbuild/when-element-msbuild.md)   
+ [Elemento Otherwise (MSBuild)](../msbuild/otherwise-element-msbuild.md)   
  [Referência do MSBuild](../msbuild/msbuild-reference.md)

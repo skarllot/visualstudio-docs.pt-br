@@ -1,36 +1,51 @@
 ---
-title: "Projeto de exemplo para cria&#231;&#227;o de testes de unidade | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exemplo de teste de unidade [Visual Studio]"
-  - "testes de unidade, exemplos"
+title: "Projeto de exemplo para criação de testes de unidade| Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unit test sample [Visual Studio]
+- unit tests, samples
 ms.assetid: db80aaf2-0652-4d3f-a8c5-2a98fd8502a2
 caps.latest.revision: 30
-caps.handback.revision: 30
-ms.author: "mlearned"
-manager: "douge"
----
-# Projeto de exemplo para cria&#231;&#227;o de testes de unidade
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: mlearned
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: 85a4222db883846e2da0bb64b4c39be1e737dcd2
+ms.lasthandoff: 02/22/2017
 
-Este código de exemplo é fornecido para uso nas instruções a seguir:  
+---
+# <a name="sample-project-for-creating-unit-tests"></a>Projeto de exemplo para criação de testes de unidade
+Este código de exemplo é fornecido para uso nas instruções passo a passo a seguir:  
   
--   [Instruções passo a passo: criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md).  Este passo a passo leva você através das etapas para criar e personalizar testes de unidade, executá\-los e examinar os resultados do teste.  
+-   [Passo a passo: criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md). Este passo a passo orienta você pelas etapas para criar e personalizar testes de unidade, executá-los e examinar os resultados de teste.  
   
--   [Walkthrough: Run tests and view code coverage](http://msdn.microsoft.com/pt-br/d4aab8e2-2140-4975-b4e3-41ef3fa944c8).  Este passo a passo ilustra como exibir dados de cobertura de código, que mostra a proporção de código do projeto que está sendo testado.  
+-   [Passo a passo: executar testes e exibir a cobertura de código](http://msdn.microsoft.com/en-us/d4aab8e2-2140-4975-b4e3-41ef3fa944c8). Este passo a passo ilustra como exibir dados de cobertura de código, que mostra a proporção do código do projeto que está sendo testado.  
   
--   [Instruções passo a passo: usando o utilitário de teste de linha de comando](../Topic/Walkthrough:%20using%20the%20command-line%20test%20utility.md).  Neste passo a passo, você pode usar o utilitário de linha de comando MSTest.exe para executar testes e exibir os resultados.  
+-   [Passo a passo: usando o utilitário de teste de linha de comando](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867). Neste passo a passo, você pode usar o utilitário de linha de comando MSTest.exe para executar testes e exibir os resultados.  
   
-## Código de exemplo  
- O erro intencional somente nesse exemplo é que o método Debit em "m\_balance \+ \= valor" deve ter um sinal de menos não um sinal de mais entrar antes do sinal de igual.  
+## <a name="sample-code"></a>Código de exemplo  
+ O erro intencional apenas neste exemplo é que o método Debit em "m_balance += amount" deve ter um sinal de menos e não um sinal de mais antes do sinal de igual.  
   
 ```  
 using System;   
@@ -126,12 +141,12 @@ namespace BankAccountNS
 }  
 ```  
   
- \/ \* Os exemplos de empresas, organizações, produtos, nomes de domínio, endereços de email, logotipos, pessoas, lugares e eventos aqui descritos são fictícios.  Nenhuma associação com qualquer empresa, organização, produto, nome de domínio, endereço de email, logotipo, pessoa, lugares ou eventos é intencional ou deve ser inferida.  \*\/  
+ /* As empresas, as organizações, os produtos, os nomes de domínio, os endereços de email, os logotipos, as pessoas, os locais e os eventos de exemplo descritos aqui são fictícios.  Nenhuma associação com nenhuma empresa, organização, produto, nome de domínio, endereço de email, logotipo, pessoa, locais ou eventos reais é intencional nem deve ser inferida. \*/  
   
-## Trabalhando com o código  
- Para trabalhar com esse código, primeiramente, você precisa criar um projeto para ele no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  Siga as etapas na seção "Preparar o passo a passo" [Instruções passo a passo: criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md).  
+## <a name="working-with-the-code"></a>Trabalhando com o código  
+ Para trabalhar com esse código, primeiramente, você precisa criar um projeto para ele no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Siga as etapas na seção "Preparar o passo a passo" em [Passo a passo: criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md).  
   
-## Consulte também  
- [Instruções passo a passo: criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)   
- [Walkthrough: Run tests and view code coverage](http://msdn.microsoft.com/pt-br/d4aab8e2-2140-4975-b4e3-41ef3fa944c8)   
- [Instruções passo a passo: usando o utilitário de teste de linha de comando](../Topic/Walkthrough:%20using%20the%20command-line%20test%20utility.md)
+## <a name="see-also"></a>Consulte também  
+ [Passo a passo: criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)   
+ [Passo a passo: executar testes e exibir a cobertura de código](http://msdn.microsoft.com/en-us/d4aab8e2-2140-4975-b4e3-41ef3fa944c8)   
+ [Passo a passo: usando o utilitário de teste de linha de comando](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)

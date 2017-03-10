@@ -1,41 +1,56 @@
 ---
-title: "Organizar objetos em cont&#234;ineres de layout no XAML Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Organizar objetos em contêineres de layout no Designer XAML | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Organizar objetos em cont&#234;ineres de layout no XAML Designer
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 564b648469da9ffd01169a7992edb7a0ae0e4a29
+ms.lasthandoff: 02/22/2017
 
-Imagine onde quer que os objetos sejam exibidos em uma página. objetos, como imagens, botões e vídeos.  Talvez você queira que eles sejam exibidos em linhas e colunas em uma única linha vertical ou horizontalmente ou em posições fixas.  
+---
+# <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>Organizar objetos em contêineres de layout no XAML Designer
+Imagine o local em que você deseja que os objetos apareçam, tais como imagens, botões e vídeos. Talvez você queira que eles apareçam em linhas e colunas; em uma única linha, vertical ou horizontal; ou em posições fixas.  
   
- Depois que você teve a oportunidade de se pensar em como a página poderá aparecer, escolha um painel de layout.  Todas as páginas começar com uma porque você precisa de algo para adicionar seus objetos.  Por padrão, é um **grade** mas você pode alterá\-lo.  
+ Após ter a chance de pensar sobre como a página pode ser exibida, escolha um painel de layout. Todas as páginas começam no painel de layout, porque você precisa de algo para adicionar seus objetos. Por padrão, é ele tem o formato de uma **Grade**, mas isso pode ser alterado.  
   
- Painéis de layout ajudarão\-lo a organizar os objetos em uma página, mas fazem mais do que isso.  Eles ajudam você a projetar para diferentes tamanhos de tela e resoluções.  Quando os usuários executam seu aplicativo, tudo em um painel de layout é redimensionada para corresponder o espaço na tela de seu dispositivo.  É claro que, se não quiser que o layout para fazer isso, você pode substituir esse comportamento para uma parte do layout, ou todo o layout.  Você pode usar propriedades de altura e largura para controlar o que.  
+ Painéis de layout ajudam a organizar objetos em uma página, mas fazem mais do que isso. Eles ajudam a projetar diferentes tamanhos de tela e resoluções. Quando usuários executam um aplicativo, tudo o que está contido no painel de layout é redimensionado para caber na tela do dispositivo em uso. Claro, se você não quiser que isso aconteça com o layout, é possível substituir esse comportamento em uma parte ou na totalidade do layout. É possível usar propriedades de altura e largura para controlar isso.  
   
- Esta página descreve controles e painéis de layout e, em seguida, direciona a vídeos curtos que o ajudarão a começar com eles.  
+ Esta página descreve painéis de layout e controles e conduz a vídeos curtos que ajudarão a introduzi-los.  
   
 > [!NOTE]
->  Alguns dos vídeos podem se referir a mesclagem ou Expression Blend, que usam o mesmo XAML designer Visual Studio e Blend para Visual Studio.  
+>  Alguns dos vídeos podem se referir ao Blend ou ao Expression Blend, que usam o mesmo Designer XAML do Visual Studio e do Blend for Visual Studio.  
   
-## Painéis de layout  
- Sua página inicial, escolhendo um desses painéis de layout.  A página pode ter mais de um.  Por exemplo, você pode começar com um **grade** layout do painel e, em seguida, adicione um **StackPanel** para uma área a **grade** para que você pode organizar controles verticalmente no elemento.  
+## <a name="layout-panels"></a>Painéis de layout  
+ Comece a página escolhendo um destes painéis de layout. A página pode ter mais de um. Por exemplo, é possível iniciar com um painel de layout em **Grade** e, em seguida, adicionar um **StackPanel** a uma área na **Grade** para organizar os controles verticalmente nesse elemento.  
   
- Os seguintes painéis de layout são mais popularmente usado, mas existem outras.  Você pode encontrá\-los em todos o **ativos** painel.  
+ Os painéis de layout a seguir são os mais populares, mas existem outros. É possível encontrar todos no painel **Ativos**.  
   
--   [Grelha](#Grid)  
+-   [Grade](#Grid)  
   
 -   [UniformGrid](#Uniform)  
   
@@ -47,73 +62,91 @@ Imagine onde quer que os objetos sejam exibidos em uma página. objetos, como im
   
 -   [DockPanel](#Dock)  
   
-###  <a name="Grid"></a> Grelha  
+###  <a name="Grid"></a> Grade  
  Organize objetos em linhas e colunas.  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [usando grades](http://www.popscreen.com/v/6A4hj/Microsoft-Expression-Blend-Using-Grids)  
+ ![](../designers/media/98b234b2-ac3b-441f-9136-98375fee87b7.png "98b234b2-ac3b-441f-9136-98375fee87b7")  
+  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Usando Grades](http://www.popscreen.com/v/6A4hj/Microsoft-Expression-Blend-Using-Grids)  
   
 ###  <a name="Uniform"></a> UniformGrid  
- Organize objetos em regiões de grade iguais ou uniformes.  Este painel é excelente para organizar uma lista de imagens.  
+ Organize objetos em regiões de grade iguais ou uniformes. Este painel é ótimo para organizar uma lista de imagens.  
   
- \(Disponível somente para projetos WPF\)  
+ ![](../designers/media/928b9284-a7e8-4678-875a-656b80b78076.png "928b9284-a7e8-4678-875a-656b80b78076")  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [Trabalhando com um UniformGrid](http://www.popscreen.com/v/6A4iq/Microsoft-Expression-Blend-Working-with-a-UniformGrid)  
+ (Disponível somente para projetos WPF)  
+  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com um UniformGrid](http://www.popscreen.com/v/6A4iq/Microsoft-Expression-Blend-Working-with-a-UniformGrid)  
   
 ###  <a name="Canvas"></a> Tela  
- Organize objetos como desejar.  Quando os usuários executam seu aplicativo, esses elementos serão corrigiram posições na tela.  
+ Organize objetos como desejar. Quando os usuários executam o aplicativo, esses elementos terão posições fixas na tela.  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [trabalhar com a tela](http://www.popscreen.com/v/6A4hT/Microsoft-Expression-Blend-Working-with-the-Canvas)  
+ ![](../designers/media/e1ae27f0-3a57-454e-b580-877dcea8836d.png "e1ae27f0-3a57-454e-b580-877dcea8836d")  
+  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com a tela](http://www.popscreen.com/v/6A4hT/Microsoft-Expression-Blend-Working-with-the-Canvas)  
   
 ###  <a name="Stack"></a> StackPanel  
- Organize objetos em uma única linha horizontal ou verticalmente.  
+ Organize objetos em uma única linha horizontal ou vertical.  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [Trabalhando com StackPanel e WrapPanel](http://www.popscreen.com/v/6A4i5/Microsoft-Expression-Blend-Using-the-StackPanel-and-WrapPanel)  
+ ![](../designers/media/a85a7b57-b0a8-495e-b985-f0291e41d093.png "a85a7b57-b0a8-495e-b985-f0291e41d093")  
+  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com o StackPanel e WrapPanel](http://www.popscreen.com/v/6A4i5/Microsoft-Expression-Blend-Using-the-StackPanel-and-WrapPanel)  
   
 ###  <a name="Wrap"></a> WrapPanel  
- Organize objetos em sequência da esquerda para a direita.  Quando o painel fica sem espaço na borda da extrema direita, ele *quebra* o conteúdo para a próxima linha, e assim por diante da esquerda para a direita, de cima para baixo.  Você também pode fazer a orientação de um painel wrap vertical para que objetos fluem de cima para baixo, esquerda para a direita.  
+ Organize objetos em sequência da esquerda para a direita. Quando o painel fica sem espaço na margem à direita, ele *encapsula* o conteúdo na próxima linha e assim por diante, da esquerda para a direita, de cima para baixo. A orientação de um painel de encapsulamento também pode ser vertical, para que os objetos sejam direcionados de cima para baixo e da esquerda para a direita.  
   
- \(Disponível somente para projetos WPF\)  
+ (Disponível somente para projetos WPF)  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [Trabalhando com StackPanel e WrapPanel](http://www.popscreen.com/v/6A4i5/Microsoft-Expression-Blend-Using-the-StackPanel-and-WrapPanel)  
+ ![](../designers/media/b1c415fb-9a32-4a18-aa0b-308fca994ac9.png "b1c415fb-9a32-4a18-aa0b-308fca994ac9")  
+  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com o StackPanel e WrapPanel](http://www.popscreen.com/v/6A4i5/Microsoft-Expression-Blend-Using-the-StackPanel-and-WrapPanel)  
   
 ###  <a name="Dock"></a> DockPanel  
- Organizar os objetos para que permaneçam, ou *Encaixar*, em uma borda do painel.  
+ Organize objetos para que eles fiquem ou se *encaixem*, em uma borda do painel.  
   
- \(Disponível somente para projetos WPF\)  
+ (Disponível somente para projetos WPF)  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [WPF \- DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)  
+ ![](../designers/media/72d46b58-9a49-4dd5-8af7-6843c0440226.png "72d46b58-9a49-4dd5-8af7-6843c0440226")  
   
-## Controles de layout  
- Você pode adicionar objetos a controles de layout.  Eles não são como rico em um painel de layout, mas você pode encontrá\-los úteis para determinados cenários.  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [WPF – DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)  
   
- Os seguintes controles de layout são mais popularmente usado, mas existem outras.  Você pode encontrá\-los em todos o **ativos** painel.  
+## <a name="layout-controls"></a>Controles de layout  
+ Também é possível adicionar objetos aos controles de layout. Eles não têm tantos recursos como o painel de layout, mas podem ser úteis em determinados cenários.  
+  
+ Os controles de layout a seguir são os mais populares, mas existem outros. É possível encontrar todos no painel **Ativos**.  
   
 -   [Borda](#Border)  
   
--   [Popup](#Popup)  
+-   [Pop-up](#Popup)  
   
 -   [ScrollViewer](#Scroll)  
   
 -   [UniformGrid](#Uniform)  
   
--   [Viewbox](#View)  
+-   [Caixa de Visualização](#View)  
   
 ###  <a name="Border"></a> Borda  
- Crie uma borda, plano de fundo ou ambos em torno de um objeto.  Você pode adicionar apenas um objeto para um **borda**.  Se você deseja aplicar uma borda ou um plano de fundo para mais de um objeto, adicione o painel de layout para o **borda**.  Em seguida, adicione objetos a esse painel ou controle.  
+ Crie uma borda, uma tela de fundo ou ambos em torno de um objeto. É possível adicionar apenas um objeto a uma **Borda**. Caso deseje aplicar uma borda ou tela de fundo a mais de um objeto, adicione o painel de layout à **Borda**. Em seguida, adicione objetos a esse painel ou controle.  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [Trabalhando com bordas](http://www.popscreen.com/v/6A4hB/Microsoft-Expression-Blend-Working-with-Borders)  
+ ![](../designers/media/e761238b-99fd-43c5-bbc4-57538b8289ff.png "e761238b-99fd-43c5-bbc4-57538b8289ff")  
   
-###  <a name="Popup"></a> Popup  
- Mostra informações ou opções para usuários em uma janela.  Você pode adicionar apenas um objeto para um **pop\-up**.  Por padrão, um **pop\-up** contém um **grade** mas você pode alterá\-lo.  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com bordas](http://www.popscreen.com/v/6A4hB/Microsoft-Expression-Blend-Working-with-Borders)  
+  
+###  <a name="Popup"></a> Pop-up  
+ Mostra informações ou opções para usuários em uma janela. É possível adicionar apenas um objeto a um **Pop-up**. Por padrão, um **Pop-up** contém uma **Grade**, mas isso pode ser alterado.  
   
 ###  <a name="Scroll"></a> ScrollViewer  
- Habilitar usa para rolar para baixo de uma página ou a área de uma página.  Você pode adicionar apenas um objeto para um **ScrollViewer** faz muito sentido para adicionar um painel de layout, como um **grade** ou **StackPanel**.  
+ Habilita o usuário a rolar para baixo uma página ou uma área dela. É possível adicionar apenas um objeto a um **ScrollViewer**, por isso, faz sentido adicionar um painel de layout como uma **Grade** ou **StackPanel**.  
   
-###  <a name="View"></a> Viewbox  
- Dimensionar objetos, assim como você faria com um controle de zoom.  Você pode adicionar apenas um objeto para um **Viewbox**.  Se você quiser aplicar esse efeito a mais de um objeto, adicionar um painel de layout para o **ViewBox**, e, em seguida, adicionar os controles para o painel de layout.  
+ ![](../designers/media/06b326d4-f23d-41a6-b26b-e1aff37572a7.png "06b326d4-f23d-41a6-b26b-e1aff37572a7")  
   
- \(Disponível somente para projetos WPF\)  
+###  <a name="View"></a> Caixa de Visualização  
+ Dimensionar objetos, assim como um controle de zoom. É possível adicionar apenas um objeto a uma **Caixa de Visualização**. Caso deseje aplicar esse efeito a mais de um objeto, adicione um painel de layout à **Caixa de Visualização** e, em seguida, adicione os controles a esse painel de layout.  
   
-## Consulte também  
+ (Disponível somente para projetos WPF)  
+  
+ ![](../designers/media/f5b13c66-d918-4141-8a16-bd8f8628687a.png "f5b13c66-d918-4141-8a16-bd8f8628687a")  
+  
+## <a name="see-also"></a>Consulte também  
  [Trabalhando com elementos no Designer XAML](../designers/working-with-elements-in-xaml-designer.md)   
- [Criando uma interface de usuário usando o Designer XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
+ [Criando uma interface do usuário usando o Designer XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)

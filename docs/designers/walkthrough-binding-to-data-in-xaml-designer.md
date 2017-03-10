@@ -1,37 +1,52 @@
 ---
-title: "Passo a passo: Associando dados no XAML Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.XamlDesigner.DataBinding"
+title: 'Passo a passo: associando dados no Designer XAML| Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.XamlDesigner.DataBinding
 ms.assetid: 1a99aeae-c3ef-407d-ba79-b8055489a43d
 caps.latest.revision: 20
-caps.handback.revision: 20
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Passo a passo: Associando dados no XAML Designer
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 98379d2f36d7c1dcb7d40132e0d95d0e353344b2
+ms.lasthandoff: 02/22/2017
 
-No Designer XAML, você pode definir propriedades de associação de dados por meio da prancheta e na janela Propriedades.  O exemplo neste passo a passo mostra como associar dados a um controle.  Especificamente, o passo a passo mostra como criar uma classe de carrinho de compras simples que tem um [DependencyProperty](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.aspx) chamado `ItemCount`, e associar o `ItemCount` propriedade para o **texto** propriedade de um [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) controle.  
+---
+# <a name="walkthrough-binding-to-data-in-xaml-designer"></a>Passo a passo: associando dados no Designer XAML
+No Designer XAML, você pode definir as propriedades de associação de dados usando o artboard e a janela Propriedades. O exemplo neste passo a passo mostra como associar dados a um controle. Especificamente, o procedimento mostra como criar uma classe simples de carrinho de compras com [DependencyProperty](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.aspx) chamado de `ItemCount` e associar a propriedade `ItemCount` à propriedade **Text** de um controle de [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
   
-### Para criar uma classe a ser usada como uma fonte de dados  
+### <a name="to-create-a-class-to-use-as-a-data-source"></a>Para criar uma classe para usar como fonte de dados  
   
-1.  No menu **Arquivo**, escolha **Novo Projeto**.  
+1.  No menu **Arquivo**, escolha **Novo**, **Projeto**.  
   
-2.  No **novo projeto** caixa de diálogo caixa, escolha o o **Visual C\#** ou **Visual Basic** nó, expanda o **Windows Desktop** nó e, em seguida, escolha o **aplicativo WPF** modelo.  
+2.  Na caixa de diálogo **Novo Projeto**, escolha o nó **Visual C#** ou **Visual Basic**, expanda o nó **Área de Trabalho do Windows** e escolha o modelo **Aplicação WPF**.  
   
-3.  Nomeie o projeto BindingTest e, em seguida, escolha o **OK** botão.  
+3.  Nomeie o projeto como **BindingTest** e escolha o botão **OK**.  
   
-4.  Abra o arquivo MainWindow.xaml.cs \(ou MainWindow.xaml.vb\) e adicione o código a seguir.  No c\#, adicione o código a `BindingTest` espaço para nome \(antes do parêntese de fechamento no arquivo\).  No Visual Basic, basta adicione a nova classe.  
+4.  Abra o arquivo MainWindow.xaml.cs (ou MainWindow.xaml.vb) e adicione o código a seguir. Em C#, adicione o código ao namespace `BindingTest` (antes do parêntese de fechamento no arquivo). No Visual Basic, adicione a nova classe.  
   
     ```c#  
     public class ShoppingCart : DependencyObject  
@@ -66,38 +81,38 @@ No Designer XAML, você pode definir propriedades de associação de dados por m
     End Class  
     ```  
   
-     Esse código define um valor de 0 como a contagem de itens padrão usando o [PropertyMetadata](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata.aspx) objeto.  
+     Esse código define o valor 0 como a contagem de item padrão usando o objeto [PropertyMetadata](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata.aspx).  
   
-5.  Sobre o **arquivo** menu, escolha **criar**, **Build Solution**.  
+5.  No menu **Arquivo**, escolha **Compilar**, **Solução de build**.  
   
-### Para associar a propriedade ItemCount a um controle TextBlock  
+### <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>Para associar a propriedade ItemCount a um controle TextBlock  
   
-1.  No Solution Explorer, abra o menu de atalho de MainWindow. XAML e escolha **View Designer**.  
+1.  No Gerenciador de Soluções, abra o menu de atalho de MainWindow.xaml e escolha **Designer de Exibição**.  
   
-2.  Na caixa de ferramentas, escolha uma [grade](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) de controle e adicioná\-lo ao formulário.  
+2.  Na caixa de ferramentas, escolha um controle de [Grade](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) e adicione-o ao formulário.  
   
-3.  Com o `Grid` selecionado, na janela Propriedades, escolha o **novo** botão ao lado de **DataContext** propriedade.  
+3.  Com `Grid` selecionado, na janela Propriedades, clique no botão **Novo** próximo a propriedade **DataContext**.  
   
-4.  No **Selecionar objeto** caixa de diálogo caixa, certifique\-se de que **Mostrar todos os assemblies** caixa de seleção estiver desmarcada, escolha **ShoppingCart** sob o **BindingTest** namespace e, em seguida, escolha o **OK** botão.  
+4.  Na caixa de diálogo **Selecionar Objeto**, verifique se a opção **Mostrar todos os assemblies** está desmarcada e selecione **ShoppingCart** no namespace **BindingTest**; em seguida, clique em **OK**.  
   
-     A ilustração a seguir mostra o **Selecionar objeto** caixa de diálogo com **ShoppingCart** selecionado.  
+     A ilustração a seguir mostra a caixa de diálogo **Selecionar Objeto** com a opção **ShoppingCart** selecionada.  
   
-     ![The Select Object dialog box](../designers/media/blendselectobject.PNG "BlendSelectObject")  
+     ![A caixa de diálogo Selecionar objeto](../designers/media/blendselectobject.PNG "BlendSelectObject")  
   
-5.  No **Toolbox**, escolha um `TextBlock` controle para adicioná\-lo ao formulário.  
+5.  Na **Caixa de ferramentas**, escolha um controle de `TextBlock` e adicione-o ao formulário.  
   
-6.  Com o `TextBlock` controle selecionado, na janela Propriedades, escolha o marcador de propriedade à direita do **texto** propriedade e escolha **criar associação de dados**.  \(Marcador de propriedade se parece com uma pequena caixa.\)  
+6.  Com o controle `TextBlock` selecionado, na janela Propriedades, escolha o marcador de propriedade à direita da propriedade **Texto** e escolha **Criar Vinculação de Dados**. (O marcador de propriedade se assemelha a uma caixa pequena.)  
   
-7.  Nos dados criar associação de caixa de diálogo, no **caminho** caixa, escolha o **ItemCount: \(int32\)** propriedade e, em seguida, escolha o **OK** botão.  
+7.  Na caixa de diálogo Criar Vinculação de Dados, na caixa **Caminho**, escolha a propriedade **ItemCount: (int32)** e, em seguida, escolha o botão **OK**.  
   
-     A ilustração a seguir mostra o **criar associação de dados** caixa de diálogo com o **ItemCount** propriedade selecionada.  
+     A ilustração a seguir mostra a caixa de diálogo **Criar Vinculação de Dados** com a propriedade **ItemCount** selecionada.  
   
-     ![Criar caixa de diálogo vinculação de dados](../designers/media/xaml_create_data_binding.png "xaml\_create\_data\_binding")  
+     ![caixa de diálogo Criar Vinculação de Dados](../designers/media/xaml_create_data_binding.png "xaml_create_data_binding")  
   
 8.  Pressione F5 para executar o aplicativo.  
   
-     O `TextBlock` controle deve mostrar o valor padrão de 0 como texto.  
+     O controle `TextBlock` deve mostrar o valor padrão de 0 como texto.  
   
-## Consulte também  
- [Criando uma interface de usuário usando o Designer XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)   
- [NIB: Add Value Converter dialog box](http://msdn.microsoft.com/pt-br/c5f3d110-a541-4b55-8bca-928f77778af8)
+## <a name="see-also"></a>Consulte também  
+ [Criando uma interface do usuário usando o Designer XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)   
+ [NIB: caixa de diálogo Adicionar Conversor de Valor](http://msdn.microsoft.com/en-us/c5f3d110-a541-4b55-8bca-928f77778af8)

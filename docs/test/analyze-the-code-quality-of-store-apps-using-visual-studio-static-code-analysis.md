@@ -1,41 +1,56 @@
 ---
-title: "Analisar a qualidade do c&#243;digo de aplicativos da Store usando a an&#225;lise de c&#243;digo est&#225;tico do Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analisar a qualidade do código de aplicativos da Store usando a análise de código estático do Visual Studio | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2341013d-a08b-49a7-b6fd-a7b6aaa797e0
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "erickson-doug"
-ms.author: "douge"
-manager: "douge"
----
-# Analisar a qualidade do c&#243;digo de aplicativos da Store usando a an&#225;lise de c&#243;digo est&#225;tico do Visual Studio
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: erickson-doug
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 23cfce356ffbd97fe300a7b7d3da1cec6eb1c070
+ms.lasthandoff: 02/22/2017
 
-![Applies to Windows and Windows Phone](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+---
+# <a name="analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>Analisar a qualidade do código de aplicativos da Store usando a análise de código estático do Visual Studio
+![Aplica-se a Windows e Windows Phone](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- A ferramenta de análise de código no Visual Studio examina seu código para um conjunto de defeitos comuns e violações de práticas recomendadas de programação.  Avisos da análise de código diferem de avisos e erros do compilador porque a ferramenta de análise de código procura por padrões de código específicos que são válidos, mas ainda podem criar problemas para você ou outras pessoas que usam seu código.  Análise de código também pode localizar defeitos em seu código que são difíceis de serem descobertas por meio de testes.  Executando a ferramenta de análise de código em intervalos regulares durante o processo de desenvolvimento pode melhorar a qualidade do seu aplicativo concluído.  
+ A ferramenta de análise de código do Visual Studio examina seu código em busca de um conjunto de defeitos e violações comuns das práticas recomendadas de programação. Os avisos da análise de código diferem dos erros e avisos do compilador porque a ferramenta de análise de código procura por padrões de código específicos que são válidos, mas ainda podem criar problemas para você ou outras pessoas que usem o seu código. A análise de código também pode localizar os defeitos no seu código que são difíceis de descobrir com testes. A execução da ferramenta de análise de código a intervalos regulares durante o processo de desenvolvimento pode melhorar a qualidade do seu aplicativo concluído.  
   
 > [!NOTE]
->  Análise de código não está disponível para o código JavaScript.  
+>  A análise de código não está disponível para o código JavaScript.  
   
-## Nesta seção  
-  
-|||  
-|-|-|  
-|[Analisar a qualidade do código do Visual Basic e C\#](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md)|Use a análise de código em projetos do Visual Basic e c\#.|  
-|[Analisar a qualidade do código C\+\+](../test/analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)|Use a análise de código em projetos do C\+\+.|  
-  
-## Mais informações sobre análise de código  
+## <a name="in-this-section"></a>Nesta seção  
   
 |||  
 |-|-|  
-|[Código de análise na biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkID=227580)|Obtenha mais informações sobre como usar a análise de código no Visual Studio Ultimate, Visual Studio Premium e Professional do Visual Studio.|  
-|[MSDN blog da equipe de análise de código](http://go.microsoft.com/fwlink/?LinkId=227200)|Para obter mais informações, incluindo documentos técnicos e amostras no blog da equipe de análise de código.|
+|[Analisar a qualidade do código do Visual Basic e C#](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md)|Use a análise de código em projetos do Visual Basic e C#.|  
+|[Analisar a qualidade do código C++](../test/analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)|Use a análise de código em projetos do C++.|  
+  
+## <a name="more-code-analysis-info"></a>Mais informações sobre a análise de código  
+  
+|||  
+|-|-|  
+|[Análise de código na Biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkID=227580)|Encontre mais informações sobre o uso de análise de código no Visual Studio Ultimate, no Visual Studio Premium e no Visual Studio Professional.|  
+|[Blog da equipe de análise de código MSDN](http://go.microsoft.com/fwlink/?LinkId=227200)|Encontre mais informações, incluindo documentos técnicos e amostras no blog da equipe de análise de código.|

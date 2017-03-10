@@ -1,36 +1,51 @@
 ---
-title: "Estendendo testes de IU codificado e grava&#231;&#245;es de a&#231;&#227;o para dar suporte ao Microsoft Excel | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Estendendo testes de IU codificados e gravações da ação para dar suporte ao Microsoft Excel | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b0f72a4-70ca-4e55-b236-2ea1034fd8a7
 caps.latest.revision: 30
-caps.handback.revision: 30
-ms.author: "mlearned"
-manager: "douge"
----
-# Estendendo testes de IU codificado e grava&#231;&#245;es de a&#231;&#227;o para dar suporte ao Microsoft Excel
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: mlearned
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: 612a2a800227d3a0bd1b416160058c44ba3e2cd8
+ms.lasthandoff: 02/22/2017
 
-A estrutura de teste para testes de UI codificados e gravações de ação não oferece suporte a todas as interfaces de usuário possíveis.  Ele pode não oferecer suporte a interface do usuário específica que você deseja testar.  Por exemplo, você não pode criar imediatamente um teste de IU codificado ou uma ação de gravação para um [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] planilha.  No entanto, você pode criar sua própria extensão para o framework de teste de IU codificado que oferecerá suporte a interface do usuário específica, tirando proveito da extensibilidade da estrutura de teste de IU codificada.  O tópico a seguir fornece um exemplo de como estender o framework para dar suporte à criação de testes de UI codificados e gravações de ação [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)].  Para obter mais informações sobre as plataformas com suporte, consulte [Configurações e plataformas compatíveis para testes de IU codificados e gravações de ações](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md).  
+---
+# <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>Estendendo testes de IU codificado e gravações da ação para dar suporte ao Microsoft Excel
+A estrutura de teste para testes de IU codificados e gravações da ação não dá suporte a todas as interfaces do usuário possíveis. Ele pode não dar suporte à interface do usuário específica que você deseja testar. Por exemplo, você não pode criar imediatamente um teste de IU codificado ou uma gravação da ação para uma planilha [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)]. No entanto, você pode criar sua própria extensão para a estrutura de teste de IU codificado que dará suporte a interface do usuário específica, tirando proveito da extensibilidade da estrutura de teste de IU codificado. O tópico a seguir fornece um exemplo de como estender a estrutura para dar suporte à criação de testes de UI codificados e gravações da ação para [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)]. Para obter mais informações sobre as plataformas que têm suporte, consulte [Configurações e Plataformas com Suporte para Testes de IU Codificados e Gravações da Ação](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md).  
   
  **Requisitos**  
   
--   O Visual Studio Enterprise  
+-   Visual Studio Enterprise  
   
- Esta seção apresenta uma extensão de teste da interface do usuário codificada que pode gravar e reproduzir testes de planilhas do Excel.  Cada parte da extensão é explicado nesta seção e os comentários do código para desenvolvedores que desejam criar esse uma extensão.  
+ Esta seção apresenta uma extensão de teste de IU codificado que pode gravar e reproduzir testes de planilhas do Excel. Cada parte da extensão é explicada nesta seção e nos comentários do código para desenvolvedores que desejam criar uma extensão desse tipo.  
   
- ![Arquitetura de teste de interface do usuário](../test/media/ui_testarch.png "UI\_TestArch")  
+ ![Arquitetura de teste de interface do usuário](../test/media/ui_testarch.png "UI_TestArch")  
 Visão geral da arquitetura  
   
-## Baixe o exemplo  
- O exemplo consiste em quatro projetos a `CodedUIExtensibilitySample.sln` solução:  
+## <a name="download-the-sample"></a>Baixar a amostra  
+ A amostra consiste de quatro projetos na solução `CodedUIExtensibilitySample.sln`:  
   
 -   CodedUIextensibilitySample  
   
@@ -40,42 +55,42 @@ Visão geral da arquitetura
   
 -   SampleTestProject  
   
- Obter o exemplo deste [postagem de blog](http://go.microsoft.com/fwlink/?LinkID=185592).  
+ Obtenha a amostra desta [postagem de blog](http://go.microsoft.com/fwlink/?LinkID=185592).  
   
 > [!NOTE]
->  O exemplo é destinado ao uso com o Microsoft Excel 2010.  O exemplo pode funcionar com outras versões do Microsoft Excel, mas não é suportado atualmente.  
+>  A amostra é destinada para uso com o Microsoft Excel 2010. A amostra pode funcionar com outras versões do Microsoft Excel, mas isso não tem suporte atualmente.  
   
-## Detalhes sobre o exemplo  
- As seções a seguir fornecem informações sobre o exemplo e sua estrutura.  
+## <a name="details-about-the-sample"></a>Detalhes sobre a amostra  
+ As seções a seguir fornecem informações sobre a amostra e sua estrutura.  
   
-### Suplemento do Microsoft Excel: ExcelCodedUIAddinHelper  
- Esse projeto inclui um suplemento que é executado no processo do Excel.  Consulte [Complemento do Excel de amostra para testes de IU codificado](../test/sample-excel-add-in-for-coded-ui-testing.md) para uma visão geral sobre o projeto de suplemento.  
+### <a name="microsoft-excel-add-in-excelcodeduiaddinhelper"></a>Suplemento do Microsoft Excel: ExcelCodedUIAddinHelper  
+ Este projeto inclui um suplemento que é executado no processo do Excel. Consulte [Suplemento de exemplo do Excel para testes de IU codificados](../test/sample-excel-add-in-for-coded-ui-testing.md) para obter uma visão geral sobre o projeto de suplemento.  
   
- Para obter mais informações, consulte [Passo a passo: criando o primeiro suplemento do VSTO para Excel](../Topic/Walkthrough:%20Creating%20Your%20First%20VSTO%20Add-in%20for%20Excel.md).  
+ Para obter mais informações, consulte [Passo a passo: criando o primeiro suplemento do VSTO para Excel](http://msdn.microsoft.com/Library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f).  
   
-### Comunicação do Excel da interface do usuário: ExcelUIcommunicationHelper  
- Esse projeto inclui o `IExcelUICommunication` interface e as classes de informações que são usadas para passar dados entre o Excel e estrutura de testes de IU codificado.  Para obter mais informações, consulte [Interface de comunicador do Excel de amostra](../test/sample-excel-communicator-interface.md).  
+### <a name="excel-ui-communication-exceluicommunicationhelper"></a>Comunicação de interface do usuário do Excel: ExcelUIcommunicationHelper  
+ Esse projeto inclui a interface `IExcelUICommunication` e as classes de informações que são usadas para passar dados entre o Excel e estrutura de testes de IU codificados. Para obter mais informações, consulte [Interface de comunicador do Excel de amostra](../test/sample-excel-communicator-interface.md).  
   
-### Com o código de extensão de teste de interface do usuário: CodedUIExentsibilitySample  
- Esse projeto inclui as classes personalizadas que são usadas em testes de uma planilha do Excel.  O código para cada uma dessas classes é bastante auto\-explicativo.  No entanto, fornecemos uma breve descrição de cada classe personalizada.  Para obter mais informações, consulte [Extensão de teste de IU codificado de amostra para Excel](../test/sample-coded-ui-test-extension-for-excel.md).  
+### <a name="coded-ui-test-extension-codeduiexentsibilitysample"></a>Extensão de teste de IU codificado: CodedUIExentsibilitySample  
+ Esse projeto inclui as classes personalizadas que são usadas em testes de uma planilha do Excel. O código para cada uma dessas classes é bastante autoexplicativo. No entanto, fornecemos uma breve descrição de cada classe personalizada. Para obter mais informações, consulte [Extensão de teste de IU codificado de exemplo para Excel](../test/sample-coded-ui-test-extension-for-excel.md).  
   
-### Implantando o suplemento e extensão  
- Após criar todos os objetos e projetos, execute fornecidos `CopyDrop.bat` arquivo como administrador.  Esse arquivo copia o `ExcelCodedUIAddinHelper` arquivos DLL e PDB para:  
+### <a name="deploying-your-add-in-and-extension"></a>Implantando o suplemento e a extensão  
+ Depois de criar todos os projetos e objetos, execute o arquivo `CopyDrop.bat` fornecido como um administrador. Esse arquivo copia os arquivos DLL e PDB de `ExcelCodedUIAddinHelper` para:  
   
- "`%CommonProgramFiles(x86)%\Microsoft Shared\VSTT\<version number>\UITestExtensionPackages\*.*`", onde o número de versão pode ser 11.0, 12.0 etc com base em sua versão do Visual Studio.  
+ "`%CommonProgramFiles(x86)%\Microsoft Shared\VSTT\<version number>\UITestExtensionPackages\*.*`", em que o número de versão pode ser 11.0, 12.0, etc., com base em sua versão do Visual Studio.  
   
- O `ExcelUICommunicationHelper` arquivos DLL e PDB são copiados para `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”`.  
+ Os arquivos DLL e PDB `ExcelUICommunicationHelper` são copiados para `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”`.  
   
- Talvez seja necessário ajustar os caminhos de cópia exata, mas nenhuma instalação adicional é necessária.  Em uma máquina de 64 bits, use o prompt de comando do Visual Studio Enterprise de 32 bits para executar o `CopyDrop.bat` arquivo.  
+ Talvez você precise ajustar os caminhos de cópia exatos, mas nenhuma instalação adicional será necessária. Em um computador de 64 bits, use o prompt de comando do Visual Studio Enterprise de 32 bits para executar o arquivo `CopyDrop.bat`.  
   
-### Teste o Excel com o SampleTestProject  
- Você pode executar o teste no projeto de teste fornecido que usa uma versão específica do Excel que você não tenha, ou crie seu próprio projeto de teste e gravar um teste de sua preferência.  Para obter mais informações, consulte [Criando testes de UI codificados](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate).  
+### <a name="testing-excel-with-the-sampletestproject"></a>Testando o Excel com o SampleTestProject  
+ Você pode executar o teste no projeto de teste fornecido que usa uma versão específica do Excel que talvez você não tenha ou então criar seu próprio projeto de teste e gravar um teste de sua preferência. Para obter mais informações, consulte [Criar um Teste de IU Codificado](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>   
- [Usar automação de interface do usuário para testar código](../test/use-ui-automation-to-test-your-code.md)   
+ [Usar a automação de interface do usuário para testar o código](../test/use-ui-automation-to-test-your-code.md)   
  [Práticas recomendadas para testes de IU codificados](../test/best-practices-for-coded-ui-tests.md)   
- [Configurações e plataformas compatíveis para testes de IU codificados e gravações de ações](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+ [Configurações e plataformas com suporte para testes de IU codificados e gravações das ações](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

@@ -1,46 +1,62 @@
 ---
-title: "Escrevendo testes de unidade para C-c + + com o Microsoft Unit Testing Framework para C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Escrevendo testes de unidade para C-C++ com o Microsoft Unit Testing Framework para C++ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4f4b5f10-7314-4725-8c6e-e72f52eff918
 caps.latest.revision: 14
-caps.handback.revision: 14
-ms.author: "mlearned"
-manager: "douge"
----
-# Escrevendo teste de unidade para C/C++ com o Microsoft Unit Testing Framework para C++
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: mlearned
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: dd88409bb0774342e0a9f50178e1204cabf72e46
+ms.lasthandoff: 02/22/2017
 
-No Visual Studio, você pode criar testes de unidade para código não gerenciado escrito em C++. Código não gerenciado é às vezes chamado de código nativo.  
+---
+# <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>Escrevendo teste de unidade para C/C++ com o Microsoft Unit Testing Framework para C++
+No Visual Studio, você pode criar testes de unidade para código não gerenciado escrito em C++. O código não gerenciado é, às vezes, chamado de código nativo.  
   
- O procedimento a seguir contém as informações essenciais que é iniciado. As seções posteriores fornecem uma explicação passo a passo que descreve as etapas mais detalhadamente.  
+ O procedimento a seguir contém as informações essenciais que servirão de introdução para você. As seções posteriores fornecem instruções passo a passo que descrevem as etapas com mais detalhes.  
   
 ### <a name="to-write-unit-tests-for-an-unmanaged-code-dll"></a>Para escrever testes de unidade para uma DLL de código não gerenciado  
   
-1.  Use o **nativo Test Project** modelo para criar um projeto separado do Visual Studio para os testes.  
+1.  Use o modelo **Projeto de Teste Nativo** para criar um projeto separado do Visual Studio para os testes.  
   
-     O projeto contém alguns exemplos de código de teste.  
+     O projeto contém alguns códigos de teste de exemplo.  
   
 2.  Disponibilize a DLL para o projeto de teste:  
   
-    -   `#include` um `.h` arquivo que contém as declarações das funções da DLL acessíveis externamente.  
+    -   `#include` um arquivo `.h` que contém as declarações das funções acessíveis externamente da DLL.  
   
-         O `.h` arquivo deve conter declarações de função marcadas com `_declspec(dllimport)`. Como alternativa, você pode exportar os métodos usando um arquivo de Definição. Para obter mais informações, consulte [Importando e exportando](/visual-cpp/build/importing-and-exporting).  
+         O arquivo `.h` deve conter as declarações das funções marcadas com `_declspec(dllimport)`. Como opção, você pode exportar os métodos usando um arquivo DEF. Para obter mais informações, consulte [Importando e exportando](/visual-cpp/build/importing-and-exporting).  
   
          Os testes de unidade podem acessar apenas as funções exportadas da DLL em teste.  
   
-    -   Adicione o projeto DLL às referências do projeto de teste:  
+    -   Adicione o projeto de DLL às Referências do projeto de teste:  
   
-         No **propriedades** do projeto de teste, expanda **Propriedades comuns**, **estrutura e referências**, e escolha **Adicionar referência**.  
+         Nas **Propriedades** do projeto de teste, expanda **Propriedades Comuns**, **Estrutura e Referências** e escolha **Adicionar Referência**.  
   
-3.  No projeto de teste, crie classes de teste e métodos de teste usando as macros de TESTE e a classe Assert da seguinte maneira:  
+3.  No projeto de teste, crie classes e métodos de teste usando as macros TEST e a classe Assert da seguinte maneira:  
   
     ```cpp  
     #include "stdafx.h"  
@@ -60,74 +76,74 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
     -   `Assert` contém várias funções estáticas que você pode usar para verificar o resultado de um teste.  
   
-    -   O `LINE_INFO()` parâmetro é opcional. Em casos onde não há nenhum arquivo PDB, ele permite que o executor de teste identificar o local de uma falha.  
+    -   O parâmetro `LINE_INFO()` é opcional. Nos casos em que não há nenhum arquivo PDB, ele permite ao executor de teste identificar o local de uma falha.  
   
-    -   Você também pode escrever métodos de instalação e limpeza de teste. Para obter mais informações, abra a definição do `TEST_METHOD` macro e ler os comentários no CppUnitTest.h  
+    -   Você também pode escrever métodos de instalação e de limpeza de teste. Para obter mais informações, abra a definição da macro `TEST_METHOD` e leia os comentários em CppUnitTest.h  
   
     -   Não é possível aninhar as classes de teste.  
   
-4.  Use o Gerenciador de testes para executar os testes:  
+4.  Use o Gerenciador de Testes para executar os testes:  
   
-    1.  Sobre o **exibição** menu, escolha **outras janelas**, **Test Explorer**.  
+    1.  No menu **Exibir**, escolha **Outras Janelas**, **Gerenciador de Testes**.  
   
     2.  Compile a solução do Visual Studio.  
   
-    3.  No Gerenciador de testes, escolha **Executar tudo**.  
+    3.  No Gerenciador de Testes, escolha **Executar Todos**.  
   
-    4.  Para investigar qualquer teste em mais detalhes no Gerenciador de testes:  
+    4.  Para investigar qualquer teste em mais detalhes no Gerenciador de Testes:  
   
-        1.  Selecione o nome do teste para ver mais detalhes, como um rastreamento de mensagens e pilha de falha.  
+        1.  Selecione o nome do teste para ver mais detalhes, como uma mensagem de falha e um rastreamento de pilha.  
   
-        2.  Abra o nome do teste (por exemplo clicando duas vezes) para ir para o local de falha ou para o código de teste.  
+        2.  Abra o nome do teste (por exemplo, clicando duas vezes) para acessar o local da falha ou o código do teste.  
   
-        3.  No menu de atalho para um teste, escolha **Depurar selecionado testar** para executar o teste no depurador.  
+        3.  No menu de atalho de um teste, escolha **Depurar Teste Selecionado** para executar o teste no depurador.  
   
-##  <a name="a-namewalkthrougha-walkthrough-developing-an-unmanaged-dll-with-test-explorer"></a><a name="walkthrough"></a> Passo a passo: Desenvolvendo uma DLL não gerenciada com o Gerenciador de testes  
- Você pode adaptar este passo a passo para desenvolver sua própria DLL. As etapas principais são os seguintes:  
+##  <a name="walkthrough"></a> Instruções passo a passo: desenvolvendo uma DLL não gerenciada com o Gerenciador de Testes  
+ Você pode adaptar estas instruções passo a passo para desenvolver a sua própria DLL. As etapas de entidade são as seguintes:  
   
 1.  [Criar um projeto de teste nativo](#unitTestProject). Os testes são criados em um projeto separado da DLL que você está desenvolvendo.  
   
-2.  [Criar um projeto de DLL](#createDllProject). Este passo a passo cria uma nova DLL, mas o procedimento para testar uma DLL existente é semelhante.  
+2.  [Criar um projeto de DLL](#createDllProject). Essas instruções passo a passo descrevem a criação de uma nova DLL, mas o procedimento para testar uma DLL existente é semelhante.  
   
-3.  [Tornar as funções DLL visível para os testes](#coupleProjects).  
+3.  [Tornar as funções da DLL visíveis para os testes](#coupleProjects).  
   
-4.  [Aumente interativamente os testes](#iterate). É recomendável um ciclo "vermelho-verde-refatoração", em que o desenvolvimento do código é organizado pelos testes.  
+4.  [Aumentar interativamente os testes](#iterate). Recomendamos o uso de um ciclo de "refatoração vermelho e verde", em que o desenvolvimento do código é conduzido pelos testes.  
   
-5.  [Depurar testes com falha](#debug). Você pode executar testes no modo de depuração.  
+5.  [Depurar os testes com falha](#debug). Você pode executar testes no modo de depuração.  
   
-6.  [Refatorar manter os testes inalterada](#refactor). Refatoração significa melhorando a estrutura do código sem alterar o comportamento externo. Você pode fazer para melhorar o desempenho, a extensibilidade ou a legibilidade do código. Porque a intenção é não alterar o comportamento, você não altere os testes ao fazer uma alteração de refatoração de código. Os testes de ajudam a garantir que não apresenta erros enquanto você estiver refatoração. Portanto, você pode fazer essas alterações com muito mais confiança que se você não tinha os testes.  
+6.  [Refatorar mantendo os testes inalterados](#refactor). Refatorar significa melhorar a estrutura do código sem alterar o comportamento externo. Você pode fazer isso para melhorar o desempenho, a extensibilidade ou a legibilidade do código. Uma vez que a intenção é não alterar o comportamento, você não alterará os testes ao executar uma alteração de refatoração no código. Os testes ajudam a garantir que você não introduza bugs durante a refatoração. Com isso, você poderá fazer essas alterações com muito mais confiança como se você não tivesse os testes.  
   
-7.  [Verificar a cobertura de](https://msdn.microsoft.com/en-us/library/fc8hec9e.aspx). Testes de unidade são mais úteis quando eles testam mais do seu código. Você pode descobrir quais partes do seu código foram usadas pelos testes.  
+7.  [Verificar a cobertura](https://msdn.microsoft.com/en-us/library/fc8hec9e.aspx). Os testes de unidade são mais úteis quando eles exercitam mais o seu código. Você pode descobrir quais partes do seu código foram usadas pelos testes.  
   
-8.  [Isolar unidades de recursos externos](https://msdn.microsoft.com/library/hh549174.aspx). Normalmente, uma DLL é dependente de outros componentes do sistema que você está desenvolvendo, como outras DLLs, bancos de dados ou subsistemas remotos. É útil testar cada unidade em isolamento de suas dependências. Componentes externos podem fazer testes sejam executados lentamente. Durante o desenvolvimento, os outros componentes não podem ser concluídos.  
+8.  [Isolar unidades de recursos externos](https://msdn.microsoft.com/library/hh549174.aspx). Normalmente, uma DLL é dependente de outros componentes do sistema que você está desenvolvendo, como outras DLLs, bancos de dados ou subsistemas remotos. É útil testar cada unidade em isolamento de suas dependências. Os componentes externos podem fazer com que os testes sejam executados lentamente. Durante o desenvolvimento, os outros componentes podem não ser concluídos.  
   
-###  <a name="a-nameunittestprojecta-create-a-native-unit-test-project"></a><a name="unitTestProject"></a> Criar um projeto de teste de unidade nativo  
+###  <a name="unitTestProject"></a> Criar um projeto de teste de unidade nativo  
   
-1.  Sobre o **arquivo** menu, escolha **novo**, **projeto**.  
+1.  No menu **Arquivo**, escolha **Novo**, **Projeto**.  
   
-     Na caixa de diálogo, expanda **instalados**, **modelos**, **Visual C++**, **teste**.  
+     Na caixa de diálogo, expanda **Instalados**, **Modelos**, **Visual C++**, **Teste**.  
   
-     Escolha o **nativo Test Project** modelo.  
+     Escolha o modelo **Projeto de Teste Nativo**.  
   
-     Neste passo a passo, o projeto de teste é denominado `NativeRooterTest`.  
+     Nestas instruções passo a passo, o projeto de teste é chamado `NativeRooterTest`.  
   
-     ![Criando uma C &#43; &#43; Projeto de teste de unidade](../test/media/utecpp01.png "UteCpp01")  
+     ![Criando um projeto de teste de unidade C&#43;&#43;](../test/media/utecpp01.png "UteCpp01")  
   
-2.  No novo projeto, inspecionar **unittest1.cpp**  
+2.  No novo projeto, inspecione **unittest1.cpp**  
   
-     ![Testar o projeto com TEST &#95; CLASSE de TESTE e #95; MÉTODO](../test/media/utecpp2.png "UteCpp2")  
+     ![Projeto de teste com TEST&#95;CLASS e TEST&#95;METHOD](../test/media/utecpp2.png "UteCpp2")  
   
      Observe que:  
   
     -   Cada teste é definido usando `TEST_METHOD(YourTestName){...}`.  
   
-         Você não precisa escrever uma assinatura de função convencional. A assinatura é criada pela macro TEST_METHOD. A macro gera uma função de instância que retorna void. Também gera uma função estática que retorna informações sobre o método de teste. Essas informações permitem que o Gerenciador de testes localizar o método.  
+         Você não precisa gravar uma assinatura de função convencional. A assinatura é criada pela macro TEST_METHOD. A macro gera uma função de instância que retorna void. Também gera uma função estática que retorna informações sobre o método de teste. Essas informações permitem que o Gerenciador de Testes encontrem o método.  
   
-    -   Métodos de teste são agrupados em classes usando `TEST_CLASS(YourClassName){...}`.  
+    -   Os métodos de teste são agrupados em classes usando `TEST_CLASS(YourClassName){...}`.  
   
          Quando os testes são executados, uma instância de cada classe de teste é criada. Os métodos de teste são chamados em uma ordem não especificada. Você pode definir métodos especiais que são invocados antes e depois de cada módulo, classe ou método.  
   
-3.  Verifique se os testes executados no Gerenciador de testes:  
+3.  Verifique se o testes são executados no Gerenciador de Testes:  
   
     1.  Insira algum código de teste:  
   
@@ -140,37 +156,37 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
          Observe que a classe `Assert` fornece vários métodos estáticos que você pode usar para verificar os resultados em métodos de teste.  
   
-    2.  Sobre o **teste** menu, escolha **executar** , **todos os testes**.  
+    2.  No menu **Teste**, escolha **Executar**, **Todos os Testes**.  
   
-         O teste compilado e executado.  
+         O teste é compilado e executado.  
   
-         O Gerenciador de testes é exibida.  
+         O Gerenciador de Testes é exibido.  
   
-         O teste aparece sob **testes aprovados**.  
+         O teste aparece em **Testes Aprovados**.  
   
-         ![Gerenciador de testes de unidade com um teste passado](../test/media/utecpp04.png "UteCpp04")  
+         ![Gerenciador de Testes de Unidade com um teste aprovado](../test/media/utecpp04.png "UteCpp04")  
   
-###  <a name="a-namecreatedllprojecta-create-an-unmanaged-dll-project"></a><a name="createDllProject"></a> Criar um projeto de DLL não gerenciada  
+###  <a name="createDllProject"></a> Criar um projeto de DLL não gerenciada  
   
-1.  Criar um **Visual C++** projeto usando o **Win32 Project** modelo.  
+1.  Crie um projeto do **Visual C++** usando o modelo **Projeto Win32**.  
   
-     Neste passo a passo, o projeto é denominado `RootFinder`.  
+     Nestas instruções passo a passo, o projeto é chamado `RootFinder`.  
   
-     ![Criando uma C &#43; &#43; Projeto Win32](../test/media/utecpp05.png "UteCpp05")  
+     ![Criando um projeto Win32 C&#43;&#43;](../test/media/utecpp05.png "UteCpp05")  
   
-2.  Selecione **DLL** e **exportar símbolos** no Assistente de aplicativo Win32.  
+2.  Selecione **DLL** e **Exportar Símbolos** no Assistente de Aplicativo Win32.  
   
-     O **exportar símbolos** opção gera uma macro conveniente que você pode usar para declarar métodos exportados.  
+     A opção **Exportar Símbolos** gera uma macro conveniente que você pode usar para declarar métodos exportados.  
   
-     ![C &#43; &#43; Assistente de projeto do conjunto de DLL e exportar símbolos](../test/media/utecpp06.png "UteCpp06")  
+     ![Assistente do projeto C&#43;&#43; definido para DLL e Exportar Símbolos](../test/media/utecpp06.png "UteCpp06")  
   
-3.  Declare uma função exportada no arquivo. h principal:  
+3.  Declare uma função exportada no arquivo .h da entidade de segurança:  
   
-     ![Novo código de projeto e. h arquivo DLL com macros de API](../test/media/utecpp07.png "UteCpp07")  
+     ![Novo projeto de código de DLL e arquivo .h com macros de API](../test/media/utecpp07.png "UteCpp07")  
   
-     O declarador `__declspec(dllexport)` faz com que os membros públicos e protegidos da classe seja visível fora da DLL. Para obter mais informações, consulte [usando dllimport e dllexport em Classes C++](/visual-cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes).  
+     O declarador `__declspec(dllexport)` faz com que os membros públicos e protegidos da classe fiquem visíveis fora da DLL. Para obter mais informações, consulte [Usando dllimport e dllexport em classes C++](/visual-cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes).  
   
-4.  No arquivo. cpp principal, adicione um corpo mínimo para a função:  
+4.  No arquivo .cpp da entidade de segurança, adicione um corpo mínimo para a função:  
   
     ```cpp  
     // Find the square root of a number.  
@@ -180,21 +196,21 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
     }  
     ```  
   
-###  <a name="a-namecoupleprojectsa-couple-the-test-project-to-the-dll-project"></a><a name="coupleProjects"></a> Acoplar o projeto de teste para o projeto DLL  
+###  <a name="coupleProjects"></a> Acoplar o projeto de teste ao projeto de DLL  
   
-1.  Adicione o projeto DLL às referências do projeto do projeto de teste:  
+1.  Adicione o projeto de DLL às referências de projeto do projeto de teste:  
   
-    1.  Abra as propriedades do projeto de teste e escolha **Propriedades comuns**, **estrutura e referências**.  
+    1.  Abra as propriedades do projeto de teste e escolha **Propriedades Comuns**, **Estrutura e Referências**.  
   
-         ![C &#43; &#43; Propriedades do projeto e 45; Estrutura e referências](../test/media/utecpp08.png "UteCpp08")  
+         ![Propriedades de projeto C&#43;&#43; &#45; Estrutura e Referências](../test/media/utecpp08.png "UteCpp08")  
   
-    2.  Escolha **Adicionar nova referência**.  
+    2.  Escolha **Adicionar Nova Referência**.  
   
-         Na **Adicionar referência** caixa de diálogo Selecione o projeto DLL e escolha **Adicionar**.  
+         Na caixa de diálogo **Adicionar Referência**, selecione o projeto de DLL e escolha **Adicionar**.  
   
-         ![C &#43; &#43; Propriedades do projeto e 45; Adicionar nova referência](../test/media/utecpp09.png "UteCpp09")  
+         ![Propriedades do projeto C&#43;&#43; &#45; Adicionar Nova Referência](../test/media/utecpp09.png "UteCpp09")  
   
-2.  No arquivo. cpp de teste de unidade principal, inclua o arquivo. h do código de DLL:  
+2.  No arquivo .cpp do teste de unidade da entidade de segurança, inclua o arquivo .h do código da DLL:  
   
     ```cpp  
     #include "..\RootFinder\RootFinder.h"  
@@ -222,15 +238,15 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
 4.  Compile a solução.  
   
-     O novo teste aparece no Gerenciador de testes.  
+     O novo teste aparece no Gerenciador de Testes.  
   
-5.  No Gerenciador de testes, escolha **Executar tudo**.  
+5.  No Gerenciador de Testes, escolha **Executar Todos**.  
   
-     ![Gerenciador de testes de unidade &45; Teste básico passado](../test/media/utecpp10.png "UteCpp10")  
+     ![Gerenciador de Testes de Unidade &#45; Teste básico aprovado](../test/media/utecpp10.png "UteCpp10")  
   
  Você configurou o teste e os projetos de código, além de ter verificado que pode executar testes que executam funções no projeto de código. Agora, você pode começar a escrever testes e códigos reais.  
   
-###  <a name="a-nameiteratea-iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a> Aumente os testes e torná-los transmitir iterativamente  
+###  <a name="iterate"></a> Aumentar iterativamente os testes e fazer com que sejam aprovados  
   
 1.  Adicione um novo teste:  
   
@@ -251,16 +267,16 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
     >   
     >  Quando os usuários alterarem os respectivos requisitos, desabilite os testes que não estejam mais corretos. Escreva novos testes e faça-os funcionar, um por vez, da mesma maneira incremental.  
   
-2.  Crie a solução e, em seguida, no Gerenciador de testes, escolha **Executar tudo**.  
+2.  Compile a solução e, no Gerenciador de Testes, escolha **Executar Todos**.  
   
-     O novo teste falha.  
+     Falha no novo teste.  
   
-     ![A falha de RangeTest](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
+     ![Falha em RangeTest](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
   
     > [!TIP]
-    >  Verifique se que cada teste falhará imediatamente depois que você escreveu. Isso ajuda a impedir a facilidade de errar ao escrever um teste que nunca falha.  
+    >  Verifique se os testes falham imediatamente após escrevê-los. Isso ajuda a impedir a facilidade de errar ao escrever um teste que nunca falha.  
   
-3.  Aprimorar o código em teste para que o novo teste é aprovado:  
+3.  Aprimore o código em teste para que o novo teste seja aprovado:  
   
     ```cpp  
     #include <math.h>  
@@ -279,16 +295,16 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
     }  
     ```  
   
-4.  Crie a solução e, em seguida, no Gerenciador de testes, escolha **Executar tudo**.  
+4.  Compile a solução e, no Gerenciador de Testes, escolha **Executar Todos**.  
   
-     Ambos os testes forem aprovados.  
+     Ambos os testes são aprovados.  
   
-     ![Gerenciador de testes de unidade e 45; Intervalo de teste foi aprovado](../test/media/utecpp12.png "UteCpp12")  
+     ![Gerenciador de Testes de Unidade &#45; Teste de intervalo aprovado](../test/media/utecpp12.png "UteCpp12")  
   
     > [!TIP]
     >  Desenvolva o código adicionando testes, um de cada vez. Verifique se todos os testes passaram após cada iteração.  
   
-###  <a name="a-namedebuga-debug-a-failing-test"></a><a name="debug"></a> Depurar um teste de falha  
+###  <a name="debug"></a> Depurar um teste que falhou  
   
 1.  Adicione outro teste:  
   
@@ -324,19 +340,19 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
     }  
     ```  
   
-2.  Crie a solução e escolha **Executar tudo**.  
+2.  Compile a solução e escolha **Executar Todos**.  
   
-3.  Abrir (ou clique duas vezes) no teste que falhou.  
+3.  Abra (ou clique duas vezes) no teste com falha.  
   
      A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do Gerenciador de Testes.  
   
-     ![Falha de NegativeRangeTests](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
+     ![Falha em NegativeRangeTests](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
   
 4.  Para ver o motivo da falha do teste, percorra a função:  
   
-    1.  Defina um ponto de interrupção no início da função SquareRoot.  
+    1.  Defina o ponto de interrupção no início da função SquareRoot.  
   
-    2.  No menu de atalho do teste com falha, escolha **Depurar testes selecionados**.  
+    2.  No menu de atalho do teste com falha, escolha **Depurar Testes Selecionados**.  
   
          Quando a execução for interrompida no ponto de interrupção, percorra o código.  
   
@@ -358,14 +374,14 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
 6.  Todos os testes agora foram aprovados.  
   
-     ![Todos os testes passarem](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
+     ![Todos os testes foram aprovados](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
   
 > [!TIP]
->  Se os testes individuais não têm dependências que impedem que está sendo executado em qualquer ordem, ative a execução de teste em paralelo com o ![UTE &#95; parallelicon &45; pequeno](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") botão de alternância na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.  
+>  Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o botão de alternância ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.  
   
-###  <a name="a-namerefactora-refactor-the-code-without-changing-tests"></a><a name="refactor"></a> Refatorar o código sem alterar os testes  
+###  <a name="refactor"></a> Refatorar o código sem alterar os testes  
   
-1.  Simplificar o cálculo central na função SquareRoot:  
+1.  Simplifique o cálculo central na função SquareRoot:  
   
     ```  
     // old code:  
@@ -375,27 +391,27 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
     ```  
   
-2.  Crie a solução e escolha **Executar todos**, para certificar-se de que você não introduziu um erro.  
+2.  Compile a solução e escolha **Executar Todos** para verificar se você não introduziu nenhum erro.  
   
     > [!TIP]
-    >  Um bom conjunto de testes de unidade permite que você não introduziu bugs quando você alterar o código de confiança.  
+    >  Um bom conjunto de testes de unidade garante que você não introduza bugs ao alterar o código.  
     >   
-    >  Manter refatoração separadas de outras alterações.  
+    >  Mantenha a refatoração separada das outras alterações.  
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   **Isolamento.** A maioria das DLLs são outros subsistemas, como bancos de dados e outras DLLs dependentes. Geralmente, esses outros componentes são desenvolvidos em paralelo. Para permitir que os testes de unidade para ser executada enquanto os outros componentes ainda não estão disponíveis, você precisa substituir mock ou  
+-   **Isolamento.** A maioria das DLLs são dependentes de outros subsistemas, como bancos de dados e outras DLLs. Geralmente, esses outros componentes são desenvolvidos em paralelo. Para permitir que os testes de unidade sejam executados enquanto os outros componentes ainda não estiverem disponíveis, você precisará substituir o fictício ou  
   
--   **Crie testes de verificação.** Você pode fazer testes executados no servidor de compilação da equipe em intervalos definidos. Isso garante que os erros não são introduzidos quando o trabalho de vários membros da equipe é integrado.  
+-   **Testes de aceitação do build.** Você pode executar testes no servidor de build da sua equipe em intervalos definidos. Isso garante que não sejam introduzidos bugs quando o trabalho de vários membros da equipe são integrados.  
   
--   **Testes de check-in.** Você pode obrigar que alguns testes são executadas antes de cada membro da equipe verifica o código no controle de origem. Normalmente, esse é um subconjunto do conjunto completo de testes de verificação de compilação.  
+-   **Testes de check-in.** Você pode exigir que alguns testes sejam executadas antes de cada membro da equipe fazer check-in do código no controle do código-fonte. Normalmente, esse é um subconjunto do conjunto completo dos testes de aceitação do build.  
   
-     Você também pode designar um nível mínimo de cobertura de código.  
+     Você também pode exigir um nível mínimo de cobertura de código.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionando testes de unidade para aplicativos do C++ existentes](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)   
+ [Adicionando testes de unidade a aplicativos do C++ existentes](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)   
  [Usando Microsoft.VisualStudio.TestTools.CppUnitTestFramework](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)   
- [Uma visão geral da interoperabilidade entre código gerenciado /](http://msdn.microsoft.com/library/ms973872.aspx)   
+ [An Overview of Managed/Unmanaged Code Interoperability](http://msdn.microsoft.com/library/ms973872.aspx)  (Uma visão geral da interoperabilidade de código gerenciado/não gerenciado)  
  [Depurando código nativo](../debugger/debugging-native-code.md)   
- [Passo a passo: Criando e usando uma biblioteca de vínculo dinâmico (C++)](../Topic/Walkthrough:%20Creating%20and%20Using%20a%20Dynamic%20Link%20Library%20\(C++\).md)   
+ [Instruções passo a passo: criando e usando uma biblioteca de vínculo dinâmico (C++)](http://msdn.microsoft.com/Library/3ae94848-44e7-4955-bbad-7d40f493e941)   
  [Importando e exportando](/visual-cpp/build/importing-and-exporting)

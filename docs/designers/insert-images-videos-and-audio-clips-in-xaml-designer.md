@@ -1,38 +1,54 @@
 ---
-title: "Inserir imagens, v&#237;deos e clipes de &#225;udio no XAML Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Inserir imagens, vídeos e clipes de áudio no Designer XAML | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ff707aca-6bc5-4a2d-834b-bb6511a7b8f6
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Inserir imagens, v&#237;deos e clipes de &#225;udio no XAML Designer
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 1ac0d3e38f758fff622e51e0223fb9977f9453a3
+ms.lasthandoff: 02/22/2017
 
-Imagens, vídeos e clipes de áudio conferir apelo visual ao seu aplicativo.  
+---
+# <a name="insert-images-videos-and-audio-clips-in-xaml-designer"></a>Inserir imagens, vídeos e clipes de áudio no XAML Designer
+Imagens, vídeos e clipes de áudio adicione apelo visual ao seu aplicativo.  
   
- ![Images sized to fit](../designers/media/b5_memory_images_sized.png "b5\_memory\_images\_sized")  
+ ![Imagens dimensionadas para ajuste](../designers/media/b5_memory_images_sized.png "b5_memory_images_sized")  
   
- Para usar uma imagem, o clipe de áudio ou vídeo, adicioná\-lo ao seu projeto e, em seguida, arraste\-o **ativos** painel para o **prancheta**.  
+ Para usar uma imagem, vídeo ou clipe de áudio, adicione-a ao seu projeto e, em seguida, arraste-a do painel **Ativos** para a **prancheta**.  
   
- Esses vídeos podem ajudá\-lo a inserir imagens, vídeos e clipes de áudio em seu aplicativo.  
+ Esses vídeos podem ajudá-lo a inserir imagens, vídeos e clipes de áudio em seu aplicativo.  
   
-|Tarefa|Assista a um vídeo curto|  
-|------------|------------------------------|  
-|Importar um arquivo do Adobe FXG|![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [Visualização de importação FXG no Blend](http://www.bing.com/videos/search?q=blend%20import%20FXG%20file&qs=n&form=QBVR&pq=blend%20import%20fxg%20file&sc=0-13&sp=-1&sk=#view=detail&mid=3C733B0B50A43166C55C3C733B0B50A43166C55C)|  
-|Importar um arquivo do Adobe Illustrator|![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [Importar um arquivo do Adobe Illustrator \(ai\) no Blend](http://www.bing.com/videos/search?q=add%20illustrator%20file%20to%20blend&qs=n&form=QBVR&pq=add%20illustrator%20file%20to%20blend&sc=0-0&sp=-1&sk=#view=detail&mid=FDB1B25D4DEB69D24515FDB1B25D4DEB69D24515)|  
-|Importar um arquivo do Adobe Photoshop|![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [Importar um arquivo do Photoshop no Blend](https://www.youtube.com/watch?v=ekYyhirFKs0)|  
-|Inserir clipes de áudio|![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [Adicionar clipes de áudio](https://www.youtube.com/watch?v=7qW9l0tmkAI&index=52&list=PLBDF977B2F1DAB358)|  
+|Tarefa|Assista a um breve vídeo|  
+|----------|-------------------------|  
+|Importar um arquivo do Adobe FXG|![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Visualização de Importação de FXG no Blend](http://www.bing.com/videos/search?q=blend%20import%20FXG%20file&qs=n&form=QBVR&pq=blend%20import%20fxg%20file&sc=0-13&sp=-1&sk=#view=detail&mid=3C733B0B50A43166C55C3C733B0B50A43166C55C)|  
+|Importar um arquivo do Adobe Illustrator|![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Importar um arquivo do Adobe Illustrator (ai) no Blend](http://www.bing.com/videos/search?q=add%20illustrator%20file%20to%20blend&qs=n&form=QBVR&pq=add%20illustrator%20file%20to%20blend&sc=0-0&sp=-1&sk=#view=detail&mid=FDB1B25D4DEB69D24515FDB1B25D4DEB69D24515)|  
+|Importar um arquivo do Adobe Photoshop|![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Importar um arquivo do Photoshop no Blend](https://www.youtube.com/watch?v=ekYyhirFKs0)|  
+|Inserir clipes de áudio|![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon")[Adicionar clipes de áudio](https://www.youtube.com/watch?v=7qW9l0tmkAI&index=52&list=PLBDF977B2F1DAB358)|  
   
-## Consulte também  
- [Criando uma interface de usuário usando o Blend para Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
+## <a name="see-also"></a>Consulte também  
+ [Criando uma interface do usuário usando o Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

@@ -1,108 +1,123 @@
 ---
-title: "Analisar a qualidade do c&#243;digo do Visual Basic e C# em aplicativos da Store usando a an&#225;lise de c&#243;digo est&#225;tico do Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.codeanalysis.propertypages.csvb.express"
+title: "Analisar a qualidade do código do Visual Basic e C# em aplicativos da Store usando a análise de código estático do Visual Studio | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.codeanalysis.propertypages.csvb.express
 ms.assetid: cab553fc-19a9-4cbf-858e-8200258ffe50
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "erickson-doug"
-ms.author: "douge"
-manager: "douge"
----
-# Analisar a qualidade do c&#243;digo do Visual Basic e C# em aplicativos da Store usando a an&#225;lise de c&#243;digo est&#225;tico do Visual Studio
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: erickson-doug
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3be5926c1a31bd02b750116077d7cffe73edaf16
+ms.lasthandoff: 02/22/2017
 
-![Applies to Windows and Windows Phone](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+---
+# <a name="analyze-visual-basic-and-c-code-quality-in-store-apps-using-visual-studio-static-code-analysis"></a>Analisar a qualidade do código do Visual Basic e C# em aplicativos da Store usando a análise de código estático do Visual Studio
+![Aplica-se a Windows e Windows Phone](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- A ferramenta de análise de código no Visual Studio Express examina seu código para um conjunto de defeitos comuns e violações de práticas recomendadas de programação.  Avisos da análise de código diferem de avisos e erros do compilador porque a ferramenta de análise de código procura por padrões de código específicos que são válidos, mas ainda podem criar problemas para você ou outras pessoas que usam seu código.  Análise de código também pode localizar defeitos em seu código que são difíceis de serem descobertas por meio de testes.  Executando a ferramenta de análise de código em intervalos regulares durante o processo de desenvolvimento pode melhorar a qualidade do seu aplicativo concluído.  
+ A ferramenta de análise de código Visual Studio Express examina seu código em busca de um conjunto de defeitos e violações comuns das práticas recomendadas de programação. Os avisos da análise de código diferem dos erros e avisos do compilador porque a ferramenta de análise de código procura por padrões de código específicos que são válidos, mas ainda podem criar problemas para você ou outras pessoas que usem o seu código. A análise de código também pode localizar os defeitos no seu código que são difíceis de descobrir com testes. A execução da ferramenta de análise de código a intervalos regulares durante o processo de desenvolvimento pode melhorar a qualidade do seu aplicativo concluído.  
   
 > [!NOTE]
->  No Visual Studio Ultimate, Visual Studio Premium e Professional do Visual Studio, você pode usar a funcionalidade completa da análise de código.  Consulte[Analisando a qualidade do aplicativo usando ferramentas de análise de código](http://msdn.microsoft.com/library/dd264897.aspx)na biblioteca MSDN.  
+>  No Visual Studio Ultimate, Visual Studio Premium e Visual Studio Professional, você pode usar a funcionalidade completa da análise de código. Consulte [Analisando a qualidade do aplicativo usando as ferramentas de análise de código](http://msdn.microsoft.com/library/dd264897.aspx) na Biblioteca MSDN.  
   
-## Neste tópico  
- Você pode aprender sobre:  
+## <a name="in-this-topic"></a>Neste tópico  
+ Estes são os assuntos tratados:  
   
- [Executar análise de código](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Run)  
+ [Executando a análise de código](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Run)  
   
  [Analisando e resolvendo avisos da análise de código](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Analyze)  
   
  [Suprimindo avisos da análise de código](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Suppress)  
   
- [Pesquisando e filtrando resultados da análise de código](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Search)  
+ [Pesquisando e filtrando resultados de análise de código](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Search)  
   
- [Avisos da análise de código do Visual Basic e C#.](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Warnings)  
+ [Avisos de análise de código em Visual Basic e C#](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Warnings)  
   
-##  <a name="BKMK_Run"></a> Executar análise de código  
- Para executar análise de código em sua solução do Visual Studio:  
+##  <a name="BKMK_Run"></a> Executando análise de código  
+ Para executar a análise de código em sua solução do Visual Studio:  
   
--   Sobre o**criar**menu, escolha**Executar análise de código na solução**.  
+-   No menu **Compilar**, escolha **Executar Análise de Código na Solução**.  
   
- Para executar análise de código automaticamente cada vez que você constrói um projeto:  
+ Para executar a análise de código automaticamente cada vez que você compilar um projeto:  
   
-1.  Clique no nome do projeto no Solution Explorer e escolha**propriedades**.  
+1.  Clique com o botão direito do mouse no nome do projeto no Gerenciador de Soluções e escolha **Propriedades**.  
   
-2.  Na página de propriedades do projeto, escolha**a análise de código**e, em seguida, escolha**habilitar análise de código na compilação \(define a constante CODEANALYSIS\)**.  
+2.  Na página de propriedades do projeto, escolha **Análise de Código** e depois **Habilitar Análise de Código no Build (define a constante CODEANALYSIS)**.  
   
- A solução é compilada e análise de código é executado.  Resultados aparecem na janela de análise de código.  
+ A solução é compilada e a análise de código é executada. Os resultados aparecem na janela Análise de Código.  
   
- ![Janela de análise de código](../test/media/ca_managed_collapsed.png "CA\_Managed\_Collapsed")  
+ ![Janela Análise de Código](../test/media/ca_managed_collapsed.png "CA_Managed_Collapsed")  
   
 ##  <a name="BKMK_Analyze"></a> Analisando e resolvendo avisos da análise de código  
- Para analisar um aviso específico, clique no título do aviso na janela análise de código.  O aviso se expande para exibir informações detalhadas sobre o problema.  
+ Para analisar um aviso específico, clique no respectivo título na janela Análise de Código. O aviso se expande para exibir informações detalhadas sobre o problema.  
   
- ![Aviso de análise de código expandido](../test/media/ca_managed_callouts.png "CA\_Managed\_Callouts")  
+ ![Aviso de análise de código expandido](../test/media/ca_managed_callouts.png "CA_Managed_Callouts")  
   
- Quando você expande um aviso, a linha de código que causou o aviso é realçada no editor de código do Visual Studio.  
+ Quando você expande um aviso, a linha de código que o causou é realçada no editor de códigos do Visual Studio.  
   
- ![Realce de texto com a análise de código](../test/media/ca_managed_sourceline.png "CA\_Managed\_SourceLine")  
+ ![Realce de texto da análise de código](../test/media/ca_managed_sourceline.png "CA_Managed_SourceLine")  
   
- Depois de entender o problema, você pode resolvê\-lo em seu código.  Em seguida, execute novamente a análise de código para certificar\-se de que o aviso não aparece mais na janela análise de código e que a correção não gerou novos avisos.  
+ Depois de entender o problema, você pode resolvê-lo no seu código. Em seguida, torne a executar a análise de código para verificar se o aviso não aparece mais na janela Análise de Código e se a sua correção não gerou novos avisos.  
   
 > [!TIP]
->  Você pode executar novamente a análise de código na janela de análise de código.  Clique o**Analisar**botão e escolha o escopo da análise.  Você pode executar novamente a análise na solução inteira ou em um projeto selecionado.  
+>  Você pode executar a análise de código novamente na janela Análise de Código. Clique no botão **Analisar** e escolha o escopo da análise. A análise pode ser executada na solução inteira ou em um projeto selecionado.  
   
 ##  <a name="BKMK_Suppress"></a> Suprimindo avisos da análise de código  
- Há momentos em que você pode decidir não corrigir um aviso de análise de código.  Você pode decidir que resolver o aviso exige recodificação demais a probabilidade de que o problema ocorrerá em qualquer implementação real do seu código.  Ou você pode achar que a análise é usada no aviso é inadequada nesse contexto específico.  Você pode suprimir avisos individuais para que eles não aparecem mais na janela análise de código.  
+ Há ocasiões em que você pode decidir não corrigir um aviso de análise de código. Você pode decidir que resolver o aviso exige recodificação demais considerando a probabilidade de que o problema ocorrerá em qualquer implementação do seu código no mundo real. Ou você pode achar que a análise usada no aviso é inadequada nesse contexto específico. É possível suprimir avisos individuais para que não apareçam mais na janela Análise de Código.  
   
  Para suprimir um aviso:  
   
-1.  Se as informações detalhadas não for exibidas, clique no título do aviso para expandi\-la.  
+1.  Se as informações detalhadas não estiverem exibidas, clique no título do aviso para expandi-lo.  
   
-2.  Escolha o**ações**link na parte inferior do aviso.  
+2.  Escolha o link **Ações** na parte inferior do aviso.  
   
-3.  Aponte para**suprimir mensagem**e, em seguida, escolha**na origem**ou**no arquivo de supressão**.  
+3.  Aponte para **Suprimir Mensagem** e escolha **Na Origem** ou **No Arquivo de Supressão**.  
   
-    -   **Na origem**insere um`SuppressMessage`atributo no arquivo de origem acima do método que gerou o aviso.  Isso torna a supressão mais detectáveis.  
+    -   **Na Origem** insere um atributo `SuppressMessage` no arquivo de origem acima do método que gerou o aviso. Isso facilita a descoberta da supressão.  
   
-    -   **No arquivo de supressão**adiciona um`SuppressMessage`de atributo para o**GlobalSuppressions.cs**arquivo do projeto.  Isso pode facilitar o gerenciamento das supressões.  Observe que o`SuppressMessage`atributo adicionado**GlobalSuppression.cs**também afeta o método que gerou o aviso.  Ele não suprime o aviso globalmente.  
+    -   **No Arquivo de Supressão** adiciona um atributo `SuppressMessage` ao arquivo **GlobalSuppressions.cs** do projeto. Isso pode simplificar o gerenciamento das supressões. Observe que o atributo `SuppressMessage` adicionado a **GlobalSuppression.cs** também afeta o método que gerou o aviso. Ele não suprime o aviso globalmente.  
   
-     Sua decisão suprimir o aviso no arquivo de origem ou no arquivo de supressão depende suas necessidades e estilo de codificação.  
+     Sua decisão sobre suprimir o aviso no arquivo de origem ou no arquivo de supressão depende do seu estilo de codificação e das suas necessidades.  
   
-##  <a name="BKMK_Search"></a> Pesquisando e filtrando resultados da análise de código  
- Você pode pesquisar listas longas de mensagens de aviso e você pode filtrar avisos em soluções multiprojeto.  
+##  <a name="BKMK_Search"></a> Pesquisando e filtrando resultados de análise de código  
+ Você pode pesquisar listas longas de mensagens de aviso e pode filtrar avisos em soluções multiprojeto.  
   
- ![Pesquisar e filtrar a janela de análise de código](../test/media/ca_searchfilter.png "CA\_SearchFilter")  
+ ![Pesquisar e filtrar a janela de análise de código](../test/media/ca_searchfilter.png "CA_SearchFilter")  
   
- Em[!INCLUDE[vs_dev11_expwin_long](../misc/includes/vs_dev11_expwin_long_md.md)]todos os avisos têm o nível de gravidade de aviso de análise de código.  
+ No [!INCLUDE[vs_dev11_expwin_long](../misc/includes/vs_dev11_expwin_long_md.md)], todos os avisos de análise de código têm o nível de severidade Aviso.  
   
-##  <a name="BKMK_Warnings"></a> Avisos da análise de código do Visual Basic e C\#.  
- Análise de código gera os seguintes avisos:  
+##  <a name="BKMK_Warnings"></a> Avisos de análise de código em Visual Basic e C#  
+ A análise de código gera os seguintes avisos:  
   
- [CA1001: tipos que possuem campos descartáveis devem ser descartáveis](http://msdn.microsoft.com/library/ms182172.aspx)  
+ [CA1001: tipos que têm campos descartáveis devem ser descartáveis](http://msdn.microsoft.com/library/ms182172.aspx)  
   
- [CA1821: Remova finalizadores vazios](http://msdn.microsoft.com/library/bb264476.aspx)  
+ [CA1821: remover finalizadores vazios](http://msdn.microsoft.com/library/bb264476.aspx)  
   
- [CA2213: campos descartáveis devem ser descartados](http://msdn.microsoft.com/library/ms182328.aspx)  
+ [CA2213: os campos descartáveis devem ser descartados](http://msdn.microsoft.com/library/ms182328.aspx)  
   
  [CA2229: implementar construtores de serialização](http://msdn.microsoft.com/library/ms182343.aspx)  
   
- [CA2231: sobrecarregar operador equals ao substituir ValueType. Equals](http://msdn.microsoft.com/library/ms182359.aspx)
+ [CA2231: sobrecarregar operador Equals ao substituir ValueType.Equals](http://msdn.microsoft.com/library/ms182359.aspx)

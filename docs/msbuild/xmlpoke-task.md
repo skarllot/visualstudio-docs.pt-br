@@ -1,47 +1,62 @@
 ---
-title: "Tarefa XmlPoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild, Tarefa XmlPoke"
-  - "Tarefa XmlPoke [MSBuild]"
+title: Tarefa XmlPoke | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- XmlPoke task [MSBuild]
+- MSBuild, XmlPoke task
 ms.assetid: 6ba1953c-be3b-4df8-8561-e133408f8270
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Tarefa XmlPoke
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 655512c5c03bcfcad8a0afe0791de092c42c3ea4
+ms.lasthandoff: 02/22/2017
 
-Define os valores conforme especificado por uma consulta XPath em um arquivo XML.  
+---
+# <a name="xmlpoke-task"></a>Tarefa XmlPoke
+Define os valores conforme especificado por uma consulta de XPath em um arquivo XML.  
   
-## Parâmetros  
- A tabela a seguir descreve os parâmetros da `XmlPoke` tarefa.  
+## <a name="parameters"></a>Parâmetros  
+ A tabela a seguir descreve os parâmetros da tarefa `XmlPoke`.  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|`Namespaces`|Opcional `String` parâmetro.<br /><br /> Especifica os namespaces para prefixos de consulta XPath.|  
-|`Query`|Opcional `String` parâmetro.<br /><br /> Especifica a consulta XPath.|  
-|`Value`|Obrigatório <xref:Microsoft.Build.Framework.ITaskItem> parâmetro.<br /><br /> Especifica o arquivo de saída.|  
-|`XmlInputPath`|Opcional <xref:Microsoft.Build.Framework.ITaskItem> parâmetro.<br /><br /> Especifica a entrada XML como um caminho de arquivo.|  
+|---------------|-----------------|  
+|`Namespaces`|Parâmetro `String` opcional.<br /><br /> Especifica os namespaces para prefixos de consulta do XPath.|  
+|`Query`|Parâmetro `String` opcional.<br /><br /> Especifica a consulta do XPath.|  
+|`Value`|Parâmetro obrigatório <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Especifica o arquivo de saída.|  
+|`XmlInputPath`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Especifica a entrada XML como um caminho de arquivo.|  
   
-## Comentários  
- Para além de ter os parâmetros listados na tabela, essa tarefa herda os parâmetros da <xref:Microsoft.Build.Tasks.TaskExtension> herda de classe, que por si só a <xref:Microsoft.Build.Utilities.Task> classe.  Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe TaskExtension \(base\)](../msbuild/taskextension-base-class.md).  
+## <a name="remarks"></a>Comentários  
+ Além de ter os parâmetros listados na tabela, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que, por sua vez, herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
-## Consulte também  
- [ \(tarefas\)](../msbuild/msbuild-tasks.md)   
+## <a name="see-also"></a>Consulte também  
+ [Tarefas](../msbuild/msbuild-tasks.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)

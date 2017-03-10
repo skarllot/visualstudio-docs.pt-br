@@ -1,100 +1,119 @@
 ---
-title: "Ferramentas de Cria&#231;&#227;o de Perfil | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.diagnosticshub.overview"
+title: "Ferramentas de Criação de Perfil | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.diagnosticshub.overview
 ms.assetid: 0fb6cd5d-e16a-4526-84a5-19e63c625bc5
 caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Ferramentas de Cria&#231;&#227;o de Perfil
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5ec205ee98f61b400112a39197e1f2aa9dddbd7d
+ms.openlocfilehash: 2d6ec94f7e68a84a4bb4a606882997fadec49e01
+ms.lasthandoff: 02/22/2017
 
-Ferramentas de criação de perfil e diagnóstico ajudarão\-lo a diagnosticar a memória e uso de CPU e outros problemas de nível de aplicativo. Com essas ferramentas, você pode acumular dados \(como valores de variáveis, chamadas de função e eventos\) ao longo do tempo em que você executar o aplicativo no depurador. Você pode exibir o estado do seu aplicativo em pontos diferentes durante a execução do seu código.  
+---
+# <a name="profiling-tools"></a>Ferramentas de Criação de Perfil
+Ferramentas de Diagnóstico e Criação de Perfil ajudam você a diagnosticar o uso de memória e uso de CPU e outros problemas em nível de aplicativo. Com essas ferramentas, você poderá acumular dados (como valores de variáveis, chamadas de função e eventos) ao longo do tempo em que você executar o aplicativo no depurador. Você pode exibir o estado do seu aplicativo em pontos diferentes durante a execução do seu código.  
   
- Confira o resumo na parte inferior para ver quais ferramentas estão disponíveis para o tipo de projeto \(por exemplo, área de trabalho, UWP, ASP.NET\).  
+ Confira o resumo na parte inferior para ver quais ferramentas estão disponíveis para o tipo de projeto (por exemplo, área de trabalho, UWP, ASP.NET).  
   
- Você pode acessar as ferramentas de criação de perfil usando **Depurar \/ Windows \/ Mostrar ferramentas de diagnóstico** para usar as ferramentas durante a sessão de depuração ou usando **Depurar \/ criador de perfil de desempenho...** para fazer uma análise de desempenho de foco. Consulte [Running Profiling Tools With or Without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md) para obter mais informações sobre as diferentes abordagens.  
+ Você pode acessar as ferramentas de criação de perfil usando **Depurar/Janelas/Mostrar Ferramentas de Diagnóstico** para usar as ferramentas durante a sessão de depuração ou você pode fazer uma análise post-mortem usando algumas outras abordagens.  Consulte [Executando ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md) para obter mais informações sobre as diferentes abordagens.
   
- ![DebugDiagnosticsToolsMenu](../profiling/media/debugdiagnosticstoolsmenu.png "DebugDiagnosticsToolsMenu")  
+ ![DebugDiagnosticsToolsMenu](../profiling/media/debugdiagnosticstoolsmenu.png "DebugDiagnosticsToolsMenu")
   
- Consulte [O que há de novo nas ferramentas de criação de perfil](../profiling/what-s-new-in-profiling-tools.md) para saber mais sobre os novos recursos desta versão.  
+ Consulte [O que há de novo nas ferramentas de criação de perfil](../profiling/what-s-new-in-profiling-tools.md) para saber mais sobre as novas funcionalidades desta versão.
   
- As seções a seguir descrevem as ferramentas de desempenho diferentes que estão disponíveis no Visual Studio.  
+ As seções a seguir descrevem as diferentes ferramentas de desempenho que estão disponíveis no Visual Studio.
   
-## Uso de memória  
+## <a name="memory-usage"></a>Uso de Memória  
  ![DiagMemorySmall](../profiling/media/diagmemorysmall.png "DiagMemorySmall")  
   
- Localizar vazamentos de memória e ineficiente de memória enquanto você estiver depurando com o **uso de memória** ferramenta. A ferramenta permite que você tire instantâneos do heap gerenciado e nativo de memória. Você pode usar essa ferramenta com aplicativos ASP.NET, aplicativos universais do Windows e aplicativos de desktop. O **uso de memória** ferramenta pode ser executada a **Ferramentas de diagnóstico** janela enquanto você está depurando \(**Debug \/ Windows \/ Mostrar ferramentas de diagnóstico**\) ou fora do depurador \(**Depurar \/ criador de perfil de desempenho...**\). Consulte  [Uso de memória](../profiling/memory-usage.md) e [Analisar o uso da memória sem depuração](../Topic/Memory%20Usage%20without%20Debugging1.md) para obter mais informações.  
+ Localize vazamentos de memória e memória ineficiente enquanto você estiver depurando com a ferramenta **Uso da Memória**. A ferramenta permite que você tire instantâneos do heap de memória gerenciada e do heap de memória nativa. Você pode usar essa ferramenta com aplicativos ASP.NET, aplicativos universais do Windows e aplicativos da área de trabalho. A ferramenta **Uso da Memória** pode ser executada da janela **Ferramentas de Diagnóstico** enquanto você está depurando (**Depurar/Janelas/Mostrar Ferramentas de Diagnóstico**) ou fora do depurador (**Depurar/Criador de Perfil de Desempenho...**). Consulte [Uso da Memória](../profiling/memory-usage.md) e [Uso da Memória sem Depuração](../profiling/Memory-Usage-without-Debugging2.md) para obter mais informações.  
   
-## Uso da CPU  
+## <a name="cpu-usage"></a>Uso da CPU  
  ![DiagCPUSmall](../profiling/media/diagcpusmall.png "DiagCPUSmall")  
   
- O **utilização de CPU** ferramenta mostra a você onde a CPU está gastando tempo executando C\+\+, c\# \/ VB e o código JavaScript.  Você pode usar essa ferramenta com área de trabalho e aplicativos universais do Windows, bem como serviços de aplicativos do Azure. O **uso de CPU** ferramenta pode ser executada a **Ferramentas de diagnóstico** janela enquanto você está depurando \(**Debug \/ Windows \/ Mostrar ferramentas de diagnóstico**\) ou fora do depurador \(**Depurar \/ criador de perfil de desempenho...**\). Consulte [Uso da CPU](../profiling/cpu-usage.md) para obter mais informações.  
+ A ferramenta **Uso da CPU** mostra em que a CPU está dedicando tempo a executar código C++, C#/VB e JavaScript.  Você pode usar essa ferramenta com aplicativos de área de trabalho e universais do Windows, bem como aplicativos do Serviço de Aplicativo do Azure e ASP.NET. A ferramenta **Uso de CPU** pode ser executada da janela **Ferramentas de Diagnóstico** enquanto você está depurando (**Depurar/Janelas/Mostrar Ferramentas de Diagnóstico**) ou fora do depurador (**Depurar/Criador de Perfil de Desempenho...**). Para obter mais informações, consulte o [Guia de Iniciantes para a Criação de Perfil de Desempenho](../profiling/beginners-guide-to-performance-profiling.md) e [Uso de CPU](../profiling/cpu-usage.md).
   
-## Performance Explorer  
- ![PerfTools](../profiling/media/perftools.png "PerfTools")  
-  
- O **Performance Explorer** \(**Debug \/ Profiler \/ Performance Explorer**\) permite que você use várias ferramentas diferentes, incluindo **amostragem de CPU**,  **instrumentação**, **alocação de memória .NET**, e **contenção de recursos**. Você pode usar ferramentas do Gerenciador de desempenho com aplicativos de desktop e aplicativos ASP.NET, mas não os aplicativos universais do Windows. Para obter mais informações, consulte [Performance Explorer](../profiling/performance-explorer.md).  
-  
-## Uso de GPU  
+## <a name="gpu-usage"></a>Uso de GPU  
  ![DiagGPUUsage](../profiling/media/diaggpuusage.png "DiagGPUUsage")  
   
- Use o [Uso de GPU](../debugger/gpu-usage.md) ferramenta para compreender melhor a utilização do hardware de alto nível do aplicativo Direct3D. Você pode usar essa ferramenta com a área de trabalho e aplicativos universais do Windows, mas não os aplicativos ASP.NET. O **uso de GPU** ferramenta pode ser executada a **Ferramentas de diagnóstico** janela enquanto você está depurando \(**Debug \/ Mostrar ferramentas de diagnóstico**\) ou fora do depurador \(**Debug \/ criador de perfil de desempenho...**\).  
+ Use a ferramenta [Uso de GPU](../debugger/gpu-usage.md) para compreender melhor a utilização do hardware de alto nível do aplicativo Direct3D. Você pode usar essa ferramenta com aplicativos universais do Windows e aplicativos da área de trabalho, mas não com aplicativos ASP.NET. A ferramenta **Uso de GPU** pode ser executada da janela **Ferramentas de Diagnóstico** enquanto você está depurando (**Depurar/Mostrar Ferramentas de Diagnóstico**) ou fora do depurador (**Depurar/Criador de Perfil de Desempenho...**).  
   
-## Linha do tempo do aplicativo  
+## <a name="application-timeline"></a>Linha do Tempo do Aplicativo  
  ![DiagAppTimeline](../profiling/media/diagapptimeline.png "DiagAppTimeline")  
   
- O [Linha do tempo do aplicativo](../profiling/application-timeline.md) ferramenta ajuda a melhorar o desempenho de aplicativos XAML, fornecendo uma exibição detalhada de seu consumo de recursos. Você pode usar o **aplicativo cronograma** com área de trabalho e aplicativos universais do Windows, mas não os aplicativos ASP.NET. O **linha do tempo do aplicativo** ferramenta pode ser executada a **Ferramentas de diagnóstico** janela \(**Debug \/ criador de perfil de desempenho...**\).  
+ A ferramenta [Linha do Tempo do Aplicativo](../profiling/application-timeline.md) ajuda a melhorar o desempenho de aplicativos XAML fornecendo uma exibição detalhada do consumo de recursos por esses aplicativos. Você pode usar a **Linha do Tempo do Aplicativo** com aplicativos universais do Windows e aplicativos da área de trabalho, mas não com aplicativos ASP.NET. A ferramenta **Linha do Tempo do Aplicativo** pode ser executada da janela **Ferramentas de Diagnóstico** (**Depurar/Criador de Perfil de Desempenho...**).
   
-## PerfTips  
+## <a name="perftips"></a>PerfTips  
  ![DiagPerfTips](../profiling/media/diagperftips.png "DiagPerfTips")  
   
- Quando o depurador interrompe a execução em um ponto de interrupção ou operação de revisão, o tempo decorrido entre a interrupção e o ponto de interrupção anterior aparece como uma dica na janela do editor. Essas [PerfTips](../profiling/perftips.md) ajudá\-lo a monitorar e analisar o desempenho de seu aplicativo enquanto você está depurando. Você pode ver **PerfTips** na área de trabalho, Windows Universal e aplicativos ASP.NET.  
+ Quando o depurador interrompe a execução em um ponto de interrupção ou operação passo a passo, o tempo decorrido entre a interrupção e o ponto de interrupção anterior aparece como uma dica na janela do editor. Essas [PerfTips](../profiling/perftips.md) ajudam você a monitorar e analisar o desempenho de seu aplicativo enquanto você está depurando. Você pode ver **PerfTips** em aplicativos da área de trabalho, universais do Windows e ASP.NET.
+
+## <a name="performance-explorer"></a>Performance Explorer  
+ ![PerfTools](../profiling/media/perftools.png "PerfTools")  
   
-## Memória de JavaScript  
+ O **Gerenciador de Desempenho** (**Depurar/Criador de Perfil/Gerenciador de Desempenho**) permite que você use várias ferramentas diferentes, incluindo **Amostragem de CPU**, **Instrumentação**, **Alocação de Memória .NET** e **Contenção de Recursos**. Você pode usar ferramentas do Gerenciador de Desempenho com aplicativos de área de trabalho e aplicativos ASP.NET, mas não com aplicativos universais do Windows. Para obter mais informações, consulte [Gerenciador de Desempenho](../profiling/performance-explorer.md).
+
+ > [!NOTE]
+ > A menos que você deseje executar uma tarefa especializada como a instrumentação, use as ferramentas de diagnóstico como o uso de memória e o uso de CPU em vez do Gerenciador de Desempenho (que agora é uma ferramenta herdada).
+  
+## <a name="javascript-memory"></a>Memória JavaScript  
  ![DiagJSMemory](../profiling/media/diagjsmemory.png "DiagJSMemory")  
   
- O [Memória de JavaScript](../profiling/javascript-memory.md) ferramenta lhe permite medir, avaliar e direcionar problemas relacionados ao desempenho no seu código com a coleta de informações de tempo na entrada e saída de cada função em seu aplicativo. Você pode usar essa ferramenta com aplicativos HTML Universal do Windows. O **temporização de função JavaScript** ferramenta pode ser executada a **Ferramentas de diagnóstico** janela \(**Debug \/ criador de perfil de desempenho...**\).  
+ A ferramenta [Memória JavaScript](../profiling/javascript-memory.md) lhe permite medir, avaliar e direcionar problemas relacionados ao desempenho no seu código por meio da coleta de informações de tempo na entrada e saída de cada função em seu aplicativo. Você pode usar essa ferramenta com aplicativos HTML universais do Windows. A ferramenta **Temporização de Função JavaScript** pode ser executada da janela **Ferramentas de Diagnóstico** (**Depurar/Criador de Perfil de Desempenho...**).  
   
-## Capacidade de Resposta da Interface de Usuário HTML  
+## <a name="html-ui-responsiveness"></a>Capacidade de Resposta da Interface de Usuário HTML  
  ![DiagHTMLResp](../profiling/media/diaghtmlresp.png "DiagHTMLResp")  
   
- O [Capacidade de resposta da interface do usuário HTML](../profiling/html-ui-responsiveness.md) ferramenta o ajuda a isolar problemas de desempenho em seus aplicativos, incluindo a falta de capacidade de resposta, tempo, de carregamento lenta e freqüentam de atualizações visuais que são menores do que o esperado. Você pode usar essa ferramenta com aplicativos HTML Universal do Windows. O **capacidade de resposta de interface do usuário HTML** ferramenta pode ser executada a **Ferramentas de diagnóstico** janela \(**Debug \/ criador de perfil de desempenho...**\).  
+ A ferramenta [Capacidade de resposta da interface do usuário HTML](../profiling/html-ui-responsiveness.md) ajuda você a isolar problemas de desempenho em seus aplicativos, incluindo a falta de capacidade de resposta, tempo de carregamento lento e atualizações visuais que são menos frequentes do que o esperado. Você pode usar essa ferramenta com aplicativos HTML universais do Windows. A **Capacidade de resposta da interface do usuário HTML** pode ser executada da janela **Ferramentas de Diagnóstico** (**Depurar/Criador de Perfil de Desempenho...**).  
   
-## IntelliTrace  
+## <a name="intellitrace"></a>IntelliTrace  
  ![DiagIntelliTrace](../profiling/media/diagintellitrace.png "DiagIntelliTrace")  
   
- [IntelliTrace](../debugger/intellitrace.md) permite registrar eventos específicos, examinar dados de **locais** durante eventos do depurador e chamadas de função e depurar erros difíceis de reproduzir.  IntelliTrace é principalmente uma ferramenta de depuração, mas ela também fornece informações que podem ser usadas para investigações de desempenho. Você pode usar essa ferramenta no Visual Studio Enterprise somente com área de trabalho, Windows Universal e aplicativos ASP.NET c\#. Você pode encontrar o IntelliTrace no **Ferramentas de diagnóstico** janela enquanto você está depurando \(**Debug \/ Windows \/ Mostrar ferramentas de diagnóstico**\).  
+ O [IntelliTrace](../debugger/intellitrace.md) lhe permite registrar eventos específicos, examinar os dados na janela **Locais** durante eventos do depurador e chamadas de função e depurar erros difíceis de reproduzir.  O IntelliTrace é principalmente uma ferramenta de depuração, mas ela também fornece informações que podem ser usadas para investigações de desempenho. Você pode usar essa ferramenta no Visual Studio Enterprise somente com aplicativos de área de trabalho, aplicativos universais do Windows e C# ASP.NET. Você pode encontrar o IntelliTrace na janela **Ferramentas de Diagnóstico** enquanto você está depurando (**Depurar/Janelas/Mostrar Ferramentas de Diagnóstico**).  
   
-## Criação de perfil na produção  
- A abordagem recomendada para criação de perfil na produção é o perfil do [linha de comando usando vsperf.exe](../profiling/using-the-profiling-tools-from-the-command-line.md) para coletar um perfil de CPU. Para suporte a criação de perfil remota no serviço de aplicativo do Azure, crie o perfil por meio de [Gerenciador de servidores ou o Portal de Kudu](https://azure.microsoft.com/en-us/blog/remote-profiling-support-in-azure-app-service/).  
+## <a name="profiling-in-production"></a>Criação de perfil na produção  
+ A abordagem recomendada para criação de perfil na produção é criar o perfil por meio da [linha de comando usando vsperf.exe](../profiling/using-the-profiling-tools-from-the-command-line.md) para coletar um perfil de CPU. Para suporte à criação de perfil remota no Serviço de Aplicativo do Azure, crie o perfil por meio do [Gerenciador de Servidores ou do Portal Kudu](https://azure.microsoft.com/en-us/blog/remote-profiling-support-in-azure-app-service/).  
   
-## Qual ferramenta deverá usar?  
- Aqui está uma tabela que lista as diferentes ferramentas que o Visual Studio oferece e os diferentes tipos de projeto você pode usá\-los com:  
+## <a name="which-tool-should-i-use"></a>Qual ferramenta devo usar?  
+ Eis aqui uma tabela que lista as diferentes ferramentas que o Visual Studio oferece e os diferentes tipos de projeto com os quais você poderá usá-las:  
   
-|Ferramenta de desempenho|Área de trabalho do Windows|Universal\/da Windows Store|ASP.NET|  
-|------------------------------|---------------------------------|---------------------------------|-------------|  
-|[Uso de memória](../profiling/memory-usage.md)|Sim|Sim|não|  
-|[Uso da CPU](../profiling/cpu-usage.md)|Sim|Sim|Somente o serviço de aplicativo do Azure|  
-|[Uso de GPU](../debugger/gpu-usage.md)|Sim|Sim|não|  
-|[Linha do tempo do aplicativo](../profiling/application-timeline.md)|Sim|Sim|não|  
-|[PerfTips](../profiling/perftips.md)|Sim|Sim para XAML, não para HTML|não|  
-|[Performance Explorer](../profiling/performance-explorer.md)|Sim|não|Sim|  
-|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise somente|.NET Enterprise somente|.NET Enterprise somente|  
-|[Capacidade de resposta da interface do usuário HTML](../profiling/html-ui-responsiveness.md)|não|Sim para HTML, não para XAML|não|  
-|[Memória de JavaScript](../profiling/javascript-memory.md)|não|Sim para HTML, não para XAML|não|  
+|Ferramenta de Desempenho|Área de Trabalho do Windows|Windows Universal/Store|ASP.NET|  
+|----------------------|---------------------|------------------------------|-------------|  
+|[Uso de Memória](../profiling/memory-usage.md)|sim|sim|sim|  
+|[Uso da CPU](../profiling/cpu-usage.md)|sim|sim|sim|  
+|[Uso de GPU](../debugger/gpu-usage.md)|sim|sim|no|  
+|[Linha do tempo do aplicativo](../profiling/application-timeline.md)|sim|sim|no|  
+|[PerfTips](../profiling/perftips.md)|sim|sim para XAML, não para HTML|no|  
+|[Gerenciador de Desempenho](../profiling/performance-explorer.md)|sim|no|sim|  
+|[IntelliTrace](../debugger/intellitrace.md)|Somente .NET Enterprise|Somente .NET Enterprise|Somente .NET Enterprise|  
+|[Capacidade de Resposta de interface do usuário em HTML](../profiling/html-ui-responsiveness.md)|no|sim para HTML, não para XAML|no|  
+|[Memória JavaScript](../profiling/javascript-memory.md)|no|sim para HTML, não para XAML|no|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Visual Studio IDE](../ide/visual-studio-ide.md)

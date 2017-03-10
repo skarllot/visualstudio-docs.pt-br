@@ -1,49 +1,64 @@
 ---
-title: "Tarefa UpdateManifestForBrowserApplication | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "adicionando o elemento <hostInBrowser /> ao manifesto do aplicativo [WPF MSBuild]"
-  - "compilando projetos XBAP [WPF MSBuild]"
-  - "Tarefa UpdateManifestForBrowserApplication [WPF MSBuild]"
-  - "Tarefa UpdateManifestForBrowserApplication [WPF MSBuild], parâmetros"
+title: Tarefa UpdateManifestForBrowserApplication | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- UpdateManifestForBrowserApplication task [WPF MSBuild]
+- adding the <hostInBrowser /> element to the application manifest [WPF MSBuild]
+- building XBAP projects [WPF MSBuild]
+- UpdateManifestForBrowserApplication task [WPF MSBuild], parameters
 ms.assetid: 653339f7-654b-4d64-a26a-5c9f27036895
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Tarefa UpdateManifestForBrowserApplication
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: 2a80b4c0ec826a43e768fc4f017c30536bb7c36a
+ms.lasthandoff: 02/22/2017
 
-O <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> tarefa é executada para adicionar o **\< hostInBrowser \/ \>** elemento para o manifesto do aplicativo \(*projectname*. manifest\) quando um [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] projeto é criado.  
+---
+# <a name="updatemanifestforbrowserapplication-task"></a>Tarefa UpdateManifestForBrowserApplication
+A tarefa <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> é executada para adicionar o elemento **\<hostInBrowser />** ao manifesto do aplicativo (*nomedoprojeto*.manifest) quando um [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] projeto é compilado.  
   
-## Parâmetros de tarefa  
+## <a name="task-parameters"></a>Parâmetros da tarefa  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|`ApplicationManifest`|Necessário **\[ITaskItem\]** parâmetro.<br /><br /> Especifica o caminho e nome do arquivo de manifesto do aplicativo que você deseja adicionar o `<hostInBrowser />` elemento.|  
-|`HostInBrowser`|Necessário **Boolean** parâmetro.<br /><br /> Especifica se deseja modificar o manifesto do aplicativo para incluir o **\< hostInBrowser \/ \>** elemento.  Se **true**, um novo `<`**hostInBrowser \/ \>** elemento é incluído no **\< entryPoint \/ \>** elemento.  Observe que o elemento inclusão é cumulativo: se um **\< hostInBrowser \/ \>** elemento já existir, ele não foi removido ou substituído.  Em vez disso, adicional **\< hostInBrowser \/ \>** elemento é criado.  Se **false**, o manifesto do aplicativo não é modificado.|  
+|---------------|-----------------|  
+|`ApplicationManifest`|Parâmetro obrigatório **ITaskItem[]**.<br /><br /> Especifica o caminho e o nome do arquivo de manifesto do aplicativo ao qual você deseja adicionar o elemento `<hostInBrowser />`.|  
+|`HostInBrowser`|Parâmetro **Booliano** opcional.<br /><br /> Especifica se deseja ou não modificar o manifesto do aplicativo para incluir o elemento **\<hostInBrowser />**. Se for **true**, um novo elemento `<`**hostInBrowser />** será incluído no elemento **\<entryPoint />**. Observe que a inclusão do elemento é cumulativa: se um elemento **\<hostInBrowser />** já existe, ele não é removido nem substituído. Em vez disso, um elemento **\<hostInBrowser />** adicional é criado. Se for **false**, o manifesto do aplicativo não será modificado.|  
   
-## Comentários  
- [!INCLUDE[TLA2#tla_xbap#plural](../msbuild/includes/tla2sharptla_xbapsharpplural_md.md)] executar usando [!INCLUDE[TLA#tla_clickonce](../msbuild/includes/tlasharptla_clickonce_md.md)] implantação e, portanto, deve por publicados com manifestos de implantação e o aplicativo de suporte.  [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] usa o [GenerateApplicationManifest](http://msdn2.microsoft.com/library/6wc2ccdc.aspx) tarefas para gerar um manifesto de aplicativo.  
+## <a name="remarks"></a>Comentários  
+ [!INCLUDE[TLA2#tla_xbap#plural](../msbuild/includes/tla2sharptla_xbapsharpplural_md.md)] são executadas usando a implantação [!INCLUDE[TLA#tla_clickonce](../msbuild/includes/tlasharptla_clickonce_md.md)] e, portanto, devem ser publicadas com suporte a implantação e manifestos de aplicativo. [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] usa a [Tarefa GenerateApplicationManifest](http://msdn2.microsoft.com/library/6wc2ccdc.aspx) para gerar um manifesto do aplicativo.  
   
- Em seguida, para configurar um aplicativo para ser hospedado em um navegador, um elemento adicional, **\< hostInBrowser \/ \>** deve ser adicionado ao manifesto do aplicativo, como mostrado no exemplo a seguir:  
+ Em seguida, para configurar um aplicativo para ser hospedado de um navegador, um elemento adicional, **\<hostInBrowser />**, deve ser adicionado ao manifesto do aplicativo, conforme mostrado no exemplo a seguir:  
   
-```  
+```xml  
 <!--MyXBAPApplication.exe.manifest-->  
 <?xml version="1.0" encoding="utf-8"?>  
 <asmv1:assembly ... >  
@@ -57,12 +72,12 @@ O <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> taref
 />  
 ```  
   
- O <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> tarefa é executada quando um [!INCLUDE[TLA2#tla_xbap](../msbuild/includes/tla2sharptla_xbap_md.md)] projeto é compilado para adicionar o `<hostInBrowser />` elemento.  
+ A tarefa <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> é executada quando um projeto [!INCLUDE[TLA2#tla_xbap](../msbuild/includes/tla2sharptla_xbap_md.md)] é compilado para adicionar o elemento `<hostInBrowser />`.  
   
-## Exemplo  
- O exemplo a seguir mostra como garantir que o `<hostInBrowser />` elemento é incluído em um arquivo de manifesto do aplicativo.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como garantir que o elemento `<hostInBrowser />` seja incluído em um arquivo de manifesto do aplicativo.  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <UsingTask   
     TaskName="Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication"  
@@ -75,10 +90,10 @@ O <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> taref
 </Project>  
 ```  
   
-## Consulte também  
- [Referência do WPF MSBuild](../msbuild/wpf-msbuild-reference.md)   
+## <a name="see-also"></a>Consulte também  
+ [Referência MSBuild do WPF](../msbuild/wpf-msbuild-reference.md)   
  [Referência de tarefas](../msbuild/wpf-msbuild-task-reference.md)   
  [Referência do MSBuild](../msbuild/msbuild-reference.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
- [Compilando um aplicativo WPF \(WPF\)](../Topic/Building%20a%20WPF%20Application%20\(WPF\).md)   
- [Visão geral dos aplicativos de navegador XAML do WPF](../Topic/WPF%20XAML%20Browser%20Applications%20Overview.md)
+ [Compilando um aplicativo WPF (WPF)](http://msdn.microsoft.com/Library/a58696fd-bdad-4b55-9759-136dfdf8b91c)   
+ [Visão geral dos aplicativos de navegador XAML do WPF](http://msdn.microsoft.com/Library/3a7a86a8-75d5-4898-96b9-73da151e5e16)

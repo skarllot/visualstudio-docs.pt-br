@@ -1,56 +1,71 @@
 ---
-title: "Registrando em logs em um ambiente multiprocessador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, log"
-  - "MSBuild, log de vários processadores"
+title: Registrando em logs em um ambiente multiprocessador | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, multi-processor logging
+- MSBuild, logging
 ms.assetid: dd4dae65-ed04-4883-b48d-59bcb891c4dc
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Registrando em logs em um ambiente multiprocessador
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: 7fefa5483ece9c0f32c93addee44c10652175268
+ms.lasthandoff: 02/22/2017
 
-A capacidade do MSBuild de usar vários processadores pode reduzir bastante tempo de compilação do projeto, mas também adiciona a complexidade ao log.  Em um ambiente de único processador, o registador pode manipular eventos de entrada, mensagens, avisos, e erros de forma previsível, sequencial.  No entanto, em um ambiente de processadores, eventos de várias fontes podem chegar simultaneamente ou fora da sequência.  MSBuild fornece um novo registador multi\-processador\- ciente e permite a criação de “de registadores personalizados transmissão.”  
+---
+# <a name="logging-in-a-multi-processor-environment"></a>Registrando em logs em um ambiente multiprocessador
+A capacidade do MSBuild de usar vários processadores pode diminuir bastante o tempo de criação do projeto, mas também adiciona complexidade ao registrar em logs. Em um ambiente de processador único, o agente pode gerenciar eventos recebidos, mensagens, avisos e erros de uma maneira previsível e sequencial. No entanto, em um ambiente com vários processadores, eventos de origens diferentes podem surgir simultaneamente ou fora de sequência. O MSBuild fornece um novo agente com reconhecimento de vários processadores e permite a criação de “agentes de encaminhamento” personalizados.  
   
-## Compilações de vários processador de log  
- Quando você cria um ou vários projetos em um sistema de processadores ou de vários principais, eventos de compilação do MSBuild para todos os projetos são gerados simultaneamente.  Uma avalancha de dados do evento pode chegar no registador ao mesmo tempo ou fora da sequência.  Isso pode oprimir o registador e hora gerados causa de compilação, a saída de registador incorretas, ou mesmo uma compilação quebrada.  Para resolver esses problemas, o registador do MSBuild pode processar de eventos para fora de sequência e correlacionar eventos e suas fontes.  
+## <a name="logging-multiple-processor-builds"></a>Registrando em log builds de vários processadores  
+ Quando você cria um ou mais projetos em um sistema com vários processadores ou vários núcleos, os eventos de build do MSBuild para todos os projetos são gerados simultaneamente. Uma avalanche de dados de eventos pode chegar ao agente ao mesmo tempo ou fora de sequência. Isso pode sobrecarregar o agente e causar tempos de build maiores, saída de agente incorreta ou até mesmo um build danificado. Para resolver esses problemas, o agente do MSBuild pode processar eventos fora de sequência e correlacionar eventos e suas fontes.  
   
- Você pode melhorar a eficiência de log ainda mais criando um registador personalizado de transferência.  Um registador de transmissão de atua como um filtro deixando o escolha, antes de criar, os eventos que você deseja monitorar.  Quando você usa um registador personalizado de transferência, os eventos indesejáveis não oprimem o registador, não desordenam os logs, ou não desacelerar tempo de compilação.  
+ Você pode melhorar a eficiência de registro em log ainda mais criando um agente personalizado de encaminhamento. Um agente personalizado de encaminhamento atua como um filtro, permitindo que você escolha, antes de criar, os eventos que você deseja monitorar. Quando você usa um agente personalizado de encaminhamento, eventos indesejados não sobrecarregam o agente, truncam os logs nem reduzem os tempos de build.  
   
-### Modelo central de log  
- Para compilações multiprocessadores, MSBuild “usa um modelo central do log.” No modelo central de log, uma instância de MSBuild.exe atua como o processo de compilação primária, ou “o nó central.” As instâncias secundários de MSBuild.exe, ou “os nós colaterais,” são anexados ao nó central.  Todos os registadores baseados ILogger\- anexados ao nó central são conhecidos como “os registadores centrais” e o registadores anexados a nós secundários são conhecidos como “registadores secundários”.  
+### <a name="central-logging-model"></a>Modelo de registro em log central  
+ Para builds para vários processadores, o MSBuild usa um "modelo de log central". No modelo de log central, uma instância de MSBuild.exe atua como o processo de build principal ou "nó central". Instâncias secundárias do MSBuild.exe ou "nós secundários," são anexadas ao nó central. Qualquer agente de ILogger anexado ao nó central é conhecido como "agentes centrais" e agentes anexados a nós secundários são conhecidos como "agentes secundários".  
   
- Quando uma compilação ocorre, os registadores secundários roteiam o tráfego de eventos a registadores central.  Porque os eventos são originados em vários nós colaterais, os dados chegam no nó central simultaneamente mas intercalaram.  Para resolver evento\-à\- projeto e referências de evento\-à\- destino, os argumentos de evento incluem informações de contexto extra do evento compilação.  
+ Quando ocorre um build, os agentes secundários encaminham o tráfego de eventos para os agentes centrais. Como eventos se originam em vários nós secundários, os dados chegam ao nó central simultaneamente, mas intercalados. Para resolver referências de evento para projeto e evento para destino, os argumentos do evento incluem informações adicionais de contexto do evento de build.  
   
- Embora apenas <xref:Microsoft.Build.Framework.ILogger> é necessário ser implementado pelo registador central, recomendamos que você também implementa <xref:Microsoft.Build.Framework.INodeLogger> se você desejar que o registador central para inicializar com o número de nós que estão participando na compilação.  A seguir sobrecarga do método de <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> é chamada quando o mecanismo inicializa o registador:  
+ Embora somente <xref:Microsoft.Build.Framework.ILogger> seja necessário ser implementado pelo agente central, é recomendável que você implemente também <xref:Microsoft.Build.Framework.INodeLogger> se desejar que o agente central inicialize com o número de nós que participam do build. A seguinte sobrecarga do método <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> é chamada quando o mecanismo inicializa o agente:  
   
-```  
+```cs
 public interface INodeLogger: ILogger  
 {  
     public void Initialize(IEventSource eventSource, int nodeCount);  
 }  
 ```  
   
-### O modelo de log  
- No modelo central do log, também tráfego de mensagem de entrada, como quando vários projetos criados imediatamente, pode oprimir o nó central, que força o sistema e move o desempenho de compilação.  
+### <a name="distributed-logging-model"></a>Modelo de Registro em Log Distribuído  
+ No modelo de log central, muito tráfego de mensagens recebidas, como quando muitos projetos são criados ao mesmo tempo, pode sobrecarregar o nó central, que desgasta o sistema e reduz o desempenho do build.  
   
- Para reduzir esse problema, MSBuild também permite que um “modelo distribuído de log” que estende o modelo central de log deixando o criar registadores de transferência.  Um registador de transferência é anexado a um nó new e recebem eventos de entrada de compilação do nó.  O registador de transferência é apenas como um registador normal exceto que pode filtrar os eventos e então encaminhar somente desejado ao nó central.  Isso reduz o tráfego de mensagem no nó central e permite portanto o melhor desempenho.  
+ Para reduzir esse problema, o MSBuild também permite um "modelo de registro em log distribuído" que estende o modelo de registro em log central, permitindo criar agentes de encaminhamento. Um agente de encaminhamento está conectado a um nó secundário e recebe eventos de build de entrada desse nó. O agente de encaminhamento é como um agente comum, exceto que pode filtrar os eventos e, em seguida, encaminhar somente os desejados para o nó central. Isso reduz o tráfego de mensagens no nó central e, portanto, permite um melhor desempenho.  
   
- Você pode criar um registador de transferência implementando a interface de <xref:Microsoft.Build.Framework.IForwardingLogger> , que deriva de <xref:Microsoft.Build.Framework.ILogger>.  A interface é definida como:  
+ Você pode criar um agente de encaminhamento ao implementar a interface <xref:Microsoft.Build.Framework.IForwardingLogger>, que deriva de <xref:Microsoft.Build.Framework.ILogger>. A interface é definida como:  
   
-```  
+```cs
 public interface IForwardingLogger: INodeLogger  
 {  
     public IEventRedirector EventRedirector { get; set; }  
@@ -58,12 +73,12 @@ public interface IForwardingLogger: INodeLogger
 }  
 ```  
   
- Para encaminhar eventos em um registador de transferência, chame o método de <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> de interface de <xref:Microsoft.Build.Framework.IEventRedirector> .  Passar <xref:Microsoft.Build.Framework.BuildEventArgs>apropriado, ou um derivada, como o parâmetro.  
+ Para encaminhar eventos em um agente de encaminhamento, chame o método <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> da interface <xref:Microsoft.Build.Framework.IEventRedirector>. Passe o <xref:Microsoft.Build.Framework.BuildEventArgs> adequado ou um derivativo, como o parâmetro.  
   
- Para obter mais informações, consulte [Criando agentes de log de encaminhamento](../msbuild/creating-forwarding-loggers.md).  
+ Para obter mais informações, consulte [Criando Agentes de Encaminhamento](../msbuild/creating-forwarding-loggers.md).  
   
-### Anexando um registador distribuído  
- Para anexar um registador distribuído em uma construção de linha de comando, use a opção de `/distributedlogger` \(ou, `/dl` para breve\).  O formato para especificar os nomes de registador tipos e classes são as mesmas que essas para a opção de `/logger` , exceto que um registador distribuído é composto de duas classes de log: um registador de transferência e um registador central.  A seguir está um exemplo de anexar um registador distribuído:  
+### <a name="attaching-a-distributed-logger"></a>Anexando um Agente Distribuído  
+ Para anexar um agente distribuído em um build de linha de comando, use a opção `/distributedlogger` (ou, `/dl` de forma abreviada). O formato para especificar os nomes dos tipos de agente e classes é o mesmo que para a opção `/logger`, exceto em casos em que um agente distribuído seja composto por duas classes de registro em log: um agente de encaminhamento e um agente central. A seguir, está um exemplo de como anexar um agente distribuído:  
   
 ```  
 msbuild.exe *.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,  
@@ -71,8 +86,8 @@ Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,
 Culture=neutral  
 ```  
   
- Um asterisco \(\*\) separa os dois nomes de registador no opção de `/dl` .  
+ Um asterisco (*) separa os dois nomes de agentes na opção `/dl`.  
   
-## Consulte também  
- [Agentes de log de compilação](../msbuild/build-loggers.md)   
+## <a name="see-also"></a>Consulte também  
+ [Agentes de Log de Build](../msbuild/build-loggers.md)   
  [Criando agentes de log de encaminhamento](../msbuild/creating-forwarding-loggers.md)

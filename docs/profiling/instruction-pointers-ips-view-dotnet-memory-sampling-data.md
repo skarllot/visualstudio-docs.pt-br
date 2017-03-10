@@ -1,49 +1,64 @@
 ---
-title: "Exibi&#231;&#227;o de ponteiros de instru&#231;&#227;o (IPs) - dados de amostragem da mem&#243;ria do .NET do criador de perfil | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibição Ponteiros de Instrução"
+title: "Exibição de IPs (ponteiros de instrução) – Dados de Amostragem da Memória do .NET | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Instruction Pointers view
 ms.assetid: 7d91cc14-e8e9-4ebb-b14f-b9f0da770508
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Exibi&#231;&#227;o de ponteiros de instru&#231;&#227;o (IPs) - dados de amostragem da mem&#243;ria do .NET do criador de perfil
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 94452ac5d18607b7b656fd8dffe3fb9e131d1352
+ms.lasthandoff: 02/22/2017
 
-A exibição de IPs para os dados de criação de perfil de alocação de memória .NET que foram coletados usando o método de amostragem lista as instruções do assembly que atribuídas a memória durante analisar executado.  As colunas da exibição também listam o tamanho e o número de alocações.  
+---
+# <a name="instruction-pointers-ips-view---net-memory-sampling-data"></a>Exibição de IPs (ponteiros de instrução) – Dados de Amostragem da Memória do .NET
+A exibição de IPs dos dados de criação de perfil de alocação de memória do .NET que foi coletada ao usar o método de amostragem lista as instruções de assembly que alocaram memória durante o processo de criação de perfil. As colunas da exibição também listam o tamanho e o número de alocações.  
   
- Somente valores exclusivos são listados.  
+ Apenas valores exclusivos são listados.  
   
-|Coluna|Descrição|  
-|------------|---------------|  
-|**Identificação do Processo**|A identificação do processo \(PID\) da execução de criação de perfil.|  
+|Column|Descrição|  
+|------------|-----------------|  
+|**ID do Processo**|A ID de processo (PID) da criação de perfil.|  
 |**Nome do Processo**|O nome do processo.|  
 |**Nome do Módulo**|O nome do módulo que contém a instrução.|  
 |**Caminho do Módulo**|O caminho do módulo que contém a instrução.|  
-|**Source File**|O arquivo de origem que contém a instrução.|  
+|**Arquivo de Origem**|O arquivo de origem que contém a instrução.|  
 |**Nome da Função**|O nome da função.|  
-|**Número de Linha da Função**|O número de linhas do início desta função no arquivo fonte.|  
-|**Endereço da função**|O endereço inicial da função.|  
-|**A linha de origem começa**|O número de linha inicial no arquivo de origem no qual a alocação ocorreu.|  
-|**Linha de origem extremidade**|O número da linha final no arquivo de origem no qual a alocação ocorreu.|  
-|**O caractere de origem começa**|O deslocamento de caractere na linha inicial do arquivo de origem no qual a alocação ocorreu.|  
-|**Extremidade de caracteres de origem**|O deslocamento de caractere de término na linha do arquivo de origem no qual a alocação ocorreu.|  
-|**Endereço de instrução**|O endereço da instrução.|  
-|**Alocações Exclusivas**|O número total de objetos criados pela instrução.|  
-|**% de Alocações Exclusivas**|A porcentagem de todos os objetos que foram criados em analisar executado que foi atribuído pela instrução.|  
-|**Bytes Exclusivos**|O número de bytes de memória que foi atribuído analisar executado em que foi atribuído pela instrução.|  
-|**% de Bytes Exclusivos**|A porcentagem de todos os bytes de memória que foi atribuído analisar executado em que foi atribuído pela instrução.|  
+|**Número de linha da função**|O número de linha do início dessa função no arquivo de origem.|  
+|**Endereço da Função**|O endereço inicial da função.|  
+|**Início da Linha de Origem**|O número de linha inicial no arquivo de origem em que a alocação ocorreu.|  
+|**Final da Linha de Origem**|O número de linha final no arquivo de origem em que a alocação ocorreu.|  
+|**Início do Caractere de Origem**|O deslocamento do caractere inicial na linha do arquivo de origem em que a alocação ocorreu.|  
+|**Final do Caractere de Origem**|O deslocamento do caractere final na linha do arquivo de origem em que a alocação ocorreu.|  
+|**Endereço da Instrução**|O endereço da instrução.|  
+|**Alocações Exclusivas**|O número total de objetos que foram criados pela instrução.|  
+|**% de Alocações Exclusivas**|O percentual de todos os objetos criados na criação de perfil que foram alocados pela instrução.|  
+|**Bytes Exclusivos**|O número de bytes de memória que foram alocados na criação de perfil que foram alocados pela instrução.|  
+|**% de Bytes Exclusivos**|O percentual de todos os bytes de memória que foram alocados na criação de perfil que foram alocados pela instrução.|  
   
-## Consulte também  
- [Exibição de ponteiros de instrução \(IPs\)](../profiling/instruction-pointers-ips-view-sampling-data.md)
+## <a name="see-also"></a>Consulte também  
+ [Exibição de IPs (ponteiros de instrução)](../profiling/instruction-pointers-ips-view-sampling-data.md)
