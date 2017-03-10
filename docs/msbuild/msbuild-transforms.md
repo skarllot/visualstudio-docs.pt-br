@@ -1,62 +1,77 @@
 ---
-title: "Transforma&#231;&#245;es do MSBuild | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, transformações"
-  - "transformações [MSBuild]"
+title: "Transformações do MSBuild | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, transforms
+- transforms [MSBuild]
 ms.assetid: d0bcfc3c-14fa-455e-805c-63ccffa4a3bf
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Transforma&#231;&#245;es do MSBuild
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: 498afe5aa861c5b52248d444c3754920f2143356
+ms.lasthandoff: 02/22/2017
 
-Uma transformação é uma conversão individual da lista de um item para outro.  Além de habilitar um projeto converter listas de itens, uma transformação permite um destino identificar um mapeamento direto entre suas entradas e saídas.  Este tópico explica as transformações e como [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] usa para construir projetos com mais eficiência.  
+---
+# <a name="msbuild-transforms"></a>Transformações do MSBuild
+Uma transformação é uma conversão individual de uma lista de itens para outra. Além de habilitar um projeto para converter as lista de itens, uma transformação permite que um destino identifique um mapeamento direto entre suas entradas e saídas. Este tópico explica as transformações e como o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] as utiliza na criação de projetos com mais eficiência.  
   
-## Transformar modificadores  
- As transformações não são arbitrárias, mas limitadas pela sintaxe especial no qual todos os modificadores de transformação devem ser no formato %\(*ItemMetaDataName*\).  Metadados do item podem ser usado como um modificador de transformação.  Isso inclui os metadados de item conhecido que é atribuído a cada item quando ele é criado.  Para obter uma lista de metadados do item conhecidas, consulte [Metadados de itens conhecidos](../msbuild/msbuild-well-known-item-metadata.md).  
+## <a name="transform-modifiers"></a>Modificadores de transformação  
+ As transformações não são arbitrárias, mas são limitadas pela sintaxe especial na qual todos os modificadores de transformação devem estar no formato %(*ItemMetaDataName*). Quaisquer metadados de item podem ser usados como um modificador de transformação. Isso inclui os metadados de item bem conhecidos atribuídos a cada item criado. Para obter uma lista de metadados de item conhecidos, veja [Metadados de itens conhecidos](../msbuild/msbuild-well-known-item-metadata.md).  
   
- No exemplo a seguir, uma lista de arquivos. resx é transformada em uma lista de arquivos. Resources.  O modificador de transformação %\(filename\) Especifica que cada arquivo. Resources tem o mesmo nome de arquivo do arquivo. resx correspondente.  
+ No exemplo a seguir, uma lista de arquivos .resx é transformada em uma lista de arquivos .resources. O modificador de transformação %(filename) especifica que cada arquivo .resources tem o mesmo nome de arquivo do que o arquivo .resx correspondente.  
   
 ```  
 @(RESXFile->'%(filename).resources')  
 ```  
   
 > [!NOTE]
->  Você pode especificar um separador personalizado para uma lista de itens transformados da mesma maneira que você especificar um separador para obter uma lista de item padrão.  Por exemplo, para separar uma lista de itens transformados usando uma vírgula \(,\) em vez de vírgula padrão \(;\), use o seguinte XML.  
+>  Você pode especificar um separador personalizado para uma lista de itens transformados da mesma maneira que especifica um separador para uma lista de itens padrão. Por exemplo, para separar uma lista de itens transformados usando uma vírgula (,) em vez do ponto-e-vírgula (;) padrão, use o XML a seguir.  
   
 ```  
 @(RESXFile->'Toolset\%(filename)%(extension)', ',')  
 ```  
   
- Por exemplo, se os itens na lista de itens @\(RESXFile\) `Form1.resx`, `Form2.resx`, e `Form3.resx`, as saídas da lista transformado será `Form1.resources`, `Form2.resources`, e `Form3.resources`.  
+ Por exemplo, se os itens na lista de itens @(RESXFile) forem `Form1.resx`, `Form2.resx` e `Form3.resx`, as saídas na lista transformada serão `Form1.resources`, `Form2.resources` e `Form3.resources`.  
   
-## Usando vários modificadores  
- Uma expressão de transformação pode conter vários modificadores, que podem ser combinados em qualquer ordem e podem ser repetidas.  No exemplo a seguir, o nome do diretório que contém os arquivos é alterado mas os arquivos mantêm a extensão de nome de arquivo e o nome original.  
+## <a name="using-multiple-modifiers"></a>Uso de vários modificadores  
+ Uma expressão de transformação pode conter vários modificadores, que podem ser combinados em qualquer ordem e podem ser repetidos. No exemplo a seguir, o nome do diretório que contém os arquivos é alterado, mas os arquivos de reter a extensão de nome de arquivo e de nome original.  
   
 ```  
 @(RESXFile->'Toolset\%(filename)%(extension)')  
 ```  
   
- Por exemplo, se os itens que estão contidos na `RESXFile` lista item são `Project1\Form1.resx`, `Project1\Form2.resx`, e `Project1\Form3.text`, saídas na lista transformada será `Toolset\Form1.resx`, `Toolset\Form2.resx`, e `Toolset\Form3.text`.  
+ Por exemplo, se os itens que estão contidos no `RESXFile` lista de itens são `Project1\Form1.resx`, `Project1\Form2.resx`, e `Project1\Form3.text`, as saídas na lista transformada será `Toolset\Form1.resx`, `Toolset\Form2.resx`, e `Toolset\Form3.text`.  
   
-## Análise de dependência  
- Transformações garantem um mapeamento individual entre a lista de itens transformados e a lista do item original.  Portanto, se um destino cria saídas são transformações das entradas, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] pode analisar os carimbos de entradas e saídas e decidir se deve ignorar, criar ou reconstruir parcialmente um destino.  
+## <a name="dependency-analysis"></a>Análise de dependência  
+ Transformações garantem um mapeamento individual entre a lista de itens transformados e a lista do item original. Portanto, se um destino cria saídas que são transformações das entradas, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] pode analisar os carimbos de hora das entradas e saídas e decida se deseja ignorar, compilar ou recompilar parcialmente um destino.  
   
- No [Tarefa Copy](../msbuild/copy-task.md) no exemplo a seguir, todos os arquivos do `BuiltAssemblies` lista item mapeia para um arquivo na pasta de destino da tarefa especificada usando uma transformação no `Outputs` atributo.  Se um arquivo a `BuiltAssemblies` item alterações na lista, o `Copy` tarefa será executada apenas para o arquivo alterado e todos os outros arquivos serão ignorados.  Para obter mais informações sobre como usar transformações e análise de dependência, consulte [Como compilar incrementalmente](../msbuild/how-to-build-incrementally.md).  
+ No [tarefa Copy](../msbuild/copy-task.md) no exemplo a seguir, todos os arquivos a `BuiltAssemblies` lista de itens é mapeado para um arquivo na pasta de destino da tarefa especificada com uma transformação no `Outputs` atributo. Se um arquivo no `BuiltAssemblies` item alterações da lista, o `Copy` tarefa será executada somente para o arquivo alterado e todos os outros arquivos serão ignorados. Para saber mais sobre como usar transformações e análise de dependência, veja [como: compilar incrementalmente](../msbuild/how-to-build-incrementally.md).  
   
-```  
+```xml  
 <Target Name="CopyOutputs"  
     Inputs="@(BuiltAssemblies)"  
     Outputs="@(BuiltAssemblies -> '$(OutputPath)%(Filename)%(Extension)')">  
@@ -68,14 +83,14 @@ Uma transformação é uma conversão individual da lista de um item para outro.
 </Target>  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-### Descrição  
- A exemplo a seguir mostra um [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] arquivo de projeto usa transformações.  Este exemplo assume que há apenas um arquivo. xsd no diretório c:\\sub0\\sub1\\sub2\\sub3 e que o diretório de trabalho é c:\\sub0.  
+### <a name="description"></a>Descrição  
+ O exemplo a seguir mostra um arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] que usa transformações. Este exemplo supõe que haja apenas um arquivo .xsd no diretório c:\sub0\sub1\sub2\sub3 e o diretório de trabalho é c:\sub0.  
   
-### Código  
+### <a name="code"></a>Código  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <ItemGroup>  
         <Schema Include="sub1\**\*.xsd"/>  
@@ -94,8 +109,8 @@ Uma transformação é uma conversão individual da lista de um item para outro.
 </Project>  
 ```  
   
-### Comentários  
- O exemplo produz a seguinte saída.  
+### <a name="comments"></a>Comentários  
+ Este exemplo gerencia a seguinte saída.  
   
 ```  
 rootdir: C:\  
@@ -108,7 +123,7 @@ relativedir: sub1\sub2\sub3\
 extension: .xsd  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Conceitos do MSBuild](../msbuild/msbuild-concepts.md)   
  [Referência do MSBuild](../msbuild/msbuild-reference.md)   
  [Como compilar incrementalmente](../msbuild/how-to-build-incrementally.md)

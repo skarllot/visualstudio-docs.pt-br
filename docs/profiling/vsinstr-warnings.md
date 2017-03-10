@@ -1,49 +1,64 @@
 ---
-title: "Avisos de VSInstr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "implementação, ferramenta VSInstr"
-  - "ferramentas de desempenho, ferramenta VSInstr"
-  - "ferramenta VSInstr"
-  - "avisos"
-  - "avisos, ferramenta VSInstr"
+title: Avisos de VSInstr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instrumentation, VSInstr tool
+- warnings
+- VSInstr tool
+- warnings, VSInstr tool
+- performance tools, VSInstr tool
 ms.assetid: 47512bc9-a8e9-4628-883a-d9888edab786
 caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Avisos de VSInstr
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: a116306cdd3fc0cd636077bf2a0d6bc87b49e96b
+ms.lasthandoff: 02/22/2017
 
-A tabela a seguir lista os avisos emitidos pela ferramenta de VSInstr.exe.  Você pode usar a opção de NOWARN junto com os números de aviso para suprimir o aviso aparecessem.  
+---
+# <a name="vsinstr-warnings"></a>Avisos de VSInstr
+A tabela a seguir lista avisos emitidos pela ferramenta VSInstr.exe. Você pode usar a opção NOWARN junto com os números de aviso para suprimir o aviso seja exibido.  
   
-|Número de aviso|Descrição|  
-|---------------------|---------------|  
-|**VSP2000**|Erro interno.  Não é possível obter o nome de arquivo do módulo para esse executável.|  
-|**VSP2001**|\<o nome do assembly\> é um assembly altamente nomeada.  Deve ser assinada novamente antes que possa ser executado.<br /><br /> Esse aviso ocorre quando um assembly assinado é provido.  Você pode usar a ferramenta de sn.exe para renunciar binário ou desativar temporariamente o requisito de nome forte.  Para obter mais informações, consulte [Sn.exe \(Ferramenta de Nome Forte\)](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md).|  
-|**VSP2002**|Não foi possível localizar o funcname \<da função\> no nome \<do arquivo\><br /><br /> Esse aviso ocorrerá se uma função não poderá ser localizada no arquivo especificado.|  
-|**VSP2003**|Não foi possível encontrar nenhum saltos cruzadas ao funcname \<da\> função no \<nome do arquivo\>.<br /><br /> Esse aviso ocorrerá se VSInstr não pode anular saltos cruzadas.  Os saltos de dados são usados para a otimização de código.|  
-|**VSP2004**|O funcname \<da função\> foi excluído usando a opção de linha de comando de EXCLUSÃO mas necessário porque contém um salto cruzada.<br /><br /> Esse aviso ocorrerá se a função foi excluída usando a opção de EXCLUSÃO, mas é necessário durante o processo de instrumentação.  O profiler inclui automaticamente a função necessário.|  
-|**VSP2005**|Texto interno do \<erro de WMI\><br /><br /> Esse aviso é emitido se a instrumentação não pode ser executada.  Revise o texto de erro para determinar se o pode ser corrigido.|  
-|**VSP2006**|Não foi possível localizar o PDB para \<o nome\><br /><br /> Esse aviso ocorrerá se o arquivo PDB não existe no caminho de pesquisa ou não corresponde ao binário.|  
-|**VSP2007**|\<o nome\> de arquivo não contém nenhum código instrumentable.<br /><br /> Esse aviso é emitido se todas as funções do arquivo binário que foram excluídas ou se o arquivo especificado contém apenas os recursos.|  
-|**VSP2008**|Não é possível obter atributos de segurança \<do nome\>.  Código \<do código de erro\><br /><br /> Esse aviso ocorrerá se o usuário não tem permissão de READ\_DAC.  Durante o processo de instrumentação profiler, o tenta preservar DACL original para binário.  Como binário original é substituído por um novo binário, DACL de binário original deve ser copiado e aplicado ao novo binário.  Isso pode falhar se o usuário tem acesso de READ\_DAC em binário original.|  
-|**VSP2009**|Não é possível definir atributos de segurança \<no nome\>.  Número \<de erro do código de erro\><br /><br /> Esse aviso ocorrerá se o usuário não tem permissão de WRITE\_DAC.  Durante o processo de instrumentação profiler, o tenta preservar DACL original para binário.  Como binário original é substituído por um novo binário, DACL de binário original deve ser copiado e aplicado ao novo binário.  Isso pode falhar se o usuário tem acesso de WRITE\_DAC no novo binário.|  
-|**VSP2010**|Nenhuma função for selecionada especificamente para a instrumentação \- devido às opções de INCLUDE\/\-EXCLUDE|  
-|**VSP2011**|Inclua\/excluir o nome \<de funcspec\> não corresponde a nenhuma função|  
-|**VSP2012**|A imagem não contém nenhum código que pode ser provido para a cobertura de código.<br /><br /> O profiler não provê o seguinte tipo de código:<br /><br /> -   Funções estáticas de CRT<br />-   Métodos gerenciados atribuídos com NonUserCodeAttribute<br />-   Métodos gerenciados atribuídos com DebuggerHiddenAttribute<br />-   Blocos de MASM<br /><br /> Esse aviso será gerado se, depois dessa filtragem, não há nenhum código esquerda.|  
-|**VSP2013**|A esta imagem requer ser executado como um processo de 32 bits.  Os sinalizadores de cabeçalho de CLR foram atualizados para refletir isso.<br /><br /> O profiler altera o binário de modo que os sistemas operacionais de 64 bits possam abrir o processo de 32 bits emulador o WOW64.  Para bibliotecas \(DLL\) isso pode falhar se são carregados em um processo de 64 bits existente.  Esse aviso notifica o usuário de dependência.|  
-|**VSP2014**|A imagem instrumentada resultante parece ser inválida, e não pode executar.<br /><br /> Essa mensagem ocorre quando o assembly provido final tem um cabeçalho inválido de PE.|  
+|Número do aviso|Descrição|  
+|--------------------|-----------------|  
+|**VSP2000**|Erro interno. Não é possível obter o nome de arquivo do módulo para este executável.|  
+|**VSP2001**|\<assembly name> é um assembly de nome forte. Ele deve ser assinado novamente antes de ser executado.<br /><br /> Este aviso ocorre quando um assembly assinado é instrumentado. Você pode usar a ferramenta sn.exe desistir binário ou desativar temporariamente o requisito de nome forte. Para saber mais, veja [Sn.exe (Ferramenta de Nome Forte)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).|  
+|**VSP2002**|Não foi possível localizar a função \<funcname > no arquivo \<filename ><br /><br /> Este aviso ocorrerá se uma função não puder ser localizada no arquivo especificado.|  
+|**VSP2003**|Não foi possível encontrar um salto cruzado para a função \<funcname> no arquivo \<filename>.<br /><br /> Este aviso ocorre se VSInstr não puder anular saltos cruzados. Saltos cruzados são usados para otimização do código.|  
+|**VSP2004**|A função \<funcname> foi excluída por meio da opção de linha de comando EXCLUDE, mas ela era necessária porque continha um salto cruzado.<br /><br /> Este aviso ocorre se a função foi excluída usando a opção EXCLUDE, mas é necessária durante o processo de instrumentação. O criador de perfil inclui automaticamente a função necessária.|  
+|**VSP2005**|Erro de Instrumentação Interno \<error text><br /><br /> Esse aviso será emitido se a instrumentação não puder ser executada. Examine o texto de erro para determinar se ele pode ser corrigido.|  
+|**VSP2006**|Não foi possível localizar PDB para \<name><br /><br /> Este aviso ocorre se o arquivo PDB não corresponde ao binário ou não existe no caminho de pesquisa.|  
+|**VSP2007**|\<filename> não contém código instrumentável.<br /><br /> Esse aviso é emitido se as funções no arquivo binário foram excluídas ou se o arquivo especificado contém somente os recursos.|  
+|**VSP2008**|Não é possível obter atributos de segurança de \<name>. Código de erro \<code><br /><br /> Este aviso ocorrerá se o usuário não tiver a permissão READ_DAC. Durante o processo de instrumentação, o criador de perfil tenta preservar a DACL original para o binário. Porque o binário original é substituído por um novo binário, a DACL do binário original deve ser copiada e aplicada ao novo binário. Isso poderá falhar se o usuário não tiver acesso READ_DAC no binário original.|  
+|**VSP2009**|Não é possível definir atributos de segurança em \<name>. Código de erro \<error number><br /><br /> Este aviso ocorre se o usuário não tem a permissão WRITE_DAC. Durante o processo de instrumentação, o criador de perfil tenta preservar a DACL original para o binário. Porque o binário original é substituído por um novo binário, a DACL do binário original deve ser copiada e aplicada ao novo binário. Isso poderá falhar se o usuário não tiver acesso WRITE_DAC no novo binário.|  
+|**VSP2010**|Não há funções especificamente selecionadas para instrumentação por causa das opções -INCLUDE/-EXCLUDE|  
+|**VSP2011**|Include/Exclude funcspec \<name> não corresponde a qualquer função|  
+|**VSP2012**|A imagem não contém qualquer código que pode ser instrumentado para cobertura de código.<br /><br /> O criador de perfil não instrumenta o seguinte tipo de código:<br /><br /> - Funções de CRT estáticas<br />- Métodos gerenciados atribuídos com NonUserCodeAttribute<br />- Métodos gerenciados atribuídos com DebuggerHiddenAttribute<br />- Blocos MASM<br /><br /> Esse aviso será gerado se, após a filtragem, não houver nenhum código restante.|  
+|**VSP2013**|Instrumentar esta imagem requer que ela seja executada como um processo de 32 bits. Os sinalizadores de cabeçalho CLR foram atualizados para refletir isso.<br /><br /> O criador de perfil modifica o binário para que os sistemas operacionais de 64 bits pode abrir o processo de 32 bits no emulador WOW64. Para bibliotecas (DLLs) isso pode falhar se eles são carregados em um processo de 64 bits existente. Este aviso notifica o usuário da dependência.|  
+|**VSP2014**|A imagem instrumentada resultante parece ser inválida e poderá não ser executada.<br /><br /> Essa mensagem ocorre quando o assembly instrumentado final tem um cabeçalho PE inválido.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [VSInstr](../profiling/vsinstr.md)

@@ -1,57 +1,72 @@
 ---
-title: "Desanexar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Desanexar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d9d1b52c-7f28-467d-b1e0-512afc4e46c9
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Desanexar
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 5104961ca2411b21a9525fc5793ff194e90f7a0c
+ms.lasthandoff: 02/22/2017
 
-Opção de VSPerfCmd.exe **Detach** desconectam o profiler de processos especificado ou todos os processos se nenhum é especificada.  Analisar deve ter sido inicializada usando o método de amostragem.  
+---
+# <a name="detach"></a>Detach
+A opção de **desanexar** VSPerfCmd.exe desconecta o criador de perfil de todos os processos ou dos processos especificados se nenhum for especificado. A criação de perfil deve ter sido inicializada usando o método de amostragem.  
   
- Analisando que foi iniciado com ou **Launch** ou as opções de **Attach** podem ser desconectada com **Detach**.  O profiler pode ser reattched usando comandos subsequentes de **Attach** .  
+ A criação de perfil que foi iniciada com as opções **Iniciar** ou o **Anexar** pode ser desconectada com **Desanexar**. O criador de perfil pode ser reconectado usando os comandos **Anexar** subsequentes.  
   
- **Detach** não fecha o arquivo de dados de perfil.  Use a opção de **Shutdown** terminar analisar e feche o arquivo de dados.  
+ **Desanexar** não fecha o arquivo de dados de criação de perfil. Use a opção **Desligamento** para finalizar a criação de perfil e fechar o arquivo de dados.  
   
 > [!NOTE]
->  Se a opção de **Start** foi especificada com a opção de **Crosssession** , todas as chamadas a **VSPerfCmd \/Attach** ou a **VSPerfCmd \/Detach** deve também especificar **Crosssession**.  
+>  Se a opção **Iniciar** foi especificada com a opção **Crosssession**, todas as chamadas para **VSPerfCmd /Attach** ou **VSPerfCmd /Detach** também devem especificar **Crosssession**.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 VSPerfCmd.exe /Detach[:PIDs|ProcessNames]  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `PIDs|ProcessNames`  
- `PID` \- o identificador numérico do sistema de um ou vários processos.  
+ `PID` - O identificador numérico do sistema de um ou mais processos.  
   
- `ProcessNames` \- o nome do processo.  Se várias instâncias do processo chamado está sendo executado, os resultados serão imprevisíveis.  
+ `ProcessNames` - o nome do processo. Se estiver executando várias instâncias do processo nomeado, os resultados serão imprevisíveis.  
   
- Processos separados de vários com vírgulas.  
+ Separe vários processos com vírgulas.  
   
- Se nenhum processo for especificado, o profiler for desanexado de qualquer processo analisado.  
+ Se nenhum processo for especificado, o criador de perfil será desanexado de todos os processos com perfil.  
   
-## Opções válidas  
- As seguintes opções de **VSPerfCmd** podem ser combinadas com a opção de **Attach** em uma única linha de comando.  
+## <a name="valid-options"></a>Opções válidas  
+ As opções **VSPerfCmd** a seguir podem ser combinadas com a opção **Anexar** em uma única linha de comando.  
   
  **Crosssession**  
- Permite analisar aplicativos nas sessões diferentes da sessão de logon.  Obrigatório se a opção de **Start** foi especificada com a opção de **Crosssession** .  
+ Permite aplicativos de criação de perfil em sessões que não seja a sessão de logon. Necessário se a opção **Iniciar** foi especificada com a opção **Crosssession**.  
   
-## Exemplo  
- Neste exemplo, o comando de suspender **Detach** analisar e o comando de **Shutdown** fecha o arquivo de dados do profiler.  
+## <a name="example"></a>Exemplo  
+ Neste exemplo, o comando **Desanexar** suspende a criação de perfil e o comando **Desligamento** fecha o arquivo de dados do criador de perfil.  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
@@ -61,8 +76,8 @@ VSPerfCmd.exe /Detach
 VSPerfCmd.exe /Shutdown  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web do ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de criação de perfil](../profiling/command-line-profiling-of-services.md)
+ [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)

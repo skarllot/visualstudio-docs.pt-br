@@ -1,83 +1,98 @@
 ---
-title: "CommentMarkAtProfile | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CommentMarkAtProfile"
-  - "CommentMarkAtProfileA"
+title: CommentMarkAtProfile | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CommentMarkAtProfile
+- CommentMarkAtProfileA
 ms.assetid: 04294ca3-bf9c-4c76-86f1-898c2140de27
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# CommentMarkAtProfile
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3e159f04398d3673764b4ab9fbd6942641207edb
+ms.lasthandoff: 02/22/2017
 
-O método `CommentMarkAtProfile` adiciona um carimbo de data\/hora, uma marca numérica, e um comentário em forma de cadeia de caracteres ao arquivo .vsp.  O valor do carimbo de data\/hora pode ser usado para sincronizar eventos externos.  Para que a marca e o comentário sejam inseridos, a criação de perfis para o segmento que contém a função CommentMarkAtProfile deve estar ATIVADA.  
+---
+# <a name="commentmarkatprofile"></a>CommentMarkAtProfile
+O método `CommentMarkAtProfile` insere um valor de carimbo de data/hora, uma marca numérica e uma cadeia de caracteres de comentário no arquivo .vsp. O valor de carimbo de data/hora pode ser usado para sincronizar os eventos externos. Para que a marcação e o comentário sejam inseridos, a criação de perfil para o thread que contém a função CommentMarkAtProfile deve ser ON.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (  
-                                   __int64 dnTimestamp,  
-                                   long lMarker,  
-                                   LPCTSTR szComment);  
+PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (  
+                                   __int64 dnTimestamp,  
+                                   long lMarker,  
+                                   LPCTSTR szComment);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `dnTimestamp`  
   
- Um inteiro de 64 bits que representa um valor de carimbo de data\/hora.  
+ Um inteiro de 64 bits que representa um valor de carimbo de data/hora.  
   
  `lMarker`  
   
- O marcador numérico a inserir.  O marcador deve ser maior ou igual a 0 \(zero\).  
+ O marcador numérico para inserir. O marcador deve ser maior ou igual a 0 (zero).  
   
  `szComment`  
   
- Um ponteiro para a cadeia de caracteres a inserir.  A cadeia de caracteres deve ter menos de 256 caracteres, incluindo o terminador NULO.  
+ Um ponteiro para a cadeia de texto para inserir. A cadeia de caracteres deve ser menor que 256 caracteres, incluindo o terminador NULO.  
   
-## Valor de propriedade\/valor de retorno  
- A função indica êxito ou falha usando a enumeração **PROFILE\_COMMAND\_STATUS**.  O valor de retorno pode ser um dos seguintes:  
+## <a name="property-valuereturn-value"></a>Valor de propriedade/Valor de retorno  
+ A função indica êxito ou falha usando a enumeração **PROFILE_COMMAND_STATUS**. O valor de retorno pode ser um dos seguintes:  
   
 |Enumerador|Descrição|  
-|----------------|---------------|  
-|MARK\_ERROR\_MARKER\_RESERVED|O parâmetro é menor ou igual a 0.  Estes valores são reservados.  A marca e o comentário não são gravados.|  
-|MARK\_ERROR\_MODE\_NEVER|A criação de perfis estava definida como NUNCA quando a função foi chamada.  A marca e o comentário não são gravados.|  
-|MARK\_ERROR\_MODE\_OFF|A criação de perfis estava definida como DESATIVADA quando a função foi chamada.  A marca e o comentário não são gravados.|  
-|MARK\_ERROR\_NO\_SUPPORT|Não há suporte para marcas neste contexto.  A marca e o comentário não são gravados.|  
-|MARK\_ERROR\_OUTOFMEMORY|Não havia memória disponível para gravar o evento.  A marca e o comentário não são gravados.|  
-|MARK\_TEXTTOOLONG|A cadeia de caracteres excede o máximo de 256 caracteres.  A cadeia de caracteres de comentário é truncada e a marca e o comentário são gravados.|  
-|MARK\_OK|MARK\_OK é retornado para indicar sucesso.|  
+|----------------|-----------------|  
+|MARK_ERROR_MARKER_RESERVED|O parâmetro é menor ou igual a 0. Esses valores são reservados. A marca e o comentário não são registrados.|  
+|MARK_ERROR_MODE_NEVER|O modo de criação de perfil foi definido para NEVER (NUNCA) quando a função foi chamada. A marca e o comentário não são registrados.|  
+|MARK_ERROR_MODE_OFF|O modo de criação de perfil foi definido como OFF quando a função foi chamada. A marca e o comentário não são registrados.|  
+|MARK_ERROR_NO_SUPPORT|Não há suporte de marca neste contexto. A marca e o comentário não são registrados.|  
+|MARK_ERROR_OUTOFMEMORY|Não havia memória disponível para registrar o evento. A marca e o comentário não são registrados.|  
+|MARK_TEXTTOOLONG|A cadeia de caracteres excede o máximo de 256 caracteres. A cadeia de caracteres de comentário é truncada e a marca e o comentário são registrados.|  
+|MARK_OK|MARK_OK é retornado para indicar êxito.|  
   
-## Comentários  
- A criação de perfil para a thread que contém a função de perfil de marca deve estar ativada para marcas e comentários inseridos com o comando Marca ou funções da API \(CommentMarkAtProfile, CommentMarkProfile, ou MarkProfile\).  Perfis de marcas são de escopo global.  Por exemplo, um perfil de marca de perfil inserido em uma thread pode ser usado para marcar o início ou o fim de um segmento de dados em qualquer thread do arquivo .vsp.  
+## <a name="remarks"></a>Comentários  
+ O estado de criação de perfil para o thread que contém a função de perfil de marca deve estar ligado quando as marcas e os comentários são inseridos com o comando Mark ou com as funções da API (CommentMarkAtProfile, CommentMarkProfile ou MarkProfile). Marcas de perfis são globais no escopo. Por exemplo, uma marca de perfil inserida em um thread pode ser usada para marcar o início ou término de um segmento de dados em um thread no arquivo .vsp.  
   
 > [!IMPORTANT]
->  Métodos CommentMarkAtProfile devem ser usados somente com instrumentação.  
+>  Os métodos CommentMarkAtProfile devem ser usados somente com a instrumentação.  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  Microsoft.VisualStudio.Profiler.dll  
   
-## Informações de função  
+## <a name="function-information"></a>Informações de função  
   
 |||  
 |-|-|  
-|**Cabeçalho**|Include VSPerf.h|  
-|**Biblioteca**|Use VSPerf.lib|  
-|**Unicode**|Implementado como CommentMarkAtProfileW \(Unicode\) e CommentMarkAtProfileA \(ANSI\).|  
+|**Header**|Inclui VSPerf.h|  
+|**Library**|Use VSPerf.lib|  
+|**Unicode**|Implementado como CommentMarkAtProfileW (Unicode) e CommentMarkAtProfileA (ANSI).|  
   
-## Exemplo  
- O código a seguir ilustra o uso da chamada genérica de função CommentMarkAtProfile.  O exemplo assume o uso de macros de cadeias de caracteres Win32 e configurações de compilador ANSI para determinar se o código chama a função habilitada para ANSI.  
+## <a name="example"></a>Exemplo  
+ O código a seguir ilustra o uso da chamada da função genérica de CommentMarkAtProfile. O exemplo pressupõe o uso de macros da cadeia de caracteres do Win32 e as configurações do compilador para ANSI para determinar se o código chama a função habilitada do ANSI.  
   
 ```  
 void ExerciseCommentMarkAtProfile(void)  
@@ -117,5 +132,5 @@ void ExerciseCommentMarkAtProfile(void)
 }  
 ```  
   
-## Consulte também  
- [Referência da API do Visual Studio Profiler \(nativo\)](../profiling/visual-studio-profiler-api-reference-native.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência da API do criador de perfil do Visual Studio (nativo)](../profiling/visual-studio-profiler-api-reference-native.md)

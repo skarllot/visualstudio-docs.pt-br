@@ -1,50 +1,65 @@
 ---
-title: "Tarefa MergeLocalizationDirectives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "localizando o XAML [WPF MSBuild], movendo comentários e atributos para um arquivo separado"
-  - "Tarefa MergeLocalizationDirectives [WPF MSBuild]"
-  - "Tarefa MergeLocalizationDirectives [WPF MSBuild], parâmetros"
-  - "movendo comentários de localização e atributos para um arquivo separado [WPF MSBuild]"
+title: Tarefa MergeLocalizationDirectives | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- localizing XAML [WPF MSBuild], moving comments and attributes to a separate file
+- MergeLocalizationDirectives task [WPF MSBuild], parameters
+- MergeLocalizationDirectives task [WPF MSBuild]
+- moving localization comments and attributes to a separate file [WPF MSBuild]
 ms.assetid: 9095b4f1-88da-4194-914b-ee1456826830
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Tarefa MergeLocalizationDirectives
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: 94cd8bfa5807e46025f416ad87fc9d82990ef966
+ms.lasthandoff: 02/22/2017
 
-O <xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives> tarefa mescla os atributos de localização e comentários de uma ou mais [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] arquivos de formato binário em um único arquivo para o assembly inteiro.  
+---
+# <a name="mergelocalizationdirectives-task"></a>Tarefa MergeLocalizationDirectives
+A tarefa <xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives> mescla os atributos de localização e comentários de um ou mais arquivos de formato binário [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] em um único arquivo para todo o assembly.  
   
-## Parâmetros da tarefa  
+## <a name="task-parameters"></a>Parâmetros da tarefa  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|`GeneratedLocalizationFiles`|Obrigatório  **\[\] de ITaskItem** parâmetro.<br /><br /> Especifica a lista de arquivos de diretivas de localização de arquivos individuais no [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] formato binário.|  
-|`OutputFile`|Obrigatório  **seqüência de caracteres** parâmetro de saída.<br /><br /> Especifica o caminho de saída do assembly compilado de diretivas de localização.|  
+|---------------|-----------------|  
+|`GeneratedLocalizationFiles`|Parâmetro obrigatório **ITaskItem[]**.<br /><br /> Especifica a lista de arquivos de diretivas de localização de arquivos individuais no formato binário [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)].|  
+|`OutputFile`|Parâmetro de saída da **cadeia de caracteres** necessário.<br /><br /> Especifica o caminho de saída do assembly de diretivas de localização compilado.|  
   
-## Comentários  
- Você pode adicionar atributos de localização e seus comentários para [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] conteúdo.  Com [!INCLUDE[TLA#tla_wpf](../msbuild/includes/tlasharptla_wpf_md.md)] suporte à localização, você pode retirar os atributos de localização e seus comentários e colocá\-los em um arquivo. loc separado do assembly gerado.  Você pode fazer isso usando o  **LocalizationPropertyStorage** atributo.  Para obter mais informações sobre atributos de localização e comentários, e  **LocalizationPropertyStorage**, consulte [Atributos de localização e comentários](../Topic/Localization%20Attributes%20and%20Comments.md).  
+## <a name="remarks"></a>Comentários  
+ Você pode adicionar atributos de localização e comentários no conteúdo [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)]. Com suporte à localização da [!INCLUDE[TLA#tla_wpf](../msbuild/includes/tlasharptla_wpf_md.md)], você pode retirar os comentários e atributos de localização e colocá-los em um arquivo .loc separado do assembly gerado. Você pode fazer isso usando o atributo **LocalizationPropertyStorage**. Para obter mais informações sobre os atributos de localização e comentários e **LocalizationPropertyStorage**, confira [Atributos de localização e comentários](http://msdn.microsoft.com/Library/ead2d9ac-b709-4ec1-a924-39927a29d02f).  
   
-## Exemplo  
- O exemplo a seguir mescla os comentários de localização de vários [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] arquivos de formato binário em um arquivo. loc único.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mescla os comentários de localização de vários arquivos de formato binário [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] em um único arquivo .loc.  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <UsingTask   
     TaskName="Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives"   
@@ -57,9 +72,9 @@ O <xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives> tarefa mescla
 </Project>  
 ```  
   
-## Consulte também  
- [Referência do WPF MSBuild](../msbuild/wpf-msbuild-reference.md)   
+## <a name="see-also"></a>Consulte também  
+ [Referência MSBuild do WPF](../msbuild/wpf-msbuild-reference.md)   
  [Referência de tarefas](../msbuild/wpf-msbuild-task-reference.md)   
  [Referência do MSBuild](../msbuild/msbuild-reference.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
- [Compilando um aplicativo WPF \(WPF\)](../Topic/Building%20a%20WPF%20Application%20\(WPF\).md)
+ [Como compilar um aplicativo WPF (WPF)](http://msdn.microsoft.com/Library/a58696fd-bdad-4b55-9759-136dfdf8b91c)

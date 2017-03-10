@@ -1,27 +1,42 @@
 ---
-title: "PeopleTrax amostra (ferramentas de cria&#231;&#227;o de perfil) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "desempenho do aplicativo, exemplos"
-  - "amostra do PeopleTrax [Visual Studio ALM]"
-  - "ferramentas de desempenho, exemplos"
-  - "desempenho, exemplos"
+title: "Exemplos de PeopleTrax (ferramentas de criação de perfil) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- performance tools, samples
+- PeopleTrax sample [Visual Studio ALM]
+- application performance, samples
+- performance, samples
 ms.assetid: 86d7f8f7-d812-4e76-bed1-e66d81709c15
 caps.latest.revision: 23
-caps.handback.revision: 23
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# PeopleTrax amostra (ferramentas de cria&#231;&#227;o de perfil)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 6fc85c33d4251700331f7ff7f2b17a8bd5428d8d
+ms.lasthandoff: 02/22/2017
 
-O aplicativo de exemplo de PeopleTrax é usado para um número de instruções passo a passo a passo a passo para [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Ferramentas de Criação de Perfil.  Você pode baixar um arquivo .zip que contém o código do aplicativo de Trax das pessoas [A galeria de código do MSDN](http://go.microsoft.com/fwlink/?LinkId=160299)do.
+---
+# <a name="peopletrax-sample-profiling-tools"></a>PeopleTrax amostra (ferramentas de criação de perfil)
+O aplicativo de exemplo PeopleTrax é usado para orientar passo a passo sobre as ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Você pode baixar um arquivo .zip que contém o código do aplicativo People Trax do [MSDN Code Gallery](http://go.microsoft.com/fwlink/?LinkId=160299).

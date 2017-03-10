@@ -1,57 +1,72 @@
 ---
-title: "Exibi&#231;&#227;o de &#225;rvore de chamadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.view.calltree"
-helpviewer_keywords: 
-  - "Exibição Árvore de Chamadas"
-  - "relatório de desempenho, Exibição Árvore de Chamadas"
-  - "relatórios de ferramentas de criação de perfil, Exibição Árvore de Chamadas"
-  - "ferramentas de criação de perfil, Exibição Árvore de Chamadas"
+title: "Exibição de árvore de chamadas | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.view.calltree
+helpviewer_keywords:
+- Call Tree view
+- profiling tools reports, Call Tree view
+- performance reports, Call Tree view
+- profiling tools, Call Tree view
 ms.assetid: b2dbc033-bf95-4d10-8e51-f9462979133e
 caps.latest.revision: 34
-caps.handback.revision: 34
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Exibi&#231;&#227;o de &#225;rvore de chamadas
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 535d39a34cdf49c8609a3d40da584417a3783846
+ms.lasthandoff: 02/22/2017
 
-A exibição de árvore de chamada exibe os caminhos de execução da função que foram atravessados no aplicativo analisado.  A raiz da árvore é o ponto de entrada no aplicativo ou no componente.  Cada nó da função lista todas as funções que chamaram e os dados de desempenho sobre essas chamadas de função.  
+---
+# <a name="call-tree-view"></a>Exibição de árvore de chamadas
+O modo de exibição de Árvore de Chamadas exibe os caminhos de execução de função que foram percorridos no aplicativo analisado. A raiz da árvore é o ponto de entrada do aplicativo ou do componente. Cada nó da função lista todas as funções que ela chamou e os dados de desempenho sobre essas chamadas de função.  
   
- A exibição de árvore do chamada também pode expandir e realce o caminho de execução de uma função que consome a maior parte do tempo ou seja provada com mais frequência.  Para exibir o caminho do mais caro, clique com o botão direito do mouse na função e clique em **Expanda o caminho quente**.  
+ O Modo de exibição de árvore de Chamadas também expande e realça o caminho de execução de uma função que consumiu mais tempo ou que gerou amostras com mais frequência. Para exibir o caminho com mais custo de desempenho, clique com o botão direito do mouse na função e, em seguida, clique em **Expandir Afunilamento**.  
   
- Cada processo de analisar executado é exibido como um nó raiz.  Você pode definir o nó de início da exibição de árvore de chamada clique com o botão direito do mouse no nó que você deseja definir como o nó de início e **Definir a raiz**selecione.  
+ Cada processo na execução de criação de perfil é exibido como um nó raiz. Você pode definir o nó inicial do modo de exibição de árvore de chamadas clicando duas vezes no nó que você deseja definir como o nó inicial e, em seguida, selecionar **Definir Raiz**.  
   
- Quando você define o nó raiz, você eliminar todas as outras entradas da exibição exceto a subárvore do nó selecionado.  Você pode redefinir o nó raiz de volta ao nó que você estivesse exibindo.  Na janela de exibição de árvore da chamada, clique com o botão direito do mouse em e selecione **Raiz de redefinição**.  
+ Ao definir o nó raiz, você elimina todas as outras entradas da visualização exceto a subárvore do nó selecionado. Você pode redefinir o nó raiz para o nó que você estava exibindo. Na janela de exibição de árvore de chamadas, clique com o botão direito do mouse e selecione **Redefinir Raiz**.  
   
- A exibição de árvore de chamada pode ser personalizado para adicionar ou remover colunas.  Clique com o botão direito do mouse em **Barra de título do nome da coluna**, e selecione **Adicionar\/remover colunas**.  
+ A exibição de árvore de chamadas pode ser personalizada para adicionar ou remover colunas. Clique com o botão direito do mouse na **Barra de Título do Nome da Coluna** e, em seguida, selecione **Adicionar/remover Colunas**.  
   
- A exibição de árvore de chamada pode ser configurado para a redução de ruído limitando a quantidade de dados que são apresentados.  Usando a redução de ruído, problemas de desempenho são mais proeminentes na exibição.  Quando problemas de desempenho são fáceis de distinguir, a análise é mais fácil.  Para obter mais informações, consulte [Como configurar redução de ruído em exibições de relatório](../profiling/how-to-configure-noise-reduction-in-report-views.md).  
+ A exibição de árvore de chamadas pode ser configurada para redução de ruído, limitando a quantidade de dados que são apresentados. Ao usar a redução de ruído, os problemas de desempenho serão mais proeminentes na visualização. Quando os problemas de desempenho são fáceis de distinguir, a análise é mais fácil. Para obter mais informações, confira [Como: configurar a redução de ruído em exibições de relatório](../profiling/how-to-configure-noise-reduction-in-report-views.md).  
   
 > [!NOTE]
->  Se a redução de ruído está configurada para exibir um aviso quando estiver habilitada, uma barra de informações serão exibidas no relatório.  
+>  Se a redução de ruído está configurada para exibir um aviso quando está ativada, uma barra de informações é exibida no relatório.  
   
- Para obter mais informações sobre as definições para colunas na exibição de árvore da chamada, consulte o seguinte:  
+ Para obter mais informações sobre as definições de colunas na exibição de árvore de chamadas, confira o seguinte:  
   
- [Exibição de árvore de chamadas](../profiling/call-tree-view-sampling-data.md)  
+ [Modo de exibição de árvore de Chamadas](../profiling/call-tree-view-sampling-data.md)  
   
- [Exibição de árvore de chamadas](../profiling/call-tree-view-instrumentation-data.md)  
+ [Modo de exibição de árvore de Chamadas](../profiling/call-tree-view-instrumentation-data.md)  
   
- [Exibição de árvore de chamadas \- amostragem](../profiling/call-tree-view-dotnet-memory-sampling-data.md)  
+ [Modo de exibição de árvore de chamadas – amostragem](../profiling/call-tree-view-dotnet-memory-sampling-data.md)  
   
- [Exibição de árvore de chamadas](../profiling/call-tree-view-contention-data.md)  
+ [Modo de exibição de árvore de Chamadas](../profiling/call-tree-view-contention-data.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Exibições de relatório de desempenho](../profiling/performance-report-views.md)   
  [Noções básicas sobre valores de dados de instrumentação](../profiling/understanding-instrumentation-data-values.md)   
  [Noções básicas sobre valores de dados de amostragem](../profiling/understanding-sampling-data-values.md)

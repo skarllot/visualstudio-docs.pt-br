@@ -1,34 +1,49 @@
 ---
-title: "Criando relat&#243;rios do criador de perfil a partir da linha de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criação de relatórios do criador de perfil com a linha de comando | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c886f8af-2014-4fec-9b24-d98b68ecafb7
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Criando relat&#243;rios do criador de perfil a partir da linha de comando
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8b98f5112289ca975eddaae6d5be7dd9e25c0fb1
+ms.lasthandoff: 02/22/2017
 
-A ferramenta de linha de comando **VSPerfReport** permite criar ou .xml o arquivo CSV \(.csv\) informa de arquivos de dados de perfil .vsp \(\).  Os tipos de relatórios de VSPerfReport correspondem a exatidão com a qual as exibições com base em interface para [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  Você pode filtrar o relatório para mostrar somente seu código e para mostrar apenas um segmento de arquivo de dados de perfil.  Para obter mais informações, consulte [VSPerfReport](../profiling/vsperfreport.md).  
+---
+# <a name="creating-profiler-reports-from-the-command-line"></a>Criando relatórios do criador de perfil a partir da linha de comando
+A ferramenta da linha de comando **VSPerfReport** permite que você crie relatórios .xml ou valores separados por vírgulas (.csv) de arquivos de dados de criação de perfil (.vsp). Tipos de relatório VSPerfReport correspondem aproximadamente às exibições baseadas em tabela da interface para [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Você pode filtrar o relatório para mostrar somente o seu código e mostrar apenas um segmento do arquivo de dados de criação de perfil. Para obter mais informações, confira [VSPerfReport](../profiling/vsperfreport.md).  
   
- Você também pode tornar seus arquivos de dados de perfil compartilhar inserindo símbolos nos arquivos de .vsp e criando os arquivos previamente analisados de relatório \(.vsps\) que são menores e mais rápidos abrir.  
+ Você também pode facilitar o compartilhamento dos arquivos de dados de criação de perfil vinculando símbolos nos arquivos .vsp e criando arquivos de relatórios previamente analisados (.vsps) que são menores e mais rápidos para abrir.  
   
-## Tarefas comuns  
+## <a name="common-tasks"></a>Tarefas comuns  
   
 |Tarefa|Conteúdo relacionado|  
-|------------|--------------------------|  
-|**Criar um relatório básico.** Criar todos ou um subconjunto dos tipos de relatórios de VSPerfReport.|-   [Criando relatórios básicos](../profiling/creating-basic-profiling-reports-from-the-command-line.md)|  
-|**Compara dois arquivos de dados de perfil.** Crie um relatório de “diff” que compara dados de desempenho em dois arquivos de dados de perfil.|-   [Como criar um relatório de comparação de criador de perfil a partir de um prompt de comando](../profiling/how-to-create-a-profiler-comparison-report-from-a-command-prompt.md)|  
-|**Exibir o rastreamento de chamadas e o rastreamento de eventos de dados do windows \(ETW\).** Crie um relatório de rastreamento de chamada que lista as informações de controle de tempo para cada ponto de entrada e saída às funções do aplicativo e o cada chamada para outras funções pela função.  Ou crie uma lista detalhada de todos os eventos de ETW que foram coletados em analisar executado.|-   [Como criar um relatório de rastreamento de chamada](../profiling/how-to-create-a-profiling-tools-call-trace-report.md)|  
-|**Filtrar um relatório.** Limite um relatório somente a funções em seu código ou a um momento específico nos dados de perfil arquivo.|-   [Como filtrar relatórios a partir da linha de comando](../profiling/how-to-filter-reports-from-the-command-line.md)|  
-|**Crie arquivos de dados portáteis de perfil.** Para facilitar o compartilhamento de dados do perfil, você pode inserir os símbolos para analisar executado no arquivo de .vsp.  Você também pode criar um arquivo de analisar os dados de criação de perfil .vsps \(\) que é menor e mais rápido abrir.|-   [Criando arquivos de dados de criação de perfil móveis](../profiling/creating-portable-profiling-data-files-from-the-command-line.md)|
+|----------|---------------------|  
+|**Criar um relatório básico.** Crie todos ou um subconjunto dos tipos de relatório VSPerfReport.|-   [Criação de relatórios básicos](../profiling/creating-basic-profiling-reports-from-the-command-line.md)|  
+|**Comparar dois arquivos de dados de criação de perfil.** Crie um relatório "diff" que compara os dados de desempenho em dois arquivos de dados de criação de perfil.|-   [Como: criar um relatório de comparação de criador de perfil por meio de um prompt de comando](../profiling/how-to-create-a-profiler-comparison-report-from-a-command-prompt.md)|  
+|**Visualizar o rastreamento de chamada de exibição e rastreamento de eventos para dados do Windows (ETW).** Crie um relatório de rastreamento de chamada que lista informações de tempo para cada ponto de entrada e saída das funções do aplicativo e cada chamada para outras funções por sua função. Ou crie uma lista detalhada de todos os eventos ETW que foram coletados em uma execução de criação de perfil.|-   [Como: criar um relatório de rastreamento de chamada](../profiling/how-to-create-a-profiling-tools-call-trace-report.md)|  
+|**Filtrar um relatório.** Limite um relatório apenas às funções em seu código ou em um momento específico no arquivo de dados de criação de perfil.|-   [Como: filtrar relatórios por meio da linha de comando](../profiling/how-to-filter-reports-from-the-command-line.md)|  
+|**Criar arquivos de dados de criação de perfil portáteis.** Para tornar mais fácil o compartilhamento de dados de criação de perfil, você pode inserir os símbolos para uma geração de perfil no arquivo .vsp. Você também pode criar um arquivo de dados de criação de perfil previamente analisados (.vsps) que é menor e mais rápido para abrir.|-   [Criação de arquivos de dados de criação de perfil portáteis](../profiling/creating-portable-profiling-data-files-from-the-command-line.md)|

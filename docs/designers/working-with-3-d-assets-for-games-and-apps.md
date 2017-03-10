@@ -1,59 +1,60 @@
 ---
-title: "Trabalhando com ativos 3D para jogos e aplicativos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.graphics"
+title: Trabalhar com ativos 3D para jogos e aplicativos | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.graphics
 ms.assetid: 910d673b-c884-4eeb-9928-0e89f3d38cb6
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
----
-# Trabalhando com ativos 3D para jogos e aplicativos
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: BrianPeek
+ms.author: brpeek
+manager: ghogen
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: da8802e4b7143797f2e5f7694ee9d2092ec41dc8
+ms.lasthandoff: 02/22/2017
 
-Esse documento descreve as [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ferramentas que você pode usar para criar ou modificar modelos, texturas e sombreadores 3D para jogos e aplicativos baseados em DirectX.  
+---
+# <a name="working-with-3-d-assets-for-games-and-apps"></a>Trabalhando com ativos 3D para jogos e aplicativos
+Este documento descreve as ferramentas [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] que você pode usar para criar ou modificar modelos 3D, texturas e sombreadores para aplicativos e jogos do DirectX.  
   
-## Desenvolvimento de aplicativo DirectX no Visual Studio  
- Um aplicativo DirectX combina geralmente a lógica de programação, o API do DirectX e programas de Alto Nível de Language de Sombreamento \(HLSL\), juntamente com recursos visuais e de áudio 3\-D para apresentar uma experiência de multimídia interativa rica.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] inclui ferramentas que você pode usar para trabalhar com imagens e texturas, modelos 3D, e sombreadores sem deixar de usar o IDE para usar outra ferramenta.  As ferramentas do Visual Studio são adequadas principalmente para criar os recursos *de espaço reservado* , que você pode usar para testar o código ou compilar protótipos antes de autorizar recursos prontos para produção, e para inspecionar e alterar os recursos prontos para produção quando estiver depurando o aplicativo.  
+## <a name="directx-app-development-in-visual-studio"></a>Desenvolvimento de aplicativos em DirectX no Visual Studio  
+ Normalmente, um aplicativo DirectX combina lógica de programação, a API do DirectX e programas HLSL (High Level Shading Language), junto com ativos visuais 3D e de áudio para apresentar uma experiência multimídia avançada e interativa.[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Inclui ferramentas que você pode usar para trabalhar com imagens e texturas, modelos 3D e sombreadores sem sair do IDE para usar outra ferramenta. As ferramentas do Visual Studio são especialmente adequadas para a criação de ativos de *espaço reservado*, os quais você pode usar para testar o código ou compilar protótipos antes de comissão de ativos prontos para produção e para inspecionar e modificar ativos prontos para produção quando você estiver depurando seu aplicativo.  
   
- Aqui está mais informações sobre os tipos de recursos que você pode trabalhar com o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+ Confira aqui mais informações sobre os tipos de ativos com os quais você pode trabalhar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
-### Imagens e texturas  
- Imagens e texturas fornecem a cor e o detalhe visual em jogos e aplicativos.  Em gráficos 3\-D, texturas vêm em uma variedade de formatos, tipos, e geometrias para suportar usos diferentes.  Por exemplo, os mapeamentos normais fornecem normais de superfície por pixel para iluminação mais detalhada de modelos 3\-D e os mapeamentos de cubo fornecem a textura em todas as direções para usos como o caixas no céu, reflexos e mapeamento de textura esférica.  As texturas podem fornecer mapas mip para suportar a renderização eficiente em diferentes níveis de detalhes e podem suportar os canais de cor diferentes e os pedidos de cor.  As texturas podem ser armazenadas em uma variedade de formatos compactados que ocupam menos memória de gráficos exclusivo e ajuda os GPUS a acessar as texturas com mais eficiência.  
+### <a name="images-and-textures"></a>Imagens e texturas  
+ Imagens e texturas fornecem cor e detalhes visuais em jogos e aplicativos. Em gráficos 3D, as texturas vêm em diversos formatos, tipos e geometrias para dar suporte a diferentes usos. Por exemplo, mapas normais fornecem superfície por pixel normal para uma iluminação mais detalhada dos modelos 3D, e mapas de cubo fornecem textura em todas as direções para utilizações como conversão boxing do céu, reflexos e mapeamento da textura esférica. As texturas podem fornecer minimapas para dar suporte à renderização eficiente em níveis diferentes de detalhe e podem oferecer suporte a canais de cores diferentes e ordenações de cor. As texturas podem ser armazenadas em vários formatos compactados que ocupam menos memória gráfica dedicada e ajudam os GPUs a acessar texturas com mais eficiência.  
   
- Você pode usar o editor de imagem de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com imagens e texturas de muitos tipos e formatos comuns.  
+ Use o Editor de Imagens do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com imagens e texturas em muitos tipos e formatos comuns.  
   
-### Modelos 3\-D  
- Os modelos 3\-D criam espaço e forma em jogos e aplicativos.  Minimamente, os modelos codificam a posição dos pontos no espaço 3\-D \- que são conhecidas como *vértices*\- junto com os dados de indexação para definir as linhas ou os triângulos que representam a forma do modelo.  Os dados adicionais podem ser associados à esses vértices \- por exemplo, informações de cores, vetores normais ou atributos específicos do aplicativo.  Cada modelo também pode definir atributos em todo objeto \- por exemplo, o sombreador usado para calcular a aparência da superfície do objeto ou em qual textura é aplicada.  
+### <a name="3-d-models"></a>Modelos&3; D  
+ Os modelos&3;D criam espaço e forma em jogos e aplicativos. No mínimo, os modelos codificam a posição de pontos no espaço 3D — que são conhecidos como *vértices*— junto com os dados de indexação para definir linhas ou triângulos que representam a forma do modelo. É possível associar dados adicionais a esses vértices — por exemplo, informações de cores, vetores normais ou atributos específicos ao aplicativo. Cada modelo também pode definir atributos de todo o objeto — por exemplo, qual sombreador é usado para calcular a aparência da superfície do objeto ou qual textura é aplicada a ele.  
   
- Você pode usar o editor de modelo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com modelos 3D em vários formatos comuns.  
+ Use o Editor de Modelo do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com modelos 3D em vários formatos comuns.  
   
-### Sombreadores  
- Os sombreadores são pequenos programas específicos de domínios que são executados na unidade de processamento gráfico \(GPU\).  Os sombreadores determinam como os modelos 3D são transformados em formas na tela e como cada pixel nessas formas é colorido.  Criando um sombreador e aplicando\-o a um objeto no seu jogo ou aplicativo, você pode dar ao objeto uma aparência exclusiva.  
+### <a name="shaders"></a>Sombreadores  
+ Sombreadores são programas pequenos específicos ao domínio executados em uma GPU (unidade de processamento gráfico). Os sombreadores determinam como os modelos 3D são transformados em formas na tela e como cada pixel nessas formas é colorido. Ao criar um sombreador e aplicá-lo a um objeto em seu jogo ou aplicativo, você pode dar ao objeto uma aparência exclusiva.  
   
- Você pode usar o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Shader Designer, que é uma ferramenta de design de sombreador com base em elementos gráficos, para criar efeitos visuais personalizados sem conhecer a programação de HLSL.  
+ Use o Designer de Sombreador do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], que é uma ferramenta de design de sombreador baseada em gráfico, para criar efeitos visuais personalizados sem conhecer programação em HLSL.  
   
 > [!NOTE]
->  Para obter mais informações sobre como iniciar com DirectX que programa, consulte [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633).  Para obter mais informações sobre como depurar um aplicativo baseado em DirectX, consulte [Diagnóstico de gráficos \(depurando gráficos DirectX\)](../debugger/visual-studio-graphics-diagnostics.md).  
+>  Para saber mais sobre como iniciar a programação em DirectX, consulte [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633). Para saber mais sobre como depurar um aplicativo baseado no DirectX, consulte [Diagnóstico de gráficos (Depuração de gráficos DirectX)](../debugger/visual-studio-graphics-diagnostics.md).  
   
-## Compatibilidade de versão de DirectX  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] usa DirectX para recursos de renderização 2D e 3D.  Você pode selecionar o renderizador de DirectX 11, ou o renderizador avançado de software do windows \(WARP\) da plataforma de Renderização.  O renderizador DirectX 11 fornece uma renderização de alto desempenho acelerada pelo hardware em GPUs DirectX 11 e DirectX 10.  O renderizador WARP ajuda a garantir que seus ativos funcionam com uma ampla gama de computadores — isso inclui computadores que não possuem hardware gráfico modernos e computadores que integraram o hardware gráfico.  Para obter mais informações sobre a URDIDURA, consulte [Guia avançado do windows \(WARP\) da plataforma de Rasterization](http://go.microsoft.com/fwlink/p/?LinkId=224634).  
+## <a name="directx-version-compatibility"></a>Compatibilidade de versão do DirectX  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] usa o DirectX para renderizar ativos 2D e 3D. Selecione o renderizador do DirectX 11, ou o renderizador de software WARP (Windows Advanced Rasterization Platform). O renderizador do DirectX 11 fornece renderização acelerada por hardware de alto desempenho em GPUs do DirectX 11 e do DirectX 10. O renderizador WARP ajuda a garantir que seus ativos funcionem muitos computadores — incluindo computadores que não possuem hardware de gráfico moderno e computadores com hardware de gráfico integrado. Para saber mais sobre WARP, consulte [Guia do WARP (Windows Advanced Rasterization Platform)](http://go.microsoft.com/fwlink/p/?LinkId=224634).  
   
-## Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos relacionados  
   
-|Nome|Descrição|  
-|----------|---------------|  
+|Título|Descrição|  
+|-----------|-----------------|  
 |[Trabalhando com texturas e imagens](../designers/working-with-textures-and-images.md)|Descreve como usar o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com imagens e texturas.|  
-|[Trabalhando com modelos 3D](../designers/working-with-3-d-models.md)|Descreve como usar o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com modelos 3\-D.|  
-|[Trabalhando com sombreadores](../designers/working-with-shaders.md)|Descreve como usar o Shader Designer [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para criar e modificar efeitos de sombreamento personalizados.|  
-|[Usando ativos 3D no jogo ou no aplicativo](../designers/using-3-d-assets-in-your-game-or-app.md)|Descreve como usar os recursos, que você criou usando o Editor de Imagem, o Editor Modelo ou Shader Designer no seu jogo ou aplicativo.|
+|[Trabalhando com modelos 3D](../designers/working-with-3-d-models.md)|Descreve como usar o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com modelos 3D.|  
+|[Trabalhando com sombreadores](../designers/working-with-shaders.md)|Descreve como usar o Designer de sombrador [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para criar e modificar efeitos de sombreamento personalizado.|  
+|[Usando ativos 3D no jogo ou no aplicativo](../designers/using-3-d-assets-in-your-game-or-app.md)|Descreve como usar ativos, que você criou usando o Editor de Imagens, o Editor de Modelo ou o Designer de Sombreador, em seu jogo ou aplicativo.|

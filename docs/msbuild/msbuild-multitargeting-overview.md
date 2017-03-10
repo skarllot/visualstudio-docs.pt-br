@@ -1,52 +1,67 @@
 ---
-title: "Vis&#227;o geral da multiplataforma no MSBuild | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visão geral da multiplataforma do MSBuild | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eecbcd65-9fbc-4307-a321-46d3c3b79b12
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Vis&#227;o geral da multiplataforma no MSBuild
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 0084ac1b7d4e0652041e5f9a1b53670b7def5799
+ms.lasthandoff: 02/22/2017
 
-Usando MSBuild, você pode compilar um aplicativo executar em qualquer uma das várias versões do .NET Framework, e em qualquer uma das várias plataformas do sistema.  Por exemplo, você pode compilar um aplicativo execute no.NET Framework 2.0 em uma plataforma de 32 bits, e compila o mesmo aplicativo executar no .NET Framework 4.5 em uma plataforma de 64 bits.  
+---
+# <a name="msbuild-multitargeting-overview"></a>Visão geral da multiplataforma no MSBuild
+Usando o MSBuild, você pode compilar um aplicativo para ser executado em qualquer uma das várias versões do .NET Framework e em qualquer uma das várias plataformas de sistema. Por exemplo, você pode compilar um aplicativo para execução no .NET Framework 2.0 em uma plataforma de 32 bits e pode compilar o mesmo aplicativo para ser executado no .NET Framework 4.5 em uma plataforma de 64 bits.  
   
 > [!IMPORTANT]
->  Independentemente de nome “que multitargeting”, um projeto pode selecionar somente uma estrutura e somente uma plataforma de cada vez.  
+>  Apesar do nome "multiplataforma", um projeto pode direcionar apenas uma estrutura e apenas uma plataforma por vez.  
   
- Estes são alguns dos recursos de definição do MSBuild:  
+ Estes são alguns dos recursos de multiplataforma do MSBuild:  
   
--   Você pode desenvolver um aplicativo que tem como alvo uma versão anterior do.NET Framework, por exemplo, para versões 2,0, 3,5, ou 4.  
+-   Você pode desenvolver um aplicativo destinado a uma versão anterior do .NET Framework, por exemplo, as versões 2.0, 3.5 ou 4.  
   
--   Você pode direcionar uma estrutura diferente do.NET Framework, por exemplo, o Silverlight Framework.  
+-   Você pode direcionar uma estrutura que não sejam o .NET Framework, por exemplo, o Silverlight Framework.  
   
--   Você pode direcionar *um perfil de estrutura*, que é um subconjunto predefinido de uma estrutura de destino.  
+-   Você pode direcionar um *perfil de estrutura*, que é um subconjunto predefinido de uma estrutura de destino.  
   
--   Se um serviço de empacotamento para a versão atual do.NET Framework é solto, você pode destinar\-lo.  
+-   Se um service pack para a versão atual do .NET Framework for lançado, você poderá visá-lo.  
   
--   MSBuild que direciona garantias que um aplicativo usa apenas funcionalidade que está disponível na estrutura e na plataforma de destino.  
+-   O direcionamento do MSBuild garante que um aplicativo use apenas a funcionalidade que está disponível na estrutura e na plataforma direcionadas.  
   
-## Destino Framework e plataforma  
- *Uma estrutura de destino* é a versão do.NET Framework que um projeto é criado executado, e *uma plataforma de destino* é a plataforma do sistema em que o projeto é compilado executar.  Por exemplo, você pode desejar utilizar um aplicativo.NET Framework 2.0 executar em uma plataforma de 32 bits que é compatível com a família do processador 802x86 \(x\).  A combinação de plataforma do framework de destino e de destino é conhecida como *o contexto de destino*.  Para obter mais informações, consulte [Estrutura de destino e plataforma de destino](../msbuild/msbuild-target-framework-and-target-platform.md).  
+## <a name="target-framework-and-platform"></a>Plataforma e estrutura de destino  
+ Uma *estrutura de destino* é a versão do .NET Framework sobre a qual um projeto é compilado para executar, e uma *plataforma de destino* é a plataforma do sistema em que o projeto é compilado para executar.  Por exemplo, você talvez queira um aplicativo .NET Framework 2.0 para ser executado em uma plataforma de 32 bits que seja compatível com a família de processadores x86 802 (x86) de destino. A combinação de estrutura de destino e plataforma de destino é conhecida como o *contexto de destino*. Para saber mais, confira [Estrutura de destino e plataforma de destino](../msbuild/msbuild-target-framework-and-target-platform.md).  
   
-## Conjunto de Ferramentas \(ToolsVersion\)  
- Conjunto de Ferramentas coleção juntos ferramentas, as tarefas, e destinos que são usados para criar o aplicativo.  Conjunto de Ferramentas inclui compiladores como csc.exe e vbc.exe, o arquivo de destino microsoft.common.targets comum \(\), e tarefas comuns arquivo \(microsoft.common.tasks\).  4,5 Conjunto De Ferramentas podem ser usados para direcionar as versões 2,0, 3,0, 3,5, 4, e 4,5 do.NET Framework. No entanto, 2,0 Conjunto De Ferramentas podem ser usados somente para utilizar a versão 2,0 do .NET Framework.  Para obter mais informações, consulte [Toolset \(ToolsVersion\)](../msbuild/msbuild-toolset-toolsversion.md).  
+## <a name="toolset-toolsversion"></a>Toolset (ToolsVersion)  
+ Um conjunto de ferramentas juntos coleta as ferramentas, tarefas e destinos que são usados para criar o aplicativo. Um conjunto de ferramentas inclui compiladores como csc.exe e vbc.exe, o arquivo de destinos comuns (microsoft.common.targets), e as tarefas comuns de arquivo (microsoft.common.tasks). O 4.5 o conjunto de ferramentas pode ser usado para o destino .NET Framework versões 2.0, 3.0, 3.5, 4 e 4.5. No entanto, o Conjunto de ferramentas 2.0 só pode ser usado para direcionar o .NET Framework versão 2.0. Para saber mais, veja [Conjunto de ferramentas (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md).  
   
-## Assemblies de referência  
- Assemblies de referência que são especificados na ajuda de Conjunto De Ferramentas você criar e compilar um aplicativo.  Esses referenciam assemblies não apenas para ativar uma compilação específica de destino, mas também restringe componentes e recursos no Visual Studio IDE aquelas que são compatíveis com o destino.  Para obter mais informações, consulte [Resolvendo assemblies em tempo de design](../msbuild/resolving-assemblies-at-design-time.md)  
+## <a name="reference-assemblies"></a>Assemblies de Referência  
+ Os assemblies de referência especificados no Conjunto de ferramentas ajudam a projetar e a compilar um aplicativo. Esses assemblies de referência não apenas habilitar uma compilação de destino específico, mas também restringem componentes e recursos no IDE do Visual Studio para aqueles que são compatíveis com o destino. Para saber mais, veja [Resolução de assemblies em tempo de design](../msbuild/resolving-assemblies-at-design-time.md)  
   
-## Configurando destinos e tarefas  
- Você pode configurar destinos e executar tarefas do MSBuild para fora de processo com MSBuild de modo que você pode direcionar os contextos que são consideravelmente diferentes de aquele que você está sendo executado.  Por exemplo, você pode direcionar um de 32 bits, aplicativos.NET Framework 2.0 quando o computador de desenvolvimento executar em uma plataforma de 64 bits com o.NET Framework 4.5. Para obter mais informações, consulte [Configurando destinos e tarefas](../msbuild/configuring-targets-and-tasks.md).  
+## <a name="configuring-targets-and-tasks"></a>Configurando destinos e tarefas  
+ Você pode configurar destinos do MSBuild e tarefas para execução fora de processo com o MSBuild para que você pode direcionar contextos são consideravelmente diferentes daquele que você estiver executando em.  Por exemplo, você pode direcionar um aplicativo do .NET Framework 2.0 de 32 bits, enquanto o computador de desenvolvimento é executada em uma plataforma de 64 bits com o .NET Framework 4.5. Para saber mais, veja [Configuração de destinos e tarefas](../msbuild/configuring-targets-and-tasks.md).  
   
-## Solução de problemas  
- Você pode encontrar erros se você tentar fazer referência a um assembly que não é parte do contexto de destino.  Para obter mais informações sobre esses erros e o que fazer sobre ele, consulte a [Solução de problemas com erros de direcionamento do .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).
+## <a name="troubleshooting"></a>Solução de problemas  
+ Você pode encontrar erros se você tentar fazer referência a um assembly que não é parte do contexto de destino. Para saber mais sobre esses erros e o que fazer sobre eles, veja [de solução de problemas de direcionamento erros do .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).

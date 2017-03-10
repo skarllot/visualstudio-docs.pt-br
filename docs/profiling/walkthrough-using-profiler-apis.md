@@ -1,49 +1,64 @@
 ---
-title: "Instru&#231;&#245;es passo a passo: usando APIs do criador de perfil | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ferramentas de desempenho, explicações passo a passo"
-  - "ferramentas de criação de perfil, explicações passo a passo"
+title: 'Passo a passo: Usar APIs do criador de perfil | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- profiling tools, walkthroughs
+- performance tools, walkthroughs
 ms.assetid: c2ae0b3e-a0ca-4967-b4df-e319008f520e
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Instru&#231;&#245;es passo a passo: usando APIs do criador de perfil
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 80504cebde504c109ab9cc454b311a3f6f9e6fbb
+ms.lasthandoff: 02/22/2017
 
-O passo a passo usa um aplicativo C\# demonstrar como usar as APIs de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Ferramentas de Criação de Perfil.  Você usará as APIs do profiler para limitar a quantidade de dados coletados durante a criação da instrumentação.  
+---
+# <a name="walkthrough-using-profiler-apis"></a>Instruções passo a passo: usando APIs do criador de perfil
+O passo a passo usa um aplicativo C# para demonstrar como usar as APIs de Ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Você usará as APIs do criador de perfil para limitar a quantidade de dados coletados durante a criação de perfil de instrumentação.  
   
- As etapas deste passo a passo geralmente se aplicam ao aplicativo c. criando \/C  Para cada idioma, você terá que configurar adequadamente seu ambiente de criação.  
+ As etapas neste passo a passo geralmente se aplicam a um aplicativo C/C++. Para cada idioma, você precisará configurar o ambiente de compilação adequadamente.  
   
- Normalmente, você iniciará para analisar o desempenho do aplicativo usando analisar de exemplo.  Se a criação de perfil de exemplo não fornece informações que localiza um afunilamento, analisar a instrumentação pode fornecer um nível de detalhe maior.  Analisar a instrumentação é muito útil para investigar a interação do thread.  
+ Normalmente, você começará a analisar o desempenho do aplicativo usando a criação de perfil de amostra. Se a criação de perfil de amostra não fornecer informações que indiquem um afunilamento, a criação de perfil de instrumentação poderá fornecer um nível maior de detalhes. A criação de perfil de instrumentação é muito útil para investigar a interação de thread.  
   
- No entanto, um nível de detalhe maior significa que mais dados são coletados.  Você pode descobrir que analisar a instrumentação cria arquivos de dados grandes.  Além disso, a instrumentação é mais provável que afete o desempenho do aplicativo.  Para obter mais informações, consulte [Noções básicas sobre valores de dados de instrumentação](../profiling/understanding-instrumentation-data-values.md) e [Noções básicas sobre valores de dados de amostragem](../profiling/understanding-sampling-data-values.md)  
+ No entanto, um nível maior de detalhe significa que mais dados são coletados. Você pode perceber que a criação de perfil de instrumentação cria arquivos de dados grandes. Além disso, provavelmente a instrumentação afetará o desempenho do aplicativo. Para saber mais, confira [Noções básicas sobre valores de dados de instrumentação](../profiling/understanding-instrumentation-data-values.md) e [Noções básicas sobre valores de dados de amostragem](../profiling/understanding-sampling-data-values.md)  
   
- O profiler do Visual Studio permite que você limite a coleção de dados.  Este passo a passo oferece um exemplo de como limitar a coleção de dados usando as APIs do profiler.  O profiler do Visual Studio fornece uma API para a coleta de dados de controle do aplicativo.  
+ O criador de perfil do Visual Studio permite que você limite a coleta de dados. Este passo a passo oferece um exemplo de como limitar a coleta de dados usando as APIs do criador de perfil. O criador de perfil do Visual Studio fornece uma API para controlar a coleta de dados de dentro de um aplicativo.  
   
- Para o código nativo, as APIs do profiler do Visual Studio estiverem em VSPerf.dll.  O arquivo de cabeçalho, VSPerf.h, e a biblioteca de importação, VSPerf.lib, está localizado diretórios das ferramentas do Microsoft Visual Studio 9 team em \\ \\ ferramentas de desempenho.  
+ Para o código nativo, as APIs do criador de perfil do Visual Studio estão em VSPerf.dll. Por padrão, VSPerf.h e VSPerf.lib, e a biblioteca de importação, VSPerf.lib, estão localizados no diretório Microsoft Visual Studio 9\Team Tools\Performance Tools.  
   
- Para código gerenciado, as APIs do profiler estão no Microsoft.VisualStudio.Profiler.dll.  Este DLL for localizado diretórios das ferramentas do Microsoft Visual Studio 9 team em \\ \\ ferramentas de desempenho.  Para obter mais informações, consulte <xref:Microsoft.VisualStudio.Profiler>.  
+ Para o código gerenciado, as APIs do criador de perfil estão na Microsoft.VisualStudio.Profiler.dll. Essa DLL está no diretório Microsoft Visual Studio 9\Team Tools\Performance Tools. Para saber mais, confira <xref:Microsoft.VisualStudio.Profiler>.  
   
-## Pré-requisitos  
- Este passo a passo pressupõe que sua escolha do ambiente de desenvolvimento é configurado para oferecer suporte à depuração e a amostragem.  Os tópicos a seguir fornecem uma visão geral desses pré\-requisitos:  
+## <a name="prerequisites"></a>Pré-requisitos  
+ Este passo a passo pressupõe que a escolha do ambiente de desenvolvimento está configurada para dar suporte à depuração e amostragem. Os tópicos a seguir fornecem uma visão geral desses pré-requisitos:  
   
- [Como escolher métodos de coleção](../profiling/how-to-choose-collection-methods.md)  
+ [Como escolher métodos de coleta](../profiling/how-to-choose-collection-methods.md)  
   
  [Como fazer referência a informações de símbolo do Windows](../profiling/how-to-reference-windows-symbol-information.md)  
   
- Por padrão, quando o profiler for iniciado, o profiler coleta dados no nível global.  O código a seguir no início do programa gerencia analisar global.  
+ Por padrão, quando o criador de perfil é iniciado, ele coleta dados no nível global. O código a seguir no início do programa desativa a criação de perfil global.  
   
 ```  
 DataCollection.StopProfile(  
@@ -51,16 +66,16 @@ ProfileLevel.Global,
 DataCollection.CurrentId);  
 ```  
   
- Você pode desativar a coleta de dados na linha de comando sem o uso de uma chamada ao API.  As etapas a seguir pressupõem a linha de comando o ambiente de criação que é configurado para executar as ferramentas para analisar e como suas ferramentas de desenvolvimento.  Isso inclui configurações necessárias para VSInstr e VSPerfCmd.  Consulte a linha de comando Ferramentas de Criação de Perfil.  
+ Você pode desativar a coleta de dados na linha de comando sem o uso de uma chamada de API. As etapas a seguir pressupõem que o ambiente de compilação de linha de comando está configurado para executar as ferramentas de criação de perfil e como suas ferramentas de desenvolvimento. Isso inclui as configurações necessárias para VSInstr e VSPerfCmd. Confira as Ferramentas de criação de perfil de linha de comando.  
   
-## Limitando a coleta de dados usando APIs do profiler  
+## <a name="limiting-data-collection-using-profiler-apis"></a>Limitação da coleta de dados usando APIs do criador de perfil  
   
-#### Para criar o código para analisar  
+#### <a name="to-create-the-code-to-profile"></a>Para criar o código para o perfil  
   
-1.  Crie um novo projeto C\# no Visual Studio, ou use uma construção de linha de comando, dependendo de sua preferência.  
+1.  Crie um novo projeto C# no Visual Studio, ou use uma compilação de linha de comando, dependendo de sua preferência.  
   
     > [!NOTE]
-    >  A construção deve fazer referência a biblioteca de Microsoft.VisualStudio.Profiler.dll, localizada diretórios das ferramentas do Microsoft Visual Studio 9 team em \\ \\ ferramentas de desempenho.  
+    >  A compilação deve fazer referência à biblioteca Microsoft.VisualStudio.Profiler.dll, localizada no diretório Microsoft Visual Studio 9\Team Tools\Performance Tools.  
   
 2.  Copie e cole o código a seguir em seu projeto:  
   
@@ -117,21 +132,21 @@ DataCollection.CurrentId);
     }  
     ```  
   
-#### Para coletar e exibir dados no Visual Studio industry  
+#### <a name="to-collect-and-view-data-in-the-visual-studio-ide"></a>Para coletar e exibir dados no IDE do Visual Studio  
   
-1.  Abra [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE.  No menu de **Analisar** , aponte para **Criador de Perfis**, e selecione **Nova sessão de desempenho.**  
+1.  Abra o IDE do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. No menu **Analisar**, aponte para **Criador de Perfil** e, em seguida, selecione **Nova Sessão de Desempenho**  
   
-2.  Adicionar seu binário compilado à lista de **Destinos** na janela de **Desempenho Explorer** .  Clique com o botão direito do mouse em **Destinos**, e selecione **Adicionar binário de destino**.  Localize binário na caixa de diálogo de **Adicionar binário de destino** , e clique em **Abrir**.  
+2.  Adicione o binário compilado à lista **Destinos** na janela **Gerenciador de Desempenho**. Clique com botão direito do mouse em **Destinos** e, em seguida, selecione **Adicionar Binário de Destino**. Localize o binário na caixa de diálogo **Adicionar Binário de Destino** e clique em **Abrir**.  
   
-3.  **Instrumentação** Selecione na lista de **Método** na barra de ferramentas de **Desempenho Explorer** .  
+3.  Selecione **Instrumentação**, na lista **Método**, na barra de ferramentas **Gerenciador de Desempenho**.  
   
-4.  Clique em **Iniciar a análise**.  
+4.  Clique em **Iniciar a Criação de Perfil**.  
   
-     O profiler proverá e executará binários e criará um arquivo de relatório de desempenho.  O arquivo de relatório de desempenho aparecerá no nó de **Relatórios** de **Desempenho Explorer**.  
+     O criador de perfil instrumentará e executará o binário e criará um arquivo de relatório de desempenho. O arquivo de relatório de desempenho aparecerá no nó **Relatórios** do **Gerenciador de Desempenho**.  
   
-5.  Abra o arquivo de relatório resultante de desempenho.  
+5.  Abra o arquivo de relatório de desempenho resultante.  
   
- Por padrão, quando o profiler for iniciado, o profiler coletará dados no nível global.  O código a seguir no início do programa gerencia analisar global.  
+ Por padrão, quando o criador de perfil for iniciado, ele coletará dados no nível global. O código a seguir no início do programa desativa a criação de perfil global.  
   
 ```  
 DataCollection.StopProfile(  
@@ -139,30 +154,30 @@ ProfileLevel.Global,
 DataCollection.CurrentId);  
 ```  
   
-#### Para coletar e exibir dados na linha de comando  
+#### <a name="to-collect-and-view-data-at-the-command-line"></a>Para coletar e exibir dados na linha de comando  
   
-1.  Criar uma versão de depuração do código de exemplo criado em “criando o código para analisar o procedimento”, anteriormente neste passo a passo.  
+1.  Compile uma versão de depuração do código de exemplo que você criou no procedimento "Criar o código para o perfil" neste passo a passo.  
   
-2.  Para analisar um aplicativo gerenciado, digite o seguinte comando para definir as variáveis de ambiente apropriadas:  
+2.  Para criar o perfil de um aplicativo gerenciado, digite o comando a seguir para definir as variáveis de ambiente apropriadas:  
   
-     VsPefCLREnv \/traceon  
+     **VsPefCLREnv /traceon**  
   
-3.  Digite o seguinte comando: VSInstr \<filename\>.exe  
+3.  Digite este comando:**VSInstr \<filename>.exe**  
   
-4.  Digite o seguinte comando: VSPerfCmd \/start:trace \/output:\<filename\>.vsp  
+4.  Digite este comando:**VSPerfCmd /start:trace /output:\<filename>.vsp**  
   
-5.  Digite o seguinte comando: VSPerfCmd \/globaloff  
+5.  Digite este comando:**VSPerfCmd /globaloff**  
   
-6.  Execute o programa.  
+6.  Execute seu programa.  
   
-7.  Digite o seguinte comando: VSPerfCmd \/shutdown  
+7.  Digite este comando:**VSPerfCmd /shutdown**  
   
-8.  Digite o seguinte comando: VSPerfReport \/calltrace:\<filename\>.vsp  
+8.  Digite este comando:**VSPerfReport /calltrace:\<filename>.vsp**  
   
-     Um arquivo .csv será criado no diretório atual com os dados de desempenho resultantes.  
+     Um arquivo .csv é criado no diretório atual com os dados de desempenho resultantes.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualStudio.Profiler>   
- [Referência da API do Visual Studio Profiler \(nativo\)](../profiling/visual-studio-profiler-api-reference-native.md)   
- [Guia de Introdução](../profiling/getting-started-with-performance-tools.md)   
- [Criando perfil a partir da linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md)
+ [Referência da API do criador de perfil do Visual Studio (nativo)](../profiling/visual-studio-profiler-api-reference-native.md)   
+ [Introdução](../profiling/getting-started-with-performance-tools.md)   
+ [Criando perfil na linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md)
