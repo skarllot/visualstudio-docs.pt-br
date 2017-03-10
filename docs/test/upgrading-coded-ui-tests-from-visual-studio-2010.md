@@ -28,9 +28,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ce287b916a088c35689cf56a58f9635112fd0d88
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
+ms.openlocfilehash: e1bc50e4b6458103ee2443828f2a666d5f230d62
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="upgrading-coded-ui-tests-from-visual-studio-2010"></a>Atualizando testes de IU codificados a partir do Visual Studio 2010
@@ -80,7 +80,7 @@ Projetos de teste que contêm testes de IU codificados criados no [!INCLUDE[vs_d
 -   **Teste de carga:** quando você executa um teste de carga junto com um tipo de rede que não é o perfil de rede local (LAN) em um computador com o Windows 8, o driver do emulador de rede faz com que o sistema operacional falhe. Para obter mais detalhes, consulte o [Artigo KB 2736182](http://support.microsoft.com/kb/2736182).  
   
 ## <a name="see-also"></a>Consulte também  
- [Portabilidade, migração e atualização de projetos do Visual Studio](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)   
+ [Portabilidade, migração e atualização de projetos do Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
  [Atualizar Testes de Versões Anteriores do Visual Studio](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)   
  [Usar a automação de interface do usuário para testar o código](../test/use-ui-automation-to-test-your-code.md)   
  [Gerar um Teste de IU Codificado de uma gravação da ação existente](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)   
