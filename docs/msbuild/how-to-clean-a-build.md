@@ -1,67 +1,82 @@
 ---
-title: "Como limpar uma compila&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "diretórios [.NET Framework], para itens de saída"
-  - "tarefa Exec [MSBuild]"
-  - "MSBuild, limpando uma compilação"
-  - "saída, removendo itens"
+title: Como limpar um build | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Exec task [MSBuild]
+- MSBuild, cleaning a build
+- directories [.NET Framework], for output items
+- output, removing items
 ms.assetid: 999ba473-b0c4-45c7-930a-63ea7a510509
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Como limpar uma compila&#231;&#227;o
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: f0deda8dae333bcb778085456c49cfd53f067254
+ms.lasthandoff: 02/22/2017
 
-Ao limpar uma compilação, todos os arquivos de saída e intermediários são excluídos, deixando somente os arquivos de projeto e o componente.  Dos arquivos de projeto e de componente, arquivos de saída e de novas instâncias de intermediários podem então ser criados.  A biblioteca de tarefas comuns que é fornecido com o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] inclui um  [Exec](../msbuild/exec-task.md) tarefa que você pode usar para executar comandos do sistema.  Para obter mais informações sobre a biblioteca de tarefas, consulte [Referência de tarefas](../msbuild/msbuild-task-reference.md).  
+---
+# <a name="how-to-clean-a-build"></a>Como limpar um build
+Quando você limpa um build, todos os arquivos de saída e intermediários são excluídos, deixando apenas os arquivos de projeto e componente. Nos arquivos de projeto e de componente, novas instâncias dos arquivos de saída e intermediários podem ser criadas. A biblioteca de tarefas comuns fornecida com o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] inclui uma tarefa [Exec](../msbuild/exec-task.md) que você pode usar para executar comandos do sistema. Para obter mais informações sobre a biblioteca de tarefas, consulte [Referência de Tarefa](../msbuild/msbuild-task-reference.md).  
   
-## A criação de um diretório para itens de saída  
- Por padrão, o arquivo. exe que é criado quando você compila um projeto é colocado no mesmo diretório dos arquivos de origem e projeto.  No entanto, normalmente, itens de saída são criados em um diretório separado.  
+## <a name="creating-a-directory-for-output-items"></a>Criando um diretório para itens de saída  
+ Por padrão, o arquivo .exe que é criado quando você compila um projeto é colocado no mesmo diretório dos arquivos de projeto e código-fonte. No entanto, normalmente, itens de saída são criados em um diretório separado.  
   
-#### Para criar um diretório para itens de saída  
+#### <a name="to-create-a-directory-for-output-items"></a>Para criar um diretório para itens de saída  
   
-1.  Use o `Property` elemento para definir o local e o nome do diretório.  Por exemplo, crie um diretório chamado `BuiltApp` no diretório que contém os arquivos de origem e de projeto:  
+1.  Use o elemento `Property` para definir o local e o nome do diretório. Por exemplo, crie um diretório chamado `BuiltApp` no diretório que contém os arquivos de projeto e código-fonte:  
   
      `<builtdir>BuiltApp</builtdir>`  
   
-2.  Use o  [MakeDir](../msbuild/makedir-task.md) tarefas para criar o diretório se o diretório não existir.  Por exemplo:  
+2.  Use a tarefa [MakeDir](../msbuild/makedir-task.md) para criar o diretório se o diretório não existir. Por exemplo:  
   
      `<MakeDir Directories = "$(builtdir)"`  
   
      `Condition = "!Exists('$(builtdir)')" />`  
   
-## Remover os itens de saída  
- Para criar novas instâncias de arquivos de saída e intermediários, você talvez queira limpar anteriores de todas as instâncias de arquivos de saída e intermediários.  Use o  [RemoveDir](../msbuild/removedir-task.md) tarefa para excluir um diretório e todos os arquivos e diretórios que ele contém a partir de um disco.  
+## <a name="removing-the-output-items"></a>Removendo os itens de saída  
+ Antes de criar novas instâncias dos arquivos de saída e intermediários, é possível limpar todas as instâncias anteriores dos arquivos de saída e intermediários. Use a tarefa [RemoveDir](../msbuild/removedir-task.md) para excluir um diretório e todos os arquivos e diretórios que ele contém de um disco.  
   
-#### Para remover um diretório e todos os arquivos contidos no diretório  
+#### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>Para remover um diretório e todos os arquivos contidos no diretório  
   
--   Use o `RemoveDir` tarefa para remover o diretório.  Por exemplo:  
+-   Use a tarefa `RemoveDir` para remover o diretório. Por exemplo:  
   
      `<RemoveDir Directories="$(builtdir)" />`  
   
-## Exemplo  
- O seguinte código exemplo de projeto contém um novo destino, `Clean`, que usa a `RemoveDir` tarefa para excluir um diretório e todos os arquivos e diretórios que ele contém.  Também neste exemplo, o `Compile` destino cria um diretório separado para os itens de saída que são excluídos quando a compilação estiver limpo.  
+## <a name="example"></a>Exemplo  
+ O seguinte exemplo de projeto de código contém um novo destino, `Clean`, que usa a tarefa `RemoveDir` para excluir um diretório e todos os arquivos e diretórios que ele contém. Também no exemplo, o destino `Compile` cria um diretório separado para os itens de saída que são excluídos quando o build for removida.  
   
- `Compile`é definido como o destino padrão e, portanto, é usado automaticamente a menos que você especifique um destino diferente ou destinos.  Usar a opção de linha de comando **\/target** para especificar um destino diferente.  Por exemplo:  
+ `Compile` é definido como o destino padrão e, portanto, é usado automaticamente a menos que você especifique um ou mais destinos diferentes. Use a opção de linha de comando **/target** para especificar um destino diferente. Por exemplo:  
   
  `msbuild <file name>.proj /target:Clean`  
   
- O **\/target** switch pode ser reduzido a **\/t** e pode especificar mais de um destino.  Por exemplo, para usar o destino `Clean` , em seguida, o destino `Compile`, tipo:  
+ A opção **/target** pode ser abreviada como **/t** e pode especificar mais de um destino. Por exemplo, para usar o destino `Clean` e, em seguida, o destino `Compile`, digite:  
   
  `msbuild <file name>.proj /t:Clean;Compile`  
   
-```  
+```xml  
 <Project DefaultTargets = "Compile"  
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >  
   
@@ -101,7 +116,7 @@ Ao limpar uma compilação, todos os arquivos de saída e intermediários são e
 </Project>  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefa Exec](../msbuild/exec-task.md)   
  [Tarefa MakeDir](../msbuild/makedir-task.md)   
  [Tarefa RemoveDir](../msbuild/removedir-task.md)   

@@ -1,55 +1,70 @@
 ---
-title: "Coletando dados de tempo detalhados para um aplicativo Web do ASP.NET usando o m&#233;todo de instrumenta&#231;&#227;o do criador de perfil a partir da linha de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "método de criação de perfil de instrumentação"
-  - "ferramentas de criação de perfil, método de instrumentação"
+title: "Coletando Dados de Tempo Detalhados para um Aplicativo Web ASP .NET Usando o Método de Instrumentação do Criador de Perfil da Linha de Comando | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- profiling tools,instrumentation method
+- instrumentation profiling method
 ms.assetid: 29f2fc55-aaf7-4e18-a672-8815455fba73
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Coletando dados de tempo detalhados para um aplicativo Web do ASP.NET usando o m&#233;todo de instrumenta&#231;&#227;o do criador de perfil a partir da linha de comando
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 7671b6158ade15501d86efb5b4087b5f9c86afed
+ms.lasthandoff: 02/22/2017
 
-Esta seção descreve os procedimentos e as opções para coletar dados de desempenho detalhados para um aplicativo Web de [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] usando a ferramenta de linha de comando de**VSPerfCmd** e o método de gerenciamento.  
+---
+# <a name="collecting-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line"></a>Coletando dados de tempo detalhados para um aplicativo Web do ASP.NET usando o método de instrumentação do criador de perfil a partir da linha de comando
+Esta seção descreve os procedimentos e opções para coletar dados de desempenho detalhados para um aplicativo Web [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] usando a ferramenta **VSPerfCmd** da linha de comando e o método de instrumentação.  
   
 > [!NOTE]
->  A ferramenta de **VSPerfCmd** proporciona acesso completo à funcionalidade de Ferramentas de Criação de Perfil, inclusive pausar e retomar, analisar e colete dados adicionais contadores de processador e de desempenho do windows.  Você também pode usar a ferramenta de linha de comando **VSPerfASPNETCmd** quando não precisar essa funcionalidade.  Em comparação com a ferramenta de linha de comando [VSPerfCmd](../profiling/vsperfcmd.md) , nenhuma variável de ambiente precisa ser definido, e reinicialize o computador não é necessário.  Para obter mais informações, consulte [Criação de perfil do site rápida com VSPerfASPNETCmd](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md).  
+>  A ferramenta **VSPerfCmd** dá acesso completo à funcionalidade de Ferramentas de Criação de Perfil, inclusive pausar e retomar a criação de perfil e coletar dados adicionais do processador e de contadores de desempenho do Windows. Também é possível usar a ferramenta de linha de comando **VSPerfASPNETCmd** quando essa funcionalidade não for necessária. Em comparação com a ferramenta de linha de comando [VSPerfCmd](../profiling/vsperfcmd.md), nenhuma variável de ambiente precisa ser definida e não é necessário reinicializar o computador. Para obter mais informações, consulte [Criação de perfil do site rápida com VSPerfASPNETCmd](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md).  
   
-## Tarefas comuns  
-  
-|Tarefa|Conteúdo relacionado|  
-|------------|--------------------------|  
-|**Perfil de binários compilados estaticamente**|-   [Como instrumentar um aplicativo do ASP.NET compilado estaticamente e coletar dados de tempo detalhados](../profiling/how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)|  
-|**Criados dinamicamente binários de perfil**|-   [Como instrumentar um aplicativo do ASP.NET compilado dinamicamente e coletar dados de tempo detalhados](../Topic/How%20to:%20Instrument%20a%20Dynamically%20Compiled%20ASP.NET%20Web%20Application%20and%20Collect%20Detailed%20Timing%20Data%20with%20the%20Profiler%20by%20Using%20the%20Command%20Line.md)|  
-  
-## Tarefas Relacionadas  
-  
-### Analisando aplicativos Web ASP.NET  
+## <a name="common-tasks"></a>Tarefas comuns  
   
 |Tarefa|Conteúdo relacionado|  
-|------------|--------------------------|  
-|**Perfile usando o método de amostragem**|-   [Coletando estatísticas do aplicativo usando amostragem](../profiling/collecting-application-statistics-for-aspnet-web-applications-using-the-profiler-sampling-method-from-the-command-line.md)|  
-|**Alocação de memória e coleta de lixo de perfil**|-   [Coletando dados de memória](../profiling/collecting-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line.md)|  
-|**Conflito de recurso de perfil e atividade de thread**|-   [Coletando dados de simultaneidade](../profiling/collecting-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line.md)|  
+|----------|---------------------|  
+|**Criar perfil para binários compilados estatisticamente**|-   [Como Instrumentar um Aplicativo do ASP.NET Compilado Estaticamente e Coletar Dados de Tempo Detalhados](../profiling/how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)|  
+|**Criar perfil para binários compilados dinamicamente**|-   [Como Instrumentar um Aplicativo do ASP.NET Compilado Dinamicamente e Coletar Dados de Tempo Detalhados](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)|  
   
-### Analisar usando o método de gerenciamento  
+## <a name="related-tasks"></a>Tarefas relacionadas  
+  
+### <a name="profiling-aspnet-web-applications"></a>Criando perfil de aplicativos Web do ASP.NET  
   
 |Tarefa|Conteúdo relacionado|  
-|------------|--------------------------|  
-|**Aplicativos autônomos de perfil \(cliente\)**|-   [Coletando dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line.md)|  
-|**Serviços de perfil**|-   [Coletando dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line.md)|  
+|----------|---------------------|  
+|**Criar perfil usando o método de amostragem**|-   [Coletando estatísticas do aplicativo usando amostragem](../profiling/collecting-application-statistics-for-aspnet-web-applications-using-the-profiler-sampling-method-from-the-command-line.md)|  
+|**Profile memory allocation and garbage collection (Alocação de memória de perfil e coleta de lixo)**|-   [Coletando dados de memória](../profiling/collecting-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line.md)|  
+|**Criar perfil de contenção de recursos e atividade de thread**|-   [Coletando dados de simultaneidade](../profiling/collecting-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line.md)|  
   
-### Criando perfil dos dados da instrumentação exibe e relatórios  
+### <a name="profiling-by-using-the-instrumentation-method"></a>Criação de perfil usando o método de instrumentação  
+  
+|Tarefa|Conteúdo relacionado|  
+|----------|---------------------|  
+|**Criar o perfil de aplicativos autônomos (clientes)**|-   [Coletando dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line.md)|  
+|**Profile services (Serviços de perfil)**|-   [Coletando dados de tempo detalhados usando a instrumentação](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line.md)|  
+  
+### <a name="analyzing-instrumentation-data-views-and-reports"></a>Analisando modos de exibição e relatórios de dados de instrumentação  
  [Exibições de dados do método de instrumentação](../profiling/instrumentation-method-data-views.md)

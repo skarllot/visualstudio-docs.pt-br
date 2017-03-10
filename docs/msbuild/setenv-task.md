@@ -1,49 +1,64 @@
 ---
-title: "Tarefa SetEnv | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.task.setenv"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-  - "C++"
-helpviewer_keywords: 
-  - "MSBuild (Visual C++), tarefas"
-  - "Tarefa SetEnv (MSBuild (Visual C++))"
+title: Tarefa SetEnv | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.task.setenv
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+- C++
+helpviewer_keywords:
+- MSBuild (Visual C++), tasks
+- SetEnv task (MSBuild (Visual C++))
 ms.assetid: fd9e4225-68cb-4608-8b27-468b0218c936
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Tarefa SetEnv
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: a842c267c9c3943264cd492ad84cf97beb8a820f
+ms.lasthandoff: 02/22/2017
 
+---
+# <a name="setenv-task"></a>Tarefa SetEnv
 Define ou exclui o valor de uma variável de ambiente especificada.  
   
-## Parâmetros  
- A tabela a seguir descreve os parâmetros da **SetEnv** tarefa.  
+## <a name="parameters"></a>Parâmetros  
+ A tabela a seguir descreve os parâmetros da tarefa **SetEnv**.  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|**Name**|Obrigatório **String** parâmetro.<br /><br /> O nome de uma variável de ambiente.|  
-|**OutputEnvironmentVariable**|Opcional **String** parâmetro de saída.<br /><br /> Contém o valor atribuído à variável de ambiente especificado pelo **Name** parâmetro.|  
-|**Prefix**|Obrigatório `Boolean` parâmetro.<br /><br /> Se `true`, concatena o valor da **Value** parâmetro antes do valor da variável de ambiente especificado pelo **Name** parâmetro e, em seguida, atribui o resultado à variável de ambiente.  Se `false`, atribui apenas o valor da **Value** parâmetro para a variável de ambiente.|  
-|**Target**|Opcional **String** parâmetro.<br /><br /> Especifica o local onde uma variável de ambiente é armazenada.  Especificar "`usuário`"ou"`máquina`".<br /><br /> Para obter mais informações, consulte "EnvironmentVariableTarget Enumeration" sobre o [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) site da Web.|  
-|**Value**|Opcional **String** parâmetro.<br /><br /> O valor atribuído à variável de ambiente especificado pelo **Name** parâmetro.  Se **Value** está vazio e a variável existe, a variável será excluída.  Se a variável não existir, nenhum erro ocorre mesmo que a operação não pode ser executada.<br /><br /> Para obter mais informações, consulte o "Método de Environment::SetEnvironmentVariable" no [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) site da Web.|  
+|---------------|-----------------|  
+|**Nome**|Parâmetro obrigatório **String**.<br /><br /> O nome de uma variável de ambiente.|  
+|**OutputEnvironmentVariable**|Parâmetro de saída opcional **String**.<br /><br /> Contém o valor atribuído à variável de ambiente especificado pelo parâmetro **Nome**.|  
+|**Prefixo**|Parâmetro `Boolean` obrigatório.<br /><br /> Se `true`, concatenará o valor do parâmetro **Valor** antes do valor da variável de ambiente especificado pelo parâmetro **Nome** e, em seguida, atribuirá o resultado à variável de ambiente. Se `false`, atribuirá somente o valor do parâmetro **Valor** à variável de ambiente.|  
+|**Target**|Parâmetro **String** opcional.<br /><br /> Especifica o local em que uma variável de ambiente é armazenada. Especifique "`User`" ou "`Machine`".<br /><br /> Para obter mais informações, consulte "Enumeração EnvironmentVariableTarget" no site do [MSDN](http://go.microsoft.com/fwlink/?LinkId=737).|  
+|**Value**|Parâmetro **String** opcional.<br /><br /> O valor atribuído à variável de ambiente especificado pelo parâmetro **Nome**. Se **Valor** estiver vazio e a variável existir, a variável será excluída. Se a variável não existir, nenhum erro ocorrerá mesmo que a operação não possa ser executada.<br /><br /> Para obter mais informações, consulte "Environment::SetEnvironmentVariable Method" no site do [MSDN](http://go.microsoft.com/fwlink/?LinkId=737).|  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)

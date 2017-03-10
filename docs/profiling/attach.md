@@ -1,83 +1,98 @@
 ---
-title: "Anexar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Anexar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 79614283-6733-4592-a53a-d428052271ad
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Anexar
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 1de1fbd4db1167971774a4ad3fb450dfebdd6527
+ms.lasthandoff: 02/22/2017
 
-A opção de VSPerfCmd.exe **Attach** iniciar a criação de perfil de exemplo do processo em execução especificado pela ID do processo \(PID\).  
+---
+# <a name="attach"></a>Attach
+A opção **Anexar** do VSPerfCmd.exe inicia a criação de perfil de exemplo do processo em execução especificado pela PID (ID do processo).  
   
- Para usar a opção de **Attach** , você deve especificar o método de **Sample** na opção de início.  
+ Para usar a opção **Anexar**, você deve especificar o método de **exemplo** na opção de início.  
   
 > [!NOTE]
->  Se a opção de **Start** foi especificada com a opção de **Crosssession** , todas as chamadas a **VSPerfCmd \/Attach** ou a **VSPerfCmd \/Detach** deve também especificar **Crosssession**.  
+>  Se a opção **Iniciar** foi especificada com a opção **Crosssession**, todas as chamadas para **VSPerfCmd /Attach** ou **VSPerfCmd /Detach** também deverão especificar **Crosssession**.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 VSPerfCmd.exe /Attach:ProcessID [Options]  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `ProcessID`  
- A ID de O processo \(PID\) do processo em execução.  O PID de um processo em execução é listado na guia os processos do gerenciador de tarefas do windows.  
+ A PID do processo em execução. A PID de um processo em execução é listada na guia Processos do Gerenciador de Tarefas do Windows.  
   
-## Opções válidas  
- As seguintes opções de **VSPerfCmd** podem ser combinadas com a opção de **Attach** em uma única linha de comando.  
+## <a name="valid-options"></a>Opções válidas  
+ As seguintes opções **VSPerfCmd** podem ser combinadas com a opção **Anexar** em uma única linha de comando.  
   
  **Crosssession**  
- Permite analisar aplicativos nas sessões diferentes da sessão de logon.  Obrigatório se a opção de **Start** foi especificada com a opção de **Crosssession** .  
+ Habilita aplicativos de criação de perfil em sessões que não sejam a sessão de logon. Necessário se a opção **Iniciar** foi especificada com a opção **Crosssession**.  
   
- **Start:** `Method`  
- Inicializa a sessão do profiler de linha de comando e defina o método analisando especificado.  
+ **Iniciar:** `Method`  
+ Inicializa a sessão de criador de perfil de linha de comando e define o método de criação de perfil especificado.  
   
  **TargetCLR**  
- Especifica a versão do .NET Framework Common Language Runtime \(CLR\) para analisar quando mais de uma versão é carregada em uma sessão analisando.  Por padrão, a primeira versão carregada é analisado.  
+ Especifica a versão do CLR (Common Language Runtime) do .NET Framework a ser analisada quando mais de uma versão for carregada em uma sessão de criação de perfil. Por padrão, a primeira versão carregada é analisada.  
   
  **GlobalOn GlobalOff**  
- Os resumos \(**GlobalOn**\) ou as pausas \(\)**GlobalOff**criação de perfil, mas não terminam a sessão analisando.  
+ Retoma (**GlobalOn**) ou pausa (**GlobalOff**) a criação de perfil, mas não termina a sessão de criação de perfil.  
   
  **ProcessOn:** `PID` **ProcessOff:** `PID`  
- Resumos**ProcessOn**\(\) ou pausa \(\)**ProcessOff**criação de perfil para o processo especificado.  
+ Retoma (**ProcessOn**) ou pausa (**ProcessOff**) a criação de perfil para o processo especificado.  
   
-## Opções de intervalo  
- Uma das opções de intervalo de amostragem pode ser especificado na linha de comando anexar.  O intervalo de amostragem padrão é 10.000.000 ciclos do relógio do processador.  
+## <a name="interval-options"></a>Opções de intervalo  
+ Uma das seguintes opções de intervalo de amostragem pode ser especificada na linha de comando Anexar. O intervalo de amostragem padrão é 10.000.000 ciclos de relógio do processador.  
   
- **Timer**\[**:**`Cycles`\]**PF**\[**:**`Events`\]**Sys**eventos \[\]**Counter**de**:**\[**:**`Name`,`Reload`,`FriendlyName`\]  
- Especifica o número e o tipo de intervalo de amostragem.  
+ **Temporizador**[**:**`Cycles`]**PF**[**:**`Events`]**Sys**[**:**Eventos]**Contador**[**:**`Name`,`Reload`,`FriendlyName`]  
+ Especifica o número e o tipo do intervalo de amostragem.  
   
--   **Timer** \- Exemplos ciclos de cada relógio do processador de `Cycles` .  Se `Cycles` não for especificado, 10.000.000 ciclos são usados.  
+-   **Temporizador** – exemplifica cada `Cycles` ciclo de relógio do processador. Se `Cycles` não for especificado, os 10.000.000 ciclos serão usados.  
   
--   **PF** \- Exemplos falhas de cada página de `Events` .  Se `Events` não for especificado, 10 falhas de página são usadas.  
+-   **PF** – exemplifica cada `Events` falha de página. Se `Events` não for especificado, 10 falhas de página serão usadas.  
   
--   **Sys** \- Exemplos de cada chamadas de `Events` o sistema operacional.  Se `Events` não for especificado, 10 chamadas do sistema são usados.  
+-   **Sys** – exemplifica cada `Events` chamadas para o sistema operacional. Se `Events` não for especificado, 10 chamadas do sistema serão usadas.  
   
--   **Counter** \- Exemplos de cada número de `Reload` do contador de desempenho de CPU especificado por `Name`.  Opcionalmente, `FriendlyName` pode especificar uma cadeia de caracteres para usar como o cabeçalho da coluna no profiler relatórios.  
+-   **Contador** – exemplifica cada número `Reload` do contador de desempenho de CPU especificado por `Name`. Opcionalmente, `FriendlyName` pode especificar uma cadeia de caracteres para usar como o cabeçalho de coluna nos relatórios do criador de perfil.  
   
-## Exemplo  
- Este exemplo demonstra como anexar a uma instância em execução de um aplicativo com a ID de processo de 12345.  
+## <a name="example"></a>Exemplo  
+ Este exemplo demonstra como anexar a uma instância em execução de um aplicativo com a ID de processo 12345.  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Attach:12345  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Criando perfil de aplicativos Web do ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Serviços de criação de perfil](../profiling/command-line-profiling-of-services.md)
+ [Criando perfil de aplicativos Web ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)

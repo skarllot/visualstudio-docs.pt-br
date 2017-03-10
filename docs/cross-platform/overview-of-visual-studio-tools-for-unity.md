@@ -1,70 +1,86 @@
 ---
-title: "Vis&#227;o geral do Visual Studio Tools for Unity | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tgt-pltfrm-cross-plat"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visão Geral das Ferramentas do Visual Studio para Unity | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tgt-pltfrm-cross-plat
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b4231bb9-45c4-4c77-ac3c-d05033b26393
 caps.latest.revision: 4
-caps.handback.revision: 4
-ms.author: "crdun"
-manager: "crdun"
----
-# Vis&#227;o geral do Visual Studio Tools for Unity
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 57642165d9d9794cee02f1b3cac3bda9becde283
+ms.lasthandoff: 02/22/2017
 
-Nesta seção, você aprenderá mais sobre os recursos do Visual Studio Tools para ofertas do Unity e como usá\-los para se tornarem mais produtivos com o Unity.  
+---
+# <a name="overview-of-visual-studio-tools-for-unity"></a>Visão Geral das Ferramentas do Visual Studio para Unity
+Nesta seção, saiba mais sobre os recursos que as Ferramentas do Visual Studio para Unity oferecem e como usá-las para ter mais produtividade no Unity.  
   
- Com o Visual Studio Tools para o Unity \(*VSTU*\), você pode usar o Visual Studio para escrever scripts de jogo e editor em c\# e, em seguida, usar seu depurador poderoso para localizar e corrigir erros.  A versão mais recente do VSTU inclui sintaxe colorida para idiomas de sombreador ShaderLab do Unity, melhores visualizações do depurador e geração de código aprimorada para o Assistente do MonoBehavior.  VSTU também coloca seus arquivos de projeto do Unity, mensagens do console e a capacidade de iniciar o jogo no Visual Studio para que possa gastar menos tempo alternância do Unity Editor durante a gravação de código.  
+ Com as Ferramentas do Visual Studio para Unity (*VSTU*), é possível usar o Visual Studio para registrar scripts de jogos e edição no C# e, em seguida, usar seu poderoso depurador para localizar e corrigir erros. A última versão do VSTU inclui a coloração de sintaxe da linguagem de sombreador ShaderLab do Unity, melhores visualizações do depurador e geração de código aprimorada para o assistente MonoBehavior. O VSTU também leva seus arquivos de projeto do Unity, mensagens do console e a capacidade de iniciar seu jogo para o Visual Studio, para que você possa gastar menos tempo mudando do e para o Editor do Unity durante a escrita do código.  
   
- Continue lendo para saber mais sobre esses recursos.  
+ Continue para saber mais sobre esses recursos.  
   
-## Integração com o Unity  
- Visual Studio Tools para o Unity não seria uma enhancer de produtividade caso seja necessário alternar entre o Visual Studio e o Unity editor o tempo todo.  É por isso que o Visual Studio Tools para o Unity torna mais fácil continuar fazendo o trabalho sem sair do Visual Studio.  
+## <a name="integration-with-unity"></a>Integração com o Unity  
+ As Ferramentas do Visual Studio para Unity não melhorariam a produtividade se fosse necessário mudar entre o editor do Unity e o Visual Studio toda hora. É por isso que as Ferramentas do Visual Studio para Unity facilitam o trabalho sem sair do Visual Studio.  
   
--   O**Explorador de projeto do Unity**exibe todo o projeto Unity dentro do Visual Studio usando a mesma hierarquia exibida no Unity editor.  
+-   O **Gerenciador de Projetos do Unity** exibe todo o projeto do Unity dentro do Visual Studio usando a mesma hierarquia exibida no editor do Unity.  
   
--   Integração com o Unity console exibe a saída do console do Unity dentro do janela de erro do Visual Studio.  
+-   A integração de console do Unity exibe a saída do console do Unity dentro da janela de erro do Visual Studio.  
   
--   Inicie a depuração de seu jogo do Visual Studio – sem precisar alternar de volta para o Unity, pressione F5.  
+-   Inicie a depuração de um jogo no Visual Studio – não é necessário voltar para o Unity, apenas pressione F5.  
   
-## Superior a depuração  
- Conecte o depurador poderoso do Visual Studio para seu jogo Unity para depurar seus scripts de c\# e DLLs, independentemente se ele estiver em execução autônoma ou no editor do Unity.  Você pode usar todos os recursos de depuração esperado do Visual Studio.  
+## <a name="superior-debugging"></a>Depuração Superior  
+ Conecte o poderoso depurador do Visual Studio ao jogo do Unity para depurar scripts do C# e DLLs mesmo se ele estiver em execução autônoma ou no editor do Unity. É possível usar todos os recursos de depuração esperados do Visual Studio.  
   
 -   Pontos de interrupção, incluindo pontos de interrupção condicionais.  
   
--   Avalie expressões complexas na janela de inspeção.  
+-   Avalie expressões complexas na janela Inspeção.  
   
--   Inspecionar e modificar o valor de variáveis e argumentos.  
+-   Inspecione e modifique o valor de variáveis e argumentos.  
   
--   Analisar estruturas complexas de objetos e dados.  
+-   Analise objetos complexos e estruturas de dados.  
   
- Você ainda pode depurar seu jogo Unity enquanto ele é executado em outro computador na rede.  
+ É possível até mesmo depurar um jogo do Unity enquanto ele é executado em outro computador em sua rede.  
   
-## Produtividade  
- Além de produtividade de estabelecidas do Visual Studio para escrever e refatoração de código em c\#, Visual Studio Tools para o Unity fornece recursos de produtividade extra para desenvolvedores do Unity.  
+## <a name="productivity"></a>Produtividade  
+ Além da produtividade estabelecida pelo Visual Studio no registro e refatoração de código no C#, as Ferramentas do Visual Studio para Unity fornecem recursos extra para desenvolvedores do Unity.  
   
--   Sintaxe colorida para idioma de ShaderLab do Unity ajuda a identificar erros no seus sombreadores antes de se tornarem bugs.  Basta abra seus arquivos ShaderLab no Visual Studio.  
+-   A coloração de sintaxe para a linguagem ShaderLab do Unity ajuda a identificar erros em sombreadores antes que eles se tornem bugs. Basta abrir os arquivos do ShaderLab no Visual Studio.  
   
--   O assistente MonoBehavior permite que você procure uma lista de comportamentos do Unity e cria o código clichê para comportamentos com que pode não estar familiarizado.  Pressionar  CTRL \+ SHIFT \+ M.  
+-   O assistente do MonoBehavior permite procurar por uma lista de comportamentos do Unity e cria código clichê para comportamentos com os quais você pode não estar familiarizado. Pressione CTRL+SHIFT+M.  
   
--   Depois de se familiarizar com os comportamentos do Unity que mais usados, o assistente MonoBehavior rápida coloca ao seu alcance.  Pressionar  CTRL \+ ALT \+ Q.  
+-   Quando estiver familiarizado com os comportamentos do Unity que você mais usa, o assistente rápido do MonoBehavior os colocará ao seu alcance. Pressione CTRL + ALT + Q.  
   
--   Acesse a documentação do Unity do Visual Studio.  Basta realçar a chamada de API que você deseja conhecer, em seguida, pressione  CTRL \+ ALT \+ M, CTRL \+ H.  
+-   Acesse a documentação do Unity no Visual Studio. Basta realçar a chamada à API que você deseja conhecer e, em seguida, pressionar CTRL+ALT+M, CTRL+H.  
   
--   Acesse todos esses recursos e muito mais com atalhos de teclado.  
+-   Acesse todos esses recursos e muito mais com os atalhos de teclado.  
   
-## Ferramentas do Visual Studio para a API do Unity  
- Personalizar e estender o comportamento do Visual Studio Tools para o Unity usando as APIs fornecidas.  
+## <a name="visual-studio-tools-for-unity-api"></a>Ferramentas do Visual Studio para API de Unity  
+ Personalize e estenda o comportamento das Ferramentas do Visual Studio para Unity usando as APIs fornecidas.  
   
--   Visual Studio Tools para o Unity registra um retorno de chamada de log para o console do Unity para Visual Studio pode transmitir.  Se você tiver scripts de editor que informações de log, você pode colocá\-los no mesmo retorno de chamada para enviar suas mensagens para o Visual Studio.  Para obter mais informações, consulte o exemplo de retorno de chamada de Log.  
+-   As Ferramentas do Visual Studio para Unity registram um retorno de chamada de log a fim de transmitir o console do Unity para o Visual Studio. Caso você tenha scripts de editor que registram informações, é possível colocá-los no mesmo retorno de chamada para enviar mensagens ao Visual Studio. Para obter mais informações, consulte o exemplo para Retorno de Chamada de Log.  
   
--   Você pode alterar como o Visual Studio Tools para o Unity gera arquivos de projeto usando o retorno de chamada do Unity estilo ProjectFileGeneration.  Para obter mais informações, consulte o exemplo de geração de arquivo de projeto.  
+-   É possível alterar o modo como as Ferramentas do Visual Studio para Unity geram arquivos de projeto usando o estilo de retorno de chamada ProjectFileGeneration do Unity. Para obter mais informações, consulte o exemplo de Geração de Arquivo de Projeto.  
   
-## Consulte também  
- [Home page do unity](http://unity3d.com)
+## <a name="see-also"></a>Consulte também  
+ [Home page do Unity](http://unity3d.com)

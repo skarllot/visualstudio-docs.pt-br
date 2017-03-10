@@ -1,51 +1,52 @@
 ---
-title: "Como exportar uma textura que tenha Alfa pr&#233;-multiplicado | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Como exportar uma textura que tenha Alfa pré-multiplicado | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
----
-# Como exportar uma textura que tenha Alfa pr&#233;-multiplicado
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: BrianPeek
+ms.author: brpeek
+manager: ghogen
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 390ac08b74d2ecca9be1a049323b96371e08e3a1
+ms.lasthandoff: 02/22/2017
 
-O Pipeline de Conteúdo da Imagem pode gerar texturas alfa pré\-multiplicadas de uma imagem de origem.  Elas podem ser mais simples de usar e mais robustas do que as texturas que não contêm o alfa pré\-multiplicado.  
+---
+# <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Como exportar uma textura que tenha Alfa pré-multiplicado
+O Pipeline de conteúdo de imagem pode gerar texturas alfa pré-multiplicadas de uma imagem de origem. Eles podem ser mais simples de usar e mais robustos do que texturas que não contêm alfa pré-multiplicado.  
   
- Este documento demonstra estas atividades:  
+ Este documento demonstra essas atividades:  
   
--   Configurando a imagem de origem a ser processada pelo Pipeline de Conteúdo da Imagem.  
+-   Configurando a imagem de origem a ser processada pelo Pipeline de conteúdo da imagem.  
   
--   Configurando o Pipeline de Conteúdo de Imagem para gerar alfa pré\-multiplicado.  
+-   Configurando o Pipeline de conteúdo de imagem para gerar alfa pré-multiplicado.  
   
-## Alfa pré\-multiplicado  
- O alfa pré\-multiplicado oferece várias vantagens sobre o alfa não pré\-multiplicado convencional, porque representa melhor a interação do mundo real da luz com os diretórios físicos materiais separando a contribuição de cor de texel \(a cor que adiciona à cena\) de sua translucência \(quantidade de cor subjacente que permite completamente\).  Algumas das vantagens de usar o alfa pré\-multiplicado são:  
+## <a name="premultiplied-alpha"></a>Alfa pré-multiplicado  
+ Alfa pré-multiplicado oferece diversas vantagens em relação a alfa convencional, alfa não pré-multiplicado, porque ele representa mais bem a interação do mundo real da luz com materiais físicos, separando a contribuição de cor de texel (a cor que ele adiciona à cena) de sua transparência (a quantidade de cor de fundo que pode passar). Algumas das vantagens de usar alfa pré-multiplicado são:  
   
--   A combinação com o alfa pré\-multiplicado é uma operação associativa; o resultado de misturar mais texturas translúcidas é o mesmo, independentemente da ordem em que texturas são misturadas.  
+-   A combinação com alfa pré-multiplicado é uma operação de associação; o resultado da combinação de várias texturas translúcidas é o mesmo, independentemente da ordem na qual as texturas são mescladas.  
   
--   Devido à natureza associativa de combinação com o alfa pré\-multiplicado, a renderização de várias passagens dos objetos translúcidos é simplificada.  
+-   Devido à natureza associativa de combinação com alfa pré-multiplicado, a renderização multipassagem de objetos translúcidos é simplificada.  
   
--   Usando o alfa pré\-multiplicado, tanto a combinação puramente aditiva \(configurando alfa para zero\) e a combinação interpolar linearmente podem ser alcançadas simultaneamente.  Por exemplo, em um sistema de partícula, uma partícula de fogo aditivamente combinada pode se tornar uma partícula de fumaça translúcida combinada usando interpolação linear.  Sem alfa pré\-multiplicado, você teria que desenhar as partículas de fogo separadamente das partículas de fumaça, e alterar o estado de renderização entre chamadas de desenho.  
+-   Ao usar alfa pré-multiplicado, tanto a combinação aditiva pura (pela configuração de alfa para zero) quanto a combinação interpoladas linearmente podem ser obtidas simultaneamente. Por exemplo, em um sistema de partículas, uma partícula de fogo combinada de maneira aditiva pode se tornar uma partícula de fumaça translúcida que é combinada por meio da interpolação linear. Sem alfa pré-multiplicado, você precisa extrair as partículas de fogo separadamente das partículas de fumaça e modificar o estado de renderização entre chamadas de retirada.  
   
--   As texturas que usam a compressão alfa pré\-multiplicada com qualidade mais alta do que as que não usam essa compressão e que não exibem o efeito de borda descolorida ou "aura", que pode ocorrer quando você mistura texturas que não usam alfa pré\-multiplicada.  
+-   Texturas que usam alfa pré-multiplicada comprimem com qualidade mais alta que aquelas que não usam e elas não exibem as bordas descoloridas — ou "efeito de halo" — que podem ocorrer quando você combina texturas que não usam alfa pré-multiplicado.  
   
-#### Para criar uma textura que usa um alfa pré\-multiplicado  
+#### <a name="to-create-a-texture-that-uses-premultiplied-alpha"></a>Como criar uma textura que usa alfa pré-multiplicado  
   
-1.  Comece com uma textura básica.  Carregue um arquivo de imagem existente ou crie um como descrito em [Como: criar uma textura básica](../Topic/How%20to:%20Create%20a%20Basic%20Texture.md).  
+1.  Comece com uma textura básica. Carregue um arquivo de imagem existente ou crie um conforme descrito em [Como criar uma textura básica](../designers/how-to-create-a-basic-texture.md).  
   
-2.  Configure o arquivo de textura de modo que seja processado pelo Pipeline de Conteúdo de Imagem.  No **Gerenciador de Soluções**, abra o menu de atalho para o arquivo de textura e, em seguida, selecione **Propriedades**.  Na página **Propriedades de Configuração**, **Geral**, defina a propriedade de **Tipo de Item** para **Pipeline de conteúdo de imagem**.  Certifique\-se de que a propriedade **Conteúdo** esteja definido como **Sim** e **Excluir de Compilação** esteja definido como **Não** e então escolha o botão **Aplicar**.  A página de propriedades de configuração **Pipeline de Conteúdo da Imagem** é exibida.  
+2.  Configure o arquivo de textura para que ele seja processado pelo Pipeline de conteúdo de imagem. No **Gerenciador de Soluções**, abra o menu de atalho do arquivo de textura e escolha **Propriedades**. Na página **Propriedades de Configuração**, **Geral**, defina a propriedade **Tipo de Item** como **Pipeline de Conteúdo de Imagem**. Verifique se a propriedade **Conteúdo** está definida como **Sim** e se **Excluir do Build** está definido como **Não** e, em seguida, escolha o botão **Aplicar**. A página de propriedades de configuração **Pipeline de Conteúdo de Imagem** é exibida.  
   
-3.  Configure o Pipeline de Conteúdo de Imagem para gerar alfa pré\-multiplicado.  Na página **Propriedades de Configuração**, **Pipeline de Conteúdo de Imagem**, **Geral**, defina a propriedade de **Converter o formato alfa pré\-multiplicado** para **Sim \(\/generatepremultipliedalpha\)**.  
+3.  Configure o Pipeline de conteúdo de imagem para gerar alfa pré-multiplicado. Na página **Propriedades de Configuração**, **Pipeline de Conteúdo de Imagem**, **geral**, defina a propriedade **Converter para formato alfa pré-multiplicado** como **Sim (/ generatepremultipliedalpha)**.  
   
-4.  Escolha o botão **OK**.  
+4.  Selecione o botão **OK**.  
   
- Quando você criar o projeto, o pipeline de conteúdo da imagem converte a imagem de origem de formato trabalhando no formato de saída que você especificou \(isso inclui a conversão da imagem para um formato alfa pré\-multiplicado\) e o resultado é copiado para o diretório de saída do projeto.
+ Quando você compila o projeto, o Pipeline de conteúdo de imagem converte a imagem de origem do formato de trabalho para o formato de saída que você especificou, incluindo a conversão da imagem para o formato alfa pré-multiplicado e o resultado é copiado para o diretório de saída do projeto.

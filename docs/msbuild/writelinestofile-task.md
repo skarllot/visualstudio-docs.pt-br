@@ -1,55 +1,70 @@
 ---
-title: "Tarefa WriteLinesToFile | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#WriteLinesToFile"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild, Tarefa WriteLinesToFile"
-  - "Tarefa WriteLinesToFile [MSBuild]"
+title: Tarefa WriteLinesToFile | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#WriteLinesToFile
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- WriteLinesToFile task [MSBuild]
+- MSBuild, WriteLinesToFile task
 ms.assetid: 9c8862ac-8da5-4437-9430-ecc30421f1c9
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Tarefa WriteLinesToFile
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: f3704a905545f090614abb951800f91b79a1e2bb
+ms.lasthandoff: 02/22/2017
 
+---
+# <a name="writelinestofile-task"></a>Tarefa WriteLinesToFile
 Grava os caminhos dos itens especificados no arquivo de texto especificado.  
   
-## Parâmetros da tarefa  
- A tabela a seguir descreve os parâmetros da `WriteLinestoFile` tarefa.  
+## <a name="task-parameters"></a>Parâmetros da tarefa  
+ A tabela a seguir descreve os parâmetros da tarefa `WriteLinestoFile`.  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|`File`|Obrigatório <xref:Microsoft.Build.Framework.ITaskItem> parâmetro.<br /><br /> Especifica o arquivo para gravar os itens.|  
-|`Lines`|Opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]` parâmetro.<br /><br /> Especifica os itens para gravar no arquivo.|  
-|`Overwrite`|Opcional `Boolean` parâmetro.<br /><br /> Se `true`, a tarefa substitui qualquer conteúdo existente no arquivo.|  
-|`Encoding`|Opcional `String` parâmetro.<br /><br /> Seleciona o caractere de codificação, por exemplo, "Unicode".  See also <xref:System.Text.Encoding>.|  
+|---------------|-----------------|  
+|`File`|Parâmetro obrigatório <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Especifica o arquivo no qual os itens serão gravados.|  
+|`Lines`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Especifica os itens a serem gravados no arquivo.|  
+|`Overwrite`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, a tarefa substituirá todo o conteúdo existente no arquivo.|  
+|`Encoding`|Parâmetro `String` opcional.<br /><br /> Seleciona a codificação de caracteres, por exemplo, "Unicode".  Consulte também <xref:System.Text.Encoding>.|  
   
-## Comentários  
- Se `Overwrite` é `true`, cria um novo arquivo, gravar o conteúdo no arquivo e, em seguida, fecha o arquivo.  Se o arquivo de destino já existir, ele será sobrescrito.  Se `Overwrite` é `false`, acrescenta o conteúdo para o arquivo, criando o arquivo de destino se ele ainda não existir.  
+## <a name="remarks"></a>Comentários  
+ Se `Overwrite` for `true`, criará um novo arquivo, gravará os conteúdos nele e o fechará. Se o arquivo de destino já existir, ele será substituído. Se `Overwrite` for `false`, acrescentará os conteúdos ao arquivo, criando um arquivo de destino, caso ele ainda não exista.  
   
- Com os parâmetros listados acima, esta tarefa herda os parâmetros da <xref:Microsoft.Build.Tasks.TaskExtension> herda de classe, que por si só a <xref:Microsoft.Build.Utilities.Task> classe.  Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe TaskExtension \(base\)](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que, por sua vez, herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
-## Exemplo  
- O exemplo a seguir usa a `WriteLinesToFile` tarefa de escrever os caminhos dos itens na `MyItems` item da coleção para o arquivo especificado pelo `MyTextFile` item da coleção.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir usa a tarefa `WriteLinesToFile` para gravar os caminhos dos itens na coleção de itens `MyItems` no arquivo especificado pela coleção de itens `MyTextFile`.  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   
     <ItemGroup>  
@@ -68,6 +83,6 @@ Grava os caminhos dos itens especificados no arquivo de texto especificado.
 </Project>  
 ```  
   
-## Consulte também  
- [ \(tarefas\)](../msbuild/msbuild-tasks.md)   
+## <a name="see-also"></a>Consulte também  
+ [Tarefas](../msbuild/msbuild-tasks.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)

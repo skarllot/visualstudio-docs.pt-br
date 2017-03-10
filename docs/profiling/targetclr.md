@@ -1,49 +1,64 @@
 ---
-title: "TargetCLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TargetCLR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f9732480-287f-40f1-a4ff-b112e143b940
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# TargetCLR
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: eb6968192a5c116d4c88347008e398aaea00a062
+ms.lasthandoff: 02/22/2017
 
-A opção de **TargetCLR** especifica a versão do Common Language Runtime \(CLR\) para analisar quando mais de uma versão do CLR é carregada em um aplicativo.  
+---
+# <a name="targetclr"></a>TargetCLR
+A opção **TargetCLR** especifica a versão do CLR (Common Language Runtime) cujo perfil deverá ser criado quando mais de uma versão do CLR for carregada em um aplicativo.  
   
- Por padrão, o destino de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Ferramentas de Criação de Perfil a primeira versão do CLR que é carregada pelo aplicativo.  
+ Por padrão, as Ferramentas de Criação de Perfil [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] têm como destino a primeira versão do CLR carregada pelo aplicativo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 VSPerfCmd.exe {/Launch:AppName | /Attach:PID} /TargetCLR[:ClrVersion] [Options]   
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `ClrVersion`  
- O número da versão do CLR.  Use o formato **vN.N.NNNNN**de versão.  
+ O número de versão do CLR. Use o formato de versão **vN.N.NNNNN**.  
   
-## Opções necessárias  
- A opção de **TargetCLR** só pode ser usada com as opções de **Launch** ou de **Attach** .  
+## <a name="required-options"></a>Opções obrigatórias  
+ A opção **TargetCLR** pode ser usada somente com as opções de **Inicialização** ou **Anexar**.  
   
- **Launch:** `AppName`  
- Inicia o aplicativo e inicia especificados analisar.  
+ **Inicialize:** `AppName`  
+ Inicia o aplicativo especificado e a criação de perfil.  
   
- **Attach:** `PID`  
- O é iniciada para analisar o processo especificado.  
+ **Anexar:** `PID`  
+ Começa a criar o perfil do processo especificado.  
   
-## Exemplo  
- Neste exemplo, a opção de TargetCLR é usada para garantir que a versão 4.0.11003 de CLR é analisada.  
+## <a name="example"></a>Exemplo  
+ Nesse exemplo, a opção TargetCLR é usada para garantir que a versão 4.0.11003 do CLR tenha um perfil criado.  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  

@@ -1,83 +1,98 @@
 ---
-title: "Tarefa AL (Assembly Linker) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#AL"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "tarefa AL [MSBuild]"
-  - "MSBuild, tarefa AL"
+title: Tarefa AL (Assembly Linker) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#AL
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- AL task [MSBuild]
+- MSBuild, AL task
 ms.assetid: 2ddefbf2-5662-4d55-99a6-ac383bf44560
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Tarefa AL (Assembly Linker)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: f3f7d61bf46f318249dd3b54caee27998d7fd105
+ms.lasthandoff: 02/22/2017
 
-A tarefa de AL envolve AL.exe, uma ferramenta que é destinado com [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)].  Essa ferramenta do assembly linker é usada para criar um assembly com um manifesto de um ou mais arquivos que são módulos ou arquivos de recurso.  Compiladores e ambientes de desenvolvimento ainda podem fornecer esses recursos, de forma que geralmente não é necessário usar diretamente esta tarefa.  O vinculador assembly é mais útil para os desenvolvedores que precisam criar um único conjunto de módulos \(assembly\) de vários arquivos componentes, como aqueles que podem ser geradas de desenvolvimento de misto linguagem.  Esta tarefa não combina os módulos em um único arquivo do assembly; módulos individuais distribuídos e ainda devem estar disponíveis para o assembly resultante carregue corretamente.  Para obter mais informações sobre AL.exe, consulte [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).  
+---
+# <a name="al-assembly-linker-task"></a>Tarefa AL (Assembly Linker)
+A tarefa AL encapsula AL.exe, uma ferramenta que é distribuída com o [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]. Essa ferramenta, o Assembly Linker, é usada para criar um assembly com um manifesto com base em um ou mais arquivos que são arquivos de recurso ou módulos. Compiladores e ambientes de desenvolvimento talvez já forneçam essas funcionalidades, então muitas vezes não é necessário usar essa tarefa diretamente. O Assembly Linker é mais útil para os desenvolvedores que precisam criar um único assembly com base em vários arquivos de componente, como aqueles que podem ser produzidos via desenvolvimento de linguagens mistas. Essa tarefa não combina os módulos em um único arquivo do assembly; os módulos individuais ainda deverão ser distribuídos e estar disponíveis para que o assembly resultante carregue corretamente. Para obter mais informações sobre o AL.exe, consulte [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).  
   
-## Parâmetros  
- A tabela a seguir descreve os parâmetros de tarefa de `AL` .  
+## <a name="parameters"></a>Parâmetros  
+ A tabela a seguir descreve os parâmetros da tarefa `AL`.  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|`AlgorithmID`|Parâmetro opcional de `String` .<br /><br /> Especifica um algoritmo de hash todos os arquivos em um assembly multi\-arquivos exceto o arquivo que contém o manifesto do assembly.  Para mais informações, consulte a documentação para a opção de `/algid` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`BaseAddress`|Parâmetro opcional de `String` .<br /><br /> Especifica o endereço em uma DLL que será carregado no computador do usuário em tempo de execução.  Os aplicativos usam mais rapidamente se você especificar o endereço básico de DLL, em vez de deixando o sistema operacional realoque as dlls no espaço do processo.  Este parâmetro corresponde a opção \/base \[\] endereço em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`CompanyName`|Parâmetro opcional de `String` .<br /><br /> Especifica uma cadeia de caracteres para o campo de `Company` no assembly.  Para mais informações, consulte a documentação para a opção de `/comp[any]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`Configuration`|Parâmetro opcional de `String` .<br /><br /> Especifica uma cadeia de caracteres para o campo de `Configuration` no assembly.  Para mais informações, consulte a documentação para a opção de `/config[uration]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`Copyright`|Parâmetro opcional de `String` .<br /><br /> Especifica uma cadeia de caracteres para o campo de `Copyright` no assembly.  Para mais informações, consulte a documentação para a opção de `/copy[right]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`Culture`|Parâmetro opcional de `String` .<br /><br /> Especifica a cadeia de caracteres de cultura para associar o assembly.  Para mais informações, consulte a documentação para a opção de `/c[ulture]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`DelaySign`|Parâmetro opcional de `Boolean` .<br /><br /> `true` para colocar somente a chave pública do assembly; `false` para assinar totalmente o assembly.  Para mais informações, consulte a documentação para a opção de `/delay[sign]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`Description`|Parâmetro opcional de `String` .<br /><br /> Especifica uma cadeia de caracteres para o campo de `Description` no assembly.  Para mais informações, consulte a documentação para a opção de `/descr[iption]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`EmbedResources`|Parâmetro opcional de <xref:Microsoft.Build.Framework.ITaskItem>`[]` .<br /><br /> Inserir os recursos especificados na imagem que contém o manifesto do assembly.  Esta tarefa copia o conteúdo do arquivo de recurso na imagem.  Os itens passados para esse parâmetro podem ter os metadados opcionais anexados a eles `LogicalName` chamado e `Access`.  Os metadados de `LogicalName` são usados para especificar o identificador interno para o recurso.  Os metadados de `Access` pode ser definido `private` para tornar o recurso não visível para outros assemblies.  Para mais informações, consulte a documentação para a opção de `/embed[resource]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`EvidenceFile`|Parâmetro opcional de `String` .<br /><br /> Insere o arquivo especificado no assembly com o nome de recurso de `Security.Evidence`.<br /><br /> Você não pode usar `Security.Evidence` para recursos normais.  Este parâmetro corresponde à opção de `/e[vidence]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`ExitCode`|Parâmetros opcionais somente leitura de saída de `Int32` .<br /><br /> Especifica o código de saída fornecido pelo comando executado.|  
-|`FileVersion`|Parâmetro opcional de `String` .<br /><br /> Especifica uma cadeia de caracteres para o campo de `File Version` no assembly.  Para mais informações, consulte a documentação para a opção de `/fileversion` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`Flags`|Parâmetro opcional de `String` .<br /><br /> Especifica um valor para o campo de `Flags` no assembly.  Para mais informações, consulte a documentação para a opção de `/flags` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`GenerateFullPaths`|Parâmetro opcional de `Boolean` .<br /><br /> Faz com que a tarefa usar o caminho absoluto para todos os arquivos que são reportados em uma mensagem de erro.  Este parâmetro corresponde à opção de `/fullpaths` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`KeyContainer`|Parâmetro opcional de `String` .<br /><br /> Especifica um contêiner que contém um par de chaves.  Isso assinará o assembly \(lhe dê um nome forte\) inserindo uma chave pública no manifesto do assembly.  A tarefa assinará no assembly final com a chave particular.  Para mais informações, consulte a documentação para a opção de `/keyn[ame]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`KeyFile`|Parâmetro opcional de `String` .<br /><br /> Especifica um arquivo que contém um par de chaves ou apenas uma chave pública para assinar um assembly.  O compilador insere a chave pública no manifesto do assembly e assina o assembly final com a chave particular.  Para mais informações, consulte a documentação para a opção de `/keyf[ile]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`LinkResources`|Parâmetro opcional de <xref:Microsoft.Build.Framework.ITaskItem>`[]` .<br /><br /> Vincula os arquivos de recursos especificados em um assembly.  O recurso torna parte do assembly, mas o arquivo não é copiado.  Os itens passados para esse parâmetro podem ter os metadados opcionais anexados a eles `LogicalName`chamado, `Target`, e `Access`.  Os metadados de `LogicalName` são usados para especificar o identificador interno para o recurso.  Os metadados de `Target` podem especificar o caminho e o nome de arquivo para que a tarefa copia o arquivo, depois do que compila esse novo arquivo do assembly.  Os metadados de `Access` pode ser definido `private` para tornar o recurso não visível para outros assemblies.  Para mais informações, consulte a documentação para a opção de `/link[resource]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`MainEntryPoint`|Parâmetro opcional de `String` .<br /><br /> Especifica o nome totalmente qualificado \(\)*class.method*do método para usar como um ponto de entrada para converter um módulo em um arquivo executável.  Este parâmetro corresponde à opção de `/main` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`OutputAssembly`|Parâmetro de saída de <xref:Microsoft.Build.Framework.ITaskItem> necessário.<br /><br /> Especifica o nome do arquivo gerado por essa tarefa.  Este parâmetro corresponde à opção de `/out` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`Platform`|Parâmetro opcional de `String` .<br /><br /> Limites em que a plataforma esse código pode ser executado; deve ser um de `x86`, de `Itanium`, de `x64`, ou de `anycpu`.  O padrão é `anycpu`.  Este parâmetro corresponde à opção de `/platform` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`ProductName`|Parâmetro opcional de `String` .<br /><br /> Especifica uma cadeia de caracteres para o campo de `Product` no assembly.  Para mais informações, consulte a documentação para a opção de `/prod[uct]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`ProductVersion`|Parâmetro opcional de `String` .<br /><br /> Especifica uma cadeia de caracteres para o campo de `ProductVersion` no assembly.  Para mais informações, consulte a documentação para a opção de `/productv[ersion]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`ResponseFiles`|Parâmetro opcional de `String[]` .<br /><br /> Especifica arquivos de resposta que contêm opções adicionais passar pelo vinculador assembly.|  
-|`SdkToolsPath`|Parâmetro opcional de `String` .<br /><br /> Especifica o caminho ferramentas SDK, como resgen.exe.|  
-|`SourceModules`|Parâmetro opcional de <xref:Microsoft.Build.Framework.ITaskItem>`[]` .<br /><br /> Um ou vários módulos a ser compilados em um assembly.  Módulos constarão no manifesto do assembly resultante, e ainda precisarão distribuído e disponível para o assembly carregue.  Os itens passados em este parâmetro podem ter os metadados adicionais chamados `Target`, especificando o caminho e o nome de arquivo para que a tarefa copia o arquivo, depois do que compila esse novo arquivo do assembly.  Para mais informações, consulte a documentação para [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).  Este parâmetro corresponde à lista de módulos passados em Al.exe sem uma opção específico.|  
-|`TargetType`|Parâmetro opcional de `String` .<br /><br /> Especifica o formato do arquivo de saída: `library` \(biblioteca de códigos\), `exe` \(aplicativo de console\), ou `win` \(aplicativo baseado no Windows\).  O padrão é `library`.  Este parâmetro corresponde à opção de `/t[arget]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`TemplateFile`|Parâmetro opcional de `String` .<br /><br /> Especifica o assembly do qual herdar todos os metadados do assembly, a não ser que o campo de cultura.  O conjunto especificado deve ter um nome forte.<br /><br /> Um assembly que você crie com o parâmetro de `TemplateFile` será um assembly satélite.  Este parâmetro corresponde à opção de `/template` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`Timeout`|Parâmetro opcional de `Int32` .<br /><br /> Especifica a quantidade de tempo, em milissegundos, depois do que o executável de tarefa é encerrado.  O valor padrão é `Int.MaxValue`, indicando que não há nenhum intervalo de tempo limite.|  
-|`Title`|Parâmetro opcional de `String` .<br /><br /> Especifica uma cadeia de caracteres para o campo de `Title` no assembly.  Para mais informações, consulte a documentação para a opção de `/title` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`ToolPath`|Parâmetro opcional de `String` .<br /><br /> Especifica o local de onde a tarefa carregará o arquivo executável subjacente \(Al.exe\).  Se este parâmetro não for especificado, a tarefa usa o caminho de instalação do SDK que corresponde à versão do framework que está executando [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
-|`Trademark`|Parâmetro opcional de `String` .<br /><br /> Especifica uma cadeia de caracteres para o campo de `Trademark` no assembly.  Para mais informações, consulte a documentação para a opção de `/trade[mark]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`Version`|Parâmetro opcional de `String` .<br /><br /> Especifica informações de versão para esse assembly.  O formato de cadeia de caracteres é *principal.menor.compilação.revisão*.  o valor padrão é 0.  Para mais informações, consulte a documentação para a opção de `/v[ersion]` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`Win32Icon`|Parâmetro opcional de `String` .<br /><br /> Insere um arquivo .ico no assembly.  O arquivo .ico fornece o arquivo de saída a aparência desejada em Arquivo Explorer.  Este parâmetro corresponde à opção de `/win32icon` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
-|`Win32Resource`|Parâmetro opcional de `String` .<br /><br /> Insere um recurso Win32 \(arquivo de .res\) no arquivo de saída.  Para mais informações, consulte a documentação para a opção de `/win32res` em [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).|  
+|---------------|-----------------|  
+|`AlgorithmID`|Parâmetro `String` opcional.<br /><br /> Especifica um algoritmo hash para todos os arquivos em um assembly multiarquivo, exceto o arquivo que contém o manifesto de assembly. Para obter mais informações, consulte a documentação da opção `/algid` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`BaseAddress`|Parâmetro `String` opcional.<br /><br /> Especifica o endereço no qual uma DLL será carregada no computador do usuário no tempo de execução. Os aplicativos serão carregados mais rapidamente se você especificar o endereço básico das DLLs, em vez de deixar o sistema operacional realocar as DLLs no espaço de processo. Esse parâmetro corresponde à opção /base[endereço] [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`CompanyName`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `Company` no assembly. Para obter mais informações, consulte a documentação da opção `/comp[any]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`Configuration`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `Configuration` no assembly. Para obter mais informações, consulte a documentação da opção `/config[uration]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`Copyright`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `Copyright` no assembly. Para obter mais informações, consulte a documentação da opção `/copy[right]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`Culture`|Parâmetro `String` opcional.<br /><br /> Especifica a cadeia de caracteres de cultura a ser associada ao assembly. Para obter mais informações, consulte a documentação da opção `/c[ulture]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`DelaySign`|Parâmetro `Boolean` opcional.<br /><br /> `true` para inserir apenas a chave pública no assembly. `false` para assinar totalmente o assembly. Para obter mais informações, consulte a documentação da opção `/delay[sign]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`Description`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `Description` no assembly. Para obter mais informações, consulte a documentação da opção `/descr[iption]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`EmbedResources`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Incorpora os recursos especificados na imagem que contém o manifesto do assembly. Essa tarefa copia o conteúdo do arquivo de recurso para a imagem. Os itens passados para esse parâmetro podem ter metadados opcionais chamados `LogicalName` e `Access` anexados a eles. Os metadados `LogicalName` são usados para especificar o identificador interno do recurso.  Os metadados `Access` podem ser definidos como `private` para tornar o recurso não visível para outros assemblies. Para obter mais informações, consulte a documentação da opção `/embed[resource]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`EvidenceFile`|Parâmetro `String` opcional.<br /><br /> Insere o arquivo especificado no assembly com o nome do recurso de `Security.Evidence`.<br /><br /> Não é possível usar `Security.Evidence` para recursos comuns. Esse parâmetro corresponde à opção `/e[vidence]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`ExitCode`|Parâmetro de saída opcional somente leitura `Int32`.<br /><br /> Especifica o código de saída fornecido pelo comando executado.|  
+|`FileVersion`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `File Version` no assembly. Para obter mais informações, consulte a documentação da opção `/fileversion` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`Flags`|Parâmetro `String` opcional.<br /><br /> Especifica um valor para o campo `Flags` no assembly. Para obter mais informações, consulte a documentação da opção `/flags` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`GenerateFullPaths`|Parâmetro `Boolean` opcional.<br /><br /> Faz com que a tarefa use o caminho absoluto para todos os arquivos reportados em uma mensagem de erro. Esse parâmetro corresponde à opção `/fullpaths` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`KeyContainer`|Parâmetro `String` opcional.<br /><br /> Especifica um contêiner que mantém um par de chaves. Isso assinará o assembly (recebe um nome forte) inserindo uma chave pública no manifesto do assembly. A tarefa assinará então o assembly final com a chave privada. Para obter mais informações, consulte a documentação da opção `/keyn[ame]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`KeyFile`|Parâmetro `String` opcional.<br /><br /> Especifica um arquivo que contém um par de chaves ou apenas uma chave pública para assinar um assembly. O compilador insere a chave pública no manifesto do assembly e, em seguida, assina o assembly final com a chave privada. Para obter mais informações, consulte a documentação da opção `/keyf[ile]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`LinkResources`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Vincula os arquivos de recurso especificados a este assembly. O recurso torna-se parte do assembly, mas o arquivo não é copiado. Os itens passados para esse parâmetro podem ter metadados opcionais chamados `LogicalName`, `Target` e `Access` anexados a eles. Os metadados `LogicalName` são usados para especificar o identificador interno do recurso. Os metadados `Target` podem especificar o caminho e o nome do arquivo para o qual a tarefa copia o arquivo, antes de compilá-lo para dentro do assembly. Os metadados `Access` podem ser definidos como `private` para tornar o recurso não visível para outros assemblies. Para obter mais informações, consulte a documentação da opção `/link[resource]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`MainEntryPoint`|Parâmetro `String` opcional.<br /><br /> Especifica o nome totalmente qualificado (*class.method*) do método a ser usado como um ponto de entrada durante a conversão de um módulo em um arquivo executável. Esse parâmetro corresponde à opção `/main` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`OutputAssembly`|Parâmetro de saída obrigatório <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Especifica o nome do arquivo gerado por essa tarefa. Esse parâmetro corresponde à opção `/out` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`Platform`|Parâmetro `String` opcional.<br /><br /> Limita as plataformas em que este código pode ser executado; deve ser uma entre `x86`, `Itanium`, `x64` e `anycpu`. O padrão é `anycpu`. Esse parâmetro corresponde à opção `/platform` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`ProductName`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `Product` no assembly. Para obter mais informações, consulte a documentação da opção `/prod[uct]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`ProductVersion`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `ProductVersion` no assembly. Para obter mais informações, consulte a documentação da opção `/productv[ersion]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`ResponseFiles`|Parâmetro `String[]` opcional.<br /><br /> Especifica os arquivos de resposta que contêm opções adicionais para passar para o vinculador de Assembly.|  
+|`SdkToolsPath`|Parâmetro `String` opcional.<br /><br /> Especifica o caminho para as ferramentas do SDK, por exemplo, resgen.exe.|  
+|`SourceModules`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Um ou mais módulos para serem compilados em um assembly. Os módulos serão listados no manifesto do assembly resultante e ainda precisarão ser distribuídos e estar disponíveis para que o assembly seja carregado. Os itens passados para esse parâmetro podem ter metadados adicionais chamados `Target`, que especificam o caminho e o nome do arquivo para o qual a tarefa copia o arquivo, antes de compilá-lo para dentro do assembly. Para obter mais informações, consulte a documentação de [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01). Esse parâmetro corresponde à lista de módulos passados em Al.exe sem uma opção específica.|  
+|`TargetType`|Parâmetro `String` opcional.<br /><br /> Especifica o formato do arquivo de saída: `library` (biblioteca de códigos), `exe` (aplicativo de console) ou `win` (aplicativo com base no Windows). O padrão é `library`. Esse parâmetro corresponde à opção `/t[arget]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`TemplateFile`|Parâmetro `String` opcional.<br /><br /> Especifica o assembly do qual todos os metadados de assembly devem ser herdados, exceto o campo de cultura. O assembly especificado deve ter um nome forte.<br /><br /> Um assembly criado com o parâmetro `TemplateFile` será um assembly satélite. Esse parâmetro corresponde à opção `/template` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`Timeout`|Parâmetro `Int32` opcional.<br /><br /> Especifica a quantidade de tempo em milissegundos após o qual o executável da tarefa é encerrado. O valor padrão é `Int.MaxValue`, indicando que não há período de tempo limite.|  
+|`Title`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `Title` no assembly. Para obter mais informações, consulte a documentação da opção `/title` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`ToolPath`|Parâmetro `String` opcional.<br /><br /> Especifica o local do qual a tarefa carregará o arquivo executável subjacente (Al.exe). Se esse parâmetro não for especificado, a tarefa usará o caminho de instalação do SDK correspondente à versão da estrutura que está executando [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
+|`Trademark`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `Trademark` no assembly. Para obter mais informações, consulte a documentação da opção `/trade[mark]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`Version`|Parâmetro `String` opcional.<br /><br /> Especifica informações de versão desse assembly. O formato da cadeia de caracteres é *principal.secundária.build.revisão*. O valor padrão é 0. Para obter mais informações, consulte a documentação da opção `/v[ersion]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`Win32Icon`|Parâmetro `String` opcional.<br /><br /> Insere um arquivo .ico no assembly. O arquivo .ico dá ao arquivo de saída a aparência desejada no Explorador de Arquivos. Esse parâmetro corresponde à opção `/win32icon` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`Win32Resource`|Parâmetro `String` opcional.<br /><br /> Insere um recurso Win32 (arquivo .res) no arquivo de saída. Para obter mais informações, consulte a documentação da opção `/win32res` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
   
-## Comentários  
- Além dos parâmetros listados acima, esta tarefa parâmetros herda da classe de <xref:Microsoft.Build.Tasks.ToolTaskExtension> própria, que herda da classe de <xref:Microsoft.Build.Utilities.ToolTask> .  Para obter uma lista de esses parâmetros adicionais e suas descrições, consulte [Classe ToolTaskExtension \(base\)](../msbuild/tooltaskextension-base-class.md).  
+## <a name="remarks"></a>Comentários  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.ToolTaskExtension>, que, por sua vez, herda da classe <xref:Microsoft.Build.Utilities.ToolTask>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base ToolTaskExtension](../msbuild/tooltaskextension-base-class.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um assembly com as opções especificadas.  
   
-```  
+```xml  
 <AL  
     EmbedResources="@(EmbeddedResource)"  
     Culture="%(EmbeddedResource.Culture)"  
@@ -94,6 +109,6 @@ A tarefa de AL envolve AL.exe, uma ferramenta que é destinado com [!INCLUDE[win
 </AL>  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
- [ \(tarefas\)](../msbuild/msbuild-tasks.md)
+ [Tarefas](../msbuild/msbuild-tasks.md)

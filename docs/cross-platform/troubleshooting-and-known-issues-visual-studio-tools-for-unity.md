@@ -1,76 +1,92 @@
 ---
-title: "Solucionando problemas e problemas conhecidos (Visual Studio Tools for Unity) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tgt-pltfrm-cross-plat"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Solução de problemas e problemas conhecidos (Ferramentas do Visual Studio para Unity) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tgt-pltfrm-cross-plat
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f5db192-8d78-4627-bd07-dbbc803ac554
 caps.latest.revision: 5
-caps.handback.revision: 5
-ms.author: "crdun"
-manager: "crdun"
----
-# Solucionando problemas e problemas conhecidos (Visual Studio Tools for Unity)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 856a160bd62053bc166620ed4c4922fceaf058e6
+ms.lasthandoff: 02/22/2017
 
-Nesta seção, você encontrará soluções para problemas comuns com o Visual Studio Tools para o Unity, descrições de problemas conhecidos e saiba como você pode ajudar a melhorar o Visual Studio Tools para o Unity pelo relatório de erros.  
+---
+# <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Solucionando problemas e problemas conhecidos (Visual Studio Tools for Unity)
+Nesta seção, você encontrará soluções para problemas comuns das Ferramentas do Visual Studio para Unity, as descrições de problemas conhecidos e aprenderá como ajudar a melhorar as Ferramentas do Visual Studio para Unity por meio de relatórios de erro.  
   
-## Solução de Problemas  
- Para resolver alguns problemas comuns com o Visual Studio Tools para o Unity, consulte as seções a seguir.  
+## <a name="troubleshooting"></a>Solução de problemas  
+ Para resolver alguns problemas comuns das Ferramentas do Visual Studio para Unity, consulte as seções a seguir.  
   
-### Migrando do UnityVS para Visual Studio Tools para o Unity  
- Se você estiver migrando de UnityVS para Visual Studio Tools para o Unity, você precisará gerar novas soluções do Visual Studio para seus projetos Unity.  
+### <a name="migrating-from-unityvs-to-visual-studio-tools-for-unity"></a>Migrar do UnityVS para as Ferramentas do Visual Studio para Unity  
+ Caso esteja migrando do UnityVS para as Ferramentas do Visual Studio para Unity, será necessário gerar novas soluções do Visual Studio para os projetos do Unity.  
   
-##### Para migrar seu projeto para Unity de 1,8 UnityVS para Visual Studio Tools para Unity 1.9  
+##### <a name="to-migrate-your-unity-project-from-unityvs-18-to-visual-studio-tools-for-unity-19"></a>Migrar um projeto do Unity do UnityVS 1.8 para as Ferramentas do Visual Studio para Unity 1.9  
   
-1.  Exclua os arquivos de solução e projeto antigos do projeto Unity.  No diretório raiz do seu projeto para Unity, localize a. sln Visual Studio e. \* proj arquivos e excluí\-los todos.  
+1.  Exclua a solução e os arquivos de projeto antigos do projeto do Unity. No diretório raiz do projeto do Unity, localize os arquivos .sln e .*proj do Visual Studio e exclua todos eles.  
   
-2.  Importe o Visual Studio Tools para o pacote do Unity para seu projeto para Unity.  Para obter informações sobre como importar o pacote VSTU, consulte Configurar o Visual Studio Tools para o Unity sobre o [Introdução](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) página.  
+2.  Importe as Ferramentas do Visual Studio para Unity para o pacote do Unity no projeto do Unity. Para obter informações sobre como importar o pacote VSTU, consulte Configurar as Ferramentas do Visual Studio para Unity na página [Introdução](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md).  
   
-3.  Gere os novos arquivos de solução e projeto.  Se você quiser gerá\-las agora, no Editor do Unity, no menu principal, escolha **Visual Studio Tools**, **gerar arquivos de projeto**.  Caso contrário, você pode ignorar esta etapa se desejar; O Visual Studio Tools para o Unity gerará novos arquivos automaticamente quando você escolhe **Visual Studio Tools**, **aberto no Visual Studio**.  
+3.  Gerar novas soluções e arquivos de projeto. Caso deseje gerá-los neste momento, escolha **Ferramentas do Visual Studio** e **Gerar Arquivos de Projeto** no menu principal do Editor do Unity. Caso contrário, é possível ignorar essa etapa; as Ferramentas do Visual Studio para Unity gerarão os novos arquivos automaticamente quando você escolher **Ferramentas do Visual Studio** e **Abrir no Visual Studio**.  
   
-### O Visual Studio não é possível carregar a solução Visual Studio Tools para o Unity criado  
- Para obter mais informações, consulte [a resposta a essa pergunta stackoverflow](http://stackoverflow.com/a/24035907/36702).  
+### <a name="visual-studio-wont-load-the-solution-that-visual-studio-tools-for-unity-created"></a>O Visual Studio não carregará a solução criada pelas Ferramentas do Visual Studio para Unity  
+ Para obter mais informações, consulte [a resposta para essa pergunta do stackoverflow](http://stackoverflow.com/a/24035907/36702).  
   
-### No Windows 8, o Visual Studio solicita para baixar a estrutura Unity de destino  
- UnityVS requer o.  NET framework 3.5, que não é instalado por padrão no Windows 8.  Para corrigir esse problema, siga as instruções para baixar e instalar o.  .NET framework 3.5.  
+### <a name="on-windows-8-visual-studio-asks-to-download-the-unity-target-framework"></a>No Windows 8, o Visual Studio solicita o download da estrutura de destino do Unity  
+ O UnityVS requer o .NET Framework 3.5, que não é instalado por padrão no Windows 8. Para corrigir esse problema, siga as instruções para baixar e instalar o .NET Framework 3.5.  
   
-## Problemas conhecidos  
- Há problemas no Visual Studio Tools para o Unity que resultam de como o depurador interage com a versão mais antiga do Unity do compilador c\# conhecidos.  Estamos trabalhando para ajudar a corrigir esses problemas, mas você pode enfrentar os seguintes problemas nesse meio tempo.  
+## <a name="known-issues"></a>Problemas conhecidos  
+ Há problemas conhecidos nas Ferramentas do Visual Studio para Unity, decorrentes de como o depurador interage com a versão mais antiga do compilador C# do Unity. Estamos trabalhando para corrigi-los, mas você pode enfrentar os seguintes problemas nesse meio tempo.  
   
--   Quando estiver depurando, Unity, às vezes, a falha.  
+-   O Unity pode falhar durante a depuração.  
   
--   Quando estiver depurando, Unity, às vezes, congela.  
+-   O Unity pode congelar durante a depuração.  
   
--   Revisão dentro e fora de métodos às vezes se comporta incorretamente, especialmente em iteradores ou em instruções switch.  
+-   A intervenção ou saída de métodos pode se comportar incorretamente, especialmente em iteradores ou em instruções switch.  
   
-## Erros de relatório  
- Ajude\-na melhorar a qualidade do Visual Studio Tools para o Unity, enviar relatórios de erros quando ocorrem falhas, congela ou outros erros.  Isso nos ajuda a investigar e corrigir problemas do Visual Studio Tools para o Unity.  Obrigado\!  
+## <a name="reporting-errors"></a>Erros de relatório  
+ Ajude-nos a melhorar a qualidade das Ferramentas do Visual Studio para Unity enviando relatórios de erro quando ocorrerem falhas, congelamentos ou outros erros. Isso nos ajuda a investigar e corrigir problemas nas Ferramentas do Visual Studio para Unity. Obrigado!  
   
-### Como relatar um erro quando o Visual Studio congela  
- Há relatórios Visual Studio às vezes congela durante a depuração com o Visual Studio Tools para o Unity, mas precisamos de mais dados para entender o problema.  Você pode nos ajudar a investigar, seguindo as etapas abaixo.  
+### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Como relatar um erro quando o Visual Studio congela  
+ Há relatórios que indicam que, às vezes, o Visual Studio congela ao depurar com as Ferramentas do Visual Studio para Unity, mas precisamos de mais dados para entender esse problema. Ajude-nos a investigá-lo seguindo as etapas abaixo.  
   
-##### Para relatar que o Visual Studio congela durante a depuração com o Visual Studio Tools para o Unity  
+##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>Para relatar que o Visual Studio congela durante a depuração com as Ferramentas do Visual Studio para Unity  
   
 1.  Abra uma nova instância do Visual Studio.  
   
-2.  Abra o diálogo Attach to Process.  Na nova instância do Visual Studio, no menu principal, escolha **Depurar**, **Attach to Process**.  
+2.  Abra o diálogo Anexar ao Processo. Na nova instância do Visual Studio, escolha **Depurar** e **Anexar ao Processo** no menu principal.  
   
-3.  Anexe o depurador à instância congelada do Visual Studio.  No **Attach to Process** caixa de diálogo, selecione a instância congelada do Visual Studio do **processos disponíveis** tabela e escolha o **anexar** botão.  
+3.  Anexe o depurador à instância congelada do Visual Studio. No diálogo **Anexar ao Processo**, selecione a instância congelada do Visual Studio na tabela **Processos Disponíveis** e, em seguida, escolha o botão **Anexar**.  
   
-4.  Pause o depurador.  Na nova instância do Visual Studio, no menu principal, escolha **Depurar**, **Interromper tudo** ou simplesmente pressione **Ctrl \+ Alt \+ Break**.  
+4.  Pause o Depurador. Na nova instância do Visual Studio, escolha **Depurar**, **Interromper Tudo** no menu principal ou pressione **Ctrl+Alt+Break**.  
   
-5.  Crie um despejo de thread.  Na janela de comando, digite o seguinte comando e pressione **Enter**.  
+5.  Crie um despejo de thread. Na janela Comando, digite o comando a seguir e pressione **Enter**.  
   
     ```powershell  
     Debug.ListCallStack /AllThreads /ShowExternalCode  
     ```  
   
-     Talvez você precise fazer o **comando** janela visível primeiro.  No Visual Studio, no menu principal, escolha **exibição**, **outras janelas**, **janela comando**.  
+     Talvez seja necessário tornar a janela **Comando** visível primeiro. No Visual Studio, escolha **Exibir**, **Outras Janelas**, **janela Comando** no menu principal.  
   
-6.  Por fim, envie o despejo de thread para [vstusp@microsoft.com](mailto:vstusp@microsoft.com), e uma descrição do que você estava fazendo quando o Visual Studio se tornou congelado.
+6.  Por fim, envie o despejo de thread para [vstusp@microsoft.com](mailto:vstusp@microsoft.com), junto com uma descrição do que você estava fazendo quando o Visual Studio congelou.

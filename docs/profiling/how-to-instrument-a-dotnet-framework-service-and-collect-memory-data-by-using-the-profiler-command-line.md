@@ -1,130 +1,145 @@
 ---
-title: "Como instrumentar um servi&#231;o do .NET Framework e coletar dados de mem&#243;ria usando a linha de comando do criador de perfil | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Como instrumentar um serviço do .NET Framework e coletar dados de memória usando a linha de comando do criador de perfil | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2fa072fc-05fe-4420-99c0-51d2ea3ac4ce
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Como instrumentar um servi&#231;o do .NET Framework e coletar dados de mem&#243;ria usando a linha de comando do criador de perfil
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 1d5165a043ed18f7e8b78b196f095d36e6b2a247
+ms.lasthandoff: 02/22/2017
 
-Este tópico descreve como usar as ferramentas de linha de comando das ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para instrumentar um serviço do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] e para coletar dados do uso de memória.  Você pode coletar dados de alocação de memória ou coletar a alocação de memória e os dados de tempo de vida do objeto.  
+---
+# <a name="how-to-instrument-a-net-framework-service-and-collect-memory-data-by-using-the-profiler-command-line"></a>Como instrumentar um serviço do .NET Framework e coletar dados de memória usando a linha de comando do criador de perfil
+Este tópico descreve como usar as ferramentas da linha de comando das Ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para instrumentar um serviço do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] e coletar dados de uso de memória. É possível coletar dados de alocação de memória ou coletar dados de alocação de memória e dados de tempo de vida do objeto.  
   
 > [!NOTE]
->  Os recursos avançados de segurança no Windows 8 e Windows Server 2012 necessitaram de alterações significativas na forma que o profiler do Visual Studio coleta dados dessas plataformas.  Os aplicativos da Windows Store também requerem novas técnicas de coleção.  Consulte [Ferramentas de desempenho em aplicativos do Windows 8 e Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+>  Os recursos de segurança aprimorados no Windows 8 e no Windows Server 2012 exigiram alterações significativas na maneira como o criador de perfil do Visual Studio coleta dados nessas plataformas. Os aplicativos da Windows Store também requerem novas técnicas de coleta. Consulte [Ferramentas de desempenho em aplicativos do Windows 8 e do Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
 > [!NOTE]
->  Você não pode analisar um serviço com o método de instrumentação se o serviço não puder ser reiniciado após a inicialização do computador, tal serviço é iniciado quando o sistema operacional é inicializado.  
+>  Você não poderá criar o perfil de um serviço com o método de instrumentação se o serviço não puder ser reiniciado após o início do computador, um serviço que inicia quando o sistema operacional for iniciado.  
 >   
->  Ferramentas de linha de comando das Ferramentas de Criação de Perfil estão localizadas no subdiretório \\Team Tools\\Performance Tools do diretório de instalação [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)].  Nos computadores de 64 bits, ambas as versões de 64 bits e de 32 bits das ferramentas está disponível.  Para usar as ferramentas de linha de comando do criador de perfis, você deve adicionar o caminho das ferramentas para a variável de ambiente PATH da janela prompt de comando ou adicioná\-lo ao próprio comando.  Para obter mais informações, consulte [Especificando o caminho para ferramentas de linha de comando](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
+>  As ferramentas de linha de comando das Ferramentas de Criação de Perfil ficam localizadas no subdiretório \Team Tools\Performance Tools do diretório de instalação do [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]. Em computadores de 64 bits, as versões de 64 e de 32 bits das ferramentas estão disponíveis. Para usar as ferramentas de linha de comando do criador de perfil, você precisa adicionar o caminho das ferramentas à variável de ambiente PATH da janela de prompt de comando ou adicioná-lo ao próprio comando. Para obter mais informações, consulte [Especificando o caminho para ferramentas de linha de comando](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
   
-## Iniciando a sessão de análise  
- Para coletar dados de desempenho de um serviço de [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)], use a ferramenta [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) para inicializar as variáveis de ambiente apropriadas e a ferramenta [VSInstr.exe](../profiling/vsinstr.md) para criar uma cópia instrumentada do arquivo binário de serviço.  
+## <a name="starting-the-profiling-session"></a>Iniciando a sessão de criação de perfil  
+ Para coletar dados de desempenho de um serviço do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)], use a ferramenta [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) para inicializar as variáveis de ambiente adequadas e a ferramenta [VSInstr.exe](../profiling/vsinstr.md) para criar uma cópia instrumentada do arquivo binário do serviço.  
   
- O computador que hospeda o serviço deve ser reiniciado para configurá\-lo para criação de perfil.  Você também deve iniciar manualmente o serviço do Gerenciador de Controle de Serviços.  Em seguida, você inicia o criador de perfis e inicia o serviço [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
+ O computador que hospeda o serviço deve ser reiniciado para configurá-lo para a criação de perfil. Você também deve iniciar o serviço manualmente do Gerenciador de Controle de Serviço. Inicie o criador de perfil e inicie o serviço [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
- Quando o componente instrumentado é executado, os dados da memória são coletados automaticamente em um arquivo de dados.  Você pode pausar e retomar a coleção de dados durante a sessão de criação de perfis.  
+ Quando o componente instrumentado é executado, os dados de memória são automaticamente coletados para um arquivo de dados. Você pode pausar e retomar a coleta de dados durante a sessão de criação de perfil.  
   
- Para finalizar a uma sessão, feche o serviço e encerre o criador de perfis explicitamente.  Na maioria dos casos, recomendamos limpar as variáveis de ambiente ao final de uma sessão.  
+ Para terminar uma sessão de criação de perfil, feche o serviço e feche explicitamente o criador de perfil. Na maioria dos casos, recomendamos desmarcar as variáveis de ambiente de criação de perfil no final de uma sessão.  
   
-#### Para iniciar a criação do perfil de um serviço do .NET Framework  
+#### <a name="to-begin-profiling-a-net-framework-service"></a>Para iniciar a criação de perfil de um serviço do .NET Framework  
   
-1.  Abra uma janela de prompt de comando.  
+1.  Abra uma janela do prompt de comando.  
   
-2.  Use a ferramenta **VSInstr** para gerar uma versão provida de binário de serviço.  
+2.  Use a ferramenta **VSInstr** para gerar uma versão instrumentada do binário.  
   
-3.  Use o Gerenciador de Controle de Serviços para substituir o binário original pela versão provida.  Verifique se o Tipo de Inicialização do serviço está definido como Manual.  
+3.  Use o Gerenciador de Controle de Serviço para substituir o binário original pela versão instrumentada. Certifique-se de que o Tipo de inicialização do serviço esteja definido como Manual.  
   
-4.  Inicialize as variáveis do ambiente do perfil.  Tipo:  
+4.  Inicialize as variáveis de ambiente de criação de perfil. Tipo:  
   
-     **VSPerfClrEnv** {**\/globaltracegc** &#124; **\/globaltracegclife**}  
+     **VSPerfClrEnv** {**/globaltracegc** &#124; **/globaltracegclife**}  
   
-    -   **\/globaltracegc** e **\/globaltracegclife** permitem a coleção de alocação de memória e objetos de dados do tempo de vida.  
+    -   **/globaltracegclife** e **/globaltracegclife** habilita a coleta de dados de alocação de memória e dados de tempo de vida do objeto.  
   
         |Opção|Descrição|  
-        |-----------|---------------|  
-        |**\/globaltracegc**|Só coleta dados de alocação de memória.|  
-        |**\/globaltracegclife**|Coleta dados de tempo de vida do objeto e alocação de memória.|  
+        |------------|-----------------|  
+        |**/globaltracegc**|Coleta somente dados de alocação de memória.|  
+        |**/globaltracegclife**|Coleta dados de alocação de memória e de tempo de vida do objeto.|  
   
 5.  Reinicie o computador.  
   
-6.  Abra uma janela de prompt de comando.  
+6.  Abra uma janela do prompt de comando.  
   
-7.  Inicie o criador de perfis.  Tipo:  
+7.  Inicie o criador de perfil. Tipo:  
   
-     **VSPerfCmd**  [\/start](../profiling/start.md) **:trace**  [\/output](../profiling/output.md) **:** `OutputFile` \[`Options`\]  
+     **VSPerfCmd**  [/start](../profiling/start.md) **:trace**  [/output](../profiling/output.md) **:** `OutputFile` [`Options`]  
   
-    -   A opção **\/start: contention** inicializa o criador de perfis.  
+    -   A opção **/start: contention** inicializa o criador de perfil.  
   
-    -   A opção **\/output:**`OutputFile` é necessária com **\/start**.  `OutputFile` especifica o nome e o local dos dados de perfil \(.vsp\).  
+    -   A opção **/output:**`OutputFile` é necessária com **/start**. `OutputFile` especifica o nome e o local do arquivo de dados de criação de perfil (.vsp).  
   
-     Você pode usar qualquer uma das seguintes opções com a opção **\/start:sample**.  
+     É possível usar qualquer uma das opções a seguir com a opção **/start:sample**.  
   
     > [!NOTE]
-    >  As opções de **\/user** e de **\/crosssession** geralmente são necessárias para serviços.  
+    >  Normalmente, as opções **/user** e **/crosssession** são necessárias para serviços.  
   
     |Opção|Descrição|  
-    |-----------|---------------|  
-    |[\/user](../profiling/user-vsperfcmd.md) **:**\[`Domain`**\\**\]`UserName`|Especifica o domínio e o nome do usuário da conta que possui o processo de trabalho do ASP.NET.  Essa opção é necessária se o processo estiver sendo executado como um usuário diferente do usuário conectado.  O proprietário do processo é listado na coluna de nome de usuário na guia de processos do gerenciador de tarefas do Windows.|  
-    |[\/crosssession](../profiling/crosssession.md)|Permite analisar os processos em outras sessões de logon.  Essa opção é necessária se o aplicativo ASP.NET estiver sendo executado em uma sessão diferente.  A ID da sessão é listada na coluna ID da sessão na guia de processos do gerenciador de tarefas do Windows.  **\/CS** pode ser especificado como uma abreviação para **\/crosssession**.|  
-    |[\/waitstart](../profiling/waitstart.md)\[**:**`Interval`\]|Especifica o número de segundos para esperar pelo profiler inicializar antes que ele retorne um erro.  Se `Interval` não for especificado, o criador de perfis aguardará indefinidamente.  Por padrão, **\/start** retorna imediatamente.|  
-    |[\/globaloff](../profiling/globalon-and-globaloff.md)|Para iniciar o criador de perfis com a coleção de dados pausada, adicione a opção de **\/globaloff** à linha de comando **\/start**.  Use **\/globalon** para continuar a criação de perfis.|  
-    |[\/counter](../profiling/counter.md) **:** `Config`|Coleta informações do contador de desempenho do processador especificado na configuração.  As informações de contador são adicionadas aos dados coletados em cada evento de perfis.|  
-    |[\/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|Especifica o contador de desempenho do Windows que será coletado durante a análise.|  
-    |[\/automark](../profiling/automark.md) **:** `Interval`|Uso com **\/wincounter** somente.  Especifica o número de milissegundos entre eventos de coleção contador de desempenho do Windows.  O padrão é 500 ms.|  
-    |[\/events](../profiling/events-vsperfcmd.md) **:** `Config`|Especifica um rastreamento de evento para evento do Windows \(ETW\) para ser coletado durante a análise.  Os eventos de ETW são coletados em um arquivo separado \(.etl\).|  
+    |------------|-----------------|  
+    |[/user](../profiling/user-vsperfcmd.md) **:**[`Domain`**\\**]`UserName`|Especifica o domínio e o nome de usuário da conta proprietária do processo de trabalho ASP.NET analisado. Esta opção será necessária se o processo estiver sendo executado como um usuário diferente do usuário conectado. O proprietário do processo é listado na coluna Nome de Usuário na guia Processos do Gerenciador de Tarefas do Windows.|  
+    |[/crosssession](../profiling/crosssession.md)|Habilita a criação de perfil de processos em outras sessões de logon. Esta opção será necessária se o aplicativo ASP.NET estiver em execução em uma sessão diferente. A ID da sessão é listada na coluna ID da Sessão na guia Processos do Gerenciador de Tarefas do Windows. **/CS** pode ser especificado como uma abreviação de **/crosssession**.|  
+    |[/waitstart](../profiling/waitstart.md)[**:**`Interval`]|Especifica o número de segundos para aguardar o criador de perfil inicializar antes de retornar um erro. Se `Interval` não for especificado, o criador de perfil aguardará indefinidamente. Por padrão, **/start** retorna imediatamente.|  
+    |[/globaloff](../profiling/globalon-and-globaloff.md)|Para iniciar o criador de perfil com a coleta de dados em pausa, adicione a opção **/globaloff** na linha de comando **/start**. Use **/globalon** para retomar a criação de perfil.|  
+    |[/counter](../profiling/counter.md) **:** `Config`|Coleta informações do contador de desempenho do processador especificado em Config. As informações do contador são adicionadas aos dados coletados em cada evento de criação de perfil.|  
+    |[/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil.|  
+    |[/automark](../profiling/automark.md) **:** `Interval`|Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O padrão é 500 ms.|  
+    |[/events](../profiling/events-vsperfcmd.md) **:** `Config`|Especifica um evento de ETW (Rastreamento de Eventos para Windows) a ser coletado durante a criação de perfil. Eventos de ETW são coletados em um arquivo separado (.etl).|  
   
 8.  Se necessário, inicie o serviço.  
   
-9. Anexa o criador de perfis ao serviço.  Tipo:  
+9. Anexe o criador de perfil ao serviço. Tipo:  
   
-     **VSPerfCmd \/attach:** `PID` &#124;`ProcessName`  
+     **VSPerfCmd /attach:** `PID`&#124;`ProcessName`  
   
-    -   Especifique o nome de identificação ou do processo do serviço.  Você pode exibir os IDs e os nomes de todos os processos em execução no Gerenciador de Tarefas do Windows.  
+    -   Especifique a ID do processo ou o nome do processo do serviço. É possível exibir as IDs de processo e nomes de todos os processos em execução no Gerenciador de Tarefas do Windows.  
   
-## Coleta de dados de controle  
- Quando o serviço é executado, você pode controlar a coleção de dados iniciando e parando a escrita de dados para o arquivo usando opções **VSPerfCmd.exe**.  A coleta de dados de controle permite que você colete dados para uma parte específica de execução do programa, como o inicio ou término do aplicativo.  
+## <a name="controlling-data-collection"></a>Controlando coleção de dados  
+ Enquanto o serviço estiver em execução, você pode controlar a coleta de dados iniciando e parando a gravação de dados no arquivo usando as opções de **VSPerfCmd.exe**. Controlar a coleta de dados permite coletar dados de uma parte específica da execução do programa, como a inicialização ou o desligamento do aplicativo.  
   
-#### Para iniciar e parar a coleção de dados  
+#### <a name="to-start-and-stop-data-collection"></a>Para iniciar e interromper a coleta de dados  
   
--   Os seguintes pares de opções **VSPerfCmd** iniciam e interrompem a coleção de dados.  Especifique cada opção em uma linha separada de comando.  É possível desativar e ativar a coleção de dados várias vezes.  
+-   Os pares de opções **VSPerfCmd** a seguir iniciam e interrompem a coleta de dados. Especifique cada opção em uma linha de comando separada. É possível ativar e desativar a coleta de dados várias vezes.  
   
     |Opção|Descrição|  
-    |-----------|---------------|  
-    |[\/globalon \/globaloff](../profiling/globalon-and-globaloff.md)|Inicia \(**\/globalon**\) ou para \(**\/globaloff**\) a coleção de dados para todos os processos.|  
-    |[\/processon](../profiling/processon-and-processoff.md) **:** `PID`  [\/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Inicia \(**\/processon**\) ou interrompe a coleta de dados \(**\/processoff**\) para o processo especificado pelo ID de processo \(`PID`\).|  
-    |[\/threadon](../profiling/threadon-and-threadoff.md) **:** `TID`  [\/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|Inicia \(**\/threadon**\) ou interrompe a coleta de dados do thread \(**\/threadoff**\) para o thread especificado por ID de threads \(`TID`\).|  
+    |------------|-----------------|  
+    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|  
+    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo especificado pela ID de processo (`PID`).|  
+    |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|Inicia (**/threadon**) ou interrompe (**/threadoff**) a coleta de dados para o thread especificado pela ID do thread (`TID`).|  
   
-## Finalizando a sessão de análise  
- Para encerrar uma sessão de criação de perfil, feche o aplicativo que está executando o componente instrumentado e, em seguida, inicie a opção **VSPerfCmd** [\/shutdown](../profiling/shutdown.md) para desativar o criador de perfis e feche o arquivo de dados de criação de perfil.  O comando **VSPerfClrEnv \/globaloff** apaga as variáveis de ambiente de criação de perfis.  
+## <a name="ending-the-profiling-session"></a>Encerrando a sessão de criação de perfil  
+ Para encerrar uma sessão de criação de perfil, feche o aplicativo que está executando o componente instrumentado e, em seguida, inicie a opção **VSPerfCmd** [/shutdown](../profiling/shutdown.md) para desligar o criador de perfil e fechar o arquivo de dados de criação de perfil. O comando **VSPerfClrEnv /globaloff** limpa as variáveis de ambiente da criação de perfil.  
   
-#### Para finalizar uma sessão de criação de perfil  
+#### <a name="to-end-a-profiling-session"></a>Para encerrar uma sessão de criação de perfil  
   
-1.  Interromper o serviço do Gerenciador de Controle de Serviços.  
+1.  Interrompa o serviço do Gerenciador de Controle de Serviço.  
   
-2.  Encerrar o criador de perfis.  Tipo:  
+2.  Desligue o criador de perfil. Tipo:  
   
-     **VSPerfCmd \/shutdown**  
+     **VSPerfCmd /shutdown**  
   
-3.  Quando você tiver concluído todas as criações de perfil, desmarque as variáveis de ambiente de criação de perfil.  Tipo:  
+3.  Quando você tiver concluído a criação de todos os perfis, desmarque as variáveis de ambiente de criação de perfil. Tipo:  
   
-     **VSPerfClrEnv \/globaloff**  
+     **VSPerfClrEnv /globaloff**  
   
-     Substitua o módulo instrumentado pelo original.  Se necessário, reconfigure o tipo de inicialização do serviço.  
+     Substitua o módulo instrumentado pelo original. Se necessário, reconfigure o Tipo de inicialização do serviço.  
   
 4.  Reinicie o computador.  
   
-## Consulte também  
- [Serviços de criação de perfil](../profiling/command-line-profiling-of-services.md)   
+## <a name="see-also"></a>Consulte também  
+ [Serviços de Criação de Perfil](../profiling/command-line-profiling-of-services.md)   
  [Exibições de dados da memória do .NET](../profiling/dotnet-memory-data-views.md)

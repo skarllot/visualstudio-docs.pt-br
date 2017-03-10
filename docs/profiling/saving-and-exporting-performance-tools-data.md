@@ -1,97 +1,113 @@
 ---
-title: "Salvando e exportando o desempenho das ferramentas de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ferramentas de desempenho, salvando e exportando relatórios"
+title: Salvando e Exportando Dados de Ferramentas de Desempenho | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- performance tools, saving and exporting reports
 ms.assetid: 2e9b28fe-3ed2-4e1d-b9cb-0a5e384380b0
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Salvando e exportando o desempenho das ferramentas de dados
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 12d07b6c0afe54f8c2334273df835006bf78468e
+ms.lasthandoff: 02/22/2017
 
+---
+# <a name="saving-and-exporting-performance-tools-data"></a>Salvando e Exportando Dados de Ferramentas de Desempenho
 Este tópico descreve como salvar e exportar arquivos de dados de desempenho.  
   
-##  <a name="BKMK_Save_Profiler_Data_Files_As_Analyzed_Report_Files"></a> Como: salvar arquivos de dados de desempenho como arquivos de relatório analisados  
- Você pode salvar modos de exibição filtrados ou não filtrados de criação de perfil de arquivos de dados \(. vsp\) como arquivos de relatório analisado. \(VSPs\). Um arquivo de relatório analisado pode ser exibido na janela de exibição do relatório e é significativamente menor do que o arquivo. vsp original. No entanto, é possível aplicar um filtro aos dados de um arquivo. VSPs. Você pode criar um arquivo de relatório analisado do Performance Explorer sem abrir o arquivo no ambiente de desenvolvimento integrado \(IDE\), ou você pode abrir e filtrar o arquivo. vsp e, em seguida, salvar os resultados.  
+##  <a name="BKMK_Save_Profiler_Data_Files_As_Analyzed_Report_Files"></a> Como Salvar Arquivos de Dados de Desempenho como Arquivos de Relatório Analisados  
+ É possível salvar exibições filtradas ou sem filtro de arquivos de dados de criação de perfil (.vsp) como arquivos de relatório analisados (.vsps). Um arquivo de relatório analisado pode ser exibido na janela Exibir Relatório e é significativamente menor do que o arquivo .vsp original. No entanto, não é possível aplicar um filtro aos dados de um arquivo .vsps. É possível criar um arquivo de relatório analisado no Gerenciador de Desempenho sem abrir o arquivo no ambiente de desenvolvimento integrado (IDE) ou você pode abrir e filtrar o arquivo .vsp e salvar os resultados.  
   
-#### Para salvar um relatório de desempenho analisados do Performance Explorer  
+#### <a name="to-save-an-analyzed-performance-report-from-the-performance-explorer"></a>Salvar um relatório de desempenho analisado do Gerenciador de Desempenho  
   
-1.  Em **relatórios**, clique no arquivo de dados de criação de perfil que você deseja analisar e, em seguida, clique em **Salvar analisados**.  
+1.  Em **Relatórios**, clique com o botão direito do mouse no arquivo de dados de criação de perfil a ser analisado e, em seguida, clique em **Salvar Analisados**.  
   
-2.  No **Salvar dados analisados** caixa de diálogo caixa, especifique o diretório e, em seguida, digite o nome do arquivo.  
+2.  Na caixa de diálogo **Salvar Dados Analisados**, especifique o diretório e digite o nome de arquivo.  
   
 3.  Clique em **Salvar.**  
   
-#### Para salvar um relatório de desempenho analisados na janela de exibição de relatório  
+#### <a name="to-save-an-analyzed-performance-report-from-the-report-view-window"></a>Salvar um relatório de desempenho analisado da janela Exibição de Relatório  
   
-1.  Abra o arquivo de dados \(. vsp\) a criação de perfil na janela de exibição do relatório.  
+1.  Abra o arquivo de dados de criação de perfil (.vsp) na janela Exibição de Relatório.  
   
-2.  \(Opcional\) Aplica um filtro aos dados. Para obter mais informações, consulte [Filtro de exibição do relatório de ferramentas de criação de perfil](../profiling/performance-report-view-filter.md).  
+2.  (Opcional) Aplique um filtro aos dados. Para obter mais informações, consulte [Filtro de Exibição de Relatório de Desempenho](../profiling/performance-report-view-filter.md).  
   
-3.  Clique em **Salvar analisados** na barra de ferramentas de janela de exibição relatório.  
+3.  Clique em **Salvar Analisados** na barra de ferramentas de janela Exibição de Relatório.  
   
-4.  No **Salvar dados analisados** caixa de diálogo caixa, especifique o diretório e, em seguida, digite o nome do arquivo.  
+4.  Na caixa de diálogo **Salvar Dados Analisados**, especifique o diretório e digite o nome de arquivo.  
   
 5.  Clique em **Salvar.**  
   
-## Como: criação de perfil de exportação das ferramentas de relatórios para um. XML ou. Arquivo CSV  
- Você pode exportar uma ou mais exibições de relatório de um arquivo. vsp ou um arquivo de dados da criação de perfil. VSPs como tanto um separado por vírgulas ou um arquivo XML. Você pode filtrar os dados na janela de exibição do relatório antes de exportá\-la ou você pode exportar exibições de relatório do arquivo de dados inteiro do **Performance Explorer** janela.  
+## <a name="how-to-export-profiling-tools-reports-to-an-xml-or-csv-file"></a>Como Exportar Relatórios de Ferramentas de Criação de Perfil para um Arquivo .XML ou .CSV  
+ É possível exportar uma ou mais exibições de relatório de um arquivo .vsp ou arquivo de dados de criação de perfil .vsps como um arquivo separado por vírgulas ou XML. É possível filtrar os dados na janela Exibição de Relatório antes de exportar ou exportar exibições de relatório de todo o arquivo de dados na janela **Gerenciador de Desempenho**.  
   
 > [!NOTE]
->  Você também pode copiar e colar linhas selecionadas da janela de exibição do relatório como valores separada.  
+>  Também é possível copiar e colar linhas selecionadas da janela Exibição de Relatório como valores separados por tabulação.  
   
-#### Para exportar relatórios de desempenho da janela Performance Explorer  
+#### <a name="to-export-performance-reports-from-the-performance-explorer-window"></a>Exportar relatórios de desempenho da janela Gerenciador de Desempenho  
   
-1.  Em **Performance Explorer**, selecione o relatório e, em seguida, clique com botão direito e selecione **exportar**.  
+1.  No **Gerenciador de Desempenho**, selecione o relatório e, em seguida, clique com o botão direito do mouse e selecione **Exportar**.  
   
-     O **Exportar relatório** caixa de diálogo é exibida.  
+     A caixa de diálogo **Exportar Relatório** aparecerá.  
   
-2.  Selecione os modos de exibição de relatório que você deseja exportar.  
+2.  Selecione as exibições de relatório que deseja exportar.  
   
-3.  Em **prefixo relatório com**, especifique o prefixo que você deseja adicionar ao nome do relatório.  
+3.  Em **Inserir prefixo no relatório**, especifique o prefixo que deseja adicionar ao nome do relatório.  
   
-4.  Em **exportados local do relatório**, especifique o diretório.  
+4.  Em **Local de Relatório Exportado**, especifique o diretório.  
   
-5.  Em **formato de relatório exportados**, selecione \(delimitado por vírgula\) \(\*. csv\), ou dados XML \(\*. xml\).  
+5.  Em **Formato de Relatório Exportado**, selecione (*.csv) (delimitado por vírgulas) ou Dados XML (\*.xml).  
   
-6.  Clique em **exportar**.  
+6.  Clique em **Exportar**.  
   
-     Cada modo de exibição de relatório é salvo em um arquivo separado que é chamado \< prefixo \> \_ \< nome de exibição do relatório \>. \< csv &#124; xml \>  
+     Cada exibição de relatório será salva em um arquivo separado denominado \<prefix>_\<report view name>.\<csv&#124;xml>  
   
-#### Para exportar relatórios de desempenho na janela de exibição de relatório  
+#### <a name="to-export-performance-reports-from-the-report-view-window"></a>Exportar relatórios de desempenho da janela Exibição de Relatório  
   
-1.  Abra o arquivo. vsp na janela de exibição do relatório.  
+1.  Abra o arquivo .vsp na janela Exibição de Relatório.  
   
-2.  \(Opcional\) Aplica um filtro aos dados. Para obter mais informações, consulte [Filtro de exibição do relatório de ferramentas de criação de perfil](../profiling/performance-report-view-filter.md).  
+2.  (Opcional) Aplique um filtro aos dados. Para obter mais informações, consulte [Filtro de Exibição de Relatório de Desempenho](../profiling/performance-report-view-filter.md).  
   
-3.  Clique em **Exportar relatório** na barra de ferramentas de janela de exibição relatório.  
+3.  Clique em **Exportar Relatório** na barra de ferramentas de janela Exibição de Relatório.  
   
-4.  Selecione os modos de exibição de relatório que você deseja exportar.  
+4.  Selecione as exibições de relatório que deseja exportar.  
   
-5.  Em **prefixo relatório com**, especifique o prefixo que você deseja adicionar ao nome do relatório.  
+5.  Em **Inserir prefixo no relatório**, especifique o prefixo que deseja adicionar ao nome do relatório.  
   
-6.  Em **exportados local do relatório**, especifique o diretório.  
+6.  Em **Local de Relatório Exportado**, especifique o diretório.  
   
-7.  Em **formato de relatório exportados**, selecione \(delimitado por vírgula\) \(\*. csv\), ou dados XML \(\*. xml\).  
+7.  Em **Formato de Relatório Exportado**, selecione (*.csv) (delimitado por vírgulas) ou Dados XML (\*.xml).  
   
-8.  Clique em **exportar**.  
+8.  Clique em **Exportar**.  
   
-     Cada modo de exibição de relatório é salvo em um arquivo separado que é chamado \< prefixo \> \_ \< nome de exibição do relatório \>. \< csv &#124; xml \>  
+     Cada exibição de relatório será salva em um arquivo separado denominado \<prefix>_\<report view name>.\<csv&#124;xml>  
   
-## Consulte também  
- [Performance Explorer](../profiling/performance-explorer.md)   
- [Dados de ferramentas de análise de desempenho](../profiling/analyzing-performance-tools-data.md)   
- [Comparando arquivos de dados de desempenho](../profiling/comparing-performance-data-files.md)   
+## <a name="see-also"></a>Consulte também  
+ [Gerenciador de Desempenho](../profiling/performance-explorer.md)   
+ [Analisando dados de ferramentas de desempenho](../profiling/analyzing-performance-tools-data.md)   
+ [Comparando Arquivos de Dados de Desempenho](../profiling/comparing-performance-data-files.md)   
  [VSPerfReport](../profiling/vsperfreport.md)

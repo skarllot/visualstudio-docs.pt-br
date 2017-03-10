@@ -1,37 +1,52 @@
 ---
-title: "Iniciando uma compila&#231;&#227;o pelo IDE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compilar"
+title: Iniciando um build pelo IDE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- build
 ms.assetid: 936317aa-63b7-4eb0-b9db-b260a0306196
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Iniciando uma compila&#231;&#227;o pelo IDE
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: accbe2bded66b0c82f047ec0621f9ac55d466730
+ms.lasthandoff: 02/22/2017
 
-Os sistemas de projeto personalizados devem usar <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> para iniciar compilações.  Este tópico descreve os motivos para isso e o procedimento.  
+---
+# <a name="starting-a-build-from-within-the-ide"></a>Iniciando um build pelo IDE
+Os sistemas de projeto personalizados devem usar <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> para iniciar os builds. Este tópico descreve as razões para isso e o procedimento.  
   
-## Compilações e threads paralelos  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] permite compilações paralelas, que requer a mediação para acesso a recursos comuns.  Os sistemas do projeto podem executar compilações de forma assíncrona, mas esses sistemas não podem chamar funções de compilação de dentro dos retornos de chama fornecidos ao gerenciador de compilação.  
+## <a name="parallel-builds-and-threads"></a>Builds paralelas e threads  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] permite builds paralelas que exigem a mediação de acesso aos recursos comuns. Os sistemas de projeto podem executar builds de forma assíncrona, mas esses sistemas não devem chamar funções de build das quais o retorno de chamada é fornecido para o gerenciador de build.  
   
- Se o sistema do projeto alterar variáveis de ambiente, deverá definir o NodeAffinity de compilação a OutOfProc.  Isso significa que você não pode usar objetos de host, pois eles exigem o nó em\-proc.  
+ Se o sistema de projeto modificar variáveis de ambiente, ele deverá definir o NodeAffinity do build para OutOfProc. Isso significa que você não pode usar objetos de host, já que eles exigem o nó em processamento.  
   
-## Usando IVSBuildManagerAccessor  
- O código abaixo dos descreve um método que um sistema de projeto pode usar para iniciar uma compilação:  
+## <a name="using-ivsbuildmanageraccessor"></a>Usando o IVSBuildManagerAccessor  
+ O código a seguir descreve um método que um sistema de projeto pode usar para iniciar um build:  
   
-```  
+```cs
   
 public bool Build(Project project, bool isDesignTimeBuild)  
 {  

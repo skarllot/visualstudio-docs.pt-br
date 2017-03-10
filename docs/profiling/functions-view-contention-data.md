@@ -1,53 +1,68 @@
 ---
-title: "Exibi&#231;&#227;o de fun&#231;&#245;es - dados de conten&#231;&#227;o do criador de perfil | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exibição Funções"
+title: "Exibição de Funções – Dados de Contenção | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Functions view
 ms.assetid: 208773b0-1a54-4b7a-ad37-2b6fd4f731d4
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Exibi&#231;&#227;o de fun&#231;&#245;es - dados de conten&#231;&#227;o do criador de perfil
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 66b767c7be73939e08c594576c4291be0660b40d
+ms.lasthandoff: 02/22/2017
 
-A visualização de relatório das funções de listas de dados de contenção as funções analisar executado em que foram bloqueadas de execução durante analisar executado.  
+---
+# <a name="functions-view---contention-data"></a>Exibição de Funções – Dados de Contenção
+A exibição de relatório de Funções de dados de contenção lista as funções na execução de criação de perfil que foram bloqueadas da execução durante o processo de criação de perfil.  
   
- A tabela a seguir explica os valores que são exibidos na exibição das funções de um arquivo de dados de perfil que seja coletado usando o método de simultaneidade.  
+ A tabela a seguir explica os valores que são exibidos na exibição de Funções de um arquivo de dados de criação de perfil que foi coletado usando o método de simultaneidade.  
   
-|Coluna|Descrição|  
-|------------|---------------|  
-|**Tempo bloqueados exclusivos**|A quantidade de tempo durante o qual esta função foi bloqueada de executar o código no corpo da função.  O tempo bloqueados em funções que eram chamadas pela função não estão incluídos.|  
-|**Tempo bloqueados exclusivo %**|A porcentagem de todas as horas bloqueadas analisar executado em que o foi bloqueado hora exclusivo desta função.|  
-|**Disputas exclusivas**|O número de vezes que a função foi bloqueada de executar o código no corpo da função.  As disputas em funções que eram chamadas pela função não são incluídas.|  
-|**Disputas exclusivas %**|A porcentagem de todas as disputas na análise foi executado disputas exclusivas dessa função.|  
-|**Endereço da função**|O endereço da função.|  
-|**Nome da Função**|O nome completo da função.|  
-|**Tempo inclusive bloqueados**|A hora em que essa função ou uma função que é chamada por essa função foram bloqueadas de executar.|  
-|**Tempo inclusive bloqueados %**|A porcentagem de todas as horas bloqueadas analisar executado em que foi bloqueado inclusive hora desse função ou módulo.|  
-|**Disputas inclusivos**|O número de vezes que a função ou uma função que é chamada por essa função foram bloqueadas de executar.|  
-|**Disputas inclusivas %**|A porcentagem de todas as disputas analisar executado em que estavam disputas inclusivo desse função ou módulo.|  
-|**Número de Linha da Função**|O número de linhas do início desta função no arquivo fonte.|  
+|Column|Descrição|  
+|------------|-----------------|  
+|**Tempo Bloqueado Exclusivo**|A quantidade de tempo durante a qual essa função foi impedida de executar o código no corpo da função. Não inclui o tempo bloqueado nas funções que foram chamadas pela função.|  
+|**% de Tempo Bloqueado Exclusivo**|O percentual de todo o tempo bloqueado na execução da criação de perfil que representou o tempo bloqueado exclusivo desta função.|  
+|**Contenções Exclusivas**|A quantidade de vezes que essa função foi impedida de executar o código no corpo da função. As contenções em funções que foram chamadas pela função não estão incluídas.|  
+|**% de Contenções Exclusivas**|O percentual de todas as contenções na execução de criação de perfil era de contenções exclusivas desta função.|  
+|**Endereço da Função**|O endereço da função.|  
+|**Nome da Função**|O nome totalmente qualificado da função.|  
+|**Tempo Bloqueado Inclusivo**|A hora em que essa função ou uma função que foi chamada por esta função foi impedida de executar.|  
+|**% de Tempo Bloqueado Inclusivo**|O percentual de todo o tempo bloqueado na execução da criação de perfil que representou o tempo bloqueado inclusivo desta função ou módulo.|  
+|**Contenções Inclusivas**|O número de vezes que essa função ou uma função que foi chamada por esta função foi impedida de executar.|  
+|**% de Contenções Inclusivas**|O percentual de todas as contenções na execução de criação de perfil que eram contenções inclusivas dessa função ou módulo.|  
+|**Número de linha da função**|O número de linha do início dessa função no arquivo de origem.|  
 |**Nome do Módulo**|O nome do módulo que contém a função.|  
-|**Caminho do Módulo**|O caminho do módulo que contém a função.|  
-|**Identificação do Processo**|A ID de O processo \(PID\) do processo no qual a função estava sendo executada.|  
+|**Caminho do Módulo**|O demarcador do módulo que contém a função.|  
+|**ID do Processo**|A PID (ID do processo) do processo no qual a função estava sendo executada.|  
 |**Nome do Processo**|O nome do processo.|  
-|**Source File**|O arquivo de origem contendo a definição para essa função.|  
+|**Arquivo de Origem**|O arquivo de origem que contém a definição dessa função.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Como personalizar as colunas de exibição do relatório](../profiling/how-to-customize-report-view-columns.md)   
- [Exibição de funções](../profiling/functions-view.md)   
- [Exibição de funções \- instrumentação](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
- [Exibição de funções \- amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)   
- [Exibição de funções](../profiling/functions-view-instrumentation-data.md)   
- [Exibição de funções](../profiling/functions-view-sampling-data.md)
+ [Exibição de Funções](../profiling/functions-view.md)   
+ [Exibição de Funções – Instrumentação](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
+ [Exibição de Funções – Amostragem](../profiling/functions-view-dotnet-memory-sampling-data.md)   
+ [Exibição de Funções](../profiling/functions-view-instrumentation-data.md)   
+ [Exibição Funções](../profiling/functions-view-sampling-data.md)

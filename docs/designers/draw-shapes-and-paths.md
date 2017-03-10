@@ -1,27 +1,43 @@
 ---
-title: "Desenhe as formas e demarcadores | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Desenhe as formas e caminhos | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d5378c59-e2e5-49f0-91f1-aa82d984a33c
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Desenhe as formas e demarcadores
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: e6fe31bc3b5ec5454e4d924af608915d0ae0f393
+ms.lasthandoff: 02/22/2017
 
-No Designer XAML, um *forma* é exatamente o que você esperaria. Por exemplo: um retângulo, um círculo ou uma elipse. Um *caminho* é uma versão mais flexível de uma forma. Você pode fazer coisas como reformatá\-los ou reuni\-los às novas formas de formulário.  
+---
+# <a name="draw-shapes-and-paths"></a>Desenhe as formas e demarcadores
+No Designer XAML, uma *forma* é exatamente o que você espera. Por exemplo: um retângulo, um círculo ou uma elipse. Um *caminho* é uma versão mais flexível de uma forma. É possível reformatar ou combiná-los para obter novas formas.  
   
- Formas e caminhos usam gráficos vetoriais, portanto, eles se adapta bem a monitores de alta resolução. Se você quiser saber mais sobre gráficos de vetor, consulte [o que são gráficos vetoriais](https://www.youtube.com/watch?v=MoCSwF0n-io) ou [gráficos vetoriais](http://www.webopedia.com/TERM/V/vector_graphics.html).  
+ Formas e caminhos usam gráficos vetoriais, portanto, eles se adaptam bem a exibições de alta resolução. Caso queira saber mais sobre gráficos vetoriais, consulte [O que são Gráficos Vetoriais](https://www.youtube.com/watch?v=MoCSwF0n-io) ou [gráficos vetoriais](http://www.webopedia.com/TERM/V/vector_graphics.html).  
   
  **Neste tópico:**  
   
@@ -29,7 +45,7 @@ No Designer XAML, um *forma* é exatamente o que você esperaria. Por exemplo: u
   
 -   [Desenhar um caminho](#Path)  
   
--   [Converter uma forma em um demarcador](#Convert)  
+-   [Converter uma forma em um caminho](#Convert)  
   
 -   [Combinar caminhos](#Combine)  
   
@@ -38,97 +54,97 @@ No Designer XAML, um *forma* é exatamente o que você esperaria. Por exemplo: u
 -   [Criar um caminho de recorte](#Clipping)  
   
 ##  <a name="Shape"></a> Desenhar uma forma  
- Você pode encontrar formas de **ativos** painel.  
+ É possível encontrar formas no painel **Ativos**.  
   
- ![Shapes category on the Assets panel](../designers/media/b4_shapes_assetspanel.png "b4\_Shapes\_AssetsPanel")  
+ ![Categoria Formas no painel Ativos](../designers/media/b4_shapes_assetspanel.png "b4_Shapes_AssetsPanel")  
   
- Arraste qualquer forma desejada para a prancheta. Em seguida, você pode usar identificadores na forma para dimensionar, girar, mover ou distorcer a forma.  
+ Arraste a forma desejada para a prancheta. Então, será possível usar identificadores na forma para ajustar a escala, girar, mover ou distorcer a forma.  
   
- ![](../designers/media/84261e83-3091-4490-ab58-4218b188439e.png "84261e83\-3091\-4490\-ab58\-4218b188439e")  
+ ![](../designers/media/84261e83-3091-4490-ab58-4218b188439e.png "84261e83-3091-4490-ab58-4218b188439e")  
   
 ##  <a name="Path"></a> Desenhar um caminho  
- Um caminho é uma série de linhas e curvas conectadas. Use um caminho para criar formas interessantes que não estão disponíveis na **ativos** painel.  
+ Um caminho é uma série de linhas e curvas conectadas. Use um caminho para criar formas interessantes que não estão disponíveis no painel **Ativos**.  
   
- Você pode desenhar um caminho por meio de uma linha, caneta ou um lápis. Você pode encontrar essas ferramentas no **ferramentas** painel.  
+ É possível desenhar um caminho usando uma linha, caneta ou lápis. Essas ferramentas podem ser encontradas no painel **Ferramentas**.  
   
- ![](../designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8\-b6a5\-4e37\-8af3\-70bcfc78c82a") ![](../designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21\-be83\-4cf6\-903b\-3a49f00c9860")  
+ ![](../designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8-b6a5-4e37-8af3-70bcfc78c82a") ![](../designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21-be83-4cf6-903b-3a49f00c9860")  
   
-### Desenhar uma linha reta  
- Use o **caneta** ferramenta ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612\-e0ed\-4e00\-84cf\-a9bc8f38fc54"), ou **linha** ferramenta ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397\-5283\-48be\-8396\-3449be7b6fbf").  
+### <a name="draw-a-straight-line"></a>Desenhar uma linha reta  
+ Use a ferramenta **Caneta** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")ou a ferramenta **Linha** ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397-5283-48be-8396-3449be7b6fbf").  
   
- **Usando a ferramenta Caneta** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612\-e0ed\-4e00\-84cf\-a9bc8f38fc54")  
+ **Usando a ferramenta Caneta** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")  
   
  Na prancheta, clique uma vez para definir o ponto inicial e, em seguida, clique novamente para definir o final da linha.  
   
- **Usando a ferramenta de linha** ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397\-5283\-48be\-8396\-3449be7b6fbf")  
+ **Usando a ferramenta Linha** ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397-5283-48be-8396-3449be7b6fbf")  
   
- Na prancheta, arraste de onde você deseja iniciar a linha e solte\-o no ponto onde você deseja que a linha termine.  
+ Na prancheta, arraste do ponto em que deseja que a linha se inicie e libere no ponto em que deseja que a linha termine.  
   
-### Desenhar uma curva  
- Use o **caneta** ferramenta ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612\-e0ed\-4e00\-84cf\-a9bc8f38fc54").  
+### <a name="draw-a-curve"></a>Desenhar uma curva  
+ Use a ferramenta **Caneta** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54").  
   
  Na prancheta, clique uma vez para definir o ponto inicial de uma linha e, em seguida, clique e arraste o ponteiro para criar a curva desejada.  
   
- Se você quiser fechar o caminho, clique no primeiro ponto na linha.  
+ Se desejar fechar o caminho, clique no primeiro ponto da linha.  
   
-### Alterar a forma de uma curva  
- Use o **Seleção direta** ferramenta ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f\-c116\-451d\-8dd2\-1f88b8406362").  
+### <a name="change-the-shape-of-a-curve"></a>Alterar a forma de uma curva  
+ Use a ferramenta **Seleção Direta** ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f-c116-451d-8dd2-1f88b8406362").  
   
- Clique na forma e, em seguida, arraste qualquer ponto na forma de alterar as formas.  
+ Clique na forma e, em seguida, arraste qualquer ponto na forma de alterar formas curvadas.  
   
-### Desenhar um demarcador de forma livre  
- Use o **Lápis** ferramenta ![](../designers/media/509dc167-734f-46c9-b012-987ee63450cd.png "509dc167\-734f\-46c9\-b012\-987ee63450cd").  
+### <a name="draw-a-free-form-path"></a>Desenhar um demarcador de forma livre  
+ Use a ferramenta **Lápis** ![](../designers/media/509dc167-734f-46c9-b012-987ee63450cd.png "509dc167-734f-46c9-b012-987ee63450cd").  
   
- Na prancheta, desenhe um caminho de forma livre como faria usando um lápis real.  
+ Na prancheta, desenhe um caminho de forma livre, assim como com um lápis real.  
   
-### Remover a parte de um caminho  
- Use o **Seleção direta** ferramenta ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f\-c116\-451d\-8dd2\-1f88b8406362").  
+### <a name="remove-part-of-a-path"></a>Remover parte de um caminho  
+ Use a ferramenta **Seleção Direta** ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f-c116-451d-8dd2-1f88b8406362").  
   
- Selecione o caminho que contém o segmento que deseja excluir e, em seguida, clique o **Excluir** botão.  
+ Selecione o caminho que contém o segmento que deseja excluir e, em seguida, clique no botão **Excluir**.  
   
-### Remover um ponto em um caminho  
- Use o **seleção** ferramenta  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340\-477e\-4efa\-a0f7\-af20851e4daa"), e o **caneta** ferramenta ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612\-e0ed\-4e00\-84cf\-a9bc8f38fc54").  
+### <a name="remove-a-point-in-a-path"></a>Remover um ponto em um caminho  
+ Use a ferramenta **Seleção** ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") e a ferramenta **Caneta** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54").  
   
- Use o **seleção** ferramenta  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340\-477e\-4efa\-a0f7\-af20851e4daa") para selecionar o caminho. Em seguida, use o **caneta** ferramenta ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612\-e0ed\-4e00\-84cf\-a9bc8f38fc54") ao clicar no ponto em que você deseja remover.  
+ Use a ferramenta **Seleção** ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") para selecionar o caminho. Em seguida, use a ferramenta **Caneta** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") para clicar no ponto em que deseja remover.  
   
-### Adicionar um ponto em um caminho  
- Use o **seleção** ferramenta  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340\-477e\-4efa\-a0f7\-af20851e4daa"), e o **caneta** ferramenta ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612\-e0ed\-4e00\-84cf\-a9bc8f38fc54").  
+### <a name="add-a-point-to-a-path"></a>Adicionar um ponto a um caminho  
+ Use a ferramenta **Seleção** ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") e a ferramenta **Caneta** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54").  
   
- Use o **seleção** ferramenta  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340\-477e\-4efa\-a0f7\-af20851e4daa") para selecionar o caminho. Use o **caneta** ferramenta ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612\-e0ed\-4e00\-84cf\-a9bc8f38fc54") clique em qualquer lugar no caminho de onde você deseja adicionar o ponto.  
+ Use a ferramenta **Seleção** ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") para selecionar o caminho. Use a ferramenta **Caneta** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") para clicar em qualquer local do caminho em que deseja adicionar o ponto.  
   
-##  <a name="Convert"></a> Converter uma forma em um demarcador  
- Para modificar uma forma da mesma forma que você modifique um caminho, convertê\-la em um caminho.  
+##  <a name="Convert"></a> Converter uma forma em um caminho  
+ Para modificar uma forma da mesma maneira que um caminho, converta a forma em um caminho.  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [trabalhar com caminhos: converter uma forma em um caminho](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: converter uma forma em um caminho](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).  
   
 ##  <a name="Combine"></a> Combinar caminhos  
- Você pode combinar formas e caminhos em um único caminho.  
+ É possível combinar caminhos e formas em um único caminho.  
   
- ![](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png "2df17a5d\-a338\-4ef4\-96c5\-dae51cc1ca8a")  
+ ![](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png "2df17a5d-a338-4ef4-96c5-dae51cc1ca8a")  
   
 |||||  
 |-|-|-|-|  
-|![](../designers/media/b1_1.png "B1\_1")|Duas formas antes da combinação|![](../designers/media/b1_4.png "B1\_4")|Intersect|  
-|![](../designers/media/b1_2.png "B1\_2")|Unir|![](../designers/media/b1_5.png "B1\_5")|Excluir sobreposição|  
-|![](../designers/media/b1_3.png "B1\_3")|Dividir|![](../designers/media/b1_6.png "B1\_6")|Subtrair|  
+|![](../designers/media/b1_1.png "B1_1")|Duas formas antes da combinação|![](../designers/media/b1_4.png "B1_4")|Interseção|  
+|![](../designers/media/b1_2.png "B1_2")|União|![](../designers/media/b1_5.png "B1_5")|Excluir Sobreposição|  
+|![](../designers/media/b1_3.png "B1_3")|Divisão|![](../designers/media/b1_6.png "B1_6")|Subtração|  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [trabalhar com caminhos: combinar caminhos](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: combinar caminhos](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).  
   
 ##  <a name="Compound"></a> Criar um caminho composto  
- Quando você cria um caminho composto, as partes de interseção dos caminhos são subtraídas do resultado e o caminho resultante assume as propriedades visuais do caminho mais baixo.  
+ Quando você cria um caminho composto, todas as partes de interseção dos caminhos são subtraídas do resultado e o caminho resultante assume as propriedades visuais do caminho mais baixo.  
   
- Você pode separar um caminho composto qualquer momento depois de criá\-la.  
+ É possível separar um caminho composto a qualquer momento após sua criação.  
   
- ![](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png "2157a8aa\-d9a7\-4de4\-8de5\-b10d28f08a84")  
+ ![](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png "2157a8aa-d9a7-4de4-8de5-b10d28f08a84")  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [trabalhar com caminhos: criar um caminho composto](https://www.youtube.com/watch?v=Io5bC0-nH6Q).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: criar um caminho composto](https://www.youtube.com/watch?v=Io5bC0-nH6Q).  
   
 ##  <a name="Clipping"></a> Criar um caminho de recorte  
- Um caminho de recorte é um caminho ou uma forma que é aplicada a outro objeto, ocultando as partes do objeto mascarado que estão fora do caminho de recorte.  
+ Um caminho de recorte é um caminho ou uma forma que é aplicada a outro objeto, o que oculta as partes do objeto mascarado que fica fora do caminho de recorte.  
   
- ![](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png "22471e98\-a841\-4f39\-a3ef\-36090cf5a625")  
+ ![](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png "22471e98-a841-4f39-a3ef-36090cf5a625")  
   
- **Assistir a um vídeo curto:** ![Configurar recursos instalados](../designers/media/bldadminconsoleinitialconfigicon.png "BldAdminConsoleInitialConfigIcon") [trabalhar com caminhos: criar um caminho de recorte](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: criar um caminho de recorte](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).  
   
-## Consulte também  
- [Criando uma interface de usuário usando o Blend para Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
+## <a name="see-also"></a>Consulte também  
+ [Criando uma interface do usuário usando o Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

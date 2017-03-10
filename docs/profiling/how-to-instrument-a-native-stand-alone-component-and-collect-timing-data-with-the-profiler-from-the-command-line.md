@@ -1,87 +1,102 @@
 ---
-title: "Como instrumentar um componente aut&#244;nomo nativo e coletar dados de tempo com o criador de perfil a partir da linha de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Como instrumentar um componente autônomo nativo e coletar dados de tempo com o criador de perfil por meio da linha de comando | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 36883074-9be8-4e90-a66f-7e87f21fcd30
 caps.latest.revision: 25
-caps.handback.revision: 25
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Como instrumentar um componente aut&#244;nomo nativo e coletar dados de tempo com o criador de perfil a partir da linha de comando
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: a65708d57eae5cf363b2148a8340494fed4176e0
+ms.lasthandoff: 02/22/2017
 
-Este tópico descreve como usar as ferramentas de linha de comando de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Ferramentas de Criação de Perfil para prover um componente nativo como c criando .exe ou arquivo .dll, e para coletar dados de controle de tempo detalhado.  
+---
+# <a name="how-to-instrument-a-native-stand-alone-component-and-collect-timing-data-with-the-profiler-from-the-command-line"></a>Como instrumentar um componente autônomo nativo e coletar dados de tempo com o criador de perfil a partir da linha de comando
+Este tópico descreve como usar as ferramentas da linha de comando das Ferramentas de criação de perfil do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para instrumentar um componente nativo, como um arquivo C++.exe ou .dll, e coletar dados detalhados de tempo.  
   
 > [!NOTE]
->  Ferramentas de linha de comando das Ferramentas de Criação de Perfil estão localizadas no subdiretório \\Team Tools\\Performance Tools do diretório de instalação [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)].  Nos computadores de 64 bits, ambas as versões de 64 bits e de 32 bits das ferramentas está disponível.  Para usar as ferramentas de linha de comando do criador de perfis, você deve adicionar o caminho das ferramentas para a variável de ambiente PATH da janela Prompt de Comando ou adicioná\-lo ao próprio comando.  Para obter mais informações, consulte [Especificando o caminho para ferramentas de linha de comando](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
+>  As ferramentas de linha de comando das Ferramentas de Criação de Perfil ficam localizadas no subdiretório \Team Tools\Performance Tools do diretório de instalação do [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]. Em computadores de 64 bits, as versões de 64 e de 32 bits das ferramentas estão disponíveis. Para usar ferramentas de linha de comando do criador de perfil, você precisa adicionar o caminho das ferramentas à variável de ambiente PATH da janela de Prompt de Comando ou adicioná-lo ao próprio comando. Para obter mais informações, consulte [Especificando o caminho para ferramentas de linha de comando](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
   
- Para coletar dados de controle de tempo detalhado de um componente usando o método de gerenciamento, use a ferramenta de [VSInstr.exe](../profiling/vsinstr.md) para gerar uma versão instrumentada do componente.  Inicie o criador de perfis.  Durante a execução do componente instrumentado, os dados do tempo são coletados automaticamente em um arquivo de dados.  Você pode pausar e retomar a coleção de dados durante a sessão de criação de perfis.  
+ Para coletar dados de tempo detalhados de um componente usando o método de instrumentação, use a ferramenta [VSInstr.exe](../profiling/vsinstr.md) para gerar uma versão instrumentada do componente. Em seguida, inicie o criador de perfil. Quando o componente instrumentado é executado, os dados de tempo são automaticamente coletados para um arquivo de dados. Você pode pausar e retomar a coleta de dados durante a sessão de criação de perfil.  
   
- Para terminar uma sessão, analisando você fechar o aplicativo de destino e então feche explicitamente o profiler.  
+ Para terminar uma sessão de criação de perfil, feche o aplicativo de destino e feche explicitamente o criador de perfil.  
   
-## Iniciando a sessão de análise  
+## <a name="starting-the-profiling-session"></a>Iniciando a sessão de criação de perfil  
   
-#### Para iniciar a análise usando o método de gerenciamento  
+#### <a name="to-start-profiling-by-using-the-instrumentation-method"></a>Para iniciar a criação de perfil usando o método de instrumentação  
   
-1.  Abra uma janela de prompt de comando.  
+1.  Abra uma janela do Prompt de Comando.  
   
 2.  Use a ferramenta **VSInstr** para gerar uma versão instrumentada do aplicativo de destino.  
   
-3.  Inicie o criador de perfis.  Tipo:  
+3.  Inicie o criador de perfil. Tipo:  
   
-     **VSPerfCmd \/start:trace \/output:** `OutputFile` \[`Options`\]  
+     **VSPerfCmd /start:trace /output:** `OutputFile` [`Options`]  
   
-    -   A opção [\/start](../profiling/start.md)**:trace** inicializa o criador de perfis.  
+    -   A opção [/start](../profiling/start.md)**:trace** inicializa o criador de perfil.  
   
-    -   A opção [\/output](../profiling/output.md)**:**`OutputFile`é necessária com **\/start** `OutputFile` especifica o nome e o local dos dados de perfil \(.vsp\).  
+    -   A opção [/output](../profiling/output.md)**:**`OutputFile` é necessária com **/start**. `OutputFile` especifica o nome e o local do arquivo de dados de criação de perfil (.vsp).  
   
-     Você pode usar uma ou mais das seguintes opções com a opção de **\/start:trace** .  
-  
-    |Opção|Descrição|  
-    |-----------|---------------|  
-    |[\/user](../profiling/user-vsperfcmd.md) **:**\[`Domain`**\\**\]`UserName`|Especifica o domínio e o nome do usuário da conta que possui o processo com perfil.  Essa opção é necessária somente se o processo estiver sendo executado como um usuário diferente do usuário conectado.  O proprietário do processo é listado na coluna de nome de usuário na guia de processos do gerenciador de tarefas do Windows.|  
-    |[\/crosssession](../profiling/crosssession.md)|Permite analisar os processos em outras sessões.  Essa opção será necessária se o aplicativo estiver sendo executado em uma sessão diferente.  A identificação da sessão é listada na coluna ID da sessão na guia de processos do gerenciador de tarefas do Windows.  **\/CS** pode ser especificado como uma abreviação para **\/crosssession**.|  
-    |[\/globaloff](../profiling/globalon-and-globaloff.md)|Inicia o profiler com a coleta de dados pausada.  Use [\/globalon](../profiling/globalon-and-globaloff.md) para continuar analisar.|  
-    |[\/counter](../profiling/counter.md) **:** `Config`|Coleta informações do contador de desempenho de processador que é especificado em `Config`.  As informações do contador é adicionado aos dados coletados em cada evento analisando.|  
-    |[\/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|Especifica o contador de desempenho do Windows que será coletado durante a análise.|  
-    |[\/automark](../profiling/automark.md) **:** `Interval`|Uso com **\/wincounter** somente.  Especifica o número de milissegundos entre eventos de coleção contador de desempenho do Windows.  O padrão é 500 ms.|  
-    |[\/events](../profiling/events-vsperfcmd.md) **:** `Config`|Especifica um rastreamento de evento para evento do Windows \(ETW\) para ser coletado durante a análise.  Os eventos de ETW são coletados em um arquivo separado \(.etl\).|  
-  
-4.  Inicie o aplicativo destino da forma normal.  
-  
-## Coleta de dados de controle  
- Durante a execução do aplicativo de destino, é possível controlar a coleção de dados iniciando e interrompendo a gravação de dados no arquivo usando as opções de **VSPerfCmd.exe**.  A coleta de dados de controle permite que você colete dados para uma parte específica de execução do programa, como o inicio ou término do aplicativo.  
-  
-#### Para iniciar e parar a coleção de dados  
-  
--   Os seguintes pares de opções iniciam e interrompem a coleção de dados.  Especifique cada opção em uma linha separada de comando.  É possível desativar e ativar a coleção de dados várias vezes.  
+     É possível usar uma ou várias opções a seguir com a opção **/start:trace**.  
   
     |Opção|Descrição|  
-    |-----------|---------------|  
-    |[\/globalon \/globaloff](../profiling/globalon-and-globaloff.md)|Inicia \(**\/globalon**\) ou para \(**\/globaloff**\) a coleção de dados para todos os processos.|  
-    |[\/processon](../profiling/processon-and-processoff.md) **:** `PID` [\/processoff](../profiling/processon-and-processoff.md)**:**`PID`|Inicia**\/processon**\(\) ou para coleta de dados \(de**\/processoff**\) para o processo que é especificado pela ID de processo \(`PID`\).|  
-    |[\/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [\/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|Inicia**\/threadon**\(\) ou para coleta de dados \(\) de**\/threadoff**do thread que é especificado pela ID de thread`TID`\(\).|  
+    |------------|-----------------|  
+    |[/user](../profiling/user-vsperfcmd.md) **:**[`Domain`**\\**]`UserName`|Especifica o domínio e o nome de usuário da conta que possui o processo analisado. Esta opção será necessária apenas se o processo estiver sendo executado como um usuário diferente do usuário conectado. O proprietário do processo é listado na coluna Nome de Usuário na guia Processos do Gerenciador de Tarefas do Windows.|  
+    |[/crosssession](../profiling/crosssession.md)|Habilita a criação de perfil de processos em outras sessões. Esta opção será necessária se o aplicativo estiver em execução em uma sessão diferente. O identificador da sessão é listado na coluna ID da Sessão na guia Processos do Gerenciador de Tarefas do Windows. **/CS** pode ser especificado como uma abreviação de **/crosssession**.|  
+    |[/globaloff](../profiling/globalon-and-globaloff.md)|Inicia o criador de perfil com a coleta de dados em pausa. Use [/globalon](../profiling/globalon-and-globaloff.md) para retomar a criação de perfil.|  
+    |[/counter](../profiling/counter.md) **:** `Config`|Coleta informações do contador de desempenho do processador que é especificado em `Config`. As informações do contador são adicionadas aos dados que são coletados em cada evento de criação de perfil.|  
+    |[/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|Especifica um contador de desempenho do Windows que deve ser coletado durante a criação de perfil.|  
+    |[/automark](../profiling/automark.md) **:** `Interval`|Use somente com **/wincounter**. Especifica o número de milissegundos entre eventos de coleta do contador de desempenho do Windows. O padrão é 500 ms.|  
+    |[/events](../profiling/events-vsperfcmd.md) **:** `Config`|Especifica um evento de ETW (Rastreamento de Eventos para Windows) a ser coletado durante a criação de perfil. Eventos de ETW são coletados em um arquivo separado (.etl).|  
   
-## Finalizando a sessão de análise  
- Para terminar uma sessão, analisando feche o aplicativo que está executando o componente provido, e para chamar na opção de **VSPerfCmd** [\/shutdown](../profiling/shutdown.md) desativar o profiler e para fechar os dados de perfil arquivo.  
+4.  Inicie o aplicativo de destino normalmente.  
   
-#### Para finalizar uma sessão de criação de perfil  
+## <a name="controlling-data-collection"></a>Controlando coleção de dados  
+ Quando o aplicativo de destino estiver em execução, você pode controlar a coleta de dados iniciando e interrompendo a gravação de dados no arquivo usando as opções de **VSPerfCmd.exe**. Controlar a coleta de dados permite coletar dados de uma parte específica da execução do programa, como a inicialização ou o desligamento do aplicativo.  
+  
+#### <a name="to-start-and-stop-data-collection"></a>Para iniciar e interromper a coleta de dados  
+  
+-   Os pares de opções a seguir iniciam e interrompem a coleta de dados. Especifique cada opção em uma linha de comando separada. É possível ativar e desativar a coleta de dados várias vezes.  
+  
+    |Opção|Descrição|  
+    |------------|-----------------|  
+    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Inicia (**/globalon**) ou interrompe (**/globaloff**) a coleta de dados para todos os processos.|  
+    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Inicia (**/processon**) ou interrompe (**/processoff**) a coleta de dados para o processo especificado pela ID de processo (`PID`).|  
+    |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|Inicia (**/threadon**) ou interrompe (**/threadoff**) a coleta de dados para o thread especificado pela ID do thread (`TID`).|  
+  
+## <a name="ending-the-profiling-session"></a>Encerrando a sessão de criação de perfil  
+ Para encerrar uma sessão de criação de perfil, feche o aplicativo que está executando o componente instrumentado e, em seguida, chame a opção **VSPerfCmd** [/shutdown](../profiling/shutdown.md) para desligar o criador de perfil e fechar o arquivo de dados de criação de perfil.  
+  
+#### <a name="to-end-a-profiling-session"></a>Para encerrar uma sessão de criação de perfil  
   
 1.  Feche o aplicativo de destino.  
   
-2.  Encerrar o criador de perfis.  Tipo:  
+2.  Desligue o criador de perfil. Tipo:  
   
-     **VSPerfCmd \/shutdown**  
+     **VSPerfCmd /shutdown**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Criando perfil de aplicativos autônomos](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [Exibições de dados do método de instrumentação](../profiling/instrumentation-method-data-views.md)

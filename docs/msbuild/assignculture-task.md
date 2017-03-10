@@ -1,54 +1,69 @@
 ---
-title: "Tarefa AssignCulture | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#AssignCulture"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Tarefa AssignCulture [MSBuild]"
-  - "MSBuild, Tarefa AssignCulture"
+title: Tarefa AssignCulture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#AssignCulture
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MSBuild, AssignCulture task
+- AssignCulture task [MSBuild]
 ms.assetid: 8f8314cc-82a6-4f16-a62d-b9f0d1d5e274
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Tarefa AssignCulture
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: 7ffb60f21d569441831662a664492bdc63aaf325
+ms.lasthandoff: 02/22/2017
 
-Esta tarefa aceita uma lista de itens que podem conter um válido.String de identificador de cultura NET como parte do nome do arquivo e produz itens que possuem um metadados chamado `Culture` identificador de cultura que contém o correspondente.  Por exemplo, o nome do arquivo Form1.fr\-FR tem uma cultura incorporada identificador "fr\-fr", para que essa tarefa produzirá um item que tem o mesmo nome de arquivo com os metadados `Culture` igual a `fr-fr`.  A tarefa também produz uma lista de nomes de arquivos com a cultura removida do nome de arquivo.  
+---
+# <a name="assignculture-task"></a>Tarefa AssignCulture
+Essa tarefa aceita uma lista de itens que pode conter uma cadeia de caracteres de identificador de cultura .NET válida como parte do nome de arquivo e produz itens com metadados nomeados como `Culture` que contêm o identificador de cultura correspondente. Por exemplo, o nome de arquivo Form1.fr-fr.resx tem um identificador de cultura "fr-fr" inserido, assim, essa tarefa produzirá um item com o mesmo nome de arquivo e com os metadados `Culture` iguais a `fr-fr`. A tarefa também produz uma lista de nomes de arquivo com a cultura removida do nome de arquivo.  
   
-## Parâmetros da tarefa  
- A tabela a seguir descreve os parâmetros da `AssignCulture` tarefa.  
+## <a name="task-parameters"></a>Parâmetros da tarefa  
+ A tabela a seguir descreve os parâmetros da tarefa `AssignCulture`.  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|`AssignedFiles`|Opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]` parâmetro de saída.<br /><br /> Contém a lista de itens recebidos na `Files` parâmetro, com um `Culture` a entrada de metadados adicionada para cada item.<br /><br /> Se a entrada do item da `Files` parâmetro já contém um `Culture` entrada de metadados, a entrada de metadados original será usada.<br /><br /> A tarefa apenas atribui uma `Culture` a entrada de metadados se o nome do arquivo contém um identificador de cultura válida.  O identificador de cultura deve ser entre os dois últimos pontos no nome do arquivo.|  
-|`AssignedFilesWithCulture`|Opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]` parâmetro de saída.<br /><br /> Contém o subconjunto de itens da `AssignedFiles` parâmetro que possuem um `Culture` a entrada de metadados.|  
-|`AssignedFilesWithNoCulture`|Opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]` parâmetro de saída.<br /><br /> Contém o subconjunto de itens da `AssignedFiles` parâmetro que não possuem um `Culture` a entrada de metadados.|  
-|`CultureNeutralAssignedFiles`|Opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]` parâmetro de saída.<br /><br /> Contém a mesma lista de itens que é produzido na `AssignedFiles` parâmetro, exceto com a cultura removida do nome do arquivo.<br /><br /> A tarefa remove apenas a cultura do nome do arquivo se ele é um identificador de cultura válida.|  
-|`Files`|Obrigatório <xref:Microsoft.Build.Framework.ITaskItem>`[]` parâmetro.<br /><br /> Especifica a lista de arquivos com nomes de cultura incorporadas para atribuir uma cultura para.|  
+|---------------|-----------------|  
+|`AssignedFiles`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Contém a lista de itens recebidos no parâmetro `Files`, com uma entrada de metadados `Culture` adicionada a cada item.<br /><br /> Se o item de entrada do parâmetro `Files` já contiver uma entrada de metadados `Culture`, a entrada de metadados original será utilizada.<br /><br /> A tarefá atribuirá uma entrada de metadados `Culture` somente se o nome de arquivo contiver um identificador de cultura válido. O identificador de cultura deve estar entre os dois últimos pontos no nome de arquivo.|  
+|`AssignedFilesWithCulture`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Contém o subconjunto dos itens do parâmetro `AssignedFiles` que tem uma entrada de metadados `Culture`.|  
+|`AssignedFilesWithNoCulture`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Contém o subconjunto dos itens do parâmetro `AssignedFiles` que não tem uma entrada de metadados `Culture`.|  
+|`CultureNeutralAssignedFiles`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Contém a mesma lista de itens produzida no parâmetro `AssignedFiles`, exceto aqueles com a cultura removida do nome de arquivo.<br /><br /> A tarefa removerá a cultura do nome de arquivo somente se ele for um identificador de cultura válido.|  
+|`Files`|Parâmetro <xref:Microsoft.Build.Framework.ITaskItem>`[]` obrigatório.<br /><br /> Especifica a lista de arquivos com nomes de cultura inseridos a qual a cultura será atribuída.|  
   
-## Comentários  
- Com os parâmetros listados acima, esta tarefa herda os parâmetros da <xref:Microsoft.Build.Tasks.TaskExtension> herda de classe, que por si só a <xref:Microsoft.Build.Utilities.Task> classe.  Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe TaskExtension \(base\)](../msbuild/taskextension-base-class.md).  
+## <a name="remarks"></a>Comentários  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que, por sua vez, herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
-## Exemplo  
- O exemplo a seguir executa a `AssignCulture` de tarefas com o `ResourceFiles` item da coleção.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir executa a tarefa `AssignCulture` com a coleção de itens `ResourceFiles`.  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <ItemGroup>  
         <ResourceFiles Include="MyResource1.fr.resx"/>  
@@ -71,15 +86,15 @@ Esta tarefa aceita uma lista de itens que podem conter um válido.String de iden
 </Project>  
 ```  
   
- A tabela a seguir descreve o valor dos itens de saída após a execução da tarefa.  Os metadados de item é mostrado entre parênteses após o item.  
+ A tabela a seguir descreve o valor dos itens de saída após a execução da tarefa. Os metadados de item são mostrados entre parênteses após o item.  
   
-|Coleção de item|Contents|  
+|Coleta de itens|Conteúdo|  
 |---------------------|--------------|  
-|`OutAssignedFiles`|`MyResource1.fr.resx (Culture="fr")`<br /><br /> `MyResource2.XX.resx`\(não há metadados adicionais\)|  
+|`OutAssignedFiles`|`MyResource1.fr.resx (Culture="fr")`<br /><br /> `MyResource2.XX.resx` (não há metadados adicionais)|  
 |`OutAssignedFilesWithCulture`|`MyResource1.fr.resx (Culture="fr")`|  
-|`OutAssignedFilesWithNoCulture`|`MyResource2.XX.resx`\(não há metadados adicionais\)|  
-|`OutCultureNeutralAssignedFiles`|`MyResource1.resx (Culture="fr")`<br /><br /> `MyResource2.XX.resx (`Não há metadados adicionais\)|  
+|`OutAssignedFilesWithNoCulture`|`MyResource2.XX.resx` (não há metadados adicionais)|  
+|`OutCultureNeutralAssignedFiles`|`MyResource1.resx (Culture="fr")`<br /><br /> `MyResource2.XX.resx (`não há metadados adicionais)|  
   
-## Consulte também  
- [ \(tarefas\)](../msbuild/msbuild-tasks.md)   
+## <a name="see-also"></a>Consulte também  
+ [Tarefas](../msbuild/msbuild-tasks.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)
