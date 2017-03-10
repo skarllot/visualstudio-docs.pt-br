@@ -1,0 +1,35 @@
+---
+title: "N&#227;o foi poss&#237;vel localizar assemblies dependentes do assembly &#39;assembly&#39;. O manifesto do assembly pode estar corrompido. | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.tasklisterror.cannotfinddependencies"
+ms.assetid: 6d6e6dda-6cec-49d0-9659-63dfdbd7d247
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "mikeblome"
+ms.author: "mblome"
+manager: "douge"
+---
+# N&#227;o foi poss&#237;vel localizar assemblies dependentes do assembly &#39;assembly&#39;. O manifesto do assembly pode estar corrompido.
+O sistema do projeto não pôde ler um assembly referenciado pelo projeto, de modo que o sistema do projeto é incapaz de determinar as dependências do assembly. Esse erro não impedirá que o projeto seja criada. No entanto, um erro de tempo de execução é possível.  
+  
+ **Para corrigir este erro**  
+  
+-   Reinstalar o Visual Studio \(se o assembly acompanha [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ou [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]\).  
+  
+     \- ou \-  
+  
+-   Reinstale o controle apropriado de terceiros.  
+  
+## Consulte também  
+ [Solucionando Problemas de Referências Quebradas](../ide/troubleshooting-broken-references.md)   
+ [PONTA como: Adicionar ou remover referências usando a caixa de diálogo Adicionar referência](http://msdn.microsoft.com/pt-br/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
+ [Assemblies in the Common Language Runtime](http://msdn.microsoft.com/pt-br/33a0bc6a-6bb3-44c7-ada7-4a046e8c0945)
