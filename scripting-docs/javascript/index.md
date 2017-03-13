@@ -145,7 +145,7 @@ O JavaScript é uma linguagem de primeira classe no Visual Studio. Você pode us
 
 <p><ul class="panelContent cardsW">
     <li>
-        <a href="https://docs.microsoft.com/scripting/javascript">
+        <a href="https://docs.microsoft.com/scripting/javascript/javascript-language-reference">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
