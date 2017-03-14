@@ -31,13 +31,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5ec205ee98f61b400112a39197e1f2aa9dddbd7d
-ms.openlocfilehash: 2d6ec94f7e68a84a4bb4a606882997fadec49e01
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8f844c2d7d975476bc4c059d211a1d6cb0df64eb
+ms.openlocfilehash: 4c995fb6df6316ce7f84fae7075b81063b54ebf7
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="profiling-tools"></a>Ferramentas de Criação de Perfil
-Ferramentas de Diagnóstico e Criação de Perfil ajudam você a diagnosticar o uso de memória e uso de CPU e outros problemas em nível de aplicativo. Com essas ferramentas, você poderá acumular dados (como valores de variáveis, chamadas de função e eventos) ao longo do tempo em que você executar o aplicativo no depurador. Você pode exibir o estado do seu aplicativo em pontos diferentes durante a execução do seu código.  
+Ferramentas de Diagnóstico e Criação de Perfil ajudam você a diagnosticar o uso de memória e uso de CPU e outros problemas em nível de aplicativo. Com essas ferramentas, você pode acumular dados (como valores de variáveis, chamadas de função e eventos) ao longo do tempo em que você executar o aplicativo no depurador. Você pode exibir o estado do seu aplicativo em pontos diferentes durante a execução do seu código.  
   
  Confira o resumo na parte inferior para ver quais ferramentas estão disponíveis para o tipo de projeto (por exemplo, área de trabalho, UWP, ASP.NET).  
   
@@ -62,12 +62,12 @@ Ferramentas de Diagnóstico e Criação de Perfil ajudam você a diagnosticar o 
 ## <a name="gpu-usage"></a>Uso de GPU  
  ![DiagGPUUsage](../profiling/media/diaggpuusage.png "DiagGPUUsage")  
   
- Use a ferramenta [Uso de GPU](../debugger/gpu-usage.md) para compreender melhor a utilização do hardware de alto nível do aplicativo Direct3D. Você pode usar essa ferramenta com aplicativos universais do Windows e aplicativos da área de trabalho, mas não com aplicativos ASP.NET. A ferramenta **Uso de GPU** pode ser executada da janela **Ferramentas de Diagnóstico** enquanto você está depurando (**Depurar/Mostrar Ferramentas de Diagnóstico**) ou fora do depurador (**Depurar/Criador de Perfil de Desempenho...**).  
+ Use a ferramenta [Uso de GPU](../debugger/gpu-usage.md) para compreender melhor a utilização do hardware de alto nível do aplicativo Direct3D. Você pode usar essa ferramenta com aplicativos universais do Windows e aplicativos da área de trabalho, mas não com aplicativos ASP.NET. A ferramenta **Uso de GPU** pode ser executada fora do depurador (**Depurar/Criador de Perfil de Desempenho...**).  
   
 ## <a name="application-timeline"></a>Linha do Tempo do Aplicativo  
  ![DiagAppTimeline](../profiling/media/diagapptimeline.png "DiagAppTimeline")  
   
- A ferramenta [Linha do Tempo do Aplicativo](../profiling/application-timeline.md) ajuda a melhorar o desempenho de aplicativos XAML fornecendo uma exibição detalhada do consumo de recursos por esses aplicativos. Você pode usar a **Linha do Tempo do Aplicativo** com aplicativos universais do Windows e aplicativos da área de trabalho, mas não com aplicativos ASP.NET. A ferramenta **Linha do Tempo do Aplicativo** pode ser executada da janela **Ferramentas de Diagnóstico** (**Depurar/Criador de Perfil de Desempenho...**).
+ A ferramenta [Linha do Tempo do Aplicativo](../profiling/application-timeline.md) ajuda a melhorar o desempenho de aplicativos XAML fornecendo uma exibição detalhada do consumo de recursos por esses aplicativos. Você pode usar a **Linha do Tempo do Aplicativo** com aplicativos universais do Windows e aplicativos da área de trabalho, mas não com aplicativos ASP.NET. A ferramenta **Linha do Tempo do Aplicativo** pode ser executada fora do depurador (**Depurar/Criador de Perfil de Desempenho...**).
   
 ## <a name="perftips"></a>PerfTips  
  ![DiagPerfTips](../profiling/media/diagperftips.png "DiagPerfTips")  
@@ -85,12 +85,12 @@ Ferramentas de Diagnóstico e Criação de Perfil ajudam você a diagnosticar o 
 ## <a name="javascript-memory"></a>Memória JavaScript  
  ![DiagJSMemory](../profiling/media/diagjsmemory.png "DiagJSMemory")  
   
- A ferramenta [Memória JavaScript](../profiling/javascript-memory.md) lhe permite medir, avaliar e direcionar problemas relacionados ao desempenho no seu código por meio da coleta de informações de tempo na entrada e saída de cada função em seu aplicativo. Você pode usar essa ferramenta com aplicativos HTML universais do Windows. A ferramenta **Temporização de Função JavaScript** pode ser executada da janela **Ferramentas de Diagnóstico** (**Depurar/Criador de Perfil de Desempenho...**).  
+ A ferramenta [Memória JavaScript](../profiling/javascript-memory.md) permite localizar vazamentos de memória e uso ineficiente de memória nos aplicativos. A ferramenta permite que você tire instantâneos do heap de JavaScript. Você pode usar essa ferramenta com aplicativos HTML universais do Windows. A ferramenta **Memória JavaScript** pode ser executada fora do depurador (**Depurar/Criador de Perfil de Desempenho...**).  
   
 ## <a name="html-ui-responsiveness"></a>Capacidade de Resposta da Interface de Usuário HTML  
  ![DiagHTMLResp](../profiling/media/diaghtmlresp.png "DiagHTMLResp")  
   
- A ferramenta [Capacidade de resposta da interface do usuário HTML](../profiling/html-ui-responsiveness.md) ajuda você a isolar problemas de desempenho em seus aplicativos, incluindo a falta de capacidade de resposta, tempo de carregamento lento e atualizações visuais que são menos frequentes do que o esperado. Você pode usar essa ferramenta com aplicativos HTML universais do Windows. A **Capacidade de resposta da interface do usuário HTML** pode ser executada da janela **Ferramentas de Diagnóstico** (**Depurar/Criador de Perfil de Desempenho...**).  
+ A ferramenta [Capacidade de resposta da interface do usuário HTML](../profiling/html-ui-responsiveness.md) ajuda você a isolar problemas de desempenho em seus aplicativos, incluindo a falta de capacidade de resposta, tempo de carregamento lento e atualizações visuais que são menos frequentes do que o esperado. Você pode usar essa ferramenta com aplicativos HTML universais do Windows. A ferramenta **Capacidade de Resposta de Interface do Usuário HTML** pode ser executada fora do depurador (**Depurar/Criador de Perfil de Desempenho...**).  
   
 ## <a name="intellitrace"></a>IntelliTrace  
  ![DiagIntelliTrace](../profiling/media/diagintellitrace.png "DiagIntelliTrace")  
