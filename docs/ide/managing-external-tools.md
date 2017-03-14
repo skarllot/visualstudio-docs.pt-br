@@ -1,7 +1,7 @@
 ---
 title: Gerenciar ferramentas externas | Microsoft Docs
 ms.custom: 
-ms.date: 01/23/2017
+ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -76,43 +76,33 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 66e09a22bcedb37f82eb9517a8f9d4affbe3a374
-ms.openlocfilehash: ad9461bb29dba3e8e2ffe242c1f709587729ce22
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: c36d97b83aa0892235c8f196cf6af63520b3547c
+ms.openlocfilehash: a31b90643e3707348595fce02ec37a1c02a97195
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="manage-external-tools"></a>Gerenciar ferramentas externas
-É possível chamar ferramentas externas no Visual Studio. Algumas ferramentas padrão estão disponíveis no menu **Ferramentas**, mas é possível adicionar outros executáveis de sua preferência.  
-  
+Você pode chamar ferramentas externas de dentro do Visual Studio usando o menu **Ferramentas**. Algumas ferramentas padrão estão disponíveis no menu **Ferramentas**, mas é possível adicionar outros executáveis de sua preferência.  
+
 ## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Ferramentas disponíveis no menu das Ferramentas do Visual Studio
- É possível chamar as ferramentas a seguir no menu **Ferramentas** em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Você também pode chamá-las pelo nome na janela **Início Rápido**. Por exemplo, para chamar GuidGen.exe, digite **Criar GUID**.  
-  
-1.  Criar GUID: gera um GUID.  
-  
-2.  Pesquisa de Erro: obtém uma mensagem de erro do valor inserido. Para obter mais informações, consulte [Referência de ERRLOOK](/visual-cpp/build/reference/errlook-reference).  
-  
-3.  Ferramenta de Rastreamento da ATL/MFC: mostra mensagens de rastreamento de depuração nas fontes ATL e MFC.  
-  
-4.  PreEmptive Dotfuscator e Análise: protege os programas .NET contra a engenharia reversa.  
-  
-5.  SPY++: exibe processos, threads, janelas e mensagens de janela graficamente.  
-  
-6.  Editor de Configuração do serviço WCF: permite criar e modificar definições de configuração para os serviços WCF.  
-  
-> [!WARNING]
->  Você poderá ver uma lista diferente de ferramentas externas, dependendo de qual edição do Visual Studio está instalada e o perfil de configurações aplicado. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
+ O menu **Ferramentas** contém vários comandos internos, como:
+
+*  **Extensões e Atualizações** para [gerenciamento de Extensões do Visual Studio](finding-and-using-visual-studio-extensions.md)
+*  **Gerenciador de Trechos de Código...** para [organizar Trechos de Código](code-snippets.md#code-snippet-manager)
+*  **Proteção Preemptiva - Dotfuscator** para iniciar o [Dotfuscator Community Edition (CE)](dotfuscator/index.md) se ele estiver [instalado](dotfuscator/install.md)
+*  **Personalizar...** para [personalizar menus e barras de ferramentas](how-to-customize-menus-and-toolbars-in-visual-studio)
+*  **Opções...** para [configurar uma variedade de opções diferentes para o IDE do Visual Studio e outras ferramentas](reference/options-dialog-box-visual-studio.md)
+
 ## <a name="add-new-tools-to-the-tools-menu"></a>Adicionar novas ferramentas ao menu Ferramentas 
- É possível adicionar uma ferramenta externa ao menu **Ferramentas**. Abra a caixa de diálogo **Ferramentas Externas**, clique em **Adicionar** e, em seguida, preencha as informações. Por exemplo, a seguinte entrada faz com que o Windows Explorer abra o diretório do arquivo atualmente aberto no Visual Studio:  
+ É possível adicionar uma ferramenta externa ao menu **Ferramentas**. Abra a caixa de diálogo **Ferramentas Externas...**, clique em **Adicionar** e, em seguida, preencha as informações. Por exemplo, a seguinte entrada faz com que o Windows Explorer abra o diretório do arquivo atualmente aberto no Visual Studio:  
   
-1.  Título: Abrir local do arquivo  
+1.  Título: *Abrir local do arquivo*
   
-2.  Comando: explorer.exe  
+2.  Comando: `explorer.exe`  
   
-3.  Argumentos: /root, "$(ItemDir)"  
+3.  Argumentos: `/root, "$(ItemDir)"`  
   
-## <a name="arguments-for-external-tools"></a>Argumentos para ferramentas externas  
- Os argumentos a seguir são variáveis do Visual Studio atribuídas ao iniciar uma ferramenta externa. Links para ferramentas externas, como Bloco de notas ou Spy++, podem estar listados no menu **Ferramentas** com a caixa de diálogo Ferramentas Externas.  
+ Esta é uma lista completa de argumentos que podem ser usados ao definir uma ferramenta externa.
   
 > [!NOTE]
 >  A barra de status do IDE exibe as variáveis Linha atual e Coluna atual para indicar a localização do ponto de inserção no Editor de Código ativo. A variável Texto atual retorna o texto ou o código selecionado nesse local.  
@@ -135,7 +125,7 @@ ms.lasthandoff: 02/22/2017
 |Nome do arquivo de projeto|$(ProjFileName)|O nome de arquivo do projeto atual (unidade + caminho + nome de arquivo).|  
 |Diretório da solução|$(SolutionDir)|O diretório da solução atual (unidade + caminho).|  
 |Nome de arquivo da solução|$(SolutionFileName)|O nome de arquivo da solução atual (unidade + caminho + nome de arquivo).|  
-  
+
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de build do C/C++](/visual-cpp/build/reference/c-cpp-build-tools)
 

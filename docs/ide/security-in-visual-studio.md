@@ -1,7 +1,7 @@
 ---
 title: "Segurança no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -31,9 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 8e34062596ab2f87ae97934b89b4c292e8f28f32
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 7a282fc04c1eb01f0c56b1d76880276fc270686d
+ms.openlocfilehash: 96136c7223f3d5f78fff9bfe3106d48cab4dd44a
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="security-in-visual-studio"></a>Segurança no Visual Studio
@@ -56,3 +56,12 @@ Você deve considerar a segurança em todos os aspectos do desenvolvimento do ap
   
  [Práticas Recomendadas de segurança](/visual-cpp/top/security-best-practices-for-cpp)  
  Aborda estouros de buffer e a visão completa do recurso de verificações de segurança do Microsoft Visual C++ fornecido pelo sinalizador de tempo de compilação /GS.
+
+## <a name="building-for-security"></a>Compilação com segurança  
+ A segurança também é uma consideração importante no processo de compilação.  Algumas etapas adicionais podem melhorar a segurança de um aplicativo implantado e ajudar a evitar engenharia reversa não autorizada, falsificação ou outros ataques.
+
+ [Dotfuscator Community Edition (CE)](dotfuscator/index.md)  
+ Explica como configurar e começar a usar a Proteção Preemptiva gratuita - Dotfuscator Community Edition para proteger assemblies .NET contra o uso não autorizado e engenharia reversa (como depuração não autorizada).
+  
+ [Gerenciando Assinatura de Assembly e Manifesto](managing-assembly-and-manifest-signing.md)  
+ Discute a assinatura de nome forte, que pode ser usada para identificar com exclusividade os componentes de software, impedindo a falsificação de nomes.

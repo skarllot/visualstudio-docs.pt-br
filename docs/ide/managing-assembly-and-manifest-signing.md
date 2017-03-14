@@ -1,7 +1,7 @@
 ---
 title: Gerenciando assinatura de assembly e de manifesto | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 85474fe229980aac7c57205f111656d4264045d1
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 68358885d93e9e6b7f231750c35065be9521c3fe
+ms.openlocfilehash: b1ce5a5c4dc05cb9d0a2ebcb68a10a5054b68893
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>Gerenciando Assinatura de Assembly e Manifesto
@@ -46,6 +46,9 @@ A assinatura de nome forte fornece a um componente de software uma identidade gl
  Para obter informações sobre como assinar assemblies em projetos do Visual Basic e do C#, consulte [Criando e usando assemblies de nomes fortes](http://msdn.microsoft.com/Library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9).  
   
  Para obter informações sobre como assinar assemblies em projetos do Visual C++, consulte [Assemblies de nome forte (assinatura de assembly) (C++/CLI)](/visual-cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli).  
+
+> [!NOTE]
+>  A assinatura de nome forte não protege contra a engenharia reversa do assembly.  Para proteger-se contra a engenharia reversa, confira [Dotfuscator Community Edition (CE)](dotfuscator/index.md).
   
 ## <a name="asset-types-and-signing"></a>Tipos de ativos e assinatura  
  É possível assinar manifestos de assemblies e do aplicativo do .NET. Eles incluem o seguinte:  
