@@ -29,20 +29,19 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a4eb45e8e0548ead5d99c441abcfa7baf3ffde4f
-ms.openlocfilehash: 474f0cc1d1b9288dbd6d3b14180c5234691b9010
+ms.sourcegitcommit: 8a3c6e60d0ea85d93281764ec3a3435538b9baa0
+ms.openlocfilehash: d89f4c4bf3d1d4230592896be14dd7d64d90825f
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cpu-usage"></a>Uso da CPU
-Quando você precisa investigar problemas de desempenho no aplicativo, um bom começo é entender como ele usa a CPU. A ferramenta **Uso da CPU** mostra a você os momentos em que a CPU está gastando tempo executando o código do Visual C++, Visual C#/Visual Basic e JavaScript.  
+Quando você precisa investigar problemas de desempenho no aplicativo, um bom começo é entender como ele usa a CPU. A ferramenta **Uso da CPU** mostra a você os momentos em que a CPU está gastando tempo executando o código do Visual C++, Visual C#/Visual Basic e JavaScript. A partir do Visual Studio 2015 Atualização 1, é possível ver um detalhamento por função do uso da CPU sem sair do depurador. É possível ativar e desativar a criação de perfil da CPU durante a depuração e exibir os resultados quando a execução é interrompida, por exemplo, em um ponto de interrupção.  
   
- A partir do Visual Studio 2015 Atualização 1, é possível ver um detalhamento por função do uso da CPU sem sair do depurador. É possível ativar e desativar a criação de perfil da CPU durante a depuração e exibir os resultados quando a execução é interrompida, por exemplo, em um ponto de interrupção. Para obter mais informações, consulte [Crie o perfil de sua CPU no Depurador do Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2015/10/29/profile-your-cpu-in-the-debugger-in-visual-studio-2015.aspx).  
+Você tem várias opções para executar e gerenciar a sessão de diagnóstico. Por exemplo, é possível executar a ferramenta **Uso da CPU** em computadores locais ou remotos ou em um simulador ou emulador. Você pode analisar o desempenho de um projeto aberto no Visual Studio, anexado a um aplicativo em execução ou iniciar um aplicativo instalado por meio da Windows Store. Para obter mais informações, consulte [Run Profiling Tools with or without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md) (Executar as ferramentas de criação de perfil com ou sem o depurador). Para obter um passo a passo que analisa o desempenho de um aplicativo da Windows Store, consulte [Analisar o uso da CPU nos aplicativos da Loja](https://msdn.microsoft.com/en-us/library/windows/apps/dn641982.aspx). 
+
+Aqui, mostramos como coletar e analisar o uso da CPU com builds de versão. Para analisar o uso da CPU durante a depuração, consulte [Guia do iniciante à criação de perfil de desempenho](../profiling/beginners-guide-to-performance-profiling.md). 
   
- Para obter um passo a passo que analisa o desempenho de um aplicativo da Windows Store, consulte [Analisar o uso da CPU nos aplicativos da Loja](https://msdn.microsoft.com/en-us/library/windows/apps/dn641982.aspx).  
-  
- o hub de Desempenho e Diagnóstico oferece várias outras opções para executar e gerenciar a sessão de diagnóstico. Por exemplo, é possível executar a ferramenta **Uso da CPU** em computadores locais ou remotos ou em um simulador ou emulador. Você pode analisar o desempenho de um projeto aberto no Visual Studio, anexado a um aplicativo em execução ou iniciar um aplicativo instalado por meio da Windows Store. Para obter mais informações, consulte [Run Profiling Tools with or without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md) (Executar as ferramentas de criação de perfil com ou sem o depurador).
-  
-##  <a name="a-namebkmkcollectcpuusagedataa-collect-cpu-usage-data"></a><a name="BKMK_Collect_CPU_usage_data"></a> Coletar dados de uso da CPU  
+##  <a name="BKMK_Collect_CPU_usage_data"></a> Coletar dados de uso da CPU  
   
 1.  No Visual Studio, defina a configuração da solução como **Versão** e escolha o destino da implantação.  
   
@@ -74,10 +73,10 @@ Quando você precisa investigar problemas de desempenho no aplicativo, um bom co
   
 ## <a name="analyze-the-cpu-usage-report"></a>Analise o relatório de uso da CPU  
   
-###  <a name="a-namebkmkthecpuusagecalltreea-the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a> A árvore de chamadas de Uso da CPU  
+###  <a name="BKMK_The_CPU_Usage_call_tree"></a> A árvore de chamadas de Uso da CPU  
  Para começar a compreender as informações da árvore de chamadas, escolha novamente o segmento `GetMaxNumberButton_Click`, e veja os detalhes da árvore de chamadas.  
   
-####  <a name="a-namebkmkcalltreestructurea-call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a> Estrutura da árvore de chamadas  
+####  <a name="BKMK_Call_tree_structure"></a> Estrutura da árvore de chamadas  
  ![GetMaxNumberButton&#95;Clique na árvore de chamada](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
   
 |||  
@@ -87,7 +86,7 @@ Quando você precisa investigar problemas de desempenho no aplicativo, um bom co
 |![Etapa 3](../profiling/media/procguid_3.png "ProcGuid_3")|Os filhos do nó de segundo nível são métodos e rotinas assíncronas do código de usuário que são chamados ou criados pelo sistema de segundo nível e código do framework.|  
 |![Etapa 4](../profiling/media/procguid_4.png "ProcGuid_4")|Os nós filhos de um método só contêm dados das chamadas do método pai. Quando **Mostrar Código Externo** é desabilitado, os métodos de aplicativo também podem conter um nó **[Código Externo]**.|  
   
-####  <a name="a-namebkmkexternalcodea-external-code"></a><a name="BKMK_External_Code"></a> Código externo  
+####  <a name="BKMK_External_Code"></a> Código externo  
  O código externo é uma função nos componentes do sistema e do framework executados pelo código que você grava. O código externo inclui funções que iniciam e param o aplicativo, elaboram a interface do usuário, controlam a segmentação e fornecem ao aplicativo outros serviços de nível inferior. Na maioria dos casos, você não se interessará pelo código externo, então, a árvore de chamadas de Uso da CPU coletará as funções externas de um método de usuário em um nó de **[Código Externo]**.  
   
  Quando desejar exibir os caminhos de chamada do código externo, escolha **Mostrar Código Externo** na lista **Exibição de filtro** e escolha **Aplicar**.  
@@ -102,7 +101,7 @@ Quando você precisa investigar problemas de desempenho no aplicativo, um bom co
   
  ![Pesquisar código externo aninhado](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "CPU_USE_WT_ShowExternalCodeTooWide_Found")  
   
-###  <a name="a-namebkmkcalltreedatacolumnsa-call-tree-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a> Colunas de dados da árvore de chamadas  
+###  <a name="BKMK_Call_tree_data_columns"></a> Colunas de dados da árvore de chamadas  
   
 |||  
 |-|-|  
@@ -112,7 +111,7 @@ Quando você precisa investigar problemas de desempenho no aplicativo, um bom co
 |**CPU própria (ms)**|O número de milissegundos gastos em chamadas para a função no intervalo de tempo escolhido e as funções chamadas pela função.|  
 |**Módulo**|O nome do módulo que contém a função ou o número de módulos que contêm as funções em um nó de [Código Externo].|  
   
-###  <a name="a-namebkmkasynchronousfunctionsinthecpuusagecalltreea-asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a> Funções assíncronas na árvore de chamadas de Uso da CPU  
+###  <a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a> Funções assíncronas na árvore de chamadas de Uso da CPU  
  Quando o compilador encontra um método assíncrono, ele cria uma classe oculta para controlar o método de execução. Conceitualmente, a classe é uma máquina de estado que inclui uma lista de funções geradas pelo compilador que chamam corretamente as operações do método original de modo assíncrono, os retornos de chamadas, o agendador e os iteradores necessários a eles. Quando o método original é chamado por um método pai, o tempo de execução remove o método do contexto de execução do pai e executa os métodos da classe oculta no contexto do código do sistema e do framework que controla a execução do aplicativo. Os métodos assíncronos são geralmente, mas nem sempre, executados em uma ou mais segmentos diferentes. Esse código é mostrado na árvore de chamadas de Uso da CPU como filhos do nó **[Código Externo]** logo abaixo do nó superior da árvore.  
   
  Para ver isso em nosso exemplo, escolha novamente o segmento `GetMaxNumberAsyncButton_Click` na linha de tempo.  
@@ -128,8 +127,3 @@ Quando você precisa investigar problemas de desempenho no aplicativo, um bom co
 -   `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` mostra a atividade necessária para agendar e iniciar as 48 tarefas que encapsulam a chamada para `GetNumberAsync`.  
   
 -   `MainPage::<GetNumberAsync>b__b` mostra a atividade das tarefas que chamam `GetNumber`.
-
-
-<!--HONumber=Feb17_HO4-->
-
-
