@@ -1,5 +1,5 @@
 ---
-title: Escrevendo testes de unidade para C-C++ com o Microsoft Unit Testing Framework para C++ | Microsoft Docs
+title: Escrevendo testes de unidade para C/C++ com o Microsoft Unit Testing Framework para C++ | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,9 +28,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: dd88409bb0774342e0a9f50178e1204cabf72e46
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 76721dbf816cf7b7b8691efc10d22aac6b69cb05
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>Escrevendo teste de unidade para C/C++ com o Microsoft Unit Testing Framework para C++
