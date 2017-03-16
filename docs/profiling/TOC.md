@@ -1,5 +1,4 @@
-# [Ferramentas de Criação de Perfil](profiling-tools.md)
-## [Tour pelos recursos de criação de perfil](profiling-feature-tour.md)
+# [Tour pelos recursos de criação de perfil](profiling-feature-tour.md)
 ## [Guia do iniciante à criação de perfil de desempenho](beginners-guide-to-performance-profiling.md)
 ## [O que há de novo nas ferramentas de criação de perfil](what-s-new-in-profiling-tools.md)
 ## [Executar ferramentas de criação de perfil com ou sem o depurador](running-profiling-tools-with-or-without-the-debugger.md)
