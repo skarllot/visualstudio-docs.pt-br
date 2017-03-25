@@ -30,16 +30,16 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 56d04a67a9e68d719b8fbf664871995a2b4dacab
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: dc5416fe979ed3e52ef2df77e5b495cb98038dcd
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Começando a desenvolver extensões do Visual Studio
 Se você nunca escreveu uma extensão do Visual Studio antes, você provavelmente tem algumas dúvidas. Apresentaremos alguns dos mais comuns aqui. Se você não vir as informações que você está procurando, use os botões de comentários (**esta página foi útil?** na parte inferior da tela) para solicitar que você deseja.  
   
 ## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>O software necessário desenvolver extensões do Visual Studio?  
- Você precisa instalar o SDK do Visual Studio 2015 além do Visual Studio 2015 para desenvolver extensões do Visual Studio.   Você pode instalar o SDK do Visual Studio 2015 como parte da instalação normal ou pode instalá-lo mais tarde. Para obter mais informações sobre como instalar o SDK do Visual Studio, consulte [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+ Você precisa instalar o SDK do Visual Studio, além do Visual Studio para desenvolver extensões do Visual Studio. Você pode instalar o SDK do Visual Studio como parte da instalação normal ou pode instalá-lo mais tarde. Para obter mais informações sobre como instalar o SDK do Visual Studio, consulte [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
 ## <a name="what-kinds-of-things-can-i-do-with-visual-studio-extensions"></a>Que tipos de coisas pode fazer com as extensões do Visual Studio?  
  O céu está o limite quando se trata de imaginando diferentes extensões do Visual Studio. Obviamente, a maioria das extensões tem algo a ver com a escrita de código, mas que não precisa ser o caso. Aqui estão alguns exemplos dos tipos de extensões, que você pode criar:  
@@ -63,20 +63,20 @@ Se você nunca escreveu uma extensão do Visual Studio antes, você provavelment
   
 -   [Editor e extensões do serviço de linguagem](../extensibility/editor-and-language-service-extensions.md): adicionar suas próprias personalizações o IntelliSense fornecido para linguagens do Visual Studio ou criar suporte para novas linguagens de programação. Você pode criar novos conclusões, sugestões e dicas de ferramenta Informaçãorápida novo. Com lâmpadas, você pode adicionar refatoração sugestões e correções de código para oferecer suporte a novas linguagens de programação.  
   
--   [Estendendo projetos](../extensibility/extending-projects.md)  
+-   [Estender projetos](../extensibility/extending-projects.md)  
   
--   [Opções e configurações de usuário estendendo](../extensibility/extending-user-settings-and-options.md)  
+-   [Estender opções e configurações de usuário](../extensibility/extending-user-settings-and-options.md)  
   
--   [Estendendo propriedades e a janela de propriedades](../extensibility/extending-properties-and-the-property-window.md)  
+-   [Estender propriedades e a janela de propriedades](../extensibility/extending-properties-and-the-property-window.md)  
   
--   [Estendendo a outras partes do Visual Studio](../extensibility/extending-other-parts-of-visual-studio.md)  
+-   [Estender outras partes do Visual Studio](../extensibility/extending-other-parts-of-visual-studio.md)  
   
--   [Visual Studio isolada Shell](../extensibility/visual-studio-isolated-shell.md)  
+-   [Shell isolado do Visual Studio](../extensibility/visual-studio-isolated-shell.md)  
   
-##  <a name="a-namebkmkprojecttemplatea-what-project-templates-are-provided-by-the-vssdk"></a><a name="BKMK_ProjectTemplate"></a>Quais modelos de projeto são fornecidos pelo VSSDK?  
+##  <a name="BKMK_ProjectTemplate"></a>Quais modelos de projeto são fornecidos pelo VSSDK?  
  Os dois tipos principais de extensões são extensões VSPackages e MEF. Em geral, as extensões de VSPackage são usadas para extensões que utilizam ou estendem os projetos, janelas de ferramentas e comandos. Extensões do MEF são usadas para estender ou personalizar o editor do Visual Studio.  
   
- Para extensões do Visual c# e Visual Basic, o VSSDK fornece um modelo de projeto VSIX vazio que pode ser usado junto com os novos modelos de item que criam comandos de menu, janelas de ferramentas e extensões do editor. Para obter mais informações, consulte [o que há de novo no SDK do Visual Studio 2015](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md). Você também pode usar este modelo para modelos de projeto do pacote, trechos de código e outros artefatos para distribuição a outros usuários.  
+ Para extensões do Visual c# e Visual Basic, o VSSDK fornece um modelo de projeto VSIX vazio que pode ser usado junto com os novos modelos de item que criam comandos de menu, janelas de ferramentas e extensões do editor. Você também pode usar este modelo para modelos de projeto do pacote, trechos de código e outros artefatos para distribuição a outros usuários.  
   
  Para C++, o Assistente de VSPackage fornece o código para adicionar comandos de menu, janelas de ferramenta e editores personalizados.  
   
@@ -100,7 +100,7 @@ Se você nunca escreveu uma extensão do Visual Studio antes, você provavelment
 ## <a name="where-can-i-find-examples-of-vssdk-code"></a>Onde posso encontrar exemplos de código VSSDK?  
  Cada um dos links listados na seção anterior têm orientações passo a passo que mostram como implementar recursos específicos. Também é possível encontrar código-fonte aberto VSSDK exemplos no GitHub em [exemplos do Visual Studio](https://aka.ms/vs2015sdksamples).  
   
-## <a name="how-can-i-distribute-my-extension"></a>Como distribuir o minha extensão?  
+## <a name="how-can-i-distribute-my-extension"></a>Como distribuir o meu extensão?  
  Você pode instalar a extensão em outro computador ou enviá-lo para seus amigos como um arquivo. VSIX, que você instalar clicando duas vezes nele. Você pode encontrar mais informações sobre pacotes VSIX em [envio extensões do Visual Studio](../extensibility/shipping-visual-studio-extensions.md).  
   
  Você também pode publicar sua extensão na Galeria do Visual Studio, que é visível para um grande número de clientes do Visual Studio. Para obter um exemplo de empacotamento de uma extensão para a Galeria, consulte [passo a passo: publicando uma extensão do Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md). Para obter mais informações sobre o que você precisa fazer para publicar na galeria, consulte [produtos e extensões do Visual Studio](https://visualstudiogallery.msdn.microsoft.com/).

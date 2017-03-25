@@ -28,18 +28,16 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4f93b8c1db59dd8d8a407c82002240641be43018
-ms.openlocfilehash: 1f9248442357c4447703ac6d6dac8a27934904e8
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: efd17a3317302fedcb9bd42aded7a38adee2f75f
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Como: migrar projetos de extensibilidade para o Visual Studio 2017
 
->**Observação:** esta documentação é preliminar e com base na versão RC do Visual Studio 2017.
-
 Este documento explica como atualizar projetos de extensibilidade para 2017 do Visual Studio. Além de descrever como atualizar os arquivos de projeto, ele também descreve como atualizar da versão de manifesto de extensão 2 (v2 VSIX) para o nova versão 3 VSIX formato de manifesto (VSIX v3).
 
-## <a name="install-visual-studio-2017-rc-with-required-workloads"></a>Instalar o Visual Studio 2017 RC com cargas de trabalho necessárias
+## <a name="install-visual-studio-2017-with-required-workloads"></a>Instalar o Visual Studio 2017 com cargas de trabalho necessárias
 
 Verifique se que a instalação inclui as seguintes cargas de trabalho:
 
@@ -59,19 +57,16 @@ O arquivo de projeto (por exemplo, *. csproj) será atualizado:
 
 >**Observação:** se sua solução não referencia o pacote do Microsoft.VSSDK.BuildTools NuGet, você pode ignorar esta etapa.
 
-Para criar sua extensão na v3 VSIX novas formato (versão 3), sua solução precisa ser compilado com as novas ferramentas de compilação VSSDK. Isso será instalado com o Visual Studio 2017 RC, mas sua extensão do VSIX v2 pode ser mantendo uma referência para uma versão mais antiga por meio do NuGet. Nesse caso, você precisará instalar manualmente uma atualização do pacote do Microsoft.VSSDK.BuildTools NuGet para sua solução. No momento da versão RC, esse pacote será em estado de "Pré-lançamento".
+Para criar sua extensão na v3 VSIX novas formato (versão 3), sua solução precisa ser compilado com as novas ferramentas de compilação VSSDK. Isso será instalado com o Visual Studio 2017, mas sua extensão de v2 VSIX pode estar mantendo uma referência a uma versão anterior por meio do NuGet. Nesse caso, você precisará instalar manualmente uma atualização do pacote do Microsoft.VSSDK.BuildTools NuGet para sua solução.
 
 Para atualizar as referências de NuGet para Microsoft.VSSDK.BuildTools:
 
 * Clique na solução e escolha **gerenciar pacotes NuGet para solução...**
 * Navegue até o **atualizações** guia.
-* Marque a caixa para **Include Prerelease**.
 * Selecione Microsoft.VSSDK.BuildTools (versão mais recente).
 * Pressione **atualização**.
 
 ![Ferramentas de compilação VSSDK](media/vssdk-build-tools.png)
-
->**Observação:** a captura de tela mostra uma versão diferente de BuildTools. Selecione a versão RC.
 
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>Faça as alterações para o manifesto de extensão do VSIX
 
@@ -83,7 +78,7 @@ Para garantir que a instalação do usuário do Visual Studio tem todos os assem
 * Certifique-se de `InstallationTarget` inclui 15.0.
 * Adicione os pré-requisitos de instalação necessários (conforme mostrado no exemplo abaixo).
   * Recomendamos que você especificar apenas as IDs de componente de pré-requisitos de instalação.
-  * Consulte a seção no final deste documento para [instruções sobre como identificar as IDs de componente](#finding-component-ids).
+  * Consulte a seção no final deste documento para [instruções na identificação de IDs de componente](#finding-component-ids).
 
 Exemplo:
 
@@ -161,7 +156,7 @@ Teste o VSIX instalada com êxito em um computador com os pré-requisitos necess
 
 Ao tente instalar a extensão:
 
-* No Visual Studio 2017 RC
+* No Visual Studio 2017
 
 ![Instalador VSIX no Visual Studio 2017](media/vsixinstaller-vs-2017.png)
 
@@ -170,7 +165,7 @@ Ao tente instalar a extensão:
   * Deve funcionar para o Visual Studio 2012, o Visual Studio 2013, o Visual Studio 2015.
 * Opcional: Verificar que o verificador de versão do instalador VSIX oferece uma opção de versões.
   * Inclui versões anteriores do Visual Studio (se instalado).
-  * Inclui o Visual Studio 2017 RC.
+  * Inclui 2017 do Visual Studio.
 
 Se o Visual Studio foi aberto recentemente, você poderá ver uma caixa de diálogo como esta:
 
@@ -180,9 +175,9 @@ Aguarde os processos desligar ou encerrar as tarefas manualmente. Você pode enc
 
 >**Observação:** esses processos não serão automaticamente desligado enquanto uma instância do Visual Studio está em execução. Verifique se você encerrou todas as instâncias do Visual Studio no computador – inclusive os de outros usuários, e continuar tentar novamente.
 
-## <a name="check-when-missing-the-required-prerequisites"></a>Verificar quando os pré-requisitos necessários ausentes
+## <a name="check-when-missing-the-required-prerequisites"></a>Verificar quando tem os pré-requisitos necessários
 
-* Tentativa de instalar a extensão em um computador com Visual Studio 2017 RC que não CONTÊM todos os componentes definidos nos pré-requisitos (acima).
+* Tentativa de instalar a extensão em um computador com Visual Studio 2017 que não CONTÊM todos os componentes definidos nos pré-requisitos (acima).
 * Verifique se a instalação identifica o componente ausente/s e lista como um pré-requisito no VSIXInstaller.
 * Observação: Elevação será obrigatória se todos os pré-requisitos precisam ser instalados com a extensão.
 
@@ -196,7 +191,7 @@ Para fornecer mais orientação, identificamos alguns tipos comuns de extensão 
 
 Tipo de extensão | Nome de Exibição |    Id
 --- | --- | ---
-Editor | Editor de núcleo do Visual Studio    | Microsoft.VisualStudio.CoreEditor
+Editor | Editor de núcleo do Visual Studio    | Microsoft.VisualStudio.Component.CoreEditor
 Roslyn | C# e Visual Basic | Microsoft.VisualStudio.Component.Roslyn.LanguageServices
 WPF | Núcleo de carga de trabalho da área de trabalho gerenciada | Microsoft.VisualStudio.Component.ManagedDesktop.Core
 Depurador | Depurador Just-In-Time | Microsoft.VisualStudio.Component.Debugger.JustInTime

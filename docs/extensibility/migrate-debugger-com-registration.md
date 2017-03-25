@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e273f31cb1f43ff79fd9a4ade37d112351dea9b5
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 19ce2d4cc1ff92240529f35f42845778ded49fdf
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="migrate-64-bit-debugger-com-class-registration"></a>Migrar o registro de classe COM de depurador de 64 bits
-
->**Observação:** esta documentação é preliminar e com base na versão RC do Visual Studio 2017.
 
 Para extensões do depurador que registrar classes COM em HKEY_CLASSES_ROOT (com regasm, regsvr32, ou gravar diretamente no registro) e carregados no msvsmon.exe (o depurador remoto), é possível fornecer esse registro para msvsmon sem precisar gravar em HKEY_CLASSES_ROOT. Isso afeta os avaliadores de expressão de depurador .NET herdados ou mecanismos de depuração que são configurados para carregar no processo de msvsmon.exe.
 
