@@ -34,8 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e419996e788914271e5a3d09b66ff8375b00150e
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: e42b90e6e9c3b151ae47032b54686c50bf838426
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="walkthrough-identifying-performance-problems"></a>Passo a passo: Identificando problemas de desempenho
@@ -76,7 +77,7 @@ Este passo a passo demonstra como criar um perfil de um aplicativo para identifi
   
      Você deve usar um build de versão para detectar problemas de desempenho no aplicativo. Um build de versão é recomendado para criação de perfil porque um build de depuração contém informações adicionais compiladas que podem afetar negativamente o desempenho e não ilustrar os problemas de desempenho com precisão.  
   
-4.  No menu **Analisar**, clique em **Iniciar o Assistente de Desempenho**.  
+4.  No menu **Analisar**, selecione **Criador de Perfil de Desempenho**, **Assistente de Desempenho** e, em seguida, **Iniciar**.  
   
      O Assistente de Desempenho é exibido.  
   
@@ -177,8 +178,3 @@ Este passo a passo demonstra como criar um perfil de um aplicativo para identifi
  [Visões gerais](../profiling/overviews-performance-tools.md)   
  [Introdução](../profiling/getting-started-with-performance-tools.md)   
  [/Z7, /Zi, /ZI (Formato de Informações de Depuração)](/visual-cpp/build/reference/z7-zi-zi-debug-information-format)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

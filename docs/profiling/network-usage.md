@@ -1,6 +1,6 @@
 ---
-title: Uso de rede | Microsoft Docs
-ms.custom: 
+title: Analisar o uso de rede em aplicativos UWP no Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -29,11 +29,12 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a4eb45e8e0548ead5d99c441abcfa7baf3ffde4f
-ms.openlocfilehash: 1e345367473f72c0b83c3bc7e4ede393c1bc56ec
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 60d05761993a4bd7547d83274e103de1b5c30b34
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="network-usage"></a>Uso de rede
+# <a name="analyze-network-usage-in-uwp-apps"></a>Analisar o uso de rede em aplicativos UWP
 A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as operações de rede executadas usando a [API Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx). Analisar os dados pode ajudar a resolver problemas, como problemas de autenticação e acesso, uso incorreto de cache e exibição ruim e desempenho de download.  
   
  A ferramenta de rede dá suporte somente a aplicativos da Plataforma Universal do Windows. Outras plataformas não têm suporte no momento.  
@@ -92,8 +93,3 @@ A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as 
  [Executar ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
  [Blog do Visual Studio: introdução ao inspetor de rede do Visual Studio](http://go.microsoft.com/fwlink/?LinkId=535022)   
  [Vídeo do Channel 9: ferramentas de diagnóstico do VS – novo criador de perfil de rede](http://channel9.msdn.com/Series/ConnectOn-Demand/206)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

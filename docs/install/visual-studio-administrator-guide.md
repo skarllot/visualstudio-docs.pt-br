@@ -1,7 +1,7 @@
 ---
 title: Guia do administrador do Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 01/12/2017
+ms.date: 03/07/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -33,27 +33,30 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5e1ab0284a11fb9ecf30694d22b8bb5dc7a52a6d
-ms.openlocfilehash: 91fb897e0bf124234484c3aada08ac57c4be1923
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 69ac1327fa9233bf0ecc18be5e7d2f2a4f82b3b0
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="visual-studio-administrator-guide-for-visual-studio-2017-rc"></a>Guia de administrador do Visual Studio para Visual Studio 2017 RC
+# <a name="visual-studio-administrator-guide-for-visual-studio-2017"></a>Guia do administrador do Visual Studio para Visual Studio 2017
 
-Você pode implantar o Visual Studio em uma rede, com a condição de que cada computador de destino atenda aos [requisitos mínimos de instalação](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs). Você pode criar um compartilhamento de rede, executando o arquivo de instalação com a opção --layout (conforme descrito na página [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)) e, em seguida, copiá-lo do computador local para o compartilhamento de rede.   
+Você pode implantar o Visual Studio em uma rede, com a condição de que cada computador de destino atenda aos [requisitos mínimos de instalação](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs). É possível criar um compartilhamento de rede executando o arquivo de instalação com a opção --layout (conforme descrito na página [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)) e, em seguida, copiá-lo do computador local para o compartilhamento de rede.   
 
- Observe que as instalações de um compartilhamento de rede “lembrarão” do local de origem de onde vieram. Isso significa que um reparo de um computador cliente pode ter que retornar para o compartilhamento de rede do qual o cliente foi instalado originalmente. Escolha cuidadosamente seu local de rede para que ele se alinhe com o tempo de vida esperado de execução de clientes do Visual Studio 2017 na sua organização.  
+ Observe que as instalações de um compartilhamento de rede “lembrarão” do local de origem de onde vieram. Isso significa que um reparo de um computador cliente pode ter que retornar para o compartilhamento de rede do qual o cliente foi instalado originalmente. Escolha cuidadosamente seu local de rede para que ele se alinhe com o tempo de vida esperado de execução de clientes do Visual Studio 2017 na sua organização.
 
- > [!IMPORTANT]
- > Embora o Visual Studio 2017 RC, de modo geral, tenha suporte para uso em um ambiente de produção, as cargas de trabalho e componentes que estão marcados como "Visualização" na interface do usuário da instalação não têm suporte para uso em ambiente de produção.
+## <a name="tools"></a>Ferramentas
+
+ Temos várias ferramentas em oferta para ajudá-lo a gerenciar as instalações do Visual Studio:
+
+* [VS-Setup-Samples](https://github.com/microsoft/vs-setup-samples): amostras do C# e C++ para ajudar os usuários a investigar as instâncias do VS em seus computadores.
+* [VSWhere](https://github.com/microsoft/vswhere): um .exe do C++ que ajuda você a encontrar as principais ferramentas do Visual Studio.
+* [VSSetup.PowerShell](https://github.com/microsoft/vssetup.powershell): scripts avançados do PowerShell para tarefas comuns de administração relacionadas à instalação.
+
 
 ## <a name="see-also"></a>Consulte também
-* [Instalar o Visual Studio 2017 RC](install-visual-studio.md)
-* [Usar parâmetros de linha de comando para instalar o Visual Studio 2017 RC](use-command-line-parameters-to-install-visual-studio.md)
-* [Criar uma instalação offline do Visual Studio 2017 RC](create-an-offline-installation-of-visual-studio.md)
-* [How to Report a Problem with Visual Studio 2017 RC](../ide/how-to-report-a-problem-with-visual-studio-2017.md) (Como relatar um problema com o Visual Studio 2017 RC)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
+* [Instalar o Visual Studio 2017](install-visual-studio.md)
+* [Usar parâmetros de linha de comando para instalar o Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)
+* [Criar uma instalação offline do Visual Studio 2017](create-an-offline-installation-of-visual-studio.md)
+* [Usar IDs de carga de trabalho e de componente do Visual Studio para personalizar a instalação offline](workload-and-component-ids.md)
+* [Relatar um problema com o Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

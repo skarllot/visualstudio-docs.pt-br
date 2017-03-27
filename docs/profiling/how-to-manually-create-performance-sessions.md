@@ -35,8 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 20ee3246d9cee5ed08e5831165d20910ab65906c
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 0a9bdb4b2301274435305e3b67cbbdc0de8ba019
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="how-to-manually-create-performance-sessions"></a>Como criar manualmente sessões de desempenho
@@ -44,7 +45,7 @@ Você pode criar manualmente uma sessão de desempenho. Não é necessário abri
   
 ### <a name="to-manually-create-a-performance-session"></a>Para criar manualmente uma sessão de desempenho  
   
-1.  No menu **Analisar**, aponte para **Criador de Perfil** e, em seguida, clique em **Nova Sessão de Desempenho**.  
+1.  No menu **Depurar**, aponte para **Criador de Perfil**, em seguida, para **Gerenciador de Desempenho** e clique em **Nova Sessão de Desempenho**.  
   
      Uma sessão de desempenho vazia é adicionada ao **Gerenciador de Desempenho**.  
   
@@ -57,8 +58,3 @@ Você pode criar manualmente uma sessão de desempenho. Não é necessário abri
 ## <a name="see-also"></a>Consulte também  
  [Gerenciador de Desempenho](../profiling/performance-explorer.md)   
  [Introdução](../profiling/getting-started-with-performance-tools.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

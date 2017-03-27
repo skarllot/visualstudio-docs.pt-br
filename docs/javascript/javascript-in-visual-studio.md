@@ -28,28 +28,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: d4741ff741b89997bbfe4fea9b0f60bba84e63db
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 77e7ce26df70e41e2328442454fe78c7a663f1f3
+ms.openlocfilehash: de00ef86413571739446b61427c3a8e6c4680c06
+ms.lasthandoff: 03/08/2017
 
 ---
 # <a name="javascript-in-visual-studio"></a>JavaScript no Visual Studio
 O JavaScript é uma linguagem de primeira classe no Visual Studio. Você pode usar a maioria ou todos os auxílios de edição padrão (trechos de código IntelliSense, e assim por diante) ao escrever o código JavaScript no Visual Studio IDE. Você pode escrever código JavaScript para muitos tipos de aplicativos e serviços.  
   
- Para obter a documentação de referência da linguagem JavaScript, consulte [JavaScript](http://msdn.microsoft.com/library/d1et7k7c\(v=vs.94\).aspx).  
+ Para obter a documentação de referência da linguagem JavaScript, consulte [JavaScript](https://docs.microsoft.com/scripting/javascript/javascript-language-reference).
   
  Versões específicas do Visual Studio ou extensões específicas do Visual Studio podem ser necessárias para desenvolver serviços e tipos de aplicativo específicos usando HTML e JavaScript. A lista a seguir contém links para obtenção de mais informações.  
   
--   Para criar aplicativos de plataforma cruzada usando o Apache Cordova, [obtenha as Ferramentas do Visual Studio para Apache Cordova](http://go.microsoft.com/fwlink/p/?LinkId=397606).  
+-   Para criar aplicativos de plataforma cruzada usando o Apache Cordova, consulte [Ferramentas do Visual Studio para Apache Cordova](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/).  
   
--   Para criar aplicativos [da Windows Store](http://dev.windows.com/develop), [do Windows Phone](http://dev.windows.com/develop) e universais (que dão suporte a ambas as plataformas), [obtenha as ferramentas](http://dev.windows.com/en-us/develop/downloads).  
-  
--   Para criar serviços baseados em nuvem, consulte o [site do Microsoft Azure](http://azure.microsoft.com/documentation/).  
-  
--   Para criar sites e aplicativos Web, [consulte o site do ASP.NET](http://www.asp.net/get-started/websites).  
-  
-    > [!NOTE]
-    >  Você pode criar um site ASP.NET vazio e usá-lo para programação em HTML, CSS e JavaScript. O arquivo Webconfig fornecido pelo ASP.NET habilita a depuração no Visual Studio (ou você pode usar ferramentas F12 quando executa o aplicativo).  
+-   Para obter links para as tecnologias do JavaScript que podem ser usadas no Visual Studio, consulte as páginas [JavaScript](https://docs.microsoft.com/scripting/javascript/) e [Tecnologias de script](https://docs.microsoft.com/scripting/).
   
  O editor de JavaScript no Visual Studio fornece é compatível com o IntelliSense. Para obter mais informações, consulte [JavaScript IntelliSense](../ide/javascript-intellisense.md).  
   

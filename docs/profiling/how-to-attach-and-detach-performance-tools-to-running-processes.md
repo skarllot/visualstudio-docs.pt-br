@@ -37,8 +37,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 71eb151dd0087016ecc407529a16f8441d7269cc
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: e28afe483218d17cc6d8409f1e140456e4e20a47
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="how-to-attach-and-detach-performance-tools-to-running-processes"></a>Como anexar e desanexar ferramentas de desempenho de processos em execução
@@ -59,11 +60,7 @@ O criador de perfil pode ser usado para anexar ou desanexar de um processo em ex
   
 ### <a name="to-attach-to-a-running-process"></a>Para anexar a um processo em execução  
   
-1.  No menu **Analisar**, aponte para **Criador de Perfil** e clique em **Anexar/Desanexar**.  
-  
-     \- ou -  
-  
-     No **Gerenciador de Desempenho**, clique com o botão direito do mouse na sessão de desempenho e, em seguida, clique em **Anexar/Desanexar**.  
+1.  No menu **Depurar**, aponte para **Criador de Perfil**, em seguida, para **Gerenciador de Desempenho** e clique em **Anexar**.    
   
      É exibida a caixa de diálogo **Anexar Criador de Perfil a Processo**.  
   
@@ -73,11 +70,7 @@ O criador de perfil pode ser usado para anexar ou desanexar de um processo em ex
   
 ### <a name="to-detach-from-a-running-process"></a>Para desanexar de um processo em execução  
   
-1.  No menu **Analisar**, aponte para **Criador de Perfil** e clique em **Anexar/Desanexar**.  
-  
-     \- ou -  
-  
-     No **Gerenciador de Desempenho**, clique com o botão direito do mouse na sessão de desempenho e, em seguida, clique em **Anexar/Desanexar**.  
+1.  No menu **Depurar**, aponte para **Criador de Perfil**, em seguida, para **Gerenciador de Desempenho** e clique em **Desanexar**. 
   
      É exibida a caixa de diálogo **Anexar Criador de Perfil a Processo**.  
   
@@ -91,8 +84,3 @@ O criador de perfil pode ser usado para anexar ou desanexar de um processo em ex
  [Como iniciar e encerrar a coleta de dados de desempenho](../profiling/how-to-start-and-end-performance-data-collection.md)   
  [Criação de perfil e segurança do Windows Vista](../profiling/profiling-and-windows-vista-security.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

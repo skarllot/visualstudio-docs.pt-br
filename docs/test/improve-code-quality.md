@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7a282fc04c1eb01f0c56b1d76880276fc270686d
-ms.openlocfilehash: df5195e7cc435f6da8ebfee4589d7c6258018993
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 2fa87621ed76fb93a9e92d558be5519d783274c5
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="improve-code-quality"></a>Melhorar a qualidade do código
@@ -48,6 +48,7 @@ O que é a qualidade do código? Correção, facilidade de manutenção e até m
 |||  
 |-|-|  
 |[Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)|O Gerenciador de Testes facilita a integração de testes de unidade em sua prática de desenvolvimento. Você pode usar a estrutura de teste de unidade da Microsoft ou uma das várias estruturas de software livre e de terceiros.|  
+|[Live Unit Testing com o Visual Studio](../test/live-unit-testing.md)|O Live Unit Testing executa testes de unidade automaticamente em segundo plano e exibe graficamente a cobertura de código e os resultados de teste no editor de código do Visual Studio.|  
 |[Analisando a qualidade do aplicativo](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)|As ferramentas de análise de código estático encontram problemas de design, uso, facilidade de manutenção e estilo no código gerenciado e C++. Muitos desses problemas podem resultar em bugs que são difíceis de reproduzir no ambiente de teste padrão.|  
 |[Medindo complexidade e facilidade de manutenção do código gerenciado](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|As métricas de código são um conjunto de medidas de software que fornecem aos desenvolvedores uma visão melhor do código que estão desenvolvendo. As métricas incluem um índice de facilidade de manutenção para funções e classes, a complexidade ciclomática de funções, a profundidade de herança de classes e a quantidade de acoplamento entre classes.|  
   

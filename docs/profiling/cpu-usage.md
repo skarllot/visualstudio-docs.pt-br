@@ -1,6 +1,6 @@
 ---
-title: Uso da CPU | Microsoft Docs
-ms.custom: 
+title: Analisar o uso da CPU no Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -29,12 +29,12 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8a3c6e60d0ea85d93281764ec3a3435538b9baa0
-ms.openlocfilehash: d89f4c4bf3d1d4230592896be14dd7d64d90825f
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: bb13868209d29ee88aaca25d37bbe0041f49961b
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="cpu-usage"></a>Uso da CPU
+# <a name="analyze-cpu-usage"></a>Analisar o uso de CPU
 Quando você precisa investigar problemas de desempenho no aplicativo, um bom começo é entender como ele usa a CPU. A ferramenta **Uso da CPU** mostra a você os momentos em que a CPU está gastando tempo executando o código do Visual C++, Visual C#/Visual Basic e JavaScript. A partir do Visual Studio 2015 Atualização 1, é possível ver um detalhamento por função do uso da CPU sem sair do depurador. É possível ativar e desativar a criação de perfil da CPU durante a depuração e exibir os resultados quando a execução é interrompida, por exemplo, em um ponto de interrupção.  
   
 Você tem várias opções para executar e gerenciar a sessão de diagnóstico. Por exemplo, é possível executar a ferramenta **Uso da CPU** em computadores locais ou remotos ou em um simulador ou emulador. Você pode analisar o desempenho de um projeto aberto no Visual Studio, anexado a um aplicativo em execução ou iniciar um aplicativo instalado por meio da Windows Store. Para obter mais informações, consulte [Run Profiling Tools with or without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md) (Executar as ferramentas de criação de perfil com ou sem o depurador). Para obter um passo a passo que analisa o desempenho de um aplicativo da Windows Store, consulte [Analisar o uso da CPU nos aplicativos da Loja](https://msdn.microsoft.com/en-us/library/windows/apps/dn641982.aspx). 

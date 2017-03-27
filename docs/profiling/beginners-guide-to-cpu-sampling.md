@@ -1,7 +1,7 @@
 ---
-title: Guia do iniciante para amostragem de CPU | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
+title: Guia do iniciante para amostragem de CPU no Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 03/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,8 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 53907b9b88deca671ee0695385dcbc856a35d309
-ms.openlocfilehash: 072783e138fcc20d80ccbe8ec8b66905778cf67d
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: ddd52c1af0a164235de2e5055896e020dc8715c3
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>Guia do Iniciante para amostragem de CPU
@@ -53,7 +54,7 @@ Você pode usar as ferramentas de criação de perfil do Visual Studio para anal
 > [!TIP]
 >  Ao analisar o código que chama as funções do Windows, você deverá verificar se tem os arquivos .pdb mais recentes. Sem esses arquivos, as exibições de relatório listarão nomes de funções do Windows criptografadas e difíceis de entender. Para obter mais informações de como verificar se você tem os arquivos necessários, consulte [How to: Reference Windows Symbol Information](../profiling/how-to-reference-windows-symbol-information.md) (Instruções: informações sobre símbolos do Windows de referência).  
   
-##  <a name="a-namestep1a-create-and-run-a-performance-session"></a><a name="Step1"></a> Criar e executar uma sessão de desempenho  
+##  <a name="Step1"></a> Criar e executar uma sessão de desempenho  
  Para obter os dados que precisa analisar, você deve primeiro criar uma sessão de desempenho e, em seguida, executar a sessão. O **Assistente de Desempenho** permite executar esses dois procedimentos.  
   
  Se não estiver criando perfil de um aplicativo da área de trabalho do Windows ou de um aplicativo ASP.NET, você deverá usar uma das outras ferramentas de criação de perfil. Consulte [Profiling Tools](../profiling/profiling-tools.md) (Ferramentas de criação de perfil).  
@@ -65,7 +66,7 @@ Você pode usar as ferramentas de criação de perfil do Visual Studio para anal
     > [!IMPORTANT]
     >  Se você não for um administrador do computador que está usando, execute o Visual Studio como um administrador enquanto estiver usando o criador de perfil. (Clique com o botão direito do mouse no ícone do aplicativo do Visual Studio e, em seguida, clique em **Executar como administrador**.  
   
-2.  No menu **Depurar**, clique em **Criador de Perfil de Desempenho**.  
+2.  No menu **Depurar**, selecione **Criador de Perfil** e, em seguida, **Criador de Perfil de Desempenho**.  
   
 3.  Marque a opção **Assistente de Desempenho** e, em seguida, clique em **Iniciar**.  
   
@@ -79,7 +80,7 @@ Você pode usar as ferramentas de criação de perfil do Visual Studio para anal
   
      Depois de concluir a execução do aplicativo, a exibição **Resumo** dos dados de criação de perfil aparecerá na janela principal do Visual Studio e um ícone para a nova sessão aparecerá na janela **Gerenciador de Desempenho**.  
   
-##  <a name="a-namestep2a-step-2-analyze-sampling-data"></a><a name="Step2"></a> Etapa 2: Analisar os dados de amostragem  
+##  <a name="Step2"></a> Etapa 2: Analisar os dados de amostragem  
  Quando você concluir a execução de uma sessão de desempenho, a exibição **Resumo** do relatório de criação de perfil aparecerá na janela principal do Visual Studio.  
   
  Recomendamos que você comece a analisar os dados examinando o **Afunilamento** e, em seguida, a lista de funções que estão fazendo a maior parte do trabalho e, finalmente, se concentrando em outras funções usando o **Linha do Tempo de Resumo**. Você também pode exibir sugestões e avisos de criação de perfil na janela **Lista de Erros**.  
@@ -124,7 +125,7 @@ Você pode usar as ferramentas de criação de perfil do Visual Studio para anal
   
     -   Para exibir informações detalhadas sobre o aviso, clique com o botão direito do mouse no erro e, em seguida, clique em **Mostrar Ajuda para Erros**  
   
-##  <a name="a-namestep3a-step-3-revise-code-and-rerun-a-session"></a><a name="Step3"></a> Etapa 3: Revisar o código e executar uma sessão novamente  
+##  <a name="Step3"></a> Etapa 3: Revisar o código e executar uma sessão novamente  
  Depois de localizar e otimizar uma ou mais funções, você poderá repetir a execução de criação de perfil e comparar os dados para ver a diferença que as alterações acarretaram no desempenho do aplicativo.  
   
 #### <a name="to-revise-code-and-rerun-the-profiler"></a>Para revisar o código e executar novamente o criador de perfil  
@@ -143,8 +144,3 @@ Você pode usar as ferramentas de criação de perfil do Visual Studio para anal
  [Gerenciador de Desempenho](../profiling/performance-explorer.md)   
  [Introdução](../profiling/getting-started-with-performance-tools.md)   
  [Visões gerais](../profiling/overviews-performance-tools.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

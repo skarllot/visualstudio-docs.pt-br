@@ -39,9 +39,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5bdc6cc6f2073ee017c3ffa2147e0fd3bcf5b128
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 9f0e4f1541de074e02c2a74e3ba2605232a53a09
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>Como coletar dados de desempenho de um site da Web
@@ -64,7 +64,7 @@ Você pode usar o **Assistente de Desempenho** para coletar dados de desempenho 
   
 1.  Abra o projeto Web do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] em [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] ou [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)].  
   
-2.  No menu **Analisar**, clique em **Iniciar o Assistente de Desempenho**.  
+2.  No menu **Analisar**, selecione **Criador de Perfil de Desempenho**, **Gerenciador de Desempenho** e, em seguida, **Iniciar**.  
   
 3.  Na primeira página do assistente, selecione um método de criação de perfil e, em seguida, clique em **Avançar**. Para obter mais informações sobre métodos de criação de perfil, consulte [Noções básicas sobre métodos de coleta de desempenho](../profiling/understanding-performance-collection-methods.md). Observe que o método de criação de perfil do visualizador de simultaneidade não está disponível para aplicativos Web.  
   
@@ -88,7 +88,7 @@ Você pode usar o **Assistente de Desempenho** para coletar dados de desempenho 
   
 1.  Abra [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] ou [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)].  
   
-2.  No menu **Analisar**, clique em **Iniciar o Assistente de Desempenho**.  
+2.  No menu **Analisar**, selecione **Criador de Perfil de Desempenho**, **Gerenciador de Desempenho** e, em seguida, **Iniciar**.  
   
 3.  Na primeira página do assistente, selecione um método de criação de perfil e, em seguida, clique em **Avançar**. Para obter mais informações, consulte [Noções Básicas sobre Métodos de Coleta de Desempenho](../profiling/understanding-performance-collection-methods.md).  
   
