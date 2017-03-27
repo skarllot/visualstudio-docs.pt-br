@@ -4,9 +4,9 @@ hide_bc: true
 title: "Documentação do Visual Studio"
 description: "Saiba como usar o Visual Studio 2017 para desenvolver aplicativos, serviços e ferramentas na linguagem de sua escolha para suas plataformas e dispositivos."
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 2a782993b8e2787c99c384c6df9c72316fe11521
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 371d314bfb81e47a13e7f00d4d4269313477ecf9
+ms.openlocfilehash: c00f51ce4662806d4c7112a3bd7a5e531e3ba521
+ms.lasthandoff: 03/23/2017
 
 ---
 <div id="main" class="v2">
@@ -570,8 +570,26 @@ ms.lasthandoff: 03/07/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Estender</h3>
-                                                    <p>Adicione sua própria funcionalidade ao IDE do Visual Studio para melhorar sua experiência de desenvolvimento.
-                                                    </p>
+                                                    <p>Adicione sua própria funcionalidade ao IDE do Visual Studio para melhorar sua experiência de desenvolvimento.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/visualstudio/data-tools/accessing-data-in-visual-studio">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img data-scaleimage="./images/vs_features-9.svg" src="./images/vs_features-9.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Dados</h3>
+                                                    <p>Crie aplicativos que se conectam aos dados em praticamente qualquer produto de banco de dados ou serviço, em qualquer formato, em qualquer lugar &#8211;em um computador local, em uma rede local ou em uma nuvem pública, privada ou híbrida.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -767,4 +785,3 @@ ms.lasthandoff: 03/07/2017
         </ul>
     </div>
 </div>
-
