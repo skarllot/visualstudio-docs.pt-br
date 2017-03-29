@@ -158,7 +158,7 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
   
 1.  Selecione o projeto de teste no Gerenciador de Soluções.  
   
-2.  Escolha **Gerenciar pacotes NuGet... ** no menu de atalho.  
+2.  Escolha **Gerenciar pacotes NuGet...** no menu de atalho.  
   
 3.  Pesquise `Microsoft.SharePoint.Emulators` na categoria **Online** e escolha **Instalar**.  
   
