@@ -67,7 +67,7 @@ Usando o Microsoft Help Viewer, você pode adicionar, remover, atualizar e mover
   
     -   Insira o caminho de um arquivo .msha ou a URL de um ponto de extremidade de serviço.  
   
-    -   Escolha o botão Procurar (**... **) para navegar para um arquivo .msha.  
+    -   Escolha o botão Procurar (**...**) para navegar para um arquivo .msha.  
   
     -   Na lista, escolha a entrada usada mais recentemente.  
   
