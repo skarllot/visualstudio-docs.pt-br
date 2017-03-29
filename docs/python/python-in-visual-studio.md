@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 9f888c27357a5e13fd5e1977bd51a200e928be64
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 746dd25dde790d5e262e25a3702b49721edc3510
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -192,3 +192,4 @@ Recursos com suporte por versão e edição do Visual Studio:
 
 - [Escrevendo jogos Kinect com o Python usando o PyKinect](https://github.com/Microsoft/PTVS/wiki/PyKinect) (wiki do GitHub)
 - [Ponte do WFastCGI entre o IIS e o Python](https://pypi.python.org/pypi/wfastcgi) (python.org)
+
