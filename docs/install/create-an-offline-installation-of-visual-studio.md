@@ -2,7 +2,7 @@
 title: Criar um instalador offline para o Visual Studio 2017 | Microsoft Docs
 description: Saiba como criar um instalador offline para o Visual Studio.
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 03/21/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
-ms.openlocfilehash: acb47946c29d99cb53b34d67fe8a26f5611307f9
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 563c78a49eb55886b1ddbd4f437951c99c6568e5
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="create-an-offline-installer-for-visual-studio-2017"></a>Criar um instalador offline para o Visual Studio 2017
@@ -54,6 +54,8 @@ O arquivo de instalação &mdash; ou para ser mais específico, um arquivo boots
 |Visual Studio Enterprise |**vs_enterprise.exe**|  
 |Visual Studio Professional |**vs_professional.exe**|  
 |Comunidade Visual Studio |**vs_community.exe**|
+
+Outros bootstrappers com suporte incluem vs_buildtools.exe, vs_feedbackclient.exe, vs_teamexplorer.exe, vs_testagent.exe, vs_testcontroller.exe e vs_testprofessional.exe.
 
 ## <a name="create-an-offline-installation-folder"></a>Criar uma pasta de instalação offline
 Para criar uma instalação offline com todos os idiomas e recursos, use um dos comandos dos exemplos a seguir.
@@ -90,8 +92,6 @@ Talvez você deseje atualizar o instalador offline em uma data posterior. Veja c
 * Para atualizar uma instância do Visual Studio instalada por meio de uma pasta de instalação offline, execute o instalador do Visual Studio e, em seguida, clique em **Atualizar**.
 * Para atualizar a pasta de instalação offline para que ela inclua as últimas atualizações, execute o comando ```--layout``` novamente. Lembre-se de apontar para a mesma pasta usada anteriormente; dessa forma, somente os componentes que foram atualizados desde a última execução de ```--layout``` serão baixados.
 
-
-Se desejar atualizar a instalação offline, execute o comando `--layout` novamente. Lembre-se de apontar para a mesma pasta usada anteriormente; dessa forma, somente os componentes que foram atualizados desde a última execução de `--layout` serão baixados.
 
 ### <a name="how-to-troubleshoot-an-offline-installer"></a>Como solucionar problemas de um instalador offline
 Às vezes, as coisas dão errado. Esta é uma tabela de problemas conhecidos e algumas soluções alternativas que podem ajudar.
