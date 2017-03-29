@@ -36,6 +36,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: efa11bb6fcbdda678dc11c80ce97ee7d7eedc0c3
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="how-to-reference-windows-symbol-information"></a>Como fazer referência a informações de símbolo do Windows
@@ -62,13 +63,8 @@ As Ferramentas de Criação de Perfil do Visual Studio usam arquivos de símbolo
   
      **C:\SymbolCache**  
   
-     Você também pode clicar no botão de reticências (**... **) e, em seguida, selecionar um diretório na caixa de diálogo **Procurar Pasta**.  
+     Você também pode clicar no botão de reticências (**...**) e, em seguida, selecionar um diretório na caixa de diálogo **Procurar Pasta**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)   
  [Como serializar informações de símbolo](../profiling/how-to-serialize-symbol-information.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

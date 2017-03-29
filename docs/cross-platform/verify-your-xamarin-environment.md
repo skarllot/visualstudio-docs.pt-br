@@ -29,6 +29,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
 ms.openlocfilehash: 0bd14e6a67fd78577f28469f495a44841253eaf1
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="verify-your-xamarin-environment"></a>Verificar o ambiente do Xamarin
@@ -70,7 +71,7 @@ Depois de ter concluído os instaladores (consulte [Configurar e instalar](../cr
   
              ![Selecionando o Emulador do Visual Studio para Android como um destino de depuração](../cross-platform/media/crossplat-xamarin-verify-3.png "CrossPlat Xamarin Verificação 3")  
   
-             Observação: se você não vir a opção de menu **Ferramentas > Emulador do Visual Studio para Android... **, você poderá não ter o emulador autoinstalado. Vá para o **Painel de Controle > Programas e Recursos**, selecione **Microsoft Visual Studio** e clique em **Alterar** para executar novamente o instalador. Clique em **Modificar** no instalador, marque a caixa de **Desenvolvimento Móveis de Multiplataforma > Emulador do Microsoft Visual Studio para Android** e clique em **Atualização**.  
+             Observação: se você não vir a opção de menu **Ferramentas > Emulador do Visual Studio para Android...**, você poderá não ter o emulador autoinstalado. Vá para o **Painel de Controle > Programas e Recursos**, selecione **Microsoft Visual Studio** e clique em **Alterar** para executar novamente o instalador. Clique em **Modificar** no instalador, marque a caixa de **Desenvolvimento Móveis de Multiplataforma > Emulador do Microsoft Visual Studio para Android** e clique em **Atualização**.  
   
         -   Para o Windows 7 ou anterior: selecione o Xamarin Player para Android no menu suspenso em vez disso e pressione F5 para executá-lo. Para obter detalhes sobre o Xamarin Player, seu gerenciador de dispositivos e dicas de solução de problemas, leia [Xamarin Android Player](http://developer.xamarin.com/guides/android/getting_started/installation/android-player/) (xamarin.com).  
   
@@ -120,7 +121,7 @@ Depois de ter concluído os instaladores (consulte [Configurar e instalar](../cr
   
         -   Verifique se nas propriedades do projeto do iOS na guia de assinatura de pacote de iOS, se o campo de autorização personalizada está vazio para a configuração de depuração ativa.  Observação: você só deverá tentar remover essa configuração se você tiver encontrado a mensagem de erro acima.  
   
-##  <a name="a-namemissinga-are-the-xamarin-project-templates-missing-try-this"></a><a name="missing"></a> Os modelos de projeto de Xamarin estão faltando? Experimente isto  
+##  <a name="missing"></a> Os modelos de projeto de Xamarin estão faltando? Experimente isto  
  Modelos poderão estar ausentes se você instalar o Xamarin diretamente do site de Xamarin e você tiver o Visual Studio 2013 e Visual Studio 2015 instalados lado a lado. Porém, é fácil corrigir isso: basta habilitar o recurso **Xamarin para Visual Studio 2015** no programa de instalação do Xamarin.  
   
 1.  No Painel de Controle, abra **Programas e Recursos**, escolha o item **Xamarin** e clique em **Alterar**.  
@@ -128,8 +129,3 @@ Depois de ter concluído os instaladores (consulte [Configurar e instalar](../cr
 2.  No Assistente de instalação para Xamarin que aparece, clique em **Avançar** e **Alterar**.  
   
 3.  Na lista de recursos opcionais a serem instalados, expanda **Xamarin para Visual Studio 2015**, escolha **será instalado na unidade local** e clique em **Avançar** para proceder para adicionar o recurso.
-
-
-<!--HONumber=Feb17_HO4-->
-
-
