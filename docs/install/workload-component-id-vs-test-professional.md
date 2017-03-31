@@ -1,14 +1,10 @@
 ---
-title:
-- IDs de carga de trabalho e de componente do Visual Studio Test Professional 2017 | Microsoft Docs
+title: IDs de carga de trabalho e de componente do Visual Studio Test Professional 2017 | Microsoft Docs
 description: Usar IDs de carga de trabalho e de componente do Visual Studio para fornecer ferramentas de teste integradas para testadores em geral
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:

@@ -1,14 +1,10 @@
 ---
-title:
-- IDs de carga de trabalho e de componente do Visual Studio 2017 | Microsoft Docs
+title: IDs de carga de trabalho e de componente do Visual Studio 2017 | Microsoft Docs
 description: "Usar as IDs de carga de trabalho e de componente para instalar o Visual Studio usando uma linha de comando ou para especificar como uma dependência em um manifesto do VSIX"
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:
