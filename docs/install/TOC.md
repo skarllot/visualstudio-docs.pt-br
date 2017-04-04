@@ -3,6 +3,7 @@
 # [Desinstalar o Visual Studio](uninstall-visual-studio.md)
 # [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
 ## [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+## [Exemplos de parâmetro de linha de comando](command-line-parameter-examples.md)
 ## [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)
 ## [Chaves de produto automaticamente durante a implantação do Visual Studio](automatically-apply-product-keys-when-deploying-visual-studio.md)
 ## [Carga de trabalho do Visual Studio e IDs do componente](workload-and-component-ids.md)
