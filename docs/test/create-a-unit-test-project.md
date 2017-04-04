@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a608bfba-1a43-4a60-b73a-1fe53ef58098
 caps.latest.revision: 8
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -30,6 +30,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 7cd8ed6aea56b5f59abbbf96709af3d42d2857c5
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="create-a-unit-test-project"></a>Crie um projeto de teste de unidade
@@ -68,8 +69,4 @@ Geralmente, os testes de unidade refletem a estrutura do código que está sendo
  **Executando testes de unidade**  
   
  [Executar testes de unidade com o Gerenciador de Testes](../test/run-unit-tests-with-test-explorer.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

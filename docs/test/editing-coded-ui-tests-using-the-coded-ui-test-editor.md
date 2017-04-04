@@ -14,7 +14,7 @@ helpviewer_keywords:
 - coded UI test, Coded UI Test Editor
 ms.assetid: 76435c4b-593e-43a3-a9fe-709a7f9f5e0f
 caps.latest.revision: 40
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -237,3 +237,4 @@ Editar propriedades de controle
  [Criando um Teste de IU Codificado Controlado por Dados](../test/creating-a-data-driven-coded-ui-test.md)   
  [Gerar um Teste de IU Codificado de uma Gravação da Ação Existente](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)   
  [Passo a passo: criando, editando e mantendo um teste de IU codificado](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
+

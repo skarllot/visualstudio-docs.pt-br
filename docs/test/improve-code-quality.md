@@ -13,7 +13,7 @@ helpviewer_keywords:
 - team-based development
 ms.assetid: 73baa961-c21f-43fe-bb92-3f59ae9b5945
 caps.latest.revision: 39
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -70,3 +70,4 @@ O que é a qualidade do código? Correção, facilidade de manutenção e até m
   
  [Acompanhando o trabalho usando o Visual Studio Online ou o Team Foundation Server](https://www.visualstudio.com/docs/work/overview)  
  Você pode usar [!INCLUDE[vstsTfsLong](../test/includes/vststfslong_md.md)] para planejar e acompanhar seus projetos, quer você use o processo agile, o processo formal ou uma variação nesses processos. Ao planejar seus projetos, acompanhar o seu progresso em relação ao plano e fazer ajustes necessários, você pode reduzir os riscos, evitar surpresas desagradáveis e gerenciar os custos de seus projetos.
+

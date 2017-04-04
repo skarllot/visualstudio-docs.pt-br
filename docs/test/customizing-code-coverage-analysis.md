@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f6337c35-acae-4c5f-b5d9-ac5ff687ef18
 caps.latest.revision: 16
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -343,3 +343,4 @@ Included items must then not match any entries in the exclude list to remain inc
 ## <a name="see-also"></a>Consulte também  
  [Uso da cobertura de código para determinar quanto código está sendo testado](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)   
  [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)
+

@@ -15,7 +15,7 @@ helpviewer_keywords:
 - unit tests, Assert classes
 ms.assetid: da1b7a0d-4f1d-4d50-a07e-7b3ff60053f9
 caps.latest.revision: 27
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -35,6 +35,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 648f5d939885c53d1f9e5ca5582ec42633209cdf
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="using-the-assert-classes"></a>Usando as classes Assert
@@ -77,8 +78,4 @@ Use as classes Assert do namespace UnitTestingFramework para verificar a funcion
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting>   
  [Criar e Executar Testes de Unidade para Código Existente](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

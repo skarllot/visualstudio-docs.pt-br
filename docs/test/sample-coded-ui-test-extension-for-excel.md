@@ -12,7 +12,7 @@ helpviewer_keywords:
 - coded UI tests, extensions for Excel
 ms.assetid: 451e4d14-7fac-42f9-af56-2bdc8414c6c7
 caps.latest.revision: 13
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -32,6 +32,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 477122449be01eb66f97044368f9c07cc29bf5c8
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="sample-coded-ui-test-extension-for-excel"></a>Extensão de teste de IU codificado de amostra para Excel
@@ -68,8 +69,4 @@ Arquitetura de extensão do Excel
  [Classe ActionFilter](../test/sample-excel-extension-actionfilter-class.md)   
  [Classes de elementos](../test/sample-excel-extension-element-classes.md)   
  [Classe PropertyProvider](../test/sample-excel-extension-propertyprovider-class.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

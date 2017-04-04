@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7d08de69-c32e-4f0b-89aa-75347b15fb82
 caps.latest.revision: 11
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -182,3 +182,4 @@ Recomendamos que, antes de alterar um aplicativo existente, você verifique se e
 2.  No Gerenciador de Testes, escolha **Executar Todos**.  
   
  Para saber mais, confira [Início Rápido: desenvolvimento orientado por testes com o Gerenciador de Testes](../test/quick-start-test-driven-development-with-test-explorer.md).
+

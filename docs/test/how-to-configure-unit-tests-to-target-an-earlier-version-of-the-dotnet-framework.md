@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: adb6c011-5abd-41d2-8ead-08cd7579bf37
 caps.latest.revision: 12
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -30,6 +30,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 5dc671e42430736c800010f6cf21e577eb940575
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Como configurar testes de unidade para direcionar uma versão anterior do .NET Framework
@@ -145,8 +146,4 @@ Quando você cria um projeto de teste no Microsoft Visual Studio, a versão mais
  [Criar soluções do SharePoint](/office-dev/office-dev/create-sharepoint-solutions)   
  [Compilando e depurando soluções do SharePoint](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)   
  [Caixa de diálogo Configurações de Compilador Avançadas (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

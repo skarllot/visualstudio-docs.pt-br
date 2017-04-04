@@ -13,7 +13,7 @@ helpviewer_keywords:
 - unit tests, running
 ms.assetid: d23a9ee7-58e3-4e8b-a38c-b2207ea73fea
 caps.latest.revision: 25
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -57,3 +57,4 @@ Se você tiver um computador de 64 bits, você poderá executar testes de unidad
  [Executar testes de unidade com o Gerenciador de Testes](../test/run-unit-tests-with-test-explorer.md)   
  [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)   
  [Especificando configurações de teste para testes do Visual Studio](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)
+

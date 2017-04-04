@@ -12,9 +12,8 @@ helpviewer_keywords:
 - unit tests
 ms.assetid: d3de7b31-0262-4373-ba84-e74eda7651e4
 caps.latest.revision: 26
-author: alexhomer1
-ms.author: ahomer
-manager: robinr
+ms.author: douge
+manager: douge
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -53,3 +52,4 @@ As ferramentas de teste de unidade do Visual Studio Express 2012 para Windows 8 
  [Executar o teste de unidade de uma DLL do C++](../test/unit-testing-a-visual-cpp-dll-for-store-apps.md)  
   
  [Executar testes de unidade no Gerenciador de Testes](../test/run-unit-tests-for-store-apps-in-visual-studio.md)
+

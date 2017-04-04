@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4f4b5f10-7314-4725-8c6e-e72f52eff918
 caps.latest.revision: 14
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -415,3 +415,4 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
  [Depurando código nativo](../debugger/debugging-native-code.md)   
  [Instruções passo a passo: criando e usando uma biblioteca de vínculo dinâmico (C++)](http://msdn.microsoft.com/Library/3ae94848-44e7-4955-bbad-7d40f493e941)   
  [Importando e exportando](/visual-cpp/build/importing-and-exporting)
+

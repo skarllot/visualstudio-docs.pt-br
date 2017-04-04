@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7c251098-00aa-49cf-9e37-5717c0c6b3f1
 caps.latest.revision: 9
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -30,6 +30,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: de85cbb19412e5a9eee44eea755c75cafb8d02ae
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="sample-excel-extension-element-classes"></a>Extensão do Excel de amostra: classes de elemento
@@ -68,8 +69,4 @@ A extensão usa classes derivadas de <xref:Microsoft.VisualStudio.TestTools.UITe
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement>   
  [Estendendo testes de IU codificados e gravações da ação para dar suporte ao Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 
