@@ -39,9 +39,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3bab7e2c86371733d8dd471dce7ce0a440a36405
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: fbe834e4e8178a129f68cec1c4a78ffea3c9fd7c
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>Caixa de diálogo Configurações do Projeto do VC++, Projetos e Soluções, Opções
@@ -94,5 +94,5 @@ Esta caixa de diálogo permite que você defina configurações de projeto [!INC
  Configura o **Gerenciador de Soluções** para mostrar os arquivos no projeto e nos arquivos em disco na pasta do projeto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Compilando programas C/C++](/visual-cpp/build/building-c-cpp-programs)   
- [Referência de build C/C++](/visual-cpp/build/reference/c-cpp-building-reference)
+ [Compilando programas C/C++](/cpp/build/building-c-cpp-programs)   
+ [Referência de build C/C++](/cpp/build/reference/c-cpp-building-reference)

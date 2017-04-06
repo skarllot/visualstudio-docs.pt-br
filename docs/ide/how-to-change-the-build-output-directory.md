@@ -31,8 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a5a83605bc532fdb2a8122b0662fd7d3f7ebf945
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 14be502abb42d6bb9637e7394ec8bf20b50c4231
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="how-to-change-the-build-output-directory"></a>Como alterar o diretório de saída do build
@@ -58,10 +59,5 @@ Você pode especificar o local de saída por configuração (para depuração, v
   
 ## <a name="see-also"></a>Consulte também  
  [Página de Build, Designer de Projeto (C#)](../ide/reference/build-page-project-designer-csharp.md)   
- [Página de propriedade geral (projeto)](/visual-cpp/ide/general-property-page-project)   
+ [Página de propriedade geral (projeto)](/cpp/ide/general-property-page-project)   
  [Compilando e criando](../ide/compiling-and-building-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

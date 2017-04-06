@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: f70339a150a53d346ab9a6f59b4b1634263f5b9e
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 80ce7de7e89844d8c9cb1052499b2d873e04965e
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="options-text-editor-cc-formatting"></a>Opções, Editor de Texto, C/C++, Formatação
@@ -81,16 +81,16 @@ Permite alterar o comportamento padrão do Editor de Códigos quando você está
  Quando você insere um arquivo no editor de texto, é possível habilitar o recurso de estrutura de tópicos. Para obter mais informações, consulte [Estrutura de tópicos](../../ide/outlining.md). Quando essa opção é selecionada, o recurso de estrutura de tópicos é habilitado quando você abre um arquivo.  
   
  **Estrutura de tópicos automática de blocos de região #pragma**  
- Quando essa opção é selecionada, a estrutura de tópicos automática de [diretivas pragma](/visual-cpp/preprocessor/pragma-directives-and-the-pragma-keyword) é habilitada. Isso permite expandir ou recolher blocos de região pragma no modo de estrutura de tópicos.  
+ Quando essa opção é selecionada, a estrutura de tópicos automática de [diretivas pragma](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword) é habilitada. Isso permite expandir ou recolher blocos de região pragma no modo de estrutura de tópicos.  
   
  **Estrutura de tópicos automática de blocos de instrução**  
  Quando essa opção é selecionada, a estrutura de tópicos automática é habilitada para os seguintes construtores de instrução:  
   
 -   [if-else](/dotnet/csharp/language-reference/keywords/if-else)  
   
--   [Instrução switch (C++)](/visual-cpp/cpp/switch-statement-cpp)  
+-   [Instrução switch (C++)](/cpp/cpp/switch-statement-cpp)  
   
--   [Instrução while (C++)](/visual-cpp/cpp/while-statement-cpp)  
+-   [Instrução while (C++)](/cpp/cpp/while-statement-cpp)  
   
 ## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo Geral, Ambiente, Opções](../../ide/reference/general-environment-options-dialog-box.md)   

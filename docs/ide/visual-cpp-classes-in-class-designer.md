@@ -32,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9ad2e17ab65e3536e1b3af9cdb92963987b12bd9
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 02cd1cabf8cf296130ace9a3dcf37a237805dfe9
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-classes-in-class-designer"></a>Classes do Visual C++ no Designer de Classe
@@ -69,7 +69,7 @@ class Penguin : public Bird, public Swimmer {};
 > [!NOTE]
 >  O comando **Mostrar Classes Derivadas** não tem suporte para código C++. É possível exibir as classes derivadas indo até o Modo de Exibição de Classe, expandindo o nó de tipo, expandindo a subpasta **Tipos Derivados** e, em seguida, arrastando esses tipos para o diagrama de classe.  
   
- Para obter mais informações sobre a herança de classes múltiplas, consulte [(NOTINBUILD) Herança múltipla](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca) e [Classes Base Múltiplas](/visual-cpp/cpp/multiple-base-classes).  
+ Para obter mais informações sobre a herança de classes múltiplas, consulte [(NOTINBUILD) Herança múltipla](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca) e [Classes Base Múltiplas](/cpp/cpp/multiple-base-classes).  
   
 ## <a name="abstract-classes"></a>Classes abstratas  
  O Designer de Classe dá suporte a classes abstratas (também chamadas de "classes base abstratas"). Essas são classes que você nunca instancia, mas das quais pode derivar outras classes. Usando um exemplo de "Herança múltipla" no início deste documento, você pode instanciar a classe `Bird` como objetos individuais, da seguinte maneira:  
@@ -136,7 +136,7 @@ typedef struct
   
  As estruturas também podem ser anônimas. O Designer de Classe exibe estruturas e classes anônimas da mesma forma como exibe o respectivo tipo. Embora você possa declarar e exibir estruturas e classes anônimas, o Designer de Classe não usará o nome de marcação que você especificar. Ele usará o nome gerado pelo Modo de Exibição de Classe. A classe ou estrutura aparece no Modo de Exibição de Classe e no Designer de Classe como um elemento chamado **__unnamed**.  
   
- Para obter mais informações sobre classes anônimas, consulte [Tipos de classe anônima](/visual-cpp/cpp/anonymous-class-types).  
+ Para obter mais informações sobre classes anônimas, consulte [Tipos de classe anônima](/cpp/cpp/anonymous-class-types).  
   
 ## <a name="template-classes"></a>Classes de modelo  
  O Designer de Classe dá suporte à visualização de classes de modelo. Declarações aninhadas têm suporte. A tabela a seguir mostra algumas declarações típicas.  
@@ -186,8 +186,8 @@ typedef struct
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com código do Visual C++ (Designer de Classe)](../ide/working-with-visual-cpp-code-class-designer.md)   
- [Classes e structs](/visual-cpp/cpp/classes-and-structs-cpp)   
- [Tipos de classe anônima](/visual-cpp/cpp/anonymous-class-types)   
+ [Classes e structs](/cpp/cpp/classes-and-structs-cpp)   
+ [Tipos de classe anônima](/cpp/cpp/anonymous-class-types)   
  [(NOTINBUILD) Herança múltipla](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)   
- [Classes base múltiplas](/visual-cpp/cpp/multiple-base-classes)   
- [Modelos](/visual-cpp/cpp/templates-cpp)
+ [Classes base múltiplas](/cpp/cpp/multiple-base-classes)   
+ [Modelos](/cpp/cpp/templates-cpp)

@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: dc32236dad42ec169fc1c7a243b7c67fd5a8dbf3
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 0dc9fed1e5fc5a827e836310175d558b14cd41b4
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="user-permissions-and-visual-studio"></a>Permissões de usuário e Visual Studio
@@ -54,8 +54,8 @@ Por motivos de segurança, você deve executar o Visual Studio como um usuário 
 ||Adquirir uma licença de desenvolvedor da [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)].|[Obter uma licença da desenvolvedor (Aplicativos da Windows Store)](http://go.microsoft.com/fwlink/?LinkID=241313)|  
 |Caixa de Ferramentas|Adicionar controles COM clássicos à **Caixa de Ferramentas**.|[Usando a caixa de ferramentas](../ide/using-the-toolbox.md)|  
 |Suplementos|Instalar e usar suplementos escritos usando COM clássico no IDE.|[Criando suplementos e assistentes](http://msdn.microsoft.com/Library/c5a47c21-6668-4de3-898d-afa969317e73)|  
-|Compilação|Usar eventos pós-compilação que registram um componente.|[Noções básicas sobre etapas e eventos de build personalizados](/visual-cpp/ide/understanding-custom-build-steps-and-build-events)|  
-||Incluir uma etapa de registro ao criar projetos do C++.|[Noções básicas sobre etapas e eventos de build personalizados](/visual-cpp/ide/understanding-custom-build-steps-and-build-events)|  
+|Compilação|Usar eventos pós-compilação que registram um componente.|[Noções básicas sobre etapas e eventos de build personalizados](/cpp/ide/understanding-custom-build-steps-and-build-events)|  
+||Incluir uma etapa de registro ao criar projetos do C++.|[Noções básicas sobre etapas e eventos de build personalizados](/cpp/ide/understanding-custom-build-steps-and-build-events)|  
 |Depuração|Depurar aplicativos que são executados com permissões elevadas.|[Preparação e configurações do depurador](../debugger/debugger-settings-and-preparation.md)|  
 ||Depurar aplicativos que são executados em uma conta de usuário diferente, como sites do ASP.NET.|[Depurando aplicativos ASP.NET e AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)|  
 ||Depurar na zona de aplicativos de navegador XAML (XBAP).|[Host do WPF (PresentationHost.exe)](http://msdn.microsoft.com/Library/3215bfa1-722c-4ac8-a7c5-bdd02d30afbd)|  

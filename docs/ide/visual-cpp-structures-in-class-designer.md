@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a71ab225aa28e75c4e996bb1cda3d165b9fd91d9
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 5f15cb38d9bd9f5035f9c02ef1beaf5d19da143b
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-structures-in-class-designer"></a>Estruturas do Visual C++ no Designer de Classe
@@ -47,7 +47,7 @@ struct MyStructure
 };  
 ```  
   
- Para obter mais informações sobre o uso do tipo `struct`, consulte [struct](/visual-cpp/cpp/struct-cpp).  
+ Para obter mais informações sobre o uso do tipo `struct`, consulte [struct](/cpp/cpp/struct-cpp).  
   
  Uma forma de estrutura C++ em um diagrama de classe parece uma forma de classe e funciona como uma, exceto que o rótulo lê **Struct** e tem cantos quadrados em vez de arredondados.  
   
@@ -57,5 +57,5 @@ struct MyStructure
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com código do Visual C++ (Designer de Classe)](../ide/working-with-visual-cpp-code-class-designer.md)   
- [Classes e structs](/visual-cpp/cpp/classes-and-structs-cpp)   
- [struct](/visual-cpp/cpp/struct-cpp)
+ [Classes e structs](/cpp/cpp/classes-and-structs-cpp)   
+ [struct](/cpp/cpp/struct-cpp)

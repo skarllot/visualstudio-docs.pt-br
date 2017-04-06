@@ -31,8 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 828c61720161b63d19451e32134b2a4765fdfd8d
+ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
+ms.openlocfilehash: f4ae98f4e9b7dbf4b1066120316ee5a167ae78f2
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="compiling-and-building-in-visual-studio"></a>Compilando e criando no Visual Studio
@@ -46,7 +47,7 @@ ms.openlocfilehash: 828c61720161b63d19451e32134b2a4765fdfd8d
 |Método de build|Benefícios|Para obter mais informações|  
 |------------------|--------------|--------------------------|  
 |Como usar o IDE|– É possível criar e executar compilações de maneira mais fácil imediatamente.<br />– É possível executar compilações em multiprocessador para projetos C++ e C#.<br />– É possível personalizar alguns aspectos do sistema de build.|[Compilando e limpando projetos e soluções no Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)|  
-|Executando uma linha de comando do MSBuild|– É possível criar projetos sem instalar o Visual Studio.<br />– É possível executar compilações em multiprocessador para todos os tipos de projeto.<br />– É possível personalizar a maioria das áreas do sistema de build.|[MSBuild](../msbuild/msbuild1.md)|  
+|Executando uma linha de comando do MSBuild|– É possível criar projetos sem instalar o Visual Studio.<br />– É possível executar compilações em multiprocessador para todos os tipos de projeto.<br />– É possível personalizar a maioria das áreas do sistema de build.|[MSBuild](../msbuild/msbuild.md)|  
 |Usando o Build do Team Foundation|–   É possível automatizar seu processo de build. Por exemplo, será possível criar um ou mais projetos à noite ou sempre que o check-in do código for feito. Também é possível criar projetos em servidores de build compartilhados em vez de no seu computador de desenvolvimento.<br />– É possível especificar rapidamente o código que você deseja compilar, os testes que você deseja executar e outras opções comuns.<br />– É possível modificar o fluxo de trabalho do build e, conforme necessário, criar atividades de build para realizar tarefas profundamente personalizadas.|[Compilar o aplicativo](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)|  
   
 ## <a name="building-from-the-ide"></a>Compilando no IDE  
@@ -72,8 +73,3 @@ ms.openlocfilehash: 828c61720161b63d19451e32134b2a4765fdfd8d
  [Noções sobre plataformas de build](../ide/understanding-build-platforms.md)   
  [Building (Compiling) Web Site Projects (Criando (compilando) projetos de site da Web)](http://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)   
  [Como criar e remover dependências do projeto](../ide/how-to-create-and-remove-project-dependencies.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

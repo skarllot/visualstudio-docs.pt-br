@@ -28,9 +28,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e843adb473be51e185fd3b5dc514b44f16106157
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 332ef0d4534d8f607a1b5d92038855ebd247657f
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="managing-project-and-solution-properties"></a>Gerenciando propriedades de solução e projeto
@@ -60,7 +60,7 @@ Projetos têm propriedades que controlam muitos aspectos da compilação, da dep
   
  ![Propriedades do projeto em Visual C&#43;&#43;](../ide/media/vs2015_projprops_cpp.png "VS2015_ProjProps_cpp")  
   
- Para obter informações sobre propriedades de projeto C++, consulte [Trabalhando com propriedades do projeto](/visual-cpp/ide/working-with-project-properties). Para obter mais informações sobre as propriedades de JavaScript, consulte [Páginas de propriedades, JavaScript](../ide/reference/property-pages-javascript.md).  
+ Para obter informações sobre propriedades de projeto C++, consulte [Trabalhando com propriedades do projeto](/cpp/ide/working-with-project-properties). Para obter mais informações sobre as propriedades de JavaScript, consulte [Páginas de propriedades, JavaScript](../ide/reference/property-pages-javascript.md).  
   
 ## <a name="solution-properties"></a>Propriedades da solução  
  Para acessar propriedades na solução, clique com o botão direito do mouse no nó da solução no **Gerenciador de Soluções** e escolha **Propriedades**. Na caixa de diálogo, você pode definir configurações de projeto para compilações de Depuração ou Versão, escolher quais projetos devem ser o projeto de inicialização quando F5 é pressionado e definir opções de análise de código.  

@@ -36,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 118223d1a5c07188b8f8d8c7b6990792dcd94ff5
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 989bc338e0cb8c49a2342d998e1e09e8f6b0eb9f
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="output-window"></a>Janela Saída
@@ -76,7 +76,7 @@ A Janela de **Saída** pode exibir mensagens de status para vários recursos no 
   
  Você também pode programar seus próprios aplicativos para gravar mensagens de diagnóstico em tempo de execução em um painel **Saída**. Para fazer isso, use os membros da classe <xref:System.Diagnostics.Debug> ou <xref:System.Diagnostics.Trace> no namespace <xref:System.Diagnostics> da Biblioteca de Classes .NET Framework. Membros da classe <xref:System.Diagnostics.Debug> exibem a saída quando você compila as configurações de Depuração da solução ou do projeto; membros da classe <xref:System.Diagnostics.Trace> exibem a saída quando você compila configurações de Depuração ou de Versão. Para obter mais informações, consulte [Mensagens de diagnóstico na Janela de Saída](../../debugger/diagnostic-messages-in-the-output-window.md).  
   
- No [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)], é possível criar etapas e eventos de build personalizados cujos avisos e erros são exibidos e contados no painel **Saída**. Ao pressionar F1 em uma linha de saída, é possível exibir um tópico de ajuda apropriado. Para obter mais informações, consulte [Formatando a saída de uma etapa de build ou um evento de build personalizado](/visual-cpp/ide/formatting-the-output-of-a-custom-build-step-or-build-event).  
+ No [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)], é possível criar etapas e eventos de build personalizados cujos avisos e erros são exibidos e contados no painel **Saída**. Ao pressionar F1 em uma linha de saída, é possível exibir um tópico de ajuda apropriado. Para obter mais informações, consulte [Formatando a saída de uma etapa de build ou um evento de build personalizado](/cpp/ide/formatting-the-output-of-a-custom-build-step-or-build-event).  
   
 ## <a name="scrolling-behavior"></a>Comportamento de rolagem  
  Se você usar a rolagem automática na Janela de Saída e, em seguida, navegar usando o mouse ou as teclas de seta, a rolagem automática será interrompida. Para retomar a rolagem automática, pressione CTRL+END.  
