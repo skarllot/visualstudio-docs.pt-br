@@ -31,43 +31,29 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a1edc88394193474b273968d8435e8df06415044
-ms.openlocfilehash: a3fcafe5c191987668dc6e0dce8835d748742ed7
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: 780c643c25f0d43ec0564e43bc50d2f36f1aee79
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="options-text-editor-cc-experimental"></a>Opções, Editor de Texto, C/C++, Experimental
-Ao alterar essas opções, você pode alterar o comportamento relacionado ao IntelliSense e ao banco de dados de navegação quando estiver programando em C ou C++.  
+Ao alterar essas opções, você pode alterar o comportamento relacionado ao IntelliSense e ao banco de dados de navegação quando estiver programando em C ou C++. Esses recursos são realmente experimentais e podem ser modificados ou removidos do Visual Studio em uma versão futura.  
   
  Para acessar essa página, na caixa de diálogo **Opções**, no painel esquerdo, expanda **Editor de Texto**, expanda **C/C++** e escolha **Experimental**.  
-  
- Esses recursos estão disponíveis em uma instalação do Visual Studio 2015 Atualização 1 RC.  
+
+ Esses recursos estão disponíveis em uma instalação do Visual Studio 2017.  
   
 > [!NOTE]
 >  Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## <a name="browsingnavigation"></a>Navegação  
- **Habilitar Novo Mecanismo de Banco de Dados**  
- Isso deve automaticamente acelerar a população de banco de dados e tornar todas as operações de banco de dados mais rápidas (sem nenhuma perda de precisão) para operações como **Ir para Definição** e **Localizar Todas as Referências**. (Apenas feche e reabra a solução para aplicar as alterações, você não precisa reiniciar o Visual Studio.)  
-  
-## <a name="intellisense"></a>IntelliSense  
- **Lista de Membros Ponto-a-Seta**  
- Substitui '.' por '->' quando aplicável para a lista de membros.  
-  
-## <a name="refactoring"></a>Refatoração  
- **Habilitar Extrair Função**  
- Extrai o código selecionado para sua própria função e substitui o código com uma chamada para a nova função. Para acessar esse recurso, clique com botão direito do mouse no código selecionado e selecione **Ações Rápidas** ou simplesmente pressione o atalho padrão Ctrl+Ponto [Ctrl+.].  
-  
- **Habilitar Alteração de Assinatura**  
- Adiciona, reordena e exclui parâmetros de uma função e propaga as alterações para todos os sites de chamada. Para acessar esse recurso, clique com botão direito do mouse em qualquer uso da função e selecione **Ações Rápidas** ou simplesmente pressione o atalho padrão Ctrl+Ponto [Ctrl+.].  
-  
-## <a name="text-editor"></a>Editor de Texto  
- **Habilitar Expandir Escopos**  
- Se habilitado, você poderá colocar o texto selecionado entre chaves digitando ‘{’ no editor de texto.  
-  
- **Habilitar Expandir Precedência**  
- Se habilitado, você poderá colocar o texto selecionado entre parênteses digitando ‘(’ no editor de texto.  
-  
- Para recursos adicionais do editor de texto na Galeria do Visual Studio, consulte a lista [aqui](http://go.microsoft.com/fwlink/?LinkId=692016). Um exemplo é [C++ Quick Fixes](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f) (Correções Rápidas C++), que dá suporte ao seguinte:  
+## <a name="enable-predictive-intellisense"></a>Habilitar IntelliSense Preditivo
+O IntelliSense Preditivo limita o número de resultados exibidos na lista suspensa do IntelliSense para que você veja apenas os resultados relevantes no contexto. Por exemplo, se você digitar <code>int x =</code> e invocar a lista suspensa do IntelliSense, verá apenas inteiros ou funções que retornam inteiros. O IntelliSense Preditivo está desativado por padrão.
+
+## <a name="enable-faster-project-load"></a>Habilitar Carregamento de Projeto Mais Rápido
+Essa opção habilita o recurso conhecido como “carregamento de solução leve”. Quando o carregamento de solução leve estiver habilitado, o Visual Studio só carregará os projetos por completo quando você realmente precisar disso. Muitas tarefas comuns, como navegação por uma base de código, edição de código e criação de projetos, não exigem o carregamento do projeto. Quando essa opção estiver habilitada, você poderá começar mais rapidamente nessas tarefas comuns sem precisar aguardar o carregamento do projeto.  
+
+## <a name="additional-features-in-the-visual-studio-gallery"></a>Recursos adicionais na Galeria do Visual Studio
+Para obter outros recursos do editor de texto na Galeria do Visual Studio, consulte a lista [aqui](http://go.microsoft.com/fwlink/?LinkId=692016). Um exemplo é [C++ Quick Fixes](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f) (Correções Rápidas C++), que dá suporte ao seguinte:  
   
 -   **Add missing #include (Adicionar #include ausente)** –sugere #include relevantes para símbolos desconhecidos no seu código  
   
@@ -82,9 +68,4 @@ Ao alterar essas opções, você pode alterar o comportamento relacionado ao Int
 ## <a name="see-also"></a>Consulte também  
  [Configurando opções do editor específicas a um idioma](../../ide/reference/setting-language-specific-editor-options.md)   
  [Refatoração em C++ (VC Blog)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
