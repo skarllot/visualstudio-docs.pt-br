@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointEvent2 | Documentos do Microsoft
+title: IDebugBreakpointEvent2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e6a0128df62abfdb16e56a7ee581931abb031ff6
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 990a8637af470c298fedd1c75f769ef32c50cb82
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugbreakpointevent2"></a>IDebugBreakpointEvent2
-O mecanismo de depuração (DE) envia essa interface para o Gerenciador de sessão de depuração (SDM) quando um programa para em um ponto de interrupção.  
+O mecanismo de depuração (DE) envia essa interface para o Gerenciador de sessão de depuração (SDM) quando um programa for interrompida no ponto de interrupção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,10 +46,10 @@ IDebugBreakpointEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O DE implementa essa interface como parte de seu suporte para pontos de interrupção. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface (usa o SDM [QueryInterface](/visual-cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface).  
+ O DE implementa essa interface como parte de seu suporte para pontos de interrupção. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface (usa o SDM [QueryInterface](/cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface).  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- O DE cria e envia esse objeto de evento quando pelo menos um ponto de interrupção é encontrado no programa. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada fornecida pelo SDM quando anexado a programa que está sendo depurado.  
+ O DE cria e envia esse objeto de evento quando pelo menos um ponto de interrupção é encontrado no programa. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada fornecida pelo SDM quando anexado ao programa que está sendo depurado.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  A tabela a seguir mostra os métodos de `IDebugBreakpointEvent2`.  

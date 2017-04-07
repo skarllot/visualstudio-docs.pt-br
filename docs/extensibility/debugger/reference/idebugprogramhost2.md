@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramHost2 | Documentos do Microsoft
+title: IDebugProgramHost2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: efa2cdef8b447cb26e4692a25a3330f15f630158
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: e142f77d19f8ee7787d71d2fa3aa8138b01d47ae
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugprogramhost2"></a>IDebugProgramHost2
-Essa interface fornece informações do host (processo) sobre um programa.  
+Essa interface fornece informações de host (processo) sobre um programa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,16 +49,16 @@ IDebugProgramHost2 : IUnknown
  O mecanismo de depuração implementa essa interface no mesmo objeto, como o [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) interface para fornecer informações sobre o processo de hospedagem. Esta é uma interface opcional.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Chamar [QueryInterface](/visual-cpp/atl/queryinterface) em um `IDebugProgram2` interface para obter essa interface.  
+ Chamar [QueryInterface](/cpp/atl/queryinterface) em um `IDebugProgram2` interface para obter essa interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  A tabela a seguir mostra os métodos de `IDebugProgramHost2`.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[GetHostName](../../../extensibility/debugger/reference/idebugprogramhost2-gethostname.md)|Obtém o título, nome amigável ou nome de arquivo do processo de hospedagem desse programa.|  
+|[GetHostName](../../../extensibility/debugger/reference/idebugprogramhost2-gethostname.md)|Obtém o título, o nome amigável ou o nome do arquivo do processo de hospedagem desse programa.|  
 |[GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)|Obtém o identificador de processo do processo de hospedagem desse programa.|  
-|[GetHostMachineName](../../../extensibility/debugger/reference/idebugprogramhost2-gethostmachinename.md)|Obtém o nome da máquina em que o processo de hospedagem do programa está em execução no.|  
+|[GetHostMachineName](../../../extensibility/debugger/reference/idebugprogramhost2-gethostmachinename.md)|Obtém o nome da máquina em que o processo de hospedagem deste programa está em execução no.|  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

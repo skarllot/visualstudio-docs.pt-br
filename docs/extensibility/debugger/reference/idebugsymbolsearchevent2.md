@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolSearchEvent2 | Documentos do Microsoft
+title: IDebugSymbolSearchEvent2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 79bb863011f11b17375215903dcb0c6726888a29
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 92385ae5922ecd16658f089c28cfd3746b6ff093
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugsymbolsearchevent2"></a>IDebugSymbolSearchEvent2
@@ -46,10 +46,10 @@ IDebugSymbolSearchEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O DE implementa essa interface para relatar os símbolos do módulo foram carregados. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. O SDM usa [QueryInterface](/visual-cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
+ O DE implementa essa interface para que tenham sido carregados símbolos do módulo de relatório. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. Usa o SDM [QueryInterface](/cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- O DE cria e envia esse objeto de evento para relatar os símbolos do módulo foram carregados. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando anexado a programa que está sendo depurado.  
+ O DE cria e envia esse objeto de evento para relatórios que tenham sido carregados símbolos do módulo. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando anexado ao programa que está sendo depurado.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  O `IDebugSymbolSearchEvent2` interface expõe o método a seguir.  
@@ -59,7 +59,7 @@ IDebugSymbolSearchEvent2 : IUnknown
 |[GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)|Recupera informações sobre os resultados de uma pesquisa de símbolo.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse evento será enviado mesmo se os símbolos não pôde ser carregado. Chamando `IDebugSymbolSearchEvent2::GetSymbolSearchInfo` permite que o manipulador deste evento para determinar se o módulo tem, na verdade, todos os símbolos.  
+ Esse evento será enviado mesmo se os símbolos não pôde ser carregado. Chamando `IDebugSymbolSearchEvent2::GetSymbolSearchInfo` permite que o manipulador desse evento para determinar se o módulo realmente tem símbolos.  
   
  Normalmente, o Visual Studio usa esse evento para atualizar o status de símbolos carregados no **módulos** janela.  
   

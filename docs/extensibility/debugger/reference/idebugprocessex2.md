@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2 | Documentos do Microsoft
+title: IDebugProcessEx2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 8469b21d53dfba3de3a0c018094f2fca897407b7
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 56483c55810f75042184439be9f0d7bcfb2d6836
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugprocessex2"></a>IDebugProcessEx2
@@ -46,29 +46,29 @@ IDebugProcessEx2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- Um fornecedor de porta personalizada implementa essa interface no mesmo objeto, como o [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) de interface para:  
+ Um fornecedor de porta personalizada implementa essa interface no mesmo objeto, como o [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) interface para:  
   
--   Suporte ao acompanhamento de sessões conectadas a um processo  
+-   Suporte a controle de sessões conectadas a um processo  
   
--   Suporte a anexar automaticamente em vários mecanismos de depuração  
+-   Suporte a anexação automática em vários mecanismos de depuração  
   
- O fornecedor de porta personalizada pode implementar essa interface, se ele escolhe.  
+ O fornecedor de porta personalizada pode implementar essa interface se escolhe.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
   
--   As chamadas SDM [QueryInterface](/visual-cpp/atl/queryinterface) em um `IDebugProcess2` interface para obter essa interface.  
+-   As chamadas SDM [QueryInterface](/cpp/atl/queryinterface) em um `IDebugProcess2` interface para obter essa interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  A tabela a seguir mostra os métodos de `IDebugProcessEx2`.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Anexar](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|Informa o processo que uma sessão agora depurar o processo.|  
+|[Anexar](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|Informa o processo que uma sessão agora está depurando o processo.|  
 |[Desanexar](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|Informa o processo que uma sessão não está depurando o processo.|  
 |[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|Adiciona nós de programa para obter uma lista de mecanismos de depuração.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa interface é privada entre o SDM e o processo.  
+ Esta interface é privada entre o SDM e o processo.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: Portpriv.h  

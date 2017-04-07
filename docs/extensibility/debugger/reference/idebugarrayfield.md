@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayField | Documentos do Microsoft
+title: IDebugArrayField | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e73ab513461077ed44bec2eed7410f5317fb6a4e
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: d294afcdbf434f65f556a3437af9cfa7e179703d
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugarrayfield"></a>IDebugArrayField
-Essa interface descreve um tipo ou um símbolo de matriz.  
+Essa interface descreve um tipo ou o símbolo de matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,10 +46,10 @@ IDebugArrayField : IDebugContainerField
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O provedor de símbolo implementa essa interface no mesmo objeto que implementa o [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface. Essa interface é uma especialização que representa objetos de matriz.  
+ O provedor de símbolo implementa essa interface no mesmo objeto que implementa o [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface. Esta interface é uma especialização que representam os objetos de matriz.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Use [QueryInterface](/visual-cpp/atl/queryinterface) para obter essa interface da [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) retorna o sinalizador `FIELD_TYPE_ARRAY`.  
+ Use [QueryInterface](/cpp/atl/queryinterface) para obter essa interface do [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) retorna o sinalizador `FIELD_TYPE_ARRAY`.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  Além dos métodos de [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) e [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interfaces, essa interface implementa o seguinte:  

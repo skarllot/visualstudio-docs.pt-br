@@ -1,5 +1,5 @@
 ---
-title: IDebugActivateDocumentEvent2 | Documentos do Microsoft
+title: IDebugActivateDocumentEvent2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 62067a0d6327bf36a621ccc4940801e29dda44ce
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 673ead5a81cf0037d794f315ac7731e2500b8fe3
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugactivatedocumentevent2"></a>IDebugActivateDocumentEvent2
@@ -46,10 +46,10 @@ IDebugActivateDocumentEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O DE implementa essa interface quando for necessário um arquivo de origem a ser aberto. Essa interface é implementada somente por mecanismos de depuração que funcionam com ou fazem parte de interpretadores do script. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface (usa o SDM [QueryInterface](/visual-cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface).  
+ O DE implementa essa interface quando for necessário um arquivo de origem a ser aberto. Essa interface é implementada somente por mecanismos de depuração que funcionam com ou fazem parte do interpretadores de script. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface (usa o SDM [QueryInterface](/cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface).  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- O DE cria e envia esse objeto de evento quando ele precisa ter um arquivo de código-fonte aberto. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada fornecida pelo SDM quando anexado a programa que está sendo depurado.  
+ O DE cria e envia esse objeto de evento quando ele precisa ter um arquivo de código-fonte aberto. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada fornecida pelo SDM quando anexado ao programa que está sendo depurado.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  A tabela a seguir mostra os métodos de `IDebugActivateDocumentEvent2`.  
@@ -57,10 +57,10 @@ IDebugActivateDocumentEvent2 : IUnknown
 |Métodos|Descrição|  
 |-------------|-----------------|  
 |[GetDocument](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocument.md)|Obtém o documento para ativar.|  
-|[GetDocumentContext](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocumentcontext.md)|Obtém o contexto do documento que descreve a posição dentro do documento.|  
+|[GetDocumentContext](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocumentcontext.md)|Obtém o contexto de documento que descreve a posição dentro do documento.|  
   
 ## <a name="remarks"></a>Comentários  
- Um cenário típico no qual essa interface é usada é que se ocorrer um erro de análise no código de script em uma página HTML, o script DE envia essa interface para o SDM para que o documento com o erro de análise pode ser exibido.  
+ Um cenário típico no qual esta interface é usada é que se ocorrer um erro de análise no código de script em uma página HTML, o script DE envia essa interface para o SDM para que o documento com o erro de análise pode ser exibido.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

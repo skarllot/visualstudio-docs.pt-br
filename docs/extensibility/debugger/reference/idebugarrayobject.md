@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject | Documentos do Microsoft
+title: IDebugArrayObject | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,14 +31,14 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b9ffd6eebb533cea6d5d24b2f95b58bb0b7e868b
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: b9cf29659d9b96d543825cc008bdc3bc70ffd95c
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugarrayobject"></a>IDebugArrayObject
 > [!IMPORTANT]
->  No Visual Studio 2015, essa forma de implementar os avaliadores de expressão foi preterida. Para obter informações sobre como implementar os avaliadores de expressão do CLR, consulte [avaliadores de expressão de CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  No Visual Studio 2015, essa maneira de implementar avaliadores de expressão foi preterida. Para obter informações sobre como implementar avaliadores de expressão do CLR, consulte [avaliadores de expressão CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
  Essa interface representa um objeto de matriz.  
   
@@ -52,10 +52,10 @@ IDebugArrayObject : IDebugObject
  O avaliador de expressão implementa essa interface para representar uma matriz.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- O [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) interface pode obter essa interface usando [QueryInterface](/visual-cpp/atl/queryinterface) se o objeto representa uma matriz.  
+ O [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) interface pode obter essa interface usando [QueryInterface](/cpp/atl/queryinterface) se o objeto que representa uma matriz.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
- Além dos métodos de `IDebugObject` interface, os seguintes métodos são implementados no `IDebugArrayObject` interface.  
+ Além dos métodos de `IDebugObject` interface, os métodos a seguir são implementados no `IDebugArrayObject` interface.  
   
 |Método|Descrição|  
 |------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerField | Documentos do Microsoft
+title: IDebugPointerField | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5f1caaf624a015720bc063911bb551135ee38133
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 82656209181d02aa6514def10af1cff17ae1bcf5
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugpointerfield"></a>IDebugPointerField
@@ -49,17 +49,17 @@ IDebugPointerField : IDebugContainerField
  O provedor de símbolo implementa essa interface para representar um ponteiro.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Use [QueryInterface](/visual-cpp/atl/queryinterface) para obter essa interface da [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) retorna `FIELD_TYPE_POINTER`.  
+ Use [QueryInterface](/cpp/atl/queryinterface) para obter essa interface do [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) retorna `FIELD_TYPE_POINTER`.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  Além dos métodos de `IDebugField` e `IDebugContainerField` interfaces, essa interface implementa o método a seguir:  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[GetDereferencedField](../../../extensibility/debugger/reference/idebugpointerfield-getdereferencedfield.md)|Retorna um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) descrevendo a meta do ponteiro.|  
+|[GetDereferencedField](../../../extensibility/debugger/reference/idebugpointerfield-getdereferencedfield.md)|Retorna um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) que descreve o destino do ponteiro.|  
   
 ## <a name="remarks"></a>Comentários  
- Em C/C++, um ponteiro pode ser um contêiner se ele for usado com a notação de matriz. Por exemplo, considerando `char *pString`, `pString` tem um tipo de ponteiro para `char`. `pString[3]`tem o tipo de um contêiner é um ponteiro para `char` que referencia o quarto elemento desse contêiner.  
+ Em C/C++, um ponteiro pode ser um contêiner se ele é usado com a notação de matriz. Por exemplo, `char *pString`, `pString` tem um tipo de ponteiro para `char`. `pString[3]`tem o tipo de um contêiner que é um ponteiro para `char` que referencia o quarto elemento do contêiner.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: sh.h  

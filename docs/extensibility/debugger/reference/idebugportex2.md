@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2 | Documentos do Microsoft
+title: IDebugPortEx2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f0fc8b48fecd72a5280ad83a33546949fcbba809
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: fa36bf7ae96058c4eb7c0462114af50fa08af656
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugportex2"></a>IDebugPortEx2
-Essa interface permite que a sessão de depuração (SDM) do Gerenciador controle de programas e processos em execução em uma porta.  
+Essa interface permite que a sessão de depuração (SDM) do Gerenciador controle, programas e processos em execução em uma porta.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,14 +49,14 @@ IDebugPortEx2 : IUnknown
  Um fornecedor de porta personalizada implementa essa interface no mesmo objeto que implementa [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md).  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- As chamadas SDM [QueryInterface](/visual-cpp/atl/queryinterface) sobre o `IDebugPort2` interface para obter essa interface.  
+ As chamadas SDM [QueryInterface](/cpp/atl/queryinterface) no `IDebugPort2` interface para obter essa interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  A tabela a seguir mostra os métodos de `IDebugPortEx2`.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)|Um arquivo executável é iniciado.|  
+|[LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)|Inicia um arquivo executável.|  
 |[ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)|Retoma a execução de um processo.|  
 |[CanTerminateProcess](../../../extensibility/debugger/reference/idebugportex2-canterminateprocess.md)|Determina se um processo pode ser encerrado.|  
 |[TerminateProcess](../../../extensibility/debugger/reference/idebugportex2-terminateprocess.md)|Finaliza um processo.|  
@@ -64,9 +64,9 @@ IDebugPortEx2 : IUnknown
 |[GetProgram](../../../extensibility/debugger/reference/idebugportex2-getprogram.md)|Obtém um programa associado a um nó de programa.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa interface é normalmente privada entre o SDM e o fornecedor de porta personalizada.  
+ Esta interface é normalmente privada entre o SDM e o fornecedor de porta personalizada.  
   
- Se desejar, um mecanismo de depuração (DE) pode procurar essa interface [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) interface passado para [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) e usar [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) para iniciar o programa. No entanto, não é um requisito, e a DE pode fazer tudo o que ele precisa fazer para iniciar o programa de solicitação.  
+ Se desejar, um mecanismo de depuração (DE) pode procurar por esta interface [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) interface passado para [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) e usar [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) para iniciar o programa. No entanto, isso é não é um requisito, e a DE pode fazer tudo o que ele precisa fazer para iniciar o programa de solicitação.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: portpriv.h  

@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2 | Documentos do Microsoft
+title: IDebugCustomAttributeQuery2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,9 +32,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3dc93efba1403301724d126ea6db7176e07ea96f
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 80928f058dd9b6ccc9bfe162191a903f2d2309e4
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugcustomattributequery2"></a>IDebugCustomAttributeQuery2
@@ -50,7 +50,7 @@ IDebugCustomAttributeQuery2 : IDebugCustomAttributeQuery
  Um provedor de símbolo implementa essa interface no mesmo objeto que implementa [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) para oferecer suporte a atributos personalizados.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Use [QueryInterface](/visual-cpp/atl/queryinterface) para obter essa interface da [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface.  
+ Use [QueryInterface](/cpp/atl/queryinterface) para obter essa interface do [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  A tabela a seguir mostra os métodos de **IDebugCustomAttributeQuery** interface.  

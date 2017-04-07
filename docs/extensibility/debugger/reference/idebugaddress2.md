@@ -1,5 +1,5 @@
 ---
-title: IDebugAddress2 | Documentos do Microsoft
+title: IDebugAddress2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 005911465f7ba78a3a6dcdf8249a96443cd12355
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: e36f2863680dea79451e57d06bd749b52fbed933
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugaddress2"></a>IDebugAddress2
-Essa interface fornece acesso para a identificação do processo que possui o objeto cujo endereço é representado por esta interface.  
+Essa interface fornece acesso para a ID do processo que possui o objeto cujo endereço é representado por esta interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,13 +46,13 @@ IDebugAddress2 : IDebugAddress
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- Um provedor de símbolo implementa essa interface no mesmo objeto que implementa o [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface. Essa interface fornece acesso para a identificação do processo que possui o objeto que está relacionado a esse endereço.  
+ Um provedor de símbolo implementa essa interface no mesmo objeto que implementa o [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface. Essa interface fornece acesso para a ID do processo que possui o objeto que está relacionado a esse endereço.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Use [QueryInterface](/visual-cpp/atl/queryinterface) para obter essa interface da [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
+ Use [QueryInterface](/cpp/atl/queryinterface) para obter essa interface do [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos em vtable ordem  
- Além dos métodos herdados do [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface, essa interface implementa o método a seguir:  
+ Além dos métodos herdados da [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface, essa interface implementa o método a seguir:  
   
 |Método|Descrição|  
 |------------|-----------------|  

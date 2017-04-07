@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessDestroyEvent2 | Documentos do Microsoft
+title: IDebugProcessDestroyEvent2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7cd8b0f6d7b288b09aea33b1240555028d37763b
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 18dc8600aeaee6e900961ab83b449e338e06cc18
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugprocessdestroyevent2"></a>IDebugProcessDestroyEvent2
-Essa interface é enviada quando um processo é finalizado, sai atypically ou será retirado da.  
+Essa interface é enviada quando um processo é finalizado, sair atypically ou será retirado da.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,10 +46,10 @@ IDebugProcessDestroyEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O mecanismo de depuração (DE) ou o fornecedor de porta personalizada implementam essa interface para informar que um processo foi encerrado. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. O SDM usa [QueryInterface](/visual-cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
+ O mecanismo de depuração (DE) ou o fornecedor de porta personalizada implementar esta interface para relatar se um processo foi finalizado. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. Usa o SDM [QueryInterface](/cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- O fornecedor de porta personalizada ou DE cria e envia esse objeto de evento para relatar o encerramento de um processo. O DE envia esse evento usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando ele for anexado ao programa que está sendo depurado. O fornecedor de porta personalizada envia esse evento usando o [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) interface.  
+ O fornecedor de porta personalizada ou DE cria e envia esse objeto de evento para relatar o encerramento de um processo. O DE envia o evento usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando ele é anexado ao programa que está sendo depurado. O fornecedor de porta personalizada envia esse evento usando o [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) interface.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

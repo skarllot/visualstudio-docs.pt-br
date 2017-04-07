@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3 | Documentos do Microsoft
+title: IDebugProperty3 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,21 +31,21 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a56d2c10837ebe6441388ba1d6f09304e46dc28e
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 295baf524d3b1261826090164ccdf657b9672122
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugproperty3"></a>IDebugProperty3
-Essa interface oferece suporte para:  
+Essa interface fornece suporte para:  
   
 -   Recuperando uma cadeia de caracteres longa arbitrária associada à propriedade.  
   
--   Associando a propriedade de uma ID exclusiva.  
+-   Associando uma ID exclusiva com a propriedade.  
   
 -   Recuperando uma lista de visualizadores personalizados para a propriedade.  
   
--   Definindo o valor de uma propriedade com a capacidade de relatar os erros resultantes  
+-   Definir o valor de uma propriedade com a capacidade de relatar os erros resultantes  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ IDebugProperty3 : IDebugProperty2
  O mecanismo de depuração (DE) implementa essa interface no mesmo objeto que implementa [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) para fornecer suporte para cadeias de caracteres longas, IDs de propriedade e visualizadores personalizados.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Chamar [QueryInterface](/visual-cpp/atl/queryinterface) em um `IDebugProperty2` interface para obter essa interface.  
+ Chamar [QueryInterface](/cpp/atl/queryinterface) em um `IDebugProperty2` interface para obter essa interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  Além dos métodos herdados de `IDebugProperty2`, o `IDebugProperty3` interface expõe os métodos a seguir.  
@@ -68,12 +68,12 @@ IDebugProperty3 : IDebugProperty2
 |[GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md)|Retorna a cadeia de caracteres em um buffer fornecido pelo usuário.|  
 |[CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md)|Cria uma ID exclusiva para essa propriedade.|  
 |[DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md)|Destrói a ID exclusiva para essa propriedade.|  
-|[GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)|Retorna o número de visualizadores personalizados que essa propriedade pode ser exibida com.|  
-|[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)|Retorna a lista de visualizadores personalizados que essa propriedade pode ser exibida com.|  
+|[GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)|Retorna o número de visualizadores personalizados que essa propriedade pode ser exibida.|  
+|[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)|Retorna a lista de visualizadores personalizados que essa propriedade pode ser exibida.|  
 |[SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)|Define o valor dessa propriedade, retornando uma mensagem de erro se algo deu errado.|  
   
 ## <a name="remarks"></a>Comentários  
- [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) é a maneira preferencial para o Gerenciador de sessão de depuração (SDM) para definir o valor da propriedade.  
+ [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) é o modo preferencial para o Gerenciador de sessão de depuração (SDM) para definir o valor da propriedade.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

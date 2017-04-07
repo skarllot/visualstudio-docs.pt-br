@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField | Documentos do Microsoft
+title: IDebugEnumField | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3c0e6e0b8fc99899c6cb4186a256571ce64053eb
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: a4040577cc6d51cedc10fcb641c7aca18fa51c14
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugenumfield"></a>IDebugEnumField
@@ -49,20 +49,20 @@ IDebugEnumField : IDebugContainerField
  Um provedor de símbolo implementa essa interface para representar uma enumeração.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Use [QueryInterface](/visual-cpp/atl/queryinterface) para obter essa interface da [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) retorna `FIELD_TYPE_ENUM`.  
+ Use [QueryInterface](/cpp/atl/queryinterface) para obter essa interface do [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) retorna `FIELD_TYPE_ENUM`.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem VTable  
- Além dos métodos de `IDebugField` e `IDebugContainerField` interfaces, essa interface implementa os seguintes métodos:  
+ Além dos métodos de `IDebugField` e `IDebugContainerField` interfaces, essa interface implementa os métodos a seguir:  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[GetUnderlyingSymbol](../../../extensibility/debugger/reference/idebugenumfield-getunderlyingsymbol.md)|Retorna um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) descrevendo o nome para esse tipo de enumeração.|  
-|[GetStringFromValue](../../../extensibility/debugger/reference/idebugenumfield-getstringfromvalue.md)|Retorna o nome da constante de enumeração associado o determinado valor.|  
-|[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)|Retorna o valor associado ao nome de constante de enumeração específico|  
-|[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)|Retorna o valor associado com o nome de constante de enumeração específico, mas ignora maiusculas/minúsculas.|  
+|[GetUnderlyingSymbol](../../../extensibility/debugger/reference/idebugenumfield-getunderlyingsymbol.md)|Retorna um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) que descreve o nome para este tipo de enumeração.|  
+|[GetStringFromValue](../../../extensibility/debugger/reference/idebugenumfield-getstringfromvalue.md)|Retorna o nome da constante de enumeração associada com o valor especificado.|  
+|[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)|Retorna o valor associado com o nome de constante de enumeração fornecido|  
+|[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)|Retorna o valor associado com o nome de constante de enumeração fornecido, mas ignora maiusculas/minúsculas.|  
   
 ## <a name="remarks"></a>Comentários  
- É o símbolo subjacente que realmente está associado a um local com [ligar](../../../extensibility/debugger/reference/idebugbinder-bind.md).  
+ É o símbolo subjacente que, na verdade, está associado a um local com [associar](../../../extensibility/debugger/reference/idebugbinder-bind.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: sh.h  
