@@ -75,7 +75,7 @@ A maneira mais fácil de personalizar um objeto é definir as propriedades no pa
 ##  <a name="Styles"></a>Estilos e modelos: Criar uma aparência consistente entre os controles  
  Você pode criar uma vez a aparência e o comportamento de um controle uma vez e aplicar esse design a outros controles, para que você não precise mantê-los individualmente.  
   
- **Você deve usar um estilo? **: se você só quiser definir as propriedades padrão (como a cor de um botão), use um *estilo*. Modifique um controle, mesmo após aplicar um estilo a ele.  
+ **Você deve usar um estilo?**: se você só quiser definir as propriedades padrão (como a cor de um botão), use um *estilo*. Modifique um controle, mesmo após aplicar um estilo a ele.  
   
  **Você deve usar um modelo?**: se você quiser alterar a estrutura de um controle, use um *modelo*. Imagine a conversão de um gráfico ou logotipo em um botão. Não é possível modificar um controle depois de aplicar um estilo a ele.  
   

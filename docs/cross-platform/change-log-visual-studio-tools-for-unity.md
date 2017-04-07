@@ -29,12 +29,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 28eaaaff0c69ab9588a9d1351aee595abf957e2e
-ms.openlocfilehash: d8c8a0908e7ddd630cfac7b879fae0521acd6944
+ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
+ms.openlocfilehash: 8c13675dbd06111bb0eced77f9343c80959afba1
+ms.lasthandoff: 03/08/2017
 
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>Log de alterações (Ferramentas do Visual Studio para Unity)
 Log de alterações de Ferramentas do Visual Studio para Unity.  
+
+## <a name="3001"></a>3.0.0.1
+ Lançado em 07/03/2017
+
+### <a name="this-version-includes-all-new-features-and-bug-fixes-introduced-with-28x-series"></a>Esta versão inclui todos os novos recursos e as correções de bugs introduzidas com a série 2.8.x.
 
 ## <a name="282-30-preview-3"></a>2.8.2 (3.0 Visualização 3)
  Lançado em 25/01/2017
@@ -445,9 +451,9 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
   
 ### <a name="bug-fixes"></a>Correções de bug  
   
--   Corrija a manipulação de temas do Visual Studio. Anteriormente, as caixas de diálogo em temas pretos podiam aparecer vazias (problemas de Conexão [nº&93263;7](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/932637/) e [nº&93643;9](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/936439/)).  
+-   Corrija a manipulação de temas do Visual Studio. Anteriormente, as caixas de diálogo em temas pretos podiam aparecer vazias (problemas de Conexão [nº 932637](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/932637/) e [nº 936439](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/936439/)).  
   
--   Corrija o congelamento do Unity ao conectar o depurador enquanto o Unity está recompilando (problemas de Conexão [nº&94711;9](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/947119/) e [nº&96921;1](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/969211/)).  
+-   Corrija o congelamento do Unity ao conectar o depurador enquanto o Unity está recompilando (problemas de Conexão [nº 947119](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/947119/) e [nº 969211](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/969211/)).  
   
 -   Corrija pontos de interrupção ao depurar editores ou jogadores remotos compilados em outro sistema.  
   
@@ -457,7 +463,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
   
 -   Corrija a manipulação de escopo de variáveis no depurador para evitar variáveis dinâmicas que pareçam fora do escopo.  
   
--   Corrija a pesquisa de membros estáticos na Avaliação de Expressão do depurador (problema de Conexão [nº&95337;9](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/953379/)).  
+-   Corrija a pesquisa de membros estáticos na Avaliação de Expressão do depurador (problema de Conexão [nº 953379](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/953379/)).  
   
 -   Corrija a exibição de tipos na Avaliação de Expressão do depurador para mostrar propriedades e campos estáticos.  
   
@@ -930,9 +936,4 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
   
 ## <a name="10--initial-release"></a>1.0 – versão inicial  
  Lançado em 22/08/2012
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

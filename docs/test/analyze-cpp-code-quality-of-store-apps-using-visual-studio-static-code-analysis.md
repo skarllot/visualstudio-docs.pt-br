@@ -12,8 +12,7 @@ f1_keywords:
 - vs.codeanalysis.propertypages.native.express
 ms.assetid: c5355e43-a37c-4686-a969-18e3dfc59a9c
 caps.latest.revision: 13
-author: alexhomer1
-ms.author: ahomer
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -33,6 +32,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: d67d850e8fc6e11336dd7cd643f1ea58dbd4cebc
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="analyze-c-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>Analisar a qualidade do código C++ de aplicativos da Store usando a análise de código estático do Visual Studio
@@ -56,7 +56,7 @@ ms.openlocfilehash: d67d850e8fc6e11336dd7cd643f1ea58dbd4cebc
   
  [Avisos da análise de código C++](../test/analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md#Warnings)  
   
-##  <a name="a-namebkmkruna-running-code-analysis"></a><a name="BKMK_Run"></a> Executando análise de código  
+##  <a name="BKMK_Run"></a> Executando análise de código  
  Para executar a análise de código em sua solução do Visual Studio:  
   
 -   No menu **Compilar**, escolha **Executar Análise de Código na Solução**.  
@@ -71,7 +71,7 @@ ms.openlocfilehash: d67d850e8fc6e11336dd7cd643f1ea58dbd4cebc
   
  ![Janela Análise de Código](../test/media/ca_cpp_collapsed.png "CA_CPP_Collapsed")  
   
-##  <a name="a-namebkmkanalyzea-analyzing-and-resolving-code-analysis-warnings"></a><a name="BKMK_Analyze"></a> Analisando e resolvendo avisos da análise de código  
+##  <a name="BKMK_Analyze"></a> Analisando e resolvendo avisos da análise de código  
  Para analisar um aviso específico, escolha o título do aviso na janela Análise de Código. O aviso se expande para exibir informações detalhadas sobre o problema. Quando possível, a análise de código exibe o número da linha e a lógica da análise que levou ao aviso.  
   
  ![Aviso de análise de código expandido](../test/media/ca_cpp_expanded_callout.png "CA_CPP_Expanded_Callout")  
@@ -85,7 +85,7 @@ ms.openlocfilehash: d67d850e8fc6e11336dd7cd643f1ea58dbd4cebc
 > [!TIP]
 >  Você pode executar a análise de código novamente na janela Análise de Código. Clique no botão **Analisar** e, em seguida, escolha o escopo da análise. A análise pode ser executada na solução inteira ou em um projeto selecionado.  
   
-##  <a name="a-namebkmksuppressa-suppressing-code-analysis-warnings"></a><a name="BKMK_Suppress"></a> Suprimindo avisos da análise de código  
+##  <a name="BKMK_Suppress"></a> Suprimindo avisos da análise de código  
  Há ocasiões em que você pode decidir não corrigir um aviso de análise de código. Você pode decidir que resolver o aviso exige recodificação demais considerando a probabilidade de que o problema ocorrerá em qualquer implementação do seu código no mundo real. Ou você pode achar que a análise usada no aviso é inadequada nesse contexto específico. É possível suprimir avisos individuais para que não apareçam mais na janela Análise de Código.  
   
  Para suprimir um aviso:  
@@ -98,12 +98,12 @@ ms.openlocfilehash: d67d850e8fc6e11336dd7cd643f1ea58dbd4cebc
   
  Suprimir uma mensagem insere `#pragma(warning:`*WarningId*`)`, que suprime o aviso para a linha de código.  
   
-##  <a name="a-namebkmksearcha-searching-and-filtering-code-analysis-results"></a><a name="BKMK_Search"></a> Pesquisando e filtrando resultados de análise de código  
+##  <a name="BKMK_Search"></a> Pesquisando e filtrando resultados de análise de código  
  Você pode pesquisar listas longas de mensagens de aviso e pode filtrar avisos em soluções multiprojeto.  
   
  ![Pesquisar e filtrar a janela de análise de código](../test/media/ca_searchfilter.png "CA_SearchFilter")  
   
-##  <a name="a-namewarningsa-c-code-analysis-warnings"></a><a name="Warnings"></a> Avisos da análise de código C++  
+##  <a name="Warnings"></a> Avisos da análise de código C++  
  A análise de código gera os seguintes avisos para o código C++:  
   
 |Regra|Descrição|  
@@ -244,8 +244,4 @@ ms.openlocfilehash: d67d850e8fc6e11336dd7cd643f1ea58dbd4cebc
 |[C28305](../code-quality/c28305.md)|Foi encontrado um erro durante a análise de um token.|  
 |[C28350](../code-quality/c28350.md)|A anotação descreve uma situação que não é aplicável condicionalmente.|  
 |[C28351](../code-quality/c28351.md)|A anotação descreve onde um valor dinâmico (uma variável) não pode ser usado na condição.|
-
-
-<!--HONumber=Feb17_HO4-->
-
 

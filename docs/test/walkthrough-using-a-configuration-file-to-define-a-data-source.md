@@ -14,7 +14,7 @@ helpviewer_keywords:
 - data sources, defining with configuration files
 ms.assetid: 95fa5214-b12e-4e1f-84e5-cc4c2d86b0d7
 caps.latest.revision: 32
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -288,3 +288,4 @@ Este passo a passo ilustra como usar uma fonte de dados definida em um arquivo a
  [Criar e Executar Testes de Unidade para Código Existente](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)   
  [Testando o aplicativo](/devops-test-docs/test/test-apps-early-and-often)   
  [Como criar um teste de unidade orientado a dados](../test/how-to-create-a-data-driven-unit-test.md)
+

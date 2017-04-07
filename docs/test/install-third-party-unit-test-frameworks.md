@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 47893b70-46f8-49dc-84bd-ec820178f683
 caps.latest.revision: 10
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -75,3 +75,4 @@ O Gerenciador de Testes do Visual Studio pode executar qualquer estrutura de tes
   
 ## <a name="see-also"></a>Consulte também  
  [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)
+

@@ -31,6 +31,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 955457ec56cecb291ce73e4fb521669ff68eb443
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="how-to-apply-a-shader-to-a-3-d-model"></a>Como aplicar um sombreador a um modelo 3-D
@@ -55,15 +56,10 @@ Este documento demonstra como usar o Editor de Modelos para aplicar um sombreado
   
  ![Cena&3;D que mostra o efeito de cor básico](../designers/media/digit-3d-model-effect.png "Digit-3D-Model-Effect")  
   
- Depois de aplicar um sombreador a um modelo, você pode abri-lo no Designer de Sombreador selecionando o modelo e, em seguida, na janela **Propriedades**, na propriedade **(Avançado)** do grupo de propriedades **Efeito**, escolha o botão de reticências (**... **).  
+ Depois de aplicar um sombreador a um modelo, você pode abri-lo no Designer de Sombreador selecionando o modelo e, em seguida, na janela **Propriedades**, na propriedade **(Avançado)** do grupo de propriedades **Efeito**, escolha o botão de reticências (**...**).  
   
 ## <a name="see-also"></a>Consulte também  
  [Como criar um modelo 3D básico](../designers/how-to-create-a-basic-3-d-model.md)   
  [Como criar um sombreador de cor básico](../designers/how-to-create-a-basic-color-shader.md)   
  [Editor de Modelo](../designers/model-editor.md)   
  [Designer de Sombreador](../designers/shader-designer.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

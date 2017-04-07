@@ -1,6 +1,6 @@
 ---
-title: "Guia do iniciante para criação de perfil de desempenho | Microsoft Docs"
-ms.custom: 
+title: "Guia do iniciante para criação de perfil de desempenho no Visual Studio | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -35,8 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 53907b9b88deca671ee0695385dcbc856a35d309
-ms.openlocfilehash: edc4f1e6a332a3c515a1d1a65b15ae3f1b989ed8
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: fe329cd5395db3afae1c3f3e98bb6e480323e21f
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="beginners-guide-to-performance-profiling"></a>Guia do iniciante à criação de perfil do desempenho
@@ -48,7 +49,7 @@ O Hub de diagnósticos oferece várias outras opções para executar e gerenciar
 
 Neste tópico, abordaremos a análise do uso de CPU no fluxo de trabalho de depuração normal. Você também pode analisar o uso da CPU sem um depurador anexado ou focando um aplicativo em execução. Para obter mais informações, consulte [Run profiling tools without debugging](../profiling/running-profiling-tools-with-or-without-the-debugger.md) (Executar ferramentas de criação de perfil sem depuração).
   
-##  <a name="a-namebkmkquickstartcollectdiagnosticdataa-step-1-collect-profiling-data"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Etapa 1: Coletar dados de criação de perfil 
+##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Etapa 1: Coletar dados de criação de perfil 
   
 1.  Abra o projeto que deseja depurar no Visual Studio e defina um ponto de interrupção no aplicativo no ponto em que deseja examinar o uso da CPU.
 
@@ -99,7 +100,7 @@ Neste tópico, abordaremos a análise do uso de CPU no fluxo de trabalho de depu
 
      Neste ponto, você pode começar a analisar os dados.
 
-## <a name="a-namestep2a-step-2-analyze-cpu-usage-data"></a><a name="Step2"></a> Etapa 2: Analisar os dados de uso da CPU
+## <a name="Step2"></a> Etapa 2: Analisar os dados de uso da CPU
 
 Recomendamos que você comece a analisar os dados examinando a lista de funções em Uso da CPU, identificando as funções que fazem a maior parte do trabalho e, em seguida, fazendo uma análise mais detalhada de cada uma.
 
@@ -146,7 +147,7 @@ Aqui há mais informações sobre os valores de coluna:
 
 - **Módulos** O nome do módulo que contém a função ou o número de módulos que contêm as funções em um nó [Código Externo].
 
-## <a name="a-namebkmkexternalcodeaview-external-code"></a><a name="BKMK_External_Code"></a>Exibir código externo
+## <a name="BKMK_External_Code"></a>Exibir código externo
 
 O código externo é uma função nos componentes do sistema e do framework executados pelo código que você grava. O código externo inclui funções que iniciam e param o aplicativo, elaboram a interface do usuário, controlam a segmentação e fornecem ao aplicativo outros serviços de nível inferior. Na maioria dos casos, você não está interessado em código externo, portanto, a ferramenta Uso de CPU reúne as funções externas de um método de usuário em um nó **[Código Externo]**.
   
@@ -165,8 +166,3 @@ Use a caixa de pesquisa para localizar um nó que você esteja procurando e use 
  [[Uso de Memória](../profiling/memory-usage.md)
  [Uso da CPU](../profiling/cpu-usage.md)
  [Ferramentas de Criação de Perfil](../profiling/profiling-tools.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

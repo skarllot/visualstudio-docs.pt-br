@@ -1,5 +1,5 @@
 ---
-title: IDebugMessageEvent2 | Documentos do Microsoft
+title: IDebugMessageEvent2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 0f033c5793dc3b89a1f2bd74a2bc4857730fb746
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: dfbe6b139a823fa13e9ce58284026c163cc07ffa
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugmessageevent2"></a>IDebugMessageEvent2
@@ -46,12 +46,12 @@ IDebugMessageEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O DE implementa essa interface para enviar uma mensagem para o Visual Studio que requer uma resposta do usuário. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. O SDM usa [QueryInterface](/visual-cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
+ O DE implementa essa interface para enviar uma mensagem para o Visual Studio que requer uma resposta do usuário. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. Usa o SDM [QueryInterface](/cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
   
- A implementação dessa interface deve se comunicar a chamada do Visual Studio de [SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md) para DE. Por exemplo, isso pode ser feito com uma mensagem publicada à mensagem do DE tratamento de segmento ou o objeto que implementa essa interface pode manter uma referência para o DE e chamar de volta o DE com a resposta passada em `IDebugMessageEvent2::SetResponse`.  
+ A implementação desta interface deve se comunicar a chamada do Visual Studio de [SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md) para DE. Por exemplo, isso pode ser feito com uma mensagem postada a mensagem do DE segmento de tratamento ou o objeto que implementa essa interface pode conter uma referência para o DE e retorno de chamada para o DE com a resposta passada para `IDebugMessageEvent2::SetResponse`.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- O DE cria e envia esse objeto de evento para exibir uma mensagem para o usuário que solicita uma resposta. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando ele for anexado ao programa que está sendo depurado.  
+ O DE cria e envia esse objeto de evento para exibir uma mensagem para o usuário que solicita uma resposta. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando ele é anexado ao programa que está sendo depurado.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  A tabela a seguir mostra os métodos de `IDebugMessageEvent2`.  
@@ -59,12 +59,12 @@ IDebugMessageEvent2 : IUnknown
 |Método|Descrição|  
 |------------|-----------------|  
 |[GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)|Obtém a mensagem a ser exibida.|  
-|[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)|Define a resposta, se houver, da caixa de mensagem.|  
+|[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)|Define a resposta, se houver, na caixa de mensagem.|  
   
 ## <a name="remarks"></a>Comentários  
- O DE usará essa interface se ela exige uma resposta específica do usuário para uma determinada mensagem. Por exemplo, se o DE uma mensagem de "Acesso negado" após uma tentativa de se conectar remotamente a um programa, o DE envia essa mensagem específica para o Visual Studio em uma `IDebugMessageEvent2` eventos com o estilo de caixa de mensagem `MB_RETRYCANCEL`. Isso permite que o usuário tentar novamente ou cancelar a operação de anexação.  
+ O DE usará essa interface se ele requer uma resposta específica do usuário para uma determinada mensagem. Por exemplo, se o DE receber uma mensagem de "Acesso negado" após uma tentativa de se conectar remotamente a um programa, o DE envia a mensagem em questão para o Visual Studio em um `IDebugMessageEvent2` evento com o estilo de caixa de mensagem `MB_RETRYCANCEL`. Isso permite que o usuário tentar novamente ou cancelar a operação de anexação.  
   
- O DE Especifica como esta mensagem deve ser tratada seguindo as convenções da função Win32 `MessageBox` (consulte [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8) para obter detalhes).  
+ O DE Especifica como esta mensagem deve ser tratada pelo segue as convenções da função Win32 `MessageBox` (consulte [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8) para obter detalhes).  
   
  Use o [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) interface para enviar mensagens para o Visual Studio que não exigem uma resposta do usuário.  
   

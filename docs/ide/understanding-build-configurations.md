@@ -45,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fad883ab06804181b4cf7f305e8ab2ebf28a9fb6
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: e0f2cecb0a2152ca99ce4b1dfb62ef28166a07ee
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="understanding-build-configurations"></a>Noções sobre configurações de build
@@ -103,5 +103,5 @@ ms.lasthandoff: 02/22/2017
  [Passo a passo: criando um aplicativo](../ide/walkthrough-building-an-application.md)   
  [Compilando e criando](../ide/compiling-and-building-in-visual-studio.md)   
  [Soluções e projetos](../ide/solutions-and-projects-in-visual-studio.md)   
- [Referência de build do C/C++](/visual-cpp/build/reference/c-cpp-building-reference)   
+ [Referência de build do C/C++](/cpp/build/reference/c-cpp-building-reference)   
  [Opções de linha de comando devenv](../ide/reference/devenv-command-line-switches.md)

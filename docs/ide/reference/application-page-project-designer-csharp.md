@@ -37,6 +37,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: ccee6976f7c98e62211eb2bda4dec7da7334e031
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="application-page-project-designer-c"></a>Página Aplicativo, Designer de Projeto (C#)
@@ -112,13 +113,8 @@ Use a página **Aplicativo** do **Designer de Projeto** para especificar as prop
  **Arquivo de recurso**  
  Selecione esse botão de opção quando você estiver fornecendo um arquivo de recurso para o projeto. Selecionar essa opção desabilita as opções **Ícone** e **Manifesto**.  
   
- Insira um nome de caminho ou use o botão Procurar (**... **) para adicionar um arquivo de recurso Win32 ao projeto.  
+ Insira um nome de caminho ou use o botão Procurar (**...**) para adicionar um arquivo de recurso Win32 ao projeto.  
   
 ## <a name="see-also"></a>Consulte também  
 [Gerenciando propriedades do aplicativo](../../ide/application-properties.md)  
  [Escrevendo código em soluções do Office](/office-dev/office-dev/writing-code-in-office-solutions)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

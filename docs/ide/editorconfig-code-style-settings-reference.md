@@ -89,9 +89,9 @@ erro | Quando esse estilo não estiver sendo seguido, mostre um erro do compilad
         - [Expressões throw](#null_checking_throw_expressions)
         - [Chamadas de delegados condicionais](#null_checking_conditional_delegate_calls)
 
-## <a name="a-namethisandmethis-and-me-qualificationa"></a><a name="this_and_me">"This." e "Me." Qualificação</a>
+## <a name="this_and_me">"This." e "Me." Qualificação</a>
 
-### <a name="a-namethisandmefieldsfieldsa"></a><a name="this_and_me_fields">Campos</a>
+### <a name="this_and_me_fields">Campos</a>
 
 |  Nome da opção | `dotnet_style_qualification_for_field` |
 | ------------- |:-------------:|
@@ -109,7 +109,7 @@ erro | Quando esse estilo não estiver sendo seguido, mostre um erro do compilad
 dotnet_style_qualification_for_field = false:suggestion
 ```
 
-### <a name="a-namethisandmepropertiespropertiesa"></a><a name="this_and_me_properties">Propriedades</a>
+### <a name="this_and_me_properties">Propriedades</a>
 
 |  Nome da opção | `dotnet_style_qualification_for_property` |
 | ------------- |:-------------:|
@@ -128,7 +128,7 @@ dotnet_style_qualification_for_property = false:suggestion
 ```
 
 
-### <a name="a-namethisandmemethodsmethodsa"></a><a name="this_and_me_methods">Métodos</a>
+### <a name="this_and_me_methods">Métodos</a>
 |  Nome da opção | `dotnet_style_qualification_for_method` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C# e Visual Basic
@@ -146,7 +146,7 @@ dotnet_style_qualification_for_property = false:suggestion
 dotnet_style_qualification_for_method = false:suggestion
 ```
 
-### <a name="a-namethisandmeeventseventsa"></a><a name="this_and_me_events">Eventos</a>
+### <a name="this_and_me_events">Eventos</a>
 |  Nome da opção | `dotnet_style_qualification_for_event` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C# e Visual Basic
@@ -164,7 +164,7 @@ dotnet_style_qualification_for_event = false:suggestion
 ```
 
 ## <a name="language_keywords">Palavras-chave de linguagens (int, string, etc.) vs nomes de tipos de estrutura para referências de tipo </a>
-### <a name="a-namelanguagekeywordsvariableslocals-parameters-and-membersa"></a><a name="language_keywords_variables">Locais, parâmetros e membros</a>
+### <a name="language_keywords_variables">Locais, parâmetros e membros</a>
 |  Nome da opção | `dotnet_style_predefined_type_for_locals_parameters_members` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C# e Visual Basic
@@ -181,7 +181,7 @@ dotnet_style_qualification_for_event = false:suggestion
 dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 ``` 
 
-### <a name="a-namelanguagekeywordsmemberaccessmember-access-expressionsa"></a><a name="language_keywords_member_access">Expressões de acesso de membro</a>
+### <a name="language_keywords_member_access">Expressões de acesso de membro</a>
 |  Nome da opção | `dotnet_style_predefined_type_for_member_access` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C# e Visual Basic
@@ -198,8 +198,8 @@ dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 dotnet_style_predefined_type_for_member_access = true:suggestion
 ``` 
 
-## <a name="a-nameexpressionlevelexpression-level-preferencesa"></a><a name="expression_level">Preferências de nível de expressão</a>
-### <a name="a-nameexpressionlevelobjectinitializersobject-initializersa"></a><a name="expression_level_object_initializers">Inicializadores de objeto</a>
+## <a name="expression_level">Preferências de nível de expressão</a>
+### <a name="expression_level_object_initializers">Inicializadores de objeto</a>
 |  Nome da opção | `dotnet_style_object_initializer` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C# e Visual Basic
@@ -216,7 +216,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 dotnet_style_object_initializer = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionlevelcollectioninitializerscollection-initializersa"></a><a name="expression_level_collection_initializers">Inicializadores de coleção</a>
+### <a name="expression_level_collection_initializers">Inicializadores de coleção</a>
 |  Nome da opção | `dotnet_style_collection_initializer` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C# e Visual Basic
@@ -233,7 +233,7 @@ dotnet_style_object_initializer = true:suggestion
 dotnet_style_collection_initializer = true:suggestion
 ```
 
-### <a name="a-nameexpressionleveltuplenamesexplicit-tuple-namesa"></a><a name="expression_level_tuple_names">Nomes de tupla explícita</a>
+### <a name="expression_level_tuple_names">Nomes de tupla explícita</a>
 |  Nome da opção | `dotnet_style_explicit_tuple_names` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C# e Visual Basic
@@ -250,7 +250,7 @@ dotnet_style_collection_initializer = true:suggestion
 dotnet_style_explicit_tuple_names = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionlevelnullcheckingcoalescing-expressions-in-null-checkinga"></a><a name="expression_level_null_checking">Unindo expressões em verificação "null"</a>
+### <a name="expression_level_null_checking">Unindo expressões em verificação "null"</a>
 |  Nome da opção | `dotnet_style_coalesce_expression` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C# e Visual Basic
@@ -267,7 +267,7 @@ dotnet_style_explicit_tuple_names = true:suggestion
 dotnet_style_coalesce_expression = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionlevelnullpropogationnull-propagation-in-null-checkinga"></a><a name="expression_level_null_propogation">Propagação nula na verificação "null"</a>
+### <a name="expression_level_null_propogation">Propagação nula na verificação "null"</a>
 |  Nome da opção | `dotnet_style_null_propagation` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C# e Visual Basic
@@ -284,9 +284,9 @@ dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_null_propagation = true:suggestion
 ``` 
 
-# <a name="a-namecsharpcodestylecsharp-code-style-settingsa"></a><a name="csharp_codestyle">Configurações de estilo de código CSharp</a>
-## <a name="a-namevarvara"></a><a name="var">"var"</a>
-### <a name="a-namevarbuiltinvar-for-built-in-typesa"></a><a name="var_built_in">"var" para tipos internos</a>
+# <a name="csharp_codestyle">Configurações de estilo de código CSharp</a>
+## <a name="var">"var"</a>
+### <a name="var_built_in">"var" para tipos internos</a>
 |  Nome da opção | `csharp_style_var_for_built_in_types` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -303,7 +303,7 @@ dotnet_style_null_propagation = true:suggestion
 csharp_style_var_for_built_in_types = true:suggestion
 ``` 
 
-### <a name="a-namevarapparentvar-when-type-is-apparenta"></a><a name="var_apparent">"var" quando o tipo é aparente</a>
+### <a name="var_apparent">"var" quando o tipo é aparente</a>
 |  Nome da opção | `csharp_style_var_when_type_is_apparent` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -320,7 +320,7 @@ csharp_style_var_for_built_in_types = true:suggestion
 csharp_style_var_when_type_is_apparent = true:suggestion
 ``` 
 
-### <a name="a-namevarelsewherevar-elsewherea"></a><a name="var_elsewhere">"var" em qualquer lugar</a>
+### <a name="var_elsewhere">"var" em qualquer lugar</a>
 |  Nome da opção | `csharp_style_var_elsewhere` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -337,7 +337,7 @@ csharp_style_var_when_type_is_apparent = true:suggestion
 csharp_style_var_elsewhere = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersmethodsa"></a><a name="expression_bodied_members">Métodos</a>
+### <a name="expression_bodied_members">Métodos</a>
 |  Nome da opção | `csharp_style_expression_bodied_methods` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -354,7 +354,7 @@ csharp_style_var_elsewhere = true:suggestion
 csharp_style_expression_bodied_methods = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersconstructorsconstructorsa"></a><a name="expression_bodied_members_constructors">Construtores</a>
+### <a name="expression_bodied_members_constructors">Construtores</a>
 |  Nome da opção | `csharp_style_expression_bodied_constructors` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -371,7 +371,7 @@ csharp_style_expression_bodied_methods = false:none
 csharp_style_expression_bodied_constructors = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersoperatorsoperatorsa"></a><a name="expression_bodied_members_operators">Operadores</a>
+### <a name="expression_bodied_members_operators">Operadores</a>
 |  Nome da opção | `csharp_style_expression_bodied_operators` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -388,7 +388,7 @@ csharp_style_expression_bodied_constructors = false:none
 csharp_style_expression_bodied_operators = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmemberspropertiespropertiesa"></a><a name="expression_bodied_members_properties">Propriedades</a>
+### <a name="expression_bodied_members_properties">Propriedades</a>
 |  Nome da opção | `csharp_style_expression_bodied_properties` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -405,7 +405,7 @@ csharp_style_expression_bodied_operators = false:none
 csharp_style_expression_bodied_properties = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersindexersindexersa"></a><a name="expression_bodied_members_indexers">Indexadores</a>
+### <a name="expression_bodied_members_indexers">Indexadores</a>
 |  Nome da opção | `csharp_style_expression_bodied_indexers` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -422,7 +422,7 @@ csharp_style_expression_bodied_properties = false:none
 csharp_style_expression_bodied_indexers = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersaccessorsaccessorsa"></a><a name="expression_bodied_members_accessors">Acessadores</a>
+### <a name="expression_bodied_members_accessors">Acessadores</a>
 |  Nome da opção | `csharp_style_expression_bodied_accessors` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -439,8 +439,8 @@ csharp_style_expression_bodied_indexers = false:none
 csharp_style_expression_bodied_accessors = false:none
 ``` 
 
-## <a name="a-namepatternmatchingpattern-matchinga"></a><a name="pattern_matching">Correspondência de padrões</a>
-### <a name="a-namepatternmatchingiscastis-with-cast-checkinga"></a><a name="pattern_matching_is_cast">verificação "is" com "cast"</a>
+## <a name="pattern_matching">Correspondência de padrões</a>
+### <a name="pattern_matching_is_cast">verificação "is" com "cast"</a>
 |  Nome da opção | `csharp_style_pattern_matching_over_is_with_cast_check` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -457,7 +457,7 @@ csharp_style_expression_bodied_accessors = false:none
 csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 ```
 
-### <a name="a-namepatternmatchingasnullas-with-null-checkinga"></a><a name="pattern_matching_as_null">Verificação "as" com "null"</a>
+### <a name="pattern_matching_as_null">Verificação "as" com "null"</a>
 |  Nome da opção | `csharp_style_pattern_matching_over_as_with_null_check` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -474,14 +474,14 @@ csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 ```
 
-### <a name="a-nameinlinedvariabledeclarationsinlined-variable-declarationsa"></a><a name="inlined_variable_declarations">Declarações de variável embutida</a>
+### <a name="inlined_variable_declarations">Declarações de variável embutida</a>
 |  Nome da opção | `csharp_style_inlined_variable_declaration` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
 
 | Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| verdadeiro | Prefira que as variáveis `out` sejam declaradas embutidas quando possível. | **C#:** <br>`if (int.TryParse(value out int i) {...}`
+| verdadeiro | Prefira que as variáveis `out` sejam declaradas embutidas quando possível. | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
 | False | Prefira que as variáveis `out` sejam declaradas explicitamente.| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
 
 #### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
@@ -491,8 +491,8 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 csharp_style_inlined_variable_declaration = true:suggestion
 ```
 
-## <a name="a-namenullcheckingnull-checking-preferencesa"></a><a name="null_checking">Preferências da verificação "null"</a>
-### <a name="a-namenullcheckingthrowexpressionsthrow-expressionsa"></a><a name="null_checking_throw_expressions">Expressões throw</a>
+## <a name="null_checking">Preferências da verificação "null"</a>
+### <a name="null_checking_throw_expressions">Expressões throw</a>
 |  Nome da opção | `csharp_style_throw_expression` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#
@@ -509,7 +509,7 @@ csharp_style_inlined_variable_declaration = true:suggestion
 csharp_style_throw_expression = true:suggestion
 ```
 
-### <a name="a-namenullcheckingconditionaldelegatecallsprefer-conditional-delegate-callsa"></a><a name="null_checking_conditional_delegate_calls">Prefira chamadas de delegados condicionais</a>
+### <a name="null_checking_conditional_delegate_calls">Prefira chamadas de delegados condicionais</a>
 |  Nome da opção | `csharp_style_conditional_delegate_call` |
 | ------------- |:-------------:|
 | **Linguagens aplicáveis** | C#

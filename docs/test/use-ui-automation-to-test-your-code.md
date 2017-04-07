@@ -19,7 +19,7 @@ helpviewer_keywords:
 - coded UI test
 ms.assetid: ad9e3eaa-ab86-436e-95b8-dc20eb1f8b2a
 caps.latest.revision: 85
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -39,6 +39,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: 753a39940ba32052cff14460f007a8f8a2d191dd
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>Usar automação de interface do usuário para testar código
@@ -80,13 +81,13 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
 -   [O que vem a seguir?](#VerifyCodeUsingCUITWhatsNext)  
   
-##  <a name="a-nameverifyingcodeusingcuitcreatea-creating-coded-ui-tests"></a><a name="VerifyingCodeUsingCUITCreate"></a> Criando Testes de IU Codificados  
+##  <a name="VerifyingCodeUsingCUITCreate"></a> Criando Testes de IU Codificados  
   
 1.  **Crie um projeto de Teste de IU Codificado.**  
   
      Os testes de IU codificados devem estar contidos em um projeto de teste de IU codificado. Se você ainda não tiver um projeto de teste de IU codificado, crie um. No **Gerenciador de Soluções**, no menu de atalho da solução, escolha **Adicionar**, **Novo Projeto** e, em seguida, selecione **Visual Basic** ou **Visual C#**. Em seguida, escolha **Teste**, **Teste de IU Codificado**.  
   
-    -   *Não vejo os modelos de projeto do **Teste de IU Codificado**.*  
+    -   *Não vejo os modelos de projeto do**Teste de IU Codificado**.*  
   
          Você pode estar usando uma versão do Visual Studio que não oferece suporte a testes de IU codificados. Para criar testes de IU codificados, é necessário usar o Visual Studio Enterprise.  
   
@@ -171,7 +172,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
  Para obter um exemplo mais detalhado, consulte [Passo a passo: criar, editar e manter um teste de IU codificado](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md). Neste passo a passo, você criará um aplicativo simples do Windows Presentation Foundation (WPF) para demonstrar como criar, editar e manter um teste de IU codificado. O passo a passo fornece soluções para corrigir os testes que foram interrompidos por vários problemas de timing e refatoração de controle.  
   
-###  <a name="a-namestartinga-starting-and-stopping-the-application-under-test"></a><a name="starting"></a> Iniciando e parando o aplicativo em teste  
+###  <a name="starting"></a> Iniciando e parando o aplicativo em teste  
  *Não desejo iniciar e parar meu aplicativo, navegador ou banco de dados separadamente para cada teste. Como evito isso?*  
   
 -   ![Pré-requisito](../test/media/prereq.png "Prereq") Se não quiser registrar as ações para iniciar o aplicativo em teste, será necessário iniciá-lo antes de escolher o ícone **Registrar**.  
@@ -182,7 +183,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
 -   ![Prerequsite](../test/media/prereq.png "Prereq") É possível adicionar um método de limpeza de teste, identificado por um atributo [TestCleanup], que executa o código no fim de cada método de teste. Por exemplo, o método para fechar o aplicativo poderia ser chamado do método TestCleanup.  
   
-###  <a name="a-nameverifyingcodeusingcuitgenerateassertionsa-validating-the-properties-of-ui-controls"></a><a name="VerifyingCodeUsingCUITGenerateAssertions"></a> Validando as propriedades de controles de interface do usuário  
+###  <a name="VerifyingCodeUsingCUITGenerateAssertions"></a> Validando as propriedades de controles de interface do usuário  
  É possível usar o **Construtor de Teste de IU Codificado** para adicionar um controle de interface do usuário ao <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> para o teste ou gerar código para um método de validação que usa uma asserção para um controle de interface do usuário.  
   
  Para gerar asserções para os controles de interface do usuário, escolha a ferramenta **Adicionar Asserções** no Construtor de Teste de IU Codificado e arraste-a até o controle no aplicativo em teste que você deseja verificar se está correto. Quando a caixa contornar o controle, solte o mouse. O código da classe de controle é criado imediatamente no arquivo `UIMap.Designer.cs`.  
@@ -303,7 +304,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
 ```  
   
-##  <a name="a-nameverifyingcodecuitmodifya-customizing-your-coded-ui-test"></a><a name="VerifyingCodeCUITModify"></a> Personalizando o teste de IU codificado  
+##  <a name="VerifyingCodeCUITModify"></a> Personalizando o teste de IU codificado  
  Depois de criar o teste de IU codificado, você poderá editá-lo usando qualquer uma destas ferramentas no Visual Studio:  
   
 -   **Construtor de Teste de IU Codificado:** use o Construtor de Teste de IU Codificado para adicionar controles e validar testes. Consulte a seção [Adicionar controles e validar suas propriedades](#VerifyingCodeUsingCUITGenerateAssertions), neste tópico.  
@@ -330,7 +331,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
         -   [Configurações e plataformas com suporte para testes de IU codificados e gravações das ações](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)  
   
-###  <a name="a-namegeneratedcodea-the-generated-code"></a><a name="generatedCode"></a> O Código Gerado  
+###  <a name="generatedCode"></a> O Código Gerado  
  Quando você escolhe **Gerar Código**, diversas partes do código são criadas:  
   
 -   **Uma linha no método de teste.**  
@@ -398,7 +399,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
  Para obter mais informações sobre o código gerado, consulte [Anatomia de um Teste de IU Codificado](../test/anatomy-of-a-coded-ui-test.md).  
   
-###  <a name="a-nameactionsa-coding-ui-control-actions-and-properties"></a><a name="actions"></a> Codificando ações e propriedades de controle de interface do usuário  
+###  <a name="actions"></a> Codificando ações e propriedades de controle de interface do usuário  
  Quando você trabalha com controles de teste de IU em testes de IU codificados, eles são separados em duas partes: ações e propriedades.  
   
 -   A primeira parte consiste em ações, que é possível realizar em controles de teste de IU. Por exemplo, os testes de IU codificados podem simular cliques do mouse em um controle de teste de IU ou simular teclas pressionadas no teclado para afetar um controle de teste de IU.  
@@ -454,10 +455,10 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
      `SetProperty(myWinCheckBox.PropertyNames.Checked, true);`  
   
-###  <a name="a-namedebugginga-debugging"></a><a name="debugging"></a> Depuração  
+###  <a name="debugging"></a> Depuração  
  Você pode analisar testes de IU codificados usando logs de teste de IU codificado. Os logs de teste de IU codificado filtram e registram informações importantes sobre as execuções de teste de IU codificado. O formato dos logs permite depurar rapidamente os problemas. Para obter mais informações, consulte [Analisando Testes de IU Codificado usando o Logs de Teste de IU Codificado](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md).  
   
-##  <a name="a-nameverifycodeusingcuitwhatsnexta-whats-next"></a><a name="VerifyCodeUsingCUITWhatsNext"></a> O que vem a seguir?  
+##  <a name="VerifyCodeUsingCUITWhatsNext"></a> O que vem a seguir?  
  **Opções adicionais para executar testes de IU codificados:** é possível executar testes de IU codificados diretamente no Visual Studio, como descrito anteriormente neste tópico. Além disso, é possível executar testes de IU automatizados em [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] ou [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]. Quando são automatizados, os testes de IU codificados precisam interagir com a área de trabalho quando executados, diferentemente de outros testes automatizados.  
   
 -   [Como executar testes no Microsoft Visual Studio](http://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)  
@@ -509,8 +510,4 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
  [Configurações e plataformas com suporte para testes de IU codificados e gravações das ações](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
  [Atualizando testes de IU codificados por meio do Visual Studio 2010](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)   
  [Gerenciando um Teste de IU Codificado de uma gravação da ação existente](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

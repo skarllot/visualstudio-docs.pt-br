@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3 | Documentos do Microsoft
+title: IDebugProcess3 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a6228383df4a48f24d3409f5b63ee4c9c3f2eef9
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 6b98394c4880ce78eb8069534b009ea351608cd6
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugprocess3"></a>IDebugProcess3
-Essa interface representa um processo em execução e seus programas. Essa interface existe como uma substituição de vários métodos de [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) interface. Ela fornece controle sobre todos os programas no processo.  
+Essa interface representa um processo em execução e seus programas. Essa interface existe como uma substituição para vários métodos de [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) interface. Ele fornece controle sobre todos os programas no processo.  
   
 > [!NOTE]
 >  [Continuar](../../../extensibility/debugger/reference/idebugprogram2-continue.md), [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md), e [etapa](../../../extensibility/debugger/reference/idebugprogram2-step.md) métodos foram preteridos e não deve mais ser usados. Use os métodos correspondentes no `IDebugProcess3` interface em vez disso.  
@@ -49,27 +49,27 @@ IDebugProcess3 : IDebugProcess2
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- Essa interface é implementada por um fornecedor de porta personalizada para gerenciar programas como um grupo. Quando os programas são gerenciados como um grupo, você pode controlar sua execução e estabeleça uma linguagem para um avaliador de expressão. Esta interface deve ser implementada pelo fornecedor de porta.  
+ Essa interface é implementada por um fornecedor de porta personalizada para gerenciar os programas como um grupo. Quando programas são gerenciados como um grupo, você pode controlar sua execução e estabelecer um idioma para um avaliador de expressão. Esta interface deve ser implementada pelo fornecedor de porta.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
  Essa interface é chamada principalmente pelo Gerenciador de depuração de sessão (SDM) para interagir com um grupo de programas identificados neste processo.  
   
- Chamar [QueryInterface](/visual-cpp/atl/queryinterface) em uma [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) interface para obter essa interface.  
+ Chamar [QueryInterface](/cpp/atl/queryinterface) em uma [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) interface para obter essa interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  Além dos métodos herdados de [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md), `IDebugProcess3` implementa os métodos a seguir.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Continuar](../../../extensibility/debugger/reference/idebugprocess3-continue.md)|Continua a execução de ou depurar um processo.|  
+|[Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)|Continua a execução de ou passando por um processo.|  
 |[Executar](../../../extensibility/debugger/reference/idebugprocess3-execute.md)|Inicia a execução de um processo.|  
-|[Etapa](../../../extensibility/debugger/reference/idebugprocess3-step.md)|Etapas encaminham uma instrução ou instrução no processo.|  
+|[Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)|Etapas de encaminham uma instrução ou instrução no processo.|  
 |[GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)|Obtém o motivo que o processo foi iniciado para depuração.|  
-|[SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)|Define o idioma de hospedagem para que o mecanismo de depuração possa carregar o avaliador de expressão apropriada.|  
-|[GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md)|Recupera o idioma definido atualmente para esse processo.|  
-|[DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)|Desabilita editar e continuar (ENC) para esse processo.<br /><br /> Um fornecedor de porta personalizada não implementar esse método (sempre deve retornar `E_NOTIMPL`).|  
-|[GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)|Obter o estado ENC para esse processo.<br /><br /> Um fornecedor de porta personalizada não implementar esse método (sempre deve retornar `E_NOTIMPL`).|  
-|[GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)|Recupera uma matriz de identificadores exclusivos para os mecanismos de depuração disponíveis.|  
+|[SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)|Define o idioma de hospedagem para que o mecanismo de depuração pode carregar o avaliador de expressão apropriada.|  
+|[GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md)|Recupera o idioma definido atualmente para este processo.|  
+|[DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)|Desabilita o editar e continuar (c) para esse processo.<br /><br /> Um fornecedor de porta personalizada não implementa esse método (sempre deve retornar `E_NOTIMPL`).|  
+|[GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)|Obter o estado ENC para esse processo.<br /><br /> Um fornecedor de porta personalizada não implementa esse método (sempre deve retornar `E_NOTIMPL`).|  
+|[GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)|Recupera uma matriz de identificadores exclusivos para mecanismos de depuração disponíveis.|  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: Msdbg.h  

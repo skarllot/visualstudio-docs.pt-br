@@ -18,9 +18,9 @@ manager: ghogen
 f1_keywords:
 - vs.performancecenter
 translationtype: Human Translation
-ms.sourcegitcommit: ba88bad0753653dcde8a4d28b4dd1c71522d6506
-ms.openlocfilehash: 435197f1536dc9006691c0f2e58fafd0fcf27718
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 27a265dbbb1f9426ba2dd254095c84239bbd0db7
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Otimizar o tempo de inicialização do Visual Studio
@@ -28,7 +28,7 @@ Idealmente, o Visual Studio sempre deve iniciar o mais rápido possível. No ent
 
 ## <a name="control-startup-behavior"></a>Controlar o comportamento de inicialização
 
-Para evitar a estender o tempo de inicialização, o Visual Studio 2017 RC evita carregar extensões durante a inicialização, usando uma abordagem de carregamento sob demanda. Isso significa que as extensões não abrem imediatamente após o Visual Studio ser iniciado, mas abrem de forma assíncrona conforme o necessário após a inicialização. Além disso, como as janelas de ferramentas deixadas abertas em uma sessão anterior do Visual Studio podem deixar o tempo de inicialização lento, o Visual Studio abre as janelas de ferramentas de uma maneira mais inteligente para evitar afetar o tempo de inicialização.
+Para evitar a extensão do tempo de inicialização, o Visual Studio 2017 evita carregar extensões durante a inicialização, usando uma abordagem de carregamento sob demanda. Isso significa que as extensões não abrem imediatamente após o Visual Studio ser iniciado, mas abrem de forma assíncrona conforme o necessário após a inicialização. Além disso, como as janelas de ferramentas deixadas abertas em uma sessão anterior do Visual Studio podem deixar o tempo de inicialização lento, o Visual Studio abre as janelas de ferramentas de uma maneira mais inteligente para evitar afetar o tempo de inicialização.
 
 Se o Visual Studio detectar lentidão na inicialização, uma mensagem pop-up será exibida, alertando-o para a janela de ferramentas ou extensão que está causando a lentidão. A mensagem também fornece um link para a caixa de diálogo **Gerenciar o Desempenho do Visual Studio**, que lista as extensões e janelas de ferramentas que estão afetando o desempenho de inicialização. Essa caixa de diálogo permite que você altere as configurações de janela de ferramentas e extensão para melhorar o desempenho de inicialização.
 
@@ -55,7 +55,7 @@ Se posteriormente você mudar de ideia, poderá reverter qualquer uma dessas op�
 
 ## <a name="speed-up-solution-load"></a>Acelerar o carregamento da solução
 
-O Visual Studio 2017 RC introduz um novo recurso chamado **carga de solução leve** que reduz a quantidade de tempo e memória necessárias para carregar soluções grandes no IDE. Se você tiver uma solução grande que contém muitos projetos C#, VB ou C++, provavelmente observará um benefício significativo do desempenho se habilitar a carga de solução leve.
+O Visual Studio 2017 introduz um novo recurso chamado **carga de solução leve**, que reduz o tempo e a memória necessários para carregar soluções grandes no IDE. Se você tiver uma solução grande que contém muitos projetos C#, VB ou C++, provavelmente observará um benefício significativo do desempenho se habilitar a carga de solução leve.
 
 Como alguns recursos do IDE não estão totalmente disponíveis quando a carga de solução leve está habilitada, o recurso é desativado por padrão. As seções a seguir o ajudarão a decidir se deve ou não habilitar esse recurso.
 
@@ -77,7 +77,7 @@ Quando você altera a configuração da carga de solução leve, a alteração e
 
 ### <a name="automatically-enable-lightweight-solution-load"></a>Habilitar a carga de solução leve automaticamente
 
-Quando você abre uma solução grande no Visual Studio 2017 RC, pode ver uma mensagem pop-up oferecendo para habilitar a carga de solução leve. A mensagem é exibida somente para soluções que contêm vários projetos C#, VB ou C++. Escolher o comando **habilitar** habilitará a carga de solução leve apenas para aquela solução. A configuração de todo o IDE não será alterada.
+Ao abrir uma solução grande no Visual Studio 2017, você poderá ver uma mensagem pop-up oferecendo para habilitar a carga de solução leve. A mensagem é exibida somente para soluções que contêm vários projetos C#, VB ou C++. Escolher o comando **habilitar** habilitará a carga de solução leve apenas para aquela solução. A configuração de todo o IDE não será alterada.
 
 ![Janela pop-up](../ide/media/VSIDE_LSL Popup.png)
 

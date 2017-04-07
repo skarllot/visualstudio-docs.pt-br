@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 221f4911981deec0330f76a82c0cc8a1b968e56e
-ms.openlocfilehash: 081a569fc7e38fecc8cc1ae5b0f8138ae8f25521
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 2e6e4b3d9d1528d57fe181b3765e1ce3624bebad
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Alterações na extensibilidade do Visual Studio 2017
-
->**Observação:** esta documentação é preliminar e com base na versão RC do Visual Studio 2017.
 
 Com o Visual Studio de 2017, estamos oferecendo uma [mais rápida e leve experiência de instalação do Visual Studio](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer) que reduz o impacto do Visual Studio em sistemas de usuário, dando aos usuários maior escolha sobre os recursos que estão instalados e cargas de trabalho. Para oferecer suporte a esses aperfeiçoamentos, fez alterações no modelo de extensibilidade e fez algumas alterações para extensibilidade do Visual Studio. Este documento descreve os detalhes técnicos dessas alterações e que pode ser feito para solucioná-los. Observe que algumas informações são detalhes de implementação de point-in-time e podem ser alteradas posteriormente.
 
@@ -46,7 +44,7 @@ Estamos introduzindo o v3 VSIX formato (versão 3) para oferecer suporte a exper
 Alterações no formato VSIX incluem:
 
 * Declaração de pré-requisitos para a instalação. Para cumprir a promessa de uma leve, fast-instalando o Visual Studio, o instalador agora oferece mais opções de configuração para os usuários. Como resultado, para garantir que os recursos e componentes necessários para uma extensão são instalados, serão necessário extensões declarar suas dependências.
-  * Com a versão RC, o instalador do Visual Studio 2017 automaticamente se oferecerá para adquirir e instalar os componentes necessários para o usuário como parte da instalação sua extensão.
+  * O instalador do Visual Studio 2017 automaticamente se oferecerá para adquirir e instalar os componentes necessários para o usuário como parte da instalação sua extensão.
   * Os usuários também serão avisados quando tentar instalar uma extensão que não foi criada usando o novo formato VSIX v3, mesmo se eles foram marcados em seu manifesto como direcionando a versão 15.0.
 * Recursos aprimorados para o formato do VSIX. Fornecer um [instalação de baixo impacto](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install) do Visual Studio que também oferece suporte a instalações lado a lado, nós não salvar mais dados de configuração no registro do sistema e movidos assemblies do Visual Studio específicos fora do GAC. Também aumentamos as capacidades do formato do VSIX e mecanismo de instalação do VSIX, permitindo que você use a ele, em vez de um MSI ou EXE para instalar as extensões para alguns tipos de instalação.
 
@@ -112,7 +110,7 @@ A maioria dos assemblies de núcleo do Visual Studio não são mais instalados n
   * HKCU\Software\Microsoft\VisualStudio\\**versão**: chaves de Registro criadas pelo Visual Studio para armazenar configurações específicas do usuário.
   * HKCU\Software\Microsoft\VisualStudio\\**versão**_Config: uma cópia do Visual Studio HKLM chave acima, além de chaves do registro mesclado de arquivos. pkgdef pelas extensões.
 * Para reduzir o impacto sobre o registro, o Visual Studio agora usa o [RegLoadAppKey](https://msdn.microsoft.com/en-us/library/windows/desktop/ms724886(v=vs.85).aspx) função para armazenar as chaves do registro em um arquivo binário privado em % VsAppDataFolder%\privateregistry.bin. Somente um número muito pequeno de chaves do Visual Studio específicas permanecem no registro do sistema.
-* Código existente em execução dentro do processo do Visual Studio não é afetado. Visual Studio redirecionará todas as operações de registro na chave HKCU Visual Studio específicos no registro particular. Lendo e gravando em outros locais do registro continuarão a usar o registro do sistema.
+* Código existente em execução dentro do processo do Visual Studio não é afetado. Visual Studio redirecionará todas as operações de registro na chave HKCU Visual Studio específicos no registro particular. Lendo e gravando em outros locais do registro continuará a usar o registro do sistema.
 * Código externo será necessário carregar e ler este arquivo para entradas de registro do Visual Studio.
 
 ### <a name="reacting-to-this-breaking-change"></a>Reagir a essa alteração de quebra

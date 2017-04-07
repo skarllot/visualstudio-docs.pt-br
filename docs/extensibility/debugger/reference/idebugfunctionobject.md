@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject | Documentos do Microsoft
+title: IDebugFunctionObject | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,14 +31,14 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 02cb3520f169e67243ac276cbbb4e4c79d439808
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 6188a5dad827abf76d22441706e6600f1dd3781a
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugfunctionobject"></a>IDebugFunctionObject
 > [!IMPORTANT]
->  No Visual Studio 2015, essa forma de implementar os avaliadores de expressão foi preterida. Para obter informações sobre como implementar os avaliadores de expressão do CLR, consulte [avaliadores de expressão de CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  No Visual Studio 2015, essa maneira de implementar avaliadores de expressão foi preterida. Para obter informações sobre como implementar avaliadores de expressão do CLR, consulte [avaliadores de expressão CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
  Essa interface representa uma função.  
   
@@ -52,7 +52,7 @@ IDebugFunctionObject : IDebugObject
  Um avaliador de expressão implementa essa interface para representar uma função.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Essa interface é uma especialização do [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) interface e é obtido usando [QueryInterface](/visual-cpp/atl/queryinterface) sobre o `IDebugObject` interface.  
+ Essa interface é uma especialização do [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) de interface e é obtido usando [QueryInterface](/cpp/atl/queryinterface) no `IDebugObject` interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  Além dos métodos herdados de [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md), o `IDebugFunctionObject` interface expõe os métodos a seguir.  
@@ -67,7 +67,7 @@ IDebugFunctionObject : IDebugObject
 |[Avaliar](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md)|Chama a função e retorna o valor resultante como um objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa interface permite que o avaliador de expressão representar funções em uma árvore de análise. O `Create` métodos nessa interface são usados para construir os objetos que representam os parâmetros de entrada para o método. A função pode então ser executada chamando o [avaliar](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) método, que retorna um objeto que representa o valor de retorno da função.  
+ Essa interface permite que o avaliador de expressão representar as funções em uma árvore de análise. O `Create` métodos nessa interface são usados para construir os objetos que representam os parâmetros de entrada para o método. A função, em seguida, pode ser executada chamando o [avaliar](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) método, que retorna um objeto que representa o valor de retorno da função.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: ee.h  

@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f6337c35-acae-4c5f-b5d9-ac5ff687ef18
 caps.latest.revision: 16
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -217,7 +217,7 @@ Por padrão, a ferramenta de cobertura de código do Visual Studio analisa todos
   
 3.  Na página **Processo**, expanda **Testes Automatizados**, **Fonte de Teste**, **Configurações de Execução**. Selecione o seu arquivo **.runsettings**.  
   
-    -   *Mas **Assembly de Teste** será exibido em vez de **Fonte de Teste**. Quando tento definir o campo **Configurações de Execução**, só consigo selecionar arquivos .testsettings.*  
+    -   *Mas**Assembly de Teste**será exibido em vez de**Fonte de Teste**. Quando tento definir o campo **Configurações de Execução**, só consigo selecionar arquivos .testsettings.*  
   
          Em **Testes Automatizados**, selecione **Assembly de Teste** e escolha **[...]** no final da linha. Na caixa de diálogo **Adicionar/Editar Execução de Teste**, defina **Test Runner** para **Visual Studio Test Runner**.  
   
@@ -343,3 +343,4 @@ Included items must then not match any entries in the exclude list to remain inc
 ## <a name="see-also"></a>Consulte também  
  [Uso da cobertura de código para determinar quanto código está sendo testado](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)   
  [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)
+

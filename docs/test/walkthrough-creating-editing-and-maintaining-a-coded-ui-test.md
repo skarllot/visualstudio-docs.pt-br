@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f7c25ba7-5c9c-455b-9242-701cda56f90c
 caps.latest.revision: 41
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -406,3 +406,4 @@ Neste passo a passo, você criará um aplicativo simples do Windows Presentation
  [Introdução ao Designer do WPF](http://msdn.microsoft.com/en-us/18e61d03-b96a-4058-a166-8ec6b3f6116b)   
  [Configurações e plataformas com suporte para testes de IU codificados e gravações das ações](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
  [Editando testes de IU codificados usando o editor de testes de IU codificados](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
+

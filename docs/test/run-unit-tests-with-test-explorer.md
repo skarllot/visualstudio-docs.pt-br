@@ -12,7 +12,7 @@ f1_keywords:
 - vs.unittesting.testexplorer.overview
 ms.assetid: 91b167a3-280a-498b-8fc2-f67859a2c64e
 caps.latest.revision: 27
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -311,3 +311,4 @@ FullName:"MyClass" - FullName:"PerfTest"
 ## <a name="see-also"></a>Consulte também  
  [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)   
  [Executar um teste de unidade como um processo de 64 bits](../test/run-a-unit-test-as-a-64-bit-process.md)
+

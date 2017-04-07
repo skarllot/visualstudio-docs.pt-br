@@ -34,8 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a1edc88394193474b273968d8435e8df06415044
-ms.openlocfilehash: 6169b6d1805808c96647425706bf555e379679a8
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 9c9e9e8c63d69e797a28ce4f8b1ac0adcf074b77
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="options-text-editor-cc-advanced"></a>Opções, Editor de Texto, C/C++, Avançado
@@ -138,8 +139,11 @@ Ao alterar essas opções, você pode alterar o comportamento relacionado ao Int
  **Máximo de Unidades de Translação no Cache**  
  O número máximo de unidades de translação será mantido ativo a qualquer momento para solicitações de IntelliSense. Você deve especificar um valor entre 2 e 15. Esse número está diretamente relacionado ao número máximo de processos de VCPkgSrv.exe que serão executados (para uma determinada instância do Visual Studio). O valor padrão é 2, mas se você tiver memória disponível, poderá aumentar esse valor e possivelmente alcançar um desempenho ligeiramente melhor no IntelliSense.  
   
- Para obter mais informações sobre as unidades de translação, consulte [Fases de translação](/visual-cpp/preprocessor/phases-of-translation).  
-  
+ Para obter mais informações sobre as unidades de translação, consulte [Fases de translação](/cpp/preprocessor/phases-of-translation).  
+
+ **Lista de Membros Ponto-a-Seta**  
+ Substitui '.' por '->' quando aplicável para a lista de membros.
+
  **Desabilitar Lista de Membros Agressivos**  
  A lista de membros não aparece enquanto você digita o nome de um tipo ou variável. A lista é exibida somente depois que você digita um dos caracteres de confirmação, conforme definido na opção **Caracteres de Confirmação de Lista de Membros**.  
   
@@ -169,12 +173,14 @@ Ao alterar essas opções, você pode alterar o comportamento relacionado ao Int
  Oculte itens não confirmados nos resultados de “Localizar Todas as Referências”. Se você remover definição da opção "Desabilitar Resolução", poderá usar essa opção para ocultar itens não confirmados nos resultados.  
   
  **Desabilitar Realce de Referência**  
+
+ ## <a name="text-editor"></a>Editor de Texto
+ **Habilitar Expandir Escopos**  
+ Se habilitado, você poderá colocar o texto selecionado entre chaves digitando ‘{’ no editor de texto.  
+  
+ **Habilitar Expandir Precedência**  
+ Se habilitado, você poderá colocar o texto selecionado entre parênteses digitando ‘(’ no editor de texto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando opções do editor específicas a um idioma](../../ide/reference/setting-language-specific-editor-options.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

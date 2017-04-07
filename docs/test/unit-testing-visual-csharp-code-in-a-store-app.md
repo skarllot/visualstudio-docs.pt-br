@@ -10,9 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 23cb0d82-0451-464e-98ea-fa66e7010ead
 caps.latest.revision: 19
-author: alexhomer1
-ms.author: ahomer
-manager: robinr
+ms.author: douge
+manager: douge
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -381,3 +380,4 @@ Este tópico descreve uma maneira de criar testes de unidade para uma classe Vis
   
 > [!NOTE]
 >  Para adicionar um método auxiliar a uma classe de teste, não adicione o atributo `[TestMethod]` ao método. O Gerenciador de Testes não registra o método a ser executado.
+

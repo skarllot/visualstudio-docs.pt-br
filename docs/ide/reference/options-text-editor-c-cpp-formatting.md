@@ -1,5 +1,5 @@
 ---
-title: "Opções, Editor de Texto, C-C++, Formatação | Microsoft Docs"
+title: "Opções, Editor de Texto, C/C++, Formatação | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0fc25d6ed45929764b5d8cb64df935dd14886f1e
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 80ce7de7e89844d8c9cb1052499b2d873e04965e
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="options-text-editor-cc-formatting"></a>Opções, Editor de Texto, C/C++, Formatação
@@ -81,16 +81,16 @@ Permite alterar o comportamento padrão do Editor de Códigos quando você está
  Quando você insere um arquivo no editor de texto, é possível habilitar o recurso de estrutura de tópicos. Para obter mais informações, consulte [Estrutura de tópicos](../../ide/outlining.md). Quando essa opção é selecionada, o recurso de estrutura de tópicos é habilitado quando você abre um arquivo.  
   
  **Estrutura de tópicos automática de blocos de região #pragma**  
- Quando essa opção é selecionada, a estrutura de tópicos automática de [diretivas pragma](/visual-cpp/preprocessor/pragma-directives-and-the-pragma-keyword) é habilitada. Isso permite expandir ou recolher blocos de região pragma no modo de estrutura de tópicos.  
+ Quando essa opção é selecionada, a estrutura de tópicos automática de [diretivas pragma](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword) é habilitada. Isso permite expandir ou recolher blocos de região pragma no modo de estrutura de tópicos.  
   
  **Estrutura de tópicos automática de blocos de instrução**  
  Quando essa opção é selecionada, a estrutura de tópicos automática é habilitada para os seguintes construtores de instrução:  
   
 -   [if-else](/dotnet/csharp/language-reference/keywords/if-else)  
   
--   [Instrução switch (C++)](/visual-cpp/cpp/switch-statement-cpp)  
+-   [Instrução switch (C++)](/cpp/cpp/switch-statement-cpp)  
   
--   [Instrução while (C++)](/visual-cpp/cpp/while-statement-cpp)  
+-   [Instrução while (C++)](/cpp/cpp/while-statement-cpp)  
   
 ## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo Geral, Ambiente, Opções](../../ide/reference/general-environment-options-dialog-box.md)   

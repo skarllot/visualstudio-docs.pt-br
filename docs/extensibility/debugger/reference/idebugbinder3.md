@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3 | Documentos do Microsoft
+title: IDebugBinder3 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,16 +31,16 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 17be0ab2d5b42410777433fe23e4408857ba53fd
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 47df761681525fd0c1062ae3d84be61c388282e9
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugbinder3"></a>IDebugBinder3
 > [!IMPORTANT]
->  No Visual Studio 2015, essa forma de implementar os avaliadores de expressão foi preterida. Para obter informações sobre como implementar os avaliadores de expressão do CLR, consulte [avaliadores de expressão de CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  No Visual Studio 2015, essa maneira de implementar avaliadores de expressão foi preterida. Para obter informações sobre como implementar avaliadores de expressão do CLR, consulte [avaliadores de expressão CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Essa interface fornece acesso aos tipos, aliases e serviços de visualizador personalizado.  
+ Essa interface fornece acesso aos serviços de visualizador personalizado, aliases e tipos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,21 +52,21 @@ IDebugBinder3 : IDebugBinder
  Um mecanismo de depuração implementa essa interface para oferecer suporte a aliases, serviços de visualizador personalizado e acesso a informações de tipo de objeto.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Um [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) interface obtém essa interface usando [QueryInterface](/visual-cpp/atl/queryinterface).  
+ Um [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) interface obtém essa interface usando [QueryInterface](/cpp/atl/queryinterface).  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  Além dos métodos fornecidos pelo [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) interface, essa interface implementa o seguinte:  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[GetMemoryObject](../../../extensibility/debugger/reference/idebugbinder3-getmemoryobject.md)|Recupera um objeto de memória que representa a memória ao qual esse objeto está associado.|  
+|[GetMemoryObject](../../../extensibility/debugger/reference/idebugbinder3-getmemoryobject.md)|Recupera um objeto de memória que representa a memória para o qual este objeto está associado.|  
 |[GetExceptionObjectAndType](../../../extensibility/debugger/reference/idebugbinder3-getexceptionobjectandtype.md)|Recupera a exceção associada a esse objeto (se houver)|  
 |[FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md)|Recupera um alias recebe seu nome,|  
 |[GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md)|Recupera uma matriz de todos os aliases para este objeto|  
-|[GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)|Obtém o número de tipos de argumento associado a este objeto|  
-|[GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)|Recupera uma lista de tipos de argumento associado a este objeto|  
-|[GetEEService](../../../extensibility/debugger/reference/idebugbinder3-geteeservice.md)|Obtém uma interface para um serviço de Visualizador|  
-|[GetMemoryContext64](../../../extensibility/debugger/reference/idebugbinder3-getmemorycontext64.md)|Converte um objeto local ou um endereço de memória de 64 bits em um contexto de memória.|  
+|[GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)|Obtém o número de tipos de argumento associados com este objeto|  
+|[GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)|Recupera uma lista de tipos de argumento associados com este objeto|  
+|[GetEEService](../../../extensibility/debugger/reference/idebugbinder3-geteeservice.md)|Obtém uma interface para um serviço do Visualizador|  
+|[GetMemoryContext64](../../../extensibility/debugger/reference/idebugbinder3-getmemorycontext64.md)|Converte um local do objeto ou um endereço de memória de 64 bits em um contexto de memória.|  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: ee.h  

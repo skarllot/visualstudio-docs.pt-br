@@ -1,5 +1,5 @@
 ---
-title: IDebugThreadNameChangedEvent2 | Documentos do Microsoft
+title: IDebugThreadNameChangedEvent2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d57362fa76e5131976a72a77dc030e7a2b117d62
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 5bb790dbc786f41a4eb09e1d6e0c3cf95cb79508
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugthreadnamechangedevent2"></a>IDebugThreadNameChangedEvent2
@@ -46,10 +46,10 @@ IDebugThreadNameChangedEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O DE implementa essa interface para relatórios que alterou o nome do thread. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. O SDM usa [QueryInterface](/visual-cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
+ O DE implementa essa interface para relatórios que o nome do thread foi alterado. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. Usa o SDM [QueryInterface](/cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- O DE cria e envia esse objeto de evento para relatório mudou o nome do thread. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando ele for anexado ao programa que está sendo depurado.  
+ O DE cria e envia esse objeto de evento para relatório de nome do thread foi alterado. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando ele é anexado ao programa que está sendo depurado.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

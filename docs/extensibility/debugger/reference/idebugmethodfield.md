@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField | Documentos do Microsoft
+title: IDebugMethodField | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0717cfca61ee6e03136283a4a5514e25b587de78
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 46d6173d2c015dc783bac0778b93419101d4c553
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugmethodfield"></a>IDebugMethodField
@@ -46,13 +46,13 @@ IDebugMethodField : IDebugContainerField
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- Um provedor de símbolo implementa essa interface no mesmo objeto que implementa o [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface. Essa interface é uma especialização que apresenta um método.  
+ Um provedor de símbolo implementa essa interface no mesmo objeto que implementa o [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface. Esta interface é uma especialização que apresenta um método.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Use [QueryInterface](/visual-cpp/atl/queryinterface) para obter essa interface da [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) retorna `FIELD_TYPE_METHOD`. Além disso, os métodos [GetPropertyGetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertygetter.md), [GetPropertySetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertysetter.md), e [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md), retorne todos os `IDebugMethodField` interface.  
+ Use [QueryInterface](/cpp/atl/queryinterface) para obter essa interface do [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) retorna `FIELD_TYPE_METHOD`. Além disso, os métodos, [GetPropertyGetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertygetter.md), [GetPropertySetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertysetter.md), e [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md), todos retornam o `IDebugMethodField` interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
- Além dos métodos de [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) e [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interfaces, essa interface implementa os seguintes métodos:  
+ Além dos métodos de [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) e [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interfaces, essa interface implementa os métodos a seguir:  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -66,7 +66,7 @@ IDebugMethodField : IDebugContainerField
 |[EnumArguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md)|Cria um enumerador para o tipo de cada argumento necessário para chamar o método.|  
   
 ## <a name="remarks"></a>Comentários  
- Um método pode conter parâmetros como variáveis locais.  
+ Um método pode conter parâmetros, bem como variáveis locais.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: sh.h  

@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide | Documentos do Microsoft
+title: IPropertyProxyEESide | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: be625a57f4fcab14bf67585cb275074f23391d4f
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: c22154a77221bd45031428a158bc8060b89f93ef
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="ipropertyproxyeeside"></a>IPropertyProxyEESide
-Essa interface fornece métodos para exibir dados sobre o objeto associado. Essa interface é parte do suporte para visualizadores de tipo.  
+Essa interface fornece métodos para exibir dados sobre o objeto associado. Esta interface é parte do suporte para visualizadores de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,10 +49,10 @@ IPropertyProxyEESide : IUnknown
  Um avaliador de expressão implementa essa interface para oferecer suporte a visualizadores de tipo.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Chamar [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) para obter essa interface. Chamar [QueryInterface](/visual-cpp/atl/queryinterface) em uma [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interface para obter o [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md) interface.  
+ Chamar [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) para obter essa interface. Chamar [QueryInterface](/cpp/atl/queryinterface) em uma [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interface para obter o [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md) interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
- Os seguintes métodos são implementados por esta interface:  
+ Os métodos a seguir são implementados por esta interface:  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -60,8 +60,8 @@ IPropertyProxyEESide : IUnknown
 |[GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)|Recupera informações sobre o assembly do objeto.|  
 |[GetInitialData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getinitialdata.md)|Obtém os dados iniciais para o objeto.|  
 |[CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)|Cria uma cópia de um armazenamento de dados existente.|  
-|[InPlaceUpdateObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md)|Cria uma referência para um armazenamento de dados existente.|  
-|[ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)|Recupera informações sobre um assembly específico no contexto do assembly que contém esse objeto.|  
+|[InPlaceUpdateObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md)|Cria uma referência a um armazenamento de dados existente.|  
+|[ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)|Recupera informações sobre um assembly específico no contexto do assembly que contém este objeto.|  
   
 ## <a name="remarks"></a>Comentários  
  Um visualizador de tipo usa essa interface para acessar os valores associados com o objeto que esta interface é parte do. Os dados são acessados por meio de [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) interface, que fornece uma exibição somente leitura dos dados.  

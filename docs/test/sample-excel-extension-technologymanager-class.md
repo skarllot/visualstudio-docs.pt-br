@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8a7b760d-b5ac-4451-9593-6ac1a0b95cdb
 caps.latest.revision: 9
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -30,6 +30,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 6ef83b910860e0a790abbe61e5e844c0adf61d53
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="sample-excel-extension-technologymanager-class"></a>Extensão de exemplo do Excel: classe TechnologyManager
@@ -82,8 +83,4 @@ Essa classe estende a classe <xref:Microsoft.VisualStudio.TestTools.UITest.Exten
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A>   
  [Estendendo testes de IU codificados e gravações da ação para dar suporte ao Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

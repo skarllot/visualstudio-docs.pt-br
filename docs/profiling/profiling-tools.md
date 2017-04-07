@@ -1,5 +1,5 @@
 ---
-title: "Ferramentas de Criação de Perfil | Microsoft Docs"
+title: "Ferramentas de criação de perfil no Visual Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8f844c2d7d975476bc4c059d211a1d6cb0df64eb
-ms.openlocfilehash: 4c995fb6df6316ce7f84fae7075b81063b54ebf7
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 0d129b4820944f5717c63243cb8550bc4fed3385
+ms.openlocfilehash: 380b65540d8f5c6ea6d8a8adf1f3c5575f5dd9dc
+ms.lasthandoff: 03/20/2017
 
 ---
 # <a name="profiling-tools"></a>Ferramentas de Criação de Perfil
@@ -103,15 +103,16 @@ Ferramentas de Diagnóstico e Criação de Perfil ajudam você a diagnosticar o 
 ## <a name="which-tool-should-i-use"></a>Qual ferramenta devo usar?  
  Eis aqui uma tabela que lista as diferentes ferramentas que o Visual Studio oferece e os diferentes tipos de projeto com os quais você poderá usá-las:  
   
-|Ferramenta de Desempenho|Área de Trabalho do Windows|Windows Universal/Store|ASP.NET|  
+|Ferramenta de Desempenho|Área de Trabalho do Windows|Windows Universal/Store|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[Uso de Memória](../profiling/memory-usage.md)|sim|sim|sim|  
 |[Uso da CPU](../profiling/cpu-usage.md)|sim|sim|sim|  
 |[Uso de GPU](../debugger/gpu-usage.md)|sim|sim|no|  
 |[Linha do tempo do aplicativo](../profiling/application-timeline.md)|sim|sim|no|  
-|[PerfTips](../profiling/perftips.md)|sim|sim para XAML, não para HTML|no|  
-|[Gerenciador de Desempenho](../profiling/performance-explorer.md)|sim|no|sim|  
-|[IntelliTrace](../debugger/intellitrace.md)|Somente .NET Enterprise|Somente .NET Enterprise|Somente .NET Enterprise|  
+|[PerfTips](../profiling/perftips.md)|sim|sim para XAML, não para HTML|sim|  
+|[Gerenciador de Desempenho](../profiling/performance-explorer.md)|sim|no|sim (não para ASP.NET Core)|  
+|[IntelliTrace](../debugger/intellitrace.md)|Somente .NET Enterprise|Somente .NET Enterprise|Somente .NET Enterprise|
+|[Uso de rede](../profiling/network-usage.md)|no|sim|no| 
 |[Capacidade de Resposta de interface do usuário em HTML](../profiling/html-ui-responsiveness.md)|no|sim para HTML, não para XAML|no|  
 |[Memória JavaScript](../profiling/javascript-memory.md)|no|sim para HTML, não para XAML|no|  
   

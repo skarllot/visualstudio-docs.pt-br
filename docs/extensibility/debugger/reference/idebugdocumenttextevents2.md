@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents2 | Documentos do Microsoft
+title: IDebugDocumentTextEvents2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1bca956b9abac7bbc054858c1ca550a10f54509d
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 242c15cc456c3a27ba7b7da45a11031b026c02d3
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugdocumenttextevents2"></a>IDebugDocumentTextEvents2
@@ -49,14 +49,14 @@ IDebugDocumentTextEvents2 : IUnknown
  O DE implementa essa interface para oferecer suporte a fazer alterações ao código-fonte. Normalmente, essa interface é implementada no mesmo objeto que implementa o [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) interface.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]obtém essa interface por meio de uma chamada para o <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise%2A>método.</xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise%2A> O <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint>interface é obtida de uma chamada para o <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.EnumConnectionPoints%2A>método.</xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.EnumConnectionPoints%2A> </xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> O <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>interface é obtida chamando o [QueryInterface](/visual-cpp/atl/queryinterface) método em uma [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) interface.</xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]Obtém a esta interface por meio de uma chamada para o <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise%2A>método.</xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise%2A> O <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint>interface é obtida de uma chamada para o <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.EnumConnectionPoints%2A>método.</xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.EnumConnectionPoints%2A> </xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> O <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>interface é obtida chamando o [QueryInterface](/cpp/atl/queryinterface) método em um [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) interface.</xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  A tabela a seguir mostra os métodos de `IDebugDocumentTextEvents2`.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[onDestroy](../../../extensibility/debugger/reference/idebugdocumenttextevents2-ondestroy.md)|Indica que o documento inteiro foi destruído.|  
+|[onDestroy](../../../extensibility/debugger/reference/idebugdocumenttextevents2-ondestroy.md)|Indica que todo o documento foi destruído.|  
 |[onInsertText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-oninserttext.md)|Notifica o pacote de depuração que o texto foi inserido no documento.|  
 |[onRemoveText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onremovetext.md)|Notifica o pacote de depuração que o texto foi removido do documento.|  
 |[onReplaceText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onreplacetext.md)|Notifica o pacote de depuração que o texto foi substituído no documento.|  

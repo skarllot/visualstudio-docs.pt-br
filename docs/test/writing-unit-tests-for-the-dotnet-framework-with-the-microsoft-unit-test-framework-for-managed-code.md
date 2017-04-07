@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fbeba971-c468-4429-8017-0f12ab55638c
 caps.latest.revision: 5
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -30,6 +30,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 5c2f22f1e4dc6be0aefe27f45e53332b206d7b90
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="writing-unit-tests-for-the-net-framework-with-the-microsoft-unit-test-framework-for-managed-code"></a>Escrevendo testes de unidade para .NET Framework com o Microsoft Unit Test Framework para código gerenciado
@@ -49,8 +50,4 @@ ms.openlocfilehash: 5c2f22f1e4dc6be0aefe27f45e53332b206d7b90
  [Como direcionar uma versão anterior do .NET](../test/how-to-configure-unit-tests-to-target-an-earlier-version-of-the-dotnet-framework.md)  
   
  [Projeto de exemplo para criação de testes de unidade](../test/sample-project-for-creating-unit-tests.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

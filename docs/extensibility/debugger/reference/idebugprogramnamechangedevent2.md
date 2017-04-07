@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNameChangedEvent2 | Documentos do Microsoft
+title: IDebugProgramNameChangedEvent2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,9 +29,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d0032971225d25b054cd66ee500800de4bcd7b97
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 36773f1a6be04f83978e34d5b4407dbcde42da06
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugprogramnamechangedevent2"></a>IDebugProgramNameChangedEvent2
@@ -44,10 +44,10 @@ IDebugProgramNameChangedEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O DE implementa essa interface para relatórios que o nome do programa foi alterado. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. O SDM usa [QueryInterface](/visual-cpp/atl/queryinterface) para acessar o **IDebugEvent2** interface.  
+ O DE implementa essa interface para o relatório que o nome do programa foi alterado. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. Usa o SDM [QueryInterface](/cpp/atl/queryinterface) para acessar o **IDebugEvent2** interface.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- O DE cria e envia esse objeto de evento para relatar uma alteração de nome do programa. O DE envia esse evento usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando anexado a programa que está sendo depurado. O fornecedor de porta personalizada envia esse evento usando a interface.  
+ O DE cria e envia esse objeto de evento para relatar uma alteração de nome de programa. O DE envia o evento usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando anexado ao programa que está sendo depurado. O fornecedor de porta personalizada envia esse evento, usando a interface.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: Msdbg.h  

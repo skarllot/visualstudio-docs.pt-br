@@ -1,5 +1,5 @@
 ---
-title: IDebugQueryEngine2 | Documentos do Microsoft
+title: IDebugQueryEngine2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c3ebaf258d63162f36a536b598b4f8bf5eac42eb
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: cdf774a97ef3b1d0bfeec0be8482d2c116806885
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugqueryengine2"></a>IDebugQueryEngine2
@@ -46,20 +46,20 @@ IDebugQueryEngine2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O DE implementa essa interface nos objetos que implementam as interfaces DE mais comuns (como [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md), [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md), e [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)) para permitir acesso ao [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) interface DE si mesmo.  
+ O DE implementa essa interface nos objetos que implementam as interfaces DE mais comuns (como [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md), [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md), e [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)) para permitir o acesso ao [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) interface DE si mesmo.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Chamar [QueryInterface](/visual-cpp/atl/queryinterface) em uma interface DE típico para obter essa interface.  
+ Chamar [QueryInterface](/cpp/atl/queryinterface) em uma interface DE típico para obter essa interface.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  A tabela a seguir mostra os métodos de `IDebugQueryEngine2`.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[GetEngineInterface](../../../extensibility/debugger/reference/idebugqueryengine2-getengineinterface.md)|Obtém uma interface de mecanismo (DE) de depuração personalizada.|  
+|[GetEngineInterface](../../../extensibility/debugger/reference/idebugqueryengine2-getengineinterface.md)|Obtém uma interface de mecanismo (DE) personalizados de depuração.|  
   
 ## <a name="remarks"></a>Comentários  
- Normalmente, essa interface é implementada no objeto que implementa o [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) de interface para oferecer suporte a causalidade ordenada percorrendo funções; isto é, quando o depurador está saindo de uma função, a função seguinte para executar pode não ser uma função em outro thread, mas a função anterior na pilha completamente. Para obter uma definição de "causalidade", consulte o [Glossário de depurador do Visual Studio](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md).  
+ Normalmente, essa interface é implementada no objeto que implementa o [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) interface para oferecer suporte a causalidade ordenado percorrendo funções; ou seja, quando o depurador é sair de uma função, a próxima função pode não ser uma função em outro thread, mas a função anterior na pilha completamente. Para obter uma definição de "causalidade", consulte o [Glossário de depurador do Visual Studio](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

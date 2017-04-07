@@ -1,8 +1,8 @@
 ---
-title: "Criar uma instalação offline do Visual Studio 2017 RC | Microsoft Docs"
-description: "Aprenda a criar uma instalação offline do Visual Studio."
+title: Criar um instalador offline para o Visual Studio 2017 | Microsoft Docs
+description: Saiba como criar um instalador offline para o Visual Studio.
 ms.custom: 
-ms.date: 02/14/2017
+ms.date: 03/21/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -12,6 +12,7 @@ ms.topic: article
 f1_keywords:
 - offline installation [Visual Studio]
 - offline install [Visual Studio]
+- offline installer [Visual Studio]
 - ISO [Visual Studio]
 ms.assetid: 7bd7e724-7bfd-43f1-9935-981919be5a00
 author: TerryGLee
@@ -33,102 +34,83 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: d4d1bd45ce697017480b3f63d0c7feb5ab20d2d6
-ms.openlocfilehash: 33e765d205aa7ad8a3d8c5b871863ab659092a77
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 563c78a49eb55886b1ddbd4f437951c99c6568e5
+ms.lasthandoff: 03/22/2017
 
 ---
-# <a name="create-an-offline-installation-of-visual-studio-2017-rc"></a>Criar uma instalação offline do Visual Studio 2017 RC
+# <a name="create-an-offline-installer-for-visual-studio-2017"></a>Criar um instalador offline para o Visual Studio 2017
+Sabemos que muitos clientes desejam um instalador offline para o [Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=844067). Embora não ofereçamos uma imagem ISO, é fácil criar uma pasta que pode ser usada para instalar no modo offline.
 
-## <a name="create-a-layout"></a>Criar um layout
-Se você desejar instalar o [Visual Studio 2017 RC](https://www.visualstudio.com/vs/visual-studio-2017-rc/) em outro computador que não tenha acesso à Internet, será possível fazê-lo criando primeiro um layout de instalação offline que contenha todos os arquivos e componentes do Visual Studio de que você precisa.
+Veja como.
 
-Em seguida, é possível instalar o Visual Studio no computador de destino usando o layout de instalação offline criado.     
+## <a name="download-the-setup-file-you-want"></a>Baixar o arquivo de configuração desejado
+**[Baixe](https://www.visualstudio.com/downloads?utm_source=mscom&utm_campaign=msdocs)** a edição do Visual Studio desejada. Lembre-se de clicar em **Salvar** e, em seguida, clique em **Abrir pasta**.
 
-> [!WARNING]
-> Atualmente, o SDK do Android não dá suporte a uma experiência de instalação offline. Se você instalar itens de instalação do SDK do Android em um computador que não está conectado à Internet, a instalação poderá falhar. Para obter mais informações sobre isso, vá para a seção [Solucionar problemas de uma instalação offline](#tshootofflineinstall) neste tópico.
+O arquivo de instalação &mdash; ou para ser mais específico, um arquivo bootstrapper &mdash; corresponderá a um dos listados a seguir.
 
+|Edição | Arquivo|  
+|-------------|-----------------------|  
+|Visual Studio Enterprise |**vs_enterprise.exe**|  
+|Visual Studio Professional |**vs_professional.exe**|  
+|Comunidade Visual Studio |**vs_community.exe**|
 
-#### <a name="to-create-an-offline-installation-layout-of-visual-studio"></a>Para criar um layout de instalação offline do Visual Studio
-1. Baixe o arquivo executável de instalação do Visual Studio em uma unidade no seu computador local.
-  Por exemplo, [baixe o arquivo vs_enterprise.exe](https://www.visualstudio.com/vs/visual-studio-2017-rc/).
-2. Execute `vs_enterprise.exe` com os seguintes argumentos (opções) em um prompt de comando:
+Outros bootstrappers com suporte incluem vs_buildtools.exe, vs_feedbackclient.exe, vs_teamexplorer.exe, vs_testagent.exe, vs_testcontroller.exe e vs_testprofessional.exe.
 
-   a. Adicione `--layout <path>`, em que `<path>` é o local no qual você deseja baixar o layout. Observe que os caminhos relativos (por exemplo, `..\vs2017`) não têm suporte no momento. Por padrão, todas as linguagens são baixadas. (Veja o exemplo A.)
+## <a name="create-an-offline-installation-folder"></a>Criar uma pasta de instalação offline
+Para criar uma instalação offline com todos os idiomas e recursos, use um dos comandos dos exemplos a seguir.
 
-   b. Restrinja o download a um subconjunto de idiomas disponíveis, fornecendo o argumento `--lang <language>`, em que `<language>` é um ou mais idioma-localidades.  (Veja o exemplo B e o exemplo C.)
+(Lembre-se de executar o comando no diretório de Download. Normalmente, ele é `C:\Users\<username>\Downloads` em um computador que executa o Windows 10).
 
-   c. Restrinja o download a um subconjunto de Cargas de trabalho e Componentes fornecendo o argumento `--add <package ID>`. Isso baixará somente as cargas de trabalho e os componentes (e suas dependências) especificados. (Veja o exemplo D e o exemplo E.)
+- Para o Visual Studio Enterprise, execute: <br>  ```vs_enterprise.exe --layout c:\vs2017offline```
+- Para o Visual Studio Professional, execute: <br> ```vs_professional.exe --layout c:\vs2017offline```
+- Para o Visual Studio Community, execute: <br> ```vs_community.exe --layout c:\vs2017offline```
 
-   Para obter uma lista completa de IDs de componente e de carga de trabalho classificadas por produto do Visual Studio, consulte nossa página [Visual Studio 2017 Workload and Component IDs (IDs de componente e de carga de trabalho do Visual Studio 2017)](https://aka.ms/vs2017componentids).
+Para obter mais exemplos, consulte a seção [Como personalizar o instalador offline](#how-to-customize-your-offline- installer) nesta página.
 
-### <a name="examples"></a>Exemplos
-**Exemplo A**: baixe todas as cargas de trabalho e componentes para todos os idiomas
-  > ```vs_enterprise.exe --layout C:\vs2017```
+## <a name="install-from-the-offline-installation-folder"></a>Instalar por meio da pasta de instalação offline
+Execute a instalação offline agora ou mais tarde: isso fica a seu critério. Mas quando fizer isso, siga estas etapas.
 
-**Exemplo B**: baixe todas as cargas de trabalho e componentes para um idioma  
-  > ```vs_enterprise.exe --layout C:\vs2017 --lang en-US```
+  1. Instale os certificados (eles estão na pasta Certificates, que está na pasta Layout. Basta clicar com o botão direito do mouse em cada um deles para instalá-los.)
 
-**Exemplo C**: baixe todas as cargas de trabalho e componentes para vários idiomas
-  > ```vs_enterprise.exe --layout C:\vs2017 --lang en-US de-DE ja-JP```
+  2. Execute o arquivo de instalação. Por exemplo, execute: <br> ```c:\vs2017offline\vs_enterprise.exe```
 
-**Exemplo D**: baixe uma carga de trabalho para todos os idiomas
-  > ```vs_enterprise.exe --layout C:\vs2017 --add Microsoft.VisualStudio.Workload.Azure ```
+## <a name="additional-tips-for-offline-installers"></a>Dicas adicionais para instaladores offline
+É fácil personalizar ou atualizar o instalador offline. Vamos mostrar como fazer isso. E se algo der errado com o instalador offline, também temos solução de problemas e informações de suporte para você.
 
-**Exemplo E**: baixe duas cargas de trabalho e um componente opcional para três idiomas
-  > ```vs_enterprise.exe --layout C:\vs2017 --add Microsoft.VisualStudio.Workload.Azure Microsoft.VisualStudio.Workload.ManagedDesktop Component.GitHub.VisualStudio --lang en-US de-DE ja-JP ```
+### <a name="how-to-customize-your-offline-installer"></a>Como personalizar o instalador offline
+Há várias opções que podem ser usadas para personalizar o instalador offline. Estes são alguns exemplos de como personalizá-lo por [localidade de idioma](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales).
 
-  > [!WARNING]
-  > O parâmetro --layout falhará se o nome do arquivo .exe de instalação incluir numerais. Para resolver esse problema, é necessário remover os numerais do nome do arquivo – por exemplo, renomeie *vs_community__198521760.1486960229.exe* como ***vs_community.exe***.
-
-### <a name="language-locales"></a>Localidades de idioma
-
-| Localidade de idioma | Linguagem |
-| -----   | ----- |
-| cs-CZ    | Tcheco |
-| de-DE    | Alemão |
-| pt-BR    | Inglês |
-| es-ES    | Espanhol |
-| fr-FR    | Francês |
-| it-IT    | Italiano |
-| ja-JP    | Japonês |
-| ko-KR    | Coreano |
-| pl-PL    | Polonês |
-| pt-BR    | Português - Brasil |
-| ru-RU    | Russo |
-| tr-TR    | Turco |
-| zh-CN    | Chinês – Simplificado |
-| zh-TW    | Chinês – Tradicional |
+ - Para baixar todas as cargas de trabalho e todos os componentes para um único idioma, execute: <br>```vs_enterprise.exe --layout C:\vs2017offline --lang en-US```
+ - Para baixar todas as cargas de trabalho e todos os componentes para vários idiomas, execute: <br>```vs_enterprise.exe --layout C:\vs2017offline --lang en-US de-DE ja-JP```
+ - Para baixar uma carga de trabalho para todos os idiomas, execute <br> ```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure ```
+ - Para baixar duas cargas de trabalho e um componente opcional para três idiomas, execute: <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure Microsoft.VisualStudio.Workload.ManagedDesktop Component.GitHub.VisualStudio --lang en-US de-DE ja-JP ``` Para saber mais sobre as opções que podem ser usadas para personalizar a instalação, consulte nossa página [Usar parâmetros de linha de comando para instalar o Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md).
 
 
-## <a name="install-from-a-layout"></a>Instalar com base em um layout
-#### <a name="to-install-visual-studio-from-an-offline-installation-layout"></a>Para instalar o Visual Studio com base em um layout de instalação offline
-1. No computador de destino, navegue até a pasta **Certificados**, que está na pasta Layout.
-2. Clique com botão direito do mouse e instale cada certificado na pasta **Certificados**.
+### <a name="how-to-update-an-offline-installer"></a>Como atualizar um instalador offline
+Talvez você deseje atualizar o instalador offline em uma data posterior. Veja como.
+* Para atualizar uma instância do Visual Studio instalada por meio de uma pasta de instalação offline, execute o instalador do Visual Studio e, em seguida, clique em **Atualizar**.
+* Para atualizar a pasta de instalação offline para que ela inclua as últimas atualizações, execute o comando ```--layout``` novamente. Lembre-se de apontar para a mesma pasta usada anteriormente; dessa forma, somente os componentes que foram atualizados desde a última execução de ```--layout``` serão baixados.
 
-  (Se você for solicitado a inserir uma senha depois de instalar um certificado, clique em **Continuar**.)  
-3. Execute `vs_enterprise.exe` na pasta **Layout**.
 
-Observação: se você estiver instalando com base em um layout parcial e selecionar cargas de trabalho, componentes ou linguagens não disponíveis no layout, a instalação tentará baixá-los.  Se você não tiver acesso à Internet, a instalação desses itens falhará.
+### <a name="how-to-troubleshoot-an-offline-installer"></a>Como solucionar problemas de um instalador offline
+Às vezes, as coisas dão errado. Esta é uma tabela de problemas conhecidos e algumas soluções alternativas que podem ajudar.
 
-> [!CAUTION]
-> Atualmente, o layout de instalação offline cria alguns arquivos com permissões restritas (ACLs) que impedem o acesso por todos os usuários.  Certifique-se de ajustar as permissões (ACLs) para que elas concedam Acesso de leitura a outros usuários *antes* de você compartilhar a instalação offline.
+| Problema       | Item                   | Solução |
+| ----------- | ---------------------- | -------- |
+| Você recebe uma mensagem de aviso informando que não é possível instalar alguns componentes e pacotes.  | Instalação do SDK do Android (nível de API) | Se desejar incluir pacotes do SDK do Android (Nível de API), será necessário ter uma conexão com a Internet ao criar o instalador offline. Se estiver em uma rede restrita, será necessário permitir o acesso às seguintes URLs: <br><br> - http://dl.google.com:443 <br> - http://dl-ssl.google.com:443 <br>  - https://dl-ssl.google.com/android/repository/*<br><br>Para obter mais informações sobre como solucionar possíveis problemas com configurações de proxy, consulte a postagem de blog [Visual Studio install failures (Android SDK Setup) behind a Proxy (Falhas de instalação do Visual Studio (instalação do SDK do Android) por trás de um proxy)](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/).  |  
+| Os usuários não têm acesso aos arquivos. | permissões (ACLs) | Lembre-se de ajustar as permissões (ACLs) para que elas concedam acesso de Leitura aos outros usuários *antes* de você compartilhar a instalação offline. |
+| Falha na instalação de novas cargas de trabalho, novos componentes ou idiomas.  | `--layout`  | Verifique se você tem acesso à Internet se estiver instalando com base em um layout parcial e selecione as cargas de trabalho, os componentes ou idiomas que não estão disponíveis no layout anterior. |
 
-## <a name="update-an-installation-layout"></a>Atualizar um layout de instalação
-À medida que forem disponibilizadas atualizações para o Visual Studio 2017 RC, será possível executar o comando `--layout` novamente, apontando para a mesma pasta de layout, a fim de garantir que a pasta contenha os componentes mais recentes. Somente os componentes que tiverem sido atualizados desde a última vez em que `--layout` foi executado serão baixados.
+### <a name="how-to-get-support-for-your-offline-installer"></a>Como obter suporte para o instalador offline
+Caso tenha um problema com a instalação offline, gostaríamos de saber a respeito. A melhor maneira de fazer isso é usando a ferramenta [Relatar um Problema](../ide/how-to-report-a-problem-with-visual-studio-2017.md). Ao usar essa ferramenta, é possível enviar-nos a telemetria e os logs necessários para nos ajudar a diagnosticar e corrigir o problema.
 
-## <a id="tshootofflineinstall"> </a>Solucionar problemas de uma instalação offline
-Quando você faz instalação offline de seu cache de instalação offline, você pode ver mensagens de aviso sobre não ser possível instalar alguns componentes e pacotes. A tabela a seguir inclui soluções possíveis para esses cenários.
+Também temos outras opções de suporte disponíveis. Para obter uma lista delas, consulte nossa página [Fale conosco](../ide/how-to-report-a-problem-with-visual-studio-2017.md).
 
-| Componente ou pacote | Solução |
-| -------------------- | -------- |
-|Instalação do SDK do Android (nível de API)| Você deve ter uma conexão com a Internet para instalar os pacotes de SDK do Android (nível de API). Se você estiver em uma rede restrita, será necessário permitir o acesso às seguintes URLs ao instalar o Visual Studio: <br><br> - http://dl.google.com:443 <br>- http://dl-ssl.google.com:443 <br>  - https://dl-ssl.google.com/android/repository/*<br><br>Para obter mais informações sobre como solucionar possíveis problemas com configurações de proxy, consulte a postagem de blog [Visual Studio install failures (Android SDK Setup) behind a Proxy (Falhas de instalação do Visual Studio (instalação do SDK do Android) por trás de um proxy)](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/).  |  
 
- > [!IMPORTANT]
- > Embora o Visual Studio 2017 RC, de modo geral, tenha suporte para uso em um ambiente de produção, as cargas de trabalho e componentes que estão marcados como "Visualização" na interface do usuário da instalação não têm suporte para uso em ambiente de produção.
-
- ## <a name="see-also"></a>Consulte também
- * [Instalar o Visual Studio](install-visual-studio.md)
- * [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
- * [Relatar um problema com o Visual Studio](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+## <a name="see-also"></a>Consulte também
+* [Instalar o Visual Studio](install-visual-studio.md)
+* [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
+* [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+* [Carga de trabalho do Visual Studio e IDs do componente](workload-and-component-ids.md)
 

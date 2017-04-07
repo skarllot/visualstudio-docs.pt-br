@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 075d9b8d-8658-4fca-8711-08304dbac1c5
 caps.latest.revision: 9
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -30,6 +30,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: b09b620b4ea8c73b84e0abe54ae493d1466850e8
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="sample-excel-extension-propertyprovider-class"></a>Extensão de exemplo do Excel: classe PropertyProvider
@@ -54,8 +55,4 @@ Essa classe interna estende a classe <xref:Microsoft.VisualStudio.TestTools.UITe
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard>   
  [Estendendo testes de IU codificados e gravações da ação para dar suporte ao Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

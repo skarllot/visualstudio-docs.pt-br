@@ -272,7 +272,7 @@ End Namespace
   
 -   **Aceleração de hardware**. Sistema gráfico do WPF tira proveito do hardware gráfico para minimizar o uso da CPU.  
   
-### <a name="2-d-shapes"></a>Formas&2;D  
+### <a name="2-d-shapes"></a>Formas 2D  
  O WPF fornece uma biblioteca de formas vetoriais 2D comuns como retângulos e elipses, que são mostradas na ilustração a seguir.  
   
  ![Elipses e retângulos](../designers/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
@@ -290,7 +290,7 @@ End Namespace
   
  Para obter mais informações, consulte [Visão geral de formas e desenho básico no WPF](https://msdn.microsoft.com/en-us/library/ms747393\(v=vs.100\).aspx).  
   
-### <a name="2-d-geometries"></a>Geometrias&2;D  
+### <a name="2-d-geometries"></a>Geometrias 2D  
  As formas 2D fornecidas pelo WPF abrangem o conjunto padrão de formas básicas. No entanto, talvez seja necessário criar formas personalizadas para facilitar o design de uma interface do usuário personalizada. Para essa finalidade, o WPF fornece geometrias. A figura a seguir demonstra o uso de geometrias para criar uma forma personalizada que pode ser desenhada diretamente, usada como um pincel ou usada para recortar outras formas e controles.  
   
  Objetos <xref:System.Windows.Shapes.Path> podem ser usados para desenhar formas fechadas ou abertas, várias formas e até mesmo formas curvas.  
@@ -301,19 +301,19 @@ End Namespace
   
  Para obter mais informações, consulte [Visão geral de geometria](https://msdn.microsoft.com/en-us/library/ms751808\(v=vs.100\).aspx)  
   
-### <a name="2-d-effects"></a>Efeitos&2;D  
+### <a name="2-d-effects"></a>Efeitos 2D  
  Um subconjunto de funcionalidades 2D do WPF inclui efeitos visuais como gradientes, bitmaps, desenhos, pintura com vídeos, rotação, dimensionamento e distorção. Eles são todas obtidos com pincéis; a figura a seguir mostra alguns exemplos.  
   
  ![Ilustração de diferentes pincéis](../designers/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
  Para obter mais informações, consulte [Visão geral de pincéis do WPF](https://msdn.microsoft.com/en-us/library/aa970904\(v=vs.100\).aspx).  
   
-### <a name="3-d-rendering"></a>Renderização&3;D  
+### <a name="3-d-rendering"></a>Renderização 3D  
  O WPF também inclui funcionalidades de renderização 3D que se integram com elementos gráficos em 2D para permitir a criação de interfaces do usuário mais interessantes e empolgantes. Por exemplo, a figura a seguir mostra imagens 2D renderizadas em formas 3D.  
   
  ![Captura de tela de exemplo do Visual3D](../designers/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
- Para obter mais informações, consulte [Visão geral de elementos gráficos&3;D](https://msdn.microsoft.com/en-us/library/ms747437\(v=vs.100\).aspx).  
+ Para obter mais informações, consulte [Visão geral de elementos gráficos 3D](https://msdn.microsoft.com/en-us/library/ms747437\(v=vs.100\).aspx).  
   
 ##  <a name="Animation"></a> Animação  
  O suporte a animação do WPF permite que você faça os controles crescerem, tremerem, rodarem e esmaecerem, para criar transições de página interessantes e muito mais. Você pode animar a maioria das classes do WPF, até mesmo classes personalizadas. A figura a seguir mostra uma animação simples em ação.  
@@ -416,7 +416,7 @@ End Namespace
   
  ![Uma caixa de listagem com a aparência padrão](../designers/media/wpfintrofigure18.png "WPFIntroFigure18")  
   
- A aparência padrão é o que você esperaria de xref:System.Windows.Controls.ListBox>. No entanto, a aparência padrão de cada tarefa contém somente o nome da tarefa. Para mostrar o nome da tarefa, a descrição e a prioridade, a aparência padrão dos itens da lista associada ao controle <xref:System.Windows.Controls.ListBox> devem ser alteradas usando um <xref:System.Windows.DataTemplate>. O XAML a seguir define um <xref:System.Windows.DataTemplate> desse tipo, que é aplicado a cada tarefa usando o atributo <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>.  
+ A aparência padrão é o que você esperaria de <xref:System.Windows.Controls.ListBox>. No entanto, a aparência padrão de cada tarefa contém somente o nome da tarefa. Para mostrar o nome da tarefa, a descrição e a prioridade, a aparência padrão dos itens da lista associada ao controle <xref:System.Windows.Controls.ListBox> devem ser alteradas usando um <xref:System.Windows.DataTemplate>. O XAML a seguir define um <xref:System.Windows.DataTemplate> desse tipo, que é aplicado a cada tarefa usando o atributo <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>.  
   
  [!code-xml[IntroToWPFSnippets#DataTemplateMARKUP1](../designers/codesnippet/Xaml/introduction-to-wpf_18.xaml)]  
 [!code-xml[IntroToWPFSnippets#DataTemplateMARKUP2](../designers/codesnippet/Xaml/introduction-to-wpf_19.xaml)]  

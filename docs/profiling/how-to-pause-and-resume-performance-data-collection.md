@@ -33,6 +33,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: e4e7cabd90852fcd067409c5ef30fa557443996a
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="how-to-pause-and-resume-performance-data-collection"></a>Como pausar e retomar a coleta de dados de desempenho
@@ -43,7 +44,7 @@ Você pode controlar interativamente a coleta de dados de criação de perfil na
  ![Página de sessão de criação de perfil](../profiling/media/prof_profilingsessionpage.png "PROF_ProfilingSessionPage")  
   
 > [!NOTE]
->  Você também pode iniciar a sessão de desempenho com a criação de perfil em pausa e retomar a criação de perfil em um ponto posterior na execução do programa. Para iniciar a sessão de desempenho com a criação de perfil em pausa, escolha o comando **Iniciar a análise de desempenho com a criação de perfil em pausa ** no menu **Depurar**.  
+>  Você também pode iniciar a sessão de desempenho com a criação de perfil em pausa e retomar a criação de perfil em um ponto posterior na execução do programa. Para iniciar a sessão de desempenho com a criação de perfil em pausa, escolha o comando **Iniciar a análise de desempenho com a criação de perfil em pausa** no menu **Depurar**.  
   
 ### <a name="to-pause--resume-or-stop-profiling"></a>Para pausar, retomar ou interromper a criação de perfil  
   
@@ -58,8 +59,3 @@ Você pode controlar interativamente a coleta de dados de criação de perfil na
 ## <a name="see-also"></a>Consulte também  
  [Controlando a coleta de dados](../profiling/controlling-data-collection.md)   
  [Como: iniciar e terminar a coleta de dados de desempenho](../profiling/how-to-start-and-end-performance-data-collection.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

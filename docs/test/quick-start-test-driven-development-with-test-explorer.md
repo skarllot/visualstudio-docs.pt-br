@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5161b533-2127-4172-b473-d4ffc76ff05b
 caps.latest.revision: 15
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -304,3 +304,4 @@ ms.lasthandoff: 02/22/2017
      Todos os testes ainda são aprovados.  
   
      ![Gerenciador de Testes de unidade mostrando 3 testes com aprovação.](../test/media/unittestexplorerwalkthrough4.png "UnitTestExplorerWalkthrough4")
+

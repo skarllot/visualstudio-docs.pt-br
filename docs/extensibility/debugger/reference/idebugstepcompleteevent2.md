@@ -1,5 +1,5 @@
 ---
-title: IDebugStepCompleteEvent2 | Documentos do Microsoft
+title: IDebugStepCompleteEvent2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 83a0035f6dafc601b2bfb40c6c5a2d1734abb43f
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: d6c18c36b205ada9fa64eb7786de9c6f16e03dde
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugstepcompleteevent2"></a>IDebugStepCompleteEvent2
-Essa interface é enviada pelo mecanismo de depuração (DE) para o Gerenciador de sessão de depuração (SDM) quando o programa que está sendo depurado conclui uma etapa em, uma etapa por ou uma etapa fora de uma linha do código-fonte, instrução ou instrução.  
+Essa interface é enviada pelo mecanismo de depuração (DE) para o Gerenciador de sessão de depuração (SDM) quando o programa que está sendo depurado conclui uma etapa em, uma etapa por ou uma etapa de fora de uma linha do código-fonte, declaração ou instrução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,13 +46,13 @@ IDebugStepCompleteEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O DE implementa essa interface para relatar a conclusão de uma operação de etapa. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. O SDM usa [QueryInterface](/visual-cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
+ O DE implementa essa interface para a conclusão de uma operação de etapa de relatório. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. Usa o SDM [QueryInterface](/cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- O DE cria e envia esse objeto de evento para relatar a conclusão de uma operação de etapa. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando ele for anexado ao programa que está sendo depurado.  
+ O DE cria e envia esse objeto de evento para a conclusão de uma operação de etapa de relatório. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando ele é anexado ao programa que está sendo depurado.  
   
 ## <a name="remarks"></a>Comentários  
- Depois que a etapa for concluída, o programa que está sendo depurado está em pausa mais uma vez e o IDE atualiza todas as suas janelas.  
+ Depois que a etapa for concluída, o programa que está sendo depurado está em pausa mais uma vez, e o IDE atualiza todas as janelas.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

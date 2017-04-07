@@ -1,6 +1,6 @@
 ---
-title: "Capacidade de resposta da interface do usuário HTML| Microsoft Docs"
-ms.custom: 
+title: "Analisar a capacidade de resposta de interface do usuário HTML em aplicativos UWP | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -40,13 +40,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: bdfe341252a7c4340a8c0a624d4394124c3efada
-ms.openlocfilehash: 1d230cb011c93ce48a855e86355d4a6ccdf55a29
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 618aaec3a0ae735560d14bea43cc2b08bd9e5445
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="html-ui-responsiveness"></a>Capacidade de Resposta de interface do usuário HTML
-Este tópico descreve como isolar problemas de desempenho em seus aplicativos usando o Criador de Perfil de Capacidade de Resposta da Interface do Usuário, uma ferramenta de desempenho disponível para aplicativos universais do Windows.  
+# <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>Analisar a capacidade de resposta de interface do usuário HTML em Aplicativos Universais do Windows
+Este tópico descreve como isolar problemas de desempenho nos aplicativos usando o Criador de Perfil de Capacidade de Resposta da Interface do Usuário, uma ferramenta de desempenho disponível para Aplicativos Universais do Windows.  
   
  O Criador de Perfil de Capacidade de Resposta da Interface de Usuário pode ajudá-lo a isolar problemas com a capacidade de resposta da Interface de Usuário ou com efeitos colaterais da plataforma, que normalmente ocorrem com estes sintomas:  
   

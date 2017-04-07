@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a01d8c61515b56bea36f8e091fcec5e811a30dd9
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: b8f389deae83848893e59daec16630c911925f19
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="project-and-solution-file-types"></a>Projeto e tipos de arquivo de solução
@@ -69,11 +69,11 @@ ms.lasthandoff: 02/22/2017
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] usam uma diversidade de formatos de arquivos para armazenar informações específicas para projetos. Para obter mais informações, consulte os seguintes tópicos de Ajuda:  
   
  [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]  
- [Tipos de arquivo criados para projetos do Visual C++](/visual-cpp/ide/file-types-created-for-visual-cpp-projects)  
+ [Tipos de arquivo criados para projetos do Visual C++](/cpp/ide/file-types-created-for-visual-cpp-projects)  
   
- [Criando e gerenciando projetos do Visual C++](/visual-cpp/ide/creating-and-managing-visual-cpp-projects)  
+ [Criando e gerenciando projetos do Visual C++](/cpp/ide/creating-and-managing-visual-cpp-projects)  
   
- [Unicode](/visual-cpp/mfc/unicode-in-mfc)  
+ [Unicode](/cpp/mfc/unicode-in-mfc)  
   
 ## <a name="see-also"></a>Consulte também  
  [Soluções e projetos](../../ide/solutions-and-projects-in-visual-studio.md)

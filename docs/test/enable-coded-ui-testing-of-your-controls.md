@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5ef1188f-89dc-413d-801d-0efdaf9b0427
 caps.latest.revision: 22
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -237,3 +237,4 @@ ms.lasthandoff: 02/22/2017
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.AccessibleObject>   
  [Usar automação de interface do usuário para testar código](../test/use-ui-automation-to-test-your-code.md)
+

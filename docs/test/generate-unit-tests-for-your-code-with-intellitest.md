@@ -12,7 +12,7 @@ f1_keywords:
 - vs.UnitTest.CreateIntelliTest
 ms.assetid: cd9ff940-e948-4d28-a72c-b291ef5c1e90
 caps.latest.revision: 33
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -32,6 +32,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: a7e37cce3a781facd2c30d4014ab51db125dae86
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="generate-unit-tests-for-your-code-with-intellitest"></a>Gerar testes de unidade para seu código com o IntelliTest
@@ -100,7 +101,7 @@ O IntelliTest explora seu código .NET para gerar dados de teste e um pacote de 
 ### <a name="specify-use-intellitest-to-validate-correctness-properties-that-you-specify-in-code"></a>Especificar: use o IntelliTest para validar as propriedades de correção especificadas no código  
  Especifique a relação geral entre as entradas e saídas que você deseja que os testes de unidade gerados validem. Essa especificação é encapsulada em um método que se parece com um método de teste, mas é quantificada universalmente. Esse é o método de teste de unidade parametrizado e qualquer asserção que você fizer deve conter todos os valores de entrada possíveis que o IntelliTest pode gerar.  
   
-##  <a name="a-nameqandalinka-q--a"></a><a name="QandALink"></a> Perguntas e respostas  
+##  <a name="QandALink"></a> Perguntas e respostas  
   
 ### <a name="q-can-you-use-intellitest-for-unmanaged-code"></a>P: É possível usar o IntelliTest para código não gerenciado?  
  **R:** Não, o IntelliTest funciona somente com código gerenciado.  
@@ -132,7 +133,7 @@ O IntelliTest explora seu código .NET para gerar dados de teste e um pacote de 
   
  Se você adicionar uma asserção e executar o IntelliTest novamente, ele verificará se a asserção é válida e o teste falhará se ela não for.  
   
-###  <a name="a-namenoruna-q-can-i-generate-parameterized-unit-tests-without-running-intellitest-first"></a><a name="NoRun"></a> P: Posso gerar testes de unidade parametrizados sem executar IntelliTest primeiro?  
+###  <a name="NoRun"></a> P: Posso gerar testes de unidade parametrizados sem executar IntelliTest primeiro?  
  **R:** Sim, clique com o botão direito do mouse na classe ou no método e escolha **Criar IntelliTest**.  
   
  ![Clique com o botão direito do mouse no editor, escolha Criar IntelliTest](../test/media/pexcreateintellitest.png "PEXCreateIntelliTest")  
@@ -150,8 +151,4 @@ O IntelliTest explora seu código .NET para gerar dados de teste e um pacote de 
   
 ### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>P: Posso saber mais sobre como os testes são gerados?  
  **R:** Sim, para obter uma visão geral, leia esta [postagem de blog](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/05/intellitest-one-test-to-rule-them-all.aspx).
-
-
-<!--HONumber=Feb17_HO4-->
-
 

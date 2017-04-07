@@ -35,8 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a4721d8bbd5dd6ec29f555ee8d4848ef3660243f
-ms.openlocfilehash: 0e1c37c0ce85cc44f7d43d895f3b4a4615539e3e
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 01c13c4e0c9107f07580fb1701f81eac74a5022f
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="visual-c-code-snippets"></a>Trechos de código do Visual C#
@@ -77,7 +78,7 @@ Os trechos de código são trechos de código prontos que você pode inserir rap
 |mbox|Cria uma chamada para <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName>. Talvez seja necessário adicionar uma referência para System.Windows.Forms.dll.|Dentro de um método, um indexador, um acessador de propriedade ou um acessador de evento.|  
 |namespace|Cria uma declaração de [namespace](/dotnet/csharp/language-reference/keywords/namespace).|Dentro de um namespace (incluindo o namespace global).|  
 |prop|Cria uma declaração de [propriedade autoimplementada](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties).|Dentro de uma classe ou um struct.|  
-ropfull|Cria uma declaração de propriedade com acessadores get e set.|Dentro de uma classe ou um struct.|  
+propfull|Cria uma declaração de propriedade com acessadores get e set.|Dentro de uma classe ou um struct.|  
 |propg|Cria uma [propriedade autoimplementada](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties) somente leitura com um acessador "set" particular.|Dentro de uma classe ou um struct.|  
 |sim|Cria uma declaração de método [static](/dotnet/csharp/language-reference/keywords/static)[int](/dotnet/csharp/language-reference/keywords/int) Main.|Dentro de uma classe ou um struct.|  
 |struct|Cria uma declaração [struct](/dotnet/csharp/language-reference/keywords/struct).|Dentro de um namespace (incluindo o namespace global), uma classe ou uma estrutura.|  
@@ -97,8 +98,4 @@ ropfull|Cria uma declaração de propriedade com acessadores get e set.|Dentro d
  [Parâmetros de modelo](../ide/template-parameters.md)   
  [Como usar trechos de código Surround-with](../ide/how-to-use-surround-with-code-snippets.md)   
  
-
-
-<!--HONumber=Feb17_HO4-->
-
 

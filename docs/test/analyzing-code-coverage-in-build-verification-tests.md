@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 59c07d15-511e-4fd0-b398-bde9d5ed00d9
 caps.latest.revision: 8
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -30,6 +30,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: bfdef1bffe6939631bb50e11d902f500c1d599ce
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="analyzing-code-coverage-in-build-verification-tests"></a>Analisando a cobertura de código em testes de verificação de build
@@ -43,7 +44,7 @@ A análise de cobertura de código no Microsoft Visual Studio mostra quanto de s
   
      Se você tiver mais de uma definição de Fonte de Teste, repita essa etapa para cada uma.  
   
-    -   *Mas não há campo denominado **Tipo de Arquivo de Configurações de Execução**.*  
+    -   *Mas não há campo denominado**Tipo de Arquivo de Configurações de Execução**.*  
   
          Em **Testes Automatizados**, selecione **Assembly de Teste** e escolha o botão de reticências **[...]** no final da linha. Na caixa de diálogo **Adicionar/Editar Execução de Teste**, em **Test Runner**, selecione **Visual Studio Test Runner**.  
   
@@ -53,8 +54,4 @@ A análise de cobertura de código no Microsoft Visual Studio mostra quanto de s
   
 ## <a name="see-also"></a>Consulte também  
  [Usando cobertura de código para determinar quanto código está sendo testado](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

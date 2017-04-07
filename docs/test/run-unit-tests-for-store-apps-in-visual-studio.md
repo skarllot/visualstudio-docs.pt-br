@@ -10,9 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5a6f5b32-bfce-4a63-81e9-02d54c592539
 caps.latest.revision: 12
-author: alexhomer1
-ms.author: ahomer
-manager: robinr
+ms.author: douge
+manager: douge
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -138,3 +137,4 @@ Este tópico descreve como executar testes de unidade usando o Gerenciador de Te
 2.  No Gerenciador de Testes, selecione os métodos de teste e escolha **Depurar Testes Selecionados** no menu de atalho.  
   
  Para obter mais informações sobre o depurador, consulte [Depuração no Visual Studio](../debugger/debugging-in-visual-studio.md).
+

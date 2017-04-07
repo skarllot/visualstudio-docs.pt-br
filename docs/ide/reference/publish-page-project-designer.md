@@ -53,7 +53,7 @@ A página **Publicar** do **Designer de Projeto** é usada para configurar as pr
   
 ## <a name="uielement-list"></a>Lista UIElement  
  **Local da Pasta de Publicação**  
- Especifica o local em que o aplicativo é publicado. Pode ser um caminho de unidade (`C:\deploy\myapplication`), um compartilhamento de arquivos (`\\server\myapplication`), um servidor FTP (`ftp://ftp.microsoft.com/myapplication`) ou um site da Web (`http://www.microsoft.com/myapplication`). Observe que o texto deve estar presente na caixa **Local de Publicação** para o botão de procurar (**... **) funcionar.  
+ Especifica o local em que o aplicativo é publicado. Pode ser um caminho de unidade (`C:\deploy\myapplication`), um compartilhamento de arquivos (`\\server\myapplication`), um servidor FTP (`ftp://ftp.microsoft.com/myapplication`) ou um site da Web (`http://www.microsoft.com/myapplication`). Observe que o texto deve estar presente na caixa **Local de Publicação** para o botão de procurar (**...**) funcionar.  
   
  Por padrão, o local de publicação será `http://localhost/<projectname>/` se você tiver o IIS instalado, ou o diretório `publish\` se você não tiver o IIS instalado. Se o computador estiver executando o Windows Vista, o padrão será sempre o diretório `publish\`, independentemente de você ter o IIS instalado.  
   

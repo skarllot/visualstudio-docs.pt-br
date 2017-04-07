@@ -1,6 +1,6 @@
 ---
-title: Linha do tempo do aplicativo | Microsoft Docs
-ms.custom: 
+title: Analisar o consumo de recursos em aplicativos XAML no Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -29,11 +29,12 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: bdfe341252a7c4340a8c0a624d4394124c3efada
-ms.openlocfilehash: 03ac5f6c12163ff56f0a77a4922cc4366d463e07
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 5455d9a16004fef1aec02fbaf856f336c67dfb05
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="application-timeline"></a>Linha do Tempo do Aplicativo
+# <a name="analyze-resource-consumption-and-ui-thread-acitivity-xaml"></a>Analisar o consumo de recursos e a atividade de thread de interface do usuário (XAML)
 Use o criador de perfil **Linha do Tempo de Aplicativo** para localizar e corrigir problemas de desempenho relacionados à interação com o aplicativo em aplicativos XAML. Essa ferramenta ajuda a melhorar o desempenho de aplicativos XAML fornecendo uma exibição detalhada do consumo de recursos dos aplicativos. Você pode analisar o tempo gasto pelo seu aplicativo para preparar quadros de interface do usuário (layout e renderização), atender a solicitações de rede e de disco e em cenários como Inicialização de Aplicativo, Carregamento de Página e redimensionamento do Windows.  
   
  **Linha do Tempo do Aplicativo** é uma das ferramentas que você pode começar com o comando **Debug / Performance Profiler...**.  
@@ -55,7 +56,7 @@ Use o criador de perfil **Linha do Tempo de Aplicativo** para localizar e corrig
 > [!NOTE]
 >  Você pode coletar e analisar os dados de uso da CPU e os dados de consumo de energia junto a dados da **ApplicationTimeline**. Consulte [Executando ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
   
-##  <a name="a-namebkmkcollecttimelinedataforyourappa-collect-application-timeline-data"></a><a name="BKMK_Collect_Timeline_data_for_your_app"></a> Coletar dados da Linha do Tempo do Aplicativo  
+##  <a name="BKMK_Collect_Timeline_data_for_your_app"></a> Coletar dados da Linha do Tempo do Aplicativo  
  Você pode criar o perfil de capacidade de resposta de seu aplicativo em seu computador local, dispositivo conectado, emuladores ou simulador do Visual Studio ou em um dispositivo remoto. Consulte [Executando ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
   
 > [!TIP]
@@ -80,34 +81,34 @@ Use o criador de perfil **Linha do Tempo de Aplicativo** para localizar e corrig
   
      ![Relatório do criador de perfil de linha do tempo](../profiling/media/timeline_base.png "TIMELINE_Base")  
   
-##  <a name="a-namebkmkanalyzetimelineprofilingdataa-analyze-timeline-profiling-data"></a><a name="BKMK_Analyze_Timeline_profiling_data"></a> Analisar dados de criação de perfil de linha do tempo  
+##  <a name="BKMK_Analyze_Timeline_profiling_data"></a> Analisar dados de criação de perfil de linha do tempo  
  Depois de coletar os dados para a criação de perfil, você pode usar estas etapas para iniciar a análise:  
   
 1.  Examine as informações nos gráficos **Utilização de thread de interface do usuário** e **Taxa de transferência visual (FPS)** e use as barras de navegação da linha do tempo para selecionar o intervalo de tempo que deseja analisar.  
   
 2.  Usando as informações nos gráficos **Utilização de thread de interface do usuário** ou **Taxa de transferência visual (FPS)**, examine os detalhes na exibição **Detalhes da linha do tempo** para descobrir as possíveis causas de qualquer aparente falta de capacidade de resposta.  
   
-###  <a name="a-namebkmkreportscenarioscategoriesandeventsa-report-scenarios-categories-and-events"></a><a name="BKMK_Report_scenarios_categories_and_events"></a> Cenários, categorias e eventos de relatório  
+###  <a name="BKMK_Report_scenarios_categories_and_events"></a> Cenários, categorias e eventos de relatório  
  A ferramenta **Linha do Tempo do Aplicativo** exibe dados de tempo para cenários, categorias e eventos relacionados ao desempenho de XAML.  
   
-###  <a name="a-namebkmkdiagnosticsessiontimelinea-diagnostic-session-timeline"></a><a name="BKMK_Diagnostic_session_timeline"></a> Linha do tempo da sessão de diagnóstico  
+###  <a name="BKMK_Diagnostic_session_timeline"></a> Linha do tempo da sessão de diagnóstico  
  ![Linha do tempo de Desempenho e Diagnóstico](../profiling/media/diaghub_timelinewithusermarks.png "DIAGHUB_TimelineWithUserMarks")  
   
  A régua na parte superior da página mostra a linha do tempo para informações com o perfil criado. Essa linha do tempo aplica-se ao gráfico **Utilização de thread de interface do usuário** e **Taxa de transferência visual**. Você pode restringir o escopo do relatório arrastando as barras de navegação na linha do tempo para selecionar um segmento da linha do tempo.  
   
  A linha do tempo também exibe todas as marcas de usuário inseridas e os eventos de ciclo de vida de ativação do aplicativo.  
   
-###  <a name="a-namebkmkuithreadutilizationgrapha-ui-thread-utilization-graph"></a><a name="BKMK_UI_thread_utilization_graph"></a> Gráfico de utilização de thread da interface do usuário  
+###  <a name="BKMK_UI_thread_utilization_graph"></a> Gráfico de utilização de thread da interface do usuário  
  ![Gráfico de utilização de CPU](../profiling/media/timeline_cpuutilization.png "TIMELINE_CpuUtilization")  
   
  O gráfico **Utilização do thread da interface do usuário (%)** é um gráfico de barras que exibe a quantidade relativa de tempo gasto em uma categoria durante um período de coleta.  
   
-###  <a name="a-namebkmkvisualthroughputfpsgrapha-visual-throughput-fps-graph"></a><a name="BKMK_Visual_throughput_FPS_graph"></a> Gráfico de taxa de transferência visual (FPS)  
+###  <a name="BKMK_Visual_throughput_FPS_graph"></a> Gráfico de taxa de transferência visual (FPS)  
  ![Gráfico de taxa de transferência Visual](../profiling/media/timeline_visualthroughput.png "TIMELINE_VisualThroughput")  
   
  O gráfico de linhas **Taxa de transferência visual (FPS)** mostra FPS (quadros por segundo) na interface do usuário e no thread de composição para o aplicativo.  
   
-###  <a name="a-namebkmktimelinedetailsa-timeline-details"></a><a name="BKMK_Timeline_details_"></a> Detalhes da linha do tempo  
+###  <a name="BKMK_Timeline_details_"></a> Detalhes da linha do tempo  
  A exibição de detalhes é o ponto em que você passará a maior parte do tempo analisando o relatório. Ele mostra uma exibição detalhada da utilização da CPU do seu aplicativo categorizada pelo subsistema de Estrutura da Interface do Usuário ou o componente do sistema que consumiu a CPU.  
   
  Há suporte para os seguintes eventos:  
@@ -124,7 +125,7 @@ Use o criador de perfil **Linha do Tempo de Aplicativo** para localizar e corrig
 > [!TIP]
 >  Escolha a ferramenta **Uso da CPU** junto com a ferramenta **Linha do Tempo do Aplicativo** ao começar a criar o perfil para exibir os métodos de aplicativo que são executados no thread da interface do usuário. Mover o código do aplicativo de execução longa em um thread em segundo plano pode melhorar a capacidade de resposta da interface do usuário.  
   
-####  <a name="a-namebkmkcustomizingtimelinedetailsa-customizing-timeline-details"></a><a name="BKMK_Customizing_Timeline_details_"></a> Personalizando os detalhes da Linha do Tempo  
+####  <a name="BKMK_Customizing_Timeline_details_"></a> Personalizando os detalhes da Linha do Tempo  
  Use a barra de ferramentas **Detalhes da linha do tempo** para classificar, filtrar e especificar as anotações das entradas da exibição **Detalhes da linha do tempo**.  
   
 |||  
@@ -138,8 +139,3 @@ Use o criador de perfil **Linha do Tempo de Aplicativo** para localizar e corrig
  [Blog da equipe WPF: Nova ferramenta de análise de desempenho da interface do usuário para aplicativos WPF](http://blogs.msdn.com/b/wpf/archive/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications.aspx)   
  [Práticas recomendadas de desempenho para aplicativos da Windows Store usando C++, C# e Visual Basic](http://msdn.microsoft.com/en-us/567bcefa-5da5-4e42-a4b8-1358c71adfa2)   
  [Otimizando o desempenho do aplicativo WPF](http://msdn.microsoft.com/Library/ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

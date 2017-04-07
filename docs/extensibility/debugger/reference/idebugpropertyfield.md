@@ -1,5 +1,5 @@
 ---
-title: IDebugPropertyField | Documentos do Microsoft
+title: IDebugPropertyField | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 02392e25a37461ba2f440abab616cd1bf5e81a02
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: cbb7047dc06feebc82c49b9d6a549babd7463852
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugpropertyfield"></a>IDebugPropertyField
@@ -46,13 +46,13 @@ IDebugPropertyField : IDebugContainerField
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- Um provedor de símbolo implementa essa interface no mesmo objeto que implementa o [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md). Essa interface é uma especialização que suporta o conceito de propriedades em uma classe.  
+ Um provedor de símbolo implementa essa interface no mesmo objeto que implementa o [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md). Esta interface é uma especialização que oferece suporte ao conceito de propriedades em uma classe.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- Use [QueryInterface](/visual-cpp/atl/queryinterface) para obter essa interface da [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface se o [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) método retorna `FIELD_KIND_PROP`.  
+ Use [QueryInterface](/cpp/atl/queryinterface) para obter essa interface do [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface se o [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) método retornará `FIELD_KIND_PROP`.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
- Além dos métodos de [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) e [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interfaces, essa interface implementa os seguintes métodos:  
+ Além dos métodos de [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) e [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interfaces, essa interface implementa os métodos a seguir:  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -60,7 +60,7 @@ IDebugPropertyField : IDebugContainerField
 |[GetPropertySetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertysetter.md)|Obtém o método que define a propriedade.|  
   
 ## <a name="remarks"></a>Comentários  
- Uma propriedade é um conceito de código gerenciado e representa um método que é tratado como uma variável. Não existem propriedades em C++ não gerenciado.  
+ Uma propriedade é um conceito de código gerenciado e representa um método que é tratado como uma variável. Propriedades não existem em C++ não gerenciado.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: sh.h  

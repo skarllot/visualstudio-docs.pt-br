@@ -33,9 +33,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 477f57bbca9c49e7d7d13155fc1f6e55ee4667a8
-ms.openlocfilehash: efc5a2722757229057a91f5e3a6c2ad3681f5a89
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: b3cd444e48893057a057c39c515e51ff8b509b34
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-studio-sdk"></a>SDK do Visual Studio
@@ -58,10 +58,10 @@ O SDK do Visual Studio ajuda você a ampliar os recursos do Visual Studio ou int
  Se você nunca escreveu uma extensão do Visual Studio antes, você deve encontrar mais informações sobre esses recursos e [começando a desenvolver extensões do Visual Studio](../extensibility/starting-to-develop-visual-studio-extensions.md).  
   
 ## <a name="installing-the-visual-studio-sdk"></a>Instalar o SDK do Visual Studio  
- A partir do Visual Studio 2015, você não instale o SDK do Visual Studio no Centro de download. Ele é fornecido como um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS mais tarde. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).  
+ O SDK do Visual Studio é um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS mais tarde. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="whats-new-in-the-visual-studio-2015-sdk"></a>O que há de novo no SDK do Visual Studio 2015  
- O SDK do Visual Studio tem alguns recursos novos, incluindo as lâmpadas e novos itens de projeto que permitem que você crie comandos de menu, janelas de ferramentas e extensões do editor usando um pacote VSIX. Para obter mais informações, consulte [o que há de novo no SDK do Visual Studio 2015](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md).  
+## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>O que há de novo no SDK do Visual Studio 2017  
+ O SDK do Visual Studio tem alguns novos recursos como o suporte para o carregamento da solução leve e o formato do VSIX v3, bem como quebrar as alterações que podem exigir que você atualize sua extensão. Para obter mais informações, consulte [o que há de novo no SDK do Visual Studio 2017](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md).  
   
 ## <a name="visual-studio-user-experience-guidelines"></a>Diretrizes de experiência de usuário do Visual Studio  
  Obter ótimas dicas para projetar a interface do usuário para a sua extensão em [diretrizes de experiência de usuário do Visual Studio](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
@@ -92,7 +92,7 @@ O SDK do Visual Studio ajuda você a ampliar os recursos do Visual Studio ou int
   
 ## <a name="see-also"></a>Consulte também  
  [Criando uma extensão com um comando de Menu](../extensibility/creating-an-extension-with-a-menu-command.md)   
- [Como: migrar projetos de extensibilidade para o Visual Studio 2015](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md)   
+ [Como: migrar projetos de extensibilidade para o Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
  [Perguntas Frequentes: Convertendo suplementos em extensões VSPackage](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
  [Gerenciamento de vários Threads em código gerenciado](../extensibility/managing-multiple-threads-in-managed-code.md)   
  [Estendendo Menus e comandos](../extensibility/extending-menus-and-commands.md)   
@@ -111,4 +111,4 @@ O SDK do Visual Studio ajuda você a ampliar os recursos do Visual Studio ou int
  [Dentro do Visual Studio SDK](../extensibility/internals/inside-the-visual-studio-sdk.md)   
  [Suporte para o SDK do Visual Studio](../extensibility/support-for-the-visual-studio-sdk.md)   
  [Arquivo morto](../extensibility/archive.md)   
- [Referência SDK do Visual Studio](../extensibility/visual-studio-sdk-reference.md)
+ [Referência do SDK do Visual Studio](../extensibility/visual-studio-sdk-reference.md)

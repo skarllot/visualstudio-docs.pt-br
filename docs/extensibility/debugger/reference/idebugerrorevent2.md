@@ -1,5 +1,5 @@
 ---
-title: IDebugErrorEvent2 | Documentos do Microsoft
+title: IDebugErrorEvent2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e79984fc00cb1592cbec9a11a931b93ec964718b
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: dc59f85492a4792d8f72cd35306844832ca5df53
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugerrorevent2"></a>IDebugErrorEvent2
-Essa interface especifica uma mensagem de erro a serem relatados para o usuário.  
+Essa interface especifica uma mensagem de erro a ser relatado para o usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,10 +46,10 @@ IDebugErrorEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- O mecanismo de depuração (DE) implementa essa interface para relatar erros como mensagens legível. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. O SDM usa [QueryInterface](/visual-cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
+ O mecanismo de depuração (DE) implementa essa interface para relatar erros como mensagens legíveis. O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface deve ser implementada no mesmo objeto dessa interface. Usa o SDM [QueryInterface](/cpp/atl/queryinterface) para acessar o `IDebugEvent2` interface.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- O DE cria e envia esse objeto de evento para relatar um erro. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando anexado a programa que está sendo depurado.  
+ O DE cria e envia esse objeto de evento para relatar um erro. O evento é enviado usando o [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) função de retorno de chamada que é fornecida pelo SDM quando anexado ao programa que está sendo depurado.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  Essa interface implementa o método a seguir:  
@@ -59,7 +59,7 @@ IDebugErrorEvent2 : IUnknown
 |`GetErrorMessage`|Retorna um erro como uma cadeia de caracteres legível.|  
   
 ## <a name="remarks"></a>Comentários  
- Se o mecanismo de depuração encontra um erro, ele poderá usar essa interface para relatar a mensagem por meio do Visual Studio para o usuário.  
+ Se o mecanismo de depuração encontra um erro, ele pode usar essa interface para relatar a mensagem por meio do Visual Studio para o usuário.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: msdbg.h  

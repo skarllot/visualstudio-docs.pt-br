@@ -29,8 +29,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 202d6bda9bab5f21e3ee5243d254c63c67b0f066
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: b4d0801f9e3924fd801f30b750d0f5dbfca634fd
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-code-snippets"></a>Trechos de código do Visual C++
@@ -153,7 +154,7 @@ for (int i = length - 1; i >= 0; i--)
 }  
 ```  
   
- O trecho **rfor** fornece um loop for (link) [baseado em intervalo](/visual-cpp/cpp/range-based-for-statement-cpp):  
+ O trecho **rfor** fornece um loop for (link) [baseado em intervalo](/cpp/cpp/range-based-for-statement-cpp):  
   
 ```cpp  
 for (auto& i : v)  
@@ -189,8 +190,3 @@ class SomeClass {
 {  
   
 ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-

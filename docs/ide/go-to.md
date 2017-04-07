@@ -27,16 +27,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: b259c5d02a452bfaa3bd59f2096b43ee1c1c5942
-ms.openlocfilehash: 352de7f71f8a6c16439061c9815219e5f2b3840a
+ms.sourcegitcommit: 3b812629bf0f655f39c35a56eb1b3ca9113303a6
+ms.openlocfilehash: 8bf6d49b21d128d15f5312fb230d4a8e7a8195af
+ms.lasthandoff: 03/01/2017
 
 ---
 
 # <a name="go-to"></a>Ir para
 Há várias maneiras de navegar facilmente pelo código dentro do IDE do Visual Studio, tanto pelo teclado quanto pelo mouse.
 
+<!-- VERSIONLESS -->
 ## <a name="go-to-all"></a>Ir para Todos
-Navegue pelo código para localizar as partes específicas que está procurando.  Você pode pesquisar uma linha, tipo, símbolo, arquivo específicos e mais de uma interface simples.
+Esse recurso existe no Visual Studio 2017 e posterior.  Ele permite navegar pelo código para localizar as partes específicas que você está procurando.  É possível pesquisar uma linha, um tipo, um símbolo, um arquivo específico e muito mais em uma interface simples e unificada.
 
 ### <a name="how-to-use"></a>Como usar
 * **Teclado**
@@ -81,6 +83,7 @@ Configuração | Descrição
 Usar guia de visualização | Exibir o item selecionado imediatamente na guia de visualização do IDE
 Mostrar detalhes    | Exibir informações do projeto, arquivo, linha e resumo dos comentários de documentação na janela
 Centralizar janela   | Mover esta janela para o centro do IDE em vez de para a parte superior direita
+<!-- END VERSIONLESS -->
 
 ## <a name="go-to-definition"></a>Ir para definição
 Navegue até a fonte de um tipo e abra o resultado em uma nova guia:
@@ -125,8 +128,3 @@ Entrada        | Função
 **Ctrl+Shift+-**    | Navegue para frente pela pilha
 
 Você também pode usar os itens de menu **Exibir > Navegar para Trás** e **Exibir > Navegar para Frente**.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

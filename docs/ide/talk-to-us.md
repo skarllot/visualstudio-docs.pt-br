@@ -1,7 +1,7 @@
 ---
 title: Fale conosco | Microsoft Docs
 ms.custom: 
-ms.date: 01/10/2017
+ms.date: 03/07/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -29,15 +29,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 34cc8dad76b93ee5a8d5b8f544e29f46aa5b6438
-ms.openlocfilehash: 604c1baf9424b63f3c0b8597e9ddb0adb686c33e
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: d580064a03291aad49134674bd42413ae05e3e72
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="talk-to-us"></a>Fale conosco
 Estamos interessados em suas ideias para aprimorar nossos produtos e nossa documentação. Não podemos sempre responder pessoalmente, mas faremos com que seus comentários cheguem à pessoa ou equipe certa.  
 
 ## <a name="i-want-to-report-a-problem-with-visual-studio"></a>Desejo relatar um problema com o Visual Studio  
- Se você estiver encontrando problemas usando o Visual Studio, como falhas, desempenho lento, um comportamento inesperado e assim por diante, relate o problema para nós usando a ferramenta **Relatar um Problema**. Basta clicar no ícone de comentários ao lado de **QuickLaunch** ou escolha **Ajuda &#124; Enviar Comentários &#124; Relatar um Problema** no menu principal. Para obter mais informações, veja [Como relatar um problema com o Visual Studio 2017 RC](how-to-report-a-problem-with-visual-studio-2017.md).  
+ Se você estiver encontrando problemas usando o Visual Studio, como falhas, desempenho lento, um comportamento inesperado e assim por diante, relate o problema para nós usando a ferramenta **Relatar um Problema**. Basta clicar no ícone de comentários ao lado de **QuickLaunch** ou escolha **Ajuda &#124; Enviar Comentários &#124; Relatar um Problema** no menu principal. Para obter mais informações, consulte [Como relatar um problema com o Visual Studio 2017](how-to-report-a-problem-with-visual-studio-2017.md).  
 
 ## <a name="i-want-to-make-a-suggestion-about-visual-studio-features"></a>Quero fazer sugestões sobre os recursos do Visual Studio  
  Se houver algo que possamos fazer melhor, informe-nos! Escolha **Fornecer uma sugestão** para sugerir um recurso ou alteração à equipe do Visual Studio. Sua sugestão será postada automaticamente em [UserVoice](https://visualstudio.uservoice.com), onde outras pessoas poderão votar nela.  
@@ -46,7 +47,7 @@ Estamos interessados em suas ideias para aprimorar nossos produtos e nossa docum
  Versões de pré-lançamento do Visual Studio têm um item de menu **Classificar este produto** que permite que você envie comentários sobre a qualidade do build que você está executando. Você não verá isso em versões de lançamento do produto.  
 
 ## <a name="i-want-to-contact-microsoft-support"></a>Desejo entrar em contato com o Suporte da Microsoft  
-Para obter opções de suporte do Visual Studio, consulte nossa página [Visão Geral do Suporte](http://www.visualstudio.com/support/support-overview-vs).
+Para obter opções de suporte do Visual Studio, consulte nossa página [Visão Geral do Suporte](https://www.visualstudio.com/vs/support/).
 
 Para outros produtos e serviços Microsoft, consulte [Suporte da Microsoft](http://go.microsoft.com/fwlink/?LinkID=99019) para obter ajuda online.
 
@@ -67,9 +68,4 @@ Os serviços de suporte da Microsoft estão sujeitos a preços, termos e condiç
 
 ## <a name="see-also"></a>Consulte também  
  [Como relatar um problema com o Visual Studio](how-to-report-a-problem-with-visual-studio-2017.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
