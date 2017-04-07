@@ -28,9 +28,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 0b87d25195b8e288252e6c53279897d1edff93bd
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: 2659c1a3b1adfc3f462971205460942c5fe5171f
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -230,6 +230,8 @@ Além de gerenciar projetos, fornecer uma experiência avançada de edição e a
     > if __name__ == "__main__":  
     >     sys.exit(int(main() or 0))      
     > ```
+    > 
+    > Como alternativa, se houver situações em que a janela de saída é fechada automaticamente quando você não desejar que isso ocorra, clique com o botão direito do mouse no projeto, selecione **Propriedades**, selecione a guia **Depurar** e, em seguida, adicione `-i` ao campo **Argumentos do Interpretador**. Isso fará com que o interpretador entre no modo interativo após a conclusão de um programa, mantendo a janela aberta até que você pressione Ctrl + Z, Enter para sair.
 
 1. Defina um ponto de interrupção na primeira linha da função `main` clicando na margem esquerda cinza próxima a essa linha ou colocando o cursor na linha e usando o comando *Depurar > Ativar/Desativar Ponto de Interrupção** (F9). Um ponto vermelho será exibido na margem cinza para indicar o ponto de interrupção (conforme indicado pela seta azul abaixo):
 

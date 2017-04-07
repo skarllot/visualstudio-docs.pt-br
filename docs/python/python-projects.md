@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 8ae79f6b8e7eb87c0138b0152d8f9ce46eac9a69
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: fb8cb89d6d369a3e8460c2bcf1e65e88ba44b104
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -73,6 +73,9 @@ Assista também ao vídeo [Deep Dive: Using source control with Python projects]
 
 Cada projeto do Python tem um arquivo de inicialização atribuído, mostrado em negrito no Gerenciador de Soluções. Esse é o arquivo que é executado quando você inicia a depuração (F5 ou **Depurar > Iniciar Depuração**) ou executa o projeto na janela interativa (Shift+Alt+F5 ou **Depurar > Executar Projeto na Interativa do Python**). Para alterá-lo, clique com o botão direito do mouse no novo arquivo e selecione **Definir como Arquivo de Inicialização**.
 
+> [!Tip]
+> Se você remover o arquivo de inicialização selecionado de um projeto e não selecionar um novo, a tentativa de executar o projeto fará com que uma janela de saída do Python apareça, porém, em seguida, desapareça quase imediatamente. Se você observar esse comportamento, verifique se haverá um arquivo de inicialização atribuído. Além disso, para manter a janela de saída aberta nesses casos, clique com o botão direito do mouse no projeto, selecione **Propriedades**, selecione a guia **Depurar** e, em seguida, adicione `-i` ao campo **Argumentos do Interpretador**. Isso fará com que o interpretador entre no modo interativo após a conclusão de um programa, mantendo a janela aberta até que você pressione Ctrl + Z, Enter para sair.
+
 Um novo projeto sempre é associado ao ambiente global padrão do Python. Para associar o projeto a outro ambiente (incluindo ambientes virtuais), clique com o botão direito do mouse no nó **Ambientes do Python** do projeto, selecione **Adicionar/Remover Ambientes do Python** e selecione os ambientes desejados. Para alterar o ambiente ativo, clique com o botão direito do mouse no ambiente desejado e selecione **Ativar Ambiente**, conforme mostrado abaixo. Para obter mais detalhes, consulte [Ambientes do Python](python-environments.md#project-specific-environments).
 
 ![Ativando um ambiente para um projeto do Python](media/projects-activate-environment.png)
@@ -97,6 +100,7 @@ A seguinte tabela resume os modelos disponíveis no Visual Studio 2017 (nem todo
 | Página da Web do IronPython Silverlight | Um projeto do IronPython executado em um navegador usando o Silverlight. O código do aplicativo do Python é incluído na página da Web como um script. Uma marca de script de texto clichê puxa um código JavaScript que inicializa o IronPython em execução dentro do Silverlight, no qual o código do Python pode interagir com o DOM. |
 | Aplicativo do Windows Forms do IronPython | Uma estrutura de projeto que usa o IronPython com a interface do usuário usando o código com o Windows Forms. O aplicativo é executado sem exibir um console. |
 | Aplicativo em segundo plano (IoT) | Dá suporte à implantação de projetos do Python a serem executados como serviços em segundo plano em dispositivos. Visite a [Central de desenvolvedores do Windows IoT](https://dev.windows.com/en-us/iot) para obter mais informações. |
+| Módulo de extensão do Python | Esse modelo é exibido no Visual C++ se você instalou as **ferramentas de desenvolvimento nativo do Python** com a carga de trabalho do Python na Visualização do Visual Studio 2017 (consulte [Instalação](installation.md)). Ele fornece a estrutura principal para uma DLL de extensão do C++, semelhante ao que é descrito em [Criando uma extensão do C++ para o Python](cpp-and-python.md). |
 
 <a name="create-project-from-existing-files"</a>
 ### <a name="creating-a-project-from-existing-files"></a>Criando um projeto com base em arquivos existentes
