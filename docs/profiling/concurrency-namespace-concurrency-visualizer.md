@@ -33,12 +33,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a24c1f467e9f66b80548dc8d517c5999d677588c
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 4f592f32fef945db4d5e7b15f8e0902291b05ea7
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="concurrency-namespace-concurrency-visualizer"></a>Namespace de simultaneidade (Visualizador de Simultaneidade)
-O namespace `Concurrency` oferece classes e funções que permitem que você acesse o Tempo de execução de simultaneidade, uma estrutura de programação simultânea para C++. Para obter mais informações, consulte [Tempo de Execução de Simultaneidade](/visual-cpp/parallel/concrt/concurrency-runtime).  
+O namespace `Concurrency` oferece classes e funções que permitem que você acesse o Tempo de execução de simultaneidade, uma estrutura de programação simultânea para C++. Para obter mais informações, consulte [Tempo de Execução de Simultaneidade](/cpp/parallel/concrt/concurrency-runtime).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,8 +60,3 @@ namespace Concurrency;
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de biblioteca C](../profiling/c-library-reference.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -39,9 +39,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 89a35b850422ebc239fd81bb50f93d9b3512a194
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 0a5cf4b0d4d6bb3b66814554c349238ab63a4b41
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-studio-integration-msbuild"></a>Integração com o Visual Studio (MSBuild)
@@ -49,7 +49,7 @@ O Visual Studio hospeda o [!INCLUDE[vstecmsbuild](../extensibility/internals/inc
   
  Este tópico descreve aspectos específicos da hospedagem do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pelo [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] que devem ser considerados ao personalizar projetos e arquivos .targets que serão carregados e compilados em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Isso ajudará a certificar recursos [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], como o IntelliSense e a depuração de trabalho no projeto personalizado.  
   
- Para obter informações sobre projetos C++, consulte [Arquivos de Projeto](/visual-cpp/ide/project-files).  
+ Para obter informações sobre projetos C++, consulte [Arquivos de Projeto](/cpp/ide/project-files).  
   
 ## <a name="project-file-name-extensions"></a>Extensões de Nome do Arquivo de Projeto  
  O MSBuild.exe reconhece extensões de nome de arquivo de projeto que correspondem ao padrão .*proj. No entanto, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] reconhece somente um subconjunto dessas extensões de nome de arquivo de projeto, o que determina o sistema de projeto específico a um idioma que carregará o projeto. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] não tem um [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] com neutralidade de idioma baseado no sistema de projeto.  
