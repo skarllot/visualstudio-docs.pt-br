@@ -31,6 +31,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 89c7ea153dc44342851b43ced5d99ffcd0b52312
 ms.openlocfilehash: 75f0baac767d66ec3c942d26957beed256f45ab3
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="how-to-unlock-visual-studio"></a>Como Desbloquear o Visual Studio
@@ -88,9 +89,4 @@ Você pode avaliar o Visual Studio gratuitamente por até 30 dias. Ao entrar no 
   
 ## <a name="see-also"></a>Consulte também  
  [Signing in to Visual Studio](../ide/signing-in-to-visual-studio.md) (Entrando no Visual Studio)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
