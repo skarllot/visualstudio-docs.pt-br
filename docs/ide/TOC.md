@@ -1,7 +1,7 @@
 # [Tour pelos recursos de IDE do Visual Studio](visual-studio-ide.md)
 # [Introdução ao Visual Studio](get-started-with-visual-studio.md)
 # [Contas de usuário e atualizações](user-accounts-and-updates.md)
-## [Signing in to Visual Studio](signing-in-to-visual-studio.md) (Entrando no Visual Studio)
+## [Entrando no Visual Studio](signing-in-to-visual-studio.md)
 ## [Trabalhar com várias contas de usuário](work-with-multiple-user-accounts.md)
 ## [Como Desbloquear o Visual Studio](how-to-unlock-visual-studio.md)
 ## [Notificações do Visual Studio](visual-studio-notifications.md)
