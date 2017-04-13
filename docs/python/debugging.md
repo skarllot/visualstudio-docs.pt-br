@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: b5d72a83092c2b97b30b7a8af539a0b1aca50418
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
+ms.openlocfilehash: 1d26ca1a464e2ec15c0d5d338a46b6fb1e7e1d65
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -105,7 +105,7 @@ Depois de interromper em um ponto de interrupção, você tem várias maneiras p
 
 ### <a name="inspecting-and-modifying-values"></a>Inspecionando e modificando valores
 
-Quando estiver parado no depurador, é possível inspecionar e modificar os valores das variáveis. Também é possível usar a janela Inspeção para monitorar variáveis individuais, bem como expressões personalizadas. (Consulte [Inspecionar variáveis](../debugger/getting-started-with-the-debugger.md#BKMK_Inspect_Variables) para obter detalhes gerais.)
+Quando estiver parado no depurador, é possível inspecionar e modificar os valores das variáveis. Também é possível usar a janela Inspeção para monitorar variáveis individuais, bem como expressões personalizadas. (Consulte [Inspecionar variáveis](../debugger/getting-started-with-the-debugger.md#inspect-variables-with-the-autos-and-locals-windows) para obter detalhes gerais.)
 
 Para exibir um valor usando DataTips, basta focalizar qualquer variável no editor. É possível clicar no valor para alterá-lo:
 
