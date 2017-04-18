@@ -17,3 +17,4 @@ Agradecemos suas contribuições para nos ajudar a melhorar a documentação do 
 Várias áreas de recursos do Visual Studio têm suas próprias pastas nesse repositório, como **depurador** para tópicos sobre depuração, **ide** para tópicos sobre o IDE (ambiente de desenvolvimento interativo) do Visual Studio e assim por diante. A subpasta **/media** de cada pasta contém arquivos de arte para os tópicos. O [Guia de contribuição](CONTRIBUTING.md) traz mais informações.
 
 Este projeto adotou o [Código de Conduta de Código-fonte da Microsoft](https://opensource.microsoft.com/codeofconduct/). Para obter mais informações, consulte as [Perguntas frequentes sobre o Código de Conduta](https://opensource.microsoft.com/codeofconduct/faq/) ou contate [opencode@microsoft.com](mailto:opencode@microsoft.com) com outras perguntas ou comentários.
+
