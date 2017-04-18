@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 69740c73cc133e08254fc546d2b59885270725f2
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 2a6555eb9c0a88b1533428cf2aa932b3fc4960ec
+ms.openlocfilehash: 2a92d10d4e47983de6e3f3c5b55adfcc5dc68c8a
+ms.lasthandoff: 03/30/2017
 
 ---
 
@@ -89,6 +89,11 @@ No exemplo acima, temos o Python 3.4 (CPython de 32 bits) instalado junto com as
 >
 > ![Exibição expandida da janela Ambientes do Python](media/environments-expanded-view.png)
 
+> [!Note]
+> Embora o Visual Studio respeite a opção de pacotes de site do sistema, ele não fornece uma maneira de alterá-lo no próprio Visual Studio.
+
+### <a name="creating-an-environment-for-an-existing-interpreter"></a>Criando um ambiente para um interpretador existente
+
 Normalmente, o Visual Studio localiza um interpretador do Python instalado verificando o Registro, mas ele poderá não encontrá-lo se o interpretador estiver instalado de maneira não padrão. Nesses casos, é possível apontar o Visual Studio diretamente para o interpretador da seguinte maneira:
 
 1. Selecione **+ Personalizado...** na Janela Ambientes, o que cria um novo ambiente e abre a guia [**Configurar**](#configure-tab) descrita abaixo.
@@ -100,9 +105,6 @@ Normalmente, o Visual Studio localiza um interpretador do Python instalado verif
 1. Selecione **Detecção Automática** para que o Visual Studio preencha os campos restantes ou preencha-os manualmente.
 1. Selecione **Aplicar** para salvar o ambiente.
 1. Se precisar remover o ambiente, selecione o comando **Remover** na guia **Configurar**.
-
-> [!Note]
-> Embora o Visual Studio respeite a opção de pacotes de site do sistema, ele não fornece uma maneira de alterá-lo no próprio Visual Studio.
 
 ### <a name="overview-tab"></a>Guia Visão Geral
 
