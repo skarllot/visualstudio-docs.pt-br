@@ -29,8 +29,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5a721717db650ff81721b0204abf107aa8fe6109
+ms.sourcegitcommit: 525a87090a05edadfa9927e55a4260e3a37f3012
+ms.openlocfilehash: fc43b483b878af4a094d0c35718f24cd1845d0e7
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getting-started-with-visual-studio-tools-for-unity"></a>Introdução às Ferramentas do Visual Studio para Unity
@@ -71,6 +72,9 @@ Nesta seção, você aprenderá a instalar as Ferramentas do Visual Studio para 
   
 > [!NOTE]
 >  Versões Express do Visual Studio não dão suporte a extensões como as Ferramentas do Visual Studio para Unity. O Visual Studio Community é uma versão gratuita do Visual Studio que dá suporte às Ferramentas do Visual Studio para Unity e a outras extensões. Para a maioria dos usuários, o Visual Studio Community é uma opção melhor que o Express.  
+
+> [!NOTE]
+>  Para o Visual Studio de 2017, o VSTU 3 vem com a carga de trabalho do Unity que você pode escolher no instalador.  
   
 ## <a name="your-first-unity-project-with-visual-studio-tools-for-unity"></a>Seu primeiro projeto do Unity com as Ferramentas do Visual Studio para Unity  
  Agora que tem tudo de que precisa, você está pronto para seu primeiro projeto do Unity com o Visual Studio. Configurar seu projeto do Unity é diferente dependendo de quais versões do Unity e das Ferramentas do Visual Studio para Unity estão instaladas. Siga as etapas abaixo para a versão do Unity e das Ferramentas do Visual Studio para Unity que você instalou.  
@@ -97,7 +101,7 @@ Nesta seção, você aprenderá a instalar as Ferramentas do Visual Studio para 
 #### <a name="3---launch-visual-studio-from-the-unity-editor"></a>3 – Inicialize o Visual Studio no Editor do Unity  
  A partir do Unity 5.2, o menu da extensão **Ferramentas do Visual Studio** não é mais necessário para inicializar o Visual Studio ou para configurar as Ferramentas do Visual Studio para Unity. Em vez disso, quando o Visual Studio estiver configurado como o editor de script externo, basta escolher o arquivo de script do editor do Unity e seu código será aberto no Visual Studio.  
   
-### <a name="previous-versions-of-unity-pre-52"></a>Versões anteriores do Unity (anteriores à&5;.2)  
+### <a name="previous-versions-of-unity-pre-52"></a>Versões anteriores do Unity (anteriores à 5.2)  
  Antes do Unity 5.2, não havia nenhum suporte interno para as Ferramentas do Visual Studio para Unity. Em vez disso, cada projeto precisava importar o unitypackage das Ferramentas do Visual Studio e definir outras configurações do projeto para usar as Ferramentas do Visual Studio para Unity.  
   
 #### <a name="1---create-a-unity-project"></a>1 – Criar um projeto do Unity  
@@ -128,8 +132,4 @@ Nesta seção, você aprenderá a instalar as Ferramentas do Visual Studio para 
   
 ## <a name="see-also"></a>Consulte também  
  [Home page do Unity](http://unity3d.com)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -31,9 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6f7dee7bd91f2060b9b39eceb7def4a0027a9a83
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 2587e4a10a4caa1192a0efc31448078db553dfb4
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>Instruções passo a passo: criando um ambiente de build de vários computadores
@@ -96,7 +96,7 @@ Você pode criar um ambiente de build na sua organização instalando o Visual S
   
 1.  No computador host, instale o Visual Studio.  
   
-2.  No computador de build, instale o .NET Framework 4.5. Para verificar se ele está instalado, certifique-se de que o valor da chave do Registro HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full@Version comece com "4.5".  
+2.  No computador de build, instale o .NET Framework 4.5. Para verificar se está instalado, certifique-se de que o valor da chave do Registro HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full@Version começa com "4.5".  
   
 ##  <a name="CopyingFiles"></a> Copiando arquivos do computador host para o computador de build  
  Esta seção aborda a cópia de arquivos específicos, compiladores, ferramentas de build, ativos do MSBuild e configurações do Registro do computador host para o computador de build. Estas instruções pressupõem que você instalou o Visual Studio no local padrão no computador host; se você tiver instalado-o em outro local, ajuste as etapas apropriadamente.  
@@ -212,7 +212,7 @@ Você pode criar um ambiente de build na sua organização instalando o Visual S
   
     -   \Microsoft.VC110.OPENMP\vcomp110.dll  
   
-5.  Copie somente os seguintes arquivos da pasta \Debug_NonRedist\x86\ ou \Debug_NonRedist\x64\ para o computador de build, conforme descrito em [Preparando um computador de teste para executar um executável de depuração](/visual-cpp/ide/preparing-a-test-machine-to-run-a-debug-executable). Nenhum outro arquivo pode ser copiado.  
+5.  Copie somente os seguintes arquivos da pasta \Debug_NonRedist\x86\ ou \Debug_NonRedist\x64\ para o computador de build, conforme descrito em [Preparando um computador de teste para executar um executável de depuração](/cpp/ide/preparing-a-test-machine-to-run-a-debug-executable). Nenhum outro arquivo pode ser copiado.  
   
     -   \Microsoft.VC110.DebugCRT\msvcp110d.dll  
   
@@ -254,7 +254,7 @@ Você pode criar um ambiente de build na sua organização instalando o Visual S
   
     -   %RegistryRoot%\Microsoft SDKs\Windows\v8.0A\WinSDK-NetFx40Tools-x86@InstallationFolder  
   
-    -   %RegistryRoot%\VisualStudio\11.0@Source Directories  
+    -   %RegistryRoot%\VisualStudio\11.0@Source Diretórios  
   
     -   %RegistryRoot%\VisualStudio\11.0\Setup\VC@ProductDir  
   
@@ -303,7 +303,7 @@ Você pode criar um ambiente de build na sua organização instalando o Visual S
   
     |Argumento Vcvarsall.bat|Compilador|Compilar uma arquitetura de computador|Arquitetura de saída de compilação|  
     |----------------------------|--------------|---------------------------------|-------------------------------|  
-    |x86 (padrão)|Nativo de&32; bits|x86, x64|x86|  
+    |x86 (padrão)|Nativo de 32 bits|x86, x64|x86|  
     |x86_amd64|x64 Cruzado|x86, x64|x64|  
     |amd64|x64 Nativo|x64|x64|  
   
@@ -439,5 +439,5 @@ Você pode criar um ambiente de build na sua organização instalando o Visual S
          Para compilação de 64 bits nativa, aponte para o MSBuild de 64 bits.  
   
 ## <a name="see-also"></a>Consulte também  
- [Preparando um computador de teste para executar um executável de depuração](/visual-cpp/ide/preparing-a-test-machine-to-run-a-debug-executable)   
+ [Preparando um computador de teste para executar um executável de depuração](/cpp/ide/preparing-a-test-machine-to-run-a-debug-executable)   
  [Referência de linha de comando](../msbuild/msbuild-command-line-reference.md)

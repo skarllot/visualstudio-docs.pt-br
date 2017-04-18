@@ -2,7 +2,7 @@
 title: Criar um instalador offline para o Visual Studio 2017 | Microsoft Docs
 description: Saiba como criar um instalador offline para o Visual Studio.
 ms.custom: 
-ms.date: 03/21/2017
+ms.date: 04/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
-ms.openlocfilehash: 563c78a49eb55886b1ddbd4f437951c99c6568e5
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 4e33dc3ebb32569b547aa9bcb6db9a15dbe4fc21
+ms.openlocfilehash: fda1a4fbfebd856312174fe24ff161b0e9d04bb9
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="create-an-offline-installer-for-visual-studio-2017"></a>Criar um instalador offline para o Visual Studio 2017
@@ -66,7 +66,7 @@ Para criar uma instalação offline com todos os idiomas e recursos, use um dos 
 - Para o Visual Studio Professional, execute: <br> ```vs_professional.exe --layout c:\vs2017offline```
 - Para o Visual Studio Community, execute: <br> ```vs_community.exe --layout c:\vs2017offline```
 
-Para obter mais exemplos, consulte a seção [Como personalizar o instalador offline](#how-to-customize-your-offline- installer) nesta página.
+Para obter mais exemplos, consulte a seção [Como personalizar o instalador offline](#how-to-customize-your-offline-installer) nesta página.
 
 ## <a name="install-from-the-offline-installation-folder"></a>Instalar por meio da pasta de instalação offline
 Execute a instalação offline agora ou mais tarde: isso fica a seu critério. Mas quando fizer isso, siga estas etapas.
@@ -98,6 +98,7 @@ Talvez você deseje atualizar o instalador offline em uma data posterior. Veja c
 
 | Problema       | Item                   | Solução |
 | ----------- | ---------------------- | -------- |
+| Você recebe uma mensagem de erro do Instalador do Visual Studio que diz: "A instalação foi concluída com aviso" e, em seguida, ocorre falha na instalação do Emulador do Windows. | Emulador do Windows 10 | Abra a pasta de instalação offline do Visual Studio, navegue até a subpasta "Win10_Emulator_10.0.15063,version=10.0.15063.12,chip=x64" e, em seguida, execute o EmulatorSetup.exe para instalar o Emulador do Windows. |
 | Você recebe uma mensagem de aviso informando que não é possível instalar alguns componentes e pacotes.  | Instalação do SDK do Android (nível de API) | Se desejar incluir pacotes do SDK do Android (Nível de API), será necessário ter uma conexão com a Internet ao criar o instalador offline. Se estiver em uma rede restrita, será necessário permitir o acesso às seguintes URLs: <br><br> - http://dl.google.com:443 <br> - http://dl-ssl.google.com:443 <br>  - https://dl-ssl.google.com/android/repository/*<br><br>Para obter mais informações sobre como solucionar possíveis problemas com configurações de proxy, consulte a postagem de blog [Visual Studio install failures (Android SDK Setup) behind a Proxy (Falhas de instalação do Visual Studio (instalação do SDK do Android) por trás de um proxy)](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/).  |  
 | Os usuários não têm acesso aos arquivos. | permissões (ACLs) | Lembre-se de ajustar as permissões (ACLs) para que elas concedam acesso de Leitura aos outros usuários *antes* de você compartilhar a instalação offline. |
 | Falha na instalação de novas cargas de trabalho, novos componentes ou idiomas.  | `--layout`  | Verifique se você tem acesso à Internet se estiver instalando com base em um layout parcial e selecione as cargas de trabalho, os componentes ou idiomas que não estão disponíveis no layout anterior. |

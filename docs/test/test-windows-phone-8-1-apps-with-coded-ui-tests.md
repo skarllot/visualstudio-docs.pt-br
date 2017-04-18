@@ -1,5 +1,5 @@
 ---
-title: Testar aplicativos Windows Phone 8.1 com testes de IU codificados | Microsoft Docs
+title: Testar aplicativos Windows UWP e 8.1 do Windows Phone com testes de UI codificados | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7b866776-f2d5-4823-8d15-919f889db26f
 caps.latest.revision: 28
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -28,13 +28,15 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 046bad5dcecf28ff1051600dcfe1e33fe5057ae7
+ms.sourcegitcommit: 1694abeb37e7fa0e5766dfda16a05bd5e7895885
+ms.openlocfilehash: 7d8f95b62fcf7f32b972e0d9b64a0175f7d1f47c
+ms.lasthandoff: 04/05/2017
 
 ---
-# <a name="test-windows-phone-81-apps-with-coded-ui-tests"></a>Testar aplicativos do Windows Phone 8.1 com testes de IU codificados
-Use testes de IU codificados para testar seus aplicativos do Windows Phone.  
-  
+# <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>Testar aplicativos Windows UWP e 8.1 do Windows Phone com testes de UI codificados
+
+Use este passo a passo para criar testes de interface do usuário para aplicativos UWP que são executados em dispositivos móveis ou emuladores e aplicativos do Windows Phone 8.1 com base em XAML.  
+
 ## <a name="create-a-simple-windows-phone-app"></a>Criar um aplicativo simples do Windows Phone  
   
 1.  Crie um novo projeto para um aplicativo do Windows Phone em branco usando um modelo Visual C# ou Visual Basic.  
@@ -92,6 +94,8 @@ Use testes de IU codificados para testar seus aplicativos do Windows Phone.
      Mantenha o emulador em execução enquanto cria seu teste de IU codificado.  
   
 ## <a name="create-a-coded-ui-test-for-the-windows-phone-app"></a>Criar um teste de IU codificado para o aplicativo do Windows Phone  
+
+[Como criar testes de IU codificados para aplicativos UWP (Plataforma Universal do Windows)?](#uwpapps)
   
 1.  Acrescente o novo projeto de teste de IU codificado à solução no aplicativo do Windows Phone.  
   
@@ -312,7 +316,7 @@ Use testes de IU codificados para testar seus aplicativos do Windows Phone.
   
      ![Resultados do Gerenciador de Testes](../test/media/cuit_phone_runtestexplorerresults.png "CUIT_Phone_RunTestExplorerResults")  
   
-##  <a name="a-nametestingphoneappscodeduidatadrivena-use-data-driven-coded-ui-tests-on-windows-phone-apps"></a><a name="TestingPhoneAppsCodedUI_DataDriven"></a> Usar testes de IU codificados e controlados por dados em aplicativos Windows Phone  
+##  <a name="TestingPhoneAppsCodedUI_DataDriven"></a> Usar testes de IU codificados e controlados por dados em aplicativos Windows Phone  
  Para testar diferentes condições, é possível executar um teste de IU codificado diversas vezes com diferentes conjuntos de dados.  
   
  Os testes de IU codificados e orientados a dados para Windows Phone são definidos com o uso do atributo DataRow em um método de teste. No exemplo a seguir, x e y usam os valores de 1 e 2 na primeira iteração e de -1 e -2 na segunda iteração do teste.  
@@ -330,7 +334,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 ### <a name="q-do-i-have-to-deploy-the-windows-phone-app-in-the-emulator-in-order-to-map-ui-controls"></a>P: Preciso implantar o aplicativo para Windows Phone no emulador para mapear os controles de interface do usuário?  
  **R**: Sim. O compilador de teste de IU codificado exige que um emulador esteja em execução e que o aplicativo esteja implantado nele. Caso contrário, ele lança uma mensagem de texto informando que não foi possível localizar nenhum emulador em execução.  
   
-###  <a name="a-nametestingphoneappscodeduiemulatordevicea-q-can-tests-be-executed-on-the-emulator-only-or-can-i-also-use-a-physical-device"></a><a name="TestingPhoneAppsCodedUI_EmulatorDevice"></a> P: Os testes só podem ser executados no emulador ou também posso usar um dispositivo físico?  
+###  <a name="TestingPhoneAppsCodedUI_EmulatorDevice"></a> P: Os testes só podem ser executados no emulador ou também posso usar um dispositivo físico?  
  **R**: Há suporte para as duas opções. Para selecionar o destino da execução de teste, altere o tipo de emulador ou selecione o dispositivo na barra de tarefa do dispositivo. Se o dispositivo estiver selecionado, é necessário conectar o dispositivo "Phone Blue" a uma das portas USB do computador.  
   
  ![Selecionar a versão do emulador ou o dispositivo físico](../test/media/cuit_phone_testtarget.png "CUIT_Phone_TestTarget")  
@@ -343,7 +347,8 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
   
 ### <a name="q-can-i-create-coded-ui-tests-for-my-windows-phone-apps-on-a-system-that-is-not-running-windows-81-or-windows-10"></a>P: Posso criar testes de IU codificados para meus aplicativos Windows Phone em um sistema que não executa o Windows 8.1 nem o Windows 10?  
  **R**: Não, os modelos de Projeto de Teste de IU Codificado estão disponíveis somente no Windows 8.1 e Windows 10. Para criar a automação para aplicativos UWP (Plataforma Universal do Windows), você precisará do Windows 10.  
-  
+
+<a name="uwpapps"></a>  
 ### <a name="q-how-do-i-create-coded-ui-tests-for-universal-windows-platform-uwp-apps"></a>P: Como fazer para criar testes de IU codificados para aplicativos UWP (Plataforma Universal do Windows)?  
  **R**: Dependendo da plataforma em que você está testando o aplicativo UWP, crie o projeto de teste de IU codificado de uma destas maneiras:  
   
@@ -393,15 +398,11 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 |Executar testes automatizados do MTM|Com suporte.|Sem suporte.|  
 |Testes direcionados a dados|Consulte [Testes controlados por dados](../test/creating-a-data-driven-coded-ui-test.md) para obter informações sobre como usar fontes de dados externas e o atributo DataSource em um método de teste.|Os dados são especificados e embutidos com o uso do atributo DataRow em um método de teste. Consulte [Usar testes de IU codificados e controlados por dados em aplicativos Windows Phone](#TestingPhoneAppsCodedUI_DataDriven) neste tópico.|  
   
- Para obter informações sobre testes de IU codificados para aplicativos da Windows Store, consulte [Testar aplicativos da Windows Store 8.1 com testes de IU codificados](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md).  
+ Para obter informações sobre testes de IU codificados para aplicativos da Windows Store, consulte [Testar aplicativos da Windows Store UWP e 8.1 com testes de IU codificados](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
  Blog do Gerenciamento do Ciclo de Vida do Aplicativo do Microsoft Visual Studio: [Using Coded UI to test XAML-based Windows Phone apps](http://blogs.msdn.com/b/visualstudioalm/archive/2014/04/05/using-coded-ui-to-test-xaml-based-windows-phone-apps.aspx?PageIndex=2#comments) (Usando a IU codificada para testar aplicativos Windows Phone baseados em XAML)  
   
 ## <a name="see-also"></a>Consulte também  
  [Usar automação de interface do usuário para testar código](../test/use-ui-automation-to-test-your-code.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

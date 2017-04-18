@@ -1,5 +1,5 @@
 ---
-title: Testar aplicativos Windows Store 8.1 com testes de IU codificados | Microsoft Docs
+title: Testar aplicativos Windows UWP e 8.1 da Windows Store com testes de UI codificados | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c8d9c15e-ce3c-401a-86ec-c5c124a239d8
 caps.latest.revision: 23
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -28,12 +28,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7e69c0933ae8e324b54bfd35114690538566c3b3
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: b40df6e53321efa72081166a1c77d0f3accf914e
+ms.lasthandoff: 04/04/2017
 
 ---
-# <a name="test-windows-store-81-apps-with-coded-ui-tests"></a>Testar aplicativos da Windows Store 8.1 com testes de IU codificados
-Use testes de IU codificados para verificar os aplicativos da Windows Store.  
+# <a name="test-windows-uwp-and-81-store-apps-with-coded-ui-tests"></a>Testar aplicativos Windows UWP e 8.1 da Windows Store com testes de UI codificados
+
+Use este passo a passo para criar testes de interface do usuário para aplicativos UWP e aplicativos Store 8.1 baseados em XAML. 
   
 ## <a name="create-a-simple-windows-store-app"></a>Criar um aplicativo simples da Windows Store  
   
@@ -76,6 +78,8 @@ Use testes de IU codificados para verificar os aplicativos da Windows Store.
 5.  Pressione F5 para executar o aplicativo da Windows Store.  
   
 ## <a name="create-and-run-a-coded-ui-test-for-the-windows-store-app"></a>Crie e execute um teste de IU codificado no aplicativo da Windows Store  
+
+[Como criar testes de IU codificados para aplicativos UWP (Plataforma Universal do Windows)?](#uwpapps)
   
 1.  Crie um novo projeto de teste de IU codificado para o aplicativo da Windows Store.  
   
@@ -307,37 +311,34 @@ Use testes de IU codificados para verificar os aplicativos da Windows Store.
   
 ## <a name="q--a"></a>Perguntas e respostas  
   
--   **P: Por que não vejo a opção para registrar meu teste de IU codificado na caixa de diálogo Gerar Código para Teste de IU Codificado?**  
+#### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>P: Por que não vejo a opção para registrar meu teste de IU codificado na caixa de diálogo Gerar Código para Teste de IU Codificado?**  
   
-     **R**: Não há suporte para a opção de registro em aplicativos da Windows Store.  
+**R**: Não há suporte para a opção de registro em aplicativos da Windows Store.  
   
--   **P: Posso criar um teste de IU codificado para meus aplicativos da Windows Store baseados em WinJS?**  
+#### <a name="q-can-i-create-a-coded-ui-test-for-my-windows-store-apps-based-on-winjs"></a>P: Posso criar um teste de IU codificado para meus aplicativos da Windows Store baseados em WinJS?**  
+
+**R**: Não. Há suporte apenas para aplicativos baseados em XAML.  
   
-     **R**: Não. Há suporte apenas para aplicativos baseados em XAML.  
+#### <a name="q-can-i-create-coded-ui-tests-for-my-windows-store-apps-on-a-system-that-is-not-running-windows-81-or-windows-10"></a>P: Posso criar testes de IU codificados para meus aplicativos da Windows Store em um sistema que não executa o Windows 8.1 nem o Windows 10?**  
   
--   **P: Posso criar testes de IU codificados para meus aplicativos da Windows Store em um sistema que não executa o Windows 8.1 nem o Windows 10?**  
+**R**: Não, os modelos de Projeto de Teste de IU Codificado estão disponíveis somente no Windows 8.1 e Windows 10. Para criar a automação para aplicativos UWP (Plataforma Universal do Windows), você precisará do Windows 10.  
+
+<a name="uwpapps"></a>  
+#### <a name="q-how-do-i-create-coded-ui-tests-for-universal-windows-platform-uwp-apps"></a>P: Como fazer para criar testes de IU codificados para aplicativos UWP (Plataforma Universal do Windows)?**  
   
-     **R**: Não, os modelos de Projeto de Teste de IU Codificado estão disponíveis somente no Windows 8.1 e Windows 10. Para criar a automação para aplicativos UWP (Plataforma Universal do Windows), você precisará do Windows 10.  
+**R**: Dependendo da plataforma em que você está testando o aplicativo UWP, crie o projeto de teste de IU codificado de uma destas maneiras:  
   
--   **P: Como fazer para criar testes de IU codificados para aplicativos UWP (Plataforma Universal do Windows)?**  
+- Um aplicativo UWP em execução no computador local será executado como um aplicativo da Loja. Para testar isso, é necessário usar o modelo **Projeto de Teste de IU Codificado (Windows)**. Para encontrar esse modelo ao criar um novo projeto, acesse o nó **Windows**, **Universal**. Se preferir, acesse o nó **Windows**, **Windows 8**, **Windows**.  
   
-     **R**: Dependendo da plataforma em que você está testando o aplicativo UWP, crie o projeto de teste de IU codificado de uma destas maneiras:  
+- Um aplicativo UWP em execução em um emulador ou dispositivo móvel será executado como um aplicativo do Windows Phone. Para testar isso, é necessário usar o modelo **Projeto de Teste de IU Codificado (Windows Phone)**. Para encontrar esse modelo ao criar um novo projeto, acesse o nó **Windows**, **Universal**. Se preferir, acesse o nó **Windows**, **Windows 8**, **Windows Phone**.  
   
-    -   Um aplicativo UWP em execução no computador local será executado como um aplicativo da Loja. Para testar isso, é necessário usar o modelo **Projeto de Teste de IU Codificado (Windows)**. Para encontrar esse modelo ao criar um novo projeto, acesse o nó **Windows**, **Universal**. Se preferir, acesse o nó **Windows**, **Windows 8**, **Windows**.  
+Depois de criar o projeto, a criação de um teste permanece a mesma que antes.  
   
-    -   Um aplicativo UWP em execução em um emulador ou dispositivo móvel será executado como um aplicativo do Windows Phone. Para testar isso, é necessário usar o modelo **Projeto de Teste de IU Codificado (Windows Phone)**. Para encontrar esse modelo ao criar um novo projeto, acesse o nó **Windows**, **Universal**. Se preferir, acesse o nó **Windows**, **Windows 8**, **Windows Phone**.  
+#### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>P: Por que não posso modificar o código no arquivo UIMap.Designer?**  
   
-     Depois de criar o projeto, a criação de um teste permanece a mesma que antes.  
-  
--   **P: Por que não posso modificar o código no arquivo UIMap.Designer?**  
-  
-     **R**: Todas as alterações de código feitas no arquivo UIMapDesigner.cs serão substituídas sempre que você gerenciar o código usando o UIMap – Construtor de Teste de IU Codificado. Se você tiver de modificar um método gravado, copie-o para o arquivo UIMap.cs e renomeie-o. O arquivo UIMap.cs pode ser usado para substituir métodos e propriedades no arquivo UIMapDesigner.cs. Você deve remover a referência para o método original no arquivo Coded UITest.cs e substituí-la pelo nome do método renomeado.  
+**R**: Todas as alterações de código feitas no arquivo UIMapDesigner.cs serão substituídas sempre que você gerenciar o código usando o UIMap – Construtor de Teste de IU Codificado. Se você tiver de modificar um método gravado, copie-o para o arquivo UIMap.cs e renomeie-o. O arquivo UIMap.cs pode ser usado para substituir métodos e propriedades no arquivo UIMapDesigner.cs. Você deve remover a referência para o método original no arquivo Coded UITest.cs e substituí-la pelo nome do método renomeado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usar a automação de interface do usuário para testar o código](../test/use-ui-automation-to-test-your-code.md)   
  [Definir uma propriedade de automação exclusiva para controles da Windows Store para teste](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

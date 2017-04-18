@@ -1,7 +1,7 @@
 ---
 title: Novidades no Visual Studio 2017 | Microsoft Docs
 ms.custom: 
-ms.date: 03/08/2017
+ms.date: 04/04/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8c4e45eadd81c54a372885ce89ccced1256d3b3d
-ms.openlocfilehash: 14a06f4344989052b0a020570dc87d9697ba95d0
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: b19199274d116e20af4c415673ebbeded95859d9
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Novidades no Visual Studio 2017
@@ -49,7 +49,7 @@ Aqui está um resumo de alto nível das alterações que fizemos:
 * **Desenvolvimento de aplicativo na nuvem com o Azure**. Um pacote interno de ferramentas do Azure que permite criar com facilidade aplicativos imediatos em nuvem da plataforma Microsoft Azure. O Visual Studio facilita a configuração, o build, a depuração, o empacotamento e a implantação de aplicativos e serviços no Azure.
 * **Desenvolvimento de aplicativos móveis**. No Visual Studio 2017, é possível inovar e obter resultados rápidos com o Xamarin, que unifica seus requisitos móveis multiplataforma usando uma base de código principal e um conjunto de habilidades. Entre na era móvel com suas equipes, investimentos em tecnologia e código C# existentes para fornecer experiências para o consumidor à frente do cronograma e abaixo do orçamento. Acelere cada etapa do ciclo de vida móvel para fornecer experiências de última geração para o consumidor ou um portfólio de aplicativos de produtividade para capacitar sua força de trabalho.
 
-Além disso, aqui estão mais detalhes sobre algumas de nossas alterações mais importantes.
+Aqui estão mais detalhes sobre algumas de nossas alterações mais importantes.
 
 ## <a name="performance-improvements"></a>Melhorias de desempenho
 
@@ -122,6 +122,21 @@ Os erros são exibidos na Lista de Erros e os rabiscos serão exibidos no editor
 No Visual Studio Enterprise 2017, o Live Unit Testing fornece resultados de teste de unidade dinâmicos e a cobertura de código no editor durante a codificação. Ele funciona com projetos do C# e Visual Basic para o .NET Framework e dá suporte a três estruturas de teste do MSTest, xUnit e NUnit.
 
 ![Live Unit Testing](../ide/media/lut-codewindow.png "Um exemplo de nosso novo recurso Live Unit Testing na edição Enterprise do Visual Studio")
+
+Para obter mais informações, consulte a postagem de blog [Live Unit Testing no Visual Studio 2017 Enterprise](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/).
+
+### <a name="devops"></a>DevOps
+#### <a name="redgate-data-tools"></a>Redgate Data Tools:
+Para estender os recursos de DevOps para o desenvolvimento do banco de dados do SQL Server, as Redgate Data Tools agora estão disponíveis nas seguintes edições do Visual Studio 2017.
+
+Incluído no Visual Studio 2017 Enterprise:
+- O [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=relnotes0317) ajuda você a desenvolver scripts de migração, gerenciar alterações no banco de dados usando o controle do código-fonte e automatizar com segurança as implantações de alterações no banco de dados do SQL Server, juntamente com alterações de aplicativos.
+- O [Redgate SQL Prompt Core](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=relnotes0317) ajuda você a gravar o SQL com maior rapidez e precisão com a ajuda do preenchimento inteligente de código. O SQL Prompt preenche automaticamente palavras-chave e objetos do sistema e do banco de dados, e oferece uma coluna de sugestões conforme você digita. Isso resulta em um código mais simples e em menos erros porque você não tem que se lembrar de cada alias ou nome de coluna.
+
+Incluído em todas as edições do Visual Studio 2017:
+- O [Redgate SQL Search](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=relnotes0317) aumenta a produtividade, ajudando-o a localizar rapidamente fragmentos de SQL e objetos em vários bancos de dados.
+
+Para obter mais informações, consulte nossa postagem de blog [Redgate Data Tools no Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/).
 
 ### <a name="visual-studio-ide-enhancements"></a>Aprimoramentos no IDE do Visual Studio
 #### <a name="interact-with-git"></a>Interagir com o Git:
