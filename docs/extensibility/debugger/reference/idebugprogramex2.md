@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEx2 | Documentos do Microsoft
+title: IDebugProgramEx2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d9464091f968753de999926fa0d01d5609a75840
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 55781c5d1f0fc15c505394fb08291a058de71247
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugprogramex2"></a>IDebugProgramEx2
@@ -46,10 +46,10 @@ IDebugProgramEx2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Observações para implementadores  
- Um fornecedor de porta personalizada implementa essa interface no mesmo objeto, como o [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) interface para permitir que o SDM anexar a um programa e, ao mesmo tempo permitindo que o fornecedor de porta controlar todas as sessões anexado ao programa. O fornecedor de porta personalizada pode implementar essa interface, se ele escolhe.  
+ Um fornecedor de porta personalizada implementa essa interface no mesmo objeto, como o [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) interface para permitir que o SDM anexar a um programa e, ao mesmo tempo, permitindo que o fornecedor de porta rastrear todas as sessões anexado ao programa. O fornecedor de porta personalizada pode implementar essa interface se escolhe.  
   
 ## <a name="notes-for-callers"></a>Observações para chamadores  
- As chamadas SDM [QueryInterface](/visual-cpp/atl/queryinterface) em um `IDebugProgram2` interface para obter essa interface para rastrear as sessões que anexadas a programas.  
+ As chamadas SDM [QueryInterface](/cpp/atl/queryinterface) em um `IDebugProgram2` interface para obter essa interface para rastrear as sessões que anexadas a programas.  
   
 ## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
  A tabela a seguir mostra os métodos de `IDebugProgramEx2`.  
@@ -57,10 +57,10 @@ IDebugProgramEx2 : IUnknown
 |Método|Descrição|  
 |------------|-----------------|  
 |[Anexar](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)|Anexa um programa para uma sessão.|  
-|[GetProgramNode](../../../extensibility/debugger/reference/idebugprogramex2-getprogramnode.md)|Obtém o nó do programa associado a um programa.|  
+|[GetProgramNode](../../../extensibility/debugger/reference/idebugprogramex2-getprogramnode.md)|Obtém o nó de programa associado a um programa.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa interface é privada entre o SDM e o programa.  
+ Esta interface é privada entre o SDM e o programa.  
   
 ## <a name="requirements"></a>Requisitos  
  Cabeçalho: Portpriv.h  

@@ -32,34 +32,49 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
-ms.openlocfilehash: 751e75cde5a238f77e123ac962c7aa062454dc4d
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 2a6555eb9c0a88b1533428cf2aa932b3fc4960ec
+ms.openlocfilehash: e8ddcebccc5a8a949c75a33de6732d42134e6445
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>Usar parâmetros de linha de comando para instalar o Visual Studio 2017
-Ao instalar o Visual Studio 2017 por meio de um prompt de comando, é possível usar os parâmetros de linha de comando a seguir (também conhecidos como opções).  
+Ao instalar o Visual Studio 2017 por meio de um prompt de comando, é possível usar uma variedade de parâmetros de linha de comando para controlar ou personalizar a instalação. Na linha de comando, é possível:
+- iniciar a instalação com certas opções pré-selecionadas, 
+- automatizar o processo de instalação
+- criar um cache (layout) dos arquivos de instalação para uso posterior. 
+
+As opções de linha de comando são usadas em conjunto com o bootstrapper de instalação, que é o arquivo pequeno (aproximadamente 1MB) que inicia o processo de download. O bootstrapper é o primeiro executável iniciado quando ao baixar do site do Visual Studio. Você pode obter um link direto para o bootstrapper de versão mais recente para a edição do produto que você está instalando nesses links:
+
+* [Visual Studio 2017 Enterprise](https://aka.ms/vs/15/release/vs_enterprise.exe)
+* [Visual Studio 2017 Professional](https://aka.ms/vs/15/release/vs_professional.exe)
+* [Comunidade do Visual Studio 2017](https://aka.ms/vs/15/release/vs_community.exe)
 
 ## <a name="list-of-command-line-parameters"></a>Lista de parâmetros de linha de comando  
- Parâmetros de linha de comando do Visual Studio não diferenciam maiúsculas de minúsculas.  
+ Os parâmetros da linha de comando do Visual Studio diferenciam maiúsculas de minúsculas.
 
-| **Comando de linha de comando** | **Descrição** |
-| ----------------------- | --------------- |  
+>  Syntax: `vs_enterprise.exe [command] <options>...`
+
+(substitua `vs_enterprise.exe` conforme apropriado para a edição do produto que está instalando)
+
+| **Comando** | **Descrição** |
+| ----------------------- | --------------- | 
+| (blank) | Instala o produto. | 
 | ```modify``` | Modifica um produto instalado. |
 | ```update``` | Atualiza um produto instalado. |
 | ```repair``` | Repara um produto instalado. |
 | ```uninstall``` | Desinstala um produto instalado. |
 
-Se nenhum comando for especificado, ele instalará o produto.
 
-| **Opção de linha de comando** | **Descrição** |
+| **Opção de instalação** | **Descrição** |
 | ----------------------- | --------------- |  
 | ```--installPath <dir>``` | O diretório de instalação no qual a instância deverá agir. Para o comando de instalação, é onde a instância será instalada. Para outros comandos, é onde a instância instalada anteriormente foi instalada. |
-| ```--productId <id>``` | A ID do produto para a instância que será instalada. Isso é necessário para o comando de instalação, ignorado para outros comandos se --installPath está especificado. |
-| ```--layout <dir>``` | **Opcional**: especifica um diretório para criar um cache de instalação offline. A seleção dessa opção também adicionará implicitamente a opção “-wait”. |
-| ```--lang <language-locale>``` *[&#60;localidade de idioma&#62; ...]* | **Opcional**: instalar e desinstalar pacotes de recursos com os idiomas especificados. Para obter mais informações, consulte a seção [Lista de localidades de idioma](#list-of-language-locales) nesta página.|
+| ```--layout <dir>``` | **Opcional**: especifica um diretório para criar um cache de instalação offline. A seleção dessa opção também adicionará implicitamente a opção “-wait”. Se for chamado de um arquivo em lotes, este comando será concluído antes de a execução passar para o próximo comando no arquivo em lotes. |
+| ```--lang <language-locale>``` *[&#60;localidade de idioma&#62; ...]* | **Opcional**: usado com --layout para preparar um cache de instalação offline com pacotes de recursos com idiomas especificados. Para obter mais informações, consulte a seção [Lista de localidades de idioma](#list-of-language-locales) nesta página.|
+| ```--addProductLang <language-locale>``` | **Opcional**: durante a instalação ou operação de modificação, isso determina os pacotes de idiomas de interface do usuário que devem ser instalados no produto. Ele pode aparecer várias vezes na linha de comando para adicionar vários pacotes de idiomas. Se não estiver presente, a instalação usará a localidade do computador. Para obter mais informações, consulte a seção [Lista de localidades de idioma](#list-of-language-locales) nesta página.|
+| ```--removeProductLang <language-locale>``` | **Opcional**: durante a instalação ou operação de modificação, isso determina os pacotes de idiomas de interface do usuário que devem ser removidos do produto. Ele pode aparecer várias vezes na linha de comando para adicionar vários pacotes de idiomas. Para obter mais informações, consulte a seção [Lista de localidades de idioma](#list-of-language-locales) nesta página.|
 | ```--add <workload or component ID>``` *[&#60;ID do componente ou carga de trabalho&#62; ...]* | **Opcional**: uma ou mais IDs de carga de trabalho ou de componente a serem adicionadas. Os componentes obrigatórios do artefato são instalados, mas não os componentes recomendados ou opcionais. É possível controlar os componentes adicionais globalmente usando “--includeRecommended” e/ou “--includeOptional”. Para um controle mais refinado, é possível acrescentar “;includeRecommended” e/ou “;includeOptional” à artifactId (por exemplo, “--add Workload1;includeRecommended” ou “--add Workload2;includeOptional;includeRecommended”). Para obter mais informações, consulte nossa página [IDs de carga de trabalho e de componente](workload-and-component-ids.md).|
 | ```--remove <workload or component ID>``` *[&#60;ID do componente ou carga de trabalho&#62; ...]* | **Opcional**: uma ou mais IDs de carga de trabalho ou de componente a serem removidas. Para obter mais informações, consulte nossa página [IDs de carga de trabalho e de componente](workload-and-component-ids.md).|
+| ```--in <path>``` | **Opcional**: o URI ou o caminho para um arquivo de resposta.  |
 | ```--all``` | **Opcional**: se todas as cargas de trabalho e todos os componentes de um produto serão instalados. |
 | ```--allWorkloads``` | **Opcional**: instala todas as cargas de trabalho e seus componentes obrigatórios, mas nenhum componente recomendado ou opcional. |
 | ```--includeRecommended``` | **Opcional**: inclui os componentes recomendados para as cargas de trabalho que estão instaladas, mas não os componentes opcionais. As cargas de trabalho são especificadas com --allWorkloads ou --add. |
@@ -67,25 +82,24 @@ Se nenhum comando for especificado, ele instalará o produto.
 | ```--quiet, -q``` | **Opcional**: não exibir nenhuma interface do usuário durante a instalação. |
 | ```--passive, -p``` | **Opcional**: exibir a interface do usuário, mas não solicitar nenhuma interação do usuário. |
 | ```--norestart``` | **Opcional**: se estiver presente, comandos com --passive ou --quiet não reiniciarão o computador automaticamente (se necessário). Isso será ignorado se nem --passive tampouco --quiet forem especificados.  |
-| ```--locale <language-locale>``` | **Opcional**: alterar o idioma de exibição da interface do usuário do instalador. A configuração será mantida. Para obter mais informações, consulte a seção [Lista de localidades de idioma](#list-of-language-locales) nesta página.|
 | ```--nickname <name>``` | **Opcional**: define o apelido a ser atribuído a um produto instalado. O apelido não pode ter mais de 10 caracteres.  |
-| ```--help, --?, -h, -?``` | Exibir o uso do parâmetro. |
+| ```--productKey``` | **Opcional**: define a chave do produto (Product Key) a ser usada para um produto instalado. Ela é composta por 25 caracteres alfanuméricos, no formato “xxxxx-xxxxx-xxxxx-xxxxx-xxxxx” ou “xxxxxxxxxxxxxxxxxxxxxxxxx”. |
+| ```--help, --?, -h, -?``` | Exibir uma versão offline desta página. |
 
->Observação: ao especificar várias cargas de trabalho e vários componentes, é necessário repetir a opção de linha de comando `--add` ou `--remove` para cada item.
+> Observação: ao especificar várias cargas de trabalho e vários componentes, é necessário repetir a opção de linha de comando `--add` ou `--remove` para cada item.
 
-| **Opção de linha de comando avançada** | **Descrição** |
+| **Opções de instalação avançadas** | **Descrição** |
 | ----------------------- | --------------- |  
 | ```--channelId <id>``` | **Opcional**: a ID do canal para a instância que será instalada. Isso é necessário para o comando de instalação, ignorado para outros comandos se --installPath está especificado. |
 | ```--channelUri <uri>``` | **Opcional**: o URI do manifesto do canal. Isso pode ser usado para o comando de instalação e é ignorado para outros comandos. |
 | ```--installChannelUri <uri>``` | **Opcional**: o URI do manifesto do canal a ser usado para a instalação. O URI especificado pelo --channelUri (que deve ser especificado quando --installChannelUri é especificado) será usado para detectar atualizações. Se as atualizações não forem desejadas, --channelUri deverá ser especificado sem um argumento. Isso pode ser usado para o comando de instalação e é ignorado para outros comandos. |
 | ```--installCatalogUri <uri>``` | **Opcional**: o URI do manifesto do catálogo a ser usado para a instalação. Se especificado, o gerente de canal tentará baixar o manifesto do catálogo desse URI antes de usar o URI no manifesto do canal de instalação. Esse parâmetro é usado para dar suporte a instalação offline, em que o cache de layout será criado com o catálogo de produtos que já foi baixado. Isso pode ser usado para o comando de instalação e é ignorado para outros comandos. |
-| ```--in <path>``` | **Opcional**: o URI ou o caminho para um arquivo de resposta.  |
-| ```--addProductLang <language-locale>``` | **Opcional**: define o idioma de um artefato (grupo, carga de trabalho ou componente) a ser instalado. Ele pode aparecer várias vezes na linha de comando. É opcional para a instalação e modificação de comandos, ignorado para a atualização, reparo e desinstalação de comandos. Se não estiver presente, a instalação usará a localidade do computador. Para obter mais informações, consulte a seção [Lista de localidades de idioma](#list-of-language-locales) nesta página.|
-| ```--removeProductLang <language-locale>``` | **Opcional**: define o idioma de um artefato (grupo, carga de trabalho ou componente) a ser removido. Ele pode aparecer várias vezes na linha de comando. É opcional para a instalação e modificação de comandos, ignorado para a atualização, reparo e desinstalação de comandos. Para obter mais informações, consulte a seção [Lista de localidades de idioma](#list-of-language-locales) nesta página.|
+| ```--productId <id>``` | A ID do produto para a instância que será instalada. Isso é necessário para o comando de instalação, ignorado para outros comandos se --installPath está especificado. |
 | ```--wait``` | **Opcional**: o processo aguardará até que a instalação seja concluída antes de retornar um código de saída. Isso é útil ao automatizar instalações em que é necessário aguardar a conclusão da instalação para tratar o código de retorno da instalação. |
-| ```--productKey``` | **Opcional**: define a chave do produto (Product Key) a ser usada para um produto instalado. Ela é composta por 25 caracteres alfanuméricos, no formato “xxxxx-xxxxx-xxxxx-xxxxx-xxxxx” ou “xxxxxxxxxxxxxxxxxxxxxxxxx”. |
+| ```--locale <language-locale>``` | **Opcional**: alterar o idioma de exibição da interface do usuário do próprio instalador. A configuração será mantida. Para obter mais informações, consulte a seção [Lista de localidades de idioma](#list-of-language-locales) nesta página.|
+
 ## <a name="list-of-workload-ids-and-component-ids"></a>Lista de IDs de carga de trabalho e IDs de componente
-Para obter uma lista de IDs de componente e de carga de trabalho classificadas por produto do Visual Studio, consulte nossa página [Visual Studio 2017 Workload and Component IDs (IDs de componente e de carga de trabalho do Visual Studio 2017)](workload-and-component-ids.md).
+Para obter uma lista de IDs de componente e de carga de trabalho classificadas por produto do Visual Studio, consulte a página [IDs de componente e de carga de trabalho do Visual Studio 2017](workload-and-component-ids.md).
 
 ## <a name="list-of-language-locales"></a>Lista de localidades de idioma
 | **Localidade de idioma** | **Linguagem** |
@@ -106,6 +120,16 @@ Para obter uma lista de IDs de componente e de carga de trabalho classificadas p
 | zh-CN | Chinês – Simplificado |
 | zh-TW | Chinês – Tradicional |
 
+
+## <a name="error-codes"></a>Códigos de erro
+Dependendo do resultado da operação, a variável de ambiente `%ERRORLEVEL%` será definida como um dos valores a seguir:
+| **Value** | **Result** |
+| --------- | ---------- |
+| 0 | A operação foi concluída com êxito |
+| 3010 | A operação foi concluída com êxito, mas a instalação requer a reinicialização antes de ser usada |
+| Outros | Condição de falha ocorreu. Verifique os logs para obter mais informações |
+
+Cada operação gerará vários arquivos de log no diretório `%TEMP%` que indicam o progresso da instalação. Classifique a pasta por data e procure arquivos começando com `dd_bootstrapper`, `dd_client` e `dd_setup` para bootstrapper, aplicativo instalador e mecanismo de instalação, respectivamente. 
 
 ## <a name="see-also"></a>Consulte também
 

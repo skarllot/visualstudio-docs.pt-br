@@ -14,4 +14,4 @@
 # [Portar, migrar e atualizar seu código](porting\port-migrate-and-upgrade-visual-studio-projects.md)
 # [Extensibilidade](extensibility/extensibility-in-visual-studio.md)
 # [Fale conosco](ide/talk-to-us.md)
-## [How to Report a Problem with Visual Studio 2017](ide/how-to-report-a-problem-with-visual-studio-2017.md) (Como relatar um problema com o Visual Studio 2017)
+## [Como relatar um problema com o Visual Studio 2017](ide/how-to-report-a-problem-with-visual-studio-2017.md)

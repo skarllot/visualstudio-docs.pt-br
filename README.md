@@ -1,19 +1,20 @@
-## Microsoft Open Source Code of Conduct
+## <a name="microsoft-open-source-code-of-conduct"></a>Código de Conduta de Código-fonte da Microsoft
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Este projeto adotou o [Código de Conduta de Código-fonte da Microsoft](https://opensource.microsoft.com/codeofconduct/).
+Para obter mais informações, consulte as [Perguntas frequentes sobre o Código de Conduta](https://opensource.microsoft.com/codeofconduct/faq/) ou contate [opencode@microsoft.com](mailto:opencode@microsoft.com) com outras perguntas ou comentários.
 
-# Visual Studio 2017 documentation
+# <a name="visual-studio-2017-documentation"></a>Documentação do Visual Studio 2017
 
-Welcome! This repo contains source files for the work-in-progress Visual Studio 2017 technical documentation. The topics are published on the [Visual Studio documentation site](https://docs.microsoft.com/visualstudio).
+Bem-vindo! Esse repositório contém arquivos de origem da documentação técnica do Visual Studio 2017, que é um trabalho em andamento. Os tópicos são publicados no [site de documentação do Visual Studio](https://docs.microsoft.com/visualstudio).
 
-The documentation for Visual Basic and Visual C# are located in a separate repo at [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs), and the Visual C++ documentation is located in the repo located at [http://github.com/Microsoft/cpp-docs](http://github.com/Microsoft/cpp-docs).
+A documentação do Visual Basic e do Visual C# está localizada em um repositório separado em [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs) e a documentação do Visual C++ está localizada no repositório em [http://github.com/Microsoft/cpp-docs](http://github.com/Microsoft/cpp-docs).
 
-## Contributing to the documentation
+## <a name="contributing-to-the-documentation"></a>Contribuindo para a documentação
 
-To contribute to this documentation, please see the [Contributing guide](CONTRIBUTING.md).
-We welcome your contributions to help us improve the Visual Studio docs. All the articles in this repository use GitHub flavored markdown.
+Para contribuir com essa documentação, consulte o [Guia de contribuição](CONTRIBUTING.md).
+Agradecemos suas contribuições para nos ajudar a melhorar a documentação do Visual Studio. Todos os artigos contidos neste repositório usam o GitHub Flavored Markdown.
 
-Several feature areas of Visual Studio have their own folders in this repo, such as **debugger** for topics on debugging, **ide** for topics on the Visual Studio interactive development environment (IDE), and so forth. The **/media** subfolder in each folder contains art files for the topics. The [Contributing guide](CONTRIBUTING.md) has more information.
+Várias áreas de recursos do Visual Studio têm suas próprias pastas nesse repositório, como **depurador** para tópicos sobre depuração, **ide** para tópicos sobre o IDE (ambiente de desenvolvimento interativo) do Visual Studio e assim por diante. A subpasta **/media** de cada pasta contém arquivos de arte para os tópicos. O [Guia de contribuição](CONTRIBUTING.md) traz mais informações.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Este projeto adotou o [Código de Conduta de Código-fonte da Microsoft](https://opensource.microsoft.com/codeofconduct/). Para obter mais informações, consulte as [Perguntas frequentes sobre o Código de Conduta](https://opensource.microsoft.com/codeofconduct/faq/) ou contate [opencode@microsoft.com](mailto:opencode@microsoft.com) com outras perguntas ou comentários.
+

@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: b0d84db6a16861fb9554af2a644423f906784748
-ms.openlocfilehash: 3ca6c45cd1f61dc4a4419ab01794e24c0c19d44a
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
+ms.openlocfilehash: 1d26ca1a464e2ec15c0d5d338a46b6fb1e7e1d65
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -67,7 +67,7 @@ Consulte também os seguintes tópicos sobre depuração específicos ao cenári
 
 O fluxo de trabalho básico de depuração envolve a definição de pontos de interrupção, a execução do código em etapas, a inspeção de valores e o tratamento de exceções, conforme descrito nas próximas seções. Para obter detalhes completos sobre o depurador do Visual Studio, consulte [Depuração no Visual Studio](../debugger/debugging-in-visual-studio.md).
 
-Uma sessão de depuração é iniciada com o comando **Depurar > Iniciar Depuração**, o botão **Iniciar** na barra de ferramentas ou a tecla F5. Isso abrirá o arquivo de inicialização do projeto (mostrado em negrito no Gerenciador de Soluções) com o ambiente ativo do projeto e os argumentos de linha de comando ou caminhos de pesquisa especificados em Propriedades do Projeto (consulte [Opções de depuração de projeto](#project-debugging-options)).
+Uma sessão de depuração é iniciada com o comando **Depurar > Iniciar Depuração**, o botão **Iniciar** na barra de ferramentas ou a tecla F5. Isso abrirá o arquivo de inicialização do projeto (mostrado em negrito no Gerenciador de Soluções) com o ambiente ativo do projeto e os argumentos de linha de comando ou caminhos de pesquisa especificados em Propriedades do Projeto (consulte [Opções de depuração de projeto](#project-debugging-options)). Se, no entanto, por alguma razão, você não tiver um arquivo de inicialização definido, você verá uma janela de saída do Python aparecer e desaparecer rapidamente. Nesse caso, clique com o botão direito do mouse no arquivo apropriado e selecione **Definir como Arquivo de Inicialização**.
 
 > [!Note]
 > O depurador sempre é iniciado com o ambiente ativo do Python para o projeto. Para alterar o ambiente, torne outro ambiente ativo, conforme descrito em [Ambientes do Python](python-environments.md).
@@ -105,7 +105,7 @@ Depois de interromper em um ponto de interrupção, você tem várias maneiras p
 
 ### <a name="inspecting-and-modifying-values"></a>Inspecionando e modificando valores
 
-Quando estiver parado no depurador, é possível inspecionar e modificar os valores das variáveis. Também é possível usar a janela Inspeção para monitorar variáveis individuais, bem como expressões personalizadas. (Consulte [Inspecionar variáveis](../debugger/getting-started-with-the-debugger.md#BKMK_Inspect_Variables) para obter detalhes gerais.)
+Quando estiver parado no depurador, é possível inspecionar e modificar os valores das variáveis. Também é possível usar a janela Inspeção para monitorar variáveis individuais, bem como expressões personalizadas. (Consulte [Inspecionar variáveis](../debugger/getting-started-with-the-debugger.md#inspect-variables-with-the-autos-and-locals-windows) para obter detalhes gerais.)
 
 Para exibir um valor usando DataTips, basta focalizar qualquer variável no editor. É possível clicar no valor para alterá-lo:
 

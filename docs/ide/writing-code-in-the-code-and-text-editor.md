@@ -1,7 +1,7 @@
 ---
-title: "Escrevendo código no Code e no Editor de Texto | Microsoft Docs"
+title: "Escrever código no editor de código | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -41,7 +41,7 @@ helpviewer_keywords:
 - line numbers
 - go to definition
 - syntax coloring
-- code editor, navigate to
+- code editor, go to
 - code editor, comparing files
 - code editor, zoom
 - code editor
@@ -49,7 +49,7 @@ helpviewer_keywords:
 - go to line
 - tabify
 - zoom
-- navigate to
+- go to
 - line break characters
 - code editor, virtual space
 - code editor, change tracking
@@ -80,17 +80,17 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4f7b8f4650fd97b2226d84d12f767369425c523c
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
+ms.openlocfilehash: c5e8972cf5efb5596f7649df2c622e802803319f
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="writing-code-in-the-code-and-text-editor"></a>Escrevendo código no editor de códigos e de texto
-O editor do Visual Studio fornece muitos recursos que tornam mais fácil para você escrever e gerenciar seu código. Você pode expandir e recolher blocos de código diferentes usando a estrutura de tópicos. Você pode aprender mais sobre o código que você está usando através do IntelliSense, do **Pesquisador de Objetos** e da Hierarquia de Chamada. Você pode navegar dentro de seu código usando recursos como **Navegar Para**, **Ir para Definição** e **Localizar Todas as Referências**. Você pode inserir blocos de código com trechos de código e pode gerar código usando recursos como o **Gerar do uso**. Se você nunca usou o editor do Visual Studio 2015, consulte [Editando seu código](https://www.visualstudio.com/features/ide-vs) para uma visão geral rápida.  
+# <a name="write-code-in-the-code-editor"></a>Escrever código no editor de códigos
+O editor do Visual Studio fornece muitos recursos que facilitam escrever e gerenciar seu código e texto. Você pode expandir e recolher blocos de código diferentes usando a estrutura de tópicos. Você pode aprender mais sobre o código que você está usando através do IntelliSense, do **Pesquisador de Objetos** e da Hierarquia de Chamada. Você pode localizar o código usando recursos como **Navegar Para**, **Ir para Definição** e **Localizar Todas as Referências**. Você pode inserir blocos de código com trechos de código e pode gerar código usando recursos como o **Gerar do uso**. Se você nunca usou o editor do Visual Studio, consulte [Editando seu Código](https://www.visualstudio.com/features/ide-vs) para obter uma visão geral rápida.  
 
- Você pode exibir seu código de várias maneiras diferentes. Para ver um modo de exibição de classe de sua solução, você pode abrir a janela **Modo de Exibição de Classe** ou expandir os nós no **Gerenciador de Soluções** em seus arquivos de classe.  
+ Você pode exibir seu código de várias maneiras diferentes. Para ver um modo de exibição de classe de sua solução, você pode abrir a janela **Modo de Exibição de Classe** ou expandir nós no **Gerenciador de Soluções** em seus arquivos de classe.
 
- Você pode pesquisar e substituir texto para um ou vários arquivos. Para obter mais informações, consulte [Localizando e substituindo texto](../ide/finding-and-replacing-text.md). Se você usar expressões regulares, observe que localizar e substituir agora usa expressões regulares do .NET. Para obter mais informações, consulte [Usando expressões regulares no Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).  
+ Você pode pesquisar e substituir texto para um ou vários arquivos. Para obter mais informações, consulte [Localizando e substituindo texto](../ide/finding-and-replacing-text.md). É possível usar expressões regulares para localizar e substituir texto. Para obter mais informações, consulte [Usando expressões regulares no Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).  
 
  As diferentes linguagens do Visual Studio oferecem conjuntos de recursos diferentes e, em alguns casos, os recursos se comportam de forma diferente nas diferentes linguagens. Muitas dessas diferenças são especificadas nas descrições dos recursos, mas para obter mais informações, consulte as seções sobre as linguagens específicas do Visual Studio.  
 
@@ -104,6 +104,7 @@ O editor do Visual Studio fornece muitos recursos que tornam mais fácil para vo
 |Coloração de sintaxe|Alguns elementos de sintaxe dos arquivos de código e de marcação são coloridos de maneiras diferentes para diferenciá-los. Por exemplo, palavras-chave (como `using` no C# e `Imports` no Visual Basic) são de uma cor, mas tipos (como `Console` e `Uri`) são de outra cor. Outros elementos de sintaxe também são coloridos, como comentários e literais de cadeia de caracteres. O C++ usa cores para fazer diferenciação entre tipos, enumerações e macros, entre outros tokens.<br /><br /> Você pode ver a cor padrão de cada tipo e pode alterar a cor de qualquer elemento de sintaxe específico na [caixa de diálogo Fontes e Cores, Ambiente, Opções](../ide/reference/fonts-and-colors-environment-options-dialog-box.md), que pode ser aberta no menu **Ferramentas**.|  
 |Marcas de Erro e Aviso|Enquanto adiciona código e compila sua solução, você pode ver: (a)sublinhados ondulados de cores diferentes (conhecidos como rabiscos) ou (b) lâmpadas que aparecem em seu código. Rabiscos vermelhos indicam erros de sintaxe, azul indica erros de compilador, verde indica avisos e roxo indica outros tipos de erros. [As lâmpadas](../ide/perform-quick-actions-with-light-bulbs.md) sugerem correções para problemas e facilitam a aplicação da correção.<br /><br /> Você pode ver a cor padrão de cada rabisco de erro e de aviso na caixa de diálogo **Ferramentas/Opções/Ambiente/Fontes e Cores**. Procure por **Erro de Sintaxe**, **Erro do Compilador**, **Aviso** e **Outro Erro**.|  
 |Correspondência de chave|Quando o ponto de inserção é colocado em uma chave de abertura em um arquivo de código, essa chave de abertura e a chave de fechamento são realçadas. Esse recurso fornece comentários imediatos sobre chaves no local incorreto ou ausentes. Você pode ativar ou desativar a correspondência de chaves com a configuração **Realce automático de delimitadores** (**Ferramentas/Opções/Editor de Texto**). Você pode alterar a cor do realce na configuração **Fontes e Cores** (**Ferramentas/Opções/Ambiente**). Procure **Correspondência de Chaves (Realce)** ou **Correspondência de Chaves (Retângulo)**.|  
+|Visualizador de Estrutura|Linhas pontilhadas conectam chaves correspondentes nos arquivos de código, o que facilita ver a abertura e o fechamento de pares de chave. Isso pode ajudar a localizar o código em sua base de código mais rapidamente. Você pode ativar ou desativar essas linhas em **Mostrar diretrizes de estrutura** na seção **Exibição** da página **Ferramentas/Opções/Editor de Texto/Geral**.|
 |Números de Linha|Os números de linha podem ser exibidos na margem esquerda da janela de código. Eles não são exibidos por padrão. Você poderá ativar essa opção nas configurações **Todas as Linguagens do Editor de Texto** (**Ferramentas/Opções/Editor de Texto/Todas as Linguagens**). Você pode exibir números de linha para linguagens de programação individuais, alterando as configurações para essas linguagens (**Ferramentas/Opções/Editor de Texto/\<linguagem>**). Para imprimir os números de linha é necessário selecionar Incluir números de linha na caixa de diálogo **Imprimir**.|  
 |Controle de Alterações|A cor da margem esquerda permite que você mantenha o controle das alterações feitas em um arquivo. As alterações que foram feitas desde que o arquivo foi aberto mas não foram salvas são indicadas por uma barra amarela na margem esquerda (conhecida como a margem de seleção). Depois de salvar as alterações (mas antes de fechar o arquivo), a barra ficará verde. Se você desfizer uma alteração depois de salvar o arquivo, a barra ficará laranja. Para desativar e ativar esse recurso, altere a opção **Controlar Alterações** nas configurações **Editor de Texto** (**Ferramentas/Opções/Editor de Texto**).|  
 |Seleção de código e texto|É possível selecionar texto no modo padrão de fluxo contínuo ou no modo de caixa, no qual você seleciona uma parte retangular do texto em vez de um conjunto de linhas. Para fazer uma seleção no modo de caixa, pressione a tecla ALT enquanto arrasta o mouse sobre a seleção (ou pressione ALT + SHIFT + \<tecla de direção>). A seleção inclui todos os caracteres dentro do retângulo definido pelo primeiro caractere e o último caractere na seleção. Tudo que é digitado ou colado na área selecionada é inserido no mesmo ponto em cada linha.|  
@@ -123,6 +124,8 @@ O editor do Visual Studio fornece muitos recursos que tornam mais fácil para vo
 |Cancelar tabulação das linhas selecionadas|Troca tabulações à esquerda por espaços. Se você desejar converter todos os espaços em seu arquivo para tabulações (ou todas as tabulações para espaços), você poderá usar os comandos `Edit.ConvertSpacesToTabs` e `Edit.ConvertTabsToSpaces`. Esses comandos não aparecem nos menus do Visual Studio, mas você pode chamá-los da janela de Acesso Rápido ou na janela Comando.|  
 |Colocar em Maiúsculas|Alterar todos os caracteres na seleção para maiúsculos ou se não houver nenhuma seleção, altera o caractere no ponto de inserção para maiúsculo.|  
 |Colocar em Minúsculas|Alterar todos os caracteres na seleção para minúsculos ou se não houver nenhuma seleção, altera o caractere no ponto de inserção para minúsculo.|  
+|Mover linhas selecionadas para cima|Move a linha selecionada uma linha para cima. Atalho: ALT + SETA PARA CIMA.|
+|Mover Linhas Selecionadas para Baixo|Move a linha selecionada uma linha para baixo. Atalho: ALT + SETA PARA BAIXO.|
 |Validar Documento|Valida os arquivos de código JScript.|  
 |Excluir Espaço em Branco Horizontal|Exclui tabulações ou espaços ao final da linha atual.|  
 |Exibir Espaço em Branco|Exibe espaços como pontos elevados e tabulações como setas. O final de um arquivo é exibido como um glifo retangular. Se **Ferramentas/Opções/Editor de Texto/Todas as Linguagens/Quebra automática de linha/Mostrar glifos visíveis para quebra automática de linha** estiver selecionado, esse glifo também será exibido.|  
@@ -134,29 +137,38 @@ O editor do Visual Studio fornece muitos recursos que tornam mais fácil para vo
 |Selecionar Marca|Em um documento que contém marcas (por exemplo, XML ou HTML), seleciona a marca.|  
 |Selecionar Conteúdo da Marca|Em um documento que contém marcas (por exemplo, XML ou HTML), seleciona o conteúdo.|  
 
-## <a name="navigate-in-the-code-window"></a>Navegar na janela de código  
- Você pode se mover em um documento de várias maneiras diferentes. Além das operações padrão, você pode usar os botões **Navegar para Trás** (ou CTRL + SINAL DE SUBTRAÇÃO) e **Navegar para Frente** (CTRL + SHIFT + SINAL DE SUBTRAÇÃO) na barra de ferramentas para mover o ponto de inserção para locais anteriores ou retornar para locais mais recentes no documento ativo. Esses botões retém os últimos 20 locais do ponto de inserção.  
+## <a name="navigate-and-find-code"></a>Navegar e localizar código  
+Você pode se mover em um documento de várias maneiras diferentes. Além das operações padrão, você pode usar os botões **Navegar para Trás** (CTRL + SINAL DE SUBTRAÇÃO) e **Navegar para Frente** (CTRL + SHIFT + SINAL DE SUBTRAÇÃO) na barra de ferramentas para mover o ponto de inserção para locais anteriores ou retornar para locais mais recentes no documento ativo. Esses botões retém os últimos 20 locais do ponto de inserção.
 
- ![Botões de navegação para frente e para trás](../ide/media/vs2015_nav_buttons.png "VS2015_Nav_buttons")  
+![Botões de navegação para frente e para trás](../ide/media/vs2017_nav_buttons.png)
 
- Você também pode usar a barra de rolagem avançada em uma janela de código para obter uma visão geral do seu código. No modo de mapa, você pode obter visualizações do código ao mover o cursor para cima e para baixo da barra de rolagem, para obter mais informações, consulte [Como controlar seu código personalizando a barra de rolagem](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md).  
+O recurso Visualizador de Estrutura no editor de código exibe *linhas de guia de estrutura* – linhas verticais tracejadas que indicam a correspondência de chaves na base de código. Isso facilita ver onde os blocos lógicos começam e terminam.
 
- Os comandos a seguir são métodos de navegação específicos do código:  
+![Visualizador de Estrutura](../ide/media/vside_structure_visualizer.png)
+
+Para desabilitar as linhas de guia de estrutura, vá até **Ferramentas**, **Opções**, **Editor de Texto**, **Geral** e limpe a caixa **Mostrar linhas de guia de estrutura**.
+
+Você também pode usar a barra de rolagem avançada em uma janela de código para obter uma visão geral do seu código. No modo de mapa, você pode obter visualizações do código ao mover o cursor para cima e para baixo da barra de rolagem, para obter mais informações, consulte [Como controlar seu código personalizando a barra de rolagem](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md).  
+
+Os comandos a seguir são métodos de navegação específicos do código:  
 
 |||  
 |-|-|  
-|Ir para \<número de linha>|(**Editar/Ir para** ou CTRL + G): mover-se até um número de linha específico no documento ativo.|  
-|Navegar para|(**Editar/Navegar Para** ou CTRL + ,): localiza um símbolo ou um arquivo na solução ativa. Ele ajuda você a escolher um bom conjunto de resultados correspondentes de uma consulta. Você pode pesquisar por palavras-chave que estão contidas em um símbolo usando caracteres de minúsculas concatenadas e caracteres de sublinhado para dividir o símbolo em palavras-chave.|  
-|Localizar Todas as Referências|(menu de contexto): localiza todas as referências ao elemento selecionado na solução.|  
-|Ir para definição|(menu de contexto ou F12): localiza a definição do elemento selecionado.|  
-|Inspecionar Definição|(menu de contexto ou Alt + F12): localiza a definição do elemento selecionado e a exibe em uma janela pop-up. Para obter mais informações, consulte [How to: View and Edit Code by Using Peek Definition (Alt+F12)](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md) (Como exibir e editar códigos usando Inspecionar Definição (Alt + F12)).|  
+|Localizar Todas as Referências|(Menu de contexto ou SHIFT + F12): localiza todas as referências ao elemento selecionado na solução.|  
+|Ir para|Contém os seguintes comandos: **Ir Para Linha** (CTRL + G): mover para o número de linha especificado no documento ativo. **Ir para Todos** (CTRL + T): mover para a linha, tipo, arquivo, membro ou símbolo especificado. **Ir para Arquivo** (CTRL + 1, CTRL + F): vá até o arquivo especificado na solução. **Ir para Tipo** (CTRL + 1, CTRL + T): vá até o tipo especificado na solução. **Ir para Membro** (CTRL + 1, CTRL + M): vá até o membro especificado na solução. **Ir para Símbolo** (CTRL + 1, CTRL + S): vá até o símbolo especificado na solução. Obtenha mais informações sobre esses comandos na seção "Localizar código usando comandos Ir Para" posteriormente neste tópico.|  
+|Ir para definição|(Menu de contexto ou F12): localiza a definição do elemento selecionado.|  
+|Ir Para Implementação|(Menu de contexto ou CTRL + F12): encontra o local no código onde o elemento selecionado é implementado.|
+|Inspecionar Definição|(Menu de contexto ou ALT + F12): localiza a definição do elemento selecionado e a exibe em uma janela no editor de código. Para obter mais informações, consulte [How to: View and Edit Code by Using Peek Definition (Alt+F12)](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md) (Como exibir e editar códigos usando Inspecionar Definição (Alt + F12)).|  
 |Próximo método, Método anterior|(**Editar/Próximo método, Método anterior**) nos arquivos de código do Visual Basic, use estes comandos para mover o ponto de inserção para métodos diferentes.|  
 |Realce de referência|Quando você clica em um símbolo no código-fonte, todas as instâncias desse símbolo são realçadas no documento. Os símbolos realçados podem incluir declarações e referências e muitos outros símbolos que **Localizar Todas as Referências** retornaria. Isso inclui os nomes de classes, objetos, variáveis, métodos e propriedades. No código do Visual Basic, as palavras-chave de muitas estruturas de controle também são realçadas. Para mover-se para o próximo símbolo realçado ou para o anterior, pressione CTRL + SHIFT + SETA PARA BAIXO ou CTRL + SHIFT + SETA PARA CIMA. Você pode alterar a cor do realce em **Ferramentas/Opções/Ambiente/Fontes e Cores/Referência Realçada.**|  
-|Localizar informações relacionadas ao código|Você pode localizar informações sobre o código específico, como alterações e quem fez essas alterações, referências, bugs, itens de trabalho, revisões de código e status de teste de unidade ao usar o CodeLens no editor de código. O CodeLens funciona como uma exibição de alerta quando você usa o Visual Studio Enterprise com o Team Foundation Server. Consulte [Localizar alterações de código e outros históricos](../ide/find-code-changes-and-other-history-with-codelens.md).|  
+|Localizar informações relacionadas ao código|Você pode localizar informações sobre o código específico, como alterações e quem fez essas alterações, referências, bugs, itens de trabalho, revisões de código e status de teste de unidade ao usar o CodeLens no editor de código. O CodeLens funciona como uma exibição de alerta quando você usa o Visual Studio Enterprise com o Team Foundation Server. Consulte [Localizar alterações de código e outros históricos](../ide/find-code-changes-and-other-history-with-codelens.md).|
+|Exibir Hierarquia de Chamada|(Menu de contexto ou CTRL + K, CTRL + T).|  
 
- Você também pode usar o **barra de navegação**, ou seja, as duas caixas suspensas exibidas na parte superior da janela de código, para navegar em um arquivo de código. Essa barra permite que você navegue diretamente até um tipo específico ou até um dos membros dentro de um tipo. A barra de navegação aparece com arquivos de código do Visual Basic, do C# e do C++.  
+ Você também pode usar a **barra de navegação** (caixas suspensas na parte superior da janela de código) para localizar códigos em uma base de código. É possível escolher um tipo ou membro para ir diretamente a ele. A barra de navegação é exibida ao editar códigos no Visual Basic, C# ou base de código C++.
 
- Para ocultar a barra de navegação, altere a opção **Barra de Navegação** na configuração Todas as Linguagens do Editor de Texto (**Ferramentas/Opções/Editor de Texto/Todas as Linguagens** ou você pode alterar as configurações de linguagens individuais). Você pode navegar nas caixas suspensas da seguinte maneira:  
+ ![Barra de navegação de código](../ide/media/vside_navigation_bar.png)
+
+ Para ocultar a barra de navegação, altere a opção **Barra de navegação** na configuração Todas as Linguagens do Editor de Texto (**Ferramentas**, **Opções**, **Editor de Texto**, **Todas as Linguagens** ou você pode alterar as configurações de linguagens individuais). Você pode navegar nas caixas suspensas da seguinte maneira:  
 
 -   Para mudar o foco da janela de código para a barra de navegação, pressione a combinação de tecla de atalho CTRL + F2.  
 
@@ -166,21 +178,19 @@ O editor do Visual Studio fornece muitos recursos que tornam mais fácil para vo
 
 -   Para selecionar o item de Barra de navegação que tem o foco e retornar ao IDE, pressione a tecla ENTER  
 
--   Para navegar até uma classe ou um tipo, clique em seu nome na lista suspensa à esquerda.  
+-   Para navegar até uma classe ou um tipo, selecione seu nome na lista suspensa à esquerda.  
 
--   Para navegar diretamente até um procedimento em uma classe, clique em um procedimento na lista suspensa à direita.  
+-   Para navegar diretamente até um procedimento em uma classe, selecione um procedimento na lista suspensa à direita.  
 
- Em uma classe parcial, os membros definidos fora do arquivo de código atual podem estar esmaecidos.  
+ Em uma classe parcial, os membros definidos fora do arquivo de código atual podem estar desabilitados (em cinza).  
 
-## <a name="find-code-using-navigate-to"></a>Localizar código usando Navegar Para
-O comando **Navegar Para** do Visual Studio executa uma pesquisa restrita do seu código para ajudá-lo a localizar rapidamente elementos especificados em arquivos de código, caminhos de arquivo e símbolos de código. Ao contrário de outras pesquisas de texto como Localizar ou Localizar nos Arquivos, o Navegar Para limita sua pesquisa às áreas em que o código real reside, como arquivos, formulários e módulos de código. Por exemplo, se você pesquisar uma cadeia de caracteres em um aplicativo Web ASP .NET usando Localizar ou Localizar nos Arquivos em toda a solução, você poderá obter várias ocorrências, incluindo instâncias da cadeia de caracteres nos comentários de código. No entanto, usando o Navegar Para, a pesquisa retornaria apenas uma única função, ignorando todas as instâncias da cadeia de caracteres nos comentários de código.
+## <a name="find-code-using-go-to-commands"></a>Localizar código usando comandos Ir Para
+Os comandos **Ir Para** do Visual Studio executam uma pesquisa restrita do seu código para ajudá-lo a localizar rapidamente itens especificados em arquivos de código, caminhos de arquivo e símbolos de código. Ao contrário de outras pesquisas de texto como Localizar ou Localizar nos Arquivos, o Ir Para limita sua pesquisa às áreas no qual o código real está, como em arquivos, formulários e módulos de código. Por exemplo, se você pesquisar uma cadeia de caracteres em um aplicativo Web ASP .NET usando Localizar ou Localizar nos Arquivos em toda a solução, você poderá obter várias ocorrências que incluem instâncias da cadeia de caracteres nos comentários de código. Ao utilizar um comando Ir Para, entretanto, sua pesquisa pode identificar a função que está procurando, ignorando as instâncias da cadeia de caracteres nos comentários de código.
 
-### <a name="navigate-code-using-navigate-to"></a>Navegar no código usando Navegar Para
+### <a name="find-code-using-go-to"></a>Localizar código usando Ir Para
 
 1. No Visual Studio, abra uma solução ou uma pasta.
-1. No menu principal, escolha **Editar**, **Navegar Para** ou pressione **CTRL + ,**.
-
-    Uma pequena caixa de texto é exibida no canto superior do editor de código.
+1. No menu principal, escolha **Editar**, **Ir Para**. Uma pequena caixa de texto é exibida no canto superior do editor de código.
 1. Na caixa de texto, digite o nome do elemento de código que você deseja localizar.
 
     ![Janela Navegar Para](../ide/media/vside_navigatetowindow.png "Janela Navegar Para")
@@ -191,60 +201,66 @@ O comando **Navegar Para** do Visual Studio executa uma pesquisa restrita do seu
 
 ### <a name="filter-your-search"></a>Filtrar sua pesquisa
 
-Para limitar a pesquisa a somente símbolos de código, preceda a consulta Navegar Para com um caractere “@”. Por exemplo, se você pesquisar `@application`, O Navegar Para exibe, por exemplo, somente as classes que têm a palavra "aplicativo" nelas.
+Por padrão, o item especificado é pesquisado em todos os itens de solução. No entanto, é possível limitar sua pesquisa de código para tipos de elementos específicos ao preceder os termos de pesquisa com determinados caracteres. A maneira mais fácil de abrir a caixa de diálogo Ir Para é escolher CTRL + T e, em seguida, alterar o caractere precedido para um na lista a seguir. (Como alternativa, você pode escolher as seguintes teclas de atalho para adicionar o caractere automaticamente para você.)
 
-Se você usar minúsculas concatenadas em seu código, você poderá encontrar elementos de código de forma mais rápida inserindo somente as letras maiúsculas do nome do elemento de código. Por exemplo, se o código tem um componente chamado `ViewSwitcher`, você poderá encontrá-lo inserindo apenas as letras maiúsculas do nome (`VS`) na janela do Navegar Para.
+|Símbolo|Descrição|  
+|-|-|
+|Nenhum|Nenhum caractere precedido. Isso localiza o termo especificado em todas as linhas, arquivos, tipos, membros e símbolos. Atalho: CTRL + T|
+|:|Vá até o número de linha especificado. Atalho: CTRL + G|
+|f|Vá até o nome de arquivo especificado. Atalho: CTRL + 1, CTRL + F|
+|t|Vá até o tipo especificado. Atalho: CTRL + 1, CTRL + T|
+|m|Vá até o membro especificado. Atalho: CTRL + 1, CTRL + M|
+|#|Vá até o símbolo especificado. Atalho: CTRL + 1, CTRL + S|
 
-![Janela Navegar Para – pesquisando com maiúsculas](../ide/media/vside_capitalsearch.png "Janela Navegar Para – pesquisando com maiúsculas")
+Por exemplo, para limitar sua pesquisa para somente símbolos de códigos, abra a caixa de diálogo Ir Para pressionando CTRL + T (ou CTRL +,) e, em seguida, preceda sua consulta do Ir Para com um caractere "#", ou escolha **Editar**, **Ir Para**, **Ir para o Símbolo** no menu. Procurar por `# application`, por exemplo, exibe somente símbolos de códigos que contêm a palavra "aplicativo".
 
-Esse recurso é particularmente útil se seu código tem nomes longos.
+É possível também alterar rapidamente o filtro de pesquisa ao escolher botões na barra de ferramentas da caixa de diálogo Ir Para. Botões que alteram os filtros estão do lado esquerdo e botões que alteram o escopo da pesquisa estão do lado direito.
+
+![](../ide/media/vside_navigation_toolbar.png)
+
+Se você usar [minúsculas concatenadas](https://en.wikipedia.org/wiki/Camel_case) em seu código, será possível encontrar elementos de código de forma mais rápida, inserindo somente as letras maiúsculas do nome do elemento de código. Por exemplo, se o código tem um tipo chamado `CredentialViewModel`, é possível refinar a pesquisa ao escolher o filtro Tipo ("t") e, em seguida, inserir apenas as letras maiúsculas do nome (`CVM`) na caixa de diálogo Ir Para.
+
+![Janela Navegar Para – pesquisando com letras maiúsculas](../ide/media/vside_capitalsearch.png)
+
+Esse recurso pode ser útil caso seu código tenha nomes longos.
+
+## <a name="finding-references-in-your-codebase"></a>Localizando referências em sua base de código
+Para localizar onde os elementos de código específicos são referenciados em toda a sua base de código, é possível usar o comando **Localizar Todas as Referências**. Para usar **Localizar Todas as Referências**, selecione esse comando no menu de contexto (clicando com o botão direito do mouse) do elemento que deseja localizar as referências, ou use as teclas SHIFT + F12.
+
+Os resultados são exibidos em uma janela de ferramentas chamada **'*{element}*' references* *, na qual *{element}* é o nome do item que está procurando. Uma barra de ferramentas na janela Referências permite que você:
+- Altere o escopo da pesquisa em uma caixa de listagem suspensa. É possível optar por examinar apenas documentos alterados até a solução inteira.
+- Copie o item referenciado selecionado ao selecionar o botão **Copiar**.
+- Escolha os botões para ir ao local seguinte ou anterior na lista, ou escolha as teclas F8 ou SHIFT + F8.
+- Remova todos os filtros nos resultados retornados, escolhendo o botão **Limpar Todos os Filtros**.
+- Altere a forma que os itens retornados são agrupados ao escolher uma configuração na caixa de listagem suspensa **Agrupar por:**.
+- Mantenha a janela de resultados da pesquisa atual ao escolher o botão **Manter Resultados**.
+- Pesquisar cadeias de caracteres nos resultados da pesquisa ao inserir texto na caixa de texto **Pesquisar Localizar Todas as Referências**.
+
+Também é possível passar o mouse por qualquer resultado de pesquisa para obter uma visualização do item devolvido.
+
+![Janela de ferramentas Localizar Todas as Referências](../ide/media/vside_findallreferences.png)
+
+Para manter os resultados da pesquisa, selecione o botão **Manter resultados**. Ao selecionar este botão, os resultados da pesquisa atual ficam nessa janela, e novos resultados da pesquisa são exibidos em uma nova janela de ferramentas.
+
+### <a name="navigate-to-references"></a>Navegue até referências
+Na caixa de diálogo Localizar Todas as Referências, é possível usar os seguintes métodos para navegar até as referências.
+
+- Use a tecla F8 para ir até a próxima referência ou SHIFT + F8 para ir até a referência anterior.
+- Pressione a tecla ENTER em uma referência ou clique duas vezes nela para ir acessá-la no código.
+- No menu de contexto de uma referência, escolha os comandos **Ir ao Local Anterior** / **Ir ao Próximo Local**.
+- Use as teclas de seta para CIMA e para BAIXO (se estiverem habilitadas na caixa de diálogo Opções). Para habilitar essa funcionalidade, no menu, selecione **Ferramentas**, **Opções**, **Ambiente**, **Guias e Janelas**, **Guia Visualizar**e, em seguida, selecione as caixas **Permitir que novos arquivos sejam abertos na guia de visualização** e **Visualizar arquivos selecionados em Localizar Resultados**.
+
+### <a name="change-reference-groupings"></a>Alterar agrupamentos de referência
+Por padrão, as referências são agrupadas por projetos, depois por definição. No entanto, é possível mudar essa ordem de agrupamento, alterando a configuração na caixa de listagem suspensa **Agrupar por:** na barra de ferramentas. Por exemplo, é possível alterá-la na configuração padrão de **Definição em vez de projeto** para **Projeto em vez de definição**, assim como outras configurações.
+
+**Definição** e **Projeto** são dois agrupamentos padrão usados, mas é possível adicionar outros ao escolher o comando **Agrupamento** no menu de contexto do item selecionado. Pode ser útil adicionar mais agrupamentos se sua solução tem muitos arquivos e caminhos.
 
 ## <a name="customize-the-editor"></a>Personalizar o Editor  
- **Importar e exportar configurações**: você pode compartilhar configurações com outro desenvolvedor, fazer com que suas configurações estejam em conformidade com um padrão ou retornar às configurações padrão do Visual Studio usando o **Assistente de Importação e Exportação de Configurações** no menu **Ferramentas**. Você pode alterar as configurações gerais ou linguagens e configurações específicas do projeto.  
+É possível compartilhar configurações do Visual Studio com outro desenvolvedor, fazer com que suas configurações estejam em conformidade com um padrão ou retornar às configurações padrão do Visual Studio usando o comando **Assistente de Importação e Exportação de Configurações** no menu **Ferramentas**. No **Assistente de Importação e Exportação de Configurações**, é possível alterar configurações gerais selecionadas ou idioma e configurações específicas do projeto.
 
- **Mapeamento de teclado**: você pode definir novas teclas de atalho ou redefinir as existentes nas configurações Ferramentas/Opções/Ambiente/Teclado. Para obter mais informações sobre teclas de atalho, consulte [Atalhos de teclado padrão](../ide/default-keyboard-shortcuts-in-visual-studio.md).  
+Para definir novas teclas de atalho ou redefinir as teclas de atalho existentes, vá até **Ferramentas**, **Opções**, **Ambiente**, **Teclado**. Para obter mais informações sobre teclas de atalho, consulte [Atalhos de teclado padrão](../ide/default-keyboard-shortcuts-in-visual-studio.md).  
 
- Para obter informações sobre as opções do editor específicas a um idioma, consulte o seguinte:  
-
--   [Configurações do Visual Basic](/dotnet/visual-basic/developing-apps/using-ide/settings)  
-
--   [Usando o Ambiente de Desenvolvimento do Visual Studio para C#](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md)  
-
--   [Opções, Editor de Texto, JavaScript, Formatação](../ide/reference/options-text-editor-javascript-formatting.md)  
-
-## <a name="in-this-section"></a>Nesta seção  
-
--   [Localizando e substituindo texto](../ide/finding-and-replacing-text.md)  
-
--   [Codificações e quebras de linha](../ide/encodings-and-line-breaks.md)  
-
--   [Estrutura de tópicos](../ide/outlining.md)  
-
--   [Refatoração](../ide/refactoring-in-visual-studio.md)  
-
--   [Dicas de produtividade](../ide/productivity-tips-for-visual-studio.md)  
-
--   [Usando o IntelliSense](../ide/using-intellisense.md)  
-
--   [Personalizando o editor](../ide/customizing-the-editor.md)  
-
--   [Como acompanhar o código personalizando a barra de rolagem](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md)  
-
--   [Como exibir e editar o código usando Inspecionar Definição (Alt + F12)](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)  
-
--   [Realizar ações rápidas com lâmpadas](../ide/perform-quick-actions-with-light-bulbs.md)  
-
--   [Trechos de código](../ide/code-snippets.md)  
-
--   [Usando a caixa de ferramentas](../ide/using-the-toolbox.md)  
-
--   [Exibindo a estrutura do código](../ide/viewing-the-structure-of-code.md)  
-
--   [Configurando identificadores no código](../ide/setting-bookmarks-in-code.md)  
-
--   [Usando a Lista de Tarefas](../ide/using-the-task-list.md)  
-
--   [Localizar alterações de código e outros históricos](../ide/find-code-changes-and-other-history-with-codelens.md)  
+Para obter mais informações sobre como personalizar o editor, consulte [Personalizando o Editor](../ide/customizing-the-editor.md). Para obter mais informações sobre as opções do editor específicas a um idioma, consulte [Usando o Ambiente de Desenvolvimento do Visual Studio para C#](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md) e [Opções, Editor de texto, JavaScript, Formatação](../ide/reference/options-text-editor-javascript-formatting.md).
 
 ## <a name="see-also"></a>Consulte também  
  [Visual Studio IDE](../ide/visual-studio-ide.md)

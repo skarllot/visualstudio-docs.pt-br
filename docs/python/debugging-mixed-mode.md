@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 1e1f72619618d252c43537093b9ebd30eee715ab
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: ddbac5b8ed52e6ed7afae7e7b04dc2fa15f7a0c2
+ms.lasthandoff: 03/27/2017
 
 ---
 
 # <a name="debugging-python-and-c-together"></a>Depurando o Python e o C++ juntos
 
-Os depuradores do Python mais comuns, incluindo a PTVS (Ferramentas Python para Visual Studio) antes da versão 2.0, dão suporte apenas à depuração de código do Python. No entanto, na prática, o Python é usado em conjunto com o C ou o C++, nos casos em que é necessário o alto desempenho ou a capacidade de invocar diretamente as APIs da plataforma. A PTVS 2.0 e posterior (em qualquer edição do Visual Studio) fornece a depuração de modo misto integrada e simultânea nativa (C/C++) e para o Python, com pilhas de chamadas combinadas, a capacidade de depurar entre o código do Python e o código nativo, pontos de interrupção em um desses tipos de código e a capacidade de ver representações do Python de objetos em quadros nativos e vice-versa:
+A maioria dos depuradores regulares do Python dão suporte apenas à depuração de código do Python. No entanto, na prática, o Python é usado em conjunto com o C ou o C++, nos casos em que é necessário o alto desempenho ou a capacidade de invocar diretamente as APIs da plataforma (consulte [Criando uma extensão do C++ para o Python](cpp-and-python.md) para obter um exemplo). O Visual Studio (ao usar as Ferramentas Python para Visual Studio 2.0 e posterior) fornece a depuração de modo misto integrada e simultânea para o C/C++ nativo e o Python, com pilhas de chamadas combinadas, a capacidade de executar o código do Python e o código nativo em etapas, pontos de interrupção em um desses tipos de código e a capacidade de ver representações do Python de objetos em quadros nativos e vice-versa:
 
 ![Depuração de modo misto](media/mixed-mode-debugging.png) 
 
@@ -51,6 +51,9 @@ Para obter uma introdução à compilação, ao teste e à depuração de módul
 
     ![Habilitando a depuração de código nativo](media/mixed-mode-debugging-enable-native.png)
 
+    > [!Tip]    
+    > Ao habilitar a depuração de código nativo, a janela de saída do Python poderá desaparecer imediatamente quando o programa tiver concluído sem fornecer a pausa comum “Pressione qualquer tecla para continuar...”. Para forçar uma pausa, adicione a opção `-i` ao campo **Executar > Argumentos do Interpretador** na guia **Depurar** ao habilitar a depuração de código nativo. Isso colocará o interpretador do Python no modo interativo após a conclusão do código e, nesse ponto, ele aguardará até que você pressione Ctrl + Z, Enter para sair.
+
 1. Ao anexar o depurador de modo misto a um processo existente (**Depurar > Anexar ao Processo...**), selecione o botão **Selecionar...** para abrir a caixa de diálogo **Selecionar Tipo de Código**, defina a opção **Depurar esses tipos de código** e selecione **Nativo** e **Python** na lista:
 
     ![Selecionando os tipos de código Nativo e do Python](media/mixed-mode-debugging-code-type.png)
@@ -59,8 +62,9 @@ Para obter uma introdução à compilação, ao teste e à depuração de módul
 
     É possível selecionar outros tipos de código além do **Nativo** ou em vez dele. Por exemplo, se um aplicativo gerenciado hospedar o CPython, que, por sua vez, usa módulos de extensão nativos e você desejar depurar todos os três, é possível marcar **Python**, **Nativo** e Gerenciado** juntos para uma experiência de depuração unificada, incluindo pilhas de chamadas combinadas e a execução em etapas entre os três tempos de execução.
 
-1. Ao iniciar a depuração no modo misto pela primeira vez, provavelmente, você verá uma caixa de diálogo **Símbolos Obrigatórios do Python**. Consulte [Símbolos para a depuração de modo misto](debugging-symbols-for-mixed-mode.md) para obter detalhes. Você precisa instalar símbolos apenas uma vez para qualquer ambiente do Python.
+1. Ao iniciar a depuração no modo misto pela primeira vez, você poderá ver uma caixa de diálogo **Símbolos Obrigatórios do Python**. Consulte [Símbolos para a depuração de modo misto](debugging-symbols-for-mixed-mode.md) para obter detalhes. Você precisa instalar símbolos apenas uma vez para qualquer ambiente do Python. Observe que, se você instalar o suporte do Python por meio do instalador do Visual Studio 2017, os símbolos serão incluídos automaticamente.
 
+1. Talvez você também deseje ter o próprio código-fonte do Python disponível. Para o Python padrão, isso pode ser obtido em [https://www.python.org/downloads/source/](https://www.python.org/downloads/source/). Baixe o arquivo morto apropriado para sua versão e extraía-o em uma pasta. Você apontará o Visual Studio para arquivos específicos nessa pasta em qualquer ponto que for solicitado.
 
 ## <a name="mixed-mode-specific-features"></a>Recursos específicos ao modo misto
 

@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 8c478c49ee429e0c5d96dc60f035fcb460b902c8
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
+ms.openlocfilehash: 890e181643d2cc5d4861d64ffd9052e0400126d0
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="managing-references-in-a-project"></a>Gerenciando referências em um projeto
@@ -70,9 +70,9 @@ Antes de escrever código em um componente externo ou um serviço conectado, o p
 ## <a name="windows-store-app-references"></a>Referências de aplicativo da Windows Store  
 
 ### <a name="project-references"></a>Referências de Projeto  
- Projetos UWP (Plataforma Universal do Windows) que se destinam ao Windows 10 podem criar referências a outros projetos UWP na solução, ou a projetos ou binários da Windows Store que se destinam a [!INCLUDE[win81](../debugger/includes/win81_md.md)], desde que esses projetos não usem APIs que foram preteridas no Windows 10. Para obter mais informações, consulte [Mover do Windows Runtime 8 para a UWP](https://msdn.microsoft.com/en-us/library/windows/apps/dn954974.aspx).  
+ Projetos UWP (Plataforma Universal do Windows) que se destinam ao Windows 10 podem criar referências a outros projetos UWP na solução, ou a projetos ou binários da Windows Store que se destinam a [!INCLUDE[win81](../debugger/includes/win81_md.md)], desde que esses projetos não usem APIs que foram preteridas no Windows 10. Para obter mais informações, consulte [Mover do Windows Runtime 8 para a UWP](https://docs.microsoft.com/en-us/windows/uwp/porting/w8x-to-uwp-root).  
 
- Se você optar por redirecionar os projetos [!INCLUDE[win81](../debugger/includes/win81_md.md)] para o Windows 10, consulte [Portando, migrando e atualizando projetos do Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md)  
+ Se você optar por redirecionar os projetos [!INCLUDE[win81](../debugger/includes/win81_md.md)] para o Windows 10, consulte [Portar, Migrar e Atualizar Projetos do Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md)  
 
 ### <a name="extension-sdk-references"></a>Referências do SDK de Extensão  
  Projetos do Visual Basic, C#, C++ e JavaScript da Windows Store que se destinam à UWP (Plataforma do Windows Universal) podem referenciar SDKs de Extensão que se destinam a [!INCLUDE[win81](../debugger/includes/win81_md.md)], desde que esses SDKs de Extensão não usem APIs que foram preteridas no Windows 10. Confira o site do fornecedor do SDK de Extensão para descobrir se ele pode ser referenciado por projetos da Windows Store que se destinam à UWP.  

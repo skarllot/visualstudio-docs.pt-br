@@ -2,7 +2,7 @@
 title: Instalar o Visual Studio 2017 | Microsoft Docs
 description: Saiba como instalar o Visual Studio, passo a passo.
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 04/03/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -37,9 +37,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8c4e45eadd81c54a372885ce89ccced1256d3b3d
-ms.openlocfilehash: 5552f67ae880e3b7ec832d6d035382e2abcca116
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
+ms.openlocfilehash: 47688935cec36db174c3a0c424b1705ae47c6118
+ms.lasthandoff: 04/03/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Instalar o Visual Studio 2017
@@ -102,6 +102,8 @@ Para instalar o Visual Studio 2017 em um idioma de sua escolha, clique na opçã
 
 Por padrão, o programa do instalador tenta encontrar a correspondência do idioma do sistema operacional quando ele é executado pela primeira vez. O instalador memoriza essa configuração. Você pode alterar essa configuração executando o instalador da linha de comando. Por exemplo, é possível forçar o instalador a ser executado em inglês usando o seguinte comando: `vs_installer.exe --locale en-US`. O instalador memorizará essa configuração quando for executado na próxima vez. O instalador dá suporte aos seguintes tokens de idioma: zh-CN, zh-TW, cs-CZ, en-US, fr-FR, de-DE, it-IT, ja-JP, ko-KR, pl-PL, pt-BR, ru-RU, es-ES e tr-TR.
 
+## <a name="get-support"></a>Obter suporte
+Às vezes, as coisas podem dar errado. Caso a instalação do Visual Studio falhe, consulte o artigo do KB [Solucionando falhas de instalação e atualização do Visual Studio 2017](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) para obter dicas de solução de problemas.
 
 ## <a name="see-also"></a>Consulte também  
 * [Modificar o Visual Studio 2017](modify-visual-studio.md)

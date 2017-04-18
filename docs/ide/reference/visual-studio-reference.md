@@ -29,8 +29,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5b6cd74c8c86c2512a0f699392f20c77703799a5
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: e32d7a177a1a6ff0e26fba7f418f368a64bb1337
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-studio-reference"></a>Referência do Visual Studio
@@ -52,7 +53,7 @@ Esta seção inclui referência de interface do usuário, equivalentes de idioma
  [Referência do Visual Studio for Applications](../../ide/reference/visual-studio-for-applications-reference.md)  
  Contém documentação de referência para interfaces que você pode usar para integrar mecanismos de script do .NET Framework a aplicativos.  
   
- [MSBuild](../../msbuild/msbuild1.md)  
+ [MSBuild](../../msbuild/msbuild.md)
  Contém documentos sobre como usar a plataforma de compilação da Microsoft, que é integrada ao [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
   
  [Recursos para Solução de problemas de erros do IDE](../../ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md)  
@@ -68,7 +69,7 @@ Esta seção inclui referência de interface do usuário, equivalentes de idioma
  [Referência do Visual Basic](/dotnet/visual-basic/reference/index)  
  Contém informações de atualização do [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], bem como a referência de tempo de execução e linguagem do [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)].  
   
- [Linguagem C ou C++ e Bibliotecas padrão](/visual-cpp/cpp/c-cpp-language-and-standard-libraries)  
+ [Linguagem C ou C++ e Bibliotecas padrão](/cpp/cpp/c-cpp-language-and-standard-libraries)  
  Contém documentação de referência de linguagem.  
   
  [Referência do JScript](http://msdn.microsoft.com/en-us/2e47f004-963c-4661-b887-a14e4660aadd)  
@@ -76,8 +77,3 @@ Esta seção inclui referência de interface do usuário, equivalentes de idioma
   
  [Informações de Referência do .NET Framework](/dotnet/visual-basic/reference/net-framework-reference-information)  
  Contém documentos sobre a biblioteca de classes, referência de linguagem e compilador do [!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)], bem como sintaxe, referência XSD do [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)], entre outros tópicos.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

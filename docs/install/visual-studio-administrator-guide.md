@@ -1,7 +1,7 @@
 ---
 title: Guia do administrador do Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 04/03/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -33,30 +33,49 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 69ac1327fa9233bf0ecc18be5e7d2f2a4f82b3b0
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
+ms.openlocfilehash: fb7a87b720ad29252c602d9be5b958d8417ab93e
+ms.lasthandoff: 04/03/2017
 
 ---
 # <a name="visual-studio-administrator-guide-for-visual-studio-2017"></a>Guia do administrador do Visual Studio para Visual Studio 2017
 
-Você pode implantar o Visual Studio em uma rede, com a condição de que cada computador de destino atenda aos [requisitos mínimos de instalação](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs). É possível criar um compartilhamento de rede executando o arquivo de instalação com a opção --layout (conforme descrito na página [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)) e, em seguida, copiá-lo do computador local para o compartilhamento de rede.   
+ Você pode implantar o Visual Studio em uma rede, com a condição de que cada computador de destino atenda aos [requisitos mínimos de instalação](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs).
 
- Observe que as instalações de um compartilhamento de rede “lembrarão” do local de origem de onde vieram. Isso significa que um reparo de um computador cliente pode ter que retornar para o compartilhamento de rede do qual o cliente foi instalado originalmente. Escolha cuidadosamente seu local de rede para que ele se alinhe com o tempo de vida esperado de execução de clientes do Visual Studio 2017 na sua organização.
+ Se você estiver implantando por meio de softwares como o System Center ou por meio de um arquivo em lotes, normalmente é preciso percorrer as etapas a seguir:
+
+1. [Armazenar em cache o layout do produto do Visual Studio](create-an-offline-installation-of-visual-studio.md) para um local de rede.
+
+2. [Selecione as cargas de trabalho e os componentes](workload-and-component-ids.md) que deseja instalar.
+
+3. [Crie um script de instalação](use-command-line-parameters-to-install-visual-studio.md) usando os itens selecionados e outros parâmetros de linha de comando para controlar a instalação.
+
+4. Opcionalmente, [aplique uma chave de produto de licença de volume](automatically-apply-product-keys-when-deploying-visual-studio.md) como parte do script de instalação para que os usuários não precisem ativar o software separadamente.
+
+5. Usa a tecnologia de implantação de sua escolha para executar o script gerado nas etapas anteriores em suas estações de trabalho do desenvolvedor de destino.
+
+6. Atualize seu local de rede com as atualizações mais recentes do Visual Studio ao executar o comando usado na etapa 1 regularmente para adicionar componentes atualizados.
+
+> [!IMPORTANT]
+>  Observe que as instalações de um compartilhamento de rede “lembrarão” do local de origem de onde vieram. Isso significa que um reparo de um computador cliente pode ter que retornar para o compartilhamento de rede do qual o cliente foi instalado originalmente. Escolha cuidadosamente seu local de rede para que ele se alinhe com o tempo de vida esperado de execução de clientes do Visual Studio 2017 na sua organização.
 
 ## <a name="tools"></a>Ferramentas
 
- Temos várias ferramentas em oferta para ajudá-lo a gerenciar as instalações do Visual Studio:
+ Tornamos várias ferramentas disponíveis que ajudarão você a detectar e gerenciar instâncias do Visual Studio instaladas em computadores cliente:
 
-* [VS-Setup-Samples](https://github.com/microsoft/vs-setup-samples): amostras do C# e C++ para ajudar os usuários a investigar as instâncias do VS em seus computadores.
-* [VSWhere](https://github.com/microsoft/vswhere): um .exe do C++ que ajuda você a encontrar as principais ferramentas do Visual Studio.
-* [VSSetup.PowerShell](https://github.com/microsoft/vssetup.powershell): scripts avançados do PowerShell para tarefas comuns de administração relacionadas à instalação.
+* [VSWhere](https://github.com/microsoft/vswhere): um C++ executável que ajuda você a encontrar o local de ferramentas de núcleo do Visual Studio por meio de uma instância instalada do Visual Studio.
+* [VSSetup.PowerShell](https://github.com/microsoft/vssetup.powershell): scripts do PowerShell que usam a API de Configuração de Instalação para identificar instâncias instaladas do Visual Studio.
+* [VS-Setup-Samples](https://github.com/microsoft/vs-setup-samples): amostras do C# e C++ que demonstram como usar a API de Configuração de Instalação para consultar uma instalação existente.
+
+Além disso, a [API de Configuração de Instalação](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.setup.configuration.aspx) fornece interfaces para desenvolvedores que desejam criar seus próprios utilitários para interrogar instâncias do Visual Studio.
+
+>[!TIP]
+>Para obter mais informações sobre a instalação do Visual Studio 2017, consulte [artigos de blog de Heath Stewart](https://blogs.msdn.microsoft.com/heaths/tag/vs2017/).
 
 
 ## <a name="see-also"></a>Consulte também
 * [Instalar o Visual Studio 2017](install-visual-studio.md)
+* [Criar um instalador offline para o Visual Studio 2017](create-an-offline-installation-of-visual-studio.md)
 * [Usar parâmetros de linha de comando para instalar o Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)
-* [Criar uma instalação offline do Visual Studio 2017](create-an-offline-installation-of-visual-studio.md)
-* [Usar IDs de carga de trabalho e de componente do Visual Studio para personalizar a instalação offline](workload-and-component-ids.md)
 * [Relatar um problema com o Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

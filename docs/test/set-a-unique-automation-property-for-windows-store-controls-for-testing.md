@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4a38cce95fa472dfc38d617b5bf65dc3f8cc4f15
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 1694abeb37e7fa0e5766dfda16a05bd5e7895885
+ms.openlocfilehash: 9168eb964b86f375390157511bf9ec9526709d7b
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="set-a-unique-automation-property-for-windows-store-controls-for-testing"></a>Definir uma propriedade de automação exclusiva para controles da Windows Store para teste
@@ -218,5 +218,5 @@ private void CreateCheckBox(string txt, StackPanel panel)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Testando aplicativos da Windows Store 8.1 com testes de IU codificados](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)
+ [Testar aplicativos Windows UWP e 8.1 da Windows Store com testes de UI codificados](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)
 

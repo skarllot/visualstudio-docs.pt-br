@@ -50,12 +50,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7efa5c21454ec3cde3e07aa091919703544cc908
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: a062b0a929ce812f19bcc6c89594b8f3b2e93b6f
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="link-task"></a>Tarefa Link
-Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vinculador vincula arquivos de objeto e bibliotecas de formato COFF (Common Object File Format) para criar um arquivo executável (.exe) ou uma DLL (biblioteca de vínculo dinâmico). Para obter mais informações, consulte [Opções de Vinculador](/visual-cpp/build/reference/linker-options).  
+Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vinculador vincula arquivos de objeto e bibliotecas de formato COFF (Common Object File Format) para criar um arquivo executável (.exe) ou uma DLL (biblioteca de vínculo dinâmico). Para obter mais informações, consulte [Opções de Vinculador](/cpp/build/reference/linker-options).  
   
 ## <a name="parameters"></a>Parâmetros  
  A tabela a seguir descreve os parâmetros da tarefa **Link**. A maioria dos parâmetros de tarefa e alguns conjuntos de parâmetros correspondem a uma opção de linha de comando.  
@@ -66,7 +67,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica uma lista de arquivos de entrada para adicionar ao comando.  
   
-     Para obter mais informações, consulte [Arquivos de Entrada LINK](/visual-cpp/build/reference/link-input-files).  
+     Para obter mais informações, consulte [Arquivos de Entrada LINK](/cpp/build/reference/link-input-files).  
   
 -   **AdditionalLibraryDirectories**  
   
@@ -74,7 +75,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Substitui o caminho da biblioteca de ambiente. Especifique um nome de diretório.  
   
-     Para obter mais informações, consulte [/LIBPATH (Libpath Adicional)](/visual-cpp/build/reference/libpath-additional-libpath).  
+     Para obter mais informações, consulte [/LIBPATH (Libpath Adicional)](/cpp/build/reference/libpath-additional-libpath).  
   
 -   **AdditionalManifestDependencies**  
   
@@ -82,7 +83,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica atributos que serão colocados na seção `dependency` do arquivo de manifesto.  
   
-     Para obter mais informações, consulte [/MANIFESTDEPENDENCY (Especificar Dependências de Manifesto)](/visual-cpp/build/reference/manifestdependency-specify-manifest-dependencies). Consulte também os "Arquivos de Configuração do Distribuidor" no site do [MSDN](http://go.microsoft.com/fwlink/?LinkId=737).  
+     Para obter mais informações, consulte [/MANIFESTDEPENDENCY (Especificar Dependências de Manifesto)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies). Consulte também os "Arquivos de Configuração do Distribuidor" no site do [MSDN](http://go.microsoft.com/fwlink/?LinkId=737).  
   
 -   **AdditionalOptions**  
   
@@ -90,7 +91,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Uma lista de opções de vinculador, conforme especificado na linha de comando. Por exemplo, **"***/option1 /option2 /option#*". Use esse parâmetro para especificar opções de vinculador que não são representadas por qualquer outro parâmetro de tarefa **Link**.  
   
-     Para obter mais informações, consulte [Opções de Vinculador](/visual-cpp/build/reference/linker-options).  
+     Para obter mais informações, consulte [Opções de Vinculador](/cpp/build/reference/linker-options).  
   
 -   **AddModuleNamesToAssembly**  
   
@@ -98,7 +99,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Adiciona uma referência de módulo a um assembly.  
   
-     Para obter mais informações, consulte [/ASSEMBLYMODULE (Adicionar um Módulo MSIL ao Assembly)](/visual-cpp/build/reference/assemblymodule-add-a-msil-module-to-the-assembly).  
+     Para obter mais informações, consulte [/ASSEMBLYMODULE (Adicionar um Módulo MSIL ao Assembly)](/cpp/build/reference/assemblymodule-add-a-msil-module-to-the-assembly).  
   
 -   **AllowIsolation**  
   
@@ -106,7 +107,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, fará com que o sistema operacional realize pesquisas de manifesto e carregamentos. Se `false`, indicará que as DLLs serão carregadas como se não houvesse nenhum manifesto.  
   
-     Para obter mais informações, consulte [/ALLOWISOLATION (Pesquisa de Manifesto)](/visual-cpp/build/reference/allowisolation-manifest-lookup).  
+     Para obter mais informações, consulte [/ALLOWISOLATION (Pesquisa de Manifesto)](/cpp/build/reference/allowisolation-manifest-lookup).  
   
 -   **AssemblyDebug**  
   
@@ -114,7 +115,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, emitirá o atributo **DebuggableAttribute** junto com o acompanhamento de informações de depuração e desabilitará otimizações JIT. Se `false`, emitirá o atributo **DebuggableAttribute**, mas desabilitará o acompanhamento de informações de depuração e as otimizações JIT.  
   
-     Para obter mais informações, consulte [/ASSEMBLYDEBUG (Adicionar DebuggableAttribute)](/visual-cpp/build/reference/assemblydebug-add-debuggableattribute).  
+     Para obter mais informações, consulte [/ASSEMBLYDEBUG (Adicionar DebuggableAttribute)](/cpp/build/reference/assemblydebug-add-debuggableattribute).  
   
 -   **AssemblyLinkResource**  
   
@@ -122,7 +123,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Cria um link para um recurso do .NET Framework no arquivo de saída; o arquivo de recurso não é colocado no arquivo de saída. Especifique o nome do recurso.  
   
-     Para obter mais informações, consulte [/ASSEMBLYLINKRESOURCE (Link para Recurso do .NET Framework)](/visual-cpp/build/reference/assemblylinkresource-link-to-dotnet-framework-resource).  
+     Para obter mais informações, consulte [/ASSEMBLYLINKRESOURCE (Link para Recurso do .NET Framework)](/cpp/build/reference/assemblylinkresource-link-to-dotnet-framework-resource).  
   
 -   **AttributeFileTracking**  
   
@@ -136,7 +137,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Define um endereço básico para o programa ou DLL que está sendo criado. Especifique `{address[,size] | @filename,key}`.  
   
-     Para obter mais informações, consulte [/BASE (Endereço Básico)](/visual-cpp/build/reference/base-base-address).  
+     Para obter mais informações, consulte [/BASE (Endereço Básico)](/cpp/build/reference/base-base-address).  
   
 -   **BuildingInIDE**  
   
@@ -162,7 +163,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **ForceSafeILImage** - **/CLRIMAGETYPE:SAFE**  
   
-     Para obter mais informações, consulte, [/CLRIMAGETYPE (Especificar Tipo de Imagem CLR)](/visual-cpp/build/reference/clrimagetype-specify-type-of-clr-image).  
+     Para obter mais informações, consulte, [/CLRIMAGETYPE (Especificar Tipo de Imagem CLR)](/cpp/build/reference/clrimagetype-specify-type-of-clr-image).  
   
 -   **CLRSupportLastError**  
   
@@ -178,7 +179,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **SystemDlls** - **/CLRSupportLastError:SYSTEMDLL**  
   
-     Para obter mais informações, consulte [/CLRSUPPORTLASTERROR (Preservar Último Código de Erro para Chamadas PInvoke)](/visual-cpp/build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls).  
+     Para obter mais informações, consulte [/CLRSUPPORTLASTERROR (Preservar Último Código de Erro para Chamadas PInvoke)](/cpp/build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls).  
   
 -   **CLRThreadAttribute**  
   
@@ -194,7 +195,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **STAThreadingAttribute** - **/CLRTHREADATTRIBUTE:STA**  
   
-     Para obter mais informações, consulte [/CLRTHREADATTRIBUTE (Definir Atributo de Thread CLR)](/visual-cpp/build/reference/clrthreadattribute-set-clr-thread-attribute).  
+     Para obter mais informações, consulte [/CLRTHREADATTRIBUTE (Definir Atributo de Thread CLR)](/cpp/build/reference/clrthreadattribute-set-clr-thread-attribute).  
   
 -   **CLRUnmanagedCodeCheck**  
   
@@ -202,7 +203,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica se o vinculador aplicará o atributo **SuppressUnmanagedCodeSecurityAttribute** às chamadas P/Invoke geradas pelo vinculador do código gerenciado nas DLLs nativas.  
   
-     Para obter mais informações, consulte [/CLRUNMANAGEDCODECHECK (Adicionar SupressUnmanagedCodeSecurityAttribute)](/visual-cpp/build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute).  
+     Para obter mais informações, consulte [/CLRUNMANAGEDCODECHECK (Adicionar SupressUnmanagedCodeSecurityAttribute)](/cpp/build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute).  
   
 -   **CreateHotPatchableImage**  
   
@@ -220,7 +221,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **ItaniumImage** - **/FUNCTIONPADMIN:16**  
   
-     Para obter mais informações, consulte [/FUNCTIONPADMIN (Cria Imagem Hotpatchable)](/visual-cpp/build/reference/functionpadmin-create-hotpatchable-image).  
+     Para obter mais informações, consulte [/FUNCTIONPADMIN (Cria Imagem Hotpatchable)](/cpp/build/reference/functionpadmin-create-hotpatchable-image).  
   
 -   **DataExecutionPrevention**  
   
@@ -228,7 +229,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, indicará que um executável foi testado e considerado compatível com o recurso de Prevenção de Execução de Dados do Windows.  
   
-     Para obter mais informações, consulte [/NXCOMPAT (Compatível com a Prevenção de Execução de Dados)](/visual-cpp/build/reference/nxcompat-compatible-with-data-execution-prevention).  
+     Para obter mais informações, consulte [/NXCOMPAT (Compatível com a Prevenção de Execução de Dados)](/cpp/build/reference/nxcompat-compatible-with-data-execution-prevention).  
   
 -   **DelayLoadDLLs**  
   
@@ -236,7 +237,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Esse parâmetro causa um *atraso no carregamento* de DLLs. Especifique o nome de uma DLL para atrasar o carregamento.  
   
-     Para obter mais informações, consulte [/DELAYLOAD (Importação de Carga com Atraso)](/visual-cpp/build/reference/delayload-delay-load-import).  
+     Para obter mais informações, consulte [/DELAYLOAD (Importação de Carga com Atraso)](/cpp/build/reference/delayload-delay-load-import).  
   
 -   **DelaySign**  
   
@@ -244,7 +245,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, assinará parcialmente um assembly. Por padrão, o valor é `false`.  
   
-     Para obter mais informações, consulte [/DELAYSIGN (Assinar Parcialmente um Assembly)](/visual-cpp/build/reference/delaysign-partially-sign-an-assembly).  
+     Para obter mais informações, consulte [/DELAYSIGN (Assinar Parcialmente um Assembly)](/cpp/build/reference/delaysign-partially-sign-an-assembly).  
   
 -   **Driver**  
   
@@ -262,7 +263,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **WDM** - **/DRIVER:WDM**  
   
-     Para obter mais informações, consulte [/DRIVER (Driver de Modo Kernel do Windows NT)](/visual-cpp/build/reference/driver-windows-nt-kernel-mode-driver).  
+     Para obter mais informações, consulte [/DRIVER (Driver de Modo Kernel do Windows NT)](/cpp/build/reference/driver-windows-nt-kernel-mode-driver).  
   
 -   **EmbedManagedResourceFile**  
   
@@ -270,7 +271,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Insere um arquivo de recurso em um assembly. Especifique o nome do arquivo de recurso necessário. Como opção, especifique o nome lógico, usado para carregar o recurso e a opção **PRIVADO**, que indica no manifesto do assembly que o arquivo de recurso é privado.  
   
-     Para obter mais informações, consulte [/ASSEMBLYRESOURCE (Inserir um Recurso Gerenciado)](/visual-cpp/build/reference/assemblyresource-embed-a-managed-resource).  
+     Para obter mais informações, consulte [/ASSEMBLYRESOURCE (Inserir um Recurso Gerenciado)](/cpp/build/reference/assemblyresource-embed-a-managed-resource).  
   
 -   **EnableCOMDATFolding**  
   
@@ -278,7 +279,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, habilitará a dobra COMDAT idêntica.  
   
-     Para obter mais informações, consulte o argumento `ICF[= iterations]` de [/OPT (Otimizações)](/visual-cpp/build/reference/opt-optimizations).  
+     Para obter mais informações, consulte o argumento `ICF[= iterations]` de [/OPT (Otimizações)](/cpp/build/reference/opt-optimizations).  
   
 -   **EnableUAC**  
   
@@ -286,7 +287,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, especificará que as informações do UAC (Controle de Conta de Usuário) estão inseridas no manifesto do programa.  
   
-     Para obter mais informações, consulte [/MANIFESTUAC (Insere informações UAC no manifesto)](/visual-cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).  
+     Para obter mais informações, consulte [/MANIFESTUAC (Insere informações UAC no manifesto)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).  
   
 -   **EntryPointSymbol**  
   
@@ -294,7 +295,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica uma função de ponto de entrada como o endereço de início para um arquivo .exe ou DLL. Especifique um nome de função como valor do parâmetro.  
   
-     Para obter mais informações, consulte [/ENTRY (Símbolo de Ponto de Entrada)](/visual-cpp/build/reference/entry-entry-point-symbol).  
+     Para obter mais informações, consulte [/ENTRY (Símbolo de Ponto de Entrada)](/cpp/build/reference/entry-entry-point-symbol).  
   
 -   **FixedBaseAddress**  
   
@@ -302,7 +303,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, criará um programa ou DLL que pode ser carregado somente em seu endereço básico preferido.  
   
-     Para obter mais informações, consulte [/FIXED (Endereço Básico Fixo)](/visual-cpp/build/reference/fixed-fixed-base-address).  
+     Para obter mais informações, consulte [/FIXED (Endereço Básico Fixo)](/cpp/build/reference/fixed-fixed-base-address).  
   
 -   **ForceFileOutput**  
   
@@ -318,7 +319,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **UndefinedSymbolOnly** - **/FORCE:UNRESOLVED**  
   
-     Para obter mais informações, consulte [/FORCE (Forçar Saída de Arquivo)](/visual-cpp/build/reference/force-force-file-output).  
+     Para obter mais informações, consulte [/FORCE (Forçar Saída de Arquivo)](/cpp/build/reference/force-force-file-output).  
   
 -   **ForceSymbolReferences**  
   
@@ -326,7 +327,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Esse parâmetro instrui o vinculador a adicionar um símbolo especificado à tabela de símbolos.  
   
-     Para obter mais informações, consulte [/INCLUDE (Forçar Referências de Símbolo)](/visual-cpp/build/reference/include-force-symbol-references).  
+     Para obter mais informações, consulte [/INCLUDE (Forçar Referências de Símbolo)](/cpp/build/reference/include-force-symbol-references).  
   
 -   **FunctionOrder**  
   
@@ -334,7 +335,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Esse parâmetro otimiza seu programa colocando as funções empacotadas (COMDATs) especificadas na imagem em uma ordem predeterminada.  
   
-     Para obter mais informações, consulte [/ORDER (Colocar Funções na Ordem)](/visual-cpp/build/reference/order-put-functions-in-order).  
+     Para obter mais informações, consulte [/ORDER (Colocar Funções na Ordem)](/cpp/build/reference/order-put-functions-in-order).  
   
 -   **GenerateDebugInformation**  
   
@@ -342,7 +343,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, criará informações de depuração para o arquivo .exe ou DLL.  
   
-     Para obter mais informações, consulte [/DEBUG (Gerar Informações de Depuração)](/visual-cpp/build/reference/debug-generate-debug-info).  
+     Para obter mais informações, consulte [/DEBUG (Gerar Informações de Depuração)](/cpp/build/reference/debug-generate-debug-info).  
   
 -   **GenerateManifest**  
   
@@ -350,7 +351,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, criará um arquivo de manifesto lado a lado.  
   
-     Para obter mais informações, consulte [/MANIFEST (Criar Manifesto do Assembly Lado a Lado)](/visual-cpp/build/reference/manifest-create-side-by-side-assembly-manifest).  
+     Para obter mais informações, consulte [/MANIFEST (Criar Manifesto do Assembly Lado a Lado)](/cpp/build/reference/manifest-create-side-by-side-assembly-manifest).  
   
 -   **GenerateMapFile**  
   
@@ -358,7 +359,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, criará um *arquivo de mapa*. A extensão de nome de arquivo do arquivo de mapa é .map.  
   
-     Para obter mais informações, consulte [/MAP (Gerar Mapfile)](/visual-cpp/build/reference/map-generate-mapfile).  
+     Para obter mais informações, consulte [/MAP (Gerar Mapfile)](/cpp/build/reference/map-generate-mapfile).  
   
 -   **HeapCommitSize**  
   
@@ -366,7 +367,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica a quantidade de memória física no heap a se alocar por vez.  
   
-     Para obter mais informações, consulte o argumento `commit` em [/HEAP (Definir Tamanho do Heap)](/visual-cpp/build/reference/heap-set-heap-size). Consulte também o parâmetro **HeapReserveSize**.  
+     Para obter mais informações, consulte o argumento `commit` em [/HEAP (Definir Tamanho do Heap)](/cpp/build/reference/heap-set-heap-size). Consulte também o parâmetro **HeapReserveSize**.  
   
 -   **HeapReserveSize**  
   
@@ -374,7 +375,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica a alocação de heap total na memória virtual.  
   
-     Para obter mais informações, consulte o argumento `reserve` em [/HEAP (Definir Tamanho do Heap)](/visual-cpp/build/reference/heap-set-heap-size). Consulte também o parâmetro **HeapCommitSize** nesta tabela.  
+     Para obter mais informações, consulte o argumento `reserve` em [/HEAP (Definir Tamanho do Heap)](/cpp/build/reference/heap-set-heap-size). Consulte também o parâmetro **HeapCommitSize** nesta tabela.  
   
 -   **IgnoreAllDefaultLibraries**  
   
@@ -382,7 +383,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, instruirá o vinculador a remover uma ou mais bibliotecas padrão da lista de bibliotecas pesquisadas ao resolver referências externas.  
   
-     Para obter mais informações, consulte [/NODEFAULTLIB (Ignorar Bibliotecas)](/visual-cpp/build/reference/nodefaultlib-ignore-libraries).  
+     Para obter mais informações, consulte [/NODEFAULTLIB (Ignorar Bibliotecas)](/cpp/build/reference/nodefaultlib-ignore-libraries).  
   
 -   **IgnoreEmbeddedIDL**  
   
@@ -390,7 +391,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, especificará que qualquer atributo IDL em código-fonte não deve ser processado em um arquivo .idl.  
   
-     Para obter mais informações, consulte [/IGNOREIDL (Não Processar Atributos em MIDL)](/visual-cpp/build/reference/ignoreidl-don-t-process-attributes-into-midl).  
+     Para obter mais informações, consulte [/IGNOREIDL (Não Processar Atributos em MIDL)](/cpp/build/reference/ignoreidl-don-t-process-attributes-into-midl).  
   
 -   **IgnoreImportLibrary**  
   
@@ -406,7 +407,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica um ou mais nomes de bibliotecas padrão a serem ignoradas. Separe várias bibliotecas usando ponto e vírgula.  
   
-     Para obter mais informações, consulte [/NODEFAULTLIB (Ignorar Bibliotecas)](/visual-cpp/build/reference/nodefaultlib-ignore-libraries).  
+     Para obter mais informações, consulte [/NODEFAULTLIB (Ignorar Bibliotecas)](/cpp/build/reference/nodefaultlib-ignore-libraries).  
   
 -   **ImageHasSafeExceptionHandlers**  
   
@@ -414,13 +415,13 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, o vinculador produzirá uma imagem somente se também puder produzir uma tabela de manipuladores de exceção segura da imagem.  
   
-     Para obter mais informações, consulte [/SAFESEH (Imagem Tem Manipuladores de Exceções Seguros)](/visual-cpp/build/reference/safeseh-image-has-safe-exception-handlers).  
+     Para obter mais informações, consulte [/SAFESEH (Imagem Tem Manipuladores de Exceções Seguros)](/cpp/build/reference/safeseh-image-has-safe-exception-handlers).  
   
 -   **ImportLibrary**  
   
      Um nome de biblioteca de importação especificado pelo usuário que substitui o nome da biblioteca padrão.  
   
-     Para obter mais informações, consulte [/IMPLIB (Nomear Biblioteca de Importações)](/visual-cpp/build/reference/implib-name-import-library).  
+     Para obter mais informações, consulte [/IMPLIB (Nomear Biblioteca de Importações)](/cpp/build/reference/implib-name-import-library).  
   
 -   **KeyContainer**  
   
@@ -428,7 +429,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Contêiner que contém a chave para um assembly assinado.  
   
-     Para obter mais informações, consulte [/KEYCONTAINER (Especificar um Contêiner de Chave para Assinar um Assembly)](/visual-cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly). Consulte também o parâmetro **KeyFile** nesta tabela.  
+     Para obter mais informações, consulte [/KEYCONTAINER (Especificar um Contêiner de Chave para Assinar um Assembly)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly). Consulte também o parâmetro **KeyFile** nesta tabela.  
   
 -   **KeyFile**  
   
@@ -436,7 +437,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica um arquivo que contém a chave para um assembly assinado.  
   
-     Para obter mais informações, consulte [/KEYFILE (Especificar Chave ou Par de Chaves para Assinar um Assembly)](/visual-cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly). Consulte também o parâmetro **KeyContainer**.  
+     Para obter mais informações, consulte [/KEYFILE (Especificar Chave ou Par de Chaves para Assinar um Assembly)](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly). Consulte também o parâmetro **KeyContainer**.  
   
 -   **LargeAddressAware**  
   
@@ -444,7 +445,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, o aplicativo poderá identificar endereços maiores do que 2 gigabytes.  
   
-     Para obter mais informações, consulte [/LARGEADDRESSAWARE (Identificar Endereços Grandes)](/visual-cpp/build/reference/largeaddressaware-handle-large-addresses).  
+     Para obter mais informações, consulte [/LARGEADDRESSAWARE (Identificar Endereços Grandes)](/cpp/build/reference/largeaddressaware-handle-large-addresses).  
   
 -   **LinkDLL**  
   
@@ -452,7 +453,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, criará uma DLL como o arquivo de saída principal.  
   
-     Para obter mais informações, consulte [/DLL (Compilar uma DLL)](/visual-cpp/build/reference/dll-build-a-dll).  
+     Para obter mais informações, consulte [/DLL (Compilar uma DLL)](/cpp/build/reference/dll-build-a-dll).  
   
 -   **LinkErrorReporting**  
   
@@ -470,7 +471,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **SendErrorReport** - **/ERRORREPORT:SEND**  
   
-     Para obter mais informações, consulte [/ERRORREPORT (Relatório de Erros Internos do Vinculador)](/visual-cpp/build/reference/errorreport-report-internal-linker-errors).  
+     Para obter mais informações, consulte [/ERRORREPORT (Relatório de Erros Internos do Vinculador)](/cpp/build/reference/errorreport-report-internal-linker-errors).  
   
 -   **LinkIncremental**  
   
@@ -478,7 +479,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, habilitará a vinculação incremental.  
   
-     Para obter mais informações, consulte [/INCREMENTAL (Vincular de Maneira Incremental)](/visual-cpp/build/reference/incremental-link-incrementally).  
+     Para obter mais informações, consulte [/INCREMENTAL (Vincular de Maneira Incremental)](/cpp/build/reference/incremental-link-incrementally).  
   
 -   **LinkLibraryDependencies**  
   
@@ -494,7 +495,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, especificará que o vinculador deve exibir um indicador de progresso que mostrará o percentual concluído do link.  
   
-     Para obter mais informações, consulte o argumento `STATUS` de [/LTCG (Geração de Código Durante o Tempo de Vinculação)](/visual-cpp/build/reference/ltcg-link-time-code-generation).  
+     Para obter mais informações, consulte o argumento `STATUS` de [/LTCG (Geração de Código Durante o Tempo de Vinculação)](/cpp/build/reference/ltcg-link-time-code-generation).  
   
 -   **LinkTimeCodeGeneration**  
   
@@ -516,7 +517,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
          \- **/LTCG:PGUpdate**  
   
-     Para obter mais informações, consulte [/LTCG (Geração de Código Durante o Tempo de Vinculação)](/visual-cpp/build/reference/ltcg-link-time-code-generation).  
+     Para obter mais informações, consulte [/LTCG (Geração de Código Durante o Tempo de Vinculação)](/cpp/build/reference/ltcg-link-time-code-generation).  
   
 -   **ManifestFile**  
   
@@ -524,7 +525,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Altera o nome do arquivo de manifesto padrão para o nome de arquivo especificado.  
   
-     Para obter mais informações, consulte [/MANIFESTFILE (Nomear Arquivo de Manifesto)](/visual-cpp/build/reference/manifestfile-name-manifest-file).  
+     Para obter mais informações, consulte [/MANIFESTFILE (Nomear Arquivo de Manifesto)](/cpp/build/reference/manifestfile-name-manifest-file).  
   
 -   **MapExports**  
   
@@ -532,7 +533,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, instruirá o vinculador a incluir funções exportadas em um arquivo de mapa.  
   
-     Para obter mais informações, consulte o argumento `EXPORTS` de [/MAPINFO (Incluir Informações em Mapfile)](/visual-cpp/build/reference/mapinfo-include-information-in-mapfile).  
+     Para obter mais informações, consulte o argumento `EXPORTS` de [/MAPINFO (Incluir Informações em Mapfile)](/cpp/build/reference/mapinfo-include-information-in-mapfile).  
   
 -   **MapFileName**  
   
@@ -546,7 +547,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica o nome de arquivo e a extensão de nome de arquivo .idl.  
   
-     Para obter mais informações, consulte [/IDLOUT (Nomear Arquivos de Saída MIDL)](/visual-cpp/build/reference/idlout-name-midl-output-files).  
+     Para obter mais informações, consulte [/IDLOUT (Nomear Arquivos de Saída MIDL)](/cpp/build/reference/idlout-name-midl-output-files).  
   
 -   **MergeSections**  
   
@@ -554,7 +555,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Combina seções em uma imagem. Especifique `from-section=to-section`.  
   
-     Para obter mais informações, consulte [/MERGE (Combinar Seções)](/visual-cpp/build/reference/merge-combine-sections).  
+     Para obter mais informações, consulte [/MERGE (Combinar Seções)](/cpp/build/reference/merge-combine-sections).  
   
 -   **MidlCommandFile**  
   
@@ -562,7 +563,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifique o nome de um arquivo que contém opções de linha de comando MIDL.  
   
-     Para obter mais informações, consulte [/MIDL (Especificar Opções de Linha de Comando MIDL)](/visual-cpp/build/reference/midl-specify-midl-command-line-options).  
+     Para obter mais informações, consulte [/MIDL (Especificar Opções de Linha de Comando MIDL)](/cpp/build/reference/midl-specify-midl-command-line-options).  
   
 -   **MinimumRequiredVersion**  
   
@@ -574,9 +575,9 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Parâmetro **String** opcional.  
   
-     Especifica o nome de um [arquivo de definição de módulo](/visual-cpp/build/reference/module-definition-dot-def-files).  
+     Especifica o nome de um [arquivo de definição de módulo](/cpp/build/reference/module-definition-dot-def-files).  
   
-     Para obter mais informações, consulte [/DEF (Especificar Arquivo de Definição de Módulo)](/visual-cpp/build/reference/def-specify-module-definition-file).  
+     Para obter mais informações, consulte [/DEF (Especificar Arquivo de Definição de Módulo)](/cpp/build/reference/def-specify-module-definition-file).  
   
 -   **MSDOSStubFileName**  
   
@@ -584,7 +585,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Anexa o programa stub MS-DOS especificado a um programa Win32.  
   
-     Para obter mais informações, consulte [/STUB (Nome do Arquivo Stub do MS-DOS)](/visual-cpp/build/reference/stub-ms-dos-stub-file-name).  
+     Para obter mais informações, consulte [/STUB (Nome do Arquivo Stub do MS-DOS)](/cpp/build/reference/stub-ms-dos-stub-file-name).  
   
 -   **NoEntryPoint**  
   
@@ -592,7 +593,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, criará uma DLL somente de recursos.  
   
-     Para obter mais informações, consulte [/NOENTRY (Sem Ponto de Entrada)](/visual-cpp/build/reference/noentry-no-entry-point).  
+     Para obter mais informações, consulte [/NOENTRY (Sem Ponto de Entrada)](/cpp/build/reference/noentry-no-entry-point).  
   
 -   **ObjectFiles**  
   
@@ -606,7 +607,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, eliminará a funções e/ou dados que nunca são referenciados.  
   
-     Para obter mais informações, consulte o argumento `REF` em [/OPT (Otimizações)](/visual-cpp/build/reference/opt-optimizations).  
+     Para obter mais informações, consulte o argumento `REF` em [/OPT (Otimizações)](/cpp/build/reference/opt-optimizations).  
   
 -   **OutputFile**  
   
@@ -614,7 +615,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Substitui o nome padrão e o local do programa que o vinculador cria.  
   
-     Para obter mais informações, consulte [/OUT (Nome do Arquivo de Saída)](/visual-cpp/build/reference/out-output-file-name).  
+     Para obter mais informações, consulte [/OUT (Nome do Arquivo de Saída)](/cpp/build/reference/out-output-file-name).  
   
 -   **PerUserRedirection**  
   
@@ -634,7 +635,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, indicará ao Bind.exe que a imagem vinculada não deve ser associada.  
   
-     Para obter mais informações, consulte [/ALLOWBIND (Evitar Associação de DLL)](/visual-cpp/build/reference/allowbind-prevent-dll-binding).  
+     Para obter mais informações, consulte [/ALLOWBIND (Evitar Associação de DLL)](/cpp/build/reference/allowbind-prevent-dll-binding).  
   
 -   **Perfil**  
   
@@ -642,7 +643,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, produzirá um arquivo de saída que pode ser usado com o criador de perfil de **Ferramentas de Desempenho**.  
   
-     Para obter mais informações, consulte [/PROFILE (Criador de Perfil das Ferramentas de Desempenho)](/visual-cpp/build/reference/profile-performance-tools-profiler).  
+     Para obter mais informações, consulte [/PROFILE (Criador de Perfil das Ferramentas de Desempenho)](/cpp/build/reference/profile-performance-tools-profiler).  
   
 -   **ProfileGuidedDatabase**  
   
@@ -650,7 +651,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica o nome do arquivo .pgd que será usado para armazenar informações sobre o programa em execução  
   
-     Para obter mais informações, consulte [/PGD (Especificar Banco de Dados para Otimizações Orientadas por Perfil)](/visual-cpp/build/reference/pgd-specify-database-for-profile-guided-optimizations).  
+     Para obter mais informações, consulte [/PGD (Especificar Banco de Dados para Otimizações Orientadas por Perfil)](/cpp/build/reference/pgd-specify-database-for-profile-guided-optimizations).  
   
 -   **ProgramDatabaseFile**  
   
@@ -658,7 +659,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica um nome para o banco de dados do programa (PDB) que o vinculador cria.  
   
-     Para obter mais informações, consulte [/PDB (Usar Banco de Dados do Programa)](/visual-cpp/build/reference/pdb-use-program-database).  
+     Para obter mais informações, consulte [/PDB (Usar Banco de Dados do Programa)](/cpp/build/reference/pdb-use-program-database).  
   
 -   **RandomizedBaseAddress**  
   
@@ -666,7 +667,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, gerará uma imagem executável que pode trocar base aleatoriamente no momento do carregamento usando o recurso *ASLR* (Address Space Layout Randomization) do Windows.  
   
-     Para obter mais informações, consulte [/DYNAMICBASE (Usar Aleatorização do Layout de Espaço do Endereço)](/visual-cpp/build/reference/dynamicbase-use-address-space-layout-randomization).  
+     Para obter mais informações, consulte [/DYNAMICBASE (Usar Aleatorização do Layout de Espaço do Endereço)](/cpp/build/reference/dynamicbase-use-address-space-layout-randomization).  
   
 -   **RegisterOutput**  
   
@@ -680,7 +681,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica o alinhamento de cada seção dentro do espaço de endereço linear do programa. O valor do parâmetro é um número de unidade de bytes e uma potência de dois.  
   
-     Para obter mais informações, consulte [/ALIGN (Alinhamento da Seção)](/visual-cpp/build/reference/align-section-alignment).  
+     Para obter mais informações, consulte [/ALIGN (Alinhamento da Seção)](/cpp/build/reference/align-section-alignment).  
   
 -   **SetChecksum**  
   
@@ -688,7 +689,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, definirá a soma de verificação no cabeçalho de um arquivo .exe.  
   
-     Para obter mais informações, consulte [/RELEASE (Definir a Soma de Verificação)](/visual-cpp/build/reference/release-set-the-checksum).  
+     Para obter mais informações, consulte [/RELEASE (Definir a Soma de Verificação)](/cpp/build/reference/release-set-the-checksum).  
   
 -   **ShowProgress**  
   
@@ -712,7 +713,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **LinkVerboseCLR** - **/VERBOSE:CLR**  
   
-     Para obter mais informações, consulte [/VERBOSE (Imprimir Mensagens de Progresso)](/visual-cpp/build/reference/verbose-print-progress-messages).  
+     Para obter mais informações, consulte [/VERBOSE (Imprimir Mensagens de Progresso)](/cpp/build/reference/verbose-print-progress-messages).  
   
 -   **Sources**  
   
@@ -726,7 +727,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica os atributos de uma seção. Isso substitui os atributos que foram definidos quando o arquivo .obj para a seção foi compilado.  
   
-     Para obter mais informações, consulte [/SECTION (Especificar Atributos de Seção)](/visual-cpp/build/reference/section-specify-section-attributes).  
+     Para obter mais informações, consulte [/SECTION (Especificar Atributos de Seção)](/cpp/build/reference/section-specify-section-attributes).  
   
 -   **StackCommitSize**  
   
@@ -734,7 +735,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica a quantidade de memória física em cada alocação quando mais memória é alocada.  
   
-     Para obter mais informações, consulte o argumento `commit` de [/STACK (Alocações da Pilha)](/visual-cpp/build/reference/stack-stack-allocations).  
+     Para obter mais informações, consulte o argumento `commit` de [/STACK (Alocações da Pilha)](/cpp/build/reference/stack-stack-allocations).  
   
 -   **StackReserveSize**  
   
@@ -742,7 +743,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica o tamanho de alocação de pilha total em memória virtual.  
   
-     Para obter mais informações, consulte o argumento `reserve` de [/STACK (Alocações da Pilha)](/visual-cpp/build/reference/stack-stack-allocations).  
+     Para obter mais informações, consulte o argumento `reserve` de [/STACK (Alocações da Pilha)](/cpp/build/reference/stack-stack-allocations).  
   
 -   **StripPrivateSymbols**  
   
@@ -750,7 +751,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Cria um segundo arquivo de banco de dados do programa (PDB) que omite os símbolos que você não deseja distribuir aos seus clientes. Especifique o nome do segundo arquivo PDB.  
   
-     Para obter mais informações, consulte [/PDBSTRIPPED (Remover Símbolos Privados)](/visual-cpp/build/reference/pdbstripped-strip-private-symbols).  
+     Para obter mais informações, consulte [/PDBSTRIPPED (Remover Símbolos Privados)](/cpp/build/reference/pdbstripped-strip-private-symbols).  
   
 -   **SubSystem**  
   
@@ -780,7 +781,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **POSIX** - **/SUBSYSTEM:POSIX**  
   
-     Para obter mais informações, consulte [/SUBSYSTEM (Especificar Subsistema)](/visual-cpp/build/reference/subsystem-specify-subsystem).  
+     Para obter mais informações, consulte [/SUBSYSTEM (Especificar Subsistema)](/cpp/build/reference/subsystem-specify-subsystem).  
   
 -   **SupportNobindOfDelayLoadedDLL**  
   
@@ -788,7 +789,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, instruirá o vinculador a não incluir uma IAT (Tabela de Endereços de Importação) associável na imagem final.  
   
-     Para obter mais informações, consulte o argumento `NOBIND` de [/DELAY (Configurações de Importação de Carga com Atraso)](/visual-cpp/build/reference/delay-delay-load-import-settings).  
+     Para obter mais informações, consulte o argumento `NOBIND` de [/DELAY (Configurações de Importação de Carga com Atraso)](/cpp/build/reference/delay-delay-load-import-settings).  
   
 -   **SupportUnloadOfDelayLoadedDLL**  
   
@@ -796,7 +797,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, instruirá a função de ajuda de carregamento atrasado a dar suporte ao descarregamento explícito da DLL.  
   
-     Para obter mais informações, consulte o argumento `UNLOAD` de [/DELAY (Configurações de Importação de Carga com Atraso)](/visual-cpp/build/reference/delay-delay-load-import-settings).  
+     Para obter mais informações, consulte o argumento `UNLOAD` de [/DELAY (Configurações de Importação de Carga com Atraso)](/cpp/build/reference/delay-delay-load-import-settings).  
   
 -   **SuppressStartupBanner**  
   
@@ -804,7 +805,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, impedirá a exibição da mensagem de direitos autorais e de número de versão quando a tarefa for iniciada.  
   
-     Para obter mais informações, consulte [/NOLOGO (Suprimir Faixa de Inicialização) (Vinculador)](/visual-cpp/build/reference/nologo-suppress-startup-banner-linker).  
+     Para obter mais informações, consulte [/NOLOGO (Suprimir Faixa de Inicialização) (Vinculador)](/cpp/build/reference/nologo-suppress-startup-banner-linker).  
   
 -   **SwapRunFromCD**  
   
@@ -812,7 +813,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, instruirá o sistema operacional a copiar a saída do vinculador para um arquivo de permuta e, em seguida, executará a imagem por meio dele.  
   
-     Para obter mais informações, consulte o argumento `CD` de [/SWAPRUN (Carregar Saída do Vinculador para Trocar Arquivo)](/visual-cpp/build/reference/swaprun-load-linker-output-to-swap-file). Consulte também o parâmetro **SwapRunFromNET**.  
+     Para obter mais informações, consulte o argumento `CD` de [/SWAPRUN (Carregar Saída do Vinculador para Trocar Arquivo)](/cpp/build/reference/swaprun-load-linker-output-to-swap-file). Consulte também o parâmetro **SwapRunFromNET**.  
   
 -   **SwapRunFromNET**  
   
@@ -820,7 +821,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, instruirá o sistema operacional a copiar a saída do vinculador para um arquivo de permuta e, em seguida, executará a imagem por meio dele.  
   
-     Para obter mais informações, consulte o argumento `NET` de [/SWAPRUN (Carregar Saída do Vinculador para Trocar Arquivo)](/visual-cpp/build/reference/swaprun-load-linker-output-to-swap-file). Consulte também o parâmetro **SwapRunFromCD** nesta tabela.  
+     Para obter mais informações, consulte o argumento `NET` de [/SWAPRUN (Carregar Saída do Vinculador para Trocar Arquivo)](/cpp/build/reference/swaprun-load-linker-output-to-swap-file). Consulte também o parâmetro **SwapRunFromCD** nesta tabela.  
   
 -   **TargetMachine**  
   
@@ -854,7 +855,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **MachineX86** - **/MACHINE:X86**  
   
-     Para obter mais informações, consulte [/MACHINE (Especificar Plataforma de Destino)](/visual-cpp/build/reference/machine-specify-target-platform).  
+     Para obter mais informações, consulte [/MACHINE (Especificar Plataforma de Destino)](/cpp/build/reference/machine-specify-target-platform).  
   
 -   **TerminalServerAware**  
   
@@ -862,7 +863,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, definirá um sinalizador no campo IMAGE_OPTIONAL_HEADER DllCharacteristics no cabeçalho opcional da imagem do programa. Quando esse sinalizador estiver definido, o servidor Host da Sessão da Área de Trabalho Remota não fará certas alterações no aplicativo.  
   
-     Para obter mais informações, consulte [/TSAWARE (Criar Aplicativo com Reconhecimento do servidor Host da Sessão da Área de Trabalho Remota)](/visual-cpp/build/reference/tsaware-create-terminal-server-aware-application).  
+     Para obter mais informações, consulte [/TSAWARE (Criar Aplicativo com Reconhecimento do servidor Host da Sessão da Área de Trabalho Remota)](/cpp/build/reference/tsaware-create-terminal-server-aware-application).  
   
 -   **TrackerLogDirectory**  
   
@@ -876,7 +877,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, fará com que nenhum arquivo de saída seja gerado caso o vinculador gere um aviso.  
   
-     Para obter mais informações, consulte [/WX (Tratar Avisos do Vinculador como Erros)](/visual-cpp/build/reference/wx-treat-linker-warnings-as-errors).  
+     Para obter mais informações, consulte [/WX (Tratar Avisos do Vinculador como Erros)](/cpp/build/reference/wx-treat-linker-warnings-as-errors).  
   
 -   **TurnOffAssemblyGeneration**  
   
@@ -884,7 +885,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, criará uma imagem para o arquivo de saída atual sem um assembly do .NET Framework.  
   
-     Para obter mais informações, consulte [/NOASSEMBLY (Criar um Módulo MSIL)](/visual-cpp/build/reference/noassembly-create-a-msil-module).  
+     Para obter mais informações, consulte [/NOASSEMBLY (Criar um Módulo MSIL)](/cpp/build/reference/noassembly-create-a-msil-module).  
   
 -   **TypeLibraryFile**  
   
@@ -892,7 +893,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Especifica o nome de arquivo e a extensão de nome de arquivo .tlb. Especifique um nome de arquivo ou um caminho e nome de arquivo.  
   
-     Para obter mais informações, consulte [/TLBOUT (Nomear Arquivo .TLB)](/visual-cpp/build/reference/tlbout-name-dot-tlb-file).  
+     Para obter mais informações, consulte [/TLBOUT (Nomear Arquivo .TLB)](/cpp/build/reference/tlbout-name-dot-tlb-file).  
   
 -   **TypeLibraryResourceID**  
   
@@ -900,7 +901,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Designa um valor especificado pelo usuário para uma biblioteca de tipos criada pelo vinculador. Especifique um valor de 1 a 65535.  
   
-     Para obter mais informações, consulte [/TLBID (Especificar ID do Recurso para TypeLib)](/visual-cpp/build/reference/tlbid-specify-resource-id-for-typelib).  
+     Para obter mais informações, consulte [/TLBID (Especificar ID do Recurso para TypeLib)](/cpp/build/reference/tlbid-specify-resource-id-for-typelib).  
   
 -   **UACExecutionLevel**  
   
@@ -916,7 +917,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
     -   **RequireAdministrator** - `level='requireAdministrator'`  
   
-     Para obter mais informações, consulte o argumento `level` de [/MANIFESTUAC (Insere informações UAC no manifesto)](/visual-cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).  
+     Para obter mais informações, consulte o argumento `level` de [/MANIFESTUAC (Insere informações UAC no manifesto)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).  
   
 -   **UACUIAccess**  
   
@@ -924,7 +925,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Se `true`, o aplicativo ignorará os níveis de proteção da interface do usuário e direcionará a entrada para janelas de permissão superior na área de trabalho; caso contrário, `false`.  
   
-     Para obter mais informações, consulte o argumento `uiAccess` de [/MANIFESTUAC (Insere informações UAC no manifesto)](/visual-cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).  
+     Para obter mais informações, consulte o argumento `uiAccess` de [/MANIFESTUAC (Insere informações UAC no manifesto)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).  
   
 -   **UseLibraryDependencyInputs**  
   
@@ -938,12 +939,7 @@ Encapsula a ferramenta de vinculador do Visual C++, link.exe. A ferramenta de vi
   
      Coloque um número de versão no cabeçalho do arquivo .dll ou .exe. Especifique “`major[.minor]`”. Os argumentos `major` e `minor` são números decimais de 0 a 65535.  
   
-     Para obter mais informações, consulte [/VERSION (Informações de Versão)](/visual-cpp/build/reference/version-version-information).  
+     Para obter mais informações, consulte [/VERSION (Informações de Versão)](/cpp/build/reference/version-version-information).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -29,9 +29,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 6f77b935309f5b0877fdeb9794a29fed3f0df9c0
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 697b8f5517ad9a953a04f920be39c9ef2cfa2558
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="analyze-memory-usage"></a>Analisar o uso de memória
@@ -50,7 +50,7 @@ Encontre vazamentos de memória e memória ineficiente enquanto estiver depurand
  Você também pode usar a ferramenta de memória fora do depurador. Confira [Uso de memória sem depuração](../profiling/memory-usage-without-debugging2.md).  
   
 > [!NOTE]
->  **Suporte de alocador personalizado** O criador de perfil de memória nativa funciona com a coleta de dados de evento [ETW](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803\(v=vs.85\).aspx) de alocação emitidos durante o tempo de execução.  Os alocadores no CRT e no SDK do Windows foram anotados no nível de origem para que seus dados de alocação possam ser capturados.  Se você estiver escrevendo seus próprios alocadores, todas as funções que retornam um ponteiro para um heap de memória recém-alocada poderão ser decoradas com [declspec](/visual-cpp/cpp/declspec)(allocator), como visto neste exemplo de myMalloc:  
+>  **Suporte de alocador personalizado** O criador de perfil de memória nativa funciona com a coleta de dados de evento [ETW](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803\(v=vs.85\).aspx) de alocação emitidos durante o tempo de execução.  Os alocadores no CRT e no SDK do Windows foram anotados no nível de origem para que seus dados de alocação possam ser capturados.  Se você estiver escrevendo seus próprios alocadores, todas as funções que retornam um ponteiro para um heap de memória recém-alocada poderão ser decoradas com [declspec](/cpp/cpp/declspec)(allocator), como visto neste exemplo de myMalloc:  
 >   
 >  `__declspec(allocator) void* myMalloc(size_t size)` 
 

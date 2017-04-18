@@ -2,7 +2,7 @@
 title: Modificar o Visual Studio 2017 | Microsoft Docs
 description: Saiba como modificar o Visual Studio, passo a passo.
 ms.custom: H1Hack27Feb2017
-ms.date: 03/07/2017
+ms.date: 03/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,24 +34,27 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 7ba87c0ba023b76a1f992eb9af660decd0b80ccd
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
+ms.openlocfilehash: 183f5761e0b3159412d1da6bb4f30d716a4c41db
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>Modificar o Visual Studio 2017 adicionando ou removendo cargas de trabalho e componentes
-Não apenas facilitamos a personalização do Visual Studio para que ele corresponda às etapas que você deseja realizar, mas também facilitamos a personalização do Visual Studio. Não é mais necessário procurar no Painel de Controle para fazer isso, basta iniciar o novo instalador do Visual Studio e fazer as alterações desejadas.  
+Não apenas facilitamos a personalização do Visual Studio para que ele corresponda às etapas que você deseja realizar, mas também facilitamos a personalização do Visual Studio. Não é mais necessário procurar no Painel de Controle para fazer isso; basta iniciar o novo Instalador do Visual Studio e fazer as alterações desejadas.  
 
 Veja como.  
 
 ## <a name="modify-workloads"></a>Modificar cargas de trabalho  
  As cargas de trabalho contêm os recursos necessários para a linguagem de programação ou plataforma que você está usando. Use cargas de trabalho para modificar o Visual Studio para que ele dê suporte ao trabalho que você deseja fazer, quando desejar fazê-lo.  
 
-1.  Localize o instalador do Visual Studio em seu computador.  
+1.  Localize o Instalador do Visual Studio no computador.  
 
      Por exemplo, em um computador que executa a Atualização de Aniversário do Windows 10, selecione **Iniciar** e, em seguida, role até a letra **V**, na qual você o verá listado como **Instalador do Visual Studio**.  
 
      ![Instalador do Visual Studio](media/vs2017-locate-the-visual-studio-installer.PNG "Localizar o Instalador do Microsoft Visual Studio")
+
+     >[!NOTE]
+     Em alguns computadores, o Instalador do Visual Studio poderá estar listado sob a letra **“M”** como **Instalador do Microsoft Visual Studio**.
 
 2.  Clique ou toque para iniciar o instalador e selecione **Modificar**.  
 
