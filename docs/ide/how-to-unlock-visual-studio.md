@@ -53,7 +53,7 @@ Você pode avaliar o Visual Studio gratuitamente por até 30 dias. Ao entrar no 
   
 ## <a name="to-unlock-visual-studio-with-a-product-key"></a>Para desbloquear o Visual Studio com uma chave do produto (Product Key)  
   
-1.  Selecione **Arquivo > Configurações de Conta** para abrir a caixa de diálogo Configurações de Conta e clique no link "**	Licenciar com uma Chave do Produto (Product Key)**".  
+1.  Selecione **Arquivo > Configurações de Conta** para abrir a caixa de diálogo Configurações de Conta e clique no link "**Licenciar com uma Chave do Produto (Product Key)**".  
   
 2.  Insira a chave do produto (Product Key) no espaço fornecido.  
   

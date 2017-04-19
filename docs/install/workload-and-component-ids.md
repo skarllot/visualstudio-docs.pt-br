@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 03/07/2017
+ms.date: 04/07/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -33,9 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
-ms.openlocfilehash: 82010bee0c2d80e8b91e9ba2cc5d664d0e91bc12
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 293d694cfff4c375b342d8322483c84fbbeb446c
+ms.openlocfilehash: d6ffa77642cb03bbea777e5caf23913d1ba3386e
+ms.lasthandoff: 04/07/2017
 
 ---
 
@@ -45,6 +45,7 @@ As páginas a seguir listam as IDs de carga de trabalho e de componente de que v
 * [Visual Studio Enterprise 2017](workload-component-id-vs-enterprise.md)
 * [Visual Studio Professional 2017 ](workload-component-id-vs-professional.md)
 * [Visual Studio Community 2017](workload-component-id-vs-community.md)
+* [Team Explorer para Visual Studio 2017](workload-component-id-vs-team-explorer.md)
 * [Ferramentas de Build do Visual Studio 2017](workload-component-id-vs-build-tools.md)
 * [Test Agent do Visual Studio 2017](workload-component-id-vs-test-agent.md)
 * [Test Controller do Visual Studio 2017 ](workload-component-id-vs-test-controller.md)
@@ -54,6 +55,8 @@ As páginas a seguir listam as IDs de carga de trabalho e de componente de que v
 Para obter mais informações sobre como usar essas listas, consulte as páginas [Usar parâmetros de linha de comando para instalar o Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) e [Como migrar projetos de extensibilidade para o Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md).
 
 ## <a name="see-also"></a>Consulte também
-* [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
-* [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)
+* [Guia do administrador do Visual Studio para Visual Studio 2017](visual-studio-administrator-guide.md)
+* [Criar uma instalação offline do Visual Studio 2017](create-an-offline-installation-of-visual-studio.md)
+* [Exemplos de parâmetros de linha de comando para a instalação do Visual Studio 2017](command-line-parameter-examples.md)
+* [Relatar um problema com o Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

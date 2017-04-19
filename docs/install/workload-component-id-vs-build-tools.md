@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 03/07/2017
+ms.date: 04/06/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -32,9 +32,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
-ms.openlocfilehash: 230d04f93e8e857fc0dbaf018e56567259ac6c38
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 5760b4f89bea1a972e75aaec8c45527e07ad28ca
+ms.lasthandoff: 04/06/2017
 
 ---
 
@@ -58,11 +58,11 @@ Para obter mais informações sobre como usar essas IDs, consulte a página [Usa
 
 ### <a name="components-included-by-this-workload"></a>Componentes incluídos por essa carga de trabalho
 
-ID do componente | Nome | Tipo de dependência
---- | --- | ---
-Microsoft.Component.MSBuild | MSBuild | Necessária
-Microsoft.VisualStudio.Component.CoreBuildTools | Principais Ferramentas de Build do Visual Studio | Necessária
-Microsoft.VisualStudio.Component.Roslyn.Compiler | Compiladores Roslyn do C# e Visual Basic | Necessária
+ID do componente | Nome | Versão | Tipo de dependência
+--- | --- | --- | ---
+Microsoft.Component.MSBuild | MSBuild | 15.0.26208.0 | Necessária
+Microsoft.VisualStudio.Component.CoreBuildTools | Principais Ferramentas de Build do Visual Studio | 15.0.26228.0 | Necessária
+Microsoft.VisualStudio.Component.Roslyn.Compiler | Compiladores Roslyn do C# e Visual Basic | 15.0.26208.0 | Necessária
 
 
 ## <a name="visual-c-build-tools"></a>Ferramentas de build do Visual C++
@@ -73,27 +73,27 @@ Microsoft.VisualStudio.Component.Roslyn.Compiler | Compiladores Roslyn do C# e V
 
 ### <a name="components-included-by-this-workload"></a>Componentes incluídos por essa carga de trabalho
 
-ID do componente | Nome | Tipo de dependência
---- | --- | ---
-Microsoft.VisualStudio.Component.VC.CoreBuildTools | Principais recursos das Ferramentas de Build do Visual C++ | Necessária
-Microsoft.VisualStudio.Component.Windows10SDK | Tempo de execução C Universal do Windows | Necessária
-Microsoft.VisualStudio.Component.VC.CMake.Project | Ferramentas do Visual C++ para CMake | Recomendado
-Microsoft.VisualStudio.Component.Windows10SDK.14393 | SDK do Windows 10 (10.0.14393.0) | Recomendado
-Microsoft.Component.VC.Runtime.UCRTSDK | SDK do CRT Universal do Windows | Opcional
-Microsoft.Net.Component.4.6.1.SDK | SDK do .NET Framework 4.6.1 | Opcional
-Microsoft.Net.Component.4.6.1.TargetingPack | Pacote de direcionamento do .NET Framework 4.6.1 | Opcional
-Microsoft.VisualStudio.Component.Static.Analysis.Tools | Ferramentas de análise estática | Opcional
-Microsoft.VisualStudio.Component.VC.ATL | Suporte ao Visual C++ ATL | Opcional
-Microsoft.VisualStudio.Component.VC.ATLMFC | Suporte ao MFC e ATL (x86 e x64) | Opcional
-Microsoft.VisualStudio.Component.VC.ClangC2 | Clang/C2 (experimental) | Opcional
-Microsoft.VisualStudio.Component.VC.CLI.Support | Suporte ao C++/CLI | Opcional
-Microsoft.VisualStudio.Component.VC.CoreIde | Principais recursos do Visual Studio C++ | Opcional
-Microsoft.VisualStudio.Component.VC.Modules.x86.x64 | Módulos da Biblioteca Padrão | Opcional
-Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | Conjunto de ferramentas do VC++ 2017 v141 (x86, x64) | Opcional
-Microsoft.VisualStudio.Component.Windows10SDK.10240 | SDK do Windows 10 (10.0.10240.0) | Opcional
-Microsoft.VisualStudio.Component.Windows10SDK.10586 | SDK do Windows 10 (10.0.10586.0) | Opcional
-Microsoft.VisualStudio.Component.Windows81SDK | SDK do Windows 8.1 | Opcional
-Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | SDK do Windows 8.1 e SDK do UCRT | Opcional
+ID do componente | Nome | Versão | Tipo de dependência
+--- | --- | --- | ---
+Microsoft.VisualStudio.Component.VC.CoreBuildTools | Principais recursos das Ferramentas de Build do Visual C++ | 15.0.26208.0 | Necessária
+Microsoft.VisualStudio.Component.Windows10SDK | Tempo de execução C Universal do Windows | 15.0.26208.0 | Necessária
+Microsoft.VisualStudio.Component.VC.CMake.Project | Ferramentas do Visual C++ para CMake | 15.0.26208.0 | Recomendado
+Microsoft.VisualStudio.Component.Windows10SDK.14393 | SDK do Windows 10 (10.0.14393.0) | 15.0.26208.0 | Recomendado
+Microsoft.Component.VC.Runtime.UCRTSDK | SDK do CRT Universal do Windows | 15.0.26208.0 | Opcional
+Microsoft.Net.Component.4.6.1.SDK | SDK do .NET Framework 4.6.1 | 15.0.26208.0 | Opcional
+Microsoft.Net.Component.4.6.1.TargetingPack | Pacote de direcionamento do .NET Framework 4.6.1 | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.Static.Analysis.Tools | Ferramentas de análise estática | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.VC.ATL | Suporte ao Visual C++ ATL | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.VC.ATLMFC | Suporte ao MFC e ATL (x86 e x64) | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.VC.ClangC2 | Clang/C2 (experimental) | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.VC.CLI.Support | Suporte ao C++/CLI | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.VC.CoreIde | Principais recursos do Visual Studio C++ | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.VC.Modules.x86.x64 | Módulos da Biblioteca Padrão | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | Conjunto de ferramentas do VC++ 2017 v141 (x86, x64) | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.Windows10SDK.10240 | SDK do Windows 10 (10.0.10240.0) | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.Windows10SDK.10586 | SDK do Windows 10 (10.0.10586.0) | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.Windows81SDK | SDK do Windows 8.1 | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | SDK do Windows 8.1 e SDK do UCRT | 15.0.26208.0 | Opcional
 
 
 ## <a name="web-development-build-tools"></a>Ferramentas de build de desenvolvimento para a Web
@@ -104,16 +104,16 @@ Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | SDK do Windows 8.1 e
 
 ### <a name="components-included-by-this-workload"></a>Componentes incluídos por essa carga de trabalho
 
-ID do componente | Nome | Tipo de dependência
---- | --- | ---
-Microsoft.VisualStudio.Web.BuildTools.ComponentGroup | Ferramentas de build de desenvolvimento para a Web | Necessária
+ID do componente | Nome | Versão | Tipo de dependência
+--- | --- | --- | ---
+Microsoft.VisualStudio.Web.BuildTools.ComponentGroup | Ferramentas de build de desenvolvimento para a Web | 15.0.26323.1 | Necessária
 ## <a name="unaffiliated-components"></a>Componentes não afiliados
 
 Estes são os componentes que não são incluídos com nenhuma carga de trabalho, mas que podem ser selecionados como um componente individual.
 
-ID do componente | Nome
---- | ---
-N/D | N/D
+ID do componente | Nome | Versão
+--- | --- | ---
+N/D | N/D | N/D
 
 
 ## <a name="see-also"></a>Consulte também
@@ -121,5 +121,6 @@ N/D | N/D
 * [Carga de trabalho do Visual Studio e IDs do componente](workload-and-component-ids.md)
 * [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
 * [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+  * [Exemplos de parâmetro de linha de comando](command-line-parameter-examples.md)
 * [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)
 

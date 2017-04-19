@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 03/07/2017
+ms.date: 04/06/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -32,9 +32,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
-ms.openlocfilehash: e8bc760033c486ae51c8bf5a664b61ed044d6d0c
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 9c219b6f1076339679fa5a4a7f3dc8cb011ae3f6
+ms.lasthandoff: 04/06/2017
 
 ---
 
@@ -58,21 +58,22 @@ Para obter mais informações sobre como usar essas IDs, consulte a página [Usa
 
 ### <a name="components-included-by-this-workload"></a>Componentes incluídos por essa carga de trabalho
 
-ID do componente | Nome | Tipo de dependência
---- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Principais recursos do Test Controller | Necessária
+ID do componente | Nome | Versão | Tipo de dependência
+--- | --- | --- | ---
+Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Principais recursos do Test Controller | 15.0.26208.0 | Necessária
 ## <a name="unaffiliated-components"></a>Componentes não afiliados
 
 Estes são os componentes que não são incluídos com nenhuma carga de trabalho, mas que podem ser selecionados como um componente individual.
 
-ID do componente | Nome
---- | ---
-N/D | N/D
+ID do componente | Nome | Versão
+--- | --- | ---
+N/D | N/D | N/D
 
 ## <a name="see-also"></a>Consulte também
 
 * [Carga de trabalho do Visual Studio e IDs do componente](workload-and-component-ids.md)
 * [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
 * [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+  * [Exemplos de parâmetro de linha de comando](command-line-parameter-examples.md)
 * [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)
 
