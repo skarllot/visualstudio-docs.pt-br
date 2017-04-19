@@ -1,7 +1,7 @@
 ---
-title: "Refatorando o código nas Ferramentas Python para Visual Studio | Microsoft Docs"
+title: "Refatorando o código do Python no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: b0d84db6a16861fb9554af2a644423f906784748
-ms.openlocfilehash: dc51f41277c91288c0812cb5c22f48d827d741aa
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: ea69604524010ab794a4de0e85aea1e5fd680ac4
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="refactoring-python-code"></a>Refatorando o código do Python
 
-A PTVS (Ferramentas Python para Visual Studio) fornece vários comandos para transformar e limpar o código-fonte automaticamente:
+O Visual Studio fornece vários comandos para transformar e limpar o código-fonte do Python automaticamente:
 
 - [Renomear](#rename) renomeia uma classe, um método ou um nome de variável selecionado
 - [Extrair método](#extract-method) cria um novo método do código selecionado
@@ -72,7 +72,7 @@ A PTVS (Ferramentas Python para Visual Studio) fornece vários comandos para tra
 
 ## <a name="add-import"></a>Adicionar importação
 
-Ao colocar o cursor em um identificador que não tem informações de tipo, a PTVS fornece uma marcação inteligente (o ícone de lâmpada à esquerda do código) cujos comandos adicionarão a instrução `import` ou `from ... import` necessária:
+Ao colocar o cursor em um identificador que não tem informações de tipo, o Visual Studio fornece uma marcação inteligente (o ícone de lâmpada à esquerda do código) cujos comandos adicionarão a instrução `import` ou `from ... import` necessária:
 
 ![Adicionar marcação inteligente de importação](media/code-refactor-add-import-1.png)
 
@@ -80,23 +80,23 @@ Preenchimentos `import` são oferecidos para pacotes e módulos de nível superi
 
 ![Resultado da adição de uma importação](media/code-refactor-add-import-2.png)
 
-A PTVS tenta filtrar os membros que realmente não estão definidos em um módulo, como módulos que são importados para outro, mas que não são filhos do módulo que está fazendo a importação. Por exemplo, muitos módulos usam `import sys` em vez de `from xyz import sys` e, portanto, a PTVS não oferece um preenchimento de importação `sys` de outros módulos, mesmo se os módulos não tiverem um membro `__all__` que exclui `sys`.
+O Visual Studio tenta filtrar os membros que não estão realmente definidos em um módulo, como módulos que são importados para outro, mas que não são filhos do módulo que está realizando a importação. Por exemplo, muitos módulos usam `import sys` em vez de `from xyz import sys`, portanto a conclusão da importação `sys` não será vista de outros módulos, mesmo se eles não tiverem um membro `__all__` que exclui `sys`.
 
-Da mesma forma, a PTVS filtra funções que são importadas de outros módulos ou do namespace interno. Por exemplo, se um módulo importa a função `settrace` do módulo `sys`, em teoria, é possível importá-lo desse módulo. Mas é melhor usar `import settrace from sys` diretamente e, portanto, a PTVS oferece essa instrução especificamente.
+Da mesma forma, o Visual Studio filtra funções importadas de outros módulos ou do namespace interno. Por exemplo, se um módulo importa a função `settrace` do módulo `sys`, em teoria, é possível importá-lo desse módulo. Porém, é melhor usar `import settrace from sys` diretamente, assim, o Visual Studio oferecerá essa instrução especificamente.
 
-Por fim, se algo precisar ser excluído devido às regras acima mas tiver outros valores que serão incluídos (devido ao fato de o nome ter recebido um valor no módulo, por exemplo), a PTVS ainda excluirá a importação. Isso pressupõe que o valor não deverá ser exportado, pois ele é definido em outro módulo e, portanto, a atribuição adicional provavelmente será um valor fictício que também não é exportado.
+Por fim, se algo precisar ser excluído devido às regras acima, mas tiver outros valores que serão incluídos (devido ao fato de o nome ter recebido um valor no módulo, por exemplo), o Visual Studio ainda excluirá a importação. Isso pressupõe que o valor não deverá ser exportado, pois ele é definido em outro módulo e, portanto, a atribuição adicional provavelmente será um valor fictício que também não é exportado.
 
 <a name="remove-imports"</a>
 ## <a name="remove-unused-imports"></a>Remover importações não utilizadas
 
-Ao escrever o código, é fácil acabar com instruções `import` para módulos que não estão sendo usados. Como a PTVS analisa o código, ela pode determinar automaticamente se uma instrução `import` é necessária, observando se o nome importado é usado dentro do escopo abaixo em que ocorre a instrução.
+Ao escrever o código, é fácil acabar com instruções `import` para módulos que não estão sendo usados. Como o Visual Studio analisa o código, ele pode determinar automaticamente se uma instrução `import` é necessária, observando se o nome importado é usado dentro do escopo abaixo, no qual a instrução ocorre.
 
 Clique com o botão direito do mouse em qualquer lugar do editor e selecione **Remover Importações**, que oferece opções para remover de **Todos os Escopos** ou apenas do **Escopo Atual**:
 
 ![Remover o menu de importações](media/code-refactor-remove-imports-1.png)
 
-Em seguida, a PTVS fará as alterações apropriadas no código:
+Em seguida, o Visual Studio fará as alterações apropriadas no código:
 
 ![Efeito da remoção de importações](media/code-refactor-remove-imports-2.png)
 
-Observe que a PTVS não leva em conta o fluxo de controle; o uso de um nome antes de uma instrução `import` será tratado como se o nome fosse, na verdade, usado. A PTVS também ignora todas as importações `from __future__`, importações que são executadas dentro de uma definição de classe, bem como em instruções `from ... import *`.
+Observe que o Visual Studio não leva em conta o fluxo de controle; o uso de um nome antes de uma instrução `import` será tratado como se o nome fosse, na verdade, usado. O Visual Studio também ignora todas as importações `from __future__`, as importações que são executadas dentro de uma definição de classe, bem como de instruções `from ... import *`.

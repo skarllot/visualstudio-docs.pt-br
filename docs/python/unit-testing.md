@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: f1148cb9e4d50241580190f274d6a4c2e3979b80
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
+ms.openlocfilehash: 878bd0baaa0e08a31274645213b222bf6faeb412
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -62,7 +62,7 @@ Por convenção, a PTVS identificará testes como métodos cujos nomes começam 
       unittest.main()
   ```
 
-1. Salve o arquivo, se necessário e, em seguida, abra o Gerenciador de Testes com o comando de menu **Texto > Janelas > Gerenciador de Testes**.
+1. Salve o arquivo se necessário e, em seguida, abra o Gerenciador de Testes com o comando de menu **Teste > Windows > Gerenciador de Testes**.
 
 1. O Gerenciador de Testes pesquisará testes no projeto e os exibirá, conforme mostrado abaixo. Se você clicar duas vezes em um teste, seu arquivo de origem será aberto.
 

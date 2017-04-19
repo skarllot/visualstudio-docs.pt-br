@@ -1,7 +1,7 @@
 ---
-title: "Formatando o código nas Ferramentas Python para Visual Studio | Microsoft Docs"
+title: "Formatando o código do Python no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,22 +29,22 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: c1d7a19438b796c5666daecef33052e43d1f720f
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: b9e1c2b6be671adb99a13e4a0eb4357fbba477b2
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="formatting-python-code"></a>Formatando o código do Python
 
-A formatação de código na PTVS (Ferramentas Python para Visual Studio) versão 2.0 e posterior permite a rápida reformatação de código para corresponder às opções de formatação pré-configuradas.
+O Visual Studio permite reformatar rapidamente o código para que ele corresponda às opções de formatação pré-configuradas.
 
 - Para formatar uma seleção: selecione **Editar > Avançado > Seleção de Formato** ou pressione Ctrl+E, F.
 - Para formatar todo o arquivo: selecione **Editar > Avançado > Formatar Documento** ou pressione Ctrl+E, D.
 
 As opções são definidas por meio de **Ferramentas > Opções > Editor de Texto > Python > Formatação** e suas subguias e, por padrão, são definidas para corresponderem a um superconjunto do [guia de estilo do PEP 8](http://www.python.org/dev/peps/pep-0008/). A guia **Geral** determina quando a formatação é aplicada; as outras três subpáginas são definidas nas próximas seções.
 
-A PTVS também adiciona o comando útil [Preencher Parágrafo de Comentário](#fill-comment-paragraph) ao menu **Editar > Avançado**, conforme descrito abaixo.
+O suporte do Python no Visual Studio também adiciona o comando útil [Preencher Parágrafo de Comentário](#fill-comment-paragraph-command) ao menu **Editar > Avançado**, conforme descrito abaixo.
 
 ## <a name="spacing"></a>Espaçamento
 
@@ -109,7 +109,7 @@ As **instruções** controlam a reescrita automática de várias instruções em
 
 ## <a name="wrapping"></a>Disposição
 
-O **encapsulamento** permite definir a **Largura máxima de comentário** (o padrão é 80), para que se a opção **Encapsular comentários muito largos** for definida, a PTVS reformate os comentários para que eles não excedam essa largura.
+O **encapsulamento** permite definir a **Largura máxima do comentário** (o padrão é 80), para que se a opção **Encapsular comentários que são muito largos** for definida, o Visual Studio reformate os comentários para que eles não excedam essa largura.
 
 ```python
 # Wrapped to 40 columns
