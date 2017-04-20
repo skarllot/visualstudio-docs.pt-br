@@ -2,7 +2,7 @@
 title: Instalar o Visual Studio 2017 | Microsoft Docs
 description: Saiba como instalar o Visual Studio, passo a passo.
 ms.custom: 
-ms.date: 04/03/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -37,9 +37,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
-ms.openlocfilehash: 47688935cec36db174c3a0c424b1705ae47c6118
-ms.lasthandoff: 04/03/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 059dd2068c5aa0d55f94f293d8430a1f401354ba
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Instalar o Visual Studio 2017
@@ -76,7 +76,7 @@ Bem-vindo a uma nova maneira de instalar o Visual Studio! Em nossa versão mais 
 
 1.  Encontre a carga de trabalho desejada na tela **Instalando o Visual Studio**.  
 
-  ![Caixa de diálogo de instalação do Visual Studio 2017](media/vs2017-workloads.PNG "Instalando o Visual Studio 2017")
+  ![Caixa de diálogo de instalação do Visual Studio 2017](media/vs2017-workloads.PNG "Instalar cargas de trabalho do Visual Studio")
 
      Por exemplo, escolha a carga de trabalho de desenvolvimento de área de trabalho do .NET. Ela vem com o editor de núcleo padrão, que inclui o suporte à edição de código básico para mais de 20 linguagens, a capacidade de abrir e editar o código de qualquer pasta sem precisar de um projeto e o controle do código-fonte integrado.  
 
@@ -90,7 +90,7 @@ Bem-vindo a uma nova maneira de instalar o Visual Studio! Em nossa versão mais 
 
 Se você não quiser usar o recurso Cargas de Trabalho útil para personalizar a instalação do Visual Studio, clique na opção **Componentes individuais** do Instalador do Visual Studio, selecione o desejado e siga os prompts.
 
-  ![Visual Studio 2017 — Instalar componentes individuais](media/vs2017-workloads.PNG "Instalar componentes individuais do Visual Studio")
+  ![Visual Studio 2017 — Instalar componentes individuais](media/vs2017-components.PNG "Instalar componentes individuais do Visual Studio")
 
 ## <a name="install-language-packs"></a>Instalar pacotes de idiomas
 
@@ -107,7 +107,10 @@ Por padrão, o programa do instalador tenta encontrar a correspondência do idio
 
 ## <a name="see-also"></a>Consulte também  
 * [Modificar o Visual Studio 2017](modify-visual-studio.md)
+* [Atualizar o Visual Studio](update-visual-studio.md)
 * [Desinstalar o Visual Studio 2017](uninstall-visual-studio.md)
 * [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
+* [Criar um instalador offline para o Visual Studio 2017](create-an-offline-installation-of-visual-studio.md)
+* [Usar parâmetros de linha de comando para instalar o Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) 
 * [How to Report a Problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md) (Como relatar um problema com o Visual Studio 2017)
 
