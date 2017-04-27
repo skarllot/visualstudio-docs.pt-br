@@ -1,7 +1,7 @@
 ---
 title: "Usar parâmetros de linha de comando para instalar o Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -32,18 +32,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 2a6555eb9c0a88b1533428cf2aa932b3fc4960ec
-ms.openlocfilehash: e8ddcebccc5a8a949c75a33de6732d42134e6445
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 09c6971e21e48d250e3a9869860459fd8cbbb50f
+ms.lasthandoff: 04/10/2017
 
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>Usar parâmetros de linha de comando para instalar o Visual Studio 2017
-Ao instalar o Visual Studio 2017 por meio de um prompt de comando, é possível usar uma variedade de parâmetros de linha de comando para controlar ou personalizar a instalação. Na linha de comando, é possível:
-- iniciar a instalação com certas opções pré-selecionadas, 
-- automatizar o processo de instalação
-- criar um cache (layout) dos arquivos de instalação para uso posterior. 
+Ao instalar o Visual Studio 2017 por meio de um prompt de comando, é possível usar uma variedade de parâmetros de linha de comando para controlar ou personalizar a instalação. Na linha de comando, você pode fazer o seguinte:
+- Iniciar a instalação com certas opções pré-selecionadas.
+- Automatizar o processo de instalação.
+- Criar um cache (layout) dos arquivos de instalação para uso posterior.
 
-As opções de linha de comando são usadas em conjunto com o bootstrapper de instalação, que é o arquivo pequeno (aproximadamente 1MB) que inicia o processo de download. O bootstrapper é o primeiro executável iniciado quando ao baixar do site do Visual Studio. Você pode obter um link direto para o bootstrapper de versão mais recente para a edição do produto que você está instalando nesses links:
+As opções de linha de comando são usadas em conjunto com o bootstrapper de instalação, que é o arquivo pequeno (aproximadamente 1MB) que inicia o processo de download. O bootstrapper é o primeiro executável iniciado quando você baixa do site do Visual Studio. Você pode obter um link direto para o bootstrapper de versão mais recente para a edição do produto que você está instalando nesses links:
 
 * [Visual Studio 2017 Enterprise](https://aka.ms/vs/15/release/vs_enterprise.exe)
 * [Visual Studio 2017 Professional](https://aka.ms/vs/15/release/vs_professional.exe)
@@ -54,11 +54,12 @@ As opções de linha de comando são usadas em conjunto com o bootstrapper de in
 
 >  Syntax: `vs_enterprise.exe [command] <options>...`
 
-(substitua `vs_enterprise.exe` conforme apropriado para a edição do produto que está instalando)
+(Substitua `vs_enterprise.exe` conforme apropriado para a edição do produto que você está instalando. Para obter exemplos, consulte a página [Exemplos de parâmetros de linha de comando](command-line-parameter-examples.md).)
+
 
 | **Comando** | **Descrição** |
-| ----------------------- | --------------- | 
-| (blank) | Instala o produto. | 
+| ----------------------- | --------------- |
+| (blank) | Instala o produto. |
 | ```modify``` | Modifica um produto instalado. |
 | ```update``` | Atualiza um produto instalado. |
 | ```repair``` | Repara um produto instalado. |
@@ -108,7 +109,6 @@ Para obter uma lista de IDs de componente e de carga de trabalho classificadas p
 | de-DE | Alemão |
 | pt-BR | Inglês |
 | es-ES | Espanhol |
-| cs-CZ | Tcheco |
 | fr-FR | Francês |
 | it-IT | Italiano |
 | ja-JP | Japonês |
@@ -123,17 +123,19 @@ Para obter uma lista de IDs de componente e de carga de trabalho classificadas p
 
 ## <a name="error-codes"></a>Códigos de erro
 Dependendo do resultado da operação, a variável de ambiente `%ERRORLEVEL%` será definida como um dos valores a seguir:
+
 | **Value** | **Result** |
 | --------- | ---------- |
 | 0 | A operação foi concluída com êxito |
 | 3010 | A operação foi concluída com êxito, mas a instalação requer a reinicialização antes de ser usada |
 | Outros | Condição de falha ocorreu. Verifique os logs para obter mais informações |
 
-Cada operação gerará vários arquivos de log no diretório `%TEMP%` que indicam o progresso da instalação. Classifique a pasta por data e procure arquivos começando com `dd_bootstrapper`, `dd_client` e `dd_setup` para bootstrapper, aplicativo instalador e mecanismo de instalação, respectivamente. 
+Cada operação gerará vários arquivos de log no diretório `%TEMP%` que indicam o progresso da instalação. Classifique a pasta por data e procure arquivos começando com `dd_bootstrapper`, `dd_client` e `dd_setup` para bootstrapper, aplicativo instalador e mecanismo de instalação, respectivamente.
 
 ## <a name="see-also"></a>Consulte também
 
- * [Instalar o Visual Studio](install-visual-studio.md)
+ * [Instalar o Visual Studio 2017](install-visual-studio.md)
  * [Criar uma instalação offline do Visual Studio 2017](create-an-offline-installation-of-visual-studio.md)
- * [Relatar um problema com o Visual Studio](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+ * [Exemplos de parâmetros de linha de comando para a instalação do Visual Studio 2017](command-line-parameter-examples.md)
+ * [Relatar um problema com o Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

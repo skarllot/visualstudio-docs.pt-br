@@ -29,13 +29,42 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
-ms.openlocfilehash: 8c13675dbd06111bb0eced77f9343c80959afba1
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 2af148cb8367ea3a584ac8e028c8167e4ad6123b
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>Log de alterações (Ferramentas do Visual Studio para Unity)
 Log de alterações de Ferramentas do Visual Studio para Unity.  
+
+## <a name="3100"></a>3.1.0.0
+ Lançado em 07/04/2017
+
+### <a name="new-features"></a>Novos recursos  
+  
+-   **Depurador:**  
+
+    -   Suporte adicionado para o novo tempo de execução do Unity (com compatibilidade com .NET 4.6/C# 6).
+        
+-   **Geração do Projeto:**  
+
+    -   Suporte adicionado para o perfil do .NET 4.6.
+    
+    -   Suporte adicionado para arquivos mcs.rsp.
+    
+    -   Sempre habilite a opção de compilação não segura quando o Unity 5.6 for usado.
+    
+    -   Suporte adicionado para a geração de projeto "Player" ao usar a plataforma da Windows Store e o back-end il2cpp.
+   
+### <a name="bug-fixes"></a>Correções de bug  
+  
+-   **Editor de Códigos:**  
+
+    -   Posição fixa do cursor após a inserção do método com preenchimento automático.
+  
+-   **Geração do Projeto:**  
+  
+    -   Versão do assembly removido após o processamento.
 
 ## <a name="3001"></a>3.0.0.1
  Lançado em 07/03/2017

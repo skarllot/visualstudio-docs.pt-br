@@ -1,7 +1,7 @@
 ---
 title: "Modelo de Projeto do Serviço de Nuvem do Azure para o Python | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 10ea76d474d96ba4b5aa95584fd1893abe05d991
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 5dd1c40c925327c9494e3a334cdf348692a4981d
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="azure-cloud-service-projects-for-python"></a>Projetos do Serviço de Nuvem do Azure para o Python
 
-A PTVS (Ferramentas Python para Visual Studio) fornece modelos para ajudá-lo a começar a criar Serviços de Nuvem do Azure usando o Python.
+O Visual Studio fornece modelos para ajudá-lo a começar a criar Serviços de Nuvem do Azure usando o Python.
 
 Um [Serviço de Nuvem](http://go.microsoft.com/fwlink/?LinkId=306052) consiste em várias *funções de trabalho* e *funções web*, com cada uma executando uma tarefa separada conceitualmente, mas que podem ser replicadas separadamente em máquinas virtuais, conforme necessário para colocação em escala. As funções web fornecem hospedagem para aplicativos Web de front-end. Quanto ao Python, qualquer estrutura Web que dá suporte ao WSGI pode ser usada para escrever um aplicativo desse tipo (com suporte no [Modelo de Projeto Web](template-web.md)). As funções de trabalho destinam-se a processos de execução longa que não interagem diretamente com os usuários. Geralmente, elas fazem uso de bibliotecas de [dados](http://go.microsoft.com/fwlink/?LinkId=401571) e de [serviço de aplicativo](http://go.microsoft.com/fwlink/?LinkId=401572), que podem ser instaladas com `pip install`&nbsp;[`azure`](http://pypi.org/project/azure).
 
@@ -58,7 +58,7 @@ Este tópico contém detalhes sobre o modelo de projeto e outros tipos de suport
 
 1. Depois de adicionar uma nova função ao projeto, você verá algumas instruções de configuração. Em geral, elas são desnecessárias, mas podem ser úteis para personalização futura dos projetos. Observe que, ao adicionar várias funções ao mesmo tempo, somente as instruções para a última função permanecerão abertas. No entanto, é possível encontrar as instruções e dicas de solução de problemas para outras funções em seus respectivos arquivos `readme.mht`, localizados na raiz da função ou na pasta `bin`.
 
-1. Uma pasta `bin` do projeto também contém um ou dois scripts do PowerShell que são usados para configurar a máquina virtual remota, incluindo a instalação do Python, qualquer arquivo [requirements.txt](#requirementstxt) no projeto e a configuração do IIS, se necessário. É possível editar esses arquivos conforme desejado para sua implantação, embora as opções mais comuns possam ser gerenciadas de outras maneiras (consulte [Configurando a implantação de função](#configuring-role-deployment) abaixo). Não sugerimos a remoção desses arquivos, pois um script de configuração herdado será usado no lugar deles, caso eles não estejam disponíveis.
+1. Uma pasta `bin` do projeto também contém um ou dois scripts do PowerShell que são usados para configurar a máquina virtual remota, incluindo a instalação do Python, qualquer arquivo [requirements.txt](#dependencies) no projeto e a configuração do IIS, se necessário. É possível editar esses arquivos conforme desejado para sua implantação, embora as opções mais comuns possam ser gerenciadas de outras maneiras (consulte [Configurando a implantação de função](#configuring-role-deployment) abaixo). Não sugerimos a remoção desses arquivos, pois um script de configuração herdado será usado no lugar deles, caso eles não estejam disponíveis.
 
     ![Arquivos de suporte à função de trabalho](media/template-azure-cloud-service-worker-role-support-files.png)
 

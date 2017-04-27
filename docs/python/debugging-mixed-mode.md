@@ -1,7 +1,7 @@
 ---
-title: "Depuração de modo misto nas Ferramentas Python para Visual Studio | Microsoft Docs"
+title: "Depuração de modo misto do Python no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: ddbac5b8ed52e6ed7afae7e7b04dc2fa15f7a0c2
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: bdc621831893f907beba7ec5ad503fe4d96c0042
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -70,7 +70,7 @@ Para obter uma introdução à compilação, ao teste e à depuração de módul
 
 - [Pilha de chamadas combinada](#combined-call-stack)
 - [Execução em etapas entre o código do Python e o código nativo](#stepping-between-python-and-native-code)
-- [Exibição de valores PyObject no código nativo](#pyobject-values-in-native-code)
+- [Exibição de valores PyObject no código nativo](#pyobject-values-view-in-native-code)
 - [Exibição de valores Nativos no código do Python](#native-values-view-in-python-code)
 
 ### <a name="combined-call-stack"></a>Pilha de chamadas combinada
@@ -153,7 +153,7 @@ O depurador de modo misto é diferente do [depurador padrão do Python](debuggin
 - Recursos sem suporte: pontos de interrupção condicionais, janela Interativa de Depuração e depuração remota de plataforma cruzada.
 - Janela imediata: disponível, mas com um subconjunto limitado de sua funcionalidade, incluindo todas as limitações listadas aqui.
 - Versões do Python com suporte: somente CPython 2.7 e 3.3+.
-- Shell do Visual Studio: ao usar a PTVS com o Shell do Visual Studio (por exemplo, se ele foi instalado usando o instalador integrado), o Visual Studio não poderá abrir projetos do C++ e a experiência de edição em arquivos do C++ será apenas a de um editor de texto básico. No entanto, há suporte completo para a depuração do C/C++ e a depuração de modo misto no Shell com código-fonte, execução em etapas em código nativo e avaliação de expressão do C++ nas janelas do depurador.
+- Shell do Visual Studio: ao usar o Python com o Shell do Visual Studio (por exemplo, se ele tiver sido instalado por meio do instalador integrado), o Visual Studio não poderá abrir projetos do C++ e a experiência de edição para arquivos do C++ será apenas a de um editor de texto básico. No entanto, há suporte completo para a depuração do C/C++ e a depuração de modo misto no Shell com código-fonte, execução em etapas em código nativo e avaliação de expressão do C++ nas janelas do depurador.
 - Exibindo e expandindo objetos: ao exibir objetos do Python nas janelas Locais e Inspeção da ferramenta do depurador, o depurador de modo misto mostra apenas a estrutura dos objetos. Ele não avalia propriedades automaticamente nem mostra atributos computados. Para coleções, ele mostra apenas os elementos de tipos de coleção interna (`tuple`, `list`, `dict`, `set`). Os tipos de coleção personalizada não são visualizados como coleções, a menos que sejam herdados de algum tipo de coleção interna.
 - Avaliação de expressão: consulte abaixo.
 

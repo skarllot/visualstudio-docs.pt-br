@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
-ms.openlocfilehash: 730207e42f42c0cd5d1b78dc558e58267343d186
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 002c77b27f7283ecd28d7ec5470b0ed44b2bb7a4
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -45,7 +45,7 @@ Os módulos escritos em C++ (ou em C) são geralmente usados para estender as fu
 
 Este tópico explica como criar um módulo de extensão do C++ para o CPython que calcula uma tangente hiperbólica e faz uma chamada a ela de um código do Python. Para demonstrar a diferença de desempenho, você criará e testará a rotina primeiro no Python.
 
-A abordagem usada aqui é a mesma usada nas extensões padrão do CPython, conforme descrito na [documentação do Python](https://docs.python.org/e/c-api/). Uma comparação entre esse e outros meios é descrita em [abordagens alternativas](#alternative-approaches) ao final deste tópico.
+A abordagem usada aqui é a mesma usada nas extensões padrão do CPython, conforme descrito na [documentação do Python](https://docs.python.org/3/c-api/). Uma comparação entre esse e outros meios é descrita em [abordagens alternativas](#alternative-approaches) ao final deste tópico.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -231,7 +231,7 @@ Em segundo lugar, é possível instalar o módulo no ambiente global do Python, 
 
 1. Se estiver usando o Visual Studio 2017, execute o instalador do Visual Studio, selecione **Modificar** e selecione **Componentes Individuais > Compiladores, ferramentas de build e tempos de execução > conjunto de ferramentas do Visual C++ 2015.3 v140**. Isso ocorre porque o Python (para o Windows) é o próprio build com o Visual Studio 2015 (versão 14.0) e espera que essas ferramentas estejam disponíveis durante o build de uma extensão por meio do método descrito aqui.
 
-1. Crie um arquivo chamado `setup.py` no projeto do C++ clicando com o botão direito do mouse no projeto, selecionando **Adicionar > Novos Itens...*, pesquisando “Python”, selecionando**arquivo do Python**, nomeando-o setup.py e selecionando **OK**. Quando o arquivo for exibido no editor, cole o seguinte código nele:
+1. Crie um arquivo chamado `setup.py` no projeto do C++ clicando com o botão direito do mouse no projeto, selecionando *Adicionar > Novos Itens...*, pesquisando “Python”, selecionando **arquivo do Python**, nomeando-o setup.py e selecionando **OK**. Quando o arquivo for exibido no editor, cole o seguinte código nele:
 
     ```python
     from distutils.core import setup, Extension, DEBUG
@@ -284,7 +284,7 @@ Há outros meios para criar extensões do Python, conforme descrito na tabela ab
 
 | Abordagem | Ano | Usuários representantes | Vantagens | Desvantagens |
 | --- | --- | --- | --- | --- |
-| Módulos de extensão do C/C++ para o CPython | 1991 | Biblioteca Padrão | [Tutoriais e documentação abrangente](https://docs.python.org/e/c-api/). Controle total. | Compilação, portabilidade, gerenciamento de referências. Profundo conhecimento sobre o C. |
+| Módulos de extensão do C/C++ para o CPython | 1991 | Biblioteca Padrão | [Tutoriais e documentação abrangente](https://docs.python.org/3/c-api/). Controle total. | Compilação, portabilidade, gerenciamento de referências. Profundo conhecimento sobre o C. |
 | SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | Gere associações para várias linguagens de uma só vez. | Sobrecarga excessiva se o Python for o único destino. |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | Sem compilação, ampla disponibilidade. | O acesso e a mutação de estruturas do C são complicados e sujeitos a erros. |
 | Cython | 2007 | [gevent](http://www.gevent.org/), [kivy](https://kivy.org/) | Semelhante ao Python. Altamente maduro. Alto desempenho. | Compilação, nova sintaxe e cadeia de ferramentas. |

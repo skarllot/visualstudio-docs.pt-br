@@ -1,7 +1,7 @@
 ---
-title: Usando o PyLint nas Ferramentas Python para Visual Studio | Microsoft Docs
+title: Usando o PyLint no Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 23650ba24f127b93dc52a3a93aa1126d67e5cf3e
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: c8bfaf9f20e7fecb3633ca101170b0f3e686aa53
+ms.lasthandoff: 04/10/2017
 
 ---
 

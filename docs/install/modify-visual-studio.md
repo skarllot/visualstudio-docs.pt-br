@@ -2,7 +2,7 @@
 title: Modificar o Visual Studio 2017 | Microsoft Docs
 description: Saiba como modificar o Visual Studio, passo a passo.
 ms.custom: H1Hack27Feb2017
-ms.date: 03/27/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
-ms.openlocfilehash: 183f5761e0b3159412d1da6bb4f30d716a4c41db
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: dc52353b476d38b7c069aa4acd95ceaa260717c4
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>Modificar o Visual Studio 2017 adicionando ou removendo cargas de trabalho e componentes
@@ -72,9 +72,12 @@ Veja como.
 
 Se você não quiser usar o recurso Cargas de Trabalho útil para personalizar a instalação do Visual Studio, escolha a opção **Componentes Individuais** do Instalador do Visual Studio, selecione o desejado e siga os prompts.  
 
+## <a name="get-support"></a>Obter suporte
+Às vezes, as coisas podem dar errado. Caso a instalação do Visual Studio falhe, consulte o artigo do KB [Solucionando falhas de instalação e atualização do Visual Studio 2017](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) para obter dicas de solução de problemas.
 
 ## <a name="see-also"></a>Consulte também  
 * [Instalar o Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=833223)
+* [Atualizar o Visual Studio](update-visual-studio.md)
 * [Desinstalar o Visual Studio 2017](uninstall-visual-studio.md)
 * [How to Report a Problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md) (Como relatar um problema com o Visual Studio 2017)
 
