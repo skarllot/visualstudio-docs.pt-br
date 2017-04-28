@@ -8,9 +8,6 @@ ms.technology:
 - vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.toolsoptionspages.nuget_package_manager.general
-- vs.toolsoptionspages.nuget_package_manager.package_sources
 ms.assetid: 2175581e-83cb-444c-bb52-cc1fca8ea196
 caps.latest.revision: 21
 author: kempb
@@ -33,6 +30,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 3f4740d442a7ef24803d6360cdcc480d9d6fca84
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>Adicionando referências usando o NuGet versus um SDK de Extensão
@@ -86,8 +84,3 @@ ms.openlocfilehash: 3f4740d442a7ef24803d6360cdcc480d9d6fca84
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciando referências em um projeto](../ide/managing-references-in-a-project.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
