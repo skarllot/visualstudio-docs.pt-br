@@ -60,8 +60,3 @@
 ### [Modelos padrão XSLT](xslt-default-templates.md)
 ### [Interface do usuário do depurador (XSLT)](debugger-user-interface-xslt.md)
 ### [Criador de Perfil XSLT](xslt-profiler.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

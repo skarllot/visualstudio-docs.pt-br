@@ -129,8 +129,3 @@
 ##### [Caixa de diálogo Selecionar Conjunto de Regras (herdado)](select-rule-set-dialog-box-legacy.md)
 ##### [Caixa de diálogo de Configuração de Tema (herdado)](theme-configuration-dialog-box-legacy.md)
 ##### [Caixa de diálogo Temas, Designer de Fluxo de Trabalho, Opções (herdado)](themes-workflow-designer-options-dialog-box-legacy.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

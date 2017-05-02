@@ -104,8 +104,3 @@
 #### [Elemento <Strings> (bootstrapper)](strings-element-bootstrapper.md)
 #### [Elemento <Schedules> (bootstrapper)](schedules-element-bootstrapper.md)
 ## [InstallShield Limited Edition](installshield-limited-edition.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

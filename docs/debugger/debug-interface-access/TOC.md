@@ -550,8 +550,3 @@
 ### [Constantes (SDK de Acesso à Interface de Depuração)](constants-debug-interface-access-sdk.md)
 ## [Exemplo de Dia2dump](dia2dump-sample.md)
 ## [Arquivo de origem Dia2dump.cpp](dia2dump-cpp-source-file.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
