@@ -3,10 +3,11 @@ layout: HubPage
 hide_bc: true
 title: "Documentação do Visual Studio"
 description: "Saiba como usar o Visual Studio 2017 para desenvolver aplicativos, serviços e ferramentas na linguagem de sua escolha para suas plataformas e dispositivos."
-translationtype: Human Translation
-ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
-ms.openlocfilehash: 5a8448dff45473fa40892fb07604759a9d015021
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2831d252fbc9601e62c372ac3df7704e1dc65f2a
+ms.openlocfilehash: a8f12e3418da5ec6fe778d3a7eaed610c120a859
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 <div id="main" class="v2">
@@ -201,7 +202,7 @@ ms.lasthandoff: 03/31/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Python (Visualização)</h3>
+                                                    <h3>Python</h3>
                                                     <p>Desenvolvimento interativo para aplicativos Python, usando estruturas familiares, incluindo Django e Flask.</p>
                                                 </div>
                                             </div>
@@ -247,6 +248,25 @@ ms.lasthandoff: 03/31/2017
                                     </div>
                                 </a>
                             </li>                            
+                            <li>        
+                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">        
+                                  <div class="cardSize">        
+                                    <div class="cardPadding">        
+                                      <div class="card">        
+                                        <div class="cardImageOuter">        
+                                          <div class="cardImage bgdAccent1 cardScaleImage">        
+                                            <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />        
+                                        </div>        
+                                        </div>        
+                                          <div class="cardText">        
+                                            <h3>Ciência de dados e aplicativos analíticos</h3>        
+                                            <p>Linguagens e ferramentas para criar aplicativos de ciência de dados, incluindo Python, R e F#.</p>        
+                                        </div>        
+                                      </div>        
+                                    </div>        
+                                  </div>        
+                                </a>        
+                            </li>
                             <li>
                                 <a href="https://go.microsoft.com/fwlink/?linkid=833075">
                                     <div class="cardSize">
@@ -287,7 +307,7 @@ ms.lasthandoff: 03/31/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Desenvolvimento móvel com o .NET</h3>
+                                                    <h3>Desenvolvimento móvel para .NET</h3>
                                                     <p>Crie aplicativos multiplataforma para iOS, Android ou Windows usando o Xamarin.</p>
                                                 </div>
                                             </div>
@@ -589,7 +609,7 @@ ms.lasthandoff: 03/31/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Dados</h3>
-                                                    <p>Crie aplicativos que se conectam aos dados em praticamente qualquer produto de banco de dados ou serviço, em qualquer formato, em qualquer lugar &#8211;em um computador local, em uma rede local ou em uma nuvem pública, privada ou híbrida.</p>
+                                                    <p>Crie aplicativos de dados que se conectem a qualquer banco de dados ou serviço e em praticamente qualquer lugar, no local ou na nuvem. </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -731,7 +751,7 @@ ms.lasthandoff: 03/31/2017
                                             </div>
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833068">
-                                                    <h3>Python (Visualização)</h3>
+                                                    <h3>Python</h3>
                                                     <p>Uma linguagem de programação de alto nível orientada a objeto geralmente usada para o desenvolvimento rápido de aplicativos.</p>
                                                 </a>
                                             </div>

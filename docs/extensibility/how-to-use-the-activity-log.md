@@ -1,5 +1,5 @@
 ---
-title: 'Como: usar o Log de atividades | Documentos do Microsoft'
+title: 'Como: usar o Log de atividades | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,20 +30,20 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 19ef7828f480efff9d210599d86a723e1f3b209f
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: c9df048a49580f3526b48e29041ef3758722ed27
+ms.openlocfilehash: dc821f22a04432989a2edb68c483d298ffcf0eb7
+ms.lasthandoff: 05/03/2017
 
 ---
 # <a name="how-to-use-the-activity-log"></a>Como: usar o Log de atividades
-Os VSPackages pode gravar mensagens no log de atividade. Esse recurso é especialmente útil para depuração VSPackages em ambientes de varejo.  
+VSPackages pode gravar mensagens no log de atividade. Esse recurso é especialmente útil para depuração VSPackages em ambientes de varejo.  
   
 > [!TIP]
->  O log de atividades é sempre ativado. O Visual Studio mantém um buffer progressivo de entradas de última cem, bem como as entradas de dez primeiros, que tem informações de configuração geral.  
+>  O log de atividades é sempre ativado. O Visual Studio manterá um buffer sem interrupção de entradas de última cem, bem como as entradas de dez primeiros, que tem informações de configuração geral.  
   
-### <a name="to-write-an-entry-to-the-activity-log"></a>Para gravar uma entrada no log de atividade  
+### <a name="to-write-an-entry-to-the-activity-log"></a>Para gravar uma entrada para o log de atividades  
   
-1.  Inserir esse código no <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>método ou em qualquer outro método, exceto o construtor de VSPackage:</xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>  
+1.  Inserir esse código no método < xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A > ou em qualquer outro método, exceto o VSPackage construtor:  
   
     ```c#  
     IVsActivityLog log = GetService(typeof(SVsActivityLog)) as IVsActivityLog;  
@@ -55,13 +55,13 @@ Os VSPackages pode gravar mensagens no log de atividade. Esse recurso é especia
         "Called for: {0}", this.ToString()));  
     ```  
   
-     Esse código obtém o <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog>de serviço e o converte para um <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>interface.</xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> </xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A>grava uma entrada informativa no log de atividade usando o contexto cultural atual.</xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A>  
+     Esse código obtém o serviço de < xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog > e converte-o em uma interface de < xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog >. < xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A > grava uma entrada informativa no log de atividade usando o contexto cultural atual.  
   
-2.  Quando o VSPackage é carregado (normalmente, quando um comando é invocado, ou uma janela é aberta), o texto é gravado no log de atividade.  
+2.  Quando o VSPackage é carregado (normalmente, quando um comando é invocado, ou uma janela é aberta), o texto é escrito para o log de atividades.  
   
 ### <a name="to-examine-the-activity-log"></a>Para examinar o log de atividades  
   
-1.  Localizar o log de atividades na subpasta para dados do Visual Studio: *% AppData %*\Microsoft\VisualStudio\14.0\ActivityLog.XML...  
+1.  Localizar o log de atividades na subpasta para dados do Visual Studio: *% AppData %*\Microsoft\VisualStudio\15.0\ActivityLog.XML...  
   
 2.  Abra o log de atividades com qualquer editor de texto. Aqui está uma entrada típica:  
   
@@ -70,12 +70,13 @@ Os VSPackages pode gravar mensagens no log de atividade. Esse recurso é especia
     ```  
   
 ## <a name="robust-programming"></a>Programação robusta  
- Como o log de atividades é um serviço, o log de atividade não está disponível no construtor de VSPackage.  
+ Como o log de atividades é um serviço, o log de atividades não está disponível no construtor VSPackage.  
   
  Você deve obter o log de atividades antes de gravar. Não armazenar em cache ou salvar o log de atividades para uso futuro.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog></xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>   
- <xref:Microsoft.VisualStudio.Shell.Interop.__ACTIVITYLOG_ENTRYTYPE></xref:Microsoft.VisualStudio.Shell.Interop.__ACTIVITYLOG_ENTRYTYPE>   
- [Os VSPackages de solução de problemas](../extensibility/troubleshooting-vspackages.md)   
+ < xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog >   
+ < xref:Microsoft.VisualStudio.Shell.Interop.__ACTIVITYLOG_ENTRYTYPE >   
+ [Solucionando problemas de VSPackages](../extensibility/troubleshooting-vspackages.md)   
  [VSPackages](../extensibility/internals/vspackages.md)
+

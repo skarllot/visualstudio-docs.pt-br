@@ -103,7 +103,7 @@ O depurador do Visual Studio ajuda você a observar o comportamento em tempo de 
         </a>
     </li>
     <li>
-        <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/get-started-debugging-multithreaded-applications">
+        <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/get-started-debugging-multithreaded-apps">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

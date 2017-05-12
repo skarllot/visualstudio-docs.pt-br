@@ -36,18 +36,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
 ms.openlocfilehash: 059dd2068c5aa0d55f94f293d8430a1f401354ba
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Instalar o Visual Studio 2017
-Bem-vindo a uma nova maneira de instalar o Visual Studio! Em nossa versão mais recente, tornamos mais fácil para você selecionar e instalar apenas os recursos necessários — e reduzimos os requisitos mínimos do Visual Studio para que ele seja instalado mais rapidamente e com menos impacto no sistema do que nunca.  
+Bem-vindo a uma nova maneira de instalar o Visual Studio! Em nossa versão mais recente, tornamos mais fácil para você selecionar e instalar apenas os recursos necessários — e reduzimos os requisitos mínimos do Visual Studio para que ele seja instalado mais rapidamente e com menos impacto no sistema do que nunca.
 
  Quer saber mais sobre quais são as outras novidades? Consulte nossas [notas de versão](https://www.visualstudio.com/news/releasenotes/vs15-relnotes). E para obter informações mais detalhadas sobre como reformulamos a experiência de instalação, consulte nossas postagens no blog, “[Faster and leaner Visual Studio installer](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer/)” (Instalador do Visual Studio mais rápido e enxuto) e “[Anatomy of a low-impact Visual Studio installation](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install/)” (Anatomia de uma instalação do Visual Studio de baixo impacto).  
 
- Pronto para instalar? Guiaremos você no processo, passo a passo. Vamos começar.  
+ Pronto para instalar? Guiaremos você no processo, passo a passo. Vamos começar.
 
 ## <a name="install-the-installer"></a>Instalar o instalador  
  Ao baixar o Visual Studio 2017, você receberá um arquivo bootstrapper que, por sua vez, instala nosso novo instalador leve. Esse novo instalador inclui tudo o que você precisa para personalizar a instalação.  
