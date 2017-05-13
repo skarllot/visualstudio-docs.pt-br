@@ -30,9 +30,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 0f4bf721934e8d5ac2c3e54b1062151e0feff61c
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -151,13 +152,13 @@ Este passo a passo mostra como criar uma solução de shell isolado, personaliza
     [assembly: AssemblyProduct("Fabrikam Music Editor")]  
     [assembly: AssemblyCopyright("Copyright © Fabrikam 2015")] [assembly: AssemblyCompany("Fabrikam")]  
     [assembly: AssemblyProduct("Fabrikam Music Editor ")]  
-    [assembly: AssemblyCopyright("Copyright © Fabrikam 2015”)]  
+    [assembly: AssemblyCopyright("Copyright © Fabrikam 2015")]  
     ```  
   
 3.  Para adicionar uma descrição do produto, alterar o `AssemblyDescription` valor **a descrição do editor de música da Fabrikam.**:  
   
     ```  
-    [assembly: AssemblyDescription("The description of Fabrikam Music editor.”)]  
+    [assembly: AssemblyDescription("The description of Fabrikam Music editor.")]  
     ```  
   
 4.  Iniciar a depuração e no aplicativo de shell isolado, abra o **ajuda / sobre** caixa. Você deve ver as cadeias de caracteres alteradas. O título da Ajuda/sobre caixa é o mesmo que o `AssemblyTitle` valor AssemblyInfo.cs.  

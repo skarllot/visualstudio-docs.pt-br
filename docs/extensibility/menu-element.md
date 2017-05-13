@@ -29,9 +29,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 580ef2814b9cf49658613e8f6f0939d135706124
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -41,7 +42,7 @@ Define um item de menu. Esses são os seis tipos de menus: contexto, Menu, MenuC
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-<Menu guid=”guidMyCommandSet” id=”MyCommand” priority=”0x100” type=”button”>  
+<Menu guid="guidMyCommandSet" id="MyCommand" priority="0x100" type="button">  
   <Parent>... </Parent>  
   <CommandFlag>... </CommandFlag>  
   <Strings>... </Strings>  

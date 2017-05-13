@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: bb766cf0e97cde77f1e1f553a17017a80060c374
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -47,7 +48,7 @@ O *processo de transformação do modelo de texto* usa um *modelo de texto* arqu
 ## <a name="custom-directives"></a>Diretivas personalizadas  
  Uma diretiva personalizada tem esta aparência:  
   
- `<#@ MyDirective Processor="MyDirectiveProcessor" parameter1="value1" … #>`  
+ `<#@ MyDirective Processor="MyDirectiveProcessor" parameter1="value1" ... #>`  
   
  Você pode usar um processador de diretriz personalizado para acessar dados externos ou recursos de um modelo de texto.  
   

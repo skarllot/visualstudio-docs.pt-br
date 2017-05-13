@@ -29,9 +29,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 751b440d51756a98844c0fdd51995dd51a0576ad
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -62,7 +63,7 @@ Você pode criar um átomo (RSS) para um local de intranet que contém as extens
 - <entry>  
   <id>SelectionHighlight..a14874d2-8199-4a60-af8a-11d6447813aa</id>   
   <title type="text">Highlight all occurrences of selected word</title>   
-  <summary type="text">This extends the editor to highlight ….</summary>   
+  <summary type="text">This extends the editor to highlight ....</summary>   
   <published>2011-04-14T14:24:51-07:00</published>   
   <updated>2011-04-14T14:24:22-07:00</updated>   
 - <author>  
@@ -82,7 +83,7 @@ Você pode criar um átomo (RSS) para um local de intranet que contém as extens
   </entry>  
 - <entry>  
   <id>Template_Wizard_239.Microsoft.3b38a7e3-5cbc-4389-a92a-d82tyc2ed592</id>   
-  …  
+  ...  
   </entry>  
   </feed>  
   

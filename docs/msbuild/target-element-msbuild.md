@@ -38,9 +38,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: 7d00a2954b3c354aa5325e72574e95ebce0a8a2b
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -64,8 +65,8 @@ Contém um conjunto de tarefas para o [!INCLUDE[vstecmsbuild](../extensibility/i
         Condition="'String A' == 'String B'">  
         Label="Label">  
     <Task>... </Task>  
-    <PropertyGroup>… </PropertyGroup>  
-    <ItemGroup>… </ItemGroup>  
+    <PropertyGroup>... </PropertyGroup>  
+    <ItemGroup>... </ItemGroup>  
     <OnError... />  
 </Target>  
 ```  
