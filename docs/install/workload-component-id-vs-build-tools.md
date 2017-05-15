@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 04/06/2017
+ms.date: 05/10/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: 5760b4f89bea1a972e75aaec8c45527e07ad28ca
-ms.lasthandoff: 04/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 054126ddbdc9f0144983a1ef21fa43875699cbee
+ms.openlocfilehash: 1147438d12d754233f6205de4a5d37920cb5b66a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -78,7 +79,7 @@ ID do componente | Nome | Versão | Tipo de dependência
 Microsoft.VisualStudio.Component.VC.CoreBuildTools | Principais recursos das Ferramentas de Build do Visual C++ | 15.0.26208.0 | Necessária
 Microsoft.VisualStudio.Component.Windows10SDK | Tempo de execução C Universal do Windows | 15.0.26208.0 | Necessária
 Microsoft.VisualStudio.Component.VC.CMake.Project | Ferramentas do Visual C++ para CMake | 15.0.26208.0 | Recomendado
-Microsoft.VisualStudio.Component.Windows10SDK.14393 | SDK do Windows 10 (10.0.14393.0) | 15.0.26208.0 | Recomendado
+Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | SDK do Windows 10 (10.0.15063.0) para Desktop C++ x86 e x64 | 15.0.26403.0 | Recomendado
 Microsoft.Component.VC.Runtime.UCRTSDK | SDK do CRT Universal do Windows | 15.0.26208.0 | Opcional
 Microsoft.Net.Component.4.6.1.SDK | SDK do .NET Framework 4.6.1 | 15.0.26208.0 | Opcional
 Microsoft.Net.Component.4.6.1.TargetingPack | Pacote de direcionamento do .NET Framework 4.6.1 | 15.0.26208.0 | Opcional
@@ -92,6 +93,7 @@ Microsoft.VisualStudio.Component.VC.Modules.x86.x64 | Módulos da Biblioteca Pad
 Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | Conjunto de ferramentas do VC++ 2017 v141 (x86, x64) | 15.0.26208.0 | Opcional
 Microsoft.VisualStudio.Component.Windows10SDK.10240 | SDK do Windows 10 (10.0.10240.0) | 15.0.26208.0 | Opcional
 Microsoft.VisualStudio.Component.Windows10SDK.10586 | SDK do Windows 10 (10.0.10586.0) | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.Windows10SDK.14393 | SDK do Windows 10 (10.0.14393.0) | 15.0.26208.0 | Opcional
 Microsoft.VisualStudio.Component.Windows81SDK | SDK do Windows 8.1 | 15.0.26208.0 | Opcional
 Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | SDK do Windows 8.1 e SDK do UCRT | 15.0.26208.0 | Opcional
 

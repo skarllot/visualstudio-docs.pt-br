@@ -14,9 +14,10 @@ caps.latest.revision: 17
 author: alancameronwills
 ms.author: awills
 manager: douge
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: d39421df38cf47657c445822dd19b25ed2ea5ea2
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -35,7 +36,7 @@ Microsoft.VisualStudio.Modeling.Diagnostics.StoreViewer.Show(mystore);
 >   
 >  `using Microsoft.VisualStudio.Modeling.Diagnostics;`  
 >   
->  `…`  
+>  `...`  
 >   
 >  `StoreViewer.Show(mystore);`  
   

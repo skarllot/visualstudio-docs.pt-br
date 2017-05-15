@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: 002c77b27f7283ecd28d7ec5470b0ed44b2bb7a4
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: f8a0bef07667e5f876473c966ed3d14a1b84dd0b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -49,11 +50,14 @@ A abordagem usada aqui é a mesma usada nas extensões padrão do CPython, confo
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Este passo a passo foi escrito para a Visualização do Visual Studio 2017 com as cargas de trabalho **Desenvolvimento de Área de Trabalho com o C++** e **Desenvolvimento do Python** com suas opções padrão (como o Python 3.6 como o interpretador padrão). Na carga de trabalho **Desenvolvimento do Python**, marque também a caixa à direita **Ferramentas de desenvolvimento nativo do Python**, que definirá a maior parte das opções descritas neste tópico. (Essa opção também incluirá a carga de trabalho do C++ automaticamente.)
+Este passo a passo foi escrito para o Visual Studio 2017 com as cargas de trabalho **Desenvolvimento da Área de Trabalho com o C++** e **Desenvolvimento do Python** com suas opções padrão (como o Python 3.6 como o interpretador padrão). Na carga de trabalho **Desenvolvimento do Python**, marque também a caixa à direita **Ferramentas de desenvolvimento nativo do Python**, que definirá a maior parte das opções descritas neste tópico. (Essa opção também incluirá a carga de trabalho do C++ automaticamente.) 
 
 ![Selecionando a opção de ferramentas de desenvolvimento nativo do Python](media/cpp-install-native.png)
 
 Para obter mais detalhes, consulte [Instalando o suporte do Python para Visual Studio](installation.md), incluindo o uso de outras versões do Visual Studio. Se você instalar o Python separadamente, lembre-se de selecionar **Baixar símbolos de depuração** e **Baixar binários de depuração** em **Opções Avançadas** no instalador. Isso garante que você terá as bibliotecas de depuração necessárias disponíveis se optar por fazer um build de depuração.
+
+> [!Note]
+> O Python também está disponível por meio da carga de trabalho **Ciência de dados e aplicativos analíticos**, que inclui o Anaconda 3 de 64 bits (com a versão mais recente do CPython) e a opção **Ferramentas nativas de desenvolvimento do Python** por padrão.
 
 ## <a name="create-the-python-application"></a>Criar o aplicativo do Python
 
@@ -265,7 +269,7 @@ Agora você pode chamar o código `tanh` e o módulo e comparar seu desempenho c
 
 ## <a name="debug-the-c-code"></a>Depurar o código C++
 
-O suporte do Python no Visual Studio inclui a capacidade de [depurar o código do Python e C++ juntos](debugging-mixed-mode.md). Para experimentar isso, faça o seguinte:
+O [suporte do Python no Visual Studio](installation.md) inclui a capacidade de [depurar o código do Python e C++ juntos](debugging-mixed-mode.md). Para experimentar isso, faça o seguinte:
 
 1. Clique com o botão direito do mouse no projeto do Python, no Gerenciador de Soluções, selecione **Propriedades**, a guia **Depuração** e, em seguida, a opção **Depurar > Habilitar depuração de código nativo**.
 

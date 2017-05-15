@@ -1,7 +1,7 @@
 ---
 title: "Começar a trabalhar com o Python no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/1/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,16 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 2659c1a3b1adfc3f462971205460942c5fe5171f
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 8001036077b8b14af80fabceafad5d3aff9b25f4
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="getting-started-with-python-in-visual-studio"></a>Introdução ao Python no Visual Studio
 
-Depois de instalar o Visual Studio com a carga de trabalho do Python (Visual Studio 2017) ou com as Ferramentas Python para Visual Studio (Visual Studio 2015 e anterior), você estará pronto para conhecer a experiência de desenvolvimento do Python.
+Depois de instalar o Visual Studio com a carga de trabalho do Python (Visual Studio 2017) ou com as Ferramentas Python para Visual Studio (Visual Studio 2015 e anterior), você estará pronto para conhecer a experiência de desenvolvimento do Python. (Consulte [Instalação](installation.md), se necessário.)
 
 Neste passo a passo, você cria um novo aplicativo vazio do Python, escolhe um ambiente do Python com o qual trabalhará e, em seguida, começa a escrever o código para ver o IntelliSense em funcionamento. Depois, você trabalhará brevemente com a janela interativa REPL para criar mais códigos, concluirá o programa e o executará por si próprio e no depurador.
 
@@ -251,7 +252,7 @@ Além de gerenciar projetos, fornecer uma experiência avançada de edição e a
 
 1. Para continuar executando o código até chegar ao próximo ponto de interrupção (ou até que o programa seja encerrado), pressione F5 novamente ou selecione o botão de barra de ferramentas **Continuar** ou **Depurar > Continuar**. Como há um ponto de interrupção no loop `for`, você interromperá na próxima iteração.
 
-1. A execução em etapas de centenas de iterações de um loop pode ser entediante e, portanto, é possível adicionar uma condição ao ponto de interrupção definido anteriormente para que ele seja interrompido somente quando o valor `i` exceder determinado valor, digamos 1600. Para fazer isso, clique com o botão direito do mouse no ponto vermelho do ponto de interrupção e selecione **Condição...**. Na janela Configurações do Ponto de Interrupção exibida, insira `i > 1600` como a expressão e selecione **Fechar**. Agora pressione F5 para continuar e você verá o programa ser executado por alguns instantes antes de ser interrompido novamente. 
+1. A execução em etapas de centenas de iterações de um loop pode ser entediante e, portanto, é possível adicionar uma condição ao ponto de interrupção definido anteriormente para que ele seja interrompido somente quando o valor `i` exceder determinado valor, digamos 1600. Para fazer isso, clique com o botão direito do mouse no ponto vermelho do ponto de interrupção e selecione **Condição...** . Na janela Configurações do Ponto de Interrupção exibida, insira `i > 1600` como a expressão e selecione **Fechar**. Agora pressione F5 para continuar e você verá o programa ser executado por alguns instantes antes de ser interrompido novamente. 
 
     ![Configurando uma condição de ponto de interrupção](media/getting-started-debugging-4.png)
 
@@ -271,4 +272,5 @@ Além dos links em “Aprofunde-se” fornecidos anteriormente, os seguintes tó
 - O Visual Studio fornece a capacidade de depurar o aplicativo em servidores remotos, conforme explicado em [Depuração remota de plataforma cruzada](debugging-cross-platform-remote.md) e [Depuração remota do Azure](debugging-azure-remote.md).
 - É possível avaliar o desempenho do código do Python usando a [Criação de Perfil do Visual Studio](profiling.md).
 - Os testes de unidade escritos no Python integram diretamente com o Gerenciador de Testes do Visual Studio, conforme discutido em [Testes de unidade](unit-testing.md).
+- [Cursos gratuitos do Python na Microsoft Virtual Academy](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 

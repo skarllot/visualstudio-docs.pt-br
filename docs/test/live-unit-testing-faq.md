@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 03abb5a6508a6c93c6770bd9373381c9173b7103
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c9df048a49580f3526b48e29041ef3758722ed27
+ms.openlocfilehash: 08677472bc13d58d9ab0b42b856955f8434089e4
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/03/2017
 
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Perguntas frequentes sobre o Live Unit Testing
@@ -229,6 +230,8 @@ Isso ocorre se os assemblies nos quais o Live Unit Testing está operando não e
 - Acesse **Ferramentas**, **Opções**, **Live Unit Testing** e altere a opção de log para **Detalhado**. Isso faz com que logs mais detalhados sejam mostrados na janela de saída. 
 
 - Defina a variável de ambiente do usuário `LiveUnitTesting_BuildLog` com o nome do arquivo que você deseja usar para capturar o log do MSBuild. Em seguida, as mensagens de log detalhado do MSBuild de builds do Live Unit Testing podem ser recuperadas desse arquivo.
+
+- Defina a variável de ambiente de usuário `LiveUnitTesting_TestPlatformLog` como `1` para capturar o log da Plataforma de Teste. Em seguida, as mensagens de log da Plataforma de Teste das execuções do Live Unit Testing poderão ser recuperadas de `[Solution Root]\.vs\[Solution Name]\log\[VisualStudio Process ID]`.
 
 - Crie uma variável de ambiente em nível de usuário chamada `VS_UTE_DIAGNOSTICS` e defina-a como 1 (ou qualquer valor) e reinicie o Visual Studio. Agora você verá muitos logs na guia **Saída – Testes** do Visual Studio. 
  

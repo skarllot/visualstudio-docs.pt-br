@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 08aabdfe0e268f93ef7723076375b7f65b15ccf3
 ms.openlocfilehash: b7cb109d11669f411b5ca3bdf3c4c32a63ac53a1
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -100,11 +101,11 @@ Você pode usar requisitos e modelos de arquitetura para ajudá-lo a organizar o
  Para testar um caso de uso, como adicionar Item à ordem, um método de teste pode incluir código semelhante a este:  
   
 ```  
-Order order = … ; // set up an order  
+Order order = ... ; // set up an order  
 // Store prior state:  
 int countBefore = order.MenuItems.Count;   
 // Perform use case:  
-MenuItem chosenItem = …; // choose an item  
+MenuItem chosenItem = ...; // choose an item  
 AddItemToOrder (chosenItem, order);   
 // Verify part of postcondition:  
 int countAfter = order.MenuItems.Count;  
@@ -145,7 +146,7 @@ Assert (countAfter == countBefore = 1);
   
  Do ponto de vista teste, um modelo de requisitos pode ser visto como uma abreviação para os testes. Portanto, é importante manter a relação entre os testes e o modelo em todo o projeto.  
   
-##  <a name="a-nameattachinga-attaching-test-cases-to-model-elements"></a><a name="Attaching"></a>Anexando casos de teste para elementos de modelo  
+##  <a name="Attaching"></a>Anexando casos de teste para elementos de modelo  
  Se seu projeto usa [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], você pode vincular testes para os elementos em seu modelo. Isso permite que você localize rapidamente os testes afetados por uma alteração nos requisitos e ajuda você a acompanhar a extensão à qual um requisito foi concretizado.  
   
  Você pode vincular testes para todos os tipos de elemento. Aqui estão alguns exemplos:  

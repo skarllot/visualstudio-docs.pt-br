@@ -1,7 +1,7 @@
 ---
-title: Teste de unidade nas Ferramentas Python para Visual Studio | Microsoft Docs
+title: Teste de Unidade do Python no Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: 878bd0baaa0e08a31274645213b222bf6faeb412
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 2597583912c7694495617c53839f41aa13cda871
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -39,13 +40,13 @@ ms.lasthandoff: 04/10/2017
 
 Testes de unidade são partes do código que testam outras unidades de código em um aplicativo, normalmente, funções isoladas, classes e assim por diante. Quando um aplicativo é aprovado em todos os seus testes de unidade, pelo menos, é possível confiar que sua funcionalidade de baixo nível está correta.
 
-O Python usa testes de unidade extensivamente para validar cenários durante a criação de um programa. A PTVS (Ferramentas Python para Visual Studio) inclui o suporte para a descoberta, execução e depuração de testes de unidade no contexto do processo de desenvolvimento, em vez de precisar executá-los separadamente.
+O Python usa testes de unidade extensivamente para validar cenários durante a criação de um programa. O suporte do Python no Visual Studio inclui descoberta, execução e depuração de testes de unidade no contexto do processo de desenvolvimento, em vez de precisar executá-los separadamente.
 
 Este tópico fornece uma breve descrição das funcionalidades de teste de unidade no Visual Studio com o Python. Para obter mais informações sobre testes de unidade em geral, consulte [Executar um teste de unidade no código](../test/unit-test-your-code.md).
 
 ## <a name="discovering-and-viewing-tests"></a>Descobrindo e exibindo testes
 
-Por convenção, a PTVS identificará testes como métodos cujos nomes começam com “test”. Para ver isso, faça o seguinte:
+Por convenção, o Visual Studio identifica os testes como métodos cujos nomes começam com “test”. Para ver isso, faça o seguinte:
 
 1. Abra um [projeto do Python](python-projects.md) carregado no Visual Studio, clique com o botão direito do mouse no projeto, selecione **Adicionar > Novo Item...** e selecione **Teste de Unidade do Python** seguido por **Adicionar**.
 
@@ -98,13 +99,13 @@ Os testes são executados em segundo plano e o Gerenciador de Testes atualiza o 
 
 ## <a name="debugging-tests"></a>Depurando testes
 
-Como os testes de unidade são partes do código, eles estão sujeitos a bugs, assim como qualquer outro código e, ocasionalmente, precisam ser executados em um depurador, no qual é possível definir pontos de interrupção, examinar variáveis e executar o código em etapas. A PTVS também fornece ferramentas de diagnóstico
+Como os testes de unidade são partes do código, eles estão sujeitos a bugs, assim como qualquer outro código e, ocasionalmente, precisam ser executados em um depurador, no qual é possível definir pontos de interrupção, examinar variáveis e executar o código em etapas. O Visual Studio também fornece ferramentas de diagnóstico
 
 Para iniciar a depuração, defina um ponto de interrupção inicial no código, clique com o botão direito do mouse no teste (ou em uma seleção) no Gerenciador de Testes e selecione **Depurar Testes Selecionados**. O Visual Studio iniciará o depurador do Python como faria com o código do aplicativo.
 
 ![Depurando um teste](media/unit-test-debugging.png)
 
-Também é possível usar os comandos **Analisar Cobertura de Código nos Testes Selecionados** e **Teste de Perfil**, dependendo da versão da PTVS (consulte a [Matriz de recursos](python-in-visual-studio.md#features-matrix)).
+Também é possível usar os comandos **Analisar Cobertura de Código nos Testes Selecionados** e **Teste de Perfil**, dependendo da versão do Visual Studio (consulte a [Matriz de recursos](python-in-visual-studio.md#features-matrix)).
 
 ### <a name="known-issues"></a>Problemas conhecidos
 

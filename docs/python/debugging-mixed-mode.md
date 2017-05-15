@@ -1,7 +1,7 @@
 ---
 title: "Depuração de modo misto do Python no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 4/10/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,22 +28,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: bdc621831893f907beba7ec5ad503fe4d96c0042
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 919227fb624f4b6dc51e13ccadea8e2682b9816f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="debugging-python-and-c-together"></a>Depurando o Python e o C++ juntos
 
-A maioria dos depuradores regulares do Python dão suporte apenas à depuração de código do Python. No entanto, na prática, o Python é usado em conjunto com o C ou o C++, nos casos em que é necessário o alto desempenho ou a capacidade de invocar diretamente as APIs da plataforma (consulte [Criando uma extensão do C++ para o Python](cpp-and-python.md) para obter um exemplo). O Visual Studio (ao usar as Ferramentas Python para Visual Studio 2.0 e posterior) fornece a depuração de modo misto integrada e simultânea para o C/C++ nativo e o Python, com pilhas de chamadas combinadas, a capacidade de executar o código do Python e o código nativo em etapas, pontos de interrupção em um desses tipos de código e a capacidade de ver representações do Python de objetos em quadros nativos e vice-versa:
+A maioria dos depuradores regulares do Python dão suporte apenas à depuração de código do Python. No entanto, na prática, o Python é usado em conjunto com o C ou o C++, nos casos em que é necessário o alto desempenho ou a capacidade de invocar diretamente as APIs da plataforma (consulte [Criando uma extensão do C++ para o Python](cpp-and-python.md) para obter um exemplo). O Visual Studio fornece a depuração de modo misto integrada e simultânea para o Python e o C/C++ nativo, com pilhas de chamadas combinadas, a capacidade de depurar entre o código do Python e o código nativo, pontos de interrupção em um desses tipos de código e a capacidade de ver representações do Python de objetos em quadros nativos e vice-versa:
 
 ![Depuração de modo misto](media/mixed-mode-debugging.png) 
 
 Para obter uma introdução à compilação, ao teste e à depuração de módulos nativos do C com o Visual Studio, assista a [Deep Dive: Creating Native Modules](https://youtu.be/D9RlT06a1EI) (Aprofundamento: Criar módulos nativos) (youtube.com, 9min9s).
 
 > [!VIDEO https://www.youtube.com/embed/D9RlT06a1EI]
+
+> [!Note]
+> A depuração de modo misto não está disponível nas Ferramentas Python para o Visual Studio 1.x.
 
 ## <a name="enabling-mixed-mode-debugging"></a>Habilitando a depuração de modo misto
 
@@ -54,7 +58,7 @@ Para obter uma introdução à compilação, ao teste e à depuração de módul
     > [!Tip]    
     > Ao habilitar a depuração de código nativo, a janela de saída do Python poderá desaparecer imediatamente quando o programa tiver concluído sem fornecer a pausa comum “Pressione qualquer tecla para continuar...”. Para forçar uma pausa, adicione a opção `-i` ao campo **Executar > Argumentos do Interpretador** na guia **Depurar** ao habilitar a depuração de código nativo. Isso colocará o interpretador do Python no modo interativo após a conclusão do código e, nesse ponto, ele aguardará até que você pressione Ctrl + Z, Enter para sair.
 
-1. Ao anexar o depurador de modo misto a um processo existente (**Depurar > Anexar ao Processo...**), selecione o botão **Selecionar...** para abrir a caixa de diálogo **Selecionar Tipo de Código**, defina a opção **Depurar esses tipos de código** e selecione **Nativo** e **Python** na lista:
+1. Ao anexar o depurador de modo misto a um processo existente (**Depurar > Anexar ao Processo...**), selecione o botão **Selecionar...**  para abrir a caixa de diálogo **Selecionar Tipo de Código**, defina a opção **Depurar esses tipos de código** e selecione **Nativo** e **Python** na lista:
 
     ![Selecionando os tipos de código Nativo e do Python](media/mixed-mode-debugging-code-type.png)
 
