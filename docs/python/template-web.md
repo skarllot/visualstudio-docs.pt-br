@@ -1,7 +1,7 @@
 ---
-title: Modelo de projeto Web nas Ferramentas Python para Visual Studio | Microsoft Docs
+title: Modelo de projeto Web para o Python no Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 2375c0c3b1a692d03d8790e400e3fea606355831
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 20edb7a53adf400fba94556e659b4215a0060c1b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="python-web-project-templates"></a>Modelos de projeto Web do Python
 
-A PTVS (Ferramentas Python para Visual Studio) inclui suporte para o desenvolvimento de projetos Web em estruturas como Bottle, Django e Flask. Isso inclui modelos de projeto e um inicializador de depuração que pode ser configurado para manipular diversas estruturas. No entanto, a PTVS não inclui as estruturas em si, que devem ser instaladas separadamente clicando com o botão direito do mouse no projeto e selecionando **Python > Instalar/atualizar estrutura...**.
+O suporte do Python no Visual Studio inclui suporte para o desenvolvimento de projetos Web em estruturas como Bottle, Django e Flask. Isso inclui modelos de projeto e um inicializador de depuração que pode ser configurado para manipular diversas estruturas. No entanto, o Visual Studio não inclui as estruturas em si, que devem ser instaladas separadamente clicando com o botão direito do mouse no projeto e selecionando **Python > Instalar/atualizar estrutura...**.
 
 Cada modelo (acessado por meio de **Arquivo > Novo > Projeto...**) inicia um servidor Web com uma porta local selecionada aleatoriamente, abre o navegador padrão durante a depuração e permite a publicação direta no [Microsoft Azure](http://www.azure.com). São fornecidos modelos para o Bottle, Flask e Django, e é possível usar o modelo de “Projeto Web” genérico para outras estruturas, como o Pyramid.
 
@@ -59,7 +60,7 @@ Para obter uma introdução aos projetos Web do Python, assista a [Getting Start
 
 ## <a name="debugging"></a>Depuração
 
-Quando um projeto Web for iniciado para depuração, a PTVS iniciará o servidor Web localmente e abrirá o navegador padrão nesse endereço e nessa porta. Para especificar opções adicionais, clique com o botão direito do mouse no projeto, selecione **Propriedades**e selecione a guia **Inicializador da Web**:
+Quando um projeto Web for iniciado para depuração, o Visual Studio iniciará o servidor Web localmente e abrirá o navegador padrão nesse endereço e nessa porta. Para especificar opções adicionais, clique com o botão direito do mouse no projeto, selecione **Propriedades**e selecione a guia **Inicializador da Web**:
 
   ![Propriedades do inicializador da Web para o modelo da Web genérico](media/template-web-launcher-properties.png)
 
@@ -67,7 +68,7 @@ No grupo **Depurar**:
 
 - **Caminhos de Pesquisa**, **Argumentos de Script**, **Argumentos do Interpretador** e **Caminho do Interpretador**: eles são os mesmos da [depuração normal](debugging.md)
 - **URL de Inicialização**: especifica a URL que será aberta no navegador. Usa como padrão `localhost`.
-- **Número da Porta**: a porta a ser usada se nenhuma for especificada na URL (a PTVS seleciona uma automaticamente por padrão). Isso permite substituir o valor padrão da variável de ambiente `SERVER_PORT`, que é usada pelos modelos para configurar a porta na qual o servidor de depuração local escuta.
+- **Número da Porta**: a porta a ser usada se nenhuma for especificada na URL (o Visual Studio seleciona uma automaticamente por padrão). Isso permite substituir o valor padrão da variável de ambiente `SERVER_PORT`, que é usada pelos modelos para configurar a porta na qual o servidor de depuração local escuta.
 
 As propriedades dos grupos **Executar Comando do Servidor** e **Depurar Comando do Servidor** (o último está abaixo do que é mostrado na imagem) determinam como o servidor Web é iniciado. Como muitas estruturas exigem o uso de um script fora do projeto atual, o script pode ser configurado aqui e o nome do módulo de inicialização pode ser passado como um parâmetro.
 
@@ -94,7 +95,7 @@ O modelo de Projeto Web do Bottle inclui um código de texto clichê que faz a c
     - **Comando**: `bottle` (módulo)
     - **Argumentos** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
-A opção `--reload` não é recomendada ao usar a PTVS para depuração.
+A opção `--reload` não é recomendada ao usar o Visual Studio para depuração.
 
 ### <a name="sample-pyramid-configuration"></a>Configuração de exemplo do Pyramid
 
