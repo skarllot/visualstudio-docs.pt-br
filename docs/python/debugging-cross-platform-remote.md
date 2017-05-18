@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: df4d74d9fe884f3aff1998f4b0b38dbff6d1359f
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: fa3d69cbb34a61a327d0b4c27430ff04b670a568
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -111,7 +112,10 @@ Nestas etapas, definiremos um ponto de interrupção simples para interromper o 
 
 1. No diálogo **Anexar ao Processo** que será exibido, configure o **Tipo de Conexão** como **Python remoto (ptvsd)**. (Em versões anteriores do Visual Studio, tais ações são denominadas **Transporte** e **Depuração remota do Python**.)
 
-1. No campo **Destino da Conexão** (**Qualificador** em versões anteriores), insira `tcp://<secret>@<ip_address>:5678`, em que `<secret>` é a cadeia de caracteres `enable_attach` passada no código Python, `<ip_address>` é o do computador remoto (que pode ser um endereço explícito ou um nome como myvm.cloudapp.net) e `:5678` é o número da porta de depuração remota. 
+1. No campo **Destino da Conexão** (**Qualificador** em versões anteriores), insira `tcp://<secret>@<ip_address>:5678`, em que `<secret>` é a cadeia de caracteres `enable_attach` passada no código Python, `<ip_address>` é o do computador remoto (que pode ser um endereço explícito ou um nome como myvm.cloudapp.net) e `:5678` é o número da porta de depuração remota.
+
+    > [!Warning]
+    > Se estiver fazendo uma conexão pela Internet pública, você deverá usar `tcps` e seguir as instruções abaixo para [Proteger a conexão do depurador com SSL](#securing-the-debugger-connection-with-ssl).
 
 1. Pressione Enter para preencher a lista de processos ptvsd disponíveis nesse computador:
 
@@ -194,5 +198,5 @@ O Visual Studio o avisará sobre possíveis problemas de certificado ao se conec
     ![Aviso de nome de host do certificado SSL](media/remote-debugging-ssl-warning2.png)
 
 > [!Warning]
-> No momento, o Visual Studio 2017 Preview travará quando esses avisos forem ignorados. Verifique se todos os problemas foram corrigidos antes de tentar se conectar.
+> No momento, o Visual Studio 2017 travará quando esses avisos forem ignorados. Verifique se todos os problemas foram corrigidos antes de tentar se conectar.
 
