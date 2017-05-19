@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: eb3abd0f37e52f2b1db3793a5471b74a5e0c37ff
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 3190be68fbba464a84a7a25b2d829979944bdb1f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -100,7 +101,7 @@ A seguinte tabela resume os modelos disponíveis no Visual Studio 2017 (nem todo
 | Página da Web do IronPython Silverlight | Um projeto do IronPython executado em um navegador usando o Silverlight. O código do aplicativo do Python é incluído na página da Web como um script. Uma marca de script de texto clichê puxa um código JavaScript que inicializa o IronPython em execução dentro do Silverlight, no qual o código do Python pode interagir com o DOM. |
 | Aplicativo do Windows Forms do IronPython | Uma estrutura de projeto que usa o IronPython com a interface do usuário usando o código com o Windows Forms. O aplicativo é executado sem exibir um console. |
 | Aplicativo em segundo plano (IoT) | Dá suporte à implantação de projetos do Python a serem executados como serviços em segundo plano em dispositivos. Visite a [Central de desenvolvedores do Windows IoT](https://dev.windows.com/en-us/iot) para obter mais informações. |
-| Módulo de extensão do Python | Esse modelo é exibido no Visual C++ se você instalou as **ferramentas de desenvolvimento nativo do Python** com a carga de trabalho do Python na Visualização do Visual Studio 2017 (consulte [Instalação](installation.md)). Ele fornece a estrutura principal para uma DLL de extensão do C++, semelhante ao que é descrito em [Criando uma extensão do C++ para o Python](cpp-and-python.md). |
+| Módulo de extensão do Python | Esse modelo é exibido no Visual C++ se você instalou as **ferramentas de desenvolvimento nativo do Python** com a carga de trabalho do Python no Visual Studio 2017 (confira [Instalação](installation.md)). Ele fornece a estrutura principal para uma DLL de extensão do C++, semelhante ao que é descrito em [Criando uma extensão do C++ para o Python](cpp-and-python.md). |
 
 <a name="create-project-from-existing-files"</a>
 ### <a name="creating-a-project-from-existing-files"></a>Criando um projeto com base em arquivos existentes

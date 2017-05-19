@@ -28,13 +28,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 5455d9a16004fef1aec02fbaf856f336c67dfb05
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4c744284c198a645440494ee79ee0e722904fda5
+ms.openlocfilehash: b6fd9ebbd931604b12c772f4e2514c86f5c9dd70
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/04/2017
 
 ---
-# <a name="analyze-resource-consumption-and-ui-thread-acitivity-xaml"></a>Analisar o consumo de recursos e a atividade de thread de interface do usuário (XAML)
+# <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Analisar o consumo de recursos e a Atividade de Thread de Interface do Usuário (XAML)
 Use o criador de perfil **Linha do Tempo de Aplicativo** para localizar e corrigir problemas de desempenho relacionados à interação com o aplicativo em aplicativos XAML. Essa ferramenta ajuda a melhorar o desempenho de aplicativos XAML fornecendo uma exibição detalhada do consumo de recursos dos aplicativos. Você pode analisar o tempo gasto pelo seu aplicativo para preparar quadros de interface do usuário (layout e renderização), atender a solicitações de rede e de disco e em cenários como Inicialização de Aplicativo, Carregamento de Página e redimensionamento do Windows.  
   
  **Linha do Tempo do Aplicativo** é uma das ferramentas que você pode começar com o comando **Debug / Performance Profiler...**.  
