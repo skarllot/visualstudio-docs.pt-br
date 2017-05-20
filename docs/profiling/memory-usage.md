@@ -1,7 +1,7 @@
 ---
 title: "Analisar o uso de memória no Visual Studio | Microsoft Docs"
 ms.custom: H1Hack27Feb2017
-ms.date: 11/04/2016
+ms.date: 04/25/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 697b8f5517ad9a953a04f920be39c9ef2cfa2558
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 137f6faa156d188afb99cafb2b1e9dbababdeb4f
+ms.openlocfilehash: a7de37fd82f94fdcef6f839884ea30c5c77061e5
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="analyze-memory-usage"></a>Analisar o uso de memória
@@ -89,7 +90,7 @@ Encontre vazamentos de memória e memória ineficiente enquanto estiver depurand
     ![Tirar instantâneo](../profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot") 
      
      > [!TIP]
-     >  -   Para criar uma linha de base para comparações de memória, tire um instantâneo no início da sessão de depuração.  
+     >  Para criar uma linha de base para comparações de memória, tire um instantâneo no início da sessão de depuração.  
 
 6.  Execute o cenário que fará com que o primeiro ponto de interrupção seja atingido.
 
@@ -113,17 +114,15 @@ As linhas da tabela de resumo de Uso de Memória listam os instantâneos que voc
 -   A coluna **Tamanho do Heap (Diff)** exibe o número de bytes no .NET e heaps nativos 
 
 Quando você tira vários instantâneos, as células da tabela de resumo incluem a alteração no valor entre o instantâneo de linha e o instantâneo anterior.  
-  
-![Célula da tabela de resumo de memória](../profiling/media/dbgdiag_mem_summarytablecell.png "DBGDIAG_MEM_SummaryTableCell")  
 
 Para analisar o uso da memória, clique em um dos links que abre um relatório detalhado do uso de memória:  
 
--   Para exibir detalhes da diferença entre o instantâneo atual e o instantâneo anterior, escolha o link de alteração à esquerda da seta (![Aumento do Uso de Memória](../profiling/media/prof-tour-mem-usage-up-arrow.png "Aumento do Uso de Memória")). Uma seta vermelha indica um aumento no uso de memória e uma seta verde indica uma diminuição).
+-   Para exibir detalhes da diferença entre o instantâneo atual e o instantâneo anterior, escolha o link de alteração à esquerda da seta (![Aumento do Uso de Memória](../profiling/media/prof-tour-mem-usage-up-arrow.png "Aumento do Uso de Memória")). Uma seta vermelha indica um aumento no uso de memória e uma seta verde indica uma diminuição.
 
     > [!TIP]
-    >  Para ajudar a identificar problemas de memória mais rapidamente, os relatórios de comparação são classificados pelos tipos de objeto que mais aumentaram no número geral (link de alteração na coluna **Objetos (Diff)**) ou que mais aumentaram quanto ao tamanho geral do heap (link de alteração na coluna **Tamanho do Heap (Diff)**).
+    >  Para ajudar a identificar problemas de memória mais rapidamente, os relatórios de comparação são classificados pelos tipos de objeto que mais aumentaram no número geral (clique no link de alteração na coluna **Objetos (Comparação)**) ou que mais aumentaram quanto ao tamanho geral do heap (clique no link de alteração na coluna **Tamanho do Heap (Comparação)**).
 
--   Para exibir detalhes apenas do instantâneo selecionado, selecione o link que não é de alteração. 
+-   Para exibir detalhes apenas do instantâneo selecionado, clique no link que não é de alteração. 
   
  O relatório é exibido em uma janela separada.   
   
