@@ -1,7 +1,7 @@
 ---
-title: "Depuração nas Ferramentas Python para Visual Studio | Microsoft Docs"
+title: "Depuração do Python no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: 1d26ca1a464e2ec15c0d5d338a46b6fb1e7e1d65
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: e15edc1f2739cad0960619aa6cb4b089589eebd8
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="debugging-your-python-code"></a>Depurando o código do Python
 
-A PTVS (Ferramentas Python para Visual Studio) fornece uma experiência de depuração abrangente para o Python, incluindo a anexação a processos em execução, avaliação de expressões nas janelas Inspeção e Imediata, inspeção de variáveis locais, pontos de interrupção, instruções intervir/depuração parcial/depuração circular, comando Definir Próxima Instrução e muito mais. 
+O Visual Studio fornece uma experiência de depuração abrangente para o Python, incluindo a anexação a processos em execução, avaliação de expressões nas janelas Inspeção e Imediata, inspeção de variáveis locais, pontos de interrupção, instruções intervir/depuração parcial/depuração circular, comando Definir Próxima Instrução e muito mais. 
 
 Para obter uma visão geral da depuração, assista a [Getting Started with PTVS, Part 4: Debugging](https://youtu.be/bO7wpzgy74A?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff) (Introdução à PTVS, parte 4: Depuração) (youtube.com, 3min30s).
 
@@ -58,7 +59,7 @@ Consulte também os seguintes tópicos sobre depuração específicos ao cenári
 
 <a name="debugging-without-a-project"</a>
 > [!Tip]
-> A PTVS dá suporte à depuração sem um projeto. Com um arquivo independente do Python aberto no Visual Studio, clique com o botão direito do mouse no editor, selecione **Iniciar Depuração** e a PTVS iniciará o script com o ambiente global padrão (consulte [Ambientes do Python](python-environments.md)) sem nenhum argumento. Mas daí em diante, você tem suporte completo à depuração.
+> O Python no Visual Studio dá suporte à depuração sem um projeto. Com um arquivo independente do Python aberto, clique com o botão direito do mouse no editor, selecione **Iniciar Depuração** e o Visual Studio iniciará o script com o ambiente global padrão (confira [Ambientes do Python](python-environments.md)) sem nenhum argumento. Mas daí em diante, você tem suporte completo à depuração.
 >
 > Para controlar o ambiente e os argumentos, você precisará criar um projeto para o código. É possível fazer isso com facilidade com a opção [Com Base em um Código Existente do Python](python-projects.md#creating-a-project-from-existing-files).
 

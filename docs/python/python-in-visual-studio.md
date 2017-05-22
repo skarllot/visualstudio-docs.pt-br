@@ -1,7 +1,7 @@
 ---
 title: Python no Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/2/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 06f5b9d2223ccb9cbbbff8f2960d89c8efbf05b2
-ms.openlocfilehash: 83a676c5f2f838b6920c5fafbe78dc9b49fbb4cb
-ms.lasthandoff: 04/12/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: c46c8b7a0d9ea1509dcda2ef711562b3cf95b259
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/12/2017
 
 O Python é uma linguagem de programação popular confiável, flexível, fácil de aprender, de uso gratuito em todos os sistemas operacionais e com suporte em uma sólida comunidade de desenvolvedores e várias bibliotecas gratuitas. O Python dá suporte a todas as formas de desenvolvimento, incluindo aplicativos Web, serviços Web, aplicativos de área de trabalho, scripts e computação científica e, da mesma forma, é usado por diversas universidades, vários cientistas e desenvolvedores casuais e profissionais. Saiba mais sobre a linguagem em [python.org](https://www.python.org) e em [Python para iniciantes](https://www.python.org/about/gettingstarted/).
 
-O Visual Studio fornece suporte de [software livre](https://github.com/Microsoft/ptvs) para a linguagem Python por meio da carga de trabalho do Python (Visual Studio 2017) e a extensão gratuita Ferramentas Python para Visual Studio (Visual Studio 2015 e versões anteriores). 
+O Visual Studio fornece suporte de [software livre](https://github.com/Microsoft/ptvs) para a linguagem Python por meio do desenvolvimento do Python e das cargas de trabalho do Data Science (Visual Studio 2017) e a extensão gratuita de Ferramentas Python para o Visual Studio (Visual Studio 2015 e versões anteriores). 
 
 Siga nossas [instruções de instalação](installation.md) para configurar a carga de trabalho do Python e, em seguida, use os links abaixo para saber mais sobre os recursos relacionados ao Python, bem como as funcionalidades do próprio Visual Studio.
 
@@ -75,7 +76,7 @@ R. Geralmente, o Python é uma linguagem interpretada, com o código executado s
 
 O suporte do Python pode ser instalado nas seguintes edições do Visual Studio, conforme descrito no [guia de instalação](installation.md):
 
-- [Visualização do Visual Studio 2017](https://www.visualstudio.com/vs/preview)
+- [Visual Studio 2017 (todas as edições)](https://www.visualstudio.com/vs/)
 - [Visual Studio 2015 (todas as edições)] (https://www.visualstudio.com/en-us/downloads/visual-studio-2015-downloads-vs)
 - [Visual Studio 2013 Community Edition] (https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)
 - [Visual Studio 2013 Express para Web, Atualização 2 ou posterior](https://www.microsoft.com/en-us/download/details.aspx?id=44912)
@@ -202,4 +203,5 @@ Recursos com suporte por versão e edição do Visual Studio:
 
 - [Escrevendo jogos Kinect com o Python usando o PyKinect](https://github.com/Microsoft/PTVS/wiki/PyKinect) (wiki do GitHub)
 - [Ponte do WFastCGI entre o IIS e o Python](https://pypi.python.org/pypi/wfastcgi) (python.org)
+- - [Cursos gratuitos do Python na Microsoft Virtual Academy](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 
