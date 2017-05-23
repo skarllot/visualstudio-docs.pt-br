@@ -4,8 +4,8 @@ hide_bc: true
 title: "Documentação do Visual Studio"
 description: "Saiba como usar o Visual Studio 2017 para desenvolver aplicativos, serviços e ferramentas na linguagem de sua escolha para suas plataformas e dispositivos."
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2831d252fbc9601e62c372ac3df7704e1dc65f2a
-ms.openlocfilehash: a8f12e3418da5ec6fe778d3a7eaed610c120a859
+ms.sourcegitcommit: 601cfd86b10f6194d817fc02e6ea0087608fd0ff
+ms.openlocfilehash: ec537370a7bc42a6d93ac377b9cd280733da6799
 ms.contentlocale: pt-br
 ms.lasthandoff: 05/10/2017
 
@@ -247,25 +247,25 @@ ms.lasthandoff: 05/10/2017
                                         </div>
                                     </div>
                                 </a>
-                            </li>                            
-                            <li>        
-                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">        
-                                  <div class="cardSize">        
-                                    <div class="cardPadding">        
-                                      <div class="card">        
-                                        <div class="cardImageOuter">        
-                                          <div class="cardImage bgdAccent1 cardScaleImage">        
-                                            <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />        
-                                        </div>        
-                                        </div>        
-                                          <div class="cardText">        
-                                            <h3>Ciência de dados e aplicativos analíticos</h3>        
-                                            <p>Linguagens e ferramentas para criar aplicativos de ciência de dados, incluindo Python, R e F#.</p>        
-                                        </div>        
-                                      </div>        
-                                    </div>        
-                                  </div>        
-                                </a>        
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">
+                                  <div class="cardSize">
+                                    <div class="cardPadding">
+                                      <div class="card">
+                                        <div class="cardImageOuter">
+                                          <div class="cardImage bgdAccent1 cardScaleImage">
+                                            <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />
+                                        </div>
+                                        </div>
+                                          <div class="cardText">
+                                            <h3>Ciência de dados e aplicativos analíticos</h3>
+                                            <p>Idiomas e ferramentas para criação de aplicativos de ciência de dados, incluindo Python, R e F#.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
                             </li>
                             <li>
                                 <a href="https://go.microsoft.com/fwlink/?linkid=833075">
