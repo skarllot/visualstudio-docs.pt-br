@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 28bcdab35f593b00973e5595587aa9226d137049
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="xattribute-class-dynamic-properties"></a>Propriedades dinâmicas da classe de XAttribute
@@ -44,5 +45,5 @@ Esta seção descreve as propriedades dinâmicas de <xref:System.Xml.Linq.XAttri
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Xml.Linq.XAttribute?displayProperty=fullName>   
- [Propriedades Dinâmicas do LINQ to XML](../designers/linq-to-xml-dynamic-properties.md)   
+ [Propriedades dinâmicas LINQ to XML](../designers/linq-to-xml-dynamic-properties.md)   
  [Propriedades dinâmicas da classe XElement](../designers/xelement-class-dynamic-properties.md)

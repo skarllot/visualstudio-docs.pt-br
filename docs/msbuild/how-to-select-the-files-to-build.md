@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 4cec7c3a52b1ef073fa0c6e03ef13af45dd2ff5c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0b8cbf0091de41b082b066c12ed28709ade7d1ea
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-select-the-files-to-build"></a>Como selecionar os arquivos a serem compilados
@@ -51,7 +52,7 @@ Quando você compila um projeto que contém vários arquivos, é possível lista
   
      `<CSFile Include="form1.cs"/>`  
   
-     – ou –  
+     - ou –  
   
      `<VBFile Include="form1.vb"/>`  
   
@@ -64,7 +65,7 @@ Quando você compila um projeto que contém vários arquivos, é possível lista
   
      `<CSFile Include="form1.cs;form2.cs"/>`  
   
-     – ou –  
+     - ou –  
   
      `<VBFile Include="form1.vb;form2.vb"/>`  
   
@@ -97,7 +98,7 @@ Quando você compila um projeto que contém vários arquivos, é possível lista
   
      `Include="Images\**\*jpgs\*.*"`  
   
-     – ou –  
+     - ou –  
   
      `Include="Images\**\*jpgs\*"`  
   
@@ -110,7 +111,7 @@ Quando você compila um projeto que contém vários arquivos, é possível lista
   
      `<CSC Sources="@(CSFile)">...</CSC>`  
   
-     – ou –  
+     - ou –  
   
      `<VBC Sources="@(VBFile)">...</VBC>`  
   

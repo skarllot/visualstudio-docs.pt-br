@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: e87d6d41a9ff7905e1c3dbcdd3289ea77cf9e0cb
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="value-xelement-dynamic-property"></a>Valor (propriedade dinâmica de XElement)
@@ -43,10 +44,10 @@ elem.Value
 ```  
   
 ## <a name="property-valuereturn-value"></a>Valor de propriedade/Valor de retorno  
- Um <xref:System.String> que representa o conteúdo concatenado do elemento.  
+ <xref:System.String> que representa o conteúdo concatenados do elemento.  
   
 ## <a name="remarks"></a>Comentários  
- Esta propriedade é equivalente à propriedade <xref:System.Xml.Linq.XElement.Value%2A> da classe <xref:System.Xml.Linq.XElement?displayProperty=fullName>, mas essa propriedade dinâmica também dá suporte a notificações de alteração.  
+ Esta propriedade é equivalente à propriedade de <xref:System.Xml.Linq.XElement.Value%2A> da classe de <xref:System.Xml.Linq.XElement?displayProperty=fullName> , mas suporta essa propriedade dinâmica também alterar notificações.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>   

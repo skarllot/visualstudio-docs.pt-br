@@ -34,9 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f6c59188abc8cbb9909c12438bc58fa9301d8af9
 ms.openlocfilehash: 25d55f075a3586356cc291e2811520a9bbafadf0
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="msbuild-reference"></a>Referência do MSBuild
@@ -109,8 +111,3 @@ ms.openlocfilehash: 25d55f075a3586356cc291e2811520a9bbafadf0
   
  <xref:Microsoft.Build.Utilities>  
  Contém a referência ao namespace de utilitários
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: c013001a52e5b894bcbcdaf9a40309505b39140c
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="value-xattribute-dynamic-property"></a>Valor (propriedade dinâmica de XAttribute)
@@ -46,7 +47,8 @@ attrib.Value
 ```  
   
 ## <a name="property-valuereturn-value"></a>Valor de propriedade/Valor de retorno  
- Um <xref:System.String> que contém o valor desse atributo.  
+ 
+          <xref:System.String> que contém o valor deste atributo.  
   
 ## <a name="exceptions"></a>Exceções  
   
@@ -55,7 +57,7 @@ attrib.Value
 |<xref:System.ArgumentNullException>|Ao definir, `value` é `null`.|  
   
 ## <a name="remarks"></a>Comentários  
- Esta propriedade é equivalente a <xref:System.Xml.Linq.XAttribute.Value%2A>, propriedade da classe <xref:System.Xml.Linq.XAttribute?displayProperty=fullName>, mas essa propriedade dinâmica também dá suporte a notificações de alteração.  
+ Esta propriedade é equivalente à propriedade de <xref:System.Xml.Linq.XAttribute.Value%2A> da classe de <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> , mas suporta essa propriedade dinâmica também alterar notificações.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>   

@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 80504cebde504c109ab9cc454b311a3f6f9e6fbb
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="walkthrough-using-profiler-apis"></a>Instruções passo a passo: usando APIs do criador de perfil
@@ -49,7 +50,7 @@ O passo a passo usa um aplicativo C# para demonstrar como usar as APIs de Ferram
   
  Para o código nativo, as APIs do criador de perfil do Visual Studio estão em VSPerf.dll. Por padrão, VSPerf.h e VSPerf.lib, e a biblioteca de importação, VSPerf.lib, estão localizados no diretório Microsoft Visual Studio 9\Team Tools\Performance Tools.  
   
- Para o código gerenciado, as APIs do criador de perfil estão na Microsoft.VisualStudio.Profiler.dll. Essa DLL está no diretório Microsoft Visual Studio 9\Team Tools\Performance Tools. Para saber mais, confira <xref:Microsoft.VisualStudio.Profiler>.  
+ Para o código gerenciado, as APIs do criador de perfil estão na Microsoft.VisualStudio.Profiler.dll. Essa DLL está no diretório Microsoft Visual Studio 9\Team Tools\Performance Tools. Para obter mais informações, consulte <xref:Microsoft.VisualStudio.Profiler>.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Este passo a passo pressupõe que a escolha do ambiente de desenvolvimento está configurada para dar suporte à depuração e amostragem. Os tópicos a seguir fornecem uma visão geral desses pré-requisitos:  
