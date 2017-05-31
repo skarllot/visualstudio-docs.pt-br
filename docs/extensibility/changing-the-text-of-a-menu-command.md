@@ -30,9 +30,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: ba6acf73a84a7a6ff5ae0c513bc5e8cf74111719
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -65,7 +66,7 @@ As etapas a seguir mostram como alterar o rótulo de texto de um comando de menu
         if (null != myCommand)  
         {  
             myCommand.Text = "New Text";  
-                    }  
+        }  
     }  
     ```  
   
@@ -103,3 +104,4 @@ As etapas a seguir mostram como alterar o rótulo de texto de um comando de menu
 6.  Sobre o **ferramentas** menu, você verá um comando chamado **ChangeMenuText invocar**.  
   
 7.  Clique no comando. Você verá a caixa de mensagem anunciando que MenuItemCallback foi chamado. Quando você fechar a caixa de mensagem, você verá o nome do comando no menu de ferramentas agora está **novo texto**.
+
