@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5a53b8d381821f6bb85e4ad1730c43d80e4d75ba
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 779171013514e67e5d7516521d136fa17adff06b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-collect-line-level-sampling-data"></a>Como coletar dados de amostragem no nível da linha
@@ -52,15 +54,15 @@ A amostragem de nível de linha é a capacidade do criador de perfil para determ
   
 -   Endereço da função.  
   
--   Início da linha – número de linha do código do qual foi obtida a amostra.  
+-   Início da linha – número de linha do código de exemplo.  
   
 -   Fim da linha – número de linha de término do código-fonte. Esse geralmente é o mesmo que os dados do "Início da linha", exceto quando uma única instrução do programa abrange várias linhas do código-fonte.  
   
--   Início do caractere – coluna de início da amostra de agregação. É geralmente 0, exceto quando uma única linha contém várias instruções de programa.  
+-   Início do caractere – coluna de início do exemplo de agregação. É geralmente 0, exceto quando uma única linha contém várias instruções de programa.  
   
--   Final do caractere – coluna de término da amostra de agregação.  
+-   Final do caractere – coluna de término do exemplo de agregação.  
   
--   IP – endereço em que a amostra de agregação foi obtida (somente em modo de exibição de IP).  
+-   IP – endereço em que o exemplo de agregação foi obtido (somente em modo de exibição de IP).  
   
  Na exibição de **Módulos**, se uma função tiver estatísticas em nível de linha, as estatísticas estarão aninhadas em cada função. Além disso, são apresentadas as estatísticas no nível de IP que estão aninhadas em cada linha.  
   
@@ -76,8 +78,3 @@ A amostragem de nível de linha é a capacidade do criador de perfil para determ
 ## <a name="see-also"></a>Consulte também  
  [Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)   
  [Analisando dados de ferramentas de desempenho](../profiling/analyzing-performance-tools-data.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

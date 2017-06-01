@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c9fb2c791ab95ab3a4193bdf9163202bbc1db84c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
+ms.openlocfilehash: 01dc224a571144744028e98153df1c525c461156
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="customizing-code-coverage-analysis"></a>Personalizando análise de cobertura de código
@@ -64,7 +65,7 @@ Por padrão, a ferramenta de cobertura de código do Visual Studio analisa todos
   
 3.  No menu **Teste**, escolha **Configurações de Teste**, **Selecionar Arquivo de Configurações de Teste** e selecione o arquivo.  
   
-4.  Agora, quando você executar **Analisar Cobertura de Código**, esse arquivo `.runsettings` controlará seu comportamento. Não se esqueça de que você deve executar a cobertura de código novamente: os resultados anteriores de cobertura e coloração de código não são ocultos automaticamente quando você executa testes ou atualiza o código.  
+4.  Agora, quando você executar **Analisar Cobertura de Código**, esse arquivo `.runsettings` controlará seu comportamento. Não se esqueça de que você deve executar a cobertura de código novamente: os resultados de cobertura e a coloração de código anteriores não são ocultados automaticamente quando você executa testes ou atualiza o código.  
   
 5.  Para ativar ou desativar as configurações personalizadas, desmarque ou selecione o arquivo no menu **Teste**, **Configurações de Teste**.  
   
@@ -154,13 +155,13 @@ Por padrão, a ferramenta de cobertura de código do Visual Studio analisa todos
 ### <a name="other-ways-to-include-or-exclude-elements"></a>Outras maneiras de incluir ou excluir elementos  
  Confira o exemplo [ no final deste tópico](#sample).  
   
--   `ModulePath` – Assemblies especificados pelo caminho do arquivo de assembly.  
+-   `ModulePath` – Assemblies especificados pelo caminho do arquivo do assembly.  
   
 -   `CompanyName` – faz a correspondência de assemblies pelo atributo Company.  
   
 -   `PublicKeyToken` – faz a correspondência de assemblies assinados pelo token de chave pública. Por exemplo, para fazer a correspondência de todos os componentes e extensões do Visual Studio, use `<PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>`.  
   
--   `Source` – faz a correspondência de elementos pelo nome do caminho do arquivo de código-fonte no qual são definidos.  
+-   `Source` – faz a correspondência de elementos pelo nome do caminho do arquivo de origem no qual eles são definidos.  
   
 -   `Attribute` – faz a correspondência de elementos aos quais um atributo específico está anexado. Especifique o nome completo do atributo, inclusive a palavra "Attribute" no final do nome.  
   
@@ -217,7 +218,7 @@ Por padrão, a ferramenta de cobertura de código do Visual Studio analisa todos
   
 3.  Na página **Processo**, expanda **Testes Automatizados**, **Fonte de Teste**, **Configurações de Execução**. Selecione o seu arquivo **.runsettings**.  
   
-    -   *Mas**Assembly de Teste**será exibido em vez de**Fonte de Teste**. Quando tento definir o campo **Configurações de Execução**, só consigo selecionar arquivos .testsettings.*  
+    -   *Mas **Assembly de Teste** será exibido em vez de **Fonte de Teste**. Quando tento definir o campo **Configurações de Execução**, só consigo selecionar arquivos .testsettings.*  
   
          Em **Testes Automatizados**, selecione **Assembly de Teste** e escolha **[...]** no final da linha. Na caixa de diálogo **Adicionar/Editar Execução de Teste**, defina **Test Runner** para **Visual Studio Test Runner**.  
   
@@ -284,7 +285,7 @@ Included items must then not match any entries in the exclude list to remain inc
             <!-- Match attributes on any code element: -->  
             <Attributes>  
               <Exclude>  
-                <!—Don't forget "Attribute" at the end of the name -->  
+                <!-- Don't forget "Attribute" at the end of the name -->  
                 <Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>  
                 <Attribute>^System\.Diagnostics\.DebuggerNonUserCodeAttribute$</Attribute>  
                 <Attribute>^System\.Runtime\.CompilerServices.CompilerGeneratedAttribute$</Attribute>  

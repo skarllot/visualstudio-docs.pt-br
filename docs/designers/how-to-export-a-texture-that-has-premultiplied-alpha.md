@@ -13,10 +13,11 @@ caps.latest.revision: 4
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 390ac08b74d2ecca9be1a049323b96371e08e3a1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b7b38036fafe64a86a132253b2597cd6d59eec6c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Como exportar uma textura que tenha Alfa pré-multiplicado
@@ -29,15 +30,15 @@ O Pipeline de conteúdo de imagem pode gerar texturas alfa pré-multiplicadas de
 -   Configurando o Pipeline de conteúdo de imagem para gerar alfa pré-multiplicado.  
   
 ## <a name="premultiplied-alpha"></a>Alfa pré-multiplicado  
- Alfa pré-multiplicado oferece diversas vantagens em relação a alfa convencional, alfa não pré-multiplicado, porque ele representa mais bem a interação do mundo real da luz com materiais físicos, separando a contribuição de cor de texel (a cor que ele adiciona à cena) de sua transparência (a quantidade de cor de fundo que pode passar). Algumas das vantagens de usar alfa pré-multiplicado são:  
+ O alfa pré-multiplicado oferece diversas vantagens em relação ao alfa convencional, não multiplicado, porque ele representa melhor a interação real da luz com materiais físicos, separando a contribuição de cor do texel (a cor que ele adiciona à cena) de sua transparência (a quantidade de cor subjacente permitida). Algumas das vantagens de usar alfa pré-multiplicado são:  
   
 -   A combinação com alfa pré-multiplicado é uma operação de associação; o resultado da combinação de várias texturas translúcidas é o mesmo, independentemente da ordem na qual as texturas são mescladas.  
   
 -   Devido à natureza associativa de combinação com alfa pré-multiplicado, a renderização multipassagem de objetos translúcidos é simplificada.  
   
--   Ao usar alfa pré-multiplicado, tanto a combinação aditiva pura (pela configuração de alfa para zero) quanto a combinação interpoladas linearmente podem ser obtidas simultaneamente. Por exemplo, em um sistema de partículas, uma partícula de fogo combinada de maneira aditiva pode se tornar uma partícula de fumaça translúcida que é combinada por meio da interpolação linear. Sem alfa pré-multiplicado, você precisa extrair as partículas de fogo separadamente das partículas de fumaça e modificar o estado de renderização entre chamadas de retirada.  
+-   Ao usar alfa pré-multiplicado, tanto a combinação aditiva pura (pela configuração de alfa para zero) quanto a combinação interpoladas linearmente podem ser obtidas simultaneamente. Por exemplo, em um sistema de partículas, uma partícula de fogo combinada de forma aditiva pode se tornar uma partícula de fumaça translúcida combinada por meio do uso da interpolação linear. Sem alfa pré-multiplicado, você precisa extrair as partículas de fogo separadamente das partículas de fumaça e modificar o estado de renderização entre chamadas de retirada.  
   
--   Texturas que usam alfa pré-multiplicada comprimem com qualidade mais alta que aquelas que não usam e elas não exibem as bordas descoloridas — ou "efeito de halo" — que podem ocorrer quando você combina texturas que não usam alfa pré-multiplicado.  
+-   As texturas que usam alfa pré-multiplicado são compactadas com qualidade mais alta do que aquelas que não usam e elas não exibem as bordas descoloridas (ou "efeito de halo") que podem ocorrer ao combinar texturas que não usam alfa pré-multiplicado.  
   
 #### <a name="to-create-a-texture-that-uses-premultiplied-alpha"></a>Como criar uma textura que usa alfa pré-multiplicado  
   
@@ -49,4 +50,4 @@ O Pipeline de conteúdo de imagem pode gerar texturas alfa pré-multiplicadas de
   
 4.  Selecione o botão **OK**.  
   
- Quando você compila o projeto, o Pipeline de conteúdo de imagem converte a imagem de origem do formato de trabalho para o formato de saída que você especificou, incluindo a conversão da imagem para o formato alfa pré-multiplicado e o resultado é copiado para o diretório de saída do projeto.
+ Quando você cria o projeto, o Pipeline de conteúdo de imagem converte a imagem de origem do formato de trabalho para o formato de saída que você especificou, incluindo a conversão da imagem para o formato alfa pré-multiplicado e o resultado é copiado para o diretório de saída do projeto.

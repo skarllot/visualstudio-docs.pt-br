@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 762fe231d277d4d9731581f2f51b21fb747358aa
-ms.openlocfilehash: 9830dbce40647453a5b7223de1873029405be9b1
-ms.lasthandoff: 04/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: a923d3fa962ee826d86a1c6946ae87a469b728d6
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="getting-started-with-visual-studio-tools-for-unity"></a>Introdução às Ferramentas do Visual Studio para Unity
@@ -87,7 +88,7 @@ Nesta seção, você aprenderá a instalar as Ferramentas do Visual Studio para 
 
  Caso contrário, se estiver apenas começando a usar o Unity, comece com um tutorial básico. Visite a página Aprender do Unity para encontrar tutoriais sobre projetos de exemplo com que você pode começar e lições com que você pode aprender para criar seu próprio jogo com o Unity. A página Aprenda do Unity tem tutoriais fáceis de seguir para vários jogos diferentes.  
 
- [Tutoriais – Página Aprenda do Unity](http://unity3d.com/learn/tutorials/modules)  
+ [Tutoriais – página Aprenda com Unity](http://unity3d.com/learn/tutorials/modules)  
 
 #### <a name="2---configure-unity-editor-to-use-visual-studio-tools-for-unity"></a>2 – Configurar o Editor do Unity para usar as Ferramentas do Visual Studio para Unity  
  Para habilitar seu projeto a usar as Ferramentas do Visual Studio para Unity, basta definir o Visual Studio como seu editor de script externo. No Editor do Unity, no menu principal, escolha **Editar, Preferências**; em seguida, na caixa de diálogo **Preferências do Unity**, escolha **Ferramentas Externas**. Em seguida, defina a propriedade **Editor de Script Externo** como a versão do Visual Studio que deseja usar (as Ferramentas do Visual Studio para Unity devem ser instaladas para esta versão do Visual Studio) e verifique se a propriedade **Editor Anexando** está definida.  
@@ -109,7 +110,7 @@ Nesta seção, você aprenderá a instalar as Ferramentas do Visual Studio para 
 
  Caso contrário, se estiver apenas começando a usar o Unity, comece com um tutorial básico. Visite a página Aprender do Unity para encontrar tutoriais sobre projetos de exemplo com que você pode começar e lições com que você pode aprender para criar seu próprio jogo com o Unity. A página Aprenda do Unity tem tutoriais fáceis de seguir para vários jogos diferentes.  
 
- [Tutoriais – Página Aprenda do Unity](http://unity3d.com/learn/tutorials/modules)  
+ [Tutoriais – página Aprenda com Unity](http://unity3d.com/learn/tutorials/modules)  
 
 #### <a name="2---configure-unity-editor-to-use-visual-studio-tools-for-unity"></a>2 – Configurar o Editor do Unity para usar as Ferramentas do Visual Studio para Unity  
  Se estiver começando de um projeto existente do Unity ou se não tiver importado o unitypackage das Ferramentas do Visual Studio quando criou o projeto, você precisará importar o unitypackage agora. No editor do Unity, no menu principal, escolha **Ativos, Importar Pacote, Ferramentas do Visual Studio 2015** (você verá uma opção para a versão do Visual Studio que tiver instalado).  

@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4c00bb71271ab60589aa86e9430e9e21686d09a5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 846860b7d61d9fbda6ca10793420b66fdab4a01f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="testing-a-large-application-with-multiple-ui-maps"></a>Testando um aplicativo grande com vários mapas de interface do usuário
@@ -42,7 +43,7 @@ Este tópico fala sobre como usar testes de IU codificados quando você estiver 
   
 -   Visual Studio Enterprise  
   
- Quando você cria um novo teste de IU codificado, a estrutura de testes [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] gera um código de teste por padrão em uma classe <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>. Para obter mais informações sobre como gravar testes de IU codificados, consulte [Criando testes de UI codificados](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) e [Anatomia de um teste de IU codificado](../test/anatomy-of-a-coded-ui-test.md).  
+ Quando você cria um novo teste de IU codificado, a estrutura de testes [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] gera um código para o teste em uma classe <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> por padrão. Para obter mais informações sobre como gravar testes de IU codificados, consulte [Criando testes de UI codificados](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) e [Anatomia de um teste de IU codificado](../test/anatomy-of-a-coded-ui-test.md).  
   
  O código gerado para o mapa de interface do usuário contém uma classe para cada objeto com o qual há interação. Para cada método gerado, é gerada uma classe complementar aos parâmetros de método especificamente para o método em questão. Se houver uma grande quantidade de objetos, páginas, formulários e controles em seu aplicativo, o mapa de interface do usuário pode ficar muito grande. Além disso, se houver diversas pessoas trabalhando nos testes, o aplicativo fica pesado com um único arquivo grande de mapa de interface do usuário.  
   

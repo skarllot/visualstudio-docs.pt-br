@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 2aff9b2c34bf8897adc7edee3a1205317258fc0f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 5acc74abd56b128bf9df708ab7c0f3451c6eb270
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Geração de código, compilação e convenções de nomenclatura no Microsoft Fakes
@@ -40,15 +41,32 @@ Este tópico discute problemas e opções na compilação e geração de código
 -   Visual Studio Enterprise  
   
 ##  <a name="BKMK_In_this_topic"></a> Neste tópico  
- [Geração e compilação de código](#BKMK_Code_generation_and_compilation)  
   
--   [Configurando a geração de código de stubs](#BKMK_Configuring_code_generation_of_stubs) • [Filtragem de tipo](#BKMK_Type_filtering) • [Usando stubs em classes concretas e métodos virtuais](#BKMK_Stubbing_concrete_classes_and_virtual_methods) • [Tipos internos](#BKMK_Internal_types) • [Otimizando tempos de build](#BKMK_Optimizing_build_times) • [Evitando conflitos entre nomes de assembly](#BKMK_Avoiding_assembly_name_clashing)  
+-   [Geração e compilação de código](#BKMK_Code_generation_and_compilation)  
   
- [Convenções de nomenclatura do Fakes](#BKMK_Fakes_naming_conventions)  
+-   [Configurando a geração de código de stubs](#BKMK_Configuring_code_generation_of_stubs)
   
--   [Convenções de nomenclatura de tipo do stub e tipo do shim](#BKMK_Shim_type_and_stub_type_naming_conventions) • [Convenções de nomenclatura de propriedade delegada de shim ou campo delegado de stub](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions) • [Convenções de nomenclatura de tipo de parâmetro](#BKMK_Parameter_type_naming_conventions) • [Regras recursivas](#BKMK_Recursive_rules)  
+-   [Filtragem de tipo](#BKMK_Type_filtering)
   
- [Recursos externos](#BKMK_External_resources)  
+-   [Stub de classes concretas e métodos virtuais](#BKMK_Stubbing_concrete_classes_and_virtual_methods)
+  
+-   [Tipos internos](#BKMK_Internal_types)
+  
+-   [Otimizando tempos de build](#BKMK_Optimizing_build_times)
+  
+-   [Evitando conflitos de nome de assembly](#BKMK_Avoiding_assembly_name_clashing)  
+  
+-   [Convenções de nomenclatura do Fakes](#BKMK_Fakes_naming_conventions)  
+  
+-   [Convenções de nomenclatura de tipo de shim e de tipo de stub](#BKMK_Shim_type_and_stub_type_naming_conventions)
+  
+-   [Convenções de nomenclatura de campo de propriedade de delegado ou de delegado de stub](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions)
+  
+-   [Convenções de nomenclatura de tipo de parâmetro](#BKMK_Parameter_type_naming_conventions)
+  
+-   [Regras recursivas](#BKMK_Recursive_rules)  
+  
+-   [Recursos externos](#BKMK_External_resources)  
   
 -   [Diretrizes](#BKMK_Guidance)  
   
@@ -125,7 +143,7 @@ Este tópico discute problemas e opções na compilação e geração de código
 ```  
   
 ###  <a name="BKMK_Internal_types"></a> Tipos internos  
- O gerador de código do Fakes gerará tipos de shim e tipos de stub que são visíveis para o assembly do Fakes gerado. Para tornar os tipos internos de um assembly com shims visível para o Fakes e seu assembly de teste, adicione atributos <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> ao código do assembly com shims que proporciona visibilidade para o assembly do Fakes gerado e para o assembly de teste. Veja um exemplo:  
+ O gerador de código do Fakes gerará tipos de shim e tipos de stub que são visíveis para o assembly do Fakes gerado. Para tornar os tipos internos de um assembly com shims visível para o Fakes e para seu assembly de teste, adicione atributos <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> no código do assembly com shims que proporciona visibilidade para o assembly do Fakes gerado e para o assembly de teste. Veja um exemplo:  
   
 ```c#  
 // FileSystem\AssemblyInfo.cs  
@@ -184,7 +202,7 @@ Este tópico discute problemas e opções na compilação e geração de código
   
  De seus projetos de teste de unidade, você pode simplesmente fazer uma referência aos assemblies do Fakes compilados que são colocados em FakesAssemblies na pasta do projeto.  
   
-1.  Crie uma nova biblioteca de classes com a versão de tempo de execução do .NET que corresponde aos seus projetos de teste. Vamos chamá-la de Fakes.Prebuild. Remova o arquivo class1.cs so projeto, ele não é necessário.  
+1.  Crie uma nova biblioteca de classes com a versão de tempo de execução do .NET que corresponde aos seus projetos de teste. Vamos chamá-lo de Fakes.Prebuild. Remova o arquivo class1.cs so projeto, ele não é necessário.  
   
 2.  Adicione uma referência a todos os assemblies do System e de terceiros para os quais você precisa do Fakes.  
   
@@ -254,7 +272,7 @@ attribute of the Assembly element in the .fakes:
   
  **Nomes de método especiais** como setters ou getter da propriedade são tratados conforme descrito na tabela a seguir.  
   
-|Se o método for…|Exemplo|Nome do método anexado|  
+|Se o método for...|Exemplo|Nome do método anexado|  
 |-------------------|-------------|--------------------------|  
 |Um **construtor**|`.ctor`|`Constructor`|  
 |Um **construtor** estático|`.cctor`|`StaticConstructor`|  
@@ -273,11 +291,11 @@ attribute of the Assembly element in the .fakes:
   
 -   Os nomes de **tipo de parâmetro** são transformados e concatenados.  
   
--   O **tipo retornado** será ignorado a menos que haja uma ambiguidade de sobrecarga. Se esse for o caso, o tipo retornado será acrescentado ao final do nome  
+-   **Tipo de retorno** será ignorado a menos que haja uma ambiguidade de sobrecarga. Se esse for o caso, o tipo retornado será acrescentado ao final do nome  
   
 ###  <a name="BKMK_Parameter_type_naming_conventions"></a> Convenções de nomenclatura de tipo de parâmetro  
   
-|Fornecido|A cadeia de caracteres acrescentada é…|  
+|Fornecido|A cadeia de caracteres acrescentada é...|  
 |-----------|-------------------------|  
 |Um **tipo**`T`|T<br /><br /> O namespace, estrutura aninhada e tics genéricos são descartados.|  
 |Um **parâmetro de saída**`out T`|`TOut`|  
@@ -285,7 +303,7 @@ attribute of the Assembly element in the .fakes:
 |Um **tipo de matriz**`T[]`|`TArray`|  
 |Uma **matriz multidimensional** tipo `T[ , , ]`|`T3`|  
 |Um **ponteiro** tipo `T*`|`TPtr`|  
-|Um **tipo genérico**`T<R1, …>`|`TOfR1`|  
+|Um **tipo genérico**`T<R1, ...>`|`TOfR1`|  
 |Um **argumento de tipo genérico**`!i` de tipo `C<TType>`|`Ti`|  
 |Um **argumento de tipo genérico**`!!i` do método `M<MMethod>`|`Mi`|  
 |Um **tipo aninhado**`N.T`|`N` é acrescentado, depois `T`|  
@@ -300,7 +318,7 @@ attribute of the Assembly element in the .fakes:
 ##  <a name="BKMK_External_resources"></a> Recursos externos  
   
 ###  <a name="BKMK_Guidance"></a> Diretrizes  
- [Testes de Entrega Contínua com o Visual Studio 2012 – Capítulo 2: Teste de Unidade: Testando o Interior](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
   
 ## <a name="see-also"></a>Consulte também  
  [Isolando código em teste com Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)

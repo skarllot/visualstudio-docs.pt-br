@@ -13,10 +13,11 @@ caps.latest.revision: 9
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 488479f2cf5e1016e1506bbe7e11847fe0eab150
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e6ee75cded8cefe4f2e46c4e53edd0f050273a5d
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-creating-a-realistic-3-d-billiard-ball"></a>Explicação passo a passo: Criando uma bola de bilhar realística em 3D
@@ -189,7 +190,7 @@ Este passo a passo demonstra como criar uma bola de bilhar realística em 3D usa
   
  ![Layout do mapa de cubo do ambiente](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png "gfx_shader_demo_billiard_art_env_texture_top")  
   
- A imagem na parte superior é a face do cubo Y positivo (+ Y); no meio, da esquerda para a direita, é – X, + Z, +X e –Z; na parte inferior, é – Y.  
+ A imagem na parte superior é a face do cubo Y positivo (+Y); no meio, da esquerda para a direita, é -X, +Z, +X e -Z; na parte inferior, é -Y.  
   
  Agora você pode modificar o sombreador para mesclar o exemplo de mapa de cubo para o restante do sombreador.  
   

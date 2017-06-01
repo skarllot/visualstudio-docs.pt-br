@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 91b3f224d92b9ace5df34cc74c8d7616b8458d6c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 1a47ab6e11e4c67713961078f125bb7abca23bb9
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="unit-test-your-code"></a>Teste de unidade de código
@@ -94,7 +95,7 @@ Os testes de unidade fornecem aos desenvolvedores e testadores uma maneira rápi
  [Teste de unidade do Visual Studio](http://go.microsoft.com/fwlink/?LinkId=224477)  
   
 ### <a name="guidance"></a>Diretrizes  
- [Testes de Entrega Contínua com o Visual Studio 2012 – Capítulo 2: Teste de Unidade: Testando o Interior](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
   
 ### <a name="reference"></a>Referência  
  [Índice de conteúdo para testes de unidade](http://go.microsoft.com/fwlink/?LinkID=254719)  

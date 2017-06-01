@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1dee6e1a0e92ecf5c8be64c4c3c477cf31291203
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: fb1bcd92e8f7bda12e774b969da2c71dfc38ab2f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>Como criar e aplicar um recurso
@@ -73,14 +74,14 @@ Os estilos e modelos de elementos no Designer XAML são armazenados em entidades
   
     -   Aplique um recurso a uma propriedade. Na janela Propriedades, escolha o marcador de propriedade ao lado do valor da propriedade, escolha **Recurso Local** ou **Recurso do Sistema** e escolha um recurso disponível na lista que é exibida.  
   
-         Se você não vir um recurso que esperava ver, é possível que o tipo do recurso não corresponda ao tipo da propriedade.  
+         Se um recurso que você esperava ver não aparecer, poderá ser porque o tipo de recurso não corresponde ao tipo da propriedade.  
   
     -   Aplique um estilo ou recurso de modelo de controle a um controle. Abra o menu de contexto para um controle na janela Estrutura de Tópicos de Documento, escolha **Editar Modelo** ou **Editar Modelos Adicionais**, escolha **Aplicar Recurso** e selecione o nome do modelo de controle na lista que é exibida.  
   
         > [!NOTE]
         >  **Editar Modelo** é usado para aplicar modelos de controle. **Editar Modelos Adicionais** é usado para aplicar outros tipos de modelo.  
   
-     Recursos podem ser aplicados sempre que forem compatíveis. Por exemplo, um recurso pincel pode ser aplicado à propriedade **Primeiro Plano** de um controle <xref:Windows.UI.Xaml.Controls.TextBox>.  
+     Recursos podem ser aplicados sempre que forem compatíveis. Por exemplo, um recurso de pincel pode ser aplicado à propriedade **Primeiro plano** de um controle <xref:Windows.UI.Xaml.Controls.TextBox>.  
   
 ### <a name="to-edit-a-resource"></a>Para editar um recurso  
   

@@ -29,9 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5c2ab4063911852bbc79b8239693a01e0818b4a9
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f880816f383712f87624467c9ed3b45a1c2ccb8c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Criando uma interface de usuário usando o Blend para Visual Studio
@@ -39,7 +41,7 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
   
  Como o Blend for Visual Studio é incluído como parte do Visual Studio, não é necessário baixá-lo. No entanto, você precisa selecioná-lo no instalador do Visual Studio para que ele seja instalado no sistema.  
   
- Se estiver conhecendo o Blend for Visual Studio agora, reserve algum tempo para se familiarizar com os recursos exclusivos do espaço de trabalho. Este tópico apresenta um tour rápido.  
+ Se você estiver começando a usar o Blend for Visual Studio, reserve um tempo para familiarizar-se com os recursos exclusivos do espaço de trabalho. Este tópico apresenta um tour rápido.  
   
 > [!NOTE]
 >  Para fazer um tour pelos recursos de design compartilhados, como a prancheta, a janela Estrutura de Tópicos do Documento e a janela Dispositivo, consulte [Criando uma interface do usuário usando o Designer XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).  
@@ -54,7 +56,7 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
   
 -   [Tour pelo painel Propriedades](#Properties)  
   
-##  <a name="a-nametoolsa-tour-of-the-tools-panel"></a><a name="Tools"></a> Tour pelo painel Ferramentas  
+##  <a name="Tools"></a> Tour pelo painel Ferramentas  
  É possível usar o painel **Ferramentas** no Blend for Visual Studio para criar e modificar objetos no aplicativo. Você cria os objetos selecionando uma ferramenta e desenhando na prancheta com o mouse.  
   
  ![Painel Ferramentas](../designers/media/blend5toolspanel.png "Blend5Toolspanel")  
@@ -70,8 +72,8 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
   
  **Assista a um breve vídeo:** ![Configure Installed Features (Configurar recursos instalados)](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [A Barra de Ferramentas](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4).  
   
-##  <a name="a-nameassetsa-tour-of-the-assets-panel"></a><a name="Assets"></a> Tour pelo painel Ativos  
- É possível encontrar todos os controles no painel **Ativos**, semelhante à **Caixa de ferramentas** no Visual Studio. Além dos controles, você encontrará tudo o que pode adicionar à sua prancheta no painel **Ativos**, incluindo estilos, mídia, comportamentos e efeitos.  
+##  <a name="Assets"></a> Tour pelo painel Ativos  
+ É possível encontrar todos os controles no painel **Ativos**, semelhante à **Caixa de ferramentas** no Visual Studio. Além dos controles, você encontrará tudo o que pode adicionar à sua prancheta no painel **Ativos**, incluindo estilos, mídias, comportamentos e efeitos.  
   
  ![Painel Ativos](../designers/media/blend5_assets_panel.png "Blend5_Assets_panel")  
   
@@ -83,7 +85,7 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
 |![](../designers/media/b1_4.png "B1_4")|**Estilos** Mostre todos os estilos contidos no dicionário de recursos.|  
 |![](../designers/media/b1_5.png "B1_5")|**Descrição** Exiba uma descrição da categoria ou subcategoria de ativos selecionada.|  
   
-##  <a name="a-nameobjectsa-tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a> Tour pelo painel Objetos e Linha do Tempo  
+##  <a name="Objects"></a> Tour pelo painel Objetos e Linha do Tempo  
  Use esse painel para organizar os objetos na prancheta e, se quiser, para animá-los.  
   
  ![Painel Objetos e Linha do Tempo no modo de animação](../designers/media/b5_object_timeline_animation.png "b5_object_timeline_animation")  
@@ -91,7 +93,7 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
 |||  
 |-|-|  
 |![](../designers/media/b1_1.png "B1_1")|**Exibição Objetos** Exiba uma árvore visual de um documento. É possível fazer uma busca detalhada em vários níveis de detalhamento. Você também pode adicionar camadas para organizar ainda mais os objetos na prancheta. Dessa forma, é possível bloqueá-los e ocultá-los como um grupo.|  
-|![](../designers/media/b1_2.png "B1_2")|**Indicador do modo de registro** Veja se você está registrando as alterações de propriedade em uma linha do tempo.|  
+|![](../designers/media/b1_2.png "B1_2")|**Indicador do modo de registro** Veja se você está gravando as alterações de propriedade em uma linha do tempo.|  
 |![](../designers/media/b1_3.png "B1_3")|**Seletor de storyboard** Exiba uma lista dos storyboards criados.|  
 |![](../designers/media/b1_4.png "B1_4")|**Fechar storyboard** Feche o storyboard atual.|  
 |![](../designers/media/b1_5.png "B1_5")|**Opções de storyboard** Crie, duplique, inverta, exclua, renomeie ou feche um storyboard.|  
@@ -107,7 +109,7 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
 |![](../designers/media/b1_15.png "B1_15")|**Zoom da linha do tempo** Defina a resolução de zoom da linha do tempo. Aumentar o zoom permite editar uma animação com mais detalhes e diminuir o zoom mostra mais uma visão geral do que está acontecendo no decorrer de períodos de tempo mais longos. Se você aumentar o zoom, mas não conseguir definir um quadro chave na posição de tempo desejada, verifique se a resolução de ajuste está definida com um valor suficientemente alto.|  
 |![Texto explicativo 16](../designers/media/b5_label_16.png "b5_label_16")|**Área de composição da linha do tempo** Exiba a linha do tempo e mova quadros chave arrastando-os ou usando os menus de atalho.|  
   
-##  <a name="a-namepropertiesa-tour-of-the-properties-panel"></a><a name="Properties"></a> Tour pelo painel Propriedades  
+##  <a name="Properties"></a> Tour pelo painel Propriedades  
  Use esse painel para exibir e modificar as propriedades de um objeto. Você também pode defini-las diretamente na prancheta. Nesse caso, as alterações na propriedade serão refletidas no painel **Propriedades**.  
   
  ![Painel Propriedades](../designers/media/blend5_properties_panel.png "Blend5_properties_panel")  
@@ -141,8 +143,3 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
  [Animar objetos](../designers/animate-objects-in-xaml-designer.md)   
  [Desenhar formas e caminhos](../designers/draw-shapes-and-paths.md)   
  [Criando o XAML no Visual Studio e no Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

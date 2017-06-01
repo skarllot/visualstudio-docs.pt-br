@@ -1,7 +1,7 @@
 ---
 title: "Ações Rápidas | Microsoft Docs"
 ms.custom: 
-ms.date: 03/10/2017
+ms.date: 05/08/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.devlang: csharp
 ms.assetid: e173fb7d-c5bd-4568-ba0f-aa61913b3244
-author: BrianPeek
-ms.author: brpeek
+author: kempb
+ms.author: kempb
 manager: ghogen
 dev_langs:
 - CSharp
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
-ms.openlocfilehash: 226e51ace56d51945cc380aaaf3450ae7dacf8e4
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2831d252fbc9601e62c372ac3df7704e1dc65f2a
+ms.openlocfilehash: e59204427c8d7d1706ca6c85261733efdcbc440e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="quick-actions"></a>Ações Rápidas
@@ -105,7 +106,7 @@ switch(myEnum)
     case MyEnum.Item3:
         break;
     default:
-        break;    
+        break;
 }
 ```
 
@@ -313,7 +314,7 @@ Debug.WriteLine("Hello")
 ```
 
 ### <a name="convert-to-interpolated-string"></a>Converter em Cadeia de Caracteres Interpolada
-[Cadeias de caracteres interpoladas](/dotnet/articles/csharp/language-reference/keywords/interpolated-strings) são uma maneira fácil de expressar cadeias de caracteres com variáveis inseridas, semelhante ao método **[String.Format](https://msdn.microsoft.com/library/system.string.format(v=vs.110).aspx)**.  Essa Ação Rápida reconhecerá maiúsculas e minúsculas nas quais as cadeias de caracteres são concatenadas ou que usam **String.Format**, e alterará o uso de uma cadeia de caracteres interpolada.
+[Cadeias de caracteres interpoladas](/dotnet/articles/csharp/language-reference/keywords/interpolated-strings) são uma maneira fácil de expressar cadeias de caracteres com variáveis inseridas, semelhante ao método **[String.Format](https://msdn.microsoft.com/library/system.string.format.aspx)**.  Essa Ação Rápida reconhece maiúsculas e minúsculas nas quais as cadeias de caracteres são concatenadas ou que usam **String.Format** e altera o uso de uma cadeia de caracteres interpolada.
 
 ```CSharp
 // Before
@@ -339,5 +340,95 @@ Dim num as Integer = 3
 Dim s As String = $"My string with {num} in the middle"
 ```
 
+### <a name="remove-merge-conflict-markers"></a>Remover marcadores de conflito de mesclagem
+Essas ações rápidas permitem que você resolva conflitos de mesclagem "fazendo uma alteração", que remove o código conflitante e os marcadores. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
+
+![Refatoração - resolver conflitos de mesclagem](../ide/media/vside-refactoring-merge-conflicts.png)
+
+### <a name="add-null-checks-for-parameters"></a>Adicionar verificações de null para parâmetros
+Essa Ação Rápida permite que você adicione uma verificação ao código para determinar se um parâmetro é nulo. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
+
+![Refatoração - adicionar verificação de nulos](../ide/media/vside-refactoring-nullcheck.png)
+
+### <a name="constructor-generator-improvements"></a>Aperfeiçoamentos do gerador de construtor
+Quando você está criando um construtor, essa ação rápida permite selecionar as propriedades ou os campos a serem gerados ou você pode gerar o construtor com base em um corpo vazio. Você também pode usá-lo para adicionar parâmetros a um construtor existente do site de chamada. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
+
+![Refatoração - gerar construtores](../ide/media/vside-refactoring-constructors.png)
+
+### <a name="remove-unused-variables"></a>Remover variáveis não utilizadas
+Essa Ação Rápida permite remover variáveis que foram declaradas, mas nunca foram usadas no código. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
+
+![Refatoração - variáveis não utilizadas](../ide/media/vside-refactoring-unusedvars.png)
+
+### <a name="generate-overrides"></a>Gerar substituições
+Essa Ação Rápida permite que você crie uma substituição de uma linha em branco em uma classe ou estrutura. A caixa de diálogo **Escolher Membros** permite que você escolha os membros a serem substituídos. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
+
+![Refatoração - substituições](../ide/media/vside-refactoring-overrides.png)
+
+![Refatoração - caixa de diálogo de substituições](../ide/media/vside-refactoring-overrides-dialog.png)
+
+### <a name="change-base-for-numeric-literals"></a>Alterar base para literais numéricas
+Essa Ação Rápida permite que você converta um literal numérico de um sistema numérico base para outro. Por exemplo, você pode alterar um número para hexadecimal ou formato binário. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
+
+![Refatoração - alterar base](../ide/media/vside-refactoring-changebase1.png)
+
+![Refatoração - alterar base](../ide/media/vside-refactoring-changebase2.png)
+
+### <a name="insert-digit-separators-into-literals"></a>Inserir separadores de dígitos em literais
+Essa Ação Rápida permite que você adicione caracteres separadores em valores literais. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
+
+![Refatoração - alterar separadores de dígitos](../ide/media/vside-refactoring-separators.png)
+
+### <a name="convert-if-construct-to-switch"></a>Converter construtor **se** para **alternar**
+Essa Ação Rápida permite que você converta um construtor **if-then-else** em um construtor **switch**. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
+
+```CSharp
+// Before
+if (obj is string s)
+{
+  Console.WriteLine("obj is a string: " + s);  
+}
+
+else if (obj is int i && i > 10)
+{
+  Console.WriteLine("obj is an int greater than 10");
+}
+
+// Convert to switch
+
+// After
+switch (obj)
+{
+  case string s:
+    Console.WriteLine("Obj is a string: " + s);
+    break;
+  case int i when i > 10:
+    Console.WriteLine("obj is an int greater than 10");
+    break;
+}
+```
+
+```VB
+' Before
+If TypeOf obj Is String s Then
+    Console.WriteLine("obj is a string: " + s)
+Else If TypeOf obj Is Integer i And i > 10 Then
+    Console.WriteLine("obj is an int greater than 10")
+End If
+
+' Convert to switch
+
+' After
+Select Case obj
+  Case String s
+    Console.WriteLine("Obj is a string: " + s)
+    Exit Sub
+  Case Integer i when i > 10
+    Console.WriteLine("obj is an int greater than 10")
+    Exit Sub
+End Select
+```
+
 # <a name="see-also"></a>Consulte também
 * [Estilos de código e ações rápidas](code-styles-and-quick-actions.md)
+

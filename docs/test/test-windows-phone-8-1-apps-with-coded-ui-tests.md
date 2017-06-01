@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 1694abeb37e7fa0e5766dfda16a05bd5e7895885
-ms.openlocfilehash: 7d8f95b62fcf7f32b972e0d9b64a0175f7d1f47c
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 969024cd3e3db42d05e2b163b3d8a674493d8aba
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>Testar aplicativos Windows UWP e 8.1 do Windows Phone com testes de UI codificados
@@ -308,7 +309,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
   
      ![Compilar e executar o teste usando o Gerenciador de Testes](../test/media/cuit_phone_runtestexplorer.png "CUIT_Phone_RunTestExplorer")  
   
-     O aplicativo do Windows Phone é iniciado, a ação de toque no botão é concluída e a propriedade Texto da caixa de texto é preenchida e validada com o método de asserção.  
+     O aplicativo do Windows Phone é iniciado, a ação de toque no botão é concluída e a propriedade Texto da caixa de texto é populada e validada com o método de asserção.  
   
      ![Executando um teste do Windows Phone](../test/media/cuit_phone_runtestexplorerrunning.png "CUIT_Phone_RunTestExplorerRunning")  
   
@@ -335,7 +336,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
  **R**: Sim. O compilador de teste de IU codificado exige que um emulador esteja em execução e que o aplicativo esteja implantado nele. Caso contrário, ele lança uma mensagem de texto informando que não foi possível localizar nenhum emulador em execução.  
   
 ###  <a name="TestingPhoneAppsCodedUI_EmulatorDevice"></a> P: Os testes só podem ser executados no emulador ou também posso usar um dispositivo físico?  
- **R**: Há suporte para as duas opções. Para selecionar o destino da execução de teste, altere o tipo de emulador ou selecione o dispositivo na barra de tarefa do dispositivo. Se o dispositivo estiver selecionado, é necessário conectar o dispositivo "Phone Blue" a uma das portas USB do computador.  
+ **R**: Há suporte para as duas opções. Para selecionar o destino da execução de teste, altere o tipo de emulador ou selecione o dispositivo na barra de tarefa do dispositivo. Se Dispositivo estiver selecionado, será necessário conectar o dispositivo Phone Blue a uma das portas USB do computador.  
   
  ![Selecionar a versão do emulador ou o dispositivo físico](../test/media/cuit_phone_testtarget.png "CUIT_Phone_TestTarget")  
   
@@ -364,13 +365,13 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 ### <a name="q-can-i-use-the-coded-ui-test-builder-to-map-controls-using-a-physical-phone-device"></a>P: Posso usar o compilador de teste de IU codificado para mapear controles usando um dispositivo telefônico físico?  
  **R**: Não. O compilador poderá mapear elementos de interface do usuário apenas se o aplicativo tiver sido implantado no emulador.  
   
-### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>P: Por que não posso modificar o código do arquivo UIMap.Designer?  
+### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>P: Por que não posso modificar o código no arquivo UIMap.Designer?  
  **R**: Todas as alterações de código feitas no arquivo UIMapDesigner.cs serão substituídas sempre que você gerenciar o código usando o UIMap – Construtor de Teste de IU Codificado. Se você tiver de modificar um método gravado, copie-o para o arquivo UIMap.cs e renomeie-o. O arquivo UIMap.cs pode ser usado para substituir métodos e propriedades no arquivo UIMapDesigner.cs. Você deve remover a referência para o método original no arquivo Coded UITest.cs e substituí-la pelo nome do método renomeado.  
   
 ### <a name="q-can-i-run-a-coded-ui-test-on-my-windows-phone-app-from-the-command-line"></a>P: Posso executar um teste de IU codificado no meu aplicativo do Windows Phone da linha de comando?  
  **R**: Sim. É possível usar um arquivo runsettings para especificar o dispositivo de destino da execução do teste. Por exemplo:  
   
- **vstest.console.exe “pathToYourCodedUITestDll” /settings:devicetarget.runsettings**  
+ **vstest.console.exe "pathToYourCodedUITestDll" /settings:devicetarget.runsettings**  
   
  Exemplo de arquivo runsettings:  
   
@@ -394,7 +395,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 |Destino da execução de testes|Computador local ou remoto. Você pode especificar os computadores remotos ao usar um caso de teste automatizado para executar os testes. Consulte [Automatizar um caso de teste no Microsoft Test Manager](/devops-test-docs/test/automate-a-test-case-in-microsoft-test-manager).|Emulador ou dispositivo. Consulte [P: Os testes só podem ser executados no emulador ou também posso usar um dispositivo físico?](#TestingPhoneAppsCodedUI_EmulatorDevice) neste tópico.|  
 |Executar da linha de comando|Não é necessário usar o arquivo de configurações para especificar o destino.|O arquivo runsettings necessário para especificar o destino.|  
 |Classes especializadas para controles do shell|<xref:Microsoft.VisualStudio.TestTools.UITesting.DirectUIControls.DirectUIControl>|<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>|  
-|Controle WebView em um aplicativo XAML|Compatível se você usa classes Html* especializadas para interagir com elementos HTML. Consulte <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>.|Não há suporte.|  
+|Controle WebView em um aplicativo XAML|Compatível se você usa classes Html* especializadas para interagir com elementos HTML. Consulte <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>.|Sem suporte.|  
 |Executar testes automatizados do MTM|Com suporte.|Sem suporte.|  
 |Testes direcionados a dados|Consulte [Testes controlados por dados](../test/creating-a-data-driven-coded-ui-test.md) para obter informações sobre como usar fontes de dados externas e o atributo DataSource em um método de teste.|Os dados são especificados e embutidos com o uso do atributo DataRow em um método de teste. Consulte [Usar testes de IU codificados e controlados por dados em aplicativos Windows Phone](#TestingPhoneAppsCodedUI_DataDriven) neste tópico.|  
   

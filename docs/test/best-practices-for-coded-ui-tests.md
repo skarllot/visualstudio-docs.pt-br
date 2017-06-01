@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: caa4ed8c607d9e3db6dc524021da8c93f5262bae
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 444f6bf46c3eac65a2771655616fd67d8ed83b32
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>Práticas recomendadas para testes de IU codificados
@@ -60,7 +61,7 @@ Este tópico descreve as melhores práticas a seguir ao desenvolver testes de IU
   
 -   Se a interface do usuário (IU) for alterada, registre novamente os métodos de teste, os métodos de asserção ou as seções afetadas de um método de teste existente.  
   
--   Crie um arquivo <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> separado para cada módulo do aplicativo em teste. Para obter mais informações, consulte [Testar um Aplicativo Grande com Vários Mapas de Interface do Usuário](../test/testing-a-large-application-with-multiple-ui-maps.md).  
+-   Crie um arquivo <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> separado para cada módulo em seu aplicativo em teste. Para obter mais informações, consulte [Testar um Aplicativo Grande com Vários Mapas de Interface do Usuário](../test/testing-a-large-application-with-multiple-ui-maps.md).  
   
 -   No aplicativo em teste, use nomes significativos ao criar os controles de interface do usuário. Isso confere mais significado e usabilidade aos nomes de controle gerados automaticamente.  
   
@@ -70,7 +71,7 @@ Este tópico descreve as melhores práticas a seguir ao desenvolver testes de IU
   
  Os testes de IU codificados se adaptam automaticamente a várias alterações na interface do usuário. Se, por exemplo, a posição ou cor de um elemento da interface do usuário forem alteradas, na maioria das vezes, o teste de IU codificado ainda encontrará o elemento correto.  
   
- Durante uma execução de teste, os controles de interface do usuário são localizados pela estrutura de teste por meio de um conjunto de propriedades de pesquisa aplicadas a cada classe de controle nas definições criadas pelo **Construtor de Teste de IU Codificado** no arquivo `UIMap.Designer.cs`. As propriedades de pesquisa contêm pares nome-valor de nomes e valores de propriedades que podem ser usados para identificar o controle, como as propriedades <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> e <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> do controle. Se as propriedades de pesquisa não forem alteradas, o teste de IU codificado encontrará o controle na interface do usuário com êxito. Se as propriedades de pesquisa forem alteradas, o teste de IU codificado terá um algoritmo de correspondência inteligente que aplica a heurística para encontrar controles e janelas na interface do usuário. Quando a interface do usuário é alterada, pode ser possível modificar as propriedades de pesquisa dos elementos identificados anteriormente para garantir que eles sejam encontrados.  
+ Durante uma execução de teste, os controles de interface do usuário são localizados pela estrutura de teste por meio de um conjunto de propriedades de pesquisa aplicadas a cada classe de controle nas definições criadas pelo **Construtor de Teste de IU Codificado** no arquivo `UIMap.Designer.cs`. As propriedades de pesquisa contêm pares nome-valor de nomes e valores da propriedade que podem ser usados para identificar o controle, como as propriedades <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> e <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> do controle. Se as propriedades de pesquisa não forem alteradas, o teste de IU codificado encontrará o controle na interface do usuário com êxito. Se as propriedades de pesquisa forem alteradas, o teste de IU codificado terá um algoritmo de correspondência inteligente que aplica a heurística para encontrar controles e janelas na interface do usuário. Quando a interface do usuário é alterada, pode ser possível modificar as propriedades de pesquisa dos elementos identificados anteriormente para garantir que eles sejam encontrados.  
   
 ## <a name="what-to-do-if-your-user-interface-changes"></a>O que fazer se a interface do usuário for alterada  
  Interfaces do usuário mudam frequentemente durante o desenvolvimento. Aqui estão algumas maneiras de reduzir o efeito dessas alterações:  
@@ -88,7 +89,7 @@ Este tópico descreve as melhores práticas a seguir ao desenvolver testes de IU
  Para saber mais sobre como registrar testes de IU codificados, consulte [Usar a Automação de Interface do Usuário para Testar o Código](../test/use-ui-automation-to-test-your-code.md).  
   
 ## <a name="what-to-do-if-a-background-process-needs-to-complete-before-the-test-can-continue"></a>O que fazer se um processo de segundo plano precisar ser concluído antes de continuar o teste  
- Talvez seja necessário esperar até que o processo seja concluído para continuar com a próxima ação de interface do usuário. Para fazer isso, é possível usar <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyLevel%2A> para aguardar a conclusão do teste, como no exemplo a seguir.  
+ Talvez seja necessário esperar até que o processo seja concluído para continuar com a próxima ação de interface do usuário. Para fazer isso, você pode usar <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyLevel%2A> para esperar para que o teste continue, como no exemplo a seguir.  
   
 ```  
 // Set the playback to wait for all threads to finish  

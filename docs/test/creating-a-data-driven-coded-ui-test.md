@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9885f3cff76b9c5e1d053550be80c4b68cf9de1b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2c4cb515c4442b3c48c42f47f9116e9ff536a5f4
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>Criando um teste de interface do usuário codificado controlado por dados
@@ -58,7 +59,7 @@ Para testar diferentes condições, você pode executar os testes várias vezes 
   
      ![Registrar ações](../test/media/cuit_datadriven_cuitbuilder.png "CUIT_dataDriven_CUITBuilder")  
   
-4.  Adicione 1 mais 2, pause o gravador e gere o método de teste. Posteriormente, substituiremos os valores dessa entrada do usuário por valores de um arquivo de dados.  
+4.  Adicione 1 mais 2, pause o gravador e gere o método de teste. Posteriormente, vamos substituir os valores dessa entrada do usuário por valores de um arquivo de dados.  
   
      ![Gerar método de teste](../test/media/cuit_datadriven_cuitbuildergencode.png "CUIT_dataDriven_CUITBuilderGenCode")  
   
@@ -78,7 +79,7 @@ Para testar diferentes condições, você pode executar os testes várias vezes 
   
      O resultado do teste que mostra se o teste passou ou falhou é exibido na janela do Gerenciador de Testes. Para abrir a janela do Gerenciador de Testes, no menu **TESTE**, escolha **Windows** e, em seguida, escolha **Gerenciador de Testes**.  
   
-6.  Como uma fonte de dados também pode ser usada para valores de parâmetro de declaração — que são usados pelo teste para verificar os valores esperados — vamos adicionar uma declaração para validar se a soma de dois números está correta. Coloque o cursor no método de teste mostrado acima, abra o menu de contexto e escolha **Gerar Código para Teste de IU Codificado** e, em seguida, **Usar Construtor de Teste de IU Codificado**.  
+6.  Como uma fonte de dados também pode ser usada para valores de parâmetro de declaração, que são usados pelo teste para verificar os valores esperados, vamos adicionar uma declaração para validar se a soma de dois números está correta. Coloque o cursor no método de teste mostrado acima, abra o menu de contexto e escolha **Gerar Código para Teste de IU Codificado** e, em seguida, **Usar Construtor de Teste de IU Codificado**.  
   
      Mapeie o controle de texto na Calculadora que exibe a soma.  
   
@@ -135,7 +136,7 @@ Para testar diferentes condições, você pode executar os testes várias vezes 
   
      Agora que criamos o conjunto de dados, vamos associar os dados ao teste.  
   
-#### <a name="step-3--add-data-source-binding"></a>Etapa 3 – Adicionar associação de fonte de dados  
+#### <a name="step-3---add-data-source-binding"></a>Etapa 3 – Adicionar associação de fonte de dados  
   
 1.  Para associar a fonte de dados, adicione um atributo `DataSource` dentro do atributo `[TestMethod]` existente que está imediatamente acima do método de teste.  
   
@@ -161,9 +162,9 @@ Para testar diferentes condições, você pode executar os testes várias vezes 
   
      Observe que o teste é executado por meio de três iterações. Isso ocorre porque a fonte de dados que foi associada continha três linhas de dados. No entanto, você observará também que o teste ainda está usando os valores de parâmetro constante e está adicionando 1 + 2 com uma soma de 3 a cada vez.  
   
-     Em seguida, configuraremos o teste para usar os valores no arquivo de fonte de dados.  
+     Em seguida, vamos configurar o teste para usar os valores no arquivo de fonte de dados.  
   
-#### <a name="step-4--use-the-data-in-the-coded-ui-test"></a>Etapa 4 – Usar os dados no teste de interface do usuário codificado  
+#### <a name="step-4---use-the-data-in-the-coded-ui-test"></a>Etapa 4 – Usar os dados no teste de IU codificado  
   
 1.  Adicione `using Microsoft.VisualStudio.TestTools.UITesting.WinControls` à parte superior do arquivo CodedUITest.cs:  
   
@@ -212,7 +213,7 @@ Para testar diferentes condições, você pode executar os testes várias vezes 
   
 3.  Salve a solução.  
   
-#### <a name="step-5--run-the-data-driven-test"></a>Etapa 5 – Executar o teste controlado por dados  
+#### <a name="step-5---run-the-data-driven-test"></a>Etapa 5 – Executar o teste controlado por dados  
   
 1.  Execute o teste novamente para verificar se o teste agora é controlado por dados.  
   
@@ -262,7 +263,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
   
  Para obter mais informações, consulte [Usar testes de IU codificados e controlados por dados em aplicativos Windows Phone](../test/test-windows-phone-8-1-apps-with-coded-ui-tests.md#TestingPhoneAppsCodedUI_DataDriven).  
   
-### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>P: Por que não posso modificar o código do arquivo UIMap.Designer?  
+### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>P: Por que não posso modificar o código no arquivo UIMap.Designer?  
  **R:** Todas as alterações de código feitas no arquivo UIMapDesigner.cs serão substituídas sempre que você gerenciar o código usando o UIMap – Construtor de Teste de IU Codificado. Neste exemplo e na maioria dos casos, as alterações de código necessárias para habilitar um teste para usar uma fonte de dados podem ser feitas no arquivo de código-fonte do teste (ou seja, CodedUITest1.cs).  
   
  Se você tiver de modificar um método gravado, copie-o para o arquivo UIMap.cs e renomeie-o. O arquivo UIMap.cs pode ser usado para substituir métodos e propriedades no arquivo UIMapDesigner.cs. Você deve remover a referência para o método original no arquivo Coded UITest.cs e substituí-la pelo nome do método renomeado.  

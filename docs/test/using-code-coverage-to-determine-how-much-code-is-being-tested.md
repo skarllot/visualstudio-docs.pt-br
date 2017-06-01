@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 86e3e1625cffabf3b64edd0da7307db7773adf4c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 90d4fec70dd131289f37d35f896d87c6e0843e83
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>Usando cobertura de código para determinar quanto código está sendo testado
@@ -68,7 +69,7 @@ Para determinar que proporção do código do projeto está sendo testada de fat
 >  Se você não obtiver os resultados esperados, consulte [Solução de problemas de cobertura de código](../test/troubleshooting-code-coverage.md). . Não se esqueça de executar novamente a cobertura de código depois de atualizar seu código. Os resultados de cobertura e a coloração de código não serão atualizados automaticamente depois que você alterar o código ou executar os testes.  
   
 ## <a name="reporting-in-blocks-or-lines"></a>Emissão de relatórios em os blocos ou linhas  
- A cobertura de código é contada em *blocos*. Um bloco é uma parte do código com exatamente um ponto de entrada e de saída.  Se o fluxo de controle do programa passar por um bloco durante a execução do teste, esse bloco será considerado coberto. O número de vezes que o bloco é usado não tem efeito sobre o resultado.  
+ A cobertura de código é contada em *blocos*. Um bloco é uma parte do código com exatamente um ponto de entrada e de saída.  Se o fluxo de controle do programa passar por um bloco durante a execução de teste, esse bloco será considerado coberto. O número de vezes que o bloco é usado não tem efeito sobre o resultado.  
   
  Você também pode ter os resultados exibidos em termos de linhas escolhendo **Adicionar/Remover Colunas** no cabeçalho da tabela. Se a execução do teste utilizou todos os blocos de código em qualquer linha de código, isso será contado como uma linha. Onde uma linha contém alguns os blocos de código que foram utilizados e outros não, isso é contado como uma linha parcial.  
   
@@ -263,7 +264,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
  Você pode exercer mais controle sobre quais assemblies e elementos são selecionados para análise de cobertura de código escrevendo um arquivo .runsettings. Por exemplo, você pode excluir os assemblies de tipos específicos sem precisar adicionar atributos às suas classes. Para obter mais informações, consulte [Personalizando a análise de cobertura de código](../test/customizing-code-coverage-analysis.md).  
   
 ## <a name="analyzing-code-coverage-in-the-build-service"></a>Analisando a cobertura de código no serviço de compilação  
- Quando você faz check-in de seu código, os testes serão executados no servidor de compilação, juntamente com os outros testes de outros membros da equipe. (Se você ainda não tiver configurado isso, consulte [Executar testes no processo de build](http://msdn.microsoft.com/Library/d05743a1-c5cf-447e-bed9-bed3cb595e38).) É útil analisar a cobertura de código no serviço de compilação, pois isso dá o panorama mais recente e mais abrangente da cobertura no projeto inteiro. Também incluirá os testes automatizados do sistema e outros testes codificados que você normalmente não executa nos computadores de desenvolvimento.  
+ Quando você faz check-in de seu código, os testes serão executados no servidor de compilação, juntamente com os outros testes de outros membros da equipe. (Se você ainda não tiver configurado isso, consulte [Executar testes no processo de build](http://msdn.microsoft.com/Library/d05743a1-c5cf-447e-bed9-bed3cb595e38).) É importante analisar a cobertura de código no serviço de build, pois isso dá o panorama mais recente e mais abrangente da cobertura no projeto inteiro. Isso também incluirá os testes automatizados do sistema e outros testes codificados que você normalmente não executa nos computadores de desenvolvimento.  
   
 1.  No Team Explorer, abra **Compilações** e adicione ou edite uma definição de build.  
   
@@ -271,7 +272,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
   
      Se você tiver mais de uma definição de Fonte de Teste, repita essa etapa para cada uma.  
   
-    -   *Mas não há campo denominado**Tipo de Arquivo de Configurações de Execução**.*  
+    -   *Mas não há nenhum campo denominado **Tipo de Arquivo de Configurações de Execução**.*  
   
          Em **Testes Automatizados**, selecione **Assembly de Teste** e escolha o botão de reticências **[...]** no final da linha. Na caixa de diálogo **Adicionar/Editar Execução de Teste**, em **Test Runner**, selecione **Visual Studio Test Runner**.  
   
@@ -296,7 +297,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 ## <a name="external-resources"></a>Recursos externos  
   
 ### <a name="guidance"></a>Diretrizes  
- [Testes de Entrega Contínua com o Visual Studio 2012 – Capítulo 2: Teste de Unidade: Testando o Interior](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
   
 ## <a name="see-also"></a>Consulte também  
  [Personalizando análise de cobertura de código](../test/customizing-code-coverage-analysis.md)   

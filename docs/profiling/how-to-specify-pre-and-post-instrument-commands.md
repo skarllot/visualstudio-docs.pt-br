@@ -34,9 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f69134d056015f0208e7f5f8d0c7121bd0060223
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: afbc73dbeda9d8201d1ed0cfccdf80025fc82306
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>Como especificar comandos pré e pós-instrumento
@@ -50,11 +52,11 @@ Você pode especificar comandos que são executados antes ou depois que os biná
   
  O diretório de trabalho no qual os comandos são executados depende do sistema operacional em que você está executando o [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] e da plataforma de destino do aplicativo analisado.  
   
- **Computadores de&32; bits**  
+ **Computadores de 32 bits**  
   
  Em computadores de 32 bits, o diretório das ferramentas de criação de perfil padrão é Drive\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools.  
   
- **Computadores de&64; bits**  
+ **Computadores de 64 bits**  
   
  Em computadores de 64 bits, especifique o caminho de acordo com a plataforma de destino do aplicativo analisado:  
   
@@ -79,7 +81,7 @@ Você pode especificar comandos que são executados antes ou depois que os biná
 3.  Digite o comando na caixa de texto **Linha de comando** em **Eventos Pré-Instrumento**.  
   
     > [!NOTE]
-    >  Você pode clicar no botão de reticências **(...)** ao lado da caixa **Linha de comando** para navegar até o arquivo apropriado .exe, .cmd ou .bat e selecioná-lo.  
+    >  Você pode clicar no botão de reticências **(...)**  ao lado da caixa **Linha de comando** para procurar e selecionar o arquivo .exe, .cmd ou .bat apropriado.  
   
 4.  Clique em **OK**.  
   
@@ -98,7 +100,7 @@ Você pode especificar comandos que são executados antes ou depois que os biná
 3.  Digite o comando na caixa de texto **Linha de comando** em **Eventos Pós-Instrumento**.  
   
     > [!NOTE]
-    >  Você pode clicar no botão de reticências **(...)** ao lado da caixa **Linha de comando** para navegar até o arquivo apropriado .exe, .cmd ou .bat e selecioná-lo.  
+    >  Você pode clicar no botão de reticências **(...)**  ao lado da caixa **Linha de comando** para procurar e selecionar o arquivo .exe, .cmd ou .bat apropriado.  
   
 4.  Clique em **OK**.  
   
@@ -106,8 +108,3 @@ Você pode especificar comandos que são executados antes ou depois que os biná
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

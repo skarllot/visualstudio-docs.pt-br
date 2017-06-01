@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: b4c56d1428506de5998f4f430239422d72df9a44
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: a737c447bc97738c6e8f5285f672e9964578061b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="getting-started-with-wpf"></a>Introdução ao WPF
@@ -41,10 +42,10 @@ O Windows Presentation Foundation (WPF) é uma estrutura de interface do usuári
   
 |||  
 |-|-|  
-|Desejo ir diretamente para…|[Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../designers/walkthrough-my-first-wpf-desktop-application2.md)<br /><br /> [Passo a passo: criar um aplicativo de área de trabalho do WPF conectado a um serviço móvel do Azure](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)|  
+|Desejo ir diretamente para...|[Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../designers/walkthrough-my-first-wpf-desktop-application2.md)<br /><br /> [Passo a passo: criar um aplicativo de área de trabalho do WPF conectado a um serviço móvel do Azure](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)|  
 |Como criar a interface do usuário do aplicativo?|[Criando o XAML no Visual Studio e no Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md)|  
 |Novo no .NET?|[Visão geral do .NET Framework](https://msdn.microsoft.com/en-us/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [Fundamentos do aplicativo](http://msdn.microsoft.com/Library/653da4ba-3752-4d1f-a08a-de017dc86ecc)<br /><br /> [Introdução ao Visual C# e ao Visual Basic](https://msdn.microsoft.com/en-us/library/dd492171\(v=vs.140\).aspx)|  
-|Quero saber mais sobre o WPF…|[Introdução ao WPF](../designers/introduction-to-wpf.md)<br /><br /> [Visão geral de XAML (WPF)](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)<br /><br /> [Controles](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)<br /><br /> [Visão geral da vinculação de dados](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)<br /><br /> [Vinculação de dados de WPF com LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml.md)|  
+|Quero saber mais sobre o WPF...|[Introdução ao WPF](../designers/introduction-to-wpf.md)<br /><br /> [Visão geral de XAML (WPF)](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)<br /><br /> [Controles](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)<br /><br /> [Visão geral da vinculação de dados](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)<br /><br /> [Vinculação de dados de WPF com LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml.md)|  
 |Você é um desenvolvedor de Windows Forms?|[Controles dos Windows Forms e controles WPF equivalentes](https://msdn.microsoft.com/en-us/library/ms750559\(v=vs.100\).aspx)<br /><br /> [Cenários com suporte em interoperação do WPF e Windows Forms](https://msdn.microsoft.com/en-us/library/ms751797\(v=vs.100\).aspx)|  
   
 ## <a name="see-also"></a>Consulte também  

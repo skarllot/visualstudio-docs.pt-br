@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: c77c8698a4536bc21b86260bb557fe79f03385cc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 5f32c2bc9f289a69a5ef9e7acfc1a973017fec0f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>Analisando testes de interface de usuário codificada usando logs de teste de interface de usuário codificada
@@ -80,7 +81,7 @@ Os logs de teste de IU codificado filtram e registram informações importantes 
     -   <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.LoggerOverrideState%2A> = HtmlLoggerState.AllActionSnapshot;  
   
 ### <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>Etapa 2: Execute o teste de IU codificado e veja o log  
- Quando executar um teste de IU codificado com as modificações no arquivo **QTAgent32.exe.config**, você verá um link de saída nos resultados do Gerenciador de Testes. Os arquivos de log são gerados quando o teste falha e quando o nível de rastreamento dos testes bem-sucedidos está definido como "detalhado".  
+ Quando executar um teste de IU codificado com as modificações no arquivo **QTAgent32.exe.config**, você verá um link de saída nos resultados do Gerenciador de Testes. Os arquivos de log são gerados não apenas quando o teste falha, mas também quando o nível de rastreamento está definido como "detalhado" e os testes são bem-sucedidos.  
   
 1.  No menu **TESTE**, escolha a opção **Windows** e **Gerenciador de Testes**.  
   

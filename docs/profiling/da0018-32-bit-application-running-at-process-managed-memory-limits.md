@@ -32,9 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 11602b444abbd154c94865934cc48cbf20703f5c
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f94a1e1c967e2e2bf9d9cdccc83603e1aee97619
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: aplicativo de 32 bits em execução em limites de memória gerenciada do processo
@@ -69,15 +71,15 @@ ms.openlocfilehash: 11602b444abbd154c94865934cc48cbf20703f5c
   
  Se o excesso de sobrecarga de memória gerenciada for um problema, considere uma destas opções:  
   
--   otimizar o uso do aplicativo de recursos de memória gerenciada  
+-   otimizando o uso de recursos de memória gerenciada do aplicativo  
   
      -ou-  
   
 -   tomar medidas para aliviar as restrições de arquitetura em relação ao tamanho máximo de memória virtual para um processo de 32 bits  
   
- Para otimizar o uso do aplicativo de recursos de memória gerenciada, colete dados de alocação de memória gerenciada em uma execução de criação de perfil de Alocação de Memória do .NET. Examine os relatórios de [Exibições de dados da memória do .NET](../profiling/dotnet-memory-data-views.md) para entender o padrão do aplicativo de alocação de memória.  
+ Para otimizar o uso de recursos de memória gerenciada do aplicativo, colete dados de alocação de memória gerenciada em uma execução de criação de perfil de Alocação de Memória do .NET. Examine os relatórios [Exibições de dados da memória do .NET](../profiling/dotnet-memory-data-views.md) para entender o padrão de alocação de memória do aplicativo.  
   
- Use a [Exibição de Tempo de Vida do Objeto](../profiling/object-lifetime-view.md) para determinar quais objetos de dados do programa estão sobrevivendo na geração e, em seguida, recuperados dela.  
+ Use a [Exibição de Tempo de Vida do Objeto](../profiling/object-lifetime-view.md) para determinar quais objetos de dados do programa estão sobrevivendo na geração e, em seguida, sendo recuperados dela.  
   
  Use a [Exibição de Alocações](../profiling/dotnet-memory-allocations-view.md) para determinar o caminho de execução que resultou nessas alocações.  
   
@@ -86,8 +88,3 @@ ms.openlocfilehash: 11602b444abbd154c94865934cc48cbf20703f5c
  Para obter alívio de arquitetura das restrições de memória virtual em relação ao tamanho da parte privada de um espaço de endereço do processo, tente executar esse processo de 32 bits em um computador de 64 bits.  Um processo de 32 bits em um computador de 64 bits pode adquirir até 4 GB de memória virtual privada.  
   
  Um processo de 64 bits em execução em um computador de 64 bits pode adquirir até 8 TB de memória virtual. Considere uma nova compilação do aplicativo para que ele seja executado como um aplicativo nativo de 64 bits. Essa regra se destina apenas a fins informativos e pode não exigir ação corretiva.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

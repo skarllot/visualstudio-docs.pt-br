@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 0d129b4820944f5717c63243cb8550bc4fed3385
-ms.openlocfilehash: 380b65540d8f5c6ea6d8a8adf1f3c5575f5dd9dc
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 09c33f3cc331af03659922e178e4089f177132de
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="profiling-tools"></a>Ferramentas de Criação de Perfil
@@ -52,7 +53,7 @@ Ferramentas de Diagnóstico e Criação de Perfil ajudam você a diagnosticar o 
 ## <a name="memory-usage"></a>Uso de Memória  
  ![DiagMemorySmall](../profiling/media/diagmemorysmall.png "DiagMemorySmall")  
   
- Localize vazamentos de memória e memória ineficiente enquanto você estiver depurando com a ferramenta **Uso da Memória**. A ferramenta permite que você tire instantâneos do heap de memória gerenciada e do heap de memória nativa. Você pode usar essa ferramenta com aplicativos ASP.NET, aplicativos universais do Windows e aplicativos da área de trabalho. A ferramenta **Uso da Memória** pode ser executada da janela **Ferramentas de Diagnóstico** enquanto você está depurando (**Depurar/Janelas/Mostrar Ferramentas de Diagnóstico**) ou fora do depurador (**Depurar/Criador de Perfil de Desempenho...**). Consulte [Uso da Memória](../profiling/memory-usage.md) e [Uso da Memória sem Depuração](../profiling/Memory-Usage-without-Debugging2.md) para obter mais informações.  
+ Localize vazamentos de memória e memória ineficiente enquanto estiver depurando com a ferramenta **Uso de Memória**. A ferramenta permite que você tire instantâneos do heap de memória gerenciada e do heap de memória nativa. Você pode usar essa ferramenta com aplicativos ASP.NET, aplicativos universais do Windows e aplicativos da área de trabalho. A ferramenta **Uso da Memória** pode ser executada da janela **Ferramentas de Diagnóstico** enquanto você está depurando (**Depurar/Janelas/Mostrar Ferramentas de Diagnóstico**) ou fora do depurador (**Depurar/Criador de Perfil de Desempenho...**). Consulte [Uso da Memória](../profiling/memory-usage.md) e [Uso da Memória sem Depuração](../profiling/Memory-Usage-without-Debugging2.md) para obter mais informações.  
   
 ## <a name="cpu-usage"></a>Uso da CPU  
  ![DiagCPUSmall](../profiling/media/diagcpusmall.png "DiagCPUSmall")  

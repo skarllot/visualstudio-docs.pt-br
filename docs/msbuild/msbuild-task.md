@@ -38,9 +38,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: de0c2bcfa1cd11492c859bc1f0fd13292e3a9736
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0540432e570bf533df1f6437361486f9dd7b6727
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="msbuild-task"></a>Tarefa MSBuild
@@ -60,14 +62,14 @@ Compila projetos [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vst
 |`SkipNonexistentProjects`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, os arquivos de projeto que não existem no disco serão ignorados. Caso contrário, esses projetos causarão um erro.|  
 |`StopOnFirstFailure`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, quando um dos projetos falhar em compilar, os projetos não serão mais compilados. Atualmente isso não tem suporte na criação em paralelo (com vários processadores).|  
 |`TargetAndPropertyListSeparators`|Parâmetro `String[]` opcional.<br /><br /> Especifica uma lista de destinos e de propriedades como metadados de item `Project`). Separadores não serão escapados antes do processamento. Por exemplo, %3B (um escape ';') será tratado como se não fosse escapado ';'.|  
-|`TargetOutputs`|Parâmetro de saída opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]` somente leitura.<br /><br /> Retorna as saídas dos destinos compilados de todos os arquivos de projeto. Somente as saídas de destinos que foram especificados são retornadas, não as saídas que podem existir em destinos dos quais esses destinos dependem.<br /><br /> O parâmetro `TargetOutputs` também contém os metadados a seguir:<br /><br /> -   `MSBuildSourceProjectFile`: o arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] que contém o destino que defina as saídas.<br />-   `MSBuildSourceTargetName`: o destino que define as saídas. **Observação:** para identificar as saídas de cada arquivo de projeto ou destino separadamente, execute a tarefa `MSBuild` separadamente para cada arquivo de projeto ou destino. Se você executar a tarefa `MSBuild` apenas uma vez para compilar todos os arquivos de projeto, as saídas de todos os destinos serão coletadas em uma matriz.|  
+|`TargetOutputs`|Parâmetro <xref:Microsoft.Build.Framework.ITaskItem>`[]` de saída opcional somente leitura.<br /><br /> Retorna as saídas dos destinos compilados de todos os arquivos de projeto. Somente as saídas de destinos que foram especificados são retornadas, não as saídas que podem existir em destinos dos quais esses destinos dependem.<br /><br /> O parâmetro `TargetOutputs` também contém os metadados a seguir:<br /><br /> -   `MSBuildSourceProjectFile`: o arquivo de projeto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] que contém o destino que defina as saídas.<br />-   `MSBuildSourceTargetName`: o destino que define as saídas. **Observação:** para identificar as saídas de cada arquivo de projeto ou destino separadamente, execute a tarefa `MSBuild` separadamente para cada arquivo de projeto ou destino. Se você executar a tarefa `MSBuild` apenas uma vez para compilar todos os arquivos de projeto, as saídas de todos os destinos serão coletadas em uma matriz.|  
 |`Targets`|Parâmetro `String` opcional.<br /><br /> Especifica o destino ou destinos para build nos arquivos de projeto. Use uma lista separada por ponto-e-vírgula de nomes de destino. Se nenhum destino for especificado na tarefa `MSBuild`, os destinos padrão especificados nos arquivos de projeto serão compilados. **Observação:** os destinos devem ocorrer em todos os arquivos de projeto. Caso contrário, ocorrerá um erro de build.|  
 |`ToolsVersion`|Parâmetro `String` opcional.<br /><br /> Especifica o `ToolsVersion` a ser usado ao compilar projetos passados para essa tarefa.<br /><br /> Permite que uma tarefa [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] compile um projeto que tem como alvo uma versão diferente de [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] do que a especificada no projeto. Os valores válidos são `2.0`, `3.0` e `3.5`. O valor padrão é `3.5`.|  
 |`UnloadProjectsOnCompletion`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, o projeto será descarregado quando a operação for concluída.|  
 |`UseResultsCache`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, o resultado em cache será retornado, se presente. Se a tarefa theMSBuild for executada, o resultado será armazenado em cache em um escopo (ProjectFileName, GlobalProperties)[TargetNames]<br /><br /> como uma lista de itens de build|  
   
 ## <a name="remarks"></a>Comentários  
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que, por sua vez, herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.TaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.Task>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base TaskExtension](../msbuild/taskextension-base-class.md).  
   
  Em vez de usar a [tarefa Exec](../msbuild/exec-task.md) para iniciar o MSBuild.exe, essa tarefa usa o mesmo processo [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] para criar projetos filho. A lista de destinos já compilados que pode ser ignorada é compartilhada entre as compilações pai e filho. Essa tarefa também é mais rápida porque nenhum processo [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] novo é criado.  
   
@@ -112,7 +114,7 @@ Compila projetos [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vst
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <ItemGroup>  
-        <ProjectToBuild Include="a1.sln…">  
+        <ProjectToBuild Include="a1.sln...">  
             <Properties>Configuration=Debug</Properties>  
         </ProjectToBuild>  
         <ProjectToBuild Include="a2.sln">  
@@ -130,7 +132,7 @@ Compila projetos [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vst
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <ItemGroup>  
-        <ProjectToBuild Include="a1.sln…"/>  
+        <ProjectToBuild Include="a1.sln..."/>  
         <ProjectToBuild Include="a2.sln">  
             <Properties>Configuration=Release</Properties>  
         </ProjectToBuild>  
@@ -150,7 +152,7 @@ Compila projetos [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vst
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <Target Name="Build">  
-        <MSBuild Projects="a1.sln…" Properties="Configuration=Release;   
+        <MSBuild Projects="a1.sln..." Properties="Configuration=Release;   
           Architecture=x86"/>  
         <MSBuild Projects="a2.sln" Properties="Configuration=Release;   
           Architecture=ia64"/>  
@@ -165,7 +167,7 @@ Compila projetos [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vst
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <ItemGroup>  
-        <ProjectToBuild Include="a1.sln…">  
+        <ProjectToBuild Include="a1.sln...">  
             <AdditionalProperties>Architecture=x86  
               </AdditionalProperties>  
         </ProjectToBuild>  
@@ -207,8 +209,3 @@ Compila projetos [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vst
 ## <a name="see-also"></a>Consulte também  
  [Tarefas](../msbuild/msbuild-tasks.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

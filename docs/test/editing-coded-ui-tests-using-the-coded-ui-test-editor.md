@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c8cce1badbf4e0e05c0d7585cd081aca6c4d642c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 55fd09e8c704152b1c88050adc567f28f37a7047
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="editing-coded-ui-tests-using-the-coded-ui-test-editor"></a>Editando testes de interface de usuário codificada usando o editor de teste de interface de usuário codificada
@@ -45,7 +46,7 @@ o Editor de testes de interface de usuário codificada permite modificar facilme
 -   Visual Studio Enterprise  
   
 ## <a name="why-should-i-do-this"></a>Por que devo fazer isso?  
- Usar o Editor de Teste de IU Codificado é mais rápido e eficiente do que editar o código utilizando métodos de testes de IU codificados por meio do Editor de Códigos. Com o Editor de Teste de IU Codificado, é possível usar a barra de ferramentas e os menus de atalho para localizar e modificar rapidamente valores de propriedade associados a ações e controles de interface do usuário. Por exemplo, é possível utilizar a barra de ferramentas do Editor de Teste de IU Codificado para executar os seguintes comandos:  
+ Usar o Editor de Teste de IU Codificado é mais rápido e eficiente do que editar o código utilizando métodos de testes de IU codificados por meio do Editor de Códigos. Com o Editor de Teste de IU Codificado, é possível usar a barra de ferramentas e os menus de atalho para localizar e modificar rapidamente valores de propriedade associados a ações e controles de interface do usuário. Por exemplo, é possível usar a barra de ferramentas do Editor de Teste de IU Codificado para executar os seguintes comandos:  
   
  ![UI Test Edito](../test/media/uitesteditor.png "UITestEditor")  
   
@@ -68,7 +69,7 @@ o Editor de testes de interface de usuário codificada permite modificar facilme
 9. [Localizar Todos](#CodedUITestEditor_LocateDecendants) ajuda a verificar a propriedade de controle e as mudanças significativas nos controles do aplicativo.  
   
 ## <a name="how-do-i-do-this"></a>Como faço isso?  
- Em [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)], abrir o arquivo UIMap.uitest afiliado ao teste de IU codificado no projeto de teste de IU codificado o exibirá automaticamente no Editor de Teste de IU Codificado. Os procedimentos a seguir descrevem como localizar e editar métodos de teste e propriedades das ações e dos controles de interface do usuário usando a barra de ferramentas e os menus de atalho do editor.  
+ Em [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)], abrir o arquivo UIMap.uitest afiliado ao teste de IU codificado no projeto de teste de IU codificado o exibirá automaticamente no Editor de Teste de IU Codificado. Os procedimentos a seguir descrevem como localizar e editar métodos de teste e propriedades das ações e dos controles da interface do usuário, usando a barra de ferramentas e os menus de atalho do editor.  
   
 ## <a name="open-a-coded-ui-test"></a>Abrir um teste de IU codificado  
  É possível exibir e editar testes de IU codificado baseados no Visual C# e no Visual Basic por meio do Editor de Teste de IU Codificado.  
@@ -91,14 +92,14 @@ Editar propriedades de ações de interface do usuário
   
  Para modificar as propriedades de uma ação de interface do usuário, no painel **Ações de interface do usuário**, expanda o método de teste que contém uma ação de IU cujas propriedades você deseja editar, selecione a ação de interface do usuário e, em seguida, modifique as propriedades usando a janela Propriedades.  
   
- Por exemplo, se um servidor estiver indisponível e uma ação de interface do usuário associada ao navegador da Web contiver a instrução **Acesse a página da Web ‘http://Contoso1/default.aspx’**, é possível alterar a URL para `‘http://Contoso2/default.aspx’`.  
+ Por exemplo, se um servidor estiver indisponível e houver uma ação de interface do usuário associada ao navegador da Web com a instrução **Acessar página da Web ‘http://Contoso1/default.aspx’**, será possível alterar a URL para `'http://Contoso2/default.aspx'`.  
   
  ![Propriedades de controle](../test/media/codeduitestcontrolprop.png "CodedUITestControlProp")  
 Editar propriedades de controle  
   
  Os procedimentos usados para modificar as ações de interface do usuário também podem ser utilizados para modificar as propriedades de um controle. No painel **Mapa do Controle de interface do usuário**, selecione o controle a ser editado e modifique as propriedades por meio da janela Propriedades.  
   
- Por exemplo, um desenvolvedor pode ter alterado a propriedade **(ID)** em um controle de botão no código-fonte do aplicativo em teste de “idSubmit” para “idLogin.” Com a alteração da propriedade **(ID)** no aplicativo, o teste de IU codificado não poderá localizar o controle de botão e falhará. Nesse caso, o testador pode abrir a coleção **Propriedades de Pesquisa** e alterar a propriedade **Id** para que ela corresponda ao novo valor usado pelo desenvolvedor no aplicativo. O testador também pode alterar o valor da propriedade **Nome Amigável** de “Enviar” para “Logon”. Com essa alteração, a ação de interface do usuário associada ao Editor de Teste de IU Codificado será atualizada de “Escolher o botão ‘Enviar’” para “Escolher o botão ‘Logon’”.  
+ Por exemplo, um desenvolvedor pode ter alterado a propriedade **(ID)** em um controle de botão no código-fonte do aplicativo em teste de “idSubmit” para “idLogin”. Com a alteração da propriedade **(ID)** no aplicativo, o teste de IU codificado não poderá localizar o controle de botão e falhará. Nesse caso, o testador pode abrir a coleção **Propriedades de Pesquisa** e alterar a propriedade **Id** para que ela corresponda ao novo valor usado pelo desenvolvedor no aplicativo. O testador também pode alterar o valor da propriedade **Nome Amigável** de “Enviar” para “Logon”. Com essa alteração, a ação de interface do usuário associada ao Editor de Teste de IU Codificado será atualizada de “Escolher botão ‘Enviar’” para “Escolher botão ‘Logon’”.  
   
  Após concluir as modificações, salve-as no arquivo UIMap.Designer escolhendo **Salvar** na barra de ferramentas [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
@@ -109,7 +110,7 @@ Editar propriedades de controle
   
 -   ![Dica](../test/media/tip.png "Dica") Para desfazer as alterações de propriedade, selecione **Desfazer** no menu **Editar** ou pressione Ctrl+Z.  
   
--   ![Dica](../test/media/tip.png "Dica") É possível usar o botão **Localizar** na barra de ferramentas do Editor de Teste de IU Codificado para abrir a ferramenta Localizar e Substituir no Visual Studio. Em seguida, será possível usar o controle Localizar para localizar uma ação de interface do usuário no Editor de Teste de IU Codificado. Por exemplo, você pode tentar localizar “Clique no botão ‘Logon’”. Isso pode ser útil em testes grandes. Não é possível utilizar a funcionalidade de substituição na ferramenta Localizar e Substituir no Editor de Teste de IU Codificado. Para obter mais informações, consulte o controle Localizar em [Localizando e Substituindo Texto](../ide/finding-and-replacing-text.md).  
+-   ![Dica](../test/media/tip.png "Dica") É possível usar o botão **Localizar** na barra de ferramentas do Editor de Teste de IU Codificado para abrir a ferramenta Localizar e Substituir no Visual Studio. Em seguida, será possível usar o controle Localizar para localizar uma ação de interface do usuário no Editor de Teste de IU Codificado. Por exemplo, você pode tentar localizar “Clicar no botão ‘Logon’”. Isso pode ser útil em testes grandes. Não é possível utilizar a funcionalidade de substituição na ferramenta Localizar e Substituir no Editor de Teste de IU Codificado. Para obter mais informações, consulte o controle Localizar em [Localizando e Substituindo Texto](../ide/finding-and-replacing-text.md).  
   
 -   ![Dica](../test/media/tip.png "Dica") Algumas vezes, pode ser difícil visualizar onde os controles estão localizados na interface do usuário do aplicativo em teste. Um dos recursos do Editor de Teste de IU Codificado é a seleção de um controle listado no mapa de controle da interface do usuário e a exibição da localização desse controle no aplicativo em teste. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Localizar um Controle de interface do usuário no aplicativo em Teste](#CodedUITestEditor_LocateUIControl) pode ser consultado mais adiante neste tópico.  
   
@@ -153,7 +154,7 @@ Editar propriedades de controle
 ##  <a name="CodedUITestEditor_MoveMethods"></a> Mover um método de teste para o arquivo UIMap a fim de facilitar a personalização  
  Se que um dos métodos de teste no teste de IU codificado requerer um código personalizado, será necessário movê-lo para o arquivo UIMap.cs ou UIMap.vb. Caso contrário, o código será substituído sempre que o teste de IU codificado for recompilado. Se o método não for movido, o código personalizado será substituído sempre que o teste for recompilado.  
   
- No painel **Ações de interface do usuário**, selecione o método de teste a ser movido para o arquivo UIMap.cs ou UIMap.vb para facilitar a funcionalidade de código personalizado que não será substituída quando o código de teste for recompilado. Em seguida, escolha o botão **Mover Código** na barra de ferramentas do Editor de Teste de IU Codificado ou abra o menu de atalho do método de teste e escolha **Mover Código**. O método de teste é removido do arquivo UIMap.uitest e não é mais exibido no painel Ações de interface do usuário. Para editar o arquivo de teste movido, abra o arquivo UIMap.cs ou UIMap.vb no Gerenciador de Soluções.  
+ No painel **Ações de interface do usuário**, selecione o método de teste a ser movido para o arquivo UIMap.cs ou UIMap.vb para facilitar a funcionalidade de código personalizada que não será substituída quando o código de teste for recompilado. Em seguida, escolha o botão **Mover Código** na barra de ferramentas do Editor de Teste de IU Codificado ou abra o menu de atalho do método de teste e escolha **Mover Código**. O método de teste é removido do arquivo UIMap.uitest e não é mais exibido no painel Ações de interface do usuário. Para editar o arquivo de teste movido, abra o arquivo UIMap.cs ou UIMap.vb no Gerenciador de Soluções.  
   
  Após mover o método, salve as alterações no arquivo UIMap.Designer escolhendo **Salvar** na barra de ferramentas [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
@@ -191,7 +192,7 @@ Editar propriedades de controle
   
  ![Todos os controles localizados](../test/media/codeduilocateall2.png "CodedUILocateAll2")  
   
- No painel **Mapa de Controle de Interface do Usuário**, selecione a caixa de controles cujos descendentes você deseja localizar e exibir. Depois, abra o menu de atalho do controle e escolha **Localizar Tudo**. A caixa de controles e todos os controles descendentes serão marcados no Editor de Teste de IU Codificado com uma marca de seleção verde ou um “X” vermelho. Essas marcas permitem saber se os controles foram localizados com êxito no aplicativo em teste.  
+ No painel **Mapa de Controle de Interface do Usuário**, selecione a caixa de controles cujos descendentes você deseja localizar e exibir. Depois, abra o menu de atalho do controle e escolha **Localizar Tudo**. A caixa de controles e todos os controles descendentes serão marcados no Editor de Teste de IU Codificado com uma marca de seleção verde ou um ‘X’ vermelho. Essas marcas permitem saber se os controles foram localizados com êxito no aplicativo em teste.  
   
  *O que mais eu deveria saber?*  
  **Questões importantes**  
@@ -221,12 +222,12 @@ Editar propriedades de controle
 ## <a name="external-resources"></a>Recursos externos  
   
 ### <a name="guidance"></a>Diretrizes  
- [Testes de Entrega Contínua com o Visual Studio 2012 – Capítulo 2: Teste de Unidade: Testando o Interior](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
   
 ### <a name="faq"></a>Perguntas Frequentes  
  [Perguntas frequentes sobre testes de IU codificados – 1](http://go.microsoft.com/fwlink/?LinkID=230576)  
   
- [Perguntas frequentes sobre testes de IU codificados –&2;](http://go.microsoft.com/fwlink/?LinkID=230578)  
+ [Perguntas frequentes sobre testes de IU codificados – 2](http://go.microsoft.com/fwlink/?LinkID=230578)  
   
 ### <a name="forum"></a>Fórum  
  [Teste de Automação de interface do usuário do Visual Studio (inclui CodedUI)](http://go.microsoft.com/fwlink/?LinkID=224497)  

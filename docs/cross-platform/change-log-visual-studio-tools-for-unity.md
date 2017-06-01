@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: 2af148cb8367ea3a584ac8e028c8167e4ad6123b
-ms.lasthandoff: 04/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7aa8de1116409f30cf1a0cd2fd689c03c2242724
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>Log de alterações (Ferramentas do Visual Studio para Unity)
@@ -760,7 +761,7 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
   
 -   Corrigido o bug UVS-11: locais em co-rotinas.  
   
-## <a name="11--beta-release"></a>1.1 – versão Beta  
+## <a name="11---beta-release"></a>1.1 – versão beta  
  Lançado em 09/10/2014  
   
 ## <a name="1013"></a>1.0.13  
@@ -963,6 +964,6 @@ Log de alterações de Ferramentas do Visual Studio para Unity.
   
 -   Corrigida a conclusão para dll dentro da pasta Ativo para UnityScript e Boo.  
   
-## <a name="10--initial-release"></a>1.0 – versão inicial  
+## <a name="10---initial-release"></a>1.0 – versão inicial  
  Lançado em 22/08/2012
 

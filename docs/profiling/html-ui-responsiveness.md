@@ -39,10 +39,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 618aaec3a0ae735560d14bea43cc2b08bd9e5445
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 90fed413835f118e59bc32f0b94cb62a40baaca1
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>Analisar a capacidade de resposta de interface do usuário HTML em Aplicativos Universais do Windows
@@ -356,7 +357,7 @@ if (performance.mark && performance.measure) {
 |Evento DOM|Script|Um evento DOM ocorreu e foi executado.<br /><br /> A propriedade `context` para o evento DOM, como `DOMContentLoaded` ou `click` é mostrada entre parênteses.|  
 |Ouvinte de eventos|Script|Um ouvinte de evento foi chamado e executado.|  
 |Ouvinte de consulta de mídia|Script|Uma consulta de mídia registrada foi invalidada, resultando na execução dos seus ouvintes associados.|  
-|Observador de mutação|Script|Um ou mais elementos observados do DOM foram modificados, resultando na execução do retorno de chamada associado do MutationObserver.|  
+|Observador de mutação|Script|Um ou mais elementos DOM observados foram modificados, resultando na execução de um retorno de chamada associado do MutationObserver.|  
 |Avaliação de script|Script|Um novo elemento SCRIPT foi encontrado no DOM e foi feita uma tentativa de analisar e executar o script.|  
 |Temporizador|Script|Um temporizador agendado teve o tempo decorrido, e isso resultou na execução de sua função associada de retorno de chamada.|  
 |Função de retorno de chamada assíncrona do Tempo de Execução do Windows|Script|Uma operação assíncrona que disparou uma função de retorno de chamada `Promise` foi concluída por um objeto do Tempo de Execução do Windows.|  

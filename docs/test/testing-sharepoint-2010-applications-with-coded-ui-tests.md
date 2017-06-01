@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b55b2ffdc3c5bd0ec0fb1b1b556a8f343aab1844
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7ab8ce7199fec306a0f50344619200266a2261b8
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>Testando os aplicativos do SharePoint 2010 com testes de interface do usuário codificada
@@ -41,7 +42,7 @@ Incluir testes de IU codificados em um aplicativo do SharePoint permite verifica
 -   Visual Studio Enterprise  
   
 ## <a name="what-else-should-i-know-about-coded-ui-tests"></a>O que mais eu deveria saber sobre testes de IU codificados?  
- Para saber mais sobre os benefícios de usar testes de IU codificados, consulte [Usar a automação da interface do usuário para testar seu código](../test/use-ui-automation-to-test-your-code.md) e [Teste para entrega contínua com Visual Studio 2012 – capítulo 5 Automatizando testes do sistema](http://go.microsoft.com/fwlink/?LinkID=255196).  
+ Para saber mais sobre os benefícios de usar testes de IU codificados, consulte [Usar automação de interface do usuário para testar código](../test/use-ui-automation-to-test-your-code.md) e [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5 Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Testando para entrega contínua com Visual Studio 2012 – Capítulo 5 Automatizando testes do sistema).  
   
  **Observações**  
   
@@ -76,7 +77,7 @@ Mouse.DoubliClick(uiItemCell,new Point(31,14));
 uiGridKeyboardInputEdit.Text=value;  
 ```  
   
- Se você estiver gravando ações em uma célula não vazia, a gravação ficará um pouco mais complicada, porque, no momento em que você adicionar texto a uma célula, um novo controle \<div > é adicionado como um filho da célula. O novo controle \<div > contém o texto que você acabou de inserir. O gravador precisa registrar ações no novo controle \<div >; no entanto, ele não pode porque o novo controle \<div > não existe até depois que o teste for inserido. Você deve fazer as seguintes alterações de código manualmente para corrigir esse problema.  
+ Se você estiver gravando ações em uma célula não vazia, a gravação ficará um pouco mais complicada, porque, no momento em que você adicionar texto a uma célula, um novo controle \<div > é adicionado como um filho da célula. O novo controle \<div > contém o texto que você acabou de inserir. O gravador precisa registrar ações no novo controle \<div>, no entanto, ele não pode porque o novo controle \<div> somente existirá quando o teste for inserido. Você deve fazer as seguintes alterações de código manualmente para corrigir esse problema.  
   
 1.  Vá para a inicialização de célula e realize as propriedades primárias `RowIndex` e `ColumnIndex`:  
   
@@ -124,7 +125,7 @@ uiGridKeyboardInputEdit.Text=value;
   
 3.  Instale o [Fiddler](http://www.fiddler2.com/fiddler2/). Essa é apenas uma ferramenta que captura e registra o tráfego HTTP.  
   
-4.  Baixe o [projeto fiddlerXap](http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-components-postattachments/00-10-36-48-70/FiddlerXapProxy.zip). Descompacte-o, compile-o e execute o script de "CopySLHelper.bat" para instalar a DLL auxiliar que é necessária para testar as Web parts do Silverlight quando você usar a ferramenta Fiddler.  
+4.  Baixe o [projeto fiddlerXap](http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-components-postattachments/00-10-36-48-70/FiddlerXapProxy.zip). Descompacte e crie o projeto e execute o script "CopySLHelper.bat" para instalar a DLL auxiliar que é necessária para testar as Web parts do Silverlight ao usar a ferramenta Fiddler.  
   
  Depois de configurar seu computador, para começar a testar seu aplicativo do SharePoint 2010 com Web parts do Silverlight, siga estas etapas:  
   
@@ -154,7 +155,7 @@ uiGridKeyboardInputEdit.Text=value;
  [Índice de conteúdo para o teste de IU codificado](http://blogs.msdn.com/b/mathew_aniyan/archive/2010/02/11/content-index-for-coded-ui-test.aspx)  
   
 ### <a name="guidance"></a>Diretrizes  
- [Teste de entrega contínua com o Visual Studio 2012 – Capítulo 5: Automatizando testes do sistema](http://go.microsoft.com/fwlink/?LinkID=255196)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5 Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 5: Automatizando testes do sistema)  
   
 ### <a name="forum"></a>Fórum  
  [Visual Studio ALM + Team Foundation Server Blog](http://go.microsoft.com/fwlink/?LinkID=254496)  

@@ -26,16 +26,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 1694abeb37e7fa0e5766dfda16a05bd5e7895885
-ms.openlocfilehash: 9168eb964b86f375390157511bf9ec9526709d7b
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b95ff54bded55d16391f57ee53b8a95ca99ca867
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="set-a-unique-automation-property-for-windows-store-controls-for-testing"></a>Definir uma propriedade de automação exclusiva para controles da Windows Store para teste
 Se desejar executar testes de IU codificados no aplicativo da Windows Store baseado em XAML, será necessário ter uma propriedade de automação exclusiva que identifica cada controle.  
   
- Você pode atribuir uma propriedade de automação exclusiva com base no tipo de controle XAML em seu aplicativo. Aqui está como atribuir essa propriedade de automação exclusiva nas seguintes situações:  
+ Você pode atribuir uma propriedade de automação exclusiva com base no tipo de controle XAML em seu aplicativo. Aqui está como designar essa propriedade de automação exclusiva nas seguintes situações:  
   
 -   [Definição XAML estática de controles](#UniquePropertyWindowsStoreControlsStaticXAML)  
   
@@ -73,7 +74,7 @@ Se desejar executar testes de IU codificados no aplicativo da Windows Store base
  Defina o AutomationProperties.AutomationId como **ButtonX** explicitamente no XAML para o controle.  
   
 ```xaml  
-<Button AutomationProperties.AutomationId=“ButtonX” Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />  
+<Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />  
   
 ```  
   
@@ -196,8 +197,8 @@ public override string ToString()
   
 ```xaml  
   
-<Button Content=”Button1” Style="{StaticResource MyButton}" Width="140"/>  
-<Button Content=”Button2” Style="{StaticResource MyButton}" Width="140"/>  
+<Button Content="Button1" Style="{StaticResource MyButton}" Width="140"/>  
+<Button Content="Button2" Style="{StaticResource MyButton}" Width="140"/>  
 ```  
   
 ###  <a name="UniquePropertyWindowsStoreControlsDynamicControls"></a> Controles dinâmicos  

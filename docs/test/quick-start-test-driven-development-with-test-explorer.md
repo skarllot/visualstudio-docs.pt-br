@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 851e427ce690ded7ee009603656623c5c9bb9a19
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2efe98a5b421fbffbe2a39cc69a5e0acf06af7db
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="quick-start-test-driven-development-with-test-explorer"></a>Início rápido: desenvolvimento orientado por testes com o Gerenciador de Testes
@@ -168,7 +169,7 @@ ms.lasthandoff: 02/22/2017
 1.  Para aumentar sua confiança que seu código funciona em todos os casos, adicione os testes que tente uma variedade maior de valores de entrada.  
   
     > [!TIP]
-    >  Evite alterar testes existentes que foram aprovados. Em vez disso, adicione novos testes. Altere os testes existentes somente quando os requisitos de usuário forem alterados. Essa política ajuda a garantir que você não perde a funcionalidade existente enquanto você trabalha para estender o código.  
+    >  Evite alterar testes existentes que foram aprovados. Em vez disso, adicione novos testes. Altere os testes existentes somente quando os requisitos de usuário forem alterados. Essa política ajuda a garantir que você não perca a funcionalidade existente enquanto trabalha para estender o código.  
   
      Na classe de teste, adicione o seguinte teste, que tenta um intervalo de valores de entrada:  
   

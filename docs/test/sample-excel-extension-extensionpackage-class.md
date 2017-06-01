@@ -27,14 +27,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f8f8608204c6bf33e04d2dd18d09f0dad98f9def
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 20e3ac96d5b12002b11a9e93b413c48738f57153
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="sample-excel-extension-extensionpackage-class"></a>Extensão de exemplo do Excel: classe ExtensionPackage
-Essa classe estende a classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage> e fornece o ponto de entrada para a extensão de teste de IU codificado. que está testando uma Planilha [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)].  
+Essa classe estende a classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage> e fornece o ponto de entrada para a extensão de teste de IU codificado que está testando uma Planilha do [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)].  
   
 ## <a name="assembly-attribute"></a>Atributos do Assembly  
  O arquivo começa com um atributo de assembly que identifica o assembly como uma extensão de teste de interface do usuário.  
@@ -52,7 +53,7 @@ Essa classe estende a classe <xref:Microsoft.VisualStudio.TestTools.UITest.Exten
  Essa classe tem propriedades que fornecem valores que são usados pela estrutura de teste da interface do usuário codificada para identificar e descrever a extensão e o assembly. Consulte os comentários do código para obter mais informações.  
   
 ## <a name="getservice-method"></a>Método GetService  
- O método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A> é o único ponto de entrada usado pela estrutura de teste de interface do usuário codificada para obter acesso ao gerente de tecnologia, o provedor de propriedade e ao filtro de ação, conforme identificado pela classe base de cada objeto.  
+ O método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A> é o único ponto de entrada usado pela estrutura de teste de IU codificado para obter acesso ao gerente de tecnologia, ao provedor de propriedade e ao filtro de ação, conforme identificado pela classe base de cada objeto.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>   

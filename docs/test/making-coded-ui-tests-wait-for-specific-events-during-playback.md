@@ -26,14 +26,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 060dc127a1cc08dcf28a59feaa774b0094e42d56
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3be7ff30658fc7e0de4cf04cab71fdae44b1b15e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>Fazendo testes de IU codificado aguardar eventos específicos durante a reprodução
-Na reprodução de um teste de IU codificado, é possível instruir o teste a aguardar a ocorrência de determinados eventos, como a exibição de uma janela, o desaparecimento da barra de progresso etc. Para fazer isso, use o método apropriado UITestControl.WaitForControlXXX(), conforme descrito na tabela a seguir. Para obter um exemplo de um teste de IU codificado que aguarda um controle ser habilitado usando o método <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A>, consulte [Instruções passo a passo: criando, editando e mantendo um teste de IU codificado](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md).  
+Na reprodução de um teste de IU codificado, é possível instruir o teste a aguardar a ocorrência de determinados eventos, como a exibição de uma janela, o desaparecimento da barra de progresso etc. Para fazer isso, use o método apropriado UITestControl.WaitForControlXXX(), conforme descrito na tabela a seguir. Para obter um exemplo de um teste de IU codificado que espera um controle ser habilitado usando o método <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A>, consulte [Instruções passo a passo: criando, editando e mantendo um teste de IU codificado](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md).  
   
  **Requisitos**  
   
@@ -113,7 +114,7 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
   
  Os métodos têm uma sobrecarga para levar um tempo limite explícito em milissegundos. No entanto, quando a operação de espera resulta em uma pesquisa implícita para o controle ou, quando o aplicativo estiver ocupado, o tempo de espera real poderá ser maior que o tempo limite especificado.  
   
- As funções anteriores são poderosas e flexíveis e devem atender a quase todas as condições. No entanto, no caso desses métodos não atenderem às suas necessidades e você precisar codificar um <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> ou um <xref:System.Threading.Thread.Sleep%2A> em seu código, é recomendável que você use o Playback.Wait() em vez da API Thread.Sleep(). Os motivos para isso são:  
+ As funções anteriores são poderosas e flexíveis e devem atender a quase todas as condições. No entanto, caso esses métodos não atendam às suas necessidades e você precise codificar um <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> ou um <xref:System.Threading.Thread.Sleep%2A> em seu código, será recomendado usar o Playback.Wait() em vez da API Thread.Sleep(). Os motivos para isso são:  
   
  Você pode usar a propriedade <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A> para modificar a duração da suspensão. Por padrão, essa variável é 1, mas você pode aumentá-la ou diminui-la para alterar o tempo de espera em todo o código. Por exemplo, se estiver testando uma rede lenta especificamente ou algum outro caso de baixo desempenho, você poderá alterar essa variável em um único lugar (ou até mesmo no arquivo de configuração) para 1,5 para adicionar 50% de espera extra em todos os locais.  
   
@@ -124,7 +125,7 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
   
  **Diretrizes**  
   
- Para obter informações, consulte [Teste para entrega contínua com o Visual Studio 2012 – Capítulo 5: Automatizando os testes de sistema](http://go.microsoft.com/fwlink/?LinkID=255196)  
+ Para obter informações adicionais, consulte [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 5: Automatizando testes de sistema)  
   
 ## <a name="see-also"></a>Consulte também  
  [Usar a automação de interface do usuário para testar o código](../test/use-ui-automation-to-test-your-code.md)   

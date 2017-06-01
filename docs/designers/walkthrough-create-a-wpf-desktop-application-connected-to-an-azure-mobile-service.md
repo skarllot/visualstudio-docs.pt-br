@@ -28,18 +28,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: df243cc90a27f971c4e57eb6f9f6a251513d8fb2
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7716a0e9249c67760ae7b31160dcae89b77b9ca7
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>Passo a passo: Criar um aplicativo de área de trabalho do WPF conectado a um serviço móvel do Azure
 Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente um aplicativo de área de trabalho moderno que usa um serviço móvel do Azure para armazenar e fornecer dados.  
   
-##  <a name="a-namerequirementsa-prerequisites"></a><a name="Requirements"></a> Pré-requisitos  
+##  <a name="Requirements"></a> Pré-requisitos  
  Você precisará dos seguintes itens para concluir este passo a passo:  
   
--   Visual Studio 2015 – qualquer versão que dê suporte ao desenvolvimento do WPF.  
+-   Visual Studio 2015 – qualquer versão que dê suporte ao desenvolvimento no WPF.  
   
 -   Uma conta ativa do Microsoft Azure.  
   
@@ -78,10 +80,10 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
      As referências necessárias serão adicionadas ao **Gerenciador de Soluções**.  
   
     > [!NOTE]
-    >  Se você não concordar com os termos de licença, escolha o botão **Eu recuso**. Você não poderá concluir o restante do passo a passo.  
+    >  Se você não concordar com os termos de licença, escolha o botão **Recusar**. Você não poderá concluir o restante do passo a passo.  
   
 ## <a name="create-the-user-interface"></a>Criar a interface do usuário  
- A próxima etapa é criar a interface do usuário para o aplicativo. Primeiro, você cria um controle de usuário reutilizável que exibe um layout padrão lado a lado com dois painéis. Em seguida, adiciona o controle do usuário à janela principal do aplicativo e acrescenta controles para inserir e exibir dados e escreve um código para definir a interação com o back-end do serviço móvel.  
+ A próxima etapa é criar a interface do usuário para o aplicativo. Primeiro, você cria um controle de usuário reutilizável que exibe um layout padrão lado a lado com dois painéis. Em seguida, você adiciona o controle do usuário na janela principal do aplicativo, adicionar controles para inserir e exibir dados e escreve um código para definir a interação com o back-end do serviço móvel.  
   
 #### <a name="to-add-a-user-control"></a>Para adicionar um controle de usuário  
   
@@ -221,10 +223,10 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
   
 1.  No **Gerenciador de Soluções**, clique duas vezes no arquivo **MainWindow.xaml**.  
   
-2.  **Importante**. Essa etapa é apenas para C#. Se você estiver usando Visual Basic, pule para a próxima etapa. No painel inferior do designer, localize a linha `xmlns:local=”clr-namespace:WPFQuickStart”` e substitua-a pelo seguinte código XAML:  
+2.  **Importante**. Essa etapa é apenas para C#. Se você estiver usando Visual Basic, pule para a próxima etapa. No painel inferior do designer, localize a linha `xmlns:local="clr-namespace:WPFQuickStart"` e substitua-a pelo seguinte código XAML:  
   
     ```xaml  
-    xmlns:local=”clr-namespace:WPFQuickStart.Common”  
+    xmlns:local="clr-namespace:WPFQuickStart.Common"  
     ```  
   
 3.  Na janela **Propriedades**, expanda o nó de categoria **Comum**, escolha a propriedade **Título** e, em seguida, insira `WPF Todo List` e pressione a tecla **Enter**.  
@@ -303,7 +305,7 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
      ![MainWindow no designer](../designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
   
     > [!NOTE]
-    >  Ao seguir os próximos procedimentos, você poderá ver erros na **Lista de Erros** se ela estiver aberta. Não se preocupe; esses erros desaparecerão após a conclusão dos procedimentos restantes.  
+    >  Ao seguir os próximos procedimentos, você poderá ver erros na **Lista de Erros** se ela estiver aberta. Não se preocupe, esses erros desaparecerão depois que você concluir os procedimentos restantes.  
   
 6.  No **Gerenciador de Soluções**, expanda o nó **MainWindow.xaml** e abra o arquivo **MainWindow.xaml.cs** ou **MainWindow.xaml.vb**.  
   
@@ -558,7 +560,7 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
      Esse código permite que o aplicativo acesse o serviço móvel em execução no Microsoft Azure.  
   
 ## <a name="test-the-application"></a>Testar o aplicativo  
- É isso – você criou um aplicativo de área de trabalho do WPF que acessa um serviço móvel do Azure. Agora tudo o que resta é executar o aplicativo e vê-lo em ação.  
+ É isso – você criou um aplicativo de área de trabalho do WPF que acessa um serviço móvel do Azure. Agora só resta executar o aplicativo e vê-lo em ação.  
   
 #### <a name="to-run-the-application"></a>Para executar o aplicativo  
   
@@ -577,7 +579,7 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
      Isso chama o método **UpdateCheckedTodoItem** e remove o item da lista e do banco de dados.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Você concluiu um exemplo bastante simples de um aplicativo de área de trabalho do WPF com um back-end do Azure. Naturalmente um aplicativo real é muito mais complexo, mas os mesmos conceitos básicos se aplicam. Consulte [WPF no .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx).  
+ Você concluiu um exemplo muito simples de um aplicativo de área de trabalho do WPF com um back-end do Azure. Naturalmente um aplicativo real é muito mais complexo, mas os mesmos conceitos básicos se aplicam. Consulte [WPF no .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx).  
   
  Você pode tornar a interface do usuário mais atraente adicionando cores, formas, gráficos e até animações. Consulte [Criando o XAML no Visual Studio e no Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md).  
   
@@ -586,8 +588,3 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
 ## <a name="see-also"></a>Consulte também  
  [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../designers/walkthrough-my-first-wpf-desktop-application2.md)   
  [Criar modernos aplicativos da área de trabalho com o Windows Presentation Foundation](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

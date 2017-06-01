@@ -13,9 +13,11 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2cfcc962e41d67995f1e1e04b787a49edfbbfbf6
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8d0cc37019b04d6f734d6bd604c0ddd948b6dc9f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>Executando ferramentas de criação de perfil com ou sem o depurador
@@ -28,17 +30,17 @@ O Visual Studio agora oferece a opção de ferramentas de desempenho, algumas da
   
 1.  O problema foi encontrado enquanto o aplicativo estava sendo desenvolvido ou em uma versão já lançada?  
   
-     Se o problema que você está lidando com foi encontrado durante o desenvolvimento, você provavelmente não precisará executar as ferramentas de desempenho em um build de versão. Se ele foi encontrado em uma versão de lançamento, reproduza o problema com uma configuração de versão e decida se o depurador ajudaria ou não a obter mais informações.  
+     Se o problema com o qual você está lidando tiver sido encontrado durante o desenvolvimento, provavelmente não será necessário executar as ferramentas de desempenho em um build de Versão. Se ele foi encontrado em uma versão de lançamento, reproduza o problema com uma configuração de versão e decida se o depurador ajudaria ou não a obter mais informações.  
   
 2.  O problema foi causado pelo uso intensivo de processamento da CPU?  
   
-     Muitos problemas ocorrem devido a questões de desempenho externo como E/S do arquivo ou a capacidade de resposta da rede, portanto não faz muita diferença se você executar as ferramentas de desempenho com ou sem o depurador. Se o problema é causado por chamadas de uso intensivo de CPU, a diferença entre as configurações de Versão e Depuração pode ser considerável e você provavelmente deve verificar se o problema existe no build de Versão antes de usar as ferramentas integradas ao depurador  
+     Muitos problemas ocorrem devido a questões de desempenho externas como E/S de arquivo ou capacidade de resposta da rede, portanto, não faz muita diferença executar as ferramentas de desempenho com ou sem o depurador. Se o problema é causado por chamadas de uso intensivo de CPU, a diferença entre as configurações de Versão e Depuração pode ser considerável e você provavelmente deve verificar se o problema existe no build de Versão antes de usar as ferramentas integradas ao depurador  
   
 3.  Você precisa avaliar com desempenho com precisão ou um número aproximado é aceitável?  
   
-     Builds de depuração não têm determinadas otimizações que builds de Versão fornecem, como por exemplo, constantes e chamadas de função embutidas, remoção de caminhos de código não utilizados e armazenamento de variáveis de maneiras que não podem ser usadas pelo depurador. O próprio depurador altera os tempos de desempenho, pois ele executa determinadas operações que são necessárias para depuração (por exemplo, interceptar exceções e eventos de módulo de carga). Por isso, os números de desempenho nas ferramentas integradas ao depurador são precisão apenas na faixa de dezenas de milissegundos. Números de desempenho para as configurações de Versão com as ferramentas de não depurador são muito mais precisos.  
+     Os builds de depuração não têm determinadas otimizações que os builds de Versão oferecem, como constantes e chamadas de função embutidas, remoção de caminhos de código não utilizados e armazenamento de variáveis de maneiras que não podem ser usadas pelo depurador. O próprio depurador altera os tempos de desempenho, pois ele executa determinadas operações que são necessárias para depuração (por exemplo, interceptar exceções e eventos de módulo de carga). Por isso, os números de desempenho nas ferramentas integradas ao depurador são precisão apenas na faixa de dezenas de milissegundos. Números de desempenho para as configurações de Versão com as ferramentas de não depurador são muito mais precisos.  
   
-##  <a name="a-namebkmkquickstartcollectdiagnosticdataa-collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Coletar dados de criação de perfil ao depurar  
+##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Coletar dados de criação de perfil ao depurar  
  A seção a seguir lida com a depuração local. Você pode descobrir mais sobre a depuração em um dispositivo ou a depuração remota nas próximas seções.  
   
 1.  Abra o projeto que você deseja depurar e clique em **Depurar / Iniciar Depuração** (ou **Iniciar** na barra de ferramentas ou **F5**).  
@@ -140,8 +142,3 @@ O Visual Studio agora oferece a opção de ferramentas de desempenho, algumas da
  [Janela do depurador Ferramentas de Diagnóstico no Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015.aspx)  
   
  [IntelliTrace no Visual Studio Enterprise 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/intellitrace-in-visual-studio-ultimate-2015.aspx)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

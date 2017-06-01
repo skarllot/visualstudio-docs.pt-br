@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: b40df6e53321efa72081166a1c77d0f3accf914e
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 806c1b22718a26e02916ada853372df4f11fb6cd
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="test-windows-uwp-and-81-store-apps-with-coded-ui-tests"></a>Testar aplicativos Windows UWP e 8.1 da Windows Store com testes de UI codificados
@@ -301,7 +302,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
   
      ![Executar o teste de IU codificado no Gerenciador de Testes](../test/media/cuit_windowsstoreapp_runtest.png "CUIT_WindowsStoreApp_RunTest")  
   
-     O aplicativo da Windows Store é ativado, o botão da ação de tocar está concluído e a propriedade Texto da caixa de texto é preenchida e validada usando o método assert.  
+     O aplicativo da Windows Store é ativado, a ação de toque no botão é concluída e a propriedade Texto da caixa de texto é populada e validada com o método de asserção.  
   
      ![Executando um teste de IU codificado](../test/media/cuit_windowsstoreapp_running.png "CUIT_WindowsStoreApp_Running")  
   
@@ -311,7 +312,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
   
 ## <a name="q--a"></a>Perguntas e respostas  
   
-#### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>P: Por que não vejo a opção para registrar meu teste de IU codificado na caixa de diálogo Gerar Código para Teste de IU Codificado?**  
+#### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>P: Por que não vejo a opção de registrar meu teste de IU codificado no diálogo Gerar Código para Teste de IU Codificado?**  
   
 **R**: Não há suporte para a opção de registro em aplicativos da Windows Store.  
   
@@ -334,7 +335,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
   
 Depois de criar o projeto, a criação de um teste permanece a mesma que antes.  
   
-#### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>P: Por que não posso modificar o código no arquivo UIMap.Designer?**  
+#### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>P: Por que não posso modificar o código do arquivo UIMap.Designer?**  
   
 **R**: Todas as alterações de código feitas no arquivo UIMapDesigner.cs serão substituídas sempre que você gerenciar o código usando o UIMap – Construtor de Teste de IU Codificado. Se você tiver de modificar um método gravado, copie-o para o arquivo UIMap.cs e renomeie-o. O arquivo UIMap.cs pode ser usado para substituir métodos e propriedades no arquivo UIMapDesigner.cs. Você deve remover a referência para o método original no arquivo Coded UITest.cs e substituí-la pelo nome do método renomeado.  
   

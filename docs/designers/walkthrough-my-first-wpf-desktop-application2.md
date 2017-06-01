@@ -28,16 +28,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0d81786a694d0541631babc8be3298a25f63e72e
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 6045516b1be3ed5a603751e71a720090a5e0fe50
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF
 <a name="introduction"></a> Este passo a passo fornece uma introdução ao desenvolvimento do WPF (Windows Presentation Foundation). Você vai criar um aplicativo básico que inclui elementos comuns à maioria dos aplicativos de área de trabalho do WPF: marcação de XAML, code-behind, definições de aplicativo, controles, layout, vinculação de dados e estilos.  
   
-##  <a name="a-namecreatetheapplicationcodefilesa-creating-the-application-project"></a><a name="Create_The_Application_Code_Files"></a> Criando o projeto de aplicativo  
- Nesta seção, você criará a infraestrutura do aplicativo, que inclui o projeto e uma janela ou formulário principal.  
+##  <a name="Create_The_Application_Code_Files"></a> Criando o projeto de aplicativo  
+ Nesta seção, você criará a infraestrutura do aplicativo, que inclui o projeto e uma janela ou um formulário principal.  
   
 #### <a name="to-create-the-project"></a>Para criar o projeto  
   
@@ -62,7 +64,7 @@ ms.openlocfilehash: 0d81786a694d0541631babc8be3298a25f63e72e
      Observe que quando você altera a marca `<Window` para `<NavigationWindow`, o IntelliSense altera automaticamente a marca de fechamento para `</NavigationWindow>` também.  
   
     > [!NOTE]
-    >  Depois de alterar a marca, se a janela **Lista de Erros** estiver aberta, você poderá notar vários erros. Não se preocupe, as alterações feitas nas próximas etapas farão com que desapareçam.  
+    >  Depois de alterar a marca, se a janela **Lista de Erros** estiver aberta, você poderá notar vários erros. Não se preocupe, as alterações feitas nas próximas etapas farão com que eles desapareçam.  
   
 3.  Escolha as marcas `<Grid>` e `</Grid>`, e exclua-as.  
   
@@ -114,7 +116,7 @@ ms.openlocfilehash: 0d81786a694d0541631babc8be3298a25f63e72e
   
      Isso altera a classe `MainWindow` para derivar de `NavigationWindow`. No Visual Basic, isso ocorre automaticamente quando você altera a janela no XAML, portanto, nenhuma alteração de código é necessária.  
   
-##  <a name="a-nameaddfilestotheapplicationa-adding-files-to-the-application"></a><a name="add_files_to_the_application"></a> Adicionando arquivos ao aplicativo  
+##  <a name="add_files_to_the_application"></a> Adicionando arquivos ao aplicativo  
  Nesta seção, você adicionará duas páginas e uma imagem ao aplicativo.  
   
 #### <a name="to-add-a-home-screen"></a>Para adicionar uma tela inicial  
@@ -127,7 +129,7 @@ ms.openlocfilehash: 0d81786a694d0541631babc8be3298a25f63e72e
   
 3.  No designer, escolha a guia **ExpenseItHome.xaml** se ela ainda não for a guia ativa do designer.  
   
-4.  Escolha o elemento `<Title>` e altere o título para **ExpenseIt – Home**.  
+4.  Escolha o elemento `<Title>` e altere o título para **ExpenseIt – Início**.  
   
      O arquivo **ExpenseItHome.xaml** agora deve ter essa aparência em C#:  
   
@@ -212,7 +214,7 @@ ms.openlocfilehash: 0d81786a694d0541631babc8be3298a25f63e72e
   
 3.  No designer, escolha a guia **ExpenseReportPage.xaml** se ela ainda não for a guia ativa do designer.  
   
-4.  Escolha o elemento `<Title>` e altere o título para **ExpenseIt – Exibir Despesa**.  
+4.  Escolha o elemento `<Title>` e altere o título para **ExpenseIt – Exibir despesa**.  
   
      O arquivo ExpenseReportPage.xaml agora deve ter essa aparência em C#:  
   
@@ -259,8 +261,8 @@ ms.openlocfilehash: 0d81786a694d0541631babc8be3298a25f63e72e
   
 6.  Feche o aplicativo para retornar ao modo de design.  
   
-##  <a name="a-nameaddlayouta-creating-the-user-interface"></a><a name="Add_Layout"></a> Criando a interface do usuário  
- O layout oferece uma maneira ordenada de posicionar elementos e também gerencia o tamanho e a posição desses elementos quando um formulário é redimensionado. Nesta seção, você criará uma grade de coluna única com três linhas. Você adicionará controles às duas páginas, algum código e finalmente definirá estilos reutilizáveis para os controles.  
+##  <a name="Add_Layout"></a> Criando a interface do usuário  
+ O layout oferece uma maneira ordenada de posicionar elementos e também gerencia o tamanho e a posição desses elementos quando um formulário é redimensionado. Nesta seção, você criará uma grade com uma única coluna e três linhas. Você adicionará controles às duas páginas, adicionará um pouco de código e finalmente definirá estilos reutilizáveis para os controles.  
   
 #### <a name="to-create-the-layout"></a>Para criar o layout  
   
@@ -952,7 +954,7 @@ ms.openlocfilehash: 0d81786a694d0541631babc8be3298a25f63e72e
   
      ![Capturas de tela de exemplo de ExpenseIt](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")  
   
-##  <a name="a-namebestpracticesa-best-practices"></a><a name="Best_Practices"></a> Práticas recomendadas  
+##  <a name="Best_Practices"></a> Práticas recomendadas  
  Este exemplo demonstra os fundamentos do WPF e, consequentemente, não segue as práticas recomendadas de desenvolvimento de aplicativos. Para obter uma cobertura abrangente das práticas recomendadas de desenvolvimento dos aplicativos WPF e .NET Framework, consulte os tópicos a seguir, conforme apropriado:  
   
 -   Acessibilidade – [Práticas recomendadas de acessibilidade](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)  
@@ -963,7 +965,7 @@ ms.openlocfilehash: 0d81786a694d0541631babc8be3298a25f63e72e
   
 -   Desempenho – [Otimizando o desempenho do aplicativo WPF](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
   
-##  <a name="a-namewhatsnexta-whats-next"></a><a name="Whats_Next"></a> O que vem a seguir  
+##  <a name="Whats_Next"></a> O que vem a seguir  
  Agora você tem uma série de técnicas à sua disposição para criar um aplicativo da área de trabalho usando o WPF. Agora você deve ter uma compreensão básica dos blocos de construção de um aplicativo do WPF limitado por dados. Este tópico não é exaustivo, mas dará a você uma noção de algumas das possibilidades que você pode descobrir por conta própria, além das técnicas do tópico.  
   
  Para obter mais informações sobre os modelos de arquitetura e programação do WPF, consulte os seguintes tópicos:  
@@ -993,8 +995,3 @@ ms.openlocfilehash: 0d81786a694d0541631babc8be3298a25f63e72e
 ## <a name="see-also"></a>Consulte também  
  [Passo a passo: Criar um aplicativo de área de trabalho do WPF conectado a um serviço móvel do Azure](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)   
  [Criar modernos aplicativos da área de trabalho com o Windows Presentation Foundation](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

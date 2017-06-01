@@ -31,9 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 9e166d17f923050158ca068125e9c886513f456f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="obtaining-build-logs-with-msbuild"></a>Obtendo logs de build com o MSBuild
@@ -87,7 +89,7 @@ msbuild MyProject.proj /t:go /fl1 /fl2 /fl3 /flp2:logfile=JustErrors.log;errorso
  Para obter mais informações, consulte [Referência de linha de comando](../msbuild/msbuild-command-line-reference.md).  
   
 ## <a name="using-a-custom-logger"></a>Usando um agente personalizado  
- Você pode criar seu próprio agente criando um tipo gerenciado que implementa a interface <xref:Microsoft.Build.Framework.ILogger>. Você pode usar um agente personalizado, por exemplo, para enviar erros de build por email, registrá-los em um banco de dados ou em um arquivo XML. Para obter mais informações, consulte [Agentes de Build](../msbuild/build-loggers.md).  
+ Você pode escrever seu próprio agente por meio da criação de um tipo gerenciado que implementa a interface <xref:Microsoft.Build.Framework.ILogger>. Você pode usar um agente personalizado, por exemplo, para enviar erros de build por email, registrá-los em um banco de dados ou em um arquivo XML. Para obter mais informações, consulte [Agentes de Build](../msbuild/build-loggers.md).  
   
  Na linha de comando do MSBuild, você deve especificar o agente personalizado usando a opção **/logger**. Você também pode usar a opção **/noconsolelogger** para desabilitar o agente do console padrão.  
   
@@ -97,8 +99,3 @@ msbuild MyProject.proj /t:go /fl1 /fl2 /fl3 /flp2:logfile=JustErrors.log;errorso
  [Registrando em Logs em um Ambiente Multiprocessador](../msbuild/logging-in-a-multi-processor-environment.md)   
  [Criando Agentes de Log de Encaminhamento](../msbuild/creating-forwarding-loggers.md)   
  [Conceitos do MSBuild](../msbuild/msbuild-concepts.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

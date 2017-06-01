@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b4ca42eedec0f6fe2daaa70b04ab9fdaf37865fc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: cbc542a413b63b4da4a4d8699c06b313ff32f86c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>Configurações e plataformas compatíveis para testes de IU codificados e gravações das ações
@@ -81,7 +82,7 @@ As configurações e as plataformas de testes de IU codificados com suporte no V
 |Cliente Web do Dynamics CRM|Suporte total.|  
 |Cliente do Dynamics (Ax) 2012|A gravação e reprodução de ações têm suporte parcial. Consulte o [site da Microsoft](http://go.microsoft.com/fwlink/?LinkId=232677) a seguir para obter detalhes.|  
 |SAP|Sem suporte.|  
-|Citrix/Serviços de Terminal|Não recomendamos o uso de ações de gravação em um servidor Host da Sessão da Área de Trabalho Remota. O gravador não dá suporte a várias instâncias ao mesmo tempo.|  
+|Citrix/Serviços de Terminal|Não recomendamos ações de gravação em um servidor Host da Sessão da Área de Trabalho Remota. O gravador não dá suporte à execução de várias instâncias ao mesmo tempo.|  
 |PowerBuilder|Suporte parcial.<br /><br /> O suporte é habilitado na acessibilidade de extensões para controles PowerBuilder.|  
   
  Para obter informações sobre como criar extensões para dar suporte a outras plataformas, consulte [Habilitar testes de IU codificados dos controles](../test/enable-coded-ui-testing-of-your-controls.md) e [Estendendo testes de IU codificados e gravações de ação para dar suporte ao Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md).  

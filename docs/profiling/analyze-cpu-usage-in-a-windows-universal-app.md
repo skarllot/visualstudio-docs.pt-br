@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: c0fa199f2ccbdc7b4e60b4295645ccf83792d435
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8e829f0c69a777dcdcda75aa9305b9202748f23e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-cpu-usage-in-a-universal-windows-app-uwp"></a>Analisar o uso da CPU em um UWP (Aplicativo Universal do Windows)
@@ -88,7 +89,7 @@ ms.lasthandoff: 03/07/2017
 ###  <a name="BKMK_CPU_utilization_timeline_graph"></a> Gráfico de linha do tempo de utilização da CPU  
  ![Gráfico de linha do tempo CpuUtilization &#40;%&#41;](../profiling/media/cpu_use_wt_timelinegraph.png "CPU_USE_WT_TimelineGraph")  
   
- O gráfico de uso da CPU mostra a atividade da CPU do aplicativo como um percentual de todo o tempo de CPU de todos os núcleos do processador no dispositivo. Os dados deste relatório foram coletados em um computador com dois núcleos. Os dois maiores picos representam a atividade da CPU de dois cliques de botões. `GetMaxNumberButton_Click` trabalha de modo síncrono em um único núcleo, por isso faz sentido que a altura do gráfico de método nunca exceda 50%. `GetMaxNumberAsycButton_Click` executa de modo assíncrono entre os dois núcleos, por isso, está certo que o pico se aproxime ao uso de todos os recursos da CPU nos dois núcleos.  
+ O gráfico de uso da CPU mostra a atividade da CPU do aplicativo como um percentual de todo o tempo de CPU de todos os núcleos do processador no dispositivo. Os dados deste relatório foram coletados em um computador com dois núcleos. Os dois maiores picos representam a atividade da CPU de dois cliques de botões. `GetMaxNumberButton_Click` é executado de forma síncrona em um único núcleo, para que faça sentido que a altura do gráfico do método nunca exceda 50%. `GetMaxNumberAsycButton_Click` executa de modo assíncrono entre os dois núcleos, por isso, está certo que o pico se aproxime ao uso de todos os recursos da CPU nos dois núcleos.  
   
 ####  <a name="BKMK_Select_timeline_segments_to_view_details"></a> Selecionar segmentos de linha do tempo para exibir detalhes  
  Use as barras de seleção na linha de tempo **Sessão de diagnóstico** para se concentrar nos dados GetMaxNumberButton_Click:  
@@ -117,7 +118,7 @@ ms.lasthandoff: 03/07/2017
 |![Etapa 4](../profiling/media/procguid_4.png "ProcGuid_4")|Os nós filhos de um método só contêm dados das chamadas do método pai. Quando **Mostrar Código Externo** é desabilitado, os métodos de aplicativo também podem conter um nó **[Código Externo]**.|  
   
 ####  <a name="BKMK_External_Code"></a> Código externo  
- O código externo consiste em funções nos componentes do sistema e da estrutura executados pelo código que você escreve. O código externo inclui funções que iniciam e param o aplicativo, elaboram a interface do usuário, controlam o threading e fornecem ao aplicativo outros serviços de nível inferior. Na maioria dos casos, você não se interessará pelo código externo, então, a árvore de chamadas de Uso da CPU coletará as funções externas de um método de usuário em um nó de **[Código Externo]**.  
+ O código externo consiste em funções nos componentes do sistema e da estrutura executados pelo código que você escreve. O código externo inclui funções que iniciam e param o aplicativo, elaboram a interface do usuário, controlam o threading e fornecem ao aplicativo outros serviços de nível inferior. Na maioria dos casos, você não se interessará pelo código externo, então, a árvore de chamadas de Uso da CPU coletará as funções externas de um método de usuário em um nó **[External Code]**.  
   
  Quando desejar exibir os caminhos de chamada do código externo, escolha **Mostrar Código Externo** na lista **Exibição de filtro** e escolha **Aplicar**.  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 03/07/2017
 |**Módulo**|O nome do módulo que contém a função ou o número de módulos que contêm as funções em um nó de [Código Externo].|  
   
 ###  <a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a> Funções assíncronas na árvore de chamadas de Uso da CPU  
- Quando o compilador encontra um método assíncrono, ele cria uma classe oculta para controlar o método de execução. Conceitualmente, a classe é uma máquina de estado que inclui uma lista de funções geradas pelo compilador que chamam corretamente as operações do método original de modo assíncrono, os retornos de chamadas, o agendador e os iteradores necessários a eles. Quando o método original é chamado por um método pai, o tempo de execução remove o método do contexto de execução do pai e executa os métodos da classe oculta no contexto do código do sistema e do framework que controla a execução do aplicativo. Os métodos assíncronos são geralmente, mas nem sempre, executados em uma ou mais segmentos diferentes. Esse código é mostrado na árvore de chamadas de Uso da CPU como filhos do nó **[Código Externo]** logo abaixo do nó superior da árvore.  
+ Quando o compilador encontra um método assíncrono, ele cria uma classe oculta para controlar a execução do método. Conceitualmente, a classe é uma máquina de estado que inclui uma lista de funções geradas pelo compilador que chamam corretamente as operações do método original de modo assíncrono, os retornos de chamadas, o agendador e os iteradores necessários a eles. Quando o método original é chamado por um método pai, o tempo de execução remove o método do contexto de execução do pai e executa os métodos da classe oculta no contexto do código do sistema e do Framework que controla a execução do aplicativo. Os métodos assíncronos são geralmente, mas nem sempre, executados em uma ou mais segmentos diferentes. Esse código é mostrado na árvore de chamadas de Uso da CPU como filhos do nó **[Código Externo]** logo abaixo do nó superior da árvore.  
   
  Para ver isso em nosso exemplo, escolha novamente o segmento `GetMaxNumberAsyncButton_Click` na linha de tempo.  
   
@@ -163,9 +164,9 @@ ms.lasthandoff: 03/07/2017
   
 -   Observe que `MainPage::<GetNumberAsync>b__b` gasta mais tempo no [Código Externo] do que para executar o método GetNumber. Muito desse tempo é a sobrecarga de operações assíncronas. Tente aumentar o número de tarefas (definidas na constante `NUM_TASKS` de MainPage.xaml.cs) e reduzir o número de iterações em `GetNumber` (mudar o valor de `MIN_ITERATIONS`). Execute o cenário de coleta e compare a atividade da CPU do `MainPage::<GetNumberAsync>b__b`com a da sessão de diagnóstico de uso da CPU original. Tente reduzir as tarefas e aumentar as iterações.  
   
--   Os usuários não se importam com o desempenho real de seu aplicativo; eles se importam com o desempenho percebido e a capacidade de resposta do aplicativo. A ferramenta Capacidade de resposta da interface de usuário XAML mostra os detalhes da atividade no segmento da interface do usuário que afeta a capacidade de resposta percebida.  
+-   Geralmente, os usuários não se importam com o desempenho real de seu aplicativo; eles se importam com o desempenho e a capacidade de resposta percebidos do aplicativo. A ferramenta Capacidade de resposta da interface de usuário XAML mostra os detalhes da atividade no segmento da interface do usuário que afeta a capacidade de resposta percebida.  
   
-     Crie uma nova sessão no de hub Desempenho e Diagnóstico e adicione as duas ferramentas Capacidade de resposta da interface de usuário XAML e Uso da CPU. Execute o cenário de coleta. Se você leu até aqui, o relatório provavelmente não diz nada que você ainda não tenha descoberto, mas as diferenças no gráfico da linha do tempo de **Utilização do Thread da interface do usuário** dos dois métodos são marcantes. Em aplicativos complexos do mundo real, a combinação de ferramentas pode ser muito útil.  
+     Crie uma nova sessão no de hub Desempenho e Diagnóstico e adicione as duas ferramentas Capacidade de resposta da interface de usuário XAML e Uso da CPU. Execute o cenário de coleta. Se você já leu até aqui, o relatório provavelmente não mostrará nada que você ainda não tenha percebido, mas as diferenças no gráfico de linha do tempo **Utilização do thread da interface do usuário** para os dois métodos chamará a atenção. Em aplicativos complexos do mundo real, a combinação de ferramentas pode ser muito útil.  
   
 ##  <a name="BKMK_MainPage_xaml"></a> MainPage.xaml  
   

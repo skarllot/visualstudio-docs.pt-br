@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 0b25d326d103c5da3b09b79d3a574734debed071
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 89694c49fdd115064d1ebe9f5dfe910b77548a76
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>Caixa de diálogo Configurações Avançadas (Visualizador de Simultaneidade)
@@ -75,11 +76,11 @@ Usando a caixa de diálogo **Configurações Avançadas** da Visualização Simu
  Na guia marcadores, você pode configurar o conjunto de provedores ETW que são mostrados como marcadores na Visualização Simultânea.  Você também pode filtrar a coleta de marcador com base no nível de importância e na categoria ETW.  Se você estiver usando o [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md) e estiver usando seu próprio provedor de marcadores, você poderá registrá-lo aqui para que ele apareça na exibição de Threads.  
   
 ### <a name="adding-a-new-provider"></a>Adicionar um novo provedor  
- Se seu código usa o [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md) ou gera eventos ETW que seguem a convenção <xref:System.Diagnostics.Tracing.EventSource>, você pode exibir esses eventos na Visualização Simultânea, registrando-os na caixa de diálogo.  
+ Se seu código usa o [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md) ou gera eventos ETW que seguem a convenção <xref:System.Diagnostics.Tracing.EventSource>, você poderá exibir esses eventos na Visualização Simultânea, registrando-os nessa caixa de diálogo.  
   
  No campo Nome, digite um nome que descreva os tipos de eventos que são gerados pelo provedor.  No campo GUID, insira o GUID associado a esse provedor. (Um GUID é associado a cada provedor de ETW.)  
   
- Opcionalmente, você pode especificar se deseja filtrar eventos deste provedor, com base no nível de importância ou categoria.  Você pode usar a categoria de campo para filtrar com base nas categorias de SDK da Visualização Simultânea.  Para fazer isso, insira uma cadeia de caracteres de categorias delimitada por vírgulas ou intervalos de categorias.  Isso especifica as categorias de eventos no provedor atual para mostrar.  Se você estiver adicionando um provedor <xref:System.Diagnostics.Tracing.EventSource>, você poderá usar o campo de categoria para filtrar por palavra-chave do ETW.  Já que a palavra-chave é um bitmask, você pode usar uma cadeia de caracteres de inteiros delimitada por vírgulas para especificar quais bits na máscara são definidos. Por exemplo, "1,2" define o primeiro e segundo bits, e isso se traduz para em 6 em decimal.  
+ Opcionalmente, você pode especificar se deseja filtrar eventos deste provedor, com base no nível de importância ou categoria.  Você pode usar a categoria de campo para filtrar com base nas categorias de SDK da Visualização Simultânea.  Para fazer isso, insira uma cadeia de caracteres de categorias delimitada por vírgulas ou intervalos de categorias.  Isso especifica as categorias de eventos no provedor atual para mostrar.  Se estiver adicionando um provedor <xref:System.Diagnostics.Tracing.EventSource>, você poderá usar o campo de categoria para filtrar por palavra-chave do ETW.  Já que a palavra-chave é um bitmask, você pode usar uma cadeia de caracteres de inteiros delimitada por vírgulas para especificar quais bits na máscara são definidos. Por exemplo, "1,2" define o primeiro e segundo bits, e isso se traduz para em 6 em decimal.  
   
  Você pode usar a lista de nível de importância para filtrar os eventos que tenham importância ou nível ETW menor que o valor especificado.  
   
@@ -87,7 +88,7 @@ Usando a caixa de diálogo **Configurações Avançadas** da Visualização Simu
  Para editar as configurações que estão associadas um provedor existente, selecione-o na lista e escolha o botão **Editar provedor**.  Você pode alterar as configurações de filtragem, nome e GUID.  
   
 ### <a name="filter-marker-data-out-of-concurrency-visualizer-reports"></a>Filtrar dados de marcador dos relatórios de Visualização Simultânea  
- Se você não deseja que os dados de um determinado provedor apareçam em rastreamentos futuros, desmarque a caixa de seleção ao lado do provedor que você deseja remover.  
+ Se você não deseja que os dados de um determinado provedor apareçam em rastreamentos futuros, desmarque a caixa de seleção ao lado do provedor que deseja remover.  
   
 ## <a name="files"></a>Arquivos  
  Na guia **arquivos**, você pode especificar o diretório no qual os arquivos de rastreamento são armazenados sempre que um rastreamento é coletado.  A Visualização Simultânea gera quatro arquivos para cada rastreamento que coleta:  

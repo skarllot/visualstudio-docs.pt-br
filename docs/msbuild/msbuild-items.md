@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: cba81e0eee6a0ce278c65e8952e75b23a6ebf3cc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 754cec0effaaa0cf68cf1a4bbc4d536dbdcf0298
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="msbuild-items"></a>Itens do MSBuild
@@ -82,7 +83,7 @@ Itens do MSBuild são entradas no sistema de build e eles normalmente representa
 </ItemGroup>  
 ```  
   
- O item "file2.cs" não substitui o item "file1.cs"; em vez disso, o nome do arquivo é acrescentado à lista de valores para o tipo de item `Compile`. Você não pode remover um item de um tipo de item durante a fase de avaliação de um build.  
+ O item "file2.cs" não substitui o item "file1.cs". Em vez disso, o nome do arquivo é acrescentado à lista de valores do tipo de item `Compile`. Você não pode remover um item de um tipo de item durante a fase de avaliação de um build.  
   
  O XML a seguir cria o mesmo tipo de item declarando os dois arquivos em um atributo `Include`. Observe que os nomes de arquivo são separados por ponto e vírgula.  
   

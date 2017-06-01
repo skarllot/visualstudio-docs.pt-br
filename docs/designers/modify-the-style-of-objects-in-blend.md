@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b76e47d1bd1d19548fba39345b7959f7303ae4dc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 77138e9a2c724b4a42e289556f7d1fa294aac0f0
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="modify-the-style-of-objects-in-blend"></a>Modificar o estilo de objetos no Blend
@@ -75,9 +76,9 @@ A maneira mais fácil de personalizar um objeto é definir as propriedades no pa
 ##  <a name="Styles"></a>Estilos e modelos: Criar uma aparência consistente entre os controles  
  Você pode criar uma vez a aparência e o comportamento de um controle uma vez e aplicar esse design a outros controles, para que você não precise mantê-los individualmente.  
   
- **Você deve usar um estilo?**: se você só quiser definir as propriedades padrão (como a cor de um botão), use um *estilo*. Modifique um controle, mesmo após aplicar um estilo a ele.  
+ **Você deve usar um estilo?** : se você só quiser definir as propriedades padrão (como a cor de um botão), use um *estilo*. É possível modificar um controle, mesmo após aplicar um estilo a ele.  
   
- **Você deve usar um modelo?**: se você quiser alterar a estrutura de um controle, use um *modelo*. Imagine a conversão de um gráfico ou logotipo em um botão. Não é possível modificar um controle depois de aplicar um estilo a ele.  
+ **Você deve usar um modelo?**: se você quiser alterar a estrutura de um controle, use um *modelo*. Imagine a conversão de um gráfico ou logotipo em um botão. Não é possível modificar um controle depois de aplicar um modelo a ele.  
   
 ### <a name="create-a-template-or-style"></a>Criar um modelo ou estilo  
  Há duas maneiras de criar um modelo. Você pode converter qualquer objeto de sua prancheta em um controle, ou pode basear seu modelo em um controle existente.  
@@ -94,14 +95,14 @@ A maneira mais fácil de personalizar um objeto é definir as propriedades no pa
   
 -   Escolha **Criar Vazio** para começar do zero.  
   
- A opção **Editar Atual** só aparecerá se você editar um estilo ou modelo já criado. Ela não aparecerá para um controle que ainda está usando um modelo de sistema padrão.  
+ A opção **Editar Atual** só aparecerá se você editar um estilo ou modelo já criado. Ela não aparecerá para um controle que ainda esteja usando um modelo padrão do sistema.  
   
  Na caixa de diálogo **Criar Recurso de Estilo**, você pode nomear o estilo ou modelo para que possa usá-lo posteriormente, ou pode aplicar o estilo ou modelo a todos os controles desse tipo.  
   
  ![](../designers/media/4818ee6a-ce60-4b79-91c8-3b1871829eea.png "4818ee6a-ce60-4b79-91c8-3b1871829eea")  
   
 > [!NOTE]
->  Você não pode criar estilos ou modelos para cada tipo de controle. Se um controle não oferecer suporte a eles, o botão de navegação estrutural não aparecerá acima da prancheta.  
+>  Você não pode criar estilos ou modelos para todos os tipos de controles. Se o controle não der suporte a eles, o botão de navegação estrutural não aparecerá acima da prancheta.  
 >   
 >  Para retornar ao escopo de edição de seu documento principal, clique em **Retornar escopo para**![](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png "55844eb3-ed98-4f20-aa66-a6f5b23eeb2b").  
 >   

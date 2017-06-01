@@ -34,9 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 078576d6e1988bf1cefbb09646ea44f61085f5cf
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
+ms.openlocfilehash: f1f9931e6e7c8dda4cb74f407901f41467c690cc
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/11/2017
 
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>Propriedades reservadas e conhecidas do MSBuild
@@ -63,6 +65,7 @@ ms.openlocfilehash: 078576d6e1988bf1cefbb09646ea44f61085f5cf
 |`MSBuildProjectFile`|O nome de arquivo completo do arquivo de projeto, incluindo a extensão de nome de arquivo; por exemplo, MyApp.proj.|Reservado|  
 |`MSBuildProjectFullPath`|O caminho absoluto e o nome de arquivo completo do arquivo de projeto, incluindo a extensão de nome de arquivo; por exemplo, C:\MyCompany\MyProduct\MyApp.proj.|Reservado|  
 |`MSBuildProjectName`|O nome de arquivo do arquivo de projeto sem a extensão de nome de arquivo; por exemplo, MyApp.|Reservado|  
+|`MSBuildRuntimeType`|O tipo de tempo de execução que está sendo executado. Introduzido no MSBuild 15. O valor pode ser indefinido (antes do MSBuild 15), `Full` indicando que o MSBuild está em execução no .NET Framework da área de trabalho, `Core` indicando que o MSBuild está em execução no .NET Core ou `Mono` indicando que o MSBuild está sendo executado no Mono.|Reservado|  
 |`MSBuildStartupDirectory`|O caminho absoluto da pasta em que [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] é chamado. Usando essa propriedade, você pode compilar tudo abaixo de um ponto específico em uma árvore de projeto sem criar arquivos dirs.proj em cada diretório. Em vez disso, você tem apenas um projeto — por exemplo, c:\traversal.proj, como mostrado aqui:<br /><br /> `<Project ...>     <ItemGroup>         <ProjectFiles              Include="$            (MSBuildStartupDirectory)            **\*.csproj"/>     </ItemGroup>     <Target Name="build">         <MSBuild             Projects="@(ProjectFiles)"/>     </Target> </Project>`<br /><br /> Para compilar em qualquer ponto da árvore, digite:<br /><br /> `msbuild c:\traversal.proj`<br /><br /> Não inclua a barra invertida final nessa propriedade.|Reservado|  
 |`MSBuildThisFile`|O nome do arquivo e a parte da extensão do arquivo de `MSBuildThisFileFullPath`.|Reservado|  
 |`MSBuildThisFileDirectory`|A parte do diretório de `MSBuildThisFileFullPath`.<br /><br /> Inclua a barra invertida final no caminho.|Reservado|  
@@ -76,8 +79,3 @@ ms.openlocfilehash: 078576d6e1988bf1cefbb09646ea44f61085f5cf
 ## <a name="see-also"></a>Consulte também  
  [Referência do MSBuild](../msbuild/msbuild-reference.md)
  [Propriedades do MSBuild](../msbuild/msbuild-properties.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

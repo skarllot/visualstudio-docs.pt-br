@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 670fb2cb0d0c5b6aa954f5c4c02154c397ec4944
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e2d04ac6463143efacf4fe4967d9e555aed84d05
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="troubleshooting-code-coverage"></a>Solução de problemas de cobertura de código
@@ -57,7 +58,7 @@ A ferramenta de análise da cobertura de código no Visual Studio coleta dados p
  Resolução  
  No Gerenciador de Testes, escolha **Executar Tudo** para verificar se os testes foram executados com êxito. Corrija todas as falhas antes de usar **Analisar Cobertura de Código**.  
   
-### <a name="youre-looking-at-a-previous-result"></a>Você está observou um resultado anterior  
+### <a name="youre-looking-at-a-previous-result"></a>Você está olhando um resultado anterior  
  Quando você modificar e reexecutar os testes, um resultado anterior da cobertura de código poderá permanecer visível, inclusive a coloração de código com base nessa execução anterior.  
   
 1.  Executar Analisar Cobertura de Código.  

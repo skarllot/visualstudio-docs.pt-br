@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4f974fdd79d3375b116511cab3862bc2de9ba84f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b1b4288ccc47cfd1a0c44b4f05ba8cddea29e073
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="display-data-in-blend"></a>Exibir dados no Blend
@@ -63,7 +64,7 @@ ms.lasthandoff: 02/22/2017
  **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Combinando a vinculação de dados com o Blend](https://www.youtube.com/watch?v=LSwPB6CAvjg).  
   
 ##  <a name="Existing"></a> Gerar dados de exemplo com base na classe  
- Se as classes que descrevem a estrutura dos dados já tiver sido criada, é possível geral dados de exemplo com base nelas.  
+ Se você já tiver criado as classes que descrevem a estrutura dos dados, será possível gerar dados de exemplo com base nelas.  
   
  Para gerar dados de exemplo com base em uma classe, abra um documento XAML e, no painel **Dados**, clique no botão **Criar dados de exemplo**![](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png "30540d76-7256-43ce-b5d9-4b2edf3d339f") e, em seguida, clique em **Criar Dados de Exemplo da Classe**.  
   

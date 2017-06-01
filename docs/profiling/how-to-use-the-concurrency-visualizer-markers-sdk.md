@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1a51a8dbf28be35febf4a0954a997e542ffd0f09
 ms.openlocfilehash: a05e0509ec092f810e0990fbc838707d126595e1
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>Como usar o SDK de marcadores do Visualizador de Simultaneidade
@@ -111,7 +113,7 @@ Este tópico mostra como usar o SDK da Visualização Simultânea para criar int
     using Microsoft.ConcurrencyVisualizer.Instrumentation;  
     ```  
   
-3.  Adicione o código para criar três intervalos na série de marcador padrão e gravar um sinalizador, uma mensagem e um alerta, um para cada intervalo. Você cria um objeto <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Span> chamando o método [EnterSpan](assetId:///EnterSpan?qualifyHint=False&autoUpgrade=True) estático. Para gravar na série padrão, use os métodos de gravação estáticos da classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers>.  
+3.  Adicione o código para criar três intervalos na série de marcador padrão e gravar um sinalizador, uma mensagem e um alerta, um para cada intervalo. Crie um objeto <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Span> chamando o método estático [EnterSpan](assetId:///EnterSpan?qualifyHint=False&autoUpgrade=True). Para escrever a série padrão, use os métodos estáticos de escrita da classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers>.  
   
     ```VB  
   
@@ -156,7 +158,7 @@ Este tópico mostra como usar o SDK da Visualização Simultânea para criar int
   
      ![Visualização Simultânea com marcadores e alertas](../profiling/media/cvmarkersmanaged.png "CvMarkersManaged")  
   
-5.  Adicione código para criar a série de marcador do cliente usando o método <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.CreateMarkerSeries%2A> estático. A classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries> contém métodos para criar intervalos e gravar sinalizadores, mensagens e alertas.  
+5.  Adicione código para criar a série de marcador do cliente usando o método estático <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.CreateMarkerSeries%2A>. O classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries> contém métodos para criar spans e escrever sinalizadores, mensagens e alertas.  
   
     ```VB  
   
@@ -196,9 +198,4 @@ Este tópico mostra como usar o SDK da Visualização Simultânea para criar int
   
 ## <a name="see-also"></a>Consulte também  
  [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

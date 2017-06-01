@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 8ce2ccc55a53d03b72f0d1d81c206b2b9a980eed
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 11ae1d653bc34ccb9c8fd8834d134b7212bc4f9a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-windows-store-apps"></a>Explicação passo a passo: Criando e executando testes de unidade de aplicativos da Windows Store
@@ -89,7 +90,7 @@ O Visual Studio inclui suporte para aplicativos do [!INCLUDE[win8_appname_long](
 ##  <a name="CreateAndRunUnitTestWin8Tailored_Manifest"></a> Editar o manifesto para o projeto de teste de unidade  
  Talvez seja necessário editar o manifesto do projeto de teste de unidade a fim de fornecer os recursos necessários para executar o aplicativo.  
   
-#### <a name="to-edit-the-unit-test-projects-windows-store-application-manifest-file"></a>Para editar o arquivo manifesto do aplicativo da Windows Store do projeto de teste de unidade  
+#### <a name="to-edit-the-unit-test-projects-windows-store-application-manifest-file"></a>Para editar o arquivo de manifesto do aplicativo da Windows Store do projeto de teste de unidade  
   
 1.  No Gerenciador de Soluções, no novo projeto de teste de unidade do [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], clique com o botão direito no arquivo de manifesto Package.appxmanifest e escolha **Abrir**.  
   
@@ -161,7 +162,7 @@ O Visual Studio inclui suporte para aplicativos do [!INCLUDE[win8_appname_long](
  [Teste de unidade do Visual Studio](http://go.microsoft.com/fwlink/?LinkId=224477)  
   
 ### <a name="msdn-library"></a>Biblioteca MSDN  
- [Biblioteca MSDN – Criar e executar testes de unidade para o código existente (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkID=223683)  
+ [Biblioteca MSDN – Criando e executando testes de unidade para o código existente (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkID=223683)  
   
 ## <a name="see-also"></a>Consulte também  
  [Testar aplicativos da Store com o Visual Studio](../test/testing-store-apps-with-visual-studio.md)   

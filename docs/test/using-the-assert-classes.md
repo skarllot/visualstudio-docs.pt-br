@@ -32,17 +32,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 648f5d939885c53d1f9e5ca5582ec42633209cdf
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 5a4f1fd5bf35a6010c2d919194b8ef21073e9a18
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="using-the-assert-classes"></a>Usando as classes Assert
 Use as classes Assert do namespace UnitTestingFramework para verificar a funcionalidade específica. Um método de teste de unidade executa o código de um método em seu código de desenvolvimento, mas relata a exatidão do comportamento do código somente se você incluir instruções Assert.  
   
 ## <a name="kinds-of-asserts"></a>Tipos de Assert  
- O namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting> fornece diversos tipos de classes Assert:  
+ O namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting> fornece vários tipos de classes Assert:  
   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>  
   

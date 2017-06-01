@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 75dc59de6446e4de3f1fa0522150eabcf800b24b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b7ef6829b8fca9f08b9c1fc526c975dad54f24d2
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>Instruções passo a passo: criando, editando e mantendo um teste de IU codificado
@@ -226,7 +227,7 @@ Neste passo a passo, você criará um aplicativo simples do Windows Presentation
   
      O teste de IU codificado é exibido no Editor de Teste de IU Codificado. Agora você pode ver e editar o teste de IU codificado.  
   
-6.  No painel **Ação de interface do usuário**, selecione o método de teste (SimpleAppTest) que deseja mover para o arquivo UIMap.cs ou UIMap.vb para facilitar a funcionalidade de código personalizado, que não será substituída quando o código de teste for recompilado.  
+6.  No painel **Ação de interface do usuário**, selecione o método de teste (SimpleAppTest) que deseja mover para o arquivo UIMap.cs ou UIMap.vb para facilitar a funcionalidade de código personalizado que não será substituída quando o código de teste for recompilado.  
   
 7.  Escolha o botão **Mover o Código** na barra de ferramentas do Editor de Teste de IU Codificado.  
   
@@ -312,11 +313,11 @@ Neste passo a passo, você criará um aplicativo simples do Windows Presentation
   
 1.  No arquivo CodedUITest1.cs, no método **CodedUITestMethod1()**, clique com o botão direito do mouse, selecione **Gerar Código para Teste de IU Codificado** e escolha **Usar o Construtor de Teste de IU Codificado**.  
   
-     O UIMap – Construtor de Teste de IU Codificado será exibido.  
+     O UIMap – Construtor de Teste de IU Codificado é exibido.  
   
 2.  Usando o atalho na área de trabalho criado anteriormente, execute o aplicativo SimpleWPFApp criado antes.  
   
-3.  No UIMap – Construtor de Teste de IU Codificado, arraste a ferramenta de cruz no botão **Iniciar** no SimpleWPFApp.  
+3.  No UIMap – Construtor de Teste de IU Codificado, arraste a ferramenta de fios para o botão **Iniciar** no SimpleWPFApp.  
   
      O botão **Iniciar** é incluído em uma caixa azul e o Construtor de Teste de IU Codificado demora alguns segundos para processar os dados do controle selecionado e exibe as propriedades dos controles. Observe que **AutomationUId** é denominado **buttonA**.  
   
@@ -328,7 +329,7 @@ Neste passo a passo, você criará um aplicativo simples do Windows Presentation
   
 6.  No UIMap – Construtor de Teste de IU Codificado, escolha **Gerar Código**.  
   
-     O Construtor de Teste de IU Codificado - Gerar Código aparece com uma nota indicando que nenhum novo método é necessário e que o código será gerado somente para as alterações no mapa de controles de IU.  
+     O Construtor de Teste de IU Codificado – Gerar Código aparece com uma nota indicando que nenhum novo método é necessário e que o código será gerado somente para as alterações no mapa de controles de interface do usuário.  
   
 7.  Escolha **Gerar**.  
   
@@ -336,7 +337,7 @@ Neste passo a passo, você criará um aplicativo simples do Windows Presentation
   
 9. Feche o UIMap – Construtor de Teste de IU Codificado.  
   
-     O UIMap – Construtor de Teste de IU Codificado demora alguns segundos para processar as alterações do mapa de controles de IU.  
+     O UIMap – Construtor de Teste de IU Codificado demora alguns segundos para processar as alterações do mapa de controles de interface do usuário.  
   
 10. No Gerenciador de Soluções, abra o arquivo UIMap.Designer.cs.  
   
@@ -396,7 +397,7 @@ Neste passo a passo, você criará um aplicativo simples do Windows Presentation
 ### <a name="faq"></a>Perguntas Frequentes  
  [Perguntas frequentes sobre testes de IU codificados – 1](http://go.microsoft.com/fwlink/?LinkID=230576)  
   
- [Perguntas frequentes sobre testes de IU codificados –&2;](http://go.microsoft.com/fwlink/?LinkID=230578)  
+ [Perguntas frequentes sobre testes de IU codificados – 2](http://go.microsoft.com/fwlink/?LinkID=230578)  
   
 ### <a name="forum"></a>Fórum  
  [Teste de Automação de interface do usuário do Visual Studio (inclui CodedUI)](http://go.microsoft.com/fwlink/?LinkID=224497)  

@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 7ec312bf7c85759fef700f0746c0981f263d46e2
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 362a756e434f93eb39776c76382d059cc2744cae
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="welcome-to-visual-studio-2017"></a>Bem-vindo ao Visual Studio 2017!
@@ -47,7 +48,7 @@ Temos tudo o que você precisa para criar ótimos aplicativos para dispositivos 
 
  É possível instalar o Visual Studio 2017 baixando-o em [Downloads do Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Para saber mais sobre o processo de instalação, consulte [Instalando o Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=833223). Crie um novo projeto ou abra um arquivo de código e comece a escrever código. Escolha o tipo de aplicativo que você deseja criar. Ou você pode [fazer um tour](https://go.microsoft.com/fwlink/?linkid=833058) pelo IDE do Visual Studio para se familiarizar com as ferramentas.
 
- E não se esqueça de explorar a nossa [galeria de códigos](https://code.msdn.microsoft.com/) para encontrar exemplos para ajudá-lo a escrever seu aplicativo mais rapidamente! Confira os vários vídeos gratuitos do Visual Studio disponíveis no [Channel 9](https://channel9.msdn.com/VisualStudio) e na [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!jobf=Developer&lang=1033).
+ E não se esqueça de explorar a nossa [galeria de códigos](https://code.msdn.microsoft.com/) para encontrar exemplos que ajudam a escrever seu aplicativo com mais rapidez! Confira os vários vídeos gratuitos do Visual Studio disponíveis no [Channel 9](https://channel9.msdn.com/VisualStudio) e na [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!jobf=Developer&lang=1033).
 
 ## <a name="build-cross-platform-apps-and-games"></a>Criar jogos e aplicativos de plataforma cruzada  
  É possível usar o Visual Studio para criar aplicativos e jogos para o Android, iOS, Linux, Windows e outros dispositivos. Saiba mais sobre isso em [Cross-Platform Mobile Development](cross-platform/cross-platform-mobile-development-in-visual-studio.md) (Desenvolvimento Móvel Multiplataforma).  Os Aplicativos Universais do Windows ajudam você a aproveitar o código em várias plataformas. Consulte [Aplicativos Universais do Windows](https://dev.windows.com/en-us/windows-apps) para obter mais informações.
@@ -99,15 +100,15 @@ Planeje, crie e execute testes manuais e automatizados para seu aplicativo. Os p
 
 Diagnóstico de memória e uso de CPU e outros problemas em nível de aplicativo. Confira [Ferramentas de Criação de Perfil](profiling/profiling-tools.md) para obter mais informações.
 
-### <a name="deliver-your-teams-code-faster"></a>Forneça o código da equipe mais rapidamente  
+### <a name="deliver-your-teams-code-faster"></a>Forneça o código à equipe com mais rapidez  
  Elimine os obstáculos entre os membros da equipe e melhore a colaboração. Vá além e automatize a versão do seu aplicativo para cada estágio do desenvolvimento até a produção. Monitore o desempenho e a disponibilidade do aplicativo quando ele estiver na Web. Colete dados de uso em tempo real sobre como seus clientes estão realmente usando o aplicativo. Confira [Gerenciamento do Ciclo de Vida do Aplicativo e DevOps](https://www.visualstudio.com/en-us/docs/vsts-tfs-overview) para obter mais detalhes.  
 
-## <a name="whats-new"></a>Novidades?  
+## <a name="whats-new"></a>Novidades  
 Saiba mais sobre as novidades do Visual Studio.
 
 |||  
 |-|-|  
-|[Novidades no Visual Studio 2017](ide/whats-new-in-visual-studio.md)|[Novidades do Visual C++](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
+|[Novidades no Visual Studio 2017](ide/whats-new-in-visual-studio.md)|[Novidades no Visual C++](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
 |[Novidades do Visual C++](/dotnet/articles/csharp/csharp-7)|
 
 

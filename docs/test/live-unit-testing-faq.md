@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: c9df048a49580f3526b48e29041ef3758722ed27
-ms.openlocfilehash: 08677472bc13d58d9ab0b42b856955f8434089e4
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e59263c352084107d9849ab656b8b7d034337c53
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Perguntas frequentes sobre o Live Unit Testing
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2017
 
 Atualmente, o Live Unit Testing não funciona com o .NET Core. Estamos trabalhando para adicionar esse suporte no futuro. 
 
-## <a name="why-doesnt-live-unit-testing-work-when-i-turn-it-on"></a>Por que o Live Unit Testing não funciona ao ativá-lo? 
+## <a name="why-doesnt-live-unit-testing-work-when-i-turn-it-on"></a>Por que o Live Unit Testing não funciona ao ser ligado? 
 
 **Resposta:** 
 
@@ -89,7 +89,7 @@ Por exemplo, pode haver um destino que produz pacotes NuGet durante um build nor
 
 ## <a name="error-messages-with-ltoutputpathgt-or-ltoutdirgt"></a>Mensagens de erro com &lt;OutputPath&gt; ou &lt;OutDir&gt;
 
-**Por que recebo este erro quando o Live Unit Testing tenta compilar minha solução: “… parece definir `<OutputPath>` ou `<OutDir>` incondicionalmente. O Live Unit Testing não executará testes do assembly de saída”?**
+**Por que recebo este erro quando o Live Unit Testing tenta criar minha solução: “... parece definir `<OutputPath>` ou `<OutDir>` incondicionalmente. O Live Unit Testing não executará testes do assembly de saída”?**
 
 **Resposta:**
 
@@ -150,7 +150,7 @@ Há várias diferenças:
 
 Consulte a seção “Incluindo e excluindo projetos e métodos de teste” do tópico [Usar o Live Unit Testing no Visual Studio 2017 Enterprise Edition](live-unit-testing.md#including-and-excluding-test-projects-and-test-methods) para obter a configuração específica ao usuário. Isso é extremamente útil quando você deseja executar um conjunto específico de testes em uma sessão de edição específica ou para persistir suas próprias preferências pessoais.
   
-Para configurações específicas à solução, é possível aplicar o atributo <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute?displayProperty=fullName> de forma programática para excluir métodos, propriedades, classes ou estruturas de serem instrumentadas pelo Live Unit Testing. Além disso, também é possível definir a propriedade `<ExcludeFromCodeCoverage>` como `true` no arquivo de projeto para excluir todo o projeto de ser instrumentado. O Live Unit Testing ainda executará os testes que não foram instrumentados, mas sua cobertura não será visualizada.
+Para configurações específicas da solução, você pode aplicar o atributo <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute?displayProperty=fullName> programaticamente para excluir métodos, propriedades, classes ou estruturas de serem instrumentados pelo by Live Unit Testing. Além disso, também é possível definir a propriedade `<ExcludeFromCodeCoverage>` como `true` no arquivo de projeto para excluir todo o projeto de ser instrumentado. O Live Unit Testing ainda executará os testes que não foram instrumentados, mas sua cobertura não será visualizada.
 
 Também é possível verificar se `Microsoft.CodeAnalysis.LiveUnitTesting.Runtime` foi carregado no domínio de aplicativo atual e desabilitar testes com base nele. Por exemplo, você pode fazer algo semelhante ao seguinte com o xUnit:
 
@@ -199,7 +199,7 @@ O Live Unit Testing inicia um build sempre que detecta uma alteração nos arqui
 
 **Resposta:**
 
-Atualmente, o Live Unit Testing não funciona bem com o recurso Carga de Solução Leve se todos os projetos na solução ainda não foram carregados. Talvez você obtenha informações de cobertura incorretas nesses cenários.
+Atualmente, o Live Unit Testing não funciona bem com o recurso de carga de Solução Leve quando ainda não estão carregados todos os projetos na solução. Talvez você obtenha informações de cobertura incorretas nesses cenários.
  
 ## <a name="why-does-live-unit-testing-does-not-capture-coverage-from-a-new-process-created-by-a-test"></a>Por que o Live Unit Testing não captura a cobertura de um novo processo criado por um teste?
  
