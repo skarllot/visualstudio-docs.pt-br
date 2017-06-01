@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2ed718f0cd308293dae0b5e2409b421c4529d09b
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0095311f5188260bf1207e4094c1ceb87b1bbb86
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="flag-markers"></a>Marcadores de sinalizador
@@ -57,7 +59,7 @@ Marcadores mostrando as categorias
 Um marcador de alerta  
   
 ## <a name="aggregation-flags"></a>Sinalizadores de agregação  
- Às vezes, sinalizadores ocorrerem tão próximos uns dos outros na Visualização Simultânea que não podem ser desenhados individualmente. Quando isso ocorre, um *sinalizador agregação* cinza, que representa os sinalizadores subjacentes, é exibido. Quando você posiciona o ponteiro em desses ícones, uma dica de ferramenta exibe o número de sinalizadores subjacentes representados. Para exibir os sinalizadores, amplie. Se ampliar completamente e ainda obtiver um sinalizador de agregação, você pode exibir os sinalizadores subjacentes no [Relatório de marcadores](../profiling/markers-report.md).  
+ Às vezes, os sinalizadores ocorrem tão próximos uns dos outros na Visualização Simultânea que não podem ser desenhados individualmente. Quando isso ocorre, um *sinalizador agregação* cinza, que representa os sinalizadores subjacentes, é exibido. Quando você posiciona o ponteiro em desses ícones, uma dica de ferramenta exibe o número de sinalizadores subjacentes representados. Para exibir os sinalizadores, amplie. Se ampliar completamente e ainda obtiver um sinalizador de agregação, você pode exibir os sinalizadores subjacentes no [Relatório de marcadores](../profiling/markers-report.md).  
   
  Sinalizadores de agregação são desenhados em tamanhos diferentes. O tamanho depende do nível de importância do sinalizador mais importante da agregação. A ilustração a seguir mostra sinalizadores de agregação em ordem crescente de importância.  
   
@@ -67,8 +69,3 @@ Sinalizadores de agregação por nível de importância
 ## <a name="see-also"></a>Consulte também  
  [Marcadores da Visualização Simultânea](../profiling/concurrency-visualizer-markers.md)   
  [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

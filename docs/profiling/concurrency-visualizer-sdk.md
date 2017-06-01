@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 1a51a8dbf28be35febf4a0954a997e542ffd0f09
-ms.openlocfilehash: 4734ac951c93fb7921e637494e91c1ca1cf16594
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0d5c4895cb77388e45442dccdbfdd98884e81c18
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="concurrency-visualizer-sdk"></a>SDK do Visualizador de Simultaneidade
@@ -45,7 +47,7 @@ Descreve como instrumentalizar o código-fonte usando o SDK de Visualização Si
  A Visualização Simultânea expõe um provedor padrão que pode ser usado para gerar marcadores. O provedor já está registrado junto com a Visualização Simultânea e não é necessário fazer mais nada para fazer os marcadores serem exibidos na interface do usuário.  
   
 ### <a name="c-and-visual-basic"></a>C# e Visual Basic  
- Em C#, o Visual Basic e outro código gerenciado usam o provedor padrão chamando <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers>. Ele expõe quatro funções para gerar marcadores: <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteFlag%2A>, <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.EnterSpan%2A>, <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteMessage%2A> e <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteAlert%2A>. Há várias sobrecargas para essas funções, dependendo se você deseja usar os padrões para as propriedades.  A sobrecarga mais simples aceita apenas um parâmetro de cadeia de caracteres que especifica a descrição do evento. A descrição é exibida nos relatórios da Visualização Simultânea.  
+ No C#, no Visual Basic e em outro código gerenciado, use o provedor padrão chamando <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers>. Ele expõe quatro funções para gerar marcadores: <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteFlag%2A>, <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.EnterSpan%2A>, <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteMessage%2A> e <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteAlert%2A>. Há várias sobrecargas para essas funções, dependendo se você deseja usar os padrões para as propriedades.  A sobrecarga mais simples aceita apenas um parâmetro de cadeia de caracteres que especifica a descrição do evento. A descrição é exibida nos relatórios da Visualização Simultânea.  
   
 ##### <a name="to-add-sdk-support-to-a-c-or-visual-basic-project"></a>Para adicionar suporte do SDK a um projeto em C# ou do Visual Basic  
   
@@ -106,16 +108,16 @@ Descreve como instrumentalizar o código-fonte usando o SDK de Visualização Si
   
 #### <a name="to-use-a-marker-series-in-a-c-or-visual-basic-project"></a>Para usar uma série de marcadores em um projeto em C# ou do Visual Basic  
   
-1.  Para usar um novo <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries>, crie-o primeiro usando um objeto <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerWriter> e, em seguida, gere os eventos de marcador diretamente da nova série.  
+1.  Para usar um novo <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries>, primeiro o crie usando um objeto <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerWriter> e, em seguida, gere eventos de marcador diretamente da nova série.  
   
     ```CSharp  
-    MarkerSeries series1 = myMarkerWriter.CreateMarkerSeries(″Series 1″);  
-    series1.WriteFlag(″My flag″);  
+    MarkerSeries series1 = myMarkerWriter.CreateMarkerSeries("Series 1");  
+    series1.WriteFlag("My flag");  
     ```  
   
     ```VB  
-    Dim series1 As New myMarkerWriter.CreateMarkerSeries(″Series 1″)  
-    series1.WriteFlag(″My flag″)  
+    Dim series1 As New myMarkerWriter.CreateMarkerSeries("Series 1")  
+    series1.WriteFlag("My flag")  
     ```  
   
 #### <a name="to-use-a-marker-series-in-a-c-project"></a>Para usar uma série de marcadores em um projeto em C++  
@@ -145,8 +147,3 @@ Descreve como instrumentalizar o código-fonte usando o SDK de Visualização Si
 |[Referência de biblioteca C](../profiling/c-library-reference.md)|Descreve a API da Visualização Simultânea para C.|  
 |<xref:Microsoft.ConcurrencyVisualizer.Instrumentation>|Descreve a API da Visualização Simultânea para o código gerenciado.|  
 |[Visualização Simultânea](../profiling/concurrency-visualizer.md)|Informações de referência para as exibições e relatórios de arquivos de dados de criação de perfil gerados usando o método de simultaneidade e que incluem dados de execução de threads.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

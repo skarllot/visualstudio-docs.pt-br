@@ -27,26 +27,27 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6ef83b910860e0a790abbe61e5e844c0adf61d53
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 07e37b1a1d7b02992bb4da69bd158878095dd789
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="sample-excel-extension-technologymanager-class"></a>Extensão de exemplo do Excel: classe TechnologyManager
 Essa classe estende a classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager> e é responsável por fornecer os serviços principais para a extensão [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)]. Embora a classe base tenha muitos métodos, apenas um subconjunto deles é usado neste exemplo.  
   
- Alguns métodos simplesmente retornam um valor da propriedade. Muitos dos métodos destinam-se a permitir que o desenvolvedor substitua o build de algoritmos padrão para o mecanismo de teste de IU codificado. Esses métodos geram um <xref:System.NotSupportedException> ou retornam `null`, que diz à estrutura para usar o algoritmo padrão.  
+ Alguns métodos simplesmente retornam um valor da propriedade. Muitos dos métodos destinam-se a permitir que o desenvolvedor substitua o build de algoritmos padrão para o mecanismo de teste de IU codificado. Esses métodos geram uma <xref:System.NotSupportedException> ou retornam `null`, que solicita que a estrutura use o algoritmo padrão.  
   
  Dependendo da complexidade da tecnologia subjacente, desenvolver o código do Gerenciador de tecnologia pode levar de poucas semanas a alguns meses. O Excel fornece uma oportunidade para criar um gerenciador de tecnologia potencialmente muito extenso. Este exemplo é intencionalmente limitado a células e planilhas do Excel e usa formatação limitada.  
   
  Quando for possível, o código do gerenciador de tecnologia usa o canal de comunicação remota do .NET aberto pela classe `Communicator` para extrair informações do suplemento em execução no processo do Excel.  
   
 ## <a name="com-visibility"></a>Visibilidade COM  
- Observe que essa classe e cada uma das classes de elemento que estendem a classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> todas têm o <xref:System.Runtime.InteropServices.ComVisibleAttribute> com um valor de `true` para assegurar que as classes sejam visíveis para COM.  
+ Observe que essa classe e cada uma das classes de elemento que estendem a classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> têm o <xref:System.Runtime.InteropServices.ComVisibleAttribute> com o valor `true` para assegurar que as classes fiquem visíveis ao COM.  
   
 ## <a name="technologyname-property"></a>Propriedade TechnologyName  
- Essa substituição da propriedade <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.TechnologyName%2A?displayProperty=fullName> deve fornecer um nome exclusivo e significativo que identifica a tecnologia subjacente para todos os outros componentes da extensão. Para essa extensão, o valor é "Excel".  
+ Essa substituição da propriedade <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.TechnologyName%2A?displayProperty=fullName> deve fornecer um nome exclusivo e significativo que identifique a tecnologia subjacente para todos os outros componentes da extensão. Para essa extensão, o valor é "Excel".  
   
 ## <a name="getcontrolsupportlevel-method"></a>Método GetControlSupportLevel  
  Essa substituição do método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetControlSupportLevel%2A?displayProperty=fullName> retorna um número que indica o nível de suporte que o gerente de tecnologia pode oferecer para o controle representado pelo identificador fornecido. Quanto maior o valor retornado, mais o gerenciador de tecnologia pode dar suporte ao controle. Nesse caso, o método verificará a janela que contém o controle e, se ele for uma planilha do Excel, o método retornará o valor mais alto; caso contrário, ele retornará zero, o que indicará que nenhum suporte é fornecido.  
@@ -68,7 +69,7 @@ Essa classe estende a classe <xref:Microsoft.VisualStudio.TestTools.UITest.Exten
  Quando um teste de IU codificado é criado, o usuário pode especificar valores de propriedade para alguns ou todos os controles no teste. Esses valores de propriedade são usados pela estrutura de teste para criar pares de nome-valor chamados propriedades de pesquisa que são usadas para localizar controles específicos de interface do usuário durante o teste. Todas as propriedades de pesquisa juntas representam o valor da propriedade <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A?displayProperty=fullName> de cada elemento na tecnologia, o que inclui todos os controles. Como um controle pode ser encontrado várias vezes durante um teste, esse método permite que o gerente de tecnologia otimize a análise das propriedades de pesquisa para o controle fornecido. Esse método também retorna um cookie que a estrutura pode utilizar para pesquisas subsequentes para o controle. Essa implementação do método usa o método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName> para analisar as propriedades de pesquisa.  
   
 ## <a name="matchelement-method"></a>Método MatchElement  
- Para executar uma pesquisa de controle pelo gerenciador de tecnologia, você pode implementar o método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.Search%2A?displayProperty=fullName> para retornar uma matriz de possíveis correspondências ou gerar <xref:System.NotSupportedException>, que informa a estrutura para usar seu próprio algoritmo de pesquisa. De qualquer forma, você deve implementar o método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.MatchElement%2A>, em que essa implementação usa novamente o método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName>.  
+ Para executar uma pesquisa de controle pelo gerenciador de tecnologia, você pode implementar o método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.Search%2A?displayProperty=fullName> para retornar uma matriz de possíveis correspondências ou gerar a <xref:System.NotSupportedException>, que solicita que a estrutura use seu próprio algoritmo de pesquisa. De qualquer forma, você deve implementar o método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.MatchElement%2A> no qual essa implementação usa novamente o método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName>.  
   
 ## <a name="navigation-methods"></a>Métodos de navegação  
  Esses métodos obtêm o pai, filhos ou irmãos do elemento fornecido da hierarquia de interface do usuário. O código é simples e claramente comentado.  

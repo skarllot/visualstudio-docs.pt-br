@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f79564e5af510e9816b8668fa9bcaeae2a419e04
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 2eaf4aa44fdc1bec56bb513af54ea7db72dcf3db
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>Como criar um teste de unidade orientado a dados
@@ -63,11 +64,11 @@ Ao usar a estrutura de teste de unidade da Microsoft para código gerenciado, vo
   
 1.  Criar uma fonte de dados que contém os valores a serem usados no método de teste. A fonte de dados pode ser de qualquer tipo que esteja registrado no computador que executa o teste.  
   
-2.  Adicionar um campo particular <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> e uma propriedade `TestContext` pública à classe de teste.  
+2.  Adicionar um campo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> privado e uma propriedade `TestContext` pública à classe de teste.  
   
-3.  Criar um método de teste de unidade e adicionar um atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> a esse método.  
+3.  Criear um método de teste de unidade e adicionar um atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> a ele.  
   
-4.  Use a propriedade do indexador <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> para recuperar os valores que são usados em um teste.  
+4.  Usar o propriedade do indexador <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> para recuperar os valores que você pode usar em um teste.  
   
 ##  <a name="BKMK_The_method_under_test"></a> O método em teste  
  Como exemplo, vamos supor que criamos:  
@@ -182,7 +183,7 @@ public void AddIntegers_FromDataSourceTest()
 ```  
   
 ###  <a name="BKMK_Using_TestContext_DataRow_to_access_the_data"></a> Usar o TestContext.DataRow para acessar os dados  
- Para acessar os dados na tabela `AddIntegersData`, use o indexador `TestContext.DataRow`. `DataRow` é um objeto <xref:System.Data.DataRow>, portanto, os valores de coluna são recuperados por índice ou por nomes de coluna. Como os valores são retornados como objetos, é preciso convertê-los para o tipo apropriado:  
+ Para acessar os dados na tabela `AddIntegersData`, use o indexador `TestContext.DataRow`. `DataRow` é um objeto <xref:System.Data.DataRow>, para que seja possível recuperar valores de colunas por índice ou nomes de colunas. Como os valores são retornados como objetos, é preciso convertê-los para o tipo apropriado:  
   
 ```  
 int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);  

@@ -28,17 +28,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 06a708113c86ca51a4ef98399b34b9dec8e90ccc
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7e95cec543216f13de06d2c2b86bc08040d1a7fb
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>ALM (Gerenciamento do Ciclo de Vida do Aplicativo) com aplicativos do Unity
-Desenvolver aplicativos para plataformas modernas envolve muito mais atividades do que apenas escrever código. Essas atividades, conhecidas como DevOps (desenvolvimento + operações), abrangem o ciclo de vida completo do aplicativo e incluem trabalhos de planejando e acompanhando, elaboração e implementação de código, gerenciamento de um repositório de código-fonte, execução de compilações, gerenciamento de integrações contínuas e implantações, teste (incluindo testes de unidade e testes de interface do usuário), execução de várias formas de diagnóstico em ambientes de desenvolvimento e produção e monitoramento do desempenho do aplicativo e dos comportamentos do usuário em tempo real por meio de telemetria e análise.  
+Desenvolver aplicativos para plataformas modernas envolve muito mais atividades do que apenas escrever código. Essas atividades, conhecidas como DevOps (desenvolvimento + operações), abrangem o ciclo de vida completo do aplicativo e incluem trabalhos de planejando e acompanhando, elaboração e implementação de código, gerenciamento de um repositório de código-fonte, execução de bulds, gerenciamento de integrações contínuas e implantações, testes (incluindo testes de unidade e testes de interface do usuário), execução de várias formas de diagnóstico em ambientes de desenvolvimento e produção e monitoramento do desempenho do aplicativo e dos comportamentos do usuário em tempo real por meio de telemetria e análise.  
   
  O Visual Studio, junto com o Visual Studio Team Services e o Team Foundation Server, proporciona uma variedade de recursos de DevOps, também conhecidos como ALM ou Gerenciamento do Ciclo de Vida do Aplicativo. Muitos são aplicáveis aos projetos de plataforma cruzada, incluindo jogos e aplicativos gráficos de imersão criados com o Unity, especialmente ao usar C# como linguagem de script. No entanto, uma vez que o Unity tem seu próprio ambiente de desenvolvimento e o mecanismo de tempo de execução, vários recursos ALM não se aplicam como se aplicariam a outros tipos de projetos criados no Visual Studio.  
   
- As tabelas a seguir identifica como os recursos do Visual Studio ALM se aplicam ou não se aplicam ao trabalhar com o Unity. Consulte a documentação vinculada para obter detalhes sobre os recursos em si.  
+ As tabelas a seguir identificam como os recursos do Visual Studio ALM se aplicam ou não se aplicam ao trabalhar com o Unity. Consulte a documentação vinculada para obter detalhes sobre os recursos em si.  
   
 ## <a name="agile-tools"></a>Ferramentas agile  
  Link de referência: **[Trabalho](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)** (usando o Visual Studio Team Services ou TFS, incluindo o Team Explorer Everywhere)  
@@ -85,7 +87,7 @@ Desenvolver aplicativos para plataformas modernas envolve muito mais atividades 
   
 2.  Nem todos os arquivos e pastas em um projeto do Unity são apropriados para controle do código-fonte, como também é descrito no link acima. As pastas Ativos e ProjectSettings devem ser adicionadas, mas as pastas Biblioteca e Temp, não. Para obter uma lista adicional de arquivos gerados não entrariam no controle do código-fonte, consulte a discussão [Como usar Git para controle do código-fonte Unity3D?](http://stackoverflow.com/questions/18225126/how-to-use-git-for-unity3d-source-control) em StackOverflow. Muitos desenvolvedores têm publicaram sobre assunto independentemente em seus blogs.  
   
-3.  Ativos binários em um projeto do Unity, como texturas ou arquivos de áudio, podem ocupar uma grande quantidade de armazenamento. Vários sistemas de controle do código-fonte, como Git, armazenam uma cópia única de um arquivo para cada alteração feita, mesmo que a alteração afete apenas uma pequena parte do arquivo. Isso pode fazer o repositório Git ficar inflado. Para resolver isso, os desenvolvedores do Unity geralmente optam por adicionar somente ativos finais ao repositório e usar uma maneira diferente de manter um histórico de trabalho de seus ativos, como OneDrive, DropBox ou git-annex. Essa abordagem funciona porque esses ativos geralmente não precisam ter controle de versão junto com as alterações do código-fonte. Os desenvolvedores normalmente também definem o Modo de Serialização de Ativo para Forçar Texto do editor do projeto para armazenar arquivos de cena no texto, em vez de no formato binário, o que permite mesclagens no controle do código-fonte. Para obter detalhes, consulte [Configurações do Editor](http://docs.unity3d.com/Manual/class-EditorManager.html) (documentação do Unity).  
+3.  Ativos binários em um projeto do Unity, como texturas ou arquivos de áudio, podem ocupar uma grande quantidade de armazenamento. Vários sistemas de controle do código-fonte, como Git, armazenam uma cópia única de um arquivo para cada alteração feita, mesmo que a alteração afete apenas uma pequena parte do arquivo. Isso pode fazer o repositório Git ficar inflado. Para resolver isso, os desenvolvedores do Unity geralmente optam por adicionar somente ativos finais ao repositório e usar uma maneira diferente de manter um histórico de trabalho de seus ativos, como OneDrive, DropBox ou git-annex. Essa abordagem funciona porque esses ativos geralmente não precisam ter controle de versão ao longo das alterações do código-fonte. Os desenvolvedores normalmente também definem o Modo de Serialização de Ativo como Forçar Texto no editor do projeto para armazenar arquivos de cena no texto e não no formato binário, o que permite mesclagens no controle do código-fonte. Para obter detalhes, consulte [Configurações do Editor](http://docs.unity3d.com/Manual/class-EditorManager.html) (documentação do Unity).  
   
 ## <a name="build"></a>Build  
  Link de referência: **[Build](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)**  
@@ -108,7 +110,7 @@ Desenvolver aplicativos para plataformas modernas envolve muito mais atividades 
 |Gerenciador de Teste (testes de gravação e reprodução)|Somente dispositivos Windows e emuladores Android||  
 |Cobertura de código|N/D|Não se aplica, uma vez que o teste de unidade acontece dentro do Unity e não no Visual Studio, consulte abaixo.|  
 |[Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)|No Unity, mas não no Visual Studio|O Unity fornece a própria estrutura de teste de unidade como parte das [Ferramentas de Teste do Unity](https://www.assetstore.unity3d.com/en/#!/content/13802) (Unity Asset Store). Resultados de teste de unidade são relatados dentro do Unity e não aparecerão no Visual Studio.|  
-|[Usar automação de interface do usuário para testar código](../test/use-ui-automation-to-test-your-code.md)|Não|Testes de UI codificados dependem de controles legíveis na interface do usuário do aplicativo; aplicativos Unity são gráficos por natureza e, assim, o conteúdo não é legível pelas ferramentas de teste de IU codificado.|  
+|[Usar automação de interface do usuário para testar código](../test/use-ui-automation-to-test-your-code.md)|Não|Os testes de IU codificados dependem de controles legíveis na interface do usuário do aplicativo. Os aplicativos Unity são gráficos por natureza e, assim, o conteúdo não é legível para ferramentas de teste de IU codificado.|  
   
 ## <a name="improve-code-quality"></a>Melhorar a qualidade do código  
  Link de referência: **[Melhorar a qualidade do código](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
@@ -136,8 +138,3 @@ Desenvolver aplicativos para plataformas modernas envolve muito mais atividades 
 |Recurso|Tem suporte com o Unity|Comentários Adicionais|  
 |-------------|--------------------------|-------------------------|  
 |Análise de falhas, telemetria e distribuição beta|Sim|HockeyApp é útil principalmente para tratar a distribuição beta e obter relatórios de falha.<br /><br /> Para telemetria de scripts do C#, é possível usar qualquer estrutura de análise, desde que ela seja executada na versão do .NET que é usada pelo Unity. No entanto, isso permite análise somente dentro de scripts de jogos e não mais profundamente dentro do mecanismo do Unity. No momento, não há nenhum plug-in do Application Insights, mas plug-ins estão disponíveis para outras soluções de análise, como [Unity Analytics](https://www.assetstore.unity3d.com/en/#!/content/28120) e [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity). Serviços como Unity Analytics que entendem a natureza de um projeto Unity obviamente fornecerão análise muito mais significativa do que estruturas genéricas.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

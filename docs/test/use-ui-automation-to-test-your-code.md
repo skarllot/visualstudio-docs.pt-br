@@ -36,16 +36,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 753a39940ba32052cff14460f007a8f8a2d191dd
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0719aac1c8a0b59b34234aeeee8ec0a3ce418168
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>Usar automação de interface do usuário para testar código
 Os testes automatizados que orientam o aplicativo por meio da interface do usuário (UI) são conhecidos como *testes de IU codificados* (CUITs). Entre esses testes estão testes funcionais dos controles de interface de usuário. Eles permitem verificar se todo o aplicativo, inclusive sua interface do usuário, está funcionando corretamente. Os testes de IU codificados são especialmente úteis quando há validação ou outra lógica na interface do usuário, como em uma página da Web. Eles também costumam ser usados para automatizar um teste manual existente.  
   
- Conforme mostrado na ilustração a seguir, uma experiência de desenvolvimento típica pode ser uma em que, inicialmente, você só compila o aplicativo (F5) e clica nos controles de interface de usuário para verificar se as coisas estão funcionando corretamente. Em seguida, você pode optar por criar um teste codificado para não ser mais necessário testar o aplicativo manualmente. Dependendo da funcionalidade específica testada no aplicativo, você pode gravar código para um teste funcional ou para um teste de integração que pode ou não incluir testes no nível da interface do usuário. Se quiser apenas acessar diretamente uma lógica de negócios, você poderá codificar um teste de unidade. Porém, em determinadas circunstâncias, pode ser benéfico incluir testes dos diversos controles de interface de usuário no aplicativo. Um teste de IU codificado pode automatizar o cenário inicial (F5), verificando se a variação de código não afeta a funcionalidade do aplicativo.  
+ Conforme mostrado na ilustração a seguir, uma experiência de desenvolvimento típica pode ser uma em que, inicialmente, você só compila o aplicativo (F5) e clica nos controles de interface de usuário para verificar se as coisas estão funcionando corretamente. Em seguida, você pode optar por criar um teste codificado para não precisar mais testar o aplicativo manualmente. Dependendo da funcionalidade específica testada no aplicativo, você pode gravar código para um teste funcional ou para um teste de integração que pode ou não incluir testes no nível da interface do usuário. Se quiser apenas acessar diretamente uma lógica de negócios, você poderá codificar um teste de unidade. Porém, em determinadas circunstâncias, pode ser benéfico incluir testes dos diversos controles de interface de usuário no aplicativo. Um teste de IU codificado pode automatizar o cenário inicial (F5), verificando se a variação de código não afeta a funcionalidade do aplicativo.  
   
  ![Testes durante o desenvolvimento de aplicativos](../test/media/cuit_overview.png "CUIT_Overview")  
   
@@ -79,7 +80,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
     -   [Depuração](#debugging)  
   
--   [O que vem a seguir?](#VerifyCodeUsingCUITWhatsNext)  
+-   [Novidades](#VerifyCodeUsingCUITWhatsNext)  
   
 ##  <a name="VerifyingCodeUsingCUITCreate"></a> Criando Testes de IU Codificados  
   
@@ -87,7 +88,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
      Os testes de IU codificados devem estar contidos em um projeto de teste de IU codificado. Se você ainda não tiver um projeto de teste de IU codificado, crie um. No **Gerenciador de Soluções**, no menu de atalho da solução, escolha **Adicionar**, **Novo Projeto** e, em seguida, selecione **Visual Basic** ou **Visual C#**. Em seguida, escolha **Teste**, **Teste de IU Codificado**.  
   
-    -   *Não vejo os modelos de projeto do**Teste de IU Codificado**.*  
+    -   *Não vejo os modelos de projeto do **Teste de IU Codificado**.*  
   
          Você pode estar usando uma versão do Visual Studio que não oferece suporte a testes de IU codificados. Para criar testes de IU codificados, é necessário usar o Visual Studio Enterprise.  
   
@@ -196,7 +197,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
  ![Propriedades de teste de IU codificado](../test/media/codedui_2.png "CodedUI_2")  
   
--   *Não vejo nenhuma propriedade quando seleciono um controle no aplicativo ou não vejo o controle no Mapa de Controles de interface do usuário.*  
+-   *Não vejo nenhuma propriedade quando seleciono um controle no aplicativo ou não vejo o controle no Mapa de Controles da interface do usuário.*  
   
      No código do aplicativo, o controle que você deseja verificar deve ter uma ID exclusiva, como um atributo de ID HTML ou WPF UId. Talvez seja necessário atualizar o código do aplicativo para adicionar essas IDs.  
   
@@ -251,7 +252,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
  *Não consigo registrar uma passagem do mouse sobre um controle. Existe uma solução alternativa para isso?*  
  **Registrar manualmente passagens do mouse**  
   
- Em algumas circunstâncias, um determinado controle usado em um teste de IU codificado pode exigir que você use o teclado para registrar manualmente eventos de passagem do mouse. Por exemplo, quando você testa um aplicativo do Windows Form ou do Windows Presentation Foundation (WPF), talvez haja código personalizado. Ou talvez haja um comportamento especial definido para a passagem do mouse sobre um controle, como a expansão de um nó de árvore quando um usuário o focaliza. Para testar circunstâncias como essa, você precisa notificar manualmente o Construtor de Teste de IU Codificado que está focalizando o controle pressionando as teclas predefinidas do teclado.  
+ Em algumas circunstâncias, um determinado controle usado em um teste de IU codificado pode exigir que você use o teclado para registrar manualmente os eventos de passagem do mouse. Por exemplo, quando você testa um aplicativo do Windows Form ou do Windows Presentation Foundation (WPF), talvez haja código personalizado. Ou talvez haja um comportamento especial definido para a passagem do mouse sobre um controle, como a expansão de um nó de árvore quando um usuário o focaliza. Para testar circunstâncias como essa, você precisa notificar manualmente o Construtor de Teste de IU Codificado que está focalizando o controle pressionando as teclas predefinidas do teclado.  
   
  Ao realizar o teste de IU codificado, focalize o controle. Em seguida, mantenha a tecla Ctrl pressionada, enquanto pressiona e solta as teclas Shift e R do teclado. Solte as teclas. Um evento de passagem do mouse é registrado pelo Construtor de Teste de IU Codificado.  
   
@@ -381,7 +382,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
     public partial class UIMap // Same partial class  
     {  
       /// <summary>  
-      /// Add two numbers – parameterized version  
+      /// Add two numbers - parameterized version  
       /// </summary>  
       public void AddTwoNumbers(int firstNumber, int secondNumber)  
       { ...   // Code modified to use parameters.  
@@ -408,21 +409,21 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
  **Acessando Ações do Controle de Teste de IU**  
   
- Para executar ações em controles de teste de interface do usuário, como cliques do mouse ou ações do teclado, use os métodos das classes <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse> e <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard>:  
+ Para realizar ações em controles de teste de IU, como cliques do mouse ou ações de teclado, use os métodos nas classes <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse> e <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard>:  
   
--   Para executar uma ação orientada pelo mouse, como um clique do mouse, em um controle de teste de interface do usuário, use <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click%2A>.  
+-   Para realizar uma ação orientada pelo mouse, como um clique do mouse em um controle de teste de IU, use <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click%2A>.  
   
      `Mouse.Click(buttonCancel);`  
   
--   Para executar uma ação orientada pelo teclado, como digitar em um controle de edição, use <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A>.  
+-   Para realizar uma ação orientada pelo teclado, como digitar em um controle de edição, use <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A>.  
   
      `Keyboard.SendKeys(textBoxDestination, @"C:\Temp\Output.txt");`  
   
  **Acessando Propriedades do Controle de Teste de IU**  
   
- Para obter e definir valores de propriedade específicos de controle de interface do usuário, você pode obter ou definir os valores de propriedades de um controle diretamente ou usar os métodos <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A?displayProperty=fullName> e <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A?displayProperty=fullName> com o nome da propriedade específica que você deseja obter ou definir.  
+ Para obter e definir valores de propriedade específicas de controle de interface de usuário, é possível obter e definir diretamente os valores como as propriedades de um controle ou usar os métodos <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A?displayProperty=fullName> e <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A?displayProperty=fullName> com o nome da propriedade específica que você deseja obter ou definir.  
   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> retorna um objeto que pode ser convertido para o <xref:System.Type> apropriado. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A> aceita um objeto do valor da propriedade.  
+ <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> retorna um objeto, que pode ser convertido no <xref:System.Type> apropriado. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A> aceita um objeto para o valor da propriedade.  
   
 ##### <a name="to-get-or-set-properties-from-ui-test-controls-directly"></a>Para obter ou definir propriedades de controles de teste de IU diretamente  
   
@@ -435,11 +436,11 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
 ##### <a name="to-get-properties-from-ui-test-controls"></a>Para obter propriedades de controles de teste de IU  
   
--   Para obter um valor da propriedade de um controle, use <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>.  
+-   Para obter um valor de propriedade de um controle, use <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>.  
   
--   Para especificar a propriedade do controle a ser obtido, use a cadeia de caracteres correta da classe `PropertyNames` em cada controle como parâmetro para <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>.  
+-   Para especificar a propriedade de controle a ser obtida, use a cadeia de caracteres apropriada da classe `PropertyNames` em cada controle como parâmetro para <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>.  
   
--   <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> retorna o tipo de dados correto, mas esse valor retornado é convertido como um <xref:System.Object>. Em seguida, o <xref:System.Object> de retorno deve ser convertido como tipo apropriado.  
+-   <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> retorna o tipo de dados apropriado, mas esse valor retornado é convertido como um <xref:System.Object>. Em seguida, o <xref:System.Object> de retorno deve ser convertido como tipo apropriado.  
   
      Exemplo:  
   
@@ -447,9 +448,9 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
 ##### <a name="to-set-properties-for-ui-test-controls"></a>Para definir propriedades para controles de teste de IU  
   
--   Para definir uma propriedade em um controle, use <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>.  
+-   Para obter uma propriedade em um controle, use <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>.  
   
--   Para especificar a propriedade do controle a ser definido, use a cadeia de caracteres correta da classe `PropertyNames` como o primeiro parâmetro de <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>, com o valor da propriedade como segundo parâmetro.  
+-   Para especificar a propriedade do controle a ser definida, use a cadeia de caracteres apropriada da classe `PropertyNames` como primeiro parâmetro para <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>, com o valor da propriedade como segundo parâmetro.  
   
      Exemplo:  
   
@@ -481,19 +482,19 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
 -   [Estendendo testes de IU codificados e gravações da ação para dar suporte ao Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)  
   
- Os testes de IU codificados costumam ser usados para automatizar testes manuais. Para obter diretrizes adicionais, consulte [Teste para Entrega Contínua com o Visual Studio 2012 – Capítulo 5: Automatizando os Testes de Sistema](http://go.microsoft.com/fwlink/?LinkID=255196). Para obter mais informações sobre testes manuais, consulte [&#91;retired&#93; Criar Casos de Testes Manuais por meio do Microsoft Test Manager](/devops-test-docs/test_notintoc/creating-manual-test-cases-using-microsoft-test-manager). Para obter mais informações sobre testes de sistemas automatizados, consulte [Criar Testes Automatizados por meio do Microsoft Test Manager](http://msdn.microsoft.com/en-us/7b5075ee-ddfe-411d-b1d4-94283550a5d0).  
+ Os testes de IU codificados costumam ser usados para automatizar testes manuais. Para obter diretrizes adicionais, consulte [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196). (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 5: Automatizando testes do sistema). Para obter mais informações sobre testes manuais, consulte [&#91;retired&#93; Criar Casos de Testes Manuais por meio do Microsoft Test Manager](/devops-test-docs/test_notintoc/creating-manual-test-cases-using-microsoft-test-manager). Para obter mais informações sobre testes de sistemas automatizados, consulte [Criar Testes Automatizados por meio do Microsoft Test Manager](http://msdn.microsoft.com/en-us/7b5075ee-ddfe-411d-b1d4-94283550a5d0).  
   
 ## <a name="external-resources"></a>Recursos externos  
   
 ### <a name="guidance"></a>Diretrizes  
- [Testes de Entrega Contínua com o Visual Studio 2012 – Capítulo 2: Teste de Unidade: Testando o Interior](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
   
- [Teste de Entrega Contínua com o Visual Studio 2012 – Capítulo 5: Automatizar Testes do Sistema](http://go.microsoft.com/fwlink/?LinkID=255196)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 5: Automatizando testes do sistema)  
   
 ### <a name="faq"></a>Perguntas Frequentes  
  [Perguntas frequentes sobre testes de IU codificados – 1](http://go.microsoft.com/fwlink/?LinkID=230576)  
   
- [Perguntas frequentes sobre testes de IU codificados –&2;](http://go.microsoft.com/fwlink/?LinkID=230578)  
+ [Perguntas frequentes sobre testes de IU codificados – 2](http://go.microsoft.com/fwlink/?LinkID=230578)  
   
 ### <a name="forum"></a>Fórum  
  [Teste de Automação de interface do usuário do Visual Studio (inclui CodedUI)](http://go.microsoft.com/fwlink/?LinkID=224497)  

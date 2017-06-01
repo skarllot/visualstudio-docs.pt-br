@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 65bcf9081699a793ddc1876fec266c8b3ed9ba90
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 28bbc6d742a072f1305b0daed7720816492083fd
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-visual-studio-tools-for-unity"></a>Usando o Visual Studio Tools for Unity
@@ -93,7 +94,7 @@ Nesta seção, você aprenderá como usar os recursos de integração e produtiv
   
      ![Exibir a janela Gerenciador de Projetos do Unity. ] (../cross-platform/media/vstu_view_unity_project_explorer.png "vstu_view_unity_project_explorer")  
   
- O Gerenciador de Projetos do Unity mostra todos os arquivos de projeto do Unity e diretórios da mesma forma que o Editor do Unity, isso é diferente de navegar nos scripts do Unity com o Gerenciador de Soluções, que contém somente os arquivos de script e os exibe como os projetos e a solução gerada pelas Ferramentas do Visual Studio para Unity. Especialmente em grandes projetos, geralmente, é mais fácil localizar o script que deseja modificar usando o Gerenciador de Projetos do Unity; Ele também torna mais fácil modificar outros tipos de arquivos, por exemplo, arquivos de configuração com base em texto, no Visual studio sem adicioná-los a um dos projetos na solução do Visual Studio.  
+ O Gerenciador de Projetos do Unity mostra todos os arquivos de projeto e diretórios do Unity da mesma forma que o Editor do Unity, isso é diferente de navegar nos scripts do Unity com o Gerenciador de Soluções, que contém somente os arquivos de script e os exibe como os projetos e a solução gerados pelas Ferramentas do Visual Studio para Unity, organizando-os. Especialmente em grandes projetos, geralmente, é mais fácil localizar o script que deseja modificar usando o Gerenciador de Projetos do Unity; Ele também torna mais fácil modificar outros tipos de arquivos, por exemplo, arquivos de configuração com base em texto, no Visual studio sem adicioná-los a um dos projetos na solução do Visual Studio.  
   
 ### <a name="unity-error-list"></a>Lista de Erros do Unity  
  Você pode exibir as mensagens do console do Unity dentro do Visual Studio quando ele estiver conectado a uma instância do Unity. Isso inclui erros e avisos do Unity. As mensagens são exibidas na janela **Lista de Erros** do Visual Studio; mensagens de erro do Unity são exibidas na guia **Erros**, as mensagens de aviso na guia **Avisos** e outras mensagens, por exemplo, as mensagens enviadas usando a API do Unity Debug. Log, são exibidas na guia **Mensagens**.  

@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d45963c4f69d199d5f86ecf569bd07daf93c1015
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 74e8c8dcdeb0ae7796a89a2e1277404cbfd51f90
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Desenvolver aplicativos para a UWP (Plataforma Universal do Windows)
@@ -38,11 +40,11 @@ Com a Plataforma Universal do Windows e nosso único núcleo do Windows, é poss
   
  ![Plataforma Universal do Windows](../cross-platform/media/uwp_coreextensions.png "UWP_CoreExtensions")  
   
- Execute seu aplicativo em um telefone Windows 10, área de trabalho do Windows 10 ou Xbox. É o mesmo pacote do aplicativo! Com a introdução do núcleo único e unificado do Windows 10, um pacote do aplicativo pode ser executado em todas as plataformas. Várias plataformas têm SDKs de Extensão que podem ser adicionados ao aplicativo para aproveitar comportamentos específicos à plataforma. Por exemplo, o SDK de uma extensão para dispositivos móveis manipula o botão Voltar pressionado em um Windows Phone. Se você referenciar um SDK de Extensão em seu projeto, basta adicionar verificações em tempo de execução para testar se esse SDK está disponível nessa plataforma. É assim que você pode ter o mesmo pacote do aplicativo para cada plataforma!  
+ Execute seu aplicativo em um telefone Windows 10, área de trabalho do Windows 10 ou Xbox. O pacote do aplicativo é o mesmo! Com a introdução do núcleo único e unificado do Windows 10, um pacote do aplicativo pode ser executado em todas as plataformas. Várias plataformas têm SDKs de Extensão que podem ser adicionados ao aplicativo para aproveitar comportamentos específicos à plataforma. Por exemplo, o SDK de uma extensão para dispositivos móveis manipula o botão Voltar pressionado em um Windows Phone. Se você referenciar um SDK de Extensão em seu projeto, basta adicionar verificações em tempo de execução para testar se esse SDK está disponível nessa plataforma. É assim que você pode usar o mesmo pacote do aplicativo para todas as plataformas!  
   
  **O que é o Windows Core?**  
   
- Pela primeira vez, o Windows foi refatorado para ter um núcleo comum em todas as plataformas Windows 10. Há uma fonte comum, um kernel do Windows comum, um arquivo, uma pilha de E/S e um modelo de aplicativo. Para a interface do usuário, há apenas uma estrutura de interface do usuário em XAML e uma estrutura de interface do usuário em HTML. Portanto, você pode se concentrar em criar um ótimo aplicativo, porque facilitamos a execução dele em diferentes dispositivos Windows 10.  
+ Pela primeira vez, o Windows foi refatorado para ter um núcleo comum em todas as plataformas Windows 10. Há uma fonte comum, um kernel do Windows comum, um arquivo, uma pilha de E/S e um modelo de aplicativo. Para a interface do usuário, há apenas uma estrutura de interface do usuário em XAML e uma estrutura de interface do usuário em HTML. Portanto, você pode se concentrar em criar um ótimo aplicativo, porque nós facilitamos a execução dele em diferentes dispositivos Windows 10.  
   
  **O que é exatamente a Plataforma Universal do Windows?**  
   
@@ -75,8 +77,3 @@ Com a Plataforma Universal do Windows e nosso único núcleo do Windows, é poss
  Se você tiver aplicativos da Windows Store 8.1, aplicativos Windows Phone 8.1 ou aplicativos Universais do Windows criados com o Visual Studio 2015 RC, [porte esses aplicativos existentes](http://msdn.microsoft.com/library/windows/apps/xaml/mt238321.aspx) para que eles usem a última Plataforma Universal do Windows.  
   
  Depois de criar seu aplicativo Universal do Windows, é necessário [empacotar o aplicativo](https://msdn.microsoft.com/library/windows/apps/hh454036.aspx) para instalá-lo em um dispositivo Windows 10 ou enviá-lo para a Windows Store.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

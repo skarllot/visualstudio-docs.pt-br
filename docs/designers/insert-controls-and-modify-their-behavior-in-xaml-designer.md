@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 93e6387db5fbb782cbc16a5cc41a1145c0fabc6d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b39860f51de3475bb81cfc4d9d46d05b8cc80e43
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="insert-controls-and-modify-their-behavior-in-xaml-designer"></a>Inserir controles e modificar seu comportamento no XAML Designer
@@ -89,6 +90,6 @@ Controles permitem que usuários interajam com seu aplicativo. Você pode usá-l
  **Assista a um breve vídeo:** ![Configure Installed Features (Configurar recursos instalados)](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Dicas de combinação: Introdução para usar comportamentos Parte 1](http://www.bing.com/videos/search?q=Expression%20blend%20behaviors&qs=n&form=QBVR&pq=expression%20blend%20behavior&sc=4-25&sp=-1&sk=#view=detail&mid=CF0DD797ED84DE740904CF0DD797ED84DE740904).  
   
 ### <a name="events"></a>Eventos  
- Para máxima flexibilidade, manipule um *evento*. Você precisará gravar algum código.  
+ Para máxima flexibilidade, manipule um *evento*. Você precisará escrever um pouco de código.  
   
  **Assista a um breve vídeo:** ![Configure Installed Features (Configurar recursos instalados)](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Adicionar um evento de Mouse](https://www.youtube.com/watch?v=2PMxAlb-x_E).

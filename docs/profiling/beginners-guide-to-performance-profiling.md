@@ -1,7 +1,7 @@
 ---
 title: "Guia do iniciante para criação de perfil de desempenho no Visual Studio | Microsoft Docs"
 ms.custom: H1Hack27Feb2017
-ms.date: 11/04/2016
+ms.date: 02/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: fe329cd5395db3afae1c3f3e98bb6e480323e21f
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
+ms.openlocfilehash: 36770fe6fad52e33144f382446d7e851734f87c5
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="beginners-guide-to-performance-profiling"></a>Guia do iniciante à criação de perfil do desempenho
@@ -149,13 +150,13 @@ Aqui há mais informações sobre os valores de coluna:
 
 ## <a name="BKMK_External_Code"></a>Exibir código externo
 
-O código externo é uma função nos componentes do sistema e do framework executados pelo código que você grava. O código externo inclui funções que iniciam e param o aplicativo, elaboram a interface do usuário, controlam a segmentação e fornecem ao aplicativo outros serviços de nível inferior. Na maioria dos casos, você não está interessado em código externo, portanto, a ferramenta Uso de CPU reúne as funções externas de um método de usuário em um nó **[Código Externo]**.
+O código externo é uma função nos componentes do sistema e do framework executados pelo código que você grava. O código externo inclui funções que iniciam e param o aplicativo, elaboram a interface do usuário, controlam a segmentação e fornecem ao aplicativo outros serviços de nível inferior. Na maioria dos casos, você não está interessado em código externo, portanto, a ferramenta Uso de CPU reúne as funções externas de um método de usuário em um nó **[External Code]**.
   
 Se você quiser exibir os caminhos de chamada do código externo, escolha **Mostrar Código Externo** na lista **Filtrar exibição** e, em seguida, escolha **Aplicar**.  
   
 ![Escolha Filtrar Exibição, em seguida, Mostrar Código Externo](../profiling/media/DiagToolsShowExternalCode.png "DiagToolsShowExternalCode")  
   
-Saiba que muitas correntes de chamada de código externo são muito aninhadas, de forma que a largura da coluna Nome da Função pode exceder a largura da tela de todos os monitores de computador, exceto dos maiores. Quando isso acontece, os nomes de funções são mostrados como **[...]**.
+Saiba que muitas correntes de chamada de código externo são muito aninhadas, de forma que a largura da coluna Nome da Função pode exceder a largura da tela de todos os monitores de computador, exceto dos maiores. Quando isso acontece, os nomes de função são mostrados como **[...]** .
   
 Use a caixa de pesquisa para localizar um nó que você esteja procurando e use a barra de rolagem horizontal para exibir os dados.
 

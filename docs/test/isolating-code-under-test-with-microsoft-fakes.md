@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ed84bfa87e0869115b7d583b9b3922efd2f18dba
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3941968fa0e2e6205c94076f555c8366f009d4c0
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="isolating-code-under-test-with-microsoft-fakes"></a>Isolando código em teste com falsificação da Microsoft
@@ -62,7 +63,7 @@ O Microsoft Fakes ajuda a isolar o código em teste substituindo outras partes d
   
  **Métodos privados.** Os shims poderão substituir chamadas para métodos particulares se todos os tipos na assinatura do método estiverem visíveis. Os stubs só podem substituir métodos visíveis.  
   
- **Interfaces e métodos abstratos.** Os stubs oferecem implementações de interfaces e métodos abstratos que podem ser usados em testes. Os shims não podem instrumentar interfaces e métodos abstratos, porque não têm corpos de método.  
+ **Interfaces e métodos abstratos.** Os stubs oferecem implementações de interfaces e métodos abstratos que podem ser usados em testes. Os shims não podem instrumentar interfaces e métodos abstratos, porque eles não têm corpos de método.  
   
  Em geral, recomendamos que você use tipos de stub para isolar das dependências dentro de sua base de código. É possível fazer isso ocultando os componentes atrás das interfaces. Os tipos de shims podem ser usados para isolar de componentes de terceiros que não oferecem uma API testável.  
   
@@ -176,11 +177,11 @@ O Microsoft Fakes ajuda a isolar o código em teste substituindo outras partes d
   
  Durante os testes, você gostaria de corrigir a propriedade `Now`, porque a versão real retorna inconvenientemente um valor diferente em cada chamada.  
   
- Para usar correções, você não precisa alterar o código do aplicativo ou escrevê-lo de uma maneira específica.  
+ Para usar shims, você não precisa modificar o código do aplicativo ou escrevê-lo de uma maneira específica.  
   
 1.  **Adicionar Assembly do Fakes**  
   
-     No Gerenciador de Soluções, abra as referências de seu projeto de teste de unidade e selecione a referência ao assembly que contém o método que você deseja forjar. Nesse exemplo, a classe `DateTime` está em **System.dll**.  Para ver as referências em um projeto do Visual Basic, escolha **Mostrar Todos os Arquivos**.  
+     No Gerenciador de Soluções, abra as referências do projeto de teste de unidade e selecione a referência ao assembly que contém o método que você deseja tornar fictício. Nesse exemplo, a classe `DateTime` está em **System.dll**.  Para ver as referências em um projeto do Visual Basic, escolha **Mostrar Todos os Arquivos**.  
   
      Escolha **Adicionar Assembly do Fakes**.  
   
@@ -245,7 +246,7 @@ O Microsoft Fakes ajuda a isolar o código em teste substituindo outras partes d
     End Class  
     ```  
   
-     Os nomes das classes de shims são compostos pelo prefixo `Fakes.Shim` adicionado ao nome do tipo original. Os nomes dos parâmetros são acrescentados ao nome do método. Não é necessário adicionar referências de assembly ao System.Fakes.  
+     Os nomes das classes de shims são compostos pelo prefixo `Fakes.Shim` adicionado ao nome do tipo original. Os nomes dos parâmetros são acrescentados ao nome do método. (Você não precisa adicionar nenhuma referência ao assembly ao System.Fakes.)  
   
  O exemplo anterior usa um shim para um método estático. Para usar um shim para um método de instância, digite `AllInstances` entre o nome do tipo e o nome do método:  
   
@@ -253,7 +254,7 @@ O Microsoft Fakes ajuda a isolar o código em teste substituindo outras partes d
 System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...  
 ```  
   
- (Não há nenhum assembly de ‘System.IO.Fakes' para referência. O namespace é gerado pelo processo de criação de shim. Porém, é possível usar ‘using' ou ‘Import’ como de costume.)  
+ (Não há nenhum assembly de 'System.IO.Fakes' para referência. O namespace é gerado pelo processo de criação de shim. Mas você pode usar 'using' ou 'Import' como de costume.)  
   
  Você também pode criar shims para instâncias específicas, para construtores e propriedades. Para obter mais informações, consulte [Usando shims para isolar o aplicativo de outros assemblies para teste de unidade](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).  
   

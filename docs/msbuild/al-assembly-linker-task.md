@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: f3f7d61bf46f318249dd3b54caee27998d7fd105
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3184299feb0834dc7e3b6980f4f3fed87b99092c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="al-assembly-linker-task"></a>Tarefa AL (Assembly Linker)
@@ -69,7 +70,7 @@ A tarefa AL encapsula AL.exe, uma ferramenta que é distribuída com o [!INCLUDE
 |`KeyFile`|Parâmetro `String` opcional.<br /><br /> Especifica um arquivo que contém um par de chaves ou apenas uma chave pública para assinar um assembly. O compilador insere a chave pública no manifesto do assembly e, em seguida, assina o assembly final com a chave privada. Para obter mais informações, consulte a documentação da opção `/keyf[ile]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
 |`LinkResources`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Vincula os arquivos de recurso especificados a este assembly. O recurso torna-se parte do assembly, mas o arquivo não é copiado. Os itens passados para esse parâmetro podem ter metadados opcionais chamados `LogicalName`, `Target` e `Access` anexados a eles. Os metadados `LogicalName` são usados para especificar o identificador interno do recurso. Os metadados `Target` podem especificar o caminho e o nome do arquivo para o qual a tarefa copia o arquivo, antes de compilá-lo para dentro do assembly. Os metadados `Access` podem ser definidos como `private` para tornar o recurso não visível para outros assemblies. Para obter mais informações, consulte a documentação da opção `/link[resource]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
 |`MainEntryPoint`|Parâmetro `String` opcional.<br /><br /> Especifica o nome totalmente qualificado (*class.method*) do método a ser usado como um ponto de entrada durante a conversão de um módulo em um arquivo executável. Esse parâmetro corresponde à opção `/main` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
-|`OutputAssembly`|Parâmetro de saída obrigatório <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Especifica o nome do arquivo gerado por essa tarefa. Esse parâmetro corresponde à opção `/out` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
+|`OutputAssembly`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem> necessário.<br /><br /> Especifica o nome do arquivo gerado por essa tarefa. Esse parâmetro corresponde à opção `/out` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
 |`Platform`|Parâmetro `String` opcional.<br /><br /> Limita as plataformas em que este código pode ser executado; deve ser uma entre `x86`, `Itanium`, `x64` e `anycpu`. O padrão é `anycpu`. Esse parâmetro corresponde à opção `/platform` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
 |`ProductName`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `Product` no assembly. Para obter mais informações, consulte a documentação da opção `/prod[uct]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
 |`ProductVersion`|Parâmetro `String` opcional.<br /><br /> Especifica uma cadeia de caracteres para o campo `ProductVersion` no assembly. Para obter mais informações, consulte a documentação da opção `/productv[ersion]` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
@@ -87,7 +88,7 @@ A tarefa AL encapsula AL.exe, uma ferramenta que é distribuída com o [!INCLUDE
 |`Win32Resource`|Parâmetro `String` opcional.<br /><br /> Insere um recurso Win32 (arquivo .res) no arquivo de saída. Para obter mais informações, consulte a documentação da opção `/win32res` em [Al.exe (Assembly Linker)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01).|  
   
 ## <a name="remarks"></a>Comentários  
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.ToolTaskExtension>, que, por sua vez, herda da classe <xref:Microsoft.Build.Utilities.ToolTask>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base ToolTaskExtension](../msbuild/tooltaskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.ToolTaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.ToolTask>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base ToolTaskExtension](../msbuild/tooltaskextension-base-class.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um assembly com as opções especificadas.  

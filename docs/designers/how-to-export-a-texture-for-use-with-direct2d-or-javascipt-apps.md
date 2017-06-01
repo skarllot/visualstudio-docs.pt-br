@@ -13,14 +13,15 @@ caps.latest.revision: 11
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fa78fa1e06619cd784831a47644e0092e6a9a0ab
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 77f610f9bf40cbd1ff840832203a78ccbaa3eeb2
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps"></a>Como exportar uma textura para uso com aplicativos Direct2D ou Javascipt
-O Pipeline de conteúdo de imagem pode gerar texturas que são compatíveis com as convenções de renderização interna do Direct2D. Texturas desse tipo são adequadas para uso em aplicativos que usam Direct2D e em aplicativos da Windows Store criados usando JavaScript.  
+O Pipeline de conteúdo de imagem pode gerar texturas que são compatíveis com as convenções de renderização internas do Direct2D. Texturas desse tipo são adequadas para uso em aplicativos que usam Direct2D e em aplicativos da Windows Store criados usando JavaScript.  
   
  Este documento demonstra essas atividades:  
   
@@ -58,7 +59,7 @@ O Pipeline de conteúdo de imagem pode gerar texturas que são compatíveis com 
 3.  Defina o formato de saída para um dos formatos de compactação em bloco. Na página **Propriedades de configuração**, **Pipeline de conteúdo de imagem**, **Geral**, defina a propriedade **Compactar** para **Compactação BC3_UNORM (/compress:BC3_UNORM)**. Você pode escolher qualquer um dos outros formatos BC1, BC2 ou BC3, dependendo dos seus requisitos. O Direct2D não dá suporte a texturas BC4, BC5, BC6 ou BC7 no momento. Para obter mais informações sobre os diferentes formatos de BC, consulte [Compactação em bloco (Direct3D 10)](http://msdn.microsoft.com/library/windows/desktop/bb694531.aspx).  
   
     > [!NOTE]
-    >  O formato de compactação especificado determina o formato do arquivo que é produzido pelo Pipeline de conteúdo de imagem. Isso é diferente da propriedade **Format** da imagem de origem no Editor de imagens, que determina o formato do arquivo de imagens de origem quando armazenados em disco, ou seja, o *formato de trabalho*. Normalmente, não é recomendável usar um formato de trabalho compactado.  
+    >  O formato de compactação especificado determina o formato do arquivo que é produzido pelo Pipeline de conteúdo de imagem. Isso é diferente da propriedade **Format** da imagem de origem no Editor de imagens, que determina o formato do arquivo de imagens de origem quando armazenados em disco, ou seja, o *formato de trabalho*. Normalmente, um formato de trabalho compactado não é o desejado.  
   
 4.  Configure o Pipeline de conteúdo de imagem para gerar uma saída que usa alfa pré-multiplicado. Na página **Propriedades de Configuração**, **Pipeline de Conteúdo de Imagem**, **geral**, defina a propriedade **Converter para formato alfa pré-multiplicado** como **Sim (/ generatepremultipliedalpha)**.  
   
@@ -66,4 +67,4 @@ O Pipeline de conteúdo de imagem pode gerar texturas que são compatíveis com 
   
 6.  Selecione o botão **OK**.  
   
- Quando você compila o projeto, o Pipeline de conteúdo de imagem converte a imagem de origem do formato de trabalho para o formato de saída que você especificou, a conversão inclui o formato alfa pré-multiplicado e o resultado é copiado para o diretório de saída do projeto.
+ Quando você cria o projeto, o Pipeline de conteúdo de imagem converte a imagem de origem do formato do trabalho para o formato de saída especificado (a conversão inclui a geração de alfa pré-multiplicado) e o resultado é copiado para o diretório de saída do projeto.

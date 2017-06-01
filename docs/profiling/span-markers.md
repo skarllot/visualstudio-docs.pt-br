@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1e73f500ca08c1766d5035d60d3b3325f822b473
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e476a1d0f3af8a0a0c9b9159d710fc7c5680a00d
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="span-markers"></a>Marcadores de período
@@ -48,7 +50,7 @@ Um marcador de período na Visualização Simultânea
 As cores das cinco primeiras categorias de período  
   
 ## <a name="span-aggregation-markers"></a>Marcadores de agregação de período  
- Às vezes, marcadores de período ocorrem tão próximos uns dos outros na Visualização Simultânea que não podem ser desenhados individualmente. Quando isso ocorre, um *marcador de agregação de período* cinza que representa os períodos subjacentes é mostrado. Quando você posiciona o ponteiro em desses ícones, uma dica de ferramenta exibe o número de períodos subjacentes representados. Para exibir os períodos, amplie. Se você ampliar completamente e ainda obtiver um marcador de agregação de período, você poderá exibir os marcadores de período subjacentes no [Relatório de Marcadores](../profiling/markers-report.md). Esta ilustração mostra um marcador de agregação de período:  
+ Às vezes, os marcadores de período ocorrem tão próximos uns dos outros na Visualização Simultânea que não podem ser desenhados individualmente. Quando isso ocorre, um *marcador de agregação de período* cinza que representa os períodos subjacentes é mostrado. Quando você posiciona o ponteiro em desses ícones, uma dica de ferramenta exibe o número de períodos subjacentes representados. Para exibir os períodos, amplie. Se você ampliar completamente e ainda obtiver um marcador de agregação de período, você poderá exibir os marcadores de período subjacentes no [Relatório de Marcadores](../profiling/markers-report.md). Esta ilustração mostra um marcador de agregação de período:  
   
  ![Um marcador de agregação período na Visualização Simultânea](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate")  
 Um marcador de agregação de período  
@@ -56,8 +58,3 @@ Um marcador de agregação de período
 ## <a name="see-also"></a>Consulte também  
  [Marcadores da Visualização Simultânea](../profiling/concurrency-visualizer-markers.md)   
  [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

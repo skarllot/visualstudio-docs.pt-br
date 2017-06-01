@@ -28,15 +28,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 383da012d69fed903e771d210bedfe67aeb955bd
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 78da5ca77ee2d6a8bd933907edbe5f921af4e2bc
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="visual-studio-and-xamarin"></a>Visual Studio e Xamarin
 O Xamarin é uma plataforma de desenvolvimento de aplicativos móveis para compilar aplicativos nativos iOS, Android e Windows de uma base C#/.NET comum, atingindo 75% a quase 100% de reutilização de código entre plataformas. Aplicativos gravados com Xamarin e C# têm acesso completo às APIs da plataforma subjacente e a capacidade de compilar interfaces do usuário nativas e compilar para pacotes específicos de plataforma, portanto não há muito impacto no desempenho de tempo de execução. (Observação: o Xamarin também dá suporte a F#, mas essa documentação se concentra somente em C#. No momento, não há suporte para o Visual Basic.)  
   
- Melhor ainda, os desenvolvedores familiarizados com C#, .NET e Visual Studio aproveitarão o mesmo o poder e a produtividade ao trabalhar com o Xamarin para aplicativos móveis, incluindo a depuração remota em dispositivos Android, iOS e Windows — sem precisar aprender idiomas de codificação nativa, como Objective-C ou Java. Então, pode parecer surpresa que diversos aplicativos de alto desempenho com interfaces do usuário lindas, como — como NASCAR, Aviva e MixRadio — foram compilados usando o Xamarin.  
+ Melhor ainda, os desenvolvedores familiarizados com C#, .NET e Visual Studio aproveitarão o mesmo o poder e a produtividade ao trabalhar com o Xamarin para aplicativos móveis, incluindo a depuração remota em dispositivos Android, iOS e Windows — sem precisar aprender idiomas de codificação nativa, como Objective-C ou Java. Portanto, é uma pequena surpresa que vários aplicativos de alto desempenho com interfaces do usuário lindas, como NASCAR, Aviva e MixRadio, tenham sido criados usando o Xamarin.  
   
  Esta documentação ajuda você a avaliar os recursos completos do **Visual Studio com Xamarin** para compilar essas experiências.  
   
@@ -55,8 +57,3 @@ O Xamarin é uma plataforma de desenvolvimento de aplicativos móveis para compi
   
 > [!NOTE]
 >  Se você estiver procurando por uma solução de desenvolvimento de multiplataforma com base em HTML e CSS, confira as Ferramentas do Visual Studio para Apache Cordova conforme descrito em [Desenvolvimento de Multiplataforma no Visual Studio](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#HTML).
-
-
-<!--HONumber=Feb17_HO4-->
-
-

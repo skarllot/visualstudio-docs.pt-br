@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d977cbafada7945899dfc5f969fccbba0c8698bc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b6b865f51ca12312ad439d059097c328576dfa4e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Executar testes de unidade com o Gerenciador de Testes
@@ -158,7 +159,7 @@ Use o Gerenciador de Testes para executar testes de unidade do Visual Studio ou 
   
  **Características na Estrutura de Teste da Unidade Microsoft para código gerenciado**  
   
- Na Estrutura de Teste de Unidade Microsoft para aplicativos gerenciados, você definir uma característica de par de nome / valor em um atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>. A estrutura de teste também contém essas características predefinidas:  
+ Na estrutura de teste de unidade da Microsoft para aplicativos gerenciados, você define um par nome/valor de característica no atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>. A estrutura de teste também contém essas características predefinidas:  
   
 |Característica|Descrição|  
 |-----------|-----------------|  
@@ -306,7 +307,7 @@ FullName:"MyClass" - FullName:"PerfTest"
 ##  <a name="BKMK_External_resources"></a> Recursos externos  
   
 ###  <a name="BKMK_Guidance"></a> Diretrizes  
- [Testes de Entrega Contínua com o Visual Studio 2012 – Capítulo 2: Teste de Unidade: Testando o Interior](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
   
 ## <a name="see-also"></a>Consulte também  
  [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)   

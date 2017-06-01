@@ -28,14 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e6fe31bc3b5ec5454e4d924af608915d0ae0f393
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2f71491696dfb776bb3e2c50a62d9b336301e536
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="draw-shapes-and-paths"></a>Desenhe as formas e demarcadores
-No Designer XAML, uma *forma* é exatamente o que você espera. Por exemplo: um retângulo, um círculo ou uma elipse. Um *caminho* é uma versão mais flexível de uma forma. É possível reformatar ou combiná-los para obter novas formas.  
+No Designer XAML, uma *forma* é exatamente o que se espera que seja. Por exemplo: um retângulo, um círculo ou uma elipse. Um *caminho* é uma versão mais flexível de uma forma. É possível reformatar ou combiná-los para obter novas formas.  
   
  Formas e caminhos usam gráficos vetoriais, portanto, eles se adaptam bem a exibições de alta resolução. Caso queira saber mais sobre gráficos vetoriais, consulte [O que são Gráficos Vetoriais](https://www.youtube.com/watch?v=MoCSwF0n-io) ou [gráficos vetoriais](http://www.webopedia.com/TERM/V/vector_graphics.html).  
   

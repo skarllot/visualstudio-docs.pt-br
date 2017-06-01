@@ -32,9 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: d6de37cfc07f1ed45124ef176fc66a1c70c432ef
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="walkthrough-command-line-profiling-using-instrumentation"></a>Instruções passo a passo: criação de perfil de linha de comando usando instrumentação
@@ -52,7 +54,7 @@ Este passo a passo leva você pela criação de perfil de um aplicativo autônom
   
 -   [!INCLUDE[vsprvsts](../code-quality/includes/vsprvsts_md.md)]  
   
--   Compreensão intermediária de C#  
+-   Noções intermediárias do C#  
   
 -   Compreensão intermediária de como trabalhar com ferramentas de linha de comando  
   
@@ -144,8 +146,3 @@ Este passo a passo leva você pela criação de perfil de um aplicativo autônom
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Noções básicas sobre valores de dados de amostragem](../profiling/understanding-sampling-data-values.md)   
  [Exibições de relatório de desempenho](../profiling/performance-report-views.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

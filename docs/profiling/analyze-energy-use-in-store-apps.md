@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 22eb436711a7539a63f0d4198b4cd176890af3d0
-ms.openlocfilehash: 6871e525345ae5c1ffc79e0126e47176bedbe110
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 28a8636db753eb71a90cb89f921f58b97aabdc59
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-energy-use-in-store-apps"></a>Analisar o uso de energia em aplicativos da Store
@@ -94,10 +95,10 @@ if (performance && performance.mark) {
  *markDescription* é uma cadeia de caracteres que contém a mensagem a ser exibida na dica de ferramenta da marca do usuário.  
   
 ##  <a name="BKMK_Configure_your_environment_for_profiling"></a> Configurar o ambiente para criação de perfil  
- Para obter boas estimativas, você deverá criar o perfil de consumo de energia do aplicativo em um dispositivo de baixa potência alimentado por bateria. Como o Visual Studio não funciona na maioria desses dispositivos, você precisará conectar seu computador com o Visual Studio ao dispositivo usando as ferramentas remotas do Visual Studio. Para se conectar a um dispositivo remoto, você precisa configurar o projeto do Visual Studio e o dispositivo remoto. Consulte [Executar aplicativos da Windows Store em um computador remoto](../debugger/run-windows-store-apps-on-a-remote-machine.md) para obter mais informações.  
+ Para obter boas estimativas, você deverá criar o perfil de consumo de energia do aplicativo em um dispositivo com baixo consumo de energia alimentado por bateria. Como o Visual Studio não funciona na maioria desses dispositivos, você precisará conectar seu computador com o Visual Studio ao dispositivo usando as ferramentas remotas do Visual Studio. Para se conectar a um dispositivo remoto, você precisa configurar o projeto do Visual Studio e o dispositivo remoto. Consulte [Executar aplicativos da Windows Store em um computador remoto](../debugger/run-windows-store-apps-on-a-remote-machine.md) para obter mais informações.  
   
 > [!TIP]
->  -   Não é recomendável criar o perfil de energia no simulador da Windows Store ou no computador que contém o Visual Studio. A criação de perfil no dispositivo real fornece dados muito mais realistas.  
+>  -   Não é recomendado criar o perfil de energia no simulador da Windows Store ou no computador com o Visual Studio. A criação de perfil no dispositivo real fornece dados muito mais realistas.  
 > -   Crie o perfil no dispositivo de destino enquanto ele é alimentado por bateria.  
 > -   Feche outros aplicativos que possam usar os mesmos recursos (rede, CPU ou tela).  
   

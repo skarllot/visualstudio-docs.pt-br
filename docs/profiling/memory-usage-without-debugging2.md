@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 9ff0dfb7330f70bb66597127347c8375f2c4c9ea
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: baf1e18c56587b071aaa25fd522e3aa1b27a0b30
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="memory-usage-without-the-debugger"></a>Uso de memória sem o depurador
@@ -121,7 +122,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
   
  Os nomes de instância são IDs exclusivas geradas pela ferramenta Uso de Memória.  
   
- Se você notar um tipo que não pode ser identificado facilmente ou se não souber como ele está envolvido no código, provavelmente, é um objeto do .NET Framework, do sistema operacional ou do compilador que a ferramenta Uso de Memória exibe porque está envolvido nas cadeias de propriedade de seus objetos.  
+ Se você notar um tipo que não possa ser identificado facilmente ou se você não souber como ele está envolvido no código, provavelmente, ele será um objeto do .NET Framework, do sistema operacional ou do compilador que a ferramenta Uso de Memória exibe porque ele está envolvido nas cadeias de propriedade de seus objetos.  
   
 ###  <a name="BKMK_Report_tree_filters_"></a> Filtros da árvore de relatórios  
  A maioria dos aplicativos contém um número surpreendentemente grande de tipos, a maioria dos quais não são muito interessantes para o desenvolvedor do aplicativo. A ferramenta **Uso de Memória** define dois filtros que podem ser usados ​​para ocultar a maioria desses tipos nas árvores de **Heap Gerenciado** e **Caminhos para a Raiz**. Você também pode filtrar uma árvore pelo nome do tipo.  

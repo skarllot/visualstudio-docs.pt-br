@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 57642165d9d9794cee02f1b3cac3bda9becde283
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2ae1ef56f40106321dd514b3e42e54be2afa7efd
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="overview-of-visual-studio-tools-for-unity"></a>Visão Geral das Ferramentas do Visual Studio para Unity
@@ -47,7 +48,7 @@ Nesta seção, saiba mais sobre os recursos que as Ferramentas do Visual Studio 
   
 -   A integração de console do Unity exibe a saída do console do Unity dentro da janela de erro do Visual Studio.  
   
--   Inicie a depuração de um jogo no Visual Studio – não é necessário voltar para o Unity, apenas pressione F5.  
+-   Inicie a depuração de um jogo no Visual Studio. Não é necessário voltar para o Unity, apenas pressione F5.  
   
 ## <a name="superior-debugging"></a>Depuração Superior  
  Conecte o poderoso depurador do Visual Studio ao jogo do Unity para depurar scripts do C# e DLLs mesmo se ele estiver em execução autônoma ou no editor do Unity. É possível usar todos os recursos de depuração esperados do Visual Studio.  

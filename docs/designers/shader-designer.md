@@ -31,9 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ff6e473c6e5b2d7a24a4e906d2f592742e3c2d14
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: af7472d5152babe2088ae3cc49caaf718a539878
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="shader-designer"></a>Designer de Sombreador
@@ -130,7 +132,7 @@ Este documento descreve como trabalhar com o Designer de Sombreador [!INCLUDE[vs
   
 -   Na barra de ferramentas **Modos do Designer de Sombreador**, escolha a forma que você deseja.  
   
-####  <a name="a-namewwsmaterialparametersa-textures-and-material-parameters"></a><a name="WWS_MaterialParameters"></a> Parâmetros de materiais e texturas  
+####  <a name="WWS_MaterialParameters"></a> Parâmetros de materiais e texturas  
  Muitos sombreadores contam com texturas e propriedades de material para produzir uma aparência exclusiva para cada tipo de objeto em seu aplicativo. Para ver a aparência que seu sombreador terá em seu aplicativo, você pode definir as texturas e propriedades de material que são usadas para renderizar a visualização para corresponder às texturas e parâmetros que você deseja usar em seu aplicativo.  
   
 ###### <a name="to-bind-a-different-texture-to-a-texture-register-or-to-modify-other-material-parameters"></a>Para associar uma textura diferente a um registro de textura ou modificar outros parâmetros de material  
@@ -143,8 +145,8 @@ Este documento descreve como trabalhar com o Designer de Sombreador [!INCLUDE[vs
   
 |Parâmetro|Propriedades|  
 |---------------|----------------|  
-|**Textura 1** – **Textura 8**|**Access**:                             **Public** para permitir que esta propriedade possa ser configurada pelo Editor de Modelo; caso contrário, **Private**.<br /><br /> **Filename**: o caminho completo do arquivo de textura que está associado com o registro de textura.|  
-|**Material Ambiente**|**Access**:                             **Public** para permitir que esta propriedade possa ser configurada pelo Editor de Modelo; caso contrário, **Private**.<br /><br /> **Valor**: a cor difusa do pixel atual é devido à luz indireta – ou seja, luz ambiente.|  
+|**Textura 1** - **Textura 8**|**Access**:                             **Public** para permitir que esta propriedade possa ser configurada pelo Editor de Modelo; caso contrário, **Private**.<br /><br /> **Filename**: o caminho completo do arquivo de textura que está associado com o registro de textura.|  
+|**Material Ambiente**|**Access**:                             **Public** para permitir que esta propriedade possa ser configurada pelo Editor de Modelo; caso contrário, **Private**.<br /><br /> **Valor**: a cor difusa do pixel atual devido à luz indireta, ou seja, a luz ambiente.|  
 |**Material Difuso**|**Access**: **Public** para permitir que esta propriedade possa ser configurada pelo Editor de Modelo; caso contrário, **Private**.<br /><br /> **Valor**: uma cor que descreve como o pixel atual difunde a iluminação direta.|  
 |**Material Emissivo**|**Access**:                              **Public** para permitir que esta propriedade possa ser configurada pelo Editor de Modelo; caso contrário, **Private**.<br /><br /> **Valor**: a contribuição de cor do pixel atual é devido à iluminação própria.|  
 |**Material Especular**|**Access**:                              **Public** para permitir que esta propriedade possa ser configurada pelo Editor de Modelo; caso contrário, **Private**.<br /><br /> **Valor**: uma cor que descreve como o pixel atual reflete a iluminação direta.|  
@@ -203,8 +205,3 @@ Este documento descreve como trabalhar com o Designer de Sombreador [!INCLUDE[vs
 |[Trabalhando com ativos 3D para jogos e aplicativos](../designers/working-with-3-d-assets-for-games-and-apps.md)|Fornece uma visão geral das ferramentas do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] que você pode usar para trabalhar com texturas e imagens, modelos 3D e efeitos de sombreamento.|  
 |[Editor de Imagens](../designers/image-editor.md)|Descreve como usar o Editor de Imagens do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com texturas e imagens.|  
 |[Editor de modelo](../designers/model-editor.md)|Descreve como usar o Editor de Modelos [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com modelos 3D.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

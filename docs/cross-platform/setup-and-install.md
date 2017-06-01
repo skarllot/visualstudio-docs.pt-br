@@ -27,10 +27,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: b01ab828f06a13f3f8e4c7b9c72e2f05da409840
-ms.openlocfilehash: 00c6e3dc4d7d1ed56d8cb196aad466cdeb7feb50
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d353d8a0a41ad487191b79aa68f26585cf9902b4
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/14/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="setup-and-install"></a>Instalar e configurar
@@ -53,7 +53,7 @@ Se você tiver problemas para usar o Xamarin depois de fazer essa configuração
   
 1.  Recomendado: um computador físico com Windows (não uma VM) executando o Windows 8 ou posterior, para obter o melhor desempenho do emulador do Android. (Já mencionamos que você precisa de um computador físico e não de uma VM?)  
   
-2.  Você poderá usar um computador com Windows 7 ou anterior, caso em que você usará o Xamarin Player para Android como o emulador. 
+2.  Você poderá usar um computador Windows 7 ou anterior e, nesse caso, você usará o Xamarin Player para Android como o emulador. 
     
 3. Para qualquer configuração, você também pode executar aplicativos diretamente em dispositivos físicos conectados.  
   
@@ -90,16 +90,16 @@ Se você tiver problemas para usar o Xamarin depois de fazer essa configuração
       
 6.  Para testar aplicativos Android, use o [Emulador do SDK do Android](https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/android-sdk-emulator/) se você não tiver dispositivos físicos. Consulte a observação abaixo.  
   
- **Observação sobre emuladores em computadores Windows:** já que CPUs dão suporte apenas uma tecnologia de virtualização por vez, é melhor ter apenas uma em uso em um computador de desenvolvimento. Há três tecnologias de virtualização principais, que são Hyper-V (usada pelo emulador do Visual Studio para Android e pelo emulador do Windows Phone), Virtual Box (usada pelo Genymotion) e Intel HAXM (usada pelo emulador do SDK do Android). Devido a vários problemas entre o Hyper-V e o Virtual Box, é melhor usar emuladores de apenas um tipo em um determinado computador, por isso as recomendações acima para usar o Hyper-V em computadores com Windows 8 e superior e emuladores Intel HAXM no Windows 7 e versões anteriores e também ao executar o Windows em um Mac.  
+ **Observação sobre emuladores em computadores Windows:** já que as CPUs dão suporte apenas a uma tecnologia de virtualização por vez, é melhor ter apenas uma em uso em um computador de desenvolvimento. Há três tecnologias de virtualização principais, que são Hyper-V (usada pelo emulador do Visual Studio para Android e pelo emulador do Windows Phone), Virtual Box (usada pelo Genymotion) e Intel HAXM (usada pelo emulador do SDK do Android). Devido a vários problemas entre o Hyper-V e o Virtual Box, é melhor usar emuladores de um único tipo em um determinado computador, por isso as recomendações acima para usar o Hyper-V em computadores Windows 8 e superiores e emuladores Intel HAXM no Windows 7 e anteriores e também ao executar o Windows no Mac.  
   
 ##  <a name="mac"></a> Configuração do Mac (Apple ID, Xcode e Xamarin)  
   
-1.  Crie uma ID Apple gratuita em [https://appleid.apple.com](https://appleid.apple.com/) se você não tiver uma. Isso é necessário para instalar e entrar no Xcode.  
+1.  Crie uma ID Apple gratuita em [https://appleid.apple.com](https://appleid.apple.com/) caso ainda não tenha uma. Isso é necessário para instalar e entrar no Xcode.  
   
 2.  Baixe e instale o Xcode de [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/) e adicione sua ID Apple, conforme descrito em [Adicionar sua conta para XCode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1) (apple.com).  
   
 3.  Baixe e instale o Xamarin, seguindo as instruções em [Instalando e configurando o Xamarin.iOS](http://developer.xamarin.com/guides/ios/getting_started/installation/mac/) (xamarin.com).  
   
-4.  Depois de concluir a instalação do Xamarin em computadores Windows e Mac, siga as instruções em [conectando ao Mac](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/xamarin-mac-agent/) (xamarin.com) para que você possa trabalhar com iOS e Mac do Visual Studio no computador Windows.  
+4.  Depois de concluir a instalação do Xamarin nos computadores Windows e Mac, siga as instruções em [Conectando ao Mac](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/xamarin-mac-agent/) (xamarin.com) para que você possa trabalhar com o iOS e o Mac usando do Visual Studio no computador Windows.  
   
      Observe que ambos os computadores devem estar na mesma rede local.

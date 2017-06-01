@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 1613943840c79028e3c60db0f54a73243eb3948c
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: a2958c20bbfbd9f4f3d03946dbe230326894b1c1
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="gpu-usage"></a>Uso de GPU
@@ -57,7 +58,7 @@ Use a ferramenta Uso de GPU no Hub de Desempenho e Diagnóstico do Visual Studio
   
 1.  No menu principal, escolha **Depurar** e, em seguida, **Desempenho e Diagnóstico** (teclado: pressione Alt + F2).  
   
-2.  No hub Desempenho e Diagnóstico, marque a caixa ao lado de **Uso de GPU**. Opcionalmente, marque as caixas ao lado de outras ferramentas de seu interesse. É possível executar várias ferramentas de Desempenho e Diagnóstico simultaneamente para obter uma visão mais completa do desempenho do aplicativo.  
+2.  No hub Desempenho e Diagnóstico, marque a caixa ao lado de **Uso de GPU**. Opcionalmente, marque as caixas ao lado de outras ferramentas nas quais você esteja interessado. É possível executar várias ferramentas de Desempenho e Diagnóstico simultaneamente para obter uma visão mais completa do desempenho do aplicativo.  
   
      ![Escolha as ferramentas de diagnóstico que você deseja usar.](media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")  
   
@@ -66,9 +67,9 @@ Use a ferramenta Uso de GPU no Hub de Desempenho e Diagnóstico do Visual Studio
   
 3.  Escolha o botão azul **Iniciar** na parte inferior do hub Desempenho e Diagnóstico para executar o aplicativo nas ferramentas selecionadas.  
   
- As informações de alto nível exibidas em tempo real incluem o intervalo de quadro, a taxa de quadros e a utilização de GPU. Cada uma dessas informações é apresentada em gráficos de forma independente, mas usa uma escala de tempo comum para que você possa estabelecer uma relação fácil entre elas.  
+ As informações de alto nível exibidas em tempo real incluem o intervalo de quadros, a taxa de quadros e a utilização de GPU. Cada uma dessas informações é apresentada em gráficos de forma independente, mas usa uma escala de tempo comum para que você possa estabelecer uma relação fácil entre elas.  
   
- Os gráficos **Tempo de quadro (ms)** e **Quadros por segundo (FPS)** contêm duas linhas horizontais vermelhas que representam metas de desempenho de 30 e 60 quadros por segundo. No gráfico **Tempo de quadro**, o aplicativo supera a meta de desempenho quando o gráfico está abaixo da linha e não alcança a meta quando o gráfico está acima da linha. Para o gráfico Quadros por segundo, ocorre o contrário – o aplicativo supera a meta de desempenho quando o gráfico está acima da linha e não alcança a meta quando o gráfico está abaixo da linha. Basicamente, esses gráficos são usados para obter uma ideia de alto nível do desempenho do aplicativo e identificar problemas de lentidão que talvez você deseje investigar – por exemplo, uma queda repentina na taxa de quadros ou um pico na Utilização de GPU.  
+ Os gráficos **Tempo de quadro (ms)** e **Quadros por segundo (FPS)** contêm duas linhas horizontais vermelhas que representam metas de desempenho de 30 e 60 quadros por segundo. No gráfico **Tempo de quadro**, o aplicativo supera a meta de desempenho quando o gráfico está abaixo da linha e não alcança a meta quando o gráfico está acima da linha. Para o gráfico Quadros por segundo, ocorre o contrário: o aplicativo supera a meta de desempenho quando o gráfico está acima da linha e não alcança a meta quando o gráfico está abaixo da linha. Basicamente, esses gráficos são usados para obter uma ideia de alto nível do desempenho do aplicativo e identificar problemas de lentidão que talvez você deseje investigar – por exemplo, uma queda repentina na taxa de quadros ou um pico na Utilização de GPU.  
   
  Enquanto o aplicativo é executado na ferramenta Uso de GPU, a sessão de diagnóstico também coleta informações detalhadas sobre eventos de gráficos que foram executados na GPU. Essas informações são usadas para gerar um relatório mais granular de como o aplicativo utiliza o hardware. Como esse relatório leva algum tempo para ser gerado com base nas informações coletadas, ele só estará disponível depois que a sessão de diagnóstico concluir a coleta de informações.  
   
@@ -84,7 +85,7 @@ Use a ferramenta Uso de GPU no Hub de Desempenho e Diagnóstico do Visual Studio
   
      ![Pós&#45;coleta, selecionar um intervalo para exibir os detalhes](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")  
   
-3.  Na parte inferior do relatório, escolha o link **Exibir detalhes** na mensagem **... Clique aqui para exibir detalhes de uso de GPU para esse intervalo** para exibir uma linha do tempo detalhada da seleção.  
+3.  Na parte inferior do relatório, escolha o link **exibir detalhes** na mensagem **... clique aqui para exibir detalhes de uso de GPU para esse intervalo** para exibir uma linha do tempo detalhada da seleção.  
   
      ![Pós&#45;coleção, com o intervalo selecionado](media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")  
   
@@ -108,14 +109,14 @@ A partir do Visual Studio 2017, esses dados podem ser abertos com o [GPUView](ht
   
  A seleção de um dos eventos na parte inferior do relatório coloca um marcador nos eventos correspondentes nas linhas do tempo relevantes, geralmente, um evento em um thread de CPU que representa a chamada à API e outro evento em uma das linhas do tempo da GPU que representa a hora em que a GPU concluiu a tarefa. Da mesma forma, a seleção de um dos eventos em uma linha do tempo realça o evento correspondente na parte inferior do relatório. Quando reduzidos nas linhas de tempo da parte superior do relatório, somente os eventos mais demorados são visíveis. Para ver os eventos que têm uma duração menor, amplie as linhas do tempo usando Ctrl + roda no dispositivo apontador ou o controle de colocação em escala no canto inferior esquerdo do painel superior. Também é possível arrastar o conteúdo do painel de linha do tempo para percorrer os eventos registrados.  
   
- Para ajudá-lo a encontrar o que você está procurando, é possível filtrar o Relatório de Uso de GPU com base nos nomes do Processo, nas IDs do Thread e no nome do evento; além disso, você pode escolher a taxa de atualização de qual vídeo determina as linhas do VSync e classificar os eventos hierarquicamente, caso o aplicativo use a interface ID3DUserDefinedAnnotation para agrupar comandos de renderização.  
+ Para ajudá-lo a encontrar o que você está procurando, é possível filtrar o Relatório de Uso de GPU com base em Nomes do processo, nas IDs do thread e Nome do evento. Além disso, você poderá escolher qual taxa de atualização de exibição determina as linhas do vysnc e classificar os eventos hierarquicamente, caso o aplicativo use a interface ID3DUserDefinedAnnotation para agrupar comandos de renderização.  
   
  Estes são mais detalhes:  
   
 |Controle de filtro|Descrição|  
 |--------------------|-----------------|  
 |**Processo**|O nome do processo de seu interesse. Todos os processos que usaram a GPU durante a sessão de diagnóstico são incluídos nessa lista suspensa. A cor associada ao processo nessa lista suspensa é a cor da atividade do thread nas linhas do tempo abaixo.|  
-|**Thread**|A ID do thread de seu interesse. Em um aplicativo com multi-thread, isso pode ajudá-lo a isolar threads específicos que pertencem ao processo de seu interesse. Os eventos associados ao thread selecionado são realçados em cada linha do tempo.|  
+|**Thread**|A ID do thread de seu interesse. Em um aplicativo multi-threaded, isso pode ajudá-lo a isolar threads específicos que pertencem ao processo de seu interesse. Os eventos associados ao thread selecionado são realçados em cada linha do tempo.|  
 |**Vídeo**|O número do vídeo cuja taxa de atualização é exibida **Observação:** alguns drivers podem ser configurados para apresentar vários vídeos físicos como um único vídeo virtual grande. Talvez você veja apenas um vídeo listado, mesmo se o computador tiver vários vídeos anexados.|  
 |**Filtrar**|Palavras-chave de seu interesse. Os eventos na parte inferior do relatório incluirão apenas aqueles que correspondem a uma palavra-chave, no todo ou em parte. É possível especificar várias palavras-chave separando-as com um ponto-e-vírgula (;).|  
 |**Classificação de Hierarquia**|Uma caixa de seleção que indica se as hierarquias de eventos – definidas por meio de marcadores do usuário – são preservadas ou ignoradas.|  
@@ -132,10 +133,10 @@ A partir do Visual Studio 2017, esses dados podem ser abertos com o [GPUView](ht
 |**ID do Thread**|A ID do thread da qual o evento foi obtido.|  
   
 > [!IMPORTANT]
->  O Windows 8.1 é necessário para a atribuição de eventos. Além disso, se a GPU ou o driver não derem suporte aos recursos de instrumentação necessários, todos os eventos serão exibidos como “não atribuídos”. Lembre-se de atualizar o driver da GPU e tente novamente caso ocorra esse problema. Para obter mais informações, consulte [Suporte de hardware e driver](#hwsupport) abaixo.  
+>  O Windows 8.1 é necessário para a atribuição de eventos. Além disso, se a GPU ou o driver não derem suporte aos recursos de instrumentação necessários, todos os eventos serão exibidos como ‘não atribuídos’. Lembre-se de atualizar o driver da GPU e tente novamente caso ocorra esse problema. Para obter mais informações, consulte [Suporte de hardware e driver](#hwsupport) abaixo.  
   
 ## <a name="gpu-usage-settings"></a>Configurações de Uso de GPU  
- É possível configurar a ferramenta Uso de GPU para adiar a coleta de informações de criação de perfil, em vez de iniciar a coleta de informações logo após a inicialização do aplicativo. Como o tamanho das informações de criação de perfil pode ser significativo, isso será útil quando você souber que os problemas de lentidão no desempenho do aplicativo só serão exibidos posteriormente.  
+ É possível configurar a ferramenta Uso de GPU para adiar a coleta de informações de criação de perfil, em vez de iniciar a coleta de informações logo após a inicialização do aplicativo. Como o tamanho das informações de criação de perfil pode ser significativo, isso será útil quando você souber que os problemas de lentidão no desempenho do aplicativo apenas serão exibidos posteriormente.  
   
 #### <a name="to-postpone-profiling-from-the-start-of-the-app"></a>Para adiar a criação de perfil após a inicialização do aplicativo:  
   

@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 2981d5082fdbcc9f15c1b36552787e0a78727e38
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: da79533a7a40b6e1b79c66f023beba2c1162bd08
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Utilitário de linha de comando Visualizador de Simultaneidade (CVCollectionCmd)
@@ -168,8 +170,3 @@ ms.openlocfilehash: 2981d5082fdbcc9f15c1b36552787e0a78727e38
 </LocalConfig>  
   
 ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-

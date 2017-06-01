@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d9364fd877975197a9333cf400da05a284182188
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0fa95a9a7ff262f03608d5b076a45220d2b56fec
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="message-markers"></a>Marcadores de mensagem
@@ -44,8 +46,3 @@ Um marcador de mensagem representa a saída de log. Uma mensagem é uma cadeia d
 ## <a name="see-also"></a>Consulte também  
  [Marcadores da Visualização Simultânea](../profiling/concurrency-visualizer-markers.md)   
  [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

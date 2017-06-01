@@ -22,10 +22,11 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 408ffb475394c7a37fecc55290e8053ae775f8f3
-ms.openlocfilehash: e0184cd4418de33e666231f4a3545925b1522667
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: c2934e927a612f89338d748a1f4a33632c548533
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="visual-studio-tools-for-apache-cordova"></a>Ferramentas do Visual Studio para Apache Cordova

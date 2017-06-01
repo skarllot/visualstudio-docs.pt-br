@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: b9e8ab5432e5c546776a61b364c0886d9f96c096
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 48b5010ae161b2ce6ad22513afbca4a8e5fe82d3
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Criar aplicativos com interface do usuário nativa usando o Xamarin no Visual Studio
@@ -70,12 +72,12 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
 >      -   [Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)  
 >     -   [Multitela Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)  
   
-##  <a name="a-namesolutiona-set-up-your-solution"></a><a name="solution"></a> Configurar sua solução  
+##  <a name="solution"></a> Configurar sua solução  
  Estas etapas criam uma solução Xamarin com interface do usuário nativa que contém uma PCL para o código compartilhado e dois pacotes NuGet adicionados.  
   
 1.  No Visual Studio, crie uma nova solução de **Aplicativo em Branco (Portátil Nativo)** e dê a ela o nome de **WeatherApp**. Você pode localizar esse modelo mais facilmente digitando **Portátil Nativo** no campo de pesquisa.  
   
-     Se não estiver lá, talvez você precise instalar o Xamarin ou habilitar o recurso do Visual Studio 2015, consulte [Configuração e instalação](../cross-platform/setup-and-install.md).  
+     Se ele não estiver lá, talvez você precise instalar o Xamarin ou habilitar o recurso do Visual Studio 2015, consulte [Configuração e instalação](../cross-platform/setup-and-install.md).  
   
 2.  Depois de clicar em OK para criar a solução, você terá vários projetos individuais:  
   
@@ -89,7 +91,7 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
   
      Dentro de cada projeto nativo, você tem acesso ao designer nativo para a plataforma correspondente e pode implementar telas específicas da plataforma.  
   
-3.  Adicione o pacote **Newtonsoft.Json** e o pacote NuGet ao projeto PCL, que você usará para processar as informações recuperadas de um serviço de dados de clima:  
+3.  Adicione os pacotes **Newtonsoft.Json** e NuGet ao projeto PCL, que você usará para processar as informações recuperadas de um serviço de dados de clima:  
   
     -   Clique com botão direito do mouse em **Solução 'WeatherApp'** no Gerenciador de Soluções e selecione **Gerenciar Pacotes NuGet para Solução…**.  
   
@@ -109,7 +111,7 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
   
 5.  Compile sua solução e verifique não se há erros de build.  
   
-##  <a name="a-namedataservicea-write-shared-data-service-code"></a><a name="dataservice"></a> Escrever código de serviço de dados compartilhados  
+##  <a name="dataservice"></a> Escrever código de serviço de dados compartilhados  
  É no projeto **WeatherApp (Portátil)** que você escreverá código para a PCL (biblioteca de classes portátil) que será compartilhado entre todas as plataformas. A PCL é incluída automaticamente nos pacotes de aplicativo compilados por projetos iOS, Android e Windows Phone.  
   
  As etapas a seguir então adicionam código para o PCL acessar e armazenar dados de serviço de clima:  
@@ -149,7 +151,7 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
     }  
     ```  
   
-4.  Adicione outra classe ao projeto PCL chamada **DataService.cs** em que você usará para processar dados JSON do serviço de dados de clima.  
+4.  Adicione outra classe ao projeto PCL chamada **DataService.cs** que você usará para processar dados JSON do serviço de dados de clima.  
   
 5.  Substitua todo o conteúdo de **DataService.cs** pelo código a seguir:  
   
@@ -180,7 +182,7 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
     }  
     ```  
   
-6.  Adicione uma terceira classe à PCL chamada **Core**, na qual você colocará a lógica de negócios compartilhada, como a lógica que forma uma cadeia de caracteres de consulta com um CEP, chama o serviço de dados de clima e preenche uma instância da classe **Clima**.  
+6.  Adicione uma terceira classe à PCL chamada **Core**, na qual você colocará a lógica de negócios compartilhada, como a lógica que forma uma cadeia de consulta com um CEP, chama o serviço de dados de clima e preenche uma instância da classe **Clima**.  
   
 7.  Substitua o conteúdo de **Core.cs** pelo seguinte:  
   
@@ -238,8 +240,8 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
   
 10. Compile o projeto da PCL **WeatherApp** para garantir que o código esteja correto.  
   
-##  <a name="a-nameandroida-design-ui-for-android"></a><a name="Android"></a> Projetar a interface do usuário para Android  
- Agora projetaremos a interface do usuário, conectaremos essa interface ao seu código compartilhado e então executaremos o aplicativo.  
+##  <a name="Android"></a> Projetar a interface do usuário para Android  
+ Agora projetaremos a interface do usuário, conectaremos essa interface ao seu código compartilhado e executaremos o aplicativo.  
   
 ### <a name="design-the-look-and-feel-of-your-app"></a>Criar a aparência de seu aplicativo  
   
@@ -541,8 +543,8 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
 > [!TIP]
 >  O código-fonte completo para esse projeto está no [repositório de amostras móveis no GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).  
   
-##  <a name="a-namewindowsa-design-ui-for-windows-phone"></a><a name="Windows"></a> Projetar a interface do usuário para Windows Phone  
- Agora projetaremos a interface do usuário para Windows Phone, conectaremos essa interface ao seu código compartilhado e então executaremos o aplicativo.  
+##  <a name="Windows"></a> Projetar a interface do usuário para Windows Phone  
+ Agora projetaremos a interface do usuário para Windows Phone, conectaremos essa interface ao seu código compartilhado e executaremos o aplicativo.  
   
 ### <a name="design-the-look-and-feel-of-your-app"></a>Criar a aparência de seu aplicativo  
  O processo de criação da interface do usuário nativa do Windows Phone em um aplicativo Xamarin não é diferente de nenhum outro aplicativo nativo do Windows Phone. Por esse motivo, não entraremos em detalhes aqui sobre como usar o designer. Para isso, consulte [Criando uma interface do usuário usando o Designer de XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).  
@@ -647,7 +649,7 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
 > [!TIP]
 >  O código-fonte completo para esse projeto está no [repositório de amostras móveis no GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).  
   
-##  <a name="a-namenexta-next-steps"></a><a name="next"></a> Próximas etapas  
+##  <a name="next"></a> Próximas etapas  
  **Adicionar a interface do usuário para iOS à solução**  
   
  Estenda este exemplo adicionando a interface do usuário nativa para iOS. Para isso, você precisará conectar-se a um Mac na sua rede local que tenha o Xcode e o Xamarin instalados. Depois de fazer isso, você poderá usar o designer de iOS diretamente no Visual Studio. Consulte o [repositório de amostras móveis no GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather) para um aplicativo completo.  
@@ -662,8 +664,3 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
  [Site do desenvolvedor do Xamarin](http://developer.xamarin.com/)   
  [Centro de Desenvolvedores do Windows](https://dev.windows.com/en-us)   
  [Pôster de referência rápida de Swift e C#](http://aka.ms/scposter)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

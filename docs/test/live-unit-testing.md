@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: edb6c75d35f89df363a07eb24ba31e203bc6672e
-ms.openlocfilehash: 30261d8b75029bac15c9ab881d9f43c1a717d8cd
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b699132bf1a31d3ef9dc3ba5af3f99c22890c632
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 
@@ -102,7 +103,7 @@ A qualquer momento, é possível pausar temporariamente ou parar por completo o 
 
 ##    <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>Exibindo a visualização de cobertura no editor durante a digitação
 
-Depois de habilitado, o Live Unit Testing atualiza cada linha de código no editor do Visual Studio para mostrar se o código que está sendo escrito é abrangido por testes de unidade e se os testes que os abrangem são aprovados.  A figura a seguir mostra linhas de código com testes aprovados e não aprovados, bem como linhas de código que não são abrangidas por testes. As linhas decoradas com um “✓” verde são abrangidas apenas por testes aprovados, as linhas decoradas com um “🞩” vermelho são abrangidas por um ou mais testes não aprovados e as linhas decoradas com um “” azul não são abrangidas por nenhum teste.
+Depois de habilitado, o Live Unit Testing atualiza cada linha de código no editor do Visual Studio para mostrar se o código que está sendo escrito é abrangido por testes de unidade e se os testes que os abrangem são aprovados.  A figura a seguir mostra linhas de código com testes aprovados e não aprovados, bem como linhas de código que não são abrangidas por testes. As linhas decoradas com um "✓" verde são cobertas apenas por testes aprovados, as linhas decoradas com um "🞩" vermelho são cobertas por um ou mais testes com falha e as linhas decoradas por um "" azul não são cobertas por nenhum teste.
 
   ![Image](./media/lut-codewindow.png)
 

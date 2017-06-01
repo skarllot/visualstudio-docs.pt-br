@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 137f6faa156d188afb99cafb2b1e9dbababdeb4f
-ms.openlocfilehash: a7de37fd82f94fdcef6f839884ea30c5c77061e5
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b2308ef41ea8068c153d286f58dcf8ac4c581ddd
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-memory-usage"></a>Analisar o uso de memória
@@ -46,7 +46,7 @@ Encontre vazamentos de memória e memória ineficiente enquanto estiver depurand
   
  ![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")  
   
- Embora você possa coletar instantâneos de memória a qualquer momento na ferramenta **Uso de Memória**, pode usar o depurador do Visual Studio para controlar como o seu aplicativo é executado ao investigar problemas de desempenho. A definição de pontos de interrupção, passo a passo, Interromper Tudo e outras ações de depurador podem ajudá-lo a concentrar as investigações de desempenho nos caminhos de código mais relevantes. A execução dessas ações enquanto o aplicativo é executado pode eliminar o ruído do código que não lhe interessa e reduzir significativamente a quantidade de tempo que leva para diagnosticar um problema.  
+ Embora você possa coletar instantâneos de memória a qualquer momento na ferramenta **Uso de Memória**, pode usar o depurador do Visual Studio para controlar como o seu aplicativo é executado ao investigar problemas de desempenho. A definição de pontos de interrupção, passo a passo, Interromper Tudo e outras ações de depurador podem ajudá-lo a concentrar as investigações de desempenho nos caminhos de código mais relevantes. A execução dessas ações enquanto o aplicativo é executado pode eliminar o ruído do código que não lhe interessa e reduzir significativamente a quantidade de tempo necessário para diagnosticar um problema.  
   
  Você também pode usar a ferramenta de memória fora do depurador. Confira [Uso de memória sem depuração](../profiling/memory-usage-without-debugging2.md).  
   
@@ -172,7 +172,7 @@ Para analisar o uso da memória, clique em um dos links que abre um relatório d
   
      ![Escolher um instantâneo na lista Comparar com](../profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
   
- O relatório de comparação adiciona colunas (marcadas com **(Diff)**) ao relatório base que mostra a diferença entre o valor do instantâneo base e o do instantâneo de comparação. Veja como o relatório de comparação Exibição de Tipo Nativo pode se parecer:  
+ O relatório de comparação adiciona colunas (marcadas com **(Diff)**) ao relatório base que mostra a diferença entre o valor do instantâneo base e o do instantâneo de comparação. Veja como pode ser a aparência de um relatório de comparação Exibição de Tipo Nativo:  
   
  ![Exibição de comparação de tipos nativos](../profiling/media/dbgdiag_mem_native_typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
   

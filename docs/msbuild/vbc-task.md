@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 795e0de87f769d444eaa57c2938c7836709aeaed
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 699ad120c95500e04d238270b8ac282ad0a8d288
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="vbc-task"></a>Tarefa Vbc
@@ -98,14 +99,14 @@ Encapsula vbc.exe, que produz executáveis (.exe), bibliotecas de vínculo dinâ
 |`TreatWarningsAsErrors`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, todos os avisos são tratados como erros. Para obter mais informações, consulte [/warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror).|  
 |`UseHostCompilerIfAvailable`|Parâmetro `Boolean` opcional.<br /><br /> Instrui a tarefa a usar o objeto do compilador em processo, se disponível. Usado somente por [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|  
 |`Utf8Output`|Parâmetro `Boolean` opcional.<br /><br /> Registra a saída do compilador usando a codificação UTF-8. Esse parâmetro corresponde à opção [/utf8output](/dotnet/visual-basic/reference/command-line-compiler/utf8output) do compilador vbc.exe.|  
-|`Verbosity`|Parâmetro `String` opcional.<br /><br /> Especifica os detalhes da saída do compilador. Os detalhes podem ser `Quiet`, `Normal` (o padrão) ou `Verbose`.|  
+|`Verbosity`|Parâmetro `String` opcional.<br /><br /> Especifica o nível de detalhes da saída do compilador. Os detalhes podem ser `Quiet`, `Normal` (o padrão) ou `Verbose`.|  
 |`WarningsAsErrors`|Parâmetro `String` opcional.<br /><br /> Especifica uma lista de avisos a serem tratados como erros. Para obter mais informações, consulte [/warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror).<br /><br /> Esse parâmetro substitui o parâmetro `TreatWarningsAsErrors`.|  
 |`WarningsNotAsErrors`|Parâmetro `String` opcional.<br /><br /> Especifica uma lista de avisos que não são tratados como erros. Para obter mais informações, consulte [/warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror).<br /><br /> Esse parâmetro será útil apenas se o parâmetro `TreatWarningsAsErrors` for definido como `true`.|  
 |`Win32Icon`|Parâmetro `String` opcional.<br /><br /> Insere um arquivo .ico no assembly, que fornece ao arquivo de saída a aparência desejada no Explorador de Arquivos. Esse parâmetro corresponde à opção [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) do compilador vbc.exe.|  
 |`Win32Resources`|Parâmetro `String` opcional.<br /><br /> Insere um arquivo de recurso Win32 (.res) no arquivo de saída. Esse parâmetro corresponde à opção [/win32resource](/dotnet/visual-basic/reference/command-line-compiler/win32resource) do compilador vbc.exe.|  
   
 ## <a name="remarks"></a>Comentários  
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.ToolTaskExtension>, que, por sua vez, herda da classe <xref:Microsoft.Build.Utilities.ToolTask>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base ToolTaskExtension](../msbuild/tooltaskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.ToolTaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.ToolTask>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base ToolTaskExtension](../msbuild/tooltaskextension-base-class.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir compila um projeto [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)].  

@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 9f2cf965ac7640322fa44920cbb1259b04133e00
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 17fd26b26e25c31772adf4b8629852256317968c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild Toolset (ToolsVersion)
@@ -65,7 +66,7 @@ O MSBuild usa um conjunto de ferramentas de tarefas, metas e ferramentas para co
   
  Quando você compila uma solução na linha de comando e especifica `ToolsVersion` para msbuild.exe, todos os projetos e suas dependências projeto a projeto são compilados de acordo com o `ToolsVersion`, mesmo que cada projeto na solução especifique seu próprio `ToolsVersion`. Para definir o valor `ToolsVersion` em uma base por projeto, consulte [Substituindo as Configurações de ToolsVersion](../msbuild/overriding-toolsversion-settings.md).  
   
- O atributo `ToolsVersion` também é usado para migração de projeto. Por exemplo, se você abrir um projeto do Visual Studio 2008 no Visual Studio 2010, o arquivo do projeto será atualizado para incluir TToolsVersion=”4.0”. Se você tentar abrir o projeto no Visual Studio 2008, ele não reconhecerá o `ToolsVersion` atualizado e, consequentemente, compilará o projeto como se o atributo ainda estivesse definido para 3.5.  
+ O atributo `ToolsVersion` também é usado para migração de projeto. Por exemplo, se você abrir um projeto do Visual Studio 2008 no Visual Studio 2010, o arquivo de projeto será atualizado para incluir ToolsVersion="4.0". Em seguida, se você tentar abrir esse projeto no Visual Studio 2008, ele não reconhecerá o `ToolsVersion` atualizado e, consequentemente, criará o projeto como se o atributo ainda estivesse definido para 3.5.  
   
  Tanto o Visual Studio 2010 quanto o Visual Studio 2012 usam o ToolsVersion 4.0. O Visual Studio 2013 usa um ToolsVersion 12.0. Em muitos casos, você pode abrir o projeto em todas as três versões do Visual Studio sem modificação. O Visual Studio sempre usa o conjunto de ferramentas correto, mas você será notificado se a versão usada não corresponder à versão encontrada no arquivo de projeto. Em quase todos os casos esse aviso é benigno, já que os conjuntos de ferramentas são compatíveis na maioria dos casos.  
   
@@ -84,7 +85,7 @@ O MSBuild usa um conjunto de ferramentas de tarefas, metas e ferramentas para co
   
 -   Usando as propriedades do conjunto de ferramentas  
   
--   Usando métodos <xref:Microsoft.Build.Utilities.ToolLocationHelper>  
+-   Usando os métodos <xref:Microsoft.Build.Utilities.ToolLocationHelper>  
   
  As propriedades do conjunto de ferramentas especificam os caminhos das ferramentas. O MSBuild usa o valor do atributo `ToolsVersion` no arquivo do projeto para localizar a chave do registro correspondente e usa as informações na chave do registro para definir as propriedades do conjunto de ferramentas. Por exemplo, se `ToolsVersion` tiver um valor `12.0`, o MSBuild configurará as propriedades do conjunto de ferramentas de acordo com esta chave do Registro: HKLM\Software\Microsoft\MSBuild\ToolsVersions\12.0.  
   
@@ -96,7 +97,7 @@ O MSBuild usa um conjunto de ferramentas de tarefas, metas e ferramentas para co
   
 -   `SDK35ToolsPath` especifica o caminho de ferramentas gerenciadas adicionais para o MSBuild 3.5.  
   
- Como alternativa, é possível determinar o conjunto de ferramentas programaticamente chamando os métodos da classe <xref:Microsoft.Build.Utilities.ToolLocationHelper>. A classe inclui os seguintes métodos:  
+ Você também pode determinar o conjunto de ferramentas programaticamente, chamando os métodos da classe <xref:Microsoft.Build.Utilities.ToolLocationHelper>. A classe inclui os seguintes métodos:  
   
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFramework%2A> retorna o caminho da pasta do .NET Framework.  
   
@@ -104,9 +105,9 @@ O MSBuild usa um conjunto de ferramentas de tarefas, metas e ferramentas para co
   
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdk%2A> retorna o caminho da pasta das ferramentas gerenciadas.  
   
--   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile%2A> retorna o caminho de um arquivo, normalmente localizado na pasta de ferramentas gerenciadas.  
+-   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile%2A> retorna o caminho de um arquivo, que normalmente está localizado na pasta das ferramentas gerenciadas.  
   
--   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToBuildTools%2A> retorna o caminho das ferramentas de build.  
+-   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToBuildTools%2A> retorna o caminho das ferramentas de compilação.  
   
 ### <a name="sub-toolsets"></a>Subconjunto de ferramentas  
  Conforme descrito anteriormente neste tópico, o MSBuild usa uma chave de registro para especificar o caminho das ferramentas básicas. Se a chave tiver uma subchave, o MSBuild a usará para especificar o caminho de um subconjunto de ferramentas que contém ferramentas adicionais. Nesse caso, o conjunto de ferramentas é definido pela combinação das definições de propriedades definidas nas duas chaves.  

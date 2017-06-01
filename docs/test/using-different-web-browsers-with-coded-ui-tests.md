@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3ba3a175d7e9b17717de2a9a33e6af4c798d18b3
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 28ce78165492b6f74cdd85ba79eae26e4d68d32c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>Usando navegadores diferentes com testes de interface do usuário codificada
@@ -57,7 +58,7 @@ Os testes de IU codificados podem automatizar testes para aplicativos Web gravan
   
 -   Instale os [componentes Selenium para testes de IU codificados entre navegadores](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/).  
   
- **O que tem suporte por todos os navegadores da Web?**  
+ **O que tem suporte em todos os navegadores da Web?**  
   
 -   [Adicionar código personalizado para recursos de controle, ](http://blogs.msdn.com/b/visualstudioalm/archive/2012/12/10/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer.aspx)como propriedades, pesquisa e waiters de reprodução.  
   
@@ -154,14 +155,14 @@ Os testes de IU codificados podem automatizar testes para aplicativos Web gravan
  [Solucionar problemas de falhas de teste entre navegadores](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)  
   
 ### <a name="guidance"></a>Diretrizes  
- [Testes de Entrega Contínua com o Visual Studio 2012 – Capítulo 2: Teste de Unidade: Testando o Interior](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
   
- [Teste de Entrega Contínua com o Visual Studio 2012 – Capítulo 5: Automatizar Testes do Sistema](http://go.microsoft.com/fwlink/?LinkID=255196)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 5: Automatizando testes do sistema)  
   
 ### <a name="faq"></a>Perguntas Frequentes  
  [Perguntas frequentes sobre testes de IU codificados – 1](http://go.microsoft.com/fwlink/?LinkID=230576)  
   
- [Perguntas frequentes sobre testes de IU codificados –&2;](http://go.microsoft.com/fwlink/?LinkID=230578)  
+ [Perguntas frequentes sobre testes de IU codificados – 2](http://go.microsoft.com/fwlink/?LinkID=230578)  
   
 ### <a name="forum"></a>Fórum  
  [Teste de automação da interface do usuário do Visual Studio (inclui IU codificada)](http://go.microsoft.com/fwlink/?LinkID=224497)  

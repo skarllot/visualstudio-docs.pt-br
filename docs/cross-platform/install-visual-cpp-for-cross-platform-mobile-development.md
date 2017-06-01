@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bfe3001ddefaba1220174fecbf8e484fe4987efd
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d284309b0243f8d551d06c53d50d5df5de8f3f3c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Instalar o Visual C++ para Desenvolvimento Móvel Multiplataforma
@@ -145,7 +146,7 @@ O [Visual C++ para Desenvolvimento Móvel de Multiplataforma](http://go.microsof
   
      ![Opções de caminho da ferramenta Android](../cross-platform/media/cppmdd_options_android.PNG "CPPMDD_Options_Android")  
   
-3.  Para alterar o caminho usado por uma ferramenta, marque a caixa de seleção ao lado do caminho e edite o caminho da pasta na caixa de texto. Você também pode usar o botão Procurar (**...**) para abrir uma caixa de diálogo **Selecionar local** para escolher a pasta.  
+3.  Para alterar o caminho usado por uma ferramenta, marque a caixa de seleção ao lado do caminho e edite o caminho da pasta na caixa de texto. Você também pode usar o botão Procurar (**...** ) para abrir uma caixa de diálogo **Selecionar local** para escolher a pasta.  
   
 4.  Escolha **OK** para salvar os locais de pasta da ferramenta personalizada.  
   

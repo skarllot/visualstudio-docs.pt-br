@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: d014b703c491603c86fcd6a89c1dc17f35b0deae
-ms.openlocfilehash: 4e0a5eca9b1d7da650c9e612076bda80b4eeda24
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f680d18660c15e96c87d868cc45cc3a66e8fc553
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="msbuild-glossary"></a>Glossário do MSBuild
@@ -95,7 +97,7 @@ Esses termos são usados para descrever o MSBuild (Microsoft Build Engine) e seu
  Os metadados conhecidos são metadados de item somente leitura que são inicializados usando um valor predefinido. Os metadados conhecidos fornecem informações descritivas para um item que faz referência a um arquivo. Por exemplo, o valor dos metadados conhecidos chamado `FullPath` é o caminho completo do arquivo referenciado. Para obter mais informações, consulte [Itens](../msbuild/msbuild-items.md).  
   
  multiplataforma  
- A capacidade de um projeto de aplicativo ou assembly de direcionar muitos CLRs e estruturas diferentes do MSBuild e do Visual Studio.  
+ A capacidade de um projeto de aplicativo ou de assembly de direcionar vários CLRs e estruturas diferentes do MSBuild e do Visual Studio.  
   
  perfil  
  Um subconjunto da estrutura completa. Ele é usado para minimizar a quantidade que precisa ser baixado para um computador.  
@@ -187,8 +189,3 @@ Esses termos são usados para descrever o MSBuild (Microsoft Build Engine) e seu
   
 ## <a name="see-also"></a>Consulte também  
  [Msbuild](../msbuild/msbuild.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

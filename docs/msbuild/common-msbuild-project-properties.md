@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c6ae2c4c80c27d696a4e7cd4e26bc3a02bebb04b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7ec5dd2249f67a2aa23dc42b1f4065bc5d9a318c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="common-msbuild-project-properties"></a>Propriedades de projeto comuns do MSBuild
@@ -136,7 +137,7 @@ A tabela a seguir lista propriedades frequentemente usadas que são definidas no
 |UseHostCompilerIfAvailable|Um parâmetro booliano que, se `true`, faz com que a tarefa de build use o objeto do compilador em processo, se ele estiver disponível. Este parâmetro será usado apenas por [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|  
 |Utf8Output|Um parâmetro booliano que, se `true`, registra a saída do compilador usando a codificação UTF-8. Esse parâmetro é equivalente à opção do compilador `/utf8Output`.|  
 |VbcToolPath|Um caminho opcional que indica outro local para vbc.exe quando a versão atual de vbc.exe for substituída.|  
-|VbcVerbosity|Especifica os detalhes da saída do compilador [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]. Os valores válidos são "Quiet," "Normal" (o valor padrão) ou "Verbose".|  
+|VbcVerbosity|Especifica o nível de detalhes da saída do compilador [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]. Os valores válidos são "Quiet," "Normal" (o valor padrão) ou "Verbose".|  
 |VisualStudioVersion|Especifica a versão do Visual Studio sob a qual este projeto deve ser considerado para estar em execução. Se esta propriedade não for especificada, o MSBuild a definirá como um valor padrão razoável.<br /><br /> Essa propriedade é usada em vários tipos de projeto para especificar o conjunto de destinos que são usados para o build. Se `ToolsVersion` é definido como 4.0 ou superior para um projeto, `VisualStudioVersion` é usado para especificar o subconjunto de ferramentas que será usado. Para obter mais informações, consulte [Conjunto de ferramentas (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md).|  
 |WarningsAsErrors|Especifica uma lista de avisos a serem tratados como erros. Esse parâmetro é equivalente à opção do compilador `/warnaserror`.|  
 |WarningsNotAsErrors|Especifica uma lista de avisos que não são tratados como erros. Esse parâmetro é equivalente à opção do compilador `/warnaserror`.|  

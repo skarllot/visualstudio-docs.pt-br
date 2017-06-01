@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ef09090c22fd4292fe1234b6746d76f6c470e7e1
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b4ed14f43316dc02ef8d039c590cd2f93b3060e5
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>Requisitos do sistema para o emulador do Visual Studio para Android
@@ -55,7 +57,7 @@ O Emulador do Visual Studio para Android é executado como uma máquina virtual 
   
 -   [O Hyper-V exige arquivos descompactados e não criptografados](#Files)  
   
-##  <a name="a-namechecklista-quick-checklist"></a><a name="Checklist"></a> Lista de verificação rápida  
+##  <a name="Checklist"></a> Lista de verificação rápida  
  Esta é uma lista de verificação rápida dos requisitos para executar o Emulador do Visual Studio para Android. Para obter informações mais detalhadas, consulte as próximas seções neste tópico.  
   
  Requisitos do sistema  
@@ -88,7 +90,7 @@ O Emulador do Visual Studio para Android é executado como uma máquina virtual 
   
 -   Você precisa ser um membro do grupo local Administradores do Hyper-V.  
   
-##  <a name="a-namesystema-system-requirements"></a><a name="System"></a> Requisitos do sistema  
+##  <a name="System"></a> Requisitos do sistema  
  O computador deve atender aos seguintes requisitos:  
   
 -   Suporte ao Hyper-V (consulte [Requisitos do Hyper-V](#HyperV))  
@@ -101,7 +103,7 @@ O Emulador do Visual Studio para Android é executado como uma máquina virtual 
   
  ![Verificar os requisitos do sistema](../cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")  
   
-##  <a name="a-namenetworka-network-requirements"></a><a name="Network"></a> Requisitos de rede  
+##  <a name="Network"></a> Requisitos de rede  
  A rede deve atender aos seguintes requisitos:  
   
 -   DHCP  
@@ -116,7 +118,7 @@ O Emulador do Visual Studio para Android é executado como uma máquina virtual 
   
 -   [Solução de problemas do emulador do Visual Studio para Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)  
   
-##  <a name="a-namehyperva-hyper-v-requirements"></a><a name="HyperV"></a> Requisitos do Hyper-V  
+##  <a name="HyperV"></a> Requisitos do Hyper-V  
  Requisitos do Hyper-V no BIOS  
   
  O BIOS do computador deve dar suporte aos seguintes requisitos e eles devem estar habilitados:  
@@ -149,12 +151,12 @@ O Emulador do Visual Studio para Android é executado como uma máquina virtual 
   
  Para adicionar você mesmo a um grupo manualmente, abra o snap-in Usuários e Grupos Locais. Para obter mais informações, consulte [Adicionar uma conta de usuário a um grupo](http://windows.microsoft.com/en-us/windows/add-user-account-to-group#1TC=windows-7). (Este tópico do Windows 7 também é aplicável ao Windows 8.)  
   
-##  <a name="a-namebootablevhda-running-the-emulator-from-a-bootable-vhd-is-not-supported"></a><a name="BootableVHD"></a> Não há suporte para a execução do emulador por meio de um VHD inicializável  
+##  <a name="BootableVHD"></a> Não há suporte para a execução do emulador por meio de um VHD inicializável  
  Se você tentar executar um aplicativo no Emulador do Visual Studio para Android enquanto estiver executando o Windows por meio de um VHD inicializável, normalmente, o emulador levará vários minutos para ser iniciado ou não será iniciado. Quando o emulador falha ao iniciar, você recebe a seguinte mensagem: Falha na implantação do aplicativo. Tente novamente.  
   
  Essa configuração não tem suporte. Para obter informações sobre problemas relacionados, consulte [Solução de problemas do emulador do Visual Studio para Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md).  
   
-##  <a name="a-namefilesa-hyper-v-requires-uncompressed-and-unencrypted-files"></a><a name="Files"></a> O Hyper-V exige arquivos descompactados e não criptografados  
+##  <a name="Files"></a> O Hyper-V exige arquivos descompactados e não criptografados  
  Em um disco rígido configurado com o sistema de arquivos NTFS, os arquivos do disco rígido virtual usados pelo Hyper-V devem ser descompactados e descriptografados. Verifique se os seguintes diretórios não estão compactados nem criptografados:  
   
 -   %localappdata%\Microsoft\XDE  
@@ -172,8 +174,3 @@ O Emulador do Visual Studio para Android é executado como uma máquina virtual 
   
 ## <a name="see-also"></a>Consulte também  
  [Solução de problemas do emulador do Visual Studio para Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

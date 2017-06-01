@@ -32,9 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 53df745959583d8423e5b0075f782aa451354464
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0bab264151049d595959a439a9659224b01c6cda
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: taxa alta de coletas de lixo Gen 2
@@ -65,11 +67,6 @@ ms.openlocfilehash: 53df745959583d8423e5b0075f782aa451354464
   
  Há colunas de Memória do .NET CLR adicionais na Exibição de Marcas que podem ajudá-lo a identificar problemas de coleta de lixo. A coluna **% de tempo no GC** ajuda você a entender a quantidade de sobrecarga de gerenciamento de memória que está ocorrendo. Se seu aplicativo normalmente usar um número relativamente pequeno de objetos grandes mas persistentes, coletas frequentes da Geração 2 não deverão consumir quantidades excessivas de tempo da CPU. Se o aplicativo estiver sob demanda de memória porque uma quantidade maior de Memória Física (RAM) é necessária, regras relacionadas que avaliam os valores da coluna **Memória\Páginas/s** também poderão ser acionadas.  
   
- Para entender o padrão do aplicativo de uso de memória gerenciada, crie o perfil dele novamente executando um perfil de alocação de Memória do .NET e selecione a opção de criação de perfil Tempo de Vida do Objeto.  
+ Para entender o padrão de uso de memória gerenciada do aplicativo, crie seu perfil novamente executando um perfil de alocação de Memória do .NET e selecione a opção de criação de perfil Tempo de Vida do Objeto.  
   
  Para obter informações sobre como melhorar o desempenho da coleta de lixo, consulte [Garbage Collector Basics and Performance Hints](http://go.microsoft.com/fwlink/?LinkId=148226) (Noções básicas sobre o coletor de lixo e dicas de desempenho) no site da Microsoft. Para obter informações sobre a sobrecarga de coleta de lixo automática, consulte [O que há por trás do heap de objetos grandes](http://go.microsoft.com/fwlink/?LinkId=177836).
-
-
-<!--HONumber=Feb17_HO4-->
-
-

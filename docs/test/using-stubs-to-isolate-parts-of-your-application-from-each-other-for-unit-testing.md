@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f35e1d74514d32f5020c72af724773a4a8846313
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d9588eff64ef29c757b6d4224c17975e6ee9d0ee
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Usando stubs para isolar partes de seu aplicativo para teste de unidade
@@ -82,9 +83,9 @@ Os *tipos de stub* são uma das duas tecnologias que o Microsoft Fakes framework
 ##  <a name="How"></a> Como usar o stubs  
   
 ###  <a name="Dependency"></a> Projetado para injeção de dependência  
- Para usar stubs, seu aplicativo precisa ser criado de forma que os diferentes componentes não sejam dependentes um do outro, mas apenas dependentes das definições de interface. Em vez de ser acoplados no tempo de compilação, os componentes são conectados no tempo de execução. Esse padrão ajuda a criar um software robusto e fácil de atualizar, pois as alterações tendem a não ser propagadas além dos limites dos componentes. Recomendamos segui-lo mesmo que você não use stubs. Se você está escrevendo um código novo, siga o padrão [Injeção de dependência](http://en.wikipedia.org/wiki/Dependency_injection). Se você está escrevendo testes para um software existente, talvez seja necessário refatorá-lo. Caso isso seja impraticável, você pode considerar o uso de shims.  
+ Para usar stubs, seu aplicativo precisa ser criado de forma que os diferentes componentes não sejam dependentes um do outro, mas apenas dependentes das definições de interface. Em vez de ser acoplados no tempo de compilação, os componentes são conectados no tempo de execução. Esse padrão ajuda a criar um software robusto e fácil de atualizar, pois as alterações tendem a não ser propagadas além dos limites dos componentes. Recomendamos segui-lo mesmo que você não use stubs. Se você está escrevendo um código novo, será fácil seguir o padrão de [injeção de dependência](http://en.wikipedia.org/wiki/Dependency_injection). Se você está escrevendo testes para um software existente, talvez seja necessário refatorá-lo. Caso isso seja impraticável, você pode considerar o uso de shims.  
   
- Vamos começar esta discussão com um exemplo motivador, aquele do diagrama. A classe StockAnalyzer lê preços de ações e gera alguns resultados interessantes. Ela tem alguns métodos públicos, que queremos testar. Para simplificar as coisas, vamos conferir apenas um desses métodos, um muito simples que informa o preço atual de uma ação específica. Queremos escrever um teste de unidade desse método. Este é o primeiro rascunho de um teste:  
+ Vamos começar esta discussão com um exemplo motivador, que se encontra no diagrama. A classe StockAnalyzer lê preços de ações e gera alguns resultados interessantes. Ela tem alguns métodos públicos, que queremos testar. Para simplificar as coisas, vamos conferir apenas um desses métodos, um muito simples que relata o preço atual de uma ação específica. Queremos escrever um teste de unidade desse método. Este é o primeiro rascunho de um teste:  
   
 ```c#  
 [TestMethod]  
@@ -198,7 +199,7 @@ analyzer = new StockAnalyzer(new StockFeed())
   
 ##### <a name="adding-a-fakes-assembly"></a>Adicionando um assembly do Fakes  
   
-1.  No Gerenciador de Soluções, expanda as **Referências** de seu projeto de teste de unidade.  
+1.  No Gerenciador de Soluções, expanda as **Referências** do projeto de teste de unidade.  
   
     -   Se você estiver trabalhando no Visual Basic, selecione **Mostrar Todos os Arquivos** na barra de ferramentas do Gerenciador de Soluções para ver a lista Referências.  
   
@@ -417,7 +418,7 @@ interface IWithEvents
 ```  
   
 ###  <a name="BKMK_Generic_methods"></a> Métodos genéricos  
- É possível fazer o stub de métodos genéricos fornecendo um delegado para cada instanciação desejada do método. Por exemplo, dada a seguinte interface que contém um método genérico:  
+ É possível fazer o stub de métodos genéricos fornecendo um delegado para cada criação de instância desejada do método. Por exemplo, dada a seguinte interface que contém um método genérico:  
   
 ```c#  
 // code under test  
@@ -475,7 +476,7 @@ public void TestGetValue()
 // unit test code  
 var stub = new Fakes.MyClass();  
 stub.CallBase = false;  
-// No delegate set – default delegate:  
+// No delegate set - default delegate:  
 Assert.AreEqual(0, stub.DoVirtual(1));  
   
 stub.CallBase = true;  
@@ -488,9 +489,9 @@ Assert.AreEqual(43,stub.DoVirtual(1));
   
 ##  <a name="BKMK_Stub_limitation"></a> Limitações de stub  
   
-1.  Não há suporte para assinaturas de métodos com ponteiros.  
+1.  Não há suporte para assinaturas de método com ponteiros.  
   
-2.  Não é possível fazer o stub de classes fechadas ou métodos estáticos porque os tipos de stub dependem da distribuição virtual do método. Em casos como este, siga as instruções de [Uso de shims para isolar o aplicativo de outros assemblies para teste de unidade](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) para usar os tipos de shim  
+2.  Não é possível fazer o stub de classes fechadas ou de métodos estáticos porque os tipos de stub dependem da expedição virtual do método. Em casos como este, siga as instruções de [Uso de shims para isolar o aplicativo de outros assemblies para teste de unidade](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) para usar os tipos de shim  
   
 ##  <a name="BKMK_Changing_the_default_behavior_of_stubs"></a> Alteração do comportamento padrão de stubs  
  Cada tipo de stub gerado contém uma instância da interface `IStubBehavior` (pela propriedade `IStub.InstanceBehavior`). O comportamento é chamado sempre que um cliente chama um membro sem delegado personalizado anexado. Se o comportamento não for definido, ele usará a instância retornada pela propriedade `StubsBehaviors.Current`. Por padrão, essa propriedade retorna um comportamento que gerou uma exceção `NotImplementedException`.  
@@ -517,7 +518,7 @@ StubBehaviors.Current =
 ## <a name="external-resources"></a>Recursos externos  
   
 ### <a name="guidance"></a>Diretrizes  
- [Testes de Entrega Contínua com o Visual Studio 2012 – Capítulo 2: Teste de Unidade: Testando o Interior](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
   
 ## <a name="see-also"></a>Consulte também  
  [Isolando código em teste com Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)

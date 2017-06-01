@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 60d05761993a4bd7547d83274e103de1b5c30b34
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 44110390bcddc67d86dcfcc81c2d5961e346ccf7
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>Analisar o uso de rede em aplicativos UWP
@@ -40,7 +41,7 @@ A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as 
  A ferramenta de rede dá suporte somente a aplicativos da Plataforma Universal do Windows. Outras plataformas não têm suporte no momento.  
   
 > [!NOTE]
->  Para obter uma descrição mais completa da ferramenta de rede, consulte [Introdução à ferramenta de rede do Visual Studio](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studio-s-network-tool.aspx).  
+>  Para obter uma descrição mais completa da ferramenta de rede, consulte [Introducing Visual Studio's network tool](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studio-s-network-tool.aspx) (Apresentando a ferramenta de rede do Visual Studio).  
   
 ## <a name="collecting-network-tool-data"></a>Coleta de dados da ferramenta de rede  
  Você deve executar a ferramenta de **rede** com um projeto aberto do Visual Studio no computador do Visual Studio.  
@@ -90,6 +91,6 @@ A ferramenta de diagnóstico de **rede** do Visual Studio coleta dados sobre as 
 3.  O botão de impressão de resposta (dentro da guia Corpo) pode ajudá-lo a analisar as cargas de resposta JSON, XML, HTML, CSS, JavaScript e TypeScript aumentando a legibilidade do conteúdo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Executar ferramentas de criação de perfil com ou sem o depurador](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
- [Blog do Visual Studio: introdução ao inspetor de rede do Visual Studio](http://go.microsoft.com/fwlink/?LinkId=535022)   
- [Vídeo do Channel 9: ferramentas de diagnóstico do VS – novo criador de perfil de rede](http://channel9.msdn.com/Series/ConnectOn-Demand/206)
+ [Run Profiling Tools with or without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md) (Executar ferramentas de criação de perfil com ou sem o depurador) 
+ [Visual Studio blog: Introducing Visual Studio's network inspector](http://go.microsoft.com/fwlink/?LinkId=535022) (Blog do Visual Studio: introdução ao inspetor de rede do Visual Studio)   
+ [Channel 9 Video: VS Diagnostics tools - New Network Profiler](http://channel9.msdn.com/Series/ConnectOn-Demand/206) (Vídeo do Channel 9: ferramentas de diagnóstico do VS – novo criador de perfil de rede)

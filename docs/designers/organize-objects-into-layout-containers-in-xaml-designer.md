@@ -27,18 +27,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 564b648469da9ffd01169a7992edb7a0ae0e4a29
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7974392d54ab30be77df939206927fd020dc620f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>Organizar objetos em contêineres de layout no XAML Designer
-Imagine o local em que você deseja que os objetos apareçam, tais como imagens, botões e vídeos. Talvez você queira que eles apareçam em linhas e colunas; em uma única linha, vertical ou horizontal; ou em posições fixas.  
+Imagine o local em que deseja que os objetos apareçam em uma página, como imagens, botões e vídeos. Talvez você queira que eles apareçam em linhas e colunas; em uma única linha, vertical ou horizontal; ou em posições fixas.  
   
- Após ter a chance de pensar sobre como a página pode ser exibida, escolha um painel de layout. Todas as páginas começam no painel de layout, porque você precisa de algo para adicionar seus objetos. Por padrão, é ele tem o formato de uma **Grade**, mas isso pode ser alterado.  
+ Depois de pensar como a página pode ser exibida, escolha um painel de layout. Todas as páginas começam no painel de layout, porque você precisa de algo para adicionar seus objetos. Por padrão, ele é uma **Grade**, mas você pode alterá-lo.  
   
- Painéis de layout ajudam a organizar objetos em uma página, mas fazem mais do que isso. Eles ajudam a projetar diferentes tamanhos de tela e resoluções. Quando usuários executam um aplicativo, tudo o que está contido no painel de layout é redimensionado para caber na tela do dispositivo em uso. Claro, se você não quiser que isso aconteça com o layout, é possível substituir esse comportamento em uma parte ou na totalidade do layout. É possível usar propriedades de altura e largura para controlar isso.  
+ Painéis de layout ajudam a organizar objetos em uma página, mas fazem mais do que isso. Eles ajudam a projetar diferentes tamanhos de tela e resoluções. Quando usuários executam um aplicativo, tudo o que está contido no painel de layout é redimensionado para caber na tela do dispositivo em uso. Claro, se você não quiser que isso aconteça com o layout, será possível substituir esse comportamento em uma parte ou na totalidade do layout. É possível usar propriedades de altura e largura para controlar isso.  
   
  Esta página descreve painéis de layout e controles e conduz a vídeos curtos que ajudarão a introduzi-los.  
   
