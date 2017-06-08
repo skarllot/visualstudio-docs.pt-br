@@ -1,7 +1,7 @@
 ---
 title: Recursos adicionais do MSBuild | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -603,6 +603,7 @@ caps.latest.revision: 17
 author: kempb
 ms.author: kempb
 manager: ghogen
+redirect_url: https://social.msdn.microsoft.com/Forums/vstudio/home?forum=msbuild
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -617,25 +618,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: e9b9d8d2498ec0c1f415242180c41af35a4addef
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="additional-msbuild-resources"></a>Recursos adicionais do MSBuild
 Se você está tentando resolver um problema e não consegue encontrar as informações necessárias na documentação, é possível consultar outros recursos, como artigos da Base de Dados de Conhecimento, a comunidade de desenvolvedores ou o suporte ao produto.  
-  
+
 ## <a name="knowledge-base-articles"></a>Artigos da Base de Dados de Conhecimento  
  É possível pesquisar a KB (Base de Dados de Conhecimento) online para encontrar artigos sobre problemas do produto. Nem todos os problemas têm um artigo correspondente na KB, mas erros encontrados por um número significativo de clientes normalmente são documentados. É possível acessar os artigos da KB no site [Base de Dados de Conhecimento (resultados da pesquisa do MSBuild)](http://search.microsoft.com/supportresults.aspx?q=knowledge+base+MSBuild&x=0&y=0).  
-  
+
 ## <a name="community-forums"></a>Fóruns da Comunidade  
  Os fóruns lhe permitem interagir com outros desenvolvedores e também com funcionários da Microsoft. Se encontrar um erro para o qual não é possível encontrar uma resolução, você pode postar perguntas sobre o problema em um fórum. Também é possível pesquisar grupos de notícias para ver se outras pessoas postaram sobre o mesmo problema. Acesse o fórum do Visual Studio MSBuild no site [Fóruns do MSDN](http://go.microsoft.com/fwlink/?LinkId=48931).  
-  
+
  É possível acessar recursos da comunidade [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] no site do [Channel 9 MSBuild](http://channel9.msdn.com/).  
-  
+
 ## <a name="product-support"></a>Suporte a produto  
  Se ainda tiver dúvidas após tentar os outros recursos, entre em contato com os serviços de suporte da Microsoft acessando o site de [Ajuda e Suporte da Microsoft](http://go.microsoft.com/fwlink/?linkid=1782). Para obter informações sobre o suporte de produto disponível na sua área, consulte [Fale conosco](../ide/talk-to-us.md).  
-  
+
 ## <a name="see-also"></a>Consulte também  
  [Solução de problemas com erros de direcionamento do .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)
+

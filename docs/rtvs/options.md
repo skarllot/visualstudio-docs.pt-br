@@ -11,7 +11,7 @@ ms.tgt_pltfrm:
 f1_keywords:
 - vs.toolsoptionspages.r_tools
 - vs.toolsoptionspages.r_tools.advanced
-- VS.ToolsOptionsPages.R_Tools.%23150
+- vs.toolsoptionspages.r_tools.#150
 ms.topic: article
 ms.assetid: 554dc602-ecad-4cd0-8e6f-a60bb8a2328f
 caps.latest.revision: 1
@@ -58,7 +58,7 @@ Também há um item de menu especial **Ferramentas do R > Configurações da ci�
 
 ![Layout da janela do cientista de dados no Visual Studio](media/installation-data-scientist-layout-result.png)
 
-> [!Important]        
+> [!Important]      
 > Para reverter posteriormente para outras configurações do Visual Studio, primeiro use o comando **Ferramentas > Importar e Exportar Configurações**, selecionando **Exportar configurações de ambiente selecionadas** e especificar um nome do arquivo. Para restaurar essas configurações, use o mesmo comando e selecione **Importar configurações de ambiente selecionadas**. Você também poderá usar os mesmos comandos se você alterar o layout do cientista de dados e quiser retornar a ele, em vez de usar o comando **Configurações da ciência de dados** diretamente.
 
 ## <a name="debugging"></a>Depuração
