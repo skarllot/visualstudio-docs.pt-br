@@ -37,9 +37,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: f8a98aebc2d6c8a0ad53988f92ea327948ae14a6
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="vsinstr"></a>VSInstr
@@ -79,8 +81,3 @@ VSInstr [/U] filename [/options]
  [VSPerfReport](../profiling/vsperfreport.md)   
  [Avisos VSInstr](../profiling/vsinstr-warnings.md)   
  [Exibições de relatório de desempenho](../profiling/performance-report-views.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
