@@ -43,7 +43,7 @@ Se você for um administrador ou desenvolvedor de uma extensão de Shell isolado
  Você pode criar um arquivo pkgdef para controlar o acesso a galerias em vários computadores. Esse arquivo deve ter o seguinte formato.  
   
 ```  
-[$RootPath$\ExtensionManager\Repositories\{UniqueGUID}]  
+[$RootKey$\ExtensionManager\Repositories\{UniqueGUID}]  
 @={URI}  (REG_SZ)  
 Disabled=0 | 1 (DWORD)  
 Priority=0 (highest priority) ... MaxInt (lowest priority) (DWORD) (uint)  
@@ -72,7 +72,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
  Você pode desabilitar uma galeria em um arquivo pkgdef. A entrada a seguir desabilita a Galeria do Visual Studio:  
   
 ```  
-[$RootPath$\ExtensionManager\Repositories\{0F45E408-7995-4375-9485-86B8DB553DC9}]  
+[$RootKey$\ExtensionManager\Repositories\{0F45E408-7995-4375-9485-86B8DB553DC9}]  
 "Disabled"=dword:00000001  
   
 ```  
@@ -80,7 +80,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
  A entrada a seguir desabilita a Galeria de exemplos:  
   
 ```  
-[$RootPath$\ExtensionManager\Repositories\{AEB9CB40-D8E6-4615-B52C-27E307F8506C}]  
+[$RootKey$\ExtensionManager\Repositories\{AEB9CB40-D8E6-4615-B52C-27E307F8506C}]  
 "Disabled"=dword:00000001  
   
 ```  
