@@ -27,9 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 9226dacfa63287857c09e5c6945363ccafadc2c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="getting-started-with-debugging-in-visual-studio"></a>Getting Started with Debugging in Visual Studio (Introdução à depuração no Visual Studio)
@@ -47,7 +49,7 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
 
  ![Botão Depurar Build do Visual Studio](../ide/media/vs_ide_gs_debug_build_type1.PNG "Vs_ide_gs_debug_build_type1")  
 
- Você também pode especificar uma plataforma de build específica para o destino, como **x86** (CPUs Intel de&32; bits), **x64** (CPUs Intel de&64; bits) e **ARM** (CPUs ARM, com suporte apenas para determinados tipos de aplicativo). O padrão é **x86** para projetos gerenciados e nativos. Para alterá-lo, clique no menu suspenso de plataforma de build e selecione uma plataforma diferente ou **Gerenciador de Configurações...**  
+ Você também pode especificar uma plataforma de build específica para o destino, como **x86** (CPUs Intel de 32 bits), **x64** (CPUs Intel de 64 bits) e **ARM** (CPUs ARM, com suporte apenas para determinados tipos de aplicativo). O padrão é **x86** para projetos gerenciados e nativos. Para alterá-lo, clique no menu suspenso de plataforma de build e selecione uma plataforma diferente ou **Gerenciador de Configurações...**  
 
  ![Janela do Gerenciador de Arquivos de Configuração do Visual Studio](../ide/media/vs_ide_gs_debug_build_cf_mgr.PNG "Vs_ide_gs_debug_build_cf_mgr")  
 
@@ -208,9 +210,4 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
  [Preparação e configurações do depurador](../debugger/debugger-settings-and-preparation.md)   
  [Depurar aplicativos de 64 bits](../debugger/debug-64-bit-applications.md)   
  [Noções básicas do depurador](../debugger/debugger-basics.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
