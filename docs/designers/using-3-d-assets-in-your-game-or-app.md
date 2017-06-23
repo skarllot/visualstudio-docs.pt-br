@@ -20,9 +20,10 @@ caps.latest.revision: 17
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 2e106d406b01e6efb96b8c674ffcc167bfcf6326
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -43,7 +44,7 @@ Este artigo descreve como é possível usar o [!INCLUDE[vsprvs](../code-quality/
     |Tipo de ativo|Nome da personalização de compilação|  
     |----------------|------------------------------|  
     |Texturas e imagens|**ImageContentTask(.targets, .props)**|  
-    |Modelos&3;D|**MeshContentTask(.targets, .props)**|  
+    |Modelos 3D|**MeshContentTask(.targets, .props)**|  
     |Sombreadores|**ShaderGraphContentTask(.targets, .props)**|  
   
 3.  Selecione o botão **OK**.  
@@ -69,7 +70,7 @@ Este artigo descreve como é possível usar o [!INCLUDE[vsprvs](../code-quality/
 |Tipo de item|Tipos de arquivo de origem|Formato do arquivo de saída|  
 |---------------|-----------------------|------------------------|  
 |**Pipeline de conteúdo da imagem**|Portable Network Graphics (.png)<br /><br /> JPEG (.jpg, .jpeg, .jpe, .jfif)<br /><br /> Direct Draw Surface (.dds)<br /><br /> Graphics Interchange Format (.gif)<br /><br /> Bitmap (.bmp, .dib)<br /><br /> Tagged Image File Format (.tif, .tiff)<br /><br /> Targa (.tga)|DirectDraw Surface (.dds)|  
-|**Pipeline de conteúdo da malha**|AutoDesk FBX Interchange File (.fbx)<br /><br /> Collada DAE File (.dae)<br /><br /> Wavefront OBJ File (.obj)|Arquivo de malha&3;D (.cmo)|  
+|**Pipeline de conteúdo da malha**|AutoDesk FBX Interchange File (.fbx)<br /><br /> Collada DAE File (.dae)<br /><br /> Wavefront OBJ File (.obj)|Arquivo de malha 3D (.cmo)|  
 |**Pipeline de conteúdo do sombreador**|Visual Shader Graph (.dgsl)|Compiled Shader Output (.cso)|  
   
 ## <a name="configuring-asset-content-pipeline-properties"></a>Configurando ativos do pipeline de conteúdo do ativo  

@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: 4b69ac4348511a831372d3002f873f26dfc2bcb2
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -40,7 +41,7 @@ Os builds incrementais são builds que são otimizados para que os destinos que 
   
  Se todos os itens de saída estiverem atualizados, o MSBuild ignorará o destino. Esse *build incremental* do destino pode melhorar significativamente a velocidade de build. Se apenas alguns arquivos estiverem atualizados, o MSBuild executará o destino, mas ignora os itens atualizados e, portanto, traz todos os itens atualizados. Isso é conhecido como um *build parcial incremental*.  
   
- Mapeamentos de&1; para&1; em geral são produzidos por transformações de item. Para obter mais informações, consulte [Transformações](../msbuild/msbuild-transforms.md).  
+ Mapeamentos de 1 para 1 em geral são produzidos por transformações de item. Para obter mais informações, consulte [Transformações](../msbuild/msbuild-transforms.md).  
   
  Considere o destino a seguir.  
   

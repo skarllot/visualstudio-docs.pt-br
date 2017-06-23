@@ -16,9 +16,10 @@ caps.latest.revision: 36
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 54eea838c686bf9956b9f9da2055bf3400f94aa5
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -43,7 +44,7 @@ Este documento descreve como trabalhar com o Editor de Modelos do [!INCLUDE[vspr
   
 1.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto ao qual você deseja adicionar a imagem e selecione **Adicionar**, **Novo Item**.  
   
-2.  Na caixa de diálogo **Adicionar Novo Item**, em **Instalado**, selecione **Gráficos** e **Cena&3;D (.fbx)**.  
+2.  Na caixa de diálogo **Adicionar Novo Item**, em **Instalado**, selecione **Gráficos** e **Cena 3D (.fbx)**.  
   
 3.  Especifique o **Nome** do arquivo de modelo e a **Localização** em que deseja que ele seja criado.  
   

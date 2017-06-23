@@ -13,16 +13,17 @@ caps.latest.revision: 8
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: df5c0c34a41c5b61869faaa3224caac1532736cd
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="working-with-3-d-models"></a>Trabalhando com modelos 3D
 Você pode usar o Editor de Modelo no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para criar modelos 3D. Você pode usar os modelos no seu jogo ou aplicativo baseado no DirectX.  
   
-## <a name="3-d-models"></a>Modelos&3; D  
+## <a name="3-d-models"></a>Modelos 3 D  
  Modelos 3D definem a forma de objetos que existem em uma cena 3D. Modelos podem ser objetos solitário básicos, objetos complexos que são formados de hierarquias de objetos básicos ou até mesmo cenas inteiras em 3D. Um objeto 3D é composto de pontos no espaço 3D (conhecido como *vértices*), índices que definem os triângulos, linhas ou outros primitivos são constituídos por esses pontos e atributos que podem ser aplicadas por vértice ou por primitivo, por exemplo, normais da superfície. Além disso, algumas informações podem se aplicar em uma base por objeto, por exemplo, o sombreador e texturas fornecerão ao objeto sua aparência exclusiva.  
   
  O Editor de modelo é a única ferramenta que você precisa para criar modelos 3D, completo com propriedades de material, texturas e sombreadores de pixel, que você pode usar em seu jogo ou aplicativo. Ou você pode criar modelos para usar na criação de protótipos e testes antes de envolver artistas para finalizar os modelos de espaço reservado.  
