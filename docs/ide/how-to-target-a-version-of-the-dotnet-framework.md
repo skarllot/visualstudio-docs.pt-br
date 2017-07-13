@@ -31,17 +31,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 7ebf1dfaa3753f1a1908b0327e8ed938115f1f13
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: eea7cb983f264fb58a4b1131f84f3ec1cb196be5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="how-to-target-a-version-of-the-net-framework"></a>Como destinar uma versão do .NET Framework
+# Como destinar uma versão do .NET Framework
+<a id="how-to-target-a-version-of-the-net-framework" class="xliff"></a>
 Este documento descreve como destinar uma versão do .NET Framework quando você cria um projeto e como alterar a versão de destino em um projeto existente do Visual Basic, Visual C# ou Visual F#.  
   
 > [!IMPORTANT]
->  Para obter informações sobre como alterar a versão de destino de projetos do C++, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](http://msdn.microsoft.com/Library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe).  
+>  Para obter informações sobre como alterar a versão de destino de projetos do C++, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset).  
   
  **Neste tópico**  
   
@@ -55,7 +56,8 @@ Este documento descreve como destinar uma versão do .NET Framework quando você
 > [!NOTE]
 >  Nas edições Express do Visual Studio, é necessário criar o projeto primeiro e, em seguida, é possível alterar o destino, conforme descrito em [Alterando a versão de destino](../ide/how-to-target-a-version-of-the-dotnet-framework.md#bkmk_existing), mais adiante neste tópico.  
   
-#### <a name="to-target-a-version-when-you-create-a-project"></a>Para destinar uma versão ao criar um projeto  
+#### Para destinar uma versão ao criar um projeto
+<a id="to-target-a-version-when-you-create-a-project" class="xliff"></a>  
   
 1.  Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
   
@@ -71,14 +73,15 @@ Este documento descreve como destinar uma versão do .NET Framework quando você
 ##  <a name="bkmk_existing"></a> Alterando a versão de destino  
  É possível alterar a versão de destino do .NET Framework em um projeto do Visual Basic, Visual C# ou Visual F# seguindo este procedimento.  
   
-#### <a name="to-change-the-targeted-version"></a>Para alterar a versão de destino  
+#### Para alterar a versão de destino
+<a id="to-change-the-targeted-version" class="xliff"></a>  
   
 1.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto que você deseja alterar e, em seguida, escolha **Propriedades**.  
   
      ![Propriedades do Gerenciador de Soluções do Visual Studio](../ide/media/vs_slnexplorer_properties.png "vs_slnExplorer_Properties")  
   
     > [!IMPORTANT]
-    >  Para obter informações sobre como alterar a versão de destino de projetos do C++, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](http://msdn.microsoft.com/Library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe).  
+    >  Para obter informações sobre como alterar a versão de destino de projetos do C++, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset).  
   
 2.  Na coluna esquerda da janela Propriedades, escolha a guia **Aplicativo**.  
   
@@ -96,11 +99,12 @@ Este documento descreve como destinar uma versão do .NET Framework quando você
     > [!NOTE]
     >  Se seu código contiver referências a outra versão do .NET Framework que não seja a que você o destinou, mensagens de erro poderão aparecer quando você compilar ou executar o código. Para resolver esses erros, você deverá modificar as referências. Consulte [Solução de problemas de erros de definição de destino do .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Visão geral do Visual Studio Multi-Targeting](../ide/visual-studio-multi-targeting-overview.md)   
  [.NET Framework Multi-Targeting para projetos Web do ASP.NET](http://msdn.microsoft.com/Library/8b8145a9-62f6-4fc4-8a83-47b0487cbe76)   
  [Solução de problemas de erros de definição de destino do .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)   
  [Página Aplicativo, Designer de Projeto (C#)](../ide/reference/application-page-project-designer-csharp.md)   
  [Página de Aplicativo, Designer de Projeto (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)   
  [Configurando projetos](http://msdn.microsoft.com/Library/a1489abb-6294-4f8f-b71f-2cb126393526)   
- [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](http://msdn.microsoft.com/Library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe)
+ [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

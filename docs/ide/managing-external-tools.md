@@ -75,25 +75,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 07dfd26933090708cf40adff5f7ceb4785686245
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 1d273749cc41eb975dc9f93329edf9a57aaae09a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="manage-external-tools"></a>Gerenciar ferramentas externas
+# Gerenciar ferramentas externas
+<a id="manage-external-tools" class="xliff"></a>
 Você pode chamar ferramentas externas de dentro do Visual Studio usando o menu **Ferramentas**. Algumas ferramentas padrão estão disponíveis no menu **Ferramentas**, mas é possível adicionar outros executáveis de sua preferência.  
 
-## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Ferramentas disponíveis no menu das Ferramentas do Visual Studio
+## Ferramentas disponíveis no menu das Ferramentas do Visual Studio
+<a id="tools-available-on-the-visual-studio-tools-menu" class="xliff"></a>
  O menu **Ferramentas** contém vários comandos internos, como:
 
 *  **Extensões e Atualizações** para [gerenciamento de Extensões do Visual Studio](finding-and-using-visual-studio-extensions.md)
 *  **Gerenciador de Trechos de Código...** para [organizar Trechos de Código](code-snippets.md#code-snippet-manager)
 *  **Proteção Preemptiva - Dotfuscator** para iniciar o [Dotfuscator Community Edition (CE)](dotfuscator/index.md) se ele estiver [instalado](dotfuscator/install.md)
-*  **Personalizar...** para [personalizar menus e barras de ferramentas](how-to-customize-menus-and-toolbars-in-visual-studio)
+*  **Personalizar...** para [personalizar menus e barras de ferramentas](how-to-customize-menus-and-toolbars-in-visual-studio.md)
 *  **Opções...** para [configurar uma variedade de opções diferentes para o IDE do Visual Studio e outras ferramentas](reference/options-dialog-box-visual-studio.md)
 
-## <a name="add-new-tools-to-the-tools-menu"></a>Adicionar novas ferramentas ao menu Ferramentas 
+## Adicionar novas ferramentas ao menu Ferramentas
+<a id="add-new-tools-to-the-tools-menu" class="xliff"></a> 
  É possível adicionar uma ferramenta externa ao menu **Ferramentas**. Abra a caixa de diálogo **Ferramentas Externas...**, clique em **Adicionar** e, em seguida, preencha as informações. Por exemplo, a seguinte entrada faz com que o Windows Explorer abra o diretório do arquivo atualmente aberto no Visual Studio:  
   
 1.  Título: *Abrir local do arquivo*
@@ -126,6 +130,7 @@ Você pode chamar ferramentas externas de dentro do Visual Studio usando o menu 
 |Diretório da solução|$(SolutionDir)|O diretório da solução atual (unidade + caminho).|  
 |Nome de arquivo da solução|$(SolutionFileName)|O nome de arquivo da solução atual (unidade + caminho + nome de arquivo).|  
 
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Ferramentas de build do C/C++](/cpp/build/reference/c-cpp-build-tools)
 

@@ -30,21 +30,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fca684da9788385ef9390f3cbaae23bf65a19074
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: dcb39c0fa8f996bcaaa2406ad5ac254b90a534d0
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="how-to-change-text-case-in-the-editor"></a>Como alterar o caso de texto no editor
+# Como alterar o caso de texto no editor
+<a id="how-to-change-text-case-in-the-editor" class="xliff"></a>
 É possível usar comandos de menu ou atalhos de teclado para converter o padrão de maiúsculas e minúsculas do texto selecionado e deixar todas as letras maiúsculas ou todas as letras minúsculas.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu vistos podem ser diferentes daqueles descritos na **Ajuda**, dependendo da edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu vistos podem ser diferentes daqueles descritos na **Ajuda**, dependendo da edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="procedure"></a>Procedimento  
+## Procedimento
+<a id="procedure" class="xliff"></a>  
   
-#### <a name="to-switch-text-to-upper-case"></a>Para mudar o texto para letras maiúsculas  
+#### Para mudar o texto para letras maiúsculas
+<a id="to-switch-text-to-upper-case" class="xliff"></a>  
   
 1.  Selecione o texto que deseja converter.  
   
@@ -59,7 +63,8 @@ ms.lasthandoff: 02/22/2017
     > [!TIP]
     >  Para reverter para a formatação anterior antes dessa alteração, selecione **Desfazer** no menu **Editar**.  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Personalizando o editor](../ide/customizing-the-editor.md)   
  [Caixa de diálogo Opções do Editor de Texto](../ide/reference/text-editor-options-dialog-box.md)   
  [Escrevendo código](../ide/writing-code-in-the-code-and-text-editor.md)

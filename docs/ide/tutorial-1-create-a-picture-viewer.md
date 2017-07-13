@@ -27,13 +27,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 13fd745ae820d87fd6259287cf7f0d796c3edae1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 3ebe300aa4e2a7314b55f8418bcfa0ad9fafdc59
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="tutorial-1-create-a-picture-viewer"></a>Tutorial 1: Criar um visualizador de imagens
+# Tutorial 1: Criar um visualizador de imagens
+<a id="tutorial-1-create-a-picture-viewer" class="xliff"></a>
 Neste tutorial, você cria um programa que carrega uma imagem de um arquivo e a exibe em uma janela. Você aprende a arrastar controles como botões e caixas de imagem no formulário, definir as respectivas propriedades e usar contêineres para redimensionar suavemente o formulário. Você também pode começar a escrever código. Você aprenderá como:  
   
 -   Crie um novo projeto.  
@@ -62,11 +64,12 @@ Mostre que você cria neste tutorial
 > [!NOTE]
 >  Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio. O Visual C# e o Visual Basic são abordados neste tutorial, portanto concentre-se nas informações específicas da linguagem de programação que você está usando.  
 >   
->  Para ver o código para Visual Basic, escolha a guia **VB** na parte superior dos blocos de código e, para ver o código para Visual C#, escolha a guia **C#**. Se estiver interessado em aprender sobre o Visual C++, consulte [Introdução](../misc/getting-started-with-visual-cpp-in-visual-studio-2015.md) e [Tutorial da linguagem C++](http://www.cplusplus.com/doc/tutorial/).  
+>  Para ver o código para Visual Basic, escolha a guia **VB** na parte superior dos blocos de código e, para ver o código para Visual C#, escolha a guia **C#**. Se estiver interessado em aprender sobre o Visual C++, consulte [Introdução](../ide/getting-started-with-cpp-in-visual-studio.md) e [Tutorial da linguagem C++](http://www.cplusplus.com/doc/tutorial/).  
 >   
 >  Se estiver interessado em aprender a escrever aplicativos do Visual C# ou do Visual Basic para a Windows Store, consulte [Criar seu primeiro aplicativo da Windows Store usando C# ou Visual Basic](http://msdn.microsoft.com/library/windows/apps/hh974581.aspx). Para obter informações sobre como criar aplicativos JavaScript para a Windows Store, consulte [Criar seu primeiro aplicativo da Windows Store usando JavaScript](http://msdn.microsoft.com/library/windows/apps/br211385.aspx).  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## Tópicos relacionados
+<a id="related-topics" class="xliff"></a>  
   
 |Título|Descrição|  
 |-----------|-----------------|  

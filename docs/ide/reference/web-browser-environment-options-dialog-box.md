@@ -42,17 +42,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 50f1d083b54ecc8418cac66086b40de8e3c69b73
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: e2852ef4eb48247a97fe513efc7cdecb89ec619a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="web-browser-environment-options-dialog-box"></a>Caixa de diálogo Navegador da Web, Ambiente, Opções
+# Caixa de diálogo Navegador da Web, Ambiente, Opções
+<a id="web-browser-environment-options-dialog-box" class="xliff"></a>
 Define opções para o navegador da Web interno e o Internet Explorer. Para acessar essa caixa de diálogo, clique em **Opções** no menu **Ferramentas**, expanda a pasta **Ambiente** e selecione **Navegador da Web**.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha Importar e Exportar Configurações no menu Ferramentas. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha Importar e Exportar Configurações no menu Ferramentas. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
 > [!IMPORTANT]
 >  Abrir determinados arquivos ou componentes da Web pode executar código no computador.  
@@ -78,7 +80,8 @@ Define opções para o navegador da Web interno e o Internet Explorer. Para aces
 > [!NOTE]
 >  Use a caixa de diálogo Procurar Com para substituir o navegador da Web interno do Visual Studio, que é uma versão do Internet Explorer, usando outro navegador da Web externo.  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Caixa de diálogo Opções do Ambiente](../../ide/reference/environment-options-dialog-box.md)   
  [Caixa de diálogo Geral, Ambiente, Opções](../../ide/reference/general-environment-options-dialog-box.md)   
  [Designer de HTML](http://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)

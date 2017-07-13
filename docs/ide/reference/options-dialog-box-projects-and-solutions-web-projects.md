@@ -29,21 +29,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a8be3036c6557497fef10410cfea61e1c84df150
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 26ab07ded2217be91152462e34ed1ffeb26d3eec
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="options-dialog-box-projects-and-solutions-web-projects"></a>Caixa de diálogo Opções, Projetos e Soluções, Projetos Web
+# Caixa de diálogo Opções, Projetos e Soluções, Projetos Web
+<a id="options-dialog-box-projects-and-solutions-web-projects" class="xliff"></a>
 Define o servidor Web que projetos Web usarão para desenvolvimento dentro do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Para acessar essa caixa de diálogo, clique em **Opções de Ferramentas**. Expanda **Projetos e Soluções** e clique em **Projetos Web**.  
   
  Por padrão, quando você executa um projeto Web no Visual Studio (por exemplo, usando F5 ou Ctrl+F5), o Visual Studio usa o Visual Studio Development Server. Para obter mais informações, consulte [Servidores Web no Visual Studio para projetos Web ASP.NET](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
 > [!NOTE]
->  As opções disponíveis nas caixas de diálogo e os nomes os locais dos comandos de menu que você vê podem diferir do que é descrito na Ajuda, dependendo de suas configurações ativas ou da edição. Esta página de Ajuda foi escrita pensando nas **Configurações da Web** em mente. Para exibir ou alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As opções disponíveis nas caixas de diálogo e os nomes os locais dos comandos de menu que você vê podem diferir do que é descrito na Ajuda, dependendo de suas configurações ativas ou da edição. Esta página de Ajuda foi escrita pensando nas **Configurações da Web** em mente. Para exibir ou alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="settings"></a>Configurações  
+## Configurações
+<a id="settings" class="xliff"></a>  
  **Usar a versão de 64 bits do IIS Express para sites e projetos**  
  Selecione esta opção para usar o IIS Express, em vez do Visual Studio Development Server. Para obter mais informações, consulte [Apresentando o IIS Express](http://go.microsoft.com/?linkid=9747914) e [visão geral do IIS Express](http://go.microsoft.com/?linkid=9747915). Esta opção está desabilitada por padrão.  
   

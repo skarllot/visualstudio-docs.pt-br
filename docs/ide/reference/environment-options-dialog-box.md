@@ -30,22 +30,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a715de0b53537e1239c0e3f5ecba080328daa34c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: bd21586ad9dab89c2146a8061271d8642529adf9
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="environment-options-dialog-box"></a>Caixa de diálogo Opções do Ambiente
+# Caixa de diálogo Opções do Ambiente
+<a id="environment-options-dialog-box" class="xliff"></a>
 Você pode usar as páginas da pasta **Ambiente** na caixa de diálogo **Opções** para definir como determinados elementos do IDE (ambiente de desenvolvimento integrado) são exibidos e se comportam. Na barra de menus, é possível acessar as páginas Ambiente escolhendo **Ferramentas**, **Opções** e selecionando **Ambiente**.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que aparecem no computador podem ser diferentes dos que são descritos na Ajuda, pois variam de acordo com as configurações ativas e a edição do Visual Studio que você está usando. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que aparecem no computador podem ser diferentes dos que são descritos na Ajuda, pois variam de acordo com as configurações ativas e a edição do Visual Studio que você está usando. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
 |Para obter informações como|Consulte|  
 |----------------------------------|---------|  
 |Personalizar a aparência e o comportamento dos menus, das janelas e de outros elementos do IDE.|[Caixa de diálogo Geral, Ambiente, Opções](../../ide/reference/general-environment-options-dialog-box.md)|  
-|Especificar a segurança para suplementos.|[Caixa de diálogo Segurança de Suplemento, Ambiente, Opções](../Topic/Add-in%20Security,%20Environment,%20Options%20Dialog%20Box.md)|  
 |Alterar as configurações para salvamento e restauração automáticos de arquivos.|[Caixa de diálogo Recuperação Automática, Ambiente, Opções](../../ide/reference/autorecover-environment-options-dialog-box.md)|  
 |Estabelecer configurações de gerenciamento e exibição de documento que incluem o comportamento de arquivos diversos.|[Caixa de diálogo Documentos, Ambiente, Opções](../../ide/reference/documents-environment-options-dialog-box.md)|  
 |Personalize como as atualizações ocorrem e como as extensões são gerenciadas.|[Caixa de diálogo Extensões e Atualizações, Ambiente, Opções](../../ide/reference/extensions-and-updates-environment-options-dialog-box.md)|  
@@ -61,5 +62,6 @@ Você pode usar as páginas da pasta **Ambiente** na caixa de diálogo **Opçõe
 |Definir opções para tarefas e listas de tarefas|[Caixa de diálogo Lista de Tarefas, Ambiente, Opções](../../ide/reference/task-list-environment-options-dialog-box.md)|  
 |Alterar sua home page e páginas de pesquisa padrão, alterando o editor de código-fonte do sistema e configurando as opções do Internet Explorer.|[Caixa de diálogo Navegador da Web, Ambiente, Opções](../../ide/reference/web-browser-environment-options-dialog-box.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Caixa de diálogo Opções](../../ide/reference/options-dialog-box-visual-studio.md)

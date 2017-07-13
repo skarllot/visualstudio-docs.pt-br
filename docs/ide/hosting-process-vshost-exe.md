@@ -30,29 +30,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: f96040d6e0a652998cc5603b67afbb564d81a8fd
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
+ms.openlocfilehash: 96cd56eaeea20b2b0defcb60a188c9e13c19ec6a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="hosting-process-vshostexe"></a>Processo de hospedagem (vshost.exe)
+# Processo de hospedagem (vshost.exe)
+<a id="hosting-process-vshostexe" class="xliff"></a>
 O processo de hospedagem é um recurso do Visual Studio que melhora o desempenho de depuração, habilita a depuração de confiança parcial e habilita a avaliação de expressão em tempo de design. Os arquivos do processo de hospedagem contêm vshost no nome do arquivo e são colocados na pasta de saída do projeto. Para obter mais informações, consulte [Depuração e o processo de hospedagem](../debugger/debugging-and-the-hosting-process.md).  
   
 > [!NOTE]
 >  Arquivos do processo de hospedagem (.vshost.exe) são para uso do Visual Studio e não devem ser executados diretamente ou implantados com o aplicativo.  
   
-## <a name="improved-debugging-performance"></a>Melhor desempenho de depuração  
- O processo de hospedagem cria um domínio do aplicativo e associa o depurador ao aplicativo. A execução dessas tarefas pode introduzir um atraso notável entre o tempo de início da depuração e o tempo do início da execução do aplicativo. O processo de hospedagem ajuda a melhorar o desempenho criando o domínio do aplicativo, associando o depurador na tela de fundo e salvando o domínio do aplicativo e o estado do depurador entre execuções do aplicativo. Para obter mais informações sobre domínios do aplicativo, consulte [Domínios do aplicativo](http://msdn.microsoft.com/Library/113a8bbf-6875-4a72-a49d-ca2d92e19cc8).  
+## Melhor desempenho de depuração
+<a id="improved-debugging-performance" class="xliff"></a>  
+ O processo de hospedagem cria um domínio do aplicativo e associa o depurador ao aplicativo. A execução dessas tarefas pode introduzir um atraso notável entre o tempo de início da depuração e o tempo do início da execução do aplicativo. O processo de hospedagem ajuda a melhorar o desempenho criando o domínio do aplicativo, associando o depurador na tela de fundo e salvando o domínio do aplicativo e o estado do depurador entre execuções do aplicativo. Para obter mais informações sobre domínios do aplicativo, consulte [Domínios do aplicativo](/dotnet/framework/app-domains/application-domains).  
   
-## <a name="partial-trust-debugging"></a>Depuração de relação de confiança parcial  
+## Depuração de relação de confiança parcial
+<a id="partial-trust-debugging" class="xliff"></a>  
  Um aplicativo pode ser especificado como um aplicativo de relação de confiança parcial na [página Segurança](../ide/reference/security-page-project-designer.md) do **Designer de Projeto**. A depuração de um aplicativo de relação de confiança parcial exige uma inicialização especial do domínio do aplicativo. Essa inicialização é manipulada pelo processo de hospedagem.  
   
-## <a name="design-time-expression-evaluation"></a>Avaliação de expressão de tempo de design  
+## Avaliação de expressão de tempo de design
+<a id="design-time-expression-evaluation" class="xliff"></a>  
  A avaliação de expressão em tempo de design permite testar o código na janela **Imediata** sem a necessidade de executar o aplicativo. O processo de hospedagem executa esse código durante a avaliação da expressão em tempo de design. Para obter mais informações, consulte [Janela Imediata](../ide/reference/immediate-window.md).  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Depuração e o processo de hospedagem](../debugger/debugging-and-the-hosting-process.md)   
  [Como desabilitar o processo de hospedagem](../ide/how-to-disable-the-hosting-process.md)   
  [Janela Imediata](../ide/reference/immediate-window.md)   
- [Domínios do aplicativo](http://msdn.microsoft.com/Library/113a8bbf-6875-4a72-a49d-ca2d92e19cc8)
+ [Domínios do aplicativo](/dotnet/framework/app-domains/application-domains)

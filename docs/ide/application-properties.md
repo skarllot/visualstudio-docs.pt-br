@@ -31,13 +31,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 473c2a2e78e294f683f022398eabd0c77f63161d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e372d9d6d935ff40054b8ba3f7684bf5ea9c458
+ms.openlocfilehash: 3274157b4463c902bc14fe077f1b8d2ca022170c
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="application-properties"></a>Propriedades do aplicativo
+# Propriedades do aplicativo
+<a id="application-properties" class="xliff"></a>
 Você pode definir propriedades gerais de aplicativo para aplicativos do Visual Basic, C# e F#, como o tipo de aplicativo, o objeto de inicialização e informações de assembly, no painel **Aplicativo** do **Designer de Projeto**.  
   
  As seguintes tarefas podem ser realizadas no painel **Aplicativo**:  
@@ -68,13 +70,14 @@ Você pode definir propriedades gerais de aplicativo para aplicativos do Visual 
   
  As tarefas disponíveis para seu aplicativo dependem da linguagem de desenvolvimento usada.  
   
-## <a name="in-this-section"></a>Nesta seção  
+## Nesta seção
+<a id="in-this-section" class="xliff"></a>  
  [Como especificar um ícone do aplicativo (Visual Basic, C#)](../ide/how-to-specify-an-application-icon-visual-basic-csharp.md)  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Página de Aplicativo, Designer de Projeto (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)   
  [Página Aplicativo, Designer de Projeto (C#)](../ide/reference/application-page-project-designer-csharp.md)   
- [Introdução ao Designer de Projeto](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
  [Publicando aplicativos ClickOnce](../deployment/publishing-clickonce-applications.md)   
  [Protegendo aplicativos ClickOnce](../deployment/securing-clickonce-applications.md)   
  [Gerenciando propriedades de depuração](http://msdn.microsoft.com/en-us/92474d16-e7fe-4fac-9287-6bd6b3a7eb68)   

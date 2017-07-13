@@ -7,8 +7,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
 - CSharp
+- VB
 helpviewer_keywords:
 - editor
 ms.assetid: 
@@ -30,16 +30,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
-ms.openlocfilehash: a5b26ed093ed86c8c438b2024f69d371fde2de36
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
+ms.openlocfilehash: 288595f50555bd8314d0ad60cd2e1ce8121a8ab0
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/23/2017
 
 ---
 
-# <a name="net-code-style-settings-for-editorconfig"></a>Configurações de Estilo de Código .NET para o EditorConfig
+# Configurações de Estilo de Código .NET para o EditorConfig
+<a id="net-code-style-settings-for-editorconfig" class="xliff"></a>
 
-## <a name="possible-values"></a>Valores possíveis
+## Valores possíveis
+<a id="possible-values" class="xliff"></a>
 
 `options_name = false|true : none|suggestion|warning|error`
 
@@ -52,7 +55,8 @@ sugestão | Quando esse estilo não estiver sendo seguido, mostre-o para o usuá
 aviso | Quando esse estilo não estiver sendo seguido, mostre um aviso do compilador.
 erro | Quando esse estilo não estiver sendo seguido, mostre um erro do compilador.
 
-## <a name="net-code-style-options"></a>Opções de estilo de código .NET
+## Opções de estilo de código .NET
+<a id="net-code-style-options" class="xliff"></a>
 
 - [Configurações de estilo de código Dotnet](#this_and_me)
     - ["This." e "Me." Qualificação](#this_and_me)
@@ -102,7 +106,8 @@ erro | Quando esse estilo não estiver sendo seguido, mostre um erro do compilad
 | verdadeiro | Preferir que todos os campos não estáticos usados em métodos não estáticos sejam antecedidos por `this.` em C# ou `Me.` no Visual Basic. | **C#:** <br>`this.capacity = 0;` <br><br> **Visual Basic:** `Me.capacity = 0`
 | False | Preferir que todos os campos não estáticos usados em métodos não estáticos não sejam antecedidos por `this.` em C# ou `Me.` no Visual Basic. | **C#:** <br>`capacity = 0;` <br><br> **Visual Basic:** `capacity = 0`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs,*.vb]
@@ -120,7 +125,8 @@ dotnet_style_qualification_for_field = false:suggestion
 | verdadeiro | Preferir que todas as propriedades não estáticas usadas em métodos não estáticos sejam antecedidas por `this.` em C# ou `Me.` no Visual Basic.| **C#:** <br>`this.ID = 0;` <br><br> **Visual Basic:** `Me.ID = 0`
 | False | Preferir que todas as propriedades não estáticas usadas em métodos não estáticos *não* sejam antecedidas por `this.` em C# ou `Me.` no Visual Basic. | **C#:** <br>`ID = 0;` <br><br> **Visual Basic:** `ID = 0`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs,*.vb]
@@ -139,7 +145,8 @@ dotnet_style_qualification_for_property = false:suggestion
 | False | Prefira que todos os métodos não estáticos chamados de dentro de métodos não estáticos *não* sejam antecedidos por `this.` em C# e `Me.` no VB. | **C#:** <br>`Display();` <br><br> **Visual Basic:** `Display()`
 
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs, *.vb]
@@ -156,7 +163,8 @@ dotnet_style_qualification_for_method = false:suggestion
 | verdadeiro | Prefira que todos os eventos não estáticos referenciados de dentro de métodos não estáticos sejam antecedidos por `this.` em C# e `Me.` no VB.| **C#:** <br>`this.Elapsed += Handler;` <br><br> **Visual Basic:** `AddHandler Me.Elapsed, AddressOf Handler`
 | False | Prefira que todos os eventos não estáticos referenciados de dentro de métodos não estáticos *não* sejam antecedidos por `this.` em C# e `Me.` no VB. | **C#:** <br>`Elapsed += Handler;` <br><br> **Visual Basic:** `AddHandler Elapsed, AddressOf Handler`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs, *.vb]
@@ -174,7 +182,8 @@ dotnet_style_qualification_for_event = false:suggestion
 | verdadeiro | Para membros locais, de parâmetros e de tipo, prefira tipos que têm uma palavra-chave de linguagem para representá-los (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`) para usar a palavra-chave a usar o nome do tipo (`Int32`, `Int64`, etc.).| **C#:** <br>`private int _member;` <br><br> **Visual Basic:** `Private _member As Integer`
 | False | Para membros locais, de parâmetros e de tipo, prefira tipos que têm uma palavra-chave de linguagem para representá-los (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`) para usar o nome do tipo a usar a palavra-chave (`Int32`, `Int64`, etc.).  | **C#:** <br>`private Int32 _member;` <br><br> **Visual Basic:** `Private _member As Int32`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs, *.vb]
@@ -191,7 +200,8 @@ dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 | verdadeiro | Prefira a palavra-chave sempre que uma expressão de acesso de membro for usada em um tipo com uma representação de palavra-chave (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`).| **C#:** <br>`var local = int.MaxValue;` <br><br> **Visual Basic:** `Dim local = Integer.MaxValue`
 | False | Prefira o nome do tipo sempre que uma expressão de acesso de membro for usada em um tipo com uma representação de palavra-chave (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`). | **C#:** <br>`var local = Int32.MaxValue;` <br><br> **Visual Basic:** `Dim local = Int32.MaxValue`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs, *.vb]
@@ -209,7 +219,8 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 | verdadeiro | Prefira que objetos sejam inicializados usando inicializadores de objeto quando possível.| **C#:** <br>`var c = new Customer(){ Age = 21 };` <br><br> **Visual Basic:** `Dim c = New Customer() With { .Age = 21 }`
 | False | Prefira que objetos *não* sejam inicializados usando inicializadores de objeto. | **C#:** <br>`var c = new Customer();`<br>`c.Age = 21;` <br><br> **Visual Basic:** <br>`Dim c = new Customer() `<br>`c.Age = 21`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs, *.vb]
@@ -226,7 +237,8 @@ dotnet_style_object_initializer = true:suggestion
 | verdadeiro | Prefira que coleções sejam inicializadas usando inicializadores de coleção quando possível.| **C#:** <br>`var list = new List<int>{ 1, 2, 3 };` <br><br> **Visual Basic:** <br> `Dim list = new List(Of Integer) From { 1, 2, 3}`
 | False | Prefira que objetos *não* sejam inicializados usando inicializadores de coleção. | **C#:** <br>`var list = new List<int>();`<br>`list.Add(1);`<br>`list.Add(2);`<br>`list.Add(3);` <br><br> **Visual Basic:** <br>`Dim list = new List(Of Integer)`<br>`list.Add(1)`<br>`list.Add(2)`<br>`list.Add(3)`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs, *.vb]
@@ -243,7 +255,8 @@ dotnet_style_collection_initializer = true:suggestion
 | verdadeiro | Prefira nomes de tupla a propriedades ItemX.| **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.name;` <br><br> **Visual Basic:** <br> `Dim customer As (name As String, age As Integer) = GetCustomer()`<br>`Dim name = customer.name`
 | False | Prefira propriedades ItemX a nomes de tupla. | **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.Item1;` <br><br> **Visual Basic:** <br>`Dim customer As (name As String, age As Integer) = GetCustomer()`<br> `Dim name = customer.Item1`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs, *.vb]
@@ -260,7 +273,8 @@ dotnet_style_explicit_tuple_names = true:suggestion
 | verdadeiro | Prefira expressão de união nula a verificação do operador ternário.| **C#:** <br>`var v = x ?? y;` <br><br> **Visual Basic:** <br> `Dim v = If(x, y)`
 | False | Prefira verificação do operador ternário a expressão de união nula. | **C#:** <br>`var v = x != null ? x : y; // or`<br>`var v = x == null ? y : x;` <br><br> **Visual Basic:** <br>`Dim v = If(x Is Nothing, y, x) ' or`<br> `Dim v = If(x IsNot Nothing, x, y)`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs, *.vb]
@@ -277,7 +291,8 @@ dotnet_style_coalesce_expression = true:suggestion
 | verdadeiro | Prefira usar o operador condicional nulo sempre que possível.| **C#:** <br>`var v = o?.ToString();` <br><br> **Visual Basic:** <br> `Dim v = o?.ToString()`
 | False | Prefira usar verificação nula ternária quando possível. | **C#:** <br>`var v = o == null ? null : o.ToString(); // or`<br>`var v = o != null ? o.String() : null;` <br><br> **Visual Basic:** <br>`Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or`<br> `Dim v = If(o IsNot Nothing, o.ToString(), Nothing)`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp and VisualBasic code style settings:
 [*.cs, *.vb]
@@ -296,7 +311,8 @@ dotnet_style_null_propagation = true:suggestion
 | verdadeiro | Prefira que `var` seja usado para tipos de sistemas internos, como `int`.| **C#:** <br>`var x = 5;`
 | False | Prefira que `var` não seja usado para tipos de sistemas internos, como `int`. | **C#:** <br>`int x = 5;`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -313,7 +329,8 @@ csharp_style_var_for_built_in_types = true:suggestion
 | verdadeiro | Prefira `var` quando o tipo já tiver sido mencionado no lado direito de uma expressão de declaração.| **C#:** <br>`var obj = new C();`
 | False | Prefira não usar `var` quando o tipo já tiver sido mencionado no lado direito de uma expressão de declaração. | **C#:** <br>`C obj = new C();`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -330,7 +347,8 @@ csharp_style_var_when_type_is_apparent = true:suggestion
 | verdadeiro | Prefira `var` em todos os casos, exceto se substituído por outra regra de estilo de código.| **C#:** <br>`var f = this.Init();`
 | False | Prefira não usar var em todos os casos, exceto se substituído por outra regra de estilo de código.| **C#:** <br>`bool f = this.Init();`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -347,7 +365,8 @@ csharp_style_var_elsewhere = true:suggestion
 | verdadeiro | Prefira membros de expressão incorporada para métodos.| **C#:** <br>`public int GetAge() => this.Age;`
 | False | Não prefira membros de expressão incorporada para métodos.| **C#:** <br>`public int GetAge() { return this.Age; }`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -364,7 +383,8 @@ csharp_style_expression_bodied_methods = false:none
 | verdadeiro | Prefira membros de expressão incorporada para construtores.| **C#:** <br>`public Customer(int age) => Age = age;`
 | False | Não prefira membros de expressão incorporada para construtores.| **C#:** <br>`public Customer(int age) { Age = age; }`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -381,7 +401,8 @@ csharp_style_expression_bodied_constructors = false:none
 | verdadeiro | Prefira membros de expressão incorporada para operadores.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`=> new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);`
 | False | Não prefira membros de expressão incorporada para operadores.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`{ return new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary); }`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -398,7 +419,8 @@ csharp_style_expression_bodied_operators = false:none
 | verdadeiro | Prefira membros de expressão incorporada para propriedades.| **C#:** <br>`public int Age => _age;`
 | False | Não prefira membros de expressão incorporada para propriedades.| **C#:** <br>`public int Age { get { return _age; }}`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -415,7 +437,8 @@ csharp_style_expression_bodied_properties = false:none
 | verdadeiro | Prefira membros de expressão incorporada para indexadores.| **C#:** <br>`public T this[int i] => _value[i];`
 | False | Não prefira membros de expressão incorporada para indexadores.| **C#:** <br>`public T this[int i] { get { return _values[i]; } }`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -432,7 +455,8 @@ csharp_style_expression_bodied_indexers = false:none
 | verdadeiro | Prefira membros de expressão incorporada para acessadores.| **C#:** <br>`public int Age { get => _age; set => _age = value; }`
 | False | Não prefira membros de expressão incorporada para acessadores.| **C#:** <br>`public int Age { get { return _age; } set { _age = value; } }`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -450,7 +474,8 @@ csharp_style_expression_bodied_accessors = false:none
 | verdadeiro | Prefira a correspondência de padrões a expressões `is` com conversões de tipo.| **C#:** <br>`if (o is int i) {...}`
 | False | Prefira expressões `is` com conversões de tipo a correspondência de padrões.| **C#:** <br>`if (o is int) {var i = (int)o; ... }`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -467,7 +492,8 @@ csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 | verdadeiro | Prefira correspondência de padrões a expressões `as` com verificações nulas para determinar se algo é de um tipo específico.| **C#:** <br>`if (o is string s) {...}`
 | False | Prefira expressões `as` com verificações de null a correspondência de padrões para determinar se algo é de um tipo específico.| **C#:** <br>`var s = o as string; if (s != null) {...}`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -484,7 +510,8 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 | verdadeiro | Prefira que as variáveis `out` sejam declaradas embutidas quando possível. | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
 | False | Prefira que as variáveis `out` sejam declaradas explicitamente.| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -502,7 +529,8 @@ csharp_style_inlined_variable_declaration = true:suggestion
 | verdadeiro | Prefira usar expressões throw a usar instruções throw. | **C#:** <br>`this.s = ss ?? throw new ArgumentNullException(nameof(s));`
 | False | Prefira usar instruções throw a usar expressões throw.| **C#:** <br>`if (s==null) {throw new ArgumentNullException(nameof(s));} this.s = s;`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]
@@ -519,7 +547,8 @@ csharp_style_throw_expression = true:suggestion
 | verdadeiro | Prefira usar a operação de união condicional (`?.`) ao invocar um lambda a executar uma verificação nula. | **C#:** <br>`func?.Invoke(args);`
 | False | Prefira realizar uma verificação nula antes de invocar um lambda a usar o operador de união condicional (`?.`).| **C#:** <br>`if (func!=null) { func(args); }`
 
-#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
+#### Exemplo de arquivo editorconfig:
+<a id="example-editorconfig-file" class="xliff"></a>
 ```
 # CSharp code style settings:
 [*.cs]

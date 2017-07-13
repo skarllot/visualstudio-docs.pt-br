@@ -38,13 +38,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: dbb9937484cc5d63bc175fd38694fbba62c9bec7
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 00829d499ae9d5a52e94094eed15b1ae39894075
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="options-text-editor-all-languages"></a>Opções, Editor de Texto, Todos os Idiomas
+# Opções, Editor de Texto, Todos os Idiomas
+<a id="options-text-editor-all-languages" class="xliff"></a>
 Esta caixa de diálogo permite alterar o comportamento padrão do Editor de Código. Essas configurações também se aplicam a outros editores baseados no Editor de código, como o modo de exibição de Fonte do Designer de HTML. Para abrir essa caixa de diálogo, selecione **Opções** no menu **Ferramentas**. Dentro da pasta **Editor de Texto**, expanda a subpasta **Todos os Idiomas** e, em seguida, escolha **Geral**.  
   
 > [!CAUTION]
@@ -53,9 +55,10 @@ Esta caixa de diálogo permite alterar o comportamento padrão do Editor de Cód
  Uma marca de seleção esmaecida é exibida quando uma opção tiver sido selecionada nas páginas de opções Geral para algumas linguagens de programação, mas não para outras.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="statement-completion"></a>Preenchimento de declaração  
+## Preenchimento de declaração
+<a id="statement-completion" class="xliff"></a>  
  Membros automático de lista  
  Quando selecionadas, listas pop-up de membros, propriedades, valores ou métodos disponíveis são exibidas pelo IntelliSense conforme você digita no editor. Escolha qualquer item da lista pop-up para inseri-lo no código. Selecionar essa opção habilita a opção **Ocultar membros avançados**.  
   
@@ -65,7 +68,8 @@ Esta caixa de diálogo permite alterar o comportamento padrão do Editor de Cód
  Informações de parâmetro  
  Quando selecionada, a sintaxe completa para a declaração ou procedimento atual é exibida sob o ponto de inserção no editor, com todos os seus parâmetros disponíveis. O parâmetro que a seguir você pode atribuir é exibido em negrito.  
   
-## <a name="settings"></a>Configurações  
+## Configurações
+<a id="settings" class="xliff"></a>  
  Ativar o espaço virtual  
  Quando esta opção está selecionada e a caixa de seleção **Quebra automática de linha** está desmarcada, você pode clicar em qualquer lugar além do final de uma linha no Editor de Códigos e digitar. Esse recurso pode ser usado para posicionar comentários em um ponto consistente ao lado do seu código.  
   
@@ -97,7 +101,8 @@ Esta caixa de diálogo permite alterar o comportamento padrão do Editor de Cód
 > [!TIP]
 >  Para exibir indicadores para espaços, tabulações e fins de linha, e assim distinguir linhas recuadas de linhas totalmente em branco, selecione **Avançado** no menu **Editar** e escolha **Exibir Espaço em Branco**.  
   
-## <a name="display"></a>Monitor  
+## Monitor
+<a id="display" class="xliff"></a>  
  Os números de linha  
  Quando selecionada, um número de linha aparece ao lado de cada linha de código.  
   
@@ -110,7 +115,8 @@ Esta caixa de diálogo permite alterar o comportamento padrão do Editor de Cód
  Barra de navegação  
  Quando selecionada, exibe a **Barra de navegação** na parte superior do editor de código. Suas listas suspensas **Objetos** e **Membros** permitem escolher um objeto específico no código, selecionar entre seus membros e navegar para a declaração do membro selecionado no Editor de Códigos.  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Opções, Editor de Texto, Todas as Linguagens, Guias](../../ide/reference/options-text-editor-all-languages-tabs.md)   
  [Caixa de diálogo Geral, Ambiente, Opções](../../ide/reference/general-environment-options-dialog-box.md)   
  [Usando o IntelliSense](../../ide/using-intellisense.md)

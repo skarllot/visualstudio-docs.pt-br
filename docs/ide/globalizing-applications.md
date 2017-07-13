@@ -31,21 +31,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 0d8671ed0cad330a83482a84198ef397a3c4ad08
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e77d5d86e16dd360759c8e289ad545efaa6a4870
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="globalizing-applications"></a>Globalizando aplicativos
+# Globalizando aplicativos
+<a id="globalizing-applications" class="xliff"></a>
 Globalização é o processo de projetar e desenvolver um produto de software que funciona para várias culturas. Esta seção se aplica a páginas do Windows Forms e do Web Forms.  
   
-## <a name="in-this-section"></a>Nesta seção  
+## Nesta seção
+<a id="in-this-section" class="xliff"></a>  
  [Classes específicas de cultura para Windows Forms e Web Forms globais](../ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md)  
  Aborda classes que formatam datas, hora, números, moeda e outras informações de acordo com a configuração de cultura.  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Globalizando o Windows Forms](http://msdn.microsoft.com/Library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5)  
+## Seções relacionadas
+<a id="related-sections" class="xliff"></a>  
+ [Globalizando o Windows Forms](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
  Fornece links para páginas de Ajuda sobre a globalização do Windows Forms.  
   
  [Globalização e localização](http://msdn.microsoft.com/Library/8ef3838e-9d05-4236-9dd0-ceecff9df80d)  

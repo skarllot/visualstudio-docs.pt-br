@@ -35,19 +35,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ec80228e0b11279368c00fd1d66062f40e1cfa47
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 782d860d94cd9e7d4967076a5ea0d3fe86b29400
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Como gerenciar configurações de build com as configurações do Visual Basic Developer aplicadas
+# Como gerenciar configurações de build com as configurações do Visual Basic Developer aplicadas
+<a id="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied" class="xliff"></a>
 Por padrão, todas as opções avançadas de configuração de build ficam ocultas com as configurações do [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Developer aplicadas. Este tópico explica como habilitar essas configurações manualmente.  
   
-## <a name="enabling-advanced-build-configurations"></a>Habilitando configurações de build avançadas  
- Por padrão, as configurações do [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Developer ocultam a opção de abrir a caixa de diálogo do **Configuration Manager** e as listas **Configuração** e **Plataforma** no [Designer de Projeto](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+## Habilitando configurações de build avançadas
+<a id="enabling-advanced-build-configurations" class="xliff"></a>  
+ Por padrão, as configurações do [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Developer ocultam a opção de abrir a caixa de diálogo do **Configuration Manager** e as listas **Configuração** e **Plataforma** no [Designer de Projeto](..//ide/reference/application-page-project-designer-visual-basic.md).  
   
-#### <a name="to-enable-advanced-build-configurations"></a>Para habilitar configurações de build avançadas  
+#### Para habilitar configurações de build avançadas
+<a id="to-enable-advanced-build-configurations" class="xliff"></a>  
   
 1.  No menu **Ferramentas**, clique em **Opções**.  
   
@@ -62,6 +66,7 @@ Por padrão, todas as opções avançadas de configuração de build ficam ocult
   
      No menu **Build**, **Configuration Manager** agora está disponível e as listas **Configuração** e **Plataforma** estão visíveis no Designer de Projeto.  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Noções sobre configurações de build](../ide/understanding-build-configurations.md)   
  [Compilando e criando](../ide/compiling-and-building-in-visual-studio.md)
