@@ -35,13 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 0baf22ca488f4500fb3f4e845a0957b6225dd327
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
-# <a name="visual-studio-command-aliases"></a>Aliases de comando do Visual Studio
+# Aliases de comando do Visual Studio
+<a id="visual-studio-command-aliases" class="xliff"></a>
 Aliases fornecem um meio de inserir um comando na caixa **Localizar/Comando** ou na janela **Comando** reduzindo o texto necessário para executar o comando. Por exemplo, em vez de inserir `>File.OpenFile` para exibir a caixa de diálogo **Abrir Arquivo**, você pode usar o alias predefinido `>of`.  
   
  Digite `alias` na janela **Comando** para exibir uma lista de aliases atuais e suas definições. Digite `>cls` para limpar o conteúdo da janela **Comando**. Se você quiser ver um alias para um comando específico, digite `alias <command name>`.  
@@ -142,7 +144,8 @@ Aliases fornecem um meio de inserir um comando na caixa **Localizar/Comando** ou
 |Listar Processos|&#124;|Debug.ListProcesses|  
 |[Comando List Threads](../../ide/reference/list-threads-command.md)|~ ~*k ~\*kb|Debug.ListThreads Debug.ListTheads /AllThreads|  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Comandos do Visual Studio](../../ide/reference/visual-studio-commands.md)   
  [Janela Comando](../../ide/reference/command-window.md)   
  [Caixa Localizar/Comando](../../ide/find-command-box.md)
