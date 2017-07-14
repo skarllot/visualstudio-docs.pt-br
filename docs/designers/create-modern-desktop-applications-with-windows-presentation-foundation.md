@@ -28,12 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: b88bfe69145fadf0d4c6eac53ea6e4f206f9226b
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/14/2017
 
 ---
-# <a name="create-modern-desktop-applications-with-windows-presentation-foundation"></a>Criar aplicativos modernos da área de trabalho com o Windows Presentation Foundation
+# Criar aplicativos modernos da área de trabalho com o Windows Presentation Foundation
+<a id="create-modern-desktop-applications-with-windows-presentation-foundation" class="xliff"></a>
 O WPF (Windows Presentation Foundation) no Visual Studio 2015 fornece aos desenvolvedores um modelo de programação unificado para a criação de modernos aplicativos de área de trabalho de linha de negócios no Windows.  
   
  [Introdução ao WPF](../designers/getting-started-with-wpf.md)  
@@ -45,8 +48,3 @@ O WPF (Windows Presentation Foundation) no Visual Studio 2015 fornece aos desenv
  [Introdução ao WPF](https://msdn.microsoft.com/en-us/library/aa970268\(v=vs.100\).aspx)  
   
  [WPF no .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
