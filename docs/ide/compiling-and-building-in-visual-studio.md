@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
-ms.openlocfilehash: f4ae98f4e9b7dbf4b1066120316ee5a167ae78f2
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e372d9d6d935ff40054b8ba3f7684bf5ea9c458
+ms.openlocfilehash: aa3d791afc574200157104145617ff6ad6139b68
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="compiling-and-building-in-visual-studio"></a>Compilando e criando no Visual Studio
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/04/2017
 |Usando o Build do Team Foundation|–   É possível automatizar seu processo de build. Por exemplo, será possível criar um ou mais projetos à noite ou sempre que o check-in do código for feito. Também é possível criar projetos em servidores de build compartilhados em vez de no seu computador de desenvolvimento.<br />– É possível especificar rapidamente o código que você deseja compilar, os testes que você deseja executar e outras opções comuns.<br />– É possível modificar o fluxo de trabalho do build e, conforme necessário, criar atividades de build para realizar tarefas profundamente personalizadas.|[Compilar o aplicativo](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)|  
   
 ## <a name="building-from-the-ide"></a>Compilando no IDE  
- Ao criar um projeto, as configurações de build padrão são definidas para ele e uma configuração de build da solução é atribuída a ele para fornecer contexto para compilações. As configurações da solução definem a maneira como os projetos na solução são criados e implantados. As configurações do projeto são um conjunto de propriedades do projeto exclusivas para um tipo de plataforma e de build (por exemplo, versão Win32). É possível editar essas configurações padrão e é possível criar suas próprias configurações. Para obter mais informações, consulte [Introduction to the Project Designer (Introdução ao Designer de Projeto)](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7) e [NIB Como modificar as propriedades do projeto e as definições de configuração](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67).  
+ Ao criar um projeto, as configurações de build padrão são definidas para ele e uma configuração de build da solução é atribuída a ele para fornecer contexto para compilações. As configurações da solução definem a maneira como os projetos na solução são criados e implantados. As configurações do projeto são um conjunto de propriedades do projeto exclusivas para um tipo de plataforma e de build (por exemplo, versão Win32). É possível editar essas configurações padrão e é possível criar suas próprias configurações. Para obter mais informações, consulte [Gerenciando propriedades de solução e de projeto](managing-project-and-solution-properties.md).  
   
  Dentro do IDE, é possível realizar as seguintes tarefas adicionais:  
   

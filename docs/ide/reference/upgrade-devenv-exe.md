@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7724efc9956807f22578f53fabcf4d1bcbbc1ee1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 1e8f81e61121fd6779cc0f0ebdbd166bf0c27c6f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="upgrade-devenvexe"></a>/Upgrade (devenv.exe)
@@ -58,7 +59,7 @@ devenv SolutionFile | ProjectFile /upgrade
   
  É necessário fazer o check-out de projetos ou soluções controlados pelo código-fonte para que eles possam ser atualizados.  
   
- Usar a opção `/upgrade` não inicia [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Os resultados da atualização podem ser vistos no Relatório de Atualização da linguagem de desenvolvimento da solução ou projeto. Nenhuma informação de erro ou de uso é retornada. Para obter mais informações sobre como atualizar projetos em [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], consulte [Como solucionar problemas de atualizações de projeto do Visual Studio malsucedidas](../../porting/how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades.md).  
+ Usar a opção `/upgrade` não inicia [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Os resultados da atualização podem ser vistos no Relatório de Atualização da linguagem de desenvolvimento da solução ou projeto. Nenhuma informação de erro ou de uso é retornada. Para obter mais informações sobre como atualizar projetos no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], consulte [Portar, migrar e atualizar projetos do Visual Studio](../../porting/port-migrate-and-upgrade-visual-studio-projects.md).  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo atualiza um arquivo de solução chamado "MyProject.sln" na pasta padrão para soluções [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
@@ -68,5 +69,4 @@ devenv "MyProject.sln" /upgrade
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Como solucionar problemas de atualizações de projeto do Visual Studio malsucedidas](../../porting/how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades.md)   
  [Opções de linha de comando devenv](../../ide/reference/devenv-command-line-switches.md)

@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 4166ed8bfa0234e1cc453bd045974b412f87ae42
-ms.openlocfilehash: a1a310aa6bf0e3d0042f35f5c49612f33b89fb61
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 6bf0181e49d8390eed8f750d16b706780d71f08a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="synchronize-your-settings-in-visual-studio"></a>Sincronizar as configurações no Visual Studio
@@ -41,7 +42,7 @@ Ao entrar no Visual Studio em vários computadores usando a mesma conta de perso
 ## <a name="synchronized-settings"></a>Configurações sincronizadas  
  Por padrão, as seguintes configurações são definidas.  
 
--   As configurações de desenvolvimento (você precisa selecionar um conjunto de configurações durante a primeira execução do Visual Studio, mas você pode alterar a seleção a qualquer momento. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).)  
+-   As configurações de desenvolvimento (você precisa selecionar um conjunto de configurações durante a primeira execução do Visual Studio, mas você pode alterar a seleção a qualquer momento. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md)).  
 
 -   As seguintes opções nas páginas **Ferramentas &#124; Opções**:  
 

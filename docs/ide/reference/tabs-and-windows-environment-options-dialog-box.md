@@ -29,14 +29,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: da6f222d59d33c156e2f69f56466070967032261
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: fccca9619f887ecd61a32bd9b3a2a48b1608a18e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="tabs-and-windows-environment-options-dialog-box"></a>Caixa de diálogo janelas e guias, ambiente, opções
-Use esta página para definir opções de como janelas com guias se comportam no painel do editor e como as janelas de ferramentas se comportam. Para obter mais informações, consulte [Como organizar e encaixar janelas](../../misc/how-to-arrange-and-dock-windows.md)  
+Use esta página para definir opções de como janelas com guias se comportam no painel do editor e como as janelas de ferramentas se comportam. Para obter mais informações, consulte [Personalização de layouts de janela no Visual Studio](../../ide/customizing-window-layouts-in-visual-studio.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo Opções do Ambiente](../../ide/reference/environment-options-dialog-box.md)

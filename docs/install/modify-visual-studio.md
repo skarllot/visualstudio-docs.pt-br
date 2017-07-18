@@ -33,14 +33,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: dc52353b476d38b7c069aa4acd95ceaa260717c4
-ms.lasthandoff: 04/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f8d907587deb8e14e777d9c69f07da6d819143e5
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>Modificar o Visual Studio 2017 adicionando ou removendo cargas de trabalho e componentes
-Não apenas facilitamos a personalização do Visual Studio para que ele corresponda às etapas que você deseja realizar, mas também facilitamos a personalização do Visual Studio. Não é mais necessário procurar no Painel de Controle para fazer isso; basta iniciar o novo Instalador do Visual Studio e fazer as alterações desejadas.  
+Não apenas tornamos mais fácil para você personalizar o Visual Studio para corresponder às etapas que deseja realizar, mas também facilitamos a customização do Visual Studio. Não é mais necessário procurar no Painel de Controle para fazer isso; basta iniciar o novo Instalador do Visual Studio e fazer as alterações desejadas.  
 
 Veja como.  
 
@@ -70,7 +71,7 @@ Veja como.
 
 ## <a name="modify-individual-components"></a>Modificar componentes individuais
 
-Se você não quiser usar o recurso Cargas de Trabalho útil para personalizar a instalação do Visual Studio, escolha a opção **Componentes Individuais** do Instalador do Visual Studio, selecione o desejado e siga os prompts.  
+Se você não quiser usar o recurso útil Cargas de Trabalho para personalizar a instalação do Visual Studio, escolha a opção **Componentes Individuais** do Instalador do Visual Studio, selecione o que deseja e siga os prompts.  
 
 ## <a name="get-support"></a>Obter suporte
 Às vezes, as coisas podem dar errado. Caso a instalação do Visual Studio falhe, consulte o artigo do KB [Solucionando falhas de instalação e atualização do Visual Studio 2017](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) para obter dicas de solução de problemas.

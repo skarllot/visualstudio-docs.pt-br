@@ -27,16 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3f4740d442a7ef24803d6360cdcc480d9d6fca84
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5b67a4c254e2410302997dee5ec36a2243c6ed11
+ms.openlocfilehash: 29db26d6c885b297ff3b8c39776c9fe59ca3ea05
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/10/2017
 
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>Adicionando referências usando o NuGet versus um SDK de Extensão
 É possível fornecer um pacote de consumo em projetos do Visual Studio usando a extensão do NuGet para Visual Studio ou um SDK (Software Development Kit). Ao descrever as similaridades e diferenças entre os dois mecanismos, este tópico pode ajudá-lo a escolher o melhor para sua tarefa.  
   
--   O NuGet é um sistema de gerenciamento de pacotes de software livre que simplifica o processo de incorporação de bibliotecas em uma solução de projeto. Para obter mais informações, consulte [NuGet Overview (Visão geral do NuGet)](http://go.microsoft.com/fwlink/?LinkId=254877).  
+-   O NuGet é um sistema de gerenciamento de pacotes de software livre que simplifica o processo de incorporação de bibliotecas em uma solução de projeto. Para obter mais informações, consulte a [documentação do NuGet](http://docs.microsoft.com/nuget).  
   
 -   Um SDK é uma coleção de arquivos que o Visual Studio trata como um único item de referência. A caixa de diálogo **Gerenciador de Referências** lista todos os SDKs relevantes para o projeto que está aberto quando você exibe essa caixa de diálogo. Quando você adiciona um SDK a um projeto, é possível acessar todo o conteúdo desse SDK por meio do IntelliSense, da **Caixa de Ferramentas**, dos designers, do **Pesquisador de Objetos**, do MSBuild, da implantação, da depuração e do empacotamento. Para obter mais informações sobre SDKs, consulte [Creating a Software Development Kit (Criando um Software Development Kit)](../extensibility/creating-a-software-development-kit.md).  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 02/22/2017
 |Os arquivos e links são automaticamente adicionados à caixa de diálogo **Gerenciador de Referências** (links de ajuda e assim por diante, preenchimento automático)|S|A caixa de diálogo **Gerenciador de Referências** enumera os SDKs automaticamente, juntamente com links de ajuda e a lista de dependências do SDK.|N|O NuGet fornece sua própria caixa de diálogo **Gerenciar Pacotes do NuGet**.|  
 |O mecanismo dá suporte a várias arquiteturas.|S|Os SDKs podem distribuir várias configurações. O MSBuild consome os arquivos apropriados para cada configuração de projeto.|N||  
 |O mecanismo dá suporte a várias configurações.|S|Os SDKs podem distribuir várias configurações. Dependendo da arquitetura de projeto, o MSBuild consome os arquivos apropriados para cada arquitetura de projeto.|N||  
-|O mecanismo pode especificar "não copiar."|S|Dependendo se os arquivos são soltos na pasta \redist ou \designtime, é possível controlar quais arquivos devem ser copiados no pacote do aplicativo de consumo.|N|Você declara quais arquivos devem ser copiados no manifesto do pacote.|  
+|O mecanismo pode especificar para "não copiar".|S|Dependendo se os arquivos são soltos na pasta \redist ou \designtime, é possível controlar quais arquivos devem ser copiados no pacote do aplicativo de consumo.|N|Você declara quais arquivos devem ser copiados no manifesto do pacote.|  
 |O conteúdo é exibido nos arquivos localizados.|S|Documentos XML localizados em SDKs são incluídos automaticamente para obter uma melhor experiência do tempo de design.|N||  
 |O MSBuild dá suporte ao consumo de várias versões de um SDK simultaneamente.|S|O SDK dá suporte ao consumo de várias versões simultaneamente.|N|Isso não está referenciando. Não é possível ter mais de uma versão de arquivos NuGet em seu projeto de cada vez.|  
 |O mecanismo dá suporte à especificação de estruturas de destino, versões do Visual Studio e tipos de projeto aplicáveis.|S|A caixa de diálogo **Gerenciador de Referências** e a **Caixa de Ferramentas** mostram apenas os SDKs aplicáveis a um projeto para que os usuários possam escolher mais facilmente os SDKs apropriados.|Y (parcial)|O Pivot é a estrutura de destino. Não há nenhuma filtragem na interface do usuário. No momento da instalação, ela pode retornar um erro.|  

@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2156da8a88465af333a74cfac99cd587b601fe75
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3d5a655a82180b7ffc82cf279b28750f55f5d4c8
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="shortcut-keys-help-viewer"></a>Teclas de atalho (Visualizador da Ajuda)
@@ -121,7 +122,7 @@ ms.lasthandoff: 02/22/2017
 |Alt + D|Altere a origem de instalação para o disco.|  
 |Alt + O|Altere a origem de instalação para online.|  
 |Tabulação|Altere o foco para a caixa de texto **Caminho do repositório local**.|  
-|Tabulação|Altere o foco para **Mover…** .|  
+|Tabulação|Altere o foco para o botão **Mover…**.|  
 |Alt + V|Abra a caixa de diálogo **Mover Conteúdo**.|  
 |Ctrl + Alt + F|Altere o foco para a caixa de texto **Filtrar documentação**.|  
 |Tabulação|Altere o foco para a lista de documentação.|  

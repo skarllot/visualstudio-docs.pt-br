@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 39319385995b4d282336adc295bf8b469094b0af
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 555a0f9b39d28166c0f414b1bcbf81c2a137d0ff
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="visual-c-intellisense"></a>Visual C++ IntelliSense
@@ -77,7 +78,7 @@ No Visual Studio 2015, o IntelliSense está disponível para arquivos de código
 ## <a name="cross-platform-intellisense"></a>IntelliSense de plataforma cruzada  
  Em um projeto de código compartilhado, alguns recursos do IntelliSense, como linhas onduladas, estão disponíveis, mesmo quando você está trabalhando em um contexto Android. Se você escrever algum código que resultaria em um erro em um projeto inativo, o IntelliSense ainda mostrará linhas onduladas, mas elas estarão em uma cor diferente das linhas onduladas para erros no contexto atual.  
   
- Há um aplicativo OpenGLES configurado para compilar para Android e iOS. A ilustração mostra o código compartilhado que está sendo editado. Na primeira imagem, Android é o projeto ativo:  
+ Há um aplicativo OpenGLES configurado para build no Android e no iOS. A ilustração mostra o código compartilhado que está sendo editado. Na primeira imagem, Android é o projeto ativo:  
   
  ![O projeto Android é o projeto ativo.](../ide/media/intellisensecppcrossplatform.png "IntelliSenseCppCrossPlatform")  
   
@@ -85,7 +86,7 @@ No Visual Studio 2015, o IntelliSense está disponível para arquivos de código
   
 -   A ramificação #else na linha 8 é esmaecida para indicar a região inativa, pois __ANDROID\_\_ está definido para o projeto Android.  
   
--   A variável de saudação na linha 11 é inicializada com o identificador HELLO, que tem uma linha ondulada roxa. Isso ocorre porque nenhum identificador HELLO é definido no projeto iOS atualmente inativo. Embora a linha 11 fosse compilada no projeto Android, ela não seria no iOS. Uma vez que esse é um código compartilhado, que é algo que você deve alterar, embora ele compile na configuração ativa no momento.  
+-   A variável de saudação na linha 11 é inicializada com o identificador HELLO, que tem uma linha ondulada roxa. Isso ocorre porque nenhum identificador HELLO é definido no projeto iOS atualmente inativo. Embora a linha de projeto 11 fosse compilada no Android, ela não seria no iOS. Uma vez que esse é um código compartilhado, que é algo que você deve alterar, embora ele compile na configuração ativa no momento.  
   
 -   A Linha 12 tem linha ondulada vermelha no identificador BYE; esse identificador não está definido no projeto ativo atualmente selecionado.  
   

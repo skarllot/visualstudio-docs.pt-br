@@ -34,9 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d95f62f61261c9c5c9af36e3bb2ee6fe66d63d2a
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: 4be8a1f36d81e2cb36d9daab9817f04d18ecb94a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Página de Aplicativo, Designer de Projeto (Visual Basic)
@@ -50,7 +52,7 @@ Use a página **Aplicativo** do Designer de Projeto para especificar as propried
  As opções a seguir permitem definir as configurações gerais para um aplicativo.  
   
  **Nome do assembly**  
- Especifica o nome do arquivo de saída que conterá o manifesto do assembly. Se você alterar essa propriedade, a propriedade **Nome de Saída** também será alterada. Também é possível fazer essa alteração em um prompt de comando usando [/out (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out). Para obter informações sobre como acessar essa propriedade de maneira programática, consulte <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.  
+ Especifica o nome do arquivo de saída que conterá o manifesto do assembly. Se você alterar essa propriedade, a propriedade **Nome de Saída** também será alterada. Também é possível fazer essa alteração em um prompt de comando usando [/out (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out). Para obter informações sobre como acessar esta propriedade de forma programática, consulte <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.  
   
  **Namespace raiz**  
  Especifica o namespace base para todos os arquivos no projeto. Por exemplo, se você configurasse o **Namespace raiz** para `Project1` e tivesse um `Class1` fora de qualquer namespace em seu código, seu namespace seria `Project1.Class1`. Se você tivesse um `Class2` em um namespace `Order` no código, seu namespace seria `Project1.Order.Class2`.  
@@ -64,7 +66,7 @@ Use a página **Aplicativo** do Designer de Projeto para especificar as propried
   
  Para obter mais informações sobre a propriedade de namespace raiz, consulte [/rootnamespace](/dotnet/visual-basic/reference/command-line-compiler/rootnamespace).  
   
- Para obter informações sobre como acessar essa propriedade de maneira programática, consulte <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.  
+ Para obter informações sobre como acessar esta propriedade de forma programática, consulte <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.  
   
  **Estrutura de destino (todas as configurações)**  
  Especifica a versão no .NET Framework que o aplicativo direciona. Essa opção pode ter valores diferentes dependendo de quais versões do .NET Framework estão instaladas em seu computador.  
@@ -81,15 +83,15 @@ Use a página **Aplicativo** do Designer de Projeto para especificar as propried
   
  Para um projeto de aplicativo Web, é necessário especificar **Biblioteca de Classes**.  
   
- Se você especificar a opção **Arquivo WinMD**, os tipos poderão ser projetados em uma linguagem de programação do Windows Runtime. Ao empacotar a saída do projeto como um arquivo WinMD, é possível codificar um aplicativo em várias linguagens e ter interoperação de código como se você tivesse escrito tudo na mesma linguagem. É possível usar a opção **Arquivo WinMD** para soluções que direcionam as bibliotecas do Windows Runtime, incluindo os aplicativos [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)]. Para obter mais informações, consulte [Criando componentes do Windows Runtime em C# e Visual Basic](http://go.microsoft.com/fwlink/?LinkId=231895).  
+ Se você especificar a opção **Arquivo WinMD**, os tipos poderão ser projetados em uma linguagem de programação do Windows Runtime. Ao empacotar a saída do projeto como um arquivo WinMD, é possível codificar um aplicativo em várias linguagens e ter interoperação de código como se você tivesse escrito tudo na mesma linguagem. É possível usar a opção **Arquivo WinMD** para soluções que direcionam as bibliotecas do Windows Runtime, incluindo os aplicativos [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)]. Para obter mais informações, consulte [Criando componentes do Windows Runtime em C# e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).  
   
 > [!NOTE]
->  O Windows Runtime pode projetar tipos para que eles sejam exibidos como objetos nativos em qualquer que os use. Por exemplo, aplicativos JavaScript que interagem com o Windows Runtime usam-no como um conjunto de objetos JavaScript e aplicativos C# usam a biblioteca como uma coleção de objetos .NET. Ao empacotar a saída do projeto como um arquivo WinMD, é possível usar a mesma tecnologia que o Windows Runtime usa.  
+>  O Windows Runtime pode projetar tipos para que eles sejam exibidos como objetos nativos em qualquer que os use. Por exemplo, aplicativos JavaScript que interagem com o Windows Runtime usam-no como um conjunto de objetos JavaScript e aplicativos C# usam a biblioteca como uma coleção de objetos .NET. Ao empacotar a saída do projeto como um arquivo WinMD, você pode aproveitar a mesma tecnologia que o Windows Runtime usa.  
   
- Para obter mais informações sobre a propriedade **Tipo de aplicativo**, consulte [/target (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target). Para obter informações sobre como acessar essa propriedade de maneira programática, consulte <xref:VSLangProj.ProjectProperties.OutputType%2A>.  
+ Para obter mais informações sobre a propriedade **Tipo de aplicativo**, consulte [/target (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target). Para obter informações sobre como acessar essa propriedade de forma programática, consulte <xref:VSLangProj.ProjectProperties.OutputType%2A>.  
   
  **Ícone**  
- Define o arquivo .ico que você deseja usar como o ícone do programa. Selecione **\<Procurar.. >** para procurar um gráfico existente. Consulte [-win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) (ou [-win32icon (opções do compilador C#)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)) para obter mais informações. Para acessar essa propriedade de maneira programática, consulte <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.  
+ Define o arquivo .ico que você deseja usar como o ícone do programa. Selecione **\<Procurar.. >** para procurar um gráfico existente. Consulte [-win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) (ou [-win32icon (opções do compilador C#)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)) para obter mais informações. Para acessar essa propriedade de forma programática, consulte <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.  
   
  **Formulário de inicialização/objeto de inicialização/URI de inicialização**  
  Especifica o formulário de inicialização ou ponto de entrada do aplicativo.  
@@ -100,7 +102,7 @@ Use a página **Aplicativo** do Designer de Projeto para especificar as propried
   
  Se **Habilitar estrutura de aplicativo** estiver desmarcado, essa lista se tornará **Objeto de inicialização** e mostrará os formulários e classes ou módulos com um `Sub Main`.  
   
- **Objeto de inicialização** define o ponto de entrada a ser chamado quando o aplicativo é carregado. Geralmente, isso é definido como o principal formulário em seu aplicativo ou como o procedimento `Sub Main` que deve ser executado quando o aplicativo é iniciado. Como as bibliotecas de classe não têm um ponto de entrada, sua única opção para essa propriedade é **(Nenhum)**. Para obter mais informações, consulte [/main](/dotnet/visual-basic/reference/command-line-compiler/main). Para acessar essa propriedade de maneira programática, consulte <xref:VSLangProj.ProjectProperties.StartupObject%2A>.  
+ **Objeto de inicialização** define o ponto de entrada a ser chamado quando o aplicativo é carregado. Geralmente, isso é definido como o principal formulário em seu aplicativo ou como o procedimento `Sub Main` que deve ser executado quando o aplicativo é iniciado. Como as bibliotecas de classe não têm um ponto de entrada, sua única opção para essa propriedade é **(Nenhum)**. Para obter mais informações, consulte [/main](/dotnet/visual-basic/reference/command-line-compiler/main). Para acessar essa propriedade de forma programática, consulte <xref:VSLangProj.ProjectProperties.StartupObject%2A>.  
   
  **Informações do assembly**  
  Clique neste botão para exibir a [Caixa de diálogo de Informações do Assembly](../../ide/reference/assembly-information-dialog-box.md).  
@@ -176,8 +178,3 @@ Use a página **Aplicativo** do Designer de Projeto para especificar as propried
 ## <a name="see-also"></a>Consulte também  
 [Gerenciando propriedades do aplicativo](../../ide/application-properties.md)
  [Escrevendo código em soluções do Office](/office-dev/office-dev/writing-code-in-office-solutions)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

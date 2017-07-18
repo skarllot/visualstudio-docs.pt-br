@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b49aa6923393ab5724b43809ceaa1bdd8ffda309
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e4b64d7c82e28c5ba58157ea729465eef84f52a4
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Como visualizar e editar códigos usando a janela Inspecionar definição (Alt+F12)
@@ -51,7 +52,7 @@ Você pode usar o comando **Inspecionar Definição** para exibir e editar códi
   
      ![Janela de Inspeção](../ide/media/peekwindow.png "PeekWindow")  
   
-     A janela de definição aparece abaixo da linha `printer.Print(“Hello World!”)` no arquivo original. A janela não oculta nenhum dos códigos em seu arquivo original. As linhas após a chamada `printer.Print(“Hello World!”)` aparecem abaixo da janela de definição.  
+     A janela de definição aparece abaixo da linha `printer.Print("Hello World!")` no arquivo original. A janela não oculta nenhum dos códigos em seu arquivo original. As linhas após a chamada `printer.Print("Hello World!")` aparecem abaixo da janela de definição.  
   
 2.  Você pode mover o cursor para locais diferentes na janela de definição de código. Você ainda se mover pela janela de código original acima ou abaixo da janela de definição.  
   

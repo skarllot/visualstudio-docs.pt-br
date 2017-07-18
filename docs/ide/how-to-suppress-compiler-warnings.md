@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 4f237be3ffdfe2bca52e885822a9fbfbbf97ba6a
-ms.openlocfilehash: 741507a6ab409eaec0b5cf000a4b0e7005495bf7
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0c4c9c5a885b6f71b8531d4b04baecaec7f45949
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Como suprimir avisos do compilador
@@ -75,7 +77,7 @@ Você pode melhorar a organização de um log de build especificando um ou mais 
   
      O arquivo de projeto é aberto no editor de códigos.  
   
-4.  Localize o elemento `<NoWarn></NoWarn>` na configuração de build com o qual você está compilando.  
+4.  Localize o elemento `<NoWarn></NoWarn>` na configuração de build com a qual você está compilando.  
   
      A exemplo a seguir mostra o elemento `<NoWarn></NoWarn>` em negrito para a configuração de build de depuração em uma plataforma x86:  
   
@@ -125,9 +127,4 @@ Você pode melhorar a organização de um log de build especificando um ou mais 
  [Passo a passo: criando um aplicativo](../ide/walkthrough-building-an-application.md)   
  [How to: View, Save, and Configure Build Log Files](../ide/how-to-view-save-and-configure-build-log-files.md)  (Como exibir, salvar e configurar arquivos de log de build)  
  [Compilando e criando](../ide/compiling-and-building-in-visual-studio.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

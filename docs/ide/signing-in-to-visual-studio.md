@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 2f67cbb9e3a2895dc6c35e68dbd6b262862c6514
-ms.openlocfilehash: 5a42f721c30dba9c14f7871a0d771f07054e2550
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8b1f56944190c60795d5bbd726388309caca7070
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="sign-in-to-visual-studio"></a>Entrar no Visual Studio
@@ -41,13 +43,13 @@ Será possível personalizar e otimizar sua experiência de desenvolvimento do V
 
 -   **Concede acesso a uma ampla gama de benefícios** do programa Visual Studio Dev Essentials, incluindo software gratuito, treinamento, suporte e muito mais. Para obter mais informações, consulte [Visual Studio Dev Essentials](http://aka.ms/vsdevhelp).  
 
--   **Sincroniza as configurações do Visual Studio** – configurações que você personaliza, como associações de chave e tema de cor, se aplicam imediatamente quando você entra no Visual Studio em qualquer outro dispositivo. Consulte [Configurações sincronizadas no Visual Studio](../ide/synchronized-settings-in-visual-studio.md).  
+-   **Sincroniza as configurações do Visual Studio** – as configurações que você personaliza, como associações de teclas, layout da janela e tema de cor, são aplicadas imediatamente quando você entra no Visual Studio em qualquer dispositivo. Consulte [Configurações sincronizadas no Visual Studio](../ide/synchronized-settings-in-visual-studio.md).  
 
 -   **Desbloqueia permanentemente o Visual Studio Express** – você pode usar qualquer edição do Visual Studio Express por quanto tempo desejar, em vez de ficar limitado ao período de avaliação de 30 dias.  
 
 -   **Desbloqueia o Visual Studio Community Edition**, em vez de ficar limitado ao período de avaliação de 30 dias.  
 
--   **Estende o período de avaliação do Visual Studio** – você pode usar o Visual Studio Professional ou Visual Studio Enterprise por um período adicional de 90 dias, em vez ficar limitado ao período de avaliação de 30 dias.  
+-   **Estende o período de avaliação do Visual Studio** – você pode usar o Visual Studio Professional ou o Visual Studio Enterprise por um período adicional de 90 dias, em vez ficar limitado ao período de avaliação de 30 dias.  
 
 -   **Desbloqueia o Visual Studio se você usa uma conta associada a uma assinatura do MSDN ou VSO**. Veja [Como desbloquear o Visual Studio](../ide/how-to-unlock-visual-studio.md).  
 
@@ -76,9 +78,4 @@ Será possível personalizar e otimizar sua experiência de desenvolvimento do V
 4.  Altere as configurações que deseja.  
 
 5.  Quando terminar, escolha o botão **Salvar alterações**.
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4a1898967d44cea46b34a41bb21e280dbd4dfbf0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: dca11a81e650f0470c891cb79623f9cc088ea669
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="import-and-export-settings-command"></a>Comando Importar e Exportar Configurações
@@ -68,5 +69,5 @@ Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)   
+ [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)   
  [Comandos do Visual Studio](../../ide/reference/visual-studio-commands.md)

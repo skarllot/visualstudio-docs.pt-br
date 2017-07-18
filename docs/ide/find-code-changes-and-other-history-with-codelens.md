@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 54ab8522368130b023dea1609e5dc250b3e9e635
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: df30e760d4474d06058be38e236285247bddbe60
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>Localizar alterações de código e outro histórico com o CodeLens
@@ -49,7 +51,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
  Para escolher os indicadores que você deseja ver ou para ativar e desativar o CodeLens, vá para **Ferramentas**, **Opções**, **Editor de Texto**, **Todas as linguagens**, **CodeLens**.  
   
-##  <a name="a-namefindreferencesa-find-references-to-your-code"></a><a name="FindReferences"></a> Localize referências ao seu código  
+##  <a name="FindReferences"></a> Localize referências ao seu código  
  Itens necessários:  
   
 -   Visual Studio Enterprise ou Visual Studio Professional  
@@ -70,7 +72,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
  ![CodeLens &#45; Referências sobre o mapa de código](../ide/media/codelensmappedreferences.png "CodeLensMappedReferences")  
   
-##  <a name="a-namefindcodehistorya-find-your-codes-history-and-linked-items"></a><a name="FindCodeHistory"></a> Localize o histórico e os itens vinculados do seu código  
+##  <a name="FindCodeHistory"></a> Localize o histórico e os itens vinculados do seu código  
  Examine o histórico do seu código para descobrir o que aconteceu com o seu código. Ou examine as alterações antes que elas tenham sido mescladas em seu código para que você possa entender melhor como as alterações em outras ramificações podem afetar seu código.  
   
  Itens necessários:  
@@ -190,7 +192,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
  ![Opções de contato e um item](../ide/media/codelensitemcontactmenu.png "CodeLensItemContactMenu")  
   
-##  <a name="a-namefindrununittestsa-find-unit-tests-for-your-code"></a><a name="FindRunUnitTests"></a> Localizar testes de unidade para seu código  
+##  <a name="FindRunUnitTests"></a> Localizar testes de unidade para seu código  
  Saiba mais sobre testes de unidade que existem para seu código sem abrir o Gerenciador de Testes. Itens necessários:  
   
 -   Visual Studio Enterprise ou Visual Studio Professional  
@@ -213,15 +215,15 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
      ![CodeLens &#45; ir para a definição do teste de unidade](../ide/media/codelensunittestdefinition.png "CodeLensUnitTestDefinition")  
   
-5.  Revise os resultados do teste. Escolha o indicador de status do teste (![CodeLens &#45; ícone de falha do teste de unidade](../ide/media/codelenstestfailedicon.png "CodeLensTestFailedIcon") ou ![CodeLens &#45; ícone de aprovação do teste de unidade](../ide/media/codelenstestpassedicon.png "CodeLensTestPassedIcon")) ou pressione **Alt + 1**.  
+5.  Examinar os resultados do teste. Escolha o indicador de status do teste (![CodeLens &#45; ícone de falha do teste de unidade](../ide/media/codelenstestfailedicon.png "CodeLensTestFailedIcon") ou ![CodeLens &#45; ícone de aprovação do teste de unidade](../ide/media/codelenstestpassedicon.png "CodeLensTestPassedIcon")) ou pressione **Alt + 1**.  
   
      ![CodeLens &#45; ver o resultado do teste de unidade](../ide/media/codelensunittestresult.png "CodeLensUnitTestResult")  
   
 6.  Para ver quantas pessoas alteraram esse teste, quem alterou esse teste ou quantas alterações foram feitas nesse teste, [Localize o histórico e os itens vinculados do seu código](#FindCodeHistory).  
   
-##  <a name="a-nameqaa-q--a"></a><a name="QA"></a> Perguntas e respostas  
+##  <a name="QA"></a> Perguntas e respostas  
   
-###  <a name="a-namechangeorturnoffa-q-how-do-i-turn-codelens-off-or-on-or-choose-which-indicators-to-see"></a><a name="ChangeOrTurnOff"></a> P: como ativar ou desativar o CodeLens? Ou escolher quais indicadores ver?  
+###  <a name="ChangeOrTurnOff"></a> P: como ativar ou desativar o CodeLens? Ou escolher quais indicadores ver?  
  **R:** é possível ativar ou desativar indicadores, exceto o indicador de referências. Acesse **Ferramentas**, **Opções**, **Editor de Texto**, **Todos os Idiomas**, **CodeLens**.  
   
  Quando os indicadores são ativados, você pode abrir as opções do CodeLens nos indicadores.  
@@ -232,7 +234,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
  ![Ativar e desativar indicadores de nível de arquivo](../ide/media/codelensfilelevelonandoff.png "CodeLensFileLevelOnAndOff")  
   
-###  <a name="a-namenoindicatorsa-q-where-is-codelens"></a><a name="NoIndicators"></a> P: onde fica o CodeLens?  
+###  <a name="NoIndicators"></a> P: onde fica o CodeLens?  
  **R:** o CodeLens é exibido no código Visual C# .NET e Visual Basic .NET no nível de método, classe, indexador e propriedade. O CodeLens é exibido no nível de arquivo para todos os outros tipos de arquivos.  
   
 -   Certifique-se que o CodeLens está ativado. Acesse **Ferramentas**, **Opções**, **Editor de Texto**, **Todos os Idiomas**, **CodeLens**.  
@@ -246,7 +248,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
 ### <a name="q-why-dont-i-see-the-work-item-details-for-a-commit"></a>P: Por que eu não vejo os detalhes de item de trabalho para uma confirmação?  
  **R:** Isso pode acontecer porque o CodeLens não pode localizar os itens de trabalho no TFS. Verifique se você está conectado ao projeto de equipe que tenha os itens de trabalho e que você tenha permissões para ver os itens de trabalho. Isso pode acontecer se a descrição de confirmação tiver informações incorretas sobre as IDs de item de trabalho no TFS.  
   
-###  <a name="a-namenolynca-q-why-dont-i-see-the-lync-or-skype-indicators"></a><a name="NoLync"></a> P: por que não vejo os indicadores do Lync ou do Skype?  
+###  <a name="NoLync"></a> P: por que não vejo os indicadores do Lync ou do Skype?  
  **R:** eles não serão exibidos se você não tiver entrado no Lync ou no Skype for Business, não tiver um desses instalados ou não tiver uma configuração com suporte. Mas você ainda pode enviar um email:  
   
  ![CodeLens &#45; Contatar o proprietário do conjunto de alterações por email](../ide/media/codelenscodesendmailchangesetnolync1.png "CodeLensCodeSendMailChangesetNoLync1")  
@@ -294,13 +296,8 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
 -   **Teste**: [localize os testes de unidade do seu código](#FindRunUnitTests) para atualizar este indicador.  
   
-###  <a name="a-namelocalversiona-q-whats-local-version"></a><a name="LocalVersion"></a> P: o que é “versão local”?  
+###  <a name="LocalVersion"></a> P: o que é “versão local”?  
  **R:** a seta **Versão local** aponta para o conjunto de alterações mais recente em sua versão local deste arquivo. Quando o servidor tem um conjunto de alterações mais recente, elas são exibidas acima ou abaixo da seta **Versão local**, dependendo da ordem usada para classificar os conjuntos de alterações.  
   
 ### <a name="q-can-i-manage-how-codelens-processes-code-to-show-history-and-linked-items"></a>P: posso gerenciar a maneira como o CodeLens processa o código para mostrar o histórico e os itens vinculados?  
  **R:** sim, se seu código estiver no TFS, use o [comando CodeIndex](../ide/codeindex-command.md) com o [comando TFS Config](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62).
-
-
-<!--HONumber=Feb17_HO4-->
-
-

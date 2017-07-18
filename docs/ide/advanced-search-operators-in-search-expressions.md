@@ -1,7 +1,7 @@
 ---
 title: "Operadores de pesquisa avançada em expressões de pesquisa | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/02/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,27 +34,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: df486e68f101de97e73666c6d7080cb15e423f83
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 07ff2413503209d6ade252ac89dbfbe2589e7e85
+ms.openlocfilehash: 7ad9c78134c337445a3e9180ad27234b7bcb07cc
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/02/2017
 
 ---
 # <a name="advanced-search-operators-in-search-expressions"></a>Operadores de pesquisa avançada em expressões de pesquisa
-Usando operadores de pesquisa avançada, você pode refinar a pesquisa de conteúdo criando expressões de pesquisa mais complicadas com base em expressões mais simples. Como a tabela a seguir mostra, esses operadores restringem o contexto no qual uma consulta é executada.  
-  
+Ao usar operadores de pesquisa avançada no Help Viewer, você pode refinar a pesquisa de conteúdo criando expressões de pesquisa mais complicadas com base em expressões mais simples. Como a tabela a seguir mostra, esses operadores restringem o contexto no qual uma consulta é executada.  
+
 > [!WARNING]
 >  Você precisa inserir os operadores de pesquisa avançada com dois pontos finais e nenhum espaço intermediário antes dos dois pontos para o mecanismo de pesquisa os reconheça.  
-  
+
 |Para pesquisar|Use|Exemplo|Resultado|  
 |-------------------|---------|-------------|------------|  
 |Um termo no título do tópico|título:|title:binaryreader|Tópicos que contêm "binaryreader" em seus títulos.|  
 |Um termo em um exemplo de código|código:|code:readdouble|Tópicos que contêm "readdouble" em um exemplo de código.|  
 |Um termo em um exemplo de uma linguagem de programação específica|code:vb:|code:vb:string|Tópicos que contêm "string" em um exemplo do Visual Basic.|  
 |Um tópico associado a uma palavra-chave de índice específica|keyword:|keyword:readbyte|Tópicos associados à palavra-chave de índice "readbyte".|  
-  
+
  Você pode usar o operador code: para encontrar conteúdo sobre qualquer uma das várias linguagens de programação, mas ele retorna resultados apenas para conteúdo marcado com uma linguagem de programação específica. A tabela a seguir lista as linguagens de programação que dão suporte a esse operador:  
-  
+
 |Linguagem de programação|Use|  
 |--------------------------|---------|  
 |Visual Basic|code:vb<br /><br /> ou<br /><br /> code:visualbasic|  
@@ -63,7 +64,8 @@ Usando operadores de pesquisa avançada, você pode refinar a pesquisa de conte�
 |F#|code:f#<br /><br /> ou<br /><br /> code:fsharp|  
 |JavaScript|code:javascript<br /><br /> ou<br /><br /> code:js|  
 |XAML|code:xaml|  
-  
+
 ## <a name="see-also"></a>Consulte também  
  [Operadores lógicos em expressões de pesquisa](../ide/logical-operators-in-search-expressions.md)   
  [Dicas de pesquisa de texto completo](../ide/full-text-search-tips.md)
+

@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9044821c2bfee0dba8ffa91f3d91afd565b8d957
-ms.openlocfilehash: 9d5e8a86d71cf1f6aa47853b862a4668dea05633
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b0ef009dae267ca566a41bad3d6f0a9ef81cb02b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="step-9-try-other-features"></a>Etapa 9: Experimentar outras funcionalidades
@@ -58,7 +59,7 @@ Para aprender mais, tente alterar os ícones e as cores, adicionar um temporizad
 -   Torne o jogo mais difícil aumentando o tamanho do tabuleiro.  
   
     > [!TIP]
-    >  Você precisará fazer mais do que apenas adicionar linhas e colunas ao TableLayoutPanel; você também precisará considerar o número de ícones criados.  
+    >  Você precisará fazer mais do que apenas adicionar linhas e colunas ao TableLayoutPanel – você também precisará considerar o número de ícones criados.  
   
 -   Torne o jogo mais desafiador ocultando o primeiro ícone se o jogador demorar demais para reagir e não escolher o segundo ícone antes do término de um determinado tempo.  
   

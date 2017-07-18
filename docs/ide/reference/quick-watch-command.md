@@ -32,14 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d92e70d02530f8b4f4e8437fe3fca6323a88dcb7
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: b9b6af3a8db0aef28a7704f8e266e1610b436ba6
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="quick-watch-command"></a>Comando Inspeção Rápida
-Exibe o texto selecionado ou especificado no campo Expressão da [Caixa de diálogo QuickWatch](../Topic/How%20to:%20Use%20the%20QuickWatch%20Dialog%20Box.md). Você pode usar essa caixa de diálogo para calcular o valor atual de uma variável ou expressão reconhecida pelo depurador ou o conteúdo de um registro. Além disso, você pode alterar o valor de qualquer variável não const ou o conteúdo de qualquer registro.  
+Exibe o texto selecionado ou especificado no campo Expressão da janela [QuickWatch](../../debugger/watch-and-quickwatch-windows.md). Você pode usar essa caixa de diálogo para calcular o valor atual de uma variável ou expressão reconhecida pelo depurador ou o conteúdo de um registro. Além disso, você pode alterar o valor de qualquer variável não const ou o conteúdo de qualquer registro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +62,7 @@ Debug.QuickWatchq [text]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Como usar a caixa de diálogo QuickWatch](../Topic/How%20to:%20Use%20the%20QuickWatch%20Dialog%20Box.md)   
+ [Definir uma inspeção nas variáveis usando as janelas Inspeção e QuickWatch no Visual Studio](../../debugger/watch-and-quickwatch-windows.md)   
  [Comandos do Visual Studio](../../ide/reference/visual-studio-commands.md)   
  [Janela Comando](../../ide/reference/command-window.md)   
  [Caixa Localizar/Comando](../../ide/find-command-box.md)   

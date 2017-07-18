@@ -1,7 +1,7 @@
 ---
 title: "Soluções e projetos no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 06/12/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -69,9 +69,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a88acb10478c5beb68cc6a12334f00145d183b1d
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
+ms.openlocfilehash: 28dfbb85790cfda2c3d840ce2d57468b5421bee0
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Soluções e projetos no Visual Studio
@@ -85,19 +87,19 @@ Quando você cria um app, aplicativo, site da Web, aplicativo Web, script, plug-
 
  Um projeto está contido, em um sentido lógico e no sistema de arquivos, em uma *solução*; esta pode conter um ou mais projetos, juntamente com informações de build, configurações de janela do Visual Studio e arquivos diversos que não estão associados a nenhum projeto. Em um sentido literal, a solução é um arquivo de texto com seu próprio formato exclusivo; ele geralmente não se destina a ser editado manualmente.  
 
- Uma solução tem um arquivo *.suo associado que armazena as configurações, preferências e informações de configuração de cada usuário que trabalhou no projeto.  
+ Uma solução tem um arquivo *.suo* associado que armazena as configurações, preferências e informações de configuração de cada usuário que trabalhou no projeto.  
 
  O diagrama a seguir mostra a relação entre projetos e soluções e os itens que eles contêm logicamente.  
 
- ![Soluções e projetos do Visual Studio](../ide/media/vs2015_project_diagram.png "vs2015_project_diagram")  
+ ![Projetos e solução do Visual Studio](../ide/media/vside-project-diagram.png)  
 
  Também é possível criar modelos de item e de projeto personalizados. Para obter mais informações, consulte [Criando modelos de item e de projeto](../ide/creating-project-and-item-templates.md).  
 
 ## <a name="creating-new-projects"></a>Criando novos projetos  
- A maneira mais fácil de criar um novo projeto é começar com um modelo de projeto predefinido, que consiste em um conjunto básico de arquivos de código, arquivos de configuração, configurações e ativos gerados previamente que permitem que você comece a criar um tipo específico de aplicativo ou site em uma linguagem de programação específica. Esses modelos são o que você vê na **caixa de diálogo Novo Projeto** quando você escolhe **Arquivo &#124; Novo &#124; Projeto** ou **Arquivo &#124; Novo &#124; Site** no menu principal e, em seguida, navega. Para obter mais informações, consulte [Criando soluções e projetos](../ide/creating-solutions-and-projects.md) e [NIB Criando projetos de modelos](http://msdn.microsoft.com/en-us/7c36d86a-6b79-4480-8228-0f925f1204b2).  
+ A maneira mais fácil de criar um novo projeto é começar com um modelo de projeto predefinido, que consiste em um conjunto básico de arquivos de código, arquivos de configuração, configurações e ativos gerados previamente que permitem que você comece a criar um tipo específico de aplicativo ou site em uma linguagem de programação específica. Esses modelos são o que você vê na **caixa de diálogo Novo Projeto** quando você escolhe **Arquivo &#124; Novo &#124; Projeto** ou **Arquivo &#124; Novo &#124; Site** no menu principal e, em seguida, navega. Para obter mais informações, consulte [Criando soluções e projetos](../ide/creating-solutions-and-projects.md).  
 
 ## <a name="managing-projects-in-solution-explorer"></a>Gerenciamento de projetos no Gerenciador de Soluções  
- Depois de criar um novo projeto, você usa o **Gerenciador de Soluções** para exibir e gerenciar projetos e soluções e seus itens associados. A ilustração a seguir mostra o Gerenciador de Servidores com uma solução em C# que contém dois projetos.  
+ Depois de criar um novo projeto, você usa o **Gerenciador de Soluções** para exibir e gerenciar projetos e soluções e seus itens associados. A ilustração a seguir mostra o Gerenciador de Soluções com uma solução em C# que contém dois projetos.  
 
  ![Gerenciador de Soluções](../ide/media/vs2015_solution_explorer.png "vs2015_solution_explorer")  
 
@@ -123,9 +125,4 @@ Quando você cria um app, aplicativo, site da Web, aplicativo Web, script, plug-
 
 ## <a name="see-also"></a>Consulte também  
  [Visual Studio IDE](../ide/visual-studio-ide.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

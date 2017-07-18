@@ -1,7 +1,7 @@
 ---
 title: "Como adicionar ou remover referências usando o Gerenciador de Referências | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -42,10 +42,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1e73cc14de8a94b2e2ce631834e36b6bc30fa7a6
+ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
+ms.openlocfilehash: b2141a16d27725c54b3407e92151e0ed7afd745e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Como adicionar ou remover referências usando o Gerenciador de Referências
@@ -70,11 +70,11 @@ ms.lasthandoff: 02/22/2017
 -   Procurar, com o subgrupo Recente.  
 
 ## <a name="assemblies-tab"></a>Guia Assemblies  
- A guia **Assemblies** lista todos os assemblies do .NET Framework que estão disponíveis para referência. A guia **Assemblies** não lista os assemblies do GAC (cache de assembly global), pois os assemblies no GAC fazem parte do ambiente de tempo de execução. Se você implantar um aplicativo que contém uma referência a um assembly registrado no GAC, o assembly não será implantado ou copiado com o aplicativo, independentemente da configuração do Local da Cópia. Para obter mais informações, consulte [Referências do projeto](http://go.microsoft.com/fwlink/?LinkId=238512).  
+ A guia **Assemblies** lista todos os assemblies do .NET Framework que estão disponíveis para referência. A guia **Assemblies** não lista os assemblies do GAC (cache de assembly global), pois os assemblies no GAC fazem parte do ambiente de tempo de execução. Se você implantar um aplicativo que contém uma referência a um assembly registrado no GAC, o assembly não será implantado ou copiado com o aplicativo, independentemente da configuração do Local da Cópia. Para obter mais informações, consulte [Gerenciando referências em um projeto](../ide/managing-references-in-a-project.md).  
 
- Ao adicionar manualmente uma referência a qualquer namespace EnvDTE (EnvDTE, EnvDTE80, EnvDTE90, EnvDTE90a ou EnvDTE100), defina a propriedade de Inserir Tipos Interop da referência como Falso na janela Propriedades. Definir essa propriedade como Verdadeiro poderá causar problemas de compilação devido a determinadas propriedades de EnvDTE que não podem ser inseridas.  
+ Ao adicionar manualmente uma referência a qualquer namespace EnvDTE (EnvDTE, EnvDTE80, EnvDTE90, EnvDTE90a ou EnvDTE100), defina a propriedade de Inserir Tipos Interop da referência como Falso na janela Propriedades. Definir essa propriedade como Verdadeiro poderá causar problemas de build devido a determinadas propriedades de EnvDTE que não podem ser inseridas.  
 
- Todos os projetos da área de trabalho contêm uma referência implícita a mscorlib. Os projetos do [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] contêm uma referência implícita em Microsoft.VisualBasic. No [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)], todos os projetos contêm uma referência implícita a System.Core, mesmo se for removido da lista de referências.  
+ Todos os projetos da área de trabalho contêm uma referência implícita a mscorlib. Os projetos do [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] contêm uma referência implícita em Microsoft.VisualBasic. No [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)], todos os projetos contêm uma referência implícita a System.Core, mesmo se ela for removida da lista de referências.  
 
  Se um tipo de projeto não der suporte a Assemblies, a guia não será exibida na caixa de diálogo **Gerenciador de Referências**.  
 
@@ -84,7 +84,7 @@ ms.lasthandoff: 02/22/2017
 
     -   Os assemblies anunciados estão no Framework completo e estão enumerados na lista de Frameworks quando o projeto tem como objetivo um perfil do Framework de destino. Os assemblies anunciados são cinzas para diferenciá-los dos assemblies que existem no perfil do Framework de destino do projeto. Por exemplo, se um projeto tem como objetivo o .NET Framework 4 Client, a lista do Framework exibirá assemblies anunciados do .NET Framework 4. Quando um usuário adiciona um assembly anunciado, o usuário é notificado de que, depois que a caixa de diálogo **Gerenciador de Referências** for fechada, o projeto terá o destino redefinido como o .NET Framework 4 e o assembly anunciado será adicionado.  
 
-    -   Os projetos para aplicativos do [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] contêm referências a todos os assemblies do [!INCLUDE[net_win8_profile](../ide/includes/net_win8_profile_md.md)] de destino por padrão na criação do projeto. Em projetos gerenciados, um nó somente leitura na pasta Referências em **Gerenciador de Soluções** indica a referência a todo o Framework. Consequentemente, a guia Framework não enumerará nenhum dos assemblies do Framework e exibirá a seguinte mensagem: “Todos os assemblies do Framework já estão referenciados. Use o Pesquisador de Objetos para explorar as referências no Framework.” Para projetos de área de trabalho, a guia Framework enumera os assemblies do Framework de destino e o usuário deve adicionar as referências exigidas pelo aplicativo.  
+    -   Os projetos para aplicativos do [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] contêm referências a todos os assemblies do [!INCLUDE[net_win8_profile](../ide/includes/net_win8_profile_md.md)] de destino por padrão na criação do projeto. Em projetos gerenciados, um nó somente leitura na pasta Referências em **Gerenciador de Soluções** indica a referência a todo o Framework. Consequentemente, a guia Framework não enumerará nenhum dos assemblies do Framework e exibirá a seguinte mensagem: “Todos os assemblies do Framework já estão referenciados. Use o Pesquisador de Objetos para explorar as referências no Framework”. Para projetos de área de trabalho, a guia Framework enumera os assemblies do Framework de destino e o usuário deve adicionar as referências exigidas pelo aplicativo.  
 
 2.  As extensões listam todos os assemblies que os fornecedores externos de componentes e controles desenvolveram para estender o Framework de destino. Dependendo da finalidade do aplicativo do usuário, esses assemblies podem ser necessários.  
 
@@ -157,7 +157,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="solution-tab"></a>Guia Solução  
  A guia Solução lista todos os projetos compatíveis dentro da solução atual, na subguia Projetos.  
 
- Um projeto pode referenciar outro projeto que tenha como destino uma versão diferente do .NET Framework. Por exemplo, você pode criar um projeto que tenha como destino o [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)], mas que faça referência a um assembly que foi criado para o .NET Framework 2. Porém, o projeto do .NET Framework 2 não pode referenciar um projeto do [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]. Para obter mais informações, consulte [Definindo uma versão específica do .NET Framework como destino](../ide/targeting-a-specific-dotnet-framework-version.md).  
+ Um projeto pode referenciar outro projeto que tenha como destino uma versão diferente do .NET Framework. Por exemplo, você pode criar um projeto que tenha como destino o [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)], mas que faça referência a um assembly que foi criado para o .NET Framework 2. Porém, o projeto do .NET Framework 2 não pode fazer referência a um projeto do [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]. Para obter mais informações, consulte [Definindo uma Versão Específica do .NET Framework como Destino](../ide/targeting-a-specific-dotnet-framework-version.md).  
 
  Um projeto que tem como destino o [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] é incompatível com um projeto que tenha como destino o [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)].  
 
@@ -170,7 +170,7 @@ ms.lasthandoff: 02/22/2017
 
  Você pode gerar um arquivo WinMD no Visual Studio de duas maneiras:  
 
--   **[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] Projetos gerenciados pelo aplicativo**: os projetos do aplicativo [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] podem produzir binários WinMD definindo Propriedades do Projeto &#124; Tipo de Saída = Arquivo WinMD. O nome do arquivo WinMD deve ser o namespace do superconjunto de todos os namespaces existentes dentro dele. Por exemplo, se um projeto consiste nos namespaces A.B e A.B.C, os possíveis nomes para o WinMD emitido serão A.winmd e A.B.winmd. Se um usuário entrar em um valor de Propriedade do Projeto &#124; Nome do Assembly ou Propriedades do Projeto &#124; Namespace não contíguo ao conjunto de namespaces no projeto ou se não houver nenhum namespace de superconjunto em um projeto, um aviso de build será gerado: “A.winmd” não é um nome de arquivo .winmd válido para esse assembly. Todos os tipos em um arquivo de metadados do Windows devem existir em um namespace secundário do nome do arquivo. Tipos que não existem em um namespace secundário do nome de arquivo não poderão ser localizados no tempo de execução. Nesse assembly, o menor namespace comum é “CSWSClassLibrary1”. A área de trabalho do Visual Basic ou um projeto do Visual C# só podem consumir WinMDs gerados usando [!INCLUDE[win8](../debugger/includes/win8_md.md)] SDKs, conhecidos como primeira parte do WinMDs, e não podem gerar WinMDs.  
+-   **[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] Projetos gerenciados pelo aplicativo**: os projetos do aplicativo [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] podem produzir binários WinMD definindo Propriedades do Projeto &#124; Tipo de Saída = Arquivo WinMD. O nome do arquivo WinMD deve ser o namespace do superconjunto de todos os namespaces existentes dentro dele. Por exemplo, se um projeto consiste nos namespaces A.B e A.B.C, os possíveis nomes para o WinMD emitido serão A.winmd e A.B.winmd. Se um usuário inserir uma Propriedade de Projeto &#124, um Nome de Assembly ou as Propriedades de Projeto &#124, o Valor do namespace separado do conjunto de namespaces no projeto ou se não houver nenhum namespace de superconjunto em um projeto, um aviso de compilação será gerado: ‘A.winmd’ não é um nome de arquivo .winmd válido para esse assembly. Todos os tipos em um arquivo de metadados do Windows devem existir em um namespace secundário do nome do arquivo. Os tipos que não existirem em um namespace secundário do nome de arquivo não poderão ser localizados no tempo de execução. Nesse assembly, o menor namespace comum é “CSWSClassLibrary1”. A área de trabalho do Visual Basic ou um projeto do Visual C# só podem consumir WinMDs gerados usando SDKs [!INCLUDE[win8](../debugger/includes/win8_md.md)], conhecidos como a primeira parte do WinMDs e não podem gerar WinMDs.  
 
 -   **[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] Projetos nativos do aplicativo**: um arquivo WinMD nativo consiste apenas em metadados. Sua implementação existe em um arquivo separado da DLL. É possível gerar binários nativos escolhendo o modelo de projeto do componente do Tempo de Execução do Windows na caixa de diálogo **Novo Projeto** ou em um projeto em branco e modificando as propriedades do projeto para gerar um arquivo WinMD. Se o projeto consiste em namespaces separados, um erro de compilação dirá ao usuário para combinar os namespaces ou executar a ferramenta MSMerge.  
 
@@ -179,7 +179,7 @@ ms.lasthandoff: 02/22/2017
 ### <a name="core-subgroup"></a>Subgrupo Núcleo  
  O subgrupo Núcleo lista todos os WinMDs (para elementos de Tempo de Execução do Windows) no SDK para a versão de destino do Windows.  
 
- Os projetos de aplicativos [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] contêm referências a todos os WinMDs no [!INCLUDE[win8](../debugger/includes/win8_md.md)] SDK por padrão na criação do projeto. Em projetos gerenciados, um nó somente leitura na pasta Referências em **Gerenciador de Soluções** indica a referência a todo o SDK do [!INCLUDE[win8](../debugger/includes/win8_md.md)]. Consequentemente, o subgrupo Núcleo no Gerenciador de Referências não enumerará alguns assemblies do [!INCLUDE[win8](../debugger/includes/win8_md.md)] SDK e exibirá uma mensagem: “O SDK do já está referenciado. Use o Pesquisador de Objetos para explorar as referências no SDK Windows.”  
+ Os projetos de aplicativos [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] contêm referências a todos os WinMDs no [!INCLUDE[win8](../debugger/includes/win8_md.md)] SDK por padrão na criação do projeto. Em projetos gerenciados, um nó somente leitura na pasta Referências em **Gerenciador de Soluções** indica a referência a todo o SDK do [!INCLUDE[win8](../debugger/includes/win8_md.md)]. Consequentemente, o subgrupo Núcleo no Gerenciador de Referências não enumerará nenhum assembly do SDK [!INCLUDE[win8](../debugger/includes/win8_md.md)] e exibirá uma mensagem: “O SDK do Windows já está referenciado. Use o Pesquisador de Objetos para explorar as referências no SDK do Windows”.  
 
  Em projetos da área de trabalho, o subgrupo Núcleo não é exibido por padrão. É possível adicionar o Windows Runtime abrindo o menu de atalho do nó do projeto, escolhendo **Descarregar Projeto**, adicionando o trecho a seguir e reabrindo o projeto (no nó do projeto, escolha **Recarregar Projeto**). Ao invocar a caixa de diálogo **Gerenciador de Referências**, o subgrupo Núcleo é exibido.  
 
@@ -194,12 +194,12 @@ ms.lasthandoff: 02/22/2017
 ### <a name="extensions-subgroup"></a>Subgrupos Extensões  
  As extensões listam o usuário de SDKs que estendem a plataforma de destino do Windows. Essa guia é exibida somente para projetos de aplicativo [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]. Os projetos de área de trabalho não exibirão essa guia porque podem consumir apenas arquivos de primeira parte .winmd.  
 
- O SDK é uma coleção de arquivos que o Visual Studio trata como um único componente. Na guia Extensões, os SDKs que se aplicam ao projeto do qual a caixa de diálogo **Gerenciador de Referências** foi invocada são listados como entradas únicas. Quando adicionado a um projeto, todo o conteúdo do SDK é consumido pelo Visual Studio de modo que o usuário não precisa realizar uma ação adicional para aproveitar os conteúdos do SDK no IntelliSense, na caixa de ferramentas, no designer, no Pesquisador de Objetos, na criação, implantação, depuração nem nos pacotes. Para obter informações sobre como exibir o SDK na guia Extensões, consulte [Criando um Software Development Kit](../extensibility/creating-a-software-development-kit.md).  
+ O SDK é uma coleção de arquivos que o Visual Studio trata como um único componente. Na guia Extensões, os SDKs que se aplicam ao projeto do qual a caixa de diálogo **Gerenciador de Referências** foi invocada são listados como entradas únicas. Quando adicionado a um projeto, todo o conteúdo do SDK é consumido pelo Visual Studio de modo que o usuário não precisa realizar ações adicionais para aproveitar os conteúdos do SDK no IntelliSense, na caixa de ferramentas, no designer, no Pesquisador de Objetos, no build, na implantação, depuração nem nos pacotes. Para obter informações sobre como exibir o SDK na guia Extensões, consulte [Criando um Software Development Kit](../extensibility/creating-a-software-development-kit.md).  
 
 > [!NOTE]
->  Se um projeto referencia o SDK que depende de outro SDK, o Visual Studio não consumirá o segundo SDK a menos que o usuário adicione manualmente uma referência ao segundo SDK. Quando um usuário escolhe um SDK na guia **Extensões**, a caixa de diálogo **Gerenciador de Referências** ajuda o usuário a identificar dependências do SDK listando não apenas o nome e a versão do SDK, mas também o nome de todas as dependências do SDK no painel de detalhes. Se um usuário não observar as dependências e adicionar somente aquele SDK, o MSBuild solicitará que o usuário adicione dependências.  
+>  Se um projeto referenciar um SDK que depende de outro SDK, o Visual Studio não consumirá o segundo SDK a menos que o usuário adicione manualmente uma referência ao segundo SDK. Quando um usuário escolhe um SDK na guia **Extensões**, a caixa de diálogo **Gerenciador de Referências** ajuda o usuário a identificar dependências do SDK listando não apenas o nome e a versão do SDK, mas também o nome de todas as dependências do SDK no painel de detalhes. Se um usuário não observar as dependências e adicionar somente aquele SDK, o MSBuild solicitará que o usuário adicione dependências.  
 
- Se um tipo de projeto não der suporte a **Extensões**, a guia não será exibida na caixa de diálogo **Gerenciador de Referências**.  
+ Se um tipo de projeto não der suporte para as **Extensões**, a guia não será exibida na caixa de diálogo **Gerenciador de Referências**.  
 
 ## <a name="browse-button"></a>Botão Procurar  
  É possível usar o botão **Procurar** para procurar um componente no sistema de arquivos.  
@@ -214,7 +214,7 @@ ms.lasthandoff: 02/22/2017
 
 -   **Componente nativo**: um projeto nativo criará um WinMD para cada conjunto não contínuo de namespaces e uma DLL que consiste na implementação. O WinMDs terá nomes distintos. Ao fazer referência a esse arquivo de componente nativo, o MSBuild não reconhecerá que os WinMDs nomeados de forma diferente formam um componente. Consequentemente, somente o *FileName*.dll e *FileName*.winmd de nome idêntico serão copiados, e ocorrerão erros de tempo de execução. Para resolver esse problema, crie uma SDK de Extensão. Para obter mais informações, consulte [Criando um Software Development Kit](../extensibility/creating-a-software-development-kit.md).  
 
--   **Consumindo controles**: no mínimo, um controle XAML consiste em um *FileName*.winmd, *FileName*.dll, *FileName*.pri, *XamlName*.xaml e *ImageName*.jpg. Quando o projeto é compilado, os arquivos de recursos associados à referência de arquivo não serão copiados no diretório de saída do projeto, e apenas *FileName*.winmd, *FileName*.dll e *FileName*.pri serão copiados. Um erro de build é registrado para informar ao usuário que os recursos *XamlName*.xaml e *ImageName*.jpg estão ausentes. Para ter êxito, o usuário precisará copiar manualmente esses arquivos de recurso no diretório de saída do projeto para a compilação e a depuração/tempo de execução. Para resolver esse problema, crie um SDK de Extensão seguindo as etapas em [Criando um Software Development Kit](../extensibility/creating-a-software-development-kit.md) ou edite o arquivo de projeto para adicionar a seguinte propriedade:  
+-   **Consumindo controles**: no mínimo, um controle XAML consiste em um *FileName*.winmd, *FileName*.dll, *FileName*.pri, *XamlName*.xaml e *ImageName*.jpg. Quando o projeto for compilado, os arquivos de recursos associados à referência de arquivo não serão copiados no diretório de saída do projeto e apenas *FileName*.winmd, *FileName*.dll e *FileName*.pri serão copiados. Um erro de build é registrado para informar ao usuário que os recursos *XamlName*.xaml e *ImageName*.jpg estão ausentes. Para ter êxito, o usuário precisará copiar manualmente esses arquivos de recurso no diretório de saída do projeto para a compilação e a depuração/tempo de execução. Para resolver esse problema, crie um SDK de Extensão seguindo as etapas em [Criando um Software Development Kit](../extensibility/creating-a-software-development-kit.md) ou edite o arquivo de projeto para adicionar a seguinte propriedade:  
 
     ```  
     <PropertyGroup>  
@@ -229,9 +229,8 @@ ms.lasthandoff: 02/22/2017
  Assemblies, COM, Windows e Navegador suportam uma guia Recente, que enumera a lista de componentes adicionados recentemente aos projetos.  
 
 ## <a name="search"></a>Pesquisar  
- A barra de pesquisa na caixa de diálogo **Gerenciador de Referências** opera na guia que está no foco. Por exemplo, se um usuário digitar “Sistema” na barra de pesquisa enquanto a guia **Solução** estiver no foco, a pesquisa não retornará nenhum resultado a menos que a solução consista em um nome de projeto que contém “Sistema”.  
+ A barra de pesquisa na caixa de diálogo **Gerenciador de Referências** opera na guia que está no foco. Por exemplo, se um usuário digitar “Sistema” na barra de pesquisa enquanto a guia **Solução** estiver no foco, a pesquisa não retornará nenhum resultado a menos que a solução consista em um nome de projeto que contenha “Sistema”.  
 
 ## <a name="see-also"></a>Consulte também  
- [NIB: como adicionar ou remover referências usando a caixa de diálogo Adicionar Referência](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
  [Gerenciando referências em um projeto](../ide/managing-references-in-a-project.md)
 

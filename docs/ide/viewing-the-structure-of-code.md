@@ -46,10 +46,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 74b3eb9965b469b6651afae44f38b48400a79426
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: cf7325de6a4d5ee4cac1b48a7da33202034fde0c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="viewing-the-structure-of-code"></a>Exibindo a estrutura do código
@@ -65,7 +66,7 @@ ms.lasthandoff: 02/22/2017
   
  [Janela de Definição de Código (C#, C++)](#BKMK_CodeDefinition)  
   
- Também é possível usar o **Gerenciador de Soluções** para procurar os tipos e membros em seus projetos, pesquisar símbolos, exibir a Hierarquia de Chamada de um método, localizar referências de símbolos e muito mais sem precisar mudar entre as várias janelas de ferramentas listadas anteriormente.  
+ Também é possível usar o **Gerenciador de Soluções** para procurar os tipos e membros em seus projetos, pesquisar símbolos, exibir a Hierarquia de Chamada de um método, localizar referências de símbolos e muito mais, sem precisar mudar entre as várias janelas de ferramentas listadas anteriormente.  
   
  Se tiver o Visual Studio Enterprise, você pode usar mapas de código para visualizar a estrutura do código e suas dependências em toda a solução, bem como detalhar as partes do código que lhe interessarem. Para obter mais informações, consulte [Mapear as dependências nas soluções](../modeling/map-dependencies-across-your-solutions.md).  
   

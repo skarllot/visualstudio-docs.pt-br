@@ -33,9 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ebeb3139ef74308fae5d80fba960e058e467bd53
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b03bbfbe9f96931ad9b64dd8542529ee258f0392
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="full-text-search-tips"></a>Dicas de pesquisa de texto completo
@@ -50,7 +52,7 @@ Um dos métodos mais úteis para localizar informações na Ajuda é executando 
 |Sintaxe|Descrição|  
 |------------|-----------------|  
 |Diferenciação de maiúsculas e minúsculas|As pesquisas não diferenciam maiúsculas de minúsculas. Desenvolva seus critérios de pesquisa usando caracteres em maiúsculas ou em minúsculas. Por exemplo, "OLE" e "ole" retornam os mesmos resultados.|  
-|Combinações de caracteres|Não é possível pesquisar somente por letras individuais (a–z) ou números (0–9). Se você tentar pesquisar determinadas palavras reservadas, como "and", "from" e "with", elas serão ignoradas. Para obter mais informações, consulte "Palavras ignoradas em pesquisas (palavras irrelevantes)" posteriormente neste tópico.|  
+|Combinações de caracteres|Não é possível pesquisar somente por letras (a–z) ou números (0–9) individuais. Se você tentar pesquisar determinadas palavras reservadas, como "e", "de" e "com", elas serão ignoradas. Para obter mais informações, consulte "Palavras ignoradas em pesquisas (palavras irrelevantes)" posteriormente neste tópico.|  
 |Ordem de avaliação|As consultas de pesquisa são avaliadas da esquerda para a direita.|  
   
 ### <a name="search-syntax"></a>Sintaxe de pesquisa  
@@ -78,8 +80,3 @@ Um dos métodos mais úteis para localizar informações na Ajuda é executando 
 ## <a name="see-also"></a>Consulte também  
  [Localizar informações](../ide/locate-information.md)   
  [Operadores lógicos em expressões de pesquisa](../ide/logical-operators-in-search-expressions.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

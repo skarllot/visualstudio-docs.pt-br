@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3fa26793fc9b715c28a159e2563e630a2cd231a0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 1b2a1479c20814f55d65504a3dd79fc15a544082
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="creating-and-configuring-type-members-class-designer"></a>Criando e configurando membros de tipo (Designer de Classe)
@@ -86,7 +87,7 @@ ms.lasthandoff: 02/22/2017
   
 2.  No menu de contexto, clique em **Janela Detalhes da Classe**.  
   
- – ou -  
+ - ou –  
   
 -   Aponte para **Outras Janelas** no menu Exibir e clique em **Detalhes da Classe**.  
   
@@ -319,7 +320,7 @@ ms.lasthandoff: 02/22/2017
   
  **Projetos somente leitura**  
   
- O projeto pode ser somente leitura por um motivo que não seja o controle de código-fonte. Fechar o projeto exibe uma caixa de diálogo que pergunta se você deseja substituir o arquivo de projeto, descartar alterações (não salvar) ou cancelar a operação de fechar. Se você optar por substituir, os arquivos de projeto serão substituídos e transformados em leitura/gravação. O novo arquivo de diagrama de classes é adicionado.  
+ O projeto pode ser somente leitura por um motivo que não seja o controle de código-fonte. Ao fechar o projeto, uma caixa de diálogo é exibida, perguntando se você deseja substituir o arquivo de projeto, descartar as alterações (não salvar) ou cancelar a operação de fechamento. Se você optar por substituir, os arquivos de projeto serão substituídos e transformados em leitura/gravação. O novo arquivo de diagrama de classes é adicionado.  
   
  **Tipos somente leitura**  
   

@@ -31,14 +31,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 349cf26923ebee02162b6a113b39393aea01c58f
-ms.lasthandoff: 03/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: b5c18e7d208879498c1923403ec1bd213adffb5a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>Instruções passo a passo: suporte Test-First com a Funcionalidade Gerar a partir do Uso
-Este tópico demonstra como usar o recurso [Gerar do Uso](../misc/generate-from-usage.md), que oferece suporte ao desenvolvimento de test-first.  
+Este tópico demonstra como usar o recurso [Gerar do Uso](../ide/visual-csharp-intellisense.md#generate-from-usage), que oferece suporte ao desenvolvimento de test-first.  
   
  O *desenvolvimento test-first* é uma abordagem para design de software em que você primeiro escreve testes de unidade baseados nas especificações do produto e, em seguida, escreve o código-fonte que é necessário para tornar os testes bem-sucedidos. O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oferece suporte ao desenvolvimento de test-first gerando novos tipos e membros no código-fonte ao referenciá-los pela primeira vez em seus casos de teste antes de serem definidos.  
   
@@ -103,8 +104,7 @@ Caixa de diálogo Gerar Novo Tipo
   
      Adicione a seguinte linha de código em `DefaultAutomobileIsInitializedCorrectly`.  
   
-     [!code-cs[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]
-     [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]  
+     [!code-cs[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]  [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]  
   
      Com o código faz referência a duas propriedades indefinidas em `Automobile`, uma marcação inteligente é exibida. Clique na marcação inteligente para `Model` e, em seguida, clique em **Gerar stub de propriedade**. Gere um stub de propriedade para a propriedade `TopSpeed` também.  
   
@@ -135,8 +135,7 @@ Janela Navegar Para
   
 1.  Nesse método de teste, você vai gerar um stub de construtor que inicializará as propriedades `Model` e `TopSpeed` para ter os valores que você especificar. Depois, você adicionará mais código para concluir o teste. Adicione também o seguinte método de teste à sua classe `AutomobileTest`.  
   
-     [!code-cs[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]
-     [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]  
+     [!code-cs[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]  [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]  
   
 2.  Clique na marcação inteligente no novo construtor de classe e, em seguida, clique em **Gerar stub de construtor**. No arquivo de classe `Automobile`, observe que o novo construtor examinou os nomes das variáveis locais que são usadas na chamada do construtor, encontrou propriedades que têm os mesmos nomes na classe `Automobile` e forneceu código no corpo do construtor para armazenar os valores de argumento nas propriedades `Model` e `TopSpeed`. (Em [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], os campos `_model` e `_topSpeed` do novo construtor são campos de suporte implicitamente definidos para as propriedades `Model` e `TopSpeed`.)  
   
@@ -146,15 +145,13 @@ Janela Navegar Para
   
 1.  Suponha que a especificação afirma que uma nova `Automobile` pode ser colocada em um estado de Execução se suas propriedades `Model` e `TopSpeed` forem definidas como algo diferente dos valores padrão. Adicione as seguintes linhas ao método `AutomobileWithModelNameCanStart`.  
   
-     [!code-cs[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]
-     [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]  
+     [!code-cs[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]  [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]  
   
 2.  Clique na marcação inteligente da chamada de método `myAuto.Start` e, em seguida, clique em **Gerar stub de método**.  
   
 3.  Clique na marcação inteligente da propriedade `IsRunning` e depois clique em **Gerar stub de propriedade**. A classe `Automobile` agora contém o código a seguir.  
   
-     [!code-cs[VbTDDWalkthrough#4](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.cs)]
-     [!code-vb[VbTDDWalkthrough#4](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.vb)]  
+     [!code-cs[VbTDDWalkthrough#4](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.cs)]  [!code-vb[VbTDDWalkthrough#4](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.vb)]  
   
 ### <a name="to-run-the-tests"></a>Para executar os testes  
   
@@ -173,13 +170,11 @@ Janela Resultados de Teste
   
 1.  Adicione o seguinte código ao construtor padrão de maneira que as propriedades `Model`, `TopSpeed` e `IsRunning` são inicializadas com seus valores padrão `"Not specified"`, `-1` e `True` (`true`).  
   
-     [!code-cs[VbTDDWalkthrough#5](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.cs)]
-     [!code-vb[VbTDDWalkthrough#5](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.vb)]  
+     [!code-cs[VbTDDWalkthrough#5](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.cs)]  [!code-vb[VbTDDWalkthrough#5](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.vb)]  
   
 2.  Quando o método `Start` é chamado, ele deve definir o sinalizador `IsRunning` como true apenas se as propriedades `Model` ou `TopSpeed` estiverem definidas com valor diferente de seu valor padrão. Remova o `NotImplementedException` do corpo do método e adicione o código a seguir.  
   
-     [!code-cs[VbTDDWalkthrough#6](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.cs)]
-     [!code-vb[VbTDDWalkthrough#6](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.vb)]  
+     [!code-cs[VbTDDWalkthrough#6](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.cs)]  [!code-vb[VbTDDWalkthrough#6](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.vb)]  
   
 ### <a name="to-run-the-tests-again"></a>Para executar os testes novamente  
   
@@ -189,7 +184,7 @@ Janela Resultados de Teste
 Janela Resultados de Teste  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerar com base no uso](../misc/generate-from-usage.md)   
+ [Gerar com base no uso](../ide/visual-csharp-intellisense.md#generate-from-usage)   
  [Escrevendo código](../ide/writing-code-in-the-code-and-text-editor.md)   
  [Usando o IntelliSense](../ide/using-intellisense.md)   
  [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md)

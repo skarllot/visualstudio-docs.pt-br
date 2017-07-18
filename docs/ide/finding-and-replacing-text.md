@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 70fe42120c787304d7285d262f53848377ab9fa0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7e63a74cbc1155cb81bc3f726506a2374b9ee72d
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="finding-and-replacing-text"></a>Localizando e substituindo texto
@@ -89,7 +90,7 @@ ms.lasthandoff: 02/22/2017
  Quando você escolhe **Localizar tudo**, uma janela **Localizar Resultados** é aberta e lista as correspondências da pesquisa. Selecionar um resultado na lista exibe o arquivo associado e realça a correspondência. Se o arquivo ainda não estiver aberto para edição, ele será aberto em uma guia de visualização no lado direito da guia. É possível usar o controle **Localizar** para pesquisar na lista **Localizar Resultados**.  
   
 ### <a name="creating-custom-search-folder-sets"></a>Criando conjuntos de pastas de pesquisa personalizados  
- Você pode definir o escopo da pesquisa escolhendo o botão **Escolher Pastas de Pesquisa** (ele se parece com **...**) ao lado da caixa **Examinar** caixa. Na caixa de diálogo **Escolher Pastas de Pesquisa**, você pode especificar um conjunto de pastas nas quais deseja pesquisar e pode salvar a especificação para utilizá-la novamente mais tarde. Você pode especificar pastas em um computador remoto somente se tiver mapeado sua unidade para o computador local.  
+ Você pode definir o escopo da pesquisa escolhendo o botão **Escolher Pastas de Pesquisa** (ele se parece com **...** ) ao lado da caixa **Examinar**. Na caixa de diálogo **Escolher Pastas de Pesquisa**, você pode especificar um conjunto de pastas nas quais deseja pesquisar e pode salvar a especificação para utilizá-la novamente mais tarde. Você pode especificar pastas em um computador remoto somente se tiver mapeado sua unidade para o computador local.  
   
 ### <a name="creating-custom-component-sets"></a>Criando conjuntos de componentes personalizados  
  Você pode definir conjuntos de componentes como o escopo da pesquisa escolhendo o botão **Editar conjunto de componentes personalizados** ao lado da caixa **Examinar**. Você pode especificar componentes COM ou .NET instalados, projetos do Visual Studio incluídos em sua solução ou qualquer assembly ou biblioteca de tipos (.dll,.tlb, .olb, .exe ou .ocx). Para pesquisar referências, selecione a caixa **Examinar referências**.  

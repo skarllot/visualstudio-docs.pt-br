@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 15f7678c7d0cba1afaa71e0443efc756880d99cc
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 078619c93e18fd25dfbc728d75835f5af58988fe
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="get-started-with-visual-studio"></a>Introdução ao Visual Studio
@@ -79,7 +80,7 @@ Observe que esses ícones da barra de ferramentas e comandos de menu podem mudar
 ### <a name="team-explorer"></a>Team Explorer
 O **Team Explorer** permite que você se conecte a ferramentas de controle do código-fonte como [Git](https://git-scm.com/) e [TFVC (Controle de Versão do Team Foundation)](https://www.visualstudio.com/en-us/docs/tfvc/overview) para armazenar seu código localmente ou compartilhá-lo com outras pessoas em um serviço hospedado. Também é possível usá-lo para rastrear tarefas e mais.
 
-Assista aos vídeos [Getting Started with Visual Studio – Building blocks of the IDE (Introdução ao Visual Studio – Criando blocos do IDE)](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK) e [Getting Started with Visual Studio – Opening a project from Source Control (Introdução ao Visual Studio – Abrindo um projeto no Controle do Código-fonte)](https://www.youtube.com/watch?v=pc9vX_4RGV4&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=3) para obter mais informações.
+Assista aos vídeos [Getting Started with Visual Studio – Building blocks of the IDE (Introdução ao Visual Studio – Criando blocos do IDE)](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK) e [Getting Started with Visual Studio – Opening a project from Source Control (Introdução ao Visual Studio – Abrindo um projeto no controle do código-fonte)](https://www.youtube.com/watch?v=pc9vX_4RGV4&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=3) para obter mais informações.
 
 ![Team Explorer](../ide/media/TeamExplorer.png)
 

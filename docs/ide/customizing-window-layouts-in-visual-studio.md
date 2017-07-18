@@ -43,9 +43,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 841c635c00aea5e78396f27098a1e64fbe29a421
-ms.openlocfilehash: b2a09ceddbfcbfb8632f777f55229d186f6e5ae9
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 8ab795965dc205cd783f469d134d64fb2b5dacf6
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Personalizar layouts de janela no Visual Studio
@@ -92,7 +94,7 @@ No Visual Studio, é possível personalizar a posição, tamanho e comportamento
  As janelas de ferramentas e do documento podem ser organizadas arrastando-as, usando comandos no menu **Janela** e clicando com o botão direito do mouse na barra de título da janela a ser organizada.  
 
 > [!NOTE]
->  Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
 
 ### <a name="dock-windows"></a>Encaixar janelas  
  Quando você clica e arrasta a barra de título de uma janela de ferramentas ou a guia da janela do documento, um losango do guia é exibido. Durante a operação de arrastar, quando o cursor do mouse está sobre uma das setas no losango, será exibida uma área sombreada que mostra onde a janela será encaixada se você soltar o botão do mouse no momento.  
@@ -148,7 +150,7 @@ No Visual Studio, é possível personalizar a posição, tamanho e comportamento
 
 ##### <a name="create-a-ui-project-and-customize-the-layout"></a>Criar um projeto de interface do usuário e personalizar o layout  
 
-1.  Na caixa de diálogo **Novo Projeto**, crie um Aplicativo de Área de Trabalho WPF em Visual C#. Suponhamos que esse é o projeto em que trabalharemos na interface do usuário. Portanto, queremos maximizar o espaço da janela de designer e tirar outras janelas de ferramenta do caminho.  
+1.  Na caixa de diálogo **Novo Projeto**, crie um Aplicativo de Área de Trabalho WPF em Visual C#. Suponhamos que este seja o projeto em que trabalharemos na interface do usuário. Portanto, queremos maximizar o espaço da janela de designer e tirar outras janelas de ferramentas do caminho.  
 
 2.  Se você tiver vários monitores, leve a janela **Gerenciador de Soluções** e o janela **Propriedades** sobre o segundo monitor. Em um sistema de monitor único, tente fechar todas as janelas exceto o designer.  
 
@@ -156,7 +158,7 @@ No Visual Studio, é possível personalizar a posição, tamanho e comportamento
 
 4.  Pressione F5 para colocar o Visual Studio em modo de depuração. Ajuste a posição das janelas de depuração Carros, Pilha de Chamadas e Saída da maneira como você as desejar. O layout que você está prestes a criar será aplicado ao modo de edição e ao modo de depuração.  
 
-5.  Quando seus layouts no modo de depuração e de edição estiverem da maneira como você os deseja, no menu principal, escolha **Janela > Salvar Layout de Janela**. Chame esse layout de "Designer."  
+5.  Quando seus layouts no modo de depuração e de edição estiverem da maneira como você os deseja, no menu principal, escolha **Janela > Salvar Layout de Janela**. Chame esse layout de "Designer".  
 
      Observe que o próximo atalho de teclado da lista reservada de Ctrl + Alt + 1...0 foi atribuído ao seu novo layout.  
 
@@ -164,9 +166,9 @@ No Visual Studio, é possível personalizar a posição, tamanho e comportamento
 
 1.  Adicione um novo projeto de **Banco de Dados do SQL Server** à solução.  
 
-2.  Clique com o botão direito do mouse no novo projeto no Gerenciador de Soluções e escolha **Exibir no Gerenciador de Objetos**. Isso exibe a janela **Gerenciador de Objetos do SQL Server**, que permite acessar tabelas, modos de exibição e outros objetos em seu banco de dados. É possível fazer essa janela flutuar ou deixá-la encaixada. Ajuste as outras janelas de ferramentas da maneira como você as desejar. Para obter maior realismo, é possível adicionar um banco de dados real, mas não é necessário para esse passo a passo.  
+2.  Clique com o botão direito do mouse no novo projeto no Gerenciador de Soluções e escolha **Exibir no Gerenciador de Objetos**. Isso exibe a janela **Gerenciador de Objetos do SQL Server**, que permite acessar tabelas, modos de exibição e outros objetos em seu banco de dados. É possível fazer essa janela flutuar ou deixá-la encaixada. Ajuste as outras janelas de ferramentas da maneira como você as desejar. Para obter maior realismo, é possível adicionar um banco de dados real, mas isso não é necessário para esse passo a passo.  
 
-3.  Quando o layout estiver da maneira como você deseja, no menu principal, escolha **Janela > Salvar Layout de Janela**. Chame esse layout de "Projeto de Banco de Dados." (Não nos preocuparemos com um layout de modo de depuração para este projeto.)  
+3.  Quando o layout estiver da maneira como você deseja, no menu principal, escolha **Janela > Salvar Layout de Janela**. Chame esse layout de “Projeto de Banco de Dados”. (Não nos preocuparemos com um layout de modo de depuração para este projeto.)  
 
 ##### <a name="switch-between-the-layouts"></a>Mudar entre os layouts  
 
@@ -193,9 +195,4 @@ No Visual Studio, é possível personalizar a posição, tamanho e comportamento
 ## <a name="related-topics"></a>Tópicos relacionados  
 
 [How to: Move Around in the IDE (Como mover-se no IDE)](../ide/how-to-move-around-in-the-visual-studio-ide.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
