@@ -28,11 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 855dbb26932fbd1f5594c2b8714eac873d6f0408
-ms.openlocfilehash: cc55f091d91e98d82a9b4f2b51d2ff4da1936a9b
+ms.translationtype: HT
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 6b8097dca52bbc0ef867938841713df0c9018718
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/19/2017
 
 ---
 # <a name="introduction-to-wpf"></a>Introdução ao WPF
@@ -163,7 +163,7 @@ End Namespace
 ##  <a name="Controls"></a> Controles  
  As experiências de usuário que são entregues pelo modelo de aplicativo são controles construídos. No WPF, "controle" é um termo abrangente que se aplica a uma categoria de classes do WPF que são hospedadas em uma janela ou página, têm uma interface do usuário e implementam algum comportamento.  
   
- Para obter mais informações, consulte [Controles](http://msdn.microsoft.com/Library/3f255a8a-35a8-4712-9065-472ff7d75599).  
+ Para obter mais informações, consulte [Controles](/dotnet/framework/wpf/controls/index).  
   
 ### <a name="wpf-controls-by-function"></a>Controles WPF por função  
  Os controles internos do WPF são listados aqui.  
