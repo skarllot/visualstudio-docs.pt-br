@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6135730b9b3283365cd63fe5d580d718f87de6bf
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 08d285b07d775f3e46bb2f5106ff8140d3058f8f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
@@ -65,5 +66,5 @@ Devenv.exe /ResetSettings "C:\My Files\MySettings.vssettings"
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)   
+ [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)   
  [Opções de linha de comando devenv](../../ide/reference/devenv-command-line-switches.md)

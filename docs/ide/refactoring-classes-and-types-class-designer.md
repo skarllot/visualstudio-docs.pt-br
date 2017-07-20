@@ -39,16 +39,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d0d537c3611faff3b81760daf95b6fc01e0d01a0
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: ba2ed6d0973e4775b1137c300608bc5ca1bdcb66
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="refactoring-classes-and-types-class-designer"></a>Refatorando classes e tipos (Designer de Classe)
 Quando você refatora o código, ele fica mais fácil de entender, manter e mais eficiente, alterando a estrutura interna e como os seus objetos são criados, não o comportamento externo dele. Use o Designer de Classe e a janela Detalhes da Classe para reduzir o trabalho que é necessário e a possibilidade de introduzir bugs quando você refatora o código do Visual C# .NET, Visual Basic .NET ou C++ em seu projeto do Visual Studio.  
   
 > [!NOTE]
->  Os arquivos de um projeto podem ser somente leitura porque o projeto está sob controle do código-fonte e não está submetido a check-out, ele é um projeto referenciado ou seus arquivos são marcados como somente leitura no disco. Quando você trabalha em um projeto em um desses estados, você tem várias maneiras de salvar o trabalho, dependendo do estado do projeto. Isso se aplica ao código de refatoração e também ao código que você altera de outra forma, como editando-o diretamente. Para obter mais informações, consulte [Exibição de informações somente leitura (Designer de Classe)](http://msdn.microsoft.com/en-us/33e2d3a9-1668-4d10-ae56-fa09b3156e0a).  
+>  Os arquivos de um projeto podem ser somente leitura porque o projeto está sob controle do código-fonte e não está submetido a check-out, ele é um projeto referenciado ou seus arquivos são marcados como somente leitura no disco. Ao trabalhar em um projeto em um desses estados, você terá várias maneiras de salvar o trabalho, dependendo do estado do projeto. Isso se aplica ao código de refatoração e também ao código que você altera de outra forma, como editando-o diretamente. Para obter mais informações, consulte [Exibição de informações somente leitura (Designer de Classe)](http://msdn.microsoft.com/en-us/33e2d3a9-1668-4d10-ae56-fa09b3156e0a).  
   
 ## <a name="common-tasks"></a>Tarefas comuns  
   
@@ -58,7 +60,7 @@ Quando você refatora o código, ele fica mais fácil de entender, manter e mais
 |**Trabalho com interfaces:** no Designer de Classe, você pode implementar uma interface no diagrama de classe se ela for conectada a uma classe que fornece o código para os métodos de interface.|-   [Como implementar uma interface (Designer de Classe)](../ide/how-to-implement-an-interface-class-designer.md)|  
 |**Refatoração de tipos, membros de tipo e parâmetros:** usando o Designer de Classe, você pode renomear tipos, substituir membros de tipo ou movê-los de um tipo para outro. Você também pode criar tipos que permitem valor nulo.|-   [Renomeando tipos e membros de tipo](../ide/refactoring-classes-and-types-class-designer.md#RenamingTypesAndMembers)<br />-   [Como mover membros de tipo de um tipo para o outro](../ide/refactoring-classes-and-types-class-designer.md#MovingTypeMembers)<br />-   [Como criar um tipo que permite valor nulo (Designer de Classe)](../ide/how-to-create-a-nullable-type-class-designer.md)|  
   
-###  <a name="a-namerenamingtypesandmembersa-renaming-types-and-type-members"></a><a name="RenamingTypesAndMembers"></a> Renomeando tipos e membros de tipo  
+###  <a name="RenamingTypesAndMembers"></a> Renomeando tipos e membros de tipo  
  No Designer de Classe, você pode renomear um tipo ou um membro de um tipo no diagrama de classe ou na janela Propriedades. Na janela Detalhes da Classe, você pode alterar o nome de um membro, mas não um tipo. A renomeação de um tipo ou membro do tipo propaga para todas as janelas e locais de código onde o nome antigo é exibido.  
   
 ##### <a name="to-rename-a-name-in-the-class-designer"></a>Para renomear um nome no Designer de Classe  
@@ -92,7 +94,7 @@ Quando você refatora o código, ele fica mais fácil de entender, manter e mais
   
      O novo nome propagada para todas as janelas e locais de código no projeto atual em que o nome antigo é exibido.  
   
-###  <a name="a-namemovingtypemembersa-moving-type-members-from-one-type-to-another"></a><a name="MovingTypeMembers"></a> Movendo membros de um tipo para o outro  
+###  <a name="MovingTypeMembers"></a> Movendo membros de um tipo para o outro  
  Usando o **Designer de Classe**, você poderá mover um membro de tipo de um tipo para outro, se ambos estiverem visíveis no diagrama de classe atual.  
   
 ##### <a name="to-move-a-type-member-from-one-type-to-another"></a>Para mover um membro de um tipo para o outro  
@@ -109,8 +111,3 @@ Quando você refatora o código, ele fica mais fácil de entender, manter e mais
 |-----------|-----------------|  
 |[Exibindo tipos e relações (Designer de Classe)](../ide/viewing-types-and-relationships-class-designer.md)||  
 |[Projetando classes e tipos (Designer de Classe)](../ide/designing-classes-and-types-class-designer.md)||
-
-
-<!--HONumber=Feb17_HO4-->
-
-

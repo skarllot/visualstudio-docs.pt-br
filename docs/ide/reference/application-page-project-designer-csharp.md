@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ccee6976f7c98e62211eb2bda4dec7da7334e031
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: 3f0056a62dc11c5584e38e9912ccd94f5b9e9b0e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="application-page-project-designer-c"></a>Página Aplicativo, Designer de Projeto (C#)
@@ -51,14 +52,14 @@ Use a página **Aplicativo** do **Designer de Projeto** para especificar as prop
  As opções a seguir permitem definir as configurações gerais para o aplicativo.  
   
  **Nome do assembly**  
- Especifica o nome do arquivo de saída que guardará o manifesto do assembly. Alterar essa propriedade também alterará a propriedade **Nome de Saída**. Também é possível fazer essa alteração na linha de comando usando [/out (opções do compilador C#)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option). Para acessar essa propriedade de maneira programática, consulte <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.  
+ Especifica o nome do arquivo de saída que guardará o manifesto do assembly. Alterar essa propriedade também alterará a propriedade **Nome de Saída**. Também é possível fazer essa alteração na linha de comando usando [/out (opções do compilador C#)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option). Para acessar essa propriedade de forma programática, consulte <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.  
   
  **Namespace padrão**  
  Especifica o namespace base para arquivos adicionados ao projeto.  
   
  Consulte [namespace](/dotnet/csharp/language-reference/keywords/namespace) para obter mais informações sobre a criação de namespaces em seu código.  
   
- Para acessar essa propriedade de maneira programática, consulte <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.  
+ Para acessar essa propriedade de forma programática, consulte <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.  
   
  **Estrutura de destino**  
  Especifica a versão no .NET Framework que o aplicativo direciona. Essa opção pode ter valores diferentes dependendo de quais versões do .NET Framework estão instaladas em seu computador.  
@@ -75,12 +76,12 @@ Use a página **Aplicativo** do **Designer de Projeto** para especificar as prop
   
  Para um projeto de aplicativo Web, é necessário especificar **Biblioteca de Classes**.  
   
- Se você especificar a opção **Arquivo WinMD**, os tipos poderão ser projetados em uma linguagem de programação do Windows Runtime. Ao empacotar a saída do projeto como um arquivo WinMD, é possível codificar um aplicativo em várias linguagens e ter interoperação de código como se você tivesse escrito tudo na mesma linguagem. É possível especificar esta opção para soluções que direcionam as bibliotecas do Windows Runtime, incluindo os aplicativos [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)]. Para obter mais informações, consulte [Criando componentes do Windows Runtime em C# e Visual Basic](http://go.microsoft.com/fwlink/?LinkId=231895).  
+ Se você especificar a opção **Arquivo WinMD**, os tipos poderão ser projetados em uma linguagem de programação do Windows Runtime. Ao empacotar a saída do projeto como um arquivo WinMD, é possível codificar um aplicativo em várias linguagens e ter interoperação de código como se você tivesse escrito tudo na mesma linguagem. É possível especificar esta opção para soluções que direcionam as bibliotecas do Windows Runtime, incluindo os aplicativos [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)]. Para obter mais informações, consulte [Criando componentes do Windows Runtime em C# e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).  
   
 > [!NOTE]
->  O Windows Runtime pode projetar tipos para que eles sejam exibidos como objetos nativos em qualquer que os use. Por exemplo, aplicativos JavaScript que interagem com o Windows Runtime usam-no como um conjunto de objetos JavaScript e aplicativos C# usam a biblioteca como uma coleção de objetos .NET. Ao empacotar a saída do projeto como um arquivo WinMD, é possível usar a mesma tecnologia que o Windows Runtime usa.  
+>  O Windows Runtime pode projetar tipos para que eles sejam exibidos como objetos nativos em qualquer que os use. Por exemplo, aplicativos JavaScript que interagem com o Windows Runtime usam-no como um conjunto de objetos JavaScript e aplicativos C# usam a biblioteca como uma coleção de objetos .NET. Ao empacotar a saída do projeto como um arquivo WinMD, você pode aproveitar a mesma tecnologia que o Windows Runtime usa.  
   
- Para obter mais informações sobre a propriedade **Tipo de aplicativo**, consulte [/target (Opções do compilador do C#)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option). Para obter informações sobre como acessar essa propriedade de maneira programática, consulte <xref:VSLangProj.ProjectProperties.OutputType%2A>.  
+ Para obter mais informações sobre a propriedade **Tipo de aplicativo**, consulte [/target (Opções do compilador do C#)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option). Para obter informações sobre como acessar esta propriedade de forma programática, consulte <xref:VSLangProj.ProjectProperties.OutputType%2A>.  
   
  **Informações do assembly**  
  Clicar neste botão para exibe a [Caixa de diálogo Informações do Assembly](../../ide/reference/assembly-information-dialog-box.md).  
@@ -90,7 +91,7 @@ Use a página **Aplicativo** do **Designer de Projeto** para especificar as prop
   
  Por padrão, em um projeto do Aplicativo de Navegador do WPF, essa opção é **(Não definido)**. A outra opção é *Projectname*.App. Nesse tipo de projeto, é necessário definir o URI de inicialização para carregar um recurso de interface do usuário quando o aplicativo é iniciado. Para fazer isso, abra o arquivo Application.xaml em seu projeto e defina a propriedade `StartupUri` como um arquivo .xaml em seu projeto, como Window1.xaml. Para obter uma lista dos elementos raiz aceitáveis, consulte <xref:System.Windows.Application.StartupUri%2A>. Também é necessário definir um método `public static void Main()` em uma classe no projeto. Essa classe será exibida na lista **Objeto de inicialização** como *ProjectName.ClassName*. Em seguida, é possível selecionar a classe como o objeto de inicialização.  
   
- Consulte [/main (Opções do compilador do C#)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option) para obter mais informações. Para acessar essa propriedade de maneira programática, consulte <xref:VSLangProj.ProjectProperties.StartupObject%2A>.  
+ Consulte [/main (Opções do compilador do C#)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option) para obter mais informações. Para acessar essa propriedade de forma programática, consulte <xref:VSLangProj.ProjectProperties.StartupObject%2A>.  
   
 ## <a name="resources"></a>Recursos  
  As opções a seguir permitem definir as configurações gerais para o aplicativo.  
@@ -99,7 +100,7 @@ Use a página **Aplicativo** do **Designer de Projeto** para especificar as prop
  Por padrão, este botão de opção é selecionado e as opções **Ícone** e **Manifesto** são habilitadas. Isso permite selecionar seu próprio ícone ou diferentes opções de geração de manifesto. Deixe esse botão de opção selecionado, a menos que você esteja fornecendo um arquivo de recurso para o projeto.  
   
  **Ícone**  
- Define o arquivo .ico que você deseja usar como o ícone do programa. Clique no botão de reticências para procurar um gráfico existente ou digite o nome do arquivo que você deseja. Consulte [-win32icon](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) (Opções do compilador do C#) para obter mais informações. Para acessar essa propriedade de maneira programática, consulte <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.  
+ Define o arquivo .ico que você deseja usar como o ícone do programa. Clique no botão de reticências para procurar um gráfico existente ou digite o nome do arquivo que você deseja. Consulte [-win32icon](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) (Opções do compilador do C#) para obter mais informações. Para acessar essa propriedade de forma programática, consulte <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.  
   
  **Manifesto**  
  Seleciona uma opção de geração de manifesto quando o aplicativo é executado no Windows Vista no UAC (Controle de Conta de Usuário). Essa opção pode ter os seguintes valores:  
@@ -113,7 +114,7 @@ Use a página **Aplicativo** do **Designer de Projeto** para especificar as prop
  **Arquivo de recurso**  
  Selecione esse botão de opção quando você estiver fornecendo um arquivo de recurso para o projeto. Selecionar essa opção desabilita as opções **Ícone** e **Manifesto**.  
   
- Insira um nome de caminho ou use o botão Procurar (**...**) para adicionar um arquivo de recurso Win32 ao projeto.  
+ Insira um nome de caminho ou use o botão Procurar (**...** ) para adicionar um arquivo de recurso Win32 ao projeto.  
   
 ## <a name="see-also"></a>Consulte também  
 [Gerenciando propriedades do aplicativo](../../ide/application-properties.md)  

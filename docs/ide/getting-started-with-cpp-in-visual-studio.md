@@ -28,13 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: c0966f42efc54452d0f7cd11e19c6f82f7686474
-ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 65b94b58da1e06febb1c189ddff85f792fef1737
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="getting-started-with-c-in-visual-studio"></a>Introdução à linguagem C++ no Visual Studio
-Ao concluir esta explicação passo a passo, você estará familiarizado com várias ferramentas e caixas de diálogo que poderá usar ao desenvolver aplicativos com o Visual Studio. Você criará um aplicativo simples no estilo "Hello, World" enquanto aprende mais sobre o trabalho no IDE (ambiente de desenvolvimento integrado).  
+Ao concluir esta explicação passo a passo, você estará familiarizado com várias ferramentas e caixas de diálogo que poderá usar ao desenvolver aplicativos com o Visual Studio. Você criará um aplicativo simples no estilo "Olá, Mundo" enquanto aprende mais sobre o trabalho no IDE (ambiente de desenvolvimento integrado).  
   
  Esse tópico contém as seguintes seções:  
   
@@ -48,7 +50,7 @@ Ao concluir esta explicação passo a passo, você estará familiarizado com vá
   
  [Criar uma versão de lançamento do aplicativo](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_BuildRelease)  
   
-##  <a name="a-namebkmkconfigurea-sign-in-to-visual-studio"></a><a name="BKMK_Configure"></a> Entrar no Visual Studio  
+##  <a name="BKMK_Configure"></a> Entrar no Visual Studio  
  Quando você iniciar o Visual Studio pela primeira vez, terá a chance de entrar usando uma conta da Microsoft, como do Live ou do Outlook. Entrar permite que suas configurações sejam sincronizadas em todos os seus dispositivos. Para obter mais informações, consulte [Entrando no Visual Studio](../ide/signing-in-to-visual-studio.md)  
   
  Figura 1: IDE do Visual Studio  
@@ -57,7 +59,7 @@ Ao concluir esta explicação passo a passo, você estará familiarizado com vá
   
  Depois de abrir o Visual Studio, você poderá ver as três partes básicas do IDE: janelas de ferramenta, menus e barras de ferramentas e o espaço da janela principal. As janelas de ferramentas estão encaixadas nos lados esquerdo e direito da janela do aplicativo, com **Início Rápido**, a barra de menus e a barra de ferramentas padrão na parte superior. O centro da janela do aplicativo contem a **Página Inicial**. Quando você abre uma solução ou um projeto, editores e designers aparecem neste espaço. Ao desenvolver um aplicativo, você passará a maior parte do seu tempo nessa área central.  
   
-##  <a name="a-namebkmkcreateappa-create-a-simple-application"></a><a name="BKMK_CreateApp"></a> Criar um aplicativo simples  
+##  <a name="BKMK_CreateApp"></a> Criar um aplicativo simples  
  Quando você cria um aplicativo no Visual Studio, primeiro cria um projeto e uma solução. Para este exemplo, você criará um aplicativo de console do Windows.  
   
 #### <a name="to-create-a-console-app"></a>Para criar um aplicativo do console  
@@ -81,10 +83,10 @@ Ao concluir esta explicação passo a passo, você estará familiarizado com vá
   
  ![Arquivos para a solução no Gerenciador de Soluções](../ide/media/c--ide_solutioncontents.png "C++IDE_SolutionContents")  
   
-##  <a name="a-namebkmkaddcodea-add-code-to-the-application"></a><a name="BKMK_AddCode"></a> Adicionar código ao aplicativo  
+##  <a name="BKMK_AddCode"></a> Adicionar código ao aplicativo  
  Em seguida, você adicionará código para exibir a palavra “Hello” na janela do console.  
   
-#### <a name="to-display-hello-in-the-console-window"></a>Para exibir “Hello” na janela do console  
+#### <a name="to-display-hello-in-the-console-window"></a>Para exibir “Olá” na janela do console  
   
 1.  No arquivo GreetingsConsoleApp.cpp, insira uma linha em branco antes da linha `return 0;` e então insira o código a seguir:  
   
@@ -115,7 +117,7 @@ Ao concluir esta explicação passo a passo, você estará familiarizado com vá
   
      ![Código que corrige o erro de cout](../ide/media/c--ide_coutfix.png "C++IDE_CoutFix")  
   
-##  <a name="a-namebkmkdebugtesta-debug-and-test-the-application"></a><a name="BKMK_DebugTest"></a> Depurar e testar o aplicativo  
+##  <a name="BKMK_DebugTest"></a> Depurar e testar o aplicativo  
  Você pode depurar o GreetingsConsoleApp para ver se a palavra "Hello" aparece na janela do console.  
   
 #### <a name="to-debug-the-application"></a>Para depurar o aplicativo  
@@ -144,8 +146,8 @@ Ao concluir esta explicação passo a passo, você estará familiarizado com vá
   
  Para obter mais informações, consulte [Projetos de console](../debugger/debugging-preparation-console-projects.md).  
   
-##  <a name="a-namebkmkbuildreleasea-build-a-release-version-of-the-app"></a><a name="BKMK_BuildRelease"></a> Criar uma versão de lançamento do aplicativo  
- Agora que você verificou que tudo está funcionando, já pode preparar uma versão de lançamento do aplicativo.  
+##  <a name="BKMK_BuildRelease"></a> Criar uma versão de lançamento do aplicativo  
+ Agora que você verificou que tudo está funcionando, já pode preparar um build de versão do aplicativo.  
   
 #### <a name="to-clean-the-solution-files-and-build-a-release-version"></a>Para limpar os arquivos de solução e criar uma versão de lançamento  
   
@@ -169,8 +171,3 @@ Ao concluir esta explicação passo a passo, você estará familiarizado com vá
  [Dicas de produtividade para o Visual Studio](../ide/productivity-tips-for-visual-studio.md)   
  [Exemplos do Visual Studio](../ide/visual-studio-samples.md)   
  [Introdução ao desenvolvimento com o Visual Studio](../ide/get-started-developing-with-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

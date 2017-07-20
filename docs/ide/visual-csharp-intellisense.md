@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2ce4f6545e3497b829234a6f21983a406059d3e0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 99f7756369fe4848fc5641009e95bbba23c95227
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="visual-c-intellisense"></a>Visual C# IntelliSense
@@ -53,7 +54,7 @@ O Visual C# IntelliSense fica disponível durante a codificação no editor e du
   
 -   [Métodos de Extensão](#ExtensionMethods)  
   
- A Lista de Conclusão no C# também é inteligente o suficiente para filtrar tokens irrelevantes e pré-selecionar um token com base no contexto. Para obter mais informações, consulte [Listas de preenchimento filtradas no C#](../misc/filtered-completion-lists-in-csharp.md) e [Itens pré-selecionados da lista de preenchimento no C#](../misc/pre-selected-completion-list-items-in-csharp.md).  
+ A Lista de Conclusão no C# também é inteligente o suficiente para filtrar tokens irrelevantes e pré-selecionar um token com base no contexto. Para obter mais informações, consulte [Filtered Completion Lists](#filtered-completion-lists) (Listas de conclusão filtradas).  
   
 ###  <a name="CodeSnippets"></a> Trechos de código em listas de preenchimento  
  No Visual C#, a lista de preenchimento inclui trechos de código para ajudá-lo a inserir com facilidade corpos de código predefinidos no programa. Os trechos de código são exibidos na lista de preenchimento como o [Elemento de atalho (trechos de código do IntelliSense)](http://msdn.microsoft.com/en-us/052cc97a-5c70-42f8-b398-4c3adf670cfa) do trecho.  Para obter mais informações sobre os trechos de código disponíveis no Visual C# por padrão, consulte [Trechos de código do Visual C#](../ide/visual-csharp-code-snippets.md).  
@@ -65,18 +66,18 @@ O Visual C# IntelliSense fica disponível durante a codificação no editor e du
  No Visual C#, a lista de preenchimento inclui Métodos de Extensão que estão no escopo.  
   
 > [!NOTE]
->  A lista de preenchimento não exibe todos os métodos de extensão para objetos <xref:System.String>.  
+>  A lista de conclusão não exibe todos os métodos de extensão para objetos <xref:System.String>.  
   
  Os métodos de extensão usam um ícone diferente dos métodos de instância. Para obter uma listagem de ícones de lista, consulte [Modo de Exibição de Classe e ícones do Pesquisador de Objetos](../ide/class-view-and-object-browser-icons.md). Quando um método de instância e um método de extensão com o mesmo nome estão no escopo, a lista de preenchimento exibe o ícone do método de extensão.  
   
-### <a name="filtered-completion-lists"></a>Listas de preenchimento filtradas  
+### <a name="filtered-completion-lists"></a> Listas de preenchimento filtradas  
  O IntelliSense remove membros desnecessários da lista de preenchimento usando filtros.  
   
  O Visual C# filtra as listas de preenchimento exibidas para estes itens:  
   
 -   **Interfaces e classes base.** O IntelliSense remove automaticamente itens das listas de preenchimento de interface e de classe base nas listas de base de declaração de classe e de interface e nas listas de restrição. Por exemplo, enumerações não aparecem na lista de preenchimento nas classes base, pois enumerações não podem ser usadas para as classes base. A lista de preenchimento de classes base contém apenas interfaces e namespaces. Se você selecionar um item na lista e, em seguida, digitar uma vírgula, o IntelliSense removerá as classes base da lista de preenchimento, pois o Visual C# não dá suporte à herança múltipla. O mesmo comportamento também ocorre em cláusulas de restrição.  
   
--   **Atributos**: ao aplicar um atributo a um tipo, a lista de preenchimento é filtrada para que a contenha somente os tipos que descendem dos namespaces que contêm esses tipos, como <xref:System.Attribute>.  
+-   **Atributos**: ao aplicar um atributo a um tipo, a lista de conclusão é filtrada para que ela tenha somente os tipos que descendem dos namespaces que contêm esses tipos, como <xref:System.Attribute>.  
   
 -   Operadores `as` e `is`.  
   
@@ -85,6 +86,8 @@ O Visual C# IntelliSense fica disponível durante a codificação no editor e du
 -   **Inicializadores de objeto:** somente os membros que podem ser inicializados serão exibidos na lista de preenchimento.  
   
 -   **Nova palavra-chave**: ao digitar `new` e pressionar a BARRA DE ESPAÇOS, é exibida uma lista de preenchimento. Um item é selecionado na lista automaticamente, de acordo com o contexto no código. Por exemplo, os itens são selecionados automaticamente na lista de preenchimento em busca de declarações e instruções de retorno nos métodos.  
+  
+-   **Palavra-chave enum**: ao pressionar a BARRA DE ESPAÇOS após um sinal de igual para uma atribuição de enum, uma lista de conclusão será exibida. Um item é selecionado na lista automaticamente, de acordo com o contexto no código. Por exemplo, os itens serão selecionados automaticamente na lista de conclusão depois que você digitar a palavra-chave retorno e quando fizer uma declaração.  
   
 -   **Operadores as e is:** uma lista de preenchimento filtrada é exibida automaticamente ao pressionar a BARRA DE ESPAÇOS depois de digitar a palavra-chave `as` ou `is`.  
   
@@ -125,6 +128,8 @@ O Visual C# IntelliSense fica disponível durante a codificação no editor e du
  O IntelliSense fornece uma opção para ajudá-lo a implementar membros de uma classe base abstrata automaticamente enquanto estiver trabalhando no Editor de Código. Normalmente, para implementar membros de uma classe base abstrata, é necessário criar uma nova definição de método para cada método da classe base abstrata na classe derivada. Usando o IntelliSense, depois de digitar o nome de uma classe base abstrata em uma declaração de classe, uma marcação inteligente é exibida. A marcação inteligente oferece a opção de implementar os métodos de classe base automaticamente.  
   
  Os stubs de método gerados pelo recurso Implementar Classe Base Abstrata são modelados pelo trecho de código definido no arquivo MethodStub.snippet. Os trechos de código são modificáveis. Para obter mais informações, consulte [Passo a passo: criando um trecho de código](../ide/walkthrough-creating-a-code-snippet.md).  
+  
+<a name="generate-from-usage></a>  
   
 ### <a name="generate-from-usage"></a>Gerar com base no uso  
  O recurso **Gerar com Base no Uso** permite usar classes e membros antes de defini-los. É possível gerar um stub para qualquer classe, construtor, método, propriedade, campo ou enumeração que você deseja usar, mas que ainda não foi definido. É possível gerar novos tipos e membros sem sair do local atual no código. Isso minimiza a interrupção do fluxo de trabalho.  
@@ -169,8 +174,6 @@ O Visual C# IntelliSense fica disponível durante a codificação no editor e du
   
 > [!NOTE]
 >  Use o comando **Navegação Regressiva** no menu **Exibir** (CTRL+-) para retornar à declaração de vínculo de evento.  
-  
- A tarefa a seguir mostra como o IntelliSense vincula automaticamente um manipulador de eventos chamado `button1_Click` a um campo de evento chamado `button1.Click`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visual Studio IDE](../ide/visual-studio-ide.md)

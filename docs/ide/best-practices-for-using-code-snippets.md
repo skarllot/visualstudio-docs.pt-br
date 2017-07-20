@@ -30,17 +30,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 954bd5e0ba38d7a538700cba175933cc8303c863
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 165fe357bd9849ca2588542614449558eae52740
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="best-practices-for-using-code-snippets"></a>Práticas recomendadas para usar trechos de código
 O código em um trecho de código mostra somente a maneira mais simples de fazer algo. Para a maioria dos aplicativos, o código deve ser modificado para se adaptar ao aplicativo.  
   
 ## <a name="handling-exceptions"></a>Tratando exceções  
- Normalmente, o trecho de código Try...Catch bloqueia a captura e gera todas as exceções novamente. Essa pode não ser a escolha certa para seu projeto. Para cada exceção, existem várias maneiras de responder. Para obter exemplos, consulte [Como manipular uma exceção usando try/catch (Guia de Programação do C#)](http://msdn.microsoft.com/Library/ca8e3773-980e-4767-8633-7408540e9818) e [Instrução Try... Catch...Finally](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement).  
+ Normalmente, o trecho de código Try...Catch bloqueia a captura e gera todas as exceções novamente. Essa pode não ser a escolha certa para seu projeto. Para cada exceção, existem várias maneiras de responder. Para obter exemplos, consulte [Como manipular uma exceção usando try/catch (Guia de Programação do C#)](/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch) e [Instrução Try... Catch...Finally](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement).  
   
 ## <a name="file-locations"></a>Locais dos arquivos  
  Quando você adaptar locais de arquivo ao seu aplicativo, deverá considerar o seguinte:  
@@ -49,7 +50,7 @@ O código em um trecho de código mostra somente a maneira mais simples de fazer
   
 -   Encontrando um local seguro. Armazenar arquivos na pasta raiz (C:\\) não é seguro. Para dados do aplicativo, é recomendável usar a pasta \Application Data. Para dados individuais do usuário, o aplicativo pode criar um arquivo para cada usuário na pasta \My Documents.  
   
--   Usando um nome de arquivo válido. É possível usar os controles <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> para reduzir a probabilidade de nomes de arquivo inválidos. Lembre-se de que entre o momento em que o usuário seleciona um arquivo e o momento em que o código manipula o arquivo, o arquivo poderá ser excluído. Além disso, o usuário poderá não ter permissões para gravar no arquivo.  
+-   Usando um nome de arquivo válido. Você pode usar os controles <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> para reduzir a probabilidade de nomes de arquivo inválidos. Lembre-se de que entre o momento em que o usuário seleciona um arquivo e o momento em que o código manipula o arquivo, o arquivo poderá ser excluído. Além disso, o usuário poderá não ter permissões para gravar no arquivo.  
   
 ## <a name="security"></a>Segurança  
  A segurança de um trecho depende do local em que ele é usado no código-fonte e de como ele é modificado quando estiver no código. A lista a seguir contém algumas das áreas que devem ser consideradas.  

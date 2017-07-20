@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bdca63e08a164afe507b9c3964356593839b6987
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: bf91686a212551ef4b760d5bb2740a14f8495a1b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="watch-command"></a>Comando Inspecionar
@@ -62,8 +63,7 @@ Debug.Watch[index]
   
 ## <a name="see-also"></a>Consulte também  
  [Janelas automáticas e locais](../../debugger/autos-and-locals-windows.md)   
- [Como editar um valor em uma janela variável](../Topic/How%20to:%20Edit%20a%20Value%20in%20a%20Variable%20Window.md)   
- [Como usar a caixa de diálogo QuickWatch](../Topic/How%20to:%20Use%20the%20QuickWatch%20Dialog%20Box.md)   
+ [Definir uma inspeção nas variáveis usando as janelas Inspeção e QuickWatch no Visual Studio](../../debugger/watch-and-quickwatch-windows.md)   
  [Comandos do Visual Studio](../../ide/reference/visual-studio-commands.md)   
  [Janela Comando](../../ide/reference/command-window.md)   
  [Caixa Localizar/Comando](../../ide/find-command-box.md)   

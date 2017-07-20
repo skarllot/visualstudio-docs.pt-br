@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 1350102a88e9c96e0a128c48ce04611fb6d83887
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="constant-nodes"></a>Nós de constante
@@ -48,9 +50,9 @@ No Designer do Sombreador, nós constantes representam valores literais e atribu
 |**Vetor de Câmera**|O vetor que se estende do pixel atual para a câmera no espaço de mundo.<br /><br /> É possível usar isso para calcular reflexões no espaço de mundo.<br /><br /> **Saída**<br /><br /> `Output`: `float3`<br /> O vetor do pixel atual da câmera.|Nenhum|  
 |**Constante de Cor**|Um valor de cor constante.<br /><br /> **Saída**<br /><br /> `Output`: `float4`<br /> O valor da cor.|**Saída**<br /> O valor da cor.|  
 |**Constante**|Um valor escalar constante.<br /><br /> **Saída**<br /><br /> `Output`: `float`<br /> O valor escalar.|**Saída**<br /> O valor escalar.|  
-|**Constante&2;D**|Uma constante de vetor de dois componentes.<br /><br /> **Saída**<br /><br /> `Output`: `float2`<br /> O valor do vetor.|**Saída**<br /> O valor do vetor.|  
-|**Constante&3;D**|Uma constante de vetor de três componentes.<br /><br /> **Saída**<br /><br /> `Output`: `float3`<br /> O valor do vetor.|**Saída**<br /> O valor do vetor.|  
-|**Constante&4;D**|Uma constante de vetor de quatro componentes.<br /><br /> **Saída**<br /><br /> `Output`: `float4`<br /> O valor da cor.|**Saída**<br /> O valor do vetor.|  
+|**Constante 2D**|Uma constante de vetor de dois componentes.<br /><br /> **Saída**<br /><br /> `Output`: `float2`<br /> O valor do vetor.|**Saída**<br /> O valor do vetor.|  
+|**Constante 3D**|Uma constante de vetor de três componentes.<br /><br /> **Saída**<br /><br /> `Output`: `float3`<br /> O valor do vetor.|**Saída**<br /> O valor do vetor.|  
+|**Constante 4D**|Uma constante de vetor de quatro componentes.<br /><br /> **Saída**<br /><br /> `Output`: `float4`<br /> O valor da cor.|**Saída**<br /> O valor do vetor.|  
 |**Posição Normalizada**|A posição do pixel atual, expressa em coordenadas de dispositivo normalizadas.<br /><br /> A coordenada X e Y têm valores no intervalo de [-1, 1], a coordenada Z tem um valor no intervalo de [0, 1] e o componente w contém o valor de profundidade de ponto no espaço de modo de exibição; w não é normalizado.<br /><br /> **Saída**<br /><br /> `Output`: `float4`<br /> A posição do pixel atual.|Nenhum|  
 |**Ponto de cor**|A cor difusa do pixel atual, que é uma combinação da cor difusa do material e dos atributos de cor do vértice.<br /><br /> **Saída**<br /><br /> `Output`: `float4`<br /> A cor difusa do pixel atual.|Nenhum|  
 |**Profundidade do Ponto**|A profundidade do pixel atual no espaço de exibição.<br /><br /> **Saída**<br /><br /> `Output`: `float`<br /> A profundidade do pixel atual.|Nenhum|  
@@ -61,8 +63,3 @@ No Designer do Sombreador, nós constantes representam valores literais e atribu
 |**Direção da Luz do Espaço Tangente**|O vetor que define a direção na qual a luz é lançada de uma fonte de luz no espaço tangente do pixel atual.<br /><br /> É possível usar isso para calcular as contribuições de iluminação e especulares no espaço tangente.<br /><br /> **Saída:**<br /><br /> `Output`: `float3`<br /> O vetor do pixel atual para uma fonte de luz.|Nenhum|  
 |**Vetor Perpendicular ao Mundo**|O vetor perpendicular à superfície do pixel atual no espaço de mundo.<br /><br /> É possível usar isso para calcular as contribuições de iluminação e os reflexos no espaço de mundo.<br /><br /> **Saída**<br /><br /> `Output`: `float3`<br /> A superfície normal do pixel atual.|Nenhum|  
 |**Posição do Mundo**|A posição do pixel atual no espaço de mundo.<br /><br /> **Saída**<br /><br /> `Output`: `float4`<br /> A posição do pixel atual.|Nenhum|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

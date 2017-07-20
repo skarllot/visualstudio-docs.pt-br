@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 89c7ea153dc44342851b43ced5d99ffcd0b52312
-ms.openlocfilehash: 75f0baac767d66ec3c942d26957beed256f45ab3
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 4a1e79dbceb4c0cfd02dab4b3132190e44ac3273
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-unlock-visual-studio"></a>Como Desbloquear o Visual Studio
@@ -44,7 +45,7 @@ Você pode avaliar o Visual Studio gratuitamente por até 30 dias. Ao entrar no 
 ## <a name="to-unlock-visual-studio-using-an-online-subscription"></a>Para desbloquear o Visual Studio usando uma assinatura online  
  Para desbloquear o Visual Studio usando uma assinatura online do MSDN ou do Visual Studio associada a uma conta da Microsoft ou uma conta corporativa ou de estudante:  
   
-1.  Clique no botão "Entrar" no canto superior direito do IDE (ou vá para Arquivo > Configurações de Conta para abrir a caixa de diálogo Configurações de Conta e clique no botão "Entrar".)  
+1.  Clique no botão "Entrar" no canto superior direito do IDE (ou acesse Arquivo > Configurações de Conta para abrir a caixa de diálogo Configurações de Conta e clique no botão "Entrar".)  
   
 2.  Insira as credenciais para uma conta da Microsoft ou uma conta corporativa ou de estudante. O Visual Studio encontrará uma assinatura do MSDN ou uma assinatura do Visual Studio Team Services associada à sua conta.  
   
@@ -85,7 +86,7 @@ Você pode avaliar o Visual Studio gratuitamente por até 30 dias. Ao entrar no 
   
 1.  Renovar sua assinatura. Para obter mais informações sobre a licença que você está usando, acesse a caixa de diálogo Arquivo > Configurações de Conta e procure as informações de licença no lado direito da caixa de diálogo.  
   
-2.  Se você tiver outra assinatura associada a uma conta diferente, adicione essa conta à lista Todas as Contas no lado esquerdo da caixa de diálogo Arquivo > Configurações de Conta clicando no link “Adicionar uma conta...” .  
+2.  Se você tiver outra assinatura associada a uma conta diferente, adicione essa conta à lista Todas as Contas no lado esquerdo da caixa de diálogo Arquivo > Configurações de Conta clicando no link “Adicionar uma conta...”.  
   
 ## <a name="see-also"></a>Consulte também  
  [Signing in to Visual Studio](../ide/signing-in-to-visual-studio.md) (Entrando no Visual Studio)

@@ -33,19 +33,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6731faf9dc5a02471adcc13768225704e07cac1c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 64cee61bb8818dc8910d6fdb32293d03a9770ad3
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="find-and-replace-environment-options-dialog-box"></a>Caixa de diálogo Localizar e Substituir, Ambiente, Opções
+# Caixa de diálogo Localizar e Substituir, Ambiente, Opções
+<a id="find-and-replace-environment-options-dialog-box" class="xliff"></a>
 Use esta página da caixa de diálogo **Opções** para controlar caixas de mensagem e outros aspectos de uma operação de localizar e substituir. Você pode acessar essa caixa de diálogo no menu **Ferramentas**, clicando em **Opções**, expandindo **Ambiente** e, em seguida, clicando em **Localizar e Substituir**. Se essa página não aparecer na lista, selecione **Mostrar todas as configurações** na caixa de diálogo **Opções**.  
   
 > [!NOTE]
->  As opções disponíveis nas caixas de diálogo e os nomes os locais dos comandos de menu que você vê podem diferir do que é descrito na Ajuda, dependendo de suas configurações ativas ou da edição. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As opções disponíveis nas caixas de diálogo e os nomes os locais dos comandos de menu que você vê podem diferir do que é descrito na Ajuda, dependendo de suas configurações ativas ou da edição. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="uielement-list"></a>Lista UIElement  
+## Lista UIElement
+<a id="uielement-list" class="xliff"></a>  
  **Exibir mensagens informativas**  
  Selecione esta opção para exibir todas as mensagens informativas de Localizar e Substituir que têm a opção **Sempre mostrar esta mensagem**. Por exemplo, se você tiver optado por não exibir a mensagem "A localização atingiu o ponto inicial da pesquisa.", selecionar essa opção faria com que essa mensagem informativa aparecesse novamente quando você usasse Localizar e Substituir.  
   
@@ -69,5 +72,6 @@ Use esta página da caixa de diálogo **Opções** para controlar caixas de mens
  **Preencher automaticamente a opção Localizar no editor**  
  Selecione esta opção para colar o texto de um dos lados do ponto de inserção atual do editor no campo **Localizar** quando você selecionar qualquer modo de exibição da janela **Localizar e Substituir** no menu **Editar**. Desmarque esta opção para usar o último padrão de pesquisa da pesquisa anterior como a cadeia de caracteres para **Localizar**.  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Localizando e substituindo texto](../../ide/finding-and-replacing-text.md)

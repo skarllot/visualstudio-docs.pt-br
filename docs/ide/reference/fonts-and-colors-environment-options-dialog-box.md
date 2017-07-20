@@ -45,17 +45,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0f016280ac261d60c60036b428ee3bb08920431b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 209ddbe4166e7818e5ea3a1a699f6a0f1ee096e0
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>Caixa de diálogo Fontes e Cores, Ambiente, Opções
 A página **Fontes e Cores** da caixa de diálogo **Opções** permite estabelecer um esquema de cores e fontes personalizado para vários elementos da interface do usuário no IDE (ambiente de desenvolvimento integrado). É possível acessar essa caixa de diálogo clicando em **Ferramentas / Opções** e, em seguida, selecionando **Ambiente / Fontes e Cores**. Se essa página não aparecer na lista, selecione **Mostrar todas as configurações** na caixa de diálogo **Opções**.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
  Alterações do esquema de cores não terão efeito durante a sessão em que foram feitas. É possível avaliar alterações de cores abrindo outra instância do Visual Studio e produzindo as condições nas quais você espera aplicar essas alterações.  
   
@@ -206,7 +207,7 @@ A página **Fontes e Cores** da caixa de diálogo **Opções** permite estabelec
 |**Atributo XML**|Nomes de atributo.|  
 |**Aspas do Atributo XML**|Os caracteres de aspas para atributos XML.|  
 |**Valor do Atributo XML**|Conteúdo de atributos XML.|  
-|**Seção Cdata XML**|Conteúdo de \<![CDATA[…]]>.|  
+|**Seção Cdata XML**|Conteúdo de \<![CDATA[...]]>.|  
 |**Comentário XML**|O conteúdo de \<!-- -->.|  
 |**Delimitador XML**|Delimitadores da sintaxe XML, incluindo <, <?, <!, \<!--, -->, ?\>, \<![, ]]> e [, ].|  
 |**Atributo de Documento XML**|O valor de um atributo de documentação XML, como \<param name="I">, em que o "I" é colorido.|  

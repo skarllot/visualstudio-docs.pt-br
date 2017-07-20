@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 989bc338e0cb8c49a2342d998e1e09e8f6b0eb9f
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 60636023fc506df5ed6e57d4f4d9c90e680ab607
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="output-window"></a>Janela Saída
@@ -74,7 +75,7 @@ A Janela de **Saída** pode exibir mensagens de status para vários recursos no 
   
  Alguns recursos do IDE e comandos invocados na [Janela Comando](../../ide/reference/command-window.md) fornecem sua saída para a Janela de **Saída**. A saída de ferramentas externas como arquivos .bat e .com, que normalmente é exibida na janela Prompt de Comando, é encaminhada para um painel **Saída** ao selecionar a opção **Usar Janela de Saída** em [Gerenciando ferramentas externas](../../ide/managing-external-tools.md). Muitos outros tipos de mensagens também podem ser exibidos em painéis **Saída**. Por exemplo, quando a sintaxe Transact-SQL em um procedimento armazenado é verificada em um banco de dados de destino, os resultados são exibidos na Janela de **Saída**.  
   
- Você também pode programar seus próprios aplicativos para gravar mensagens de diagnóstico em tempo de execução em um painel **Saída**. Para fazer isso, use os membros da classe <xref:System.Diagnostics.Debug> ou <xref:System.Diagnostics.Trace> no namespace <xref:System.Diagnostics> da Biblioteca de Classes .NET Framework. Membros da classe <xref:System.Diagnostics.Debug> exibem a saída quando você compila as configurações de Depuração da solução ou do projeto; membros da classe <xref:System.Diagnostics.Trace> exibem a saída quando você compila configurações de Depuração ou de Versão. Para obter mais informações, consulte [Mensagens de diagnóstico na Janela de Saída](../../debugger/diagnostic-messages-in-the-output-window.md).  
+ Você também pode programar seus próprios aplicativos para gravar mensagens de diagnóstico em tempo de execução em um painel **Saída**. Para fazer isso, use os membros da classe <xref:System.Diagnostics.Debug> ou <xref:System.Diagnostics.Trace> no namespace <xref:System.Diagnostics> da biblioteca de classes do .NET Framework. Os membros da classe <xref:System.Diagnostics.Debug> exibem a saída quando você compila as configurações de Depuração da solução ou do projeto; os membros da classe <xref:System.Diagnostics.Trace> exibem a saída quando você compila as configurações de Depuração ou de Versão. Para obter mais informações, consulte [Mensagens de diagnóstico na Janela de Saída](../../debugger/diagnostic-messages-in-the-output-window.md).  
   
  No [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)], é possível criar etapas e eventos de build personalizados cujos avisos e erros são exibidos e contados no painel **Saída**. Ao pressionar F1 em uma linha de saída, é possível exibir um tópico de ajuda apropriado. Para obter mais informações, consulte [Formatando a saída de uma etapa de build ou um evento de build personalizado](/cpp/ide/formatting-the-output-of-a-custom-build-step-or-build-event).  
   
@@ -86,4 +87,4 @@ A Janela de **Saída** pode exibir mensagens de status para vários recursos no 
  [Como controlar a Janela de Saída](http://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858)   
  [Compilando e criando](../../ide/compiling-and-building-in-visual-studio.md)   
  [Noções sobre configurações de build](../../ide/understanding-build-configurations.md)   
- [Visão geral da biblioteca de classes](http://msdn.microsoft.com/Library/7e4c5921-955d-4b06-8709-101873acf157)
+ [Visão geral da biblioteca de classes](/dotnet/standard/class-library-overview)

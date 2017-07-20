@@ -28,12 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 908f67221bc7fe995c0683400bfd406eb9b44d3e
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/14/2017
 
 ---
-# <a name="designing-user-interfaces"></a>Criando interfaces do usuário
+# Criando interfaces do usuário
+<a id="designing-user-interfaces" class="xliff"></a>
 Você pode criar e projetar a interface do usuário de seu aplicativo usando uma variedade de ferramentas do Visual Studio.  
   
 |Para saber mais a respeito|Consulte|  
@@ -43,11 +46,7 @@ Você pode criar e projetar a interface do usuário de seu aplicativo usando uma
 |Como desenvolver um aplicativo DirectX no Visual Studio.|[Trabalhando com ativos 3D para jogos e aplicativos](../designers/working-with-3-d-assets-for-games-and-apps.md)|  
 |Ícones padrão disponíveis para seus programas.|[A Biblioteca de Imagens do Visual Studio](../designers/the-visual-studio-image-library.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Passo a passo: criar um aplicativo simples](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)   
  [A Biblioteca de Imagens do Visual Studio](../designers/the-visual-studio-image-library.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

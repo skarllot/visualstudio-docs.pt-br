@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: edc126208bb401c8dba9a6be722cbd0dbda21caf
-ms.openlocfilehash: 720048b861bfb208489a62340efca28ae88d1951
+ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
+ms.openlocfilehash: 28c6a166a423b3341ae32676830861eaa78cb40d
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/22/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Novidades no Visual Studio 2017
@@ -132,7 +132,7 @@ Para estender os recursos de DevOps para o desenvolvimento do banco de dados do 
 
 Incluído no Visual Studio 2017 Enterprise:
 - O [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs) ajuda você a desenvolver scripts de migração, gerenciar alterações no banco de dados usando o controle do código-fonte e automatizar com segurança as implantações de alterações no banco de dados do SQL Server, juntamente com alterações de aplicativos.
-- O [Redgate SQL Prompt Core](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs) ajuda você a gravar o SQL com maior rapidez e precisão com a ajuda do preenchimento inteligente de código. O SQL Prompt preenche automaticamente palavras-chave e objetos do sistema e do banco de dados, e oferece uma coluna de sugestões conforme você digita. Isso resulta em um código mais simples e em menos erros porque você não tem que se lembrar de cada alias ou nome de coluna.
+- O [Redgate SQL Prompt Core](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs) ajuda você a gravar o SQL com maior rapidez e precisão com a ajuda do preenchimento inteligente de código. O SQL Prompt preenche automaticamente palavras-chave e objetos do sistema e do banco de dados, e oferece uma coluna de sugestões conforme você digita. Isso resulta em um código mais simples e em menos erros porque você não precisa se lembrar de cada alias ou nome de coluna.
 
 Incluído em todas as edições do Visual Studio 2017:
 - O [Redgate SQL Search](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs) aumenta a produtividade, ajudando-o a localizar rapidamente fragmentos de SQL e objetos em vários bancos de dados.
@@ -146,7 +146,7 @@ Quando estiver trabalhando com um projeto no Visual Studio, é possível configu
 ![Caixa de diálogo Interagir com o Git do Visual Studio 2017](../ide/media/vsIDE-GitInteraction.png "Ferramentas do Git no IDE do Visual Studio")
 
 #### <a name="view-and-navigate-code-with-structure-visualizer"></a>Exibir e navegar no código com o Visualizador de Estrutura:
-O Visualizador de Estrutura desenha linhas guia de estrutura (também conhecidas como guias de recuo) no código. É possível usá-las para visualizar e descobrir em qual bloco de código você está a qualquer momento sem a necessidade de rolagem. Focalizar as linhas mostra as dicas de ferramentas que permitem a abertura desse bloco e de seus pais. Esse recurso está disponível para todas as linguagens com suporte por meio de gramáticas TextMate, bem como C#, Visual Basic e XAML.
+O Visualizador de Estrutura desenha linhas guia de estrutura (também conhecidas como guias de recuo) no código. É possível usá-las para visualizar e descobrir em qual bloco de código você está a qualquer momento, sem a necessidade de rolagem. Focalizar as linhas mostra as dicas de ferramentas que permitem a abertura desse bloco e de seus pais. Esse recurso está disponível para todas as linguagens com suporte por meio de gramáticas TextMate, bem como C#, Visual Basic e XAML.
 
 ![Visualizador de estrutura do Visual Studio 2017](../ide/media/vsIDE-StructureVisualizer.png "Visualizador de estrutura no Visual Studio")
 
@@ -199,11 +199,11 @@ Se você quiser fazer sugestões sobre como podemos aprimorar o Visual Studio ou
  Às vezes, uma mensagem não é suficiente para transmitir o impacto total de um problema que você encontrou. Se você tiver um travamento, uma falha ou outro problema de desempenho, você poderá compartilhar facilmente conosco as etapas de reprodução e os arquivos de suporte (como capturas de tela e arquivos de rastreamento e arquivos de despejo com heap) usando a ferramenta **Relatar um Problema**. Para obter mais informações sobre como usar essa ferramenta, consulte a página [Como relatar um problema](how-to-report-a-problem-with-visual-studio-2017.md).  
 
 ### <a name="track-your-issue-in-connect"></a>Acompanhar seu problema no Connect  
- Se você quiser acompanhar o status de seus comentários do Visual Studio, basta ir até o [Connect](http://connect.microsoft.com/) e reportar o bug lá. Depois que você reportar, é possível retornar ao Connect para acompanhar o status.  
+ Se você quiser acompanhar o status de seus comentários do Visual Studio, basta acessar o [Connect](http://connect.microsoft.com/) e reportar o bug lá. Depois que você reportar, é possível retornar ao Connect para acompanhar o status.  
 
 ## <a name="see-also"></a>Consulte também  
 * [Novidades no Visual C++](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
-* [Novidades no C#](https://docs.microsoft.com/en-us/dotnet/articles/csharp/csharp-7)  
+* [Novidades no C#](https://docs.microsoft.com/en-us/dotnet/csharp/csharp-7)  
 * [Novidades para o Team Foundation Server](https://www.visualstudio.com/en-us/docs/whats-new)
 * [Notas de Versão do Visual Studio](https://www.visualstudio.com/news/vs2015-vs)
 

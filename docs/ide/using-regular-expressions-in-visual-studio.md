@@ -37,14 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 6d7266c35746fa4413ffd4ce058b1acbe9229af2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 541b728d006f85fc550c5ddad2a7cd74190c244a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Usando expressões regulares no Visual Studio
-O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] usa expressões regulares do .NET Framework para localizar e substituir texto. Para obter mais informações sobre as expressões regulares do .NET, consulte [Expressões regulares do .NET Framework](http://msdn.microsoft.com/Library/521b3f6d-f869-42e1-93e5-158c54a6895d).  
+O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] usa expressões regulares do .NET Framework para localizar e substituir texto. Para obter mais informações sobre as expressões regulares do .NET, consulte [Expressões regulares do .NET Framework](/dotnet/standard/base-types/regular-expressions).  
   
  Antes do Visual Studio 2012, o Visual Studio usava a sintaxe de expressão regular personalizada nas janelas Localizar e Substituir. Consulte [Conversões de expressões regulares do Visual Studio](https://msdn.microsoft.com/en-us/library/2k3te2cs\(v=vs.110\).aspx) para obter uma explicação de como converter alguns dos símbolos personalizados de expressões regulares mais usados nas versões do .NET.  
   
@@ -52,7 +53,7 @@ O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] usa expressões regu
 >  Em sistemas operacionais Windows, a maioria das linhas termina em “\r\n” (um retorno de carro seguido por uma nova linha). Esses caracteres não são visíveis, mas estão presentes no editor e são passados para o serviço Expressão Regular do .NET.  
   
 > [!TIP]
->  Para obter informações sobre as expressões regulares usadas em padrões de substituição, consulte [Substituições](http://msdn.microsoft.com/Library/d1f52431-1c7d-4dc6-8792-6b988256892e). Para usar um grupo de captura numerado, a sintaxe é `$1` para especificar o grupo numerado e `(x)` para especificar o grupo em questão. Por exemplo, a expressão regular agrupada `(\d)([a-z])` encontra quatro correspondências na seguinte cadeia de caracteres: **1a 2b 3c 4d**. A cadeia de caracteres de substituição `z$1` converte essa cadeia de caracteres em **z1 z2 z3 z4**.  
+>  Para obter informações sobre as expressões regulares usadas em padrões de substituição, consulte [Substituições](/dotnet/standard/base-types/substitutions-in-regular-expressions). Para usar um grupo de captura numerado, a sintaxe é `$1` para especificar o grupo numerado e `(x)` para especificar o grupo em questão. Por exemplo, a expressão regular agrupada `(\d)([a-z])` encontra quatro correspondências na seguinte cadeia de caracteres: **1a 2b 3c 4d**. A cadeia de caracteres de substituição `z$1` converte essa cadeia de caracteres em **z1 z2 z3 z4**.  
   
 ## <a name="regular-expressions-in-visual-studio"></a>Expressões regulares no Visual Studio  
  Estes são alguns exemplos  

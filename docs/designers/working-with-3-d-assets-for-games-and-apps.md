@@ -15,9 +15,10 @@ caps.latest.revision: 24
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: da8802e4b7143797f2e5f7694ee9d2092ec41dc8
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -34,8 +35,8 @@ Este documento descreve as ferramentas [!INCLUDE[vsprvs](../code-quality/include
   
  Use o Editor de Imagens do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com imagens e texturas em muitos tipos e formatos comuns.  
   
-### <a name="3-d-models"></a>Modelos&3; D  
- Os modelos&3;D criam espaço e forma em jogos e aplicativos. No mínimo, os modelos codificam a posição de pontos no espaço 3D — que são conhecidos como *vértices*— junto com os dados de indexação para definir linhas ou triângulos que representam a forma do modelo. É possível associar dados adicionais a esses vértices — por exemplo, informações de cores, vetores normais ou atributos específicos ao aplicativo. Cada modelo também pode definir atributos de todo o objeto — por exemplo, qual sombreador é usado para calcular a aparência da superfície do objeto ou qual textura é aplicada a ele.  
+### <a name="3-d-models"></a>Modelos 3 D  
+ Os modelos 3D criam espaço e forma em jogos e aplicativos. No mínimo, os modelos codificam a posição de pontos no espaço 3D — que são conhecidos como *vértices*— junto com os dados de indexação para definir linhas ou triângulos que representam a forma do modelo. É possível associar dados adicionais a esses vértices — por exemplo, informações de cores, vetores normais ou atributos específicos ao aplicativo. Cada modelo também pode definir atributos de todo o objeto — por exemplo, qual sombreador é usado para calcular a aparência da superfície do objeto ou qual textura é aplicada a ele.  
   
  Use o Editor de Modelo do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para trabalhar com modelos 3D em vários formatos comuns.  
   

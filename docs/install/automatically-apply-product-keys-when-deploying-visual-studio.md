@@ -50,7 +50,7 @@ ms.lasthandoff: 05/09/2017
  Essa é uma linha de comando de exemplo para aplicar a licença ao Visual Studio 2017 Enterprise, que tem um MPC de 08860, com uma chave do produto (Product Key) `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE`, supondo a instalação em um local padrão:
 
  ```cmd
- C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\StorePID.exe AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 08860
+ "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\StorePID.exe" AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 08860
  ```
 
  A seguinte tabela lista os códigos MPC para cada edição do Visual Studio:

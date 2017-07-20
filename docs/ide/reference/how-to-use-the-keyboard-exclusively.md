@@ -34,22 +34,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 863e280017e58474e938624ad708ccb4fc73aed7
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 6b1e1a8a1e453015a673580d8a0dda7f5e817168
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="how-to-use-the-keyboard-exclusively"></a>Como usar o teclado de forma exclusiva
+# Como usar o teclado de forma exclusiva
+<a id="how-to-use-the-keyboard-exclusively" class="xliff"></a>
 O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] fornece muitas combinações padrão de teclas de atalho para facilitar a navegação e a criação de código dentro do IDE (ambiente de desenvolvimento integrado). Para obter uma lista completa das teclas de atalho usadas no Visual Studio, consulte [Atalhos de teclado padrão](../../ide/default-keyboard-shortcuts-in-visual-studio.md). Para obter informações sobre os atalhos de teclado disponíveis para outros produtos da Microsoft, consulte [http://www.microsoft.com/enable/products/keyboard.aspx](http://go.microsoft.com/fwlink/?LinkID=40400).  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="toolbox-controls"></a>Controles de Caixa de Ferramentas  
+## Controles de Caixa de Ferramentas
+<a id="toolbox-controls" class="xliff"></a>  
  É possível adicionar um controle da Caixa de Ferramentas a um formulário ou designer usando o teclado.  
   
-#### <a name="to-add-controls-from-the-toolbox-to-a-designer-from-the-keyboard"></a>Para adicionar controles da Caixa de Ferramentas a um designer usando o teclado  
+#### Para adicionar controles da Caixa de Ferramentas a um designer usando o teclado
+<a id="to-add-controls-from-the-toolbox-to-a-designer-from-the-keyboard" class="xliff"></a>  
   
 1.  Na barra de menus, escolha **Exibir**, **Caixa de Ferramentas**.  
   
@@ -61,10 +65,12 @@ O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] fornece muitas co
   
  O controle é adicionado ao formulário ou designer.  
   
-## <a name="dialog-box-options"></a>Opções de caixa de diálogo  
+## Opções de caixa de diálogo
+<a id="dialog-box-options" class="xliff"></a>  
  É possível percorrer as opções em uma caixa de diálogo e alterar as configurações da opção usando o teclado.  
   
-#### <a name="to-set-dialog-box-options-from-the-keyboard"></a>Para definir opções da caixa de diálogo usando o teclado  
+#### Para definir opções da caixa de diálogo usando o teclado
+<a id="to-set-dialog-box-options-from-the-keyboard" class="xliff"></a>  
   
 1.  Use **TAB** ou **SHIFT + TAB** para se mover para cima e para baixo entre os controles na caixa de diálogo.  
   
@@ -80,16 +86,19 @@ O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] fornece muitas co
   
     -   Para grades, use as teclas de direção para navegar. Para listas suspensas em grades, use **SHIFT** + **ALT** + **SETA PARA BAIXO** para exibir itens e use **SETA PARA CIMA** e **SETA PARA BAIXO** para alterar o item selecionado.  
   
-## <a name="window-and-file-navigation"></a>Navegação em janelas e arquivos  
+## Navegação em janelas e arquivos
+<a id="window-and-file-navigation" class="xliff"></a>  
  O IDE fornece várias maneiras de percorrer janelas de documentos e de ferramentas abertas usando o teclado. Também é possível mover e encaixar janelas de ferramentas em locais diferentes usando o teclado.  
   
-#### <a name="to-navigate-among-windows-and-files-in-the-ide-from-the-keyboard"></a>Para navegar entre janelas e arquivos no IDE usando o teclado  
+#### Para navegar entre janelas e arquivos no IDE usando o teclado
+<a id="to-navigate-among-windows-and-files-in-the-ide-from-the-keyboard" class="xliff"></a>  
   
 -   Para percorrer os arquivos em um editor ou designer, escolha as teclas CTRL + TAB para exibir o Navegador do IDE com **Arquivos Ativos** selecionado. Pressione a tecla Enter para navegar até o arquivo realçado.  
   
 -   Para percorrer janelas de ferramentas encaixadas, escolha Alt + F7 para exibir o Navegador do IDE com **Janelas de Ferramentas Ativas** selecionado. Escolha a tecla Enter para navegar até a janela realçada.  
   
-#### <a name="to-move-and-dock-tool-windows-from-the-keyboard"></a>Para mover e encaixar janelas de ferramentas usando o teclado  
+#### Para mover e encaixar janelas de ferramentas usando o teclado
+<a id="to-move-and-dock-tool-windows-from-the-keyboard" class="xliff"></a>  
   
 1.  Navegue até a janela da ferramenta que você pretende mover e coloque-a em foco.  
   
@@ -111,7 +120,8 @@ O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] fornece muitas co
   
      A janela de ferramentas é encaixada no novo local de encaixe.  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Identificando e personalizando atalhos de teclado](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)   
  [Dicas e truques de acessibilidade](../../ide/reference/accessibility-tips-and-tricks.md)   
  [Atalhos de teclado padrão](../../ide/default-keyboard-shortcuts-in-visual-studio.md)

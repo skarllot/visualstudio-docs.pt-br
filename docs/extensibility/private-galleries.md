@@ -68,7 +68,7 @@ Você pode compartilhar controles, modelos e ferramentas que você desenvolve po
  Um administrador pode disponibilizar uma galeria privada em vários computadores ao mesmo tempo, modificando o registro do sistema em cada computador. Para fazer isso, crie um arquivo pkgdef que descreve as novas chaves de registro e seus valores.  O formato deste arquivo é da seguinte maneira.  
   
 ```  
-[$RootPath$\ExtensionManager\Repositories\{UniqueGUID}]  
+[$RootKey$\ExtensionManager\Repositories\{UniqueGUID}]  
 @={URI}  (REG_SZ)  
 Disabled=0 | 1 (DWORD)  
 Priority=0 (highest priority) ... MaxInt (lowest priority) (DWORD) (uint)  

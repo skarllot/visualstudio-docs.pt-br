@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: be7d54307d274cfbf3a71d34118d0e1ca92a83e5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3058bf7c6714f18291353224a192218c1b59a480
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-specify-build-events-c"></a>Como especificar eventos de build (C#)
@@ -69,7 +70,7 @@ Use eventos de build para especificar comandos que são executados antes do iní
 6.  Na caixa **Executar o evento de pós-build**, especifique em que condições o evento pós-build deve ser executado.  
   
     > [!NOTE]
-    >  Para adicionar uma sintaxe longa, ou para selecionar macros de build na [Caixa de diálogo de linha de comando do evento de pré-/pós-build](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md), clique no botão de reticências (**...**) para exibir uma caixa de edição.  
+    >  Para adicionar uma sintaxe longa ou para selecionar macros de build na [Caixa de diálogo de linha de comando do evento de pré-/pós-build](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md), clique no botão de reticências (**...**) para exibir uma caixa de edição.  
   
      A sintaxe do evento de build pode incluir qualquer comando que seja válido em um prompt de comando ou em um arquivo .bat. O nome de um arquivo em lote deve ser precedido por `call` para garantir que todos os comandos posteriores sejam executados.  
   

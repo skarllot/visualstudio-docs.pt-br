@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9a10073a39957e86583d77762f401fd09af80cf8
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 79222e6c9cf609e617bd3cfd49d31be4f9c7c30e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>Etapa 1: Criar um projeto e adicionar rótulos ao formulário
@@ -145,7 +147,7 @@ A primeira linha do teste de matemática
   
      É possível usar as linhas separadoras para fornecer distância suficiente entre as duas linhas.  
   
-3.  Altere o valor da propriedade **Text** do segundo rótulo para **–** (sinal de subtração).  
+3.  Altere o valor da propriedade **Text** do segundo rótulo para **-** (sinal de subtração).  
   
 4.  Nomeie o primeiro rótulo de interrogação **minusLeftLabel**.  
   
@@ -193,8 +195,3 @@ Formulário inicial do teste de matemática
 -   Para ir para a próxima etapa do tutorial, consulte [Etapa 2: criar um problema de adição aleatório](../ide/step-2-create-a-random-addition-problem.md).  
   
 -   Para retornar ao tópico de visão geral, consulte [Tutorial 2: criar um teste de matemática temporizado](../ide/tutorial-2-create-a-timed-math-quiz.md).
-
-
-<!--HONumber=Feb17_HO4-->
-
-

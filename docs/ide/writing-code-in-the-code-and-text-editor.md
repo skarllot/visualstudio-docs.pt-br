@@ -79,10 +79,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
-ms.openlocfilehash: c5e8972cf5efb5596f7649df2c622e802803319f
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7b3cc733a1a808f60a27332024bcfff1dd9e670b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="write-code-in-the-code-editor"></a>Escrever código no editor de códigos
@@ -227,7 +228,7 @@ Esse recurso pode ser útil caso seu código tenha nomes longos.
 ## <a name="finding-references-in-your-codebase"></a>Localizando referências em sua base de código
 Para localizar onde os elementos de código específicos são referenciados em toda a sua base de código, é possível usar o comando **Localizar Todas as Referências**. Para usar **Localizar Todas as Referências**, selecione esse comando no menu de contexto (clicando com o botão direito do mouse) do elemento que deseja localizar as referências, ou use as teclas SHIFT + F12.
 
-Os resultados são exibidos em uma janela de ferramentas chamada **'*{element}*' references* *, na qual *{element}* é o nome do item que está procurando. Uma barra de ferramentas na janela Referências permite que você:
+Os resultados são exibidos em uma janela de ferramentas chamada  **'*{element}*' references* *, na qual *{element}* é o nome do item que está procurando. Uma barra de ferramentas na janela Referências permite que você:
 - Altere o escopo da pesquisa em uma caixa de listagem suspensa. É possível optar por examinar apenas documentos alterados até a solução inteira.
 - Copie o item referenciado selecionado ao selecionar o botão **Copiar**.
 - Escolha os botões para ir ao local seguinte ou anterior na lista, ou escolha as teclas F8 ou SHIFT + F8.

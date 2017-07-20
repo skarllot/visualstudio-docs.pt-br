@@ -34,13 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 88b16c80dd08a95f0d569ce7d6bdfbe37163c40d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: ce92fc8cb8369381ad8f00cd677cc04b96bfd1d3
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="toolbox"></a>Caixa de Ferramentas
+# Caixa de Ferramentas
+<a id="toolbox" class="xliff"></a>
 A **Caixa de Ferramentas** exibe ícones de controles e outros itens que você pode adicionar a projetos [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Para abrir a **Caixa de Ferramentas**, clique em **Caixa de Ferramentas** no menu **Exibir**. Você pode encaixar a **Caixa de Ferramentas** e pode fixá-la aberta ou configurá-la para **Ocultar Automaticamente**.  
   
  Ícones da **Caixa de Ferramentas** podem ser arrastados para o modo de exibição de Design ou colados em um editor de código. As duas ações adicionam o código fundamental para criar uma instância do item de **Caixa de Ferramentas** no arquivo de projeto ativo.  
@@ -48,9 +50,10 @@ A **Caixa de Ferramentas** exibe ícones de controles e outros itens que você p
  A **Caixa de Ferramentas** exibe apenas os itens que são apropriados para o tipo de arquivo em que você está trabalhando. Você pode pesquisar na Caixa de Ferramentas para filtrar ainda mais os itens que aparecem. Se o projeto exigir um controle que não tem suporte do Perfil de Cliente, você pode configurar o projeto para ter como destino a estrutura inteira editando as propriedades do projeto.  
   
 > [!NOTE]
->  Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="help-on-toolbox-tabs"></a>Ajuda sobre as guias da Caixa de Ferramentas  
+## Ajuda sobre as guias da Caixa de Ferramentas
+<a id="help-on-toolbox-tabs" class="xliff"></a>  
  Os documentos a seguir fornecem mais informações sobre guias específicas da **Caixa de Ferramentas**.  
   
 -   [Caixa de Ferramentas, Guia Dados](http://msdn.microsoft.com/library/8a41dyt7\(v=vs.110\))  
@@ -65,5 +68,6 @@ A **Caixa de Ferramentas** exibe ícones de controles e outros itens que você p
   
 -   [Caixa de Ferramentas, Guia HTML](http://msdn.microsoft.com/library/w9ss7h1a\(v=vs.120\))  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Usando a caixa de ferramentas](../../ide/using-the-toolbox.md)

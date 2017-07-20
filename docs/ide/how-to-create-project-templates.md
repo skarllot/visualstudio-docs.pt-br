@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6891ffa07e9a022236f67372e1bfb00533676247
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: 279a123088308a54dccfa9abe0bfbcdb18e5aaf1
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="how-to-create-project-templates"></a>Como criar modelos de projeto
@@ -55,7 +56,7 @@ Este procedimento permite criar um modelo usando o assistente de **Exportação 
   
 3.  Conforme apropriado, edite os arquivos de código para indicar em que ponto a substituição de parâmetro deve ocorrer. Para obter mais informações sobre a substituição de parâmetros, consulte [Como substituir parâmetros em um modelo](../ide/how-to-substitute-parameters-in-a-template.md).  
   
-4.  No menu **Arquivo**, clique em **Exportar Modelo**. O assistente de **Exportação de Modelo** é aberto.  
+4.  No menu **Projeto**, clique em **Exportar Modelo**. O assistente de **Exportação de Modelo** é aberto.  
   
 5.  Clique em **Modelo de Projeto**.  
   
@@ -74,3 +75,4 @@ Este procedimento permite criar um modelo usando o assistente de **Exportação 
 ## <a name="see-also"></a>Consulte também  
  [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)   
  [Como criar modelos de item](../ide/how-to-create-item-templates.md)
+

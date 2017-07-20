@@ -44,13 +44,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: 3fb3b66548077a2f92289f1a2f02cc8ae77544cc
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>Classes específicas de cultura para Windows Forms e Web Forms globais
-Cada cultura tem diferentes convenções para exibir datas, hora, números, moeda e outras informações. O namespace <xref:System.Globalization> contém classes que podem ser usadas para modificar como os valores específicos de cultura são exibidos, como <xref:System.Globalization.DateTimeFormatInfo>, **Calendário** e <xref:System.Globalization.NumberFormatInfo>.  
+Cada cultura tem diferentes convenções para exibir datas, hora, números, moeda e outras informações. O namespace <xref:System.Globalization> contém classes que podem ser usadas para modificar o modo como os valores específicos de cultura são exibidos, como <xref:System.Globalization.DateTimeFormatInfo>, **Calendário** e <xref:System.Globalization.NumberFormatInfo>.  
   
 ## <a name="using-the-culture-setting"></a>Usando a configuração de cultura  
  Mas, na maioria das vezes, você usará a configuração de cultura armazenada no aplicativo ou no painel de controle **Opções Regionais** para determinar automaticamente as convenções no tempo de execução e formatar as informações adequadamente. Para obter mais informações sobre como configurar a cultura, consulte [How to: Set the Culture and UI Culture for Windows Forms Globalization (Como definir a cultura e a cultura da interface do usuário para globalização do Windows Forms)](http://msdn.microsoft.com/en-us/694e049f-0b91-474a-9789-d35124f248f0) ou [How to: Set the Culture and UI Culture for ASP.NET Web Page Globalization (Como definir a cultura e cultura da interface do usuário para globalização de página da Web do ASP.NET)](http://msdn.microsoft.com/Library/76091f86-f967-4687-a40f-de87bd8cc9a0). As classes que formatam informações automaticamente de acordo com a configuração de cultura são chamadas classes específicas de cultura. Alguns métodos específicos de cultura são <xref:System.IFormattable.ToString%2A?displayProperty=fullName>, <xref:System.Console.WriteLine%2A?displayProperty=fullName> e <xref:System.String.Format%2A?displayProperty=fullName>. Algumas funções específicas de cultura (na linguagem do Visual Basic) são `MonthName` e `WeekDayName`.  
@@ -92,8 +94,3 @@ Console.WriteLine(myInt.ToString("C", Thread.CurrentThread.CurrentCulture));
  <xref:System.Console.WriteLine%2A?displayProperty=fullName>   
  <xref:System.String.Format%2A?displayProperty=fullName>   
  [Globalizando e localizando aplicativos](../ide/globalizing-and-localizing-applications.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

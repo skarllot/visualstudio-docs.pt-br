@@ -1,8 +1,8 @@
 ---
 title: "Criar uma instalação offline do Visual Studio | Microsoft Docs"
-description: "Escolha uma versão e saiba como criar uma instalação offline do Visual Studio."
+description: "Descubra como criar uma instalação offline do Visual Studio."
 ms.custom: 
-ms.date: 03/27/2017
+ms.date: 05/15/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -33,18 +33,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
-ms.openlocfilehash: 305402c28998de265549715356c93840f3f2f09e
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d9de84bed187c62962a76424aabdc5f355dff4dc
+ms.openlocfilehash: 3f62dda1c768c62c438e30a75155fbecabe049e0
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
-# <a name="create-an-offline-installation-of-visual-studio"></a>Criar uma instalação offline do Visual Studio
+# <a name="create-an-offline-installation-of-visual-studio-2017"></a>Criar uma instalação offline do Visual Studio 2017
 
-Se você desejar criar um layout de instalação offline do Visual Studio para poder instalar o produto em um computador que não tem conexão com a Internet, nós poderemos indicar a direção correta.
+Se você estiver procurando por uma opção offline para a instalação do Visual Studio 2017, podemos indicar a direção certa.
 
-Escolha a versão do Visual Studio que mais te interessa e exiba os detalhes em uma das páginas a seguir.
-
-* Para o **Visual Studio 2015**, consulte nossa página [Create an Offline Installation of Visual Studio 2015 (Criar uma instalação offline do Visual Studio 2015)](https://msdn.microsoft.com/library/mt706497.aspx) no MSDN.
-* Para o **Visual Studio 2017**, consulte nossa página [Criar uma instalação offline do Visual Studio 2017](../install/create-an-offline-installation-of-visual-studio.md) em docs.microsoft.com.
+* Se você deseja instalar uma única instância do Visual Studio 2017, mas sua conexão de Internet estiver indisponível ou não for confiável, consulte nossa página [Install Visual Studio 2017 on low bandwidth or unreliable network environments](../install/install-visual-studio-in-offline-environment.md) (Instalar o Visual Studio 2017 em ambientes de rede não confiáveis ou de baixa largura de banda).  
+* Se você for um administrador de empresas que deseja executar uma grande implantação do Visual Studio 2017 em uma rede de estações de trabalho cliente que são protegidas por um firewall da Internet, consulte nossas páginas [Criar uma instalação de rede do Visual Studio 2017](../install/create-a-network-installation-of-visual-studio.md) e [Considerações especiais para a instalação do Visual Studio em um ambiente offline](../install/install-visual-studio-in-offline-environment.md).
 

@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 47cc71da3637ae7f3bdb7ff4b09451a87d546bff
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e165ec6487a17819313dacd819ca1147b9953339
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="localizing-applications"></a>Localizando aplicativos
@@ -50,16 +51,16 @@ ms.lasthandoff: 02/22/2017
  Aborda a assinatura de assemblies satélites com pares de chaves pública-privada.  
   
  [Números de versão para assemblies satélite principais e localizados](../ide/version-numbers-for-main-and-localized-satellite-assemblies.md)  
- Introduz a classe <xref:System.Resources.SatelliteContractVersionAttribute>, que determina quais assemblies satélites trabalham com o assembly principal de um aplicativo.  
+ Apresenta a classe <xref:System.Resources.SatelliteContractVersionAttribute>, que determina quais assemblies satélites trabalham com o assembly principal de um aplicativo.  
   
- [Neutral Resources Languages for Localization](../ide/neutral-resources-languages-for-localization.md) (Idiomas de recursos neutros para localização)  
- Introduz a classe <xref:System.Resources.NeutralResourcesLanguageAttribute>, que especifica a cultura dos recursos incluídos no assembly principal de um aplicativo.  
+ [Idiomas de recursos neutros para localização](../ide/neutral-resources-languages-for-localization.md)  
+ Apresenta a classe <xref:System.Resources.NeutralResourcesLanguageAttribute>, que especifica a cultura dos recursos incluídos no assembly principal de um aplicativo.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Introdução a aplicativos internacionais com base no .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)  
  Aborda os conceitos relacionados ao desenvolvimento de software para um mercado internacional usando o Visual Basic ou o Visual C#.  
   
- [Globalizando o Windows Forms](http://msdn.microsoft.com/Library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5)  
+ [Globalizando o Windows Forms](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
  Fornece links para páginas que explicam como criar aplicativos do Windows que dão suporte a várias culturas.  
   
  [Globalização e localização](http://msdn.microsoft.com/Library/8ef3838e-9d05-4236-9dd0-ceecff9df80d)  

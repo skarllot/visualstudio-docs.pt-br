@@ -43,17 +43,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f63493b3ce7b8967273fbe52faa6cac0716bc732
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 71566f11a069d266ded2aebe02bbf388cf00730e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="how-to-manage-editor-modes"></a>Como gerenciar modos do editor
 É possível exibir o Editor de Código do Visual Studio em vários modos de exibição.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
 ## <a name="enabling-full-screen-mode"></a>Habilitando o modo de tela inteira  
  É possível escolher ocultar todas as janelas de ferramentas e exibir apenas janelas do documento, habilitando o modo de **Tela Inteira**.  
@@ -82,5 +83,5 @@ ms.lasthandoff: 02/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Personalizando o editor](../ide/customizing-the-editor.md)   
- [Como organizar e encaixar janelas](../misc/how-to-arrange-and-dock-windows.md)   
+ [Personalizar layouts de janela no Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md)   
  [Caixa de diálogo Fontes e Cores, Ambiente, Opções](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)

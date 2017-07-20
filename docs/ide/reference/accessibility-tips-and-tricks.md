@@ -1,7 +1,7 @@
 ---
 title: Dicas e truques de acessibilidade | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -29,46 +29,48 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c1e4fdf79ac11095501ca8823ff247cb48374824
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: 837df3bb8da963fa12ee02b39d19509336873d21
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="accessibility-tips-and-tricks"></a>Dicas e truques de acessibilidade
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] inclui recursos de acessibilidade internos para que você possa trabalhar mais facilmente no teclado e usar leitores de tela ou outros dispositivos de tecnologia adaptativa. O tópico inclui algumas sugestões para otimizar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] para acessibilidade, bem como algumas combinações de teclas de atalho úteis.  
-  
-> [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
+O Visual Studio inclui recursos de acessibilidade internos para que você possa trabalhar mais facilmente no teclado e usar leitores de tela ou outros dispositivos de tecnologia adaptativa. O tópico inclui algumas sugestões para otimizar o Visual Studio para acessibilidade, bem como algumas combinações de teclas de atalho úteis. As combinações de teclas de atalho permitem que você execute tarefas no Visual Studio usando o teclado.
+
 ## <a name="save-your-ide-settings"></a>Salvar as configurações do IDE  
- É possível personalizar sua experiência no IDE salvando seu layout de janela, esquema de mapeamento de teclado e outras preferências. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="common-windows-shortcut-key-combinations"></a>Combinações comuns de teclas de atalho do Windows  
- É possível usar muitas combinações padrão de teclas de atalho do Windows para realizar tarefas dentro do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Algumas dessas combinações de teclas de atalho incluem:  
-  
-|Descrição|Combinação de teclas|  
-|-----------------|---------------------|  
-|Ativar e desativar o alto contraste|**ALT esquerdo + SHIFT esquerdo + PRINT SCREEN**|  
-|Marque ou desmarque a opção da caixa de seleção em uma caixa de diálogo|**BARRA DE ESPAÇO**|  
-|Exibir as propriedades do item selecionado. Por exemplo, coloca o foco na janela Propriedades se um formulário foi selecionado ou abre a caixa de diálogo Página de Propriedades se um projeto foi selecionado.|**ALT+ENTER**|  
-|Exibir os itens na lista ativa, como uma lista suspensa, em uma caixa de diálogo|**ALT** + SETA PARA BAIXO|  
-|Exibir itens em uma lista suspensa em uma grade|**SHIFT** + **ALT** + **SETA PARA BAIXO**|  
-  
-## <a name="hidden-visual-studio-shortcut-key-combinations"></a>Combinações ocultas de teclas de atalho do Visual Studio  
- Alguns recursos têm teclas de atalho disponíveis que não são exibidos na caixa de diálogo Opções no painel Ambiente\Teclado. Essas combinações de teclas de atalho incluem o seguinte:  
-  
+ É possível personalizar sua experiência no IDE salvando seu layout de janela, esquema de mapeamento de teclado e outras preferências. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
+
+## <a name="accessing-toolbars"></a>Acessando as barras de ferramentas
+O Visual Studio IDE tem barras de ferramentas, assim como tem muitas janelas de ferramentas. As combinações de teclas de atalho a seguir ajudarão você a acessá-las.
+
 |Recurso|Descrição|Combinação de teclas|  
 |-------------|-----------------|---------------------|  
-|Janela caixa de ferramentas|Mover-se entre guias Caixa de ferramentas|**CTRL** + **SETA PARA CIMA**<br /><br /> e<br /><br /> **CTRL** + **SETA PARA BAIXO**|  
-|Janela caixa de ferramentas|Adicionar um controle da Caixa de ferramentas a um formulário ou designer|**ENTER**|  
-|Caixa de diálogo Teclado, Ambiente, Opções|Excluir uma combinação de teclas inserida na opção **Pressionar teclas de atalho**|**BACKSPACE**|  
-|Todas as janelas de ferramentas|Selecionar o primeiro botão na barra de ferramentas da janela|**SHIFT** + **ALT**|  
-|Barras de ferramentas do IDE|Selecionar o primeiro botão na barra de ferramentas Padrão|**ALT**, **CTRL** + **TAB** **Observações:**  Pressione **CTRL** + **TAB** novamente para selecionar o primeiro botão na próxima barra de ferramentas do IDE.|  
-  
+|Barras de ferramentas do IDE|Selecione o primeiro botão na barra de ferramentas Standard.|**ALT**, **CTRL** + **TAB**|  
+|Barras de ferramentas da janela de ferramentas|Mova o foco para a barra de ferramentas em uma janela de ferramentas. <br> <br> **OBSERVAÇÃO:** isso funciona para a maioria das janelas de ferramentas, mas somente quando o foco está em uma janela de ferramentas. Além disso, você deve escolher a tecla SHIFT antes da tecla ALT. Em algumas janelas de ferramentas, como a Team Explorer, você deve manter a tecla SHIFT pressionada por um momento antes de escolher a tecla ALT.|**SHIFT** + **ALT**|
+|Barras de ferramentas|Acesse o primeiro item na barra de ferramentas Avançar (quando uma barra de ferramentas tem foco).|**CTRL** + **TAB**|
+
+## <a name="other-useful-shortcut-key-combinations"></a>Outras combinações de teclas de atalho úteis  
+Algumas outras combinações de teclas de atalho úteis incluem o seguinte.
+
+|Recurso|Descrição|Combinação de teclas|  
+|-------------|-----------------|---------------------|  
+|IDE|Ativar e desativar o alto contraste. <br> <br> **OBSERVAÇÃO:** atalho padrão do Windows|**ALT esquerdo + SHIFT esquerdo + PRINT SCREEN**|  
+|Caixa de diálogo|Marque ou desmarque a opção da caixa de seleção em uma caixa de diálogo. <br> <br> **OBSERVAÇÃO:** atalho padrão do Windows|**BARRA DE ESPAÇO**|  
+|Menus de contexto|Abra um menu de contexto (clique com o botão direito do mouse). <br> <br> **OBSERVAÇÃO:** atalho padrão do Windows|**SHIFT** + **F10**|
+|Menus|Acesse rapidamente um item de menu usando as teclas de aceleração. Escolha a tecla **ALT** seguida pelas letras sublinhadas em um menu de atalho para ativar o comando. Por exemplo, para exibir a caixa de diálogo Abrir Projeto no Visual Studio, você escolheria **ALT** + **F** + **O** + **P**.  <br><br> **OBSERVAÇÃO:** atalho padrão do Windows|**ALT** + **[carta]**|
+|Janela caixa de ferramentas|Mover-se entre guias da Caixa de ferramentas.|**CTRL** + **SETA PARA CIMA**<br /><br /> e<br /><br /> **CTRL** + **SETA PARA BAIXO**|  
+|Janela caixa de ferramentas|Adicionar um controle da Caixa de ferramentas a um formulário ou designer.|**ENTER**|  
+|Caixa de diálogo Teclado, Ambiente, Opções|Excluir uma combinação de teclas inserida na opção **Pressionar teclas de atalho**.|**BACKSPACE**|  
+
+> [!NOTE]
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas.  
+
 ## <a name="see-also"></a>Consulte também  
  [Recursos de Acessibilidade do Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)
 
+ [Como personalizar menus e barras de ferramentas no Visual Studio](../../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
 
-<!--HONumber=Feb17_HO4-->
-
+ [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
 

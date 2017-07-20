@@ -1,7 +1,7 @@
 ---
 title: Tour pelos recursos do IDE do Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 06/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -26,10 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
-ms.openlocfilehash: c8276097c53ea49d223c43ada5511ab5d5f38036
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: 8d2c20b32201b3df85e5150828565eee84d66375
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="visual-studio-ide-feature-tour"></a>Tour pelos recursos do IDE do Visual Studio
@@ -142,7 +143,7 @@ Nada acontece de forma perfeita o tempo todo. Quando você escrever o código, �
 
 ![Depuração](../ide/media/VSIDE_Tour_Debugging.png)
 
-Para testes, o Visual Studio oferece testes de unidade, IntelliTest, testes de carga e desempenho e muito mais. Para obter mais detalhes sobre o processo de depuração do Visual Studio, consulte [Tour pelos recursos do depurador](https://review.docs.microsoft.com/visualstudio/debugger/debugger-feature-tour?branch=mikejo-tour). Para saber mais sobre testes, consulte [Ferramentas de teste](https://www.visualstudio.com/vs/testing-tools/). Para saber mais sobre como melhorar o desempenho de seus aplicativos, consulte [Ferramentas de criação de perfil](https://docs.microsoft.com/visualstudio/profiling/profiling-tools).
+Para testes, o Visual Studio oferece testes de unidade, IntelliTest, testes de carga e desempenho e muito mais. Para obter mais detalhes sobre o processo de depuração do Visual Studio, consulte [Tour pelos recursos do depurador](../debugger/debugger-feature-tour.md). Para saber mais sobre testes, consulte [Ferramentas de teste](https://www.visualstudio.com/vs/testing-tools/). Para saber mais sobre como melhorar o desempenho de seus aplicativos, consulte [Tour pelos recursos de criação de perfil](../profiling/profiling-feature-tour.md).
 
 ## <a name="deploy-your-finished-application"></a>Implantar o aplicativo concluído  
 Quando o aplicativo está pronto para ser implantado em usuários ou clientes, o Visual Studio fornece as ferramentas para fazer isso, independentemente de você estar implantando na Windows Store, em um site do SharePoint ou com as tecnologias InstallShield ou Windows Installer. Ele é todo acessível por meio do IDE. Para obter mais informações, consulte [Implantação de aplicativos, serviços e componentes](../deployment/deploying-applications-services-and-components.md).
@@ -233,7 +234,7 @@ O **Pesquisador de Objetos do SQL Server** no Visual Studio fornece uma exibiç�
 Se o Visual Studio não tiver a funcionalidade exata de que você precisa, será possível adicioná-la! É possível personalizar o IDE de acordo com o estilo e fluxo de trabalho, adicionar suporte para ferramentas externas que ainda não estão integradas ao Visual Studio e modificar a funcionalidade existente para aumentar a produtividade. O Visual Studio fornece ferramentas, controles e modelos da Microsoft, de nossos parceiros e da comunidade. Para saber mais sobre como estender o Visual Studio, consulte [Estender o IDE do Visual Studio](https://www.visualstudio.com/vs/extend/).
 
 ## <a name="learn-more-and-find-out-whats-new"></a>Saiba mais e descubra as novidades
-Se você nunca usou o Visual Studio antes, conheça os conceitos básicos, começando com [Introdução ao Visual Studio](../ide/get-started-with-visual-studio.md) ou confira os cursos gratuitos do Visual Studio disponíveis na [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033).
+Se você nunca usou o Visual Studio antes, conheça os conceitos básicos, começando com a [Introdução ao Visual Studio](../ide/get-started-with-visual-studio.md) ou confira os cursos gratuitos do Visual Studio disponíveis na [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033).
 Se você quiser conferir as novas funcionalidades no Visual Studio 2017, consulte [Novidades no Visual Studio 2017](../ide/whats-new-in-visual-studio.md).
 
 Parabéns por concluir o tour pelo IDE do Visual Studio! Esperamos que você tenha aprendido algo útil sobre alguns de seus principais recursos.

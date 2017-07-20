@@ -31,17 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a1f8d6b7da0faf5667d40f17ffeaae99954f51fc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: bfe6b74b10829ac06d07b3e22b969b8ed6357972
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="toolbox-data-tab"></a>Caixa de Ferramentas, Guia Dados
 Exibe objetos de dados que é possível adicionar a formulários e componentes. A guia **Dados** da **Caixa de Ferramentas** é exibida ao criar um projeto que tem um designer associado. A **Caixa de Ferramentas** é exibida por padrão no ambiente de desenvolvimento integrado do Visual Studio; se for preciso exibir a **Caixa de Ferramentas**, selecione **Caixa de Ferramentas** no menu **Exibir**.  
   
 > [!TIP]
->  Executar o Assistente de configuração de fonte de dados cria e configura automaticamente a maioria dos itens de dados. Para obter mais informações, consulte [Criando aplicativos de dados usando Visual Studio](http://msdn.microsoft.com/en-us/28edce21-220a-484c-b461-a75b0232d293).  
+>  Executar o Assistente de configuração de fonte de dados cria e configura automaticamente a maioria dos itens de dados. Para obter mais informações, consulte [Adicionar novas fontes de dados](../../data-tools/add-new-data-sources.md).  
   
 ## <a name="ui-element-list"></a>Lista de elementos da interface de usuário  
  Para acessar diretamente a página de referência do .NET Framework para um componente, pressione **F1** no item na **Caixa de Ferramentas** ou no item de componente na bandeja do designer.  
@@ -54,13 +55,11 @@ Exibe objetos de dados que é possível adicionar a formulários e componentes. 
 |<xref:System.Windows.Forms.BindingNavigator>|Representa interface do usuário de navegação e a manipulação para controles em um formulário que está associado aos dados.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Instruções passo a passo de dados](../Topic/Data%20Walkthroughs.md)   
- [Associar controles do Windows Forms a dados no Visual Studio](../../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visão geral de aplicativos de dados no Visual Studio](../../data-tools/overview-of-data-applications-in-visual-studio.md)   
- [Conectando-se a dados no Visual Studio](../../data-tools/connecting-to-data-in-visual-studio.md)   
- [Preparando o aplicativo para receber dados](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [Buscando dados no aplicativo](../../data-tools/fetching-data-into-your-application.md)   
+ [Acessando dados no Visual Studio](../../data-tools/accessing-data-in-visual-studio.md)   
+ [Ferramentas de dados do Visual Studio para .NET](../../data-tools/visual-studio-data-tools-for-dotnet.md)   
+ [Ferramentas de conjunto de dados no Visual Studio](../../data-tools/dataset-tools-in-visual-studio.md)   
  [Associar controles a dados no Visual Studio](../../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Editando dados no aplicativo](../../data-tools/editing-data-in-your-application.md)   
- [Validando dados](../Topic/Validating%20Data.md)   
+ [Associar controles do Windows Forms a dados no Visual Studio](../../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [Editar dados em conjuntos de dados](../../data-tools/edit-data-in-datasets.md)   
+ [Validando dados em conjuntos de dados](../../data-tools/validate-data-in-datasets.md)   
  [Salvando dados](../../data-tools/saving-data.md)

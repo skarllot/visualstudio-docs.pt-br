@@ -27,9 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 5b845b8be2d60e1a32cc570fd59ae94f2063c116
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: cc0ac8b3418c725579b25712e14c373028fca339
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Dicas de produtividade para o Visual Studio
@@ -49,7 +51,7 @@ Seguindo estas dicas, você pode gravar, navegar e depurar seu código no Visual
   
  [Gerenciando arquivos, barras de ferramentas e janelas](../ide/productivity-tips-for-visual-studio.md#BKMK_Managing)  
   
-##  <a name="a-namebkmkaccessa-accessing-visual-studio-tools"></a><a name="BKMK_Access"></a> Acessando as Ferramentas do Visual Studio  
+##  <a name="BKMK_Access"></a> Acessando as Ferramentas do Visual Studio  
  É possível acessar facilmente o Prompt de Comando do Desenvolvedor ou outra ferramenta se você fixá-la na Tela inicial ou na barra de tarefas.  
   
 1.  Na tela inicial, digite `Visual Studio Tools` e, em seguida, pressione a tecla Enter.  
@@ -74,7 +76,7 @@ Seguindo estas dicas, você pode gravar, navegar e depurar seu código no Visual
   
 3.  Escolha **Fixar em Iniciar** ou **Fixar na Barra de Tarefas**.  
   
-##  <a name="a-namebkmkwritinga-writing-code"></a><a name="BKMK_Writing"></a> Escrevendo código  
+##  <a name="BKMK_Writing"></a> Escrevendo código  
  Escreva código mais rapidamente usando os seguintes recursos.  
   
 -   **Use aplicativos de exemplo**. Você pode acelerar o desenvolvimento de aplicativos ao baixar e instalar aplicativos de exemplo da Galeria de Códigos do MSDN. Você também pode aprender uma tecnologia em particular ou um conceito baixando e explorando um Sample Pack para essa área.  
@@ -107,27 +109,27 @@ Seguindo estas dicas, você pode gravar, navegar e depurar seu código no Visual
   
      Para abrir uma definição em uma janela pop-up, realce o elemento e escolha as chaves Alt+F12 ou abra o menu de atalho do elemento e escolha **Inspecionar Definição**. Para abrir uma definição em uma janela de código separada, abra o menu de atalho para o elemento de código e então escolha **Ir Para Definição**.  
   
-##  <a name="a-namebkmknavigatinga-navigating-within-your-code"></a><a name="BKMK_Navigating"></a> Navegando em seu código  
+##  <a name="BKMK_Navigating"></a> Navegando em seu código  
  Você pode usar várias técnicas para localizar e mover para locais específicos em seu código com mais rapidez.  
   
 -   **Usar indicadores em linhas de código**. Você pode usar indicadores para navegar rapidamente para linhas específicas do código em um arquivo.  
   
      Para definir um indicador, na barra de menus, escolha **Editar**, **Indicadores**, **Ativar/Desativar Indicador**. Você pode exibir todos os indicadores para uma solução na janela **Indicadores**. Para obter mais informações, consulte [Definindo Indicadores no Código](../ide/setting-bookmarks-in-code.md).  
   
--   **Pesquisar definições de símbolo em um arquivo**. Você pode pesquisar em uma solução para localizar definições de símbolo e nomes de arquivo, mas os resultados de pesquisa não incluem namespaces ou variáveis locais.  
+-   **Pesquisar definições de símbolo em um arquivo**. Você pode pesquisar em uma solução para localizar definições de símbolos e nomes de arquivos, mas os resultados da pesquisa não incluirão os namespaces ou as variáveis locais.  
   
      Para acessar esse recurso, na barra de menus, escolha **Editar**, **Navegar Até**.  
   
--   **Procure a estrutura geral do seu código**. No **Gerenciador de Soluções**, você pode pesquisar e procurar classes e seus tipos e membros em seus projetos. Você também pode procurar por símbolos, exibir a Hierarquia de Chamada de um método, localizar referências do símbolo e realizar outras tarefas. Se você escolher um elemento de código no **Gerenciador de Soluções**, o arquivo associado será aberto em uma guia **Visualização** e o cursor se moverá para o elemento no arquivo. Para obter mais informações, consulte [Exibindo a estrutura do código](../ide/viewing-the-structure-of-code.md).  
+-   **Procure a estrutura geral do seu código**. No **Gerenciador de Soluções**, você pode pesquisar e procurar classes e seus tipos e membros em seus projetos. Você também pode pesquisar símbolos, exibir a Hierarquia de Chamada de um método, localizar referências de símbolos e realizar outras tarefas. Se você escolher um elemento de código no **Gerenciador de Soluções**, o arquivo associado será aberto em uma guia **Visualização** e o cursor se moverá para o elemento no arquivo. Para obter mais informações, consulte [Exibindo a estrutura do código](../ide/viewing-the-structure-of-code.md).  
   
-##  <a name="a-namebkmkfindinga-finding-items-faster"></a><a name="BKMK_Finding"></a> Localizando itens com mais rapidez  
+##  <a name="BKMK_Finding"></a> Localizando itens com mais rapidez  
  Você pode procurar no IDE comandos, arquivos e opções, bem como filtrar o conteúdo de janelas de ferramenta para mostrar somente as informações relevantes para sua tarefa atual.  
   
 -   **Filtrar o conteúdo de janelas de ferramentas**. Você pode pesquisar no conteúdo de muitas janelas de ferramentas, como a **Caixa de Ferramentas**, a janela **Propriedades** e o **Gerenciador de Soluções**, mas só poderá exibir itens cujos nomes contenhamos caracteres que você especificar.  
   
 -   **Exiba apenas os erros que você deseja resolver**. Se você escolher o botão **Filtrar** na barra de ferramentas **Lista de Erros**, poderá reduzir o número de erros que aparecem na janela **Lista de Erros**. Você só pode exibir os erros em arquivos que estão abertos no editor, somente os erros no arquivo atual ou somente os erros no projeto atual. Você também pode pesquisar na janela Lista de Erros para localizar erros específicos.  
   
--   **Localizar caixas de diálogo, comandos de menu e opções**. Na caixa [Caixa de diálogo Início Rápido, Ambiente, Opções](../ide/reference/quick-launch-environment-options-dialog-box.md), digite palavras-chave ou frases para os itens que você está tentando localizar. Por exemplo, as seguintes opções aparecerão se você inserir `new project`:  
+-   **Localizar caixas de diálogo, comandos de menu e opções**. Na [Caixa de diálogo de início rápido, ambiente, opções](../ide/reference/quick-launch-environment-options-dialog-box.md), digite palavras-chave ou frases sobre os itens que você está tentando localizar. Por exemplo, as seguintes opções aparecerão se você inserir `new project`:  
   
      Figura 3: lista de resultados do Início Rápido para `new project`  
   
@@ -135,10 +137,10 @@ Seguindo estas dicas, você pode gravar, navegar e depurar seu código no Visual
   
      O **Início Rápido** exibe links para a caixa de diálogo de **Novo Projeto**, a caixa de diálogo **Adicionar Novo Item** e a página Projetos e Soluções na caixa de diálogo **Opções**, entre outros. Os resultados do Início Rápido também podem incluir arquivos de projeto e janelas de ferramenta.  
   
-##  <a name="a-namebkmkdebugginga-debugging-code"></a><a name="BKMK_Debugging"></a> Depurando código  
+##  <a name="BKMK_Debugging"></a> Depurando código  
  A depuração pode consumir muito tempo, mas as dicas a seguir podem ajudar a acelerar o processo.  
   
--   **Teste a mesma página, aplicativo ou site em navegadores diferentes**. À medida que você depura seu código, poderá facilmente mudar entre os navegadores da Web instalados, incluindo o [Inspetor de Página (Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209), sem ter que abrir a caixa de diálogo **Procurar Com**. Você pode usar a lista **Destino de Depuração**, que está na barra de ferramentas **Padrão** ao lado do botão **Iniciar Depuração**, para verificar rapidamente qual navegador você está usando enquanto depura ou exibe páginas.  
+-   **Teste a mesma página, aplicativo ou site em navegadores diferentes**. À medida que você depura seu código, poderá facilmente mudar entre os navegadores da Web instalados, incluindo o [Inspetor de Página (Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209), sem ter que abrir a caixa de diálogo **Procurar Com**. Você pode usar a lista **Destino de Depuração**, que está na barra de ferramentas **Standard** ao lado do botão **Iniciar Depuração**, para verificar rapidamente qual navegador está utilizando enquanto depura ou exibe as páginas.  
   
      ![Selecionar as opções de depuração do navegador da Web](../ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")  
   
@@ -158,26 +160,21 @@ Seguindo estas dicas, você pode gravar, navegar e depurar seu código no Visual
   
      Para obter mais informações sobre comandos adicionais, consulte [Aliases de comando do Visual Studio](../ide/reference/visual-studio-command-aliases.md).  
   
-##  <a name="a-namebkmkmanaginga-managing-files-toolbars-and-windows"></a><a name="BKMK_Managing"></a> Gerenciando arquivos, barras de ferramentas e janelas  
+##  <a name="BKMK_Managing"></a> Gerenciando arquivos, barras de ferramentas e janelas  
  A qualquer momento, você pode estar trabalhando em vários arquivos de código e se mover entre várias janelas de ferramenta enquanto desenvolve um aplicativo. Você pode se manter organizado usando as dicas a seguir.  
   
 -   **Manter arquivos que você usa frequentemente visíveis no editor**. Você pode fixar arquivos no lado esquerdo da guia de forma que eles permaneçam visíveis, independentemente de quantos arquivos estiverem abertos no editor.  
   
-     Para fixar um arquivo, escolha a guia do arquivo e então escolha o botão **Ativar/desativar status de pin**.  
+     Para fixar um arquivo, escolha a guia do arquivo e, então, selecione o botão **Ativar/desativar status de pin**.  
   
--   **Mover documentos e janelas para outros monitores**. Se você usar mais de um monitor quando desenvolver aplicativos, poderá trabalhar em partes do seu aplicativo mais facilmente movendo arquivos que estejam abertos no editor para outro monitor. Você também pode mover janelas de ferramentas, como janelas de depuração, para outro monitor e encaixar janelas de documento e de ferramenta para criar "reposicionamentos". Para obter mais informações, consulte [Como organizar e encaixar janelas](../misc/how-to-arrange-and-dock-windows.md).  
+-   **Mover documentos e janelas para outros monitores**. Se você usar mais de um monitor quando desenvolver aplicativos, poderá trabalhar em partes do seu aplicativo mais facilmente movendo arquivos que estejam abertos no editor para outro monitor. Você também pode mover janelas de ferramentas, como as de depuração, para outro monitor e encaixar as janelas de documentos e de ferramentas para criar "rafts". Para obter mais informações, consulte [Personalização de layouts de janela no Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md).  
   
      Você também pode gerenciar arquivos mais facilmente criando outra instância do **Gerenciador de Soluções** e movendo-a para outro monitor. Para criar outra instância do **Gerenciador de Soluções**, abra um menu de atalho no **Gerenciador de Soluções** e então escolha **Novo Modo de Exibição do Gerenciador de Soluções**.  
   
--   **Personalizar as fontes que aparecem no Visual Studio**. Você pode alterar a fonte, o tamanho e a cor usados par ao texto no IDE. Por exemplo, você pode personalizar a cor de elementos de código específicos no editor e a fonte em janelas de ferramenta ou por meio do IDE. Para obter mais informações, consulte [Como alterar fontes e cores](../ide/how-to-change-fonts-and-colors-in-visual-studio.md) e [Como alterar fontes e cores no Editor](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).  
+-   **Personalizar as fontes que aparecem no Visual Studio**. Você pode alterar o tipo de fonte, a cor e o tamanho usados para o texto no IDE. Por exemplo, você pode personalizar a cor de elementos de código específicos no editor e a fonte em janelas de ferramenta ou por meio do IDE. Para obter mais informações, consulte [Como alterar fontes e cores](../ide/how-to-change-fonts-and-colors-in-visual-studio.md) e [Como alterar fontes e cores no Editor](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atalhos de teclado padrão para comandos frequentes](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)   
  [Como personalizar menus e barras de ferramentas](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)   
  [Passo a passo: criar um aplicativo simples](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)   
  [Dicas e truques de acessibilidade](../ide/reference/accessibility-tips-and-tricks.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

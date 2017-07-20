@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 332ef0d4534d8f607a1b5d92038855ebd247657f
-ms.lasthandoff: 04/05/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 359e1eb5df8f19774d352ace631802367b6dd8c9
+ms.openlocfilehash: 481153e7f3d609c56f313ff5ee9f3f1b511dc5ef
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="managing-project-and-solution-properties"></a>Gerenciando propriedades de solução e projeto
@@ -38,7 +39,7 @@ Projetos têm propriedades que controlam muitos aspectos da compilação, da dep
   
  ![Menu de contexto do projeto](../ide/media/vs2015_proj_prop_menu.gif "vs2015_proj_prop_menu")  
   
- Projetos do .NET também têm um nó de propriedades na árvore do projeto em si.  
+ Os projetos do .NET também podem ter um nó de propriedades na árvore do projeto em si.  
   
  ![Nó de propriedades na árvore do Gerenciador de Soluções](../ide/media/vs2015_props_se.png "VS2015_Props_SE")  
   
@@ -48,8 +49,8 @@ Projetos têm propriedades que controlam muitos aspectos da compilação, da dep
 ## <a name="project-properties"></a>Propriedades do projeto  
  Propriedades do Projeto são organizadas em grupos, cada grupo tem sua própria página de propriedades, e as páginas podem ser diferentes para diferentes linguagens e tipos de projeto.  
   
-### <a name="c-and-visual-basic-projects"></a>Projetos em C# e Visual Basic  
- Em projetos C# e Visual Basic, as propriedades são expostas no **Designer de Projeto**. A ilustração a seguir mostra a página de propriedades Build para um projeto WPF em C#:  
+### <a name="c-visual-basic-and-f-projects"></a>Projetos em C#, Visual Basic e F#  
+ Nos projetos em C#, Visual Basic e F#, as propriedades são expostas no **Designer de Projeto**. A ilustração a seguir mostra a página de propriedades Build para um projeto WPF em C#:  
   
  ![Designer de Projeto do Visual Studio](../ide/media/vs2015_proppage_build.png "VS2015_PropPage_Build")  
   
@@ -63,7 +64,8 @@ Projetos têm propriedades que controlam muitos aspectos da compilação, da dep
  Para obter informações sobre propriedades de projeto C++, consulte [Trabalhando com propriedades do projeto](/cpp/ide/working-with-project-properties). Para obter mais informações sobre as propriedades de JavaScript, consulte [Páginas de propriedades, JavaScript](../ide/reference/property-pages-javascript.md).  
   
 ## <a name="solution-properties"></a>Propriedades da solução  
- Para acessar propriedades na solução, clique com o botão direito do mouse no nó da solução no **Gerenciador de Soluções** e escolha **Propriedades**. Na caixa de diálogo, você pode definir configurações de projeto para compilações de Depuração ou Versão, escolher quais projetos devem ser o projeto de inicialização quando F5 é pressionado e definir opções de análise de código.  
+ Para acessar propriedades na solução, clique com o botão direito do mouse no nó da solução no **Gerenciador de Soluções** e escolha **Propriedades**. Na caixa de diálogo, você pode definir as configurações de projeto para builds de Depuração ou Versão, escolher quais projetos devem ser o projeto de inicialização quando F5 é pressionado e definir as opções de análise de código.  
   
 ## <a name="see-also"></a>Consulte também  
  [Soluções e projetos no Visual Studio](../ide/solutions-and-projects-in-visual-studio.md)
+

@@ -30,22 +30,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 2587e4a10a4caa1192a0efc31448078db553dfb4
-ms.lasthandoff: 04/05/2017
+ms.translationtype: HT
+ms.sourcegitcommit: dc7a0c10390de67b56a83d2824224bed24125db0
+ms.openlocfilehash: 702be191610ce05e91d081fed9c70a135c72c971
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>Instruções passo a passo: criando um ambiente de build de vários computadores
+
 Você pode criar um ambiente de build na sua organização instalando o Visual Studio em um computador host e, em seguida, copiando vários arquivos e configurações para outro computador de modo que ele possa participar de compilações. Você não precisa instalar o Visual Studio no outro computador.  
   
- Este documento não confere direitos para redistribuir o software externamente nem para fornecer ambientes de build a terceiros.  
+Este documento não confere direitos para redistribuir o software externamente nem para fornecer ambientes de build a terceiros.  
   
-||  
-|-|  
-|Aviso de isenção de responsabilidade<br /><br /> Este documento é fornecido "no estado em que se encontra". Embora tenhamos testado as etapas descritas, não é possível testar exaustivamente cada configuração. Tentaremos manter o documento atualizado com quaisquer informações adicionais que obtivermos. As informações e as exibições expressas neste documento, incluindo a URL e outras referências a sites da Internet, podem mudar sem aviso prévio. A Microsoft não oferece nenhuma garantia, explícita ou implícita, quanto às informações fornecidas aqui. Você assume o risco de utilizá-las.<br /><br /> Este documento não lhe concede nenhum direito legal à nenhuma propriedade intelectual de nenhum produto da Microsoft. Você pode copiar e usar este documento para fins internos de referência.<br /><br /> Você não tem obrigação de enviar à Microsoft nenhuma sugestão ou comentário ("Comentários") com relação a este documento. No entanto, qualquer Comentário que você forneça voluntariamente poderá ser usado em Produtos Microsoft e especificações relacionadas ou outra documentação (coletivamente, "Ofertas Microsoft"), que, por sua vez, poderão ser utilizados por terceiros para desenvolver seus próprios produtos. Portanto, ao fornecer Comentários sobre a Microsoft em qualquer versão deste documento ou das Ofertas da Microsoft aos quais elas se aplicam, você concorda que: (a) a Microsoft pode livremente usar, reproduzir, licenciar, distribuir e comercializar de outra forma seus Comentários em qualquer Oferta da Microsoft; (b) você também concede a terceiros, sem custos, somente os direitos de patente necessários para permitir que outros produtos usem ou interajam com quaisquer partes específicas de um Produto Microsoft que incorporem Seus Comentários; e (c) você não fornecerá à Microsoft nenhum Comentário (i) que você tenha motivo para acreditar que esteja sujeito a qualquer declaração ou direito de patente, direitos autorais ou outra propriedade intelectual de terceiros; ou (ii) sujeito a termos de licença que busquem exigir que qualquer Oferta da Microsoft que incorpore ou seja derivada desses Comentários, ou outra propriedade intelectual da Microsoft, seja licenciada ou compartilhada de outra forma com quaisquer terceiros.|  
-  
- Este passo a passo foi validado nos seguintes sistemas operacionais executando o MSBuild na linha de comando e usando o Team Foundation Build.  
+> Aviso de isenção de responsabilidade<br /><br /> Este documento é fornecido "no estado em que se encontra". Embora tenhamos testado as etapas descritas, não é possível testar exaustivamente cada configuração. Tentaremos manter o documento atualizado com quaisquer informações adicionais que obtivermos. As informações e as exibições expressas neste documento, incluindo a URL e outras referências a sites da Internet, podem mudar sem aviso prévio. A Microsoft não oferece nenhuma garantia, explícita ou implícita, quanto às informações fornecidas aqui. Você assume o risco de utilizá-las.<br /><br /> Este documento não lhe concede nenhum direito legal à nenhuma propriedade intelectual de nenhum produto da Microsoft. Você pode copiar e usar este documento para fins internos de referência.<br /><br /> Você não tem obrigação de enviar à Microsoft nenhuma sugestão ou comentário ("Comentários") com relação a este documento. No entanto, qualquer Comentário que você forneça voluntariamente poderá ser usado em Produtos Microsoft e especificações relacionadas ou outra documentação (coletivamente, "Ofertas Microsoft"), que, por sua vez, poderão ser utilizados por terceiros para desenvolver seus próprios produtos. Portanto, ao fornecer Comentários sobre a Microsoft em qualquer versão deste documento ou das Ofertas da Microsoft aos quais elas se aplicam, você concorda que: (a) a Microsoft pode livremente usar, reproduzir, licenciar, distribuir e comercializar de outra forma seus Comentários em qualquer Oferta da Microsoft; (b) você também concede a terceiros, sem custos, somente os direitos de patente necessários para permitir que outros produtos usem ou interajam com quaisquer partes específicas de um Produto Microsoft que incorporem Seus Comentários; e (c) você não fornecerá à Microsoft nenhum Comentário (i) que você tenha motivo para acreditar que esteja sujeito a qualquer declaração ou direito de patente, direitos autorais ou outra propriedade intelectual de terceiros; ou (ii) sujeito a termos de licença que busquem exigir que qualquer Oferta da Microsoft que incorpore ou seja derivada desses Comentários, ou outra propriedade intelectual da Microsoft, seja licenciada ou compartilhada de outra forma com quaisquer terceiros.
+
+
+Este passo a passo foi validado nos seguintes sistemas operacionais executando o MSBuild na linha de comando e usando o Team Foundation Build.  
   
 -   Windows 8 (x86 e x64)  
   
@@ -242,7 +243,7 @@ Você pode criar um ambiente de build na sua organização instalando o Visual S
     >   
     >  Além disso, se você estiver usando uma letra da unidade diferente no computador de build daquela usada no computador host, altere os valores das entradas do Registro de acordo.  
   
-2.  Crie as seguintes entradas do Registro no computador de build. Todas estas entradas são cadeias de caracteres (tipo = = "REG_SZ" no Registro). Defina os valores dessas entradas da mesma forma que os valores das entradas comparáveis no computador host.  
+2.  Crie as seguintes entradas do Registro no computador de build. Todas estas entradas são cadeias de caracteres (Tipo = = "REG_SZ" no Registro). Defina os valores dessas entradas da mesma forma que os valores das entradas comparáveis no computador host.  
   
     -   %RegistryRoot%\\.NETFramework\v4.0.30319\AssemblyFoldersEx\VCMSBuild Public Assemblies@(Default)  
   
@@ -366,7 +367,7 @@ Você pode criar um ambiente de build na sua organização instalando o Visual S
 >  **msbuild** *solution.sln* **/p:PlatformToolset=v110**  
   
 ##  <a name="CreatingForSourceControl"></a> Criando o ambiente de build para que se possa verificá-lo no controle do código-fonte  
- Você pode criar um ambiente de build que possa ser implantado em vários computadores e não exija arquivos de GAC nem a modificação de configurações do Registro. As etapas a seguir são apenas uma maneira de fazer isso. Adapte estas etapas às características exclusivas do seu ambiente de build.  
+ Você pode criar um ambiente de build que possa ser implantado em vários computadores e que não exija arquivos de GAC, nem a modificação das configurações do Registro. As etapas a seguir são apenas uma maneira de fazer isso. Adapte estas etapas às características exclusivas do seu ambiente de build.  
   
 > [!NOTE]
 >  Você deve desabilitar a compilação incremental para que tracker.exe não gere um erro durante um build. Para desabilitar a compilação incremental, defina este parâmetro de build:  
@@ -389,9 +390,9 @@ Você pode criar um ambiente de build na sua organização instalando o Visual S
   
          para  
   
-         AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll”.  
+         AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll".  
   
-         A nomenclatura anterior baseia-se no assembly ao qual se está aplicando GAC.  
+         A nomenclatura anterior se baseia no assembly ao qual se está aplicando GAC.  
   
     -   Em %Depot% \MSBuild\Microsoft.Cpp\v4.0\v110\Microsoft.CPPClean.Targets, altere todas as instâncias de  
   
@@ -399,9 +400,9 @@ Você pode criar um ambiente de build na sua organização instalando o Visual S
   
          para  
   
-         AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll”.  
+         AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll".  
   
-4.  Crie um arquivo .props (por exemplo, Partner.AutoImports.props) e coloque-o na raiz da pasta que contém seus projetos. Esse arquivo é usado para definir as variáveis que são usadas pelo MSBuild para localizar vários recursos. Se as variáveis não forem definidas por esse arquivo, elas serão definidas por outros arquivos .props e .targets que dependem de valores de Registro. Porque não estamos configurando nenhum valor de Registro, essas variáveis estariam vazias e o build falharia. Em vez disso, adicione isso a Partner.AutoImports.props:  
+4.  Crie um arquivo .props (por exemplo, Partner.AutoImports.props) e coloque-o na raiz da pasta que contém seus projetos. Esse arquivo é usado para definir as variáveis que são usadas pelo MSBuild para localizar vários recursos. Se as variáveis não forem definidas por esse arquivo, elas serão definidas por outros arquivos .props e .targets que dependem de valores de Registro. Uma vez que não estamos configurando nenhum valor de registro, essas variáveis estariam vazias e o build falharia. Em vez disso, adicione isso a Partner.AutoImports.props:  
   
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -424,7 +425,7 @@ Você pode criar um ambiente de build na sua organização instalando o Visual S
     </Project>  
     ```  
   
-5.  Em cada um dos seus arquivos de projeto, adicione a seguinte linha na parte superior, após a linha `<Project Default Targets…>`.  
+5.  Em cada um dos seus arquivos de projeto, adicione a seguinte linha na parte superior, após a linha `<Project Default Targets...>`.  
   
     ```  
     <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Partner.AutoImports.props))\Partner.AutoImports.props"/>  

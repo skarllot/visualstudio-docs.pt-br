@@ -31,13 +31,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2ea437dc31f245aa88add31abbd1e9c72d8b20c6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 47b609a3138dff39db7b817ce320a0a46665127a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="how-to-display-urls-as-links-in-the-editor"></a>Como exibir URLs como links no Editor
+# Como exibir URLs como links no Editor
+<a id="how-to-display-urls-as-links-in-the-editor" class="xliff"></a>
 É possível optar por fazer o Editor de Código tratar URLs (Uniform Resource Locators) em seu código como links ativos. Quando você usa esse recurso, as URLs:  
   
 -   São exibidas sublinhadas.  
@@ -47,11 +49,13 @@ ms.lasthandoff: 02/22/2017
 -   Tentam abrir o site da Web indicado quando você pressiona **CTRL** + clique com o botão esquerdo do mouse no link. Por padrão, o site da Web é exibido no navegador da Web interno.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="procedure"></a>Procedimento  
+## Procedimento
+<a id="procedure" class="xliff"></a>  
   
-#### <a name="to-display-urls-as-links"></a>Para exibir URLs como links  
+#### Para exibir URLs como links
+<a id="to-display-urls-as-links" class="xliff"></a>  
   
 1.  No menu **Ferramentas**, clique em **Opções**.  
   
@@ -65,7 +69,8 @@ ms.lasthandoff: 02/22/2017
   
 4.  Em **Exibir**, selecione **Habilitar navegação de URL com um único clique**.  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Personalizando o editor](../../ide/customizing-the-editor.md)   
  [Caixa de diálogo Opções do Editor de Texto](../../ide/reference/text-editor-options-dialog-box.md)   
  [Escrevendo código](../../ide/writing-code-in-the-code-and-text-editor.md)

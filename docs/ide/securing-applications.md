@@ -30,16 +30,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: ba87dedcedace72a2d4fc47f894337ce69fbfc7e
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: ac6d4b23723842266dbdad13dcd69042357af9ab
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="securing-applications"></a>Protegendo aplicativos
+# Protegendo aplicativos
+<a id="securing-applications" class="xliff"></a>
 Embora a maioria dos aplicativos tenham desafios de segurança comuns, cada domínio de aplicativo possui seus próprios desafios de segurança.  
   
-## <a name="general-security-considerations"></a>Considerações gerais de segurança  
+## Considerações gerais de segurança
+<a id="general-security-considerations" class="xliff"></a>  
  Cada linguagem tem suas próprias considerações de segurança e desafios.  
   
  [Práticas Recomendadas de segurança](/cpp/top/security-best-practices-for-cpp)  
@@ -48,7 +51,8 @@ Embora a maioria dos aplicativos tenham desafios de segurança comuns, cada dom�
  [NÃO ESTÁ EM BUILD: segurança e programação (C# e Visual Basic)](http://msdn.microsoft.com/en-us/227e2863-cf09-4c28-9611-bcd82be5e994)  
  Fornece informações sobre os três principais problemas de segurança para desenvolvedores do Visual Basic e C#: privilégios, aplicativos Web e instalação do Visual Studio.  
   
-## <a name="securing-mobile-applications"></a>Protegendo aplicativos móveis  
+## Protegendo aplicativos móveis
+<a id="securing-mobile-applications" class="xliff"></a>  
  À medida que aumenta a popularidade dos dispositivos móveis, torna-se mais importante a segurança das informações e dos dados nesses dispositivos.  
   
  [Considerações de segurança para dispositivos](http://msdn.microsoft.com/en-us/45fab484-8718-452e-8210-04fda3c6cb87)  
@@ -60,7 +64,8 @@ Embora a maioria dos aplicativos tenham desafios de segurança comuns, cada dom�
  [Criando páginas móveis seguras de formulário Web](http://msdn.microsoft.com/en-us/b69727c1-f81f-4221-a116-8f92f769365f)  
  Discute o planejamento, a implementação e a segurança de suporte em redes wireless e dispositivos móveis.  
   
-## <a name="securing-web-applications"></a>Protegendo aplicativos Web  
+## Protegendo aplicativos Web
+<a id="securing-web-applications" class="xliff"></a>  
  Uma página Web escrita incorretamente pode comprometer a integridade e a segurança de um servidor inteiro e potencialmente de uma rede inteira. Em virtude disso, você deve revisar as considerações de segurança ao planejar seu aplicativo Web.  
   
  [Arquitetura de segurança do ASP.NET](http://msdn.microsoft.com/Library/c34d6f4f-f64d-4697-bd32-02dd2ddf726f)  
@@ -75,11 +80,13 @@ Embora a maioria dos aplicativos tenham desafios de segurança comuns, cada dom�
  [Como usar segurança de transporte](http://msdn.microsoft.com/en-us/16210e41-5492-4cc8-9002-7366b1fc7297)  
  Descreve como usar a segurança de transporte para autenticação ao se conectar a um serviço WCF.  
   
-## <a name="securing-desktop-applications"></a>Protegendo aplicativos de área de trabalho  
+## Protegendo aplicativos de área de trabalho
+<a id="securing-desktop-applications" class="xliff"></a>  
  Criar a segurança para aplicativos de área de trabalho é uma etapa essencial durante o desenvolvimento de aplicativos.  
   
- [Segurança do Windows Forms](http://msdn.microsoft.com/Library/932d438a-5285-46d8-a958-8c93d0ad6cae)  
+ [Segurança do Windows Forms](/dotnet/framework/winforms/windows-forms-security)  
  Fornece uma visão geral da implementação de segurança do Windows Forms.  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Segurança](../ide/security-in-visual-studio.md)

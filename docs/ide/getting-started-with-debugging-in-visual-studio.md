@@ -27,9 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9226dacfa63287857c09e5c6945363ccafadc2c7
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: fa857220def2da9b05f1bbed70e906034727b8af
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="getting-started-with-debugging-in-visual-studio"></a>Getting Started with Debugging in Visual Studio (Introdução à depuração no Visual Studio)
@@ -38,7 +40,7 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
  Observação: links para recursos mais avançados e tópicos específicos de plataforma ou de recurso estão na parte inferior desta página.  
 
 ## <a name="my-code-doesnt-work-help-me-visual-studio"></a>Meu código não funciona. Ajude-me, Visual Studio!  
- Então você descobriu o editor e criei alguns códigos. Agora, você deseja iniciar a depuração desse código. No Visual Studio, assim como acontece com a maioria dos IDEs, há duas fases para depuração: compilar o código para detectar e resolver erros de compilador e de projeto e executar código no ambiente para detectar e resolver erros de tempo de execução e dinâmicos.  
+ Então, você descobriu o editor e criou alguns códigos. Agora, você deseja iniciar a depuração desse código. No Visual Studio, assim como acontece com a maioria dos IDEs, há duas fases para depuração: compilar o código para detectar e resolver erros de compilador e de projeto e executar código no ambiente para detectar e resolver erros de tempo de execução e dinâmicos.  
 
 ### <a name="configuring-a-build"></a>Configurando um build  
  Há dois tipos básicos de configuração de build: **Depuração** e **Versão**. A primeira configuração produz um executável maior e mais lento que permite uma experiência de depuração de tempo de execução interativa mais avançada, mas nunca deve ser enviado. A segunda compila um executável mais rápido e mais otimizado apropriado para enviar (pelo menos da perspectiva do compilador).  
@@ -47,20 +49,20 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
 
  ![Botão Depurar Build do Visual Studio](../ide/media/vs_ide_gs_debug_build_type1.PNG "Vs_ide_gs_debug_build_type1")  
 
- Você também pode especificar uma plataforma de build específica para o destino, como **x86** (CPUs Intel de&32; bits), **x64** (CPUs Intel de&64; bits) e **ARM** (CPUs ARM, com suporte apenas para determinados tipos de aplicativo). O padrão é **x86** para projetos gerenciados e nativos. Para alterá-lo, clique no menu suspenso de plataforma de build e selecione uma plataforma diferente ou **Gerenciador de Configurações...**  
+ Você também pode especificar uma plataforma de build específica para o destino, como **x86** (CPUs Intel de 32 bits), **x64** (CPUs Intel de 64 bits) e **ARM** (CPUs ARM, com suporte apenas para determinados tipos de aplicativo). O padrão é **x86** para projetos gerenciados e nativos. Para alterá-lo, clique no menu suspenso da plataforma de build e selecione uma plataforma diferente ou o **Configuration Manager...**  
 
  ![Janela do Gerenciador de Arquivos de Configuração do Visual Studio](../ide/media/vs_ide_gs_debug_build_cf_mgr.PNG "Vs_ide_gs_debug_build_cf_mgr")  
 
- Você pode especificar uma configuração de build de destino usando o **Gerenciador de Configurações**. Inicie-o, clique na lista suspensa **Configuração** ou **CPU** e selecione **Novo...** para criar uma nova plataforma ou build.  
+ Você pode especificar uma configuração de build de destino usando o **Gerenciador de Configurações**. Inicie-o, clique na lista suspensa **Configuração** ou **CPU** e selecione **Novo...** para criar um novo build ou uma nova plataforma.  
 
  ![Janela do Gerenciador de Configurações do Visual Studio](../ide/media/vs_ide_gs_debug_build_cf_mgr_2.PNG "Vs_ide_gs_debug_build_cf_mgr_2")  
 
- Ao começar, basta usar **Depuração** e **x86** como sua configuração de build e plataforma, respectivamente. Quando você terminar de codificar e depurar, altere a configuração para **Versão** e direcione para uma plataforma específica. (As versões mais antigas do Visual Studio forneciam uma plataforma padrão **AnyCPU** para projetos de código .Net.)  
+ Ao começar, basta usar **Depuração** e **x86** como sua configuração de build e plataforma, respectivamente. Quando você terminar de codificar e depurar, altere a configuração para **liberar** e definir uma plataforma específica como destino. (As versões mais antigas do Visual Studio forneciam uma plataforma padrão **AnyCPU** para projetos de código .Net.)  
 
  Observação: quando você compila seu projeto, os valores de configuração e plataforma também são usados para determinar que caminho de diretório do projeto é criado para armazenar o executável. Normalmente, ele é **\<caminho-para-o-projeto>\\<nome-do-projeto>\\<configuração\>\\<plataforma\>**. Por exemplo, um projeto com uma configuração de `Debug` e uma plataforma de `x86` seria encontrado em `Projects\MyProjectNameHere\MyProjectNameHere\bin\Debug\x86`. Isso poderá ser útil se você tiver suas próprias ferramentas ou scripts que gerenciam esses executáveis compilados.  
 
 ### <a name="building-your-code"></a>Compilando seu código  
- Com seu build configurado, é hora de realmente compilar seu projeto. A maneira mais fácil de fazer isso é pressionar F7, mas você também pode iniciar o build selecionando **Compilar->Compilar Solução** no menu principal.  
+ Com o build configurado, é hora de realmente compilar seu projeto. A maneira mais fácil de fazer isso é pressionar F7, mas você também pode iniciar o build selecionando **Compilar->Compilar Solução** no menu principal.  
 
  ![Seleção de menu do projeto de build do Visual Studio](../ide/media/vs_ide_gs_debug_build_menu_item.png "Vs_ide_gs_debug_build_menu_item")  
 
@@ -73,7 +75,7 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
  ![Saída de build bem-sucedido do Visual Studio](../ide/media/vs_ide_gs_debug_success_build.PNG "vs_ide_gs_debug_success_build")  
 
 ### <a name="reviewing-the-error-list"></a>Revisando a Lista de Erros  
- A menos que não tenha feito nenhuma modificação no código compilado com êxito anteriormente, provavelmente você tem um erro. Se você não estiver familiarizado com a codificação, provavelmente terá muitos deles. Às vezes os erros são óbvios, como um erro de sintaxe simples ou um nome de variável incorreto e às vezes eles são difíceis de entender, com apenas um código confuso para orientá-lo. Para uma exibição mais clara dos problemas, navegue até o final da janela **Saída** do build e clique na guia **Lista de Erros**. Isso leva a uma exibição mais organizada dos erros e avisos para o projeto e oferece algumas opções adicionais também.  
+ A menos que não tenha feito nenhuma modificação no código compilado com êxito anteriormente, provavelmente haverá um erro. Se você não estiver familiarizado com a codificação, provavelmente haverá muitos deles. Às vezes os erros são óbvios, como um erro de sintaxe simples ou um nome de variável incorreto e às vezes eles são difíceis de entender, com apenas um código confuso para orientá-lo. Para uma exibição mais clara dos problemas, navegue até o final da janela **Saída** do build e clique na guia **Lista de Erros**. Isso leva a uma exibição mais organizada dos erros e avisos para o projeto e oferece algumas opções adicionais também.  
 
  ![Lista de Erros e Saída do Visual Studio](../ide/media/vs_ide_gs_debug_bad_build_error_list.PNG "Vs_ide_gs_debug_bad_build_error_list")  
 
@@ -103,7 +105,7 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
  Como alternativa, você pode clicar no valor do código de erro com hiperlinks na coluna **Código** da **Lista de Erros**. Isso inicializará uma pesquisa do Bing apenas do código de erro.  
 
 ### <a name="performing-static-code-analysis"></a>Realizando a análise de código estático  
- "Análise de código estático" é uma forma elegante de dizer "verificar automaticamente meu código quanto a problemas comuns que podem levar a erros em tempo de execução ou problemas no gerenciamento do código". Crie o hábito de executá-lo depois de limpar os erros óbvios que impediam o build e reserve um tempo para resolver os avisos que ele pode produzir. Você poupará algumas dores de cabeça no futuro, bem como aprenderá algumas técnicas de estilo de código.  
+ "Análise de código estático" é uma forma elegante de dizer "verificar automaticamente meu código quanto a problemas comuns que podem levar a erros em tempo de execução ou a problemas no gerenciamento do código". Crie o hábito de executá-lo depois de limpar os erros óbvios que impediam o build e reserve um tempo para resolver os avisos que ele pode produzir. Você evitará algumas dores de cabeça no futuro, bem como aprenderá algumas técnicas de estilo de código.  
 
  Pressione Alt+F11 (ou selecione **Analisar->Executar Análise de Código na Solução** no menu superior) para iniciar a análise de código estático. Isso poderá levar algum tempo se você tiver muito código.  
 
@@ -135,7 +137,7 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
  Para obter mais informações sobre as lâmpadas, leia [Realizar ações rápidas com lâmpadas](../ide/perform-quick-actions-with-light-bulbs.md).  
 
 ### <a name="debugging-your-running-code"></a>Depurando seu código em execução  
- Agora que você compilou seu código com êxito e realizou um pouco de limpeza, execute-o pressionando F5 ou selecionando **Depurar->Iniciar Depuração**. Isso iniciará o aplicativo em um ambiente de depuração para que você pode observar seu comportamento em detalhes. O IDE do Visual Studio muda enquanto o aplicativo é executado: a janela **Saída** é substituída por duas novas (na configuração de janela padrão), a janela com guias **Autos/Locais/Módulos/Inspeção** e a janela com guias **Pilha de Chamadas/Pontos de Interrupção/Configuração de Exceção/Saída**. Essas janelas têm várias guias que permitem inspecionar e avaliar as variáveis, os threads, as filas de chamadas e vários outros comportamentos do aplicativo enquanto ele é executado.  
+ Agora que você compilou seu código com êxito e fez uma limpeza rápida, execute-o pressionando F5 ou selecionando **Depurar->Iniciar Depuração**. Isso iniciará o aplicativo em um ambiente de depuração para que você pode observar seu comportamento em detalhes. O IDE do Visual Studio muda enquanto o aplicativo é executado: a janela **Saída** é substituída por duas novas (na configuração de janela padrão), a janela com guias **Autos/Locais/Módulos/Inspeção** e a janela com guias **Pilha de Chamadas/Pontos de Interrupção/Configuração de Exceção/Saída**. Essas janelas têm várias guias que permitem inspecionar e avaliar as variáveis, os threads, as pilhas de chamadas e vários outros comportamentos do aplicativo enquanto ele é executado.  
 
  ![Janelas Autos e Pilha de Chamadas do Visual Studio](../ide/media/vs_ide_gs_debug_autos_and_call_stack.PNG "Vs_ide_gs_debug_autos_and_call_stack")  
 
@@ -147,9 +149,9 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
 
  ![Botão Continuar Depuração do Visual Studio](../ide/media/vs_ide_gs_debug_continue_button.png "Vs_ide_gs_debug_continue_button")  
 
- Você pode parar o aplicativo pressionando Shift+F5 ou clicando no botão **Parar**. Ou, pode simplesmente fechar a janela principal do aplicativo (ou caixa de diálogo de linha de comando).  
+ Você pode parar o aplicativo pressionando Shift+F5 ou clicando no botão **Parar**. Ou, pode simplesmente fechar a janela principal do aplicativo (ou a caixa de diálogo da linha de comando).  
 
- Se seu código for executado perfeitamente e exatamente como esperado, parabéns! Altere a configuração de build para **Versão** e recompile-o para implantação. (No entanto, os profissionais talvez desejem pular para a parte sobre Teste de unidade no final.) No entanto, se ele parou, falhou ou forneceu alguns resultados estranhos, você precisará localizar a origem desses problemas e corrigir os bugs.  
+ Se seu código for executado perfeitamente e exatamente como esperado, parabéns! Altere a configuração de build para **Versão** e recompile-o para implantação. (No entanto, os profissionais talvez desejem pular para a parte sobre Teste de unidade no final.) No entanto, se ele tiver parado, falhado ou fornecido alguns resultados estranhos, você precisará localizar a origem desses problemas e corrigir os bugs.  
 
 ### <a name="setting-simple-breakpoints"></a>Configuração pontos de interrupção simples  
  Pontos de interrupção são o recurso mais básico e essencial da depuração confiável. Um ponto de interrupção indica quando o Visual Studio deve suspender o código em execução para que você possa examinar os valores das variáveis ou o comportamento de memória ou se uma ramificação de código está sendo executada ou não. Você NÃO precisa recompilar um projeto após configurar e remover pontos de interrupção.  
@@ -158,7 +160,7 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
 
  ![Ponto de interrupção do Visual Studio](../ide/media/vs_ide_gs_debug_breakpoint1.png "Vs_ide_gs_debug_breakpoint1")  
 
- Quando o código for parado, a linha de código marcada ainda não terá sido executada. Neste ponto, convém executar as instruções para a linha de código marcada pelo ponto de interrupção e inspecionar os valores alterados. Isso é chamado de “intervir” no código. Se o código marcado for uma chamada de método, você poderá intervir nele pressionando F11. Você também pode "ultrapassar" a linha de código pressionando F10. Para obter mais detalhes sobre as ações da etapa de ponto de interrupção, leia [Navegar pelo código com o depurador](../debugger/navigating-through-code-with-the-debugger.md).  
+ Quando o código for parado, a linha de código marcada ainda não terá sido executada. Neste ponto, convém executar as instruções para a linha de código marcada pelo ponto de interrupção e inspecionar os valores alterados. Isso é chamado de “intervir” no código. Se o código marcado for uma chamada de método, você poderá intervir nele pressionando F11. Você também pode “ultrapassar” a linha de código pressionando F10. Para obter mais detalhes sobre a intervenção no código, leia [Navegar pelo Código com o Depurador](../debugger/navigating-through-code-with-the-debugger.md).  
 
  Os usos comuns para os pontos de interrupção incluem:  
 
@@ -175,7 +177,7 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
 ### <a name="setting-conditional-breakpoints"></a>Configurando pontos de interrupção condicionais  
  Se você tiver um ponto de interrupção em um loop ou recursão ou se tiver muitos pontos de interrupção que percorre com frequência, use um ponto de interrupção condicional para garantir que seu código seja suspenso APENAS quando condições específicas forem atendidas. Caso contrário, você pressionará F11 muitas vezes.  
 
- Para definir um ponto de interrupção condicional e suspender seu código quando uma variável for definida para um determinado valor ou passar um certo limite, clique na margem para definir um ponto de interrupção e, em seguida, selecione a "engrenagem" no menu de foco que aparece.  
+ Para definir um ponto de interrupção condicional e suspender seu código quando uma variável for definida para um determinado valor ou passar um certo limite, clique na margem para definir um ponto de interrupção e, em seguida, selecione a “engrenagem” no menu de foco que aparece.  
 
  ![Configurações de ponto de interrupção do Visual Studio](../ide/media/vs_ide_gs_debug_breakpoint_settings.png "Vs_ide_gs_debug_breakpoint_settings")  
 
@@ -192,7 +194,7 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
 
  Passe o mouse sobre uma variável para ver os valores e referências que ela contém no momento. Se você vir um valor que não esperava, provavelmente haverá um bug nas linhas de código anteriores ou de chamada. Mova os pontos de interrupção para cima ou adicione condições aos pontos de interrupção existentes para restringir ainda mais sua pesquisa.  
 
- Além disso, o Visual Studio exibe a janela Ferramentas de Diagnóstico, na qual você pode observar o uso de memória e CPU do aplicativo ao longo do tempo. Use-os para procurar alocação de memória ou uso da CPU intenso inesperado. Use-o em conjunto com a janela **Inspeção** e pontos de interrupção para determinar o que está causando os recursos não liberados ou o uso intenso inesperado.  
+ Além disso, o Visual Studio exibe a janela Ferramentas de Diagnóstico, na qual você pode observar o uso de memória e CPU do aplicativo ao longo do tempo. Use-os para procurar alocação de memória ou uso da CPU intenso inesperado. Use-o em conjunto com a janela **Inspeção** e com os pontos de interrupção para determinar o que está ocasionando o uso intenso inesperado ou os recursos não liberados.  
 
  ![Janela Ferramentas de Diagnóstico do Visual Studio](../ide/media/vs_ide_gs_debug_diagnostic_tools.PNG "Vs_ide_gs_debug_diagnostic_tools")  
 
@@ -204,13 +206,8 @@ O Visual Studio fornece um poderoso conjunto integrado de ferramentas de depura�
  Para saber mais sobre testes de unidade no Visual Studio e como eles podem ajudá-lo a criar código de melhor qualidade, leia [Noções básicas de teste de unidade](../test/unit-test-basics.md).  
 
 ## <a name="see-also"></a>Consulte também  
- [Depurando no Visual Studio](../debugger/debugging-in-visual-studio.md)   
+ [Tour dos recursos do depurador](../debugger/debugger-feature-tour.md)   
  [Preparação e configurações do depurador](../debugger/debugger-settings-and-preparation.md)   
  [Depurar aplicativos de 64 bits](../debugger/debug-64-bit-applications.md)   
  [Noções básicas do depurador](../debugger/debugger-basics.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
