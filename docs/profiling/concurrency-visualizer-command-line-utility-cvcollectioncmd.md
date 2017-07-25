@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: da79533a7a40b6e1b79c66f023beba2c1162bd08
+ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
+ms.openlocfilehash: f219ae7937ea3810b58faa34f6320a627ede99ae
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Utilitário de linha de comando Visualizador de Simultaneidade (CVCollectionCmd)
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/13/2017
   
 |Opção|Descrição|Parâmetros|Valores de retorno|  
 |------------|-----------------|----------------|-------------------|  
-|Consulta|Retorna se a coleta pode ser iniciada.|Nenhum|0 se a coleta estiver pronta para começar.<br /><br /> 1 se a coleta já estiver em andamento.<br /><br /> 2 se a coleta não estiver em andamento, mas uma ou mais sessões [ETW](http://msdn.microsoft.com/Library/ac99a063-e2d2-40cc-b659-d23c2f783f92) necessárias já estiverem habilitadas.|  
+|Consulta|Retorna se a coleta pode ser iniciada.|Nenhum|0 se a coleta estiver pronta para começar.<br /><br /> 1 se a coleta já estiver em andamento.<br /><br /> 2 se a coleta não estiver em andamento, mas uma ou mais sessões [ETW](/dotnet/framework/wcf/samples/etw-tracing) necessárias já estiverem habilitadas.|  
 |Inicializar|Executa o processo especificado na Visualização Simultânea.|O caminho do executável.|0 se a execução foi bem-sucedida.<br /><br /> 1 se a execução falhou porque não foi possível iniciar o aplicativo de destino.<br /><br /> 13 se a execução falhou porque CVCollectionCmd não tem permissões suficientes para gravar no diretório de saída especificado.|  
 |Attach|Começa coletando um rastreamento em todo o sistema. Do contrário, se conecta a um processo, se algum for especificado.|Nenhum.|0 se o anexo for bem-sucedido.<br /><br /> 1 se o anexo falhou porque o processo especificado é inválido ou ambíguo.<br /><br /> 13 se o anexo falhou porque CVCollectionCmd não tem permissões suficientes para gravar no diretório de saída especificado.|  
 |Detach|Para a coleta.|Nenhum.|0 se a desanexação for bem-sucedida.<br /><br /> 1 se a desanexação falhou porque a coleta não está em andamento no momento.<br /><br /> 2 se a desanexação falhou porque a coleta não pode ser parada.|  
@@ -170,3 +170,4 @@ ms.lasthandoff: 05/13/2017
 </LocalConfig>  
   
 ```
+

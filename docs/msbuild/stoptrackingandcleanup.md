@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: a0093df3ec1ba5b7501074177f91cc6c47574220
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: 809e3bffb84406b13aa26c9a170fbb3caf5f1808
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="stoptrackingandcleanup"></a>StopTrackingAndCleanup
@@ -50,7 +51,7 @@ HRESULT WINAPI StopTrackingAndCleanup(void);
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna um [HRESULT](assetId:///HRESULT?qualifyHint=False&autoUpgrade=True) com o conjunto de bits [SUCCEEDED](assetId:///SUCCEEDED?qualifyHint=False&autoUpgrade=True) se o acompanhamento tiver sido interrompido.  
+ Retorna um **HRESULT** com o conjunto de bits **SUCCEEDED** se o acompanhamento tiver sido interrompido.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** FileTracker.h  

@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fe87e06cc64d0f8e1cf12e6e3cdd524f98f032fd
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: d46fea0afc0d6d47a431954dc80a0b58611de0f3
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="setthreadcount"></a>SetThreadCount
@@ -54,7 +55,7 @@ HRESULT WINAPI SetThreadCount(int threadCount);
  O número máximo de threads.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um [HRESULT](assetId:///HRESULT?qualifyHint=False&autoUpgrade=True) com o conjunto de bit [SUCCEEDED](assetId:///SUCCEEDED?qualifyHint=False&autoUpgrade=True) se a contagem de thread foi atualizada.  
+ Um **HRESULT** com o conjunto de bit **SUCCEEDED** se a contagem de thread foi atualizada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** FileTracker.h

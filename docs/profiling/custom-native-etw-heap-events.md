@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 83fbf12dce91f79d537b574ea9903af5d6e61d1f
-ms.openlocfilehash: 0cc24f68ddef374f539c299d87cede8a13fac1a2
-ms.lasthandoff: 02/28/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 795bf9746c4ae48ac04141a05ba56462ecb90482
+ms.openlocfilehash: afc044be4d63b7a292a6d94e360366913bd28883
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/23/2017
 
 ---
 
 # <a name="custom-native-etw-heap-events"></a>Eventos de heap ETW nativo personalizado
 
-O Visual Studio contém uma variedade de [ferramentas de criação de perfil e diagnóstico](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools), incluindo um criador de perfil de memória nativa.  Esse criador de perfil vincula [eventos ETW](https://msdn.microsoft.com/en-us/library/windows/desktop/aa363668(v=vs.85).aspx) do provedor de heap e fornece uma análise de como a memória está sendo alocada e utilizada.  Por padrão, essa ferramenta só pode analisar alocações feitas do heap padrão do Windows e todas as alocações fora desse heap nativo não serão exibidas.
+O Visual Studio contém uma variedade de [ferramentas de criação de perfil e diagnóstico](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools), incluindo um criador de perfil de memória nativa.  Esse criador de perfil vincula [eventos ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) do provedor de heap e fornece uma análise de como a memória está sendo alocada e utilizada.  Por padrão, essa ferramenta só pode analisar alocações feitas do heap padrão do Windows e todas as alocações fora desse heap nativo não serão exibidas.
 
 Há vários casos em que você pode desejar usar seu próprio heap personalizado e evitar a sobrecarga de alocação do heap padrão.  Por exemplo, você poderá usar [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) para alocar uma grande quantidade de memória no início do aplicativo ou do jogo e depois gerenciar seus próprios blocos nessa lista.  Nesse cenário, a ferramenta de criador de perfil de memória só verá essa alocação inicial e não o gerenciamento personalizado feito na parte de memória.  No entanto, ao usar o Provedor ETW de Heap Nativo Personalizado, é possível informar a ferramenta sobre as alocações que estão sendo feitas fora do heap padrão.
 

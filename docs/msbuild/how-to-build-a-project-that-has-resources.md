@@ -32,9 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: f0c10c20b96ebbbaaad4047349d7586b584b8b57
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 641697cabee22a86e3b5ee7a360cbea154ead486
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="how-to-build-a-project-that-has-resources"></a>Como compilar um projeto que tem recursos
@@ -56,7 +58,7 @@ Se você estiver compilando versões localizadas de um projeto, todos os element
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra como o elemento `Output` especifica que o atributo `OutputResources` da tarefa `GenerateResource` conterá os arquivos de recurso compilados `alpha.resources` e `beta.resources` e que esses dois arquivos serão colocados dentro da lista de itens `Resources`. Identificando esses arquivos de recursos como uma coleção de itens de mesmo nome, você poderá facilmente usá-los como entradas para outra tarefa, como a tarefa [Csc](../msbuild/csc-task.md).  
   
- Essa tarefa é equivalente a usar o comutador **/compile** para [Resgen.exe](http://msdn.microsoft.com/Library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4):  
+ Essa tarefa é equivalente a usar o comutador **/compile** para [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator):  
   
  `Resgen.exe /compile alpha.resx,alpha.resources /compile beta.txt,beta.resources`  
   
@@ -97,9 +99,4 @@ Se você estiver compilando versões localizadas de um projeto, todos os element
 [MSBuild](../msbuild/msbuild.md)  
  [Tarefa GenerateResource](../msbuild/generateresource-task.md)   
  [Tarefa Csc](../msbuild/csc-task.md)   
- [Resgen.exe (Gerador de Arquivo de Recurso)](http://msdn.microsoft.com/Library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
+ [Resgen.exe (Gerador de Arquivo de Recurso)](/dotnet/framework/tools/resgen-exe-resource-file-generator)

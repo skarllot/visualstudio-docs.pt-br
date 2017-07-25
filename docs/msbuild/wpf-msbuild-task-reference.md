@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3539fee4728beff42364b3cce2ac141db7ae4158
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 124466bbe97d1e8510e6a1966e2c900a07555b74
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="wpf-msbuild-task-reference"></a>Referência das tarefas do WPF MSBuild
@@ -75,4 +76,4 @@ O processo de build do Windows Presentation Foundation (WPF) estende o Microsoft
  Adiciona o elemento **\<hostInBrowser / >** para o manifesto do aplicativo (*projectname*.exe.manifest) quando um [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] projeto é compilado.  
   
 ## <a name="see-also"></a>Consulte também  
- [MSBuild](http://msdn.microsoft.com/en-us/7c49aba1-ee6c-47d8-9de1-6f29a906e20b)
+ [MSBuild](../msbuild/msbuild.md)

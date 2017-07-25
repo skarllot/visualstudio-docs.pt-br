@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 9688e042bd1e9df95d743d784e71b4a0fbe028e5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: 05bbd82de0c73bff6f8ccb8807b45535afae8dd3
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="starttrackingcontext"></a>StartTrackingContext
@@ -57,7 +58,7 @@ HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskN
  Identifica o contexto de acompanhamento. Esse nome é usado para criar o nome de arquivo de log.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um [HRESULT](assetId:///HRESULT?qualifyHint=False&autoUpgrade=True) com o conjunto de bits [SUCCEEDED](assetId:///SUCCEEDED?qualifyHint=False&autoUpgrade=True) se o contexto de acompanhamento foi criado.  
+ Um **HRESULT** com o conjunto de bits **SUCCEEDED** se o contexto de acompanhamento foi criado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** FileTracker.h

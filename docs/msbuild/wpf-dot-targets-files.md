@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: ec0e05758a3012c88d76f276b30b44bb3f6f2ef6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: addacccf1d647ce2e4328af08b238bcc7dac898a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="wpf-targets-files"></a>Arquivos .targets do WPF
@@ -48,4 +49,4 @@ ms.lasthandoff: 02/22/2017
 ## <a name="see-also"></a>Consulte também  
  [Arquivos .Targets](../msbuild/msbuild-dot-targets-files.md)   
  [Referência do MSBuild](../msbuild/msbuild-reference.md)   
- [Como compilar um aplicativo WPF (WPF)](http://msdn.microsoft.com/Library/a58696fd-bdad-4b55-9759-136dfdf8b91c)
+ [Como compilar um aplicativo WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

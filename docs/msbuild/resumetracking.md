@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ca7ce35b34a994190242a75f97d8dd705bf87986
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: b904d3cb9039088dbaaa3dce8701a32839eb78b9
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="resumetracking"></a>ResumeTracking
@@ -50,7 +51,7 @@ HRESULT WINAPI ResumeTracking();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um [HRESULT](assetId:///HRESULT?qualifyHint=False&autoUpgrade=True) com o conjunto de bits [SUCCEEDED](assetId:///SUCCEEDED?qualifyHint=False&autoUpgrade=True) se o acompanhamento tiver sido retomado. [E_FAIL](assetId:///E_FAIL?qualifyHint=False&autoUpgrade=True) será retornado se não for possível continuar o acompanhamento porque o contexto não estava disponível.  
+ Um **HRESULT** com o conjunto de bits **SUCCEEDED** se o acompanhamento tiver sido retomado. **E_FAIL** será retornado se não for possível continuar o acompanhamento porque o contexto não estava disponível.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** FileTracker.h  

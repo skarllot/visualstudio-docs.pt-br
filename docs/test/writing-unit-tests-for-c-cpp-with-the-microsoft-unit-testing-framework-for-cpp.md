@@ -28,10 +28,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 203cc6111870cbf3342fd84c5931a0dadc2bdde0
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: c7d4f4f00d8d89b77f18b2a1b355a445c05dfb6b
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>Escrevendo teste de unidade para C/C++ com o Microsoft Unit Testing Framework para C++
@@ -414,6 +414,6 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
  [Usando Microsoft.VisualStudio.TestTools.CppUnitTestFramework](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)   
  [An Overview of Managed/Unmanaged Code Interoperability](http://msdn.microsoft.com/library/ms973872.aspx)  (Uma visão geral da interoperabilidade de código gerenciado/não gerenciado)  
  [Depurando código nativo](../debugger/debugging-native-code.md)   
- [Instruções passo a passo: criando e usando uma biblioteca de vínculo dinâmico (C++)](http://msdn.microsoft.com/Library/3ae94848-44e7-4955-bbad-7d40f493e941)   
+ [Instruções passo a passo: criando e usando uma biblioteca de vínculo dinâmico (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)   
  [Importando e exportando](/cpp/build/importing-and-exporting)
 
