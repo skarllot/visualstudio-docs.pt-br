@@ -21,10 +21,10 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: dc7a0c10390de67b56a83d2824224bed24125db0
-ms.openlocfilehash: 974a032e57397592b7c09bffe28c55cb02c01a0a
+ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
+ms.openlocfilehash: 8e5165b4b17195e5f9172dd25962c9486a7aeeeb
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
@@ -61,5 +61,5 @@ Determina quanta informação é gravada no arquivo de log de build, que está l
 
 ## <a name="see-also"></a>Consulte também  
 -[Compilando e criando](../../ide/compiling-and-building-in-visual-studio.md)
-- [Caixa de diálogo Opções, Projetos e Soluções](../../ide/projects-and-solutions-options-dialog-box.md)
-- [Caixa de diálogo Opções, Projetos e Soluções, Projetos Web](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)
+- [Caixa de diálogo Opções, Projetos e Soluções](projects-and-solutions-options-dialog-box.md)
+- [Caixa de diálogo Opções, Projetos e Soluções, Projetos Web](options-dialog-box-projects-and-solutions-web-projects.md)
