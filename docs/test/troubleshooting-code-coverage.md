@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: e2d04ac6463143efacf4fe4967d9e555aed84d05
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: c435bb9e490e9a3c59de78f383632552c0ca4641
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="troubleshooting-code-coverage"></a>Solução de problemas de cobertura de código
@@ -106,7 +106,7 @@ A ferramenta de análise da cobertura de código no Visual Studio coleta dados p
  Verifique se o assembly não é carregado com base no cache de imagem nativa.  
   
  Explicação  
- Por motivos de desempenho, os assemblies de imagem nativa não são analisados. Para obter mais informações, consulte [Ngen.exe (Gerador de Imagens Nativas)](http://msdn.microsoft.com/Library/44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66).  
+ Por motivos de desempenho, os assemblies de imagem nativa não são analisados. Para obter mais informações, consulte [Ngen.exe (Gerador de Imagens Nativas)](/dotnet/framework/tools/ngen-exe-native-image-generator).  
   
  Resolução  
  Use uma versão MSIL do assembly. Não o processe com NGen.  

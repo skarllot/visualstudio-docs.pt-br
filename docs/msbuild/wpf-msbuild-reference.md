@@ -36,10 +36,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e0a14b4c5712c13f2c14439b89420952ad494176
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 126bcc37899efcc373f2bd92c054a02d6e4aca6b
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="wpf-msbuild-reference"></a>Referência do WPF MSBuild
@@ -68,4 +68,4 @@ O WPF (Windows Presentation Foundation) estende o MSBuild (Microsoft Build Engin
  Um assembly das janelas da tarefa de build.  
   
 ## <a name="see-also"></a>Consulte também  
- [MSBuild](http://msdn.microsoft.com/en-us/7c49aba1-ee6c-47d8-9de1-6f29a906e20b)
+ [MSBuild](../msbuild/msbuild.md)

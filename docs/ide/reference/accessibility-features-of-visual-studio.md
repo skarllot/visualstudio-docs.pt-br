@@ -30,14 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9f7a72d4b95993df69bdde9c54e67781886b230b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 2fe12cb93b014a0ade1e860e1d4622abcc94e97e
+ms.openlocfilehash: b69e72a39ae91eeb92b710fc15b66ced13482d83
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/13/2017
 
 ---
 # <a name="accessibility-features-of-visual-studio"></a>Funcionalidades de Acessibilidade do Visual Studio
-Além dos recursos de acessibilidade e utilitários no Windows, os seguintes recursos tornam o Visual Studio 2013 mais acessível a pessoas portadoras de deficiência:  
+Além dos recursos de acessibilidade e utilitários no Windows, os seguintes recursos tornam o Visual Studio mais acessível para pessoas portadoras de deficiência:  
   
 -   Ampliação de texto e botão da barra de ferramentas  
   
@@ -66,3 +67,4 @@ Além dos recursos de acessibilidade e utilitários no Windows, os seguintes rec
   
 ## <a name="see-also"></a>Consulte também  
  [Produtos e serviços de acessibilidade da Microsoft](../../ide/reference/accessibility-products-and-services-from-microsoft.md)
+

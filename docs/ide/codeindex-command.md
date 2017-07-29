@@ -38,8 +38,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/24/2017
 
 ---
-# Comando CodeIndex
-<a id="codeindex-command" class="xliff"></a>
+# <a name="codeindex-command"></a>Comando CodeIndex
 Use o comando **CodeIndex** para gerenciar a indexação de código no Team Foundation Server. Por exemplo, você pode desejar redefinir o índice para consertar informações CodeLens ou desativar a indexação para investigar problemas de desempenho do servidor.  
   
  **Permissões necessárias**  
@@ -49,15 +48,13 @@ Use o comando **CodeIndex** para gerenciar a indexação de código no Team Foun
 > [!NOTE]
 >  Mesmo que use credenciais administrativas para entrar, você deve abrir uma janela de prompt de comandos com privilégios elevados para executar esse comando. Você também deve executar esse comando a partir do nível de aplicativo para o Team Foundation.  
   
-## Sintaxe
-<a id="syntax" class="xliff"></a>  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /ignoreList:[ add | remove | removeAll | view ] ServerPath | /listLargeFiles [/fileCount:FileCount] [/minSize:MinSize] | /reindexAll | /destroyCodeIndex [/noPrompt] | /temporaryDataSizeLimit:[ view | <SizeInGBs> | disable ] | /indexHistoryPeriod:[ view | all | <NumberOfMonths> ] [/collectionName:CollectionName | /collectionId:CollectionId]  
 ```  
   
-#### Parâmetros
-<a id="parameters" class="xliff"></a>  
+#### <a name="parameters"></a>Parâmetros  
   
 |**Argumento**|**Descrição**|  
 |------------------|---------------------|  
@@ -78,8 +75,7 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 |**/collectionName:** `CollectionName`|Especifica o nome da coleção de projetos de equipe na qual executar o comando **CodeIndex**. Obrigatório se você não usar **/CollectionId**.|  
 |**/collectionId:** `CollectionId`|Especifica o número de identificação da coleção de projetos de equipe na qual executar o comando **CodeIndex**. Obrigatório se você não usar **/CollectionName**.|  
   
-## Exemplos
-<a id="examples" class="xliff"></a>  
+## <a name="examples"></a>Exemplos  
   
 > [!NOTE]
 >  Os exemplos de empresas, organizações, produtos, nomes de domínio, endereços de email, logotipos, pessoas, lugares e eventos aqui mencionados são fictícios.  Nenhuma associação com nenhuma empresa, organização, produto, nome de domínio, endereço de email, logotipo, pessoa, locais ou eventos reais é intencional nem deve ser inferida.  
@@ -144,7 +140,6 @@ TFSConfig CodeIndex /temporaryDataSizeLimit:disable /collectionName:"Fabrikam We
 TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Web Site"  
 ```  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
  [Managing server configuration with TFSConfig (Gerenciando a configuração do servidor com TFSConfig)](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62)   
  [Ferramentas de linha de comando do TFS](http://msdn.microsoft.com/en-us/be8c997a-b97b-4e59-97f5-04db0a601a6c)

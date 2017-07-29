@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a116306cdd3fc0cd636077bf2a0d6bc87b49e96b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e13a7e293038cf3a9b085d14e428767c561e5e3e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="vsinstr-warnings"></a>Avisos de VSInstr
@@ -45,7 +46,7 @@ A tabela a seguir lista avisos emitidos pela ferramenta VSInstr.exe. Você pode 
 |Número do aviso|Descrição|  
 |--------------------|-----------------|  
 |**VSP2000**|Erro interno. Não é possível obter o nome de arquivo do módulo para este executável.|  
-|**VSP2001**|\<assembly name> é um assembly de nome forte. Ele deve ser assinado novamente antes de ser executado.<br /><br /> Este aviso ocorre quando um assembly assinado é instrumentado. Você pode usar a ferramenta sn.exe desistir binário ou desativar temporariamente o requisito de nome forte. Para saber mais, veja [Sn.exe (Ferramenta de Nome Forte)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).|  
+|**VSP2001**|\<assembly name> é um assembly de nome forte. Ele deve ser assinado novamente antes de ser executado.<br /><br /> Este aviso ocorre quando um assembly assinado é instrumentado. Você pode usar a ferramenta sn.exe desistir binário ou desativar temporariamente o requisito de nome forte. Para saber mais, veja [Sn.exe (Ferramenta de Nome Forte)](/dotnet/framework/tools/sn-exe-strong-name-tool).|  
 |**VSP2002**|Não foi possível localizar a função \<funcname > no arquivo \<filename ><br /><br /> Este aviso ocorrerá se uma função não puder ser localizada no arquivo especificado.|  
 |**VSP2003**|Não foi possível encontrar um salto cruzado para a função \<funcname> no arquivo \<filename>.<br /><br /> Este aviso ocorre se VSInstr não puder anular saltos cruzados. Saltos cruzados são usados para otimização do código.|  
 |**VSP2004**|A função \<funcname> foi excluída por meio da opção de linha de comando EXCLUDE, mas ela era necessária porque continha um salto cruzado.<br /><br /> Este aviso ocorre se a função foi excluída usando a opção EXCLUDE, mas é necessária durante o processo de instrumentação. O criador de perfil inclui automaticamente a função necessária.|  

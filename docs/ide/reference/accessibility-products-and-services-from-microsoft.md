@@ -38,9 +38,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: d590f992554a39086c79418caee61cb36f6b750d
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -83,7 +84,7 @@ A Microsoft tem o compromisso de facilitar o uso de seus produtos e serviços pa
  Endereços Web podem mudar, portanto, talvez você não consiga se conectar ao site ou aos sites mencionados aqui.  
   
 ##  <a name="hearing"></a> Atendimento ao cliente para pessoas com deficiências auditivas  
- Se você for surdo ou tiver algum tipo de deficiência auditiva, o acesso completo aos produtos da Microsoft e ao atendimento ao cliente estará disponível por meio de um serviço de telefone de texto (TTY/TDD):  
+ Se você for deficiente auditivo ou tiver algum tipo de deficiência auditiva, o acesso completo aos produtos da Microsoft e ao atendimento ao cliente estará disponível por meio de um serviço de telefone de texto (TTY/TDD):  
   
 -   Para obter atendimento ao cliente, contate o Microsoft Sales Information Center em (800) 892-5234 entre 6:30 AM e 17:30, hora do Pacífico, de segunda a sexta-feira, exceto feriados.  
   

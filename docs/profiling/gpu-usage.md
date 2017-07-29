@@ -28,10 +28,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: a2958c20bbfbd9f4f3d03946dbe230326894b1c1
+ms.sourcegitcommit: 795bf9746c4ae48ac04141a05ba56462ecb90482
+ms.openlocfilehash: 7b69cc5d96a1b51a3d58f688a53bb0156ec3b713
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="gpu-usage"></a>Uso de GPU
@@ -93,7 +93,7 @@ Use a ferramenta Uso de GPU no Hub de Desempenho e Diagnóstico do Visual Studio
 
 <!-- VERSIONLESS -->
 ## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>Exportar para o GPUView ou o Windows Performance Analyzer
-A partir do Visual Studio 2017, esses dados podem ser abertos com o [GPUView](https://msdn.microsoft.com/library/windows/desktop/ff570133(v=vs.85).aspx) e o [Windows Performance Analyzer](https://msdn.microsoft.com/windows/hardware/commercialize/test/wpt/windows-performance-analyzer) clicando nos links **Abrir no GpuView** ou **Abrir no WPA** localizados no canto inferior direito da sessão de diagnóstico.
+A partir do Visual Studio 2017, esses dados podem ser abertos com o [GPUView](/windows-hardware/drivers/display/using-gpuview) e o [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) clicando nos links **Abrir no GpuView** ou **Abrir no WPA** localizados no canto inferior direito da sessão de diagnóstico.
 
 ![Abrir em...](media/gfx_diag_open_in.png)
 <!-- /VERSIONLESS -->
@@ -170,5 +170,5 @@ A partir do Visual Studio 2017, esses dados podem ser abertos com o [GPUView](ht
 -   [Ferramenta Uso de GPU no Visual Studio (vídeo)](http://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)  
 -   [Ferramenta Uso de GPU no Visual Studio 2013 Atualização 4 CTP1 (blog)](http://blogs.msdn.com/b/vcblog/archive/2014/09/05/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1.aspx)  
 -   [Uso de GPU para o DirectX no Visual Studio (blog)](http://blogs.msdn.com/b/ianhu/archive/2014/12/16/gpu-usage-for-directx-in-visual-studio.aspx)
-- [GPUView](https://msdn.microsoft.com/library/windows/desktop/ff570133(v=vs.85).aspx) 
-- [Windows Performance Analyzer](https://msdn.microsoft.com/windows/hardware/commercialize/test/wpt/windows-performance-analyzer)
+- [GPUView](/windows-hardware/drivers/display/using-gpuview) 
+- [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)

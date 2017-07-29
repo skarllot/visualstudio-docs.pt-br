@@ -29,16 +29,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 8ef43b82ba8a9ca138872a152e8811174e20d1fe
+ms.sourcegitcommit: 795bf9746c4ae48ac04141a05ba56462ecb90482
+ms.openlocfilehash: 74e69f0d5d04192eb801f5e56e1a4ee6ca2cc57a
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="analyze-cpu-usage"></a>Analisar o uso de CPU
 Quando você precisa investigar problemas de desempenho no aplicativo, um bom começo é entender como ele usa a CPU. A ferramenta **Uso da CPU** mostra a você os momentos em que a CPU está gastando tempo executando o código do Visual C++, Visual C#/Visual Basic e JavaScript. A partir do Visual Studio 2015 Atualização 1, é possível ver um detalhamento por função do uso da CPU sem sair do depurador. É possível ativar e desativar a criação de perfil da CPU durante a depuração e exibir os resultados quando a execução é interrompida, por exemplo, em um ponto de interrupção.  
   
-Você tem várias opções para executar e gerenciar a sessão de diagnóstico. Por exemplo, é possível executar a ferramenta **Uso da CPU** em computadores locais ou remotos ou em um simulador ou emulador. Você pode analisar o desempenho de um projeto aberto no Visual Studio, anexado a um aplicativo em execução ou iniciar um aplicativo instalado por meio da Windows Store. Para obter mais informações, consulte [Run Profiling Tools with or without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md) (Executar as ferramentas de criação de perfil com ou sem o depurador). Para obter um passo a passo que analisa o desempenho de um aplicativo da Windows Store, consulte [Analisar o uso da CPU nos aplicativos da Loja](https://msdn.microsoft.com/en-us/library/windows/apps/dn641982.aspx). 
+Você tem várias opções para executar e gerenciar a sessão de diagnóstico. Por exemplo, é possível executar a ferramenta **Uso da CPU** em computadores locais ou remotos ou em um simulador ou emulador. Você pode analisar o desempenho de um projeto aberto no Visual Studio, anexado a um aplicativo em execução ou iniciar um aplicativo instalado por meio da Windows Store. Para obter mais informações, consulte [Run Profiling Tools with or without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md) (Executar as ferramentas de criação de perfil com ou sem o depurador). Para obter um passo a passo que analisa o desempenho de um aplicativo da Windows Store, consulte [Analisar o uso da CPU nos aplicativos da Loja](analyze-cpu-usage-in-a-windows-universal-app.md). 
 
 Aqui, mostramos como coletar e analisar o uso da CPU com builds de versão. Para analisar o uso da CPU durante a depuração, consulte [Guia do iniciante à criação de perfil de desempenho](../profiling/beginners-guide-to-performance-profiling.md). 
   
