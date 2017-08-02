@@ -46,7 +46,7 @@ Você pode compartilhar controles, modelos e ferramentas que você desenvolve po
 ## <a name="adding-a-private-gallery-to-extensions-and-updates-in-visual-studio"></a>Adicionando uma galeria privada para extensões e atualizações no Visual Studio  
  Quando uma galeria privada estiver disponível, você pode adicioná-lo para **extensões e atualizações** no Visual Studio.  
   
- ![Gerenciador de extensões de caixa de diálogo Adicionar](../extensibility/media/em_adddialog.png "EM_AddDialog")  
+ ![Gerenciador de extensões de caixa de diálogo Adicionar](~/docs/extensibility/media/em_adddialog.png "EM_AddDialog")  
   
 #### <a name="to-add-a-private-gallery-to-extensions-and-updates"></a>Para adicionar uma galeria privada para extensões e atualizações  
   
@@ -84,7 +84,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 ## <a name="installing-extensions-from-a-private-gallery"></a>Instalando extensões de uma galeria privada  
  Você pode procurar e instalar extensões do Visual Studio de uma galeria privada em **extensões e atualizações**. As etapas a seguir usam uma galeria particular chamada `My Gallery`.  
   
- ![Gerenciador de extensões instalando Galeria privada](../extensibility/media/em_.png "EM_")  
+ ![Gerenciador de extensões instalando Galeria privada](~/docs/extensibility/media/em_.png "EM_")  
   
 #### <a name="to-search-for-and-install-extensions-from-a-private-gallery"></a>Para procurar e instalar as extensões de uma galeria privada  
   
@@ -97,7 +97,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 ## <a name="updating-extensions-from-a-private-gallery"></a>Extensões de atualização de uma galeria privada  
  Conforme novas versões de extensões do Visual Studio são lançadas na Galeria privada, você pode atualizar as extensões que você instalou. As etapas a seguir usam uma galeria particular chamada `My Repository`.  
   
- ![Atualização de galeria particular do Gerenciador de extensão](../extensibility/media/em_update.png "EM_Update")  
+ ![Atualização de galeria particular do Gerenciador de extensão](~/docs/extensibility/media/em_update.png "EM_Update")  
   
 #### <a name="to-update-an-installed-extension-from-a-private-gallery"></a>Para atualizar uma extensão instalados de uma galeria privada  
   

@@ -104,7 +104,7 @@ Para o comportamento de interação típica, siga o [diretrizes de área de trab
 #### <a name="layout"></a>Layout  
 Caixas de combinação e listas suspensas devem ser dimensionadas para ajustar o conteúdo não se ajustar à largura da janela em que elas serão mostradas nem arbitrariamente corresponde ao tamanho de um campo longo, como um caminho.  
   
-![Incorreto: a largura da lista suspensa é muito longa para o conteúdo que será exibido.](../../extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707-03_IncorrectDropDownLayout")<br />Incorreto: a largura da lista suspensa é muito longa para o conteúdo que será exibido.
+![Incorreto: a largura da lista suspensa é muito longa para o conteúdo que será exibido.](~/docs/extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707-03_IncorrectDropDownLayout")<br />Incorreto: a largura da lista suspensa é muito longa para o conteúdo que será exibido.
   
 ![Correto: na lista suspensa é dimensionada para permitir o crescimento de tradução, mas não desnecessariamente longas.](../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707-04_CorrectDropDownLayout")<br />Correto: na lista suspensa é dimensionada para permitir o crescimento de tradução, mas não desnecessariamente longas. 
   
@@ -160,11 +160,11 @@ Há duas maneiras de exibir informações de texto estático.
 
 Texto estático pode ser em seu próprio em uma caixa de diálogo sem qualquer contenção quando não há nenhum conflito de agrupamento. Decida se as linhas de uma caixa adicionais são realmente necessárias. Um exemplo é a exibição de um caminho de diretório em uma seção criada por uma linha de grupo, conforme mostrado abaixo:  
 
-![Informações de texto estático em controles de texto](../../extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />Informações de texto estático em controles de texto
+![Informações de texto estático em controles de texto](~/docs/extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />Informações de texto estático em controles de texto
 
 Na caixa de diálogo onde existem outras áreas agrupadas e confinamento das informações de ajuda a legibilidade, e quando uma seção pode ser ocultada ou exibida (como no **janela propriedades** painel de descrição) ou você deseja ser consistente com a interface do usuário semelhante, coloque o texto dentro de uma caixa. Essa caixa de grupo deve ser uma única regra e colorida com o `ButtonShadow`:
 
-![Texto estático na janela Propriedades](../../extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />Texto estático na janela Propriedades
+![Texto estático na janela Propriedades](~/docs/extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />Texto estático na janela Propriedades
 
 ### <a name="read-only-text-box"></a>Caixa de texto somente leitura
 
@@ -172,7 +172,7 @@ Isso permite que o usuário selecionar o texto dentro do campo, mas não editá-
 
 Uma caixa de texto pode se tornar ativa (editável) quando um usuário altera um controle, como verificação/desmarcar uma caixa de seleção ou selecionar/Cancelar a seleção um botão de opção. Por exemplo, no **ferramentas &gt; opções** página mostrada abaixo, o **Home Page** caixa de texto se torna ativa quando o **usar padrão** caixa de seleção está desmarcada.
 
-![Caixa de texto somente leitura, mostrando os estados ativos e inativos](../../extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />Caixa de texto somente leitura, mostrando os estados ativos e inativos
+![Caixa de texto somente leitura, mostrando os estados ativos e inativos](~/docs/extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />Caixa de texto somente leitura, mostrando os estados ativos e inativos
 
 ### <a name="using-text-in-dialogs"></a>Usando texto em caixas de diálogo
 
@@ -219,7 +219,7 @@ Caixas de diálogo se beneficiar com as diretrizes de marca d'água ligeiramente
 
 -   As marcas d'água podem ser centralizadas ou recuo à esquerda. Aplica regras de design padrão ao tomar decisões de alinhamento. A marca d'água não pode ser selecionada no plano de fundo.
 
-![Exemplo de texto de marca d'água](../../extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />Exemplo de texto de marca d'água
+![Exemplo de texto de marca d'água](~/docs/extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />Exemplo de texto de marca d'água
 
 ### <a name="context-specific-dynamic-text"></a>Texto de contexto específico (dinâmico)
 
@@ -319,12 +319,12 @@ Alguns botões devem sempre usar uma imagem de gráfica e nunca incluir o texto 
 | Função | Botão |  
 | --- | --- |  
 | Adicionar | ![Botão "Adicionar" gráfico](../../extensibility/ux-guidelines/media/070703-08_buttonadd.png "070703 08_ButtonAdd") |
-| Remover | ![Botão gráfico "Remover"](../../extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
+| Remover | ![Botão gráfico "Remover"](~/docs/extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
 | Adicionar Tudo | ![Botão "Adicionar tudo" gráfico](../../extensibility/ux-guidelines/media/070703-10_buttonaddall.png "070703 10_ButtonAddAll") |
 | Remover Tudo | ![Botão gráfico de "Remover tudo"](../../extensibility/ux-guidelines/media/070703-11_buttonremoveall.png "070703 11_ButtonRemoveAll") |
 | Mover Para Cima | ![Botão gráfico "Mover para cima"](../../extensibility/ux-guidelines/media/070703-12_buttonmoveup.png "070703 12_ButtonMoveUp") |
-| Mover Para Baixo | ![Botão gráfico "Mover para baixo"](../../extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
-| Excluir | ![Botão gráfico "Delete"](../../extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
+| Mover Para Baixo | ![Botão gráfico "Mover para baixo"](~/docs/extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
+| Excluir | ![Botão gráfico "Delete"](~/docs/extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
   
 ##### <a name="sizing-and-spacing"></a>Espaçamento e dimensionamento  
 Dimensionamento para botões gráfica é igual à versão resumida do **[procurar...]**  botão (26 x 23 pixels):  
@@ -371,7 +371,7 @@ Quando um nó é selecionado na exibição de árvore, o realce deve expandir pa
 #### <a name="scroll-bars"></a>Barras de rolagem  
 Barras de rolagem sempre devem ser ocultadas se o conteúdo caiba no controle de exibição de árvore. É aceitável para as barras de rolagem seja oculto ou semi-transparente em uma janela rolável e aparecem quando a janela que contém o modo de exibição de árvore tem o foco, ou após o foco da árvore de exibição também.  
   
-![Ambas as barras de rolagem vertical e horizontal são exibidas porque o conteúdo excederam os limites do controle de exibição de árvore.](../../extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705-4_Scrollbars")<br />Ambas as barras de rolagem vertical e horizontal são exibidas porque o conteúdo excederam os limites do controle de exibição de árvore.
+![Ambas as barras de rolagem vertical e horizontal são exibidas porque o conteúdo excederam os limites do controle de exibição de árvore.](~/docs/extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705-4_Scrollbars")<br />Ambas as barras de rolagem vertical e horizontal são exibidas porque o conteúdo excederam os limites do controle de exibição de árvore.
   
 ###  <a name="BKMK_TreeViewInteractions"></a>Interações de modo de exibição de árvore  
   

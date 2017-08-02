@@ -128,11 +128,11 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
      Nestas instruções passo a passo, o projeto de teste é chamado `NativeRooterTest`.  
   
-     ![Criando um projeto de teste de unidade C&#43;&#43;](../test/media/utecpp01.png "UteCpp01")  
+     ![Criando um projeto de teste de unidade C&#43;&#43;](~/docs/test/media/utecpp01.png "UteCpp01")  
   
 2.  No novo projeto, inspecione **unittest1.cpp**  
   
-     ![Projeto de teste com TEST&#95;CLASS e TEST&#95;METHOD](../test/media/utecpp2.png "UteCpp2")  
+     ![Projeto de teste com TEST&#95;CLASS e TEST&#95;METHOD](~/docs/test/media/utecpp2.png "UteCpp2")  
   
      Observe que:  
   
@@ -165,7 +165,7 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
          O teste aparece em **Testes Aprovados**.  
   
-         ![Gerenciador de Testes de Unidade com um teste aprovado](../test/media/utecpp04.png "UteCpp04")  
+         ![Gerenciador de Testes de Unidade com um teste aprovado](~/docs/test/media/utecpp04.png "UteCpp04")  
   
 ###  <a name="createDllProject"></a> Criar um projeto de DLL não gerenciada  
   
@@ -173,17 +173,17 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
      Nestas instruções passo a passo, o projeto é chamado `RootFinder`.  
   
-     ![Criando um projeto Win32 C&#43;&#43;](../test/media/utecpp05.png "UteCpp05")  
+     ![Criando um projeto Win32 C&#43;&#43;](~/docs/test/media/utecpp05.png "UteCpp05")  
   
 2.  Selecione **DLL** e **Exportar Símbolos** no Assistente de Aplicativo Win32.  
   
      A opção **Exportar Símbolos** gera uma macro conveniente que você pode usar para declarar métodos exportados.  
   
-     ![Assistente do projeto C&#43;&#43; definido para DLL e Exportar Símbolos](../test/media/utecpp06.png "UteCpp06")  
+     ![Assistente do projeto C&#43;&#43; definido para DLL e Exportar Símbolos](~/docs/test/media/utecpp06.png "UteCpp06")  
   
 3.  Declare uma função exportada no arquivo .h da entidade de segurança:  
   
-     ![Novo projeto de código de DLL e arquivo .h com macros de API](../test/media/utecpp07.png "UteCpp07")  
+     ![Novo projeto de código de DLL e arquivo .h com macros de API](~/docs/test/media/utecpp07.png "UteCpp07")  
   
      O declarador `__declspec(dllexport)` faz com que os membros públicos e protegidos da classe fiquem visíveis fora da DLL. Para obter mais informações, consulte [Usando dllimport e dllexport em classes C++](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes).  
   
@@ -203,13 +203,13 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
     1.  Abra as propriedades do projeto de teste e escolha **Propriedades Comuns**, **Estrutura e Referências**.  
   
-         ![Propriedades de projeto C&#43;&#43; &#45; Estrutura e Referências](../test/media/utecpp08.png "UteCpp08")  
+         ![Propriedades de projeto C&#43;&#43; &#45; Estrutura e Referências](~/docs/test/media/utecpp08.png "UteCpp08")  
   
     2.  Escolha **Adicionar Nova Referência**.  
   
          Na caixa de diálogo **Adicionar Referência**, selecione o projeto de DLL e escolha **Adicionar**.  
   
-         ![Propriedades do projeto C&#43;&#43; &#45; Adicionar Nova Referência](../test/media/utecpp09.png "UteCpp09")  
+         ![Propriedades do projeto C&#43;&#43; &#45; Adicionar Nova Referência](~/docs/test/media/utecpp09.png "UteCpp09")  
   
 2.  No arquivo .cpp do teste de unidade da entidade de segurança, inclua o arquivo .h do código da DLL:  
   
@@ -243,7 +243,7 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
 5.  No Gerenciador de Testes, escolha **Executar Todos**.  
   
-     ![Gerenciador de Testes de Unidade &#45; Teste básico aprovado](../test/media/utecpp10.png "UteCpp10")  
+     ![Gerenciador de Testes de Unidade &#45; Teste básico aprovado](~/docs/test/media/utecpp10.png "UteCpp10")  
   
  Você configurou o teste e os projetos de código, além de ter verificado que pode executar testes que executam funções no projeto de código. Agora, você pode começar a escrever testes e códigos reais.  
   
@@ -272,7 +272,7 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
      Falha no novo teste.  
   
-     ![Falha em RangeTest](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
+     ![Falha em RangeTest](~/docs/test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
   
     > [!TIP]
     >  Verifique se os testes falham imediatamente após escrevê-los. Isso ajuda a impedir a facilidade de errar ao escrever um teste que nunca falha.  
@@ -300,7 +300,7 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
      Ambos os testes são aprovados.  
   
-     ![Gerenciador de Testes de Unidade &#45; Teste de intervalo aprovado](../test/media/utecpp12.png "UteCpp12")  
+     ![Gerenciador de Testes de Unidade &#45; Teste de intervalo aprovado](~/docs/test/media/utecpp12.png "UteCpp12")  
   
     > [!TIP]
     >  Desenvolva o código adicionando testes, um de cada vez. Verifique se todos os testes passaram após cada iteração.  
@@ -347,7 +347,7 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
      A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do Gerenciador de Testes.  
   
-     ![Falha em NegativeRangeTests](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
+     ![Falha em NegativeRangeTests](~/docs/test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
   
 4.  Para ver o motivo da falha do teste, percorra a função:  
   
@@ -375,7 +375,7 @@ No Visual Studio, você pode criar testes de unidade para código não gerenciad
   
 6.  Todos os testes agora foram aprovados.  
   
-     ![Todos os testes foram aprovados](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
+     ![Todos os testes foram aprovados](~/docs/test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
   
 > [!TIP]
 >  Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o botão de alternância ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.  

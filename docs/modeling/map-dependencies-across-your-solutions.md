@@ -55,7 +55,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="map-dependencies-across-your-solutions"></a>Mapear as dependências nas soluções
 Quando você quiser entender as dependências em seu código, visualize-os Criando mapas de código. Isso ajuda você a ver como o código se ajusta sem ler nos arquivos e linhas de código.  
   
- ![Exibir dependências em suas soluções](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
+ ![Exibir dependências em suas soluções](~/docs/modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
   
  **Aqui estão alguns vídeos**:  
   
@@ -101,7 +101,7 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
   
 2.  Selecione todos os projetos, referências de assembly, pastas, arquivos, tipos ou membros que você deseja mapear.  
   
-3.  Sobre o **Solution Explorer** barra de ferramentas, escolha **Mostrar no mapa de código**![criar novo gráfico selecionado nós botão de](../modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton"). Ou abra o menu de atalho e escolha **Mostrar no mapa de código**. Você também pode arrastar itens da exibição de classe ou Pesquisador de objetos em um novo ou um mapa de código existente.  
+3.  Sobre o **Solution Explorer** barra de ferramentas, escolha **Mostrar no mapa de código**![criar novo gráfico selecionado nós botão de](~/docs/modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton"). Ou abra o menu de atalho e escolha **Mostrar no mapa de código**. Você também pode arrastar itens da exibição de classe ou Pesquisador de objetos em um novo ou um mapa de código existente.  
   
 4.  [Consulte as dependências específicas](#SeeSpecificSource) para entender como você pode usar mapas de código para exibir as dependências específicas em sua solução.  
   
@@ -135,23 +135,23 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
   
 1.  Sobre o **arquitetura** menu, escolha **gerar mapa de código para a solução**.  
   
-     ![Gerar um comando de mapa de código](../modeling/media/codemapsarchitecturemenu.png "CodeMapsArchitectureMenu")  
+     ![Gerar um comando de mapa de código](~/docs/modeling/media/codemapsarchitecturemenu.png "CodeMapsArchitectureMenu")  
   
      Obtenha um mapa que mostra os assemblies de nível superior e os links agregados entre eles. Quanto maior o vínculo agregado, mais dependências ele representa.  
   
 2.  Use o **legenda** botão na barra de mapa de código para mostrar ou ocultar a lista de ícones do tipo de projeto (como teste, Web e projeto Phone), itens de código (como Classes, métodos e propriedades) e tipos de relações (como herda de, implementa e chamadas).  
   
-     ![Gráfico de dependência de nível superior de assemblies](../modeling/media/dependencygraph_toplevelassemblies.png "DependencyGraph_TopLevelAssemblies")  
+     ![Gráfico de dependência de nível superior de assemblies](~/docs/modeling/media/dependencygraph_toplevelassemblies.png "DependencyGraph_TopLevelAssemblies")  
   
      Essa solução de exemplo contém pastas de solução (**testes** e **componentes**), assemblies, projetos da Web e projetos de teste. Por padrão, todas as relações de confinamento aparecem como *grupos*, que você pode expandir e recolher. O **externos** grupo contém nada fora da sua solução, incluindo dependências de plataforma. Os assemblies externos mostram apenas os itens usados. Por padrão, os tipos base do sistema estão ocultos no mapa para reduzir a desordem.  
   
 3.  Para detalhar o mapa, expanda os grupos que representam os projetos e assemblies. Você pode expandir tudo pressionando **CTRL + A** para selecionar todos os nós e, em seguida, escolhendo **grupo**, **expandir** no menu de atalho.  
   
-     ![Expandir todos os grupos em um mapa de código](../modeling/media/codemapsexpandallgroups.png "CodeMapsExpandAllGroups")  
+     ![Expandir todos os grupos em um mapa de código](~/docs/modeling/media/codemapsexpandallgroups.png "CodeMapsExpandAllGroups")  
   
 4.  No entanto, isso não pode ser útil para uma solução grande. Na verdade, soluções complexas, limitações de memória podem impedir que você expandir todos os grupos. Em vez disso, para ver dentro de um nó individual, expandi-la. Mova o ponteiro do mouse sobre o nó e, em seguida, clique na divisa (seta para baixo) quando ele for exibido.  
   
-     ![Expandir um nó em um mapa de código](../modeling/media/dependencygraph_containment.png "DependencyGraph_Containment")  
+     ![Expandir um nó em um mapa de código](~/docs/modeling/media/dependencygraph_containment.png "DependencyGraph_Containment")  
   
      Ou use o teclado selecionando o item e pressionar a tecla de mais (**+**). Para explorar níveis mais profundos do código, faça o mesmo para namespaces, tipos e membros.  
   
@@ -160,13 +160,13 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
   
 5.  Para simplificar o mapa e enfocar partes individuais, escolha **filtros** na barra de ferramentas de mapa de código e selecione apenas os tipos de nós e links que lhe interessam. Por exemplo, você pode ocultar todas as pastas de solução e Assembly contêineres.  
   
-     ![Simplificar o mapa pela filtragem de recipientes](../modeling/media/codemapsfilterfoldersassemblies.png "CodeMapsFilterFoldersAssemblies")  
+     ![Simplificar o mapa pela filtragem de recipientes](~/docs/modeling/media/codemapsfilterfoldersassemblies.png "CodeMapsFilterFoldersAssemblies")  
   
      Você também pode simplificar o mapa, ocultando ou removendo grupos individuais e itens do mapa, sem afetar o código subjacente da solução.  
   
 6.  Para ver as relações entre itens, selecione-as no mapa. As cores dos links indicam os tipos de relação, como mostra a **legenda** painel.  
   
-     ![Exibir dependências em suas soluções](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
+     ![Exibir dependências em suas soluções](~/docs/modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
   
      Neste exemplo, os links roxos são chamadas, pontilhados links são referências e os links de azuis claros são acesso de campo. Links verde pode ser herança ou podem ser *agregar links* que indicam mais de um tipo de relação (ou *categoria*).  
   
@@ -175,13 +175,13 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
   
 7.  Para obter mais informações sobre um item ou link, mova o ponteiro sobre ele até que uma dica de ferramenta é exibida. Mostra detalhes de um elemento de código ou as categorias que representa um link.  
   
-     ![Mostrar as categorias de uma relação](../modeling/media/codemapsshowlinkcatgories.png "CodeMapsShowLinkCatgories")  
+     ![Mostrar as categorias de uma relação](~/docs/modeling/media/codemapsshowlinkcatgories.png "CodeMapsShowLinkCatgories")  
   
 8.  Para examinar itens e dependências representados por um link agregado, primeiro selecione o link e, em seguida, abra o menu de atalho. Escolha **Mostrar contribuindo com Links** (ou **Mostrar contribuindo Links no novo mapa de códigos**). Isso expande os grupos em ambas as extremidades do link e mostra somente os itens e as dependências que participam no link.  
   
 9. Para focar em partes específicas do mapa, você pode continuar a remover itens que você não está interessado. Por exemplo, para examinar o modo de exibição de classe e de membro, simplesmente filtrar todos os nós de namespace no **filtros** painel.  
   
-     ![Busca detalhada em nível de classe e membro](../modeling/media/dependencygraph_expandedselectedgroups_2012.png "DependencyGraph_ExpandedSelectedGroups_2012")  
+     ![Busca detalhada em nível de classe e membro](~/docs/modeling/media/dependencygraph_expandedselectedgroups_2012.png "DependencyGraph_ExpandedSelectedGroups_2012")  
   
 10. Outra maneira de foco em um mapa de solução complexa é gerar um novo mapa contendo os itens selecionados em um mapa existente. Manter **CTRL** enquanto seleciona os itens que você deseja se concentrar em, abra o menu de atalho e escolha **da seleção de um novo gráfico**.  
   
@@ -189,11 +189,11 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
   
 11. O contexto contém é transportado para o novo mapa. Ocultar pastas de solução e quaisquer outros contêineres que você não deseja ver usando o **filtros** painel.  
   
-     ![Filtrar os contêineres para simplificar a exibição](../modeling/media/codemapsexpandnewgroups.png "CodeMapsExpandNewGroups")  
+     ![Filtrar os contêineres para simplificar a exibição](~/docs/modeling/media/codemapsexpandnewgroups.png "CodeMapsExpandNewGroups")  
   
 12. Expanda os grupos e selecionar itens no mapa para exibir as relações.  
   
-     ![Selecionar itens para exibir as relações](../modeling/media/codemapsviewnewrelationships.png "CodeMapsViewNewRelationships")  
+     ![Selecionar itens para exibir as relações](~/docs/modeling/media/codemapsviewnewrelationships.png "CodeMapsViewNewRelationships")  
   
  Confira também:   
   
@@ -215,19 +215,19 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
 ##  <a name="a-nameseespecificsourcea-see-specific-dependencies"></a><a name="SeeSpecificSource"></a>Consulte as dependências específicas  
  Por exemplo, suponha que você tem uma revisão de código para executar em alguns arquivos com alterações pendentes. Para ver as dependências nessas alterações, você pode criar um mapa de código dos arquivos.  
   
- ![Mostrar as dependências específicas em um mapa de código](../modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
+ ![Mostrar as dependências específicas em um mapa de código](~/docs/modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
   
 ### <a name="see-specific-dependencies-in-your-solution"></a>Consulte as dependências específicas na solução  
   
 1.  Abra **soluções**. Selecione os projetos, referências do assembly, pastas, arquivos, tipos e membros de seu interesse. Para encontrar itens que têm dependências em tipos ou membros, abra o tipo ou o menu de atalho do membro do **Solution Explorer**. Escolha o tipo de dependência e, em seguida, selecione os resultados.  
   
-2.  Mapear os itens e seus membros. Sobre o **Solution Explorer** barra de ferramentas clique **Mostrar no mapa de código**![criar novo gráfico selecionado nós botão de](../modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton").  
+2.  Mapear os itens e seus membros. Sobre o **Solution Explorer** barra de ferramentas clique **Mostrar no mapa de código**![criar novo gráfico selecionado nós botão de](~/docs/modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton").  
   
-     ![Selecione os itens que você deseja mapear](../modeling/media/codemapsselectinsolutionexplorer.png "CodeMapsSelectInSolutionExplorer")  
+     ![Selecione os itens que você deseja mapear](~/docs/modeling/media/codemapsselectinsolutionexplorer.png "CodeMapsSelectInSolutionExplorer")  
   
 3.  O mapa mostra os itens selecionados em seus assemblies contendo.  
   
-     ![Itens mostrados como grupos no mapa selecionados](../modeling/media/codemapsshowitemsfromsolnexplorer.png "CodeMapsShowItemsFromSolnExplorer")  
+     ![Itens mostrados como grupos no mapa selecionados](~/docs/modeling/media/codemapsshowitemsfromsolnexplorer.png "CodeMapsShowItemsFromSolnExplorer")  
   
      Você também pode arrastar itens do Gerenciador de soluções, exibição de classe ou Pesquisador de objetos para um espaço em branco ou um mapa de código existente. Para criar um mapa em branco, consulte [criar um mapa de código vazio](#GetStarted). Para incluir a hierarquia pai para seus itens, pressione e segure a **CTRL** pressionada enquanto você arrasta itens ou usar o **pais incluem** botão na barra de mapa de código para especificar a ação padrão.  
   
@@ -236,15 +236,15 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
   
 4.  Para explorar itens, expanda-os. Mova o ponteiro do mouse sobre um item, e clique no ícone de divisa (seta para baixo) quando ele for exibido.  
   
-     ![Expandir um nó em um mapa de código](../modeling/media/dependencygraph_containment.png "DependencyGraph_Containment")  
+     ![Expandir um nó em um mapa de código](~/docs/modeling/media/dependencygraph_containment.png "DependencyGraph_Containment")  
   
      Para expandir todos os itens, selecione-os usando **CTRL + A**, em seguida, abra o menu de atalho para o mapa e escolha **grupo**, **expandir**. No entanto, essa opção não estará disponível se expandir todos os grupos cria um mapa inutilizável ou problemas de memória.  
   
 5.  Continue a expandir itens que você está interessado, até o nível de classe e de membro, se necessário.  
   
-     ![Expanda os grupos de nível de classe e membro](../modeling/media/codemapsexpandtoclassandmember.png "CodeMapsExpandToClassAndMember")  
+     ![Expanda os grupos de nível de classe e membro](~/docs/modeling/media/codemapsexpandtoclassandmember.png "CodeMapsExpandToClassAndMember")  
   
-     Para ver os membros que estão no código, mas não são exibidos no mapa, clique o **buscar filhos** ícone ![buscar filhos ícone](../modeling/media/dependencygraph_deletednodesicon.png "DependencyGraph_DeletedNodesIcon") no canto superior esquerdo de um grupo.  
+     Para ver os membros que estão no código, mas não são exibidos no mapa, clique o **buscar filhos** ícone ![buscar filhos ícone](~/docs/modeling/media/dependencygraph_deletednodesicon.png "DependencyGraph_DeletedNodesIcon") no canto superior esquerdo de um grupo.  
   
 6.  Para ver mais itens relacionados a esses no mapa, selecione um e escolha **Mostrar relacionados** na barra de ferramentas de mapa de código, selecione o tipo de itens relacionados para adicionar ao mapa. Como alternativa, selecione um ou mais itens, abra o menu de atalho e escolha o **Mostrar...** opção para o tipo de itens relacionados para adicionar ao mapa. Por exemplo:  
   
@@ -287,15 +287,15 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
     |**Mostrar que contém o tipo**|Adicione o tipo de pai.|  
     |**Mostrar o Assembly, Namespace e tipo que contém**|Adicione a hierarquia do contêiner pai.|  
   
-     ![Mostrar métodos chamados por este membro](../modeling/media/codemapsshowrelatedmethods.png "CodeMapsShowRelatedMethods")  
+     ![Mostrar métodos chamados por este membro](~/docs/modeling/media/codemapsshowrelatedmethods.png "CodeMapsShowRelatedMethods")  
   
 7.  O mapa mostra as relações. Neste exemplo, os métodos chamados `Find` método e sua localização na solução ou externamente.  
   
-     ![Mostrar as dependências específicas em um mapa de código](../modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
+     ![Mostrar as dependências específicas em um mapa de código](~/docs/modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
   
 8.  Para simplificar o mapa e enfocar partes individuais, escolha **filtros** na barra de ferramentas de mapa de código e selecione apenas os tipos de nós e links que lhe interessam. Por exemplo, desative a exibição de pastas de solução, Assemblies e Namespaces.  
   
-     ![Use o painel de filtro para simplificar a exibição](../modeling/media/almcodemapfilterpane.png "ALMCodeMapFilterPane")  
+     ![Use o painel de filtro para simplificar a exibição](~/docs/modeling/media/almcodemapfilterpane.png "ALMCodeMapFilterPane")  
   
 ##  <a name="a-nameseesourceheadera-see-dependencies-between-c-and-c-source-files-and-header-files"></a><a name="SeeSourceHeader"></a>Ver as dependências entre arquivos de código-fonte C e C++ e arquivos de cabeçalho  
  Se você quiser criar mapas mais completos para projetos do C++, defina a opção de compilador procurar informações (**/FR**) nesses projetos. Do contrário, uma mensagem é exibida e solicita a definição dessa opção. Se você selecionar **Okey**, isso define a opção de mapa atual. Você pode optar por ocultar a mensagem para todos os mapas posteriores. Se você ocultar essa mensagem, poderá exibi-la novamente. Defina a seguinte chave do registro `0` ou exclua a chave:  
@@ -306,11 +306,11 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
   
 -   Para ver as dependências entre todos os arquivos de origem e arquivos de cabeçalho em sua solução, o **arquitetura** menu, escolha **gerar gráfico de arquivos de inclusão**.  
   
-     ![Gráfico de dependência para código nativo](../modeling/media/dependencygraphgeneral_nativecode.png "DependencyGraphGeneral_NativeCode")  
+     ![Gráfico de dependência para código nativo](~/docs/modeling/media/dependencygraphgeneral_nativecode.png "DependencyGraphGeneral_NativeCode")  
   
 -   Para ver as dependências entre os arquivos abertos atualmente, os arquivos de origem relacionados e os arquivos de cabeçalho, abra o arquivo de origem ou o arquivo de cabeçalho. Abra o menu de atalho do arquivo em qualquer lugar dentro do arquivo. Escolha **gerar gráfico de arquivos de inclusão**.  
   
-     ![Gráfico de dependência de primeiro nível para o arquivo. h](../modeling/media/dependencygraph_native_firstlevel.png "DependencyGraph_Native_FirstLevel")  
+     ![Gráfico de dependência de primeiro nível para o arquivo. h](~/docs/modeling/media/dependencygraph_native_firstlevel.png "DependencyGraph_Native_FirstLevel")  
   
 ###  <a name="a-nametroubleshootinga-troubleshoot-maps-for-c-and-c-code"></a><a name="Troubleshooting"></a>Solucionar problemas de mapas de código C e C++  
  Esses itens não são suportados para os códigos C e C++:  
@@ -345,7 +345,7 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
   
 -   Edite o arquivo de mapa de código diretamente para remover os nós e links que não é necessário. Alterar o mapeamento não afeta o código subjacente. Consulte [Personalizar código mapeia editando os arquivos DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).  
   
- ![Botões SKIP Build e incluir pais](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")  
+ ![Botões SKIP Build e incluir pais](~/docs/modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")  
   
  Embora o Visual Studio pode executar com 1 GB de memória, é recomendável que o computador tenha pelo menos 2 GB de memória para evitar longos atrasos enquanto o Visual Studio cria o índice de código e gera o mapa.  
   
@@ -362,7 +362,7 @@ Quando você quiser entender as dependências em seu código, visualize-os Crian
   
  Para salvar o mapa como parte do projeto específico, na barra de ferramentas do mapa, escolha **compartilhamento**, **mover** \< *CodeMapName*>**dgml em**e, em seguida, escolha o projeto onde você deseja salvar o mapa.  
   
- ![Mover um mapa em outro projeto](../modeling/media/codemapsmovemapmenu.png "CodeMapsMoveMapMenu")  
+ ![Mover um mapa em outro projeto](~/docs/modeling/media/codemapsmovemapmenu.png "CodeMapsMoveMapMenu")  
   
  O Visual Studio salva o mapa como um arquivo. dgml que você pode compartilhar com outros usuários do Visual Studio Enterprise e Professional do Visual Studio.  
   

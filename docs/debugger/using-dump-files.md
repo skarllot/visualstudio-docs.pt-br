@@ -103,7 +103,7 @@ Arquivos de despejo com ou sem heaps; crie um arquivo de despejo; abra um arquiv
   
 3.  A janela de **Resumo de Arquivo de Despejo** aparece.  Nesta janela, você pode exibir informações de resumo de depuração para o arquivo de despejo, definir o caminho do símbolo, iniciar a depuração e copiar as informações de resumo para a área de transferência.  
   
-     ![Página de resumo de minidespejo](../debugger/media/dbg_dump_summarypage.png "DBG\_DUMP\_SummaryPage")  
+     ![Página de resumo de minidespejo](~/docs/debugger/media/dbg_dump_summarypage.png "DBG\_DUMP\_SummaryPage")  
   
 4.  Para iniciar a depuração, vá para o **ações** seção e escolha a opção **Depurar somente com nativo** ou **depurar com misto**.  
   

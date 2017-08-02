@@ -58,7 +58,7 @@ Quando você não está depurando, o **Gerenciamento de Vida Útil de Processos*
   
 3.  Na barra de ferramentas **Local do Depurador**, escolha o evento que você deseja acionar:  
   
-     ![Suspender, continuar, terminar e tarefas em segundo plano](../debugger/media/dbg_suspendresumebackground.png "DBG\_SuspendResumeBackground")  
+     ![Suspender, continuar, terminar e tarefas em segundo plano](~/docs/debugger/media/dbg_suspendresumebackground.png "DBG\_SuspendResumeBackground")  
   
      Observe que **Suspender e desligar** fecha o aplicativo e encerra a sessão de depuração.  
   
@@ -80,7 +80,7 @@ Quando você não está depurando, o **Gerenciamento de Vida Útil de Processos*
   
 3.  Na lista de eventos na barra de ferramentas **Local do Depurador**, escolha a tarefa em segundo plano que você deseja iniciar.  
   
-     ![Suspender, continuar, terminar e tarefas em segundo plano](../debugger/media/dbg_suspendresumebackground.png "DBG\_SuspendResumeBackground")  
+     ![Suspender, continuar, terminar e tarefas em segundo plano](~/docs/debugger/media/dbg_suspendresumebackground.png "DBG\_SuspendResumeBackground")  
   
 ###  <a name="BKMK_Trigger_a_background_task_when_the_app_is_not_running"></a> Disparar uma tarefa em segundo plano quando o aplicativo não está sendo executado  
   
@@ -94,19 +94,19 @@ Quando você não está depurando, o **Gerenciamento de Vida Útil de Processos*
   
     -   Para projetos em Visual C\# e Visual Basic, escolha **Não iniciar, mas depurar meu código quando ele começar**.  
   
-         ![Propriedade de inicialização de depuração C &#35;&#47;VB aplicativo](../debugger/media/dbg_csvb_dontlaunchapp.png "DBG\_CsVb\_DontLaunchApp")  
+         ![Propriedade de inicialização de depuração C &#35;&#47;VB aplicativo](~/docs/debugger/media/dbg_csvb_dontlaunchapp.png "DBG\_CsVb\_DontLaunchApp")  
   
     -   Para projetos em JavaScript e Visual C\+\+, escolha **Não** na lista **Iniciar aplicativo**.  
   
-         ![C &#43; &#43; &#47; VB iniciar propriedade de depuração do aplicativo](../debugger/media/dbg_cppjs_dontlaunchapp.png "DBG\_CppJs\_DontLaunchApp")  
+         ![C &#43; &#43; &#47; VB iniciar propriedade de depuração do aplicativo](~/docs/debugger/media/dbg_cppjs_dontlaunchapp.png "DBG\_CppJs\_DontLaunchApp")  
   
 4.  Pressione **F5** para colocar o aplicativo no modo de depuração.  Observe que a lista **Processo** na barra de ferramentas **Local do Depurador** exibe o nome do pacote do aplicativo para indicar que você está no modo de depuração.  
   
-     ![Lista de tarefas do processo de plano de fundo](../debugger/media/dbg_backgroundtask_processlist.png "DBG\_BackgroundTask\_ProcessList")  
+     ![Lista de tarefas do processo de plano de fundo](~/docs/debugger/media/dbg_backgroundtask_processlist.png "DBG\_BackgroundTask\_ProcessList")  
   
 5.  Na lista de eventos na barra de ferramentas **Local do Depurador**, escolha a tarefa em segundo plano que você deseja iniciar.  
   
-     ![Suspender, continuar, terminar e tarefas em segundo plano](../debugger/media/dbg_suspendresumebackground.png "DBG\_SuspendResumeBackground")  
+     ![Suspender, continuar, terminar e tarefas em segundo plano](~/docs/debugger/media/dbg_suspendresumebackground.png "DBG\_SuspendResumeBackground")  
   
 ##  <a name="BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app"></a> Disparar eventos e tarefas em segundo plano do Gerenciamento de Vida Útil de Processos de um aplicativo instalado  
  Use a caixa de diálogo Depurar Aplicativo Instalado para carregar um aplicativo que já está instalado no depurador.  Por exemplo, você pode depurar um aplicativo instalado da Windows Store ou depurar um aplicativo quando tiver seus arquivos de origem, mas não um projeto do Visual Studio para o aplicativo.  A caixa de diálogo Depurar Aplicativo Instalado permite que você inicie um aplicativo no modo de depuração no computador do Visual Studio ou em um dispositivo remoto, ou que você defina que o aplicativo seja executado no modo de depuração, mas não seja iniciado.  Consulte a seção **Iniciar um aplicativo instalado no depurador** da versão para [JavaScript](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Start_an_installed_app_in_the_debugger) ou [Visual C\+\+, Visual C\# e Visual Basic](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md#BKMK_Start_an_installed_app_in_the_debugger) de **Como iniciar uma sessão de depuração** para obter mais informações.  

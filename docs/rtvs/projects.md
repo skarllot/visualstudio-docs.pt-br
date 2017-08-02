@@ -49,11 +49,11 @@ Os projetos são sempre gerenciados em uma *solução* do Visual Studio, que pod
 1. Escolha **Arquivo > Novo > Projeto...** (Ctrl + Shift + N)
 1. Selecione "Projeto R" em **Modelos > R**, dê ao projeto um nome e um local e selecione **OK**:
 
-    ![Caixa de diálogo Novo Projeto para R no Visual Studio (RTVS no VS2017)](media/getting-started-01-new-project.png)
+    ![Caixa de diálogo Novo Projeto para R no Visual Studio (RTVS no VS2017)](~/docs/rtvs/media/getting-started-01-new-project.png)
 
 Isso criará um projeto com um arquivo `script.R` vazio aberto no editor. Observe também no **Gerenciador de Soluções** que há outros dois arquivos no projeto:
 
-![Conteúdo de um projeto R criado usando um modelo](media/projects-template-results.png)
+![Conteúdo de um projeto R criado usando um modelo](~/docs/rtvs/media/projects-template-results.png)
 
 O `.Rhistory` registra todos os comandos que você insere na janela [R Interativo](interactive-repl.md). Você pode abrir uma janela de histórico dedicada com o comando **Ferramentas do R > Janelas > Histórico** que conterá um botão de barra de ferramentas e itens de menu de contexto para limpar o conteúdo do histórico.
 
@@ -133,7 +133,7 @@ As soluções do Visual Studio fornecem um local conveniente para reunir e geren
 
 No exemplo abaixo, a solução contém um projeto R com um modelo criado usando R e Azure Machine Learning, um projeto Python/scikit-learn, um projeto C++ que contém módulos para trabalho com uso intensivo de computação, um projeto SQL para gerenciamento de dados e um projeto Python/Bottle para o site da web que publica o resultado:
 
-![Gerenciador de Soluções do Visual Studio mostrando vários projetos relacionados em uma solução](media/projects-polyglot.png)
+![Gerenciador de Soluções do Visual Studio mostrando vários projetos relacionados em uma solução](~/docs/rtvs/media/projects-polyglot.png)
 
 O projeto realçado em negrito é o projeto de "inicialização" da solução. Para alterá-lo, clique com o botão direito do mouse em um projeto diferente e selecione **Definir como projeto de inicialização**.
 

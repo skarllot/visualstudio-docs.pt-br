@@ -66,7 +66,7 @@ Este documento descreve como trabalhar com o Editor de Modelos do [!INCLUDE[vspr
   
  Esta é a barra de ferramentas **Modo do Editor de Modelos**:  
   
- ![A barra de ferramentas modal do Visualizador do Modelo.](../designers/media/digit-mre-modal-toolbar.png "Digit-MRE-Modal-Toolbar")  
+ ![A barra de ferramentas modal do Visualizador do Modelo.](~/docs/designers/media/digit-mre-modal-toolbar.png "Digit-MRE-Modal-Toolbar")  
   
  Esta tabela descreve os itens na barra de ferramentas **Modo do Editor de Modelos**, que são listados na ordem em que aparecem, da esquerda para a direita.  
   
@@ -94,7 +94,7 @@ Este documento descreve como trabalhar com o Editor de Modelos do [!INCLUDE[vspr
   
  Veja a barra de ferramentas **Editor de Modelos**:  
   
- ![Barra de ferramentas do Visualizador de Modelos](../designers/media/digit-mre-toolbar.png "Digit-MRE-Toolbar")  
+ ![Barra de ferramentas do Visualizador de Modelos](~/docs/designers/media/digit-mre-toolbar.png "Digit-MRE-Toolbar")  
   
  A tabela a seguir descreve os itens da barra de ferramentas **Editor de Modelos**, que são listados na ordem em que aparecem, de cima para baixo.  
   

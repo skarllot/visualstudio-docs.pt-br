@@ -34,7 +34,7 @@ Se você encontrar um problema com o Visual Studio, gostaríamos de saber sobre 
   1. Clique em **Entrar**; essa opção está no lado esquerdo da ferramenta, conforme mostrado na captura de tela a seguir.
   2. Siga as instruções na tela para se conectar.
 
-  ![Conectar para relatar um problema](../ide/media/vs2017-report-a-problem-sign-in.png "Conectar para relatar um problema")
+  ![Conectar para relatar um problema](~/docs/ide/media/vs2017-report-a-problem-sign-in.png "Conectar para relatar um problema")
 
 
 ## <a name="search-and-vote-for-similar-problems"></a>Pesquisar e votar em problemas semelhantes  
@@ -43,7 +43,7 @@ Se você encontrar um problema com o Visual Studio, gostaríamos de saber sobre 
 1.  Pesquise o problema e veja se outros usuários já o relataram.
 2.  Se alguém tiver relatado, "vote como positivo" para nos informar.  
 
-  ![VS15-FeedbackTool-SearchForSimilarReportedProblems](../ide/media/vs2017-report-a-problem-search-and-vote.png "Pesquisar e votar em problemas semelhantes")
+  ![VS15-FeedbackTool-SearchForSimilarReportedProblems](~/docs/ide/media/vs2017-report-a-problem-search-and-vote.png "Pesquisar e votar em problemas semelhantes")
 
 
 ## <a name="report-a-new-problem"></a>Relatar um problema novo

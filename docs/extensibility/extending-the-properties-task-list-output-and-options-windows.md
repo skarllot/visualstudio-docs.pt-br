@@ -64,7 +64,7 @@ Você pode acessar qualquer janela de ferramenta no Visual Studio. Este passo a 
   
 3.  Arraste uma **TextBox**, um **botão**e um **ListBox** à tela. Organize os elementos de forma que a caixa de texto e o botão estão no mesmo nível e ListBox preenche o restante da janela abaixo deles, como na figura abaixo.  
   
-     ![Concluída a janela da ferramenta](../extensibility/media/t5-toolwindow.png "T5 ToolWindow")  
+     ![Concluída a janela da ferramenta](~/docs/extensibility/media/t5-toolwindow.png "T5 ToolWindow")  
   
 4.  No painel de XAML, localizar o botão e defina sua propriedade de conteúdo **adicionar**. Reconectar o manipulador de eventos do botão para o controle Button, adicionando um `Click="button1_Click"` atributo. O bloco de tela deve ter esta aparência:  
   
@@ -152,7 +152,7 @@ Você pode acessar qualquer janela de ferramenta no Visual Studio. Este passo a 
   
      Quando um usuário abre a página de opções, ela deve ser semelhante a figura a seguir.  
   
-     ![Página Opções de](../extensibility/media/t5optionspage.gif "T5OptionsPage")  
+     ![Página Opções de](~/docs/extensibility/media/t5optionspage.gif "T5OptionsPage")  
   
      Observe a categoria **ToDo** e a subcategoria **geral**.  
   
@@ -165,7 +165,7 @@ Você pode acessar qualquer janela de ferramenta no Visual Studio. Este passo a 
   
      Para tornar dados disponíveis na **propriedades** janela, você transforma os dados em propriedades públicas que tem dois atributos especiais, `Description` e `Category`. `Description`é o texto que aparece na parte inferior da **propriedades** janela. `Category`determina onde a propriedade deve ser exibida quando o **propriedades** janela é exibida no **categorizado** exibição. Na figura a seguir, o **propriedades** janela está **categorizado** exibição, o **nome** propriedade no **ToDo Fields** categoria selecionada e a descrição do **nome** propriedade é exibida na parte inferior da janela.  
   
-     ![Janela propriedades](../extensibility/media/t5properties.png "T5Properties")  
+     ![Janela propriedades](~/docs/extensibility/media/t5properties.png "T5Properties")  
   
 2.  Adicione as seguintes instruções using o arquivo TodoItem.cs.  
   

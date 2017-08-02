@@ -41,7 +41,7 @@ Uma janela de código é um objeto de janela de documento que oferece suporte a 
   
  Uma janela de código é um <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>objeto que tem um modo de exibição de texto e qualquer ornamentos situados no objeto.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> Quando você criar a janela de código durante a instanciação do núcleo do editor, o serviço de linguagem pode anexar um <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>para a janela de código, como é mostrado na ilustração a seguir.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>  
   
- ![Gráfico de CodeWindow](../extensibility/media/vscodewindow.gif "vscodewindow")  
+ ![Gráfico de CodeWindow](~/docs/extensibility/media/vscodewindow.gif "vscodewindow")  
 Janela de código  
   
  O serviço de linguagem implementa o Gerenciador de janelas de código e é responsável por gerenciar ornamentos, como uma barra de menu suspenso. O janela de código chama o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A>método durante a inicialização da janela de código.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A> Quando essa chamada é feita, o serviço de linguagem pode adicionar uma barra de menu suspenso ou uma barra de botões (<xref:Microsoft.VisualStudio.TextManager.Interop.IVsButtonBarClient>) para a janela de código.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsButtonBarClient>  

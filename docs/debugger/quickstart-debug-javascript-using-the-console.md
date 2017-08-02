@@ -107,7 +107,7 @@ manager: "ghogen"
   
      Um visualizador para o objeto `items` aparece na janela do console. Isso indica que foi criada uma instância do objeto `items` e está disponível no contexto do script atual. Na janela do console, você pode clicar nos nós de um objeto para ver os valores de propriedade \(ou usar as teclas de direção\). Se você clicar na seta para baixo do objeto `items._data`, como mostra esta ilustração, verá que suas referências da origem das imagens estão incorretas, como esperado. As imagens padrão \(logo.png\) ainda estão presentes no objeto e há imagens ausentes intercaladas com as imagens esperadas.  
   
-     ![Janela de Console do JavaScript](../debugger/media/js_console_window.png "JS\_Console\_Window")  
+     ![Janela de Console do JavaScript](~/docs/debugger/media/js_console_window.png "JS\_Console\_Window")  
   
      Note também que há muito mais itens no objeto `items._data` do que o esperado.  
   
@@ -162,7 +162,7 @@ manager: "ghogen"
   
      O aplicativo entra no modo de interrupção quando a execução atinge a função `updateImages()`, e a linha atual de execução do programa é realçada em amarelo.  
   
-     ![Usando o modo de interrupção com o Console de JavaScript](../debugger/media/js_breakmode.png "JS\_BreakMode")  
+     ![Usando o modo de interrupção com o Console de JavaScript](~/docs/debugger/media/js_breakmode.png "JS\_BreakMode")  
   
      Você pode alterar os valores das variáveis para afetar imediatamente o estado do programa sem finalizar a sessão de depuração atual.  
   
@@ -200,7 +200,7 @@ manager: "ghogen"
   
  A ilustração a seguir mostra a lista de destino na janela Console do JavaScript.  
   
- ![Target selection in the JavaScript console window](../debugger/media/js_console_target.png "JS\_Console\_Target")  
+ ![Target selection in the JavaScript console window](~/docs/debugger/media/js_console_target.png "JS\_Console\_Target")  
   
  Você também pode alternar o contexto de execução usando o comando `cd`, mas você precisa saber o nome do outro contexto de execução e a referência que será usada deve estar no escopo. A lista **Destino** fornece um acesso melhor a outros contextos de execução.  
   

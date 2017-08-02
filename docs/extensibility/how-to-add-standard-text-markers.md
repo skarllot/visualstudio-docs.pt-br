@@ -55,7 +55,7 @@ Use o procedimento a seguir para criar um tipo de marcador de texto padrão forn
   
      Por exemplo, os comandos de ponto de interrupção específico no menu de contexto incluem **remover ponto de interrupção** por meio de **novo ponto de interrupção**, conforme exibido na tela a seguir.  
   
-     ![Menu de contexto do marcador](../extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
+     ![Menu de contexto do marcador](~/docs/extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
   
 2.  Devolver um texto identificando o nome do comando personalizado. Por exemplo, **remover ponto de interrupção** pode ser um comando personalizado se o ambiente não já forneceu-lo. Você também passa novamente se o comando é suportado, disponível e habilitado, e/ou uma alternância-off. O ambiente usa essas informações para exibir o comando personalizado no menu de contexto da forma correta.  
   

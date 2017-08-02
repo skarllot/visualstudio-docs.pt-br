@@ -61,7 +61,7 @@ Projetos do Visual Studio tem versão separada e configurações para o seu prog
   
 2.  Na barra de ferramentas, escolha**Depurar**ou**versão**do**configurações da solução**caixa de listagem.  
   
-     ![toolbar build configuration](../debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
+     ![toolbar build configuration](~/docs/debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
   
      Essa barra de ferramentas não está disponível nas edições Express.  É possível usar os itens de menu **Solução de Compilação F6** e de **Iniciar Depuração F5** para escolher a configuração.  
   

@@ -328,7 +328,7 @@ Como uma transição animada quando um elemento de interface do usuário altera 
 #### <a name="x-y-position-change"></a>Alteração de posição X-Y  
 Com esse padrão, um elemento de interface do usuário altera a posição X ou Y ou ambos.  
   
-![Animação de alteração de posição X-Y](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />Animação de alteração de posição X-Y  
+![Animação de alteração de posição X-Y](~/docs/extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />Animação de alteração de posição X-Y  
   
 ##### <a name="correct-usage"></a>Uso correto  
 Como uma transição animada quando um elemento de interface do usuário altera a posição de um contexto para outro.  
@@ -351,7 +351,7 @@ Reorganização de guia
 #### <a name="rotate"></a>Girar  
 Com esse padrão, o elemento de interface do usuário gira.  
   
-![Animação de rotação do elemento de interface do usuário](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />Animação de rotação do elemento de interface do usuário  
+![Animação de rotação do elemento de interface do usuário](~/docs/extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />Animação de rotação do elemento de interface do usuário  
   
 ##### <a name="correct-usage"></a>Uso correto  
 Somente para o indicador de progresso indeterminado giratório.  

@@ -53,7 +53,7 @@ Já pensou sobre como criar seu próprio tipo de projeto? Se perguntar o que rea
 ## <a name="the-new-project-dialog-box"></a>Caixa de diálogo Novo projeto  
  Tudo começa quando você seleciona um tipo de projeto para um novo projeto. Vamos começar clicando **novo projeto** sobre o **arquivo** menu. O **novo projeto** caixa de diálogo aparece, aparência semelhante a este:  
   
- ![Caixa de diálogo Novo projeto](../../extensibility/internals/media/newproject.gif "NewProject")  
+ ![Caixa de diálogo Novo projeto](~/docs/extensibility/internals/media/newproject.gif "NewProject")  
   
  Vamos dar uma olhada de perto. O **tipos de projeto** os vários tipos de projeto, você pode criar listas de árvore. Quando você seleciona um tipo de projeto como **Visual C# Windows**, você verá uma lista dos modelos de aplicativos para você começar. **Modelos instalados do Visual Studio** são instalados pelo Visual Studio e estão disponíveis para qualquer usuário do computador. Novos modelos que você cria ou coleta podem ser adicionados para **Meus modelos** e estão disponíveis apenas para você.  
   
@@ -123,11 +123,11 @@ devenv /installvstemplates
   
  Para o Visual Studio com c# configurações do desenvolvedor, o **tipos de projeto** árvore parecida com esta:  
   
- ![Tipos de projeto](../../extensibility/internals/media/projecttypes.png "ProjectTypes")  
+ ![Tipos de projeto](~/docs/extensibility/internals/media/projecttypes.png "ProjectTypes")  
   
  A pasta ProjectTemplates correspondente tem esta aparência:  
   
- ![Modelos de projeto](../../extensibility/internals/media/projecttemplates.png "ProjectTemplates")  
+ ![Modelos de projeto](~/docs/extensibility/internals/media/projecttemplates.png "ProjectTemplates")  
   
  Quando o **novo projeto** abre a caixa de diálogo, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] atravessa a pasta ProjectTemplates e recria a estrutura no **tipos de projeto** árvore com algumas alterações:  
   
@@ -225,7 +225,7 @@ devenv /installvstemplates
   
 1.  Abra o **novo projeto** caixa de diálogo caixa e expanda o **Visual C#** nó do projeto.  
   
- ![MyProjectNode](../../extensibility/internals/media/myprojectnode.png "MyProjectNode")  
+ ![MyProjectNode](~/docs/extensibility/internals/media/myprojectnode.png "MyProjectNode")  
   
  **MyProjectNode** aparece como um nó filho do Visual c# sob o nó Windows.  
   

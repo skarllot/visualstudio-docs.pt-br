@@ -102,7 +102,7 @@ R. Sim, você pode usar qualquer sistema de controle do código-fonte que esteja
 
 R. A versão 1.0 do RTVS será somente em inglês. A versão 1.1 será localizado para o mesmo conjunto de idiomas do Visual Studio. Enquanto isso, use o [Pacote do idioma inglês para o Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48157) ou, no Visual Studio 2017, execute o instalador e selecione inglês na guia **Pacotes de idiomas**.
 
-![Configurações internacionais do Visual Studio 2017](media/FAQ-international-settings.png)
+![Configurações internacionais do Visual Studio 2017](~/docs/rtvs/media/FAQ-international-settings.png)
 
 **P. As RTVS funcionarão com as edições de 32 bits do R?**
 

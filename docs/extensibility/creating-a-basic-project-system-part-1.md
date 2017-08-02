@@ -91,7 +91,7 @@ No Visual Studio, os projetos são contêineres que os desenvolvedores usam para
   
 3.  Para exibir o ícone diferente. Esse ícone aparecerá no **novo projeto** caixa de diálogo posteriormente no passo a passo.  
   
-     ![Ícone de projeto simples](../extensibility/media/simpleprojicon.png "SimpleProjIcon")  
+     ![Ícone de projeto simples](~/docs/extensibility/media/simpleprojicon.png "SimpleProjIcon")  
   
 4.  Salve o ícone e feche o editor de ícone.  
   
@@ -487,7 +487,7 @@ No Visual Studio, os projetos são contêineres que os desenvolvedores usam para
   
 2.  No **propriedades** windows, reduza o bitmap para 16 por 16 pixels. Verifique o bitmap distintas.  
   
-     ![Comando de projeto simples](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
+     ![Comando de projeto simples](~/docs/extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
   
 3.  No **propriedades** janela, alterar o **ação de compilação** do bitmap para **Embedded Resource**.  
   
@@ -562,7 +562,7 @@ No Visual Studio, os projetos são contêineres que os desenvolvedores usam para
   
 2.  No projeto recém-criado, observe que SimpleProjectNode.bmp é usado como o ícone de nó do projeto.  
   
-     ![Projeto simples novo nó do projeto](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
+     ![Projeto simples novo nó do projeto](~/docs/extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
   
 3.  Abra Program.cs no editor de códigos. Você deve ver o código-fonte que se parece com o código a seguir.  
   
@@ -665,6 +665,6 @@ No Visual Studio, os projetos são contêineres que os desenvolvedores usam para
   
 6.  Inicie a depuração do projeto. O novo projeto deve compilar, executar e exibir "Hello VSX!!!" Na janela do console.  
   
-     ![Comando de projeto simples](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
+     ![Comando de projeto simples](~/docs/extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
   
  Parabéns! Você implementou um sistema básico de projeto gerenciado.

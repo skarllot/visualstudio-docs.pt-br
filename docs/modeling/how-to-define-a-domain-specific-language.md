@@ -59,7 +59,7 @@ Para definir uma linguagem específica de domínio (DSL), crie uma solução do 
   
 1.  Criar uma solução com o **linguagem específica do domínio** modelo, que pode ser encontrado em **outros tipos/extensibilidade de projeto** no **novo projeto** caixa de diálogo.  
   
-     ![Criar caixa de diálogo DSL](../modeling/media/create_dsldialog.png "Create_DSLDialog")  
+     ![Criar caixa de diálogo DSL](~/docs/modeling/media/create_dsldialog.png "Create_DSLDialog")  
   
      Quando você clica em **Okey**, o **Assistente de linguagem específica do domínio** abre e exibe uma lista de soluções do modelo DSL.  
   
@@ -97,7 +97,7 @@ Para definir uma linguagem específica de domínio (DSL), crie uma solução do 
   
  A interface do usuário agora se assemelha à imagem a seguir.  
   
- ![designer de DSL](../modeling/media/dsl_designer.png "dsl_designer")  
+ ![designer de DSL](~/docs/modeling/media/dsl_designer.png "dsl_designer")  
   
  Essa solução define uma linguagem específica de domínio. Para obter mais informações, consulte [visão geral da Interface do usuário específica do domínio idioma ferramentas](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md).  
   
@@ -110,7 +110,7 @@ Para definir uma linguagem específica de domínio (DSL), crie uma solução do 
   
  Se você executar uma solução que você criou do **linguagem mínima** modelo, seu experimental [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] será parecida com o exemplo a seguir:  
   
- ![](../modeling/media/dsl_min.png "DSL_min")  
+ ![](~/docs/modeling/media/dsl_min.png "DSL_min")  
   
  Experimente com as ferramentas. Crie elementos e os conecte.  
   
@@ -150,11 +150,11 @@ Para definir uma linguagem específica de domínio (DSL), crie uma solução do 
   
  A figura a seguir mostra as classes e relações que fazem parte da DSL usada de exemplo neste tópico.  
   
- ![Relações de incorporação e referência](../modeling/media/music_classes.png "Music_Classes")  
+ ![Relações de incorporação e referência](~/docs/modeling/media/music_classes.png "Music_Classes")  
   
  A próxima figura é um modelo de exemplo desta DSL:  
   
- ![Modelo de instância da DSL gerado](../modeling/media/music_instance.png "Music_Instance")  
+ ![Modelo de instância da DSL gerado](~/docs/modeling/media/music_instance.png "Music_Instance")  
   
 > [!NOTE]
 >  "Modelo" refere-se a uma instância de sua DSL que os usuários criam e geralmente é exibida como um diagrama. Este tópico discute o diagrama da Definição de DSL e os diagramas de modelo que aparecem quando sua DSL é usada.  
@@ -296,7 +296,7 @@ Para definir uma linguagem específica de domínio (DSL), crie uma solução do 
   
     4.  Certifique-se de que haja uma marca de seleção ao lado de cada nome de decorador.  
   
-     ![Janela de detalhes de DSL e mapeamentos de forma](../modeling/media/dsldetailswindow.png "DslDetailsWindow")  
+     ![Janela de detalhes de DSL e mapeamentos de forma](~/docs/modeling/media/dsldetailswindow.png "DslDetailsWindow")  
   
 7.  **Tornar um item de caixa de ferramentas para criar elementos da classe de domínio.**  
   
@@ -342,7 +342,7 @@ Para definir uma linguagem específica de domínio (DSL), crie uma solução do 
   
  Por exemplo, se Álbuns de música e Artistas forem exibidos como formas no diagrama, será possível definir um relação chamada ArtistsAppearedOnAlbums, a qual vincula os Artistas aos Álbuns nos quais eles trabalharam. Veja o exemplo na figura.  
   
- ![Modelo de instância da DSL gerado](../modeling/media/music_instance.png "Music_Instance")  
+ ![Modelo de instância da DSL gerado](~/docs/modeling/media/music_instance.png "Music_Instance")  
   
  As relações de referência também podem vincular elementos do mesmo tipo. Por exemplo, em uma DSL que representa uma árvore genealógica, a relação entre pais e seus filhos é uma relação de referência de Pessoa a Pessoa.  
   
@@ -359,7 +359,7 @@ Para definir uma linguagem específica de domínio (DSL), crie uma solução do 
   
  **Defina a propriedade permite duplicatas da relação,** se mais de um link da mesma classe pode existir entre o mesmo par de elementos de modelo. Por exemplo, você poderia permitir que um Professor ensinasse mais de uma Matéria para o mesmo Aluno.  
   
- ![Mapas de conectores de forma](../modeling/media/music_connector.png "Music_Connector")  
+ ![Mapas de conectores de forma](~/docs/modeling/media/music_connector.png "Music_Connector")  
   
  Para obter mais informações, consulte [propriedades de relações de domínio](../modeling/properties-of-domain-relationships.md) e [propriedades de funções de domínio](../modeling/properties-of-domain-roles.md).  
   
@@ -422,11 +422,11 @@ Para definir uma linguagem específica de domínio (DSL), crie uma solução do 
 ##  <a name="a-namecompartmentsa-defining-shapes-that-contain-lists-compartment-shapes"></a><a name="compartments"></a>Definindo formas que contêm listas: formas do compartimento  
  Uma forma do compartimento contém uma ou mais listas de itens. Por exemplo, em uma DSL de Biblioteca de Músicas, você poderia usar formas do compartimento para representar os Álbuns de música. Em cada Álbum, há uma lista de Canções.  
   
- ![Forma do compartimento](../modeling/media/compartmentshape.png "CompartmentShape")  
+ ![Forma do compartimento](~/docs/modeling/media/compartmentshape.png "CompartmentShape")  
   
  No método mais simples de obter esse efeito em uma definição de DSL, você define uma classe de domínio para o contêiner e uma classe de domínio para cada lista. A classe de contêiner é mapeada para a forma do compartimento.  
   
- ![Mapa de forma](../modeling/media/music_mapcomp.png "Music_MapComp")  
+ ![Mapa de forma](~/docs/modeling/media/music_mapcomp.png "Music_MapComp")  
   
  Para obter mais informações, consulte [propriedades de formas do compartimento](../modeling/properties-of-compartment-shapes.md).  
   
@@ -516,7 +516,7 @@ Para definir uma linguagem específica de domínio (DSL), crie uma solução do 
   
 7.  Abra o Gerenciador de linguagens. Verifique se você pode ver os nós do contêiner com os nós do item de lista dentro.  
   
- ![Gerado Gerenciador de DSL](../modeling/media/music_explorer.png "Music_Explorer")  
+ ![Gerado Gerenciador de DSL](~/docs/modeling/media/music_explorer.png "Music_Explorer")  
   
  Depois de testar inicialmente uma forma do compartimento, talvez você queira ajustar algumas de suas propriedades e adicionar outros recursos mais avançados. Para obter mais informações, consulte [personalizando e estendendo uma linguagem específica do domínio](../modeling/customizing-and-extending-a-domain-specific-language.md).  
   

@@ -46,7 +46,7 @@ Neste tutorial, você cria um teste no qual o tomador de teste deve responder a 
   
  Quando você terminar, seu teste ficará parecido com a imagem a seguir, mas com números diferentes.  
   
- ![Teste de matemática com quatro problemas](../ide/media/express_finishedquiz.png "Express_FinishedQuiz")  
+ ![Teste de matemática com quatro problemas](~/docs/ide/media/express_finishedquiz.png "Express_FinishedQuiz")  
 Teste que você cria neste tutorial  
   
  Para baixar uma versão concluída do teste, consulte [Exemplo de tutorial de teste completo de matemática](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).  

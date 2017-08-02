@@ -41,7 +41,7 @@ Com base nos comentários dos clientes, uma das áreas de foco para a versão do
 
 Para ajudar os usuários a entender esse impacto, adicionamos um novo recurso no Visual Studio para notificar os usuários de extensões lentas. Quando o Visual Studio detecta uma nova extensão que está diminuindo a carga de solução ou de inicialização, os usuários verão uma notificação no IDE apontá-los para a nova caixa de diálogo "Gerenciar Visual Studio Performance". Essa caixa de diálogo também sempre pode ser acessada pelo menu de ajuda para procurar extensões detectadas anteriormente.
 
-![gerenciar o desempenho do Visual Studio](media/manage-performance.png)
+![gerenciar o desempenho do Visual Studio](~/docs/extensibility/media/manage-performance.png)
 
 Este documento tem como objetivo ajudar os desenvolvedores de extensão descrevendo como o impacto de extensão é calculado e como ele pode ser analisado localmente para testar se uma extensão pode ser mostrada como um impacto sobre a extensão de desempenho.
 
@@ -143,7 +143,7 @@ private void DoMoreWork()
 
 Depois de configurar seu ambiente do Visual Studio com a extensão instalada, você pode gravar um rastreamento de inicialização abrindo PerfView e abrindo a caixa de diálogo coletar no menu "Coletar".
 
-![menu coletar perfview](media/perfview-collect-menu.png)
+![menu coletar perfview](~/docs/extensibility/media/perfview-collect-menu.png)
 
 As opções padrão fornecerá pilhas de chamadas para consumo de CPU, mas já que estamos interessados em tempo de bloqueio, bem, você também deve habilitar pilhas de "Tempo de Thread". Depois que as configurações estão prontas, você pode clicar em "Iniciar coleta" e inicie o Visual Studio depois de gravação é iniciada.
 
@@ -155,7 +155,7 @@ Após a conclusão da gravação PerfView será automaticamente abrir o rastream
 
 Para os fins deste exemplo, estamos interessados principalmente no modo de exibição "Pilhas de tempo do Thread" que pode ser encontrado em "Advanced Group". Essa exibição mostrará o tempo total gasto em um thread por um método incluindo o tempo de CPU e tempo bloqueado, como e/s de disco ou aguardando identificadores.
 
- ![pilhas de tempo do thread](media/perfview-thread-time-stacks.png)
+ ![pilhas de tempo do thread](~/docs/extensibility/media/perfview-thread-time-stacks.png)
 
  Ao abrir a exibição "Thread pilhas de tempo", você deve escolher o processo de "devenv" para iniciar a análise.
 
@@ -170,11 +170,11 @@ No exemplo acima algumas interessante chamada pilhas seria:
 
 1. E/s usando a classe System.IO: enquanto inclusive custo desses quadros não pode ser muito caro no rastreamento, eles são uma causa potencial de um problema já que a velocidade de e/s de arquivo irá variar de máquina para máquina.
 
-  ![quadros de e/s do sistema](media/perfview-system-io-frames.png)
+  ![quadros de e/s do sistema](~/docs/extensibility/media/perfview-system-io-frames.png)
 
 2. Bloqueio de chamadas, aguardando outro trabalho assíncrono: nesse caso tempo inclusive representa a hora em que o thread principal seja bloqueado na conclusão do trabalho assíncrono.
 
-  ![quadros de chamada de bloqueio](media/perfview-blocking-call-frames.png)
+  ![quadros de chamada de bloqueio](~/docs/extensibility/media/perfview-blocking-call-frames.png)
 
 Um dos outros modos de exibição no rastreamento que serão úteis para determinar o impacto será as pilhas de carga"imagem". Você pode aplicar os mesmo filtros conforme aplicadas à exibição "Thread pilhas de tempo" e descobrir todos os assemblies carregados devido o código executado por seu pacote carregado automaticamente.
 

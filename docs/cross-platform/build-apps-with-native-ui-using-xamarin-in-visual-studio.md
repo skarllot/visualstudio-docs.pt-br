@@ -468,7 +468,7 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
   
 13. Salve o arquivo e mude para o modo de exibição de **Design**. Sua interface do usuário deve aparecer da seguinte maneira:  
   
-     ![Interface do usuário para aplicativo Android](../cross-platform/media/xamarin_androidui.png "Xamarin_AndroidUI")  
+     ![Interface do usuário para aplicativo Android](~/docs/cross-platform/media/xamarin_androidui.png "Xamarin_AndroidUI")  
   
 14. Abra **MainActivity.cs** e exclua as linhas no método *OnCreate* que se referem ao botão padrão removido anteriormente. O código deve ser assim quando você terminar:  
   
@@ -597,7 +597,7 @@ Depois de concluir as etapas em [Configuração e instalação](../cross-platfor
   
  No modo de exibição de design, sua interface do usuário deve aparecer da seguinte maneira:  
   
- ![Interface do usuário do aplicativo Windows Phone](../cross-platform/media/xamarin_winphone_finalui.png "Xamarin_WinPhone_FinalUI")  
+ ![Interface do usuário do aplicativo Windows Phone](~/docs/cross-platform/media/xamarin_winphone_finalui.png "Xamarin_WinPhone_FinalUI")  
   
 ### <a name="consume-your-shared-code"></a>Consumir seu código compartilhado  
   

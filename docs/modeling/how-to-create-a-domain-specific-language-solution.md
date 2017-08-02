@@ -60,7 +60,7 @@ Uma linguagem específica do domínio (DSL) é criada usando especializado [!INC
         > [!NOTE]
         >  Preferencialmente, o nome que você digita deve ser um identificador válido do Visual c#, porque ele pode ser usado para gerar código.  
   
-     ![Criar caixa de diálogo DSL](../modeling/media/create_dsldialog.png "Create_DSLDialog")  
+     ![Criar caixa de diálogo DSL](~/docs/modeling/media/create_dsldialog.png "Create_DSLDialog")  
   
 2.  Escolha um modelo DSL.  
   

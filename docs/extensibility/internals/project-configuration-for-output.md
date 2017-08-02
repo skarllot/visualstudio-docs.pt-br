@@ -50,7 +50,7 @@ Cada configuração pode dar suporte a um conjunto de processos de compilação 
   
  Grupos também podem ter uma saída de chave que permita atalhos de empacotamento apontar para algo significativo. Nenhum grupo pode ser vazio em uma determinada configuração, portanto não deve ser feita nenhuma suposição sobre o tamanho de um grupo. O tamanho (número de saídas) de cada grupo em qualquer configuração pode ser diferente do tamanho de outro grupo na mesma configuração. Ele também pode ser diferente do tamanho do mesmo grupo em outra configuração.  
   
- ![Gráfico de grupos de saída](../../extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups")  
+ ![Gráfico de grupos de saída](~/docs/extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups")  
 Grupos de saída  
   
  O principal uso do <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg>interface é fornecer acesso para criar, implantar e depurar objetos de gerenciamento e permitir que os projetos a liberdade de grupo de saídas.</xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg> Para obter mais informações sobre o uso dessa interface, consulte [o objeto de configuração do projeto](../../extensibility/internals/project-configuration-object.md).  

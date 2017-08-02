@@ -40,7 +40,7 @@ ms.openlocfilehash: 22fe52a8f29840d1b99a1dc7de71b899f912dcf3
 # <a name="utilization-view"></a>Exibição da utilização
 A **Exibição de Utilização** exibe informações sobre a CPU, GPU e outros recursos do sistema usados pelo processo atual. Ela mostra a utilização média do núcleo pelo processo analisado, o processo ocioso, o processo do Sistema e outros processos em execução no sistema ao longo do tempo. Ela não mostra qual núcleo específico está ativo em um determinado momento. Por exemplo, se dois núcleos estiverem sendo executados individualmente com capacidade de 50% durante um período específico, essa exibição mostrará um núcleo lógico sendo utilizado. A exibição é gerada pela divisão do tempo de criação de perfil em segmentos de tempo curto. Para cada segmento, o gráfico plota o número médio de threads de processos em execução nos núcleos lógicos durante esse intervalo.  
   
- ![Exibição de Utilização de CPU](../profiling/media/vsts_ppacpuutil.png "VSTS_PPAcpuUtil")  
+ ![Exibição de Utilização de CPU](~/docs/profiling/media/vsts_ppacpuutil.png "VSTS_PPAcpuUtil")  
   
  O gráfico mostra o tempo (no eixo x) e os núcleos lógicos médios utilizados pelo processo de destino, o processo ocioso e o processo do Sistema. (O processo ocioso mostra núcleos ociosos. O processo do Sistema é um processo no Windows que pode executar o trabalho em nome de outros processos.) Os processos restantes em execução na conta do sistema para a utilização de qualquer um dos núcleos restantes.  
   

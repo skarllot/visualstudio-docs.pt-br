@@ -65,13 +65,13 @@ Este tópico destina-se a desenvolvedores que trabalham principalmente em um Mac
 
 2.  No instalador, clique no botão **Opções adicionais** (ícone de três barras) _ao lado de_ **Inicialização** e, então, escolha **Modificar**.  
   
-     ![Como escolher a opção Modificar na instalação do Visual Studio](../cross-platform/media/cross-plat-xamarin-setup-1a.png "Instalação 1 entre várias plataformas do Xamarin")  
+     ![Como escolher a opção Modificar na instalação do Visual Studio](~/docs/cross-platform/media/cross-plat-xamarin-setup-1a.png "Instalação 1 entre várias plataformas do Xamarin")  
   
 3.  Verifique as seguintes caixas:
 
     1.  **Celular e Jogos > Desenvolvimento Móvel com o .NET**. Isso também selecionará automaticamente várias ferramentas Android em Ferramentas Comuns e Kits de desenvolvimento de Software. Essa opção também deve atualizar uma instalação existente do Xamarin.  
   
-         ![Selecione a opção Desenvolvimento Móvel em Jogos e Desenvolvimento Móvel](../cross-platform/media/cross-plat-xamarin-setup-2a.png "Instalação 2 entre várias plataformas do Xamarin")  
+         ![Selecione a opção Desenvolvimento Móvel em Jogos e Desenvolvimento Móvel](~/docs/cross-platform/media/cross-plat-xamarin-setup-2a.png "Instalação 2 entre várias plataformas do Xamarin")  
   
     2. (Opcional) **Windows > desenvolvimento da Plataforma Universal do Windows**. Isso inclui opções de instalação de imagens de emulador que levarão mais tempo para baixar; você sempre pode retornar ao instalador do Visual Studio para adicioná-las mais tarde.  
 
@@ -130,8 +130,8 @@ Este tópico destina-se a desenvolvedores que trabalham principalmente em um Mac
 
     2.  Selecione o destino **iPhoneSimulator** na lista suspensa do build do Visual Studio, conforme mostrado abaixo. Se nenhum simulador estiver listado, inicie o Xcode no Mac, selecione **Xcode->Preferências** e clique em **Baixar**. Em **Componentes** você deve ver as versões de simulador que estão disponíveis para download. Instruções adicionais para depuração podem ser encontradas na página [Depuração](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) do Xamarin (xamarin.com).
 
-         ![Selecionando o destino de build do iPhoneSimulator](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verificação 5")
+         ![Selecionando o destino de build do iPhoneSimulator](~/docs/cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verificação 5")
 
     3.  Selecione um destino iPhone na lista suspensa de depuração do Visual Studio, conforme mostrado abaixo e inicie o depurador pressionando F5. Isso inicia o simulador no Mac no qual você poderá interagir com o aplicativo enquanto a depuração ocorrer no Visual Studio.
 
-         ![Selecionando um destino de depuração do iPhone](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verificação 6")
+         ![Selecionando um destino de depuração do iPhone](~/docs/cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verificação 6")

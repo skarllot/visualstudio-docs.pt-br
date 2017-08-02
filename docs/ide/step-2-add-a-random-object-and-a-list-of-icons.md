@@ -51,7 +51,7 @@ Nesta etapa, você cria um conjunto de símbolos correspondentes para o jogo. Ca
   
 3.  Ao adicionar o objeto `List`, observe a janela do **IntelliSense** que é aberta. Veja a seguir um exemplo do Visual C#, mas texto semelhante aparece quando você adiciona uma lista no Visual Basic.  
   
-     ![Janela Propriedades mostrando o evento de clique](../ide/media/express_listintellisense.png "Express_ListIntellisense")  
+     ![Janela Propriedades mostrando o evento de clique](~/docs/ide/media/express_listintellisense.png "Express_ListIntellisense")  
 Janela do IntelliSense  
   
     > [!NOTE]

@@ -34,7 +34,7 @@ O modo de Início é o ponto iniciando para o designer de \(XSD\) de esquema XML
 ## Barra de ferramentas  
  Você pode navegar entre o modo de Início, o [O modo do modelo de conteúdo](../xml-tools/content-model-view.md) e o [O modo de gráfico](../xml-tools/graph-view.md) da barra de ferramentas do designer de esquema XML.  
   
- ![XML Schema Designer Toolbar](../xml-tools/media/xsdstartviewtoolbar.gif "XSDStartViewToolbar")  
+ ![XML Schema Designer Toolbar](~/docs/xml-tools/media/xsdstartviewtoolbar.gif "XSDStartViewToolbar")  
   
  Os seguintes botões estão ativados na barra de ferramentas do designer XSD quando a exibição de Início é ativa:  
   

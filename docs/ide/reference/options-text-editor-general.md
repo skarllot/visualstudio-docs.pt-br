@@ -101,7 +101,7 @@ Essa caixa de diálogo permite alterar as configurações globais para o Editor 
   
 |Margem de seleção ativada|Margem de seleção desativada|  
 |-------------------------|--------------------------|  
-|![HTMLpageSelectionMarginOn screenshot](../../ide/reference/media/vxselmaron.gif "vxSelmaron")|![HTMLpageSelectionMarginOff screenshot](../../ide/reference/media/vxselmaroff.gif "vxSelmaroff")|  
+|![HTMLpageSelectionMarginOn screenshot](~/docs/ide/reference/media/vxselmaron.gif "vxSelmaron")|![HTMLpageSelectionMarginOff screenshot](~/docs/ide/reference/media/vxselmaroff.gif "vxSelmaroff")|  
   
  Margem de indicadores  
  Quando selecionado, exibe uma margem vertical fora da borda esquerda da área de texto do editor. Quando você clica nesta margem, um ícone e uma dica de ferramenta relacionados ao texto aparecem. Por exemplo, atalhos da lista de tarefas ou de pontos de interrupção aparecem na margem de indicadores. Informações da margem de indicadores não são impressas.  

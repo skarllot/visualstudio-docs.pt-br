@@ -68,7 +68,7 @@ Subtipos de projeto permitem que os VSPackages estender projetos baseados em Mic
   
  A ilustração a seguir mostra uma representação esquemática de uma agregação de subtipo de projeto de vários níveis.  
   
- ![Gráfico de projectflavor do vários níveis de Studio Visual](../../extensibility/internals/media/vs_multilevelprojectflavor.gif "VS_MultilevelProjectFlavor")  
+ ![Gráfico de projectflavor do vários níveis de Studio Visual](~/docs/extensibility/internals/media/vs_multilevelprojectflavor.gif "VS_MultilevelProjectFlavor")  
 Subtipo de vários níveis de projeto  
   
  Uma agregação de subtipo de vários níveis de projeto consiste em três níveis, um projeto base, que é agregadas por um subtipo de projeto e agregadas por um subtipo de projeto avançadas. A figura se concentra em algumas das interfaces de suporte que são fornecidas como parte do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] arquitetura subtipo de projeto.  
@@ -78,7 +78,7 @@ Subtipo de vários níveis de projeto
   
  A ilustração a seguir se concentra na implementação do extensor de automação, o objeto de procura de configuração de projeto em particular, usado pelo subtipos de projeto para estender o sistema de base do projeto.  
   
- ![Gráfico de extensor de automático de tipo de projeto do VS](../../extensibility/internals/media/vs_projectflavorautoextender.gif "VS_ProjectFlavorAutoExtender")  
+ ![Gráfico de extensor de automático de tipo de projeto do VS](~/docs/extensibility/internals/media/vs_projectflavorautoextender.gif "VS_ProjectFlavorAutoExtender")  
 Extensor de automação de subtipo do projeto.  
   
  Subtipos de projeto podem ampliar ainda mais o sistema de projeto base estendendo o modelo de objeto de automação. Eles são definidos como parte do objeto de automação DTE e são usados para estender o objeto de projeto, o `ProjectItem` objeto e o `Configuration` objeto. Para obter mais informações, consulte [estendendo o modelo de objeto do projeto Base](../../extensibility/internals/extending-the-object-model-of-the-base-project.md).  

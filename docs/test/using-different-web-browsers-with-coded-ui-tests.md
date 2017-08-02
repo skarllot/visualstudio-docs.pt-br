@@ -117,17 +117,17 @@ Os testes de IU codificados podem automatizar testes para aplicativos Web gravan
  *O que mais eu deveria saber?*  
  **Observações**  
   
--   ![Prerequsite](../test/media/prereq.png "Prereq") não há suporte para o navegador Safari da Apple.  
+-   ![Prerequsite](~/docs/test/media/prereq.png "Prereq") não há suporte para o navegador Safari da Apple.  
   
--   ![Prerequsite](../test/media/prereq.png "Prereq") A ação de iniciar o navegador deve fazer parte do teste de IU codificado.  
+-   ![Prerequsite](~/docs/test/media/prereq.png "Prereq") A ação de iniciar o navegador deve fazer parte do teste de IU codificado.  
   
      Se você tiver um navegador da Web já aberto e quiser executar etapas nele, a reprodução falhará a menos que você esteja usando o Internet Explorer. Consequentemente, é uma prática recomendada incluir a inicialização do navegador da Web como parte dos testes de IU codificados.  
   
--   ![Prerequsite](../test/media/prereq.png "Prereq") Não há suporte para automatizar ações de IU baseadas em navegadores específicos, como maximizar, minimizar e restaurar.  
+-   ![Prerequsite](~/docs/test/media/prereq.png "Prereq") Não há suporte para automatizar ações de IU baseadas em navegadores específicos, como maximizar, minimizar e restaurar.  
   
  **Dicas**  
   
--   ![Tip](../test/media/tip.png "Tip") Você pode configurar a saída para incluir capturas de tela nos logs de IU codificados. Para fazer isso, você precisa definir algumas configurações no arquivo QTAgent32.exe.config. Por padrão, esse arquivo é instalado no seguinte local:  
+-   ![Tip](~/docs/test/media/tip.png "Tip") Você pode configurar a saída para incluir capturas de tela nos logs de IU codificados. Para fazer isso, você precisa definir algumas configurações no arquivo QTAgent32.exe.config. Por padrão, esse arquivo é instalado no seguinte local:  
   
      **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**  
   

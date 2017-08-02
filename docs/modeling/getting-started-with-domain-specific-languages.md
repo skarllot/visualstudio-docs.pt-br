@@ -45,7 +45,7 @@ Este tópico explica os conceitos básicos de definindo e usando uma linguagem e
   
  Quando você tiver criado uma DSL, você pode distribuí-lo como parte de um pacote de extensão de integração do Visual Studio (VSIX). Os usuários trabalham com DSL no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]:  
   
- ![Diagrama de árvore genealógica, caixa de ferramentas e o explorer](../modeling/media/familyt_instance.png "FamilyT_Instance")  
+ ![Diagrama de árvore genealógica, caixa de ferramentas e o explorer](~/docs/modeling/media/familyt_instance.png "FamilyT_Instance")  
   
  A notação é apenas parte de uma DSL. Junto com a notação, o pacote VSIX inclui ferramentas que os usuários podem aplicar para ajudá-los a editar e gerar material de seus modelos.  
   
@@ -77,7 +77,7 @@ Este tópico explica os conceitos básicos de definindo e usando uma linguagem e
   
 3.  Clique em **Designer de linguagem específica do domínio**.  
   
-     ![Criar caixa de diálogo DSL](../modeling/media/create_dsldialog.png "Create_DSLDialog")  
+     ![Criar caixa de diálogo DSL](~/docs/modeling/media/create_dsldialog.png "Create_DSLDialog")  
   
 4.  No **nome** , digite **FamilyTree**. Clique em **OK**.  
   
@@ -104,7 +104,7 @@ Este tópico explica os conceitos básicos de definindo e usando uma linguagem e
   
  A interface do usuário agora se assemelha à imagem a seguir.  
   
- ![designer de DSL](../modeling/media/dsl_designer.png "dsl_designer")  
+ ![designer de DSL](~/docs/modeling/media/dsl_designer.png "dsl_designer")  
   
  Essa solução define uma linguagem específica de domínio. Para obter mais informações, consulte [visão geral da Interface do usuário específica do domínio idioma ferramentas](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md).  
   
@@ -153,7 +153,7 @@ Este tópico explica os conceitos básicos de definindo e usando uma linguagem e
   
  Sua avaliação [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] será parecida com o exemplo a seguir:  
   
- ![](../modeling/media/dsl_min.png "DSL_min")  
+ ![](~/docs/modeling/media/dsl_min.png "DSL_min")  
   
 ### <a name="the-content-of-a-model"></a>O conteúdo de um modelo  
  O conteúdo de um arquivo que é uma instância de uma DSL é chamado um *modelo*. O modelo contém *modelo**elementos* e *links* entre os elementos. A definição de DSL Especifica quais tipos de elementos de modelo e links podem existir no modelo. Por exemplo, em uma DSL criada usando o modelo de linguagem mínima, há um tipo de elemento de modelo e um tipo de link.  
@@ -213,7 +213,7 @@ Este tópico explica os conceitos básicos de definindo e usando uma linguagem e
   
 1.  No diagrama DslDefinition, renomeie **ExampleModel** para **FamilyTreeModel**, **ExampleElement** para **pessoa**, **destinos** para **pais**, e **fontes** para **filhos**. Você pode clicar em cada rótulo para alterá-la.  
   
-     ![Diagrama de definição de DSL - modelo de árvore genealógica](../modeling/media/familyt_person.png "FamilyT_Person")  
+     ![Diagrama de definição de DSL - modelo de árvore genealógica](~/docs/modeling/media/familyt_person.png "FamilyT_Person")  
   
 2.  Renomeie as ferramentas de elemento e o conector.  
   
@@ -272,7 +272,7 @@ Este tópico explica os conceitos básicos de definindo e usando uma linguagem e
   
     4.  Selecione cada decorador novo e na janela Propriedades, defina o **posição** campo. Isso determina onde o valor da propriedade de domínio será exibido na forma. Por exemplo, defina **InnerBottomLeft** e **InnerBottomRight**.  
   
-         ![Definição da forma do compartimento](../modeling/media/familyt_compartment.png "FamilyT_Compartment")  
+         ![Definição da forma do compartimento](~/docs/modeling/media/familyt_compartment.png "FamilyT_Compartment")  
   
 3.  Mapear os decoradores para as propriedades.  
   
@@ -288,7 +288,7 @@ Este tópico explica os conceitos básicos de definindo e usando uma linguagem e
   
 6.  Em um arquivo. TT, você pode adicionar código que obtém as propriedades de cada pessoa.  
   
- ![Diagrama de árvore genealógica, caixa de ferramentas e o explorer](../modeling/media/familyt_instance.png "FamilyT_Instance")  
+ ![Diagrama de árvore genealógica, caixa de ferramentas e o explorer](~/docs/modeling/media/familyt_instance.png "FamilyT_Instance")  
   
 ### <a name="define-new-classes"></a>Definir novas Classes  
  Você pode adicionar classes de domínio e relações em um modelo. Por exemplo, você poderia criar uma nova classe para representar cidades e uma nova relação para representar que uma pessoa viver em uma cidade.  
@@ -314,7 +314,7 @@ Este tópico explica os conceitos básicos de definindo e usando uma linguagem e
   
     1.  Clique o **relação de referência** ferramenta, clique em pessoa e, em seguida, clique em cidade.  
   
-         ![Fragmento da definição de DSL: raiz da árvore genealógica](../modeling/media/familyt_root.png "FamilyT_Root")  
+         ![Fragmento da definição de DSL: raiz da árvore genealógica](~/docs/modeling/media/familyt_root.png "FamilyT_Root")  
   
         > [!NOTE]
         >  Relações de referência representam referências cruzadas de uma parte da árvore modelo para outro.  
@@ -339,7 +339,7 @@ Este tópico explica os conceitos básicos de definindo e usando uma linguagem e
   
     2.  Use o **mapa de elemento do diagrama** ferramenta para vincular o novo conector à relação entre pessoa e cidade.  
   
-         ![Definição de árvore genealógica com mapa de forma adicionada](../modeling/media/familyt_shapemap.png "FamilyT_ShapeMap")  
+         ![Definição de árvore genealógica com mapa de forma adicionada](~/docs/modeling/media/familyt_shapemap.png "FamilyT_ShapeMap")  
   
 6.  Crie uma ferramenta de elemento para fazer uma cidade de novo.  
   

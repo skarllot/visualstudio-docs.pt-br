@@ -69,7 +69,7 @@ Por padrão, a ferramenta de cobertura de código do Visual Studio analisa todos
   
 5.  Para ativar ou desativar as configurações personalizadas, desmarque ou selecione o arquivo no menu **Teste**, **Configurações de Teste**.  
   
- ![Menu de configurações de teste com o arquivo de configurações personalizadas](../test/media/codecoverage-settingsfile.png "CodeCoverage-settingsFile")  
+ ![Menu de configurações de teste com o arquivo de configurações personalizadas](~/docs/test/media/codecoverage-settingsfile.png "CodeCoverage-settingsFile")  
   
  Outros aspectos dos testes de unidade podem ser configurados no mesmo arquivo .runsettings. Para obter mais informações, consulte [Efetuar teste de unidade em seu código](../test/unit-test-your-code.md).  
   
@@ -210,7 +210,7 @@ Por padrão, a ferramenta de cobertura de código do Visual Studio analisa todos
 ### <a name="to-customize-run-settings-in-a-build-definition"></a>Para personalizar as configurações de execução em uma definição de compilação  
  Você pode obter dados de cobertura de código de uma compilação de equipe.  
   
- ![Especificação do runsettings em uma definição de compilação](../test/media/codecoverage-buildrunsettings.png "CodeCoverage-buildRunsettings")  
+ ![Especificação do runsettings em uma definição de compilação](~/docs/test/media/codecoverage-buildrunsettings.png "CodeCoverage-buildRunsettings")  
   
 1.  Verifique se o arquivo .runsettings passou por check-in.  
   

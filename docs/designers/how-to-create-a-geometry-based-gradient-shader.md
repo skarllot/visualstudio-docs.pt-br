@@ -76,13 +76,13 @@ Este documento demonstra como usar o Designer de Sombreador e a Directed Graph S
 > [!NOTE]
 >  Nesta ilustração é especificada uma cor laranja para demonstrar melhor o efeito do sombreador, mas como a forma de visualização não tem posição no espaço de mundo, o sombreador não pode ser visualizado totalmente no Designer de Sombreador. O sombreador deve ser visualizado em uma cena real para demonstrar o efeito completo.  
   
- ![Gráfico de sombreador e uma visualização de seu efeito](../designers/media/digit-gradient-effect-graph.png "Digit-Gradient-Effect-Graph")  
+ ![Gráfico de sombreador e uma visualização de seu efeito](~/docs/designers/media/digit-gradient-effect-graph.png "Digit-Gradient-Effect-Graph")  
   
  Determinadas formas podem fornecer melhores visualizações para alguns sombreadores. Para obter informações sobre como visualizar sombreadores no Designer de Sombreador, consulte **Visualização de Sombreadores** em [Designer de Sombreador](../designers/shader-designer.md)  
   
  A ilustração a seguir mostra o sombreador que é descrito neste documento, aplicado a uma cena 3D que é demonstrada em [Como modelar terreno 3D](../designers/how-to-model-3-d-terrain.md). A intensidade da cor aumenta com a altura do ponto no mundo.  
   
- ![Efeito de gradiente aplicado a um modelo de terreno 3D](../designers/media/digit-gradient-effect-result.png "Digit-Gradient-Effect-Result")  
+ ![Efeito de gradiente aplicado a um modelo de terreno 3D](~/docs/designers/media/digit-gradient-effect-result.png "Digit-Gradient-Effect-Result")  
   
  Para obter mais informações sobre como aplicar um sombreador a um modelo 3D, consulte [Como aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md).  
   

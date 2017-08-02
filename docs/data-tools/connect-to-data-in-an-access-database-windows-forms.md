@@ -40,11 +40,11 @@ manager: "ghogen"
   
 2.  No menu **Exibir**, escolha **Outras Janelas** \> **Fontes de Dados**.  
   
-     ![View Other Windows Data Sources](../data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![View Other Windows Data Sources](~/docs/data-tools/media/viewdatasources.png "ViewDataSources")  
   
 3.  Na janela **Fontes de Dados**, clique em **Adicionar Nova Fonte de Dados**.  
   
-     ![Add New Data Source](../data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+     ![Add New Data Source](~/docs/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
   
 4.  Escolha **Base de Dados** na página **Escolher um Tipo de Fonte de Dados** e, em seguida, escolha **Próximo**.  
   
@@ -87,11 +87,11 @@ manager: "ghogen"
   
 2.  No menu **Exibir**, escolha **Outras Janelas** \> **Fontes de Dados**.  
   
-     ![View Other Windows Data Sources](../data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![View Other Windows Data Sources](~/docs/data-tools/media/viewdatasources.png "ViewDataSources")  
   
 3.  Na janela **Fontes de Dados**, clique em **Adicionar Nova Fonte de Dados**.  
   
-     ![Add New Data Source](../data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+     ![Add New Data Source](~/docs/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
   
 4.  Escolha **Base de Dados** na página **Escolher um Tipo de Fonte de Dados** e, em seguida, escolha **Próximo**.  
   

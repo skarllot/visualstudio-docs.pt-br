@@ -71,7 +71,7 @@ O jogo funciona bem, desde que o jogador escolha apenas pares de ícones que nã
   
 2.  Salve e execute o programa e, em seguida, comece a escolher os ícones no formulário. Se você escolher um par que não corresponda, o evento Tick do temporizador é disparado e ambos os ícones desaparecem. Se você escolher um par correspondente, a nova instrução `if` será executada e a instrução de retorno fará com que o método pule o código que inicia o temporizador, de modo que o ícone permanece visível, conforme mostrado na imagem a seguir.  
   
-     ![Jogo criado neste tutorial](../ide/media/express_finishedgame.png "Express_FinishedGame")  
+     ![Jogo criado neste tutorial](~/docs/ide/media/express_finishedgame.png "Express_FinishedGame")  
 Jogo da memória com pares de ícone visíveis  
   
 ### <a name="to-continue-or-review"></a>Para continuar ou revisar  

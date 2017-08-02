@@ -60,7 +60,7 @@ O IntelliSense fornece [preenchimentos](#completions), [ajuda da assinatura](#si
 
 Preenchimentos aparecem como instruções, identificadores e outras palavras que podem ser inseridas adequadamente na localização atual no editor. O que é mostrado na lista baseia-se no contexto e é filtrado para omitir opções incorretas ou que desviam a atenção. Em geral, os preenchimentos são disparados com a digitação de instruções diferentes (como `import`) e operadores (incluindo um ponto final), mas é possível fazer com que eles apareçam a qualquer momento digitando Ctrl-J, Espaço.
 
-![Preenchimento de membro](media/code-editing-completions-simple.png)
+![Preenchimento de membro](~/docs/python/media/code-editing-completions-simple.png)
 
 Quando uma lista de preenchimento é aberta, é possível pesquisar o preenchimento que você deseja usando as teclas de direção, o mouse ou continuando a digitação. Conforme você digita mais letras, a lista é filtrada ainda mais para mostrar os prováveis preenchimentos. Essa filtragem é inteligente e permitirá o uso de atalhos, como:
 
@@ -70,27 +70,27 @@ Quando uma lista de preenchimento é aberta, é possível pesquisar o preenchime
 
 Alguns exemplos:
 
-![Preenchimento de membro com filtragem](media/code-editing-completion-filtering.png)
+![Preenchimento de membro com filtragem](~/docs/python/media/code-editing-completion-filtering.png)
 
 Os preenchimentos de membro são mostrados automaticamente quando você digita um ponto final depois de uma variável ou um valor e exibe os métodos e os atributos dos tipos possíveis. Se uma variável puder ser de mais de um tipo, a lista incluirá todas as possibilidades de todos os tipos, com informações extras para indicar quais tipos dão suporte a cada preenchimento. Quando um preenchimento tem o suporte de todos os tipos possíveis, ele é mostrado sem anotação.
 
-![Preenchimento de membro em vários tipos](media/code-editing-completion-types.png)
+![Preenchimento de membro em vários tipos](~/docs/python/media/code-editing-completion-types.png)
 
 Por padrão, os membros que começam e terminam com um sublinhado duplo não são mostrados. Em geral, esses membros não deverão ser acessados diretamente, mas se você precisar de um, digitar o sublinhado duplo à esquerda adicionará esses preenchimentos à lista:
 
-![Preenchimento de membro privado](media/code-editing-completion-dunder.png)
+![Preenchimento de membro privado](~/docs/python/media/code-editing-completion-dunder.png)
 
 As instruções `import` e `from ... import` exibem uma lista de módulos que podem ser importados e, no caso de `from ... import`, os membros que podem ser importados do módulo especificado.
 
-![Preenchimento de importação](media/code-editing-completion-import.png)
+![Preenchimento de importação](~/docs/python/media/code-editing-completion-import.png)
 
 As instruções `raise` e `except` exibirão a lista de classes que provavelmente são tipos de erros. Elas podem não incluir todas as exceções definidas pelo usuário, mas ajudarão você a encontrar as exceções internas adequadas rapidamente:
 
-![Preenchimento de exceção](media/code-editing-completion-exception.png)
+![Preenchimento de exceção](~/docs/python/media/code-editing-completion-exception.png)
 
 Digitar @ inicia um decorador e mostra os decoradores possíveis. Muitos desses itens não poderão ser usados como decoradores e você precisará verificar a documentação da biblioteca para determinar qual deles usar:
 
-![Preenchimento de decorador](media/code-editing-completion-decorator.png)
+![Preenchimento de decorador](~/docs/python/media/code-editing-completion-decorator.png)
 
 > [!Tip]
 > É possível configurar o comportamento de preenchimentos por meio de **Ferramentas > Opções > Editor de Texto > Python > Avançado**. Dentre eles, **Filtrar lista com base na cadeia de caracteres de pesquisa**: aplica a filtragem de sugestões de preenchimento à medida que você digita (o padrão é marcado); **Preenchimento de membro exibe a interseção dos membros** mostra apenas os preenchimentos que têm suporte em todos os tipos possíveis (o padrão é desmarcado).
@@ -100,7 +100,7 @@ Digitar @ inicia um decorador e mostra os decoradores possíveis. Muitos desses 
 
 Ao escrever o código que chama uma função, a ajuda da assinatura é exibida quando você digita o `(` de abertura e exibe as informações de documentação e parâmetro disponíveis. Também é possível fazer com ela seja exibida com Ctrl+Shift+Espaço dentro de uma chamada de função. As informações exibidas dependem das cadeias de caracteres de documentação no código-fonte da função, mas incluirão os valores padrão.
 
-![Ajuda da assinatura](media/code-editing-signature-help.png)
+![Ajuda da assinatura](~/docs/python/media/code-editing-signature-help.png)
 
 > [!Tip]
 > Para desabilitar a ajuda da assinatura, acesse **Ferramentas > Opções > Editor de Texto > Python > Geral** e desmarque a opção **Preenchimento de declaração > Informações de parâmetro**.
@@ -109,17 +109,17 @@ Ao escrever o código que chama uma função, a ajuda da assinatura é exibida q
 
 Focalizar o ponteiro do mouse em um identificador exibe uma dica de ferramenta Informações Rápidas. Dependendo do identificador, Informações Rápidas poderá exibir os possíveis valores ou tipos, toda a documentação disponível, tipos de retorno e localizações de definição:
 
-![Informação Rápida](media/code-editing-quick-info.png)
+![Informação Rápida](~/docs/python/media/code-editing-quick-info.png)
 
 ### <a name="code-coloring"></a>Coloração de código
 
 A coloração de código usa informações da análise de código para colorir variáveis, instruções e outras partes do código. Por exemplo, as variáveis que se referem a módulos ou classes podem ser exibidas em uma cor diferente para funções ou outros valores, e os nomes de parâmetro são exibidos em uma cor diferente para variáveis locais ou globais (observe que, por padrão, as funções não são exibidas em negrito):
 
-![Coloração de código](media/code-editing-code-coloring.png)
+![Coloração de código](~/docs/python/media/code-editing-code-coloring.png)
 
 Para personalizar as cores usadas, acesse **Ferramentas > Opções > Ambiente > Fontes e Cores** e modifique as entradas do Python na lista **Exibir itens**.
 
-![Opções de Fontes e Cores](media/code-editing-customize-colors.png)
+![Opções de Fontes e Cores](~/docs/python/media/code-editing-customize-colors.png)
 
 > [!Tip]
 > Para desabilitar a coloração de código, acesse **Ferramentas > Opções > Editor de Texto > Python > Avançado** e desmarque **Opções Diversas > Colorir nomes com base no tipo**.
@@ -128,11 +128,11 @@ Para personalizar as cores usadas, acesse **Ferramentas > Opções > Ambiente > 
 
 Trechos de código são fragmentos de código que podem ser inseridos nos arquivos digitando um atalho e pressionando Tab ou usando os comandos **Editar > IntelliSense > Inserir Trecho de Código** **Envolver com**. Por exemplo, digitar `class` seguido pela tecla Tab gerará o restante da classe. É possível digitar sobre o nome e a lista de bases, movendo entre os campos realçados com Tab e, em seguida, pressionando Enter para começar a digitar o corpo.
 
-![Trechos de código](media/code-editing-code-snippets.png)
+![Trechos de código](~/docs/python/media/code-editing-code-snippets.png)
 
 É possível ver os trechos de código disponíveis no Gerenciador de Trechos de Código (**Ferramentas > Gerenciador de Trechos de Código**), selecionando **Python** como a linguagem:
 
-![Gerenciador de Trechos de Código](media/code-editing-code-snippets-manager.png)
+![Gerenciador de Trechos de Código](~/docs/python/media/code-editing-code-snippets-manager.png)
 
 Para criar seus próprios trechos de código, consulte [Passo a passo: Criando um trecho de código](https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet).
 Trechos de código podem ser personalizados com a [criação de um trecho de código](https://msdn.microsoft.com/en-us/library/ms165394.aspx) e importando-o por meio do 
@@ -148,7 +148,7 @@ O suporte do Python no Visual Studio fornece vários meios para navegar rapidame
 
 A barra de navegação é exibida na parte superior de cada janela do editor e inclui uma lista de dois níveis de definições. A lista suspensa à esquerda contém definições de nível superior de classe e função no arquivo atual; a lista suspensa à direita exibe uma lista de definições dentro do escopo mostrado à esquerda. Conforme você usa o editor, elas são atualizadas para mostrar o contexto atual e você também pode selecionar uma entrada dessa lista para ir diretamente para ela.
 
-![Barra de navegação](media/code-editing-navigation-bar.png)
+![Barra de navegação](~/docs/python/media/code-editing-navigation-bar.png)
 
 > [!Tip]
 > Para ocultar a barra de navegação, acesse **Ferramentas > Opções > Editor de Texto > Python > Geral** e desmarque a opção **Configurações > Barra de navegação**.
@@ -157,7 +157,7 @@ A barra de navegação é exibida na parte superior de cada janela do editor e i
 
 O comando **Ir Para Definição** vai rapidamente do uso de um identificador (como um nome de função, classe ou variável) para o código-fonte em que ele está definido. Invoque-o clicando com o botão direito do mouse em um identificador e selecionando **Ir Para Definição** ou colocando o cursor no identificador e pressionando F12. Ele funciona em todo o código e nas bibliotecas externas, desde que o código-fonte esteja disponível. Se o código-fonte da biblioteca não estiver disponível, o comando **Ir Para Definição** irá para a instrução `import` relevante de uma referência de módulo ou exibirá um erro.
 
-![Ir para definição](media/code-editing-go-to-definition.png)
+![Ir para definição](~/docs/python/media/code-editing-go-to-definition.png)
 
 ### <a name="navigate-to"></a>Navegar para
 
@@ -165,10 +165,10 @@ O comando **Editar > Navegar Para...** (Ctrl-vírgula) exibe uma caixa de pesqui
 
 Clicar duas vezes em um nome ou selecioná-lo com teclas de direção e Enter navegará para a definição desse identificador.
 
-![Navegar para](media/code-editing-navigate-to.png)
+![Navegar para](~/docs/python/media/code-editing-navigate-to.png)
 
 ### <a name="find-all-references"></a>Localizar Todas as Referências
 
 O comando **Localizar Todas as Referências** é uma maneira útil de descobrir o local em que um identificador específico é definido e usado, incluindo importações e atribuições. Invoque-o clicando com o botão direito do mouse em um identificador e selecionando **Localizar Todas as Referências** ou colocando o cursor no identificador e pressionando Shift+F12. Clicar duas vezes em um item da lista navegará para sua localização.
 
-![Resultados de Localizar Todas as Referências](media/code-editing-find-all-references.png)
+![Resultados de Localizar Todas as Referências](~/docs/python/media/code-editing-find-all-references.png)

@@ -51,7 +51,7 @@ Você pode depurar um serviço do Windows ao iniciar o serviço e anexando o dep
   
 4.  Na janela do depurador Just\-In\-Time, selecione a versão do Visual Studio que você deseja usar para depuração.  
   
-     ![JustInTimeDebugger](../debugger/media/justintimedebugger.png "JustInTimeDebugger")  
+     ![JustInTimeDebugger](~/docs/debugger/media/justintimedebugger.png "JustInTimeDebugger")  
   
 5.  Uma nova instância do Visual Studio é iniciado e a execução é interrompida no `Debugger.Launch()` método.  
   

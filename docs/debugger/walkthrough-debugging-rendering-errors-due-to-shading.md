@@ -34,7 +34,7 @@ Este passo a passo demonstra como usar [!INCLUDE[vsprvs](../code-quality/include
   
  Nesse cenário, você adicionou recentemente um objeto ao seu aplicativo, juntamente com o novo vértice e sombreadores de pixel para transformar o objeto e dê a ele uma aparência exclusiva. Quando você executa o aplicativo durante um teste, o objeto será renderizado em preto sólido. Usando o diagnóstico de gráficos, você captura o problema para um log de gráficos para que você pode depurar o aplicativo. O problema parece com isso no aplicativo:  
   
- ![O objeto é processado com cores incorretas.](../debugger/media/gfx_diag_demo_render_error_shader_problem.png "gfx\_diag\_demo\_render\_error\_shader\_problem")  
+ ![O objeto é processado com cores incorretas.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_problem.png "gfx\_diag\_demo\_render\_error\_shader\_problem")  
   
 ## Investigação  
  Usando as ferramentas de diagnóstico de gráficos, você pode carregar o documento de log de gráficos para inspecionar os quadros que foram capturados durante o teste.  
@@ -45,7 +45,7 @@ Este passo a passo demonstra como usar [!INCLUDE[vsprvs](../code-quality/include
   
 2.  No **lista quadro**, selecione um quadro em que o objeto não tem a aparência correta. O destino de renderização é atualizado para refletir o quadro selecionado. Nesse cenário, os gráficos de log documento janela será semelhante a esta:  
   
-     ![Os gráficos registrar o documento no Visual Studio.](../debugger/media/gfx_diag_demo_render_error_shader_step_1.png "gfx\_diag\_demo\_render\_error\_shader\_step\_1")  
+     ![Os gráficos registrar o documento no Visual Studio.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_1.png "gfx\_diag\_demo\_render\_error\_shader\_step\_1")  
   
  Depois de selecionar um quadro que demonstra o problema, você pode usar o **histórico de Pixel de gráficos** janela para diagnosticar a ele. O **histórico de Pixel de gráficos** janela mostra os primitivos que poderiam ter tido um efeito em um pixel específico, seus sombreadores e quais seus efeitos sobre o destino de renderização são, em ordem cronológica.  
   
@@ -55,11 +55,11 @@ Este passo a passo demonstra como usar [!INCLUDE[vsprvs](../code-quality/include
   
 2.  Selecione um pixel para examinar. Na janela de documento de log de gráficos, selecione um dos pixels no objeto que é colorido incorretamente:  
   
-     ![A seleção de um pixel exibe informações sobre seu histórico.](../debugger/media/gfx_diag_demo_render_error_shader_step_2.png "gfx\_diag\_demo\_render\_error\_shader\_step\_2")  
+     ![A seleção de um pixel exibe informações sobre seu histórico.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_2.png "gfx\_diag\_demo\_render\_error\_shader\_step\_2")  
   
      O **histórico de Pixel de gráficos** janela é atualizada para refletir o pixel selecionado. Nesse cenário, o **histórico de Pixel de gráficos** janela tem esta aparência:  
   
-     ![O histórico de pixel mostra um evento de DrawIndexed.](../debugger/media/gfx_diag_demo_render_error_shader_step_3.png "gfx\_diag\_demo\_render\_error\_shader\_step\_3")  
+     ![O histórico de pixel mostra um evento de DrawIndexed.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_3.png "gfx\_diag\_demo\_render\_error\_shader\_step\_3")  
   
      Observe que o resultado do sombreador de pixel é completamente opaco preto \(0, 0, 0, 1\) e que o **Output Merger** combinado com o **anterior** cor do pixel de forma que o **resultado** também é opaco totalmente preto.  
   
@@ -73,7 +73,7 @@ Este passo a passo demonstra como usar [!INCLUDE[vsprvs](../code-quality/include
   
 3.  O ponteiro sobre `input.color`. Observe que seu valor é completamente opaco preto \(0, 0, 0, 1\).  
   
-     ![O membro "cor" de "entrada" é indefinido.](../debugger/media/gfx_diag_demo_render_error_shader_step_5.png "gfx\_diag\_demo\_render\_error\_shader\_step\_5")  
+     ![O membro "cor" de "entrada" é indefinido.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_5.png "gfx\_diag\_demo\_render\_error\_shader\_step\_5")  
   
      Nesse cenário, a análise revela que a cor incorreta, provavelmente é o resultado de um sombreador de vértices que não fornece as informações de cor certa para o sombreador de pixel operar em.  
   
@@ -87,7 +87,7 @@ Este passo a passo demonstra como usar [!INCLUDE[vsprvs](../code-quality/include
   
 3.  Confirme que o membro de cor nunca seja copiado na estrutura de entrada. Porque o valor de `output.color` é definido como preto opaco totalmente antes de `output` estrutura é retornada, é uma boa idéia para certificar\-se de que o valor de `output` não foi inicializado corretamente em uma linha anterior. Percorrer o código de sombreador de vértice até alcançar a linha que define `output.color` para preto, enquanto você observa que o valor de `output.color`. Observe que o valor de `output.color` não foi inicializado até que ele seja definido para preto. Isso confirma que a linha de código que define `output.color` para preto deve ser modificado, em vez de excluído.  
   
-     ![O valor de "output.color" nunca será inicializado.](../debugger/media/gfx_diag_demo_render_error_shader_step_7.png "gfx\_diag\_demo\_render\_error\_shader\_step\_7")  
+     ![O valor de "output.color" nunca será inicializado.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_7.png "gfx\_diag\_demo\_render\_error\_shader\_step\_7")  
   
  Depois de determinar que a causa do problema de renderização é que o sombreador de vértices não fornece o valor da cor correta para o sombreador de pixel, você pode usar essas informações para corrigir o problema. Nesse cenário, você pode corrigi\-lo alterando o seguinte código no sombreador de vértices  
   
@@ -103,8 +103,8 @@ output.color = input.color;
   
  Esse código simplesmente passa a cor de vértice por meio de vértices do objeto sem modificações — sombreadores de vértices mais complexos poderia modificar a cor antes de passá\-lo por meio de. O código de sombreador de vértice corrigido deve ter esta aparência:  
   
- ![O código de sombreador de vértices corrigido.](../debugger/media/gfx_diag_demo_render_error_shader_step_8.png "gfx\_diag\_demo\_render\_error\_shader\_step\_8")  
+ ![O código de sombreador de vértices corrigido.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_8.png "gfx\_diag\_demo\_render\_error\_shader\_step\_8")  
   
  Depois de corrigir o código, recompilá\-lo e executar o aplicativo novamente para descobrir o que é resolvido o problema de renderização.  
   
- ![O objeto é processado com as cores corretas.](../debugger/media/gfx_diag_demo_render_error_shader_resolution.png "gfx\_diag\_demo\_render\_error\_shader\_resolution")
+ ![O objeto é processado com as cores corretas.](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_resolution.png "gfx\_diag\_demo\_render\_error\_shader\_resolution")

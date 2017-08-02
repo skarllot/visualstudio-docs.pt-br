@@ -109,7 +109,7 @@ Ao instalar a opção Visual C++ para Desenvolvimento Móvel Multiplataforma, vo
   
      O Visual Studio inicia o emulador, que leva vários segundos para carregar e implantar o código. É assim que o aplicativo aparece no Emulador do Visual Studio para Android.  
   
-     ![Aplicativo em execução no Emulador do Android](../cross-platform/media/cppmdd_opengles_andemulator.png "CPPMDD_OpenGLES_AndEmulator")  
+     ![Aplicativo em execução no Emulador do Android](~/docs/cross-platform/media/cppmdd_opengles_andemulator.png "CPPMDD_OpenGLES_AndEmulator")  
   
      Quando o aplicativo tiver sido iniciado, você poderá definir pontos de interrupção e usar o depurador para executar o código em etapas, examinar os locais e inspecionar os valores.  
   
@@ -150,7 +150,7 @@ Ao instalar a opção Visual C++ para Desenvolvimento Móvel Multiplataforma, vo
   
      Quando seu aplicativo tiver sido iniciado, você poderá definir pontos de interrupção e usar o depurador do Visual Studio para examinar locais, consultar a pilha de chamadas e inspecionar os valores.  
   
-     ![Depurador no ponto de interrupção no aplicativo iOS](../cross-platform/media/cppmdd_opengles_iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
+     ![Depurador no ponto de interrupção no aplicativo iOS](~/docs/cross-platform/media/cppmdd_opengles_iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
   
 5.  Pressione Shift + F5 para parar a depuração.  
   

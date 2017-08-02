@@ -115,7 +115,7 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
   
      Esse código XAML cria um layout reutilizável com espaços reservados para campos de número, título e campos de descrição. Em tempo de execução, os espaços reservados podem ser substituídos por texto, conforme mostrado na ilustração a seguir.  
   
-     ![O controle de usuário QuickStartTask](../designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
+     ![O controle de usuário QuickStartTask](~/docs/designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
   
 6.  No **Gerenciador de Soluções**, expanda o nó **QuickStartTask.xaml** e abra o arquivo **QuickStartTask.xaml.cs** ou **QuickStartTask.xaml.vb**.  
   
@@ -302,7 +302,7 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
   
      Neste ponto, seu design deve ser semelhante à ilustração a seguir.  
   
-     ![MainWindow no designer](../designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
+     ![MainWindow no designer](~/docs/designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
   
     > [!NOTE]
     >  Ao seguir os próximos procedimentos, você poderá ver erros na **Lista de Erros** se ela estiver aberta. Não se preocupe, esses erros desaparecerão depois que você concluir os procedimentos restantes.  
@@ -572,7 +572,7 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
   
      Observe que as duas entradas são adicionadas á lista **Consultar e Atualizar Dados**, conforme mostrado na ilustração a seguir.  
   
-     ![Os itens Todo são adicionados à lista. ] (../designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
+     ![Os itens Todo são adicionados à lista. ] (~/docs/designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
   
 4.  Marque a caixa de seleção para a entrada **Fazer algo mais** na lista.  
   

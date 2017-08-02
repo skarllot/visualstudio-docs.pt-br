@@ -45,7 +45,7 @@ Abaixo está um trecho do MSDN que explica quais "ngen":
 
 "NGen" um assembly, VSIX deve ser instalado "por instância por máquina". Isso pode ser habilitado, marcando a caixa de seleção "todos os usuários" no designer de vsixmanifest:
 
-![Verifique todos os usuários](media/check-all-users.png)
+![Verifique todos os usuários](~/docs/extensibility/media/check-all-users.png)
 
 ## <a name="how-to-enable-ngen"></a>Como habilitar o Ngen
 
@@ -60,7 +60,7 @@ Há 4 propriedades que podem ser definidas:
 
 Aqui está uma olhada a **propriedades** janela em ação:
 
-![NGen em Propriedades](media/ngen-in-properties.png)
+![NGen em Propriedades](~/docs/extensibility/media/ngen-in-properties.png)
 
 Isso irá adicionar metadados a referência do projeto dentro do arquivo do projeto VSIX. csproj:
 

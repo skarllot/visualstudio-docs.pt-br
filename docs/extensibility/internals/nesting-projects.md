@@ -47,7 +47,7 @@ Os desenvolvedores de aplicativos corporativos que usam o pacote do VS convenien
  Você pode encontrar um exemplo de projetos aninhados no exemplo do c# Example.Nested projeto.  
   
 ## <a name="nested-projects-example"></a>Exemplo de projetos aninhados  
- ![Solução de projetos aninhados](../../extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects")  
+ ![Solução de projetos aninhados](~/docs/extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects")  
 Exemplo de projetos aninhados  
   
 ## <a name="see-also"></a>Consulte também  

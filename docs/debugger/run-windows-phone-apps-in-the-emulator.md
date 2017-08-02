@@ -189,7 +189,7 @@ O emulador do Windows Phone fornece um ambiente virtualizado no qual você pode 
 ##  <a name="BKMK_tasks_shot"></a> Capturar capturas de tela no emulador  
  Você pode criar capturas de tela de seus aplicativos do Windows Phone usando a ferramenta de captura de tela a partir da janela Ferramentas adicionais. A ferramenta cria arquivos PNG que correspondem à resolução do emulador em execução.  
   
- ![Screenshots from the Windows Phone Emulator](../debugger/media/wp_emulator_screenshots.png "WP\_Emulator\_screenshots")  
+ ![Screenshots from the Windows Phone Emulator](~/docs/debugger/media/wp_emulator_screenshots.png "WP\_Emulator\_screenshots")  
   
 #### Para criar uma captura de tela do aplicativo usando a ferramenta de captura de tela interna do emulador  
   

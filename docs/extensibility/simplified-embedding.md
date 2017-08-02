@@ -37,7 +37,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="simplified-embedding"></a>Simplificado incorporação
 Inserindo simplificada é habilitado em um editor quando seu objeto de exibição de documento é pai (ou seja, feitas filho) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]e o <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>interface é implementada para lidar com seus comandos de janela.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> Editores de incorporação simplificados não podem hospedar controles ativos. Os objetos usados para criar um editor com incorporação simplificado são mostrados na ilustração a seguir.  
   
- ![Gráfico do Editor de inserção simplificado](../extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
+ ![Gráfico do Editor de inserção simplificado](~/docs/extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
 Editor de inserção simplificada  
   
 > [!NOTE]

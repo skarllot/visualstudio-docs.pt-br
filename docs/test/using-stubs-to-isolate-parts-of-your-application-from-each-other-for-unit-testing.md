@@ -42,7 +42,7 @@ Os *tipos de stub* são uma das duas tecnologias que o Microsoft Fakes framework
   
  No diagrama, o componente StockAnalyzer é aquele que desejamos testar. Ele geralmente usa outro componente, RealStockFeed. Mas RealStockFeed retorna resultados diferentes sempre que seus métodos são chamados, dificultando o teste do StockAnalyzer.  Durante o teste, nós o substituímos por uma classe diferente, StubStockFeed.  
   
- ![As classes de stub e real em conformidade com uma interface. ] (../test/media/fakesinterfaces.png "FakesInterfaces")  
+ ![As classes de stub e real em conformidade com uma interface. ] (~/docs/test/media/fakesinterfaces.png "FakesInterfaces")  
   
  Como os stubs dependem de sua capacidade de estruturar seu código dessa forma, normalmente você usará stubs para isolar uma parte do aplicativo de outra. Para isolá-lo de outros assemblies que não estão sob seu controle, como System.dll, você normalmente usaria shims. Confira o artigo [Uso de shims para isolar o seu aplicativo de outros assemblies para o teste de unidade](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).  
   

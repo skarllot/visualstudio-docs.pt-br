@@ -61,7 +61,7 @@ Em seguida, adicione um comentário ao seu código. Um comentário é uma observ
   
      As instruções fazem com que seus programas funcionem. No Visual C#, uma instrução sempre termina em um ponto-e-vírgula. No Visual Basic, o final de uma linha é o fim de uma declaração. (Nenhuma vírgula é necessária no Visual Basic.) A instrução anterior diz ao controle `PictureBox` para carregar o arquivo que o usuário selecionou com o componente **OpenFileDialog**.  
   
- ![link para vídeo](../data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 5](http://go.microsoft.com/fwlink/?LinkId=205216) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 5](http://go.microsoft.com/fwlink/?LinkId=205206). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
+ ![link para vídeo](~/docs/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 5](http://go.microsoft.com/fwlink/?LinkId=205216) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 5](http://go.microsoft.com/fwlink/?LinkId=205206). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
   
 ### <a name="to-add-comments"></a>Para adicionar comentários  
   
@@ -81,14 +81,14 @@ Em seguida, adicione um comentário ao seu código. Um comentário é uma observ
   
 2.  Antes de executar o programa, salve seu programa clicando no botão **Salvar Todos** na barra de ferramentas, que aparece da seguinte forma.  
   
-     ![Botão de barra de ferramentas Salvar Todos](../ide/media/express_iconsaveall.png "Express_IconSaveAll")  
+     ![Botão de barra de ferramentas Salvar Todos](~/docs/ide/media/express_iconsaveall.png "Express_IconSaveAll")  
 Botão Salvar todos  
   
      Como alternativa para salvar seu programa, na barra de menus, escolha **Arquivo**, **Salvar todos**. É uma prática recomendada salvar no início e com frequência.  
   
      Quando estiver em execução, seu programa deve estar como a imagem a seguir.  
   
-     ![Visualizador de imagem](../ide/media/express_pictureviewerdonerun.png "Express_PictureViewerDoneRun")  
+     ![Visualizador de imagem](~/docs/ide/media/express_pictureviewerdonerun.png "Express_PictureViewerDoneRun")  
 Visualizador de imagem  
   
 ### <a name="to-test-your-program"></a>Para testar o programa  

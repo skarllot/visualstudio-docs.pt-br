@@ -79,7 +79,7 @@ Este documento descreve como trabalhar com o Designer de Sombreador [!INCLUDE[vs
   
  Aqui está a barra de ferramentas **Modo de Designer de Sombreador**:  
   
- ![Barra de ferramentas de Modo do Designer de Sombreador](../designers/media/digit-dsd-modal-toolbar.png "Barra de ferramentas de modo DSD de dígito")  
+ ![Barra de ferramentas de Modo do Designer de Sombreador](~/docs/designers/media/digit-dsd-modal-toolbar.png "Barra de ferramentas de modo DSD de dígito")  
   
  Esta tabela descreve os itens na barra de ferramentas **Modo do Designer de Sombreador**, que são listados na ordem em que aparecem, da esquerda para a direita:  
   

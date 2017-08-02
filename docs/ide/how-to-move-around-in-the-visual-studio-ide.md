@@ -74,7 +74,7 @@ O IDE (ambiente de desenvolvimento integrado) foi projetado para que você possa
   
  O **Navegador de IDE** funciona de modo muito semelhante ao gerenciador de aplicativos do Windows. Ele não está disponível nos menus e pode ser acessado somente usando teclas de atalho. Você pode usar qualquer um dos dois comandos para acessar o **Navegador de IDE** (mostrado abaixo) para percorrer os arquivos, dependendo da ordem na qual deseja percorrê-los.  
   
- ![Navegador de IDE do Visual Studio](../ide/media/vs2015_ide_navigator.png "VS2015_IDE_Navigator")  
+ ![Navegador de IDE do Visual Studio](~/docs/ide/media/vs2015_ide_navigator.png "VS2015_IDE_Navigator")  
   
  O `Window.PreviousDocumentWindowNav` permite ir para o arquivo acessado mais recentemente e `Window.NextDocumentWindowNav` permite mover-se na ordem inversa. Configurações Gerais de Desenvolvimento atribuem CTRL + SHIFT + TAB a `Window.PreviousDocumentWindowNav` e CTRL + TAB a `Window.NextDocumentWindowNav`.  
   

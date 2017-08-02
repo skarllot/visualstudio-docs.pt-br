@@ -56,7 +56,7 @@ Você pode definir pontos de interrupção quando você deseja interromper a exe
 ##  <a name="BKMK_Overview"></a> Definindo um ponto de interrupção no código\-fonte  
  Você pode definir um ponto de interrupção no código\-fonte clicando na margem esquerda de um arquivo de código fonte ou colocando o cursor em uma linha de código e pressionando F9. O ponto de interrupção aparece como um ponto vermelho na margem esquerda e a linha de código é colorida assim:  
   
- ![Set a breakpoint](../debugger/media/basicbreakpoint.png "BasicBreakpoint")  
+ ![Set a breakpoint](~/docs/debugger/media/basicbreakpoint.png "BasicBreakpoint")  
   
  Quando você executa este código no depurador, a execução pára sempre que o ponto de interrupção é atingido antes que o código nessa linha é executado. A linha de código\-fonte é colorida amarela:  
   
@@ -134,7 +134,7 @@ Você pode definir pontos de interrupção quando você deseja interromper a exe
 ##  <a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a> Gerenciando pontos de interrupção  
  Você pode usar o **pontos de interrupção** janela \(**Debug \/ Windows \/ pontos de interrupção**, ou **CTRL \+ ALT \+ B**\) para ver todos os pontos de interrupção que você tenha definido em sua solução:  
   
- ![Breakpoints window](../debugger/media/breakpointswindow.png "BreakpointsWindow")  
+ ![Breakpoints window](~/docs/debugger/media/breakpointswindow.png "BreakpointsWindow")  
   
  O **pontos de interrupção** janela fornece um local central para gerenciar todos os seus pontos de interrupção, que pode ser especialmente útil em uma solução grande ou um cenário complexo de depuração em que os pontos de interrupção são essenciais. Se você precisar salvar ou compartilhar o estado e o local de um conjunto de pontos de interrupção, você pode exportar e importar pontos de interrupção somente a partir de **pontos de interrupção** janela.  
   

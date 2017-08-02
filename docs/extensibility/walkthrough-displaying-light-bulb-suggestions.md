@@ -45,11 +45,11 @@ As lâmpadas são ícones usados no editor do Visual Studio que expanda para exi
   
  Uma lâmpada é semelhante ao seguinte. Em um projeto Visual Basic ou Visual c#, um rabisco vermelho aparece em um nome de variável quando ela é inválida. Quando você passa o mouse sobre o identificador inválido, uma lâmpada é exibida próximo ao cursor.  
   
- ![lâmpada](../extensibility/media/lightbulb.png "lâmpada")  
+ ![lâmpada](~/docs/extensibility/media/lightbulb.png "lâmpada")  
   
  Se você clicar na seta para baixo, a lâmpada, é exibido um conjunto de ações sugeridas, junto com uma visualização da ação selecionada. Nesse caso, ele mostra as alterações que serão feitas no seu código se você executar a ação.  
   
- ![visualização de lâmpada](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
+ ![visualização de lâmpada](~/docs/extensibility/media/lightbulbpreview.png "LightBulbPreview")  
   
  Você pode usar as lâmpadas para fornecer suas próprias ações sugeridas. Por exemplo, você pode fornecer ações para mover as chaves para uma nova linha de abertura ou movê-los para o final da linha anterior. A instrução a seguir mostra como criar uma lâmpada aparece na palavra atual e tem duas ações sugeridas: **converter em maiusculas** e **converter em letras minúsculas**.  
   
@@ -371,12 +371,12 @@ As lâmpadas são ícones usados no editor do Visual Studio que expanda para exi
   
 3.  Crie um arquivo de texto e digite algum texto. Você deve ver uma lâmpada à esquerda do texto.  
   
-     ![testar a lâmpada](../extensibility/media/testlightbulb.png "TestLIghtBulb")  
+     ![testar a lâmpada](~/docs/extensibility/media/testlightbulb.png "TestLIghtBulb")  
   
 4.  Aponte para a lâmpada. Você deve ver uma seta para baixo.  
   
 5.  Quando você clica na lâmpada, duas ações sugeridas devem ser exibidas, juntamente com a visualização da ação selecionada.  
   
-     ![testar a lâmpada, expandida](../extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
+     ![testar a lâmpada, expandida](~/docs/extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
   
 6.  Se você clicar na primeira ação, todo o texto na palavra atual deve ser convertido em letras maiusculas. Se você clicar na segunda ação, todo o texto deve ser convertido em letras minúsculas.

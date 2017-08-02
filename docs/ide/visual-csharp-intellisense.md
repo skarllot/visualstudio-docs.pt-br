@@ -108,11 +108,11 @@ O Visual C# IntelliSense fica disponível durante a codificação no editor e du
   
  Para iniciar a operação Adicionar usando, posicione o cursor em uma referência de tipo que não pode ser resolvida. Por exemplo, ao criar um aplicativo de console e, em seguida, adicionar `XmlTextReader` ao corpo do método `Main`, uma marcação inteligente será exibida abaixo do caractere mais à direita de `XmlTextReader`, pois ele aparece como uma referência de tipo que não pode ser resolvida.  
   
- ![Adicionar usando a imagem de marcação inteligente](../ide/media/addusesmart.gif "AddUseSmart")  
+ ![Adicionar usando a imagem de marcação inteligente](~/docs/ide/media/addusesmart.gif "AddUseSmart")  
   
  Em seguida, é possível invocar a operação Adicionar usando selecionando-a no submenu **Resolver** do menu **IntelliSense** ou do menu de contexto, ou invocando Adicionar usando por meio da marcação inteligente. A marcação inteligente fica visível apenas quando o cursor está posicionado no tipo não associado ou adjacente a ele.  
   
- ![Adicionar usando, imagem expandida da marcação inteligente](../ide/media/addusesmartexp.gif "AddUseSmartExp")  
+ ![Adicionar usando, imagem expandida da marcação inteligente](~/docs/ide/media/addusesmartexp.gif "AddUseSmartExp")  
   
 ### <a name="organize-usings"></a>Organizar usos  
  As opções **Organizar Usos** classificam e removem as declarações `using` e `extern` sem alterar o comportamento do código-fonte. Ao longo do tempo, os arquivos de origem poderão ficar sobrecarregados e ser difíceis de serem lidos devido a diretivas `using` desnecessárias e desorganizadas. As opções **Organizar Usos** compactam o código-fonte removendo diretivas `using` não utilizadas e melhoram a legibilidade com sua classificação.  
@@ -161,11 +161,11 @@ O Visual C# IntelliSense fica disponível durante a codificação no editor e du
   
  Ao digitar o operador `+=` após um campo de evento em um arquivo .cs, o IntelliSense mostra a opção de pressionar a tecla TAB. Isso insere uma nova instância de um delegado que aponta para o método que manipula o evento.  
   
- ![Botão Vínculo Automático](../ide/media/vxautohookup.gif "vxAutoHookUp")  
+ ![Botão Vínculo Automático](~/docs/ide/media/vxautohookup.gif "vxAutoHookUp")  
   
  Se você pressionar TAB, o IntelliSense concluirá a instrução para você automaticamente e exibirá a referência de manipulador de eventos como um texto selecionado no Editor de Código. Para concluir o vínculo automático de evento, o IntelliSense solicita que você pressione a tecla TAB novamente para criar um stub vazio para o manipulador de eventos.  
   
- ![Gerar manipulador de eventos](../ide/media/vxgenerateeventhandler.gif "vxGenerateEventHandler")  
+ ![Gerar manipulador de eventos](~/docs/ide/media/vxgenerateeventhandler.gif "vxGenerateEventHandler")  
   
 > [!NOTE]
 >  Se um novo delegado criado pelo IntelliSense referenciar um manipulador de eventos existente, o IntelliSense comunicará essas informações na dica de ferramenta. Depois, é possível modificar essa referência; o texto já está selecionado no Editor de Código. Caso contrário, o vínculo automático de evento será concluído nesse ponto.  

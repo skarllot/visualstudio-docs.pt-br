@@ -100,27 +100,27 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
      Usando a janela **Pilhas Paralelas** , você pode exibir várias pilhas de chamadas ao mesmo tempo em uma exibição.  A ilustração a seguir mostra a janela **Pilhas Paralelas** acima da janela **Pilha de Chamadas**.  
   
-     ![Janela pilhas paralelas na exibição de Threads](../debugger/media/pdb_walkthrough_1.png "PDB\_Walkthrough\_1")  
+     ![Janela pilhas paralelas na exibição de Threads](~/docs/debugger/media/pdb_walkthrough_1.png "PDB\_Walkthrough\_1")  
   
      A pilha de chamadas do thread principal é exibida em uma caixa e as pilhas de chamadas dos outros quatro threads são agrupadas em outra caixa.  Quatro threads são agrupados porque os quadros de pilhas compartilham os mesmos contextos do método; isto é, estão nos mesmos métodos: `A`, `B`, e `C`.  Para exibir as IDs de thread e os nomes dos threads que compartilham a mesma caixa, passe o mouse sobre o cabeçalho \(**4 Threads**\).  O thread atual é exibido em negrito, como mostra a ilustração a seguir.  
   
-     ![Dica de ferramenta com nomes e identificações de segmento](../debugger/media/pdb_walkthrough_1a.png "PDB\_Walkthrough\_1A")  
+     ![Dica de ferramenta com nomes e identificações de segmento](~/docs/debugger/media/pdb_walkthrough_1a.png "PDB\_Walkthrough\_1A")  
   
      A seta amarela indica o quadro de pilhas do thread atual.  Para obter mais informações, passe o mouse sobre ela  
   
-     ![Dica de ferramenta no quadro de pilha ativa](../debugger/media/pdb_walkthrough_1b.png "PDB\_Walkthrough\_1B")  
+     ![Dica de ferramenta no quadro de pilha ativa](~/docs/debugger/media/pdb_walkthrough_1b.png "PDB\_Walkthrough\_1B")  
   
      Você pode definir o nível de detalhes que deseja mostrar dos registros de ativação \(**Nomes de Módulo**, **Tipos de Parâmetro**, **Nomes de Parâmetros**, **Valores de Parâmetro**, **Números de Linha** e **Deslocamentos de Byte**\) clicando com o botão direito do mouse na janela **Pilha de Chamadas**.  
   
      Um realce azul ao redor de uma caixa indica que o thread atual é parte dessa caixa.  O thread atual também é indicado pelo registro de ativação em negrito na dica de ferramenta.  Se você clicar duas vezes no thread principal na janela Threads, poderá observar que o realce azul na janela **Pilhas Paralelas** se move também.  
   
-     ![Pilhas de thread principal realçado em azul](../debugger/media/pdb_walkthrough_1c.png "PDB\_Walkthrough\_1C")  
+     ![Pilhas de thread principal realçado em azul](~/docs/debugger/media/pdb_walkthrough_1c.png "PDB\_Walkthrough\_1C")  
   
 #### Para retomar a execução até o segundo ponto de interrupção  
   
 1.  Para retomar a execução até atingir o segundo ponto de interrupção, no menu **Depurar**, clique em **Continuar**.  A ilustração a seguir mostra a árvore do thread no segundo ponto de interrupção.  
   
-     ![Janela pilhas paralelas com muitas ramificações](../debugger/media/pdb_walkthrough_2.png "PDB\_Walkthrough\_2")  
+     ![Janela pilhas paralelas com muitas ramificações](~/docs/debugger/media/pdb_walkthrough_2.png "PDB\_Walkthrough\_2")  
   
      No primeiro ponto de interrupção, quatro threads foram de S.A para S.B até o método S.C.  Essas informações ainda estão visíveis na janela **Pilhas Paralelas**, mas os quatro threads progrediram mais.  Um deles continuou até S.D e depois S.E.  Outro continuou até S.F, S.G e S.H.  Dois outros continuaram até S.I e S.J, e um deles foi até S.K e o outro continuou até o código externo de não usuário.  
   
@@ -132,17 +132,17 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
      Você pode alternar para outro thread ou para outro registro de outro thread, usando o menu de atalho na janela **Pilhas Paralelas**.  Por exemplo, clique com o botão direito do mouse em S.J, aponte para **Alternar para Quadro** e clique em um comando.  
   
-     ![Caminho de pilhas paralelas de execução](../debugger/media/pdb_walkthrough_2b.png "PDB\_Walkthrough\_2B")  
+     ![Caminho de pilhas paralelas de execução](~/docs/debugger/media/pdb_walkthrough_2b.png "PDB\_Walkthrough\_2B")  
   
      Clique com o botão direito do mouse em S.C e aponte para **Alternar para Quadro**.  Um dos comandos tem uma marca de seleção que indica o registro de ativação do thread atual.  Você pode alternar para esse registro do mesmo thread \(apenas a seta verde se moverá\) ou pode alternar para o outro thread \(o realce azul também se moverá\).  A ilustração a seguir mostra o submenu.  
   
-     ![Menu pilhas com 2 opções em C, embora J seja o atual](../debugger/media/pdb_walkthrough_3.png "PDB\_Walkthrough\_3")  
+     ![Menu pilhas com 2 opções em C, embora J seja o atual](~/docs/debugger/media/pdb_walkthrough_3.png "PDB\_Walkthrough\_3")  
   
      Quando um contexto de método é associado a apenas um registro de ativação, o cabeçalho da caixa exibe **1 Thread** e você pode alternar clicando duas vezes nele.  Se você clicar duas vezes em um contexto de método que tenha mais de 1 registro associado a ele, o menu será exibido automaticamente.  Enquanto você passa o mouse sobre os contextos de método, observe o triângulo preto no lado direito.  Um clique nesse triângulo também exibe o menu de atalho.  
   
      Para os aplicativos grandes que têm muitos threads, talvez seja conveniente se concentrar apenas em um subconjunto de threads.  A janela **Pilhas Paralelas** pode exibir pilhas de chamadas apenas para threads sinalizados.  Na barra de ferramentas, clique no botão **Mostrar Somente Sinalizados** ao lado da caixa de listagem.  
   
-     ![Janela pilhas vazias e dica de ferramenta](../debugger/media/pdb_walkthrough_3a.png "PDB\_Walkthrough\_3A")  
+     ![Janela pilhas vazias e dica de ferramenta](~/docs/debugger/media/pdb_walkthrough_3a.png "PDB\_Walkthrough\_3A")  
   
      Em seguida, na janela **Threads**, sinalize threads individualmente para ver como as respectivas pilhas de chamadas aparecem na janela **Pilhas Paralelas**.  Para sinalizar threads, use o menu de atalho ou a primeira célula de um thread.  Clique no botão de barra de ferramentas **Mostrar Somente Sinalizados** novamente para mostrar todos os threads.  
   
@@ -152,11 +152,11 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
      Quando vários threads estão no mesmo método, mas o método não estava no início da pilha de chamadas, ele é exibido em caixas diferentes.  Um exemplo no ponto de interrupção atual é S.L, que tem três threads e aparece em três caixas.  Clique duas vezes em S.L.  
   
-     ![Caminho de execução de pilhas paralelas](../debugger/media/pdb_walkthrough_3b.png "PDB\_Walkthrough\_3B")  
+     ![Caminho de execução de pilhas paralelas](~/docs/debugger/media/pdb_walkthrough_3b.png "PDB\_Walkthrough\_3B")  
   
      Observe que S.L está em negrito nas outras duas caixas para que você possa ver onde mais ele aparece.  Para saber quais registros chamam S.L e quais registros ele chama, clique no botão **Ativar\/Desativar Modo de Exibição do Método** na barra de ferramentas.  A ilustração a seguir mostra o modo de exibição do método da janela **Pilhas Paralelas** .  
   
-     ![Janela pilhas na exibição de método](../debugger/media/pdw_walkthrough_4.png "PDW\_Walkthrough\_4")  
+     ![Janela pilhas na exibição de método](~/docs/debugger/media/pdw_walkthrough_4.png "PDW\_Walkthrough\_4")  
   
      Observe como o diagrama girou no método selecionado e o posicionou em sua própria caixa no meio da exibição.  Os receptores e os chamadores aparecem nas partes superior e inferior.  Clique no botão **Ativar\/Desativar Modo de Exibição do Método** novamente para sair desse modo.  
   
@@ -172,7 +172,7 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
      Quando houver diagramas grandes e você for para o próximo ponto de interrupção, talvez seja conveniente que o modo de exibição role até o registro de ativação ativo do thread atual; isto é, o thread que atingiu o ponto de interrupção primeiro.  Na janela **Pilhas Paralelas**, verifique se o botão **Autorrolagem para Quadro de Pilha Atual** na barra de ferramentas está ativo.  
   
-     ![Autorrolagem na janela pilhas paralelas](../debugger/media/pdb_walkthrough_4a.png "PDB\_Walkthrough\_4A")  
+     ![Autorrolagem na janela pilhas paralelas](~/docs/debugger/media/pdb_walkthrough_4a.png "PDB\_Walkthrough\_4A")  
   
 2.  Antes de continuar, na janela **Pilhas Paralelas**, role até a extrema esquerda e até o fim.  
   
@@ -184,7 +184,7 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
      O **Modo de Exibição Vista de Pássaro** também é útil com diagramas grandes na janela **Pilhas Paralelas**.  Você pode ver o **Modo de Exibição de Vista de Pássaro** clicando no botão entre as barras de rolagem no canto inferior direito da janela, como mostra a ilustração a seguir.  
   
-     ![Janela pilhas paralelas com exibição de vista aérea](../debugger/media/pdb_walkthrough_5.png "PDB\_Walkthrough\_5")  
+     ![Janela pilhas paralelas com exibição de vista aérea](~/docs/debugger/media/pdb_walkthrough_5.png "PDB\_Walkthrough\_5")  
   
      Você pode mover o retângulo para ver uma rápida panorâmica do diagrama.  
   
@@ -192,7 +192,7 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
      Para ampliar ou reduzir o diagrama, mantenha pressionada a tecla CTRL enquanto move a roda do mouse.  Como alternativa, clique no botão Aplicar Zoom na barra de ferramentas e use a ferramenta Zoom.  
   
-     ![Pilhas lado a lado Zoom in e check&#45;out](../debugger/media/pdb_walkthrough_5a.png "PDB\_Walkthrough\_5A")  
+     ![Pilhas lado a lado Zoom in e check&#45;out](~/docs/debugger/media/pdb_walkthrough_5a.png "PDB\_Walkthrough\_5A")  
   
      Você também pode exibir as pilhas na direção de cima para baixo em vez de baixo para cima, clicando no menu **Ferramentas** e em **Opções** e selecionando ou desmarcando a opção no nó **Depuração**.  
   
@@ -213,7 +213,7 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
 5.  No menu **Depurar**, aponte para **Windows** e clique em **Tarefas Paralelas**.  A ilustração a seguir mostra a janela **Tarefas Paralelas**.  
   
-     ![Janela tarefas paralelas com 4 tarefas em execução](../debugger/media/pdw_walkthrough_6.png "PDW\_Walkthrough\_6")  
+     ![Janela tarefas paralelas com 4 tarefas em execução](~/docs/debugger/media/pdw_walkthrough_6.png "PDW\_Walkthrough\_6")  
   
      Para cada tarefa em execução, você pode ler a ID, que é retornada pela propriedade do mesmo nome, a ID e o nome do thread que a executa, seu local \(passar o mouse sobre ele exibe uma dica de ferramenta que tem a pilha de chamadas inteira\).  Além disso, na coluna **Tarefa**, você pode ver o método que foi passado na tarefa; em outras palavras, o ponto de partida.  
   
@@ -229,11 +229,11 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
      Anteriormente, a coluna **Status** mostrava todas as tarefas como Em Execução, mas agora duas tarefas estão Aguardando.  As tarefas podem ser bloqueadas por diversos motivos diferentes.  Na coluna **Status**, passe o mouse sobre uma tarefa em espera para saber porque ela está bloqueada.  Por exemplo, na ilustração, a tarefa 3 está aguardando a tarefa 4.  
   
-     ![Janela tarefas paralelas com 2 tarefas em espera](../debugger/media/pdb_walkthrough_7.png "PDB\_Walkthrough\_7")  
+     ![Janela tarefas paralelas com 2 tarefas em espera](~/docs/debugger/media/pdb_walkthrough_7.png "PDB\_Walkthrough\_7")  
   
      A tarefa 4, por sua vez, está aguardando um monitor de propriedade do thread atribuído à tarefa 2.  
   
-     ![Janela tarefas com tarefa em espera e dica de ferramenta](../debugger/media/pdb_walkthrough_7a.png "PDB\_Walkthrough\_7A")  
+     ![Janela tarefas com tarefa em espera e dica de ferramenta](~/docs/debugger/media/pdb_walkthrough_7a.png "PDB\_Walkthrough\_7A")  
   
      Você pode sinalizar uma tarefa clicando no sinalizador na primeira coluna da janela **Tarefas Paralelas**.  
   
@@ -241,13 +241,13 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
      Quando você usou a janela **Pilhas Paralelas** antes, exibiu os threads do aplicativo.  Exiba a janela **Pilhas Paralelas** novamente, mas desta vez, exiba as tarefas do aplicativo.  Para fazer isso, selecione **Tarefas** na caixa na parte superior esquerda.  A ilustração a seguir mostra o Modo de Exibição de Tarefas.  
   
-     ![Janela tarefas paralelas na exibição de tarefas](../debugger/media/pdb_walkthrough_8.png "PDB\_Walkthrough\_8")  
+     ![Janela tarefas paralelas na exibição de tarefas](~/docs/debugger/media/pdb_walkthrough_8.png "PDB\_Walkthrough\_8")  
   
      Os threads que não estão executando tarefas no momento não são mostrados no Modo de Exibição de Tarefas da janela **Pilhas Paralelas**.  Além disso, para os threads que executam tarefas, alguns registros de ativação que não são relevantes para tarefas são filtrados das partes superior e inferior da pilha.  
   
      Exiba a janela **Tarefas Paralelas** novamente.  Clique com o botão direito do mouse em qualquer cabeçalho de coluna para ver um menu de atalho da coluna.  
   
-     ![Menu de columnheader tarefas paralelas](../debugger/media/pdb_walkthrough_8a.png "PDB\_Walkthrough\_8A")  
+     ![Menu de columnheader tarefas paralelas](~/docs/debugger/media/pdb_walkthrough_8a.png "PDB\_Walkthrough\_8A")  
   
      Você pode usar o menu de atalho para adicionar ou remover colunas.  Por exemplo, a coluna Appdomain não está selecionada; consequentemente, não é exibida na lista.  Clique em **Pai**.  A coluna **Pai** aparece sem valores para todas as quatro tarefas.  
   
@@ -259,15 +259,15 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
      Para visualizar melhor a relação pai\-filho, clique com o botão direito do mouse no cabeçalho da coluna **Pai** e clique em **Modo de Exibição Pai\-Filho**.  Você verá a ilustração a seguir.  
   
-     ![Modo de exibição de tarefas paralelo na exibição pai&#45;filho](../debugger/media/pdb_walkthrough_9.png "PDB\_Walkthrough\_9")  
+     ![Modo de exibição de tarefas paralelo na exibição pai&#45;filho](~/docs/debugger/media/pdb_walkthrough_9.png "PDB\_Walkthrough\_9")  
   
      Observe que as tarefas 4 e 5 estão em execução no mesmo thread.  Essas informações não são exibidas na janela **Threads**; sua exibição é outro benefício da janela **Tarefas Paralelas**.  Para confirmar isso, exiba a janela **Pilhas Paralelas**.  Verifique se você está exibindo **Tarefas**.  Localize as tarefas 4 e 5 clicando duas vezes nelas na janela **Tarefas Paralelas**.  Quando fizer isso, o realce azul na janela **Pilhas Paralelas** será atualizado.  Você também pode localizar as tarefas 4 e 5 revisando as dicas de ferramenta na janela **Pilhas Paralelas**.  
   
-     ![Janela pilhas paralelas na exibição de tarefas](../debugger/media/pdb_walkthrough_9a.png "PDB\_Walkthrough\_9A")  
+     ![Janela pilhas paralelas na exibição de tarefas](~/docs/debugger/media/pdb_walkthrough_9a.png "PDB\_Walkthrough\_9A")  
   
      Na janela **Pilhas Paralelas**, clique com o botão direito do mouse em S.P e clique em **Ir para Thread**.  A janela alterna para o Modo de Exibição de Threads e o registro correspondente está na exibição.  Você pode ver as duas tarefas no mesmo thread.  
   
-     ![Exibição de threads com thread realçado](../debugger/media/pdb_walkthrough_9b.png "PDB\_Walkthrough\_9B")  
+     ![Exibição de threads com thread realçado](~/docs/debugger/media/pdb_walkthrough_9b.png "PDB\_Walkthrough\_9B")  
   
      Esse é outro benefício do Modo de Exibição de Tarefas na janela **Pilhas Paralelas**, comparado com a janela **Threads**.  
   
@@ -275,7 +275,7 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
 1.  Para retomar a execução até atingir o terceiro ponto de interrupção, no menu **Depurar**, clique em **Continuar**.  Clique no cabeçalho de coluna **ID** para classificar por ID.  Você verá a ilustração a seguir.  
   
-     ![Janela pilhas paralelas com tarefas em 4 Estados](../debugger/media/pdb_walkthrough_10.png "PDB\_Walkthrough\_10")  
+     ![Janela pilhas paralelas com tarefas em 4 Estados](~/docs/debugger/media/pdb_walkthrough_10.png "PDB\_Walkthrough\_10")  
   
      Como a tarefa 5 foi concluída, ele não é mais exibida.  Se esse não for o caso no seu computador e o deadlock não for mostrado, volte uma etapa pressionando F11.  
   
@@ -283,19 +283,19 @@ Este passo a passo descreve como usar as janelas **Tarefas Paralelas** e **Pilha
   
      Exiba a janela **Pilhas Paralelas** novamente.  O cabeçalho de cada caixa tem uma dica de ferramenta que mostra as IDs e os nomes de thread.  Alterne para o Modo de Exibição de Tarefas na janela **Pilhas Paralelas**.  Passe o mouse sobre um cabeçalho para ver o nome, a ID e o status da tarefa, como mostra a ilustração a seguir.  
   
-     ![Janela pilhas paralelas com dica de ferramenta do cabeçalho](../debugger/media/pdb_walkthrough_11.png "PDB\_Walkthrough\_11")  
+     ![Janela pilhas paralelas com dica de ferramenta do cabeçalho](~/docs/debugger/media/pdb_walkthrough_11.png "PDB\_Walkthrough\_11")  
   
      Você pode agrupar as tarefas por coluna.  Na janela **Tarefas Paralelas**, clique com o botão direito do mouse no cabeçalho da coluna **Status** e clique em **Agrupar por Status**.  A ilustração a seguir mostra a janela **Tarefas Paralelas** agrupada por status.  
   
-     ![Janela tarefas paralelas com tarefas agrupadas](../debugger/media/pdb_walkthrough_12.png "PDB\_Walkthrough\_12")  
+     ![Janela tarefas paralelas com tarefas agrupadas](~/docs/debugger/media/pdb_walkthrough_12.png "PDB\_Walkthrough\_12")  
   
      Também é possível agrupar por qualquer outra coluna.  Agrupando tarefas, você pode se concentrar em um subconjunto de tarefas.  Cada grupo recolhível tem uma contagem de itens que são agrupados.  Você também pode sinalizar rapidamente todos os itens no grupo clicando no botão **Sinalizar** à direita do botão **Recolher**.  
   
-     ![Janela tarefas paralelas agrupada](../debugger/media/pdb_walkthrough_12a.png "PDB\_Walkthrough\_12A")  
+     ![Janela tarefas paralelas agrupada](~/docs/debugger/media/pdb_walkthrough_12a.png "PDB\_Walkthrough\_12A")  
   
      O último recurso da janela **Tarefas Paralelas** que deve ser examinado é o menu de atalho exibido quando você clica com o botão direito do mouse em uma tarefa.  
   
-     ![Contextmenu de janela tarefas paralela expandido](../debugger/media/pdb_walkthrough_12b.png "PDB\_Walkthrough\_12B")  
+     ![Contextmenu de janela tarefas paralela expandido](~/docs/debugger/media/pdb_walkthrough_12b.png "PDB\_Walkthrough\_12B")  
   
      O menu de atalho exibe comandos diferentes, dependendo do status da tarefa.  Os comandos podem incluir **Copiar**, **Selecionar Tudo**, **Exibição Hexadecimal**, **Alternar para Tarefas**, **Congelar Thread Atribuído**, **Congelar Todos os Threads Exceto Este**, **Descongelar Thread Atribuído** e **Sinalizar**.  
   

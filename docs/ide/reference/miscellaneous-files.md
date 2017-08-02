@@ -50,7 +50,7 @@ Talvez você queira usar os editores [!INCLUDE[vsprvs](../../code-quality/includ
   
  Abrir arquivos independentemente de um contêiner é útil para uma variedade de razões. Você pode ter um arquivo que deseja exibir enquanto desenvolve uma solução baseada em projeto, mas que não é parte integrante do desenvolvimento da solução. Exemplos comuns incluem instruções ou anotações de desenvolvimento, esquema de banco de dados e fragmentos de código. Além disso, você talvez queira criar um arquivo autônomo.  
   
- ![Projetos de soluções](../../ide/reference/media/projects_solutions_misc.gif "Projects_Solutions_Misc")  
+ ![Projetos de soluções](~/docs/ide/reference/media/projects_solutions_misc.gif "Projects_Solutions_Misc")  
   
  O Gerenciador de Soluções poderá exibir uma pasta Arquivos Diversos para os arquivos se as opções para a pasta estiverem habilitadas. As opções podem ser definidas em [Caixa de diálogo Documentos, Ambiente, Opções](../../ide/reference/documents-environment-options-dialog-box.md). Depois de fechar um arquivo diverso, ele não é associado a nenhuma solução ou projeto específico, a menos que uma opção seja habilitada para isso também.  
   

@@ -39,7 +39,7 @@ ms.lasthandoff: 04/10/2017
 
 O Visual Studio fornece uma janela interativa REPL (leitura-avaliação-impressão-loop) para cada um dos ambientes do Python, que é uma melhoria do REPL obtido com `python.exe` na linha de comando. A janela interativa (aberta com os comandos de menu **Exibir > Outras Janelas > &lt;ambiente&gt; Interativo**) permite inserir um código arbitrário do Python e ver resultados imediatos, o que ajuda você a aprender e experimentar com APIs e a desenvolver o código de trabalho de forma interativa a ser incluído em seus projetos.
 
-![Janela interativa do Python](media/interactive-window.png)
+![Janela interativa do Python](~/docs/python/media/interactive-window.png)
 
 O Visual Studio tem diversos modos REPL do Python à sua disposição:
 
@@ -62,15 +62,15 @@ Há várias maneiras para abrir a janela interativa de um ambiente.
 
 Primeiro, mude para a janela Ambientes do Python (**Exibir > Outras Janelas > Ambientes do Python** ou Ctrl-K, Ctrl-`) e selecione o comando ou botão **Abrir Janela Interativa** de um ambiente escolhido.
 
-![Link Janela Interativa na janela Ambientes do Python](media/interactive-window-opening.png)
+![Link Janela Interativa na janela Ambientes do Python](~/docs/python/media/interactive-window-opening.png)
 
 Em segundo lugar, **Exibir > Outras Janelas** contém comandos **Interativos** para cada um dos ambientes, geralmente, mostrados próximo à parte inferior do menu:
 
-![Itens de menu da Janela Interativa em Exibir > Outras Janelas](media/interactive-window-menu.png)
+![Itens de menu da Janela Interativa em Exibir > Outras Janelas](~/docs/python/media/interactive-window-menu.png)
 
 Em terceiro lugar, é possível abrir uma janela interativa no arquivo de inicialização do projeto ou para um arquivo independente, selecionando o comando de menu **Depurar > Executar [Projeto | Arquivo] em Python Interativo** (Shift+Alt+F5):
 
-![Executar Projeto no menu Python Interativo](media/interactive-execute-project.png)
+![Executar Projeto no menu Python Interativo](~/docs/python/media/interactive-execute-project.png)
 
 Por fim, é possível selecionar o código no arquivo e usar o comando [Enviar código para interativa](#send-code-to-interactive-command) descrito abaixo.
 
@@ -88,7 +88,7 @@ Observe que também há um conjunto separado de opções para a opção **Janela
 
 Depois de abrir a janela interativa, é possível começar a inserir o código linha por linha no prompt `>>>`. A janela interativa executa cada linha conforme ela é inserida, o que inclui a importação de módulos, definição de variáveis e assim por diante. É possível ver isso nas duas primeiras linhas mostradas no gráfico abaixo:
 
-![Janela interativa do Python](media/interactive-window.png)
+![Janela interativa do Python](~/docs/python/media/interactive-window.png)
 
 A exceção é quando uma instrução termina em dois-pontos, assim como ocorre com a instrução `for` acima, pois a janela interativa sabe que precisa de linhas de código adicionais antes de executar o bloco de código corretamente. Nesse caso, o prompt de linha muda para `...`, indicando que é necessário inserir linhas adicionais no bloco, conforme mostrado na quarta e quinta linhas do gráfico acima. Ao pressionar Enter em uma linha em branco, a janela interativa fecha o bloco e o executa no interpretador.
 
@@ -116,20 +116,20 @@ Os comandos também são extensíveis por meio do MEF (o Managed Extensibility F
 
 Por padrão, a janela interativa de um projeto tem como escopo o arquivo de inicialização do projeto, como se ele fosse executado no prompt de comando. Para um arquivo independente, ele tem como escopo esse arquivo. No entanto, a qualquer momento, o menu suspenso na parte superior da janela interativa permite alterar o escopo durante a sessão de REPL:
 
-![Escopos da janela interativa](media/interactive-scopes.png)
+![Escopos da janela interativa](~/docs/python/media/interactive-scopes.png)
 
 Ao importar um módulo, como digitar `import os`, você verá opções na lista suspensa para mudar para um escopo nesse módulo. Você também verá uma mensagem na janela interativa indicando o novo escopo; portanto, é possível acompanhar como você chegou a determinado estado durante a sessão.
 
 A inserção de `dir()` em um escopo exibe os identificadores válidos no escopo, incluindo nomes de função, classes e variáveis. Por exemplo, o uso de `$mod importlib` seguido por `dir()` mostra o seguinte:
 
-![Janela interativa no escopo de importlib](media/interactive-importlib-scope.png)
+![Janela interativa no escopo de importlib](~/docs/python/media/interactive-importlib-scope.png)
 
 <a name="sending-code-to-interactive"</a>
 ## <a name="send-code-to-interactive-command"></a>Comando Enviar código para interativa
 
 Além de trabalhar na janela interativa diretamente, é possível selecionar o código no editor, clicar com o botão direito do mouse e escolher **Enviar para interativa**:
 
-![Comando de menu Enviar para interativa](media/interactive-send-to.png)
+![Comando de menu Enviar para interativa](~/docs/python/media/interactive-send-to.png)
 
 Isso é útil para o desenvolvimento de código iterativo ou evolucionário, incluindo o teste do código durante o desenvolvimento. Por exemplo, depois de enviar um trecho de código para a janela interativa e ver sua saída, é possível pressionar a seta para cima para exibir o código novamente, modificá-lo e testá-lo rapidamente pressionando Ctrl+Enter. (Pressionar Enter no final da entrada o executa, mas pressionar Enter no meio da entrada insere uma nova linha.) Depois de obter o código desejado, é possível copiá-lo novamente com facilidade para o arquivo de projeto.
 

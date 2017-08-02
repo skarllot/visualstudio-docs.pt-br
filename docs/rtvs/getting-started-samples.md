@@ -52,11 +52,11 @@ Este exemplo fornece uma introdução detalhada ao R por meio de comentários ex
 
 - `1-Getting Started with R.R` aborda vários conceitos básicos do R incluindo o uso de pacotes, carregamento e análise de dados e criação de gráficos.
 
-    ![Exemplo de saída de 1-Getting Started with R.R (1 – Introdução ao R.R)](media/samples-getting-started-output.png)
+    ![Exemplo de saída de 1-Getting Started with R.R (1 – Introdução ao R.R)](~/docs/rtvs/media/samples-getting-started-output.png)
 
 - `2-Introduction to ggplot2.R` apresenta o pacote gráfico ggplot2 conhecido por seus gráficos atraentes e sua sintaxe simples. Este exemplo visualiza dados de terremoto de Fiji.
 
-    ![Exemplo de saída de 2-Introduction to ggplot2.R (2 – Introdução ao ggplot2.R)](media/samples-ggplot-output.png)
+    ![Exemplo de saída de 2-Introduction to ggplot2.R (2 – Introdução ao ggplot2.R)](~/docs/rtvs/media/samples-ggplot-output.png)
 
 
 ## <a name="microsoft-r-server-and-machine-learning"></a>Microsoft R Server and Machine Learning (Microsoft R Server e aprendizado de máquina)
@@ -67,7 +67,7 @@ Como todos os exemplos, uma ótima maneira de experimentá-los é abrir o arquiv
 
 - `Benchmarks` executa inúmeros parâmetros de comparação de computação intensiva para mostrar os ganhos de desempenho possíveis por meio do uso do Microsoft R Open e da Intel MKL (Math Kernel Library) para cálculos de álgebra linear rápidos e paralelos. Com os dados simulados, ele compara especificamente usando dois threads em relação a um para determinados cálculos relacionados à matriz.   
 
-    ![Gráfico de parâmetro de comparação de exemplo](media/samples-mro-benchmark-plot.png)
+    ![Gráfico de parâmetro de comparação de exemplo](~/docs/rtvs/media/samples-mro-benchmark-plot.png)
 
 - `Bike_Rental_Estimation_with_MRS` cria um modelo de previsão de demanda para locações de bicicletas com base em um conjunto de dados históricos, usando o Microsoft R Server. 
 
@@ -76,7 +76,7 @@ Como todos os exemplos, uma ótima maneira de experimentá-los é abrir o arquiv
     - `Import Data from URL to xdf.R` mostra como carregar um arquivo de dados identificado por URL no Microsoft R Server como um xdf. (Requer o MRS.)
     - `Using ggplot2.R` é uma extensão do exemplo `A First Look at R/2-Introduction to ggplot2.R`, fazendo um tour mais amplo da funcionalidade do ggplot2, incluindo a criação de gráficos 3D interativos.
 
-        ![Exemplo de saída usando o ggplot2.R](media/samples-3d-interactive.png)
+        ![Exemplo de saída usando o ggplot2.R](~/docs/rtvs/media/samples-3d-interactive.png)
 
 - `Datasets` contém três arquivos `.csv` usados por outros exemplos
 - `Flight_Delays_Prediction_with_R` e `Flight_Delays_Prediction_with_MRS` mostram como prever atrasos de voo usando R, aprendizado de máquina e desempenho e dados meteorológicos pontuais históricos. 
@@ -100,11 +100,11 @@ O [Microsoft R Open](http://aka.ms/rtvs-r-open), a distribuição do R da Micros
 
 A comparação a seguir mostra que o MRS e o MRO com MKL têm um desempenho de computação significativamente melhor em relação a um certo cálculo da matriz de R e MRO sem MKL. São usados dados simulados no cálculo:
 
-![Comparando o MRS e MRO com MKL ao R e ao MRO sem MKL](media/samples-speed-comparison.png)
+![Comparando o MRS e MRO com MKL ao R e ao MRO sem MKL](~/docs/rtvs/media/samples-speed-comparison.png)
 
 Para obter uma comparação técnica do R com o MRO e o MRS, confira [a discussão detalhada do Lixun Zhang](http://htmlpreview.github.io/?https://github.com/lixzhang/R-MRO-MRS/blob/master/Introduction_to_MRO_and_MRS.html) sobre o tópico.
 
 A figura a seguir compara o tempo decorrido em segundos usado na criação de modelos de regressão logística para prever se a chegada dos voos de passageiros agendados atrasará mais de 15 minutos. O tempo decorrido usado em CRAN R aumenta drasticamente ao aumentar um pequeno número de linhas, enquanto o MRS aumenta apenas cerca de duas vezes. Para obter detalhes sobre esse parâmetro de comparação, confira o exemplo `Benchmarks/rxGlm_benchmark.R`.
 
-![Parâmetro de comparação rxGlm](media/samples-rxGLM-benchmark.png)
+![Parâmetro de comparação rxGlm](~/docs/rtvs/media/samples-rxGLM-benchmark.png)
 

@@ -38,7 +38,7 @@ O **tarefas** janela é semelhante a **Threads** janela, exceto que mostra infor
   
  Você pode usar a janela **Tarefas** sempre que quebrar no depurador.  Você poderá acessá\-la clicando no menu **Depurar**, **Janelas** e **Tarefas**.  A ilustração a seguir mostra a janela **Tarefas** no modo padrão.  
   
- ![Janela tarefas paralelas](../debugger/media/parallel_tasks_window.png "Parallel\_Tasks\_Window")  
+ ![Janela tarefas paralelas](~/docs/debugger/media/parallel_tasks_window.png "Parallel\_Tasks\_Window")  
   
 > [!NOTE]
 >  No código gerenciado, um <xref:System.Threading.Tasks.Task> que tem um status de <xref:System.Threading.Tasks.TaskStatus>, <xref:System.Threading.Tasks.TaskStatus> ou <xref:System.Threading.Tasks.TaskStatus> podem não ser exibidos na janela das tarefas quando os threads gerenciados estão em um estado de suspensão ou junção.  
@@ -67,7 +67,7 @@ O **tarefas** janela é semelhante a **Threads** janela, exceto que mostra infor
   
  Você pode adicionar colunas à exibição clicando com o botão direito em um cabeçalho de coluna e selecionando as colunas desejadas.  \(Remover colunas desmarcando as seleções.\) Você também pode reordenar colunas arrastando\-os esquerda ou direita.  O menu de atalho da coluna é mostrado na ilustração a seguir.  
   
- ![Menu de contexto tarefas paralelas](../debugger/media/parallel_tasks_contextmenu.png "Parallel\_Tasks\_ContextMenu")  
+ ![Menu de contexto tarefas paralelas](~/docs/debugger/media/parallel_tasks_contextmenu.png "Parallel\_Tasks\_ContextMenu")  
   
 ## Tarefas de classificação  
  Para classificar as tarefas por critérios da coluna, clique no cabeçalho da coluna.  Por exemplo, clicando no cabeçalho de coluna **ID**, você poderá classificar as tarefas pela ID de tarefa: 1, 2, 3, 4, 5 e assim por diante.  Para inverter a ordem de classificação, clique no cabeçalho da coluna novamente.  A coluna e a ordem de classificação atuais estão indicadas por uma seta na coluna.  
@@ -75,12 +75,12 @@ O **tarefas** janela é semelhante a **Threads** janela, exceto que mostra infor
 ## Agrupando tarefas  
  Você pode agrupar tarefas com base em qualquer coluna na exibição de lista.  Por exemplo, ao clicar com o botão direito no cabeçalho da coluna **Status** e clicar em **Agrupar por Status**, você pode agrupar todas as tarefas que têm o mesmo status.  Por exemplo, você pode visualizar rapidamente as tarefas em espera para que poder se concentrar em por que estão bloqueadas.  Você também pode recolher um grupo que não é de interesse durante a sessão de depuração.  Da mesma forma, você pode agrupar por outras colunas.  Um grupo pode ser sinalizado ou ter a sinalização removida apenas clicando no botão ao lado do cabeçalho do grupo.  A ilustração a seguir mostra a janela **Tarefas** no modo agrupado.  
   
- ![Modo agrupado de tarefas paralelas](../debugger/media/parallel_tasks_groupedmode.png "Parallel\_Tasks\_GroupedMode")  
+ ![Modo agrupado de tarefas paralelas](~/docs/debugger/media/parallel_tasks_groupedmode.png "Parallel\_Tasks\_GroupedMode")  
   
 ## Modo de Exibição Pai\-Filho  
  \(Essa exibição está disponível apenas para código gerenciado.\) Um título de coluna e, em seguida, clicando em **exibição pai\-filho**, você pode alterar a lista de tarefas para uma exibição hierárquica, na qual cada filho tarefa é um subnó que pode ser exibido ou ocultado em seu pai.  A ilustração a seguir mostra as tarefas na exibição de pai\-filho.  
   
- ![Modo de exibição de pai&#45;filho de tarefas paralelas](../debugger/media/parallel_tasks_parentchildview.png "Parallel\_Tasks\_ParentChildView")  
+ ![Modo de exibição de pai&#45;filho de tarefas paralelas](~/docs/debugger/media/parallel_tasks_parentchildview.png "Parallel\_Tasks\_ParentChildView")  
   
 ## Tarefas de sinalização  
  Você pode sinalizar o thread no qual uma tarefa está sendo executada selecionando o item da lista de tarefas e escolhendo **Sinalizar** no menu de contexto, ou clicando no ícone de sinalizador na primeira coluna.  Se você sinalizar várias tarefas, poderá classificar na coluna do sinalizador para levar todas as tarefas sinalizadas para o alto para que você possa se concentrar apenas nelas.  Você também pode usar a janela **Pilhas Paralelas** para exibir apenas tarefas sinalizadas.  Isso permite filtrar tarefas nas quais você não está interessado para depuração.  Os sinalizadores não são mantidos entre sessões de depuração.  
@@ -90,7 +90,7 @@ O **tarefas** janela é semelhante a **Threads** janela, exceto que mostra infor
   
  A ilustração a seguir mostra os outros itens de menu para cada tarefa.  
   
- ![Menu de contexto tarefas paralelas](../debugger/media/parallel_tasks_contextmenu2.png "Parallel\_Tasks\_ContextMenu2")  
+ ![Menu de contexto tarefas paralelas](~/docs/debugger/media/parallel_tasks_contextmenu2.png "Parallel\_Tasks\_ContextMenu2")  
   
 ## Consulte também  
  [Noções básicas do depurador](../debugger/debugger-basics.md)   

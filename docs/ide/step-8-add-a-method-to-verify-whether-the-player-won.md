@@ -51,7 +51,7 @@ Você criou um jogo divertido, mas ele precisa de um item adicional para ser fin
   
 3.  Salve e execute o programa. Jogue o jogo e combine todos os ícones. Quando você ganha, o programa exibe uma MessageBox de congratulação (conforme mostrado na imagem a seguir) e fecha a caixa.  
   
-     ![Jogo da memória com MessageBox](../ide/media/express_tut4step8.png "Express_Tut4Step8")  
+     ![Jogo da memória com MessageBox](~/docs/ide/media/express_tut4step8.png "Express_Tut4Step8")  
 Jogo da memória com MessageBox  
   
 ### <a name="to-continue-or-review"></a>Para continuar ou revisar  

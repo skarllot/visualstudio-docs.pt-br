@@ -34,7 +34,7 @@ manager: "wpickett"
   
 3.  Selecione o **permitem uma análise completa solução** caixa de seleção para habilitar a análise de solução completa, ou desmarque a caixa para desativá\-lo. Escolha o **OK** botão quando terminar.  
   
-     ![Enable full solution analysis check box.](../code-quality/media/fsa_toolsoptions.png "FSA\_ToolsOptions")  
+     ![Enable full solution analysis check box.](~/docs/code-quality/media/fsa_toolsoptions.png "FSA\_ToolsOptions")  
   
 ## Resultados de habilitar e desabilitar análise de solução completa  
  Na seguinte captura de tela, você pode ver os resultados quando a análise da solução completa está habilitada. Todos os erros e problemas de análise de código em *todas as* dos arquivos na solução aparecem, independentemente se os arquivos estiverem abertos ou não.  

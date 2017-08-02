@@ -240,7 +240,7 @@ End Namespace
   
  Para simplificar o desenvolvimento de aplicativos, o WPF fornece um mecanismo de vinculação de dados para executar essas etapas automaticamente. A unidade principal do mecanismo de associação de dados é a classe <xref:System.Windows.Data.Binding>, cujo trabalho é associar um controle (o destino da associação) a um objeto de dados (a origem da associação). Considere a relação ilustrada pela figura a seguir.  
   
- ![Diagrama de vinculação de dados básica](../designers/media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![Diagrama de vinculação de dados básica](~/docs/designers/media/databindingmostbasic.png "DataBindingMostBasic")  
   
  O exemplo a seguir demonstra como associar um <xref:System.Windows.Controls.TextBox> a uma instância de um objeto `Person` personalizado. A implementação de `Person` é mostrada no código a seguir.  
   
@@ -276,7 +276,7 @@ End Namespace
 ### <a name="2-d-shapes"></a>Formas 2D  
  O WPF fornece uma biblioteca de formas vetoriais 2D comuns como retângulos e elipses, que são mostradas na ilustração a seguir.  
   
- ![Elipses e retângulos](../designers/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
+ ![Elipses e retângulos](~/docs/designers/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
  Uma funcionalidade interessante de formas é que elas não são apenas para exibição; as formas implementam muitas das funcionalidades que você espera dos controles, incluindo entrada de teclado e de mouse. O exemplo a seguir mostra o evento <xref:System.Windows.UIElement.MouseUp> de um <xref:System.Windows.Shapes.Ellipse> que está sendo manipulado.  
   
@@ -287,7 +287,7 @@ End Namespace
   
  A figura a seguir mostra o que é produzido pelo código anterior.  
   
- ![Uma janela com o texto "você clicou na elipse&#33"](../designers/media/wpfintrofigure12.png "WPFIntroFigure12")  
+ ![Uma janela com o texto "você clicou na elipse&#33"](~/docs/designers/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
  Para obter mais informações, consulte [Visão geral de formas e desenho básico no WPF](https://msdn.microsoft.com/en-us/library/ms747393\(v=vs.100\).aspx).  
   
@@ -298,28 +298,28 @@ End Namespace
   
  Os objetos <xref:System.Windows.Media.Geometry> podem ser usados para recorte, teste de clique e renderização de dados gráficos 2D.  
   
- ![Vários usos de um caminho](../designers/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
+ ![Vários usos de um caminho](~/docs/designers/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
   
  Para obter mais informações, consulte [Visão geral de geometria](https://msdn.microsoft.com/en-us/library/ms751808\(v=vs.100\).aspx)  
   
 ### <a name="2-d-effects"></a>Efeitos 2D  
  Um subconjunto de funcionalidades 2D do WPF inclui efeitos visuais como gradientes, bitmaps, desenhos, pintura com vídeos, rotação, dimensionamento e distorção. Eles são todas obtidos com pincéis; a figura a seguir mostra alguns exemplos.  
   
- ![Ilustração de diferentes pincéis](../designers/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
+ ![Ilustração de diferentes pincéis](~/docs/designers/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
  Para obter mais informações, consulte [Visão geral de pincéis do WPF](https://msdn.microsoft.com/en-us/library/aa970904\(v=vs.100\).aspx).  
   
 ### <a name="3-d-rendering"></a>Renderização 3D  
  O WPF também inclui funcionalidades de renderização 3D que se integram com elementos gráficos em 2D para permitir a criação de interfaces do usuário mais interessantes e empolgantes. Por exemplo, a figura a seguir mostra imagens 2D renderizadas em formas 3D.  
   
- ![Captura de tela de exemplo do Visual3D](../designers/media/wpfintrofigure13.png "WPFIntroFigure13")  
+ ![Captura de tela de exemplo do Visual3D](~/docs/designers/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
  Para obter mais informações, consulte [Visão geral de elementos gráficos 3D](https://msdn.microsoft.com/en-us/library/ms747437\(v=vs.100\).aspx).  
   
 ##  <a name="Animation"></a> Animação  
  O suporte a animação do WPF permite que você faça os controles crescerem, tremerem, rodarem e esmaecerem, para criar transições de página interessantes e muito mais. Você pode animar a maioria das classes do WPF, até mesmo classes personalizadas. A figura a seguir mostra uma animação simples em ação.  
   
- ![Imagens de um cubo animado](../designers/media/wpfintrofigure7.png "WPFIntroFigure7")  
+ ![Imagens de um cubo animado](~/docs/designers/media/wpfintrofigure7.png "WPFIntroFigure7")  
   
  Para obter mais informações, consulte [Visão geral de animação](https://msdn.microsoft.com/en-us/library/ms752312\(v=vs.100\).aspx).  
   
@@ -442,7 +442,7 @@ End Namespace
   
  Já que esse estilo atinge todos os controles <xref:System.Windows.Controls.Button>, o estilo é aplicado automaticamente a todos os botões na janela, conforme mostrado na figura a seguir.  
   
- ![Dois botões laranja](../designers/media/wpfintrofigure20.png "WPFIntroFigure20")  
+ ![Dois botões laranja](~/docs/designers/media/wpfintrofigure20.png "WPFIntroFigure20")  
   
  Para obter mais informações, consulte [Estilo e modelagem](https://msdn.microsoft.com/en-us/library/ms745683\(v=vs.100\).aspx).  
   

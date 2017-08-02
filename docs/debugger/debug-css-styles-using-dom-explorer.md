@@ -48,7 +48,7 @@ manager: "ghogen"
 -   Use o **alterações** guia \(apenas para aplicativos da Windows Store e Windows Phone Store\) para identificar e rastrear os estilos CSS alterados durante uma sessão de depuração.  
   
 > [!TIP]
->  As mudanças que você faz nos estilos nas guias **Estilos** e **Computado** não são permanentes. Elas são perdidas quando você interrompe a depuração. Para alterar o código\-fonte e recarregar páginas sem interromper e reiniciar o depurador, atualize seu aplicativo usando o  ![Atualizar botão de aplicativo do Windows](../debugger/media/js_refresh.png "JS\_Refresh") botão \(**Atualizar aplicativo do Windows**\) sobre o **Depurar** barra de ferramentas \(somente para aplicativos da Windows Store e Windows Phone Store\). Para saber mais, veja [Atualizar um aplicativo \(JavaScript\)](../debugger/refresh-an-app-javascript.md).  
+>  As mudanças que você faz nos estilos nas guias **Estilos** e **Computado** não são permanentes. Elas são perdidas quando você interrompe a depuração. Para alterar o código\-fonte e recarregar páginas sem interromper e reiniciar o depurador, atualize seu aplicativo usando o  ![Atualizar botão de aplicativo do Windows](~/docs/debugger/media/js_refresh.png "JS\_Refresh") botão \(**Atualizar aplicativo do Windows**\) sobre o **Depurar** barra de ferramentas \(somente para aplicativos da Windows Store e Windows Phone Store\). Para saber mais, veja [Atualizar um aplicativo \(JavaScript\)](../debugger/refresh-an-app-javascript.md).  
   
 ## Exemplo de correção de uma regra de CSS  
  Este exemplo mostra como inspecionar regras de CSS e depurar um problema de estilo. Por exemplo, vamos supor que você mude a cor de uma fonte usada para exibir títulos de grupo no modelo de [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] Aplicativo de Separação.  
@@ -87,14 +87,14 @@ manager: "ghogen"
     > [!TIP]
     >  Depois que o aplicativo aparecer no Simulador, posicione o Simulador ao lado da janela do Visual Studio para que seja possível ver imediatamente os resultados das seleções e alterações feitas em estilos CSS.  
   
-6.  Alterne para o Visual Studio e clique em **Selecionar Elemento** no Explorador do DOM \(ou pressione Ctrl \+ B\). O modo de seleção muda, permitindo que você selecione um item clicando nele, e o aplicativo é colocado em primeiro plano. O modo é revertido após um único clique. Aqui está o botão **Selecionar Elemento**.![Selecione o elemento botão no Explorer do DOM](../debugger/media/js_dom_select_element_button.png "JS\_DOM\_Select\_Element\_Button")  
+6.  Alterne para o Visual Studio e clique em **Selecionar Elemento** no Explorador do DOM \(ou pressione Ctrl \+ B\). O modo de seleção muda, permitindo que você selecione um item clicando nele, e o aplicativo é colocado em primeiro plano. O modo é revertido após um único clique. Aqui está o botão **Selecionar Elemento**.![Selecione o elemento botão no Explorer do DOM](~/docs/debugger/media/js_dom_select_element_button.png "JS\_DOM\_Select\_Element\_Button")  
   
     > [!TIP]
     >  Você também pode selecionar elementos HTML diretamente no Explorador de DOMs. Para obter mais informações sobre como selecionar elementos, consulte [Guia de início rápido: depurar HTML e CSS](../debugger/quickstart-debug-html-and-css.md).  
   
 7.  No Simulador, focalize o título do primeiro item na lista, **Título do Grupo: 1**, no painel esquerdo da página inicial. O título é realçado, conforme mostrado aqui:  
   
-     ![Usando o botão do elemento Select](../debugger/media/js_css_select_element.png "JS\_CSS\_Select\_Element")  
+     ![Usando o botão do elemento Select](~/docs/debugger/media/js_css_select_element.png "JS\_CSS\_Select\_Element")  
   
     > [!NOTE]
     >  O Emulador do Windows Phone só permite destacar os elementos parcialmente ao focalizá\-los.  
@@ -107,7 +107,7 @@ manager: "ghogen"
   
      Quando você seleciona o elemento H4 no Explorador do DOM, as guias do Explorador do DOM mostram as regras associadas ao elemento H4. A guia **Calculado** é mostrada aqui, com a propriedade de `color` aberta:  
   
-     ![Guia de estilos de rastreamento no Explorer do DOM](../debugger/media/js_css_styles.png "JS\_CSS\_Styles")  
+     ![Guia de estilos de rastreamento no Explorer do DOM](~/docs/debugger/media/js_css_styles.png "JS\_CSS\_Styles")  
   
      Essa exibição fornece informações úteis sobre as regras que estão associadas ao estilo de `color`, como indicado a seguir:  
   
@@ -123,13 +123,13 @@ manager: "ghogen"
   
 9. Desmarque a caixa de seleção da primeira ocorrência do estilo de `color`, que é para o seletor `.itemspage .itemslist .item .item-overlay .item-title`. Agora, no Simulador, você verá que a cor dos títulos dos itens mudará para laranja, como pretendíamos, e o seletor que modificamos no CSS, `.itemspage .itemslist .item`, não será mais substituído \(isto é, não terá mais texto tachado aplicado\). Esta é a guia **Computado** depois que desmarcarmos a caixa de seleção.  
   
-     ![The Computed tab after updating the CSS style](../debugger/media/js_css_styles_fixed.png "JS\_CSS\_Styles\_Fixed")  
+     ![The Computed tab after updating the CSS style](~/docs/debugger/media/js_css_styles_fixed.png "JS\_CSS\_Styles\_Fixed")  
   
 10. Selecione a guia **Alterações**.  
   
      Use a guia **Alterações** para identificar e rastrear alterações de estilos que você realizou durante uma sessão de depuração. A imagem a seguir mostra o seletor `.itemspage .itemslist .item .item-overlay .item-title` na guia **Alterações**, que foi substituído.  
   
-     ![Changes tab of the DOM Explorer](../debugger/media/js_css_styles_changes.png "JS\_CSS\_Styles\_Changes")  
+     ![Changes tab of the DOM Explorer](~/docs/debugger/media/js_css_styles_changes.png "JS\_CSS\_Styles\_Changes")  
   
 11. Você também pode editar manualmente os valores de estilo CSS e ver o resultado imediato usando a guia **Estilos**.  
   
@@ -141,7 +141,7 @@ manager: "ghogen"
   
 15. Use o teclado para modificar esse valor. Altere\-o para `rgb(255, 255, 0, 0.87)` e pressione Enter. As cores dos títulos do item no Simulador mudam para amarelo.  
   
-16. Para fazer alterações no arquivo CSS de origem, clique no link **items.css** da guia **Estilos**. Isso abre o arquivo items.css, no qual é possível alterar o valor do estilo de `color` no código do aplicativo. Para atualizar o aplicativo sem interromper e reiniciar o depurador, clique o  ![Atualizar botão de aplicativo do Windows](../debugger/media/js_refresh.png "JS\_Refresh") \(**Atualizar aplicativo do Windows**\) botão o **Depurar** barra de ferramentas.  
+16. Para fazer alterações no arquivo CSS de origem, clique no link **items.css** da guia **Estilos**. Isso abre o arquivo items.css, no qual é possível alterar o valor do estilo de `color` no código do aplicativo. Para atualizar o aplicativo sem interromper e reiniciar o depurador, clique o  ![Atualizar botão de aplicativo do Windows](~/docs/debugger/media/js_refresh.png "JS\_Refresh") \(**Atualizar aplicativo do Windows**\) botão o **Depurar** barra de ferramentas.  
   
 ## Consulte também  
  [Guia de início rápido: depurar HTML e CSS](../debugger/quickstart-debug-html-and-css.md)   

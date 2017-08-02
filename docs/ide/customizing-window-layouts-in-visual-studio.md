@@ -105,13 +105,13 @@ No Visual Studio, é possível personalizar a posição, tamanho e comportamento
 
  A ilustração a seguir mostra o losango do guia para janelas de documentos, que só podem ser encaixadas dentro do quadro de edição:  
 
- ![Losango do guia da janela do documento](../ide/media/documentwindowguidediamonds.png "Documentwindowguidediamonds")  
+ ![Losango do guia da janela do documento](~/docs/ide/media/documentwindowguidediamonds.png "Documentwindowguidediamonds")  
 
  As janelas de ferramentas podem ser fixadas em um lado de um quadro no IDE ou dentro do quadro de edição. Um guia do losango será exibido quando você arrastar uma janela de ferramentas para outro lugar para ajudá-lo a reencaixar a janela facilmente.  
 
  Losango do guia para janelas de ferramentas  
 
- ![Losangos do guia da janela de ferramentas](../ide/media/vs10guidediamond.png "VS10GuideDiamond")  
+ ![Losangos do guia da janela de ferramentas](~/docs/ide/media/vs10guidediamond.png "VS10GuideDiamond")  
 
  A ilustração a seguir mostra o Gerenciador de Soluções que está sendo encaixado em um novo local, mostrado pela área sombreada azul:  
 
@@ -186,7 +186,7 @@ No Visual Studio, é possível personalizar a posição, tamanho e comportamento
 
 1.  É possível remover, renomear ou reordenar seu layout personalizado escolhendo **Janela > Gerenciar Layouts de Janela**. Se você mover um layout, a associação de teclas será ajustada automaticamente para refletir a nova posição na lista. Do contrário, as associações não poderão ser modificadas e, assim, será possível armazenar, no máximo, 10 layouts por vez.  
 
-     ![Gerenciar layouts de janela](../ide/media/managewindowlayouts.png "ManageWindowLayouts")  
+     ![Gerenciar layouts de janela](~/docs/ide/media/managewindowlayouts.png "ManageWindowLayouts")  
 
      Para se lembrar de qual atalho de teclado foi atribuído a qual layout, escolha **Janela > Aplicar Layout de Janela**.  
 

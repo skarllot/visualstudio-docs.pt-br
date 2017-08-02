@@ -56,7 +56,7 @@ JavaScript não permite digitação para declarações de variável explícita. 
   
  **Opções de conclusão de um objeto não identificado**  
   
- ![JavaScript IntelliSense para identificadores](../ide/media/js_intellisense_identifiers.png "js\_intellisense\_identifiers")  
+ ![JavaScript IntelliSense para identificadores](~/docs/ide/media/js_intellisense_identifiers.png "js\_intellisense\_identifiers")  
   
  Você pode substituir a lista de conclusão de um objeto usando recursos de extensibilidade de JavaScript IntelliSense ou comentários de documentação XML.  Usando esses recursos, você pode fornecer informações de tipo e mais descritivo IntelliSense quando ele poderia não estar disponível.  Para obter mais informações, consulte [Estendendo JavaScript IntelliSense](../ide/extending-javascript-intellisense.md) e [Como criar comentários de documentação XML JavaScript](../ide/create-xml-documentation-comments-for-javascript-intellisense.md).  
   

@@ -57,15 +57,15 @@ Consulte também os tópicos sobre [IntelliSense](code-intellisense.md), [trecho
 
 Além de colorir diferentes partes do código, como cadeias de caracteres, comentários e palavras-chave, as RTVS também realçam e habilitam links em comentários:
 
-![Coloração de sintaxe para código R](media/editing-syntax-colors.png)
+![Coloração de sintaxe para código R](~/docs/rtvs/media/editing-syntax-colors.png)
 
 Para personalizar fontes e determinadas cores de realce, selecione o comando **Ferramentas > Opções**, navegue até **Ambiente > Fontes e Cores** e, em seguida, altere as configurações de itens relacionados ao R na caixa **Exibir itens:**:
 
-![Opções de fontes e cores para código R](media/editing-syntax-colors-options.png)
+![Opções de fontes e cores para código R](~/docs/rtvs/media/editing-syntax-colors-options.png)
 
 O Visual Studio também sublinha erros de sintaxe no editor:
 
-![Realce de erro de sintaxe no código R](media/editing-syntax-error.png)
+![Realce de erro de sintaxe no código R](~/docs/rtvs/media/editing-syntax-error.png)
 
 Para alterar esse comportamento, consulte a configuração **Avançado > Verificação de sintaxe** em [opções do editor](#editor-options).
 
@@ -73,11 +73,11 @@ Para alterar esse comportamento, consulte a configuração **Avançado > Verific
 
 Conforme você digita o código, as RTVS fornecem preenchimento automático, conforme descrito na página [IntelliSense](code-intellisense.md). Ele também faz a formatação automática, como o fechamento de chaves e parênteses: 
 
-![Animação de formatação embutida](media/editing-inline-formatting.gif)
+![Animação de formatação embutida](~/docs/rtvs/media/editing-inline-formatting.gif)
 
 Ao digitar chamadas de funções que têm muitos parâmetros, muitas vezes você deseja alinhar os parâmetros para deixar o código mais fácil de ler. As RTVS lembram do recuo que você definiu para os parâmetros e aplica esse recuo automaticamente às linhas subsequentes:
 
-![Animação de recuo automático](media/editing-auto-indentation.gif)
+![Animação de recuo automático](~/docs/rtvs/media/editing-auto-indentation.gif)
 
 Para alterar esse comportamento, consulte [opções do editor](#editor-options) abaixo e veja o grupo **Guias**.
 
@@ -85,7 +85,7 @@ As regiões de código recolhíveis permitem ocultar parte do código temporaria
 
 Para criar uma região sua, coloque o código desejado entre comentários que terminam com `---`. Os controles pequenos +/- à esquerda do código permitem que você expanda e recolha regiões:
 
-![Criando uma região recolhível com comentários](media/editing-collapsible-regions.gif)
+![Criando uma região recolhível com comentários](~/docs/rtvs/media/editing-collapsible-regions.gif)
  
 Por padrão, o Visual Studio insere espaços quando você pressiona a tecla Tab. Novamente você pode alterar esse comportamento, conforme descrito em [Opções, Editor de Texto, Guias](../ide/reference/options-text-editor-all-languages.md).
 
@@ -99,7 +99,7 @@ Isso abre uma nova janela do editor que contém o código-fonte da função e co
 
 **Definição de espiada**, invocado do menu acionado com um clique do botão direito do mouse ou com Alt + F12, insere uma região rolável e somente leitura que contém o código-fonte da função abaixo da chamada de função:
 
-![Animação para definição de espiada](media/editing-peek-definition.gif)
+![Animação para definição de espiada](~/docs/rtvs/media/editing-peek-definition.gif)
 
 ## <a name="sending-code-to-the-interactive-window"></a>Enviando o código para a janela interativa
 
@@ -131,7 +131,7 @@ As opções de formatação (incluindo desligar a formatação) são definidas p
 
 As RTVS fornecem um atalho para a geração de comentários [Roxygen](http://roxygen.org/) usando os nomes de parâmetro de uma função. Basta digitar `###` em uma linha em branco acima da definição de função:
 
-![Animação da inserção de um comentário Roxygen](media/editing-roxygen-comments.gif)
+![Animação da inserção de um comentário Roxygen](~/docs/rtvs/media/editing-roxygen-comments.gif)
 
 ## <a name="editor-options"></a>Opções do editor
 

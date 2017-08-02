@@ -49,7 +49,7 @@ Os aplicativos de dados de *N camadas* são aplicativos que acessam dados e são
   
 -   Gravar código para preencher as tabelas de dados.  
   
- ![link para vídeo](../data-tools/media/playvideo.png "PlayVideo") Para obter uma versão em vídeo deste tópico, consulte [Vídeo Como criar um aplicativo de dados de N camadas](http://go.microsoft.com/fwlink/?LinkId=115188).  
+ ![link para vídeo](~/docs/data-tools/media/playvideo.gif "PlayVideo") Para obter uma versão em vídeo deste tópico, consulte [Vídeo Como criar um aplicativo de dados de N camadas](http://go.microsoft.com/fwlink/?LinkId=115188).  
   
 ## Pré-requisitos  
  Para concluir esta explicação passo a passo, será necessário:  

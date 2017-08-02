@@ -43,19 +43,19 @@ Um marcador de sinalizador representa algo que ocorreu em um instante de tempo e
 ## <a name="flag-importance"></a>Importância do sinalizador  
  Sinalizadores são exibidos em tamanhos diferentes dependendo de sua importância. Como qualquer marcador, a importância pode ser baixa, normal, alta ou crítica.  Esta ilustração mostra a aparência dos marcadores segundo seu nível de importância:  
   
- ![Marcadores de importância baixa, normal, alta e crítica](../profiling/media/cvmarkerimportance.png "CVMarkerImportance")  
+ ![Marcadores de importância baixa, normal, alta e crítica](~/docs/profiling/media/cvmarkerimportance.png "CVMarkerImportance")  
 Marcadores mostrando a importância do sinalizador  
   
 ## <a name="flag-category"></a>Categoria do sinalizador  
  Um sinalizador pode ser exibido em cinco cores diferentes, dependendo de sua categoria. As cores são reutilizadas se houver mais de cinco categorias. Não é possível escolher a cor. Como qualquer marcador, a categoria pode ser qualquer inteiro. A ilustração a seguir mostra as cores das cinco primeiras categorias.  
   
- ![Cinco cores de marcadores de categoria](../profiling/media/cvmarkercategory.png "CVMarkerCategory")  
+ ![Cinco cores de marcadores de categoria](~/docs/profiling/media/cvmarkercategory.png "CVMarkerCategory")  
 Marcadores mostrando as categorias  
   
 ## <a name="alerts"></a>Alertas  
  Um alerta é um sinalizador vermelho que representa um evento crítico do aplicativo, como uma exceção.  Este é um alerta:  
   
- ![Marcador de alerta de Visualização Simultânea](../profiling/media/cvmarkeralert.png "CVMarkerAlert")  
+ ![Marcador de alerta de Visualização Simultânea](~/docs/profiling/media/cvmarkeralert.png "CVMarkerAlert")  
 Um marcador de alerta  
   
 ## <a name="aggregation-flags"></a>Sinalizadores de agregação  
@@ -63,7 +63,7 @@ Um marcador de alerta
   
  Sinalizadores de agregação são desenhados em tamanhos diferentes. O tamanho depende do nível de importância do sinalizador mais importante da agregação. A ilustração a seguir mostra sinalizadores de agregação em ordem crescente de importância.  
   
- ![Sinalizadores de agregação mostrando quatro níveis de importância](../profiling/media/cvmarkeraggregate.png "CVMarkerAggregate")  
+ ![Sinalizadores de agregação mostrando quatro níveis de importância](~/docs/profiling/media/cvmarkeraggregate.png "CVMarkerAggregate")  
 Sinalizadores de agregação por nível de importância  
   
 ## <a name="see-also"></a>Consulte também  

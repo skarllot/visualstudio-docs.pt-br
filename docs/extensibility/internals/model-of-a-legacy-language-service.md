@@ -48,7 +48,7 @@ Um serviço de linguagem define os elementos e recursos para um idioma específi
   
  O desenho conceitual a seguir mostra um modelo de um serviço de linguagem básicos.  
   
- ![Gráfico de modelo de serviço de linguagem](../../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
+ ![Gráfico de modelo de serviço de linguagem](~/docs/extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
 Modelo de serviço de linguagem básicos  
   
  Os hosts de janela de documento o *exibição do documento* do editor, neste caso o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] editor básicos. O modo de exibição de documento e o buffer de texto são de propriedade pelo editor. Esses objetos funcionam com [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] através de uma janela de documento especializadas chamado um *janela código*. A janela de código está contida em uma <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>objeto que é criado e controlado pelo IDE.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>  

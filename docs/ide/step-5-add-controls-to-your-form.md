@@ -36,7 +36,7 @@ ms.openlocfilehash: 07048d1ab89599609d7ece1e69056e6dd1dd7eea
 # <a name="step-5-add-controls-to-your-form"></a>Etapa 5: Adicionar controles ao formulário
 Nessa etapa, você adiciona controles como um controle `PictureBox` e um controle `CheckBox` em seu formulário. Em seguida, você adiciona botões ao seu formulário.  
   
- ![link para vídeo](../data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 2](http://go.microsoft.com/fwlink/?LinkId=205211) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 2](http://go.microsoft.com/fwlink/?LinkId=205200). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
+ ![link para vídeo](~/docs/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 2](http://go.microsoft.com/fwlink/?LinkId=205211) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 2](http://go.microsoft.com/fwlink/?LinkId=205200). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
   
 ### <a name="to-add-controls-to-your-form"></a>Para adicionar controles ao seu formulário  
   
@@ -48,7 +48,7 @@ Nessa etapa, você adiciona controles como um controle `PictureBox` e um control
   
 4.  Escolha o novo controle PictureBox para selecioná-lo, e então escolha o triângulo preto no novo controle PictureBox para exibir a lista de tarefas, como mostrado na seguinte imagem.  
   
-     ![Tarefas PictureBox](../ide/media/express_pictureboxtasks.png "Express_PictureBoxTasks")  
+     ![Tarefas PictureBox](~/docs/ide/media/express_pictureboxtasks.png "Express_PictureBoxTasks")  
 Tarefas PictureBox  
   
     > [!NOTE]
@@ -63,7 +63,7 @@ Tarefas PictureBox
   
 7.  Escolha o TableLayoutPanel no formulário e adicione um controle **CheckBox** ao formulário. Clique duas vezes no item **CheckBox** na Caixa de Ferramentas para adicionar um novo controle CheckBox à próxima célula livre em sua tabela. Como um PictureBox ocupa as duas primeiras células em TableLayoutPanel, o controle de caixa de seleção é adicionado à célula do canto inferior esquerdo. Escolha a propriedade **Text** e digite a palavra **Stretch**, como mostrado na imagem a seguir.  
   
-     ![Controle TextBox com a propriedade Stretch](../ide/media/express_pictureviewercheckbox.png "Express_PictureViewerCheckbox")  
+     ![Controle TextBox com a propriedade Stretch](~/docs/ide/media/express_pictureviewercheckbox.png "Express_PictureViewerCheckbox")  
 Controle de caixa de texto com propriedade de alongamento  
   
 8.  Escolha o TableLayoutPanel no formulário e, em seguida, vá para o grupo **Contêineres** na Caixa de Ferramentas (na qual você obteve o controle TableLayoutPanel) e clique duas vezes no item **FlowLayoutPanel** para adicionar um novo controle à última célula em PictureBox (canto inferior direito). Encaixe então o FlowLayoutPanel no TableLayoutPanel (escolhendo **Encaixar no contêiner pai** na lista de tarefas de triângulo preto de FlowLayoutPanel ou configurando a propriedade **Dock** de FlowLayoutPanel para **Fill**).  
@@ -89,7 +89,7 @@ Controle de caixa de texto com propriedade de alongamento
   
 5.  Escolha o botão **Fechar** para selecioná-lo. Mantenha pressionada a tecla CTRL e escolha os outros três botões, de forma que todos eles sejam selecionados. Quando todos os botões são selecionados, vá para a janela **Propriedades** e role até a propriedade **AutoSize**. Essa propriedade informa o botão para redimensionar automaticamente para ajustar todo o texto correspondente. Defina-a como **true**. Os botões agora devem ser dimensionados corretamente e estar na ordem correta. (Enquanto todos os quatro botões estiverem selecionados, você pode alterar todas as quatro propriedades **AutoSize** ao mesmo tempo.) A figura a seguir mostra os quatro botões.  
   
-     ![Visualizador de imagens com quatro botões](../ide/media/express_autosize.png "Express_AutoSize")  
+     ![Visualizador de imagens com quatro botões](~/docs/ide/media/express_autosize.png "Express_AutoSize")  
 Visualizador de imagens com quatro botões  
   
 6.  Agora execute o programa novamente para ver seu formulário recentemente apresentado. A escolha dos botões e da caixa de seleção não faz nada ainda, mas funcionará em breve.  

@@ -115,7 +115,7 @@ Na terceira parte deste tutorial, você adicionará um timer de contagem regress
   
      O temporizador inicia a contagem regressiva. Quando o tempo se esgota, o teste termina e a resposta aparece. A ilustração a seguir mostra o teste em andamento.  
   
-     ![Teste de matemática em andamento](../ide/media/express_addcountdown.png "Express_AddCountdown")  
+     ![Teste de matemática em andamento](~/docs/ide/media/express_addcountdown.png "Express_AddCountdown")  
 Teste de matemática em andamento  
   
 ### <a name="to-continue-or-review"></a>Para continuar ou revisar  

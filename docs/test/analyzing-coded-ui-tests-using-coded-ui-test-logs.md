@@ -96,17 +96,17 @@ Os logs de teste de IU codificado filtram e registram informações importantes 
   
 4.  Clique no link **Saída** nos resultados do Gerenciador de Testes.  
   
-     ![Link de saída no Gerenciador de Testes](../test/media/cuit_htmlactionlog1.png "CUIT_HTMLActionLog1")  
+     ![Link de saída no Gerenciador de Testes](~/docs/test/media/cuit_htmlactionlog1.png "CUIT_HTMLActionLog1")  
   
      Essa ação exibe a saída do teste, que inclui um link ao log de ações.  
   
-     ![Resultados e links de saída do teste de interface do usuário codificada](../test/media/cuit_htmlactionlog2.png "CUIT_HTMLActionLog2")  
+     ![Resultados e links de saída do teste de interface do usuário codificada](~/docs/test/media/cuit_htmlactionlog2.png "CUIT_HTMLActionLog2")  
   
 5.  Escolha o link UITestActionLog.html.  
   
      O log é exibido em seu navegador da Web.  
   
-     ![Arquivo de log de teste de IU codificado](../test/media/cuit_htmlactionlog3.png "CUIT_HTMLActionLog3")  
+     ![Arquivo de log de teste de IU codificado](~/docs/test/media/cuit_htmlactionlog3.png "CUIT_HTMLActionLog3")  
   
 ## <a name="q--a"></a>Perguntas e respostas  
   

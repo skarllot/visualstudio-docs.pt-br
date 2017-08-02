@@ -60,7 +60,7 @@ Os comandos de menu **Criar IntelliTest** e **Executar IntelliTest**:
   
 2.  Clique com o botão direito do mouse em um método no código e escolha **Executar IntelliTest** para gerar testes de unidade para o código em seu método.  
   
-     ![Clique com botão direito do mouse em seu método para gerar testes de unidade](../test/media/runpex.png "RunPEX")  
+     ![Clique com botão direito do mouse em seu método para gerar testes de unidade](~/docs/test/media/runpex.png "RunPEX")  
   
      O IntelliTest executa o código várias vezes com entradas diferentes. Cada execução é representada na tabela, mostrando os dados de teste de entrada e a saída ou exceção resultante.  
   
@@ -92,7 +92,7 @@ Os comandos de menu **Criar IntelliTest** e **Executar IntelliTest**:
   
      Exiba os avisos para decidir o que deseja fazer.  
   
-     ![Exibir os avisos](../test/media/pexviewwarning.png "PEXViewWarning")  
+     ![Exibir os avisos](~/docs/test/media/pexviewwarning.png "PEXViewWarning")  
   
 2.  Após examinar o código e entender o que deseja testar, você pode corrigir o aviso e escolher quais classes devem ser usadas para testar a interface.  
   
@@ -154,7 +154,7 @@ Especifique a relação geral entre as entradas e saídas que você deseja que o
   
  Aceite o formato padrão para gerar os testes ou altere o nome de seu projeto e testes. É possível criar um novo projeto de teste ou salvar seus testes em um projeto existente.  
   
- ![Crie o IntelliTest com o MSTest padrão](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
+ ![Crie o IntelliTest com o MSTest padrão](~/docs/test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
 
 <a name="extend-framework"></a>  
 ### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>P: Posso usar outras estruturas de teste de unidade com o IntelliTest?  

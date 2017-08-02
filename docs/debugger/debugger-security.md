@@ -51,7 +51,7 @@ A capacidade de depurar outro processo oferece poderes extremamente grandes que 
   
  O Visual Studio Monitor de depuração remota \(msvsmon.exe\) é usado na depuração remota, e há várias recomendações de segurança para configurá\-lo. A melhor maneira de configurar o modo de autenticação é a autenticação do Windows, como o modo de autenticação não é inseguro.  
   
- ![Diálogo de erro](../debugger/media/dbg_err_remotepermissionschanged.png "DBG\_ERR\_RemotePermissionsChanged")  
+ ![Diálogo de erro](~/docs/debugger/media/dbg_err_remotepermissionschanged.png "DBG\_ERR\_RemotePermissionsChanged")  
   
  Ao usar o modo de autenticação do Windows, esteja ciente que conceder uma permissão de usuário não confiável para se conectar a msvsmon é perigoso, pois o usuário recebe todas as permissões no computador...  
   

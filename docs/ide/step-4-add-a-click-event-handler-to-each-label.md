@@ -53,7 +53,7 @@ O jogo da memória funciona desta forma:
   
 3.  Escolha o botão **Eventos** na barra de ferramentas da janela **Propriedades** para exibir a página **Eventos** na janela **Propriedades**. Role para baixo até o evento **Clicar** e insira **label_Click** na caixa, conforme mostrado na imagem a seguir.  
   
-     ![Janela Propriedades mostrando o evento de clique](../ide/media/express_labelclick.png "Express_labelClick")  
+     ![Janela Propriedades mostrando o evento de clique](~/docs/ide/media/express_labelclick.png "Express_labelClick")  
 Janela Propriedades mostrando o evento Click  
   
 4.  Escolha a tecla ENTER. O IDE adiciona um manipulador de eventos Click chamado `label_Click()` ao código e o vincula a cada um dos rótulos no formulário.  

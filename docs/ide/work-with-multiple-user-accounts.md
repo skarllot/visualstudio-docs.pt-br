@@ -53,7 +53,7 @@ Se você tem várias contas da Microsoft e/ou contas corporativas ou de estudant
 
  Na primeira vez que você usar o Visual Studio em qualquer dispositivo específico, a caixa de diálogo mostrará apenas as assinaturas registradas na ID que você usou para entrar no IDE. Você pode acessar os recursos de qualquer uma das outras contas diretamente do **Gerenciador de Servidores** clicando com o botão direito do mouse no nó do Azure e escolhendo **Gerenciar e Filtrar Assinaturas** e, em seguida, adicionar suas contas do controle de seletor de conta. Você pode escolher outra conta, se desejar, clicando na seta para baixo e escolhendo na lista de contas. Depois de escolher a conta, é possível escolher qual assinatura dessa conta você deseja exibir no Gerenciador de Servidores.  
 
- ![Caixa de diálogo Gerenciar Assinaturas do Azure](../ide/media/vs2015_manage_subs.png "vs2015_manage_subs")  
+ ![Caixa de diálogo Gerenciar Assinaturas do Azure](~/docs/ide/media/vs2015_manage_subs.png "vs2015_manage_subs")  
 
  Na próxima vez que você abrir o Gerenciador de Servidores, os recursos dessa(s) assinatura(s) serão exibidos.  
 

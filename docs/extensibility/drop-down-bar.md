@@ -40,7 +40,7 @@ A barra de menu suspenso é fornecida na parte superior da janela de código e c
 ## <a name="drop-down-bar-interfaces"></a>Interfaces de barra de menu suspenso  
  Em [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)], por exemplo, a barra de menu suspenso contém listas de [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] itens e [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] funções de membro de itens, como mostrado na figura a seguir.  
   
- ![Barras suspensas](../extensibility/media/vsdropdown_bar.gif "vsDropdown_bar")  
+ ![Barras suspensas](~/docs/extensibility/media/vsdropdown_bar.gif "vsDropdown_bar")  
 Barra de menu suspenso  
   
  Ao implementar uma barra de menu suspenso, há quatro interfaces de importância fundamental:  

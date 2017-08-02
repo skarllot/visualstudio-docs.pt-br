@@ -42,7 +42,7 @@ Para determinar que proporção do código do projeto está sendo testada de fat
   
  A cobertura de código é uma opção quando você executa métodos de teste usando o Gerenciador de Testes. A tabela de resultados mostra a porcentagem do código que foi executada em cada assembly, classe e método. Além disso, o editor de código-fonte mostra que código foi testado.  
   
- ![Resultados da cobertura de código com coloração](../test/media/codecoverage1.png "CodeCoverage1")  
+ ![Resultados da cobertura de código com coloração](~/docs/test/media/codecoverage1.png "CodeCoverage1")  
   
  **Requisitos**  
   
@@ -52,7 +52,7 @@ Para determinar que proporção do código do projeto está sendo testada de fat
   
 1.  No menu **Teste**, escolha **Analisar Cobertura de Código**.  
   
-2.  Para ver quais linhas foram executadas, escolha o ![Ícone Mostrar Coloração de Cobertura de Código](../test/media/codecoverage-showcoloringicon.png "CodeCoverage ShowColoringIcon")**Mostrar Coloração de Cobertura de Código**.  
+2.  Para ver quais linhas foram executadas, escolha o ![Ícone Mostrar Coloração de Cobertura de Código](~/docs/test/media/codecoverage-showcoloringicon.png "CodeCoverage ShowColoringIcon")**Mostrar Coloração de Cobertura de Código**.  
   
      Para alterar as cores ou usar a formatação em negrito, escolha **Ferramentas**, **Opções**, **Ambiente**, **Fontes e Cores**, **Mostrar configurações de: Editor de Texto**. Em **Exibir Itens**, ajuste os itens de cobertura.  
   
@@ -97,7 +97,7 @@ Para determinar que proporção do código do projeto está sendo testada de fat
   
  Por exemplo, suponhamos que, ao executar um teste com a entrada “2 ", você descobre que 50% de uma função específica está coberta. Quando você executa o teste uma segunda vez com a entrada “- 2 " você consulta a exibição de cores de cobertura que a outra 50% da função está coberto. Agora você mescla os resultados das duas execuções de testes, e a exibição do relatório e da coloração de cobertura mostra que 100% da função foi coberta.  
   
- Use o ![ícone do botão de Mesclagem na janela Cobertura de Código](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**Mesclar resultados da cobertura de código** para fazer isso. Você pode escolher qualquer combinação de execuções recentes ou resultados importados. Se você quiser combinar resultados exportados, importe-os primeiro.  
+ Use o ![ícone do botão de Mesclagem na janela Cobertura de Código](~/docs/test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**Mesclar resultados da cobertura de código** para fazer isso. Você pode escolher qualquer combinação de execuções recentes ou resultados importados. Se você quiser combinar resultados exportados, importe-os primeiro.  
   
  Use **Exportar Resultados da Cobertura de Código** para salvar os resultados de uma operação de mesclagem.  
   
@@ -276,7 +276,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
   
          Em **Testes Automatizados**, selecione **Assembly de Teste** e escolha o botão de reticências **[...]** no final da linha. Na caixa de diálogo **Adicionar/Editar Execução de Teste**, em **Test Runner**, selecione **Visual Studio Test Runner**.  
   
- ![Configurar a definição de build para cobertura de código](../test/media/codecoverage-plaincc.png "CodeCoverage plainCC")  
+ ![Configurar a definição de build para cobertura de código](~/docs/test/media/codecoverage-plaincc.png "CodeCoverage plainCC")  
   
  Depois que a compilação é executada, os resultados da cobertura de código são anexados à execução do teste e aparecem no resumo de compilação.  
   

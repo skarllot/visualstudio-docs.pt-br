@@ -70,13 +70,13 @@ Este tópico descreve como executar testes de unidade usando o Gerenciador de Te
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> Executando testes no Gerenciador de Testes  
  Quando você compila o projeto de teste, os testes são exibidos no Gerenciador de Testes. Se o Gerenciador de Testes não estiver visível, escolha **Teste** no menu do Visual Studio, escolha **Windows** e, em seguida, escolha **Gerenciador de Testes**.  
   
- ![Gerenciador de testes de unidade](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![Gerenciador de testes de unidade](~/docs/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  Conforme você executa, grava e executa novamente os testes, o Gerenciador de Testes exibe os resultados nos grupos padrão de **Testes com Falha**, **Testes Aprovados**, **Testes Ignorados** e **Testes Não Executados**. Você pode alterar a forma como o Gerenciador de Testes agrupa seus testes.  
   
  Você pode executar a maior parte do trabalho de encontrar, organizar e executar testes usando a barra de ferramentas do Gerenciador de Testes.  
   
- ![Executar testes na barra de ferramentas do Gerenciador de Testes](../test/media/ute_toolbar.png "UTE_ToolBar")  
+ ![Executar testes na barra de ferramentas do Gerenciador de Testes](~/docs/test/media/ute_toolbar.png "UTE_ToolBar")  
   
 ###  <a name="BKMK_Running_tests"></a> Executando testes  
  Você pode executar todos os testes na solução, todos os testes em um grupo ou um conjunto de testes que você selecionar. Realize um dos seguintes procedimentos:  
@@ -119,12 +119,12 @@ Este tópico descreve como executar testes de unidade usando o Gerenciador de Te
   
 |||  
 |-|-|  
-|![Botão do grupo do Gerenciador de Testes](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|Para agrupar os testes pelo tempo necessário para executá-los, abra a lista **Agrupar por** e escolha **Duração**. Escolha **Resultado do Teste** para mudar para o agrupamento original.|  
+|![Botão do grupo do Gerenciador de Testes](~/docs/test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|Para agrupar os testes pelo tempo necessário para executá-los, abra a lista **Agrupar por** e escolha **Duração**. Escolha **Resultado do Teste** para mudar para o agrupamento original.|  
   
 ###  <a name="BKMK_Searching_and_filtering_the_test_list"></a> Pesquisando e filtrando a lista de testes  
  Quando você tiver um grande número de testes, poderá digitar na caixa de pesquisa do Gerenciador de Testes para filtrar a lista por cadeia de caracteres especificada. Você pode restringir o filtro a tipos específicos de cadeias de caracteres escolhendo na lista de filtros antes de inserir a cadeia de caracteres de pesquisa.  
   
- ![Categorias de filtro de pesquisa](../test/media/ute_searchfilter.png "UTE_SearchFilter")  
+ ![Categorias de filtro de pesquisa](~/docs/test/media/ute_searchfilter.png "UTE_SearchFilter")  
   
 ##  <a name="BKMK_Debugging_unit_tests"></a> Depurando testes de unidade  
  Você pode usar o Gerenciador de Testes para iniciar uma sessão de depuração para os testes. Passar pelo código com o depurador do Visual Studio permite-lhe navegar facilmente entre os testes de unidade e o projeto sendo testado. Para iniciar a depuração:  

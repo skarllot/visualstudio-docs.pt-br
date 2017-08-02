@@ -34,7 +34,7 @@ O Visual Studio fornece várias ferramentas em tempo de design para ajudá\-lo a
   
  Um aplicativo de dados típico usa a maioria dos processos ilustrados no diagrama a seguir:  
   
- ![Gráfico de ciclo de dados](../data-tools/media/datacyclegraphicinfo.png "datacyclegraphicinfo")  
+ ![Gráfico de ciclo de dados](~/docs/data-tools/media/datacyclegraphicinfo.gif "datacyclegraphicinfo")  
 O ciclo de dados  
   
  À medida que você cria seu aplicativo, pense na tarefa que você está tentando realizar.  Use as seções a seguir para ajudar a localizar as ferramentas do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e objetos que estão disponíveis para você.  

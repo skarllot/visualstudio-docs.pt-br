@@ -78,7 +78,7 @@ Se os ícones aparecerem nas mesmas células a cada jogo, ele não será muito d
   
 5.  Feche seu programa e, em seguida, execute-o novamente. Observe que diferentes ícones são atribuídos a cada rótulo, conforme mostrado na imagem a seguir.  
   
-     ![Jogo da memória com ícones aleatórios](../ide/media/express_tut4step3.png "Express_Tut4Step3")  
+     ![Jogo da memória com ícones aleatórios](~/docs/ide/media/express_tut4step3.png "Express_Tut4Step3")  
 Jogo da memória com ícones aleatórios  
   
      Os ícones estão visíveis agora porque você não os ocultou. Para ocultá-los do jogador, você pode definir a propriedade `Forecolor` de cada rótulo para a mesma cor de sua propriedade `BackColor`.  

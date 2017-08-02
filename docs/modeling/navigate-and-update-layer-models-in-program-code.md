@@ -52,7 +52,7 @@ using (ILinkedUndoTransaction t =
 ```  
   
 ## <a name="containment"></a>Confinamento  
- ![ILayer e ILayerModel podem conter ILayers. ] (../modeling/media/layerapi_containment.png "LayerApi_Containment")  
+ ![ILayer e ILayerModel podem conter ILayers. ] (~/docs/modeling/media/layerapi_containment.png "LayerApi_Containment")  
   
  Camadas (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>) e o modelo de camada (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>) podem conter comentários e camadas.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel> </xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>  
   
@@ -63,14 +63,14 @@ using (ILinkedUndoTransaction t =
 ## <a name="dependency-links"></a>Vínculos de dependência  
  Um vínculo de dependência é representado por um objeto. Ele pode ser navegado em qualquer direção:  
   
- ![Um ILayerDependencyLink conecta dois ILayers. ] (../modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
+ ![Um ILayerDependencyLink conecta dois ILayers. ] (~/docs/modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
   
  Para criar um vínculo de dependência, chame `source.CreateDependencyLink(target)`.  
   
 ## <a name="comments"></a>Comentários  
  Os comentários podem ser encontrados dentro de camadas ou do modelo de camada e também podem ser vinculados a qualquer elemento de camada:  
   
- ![Comentários podem ser anexados a qualquer elemento de camada. ] (../modeling/media/layerapi_comments.png "LayerApi_Comments")  
+ ![Comentários podem ser anexados a qualquer elemento de camada. ] (~/docs/modeling/media/layerapi_comments.png "LayerApi_Comments")  
   
  Um comentário pode ser vinculado a qualquer número de elementos, incluindo zero.  
   
@@ -94,7 +94,7 @@ IEnumerable<ILayerComment> comments =
 ## <a name="layer-elements"></a>Elementos de camada  
  Todos os tipos de elementos que podem estar contidos em um modelo são elementos de camada:  
   
- ![conteúdo do diagrama de dependência é ILayerElements. ] (../modeling/media/layerapi_layerelements.png "LayerApi_LayerElements")  
+ ![conteúdo do diagrama de dependência é ILayerElements. ] (~/docs/modeling/media/layerapi_layerelements.png "LayerApi_LayerElements")  
   
 ## <a name="properties"></a>Propriedades  
  Cada `ILayerElement` tem um dicionário de cadeia chamado `Properties`. Você pode usar este dicionário para anexar informações arbitrárias a qualquer elemento da camada.  
@@ -134,7 +134,7 @@ public void ... (...)
     if (element != null) ... }}  
 ```  
   
- ![Cada ILayerElement é apresentado por um IShape. ] (../modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
+ ![Cada ILayerElement é apresentado por um IShape. ] (~/docs/modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
   
  <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>e <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>também são usados para exibir modelos UML.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram></xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> Para obter mais informações, consulte [exibir um modelo UML em diagramas](../modeling/display-a-uml-model-on-diagrams.md).  
   

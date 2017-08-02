@@ -91,7 +91,7 @@ Após você concluir as etapas em [Configuração e instalação](../cross-platf
   
     -   Clique em **Atualizar**.  
   
-         ![Atualizando o pacote do NuGet do Xamarin.Forms](../cross-platform/media/crossplat-xamarin-formsguide-4.png "CrossPlat Xamarin FormsGuide 4")  
+         ![Atualizando o pacote do NuGet do Xamarin.Forms](~/docs/cross-platform/media/crossplat-xamarin-formsguide-4.png "CrossPlat Xamarin FormsGuide 4")  
   
 4.  Adicione os pacotes **Newtonsoft.Json** e NuGet ao projeto PCL, que você usará para processar as informações recuperadas de um serviço de dados de clima:  
   

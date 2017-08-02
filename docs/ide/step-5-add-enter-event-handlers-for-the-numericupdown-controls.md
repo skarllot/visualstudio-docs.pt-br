@@ -63,7 +63,7 @@ Na quinta parte deste tutorial, você adicionará manipuladores de eventos de En
   
 2.  Escolha o evento de **Enter**, digite `answer_Enter` e pressione a tecla Enter.  
   
-     ![Caixa de diálogo Propriedades](../ide/media/express_answerenter.png "Express_AnswerEnter")  
+     ![Caixa de diálogo Propriedades](~/docs/ide/media/express_answerenter.png "Express_AnswerEnter")  
 Caixa de diálogo Propriedades  
   
      Você adicionou um manipulador de eventos Enter para o controle NumericUpDown de soma e você nomeou esse manipulador **answer_Enter**.  

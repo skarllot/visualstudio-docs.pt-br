@@ -38,7 +38,7 @@ Para habilitar seu programa a abrir arquivos de imagem e escolher uma cor da tel
   
  Um componente é como um controle de certas maneiras. Use a Caixa de Ferramentas para adicionar um componente ao seu formulário e ajuste suas propriedades usando a janela **Propriedades**. Mas, diferentemente de um controle, adicionar um componente ao seu formulário não adiciona um item visível que o usuário possa ver no formulário. Em vez disso, fornece determinados comportamentos que você pode disparar com código. É um componente que abre uma caixa de diálogo **Abrir Arquivo**.  
   
- ![link para vídeo](../data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 3](http://go.microsoft.com/fwlink/?LinkId=205213) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 3](http://go.microsoft.com/fwlink/?LinkId=205202). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
+ ![link para vídeo](~/docs/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 3](http://go.microsoft.com/fwlink/?LinkId=205213) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 3](http://go.microsoft.com/fwlink/?LinkId=205202). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
   
 ### <a name="to-add-dialog-components-to-your-form"></a>Para adicionar componentes da caixa de diálogo ao seu formulário  
   
@@ -49,7 +49,7 @@ Para habilitar seu programa a abrir arquivos de imagem e escolher uma cor da tel
   
 2.  Para adicionar um componente chamado **openFileDialog1** ao formulário, clique duas vezes em **OpenFileDialog**. Para adicionar um componente chamado **colorDialog1** ao formulário, clique duas vezes em **ColorDialog** na Caixa de Ferramentas. (Use a referência da próxima etapa do tutorial.) Você deve ver uma área na parte inferior do Windows Forms Designer (abaixo do formulário visualizador de imagens) que tem um ícone para cada um dos dois componentes da caixa de diálogo que você adicionou, conforme mostrado na seguinte imagem.  
   
-     ![Componentes da caixa de diálogo](../ide/media/express_dialogsadded.png "Express_DialogsAdded")  
+     ![Componentes da caixa de diálogo](~/docs/ide/media/express_dialogsadded.png "Express_DialogsAdded")  
 Componentes da caixa de diálogo  
   
 3.  Escolha o ícone **openFileDialog1** na área da parte inferior do Designer de Formulários do Windows. Defina as duas propriedades:  

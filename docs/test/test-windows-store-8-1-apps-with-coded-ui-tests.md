@@ -84,11 +84,11 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
   
 1.  Crie um novo projeto de teste de IU codificado para o aplicativo da Windows Store.  
   
-     ![Novo projeto de teste de IU codificado &#40;Aplicativos da Windows Store&#41;](../test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
+     ![Novo projeto de teste de IU codificado &#40;Aplicativos da Windows Store&#41;](~/docs/test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
   
 2.  Escolha editar o mapa de interface do usuário usando a ferramenta de fios.  
   
-     ![Optar por editar o mapa de interface do usuário ou adicionar declarações](../test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")  
+     ![Optar por editar o mapa de interface do usuário ou adicionar declarações](~/docs/test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")  
   
 3.  Use a ferramenta de fios no Construtor de Teste de IU Codificado para selecionar o bloco de aplicativos, clique com o botão direito do mouse em **AutomationId** e escolha **Copiar Valor para a Área de Transferência**. O valor na área de transferência será usado mais tarde para gravar a ação para ativar o aplicativo para teste.  
   
@@ -116,7 +116,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
   
 9. Adicione e gere o código para a asserção.  
   
-     ![Gerar código para a declaração de caixa de texto](../test/media/cuit_windowsstoreapp_textbox_generate_assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")  
+     ![Gerar código para a declaração de caixa de texto](~/docs/test/media/cuit_windowsstoreapp_textbox_generate_assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")  
   
 10. **Visual C#**  
   

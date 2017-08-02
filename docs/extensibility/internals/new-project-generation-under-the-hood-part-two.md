@@ -134,7 +134,7 @@ namespace Simple
   
  A estrutura de pastas de aplicativo Windows resultante tem esta aparência:  
   
- ![SimpleSolution](../../extensibility/internals/media/simplesolution.png "SimpleSolution")  
+ ![SimpleSolution](~/docs/extensibility/internals/media/simplesolution.png "SimpleSolution")  
   
  A primeira e única \<projeto > marca das leituras de modelo:  
   

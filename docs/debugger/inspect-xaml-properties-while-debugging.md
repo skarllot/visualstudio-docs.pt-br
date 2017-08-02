@@ -80,7 +80,7 @@ private void button_Click(object sender, RoutedEventArgs e)
   
  Quando a janela é exibida, clique o**Adicionar Item**botão duas vezes.  Você deve ver algo assim:  
   
- ![Main window of the app](../debugger/media/livevisualtree-app.png "LiveVIsualTree\-App")  
+ ![Main window of the app](~/docs/debugger/media/livevisualtree-app.png "LiveVIsualTree\-App")  
   
  Agora, abra o**árvore Visual do Live**janela \(**Debug \/ Windows \/ árvore Visual do Live**ou a encontrá\-lo no lado esquerdo do IDE\).  Arraste\-a para fora de sua posição de encaixe para que possamos observar essa janela e o**Propriedades Live**janela lado a lado.  No**árvore Visual do Live**janela, expanda o**ContentPresenter**nó.  Ele deve conter nós para o botão e a caixa de listagem.  Expanda a caixa de listagem \(e, em seguida, o**ScrollContentPresenter**e**ItemsPresenter**\) para ver a lista de itens de caixa.  A janela deve ter esta aparência:  
   
@@ -96,7 +96,7 @@ private void button_Click(object sender, RoutedEventArgs e)
   
  **Exibir adorners de layout do aplicativo em execução**.  Você pode habilitar esse modo quando você seleciona o botão que está imediatamente à direita do botão de seleção Enable.  Quando**exibir adorners layout**estiver ativado, ele faz com que a janela do aplicativo Mostrar linhas horizontais e verticais ao longo dos limites do objeto selecionado, você pode ver o que ele alinha, bem como retângulos que mostram as margens.  Por exemplo, ativar ambos**Ativar seleção**e**layout de exibição**ativado e selecione o**Adicionar Item**bloco de texto no aplicativo.  Você deve ver o nó de bloco de texto no**árvore Visual do Live**e o bloco de texto propriedades**Live Visualizador de propriedade**bem como as linhas horizontais e verticais dos limites do bloco de texto.  
   
- ![LivePropertyViewer in DisplayLayout](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer\-DisplayLayout")  
+ ![LivePropertyViewer in DisplayLayout](~/docs/debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer\-DisplayLayout")  
   
  **Visualizar seleção**.  Você pode habilitar esse modo selecionando o terceiro botão da esquerda na barra de ferramentas Live árvore Visual.  Este modo mostra o XAML onde o elemento foi declarado, se você tiver acesso ao código\-fonte do aplicativo.  Selecione**Ativar seleção**e**Visualizar seleção**e, em seguida, selecione o botão no nosso aplicativo de teste.  O arquivo MainWindow. XAML é aberto no Visual Studio e o cursor é colocado na linha em que o botão é definido.  
   

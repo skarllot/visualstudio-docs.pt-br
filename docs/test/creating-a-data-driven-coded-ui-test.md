@@ -53,7 +53,7 @@ Para testar diferentes condições, você pode executar os testes várias vezes 
   
 2.  Escolha registrar as ações.  
   
-     ![Escolher registrar as ações](../test/media/cuit_datadriven_generatecodedialog.png "CUIT_dataDriven_GenerateCodeDialog")  
+     ![Escolher registrar as ações](~/docs/test/media/cuit_datadriven_generatecodedialog.png "CUIT_dataDriven_GenerateCodeDialog")  
   
 3.  Abra o aplicativo Calculadora e inicie a gravação do teste.  
   
@@ -61,7 +61,7 @@ Para testar diferentes condições, você pode executar os testes várias vezes 
   
 4.  Adicione 1 mais 2, pause o gravador e gere o método de teste. Posteriormente, vamos substituir os valores dessa entrada do usuário por valores de um arquivo de dados.  
   
-     ![Gerar método de teste](../test/media/cuit_datadriven_cuitbuildergencode.png "CUIT_dataDriven_CUITBuilderGenCode")  
+     ![Gerar método de teste](~/docs/test/media/cuit_datadriven_cuitbuildergencode.png "CUIT_dataDriven_CUITBuilderGenCode")  
   
      Feche o construtor de teste. O método é adicionado ao teste:  
   
@@ -91,7 +91,7 @@ Para testar diferentes condições, você pode executar os testes várias vezes 
   
 8.  Após configurar a declaração, gere o código do construtor de novamente. Isso cria um novo método para a validação.  
   
-     ![Gerar o método de declaração](../test/media/cuit_datadriven_assertiongencode.png "CUIT_dataDriven_AssertionGenCode")  
+     ![Gerar o método de declaração](~/docs/test/media/cuit_datadriven_assertiongencode.png "CUIT_dataDriven_AssertionGenCode")  
   
      Como o método `ValidateSum` valida os resultados do método `AddNumbers`, mova-o para a parte inferior do bloco de códigos.  
   

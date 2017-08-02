@@ -107,7 +107,7 @@ No Designer XAML, você pode definir as propriedades de associação de dados us
   
      A ilustração a seguir mostra a caixa de diálogo **Criar Vinculação de Dados** com a propriedade **ItemCount** selecionada.  
   
-     ![caixa de diálogo Criar Vinculação de Dados](../designers/media/xaml_create_data_binding.png "xaml_create_data_binding")  
+     ![caixa de diálogo Criar Vinculação de Dados](~/docs/designers/media/xaml_create_data_binding.png "xaml_create_data_binding")  
   
 8.  Pressione F5 para executar o aplicativo.  
   

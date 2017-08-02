@@ -47,19 +47,19 @@ ms.lasthandoff: 02/22/2017
   
 |Ícone|Descrição|Ícone|Descrição|  
 |----------|-----------------|----------|-----------------|  
-|![Símbolo de namespace](../ide/media/vxnamespace_icon.gif "vxNamespace_Icon")|espaço de nome|![Símbolo de declaração](../ide/media/vxmethod_icon.gif "vxMethod_Icon")|Método ou função|  
-|![Ícone de classe](../ide/media/vxclass_icon.gif "vxClass_Icon")|Classe|![Símbolo de operador](../ide/media/vxoperator_icon.gif "vxOperator_Icon")|Operador|  
-|![Símbolo de interface pirulito](../ide/media/vxinterface_icon.gif "vxInterface_Icon")|Interface|![Símbolo de propriedade](../ide/media/vxproperty_icon.gif "vxProperty_Icon")|Propriedade|  
-|![Símbolo de estrutura](../ide/media/vxstruct_icon.gif "vxStruct_Icon")|Estrutura|![Ícone de campo](../ide/media/vxfield_icon.gif "vxField_Icon")|Campo ou variável|  
-|![Símbolo de união](../ide/media/vxunion_icon.gif "vxUnion_Icon")|União|![Símbolo de evento](../ide/media/vxevent_icon.gif "vxEvent_Icon")|Evento|  
-|![Símbolo de enumeração](../ide/media/vxenum_icon.gif "vxEnum_Icon")|Enum|![Ícone de constante](../ide/media/vxconstant_icon.gif "vxConstant_Icon")|Constante|  
-|![Símbolo de definição de tipo](../ide/media/vxtypedef_icon.gif "vxTypeDef_Icon")|TypeDef|![Símbolo do item Enumerar](../ide/media/vxenumitem_icon.gif "vxEnumItem_Icon")|Item Enum|  
-|![Símbolo do módulo do Visual Studio](../ide/media/vxmodule_icon.gif "vxModule_Icon")|Módulo|![Símbolo de item do mapa](../ide/media/vxmapitem_icon.gif "vxMapItem_Icon")|Item de Mapa|  
-|![Símbolo de método de extensão](../ide/media/extensionmethod.gif "ExtensionMethod")|Método de extensão|![Símbolo de declaração](../ide/media/vxmethod_icon.gif "vxMethod_Icon")|Declaração externa|  
-|![Símbolo de delegado](../ide/media/vxdelegate_icon.gif "vxDelegate_Icon")|Representante|![Ícone de erro para o Modo de Exibição de Classe e Pesquisador de Objetos](../ide/media/erroricon.gif "ErrorIcon")|Erro|  
-|![Símbolo de exceção](../ide/media/vxexception_icon.gif "vxException_Icon")|Exceção|![Símbolo de modelo](../ide/media/vxtemplate_icon.gif "vxTemplate_Icon")|Modelo|  
-|![Símbolo de mapa](../ide/media/vxmap_icon.gif "vxMap_Icon")|Mapa|![Símbolo de ponto de exclamação de erro](../ide/media/vxerror_icon.gif "vxError_Icon")|Unknown|  
-|![Símbolo de encaminhamento de tipo](../ide/media/ob_type_forward.gif "ob_type_forward")|Encaminhamento de tipo|||  
+|![Símbolo de namespace](~/docs/ide/media/vxnamespace_icon.gif "vxNamespace_Icon")|espaço de nome|![Símbolo de declaração](~/docs/ide/media/vxmethod_icon.gif "vxMethod_Icon")|Método ou função|  
+|![Ícone de classe](~/docs/ide/media/vxclass_icon.gif "vxClass_Icon")|Classe|![Símbolo de operador](~/docs/ide/media/vxoperator_icon.gif "vxOperator_Icon")|Operador|  
+|![Símbolo de interface pirulito](~/docs/ide/media/vxinterface_icon.gif "vxInterface_Icon")|Interface|![Símbolo de propriedade](~/docs/ide/media/vxproperty_icon.gif "vxProperty_Icon")|Propriedade|  
+|![Símbolo de estrutura](~/docs/ide/media/vxstruct_icon.gif "vxStruct_Icon")|Estrutura|![Ícone de campo](~/docs/ide/media/vxfield_icon.gif "vxField_Icon")|Campo ou variável|  
+|![Símbolo de união](~/docs/ide/media/vxunion_icon.gif "vxUnion_Icon")|União|![Símbolo de evento](~/docs/ide/media/vxevent_icon.gif "vxEvent_Icon")|Evento|  
+|![Símbolo de enumeração](~/docs/ide/media/vxenum_icon.gif "vxEnum_Icon")|Enum|![Ícone de constante](~/docs/ide/media/vxconstant_icon.gif "vxConstant_Icon")|Constante|  
+|![Símbolo de definição de tipo](~/docs/ide/media/vxtypedef_icon.gif "vxTypeDef_Icon")|TypeDef|![Símbolo do item Enumerar](~/docs/ide/media/vxenumitem_icon.gif "vxEnumItem_Icon")|Item Enum|  
+|![Símbolo do módulo do Visual Studio](~/docs/ide/media/vxmodule_icon.gif "vxModule_Icon")|Módulo|![Símbolo de item do mapa](~/docs/ide/media/vxmapitem_icon.gif "vxMapItem_Icon")|Item de Mapa|  
+|![Símbolo de método de extensão](~/docs/ide/media/extensionmethod.gif "ExtensionMethod")|Método de extensão|![Símbolo de declaração](~/docs/ide/media/vxmethod_icon.gif "vxMethod_Icon")|Declaração externa|  
+|![Símbolo de delegado](~/docs/ide/media/vxdelegate_icon.gif "vxDelegate_Icon")|Representante|![Ícone de erro para o Modo de Exibição de Classe e Pesquisador de Objetos](~/docs/ide/media/erroricon.gif "ErrorIcon")|Erro|  
+|![Símbolo de exceção](~/docs/ide/media/vxexception_icon.gif "vxException_Icon")|Exceção|![Símbolo de modelo](~/docs/ide/media/vxtemplate_icon.gif "vxTemplate_Icon")|Modelo|  
+|![Símbolo de mapa](~/docs/ide/media/vxmap_icon.gif "vxMap_Icon")|Mapa|![Símbolo de ponto de exclamação de erro](~/docs/ide/media/vxerror_icon.gif "vxError_Icon")|Unknown|  
+|![Símbolo de encaminhamento de tipo](~/docs/ide/media/ob_type_forward.gif "ob_type_forward")|Encaminhamento de tipo|||  
   
 ## <a name="signal-icons"></a>Ícones de sinal  
  Os ícones de sinal a seguir aplicam-se a todos os ícones anteriores e indicam sua acessibilidade.  
@@ -70,11 +70,11 @@ ms.lasthandoff: 02/22/2017
 |Ícone|Descrição|  
 |----------|-----------------|  
 |\<Nenhum ícone de sinal>|Público. Acessível de qualquer lugar neste componente e de qualquer componente que faça referência a ele.|  
-|![Símbolo de sinal protegido](../ide/media/vxsignal_icon_key.gif "vxSignal_Icon_Key")|Protegido. Acessível da classe ou do tipo recipiente ou daqueles derivados da classe ou do tipo recipiente.|  
-|![Símbolo de sinal privado](../ide/media/vxsignal_icon_lock.gif "vxSignal_Icon_Lock")|Privado. Acessível somente na classe ou no tipo recipiente.|  
-|![Símbolo de sinal lacrado](../ide/media/vxsignal_icon_envelope.gif "vxSignal_Icon_Envelope")|Lacrado.|  
-|![Símbolo de amigo&#47;interno do sinal](../ide/media/vxsignal_icon_diamond.gif "vxSignal_Icon_Diamond")|Amigo/interno. Acessível somente no projeto.|  
-|![Ícone de seta do sinal](../ide/media/vxsignal_icon_arrow.gif "vxSignal_Icon_Arrow")|Atalho. Um atalho para o objeto.|  
+|![Símbolo de sinal protegido](~/docs/ide/media/vxsignal_icon_key.gif "vxSignal_Icon_Key")|Protegido. Acessível da classe ou do tipo recipiente ou daqueles derivados da classe ou do tipo recipiente.|  
+|![Símbolo de sinal privado](~/docs/ide/media/vxsignal_icon_lock.gif "vxSignal_Icon_Lock")|Privado. Acessível somente na classe ou no tipo recipiente.|  
+|![Símbolo de sinal lacrado](~/docs/ide/media/vxsignal_icon_envelope.gif "vxSignal_Icon_Envelope")|Lacrado.|  
+|![Símbolo de amigo&#47;interno do sinal](~/docs/ide/media/vxsignal_icon_diamond.gif "vxSignal_Icon_Diamond")|Amigo/interno. Acessível somente no projeto.|  
+|![Ícone de seta do sinal](~/docs/ide/media/vxsignal_icon_arrow.gif "vxSignal_Icon_Arrow")|Atalho. Um atalho para o objeto.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibindo a estrutura do código](../ide/viewing-the-structure-of-code.md)

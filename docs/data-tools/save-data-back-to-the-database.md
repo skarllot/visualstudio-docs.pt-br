@@ -62,7 +62,7 @@ O conjunto de dados é uma cópia dos dados na memória. Se você modificar esse
   
  Se você enviar as alterações no banco de dados, uma segunda etapa é necessária. Se você não estiver usando controles ligados a dados, você precisa chamar o método Update do mesmo TableAdapter \(ou adaptador de dados\) que você usou para preencher o dataset, embora também possa usar adaptadores diferentes, por exemplo, para mover dados de uma fonte de dados para outro ou para atualizar várias fontes de dados manualmente. Se você não estiver usando a ligação de dados e está salvando alterações para tabelas relacionadas, você precisa criar manualmente uma variável da classe TableAdapterManager gerado automaticamente e chame seu método UdpateAll.  
   
- ![Atualizações de Dataset do Visual Basic](../data-tools/media/vbdatasetupdates.png "vbDatasetUpdates")  
+ ![Atualizações de Dataset do Visual Basic](~/docs/data-tools/media/vbdatasetupdates.gif "vbDatasetUpdates")  
 Processo de atualização de dois estágios e a função do DataRowVersion em uma atualização bem\-sucedida  
   
  Um conjunto de dados contém coleções de tabelas, que contêm uma coleção de linhas. Ao adicionar ou remover linhas, se você pretende atualizar uma fonte de dados subjacente, você deve usar os métodos na propriedade DataTable.DataRowCollection. Esses métodos executam o controle de alterações necessário para atualizar a fonte de dados. Se você chamar a coleção RemoveAt na propriedade de linhas, a exclusão não ser comunicada de volta para o banco de dados.  

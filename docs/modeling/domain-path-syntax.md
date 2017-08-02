@@ -28,7 +28,7 @@ As definições de DSL usam uma sintaxe semelhante a XPath para localizar elemen
   
  *RelationshipName.PropertyName/! Função*  
   
- ![Relação de referência CommentReferencesSubjects](../modeling/media/dsl_reference.png "dsl_reference")  
+ ![Relação de referência CommentReferencesSubjects](~/docs/modeling/media/dsl_reference.png "dsl_reference")  
   
  A sintaxe percorre a árvore do modelo. Por exemplo, a relação de domínio **CommentReferencesSubjects** na ilustração acima tem um **assuntos** função. O segmento de caminho **/! Subjectt** Especifica que o caminho termina em elementos acessados por meio de **assuntos** função.  
   

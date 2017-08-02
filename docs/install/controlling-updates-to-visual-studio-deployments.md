@@ -74,7 +74,7 @@ Se desejar ter controle direto sobre onde o Visual Studio procura por atualizaç
  8. Novas instalações instalarão automaticamente a versão atualizada do Visual Studio diretamente do layout.
 
 ## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Notificações de controle no IDE do Visual Studio
-Conforme descrito acima, o Visual Studio verifica o local do qual foi instalado (por exemplo, o compartilhamento de rede ou a internet), para ver se há atualizações disponíveis. Quando uma atualização está disponível, por padrão, o Visual Studio notifica o usuário com um sinalizador de notificação no canto superior direito da janela: ![sinalizador de notificação de atualizações](media/notification-flag.png)
+Conforme descrito acima, o Visual Studio verifica o local do qual foi instalado (por exemplo, o compartilhamento de rede ou a internet), para ver se há atualizações disponíveis. Quando uma atualização está disponível, por padrão, o Visual Studio notifica o usuário com um sinalizador de notificação no canto superior direito da janela: ![sinalizador de notificação de atualizações](~/docs/install/media/notification-flag.png)
 
 Se você não quiser que os usuários finais sejam notificados de atualizações (por exemplo, você fornece atualizações por meio de um mecanismo de distribuição de software central), poderá desabilitar essas notificações.
 

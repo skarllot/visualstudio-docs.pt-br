@@ -98,7 +98,7 @@ Use análise de quadro de gráficos no analisador de elementos gráficos do Visu
 #### Significância estatística  
  Para chamar atenção para as variações de renderização que possuem maior relevância, a Análise de Quadro determina a significância estatística de cada variante de renderização e exibe aquelas de são significativas em negrito.  Aquelas que aprimoram o desempenho são exibidas em verde, e as que reduzem o desempenho, em vermelho.  Os resultados que não são estatisticamente significativos são exibidos em fonte normal.  
   
- ![The statistical relevence of the draw call variant](../debugger/media/pix_frame_analysis_summary_stats.png "pix\_frame\_analysis\_summary\_stats")  
+ ![The statistical relevence of the draw call variant](~/docs/debugger/graphics/media/pix_frame_analysis_summary_stats.png "pix\_frame\_analysis\_summary\_stats")  
   
  Para determinar a relevância estatística, a Análise de Quadro usa o [Teste T de Student](http://www.wikipedia.org/wiki/Student%27s_t-test).  
   

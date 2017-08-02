@@ -64,7 +64,7 @@ Este erro é:
   
 5.  Na coluna **Política**, clique duas vezes em **Depurar programas** para exibir as atribuições locais atual da política de grupo na caixa de diálogo **Configuração de Política de Segurança Local**.  
   
-     ![Direitos de usuário de diretiva de segurança local](../debugger/media/dbg_err_localsecuritypolicy_userrightsdebugprograms.png "DBG\_ERR\_LocalSecurityPolicy\_UserRightsDebugPrograms")  
+     ![Direitos de usuário de diretiva de segurança local](~/docs/debugger/media/dbg_err_localsecuritypolicy_userrightsdebugprograms.png "DBG\_ERR\_LocalSecurityPolicy\_UserRightsDebugPrograms")  
   
 6.  Para adicionar novos usuários, clique no botão **Adicionar Usuário ou Grupo**.  
   
@@ -80,7 +80,7 @@ Este erro é:
   
 5.  Na caixa de diálogo **Acesso à rede: modelo de compartilhamento e segurança para contas locais**, altere o valor para **Clássico \- os usuários locais são autenticados como eles próprios** e clique no botão **Aplicar**.  
   
-     ![Opções de segurança de diretiva de segurança local](../debugger/media/dbg_err_localsecuritypolicy_securityoptions_networkaccess.png "DBG\_ERR\_LocalSecurityPolicy\_SecurityOptions\_NetworkAccess")  
+     ![Opções de segurança de diretiva de segurança local](~/docs/debugger/media/dbg_err_localsecuritypolicy_securityoptions_networkaccess.png "DBG\_ERR\_LocalSecurityPolicy\_SecurityOptions\_NetworkAccess")  
   
 ## Consulte também  
  [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)   

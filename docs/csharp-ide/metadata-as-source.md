@@ -37,7 +37,7 @@ Metadados como fonte permitem exibir os metadados que aparecem como código\-fon
   
  Por exemplo, se você executar o  **Go To Definition** comando <xref:System.Console>, metadados para <xref:System.Console> aparece no Editor de código, como C\# código\-fonte semelhante a sua declaração, mas sem uma implementação.  
   
- ![Metadados como fonte](../csharp-ide/media/metadatasource.png "MetadataSource")  
+ ![Metadados como fonte](~/docs/csharp-ide/media/metadatasource.png "MetadataSource")  
   
 ## Visualização de metadados como fonte na janela de definição de código  
  Quando o  **Definição do código de** janela está ativa ou visível, o IDE executa automaticamente o  **Go To Definition** comando para itens sob o cursor no Editor de código e para itens que estão selecionados na  **Class View** ou o  **Pesquisador de objetos**.  Se o código\-fonte não está disponível para esse item, o IDE exibe os metadados do item como fonte na  **Definição do código de** janela.  
