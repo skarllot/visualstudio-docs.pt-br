@@ -66,7 +66,7 @@ Este tópico descreve como isolar problemas de desempenho nos aplicativos usando
   
      Se desejar alterar o destino da análise para o criador de perfil, escolha **Alterar Destino**.  
   
-     ![Alterar destino de análise](../profiling/media/js_tools_target.png "JS_Tools_Target")  
+     ![Alterar destino de análise](~/profiling/media/js_tools_target.png "JS_Tools_Target")  
   
      As seguintes opções estão disponíveis para o destino de análise:  
   
@@ -117,7 +117,7 @@ Este tópico descreve como isolar problemas de desempenho nos aplicativos usando
   
 8.  Se você tiver adicionado marcas de usuário, elas aparecerão na opção [Exibir a linha do tempo da sessão de diagnóstico](#Ruler) do criador de perfil. A ilustração a seguir mostra uma única marca de usuário usada para especificar uma operação específica em seu código.  
   
-     ![Régua de diagnóstico mostrando uma marca de usuário](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
+     ![Régua de diagnóstico mostrando uma marca de usuário](~/profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
   
 9. Identifique uma área de interesse na linha de tempo e nos gráficos do criador de perfil usando marcas de usuário, eventos de ciclo de vida do aplicativo ou dados visíveis nos gráficos. Veja a seguir algumas diretrizes para ajudá-lo a analisar e usar os dados dos gráficos:  
   
@@ -131,7 +131,7 @@ Este tópico descreve como isolar problemas de desempenho nos aplicativos usando
   
      A ilustração a seguir mostra o gráfico de utilização da CPU com uma área de interesse realçada.  
   
-     ![Gráfico de utilização de CPU](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
+     ![Gráfico de utilização de CPU](~/profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
   
 11. Use a opção [Exibir detalhes da linha de tempo](#TimelineDetails) para obter informações detalhadas sobre os eventos que são realizados com muita frequência ou demorando muito tempo para terminar. Por exemplo, procure o seguinte:  
   
@@ -174,7 +174,7 @@ if (performance && performance.mark) {
   
  A ilustração a seguir mostra a régua de diagnóstico com uma única marca de usuário e sua dica de ferramenta.  
   
- ![Régua de diagnóstico mostrando uma marca de usuário](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
+ ![Régua de diagnóstico mostrando uma marca de usuário](~/profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
   
  Você também pode criar eventos gerados por ferramenta na exibição dos detalhes da linha do tempo para ver quanto tempo se passa entre duas marcas de usuário. O código a seguir adiciona uma segunda marca de usuário e uma medida do tempo decorrido entre a execução de duas marcas de usuário (o código anterior mostra a primeira marca de usuário).  
   
@@ -199,7 +199,7 @@ if (performance.mark && performance.measure) {
   
  Esta é a aparência da sessão de diagnóstico com uma dica de ferramenta exibida para vários eventos de ciclo de vida do aplicativo:  
   
- ![Régua da sessão de diagnóstico](../profiling/media/js_htmlvizprof_ruler.png "JS_HTMLVizProf_Ruler")  
+ ![Régua da sessão de diagnóstico](~/profiling/media/js_htmlvizprof_ruler.png "JS_HTMLVizProf_Ruler")  
   
  A linha do tempo mostra quando ocorrem os eventos de ciclo de vida do aplicativo, como o evento de ativação, e mostra marcas de usuário (triângulos com a marca de usuário) que você pode adicionar ao seu código. Você pode selecionar os eventos para mostrar dicas de ferramenta com mais informações. Para obter mais informações sobre as marcas de usuário, consulte [Marcar código para análise](#ProfileMark) neste tópico.  
   
@@ -219,7 +219,7 @@ if (performance.mark && performance.measure) {
   
  Este exemplo mostra a aparência do gráfico da utilização da CPU:  
   
- ![Gráfico de utilização de CPU](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
+ ![Gráfico de utilização de CPU](~/profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
   
  Use este gráfico para:  
   
@@ -303,7 +303,7 @@ if (performance.mark && performance.measure) {
   
  Desmarque a opção **Atividade em segundo plano** do ícone de filtro no painel inferior para filtrar a decodificação de imagem, o download especulativo e os eventos GC. Como esses eventos não são muito acionáveis, eles ficam ocultos por padrão.  
   
- ![Filtrando eventos na linha do tempo](../profiling/media/js_htmlvizprofiler_event_filter.png "JS_HTMLVizProfiler_Event_Filter")  
+ ![Filtrando eventos na linha do tempo](~/profiling/media/js_htmlvizprofiler_event_filter.png "JS_HTMLVizProfiler_Event_Filter")  
   
  Para filtrar os eventos de solicitação HTTP, desmarque a opção **Tráfego de rede** do ícone de filtro no painel inferior. Por padrão, esses eventos são mostrados no gráfico de detalhes da linha do tempo.  
   

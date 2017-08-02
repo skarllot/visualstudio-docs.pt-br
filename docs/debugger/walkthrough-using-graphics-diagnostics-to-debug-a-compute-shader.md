@@ -32,7 +32,7 @@ Este passo a passo demonstra como usar as ferramentas de diagnóstico de gráfic
 ## Cenário  
  Nesse cenário, você tenha escrito uma simulação dinâmica de fluidos que usa DirectCompute para executar as partes com uso intensivo de computação da atualização de simulação.  Quando o aplicativo é executado, o processamento de conjunto de dados e da interface do usuário a aparência correta, mas a simulação não se comportar conforme o esperado.  Usando o diagnóstico de gráficos, você pode capturar o problema em um log de gráficos para que você pode depurar o aplicativo.  O problema parece com isto no aplicativo:  
   
- ![The simulated fluid behaves incorrectly.](../debugger/media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx\_diag\_demo\_compute\_shader\_fluid\_problem")  
+ ![The simulated fluid behaves incorrectly.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx\_diag\_demo\_compute\_shader\_fluid\_problem")  
   
  Para obter informações sobre como detectar os problemas de gráficos em um log de gráficos, consulte [Capturando informações de gráficos](../debugger/capturing-graphics-information.md).  
   
@@ -55,13 +55,13 @@ Este passo a passo demonstra como usar as ferramentas de diagnóstico de gráfic
   
 2.  Inspecione o **lista de eventos gráficos** para o evento de desenho que renderiza o conjunto de dados.  Para tornar isso mais fácil, digite `Desenhar` no **pesquisa** caixa no canto superior direito do **lista de eventos gráficos** janela.  Isso filtra a lista para que ele contém apenas os eventos que têm "Desenha" em seus cargos.  Nesse cenário, você descobre que elas desenhar eventos ocorreu:  
   
-     ![The Event List &#40;EL&#41; shows draw events.](../debugger/media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_2")  
+     ![The Event List &#40;EL&#41; shows draw events.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_2")  
   
 3.  Percorrer cada evento de desenho enquanto você observa o destino de renderização na guia de documento de log de gráficos.  
   
 4.  Pare quando o destino de renderização exibe o conjunto de dados processado pela primeira vez.  Nesse cenário, o conjunto de dados é processado no primeiro evento de desenho.  Erro na simulação é mostrado:  
   
-     ![This draw event renders the simulation data set.](../debugger/media/gfx_diag_demo_compute_shader_fluid_step_3.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_3")  
+     ![This draw event renders the simulation data set.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_3.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_3")  
   
 5.  Agora inspecionar o **lista de eventos gráficos** para o `Dispatch` eventos que atualiza a simulação.  Como é provável que a simulação está atualizada antes de ser processado, você pode se concentrar primeiro na `Dispatch` eventos que ocorrem antes do evento de desenho que renderiza os resultados.  Para tornar isso mais fácil, modifique o **pesquisa** caixa ler `Draw; expedição; CSSetShader (`.  Isso filtra a lista para que ele contém também `Dispatch` e `CSSetShader` eventos além de eventos de desenho.  Nesse cenário, você descobre que várias `Dispatch` eventos ocorridos antes do evento de desenho:  
   
@@ -89,7 +89,7 @@ Este passo a passo demonstra como usar as ferramentas de diagnóstico de gráfic
   
 3.  Examine o código\-fonte do sombreador de cálculo para a etapa de integração procurar a origem do erro.  Quando você usar o diagnóstico de gráficos para depurar o código do sombreador de cálculo HLSL, você pode percorrer o código e usar outras ferramentas de depuração familiares, como janelas de observação.  Nesse cenário, você determinar que não parece haver um erro no sombreador de computação que executa a etapa de integração.  
   
-     ![Debugging the IntegrateCS compute shader.](../debugger/media/gfx_diag_demo_compute_shader_fluid_step_7.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_7")  
+     ![Debugging the IntegrateCS compute shader.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_7.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_7")  
   
 4.  Para parar a depuração do sombreador de computação, no **Depurar** barra de ferramentas, escolha **parar depuração** \(teclado: Shift \+ F5\).  
   
@@ -101,7 +101,7 @@ Este passo a passo demonstra como usar as ferramentas de diagnóstico de gráfic
   
 6.  Examine o código fonte do sombreador computação para a etapa de força de cálculo.  Nesse cenário, você determinar que a origem do erro está aqui.  
   
-     ![Debugging the ForceCS&#95;Simple compute shader.](../debugger/media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_9")  
+     ![Debugging the ForceCS&#95;Simple compute shader.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_9")  
   
  Depois de determinar o local do erro, você pode parar a depuração e modificar o código\-fonte do sombreador de cálculo para calcular a distância entre as partículas interagir corretamente.  Nesse cenário, basta alterar a linha `float2 diff = N_position + P_position;` para `float2 diff = N_position - P_position;`:  
   

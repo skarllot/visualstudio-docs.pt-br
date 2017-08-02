@@ -36,7 +36,7 @@ O componente Microsoft Visual C++ para Desenvolvimento Móvel inclui funcionalid
 ### <a name="open-in-xcode"></a>Abrir no XCode  
  Para abrir o projeto no XCode por meio do Visual Studio, no submenu **Computador Remoto**, escolha **Abrir no XCode** para abrir o projeto selecionado no computador remoto emparelhado. O servidor vcremote é usado para abrir o XCode no Mac e navegar para um diretório temporário criado no Mac que contém uma cópia do projeto. O Visual Studio exibe uma caixa de diálogo que mostra o diretório temporário usado para o projeto. As ações realizadas no computador remoto também são mostradas na janela **Saída** do Visual Studio. Para vê-las, talvez você precise selecionar **Computador Remoto do Visual C++** na lista suspensa **Mostrar saída de** na parte superior da janela **Saída**.  
   
- ![A janela Saída mostra as ações do computador remoto.] (../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
+ ![A janela Saída mostra as ações do computador remoto.] (~/cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
   
  No Mac, é possível usar todas as ferramentas do XCode para editar o código e recursos, storyboards e ações. No Visual Studio, o projeto de Aplicativo do iOS é anotado com “Aberto no XCode” para indicar que podem ser feitas alterações no computador remoto. Depois que as edições forem concluídas, é possível usar os comandos Efetuar Pull de Remoto ou Pull Incremental de Remoto para copiar as alterações de volta para o projeto do Visual Studio.  
   

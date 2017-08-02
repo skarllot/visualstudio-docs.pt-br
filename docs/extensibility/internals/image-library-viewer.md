@@ -215,7 +215,7 @@ A ferramenta Visualizador de biblioteca de imagens do Visual Studio pode carrega
   
  As informações exibidas para cada fonte de imagem incluem o tipo de plano de fundo para exibi-lo, se ele pode ter tema ou oferece suporte a alto contraste, quais são os tamanhos é válido para ou é neutro de tamanho e se a imagem é proveniente de um assembly nativo.  
   
- ![Visualizador de biblioteca de imagens pode tema](../../extensibility/internals/media/image-library-viewer-can-theme.png "Visualizador da biblioteca de imagens pode tema")  
+ ![Visualizador de biblioteca de imagens pode tema](~/extensibility/internals/media/image-library-viewer-can-theme.png "Visualizador da biblioteca de imagens pode tema")  
   
  Ao validar um manifesto de imagem, é recomendável que você implantar o manifesto e imagem DLL em seus locais reais. Isso irá verificar se todos os caminhos relativos estão funcionando corretamente e que a biblioteca de imagens pode localizar e carregar o manifesto e imagem DLL.  
   

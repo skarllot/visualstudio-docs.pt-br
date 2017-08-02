@@ -44,17 +44,17 @@ ms.lasthandoff: 02/22/2017
 Removendo dependências indesejáveis é uma parte importante do gerenciamento de suas deficiências técnicas.
 Validação em tempo real das dependências é agora incluída, fornecendo informações precisas sobre problemas e se beneficiar totalmente com os novos recursos na lista de erros e o editor.
 
-![Validação de dependência ao vivo em ação](media/dep-validation-whatsnew-01.png)
+![Validação de dependência ao vivo em ação](~/modeling/media/dep-validation-whatsnew-01.png)
 
 A experiência de criação foi alterado para fazer a validação de dependência mais detectáveis e mais acessível, alterando a terminologia de "Diagrama de camada" para "Diagrama de dependência".
 
 O **arquitetura** menu agora contém um comando para criar um diagrama de dependência diretamente:
 
-![Item de dependência ao vivo no menu de arquitetura](media/dep-validation-whatsnew-02.png)
+![Item de dependência ao vivo no menu de arquitetura](~/modeling/media/dep-validation-whatsnew-02.png)
 
 ... e os nomes de propriedade de uma camada em um diagrama de dependência e suas descrições, foram alterados para torná-los mais significativos:
 
-![Nomes de propriedade de dependência ao vivo atualizado](media/dep-validation-whatsnew-03.png)
+![Nomes de propriedade de dependência ao vivo atualizado](~/modeling/media/dep-validation-whatsnew-03.png)
 
 Agora você ver o impacto das alterações imediatamente nos resultados da análise para o código na solução atual sempre que você salvar o diagrama. Você não precisa mais esperar pela conclusão do comando "Validar dependências".
 

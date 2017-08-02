@@ -87,7 +87,7 @@ O IntelliSense é o termo geral para vários recursos: Listar Membros, Informaç
   
  Quando você seleciona um membro na caixa **Listar Membros**, as Informações Rápidas também são exibidas.  
   
- ![Informações do parâmetro em um arquivo de código C&#35;](../ide/media/vs2015_paraminfo.png "VS2015_ParamInfo")  
+ ![Informações do parâmetro em um arquivo de código C&#35;](~/ide/media/vs2015_paraminfo.png "VS2015_ParamInfo")  
   
  É possível invocar Informações Rápidas clicando em **Editar/IntelliSense/Informações Rápidas**, digitando CTRL+I ou clicando no botão **Informações Rápidas** na barra de ferramentas do editor.  
   

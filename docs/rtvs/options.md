@@ -45,7 +45,7 @@ ms.lasthandoff: 05/12/2017
  
 As configurações são acessadas por meio do menu **Ferramentas do R > Opções** ou de **Ferramentas > Opções** e rolando até **Ferramentas do R**:
  
-  ![Caixa de diálogo de opções para Ferramentas de R](media/options-dialog.png)
+  ![Caixa de diálogo de opções para Ferramentas de R](~/rtvs/media/options-dialog.png)
 
 As seções a seguir descrevem as diferentes opções disponíveis nesta página...
 
@@ -56,7 +56,7 @@ As seções a seguir descrevem as diferentes opções disponíveis nesta página
 
 Também há um item de menu especial **Ferramentas do R > Configurações da ciência de dados** que configura o IDE do Visual Studio com um layout que é otimizado para as necessidades dos cientistas de dados. Especificamente, essa opção abre as janelas [Interativo](interactive-repl.md), [Gerenciador de Variáveis](variable-explorer.md) e [Espaços de trabalho](workspaces.md):
 
-![Layout da janela do cientista de dados no Visual Studio](media/installation-data-scientist-layout-result.png)
+![Layout da janela do cientista de dados no Visual Studio](~/rtvs/media/installation-data-scientist-layout-result.png)
 
 > [!Important]      
 > Para reverter posteriormente para outras configurações do Visual Studio, primeiro use o comando **Ferramentas > Importar e Exportar Configurações**, selecionando **Exportar configurações de ambiente selecionadas** e especificar um nome do arquivo. Para restaurar essas configurações, use o mesmo comando e selecione **Importar configurações de ambiente selecionadas**. Você também poderá usar os mesmos comandos se você alterar o layout do cientista de dados e quiser retornar a ele, em vez de usar o comando **Configurações da ciência de dados** diretamente.

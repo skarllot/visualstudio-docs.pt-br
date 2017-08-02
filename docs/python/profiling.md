@@ -42,11 +42,11 @@ O Visual Studio dá suporte à criação de perfil de um aplicativo do Python ao
 
 A criação de perfil é iniciada por meio do comando de menu **Analisar > Iniciar Criação de Perfil do Python**, que abre uma caixa de diálogo de configuração:
 
-![Caixa de diálogo de configuração de criação de perfil](media/profiling-start.png)
+![Caixa de diálogo de configuração de criação de perfil](~/python/media/profiling-start.png)
 
 Quando você seleciona **OK**, o criador de perfil é executado e abre um relatório de desempenho por meio do qual é possível explorar como o tempo é gasto no aplicativo:
 
-![Relatório de desempenho de criação de perfil](media/profiling-results.png)
+![Relatório de desempenho de criação de perfil](~/python/media/profiling-results.png)
 
 Para obter uma visão geral, consulte o seguinte
 

@@ -56,15 +56,15 @@ As RTVS dão suporte para adição de consultas SQL em projetos R, permitindo qu
 
 Para adicionar um arquivo de consulta SQL, clique com botão direito do mouse no projeto no Gerenciador de Soluções, selecione **Adicionar > Novo Item...** e selecione o tipo de arquivo de **Consulta SQL**:
 
-![Adicionar item de consulta SQL a um projeto](media/sql-add-item.png)
+![Adicionar item de consulta SQL a um projeto](~/rtvs/media/sql-add-item.png)
 
 Isso abre o arquivo no editor Transact-SQL do Visual Studio, que fornece o IntelliSense completo para SQL e a capacidade de executar consultas. Para que esses recursos funcionem, no entanto, você precisa se conectar a um banco de dados usando o botão Conectar na barra de ferramentas do editor ou simplesmente tentando executar uma consulta (Ctrl + Shift + E, que também funciona em uma seleção). As duas formas abrem a caixa de diálogo de conexão:
 
-![Caixa de diálogo de conexão SQL](media/sql-connection-dialog.png)
+![Caixa de diálogo de conexão SQL](~/rtvs/media/sql-connection-dialog.png)
 
 Quando uma conexão é estabelecida, você pode executar consultas e ver os resultados:
 
-![Resultados da consulta da janela SQL](media/sql-query-results.png)
+![Resultados da consulta da janela SQL](~/rtvs/media/sql-query-results.png)
 
 O editor Transact-SQL dá suporte a uma variedade de outros recursos, como exibir o plano de execução da consulta, um depurador de consulta e a vários outros recursos. Para obter detalhes, consulte [Usar o Editor Transact-SQL para editar e executar scripts](https://msdn.microsoft.com/library/hh272706.aspx).
 
@@ -86,11 +86,11 @@ O vídeo a seguir (6m 09s) também fornece uma visão geral desses recursos:
 
 1. Selecione **Ferramentas do R > Dados > Adicionar Conexão de Banco de Dados** para abrir a caixa de diálogo **Propriedades de Conexão**, no qual você especifica o nome da fonte de dados (SQL Server, neste caso), o nome do servidor, o modo de autenticação e o nome do banco de dados. Você pode selecionar **Testar Conexão** para verificar sua entrada antes de fechar a caixa de diálogo.
  
-    ![Caixa de diálogo Conexão SQL](media/sql-connection-string-dialog.png)
+    ![Caixa de diálogo Conexão SQL](~/rtvs/media/sql-connection-string-dialog.png)
 
 1. Depois de selecionar **OK** com uma conexão válida, o Visual Studio gera uma cadeia de conexão chamada `dbConnection` em um novo arquivo `settings.R`. As RTVS origina (executa) automaticamente esse arquivo, permitindo usar imediatamente a conexão dos scripts R:
 
-![Arquivo SQL Settings.R](media/sql-settings-dot-r.png)
+![Arquivo SQL Settings.R](~/rtvs/media/sql-settings-dot-r.png)
 
 ### <a name="write-and-test-a-sql-stored-procedure"></a>Escrever e testar um procedimento armazenado SQL
 
@@ -98,7 +98,7 @@ Para adicionar um novo procedimento armazenado SQL, clique com o botão direito 
  
 As RTVS criam três arquivos para o procedimento armazenado, um arquivo `.R` para o código R, um arquivo `.Query.sql` para o código SQL e um arquivo `.Template.sql` que combina os dois arquivos. Os dois aparecem no Gerenciador de Soluções como filhos do arquivo `.R`:
 
-![Exibição do Gerenciador de Soluções expandido com o procedimento armazenado SQL com R](media/sql-solution-explorer-expanded.png)
+![Exibição do Gerenciador de Soluções expandido com o procedimento armazenado SQL com R](~/rtvs/media/sql-solution-explorer-expanded.png)
 
 `StoredProcedure.R` (neste exemplo) é onde você escreverá seu código R. O conteúdo padrão é o seguinte:
 
@@ -126,7 +126,7 @@ O outro código gerado nos comentários é um script de teste pequeno que usa o 
 
 Depois que estiver satisfeito com seu código SQL, você poderá integrá-lo facilmente ao código R em `StoredProcedure.R`, bastando arrastar o arquivo `.sql` para o editor aberto do arquivo `.R`. Na imagem abaixo, `StoredProcedure.Query.sql` foi arrastado para o ponto após a vírgula em `sqlQuery(channel, )`:
 
-![Lendo o arquivo SQL na variável de cadeia de caracteres de R](media/sql-reference-sql-file-from-r.png)
+![Lendo o arquivo SQL na variável de cadeia de caracteres de R](~/rtvs/media/sql-reference-sql-file-from-r.png)
 
 Como você pode ver, essa etapa simples gera automaticamente o código R para abrir o arquivo `.sql`, ler seu conteúdo em uma cadeia de caracteres e passá-lo para o pacote RODBC para enviá-lo ao SQL Server.
 
@@ -167,7 +167,7 @@ WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 1. Selecione o comando de menu **Ferramentas do R > Dados > Publicar com Opções...**.
 1. Na caixa de diálogo que aparece, altere **Publicar em:** para **Banco de dados**, especifique o destino, selecione **Publicar** e as RTVS criarão e publicarão o procedimento armazenado:
 
-    ![Caixa de diálogo Publicar procedimento armazenado](media/sql-publish-with-options.png)
+    ![Caixa de diálogo Publicar procedimento armazenado](~/rtvs/media/sql-publish-with-options.png)
 
 1. Para publicar todos os procedimentos armazenados em um projeto, você também pode usar o comando **Ferramentas do R > Dados > Publicar Procedimentos Armazenados**, que também estão disponíveis ao clicar com o botão direito do mouse no projeto no Gerenciador de Soluções.
 

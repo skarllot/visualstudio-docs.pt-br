@@ -136,7 +136,7 @@ As ferramentas de Perfil do Visual Studio fornecem cinco métodos que você pode
 ##  <a name="a-nametierinteractiona-tier-interaction"></a><a name="tier_interaction"></a> Interações de Camada  
  Criação de perfil de interação de camadas adiciona informações a um arquivo de dados de criação de perfil sobre chamadas [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] síncronas entre uma [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] página ou em outro aplicativo e um [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] banco de dados. Os dados incluem o número e a hora de chamadas e os tempos mínimos e máximos. Dados de interação de camadas podem ser adicionados para criação de perfil de dados que são coletados com a amostragem, instrumentação, memória do .NET ou métodos de simultaneidade.  
   
- ![Dados de criação de perfil da interação de camadas](../profiling/media/tierinteraction_profilingtools.png "TierInteraction_ProfilingTools")  
+ ![Dados de criação de perfil da interação de camadas](~/profiling/media/tierinteraction_profilingtools.png "TierInteraction_ProfilingTools")  
 Dados de interação de camadas que são coletados por ferramentas de criação de perfil  
   
  [Coletando dados de interação entre camadas](../profiling/collecting-tier-interaction-data.md)  

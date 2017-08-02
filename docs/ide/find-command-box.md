@@ -44,7 +44,7 @@ ms.lasthandoff: 02/22/2017
   
  A caixa **Localizar/Comando** retém os últimos 20 itens inseridos e os exibe em uma lista suspensa. É possível navegar pela lista escolhendo as teclas de direção.  
   
- ![Caixa Localizar&#47;Comando](../ide/media/findcommandbox.png "FindCommandBox")  
+ ![Caixa Localizar&#47;Comando](~/ide/media/findcommandbox.png "FindCommandBox")  
 Localizar/caixa de comando  
   
 ## <a name="searching-for-text"></a>Pesquisando texto  

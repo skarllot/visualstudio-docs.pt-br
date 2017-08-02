@@ -257,7 +257,7 @@ ms.lasthandoff: 05/13/2017
   
      A ilustração a seguir mostra o aplicativo com os botões da janela de navegação.  
   
-     ![Captura de tela de exemplo de ExpenseIt](../designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
+     ![Captura de tela de exemplo de ExpenseIt](~/designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
   
 6.  Feche o aplicativo para retornar ao modo de design.  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 05/13/2017
   
 3.  Crie e execute o aplicativo. A ilustração a seguir mostra a aparência do tempo de execução dos controles criados pelo XAML nesse procedimento.  
   
-     ![Captura de tela de exemplo de ExpenseIt](../designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+     ![Captura de tela de exemplo de ExpenseIt](~/designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
 4.  Feche o aplicativo para retornar ao modo de design.  
   
@@ -480,7 +480,7 @@ ms.lasthandoff: 05/13/2017
   
 6.  Se você compilar e executar o aplicativo neste ponto, ele deverá se parecer com a seguinte ilustração:  
   
-     ![Captura de tela de exemplo de ExpenseIt](../designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
+     ![Captura de tela de exemplo de ExpenseIt](~/designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
   
 #### <a name="to-add-code-to-the-button"></a>Para adicionar código ao botão  
   
@@ -600,7 +600,7 @@ ms.lasthandoff: 05/13/2017
   
      A ilustração a seguir mostra a página Relatório de Despesas. Observe que o botão de navegação regressiva está habilitado.  
   
-     ![Captura de tela de exemplo de ExpenseIt](../designers/media/gettingstartedfigure4.png "GettingStartedFigure4")  
+     ![Captura de tela de exemplo de ExpenseIt](~/designers/media/gettingstartedfigure4.png "GettingStartedFigure4")  
   
 #### <a name="to-style-controls"></a>Para controles de estilo  
   
@@ -952,7 +952,7 @@ ms.lasthandoff: 05/13/2017
   
      A ilustração a seguir mostra as duas páginas do aplicativo ExpenseIt com controles, layout, estilos, vinculação de dados e modelos de dados aplicados.  
   
-     ![Capturas de tela de exemplo de ExpenseIt](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")  
+     ![Capturas de tela de exemplo de ExpenseIt](~/designers/media/gettingstartedfigure5.png "GettingStartedFigure5")  
   
 ##  <a name="Best_Practices"></a> Práticas recomendadas  
  Este exemplo demonstra os fundamentos do WPF e, consequentemente, não segue as práticas recomendadas de desenvolvimento de aplicativos. Para obter uma cobertura abrangente das práticas recomendadas de desenvolvimento dos aplicativos WPF e .NET Framework, consulte os tópicos a seguir, conforme apropriado:  

@@ -53,7 +53,7 @@ Este documento demonstra como usar o Editor de Modelo para criar um modelo de te
   
  Ao terminar, o modelo deve ter esta aparência:  
   
- ![Cena&3;D que mostra um modelo de terreno](../designers/media/digit-terrain-model.png "Digit-Terrain-Model")  
+ ![Cena&3;D que mostra um modelo de terreno](~/designers/media/digit-terrain-model.png "Digit-Terrain-Model")  
   
  Antes de começar, verifique se a janela **Propriedades** e a **Caixa de Ferramentas** estão sendo exibidas.  
   
@@ -81,7 +81,7 @@ Este documento demonstra como usar o Editor de Modelo para criar um modelo de te
   
  O modelo de terreno está concluído. Aqui está o modelo final novamente, com sombreamento Phong aplicado:  
   
- ![Cena&3;D que mostra um modelo de terreno](../designers/media/digit-terrain-model.png "Digit-Terrain-Model")  
+ ![Cena&3;D que mostra um modelo de terreno](~/designers/media/digit-terrain-model.png "Digit-Terrain-Model")  
   
  Você pode usar esse modelo de terreno para demonstrar o efeito do sombreador de gradiente descrito em [Como criar um sombreador de gradiente com base na geometria](../designers/how-to-create-a-geometry-based-gradient-shader.md).  
   

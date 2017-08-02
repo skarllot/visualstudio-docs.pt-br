@@ -27,13 +27,13 @@ Uma linguagem específica do domínio (DSL) é definida por seu arquivo de defin
 ## <a name="the-dsl-definition"></a>A definição de DSL  
  Quando você abre `Dsl\DslDefinition.dsl`, suas [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] janela semelhante a figura a seguir.  
   
- ![designer de DSL](../modeling/media/dsl_designer.png "dsl_designer")  
+ ![designer de DSL](~/modeling/media/dsl_designer.png "dsl_designer")  
   
  As informações mais importantes na definição de DSL são exibidas no diagrama de definição de DSL. Informações adicionais, que também é parte do Dsldefinition, são exibidas no Gerenciador de DSL, que geralmente aparece no lado do diagrama. Você trabalha com o diagrama para as tarefas mais frequentes e com o Gerenciador de DSL para personalizações mais avançadas.  
   
  O diagrama de definição de DSL mostra as classes de domínio que definem os elementos de modelo e as relações que definem links entre elementos de modelo. Ele também mostra as formas e conectores são usados para exibir os elementos de modelo para o usuário.  
   
- ![designer de DSL com raias](../modeling/media/dsl_desinger.png "dsl_desinger")  
+ ![designer de DSL com raias](~/modeling/media/dsl_desinger.png "dsl_desinger")  
   
  Quando você seleciona um item na definição de DSL, no diagrama ou no Gerenciador de DSL, informações sobre ele são exibidas na janela Propriedades. Informações adicionais podem ser exibidas na janela de detalhes de DSL.  
   
@@ -47,13 +47,13 @@ Uma linguagem específica do domínio (DSL) é definida por seu arquivo de defin
   
  Esta ilustração mostra um modelo que tenha sido criado pelo usuário de uma biblioteca de música DSL. Álbuns de música são representadas por caixas que contêm listas de músicas. Artistas são representadas por caixas com cantos arredondados e conectadas aos álbuns ao qual eles contribuíram.  
   
- ![Modelo de instância da DSL gerado](../modeling/media/music_instance.png "Music_Instance")  
+ ![Modelo de instância da DSL gerado](~/modeling/media/music_instance.png "Music_Instance")  
   
  A definição de DSL separa os dois aspectos. A aparência dos elementos de modelo no diagrama de modelo é definida usando classes de forma e conector. As informações incluídas no modelo são definidas usando classes de domínio e relacionamentos de domínio.  
   
  A ilustração a seguir mostra as classes de domínio e as relações na definição de DSL da biblioteca de música.  
   
- ![Relações de incorporação e referência](../modeling/media/music_classes.png "Music_Classes")  
+ ![Relações de incorporação e referência](~/modeling/media/music_classes.png "Music_Classes")  
   
  A ilustração mostra quatro classes de domínio: música, álbum, artista e música. As classes de domínio definem propriedades do domínio, como nome, título e assim por diante. No modelo de instância, os valores de algumas dessas propriedades são exibidos no diagrama.  
   
@@ -106,7 +106,7 @@ Uma linguagem específica do domínio (DSL) é definida por seu arquivo de defin
 ### <a name="the-explorer-displays-the-embedding-tree"></a>O Explorer exibe a árvore de incorporação  
  Sua definição de DSL também cria um explorer, que os usuários veem junto com seus diagramas de modelo.  
   
- ![Gerado Gerenciador de DSL](../modeling/media/music_explorer.png "Music_Explorer")  
+ ![Gerado Gerenciador de DSL](~/modeling/media/music_explorer.png "Music_Explorer")  
   
  O explorer mostra todos os elementos no modelo, mesmo aqueles para os quais você não definiu as formas. Ele mostra elementos e relações de incorporação, mas não relações de referência.  
   
@@ -124,7 +124,7 @@ Uma linguagem específica do domínio (DSL) é definida por seu arquivo de defin
   
  Na figura a seguir, a linha entre o **Publisher** classe de domínio e o **PublisherCatalog** relação de domínio é a função de origem. A linha entre a relação de domínio e o **álbum** classe de domínio é a função de destino.  
   
- ![Funções e propriedades. ] (../modeling/media/propertycode.png "PropertyCode")  
+ ![Funções e propriedades. ] (~/modeling/media/propertycode.png "PropertyCode")  
   
  Os nomes associados a uma relação são especialmente importantes quando você escreve o código do programa que atravessa o modelo. Por exemplo, quando você cria a solução DSL, a classe gerada publicador tem uma propriedade catálogo é uma coleção de álbuns. A classe álbum tem uma propriedade Publisher é uma única instância da classe publicador.  
   

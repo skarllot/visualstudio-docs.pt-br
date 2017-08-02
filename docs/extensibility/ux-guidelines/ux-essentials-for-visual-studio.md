@@ -99,7 +99,7 @@ ms.lasthandoff: 05/04/2017
   
  Nesse caso, há uma preocupação adicional porque contém o ícone usado para o alerta um "&times;" ícone, portanto não pode ser usado no ícone Remover comuns ao lado dela. Como resultado, a interface do usuário utiliza um botão Remover, um controle mais complexa.  
   
- ![Colocação de interface do usuário em um estado de erro por padrão é um padrão de um Visual Studio.](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-pattern")<br />Colocação de interface do usuário em um estado de erro por padrão é um padrão de um Visual Studio.
+ ![Colocação de interface do usuário em um estado de erro por padrão é um padrão de um Visual Studio.](~/extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-pattern")<br />Colocação de interface do usuário em um estado de erro por padrão é um padrão de um Visual Studio.
   
 #### <a name="alternatives"></a>Alternativas  
  A melhor solução para esse problema seria:  
@@ -122,7 +122,7 @@ ms.lasthandoff: 05/04/2017
 Forçar o usuário leia texto explicativo antes de ignorar a interface do usuário é um antidentro padrão de do Visual Studio. Links de vídeo corretamente projetado deve exibir uma dica de ferramenta com informações adicionais no hover e clicando na "&times;" deve ignorar a mensagem sem necessidade de interação adicional.
 
 
- ![Explicação texto anti #45; padrão &#45; incorreto](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />Padrão de link de vídeo incorreto
+ ![Explicação texto anti #45; padrão &#45; incorreto](~/extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />Padrão de link de vídeo incorreto
   
 #### <a name="result"></a>Resultado  
  Em vez de um botão Fechar simple (um clique), o usuário será forçado a usar dois cliques para simplesmente ignorar a interface do usuário em cada local que os links de vídeos aparecem.  
@@ -130,20 +130,20 @@ Forçar o usuário leia texto explicativo antes de ignorar a interface do usuár
 #### <a name="alternatives"></a>Alternativas  
  O design correto para essa situação seria seguem o padrão comum para o Internet Explorer, o Office e o Visual Studio: no foco, o usuário pode ver a descrição de dica de ferramenta e um clique oculta a interface do usuário.  
   
- ![Explicação texto anti #45; padrão &#45; corrigir](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti-pattern-correct")<br />Padrão de link de vídeo correto
+ ![Explicação texto anti #45; padrão &#45; corrigir](~/extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti-pattern-correct")<br />Padrão de link de vídeo correto
   
 ### <a name="using-command-bars-for-settings"></a>Usando as barras de comando para configurações  
  **A Figura** representa esse anti-padrão: colocar uma configuração abaixo de um botão de comando que se aplica a mais do que apenas o comando. Nesse esboço, há comandos além de iniciar depuração — como o modo de exibição no navegador, iniciar sem depurar e intervir — que respeitará a configuração selecionada.  
 
-  ![R: de figura Padrão contra da barra de comando](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-pattern-FigureA")<br />R: de figura Padrão contra da barra de comando
+  ![R: de figura Padrão contra da barra de comando](~/extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-pattern-FigureA")<br />R: de figura Padrão contra da barra de comando
   
  Ligeiramente melhor, mas ainda indesejável, é colocar as configurações deste tipo em barras de ferramentas, conforme mostrado no **Figura B**. Enquanto os botões de divisão levar menos de espaço e, portanto, uma melhoria em listas suspensas, ambos os designs ainda estiver usando uma barra de ferramentas para promover a algo que não é realmente um comando.  
  
- ![Figura b: melhor, mas ainda um antide padrão de barra de comando](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-pattern-FigureB")<br />Figura b: melhor, mas ainda um antide padrão de barra de comando
+ ![Figura b: melhor, mas ainda um antide padrão de barra de comando](~/extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-pattern-FigureB")<br />Figura b: melhor, mas ainda um antide padrão de barra de comando
  
   A abordagem correta mostrado na **Figura C**, a configuração está associada a uma série de comandos. Não há nenhuma configuração global que está sendo definida e podemos simplesmente alterna entre quatro comandos. Essa é a única situação em que os comandos na barra de ferramentas são aceitáveis. 
 
- ![Uso correto de c: de figura de padrão de barra de comando do Visual Studio](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-pattern-FigureC")<br />Uso correto de c: de figura de padrão de barra de comando do Visual Studio
+ ![Uso correto de c: de figura de padrão de barra de comando do Visual Studio](~/extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-pattern-FigureC")<br />Uso correto de c: de figura de padrão de barra de comando do Visual Studio
    
 ### <a name="control-anti-patterns"></a>Padrões de um controle  
  Alguns antisão padrões de uso simplesmente incorreto ou apresentação de um controle ou um grupo de controles.  
@@ -152,15 +152,15 @@ Forçar o usuário leia texto explicativo antes de ignorar a interface do usuár
  Texto sublinhado deve ser usado apenas para hiperlinks.  
   
  **Inválido:**    
- ![Texto sublinhado e não é um hiperlink é um padrão de um Visual Studio.](../../extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102-g_GroupLabelIncorrect")<br />Texto sublinhado e não é um hiperlink é um padrão de um Visual Studio.
+ ![Texto sublinhado e não é um hiperlink é um padrão de um Visual Studio.](~/extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102-g_GroupLabelIncorrect")<br />Texto sublinhado e não é um hiperlink é um padrão de um Visual Studio.
   
  **BOM:**   
- ![Estilo corretamente, o texto de hiperlink não aparece acrescido na fonte de ambiente.](../../extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102-h_GroupLabelCorrect")<br />Estilo corretamente, o texto de hiperlink não aparece acrescido na fonte de ambiente.
+ ![Estilo corretamente, o texto de hiperlink não aparece acrescido na fonte de ambiente.](~/extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102-h_GroupLabelCorrect")<br />Estilo corretamente, o texto de hiperlink não aparece acrescido na fonte de ambiente.
   
 #### <a name="clicking-on-a-check-box-results-in-a-pop-up-dialog"></a>Clicando em resultados de uma caixa de seleção em uma caixa de diálogo pop-up  
  Clicando na caixa de seleção "Habilitar a área de trabalho remota para todas as funções" no Assistente "Publicar aplicativo do Windows Azure" imediatamente abre uma caixa de diálogo pop-up, um padrão de um Visual Studio. Além disso, o campo da caixa de seleção não preenche uma caixa de seleção após ser selecionado, outro anti-padrão de interação.  
   
- ![Colocar uma caixa de diálogo depois de clicar em uma caixa de seleção é um padrão de um Visual Studio.](../../extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102-i_CheckboxPopup")<br />Colocar uma caixa de diálogo depois de clicar em uma caixa de seleção é um padrão de um Visual Studio.
+ ![Colocar uma caixa de diálogo depois de clicar em uma caixa de seleção é um padrão de um Visual Studio.](~/extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102-i_CheckboxPopup")<br />Colocar uma caixa de diálogo depois de clicar em uma caixa de seleção é um padrão de um Visual Studio.
   
 ### <a name="hyperlink-anti-patterns"></a>Padrões de um hiperlink  
  O exemplo a seguir contém dois anti padrões de.  
@@ -169,7 +169,7 @@ Forçar o usuário leia texto explicativo antes de ignorar a interface do usuár
   
 2.  "Saiba mais" não é o texto apropriado para um link para um tópico conceitual. Objetivo do usuário não é saber mais, é compreender as implicações de sua escolha.  
   
- ![Ignorando o serviço de cor e usando "Saiba mais" para os hiperlinks são anti-padrões de Visual Studio.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />Ignorando o serviço de cor e usando "Saiba mais" para os hiperlinks são anti-padrões de Visual Studio.  
+ ![Ignorando o serviço de cor e usando "Saiba mais" para os hiperlinks são anti-padrões de Visual Studio.](~/extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />Ignorando o serviço de cor e usando "Saiba mais" para os hiperlinks são anti-padrões de Visual Studio.  
   
  **Melhor solução:** representar a pergunta, o usuário deve estar se perguntando clicando no link.  
   

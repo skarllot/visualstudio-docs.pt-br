@@ -62,7 +62,7 @@ Este documento demonstra como usar o Editor de Modelo para modificar o *ponto di
   
  Aqui está um modelo que tem um ponto dinâmico modificado:  
   
- ![Um modelo de uma casa com um ponto dinâmico modificado](../designers/media/digit-modified-model.png "Digit-Modified-Model")  
+ ![Um modelo de uma casa com um ponto dinâmico modificado](~/designers/media/digit-modified-model.png "Digit-Modified-Model")  
   
 ## <a name="see-also"></a>Consulte também  
  [Como criar um modelo 3D básico](../designers/how-to-create-a-basic-3-d-model.md)   

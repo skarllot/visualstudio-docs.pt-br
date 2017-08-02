@@ -414,10 +414,10 @@ Padrões compostos combinam elementos de design e interação em configurações
 |-----------|----------------|--------------------|  
 |**Não selecionada**|Padrão|![Estado do botão padrão](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713&10;_DefaultState")||  
 |**Seleção principal**|Redimensionáveis|![Seleção principal com alças de redimensionamento](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713&11;_PrimaryResize")|![Seleção principal com Redimensionar alças (ampliadas)](../../extensibility/ux-guidelines/media/0713-12_primaryresizezoom.png "0713&12;_PrimaryResizeZoom")|  
-|**Seleção principal**|Não redimensionáveis|![Alças de redimensionamento de seleção principal sem](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713&13;_PrimaryNoResize")|![Seleção principal sem redimensionar alças (ampliadas)](../../extensibility/ux-guidelines/media/0713-14_primarynoresizezoom.png "0713&14;_PrimaryNoResizeZoom")|  
+|**Seleção principal**|Não redimensionáveis|![Alças de redimensionamento de seleção principal sem](~/extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713&13;_PrimaryNoResize")|![Seleção principal sem redimensionar alças (ampliadas)](../../extensibility/ux-guidelines/media/0713-14_primarynoresizezoom.png "0713&14;_PrimaryNoResizeZoom")|  
 |**Seleção principal**|Bloqueado|![Seleção principal bloqueada](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713&15;_PrimaryLocked")|![Seleção principal bloqueado (com zoom)](../../extensibility/ux-guidelines/media/0713-16_primarylockedzoom.png "0713&16;_PrimaryLockedZoom")|  
-|**Seleção secundária**|Redimensionáveis|![Seleção secundária com alças de redimensionamento](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713&17;_SecondaryResize")|![Seleção secundária com Redimensionar alças (ampliadas)](../../extensibility/ux-guidelines/media/0713-18_secondaryresizezoom.png "0713&18;_SecondaryResizeZoom")|  
-|**Seleção secundária**|Não redimensionáveis|![Alças de redimensionamento de seleção secundária sem](../../extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713&19;_SecondaryNoResize")|![Seleção secundária sem redimensionamento (ampliado)](../../extensibility/ux-guidelines/media/0713-20_secondarynoresizezoom.png "0713&20;_SecondaryNoResizeZoom")|  
+|**Seleção secundária**|Redimensionáveis|![Seleção secundária com alças de redimensionamento](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713&17;_SecondaryResize")|![Seleção secundária com Redimensionar alças (ampliadas)](~/extensibility/ux-guidelines/media/0713-18_secondaryresizezoom.png "0713&18;_SecondaryResizeZoom")|  
+|**Seleção secundária**|Não redimensionáveis|![Alças de redimensionamento de seleção secundária sem](~/extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713&19;_SecondaryNoResize")|![Seleção secundária sem redimensionamento (ampliado)](~/extensibility/ux-guidelines/media/0713-20_secondarynoresizezoom.png "0713&20;_SecondaryNoResizeZoom")|  
 |**Seleção secundária**|Bloqueado|![Seleção secundária bloqueada](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713&21;_SecondaryLocked")|![Seleção secundária bloqueada (com zoom)](../../extensibility/ux-guidelines/media/0713-22_secondarylockedzoom.png "0713&22;_SecondaryLockedZoom")|  
 |**Interface do usuário ativo**|Padrão|![Estado ativo da interface do usuário](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713&23;_UIActive")|![Estado ativo de interface do usuário (ampliado)](../../extensibility/ux-guidelines/media/0713-24_uiactivezoom.png "0713&24;_UIActiveZoom")|  
   
@@ -426,7 +426,7 @@ Padrões compostos combinam elementos de design e interação em configurações
 #### <a name="tree-view"></a>Exibição de árvore  
  Seleção em uma exibição de árvore é mostrada com um realce simple. Se o usuário clica em um nome de nó ou um ícone de nó, o nó fica selecionado. Os glifos triangulares à esquerda do nó expandir ou contrair o controle de árvore mas não afetam a seleção do usuário, com uma exceção: ao recolher um nó pai quando a seleção está em um filho do nó, a seleção se move para o pai.  
   
- ![Modo de exibição de árvore típico no Visual Studio](../../extensibility/ux-guidelines/media/0713-25_treeview.png "0713&25;_TreeView")  
+ ![Modo de exibição de árvore típico no Visual Studio](~/extensibility/ux-guidelines/media/0713-25_treeview.png "0713&25;_TreeView")  
   
  **Modo de exibição de árvore típico no Visual Studio**  
   

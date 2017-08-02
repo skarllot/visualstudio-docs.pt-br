@@ -42,7 +42,7 @@ A estrutura de teste para testes de IU codificados e gravações da ação não 
   
  Esta seção apresenta uma extensão de teste de IU codificado que pode gravar e reproduzir testes de planilhas do Excel. Cada parte da extensão é explicada nesta seção e nos comentários do código para desenvolvedores que desejam criar uma extensão desse tipo.  
   
- ![Arquitetura de teste de interface do usuário](../test/media/ui_testarch.png "UI_TestArch")  
+ ![Arquitetura de teste de interface do usuário](~/test/media/ui_testarch.png "UI_TestArch")  
 Visão geral da arquitetura  
   
 ## <a name="download-the-sample"></a>Baixar a amostra  

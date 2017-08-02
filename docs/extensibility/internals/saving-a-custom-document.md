@@ -39,7 +39,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="saving-a-custom-document"></a>Salvando um documento personalizado
 Os identificadores de ambiente a **salvar**, **Salvar como**, e **Salvar tudo** comandos. Quando um usuário clica **salvar**, **Salvar como**, **ou salvar tudo** sobre o **arquivo** menu ou fecha a solução, resultando em um Salvar tudo, o seguinte processo ocorre.  
   
- ![Salvar do Editor de cliente](../../extensibility/internals/media/private.gif "Private")  
+ ![Salvar do Editor de cliente](~/extensibility/internals/media/private.gif "Private")  
 Salvar, salvar como e salvar tudo manipulação de comando para um editor personalizado  
   
  Esse processo é detalhado nas etapas a seguir:  

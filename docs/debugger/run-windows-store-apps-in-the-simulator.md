@@ -38,14 +38,14 @@ O simulador do Visual Studio para aplicativos da Windows Store é um aplicativo 
 ##  <a name="BKMK_Set_the_simulator_as_the_target"></a> Definir o simulador como o destino  
  Para executar seu aplicativo da Windows Store no simulador, selecione **Simulador** na lista suspensa ao lado do botão **Iniciar Depuração** na barra de ferramentas **Padrão** do depurador.  
   
- ![Em execução no simulador](../debugger/media/vsrun_f5_simulator.png "VSRUN\_F5\_Simulator")  
+ ![Em execução no simulador](~/debugger/media/vsrun_f5_simulator.png "VSRUN\_F5\_Simulator")  
   
 ##  <a name="BKMK_Choose_an_interaction_mode"></a> Escolher um modo de interação  
  Você pode escolher os seguintes modos de interação  
   
--   ![Botão de modo](../debugger/media/simulator_mousemodebtn.png "SIMULATOR\_MouseModeBtn") Modo de mouse: define o modo de interação para gestos de mouse. Esses gestos incluem cliques, cliques duplos e arrastos.  
+-   ![Botão de modo](~/debugger/media/simulator_mousemodebtn.png "SIMULATOR\_MouseModeBtn") Modo de mouse: define o modo de interação para gestos de mouse. Esses gestos incluem cliques, cliques duplos e arrastos.  
   
--   ![Toque emulação botão Iniciar](../debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR\_StartTouchEmulationBtn") Iniciar a emulação de toque: define o modo de interação para gestos de um único dedo. Os eventos desse tipo incluem tocar, arrastar e passar o dedo.  
+-   ![Toque emulação botão Iniciar](~/debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR\_StartTouchEmulationBtn") Iniciar a emulação de toque: define o modo de interação para gestos de um único dedo. Os eventos desse tipo incluem tocar, arrastar e passar o dedo.  
   
      ![Simulator one finger target](../debugger/media/simulator_onefinger.png "SIMULATOR\_OneFinger") O ícone de destino único indica o local de eventos no simulador. Use o mouse para posicionar o ponteiro.  
   
@@ -54,7 +54,7 @@ O simulador do Visual Studio para aplicativos da Windows Store é um aplicativo 
 ## Aperto e zoom  
  Defina o modo de interação como sendo gestos de aperto e zoom com dois dedos.  
   
--   ![Siimulator two finger target](../debugger/media/simulator_twofinger.png "SIMULATOR\_TwoFinger")  
+-   ![Siimulator two finger target](~/debugger/media/simulator_twofinger.png "SIMULATOR\_TwoFinger")  
   
      O ícone de alvo duplo indica o local de dois dedos na tela do dispositivo.  
   

@@ -50,7 +50,7 @@ Os estilos e modelos de elementos no Designer XAML são armazenados em entidades
   
      A caixa de diálogo apropriada para criar um recurso é exibida. Esta caixa de diálogo é exibida quando você cria um recurso com um pincel:  
   
-     ![Criar caixa de diálogo Recurso](../designers/media/xaml_create_resource.png "xaml_create_resource")  
+     ![Criar caixa de diálogo Recurso](~/designers/media/xaml_create_resource.png "xaml_create_resource")  
   
 3.  Na caixa **Nome (Chave)**, insira um nome de chave. Este é o nome que você pode usar quando quer que outros elementos façam referência ao recurso.  
   

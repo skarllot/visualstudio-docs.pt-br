@@ -46,18 +46,18 @@ Esta página guia você pela desinstalação do Visual Studio, nosso pacote inte
 
      Por exemplo, em um computador que executa a Atualização de Aniversário do Windows 10, selecione **Iniciar** e, em seguida, role até a letra **V**, na qual você o verá listado como **Instalador do Visual Studio**.  
 
-     ![Instalador do Visual Studio](media/vs2017-locate-the-visual-studio-installer.PNG "Localizar o Instalador do Microsoft Visual Studio")
+     ![Instalador do Visual Studio](~/install/media/vs2017-locate-the-visual-studio-installer.PNG "Localizar o Instalador do Microsoft Visual Studio")
 
      >[!NOTE]
      Em alguns computadores, o Instalador do Visual Studio poderá estar listado sob a letra **“M”** como **Instalador do Microsoft Visual Studio**.
 
 2.  Clique para iniciar o instalador, clique no ícone ![Detalhes], no ícone (media/vs2017uninstall-UninstallIcon.png "Selecionar as Opções") e, em seguida, em **Desinstalar**.  
 
-     ![Modificando o Visual Studio 2017: Modificar, iniciar, reparar ou desinstalar](media/vs2017-uninstall.PNG "Reparar ou desinstalar o Visual Studio 2017")  
+     ![Modificando o Visual Studio 2017: Modificar, iniciar, reparar ou desinstalar](~/install/media/vs2017-uninstall.PNG "Reparar ou desinstalar o Visual Studio 2017")  
 
 3.  Clique em **OK** para confirmar sua escolha.
 
-     ![Modificando o Visual Studio 2017: Desinstalar o produto](media/vs2017-uninstall-confirm.PNG "Confirmar para desinstalar o Visual Studio 2017")  
+     ![Modificando o Visual Studio 2017: Desinstalar o produto](~/install/media/vs2017-uninstall-confirm.PNG "Confirmar para desinstalar o Visual Studio 2017")  
 
 Se você mudar de ideia posteriormente e desejar reinstalar o Visual Studio 2017, bastará iniciar o Instalador do Visual Studio novamente e, em seguida, selecionar **Instalar** na tela de seleção.
 

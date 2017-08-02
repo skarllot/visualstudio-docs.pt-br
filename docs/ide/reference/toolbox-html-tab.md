@@ -53,12 +53,12 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
  As ferramentas a seguir estão disponíveis por padrão na guia HTML.  
 
  **Ponteiro**  
- ![Ponteiro de página HTML do Designer de Dispositivo Móvel do ASP.NET](../../ide/reference/media/vxpointer.gif "vxPointer")  
+ ![Ponteiro de página HTML do Designer de Dispositivo Móvel do ASP.NET](~/ide/reference/media/vxpointer.gif "vxPointer")  
 
  Essa ferramenta é selecionada por padrão quando uma guia da Caixa de ferramentas é aberta. Não pode ser excluído. O ponteiro permite arrastar objetos para a superfície do modo de exibição de Design, redimensioná-los e reposicioná-los na página ou no formulário. Para obter mais informações, consulte [Usando a caixa de ferramentas](../../ide/using-the-toolbox.md).  
 
  **Entrada (Botão)**  
- ![Botão da página da Web HTML](../../ide/reference/media/vxbutton.gif "vxButton")  
+ ![Botão da página da Web HTML](~/ide/reference/media/vxbutton.gif "vxButton")  
 
  Insere um elemento `input` igual a `type="button"`. Para alterar o texto exibido, edite a propriedade `name`. Por padrão, `id="Button1"` é inserido para o primeiro botão, `id="Button2"` para o segundo e assim por diante.  
 
@@ -69,7 +69,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 ```  
 
  **Entrada (Redefinição)**  
- ![Captura de tela de HTMLpageResetButton](../../ide/reference/media/vxreset.gif "vxReset")  
+ ![Captura de tela de HTMLpageResetButton](~/ide/reference/media/vxreset.gif "vxReset")  
 
  Insere um elemento `input` igual a `type="reset"`. Para alterar o texto exibido, edite a propriedade `name`. Por padrão, `id="Reset1"` é inserido para o primeiro botão de redefinição, `id="Reset2"` para o segundo e assim por diante.  
 
@@ -80,7 +80,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 ```  
 
  **Entrada (Enviar)**  
- ![Captura de tela de HTMLpageToolbarSubmitButton](../../ide/reference/media/vxsubmit.gif "vxSubmit")  
+ ![Captura de tela de HTMLpageToolbarSubmitButton](~/ide/reference/media/vxsubmit.gif "vxSubmit")  
 
  Insere um elemento `input` igual a `type="submit"`. Para alterar o texto exibido, edite a propriedade `name`. Por padrão, `id="Submit1"` é inserido para o primeiro botão de envio, `id="Submit2"` para o segundo e assim por diante.  
 
@@ -91,7 +91,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 ```  
 
  **Entrada (Texto)**  
- ![Captura de tela de HTMLpageToolbarTextField](../../ide/reference/media/vxtextfield.gif "vxTextfield")  
+ ![Captura de tela de HTMLpageToolbarTextField](~/ide/reference/media/vxtextfield.gif "vxTextfield")  
 
  Insere um elemento `input` igual a `type="text"` no documento. Para alterar o texto padrão exibido, edite o atributo `value`. Por padrão, `id="Text1"` é inserido para o primeiro campo de texto, `id="Text2"` para o segundo e assim por diante.  
 
@@ -105,7 +105,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 >  É recomendável validar todas as entradas do usuário. Para obter mais informações, consulte [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites) (Validando a entrada do usuário em Páginas da Web do ASP.NET (Razor)).  
 
  **Entrada (Arquivo)**  
- ![Campo de arquivo de paginação HTML](../../ide/reference/media/vxfilefield.gif "vxFilefield")  
+ ![Campo de arquivo de paginação HTML](~/ide/reference/media/vxfilefield.gif "vxFilefield")  
 
  Insere um elemento `input` igual a `type="file"` no documento. Por padrão, `id="File1"` é inserido para o primeiro campo de arquivo, `id="File2"` para o segundo e assim por diante.  
 
@@ -119,7 +119,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 >  É recomendável validar todas as entradas do usuário. Para obter mais informações, consulte [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites) (Validando a entrada do usuário em Páginas da Web do ASP.NET (Razor)).  
 
  **Entrada (Senha)**  
- ![Campo de senha do Visual Studio](../../ide/reference/media/vxpassword.gif "vxPassword")  
+ ![Campo de senha do Visual Studio](~/ide/reference/media/vxpassword.gif "vxPassword")  
 
  Insere um elemento `input` igual a `type="password"`. Por padrão, `id="Password1"` é inserido para o primeiro campo de senha, `id="Password2"` para o segundo e assim por diante.  
 
@@ -133,7 +133,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 >  Se o aplicativo transmitir nomes de usuário e senhas, será necessário configurar o site para usar o protocolo SSL para criptografar a transmissão. Para obter mais informações, consulte “Protegendo conexões com o protocolo SSL” no [Guia de Operações do IIS](http://go.microsoft.com/fwlink/?linkid=47856). Além disso, é recomendável validar todas as entradas do usuário. Para obter mais informações, consulte [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites) (Validando a entrada do usuário em Páginas da Web do ASP.NET (Razor)).  
 
  **Entrada (caixa de seleção)**  
- ![Opção Caixa de seleção da caixa de ferramentas da página da Web HTML](../../ide/reference/media/vxcheckbox.gif "vxCheckbox")  
+ ![Opção Caixa de seleção da caixa de ferramentas da página da Web HTML](~/ide/reference/media/vxcheckbox.gif "vxCheckbox")  
 
  Insere um elemento `input` igual a `type="checkbox"`. Para alterar o texto exibido, edite a propriedade `name`. Por padrão, `id="Checkbox1"` é inserido para a primeira caixa de seleção, `id="Checkbox2"` para a segunda e assim por diante.  
 
@@ -144,7 +144,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 ```  
 
  **Entrada (Opção)**  
- ![Captura de tela de VisualStudioHTMLpageRadioButton](../../ide/reference/media/vxradio.gif "vxRadio")  
+ ![Captura de tela de VisualStudioHTMLpageRadioButton](~/ide/reference/media/vxradio.gif "vxRadio")  
 
  Insere um elemento `input` igual a `type="radio"`. Para alterar o texto exibido, edite a propriedade `name`. Por padrão, `id="Radio1"` é inserido para o primeiro botão de opção, `id="Radio2"` para o segundo e assim por diante.  
 
@@ -155,7 +155,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 ```  
 
  **Entrada (Oculta)**  
- ![Item Oculto da página HTML](../../ide/reference/media/vxhidden.gif "vxhidden")  
+ ![Item Oculto da página HTML](~/ide/reference/media/vxhidden.gif "vxhidden")  
 
  Insere um elemento `input` igual a `type="hidden"`. Por padrão, `id="Hidden1"` é inserido para o primeiro campo oculto, `id="Hidden2"` para o segundo e assim por diante.  
 
@@ -166,7 +166,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 ```  
 
  **Área de texto**  
- ![Área de texto da barra de ferramentas da página HTML](../../ide/reference/media/vxtextarea.gif "vxTextarea")  
+ ![Área de texto da barra de ferramentas da página HTML](~/ide/reference/media/vxtextarea.gif "vxTextarea")  
 
  Insere um elemento `textarea`. É possível redimensionar a área de texto ou usar as barras de rolagem para exibir o texto que se estende além da área de exibição. Para alterar o texto padrão exibido, edite o atributo `value`. Por padrão, `id="textarea1"` é inserido para a primeira área de texto, `id=" textarea 2"` para a segunda e assim por diante.  
 
@@ -180,7 +180,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 >  É recomendável validar todas as entradas do usuário. Para obter mais informações, consulte [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites) (Validando a entrada do usuário em Páginas da Web do ASP.NET (Razor)).  
 
  **Tabela**  
- ![Captura de tela de HTMLpageToolbarTable](../../ide/reference/media/vxtable.gif "vxTable")  
+ ![Captura de tela de HTMLpageToolbarTable](~/ide/reference/media/vxtable.gif "vxTable")  
 
  Insere um elemento `table`.  
 
@@ -191,7 +191,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 ```  
 
 **Image**  
- ![Item Imagem da página HTML](../../ide/reference/media/vximage.gif "vxImage")  
+ ![Item Imagem da página HTML](~/ide/reference/media/vximage.gif "vxImage")  
 
  Insere um elemento `img`. Edite esse elemento para especificar seu `src` e seu texto `alt`.  
 
@@ -202,7 +202,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 ```  
 
  **Selecionar**  
- ![Lista suspensa da caixa de ferramentas da página HTML](../../ide/reference/media/vxdropdown.gif "vxDropdown")  
+ ![Lista suspensa da caixa de ferramentas da página HTML](~/ide/reference/media/vxdropdown.gif "vxDropdown")  
 
  Insere um elemento `select` suspenso (sem um atributo `size`). Por padrão, `id="select1"` é inserido para a primeira caixa de listagem, `id="select2"` para a segunda e assim por diante.  
 
@@ -215,7 +215,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
  É possível criar um elemento `select` multilinha aumentando o valor da propriedade de tamanho.  
 
  **Régua horizontal**  
- ![Item Regra Horizontal da página HTML](../../ide/reference/media/vxhorizontal.gif "vxHorizontal")  
+ ![Item Regra Horizontal da página HTML](~/ide/reference/media/vxhorizontal.gif "vxHorizontal")  
 
  Insere um elemento `hr`. Para aumentar a espessura da linha, edite o atributo `size`.  
 
@@ -226,7 +226,7 @@ A guia **HTML** da Caixa de ferramentas fornece componentes que são úteis em p
 ```  
 
  **Div**  
- ![Rótulo da página HTML](../../ide/reference/media/vxlabel.gif "vxLabel")  
+ ![Rótulo da página HTML](~/ide/reference/media/vxlabel.gif "vxLabel")  
 
  Insere um elemento `div` inclui um atributo `ms_positioning="FlowLayout"`. Com exceção da largura e da altura, esse item é idêntico a um Painel de Layout de Fluxo. Para formatar o texto contido em um elemento `div`, adicione um atributo `class="stylename"` à marcação de abertura.  
 

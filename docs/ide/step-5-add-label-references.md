@@ -55,7 +55,7 @@ O programa precisa rastrear quais controles de rótulo o jogador escolhe. Atualm
   
 4.  Escolha o próximo controle de rótulo e observe que nada acontece. O programa já está rastreando o primeiro rótulo que o jogador escolheu, de modo que `firstClicked` não é igual a `null` no Visual C# ou `Nothing` no Visual Basic. Quando sua instrução `if` verifica `firstClicked` para determinar se ele é igual a `null` ou `Nothing`, ela descobre que não é e não executa as instruções na instrução `if`. Desse modo, somente o primeiro ícone que é escolhido torna-se preto e os outros ícones ficam invisíveis, conforme mostrado na imagem a seguir.  
   
-     ![Jogo da memória mostrando um ícone](../ide/media/express_tut4step5.png "Express_Tut4Step5")  
+     ![Jogo da memória mostrando um ícone](~/ide/media/express_tut4step5.png "Express_Tut4Step5")  
 Jogo da memória mostrando um ícone  
   
      Essa situação será corrigida na primeira etapa do tutorial adicionando um controle **Temporizador**.  

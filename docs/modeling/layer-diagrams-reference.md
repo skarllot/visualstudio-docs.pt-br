@@ -64,7 +64,7 @@ No Visual Studio, você pode usar um *diagrama de dependência* para visualizar 
  Este tópico descreve os elementos que você pode usar em um diagrama de dependência. Para obter mais informações sobre como criar e desenhar diagramas de dependência, consulte [diagramas de dependência: diretrizes](../modeling/layer-diagrams-guidelines.md). Para obter mais informações sobre padrões de camadas, visite o [site Patterns Practices < /](http://go.microsoft.com/fwlink/?LinkId=145794).  
   
 ## <a name="reading-dependency-diagrams"></a>Diagramas de dependência de leitura  
- ![Elementos em diagramas de dependência](../modeling/media/uml_layerrefreading.png "UML_LayerRefReading")  
+ ![Elementos em diagramas de dependência](~/modeling/media/uml_layerrefreading.png "UML_LayerRefReading")  
   
  A tabela a seguir descreve os elementos que você pode usar em um diagrama de dependência.  
   

@@ -31,7 +31,7 @@ manager: "ghogen"
 # Associar controles dos Windows Forms a dados no Visual Studio
 Você pode exibir dados para usuários do seu aplicativo pela vinculação de dados para formulários do Windows. Para criar esses controles ligados a dados, você pode arrastar itens do **fontes de dados** janela para o Windows Forms Designer no Visual Studio. Este tópico descreve algumas das tarefas, ferramentas e classes envolvidas na criação de aplicativos do Windows Forms associado a dados mais comuns.  
   
- ![Data Source drag operation](../data-tools/media/raddata-data-source-drag-operation.png "raddata Data Source drag operation")  
+ ![Data Source drag operation](~/data-tools/media/raddata-data-source-drag-operation.png "raddata Data Source drag operation")  
   
  Para obter informações gerais sobre como criar controles ligados a dados no Visual Studio, consulte [Associar controles a dados no Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md). Para obter mais informações sobre associação de dados no Windows Forms, consulte [Associação de dados do Windows Forms](../Topic/Windows%20Forms%20Data%20Binding.md).  
   

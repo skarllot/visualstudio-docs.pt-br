@@ -174,7 +174,7 @@ Você pode depurar um aplicativo do Visual Studio que foi implantado em um compu
   
 7.  Para o **Depurar** configuração, selecione o **implantar** caixa de seleção.  
   
-     ![RemoteDebugCplusDeploy](../debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
+     ![RemoteDebugCplusDeploy](~/debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
   
 8.  Iniciar a depuração \(**Depurar \/ iniciar depuração**, ou **F5**\).  
   

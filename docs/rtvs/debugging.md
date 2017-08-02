@@ -43,7 +43,7 @@ As RTVS (Ferramentas do R para Visual Studio) integram-se à experiência de dep
 
 Iniciar o depurador para um o arquivo de inicialização R em um projeto R é o mesmo que para outros tipos de projeto: use **Depurar > Iniciar Depuração**, a tecla F5 ou o **Arquivo de inicialização de origem** na barra de ferramentas de depuração mostrada abaixo. Para alterar o arquivo de inicialização, clique com o botão direito do mouse em um arquivo no Gerenciador de Soluções e selecione **Definir Como Script R de Inicialização**.
 
-![Botão Iniciar depurador para R](media/debugger-start-button.png)
+![Botão Iniciar depurador para R](~/rtvs/media/debugger-start-button.png)
 
 Em todos os casos, iniciar o depurador "origina" o arquivo na janela interativa, o que significa carregá-lo e executá-lo lá. Quando você iniciar a depuração, na verdade, você verá uma saída como esta na janela interativa:
 
@@ -85,5 +85,5 @@ O Navegador de Ambiente dá suporte a uma série de comandos especiais:
 | help | mostrar ajuda: exibe os comandos disponíveis na janela interativa. |
 | &lt;expr&gt; | avaliar a expressão em *expr*. |
 
-![Navegador de Ambiente na janela interativa](media/debugger-environment-browser.png)
+![Navegador de Ambiente na janela interativa](~/rtvs/media/debugger-environment-browser.png)
 

@@ -35,7 +35,7 @@ O Microsoft Visual C++ para Desenvolvimento Móvel Multiplataforma inclui o supo
   
 2.  No painel **Escolher um projeto**, escolha o botão Procurar para selecionar um arquivo .pbxproj do XCode. Navegue até o arquivo de projeto na caixa de diálogo **Selecionar arquivo de projeto do XCode** e escolha **Abrir**.  
   
-     ![Selecione um arquivo de projeto na caixa de diálogo Selecionar arquivo de projeto do XCode](../cross-platform/media/cppmdd_u2_importxcode_browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
+     ![Selecione um arquivo de projeto na caixa de diálogo Selecionar arquivo de projeto do XCode](~/cross-platform/media/cppmdd_u2_importxcode_browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
   
      No assistente Importar do XCode, escolha **Avançar**.  
   

@@ -41,13 +41,13 @@ O [PyLint](https://www.pylint.org/), uma ferramenta amplamente usada que verific
 
 Basta clicar com o botão direito do mouse em um projeto do Python no Gerenciador de Soluções e selecionar **Python > Executar PyLint...**:
 
-![Comando PyLint no menu de contexto em projetos do Python](media/code-pylint-command.png)
+![Comando PyLint no menu de contexto em projetos do Python](~/python/media/code-pylint-command.png)
 
 O uso dos comandos solicitará a instalação do PyLint no ambiente ativo, se necessário.
 
 Os avisos e erros do PyLint são exibidos na janela Lista de Erros:
 
-![Lista de erros do PyLint](media/code-pylint-error-list.png)
+![Lista de erros do PyLint](~/python/media/code-pylint-error-list.png)
 
 Se você clicar duas vezes em um erro, será levado diretamente para o código-fonte que gerou o problema.
 

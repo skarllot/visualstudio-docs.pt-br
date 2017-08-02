@@ -20,7 +20,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Criando uma linguagem específica do domínio baseada no Windows Forms
 Você pode usar Windows Forms para exibir o estado de um modelo de linguagem específica do domínio (DSL), em vez de usar um diagrama DSL. Este tópico explica um Windows Form de associação a uma DSL, usando o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] SDK de visualização e modelagem.  
   
- ![DSL-Wpf-2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+ ![DSL-Wpf-2](~/modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
 Uma instância DSL, mostrando uma interface do usuário do Windows Form e o Gerenciador de modelos.  
   
 ## <a name="creating-a-windows-forms-dsl"></a>Criando uma DSL de Windows Forms  
@@ -71,7 +71,7 @@ Uma instância DSL, mostrando uma interface do usuário do Windows Form e o Gere
 ## <a name="updating-the-dsl-definition"></a>Atualizando a definição de DSL  
  A seguinte que definição de DSL é usada neste passo a passo.  
   
- ![DSL-Wpf-1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
+ ![DSL-Wpf-1](~/modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
   
 #### <a name="to-update-the-dsl-definition"></a>Para atualizar a definição de DSL  
   
@@ -130,7 +130,7 @@ Uma instância DSL, mostrando uma interface do usuário do Windows Form e o Gere
   
      As propriedades e relacionamentos de sua classe de modelo aparecem na janela Data Sources.  
   
-     ![3 DslWpf](../modeling/media/dslwpf-3.png "DslWpf-3")  
+     ![3 DslWpf](~/modeling/media/dslwpf-3.png "DslWpf-3")  
   
 #### <a name="to-connect-your-model-to-a-form"></a>Para conectar seu modelo para um formulário  
   
@@ -175,7 +175,7 @@ Uma instância DSL, mostrando uma interface do usuário do Windows Form e o Gere
   
 -   Isso garante que, quando o usuário seleciona uma linha, a janela Propriedades exibe as propriedades do elemento de modelo correspondente, em vez de linha de grade de dados.  
   
- ![DslWpf4](../modeling/media/dslwpf4.png "DslWpf4")  
+ ![DslWpf4](~/modeling/media/dslwpf4.png "DslWpf4")  
 Esquema de links entre fontes de dados e modos de exibição.  
   
 #### <a name="to-complete-the-bindings-to-the-dsl"></a>Para concluir as associações a DSL  
@@ -305,7 +305,7 @@ Esquema de links entre fontes de dados e modos de exibição.
   
      É possível editar o nome do elemento na exibição de grade de dados. Você também pode excluí-lo a partir daí.  
   
- ![DSL-Wpf-2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+ ![DSL-Wpf-2](~/modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
   
 ### <a name="about-the-code-to-add-an-element"></a>Sobre o código para adicionar um elemento  
  Para os novos botões de elemento, o seguinte código alternativo é um pouco mais simples.  

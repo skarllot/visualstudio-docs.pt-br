@@ -96,7 +96,7 @@ Este documento descreve como trabalhar com o Editor de Imagens do [!INCLUDE[vspr
   
  Esta é a barra de ferramentas do **Modo do Editor de Imagens**:  
   
- ![A barra de ferramentas modal do Editor de Imagens.](../designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")  
+ ![A barra de ferramentas modal do Editor de Imagens.](~/designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")  
   
  Esta tabela descreve os itens na barra de ferramentas **Modo do Editor de Imagens**, que são listados na ordem em que aparecem, da esquerda para a direita.  
   
@@ -120,7 +120,7 @@ Este documento descreve como trabalhar com o Editor de Imagens do [!INCLUDE[vspr
   
  Esta é a barra de ferramentas do **Editor de Imagens**.  
   
- ![Barra de ferramentas do Editor de Imagens](../designers/media/digit-tre-toolbar.png "Digit-TRE-Toolbar")  
+ ![Barra de ferramentas do Editor de Imagens](~/designers/media/digit-tre-toolbar.png "Digit-TRE-Toolbar")  
   
  A tabela a seguir descreve os itens da barra de ferramentas **Editor de Imagens**, que são listados na ordem em que aparecem, de cima para baixo.  
   

@@ -54,7 +54,7 @@ Este documento demonstra como usar o Editor de Modelos para aplicar um sombreado
   
  Este é um modelo ao qual o efeito de cor básico foi aplicado:  
   
- ![Cena&3;D que mostra o efeito de cor básico](../designers/media/digit-3d-model-effect.png "Digit-3D-Model-Effect")  
+ ![Cena&3;D que mostra o efeito de cor básico](~/designers/media/digit-3d-model-effect.png "Digit-3D-Model-Effect")  
   
  Depois de aplicar um sombreador a um modelo, você pode abri-lo no Designer de Sombreador selecionando o modelo e, em seguida, na janela **Propriedades**, na propriedade **(Avançado)** do grupo de propriedades **Efeito**, escolha o botão de reticências (**...**).  
   

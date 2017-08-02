@@ -41,7 +41,7 @@ Em seguida, adicione um controle **Timer** ao jogo de correspondência. Um tempo
   
 1.  Na caixa de ferramentas do Designer de Formulários do Windows, escolha **Temporizador** (na categoria **Componentes**) e escolha a tecla ENTER ou clique duas vezes no temporizador para adicionar um controle de temporizador ao formulário. O ícone do temporizador, chamado **Timer1**, deve ser exibido em um espaço abaixo do formulário, como mostra na imagem a seguir.  
   
-     ![Timer](../ide/media/express_timer.png "Express_Timer")  
+     ![Timer](~/ide/media/express_timer.png "Express_Timer")  
 Temporizador  
   
     > [!NOTE]

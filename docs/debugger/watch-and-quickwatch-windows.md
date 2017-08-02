@@ -88,7 +88,7 @@ static void Main(string[] args) { int a, b, c; a = 1; b = 2; c = 0; for (int i =
   
  Em geral, as regras de avaliação de expressões no **inspeção** janela são as mesmas que as regras para avaliar expressões na linguagem de codificação. Se a expressão tiver um erro de sintaxe, você pode esperar o mesmo erro de compilador que você veria no editor de códigos. Aqui está um exemplo:  
   
- ![WatchExpressionError](../debugger/media/watchexpressionerror.png "WatchExpressionError")  
+ ![WatchExpressionError](~/debugger/media/watchexpressionerror.png "WatchExpressionError")  
   
 ##  <a name="bkmk_refreshWatch"></a> Atualizando valores de inspeção estão desatualizados  
  Em determinadas circunstâncias, você poderá ver um ícone de atualização \(um círculo com duas setas ou um círculo com duas linhas onduladas\) quando uma expressão é avaliada no **inspeção** janela.  Por exemplo, se você tiver a avaliação da propriedade desativada \(**Ferramentas \/ opções \/ depuração \/ habilitar avaliação de propriedades e outras chamadas de função implícitas**\), e você tem o seguinte código:  

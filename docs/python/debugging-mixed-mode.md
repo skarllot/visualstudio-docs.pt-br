@@ -40,7 +40,7 @@ ms.lasthandoff: 05/23/2017
 
 A maioria dos depuradores regulares do Python dão suporte apenas à depuração de código do Python. No entanto, na prática, o Python é usado em conjunto com o C ou o C++, nos casos em que é necessário o alto desempenho ou a capacidade de invocar diretamente as APIs da plataforma (consulte [Criando uma extensão do C++ para o Python](cpp-and-python.md) para obter um exemplo). Quando um projeto Python é carregado, o Visual Studio fornece a depuração de modo misto integrada e simultânea para o Python e o C/C++ nativo, com pilhas de chamadas combinadas, a capacidade de alternar entre o código do Python e o código nativo, pontos de interrupção nos dois tipos de código e a capacidade de ver representações do Python de objetos em quadros nativos e vice-versa:
 
-![Depuração de modo misto](media/mixed-mode-debugging.png) 
+![Depuração de modo misto](~/python/media/mixed-mode-debugging.png) 
 
 Para obter uma introdução à compilação, ao teste e à depuração de módulos nativos do C com o Visual Studio, assista a [Deep Dive: Creating Native Modules](https://youtu.be/D9RlT06a1EI) (Aprofundamento: Criar módulos nativos) (youtube.com, 9min9s).
 
@@ -53,14 +53,14 @@ Para obter uma introdução à compilação, ao teste e à depuração de módul
 
 1. Clique com o botão direito do mouse no projeto, no Gerenciador de Soluções, selecione **Propriedades**, selecione a guia **Depuração** e, em seguida, ative a opção para **Habilitar a depuração de código nativo**. Isso habilita o modo misto em todas as sessões de depuração.
 
-    ![Habilitando a depuração de código nativo](media/mixed-mode-debugging-enable-native.png)
+    ![Habilitando a depuração de código nativo](~/python/media/mixed-mode-debugging-enable-native.png)
 
     > [!Tip]    
     > Ao habilitar a depuração de código nativo, a janela de saída do Python poderá desaparecer imediatamente quando o programa tiver concluído sem fornecer a pausa comum “Pressione qualquer tecla para continuar...”. Para forçar uma pausa, adicione a opção `-i` ao campo **Executar > Argumentos do Interpretador** na guia **Depurar** ao habilitar a depuração de código nativo. Isso colocará o interpretador do Python no modo interativo após a conclusão do código e, nesse ponto, ele aguardará até que você pressione Ctrl + Z, Enter para sair.
 
 1. Ao anexar o depurador de modo misto a um processo existente (**Depurar > Anexar ao Processo...**), selecione o botão **Selecionar...**  para abrir a caixa de diálogo **Selecionar Tipo de Código**, defina a opção **Depurar esses tipos de código** e selecione **Nativo** e **Python** na lista:
 
-    ![Selecionando os tipos de código Nativo e do Python](media/mixed-mode-debugging-code-type.png)
+    ![Selecionando os tipos de código Nativo e do Python](~/python/media/mixed-mode-debugging-code-type.png)
 
     As configurações de tipo de código são persistentes, portanto, se desejar desabilitar a depuração de modo misto ao anexar a um processo diferente mais tarde, você precisará repetir essas etapas e desmarcar o tipo de código Python.
 
@@ -75,7 +75,7 @@ Para obter uma introdução à compilação, ao teste e à depuração de módul
 >
 > Nesse caso, inicie o projeto C++ sem depuração (**Depurar > Iniciar sem depuração** ou Ctrl + F5) e, em seguida, use **Depurar > Anexar ao Processo...** . Na caixa de diálogo que aparece, selecione o processo apropriado e use o botão **Selecionar...**  para abrir a caixa de diálogo **Selecionar Tipo de Código** na qual você pode selecionar o Python, conforme mostrado abaixo. Selecione **OK** para fechar essa caixa de diálogo, em seguida, **Anexar** para iniciar o depurador. Observe que talvez seja necessário introduzir uma pausa ou atraso adequado no aplicativo C++ para garantir que ele não chame o Python que você deseja depurar antes que você anexe o depurador.
 >
-> ![Selecionando Python como o tipo de depuração ao anexar um depurador](media/mixed-mode-debugging-attach-type.png)
+> ![Selecionando Python como o tipo de depuração ao anexar um depurador](~/python/media/mixed-mode-debugging-attach-type.png)
 
 ## <a name="mixed-mode-specific-features"></a>Recursos específicos ao modo misto
 
@@ -88,7 +88,7 @@ Para obter uma introdução à compilação, ao teste e à depuração de módul
 
 A janela Pilha de Chamadas mostra os registros de ativação nativo e do Python intercalados, com transições marcadas entre os dois:
 
-![Pilha de chamadas combinada](media/mixed-mode-debugging-call-stack.png)
+![Pilha de chamadas combinada](~/python/media/mixed-mode-debugging-call-stack.png)
 
 > [!Note]
 > As transições serão exibidas como “[Código Externo]”, sem especificar a direção da transição, se a opção **Ferramentas > Opções > Depuração > Geral > Habilitar Apenas Meu Código** estiver definida.
@@ -103,11 +103,11 @@ Ao usar os comandos Intervir (F11) ou Depuração Circular (Shift+F11), o depura
 
 Quando um quadro nativo (C ou C++) está ativo, suas variáveis locais são mostradas na janela Locais do depurador. Nos módulos de extensão nativos do Python, muitos deles são do tipo `PyObject` (que é um typedef de `_object`) ou alguns outros tipos fundamentais do Python (consulte a lista abaixo). Na depuração de modo misto, esses valores apresentam um nó filho adicional rotulado “exibição do Python”. Quando expandido, esse nó mostra a representação do Python da variável, idêntica a que você veria se uma variável local referenciando o mesmo objeto estivesse presente em um quadro do Python. Os filhos desse nó são editáveis.
 
-![Exibição do Python](media/mixed-mode-debugging-python-view.png)
+![Exibição do Python](~/python/media/mixed-mode-debugging-python-view.png)
 
 Para desabilitar esse recurso, clique com o botão direito do mouse em qualquer lugar da janela Locais e ative/desative a opção de menu **Python > Mostrar Nós de Exibição do Python**:
 
-![Habilitando a exibição do Python](media/mixed-mode-debugging-enable-python-view.png)
+![Habilitando a exibição do Python](~/python/media/mixed-mode-debugging-enable-python-view.png)
 
 Tipos C que mostram nós “[Exibição do Python]” (se estiverem habilitados):
 
@@ -137,11 +137,11 @@ Uma opção alternativa (e melhor) é seguir o [PEP 3123](http://www.python.org/
 
 Semelhante à seção anterior, é possível habilitar uma “[Exibição do C++]” para valores nativos na janela Locais quando um quadro do Python está ativo. Esse recurso não está habilitado por padrão; portanto, ative-o clicando com o botão direito do mouse na janela Locais e ativando/desativando a opção de menu **Python > Mostrar Nós de Exibição do C++**.
 
-![Habilitando a exibição do C++](media/mixed-mode-debugging-enable-cpp-view.png)
+![Habilitando a exibição do C++](~/python/media/mixed-mode-debugging-enable-cpp-view.png)
 
 O nó “[Exibição do C++]” fornece uma representação da estrutura subjacente do C/C++ de um valor, idêntico ao que você veria em um quadro nativo. Por exemplo, ele mostra uma instância de `_longobject` (para a qual `PyLongObject` é um typedef) de um inteiro longo no Python e tentará inferir tipos para as classes nativas criadas por conta própria. Os filhos desse nó são editáveis.
 
-![Exibição do C++](media/mixed-mode-debugging-cpp-view.png)
+![Exibição do C++](~/python/media/mixed-mode-debugging-cpp-view.png)
 
 Se um campo filho de um objeto for do tipo `PyObject` ou um dos outros tipos com suporte, ele terá um nó de representação “[Exibição do Python]” (se ele estiver habilitado), possibilitando o acesso a gráficos de objeto em que links não são diretamente expostos ao Python.
 

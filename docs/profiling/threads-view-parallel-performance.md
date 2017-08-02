@@ -84,7 +84,7 @@ A Exibição Threads é a exibição mais detalhada e com uma grande variedade d
   
  Esta é uma ilustração da Exibição de Threads:  
   
- ![Exibição de Threads](../profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
+ ![Exibição de Threads](~/profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
 Modo de Exibição de Threads  
   
  Inicialmente, os threads são classificados na ordem em que são criados, para que o thread do aplicativo principal seja o primeiro. É possível usar a opção de classificação no canto superior esquerdo da exibição para classificar threads por outro critério (por exemplo, pela maioria dos trabalhos de execução executada).  

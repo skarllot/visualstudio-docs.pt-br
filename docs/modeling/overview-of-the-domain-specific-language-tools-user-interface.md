@@ -24,7 +24,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>Visão geral da interface de usuário das Ferramentas de Linguagem Específica do Domínio
 Quando você abre uma solução de ferramentas de linguagem específica do domínio (ferramentas DSL) em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], a interface do usuário será semelhante a figura a seguir.  
   
- ![designer de DSL](../modeling/media/dsl_designer.png "dsl_designer")  
+ ![designer de DSL](~/modeling/media/dsl_designer.png "dsl_designer")  
   
  A tabela a seguir explica como as partes da interface do usuário são usadas.  
   
@@ -38,7 +38,7 @@ Quando você abre uma solução de ferramentas de linguagem específica do domí
 ## <a name="the-domain-model-diagram"></a>O diagrama de modelo de domínio  
  O diagrama de modelo de domínio é dividido em duas partes. Um lado do diagrama mostra os elementos e as relações no modelo. O outro lado mostra como o modelo é exibido e inclui as formas que são usadas para exibir os elementos e as propriedades do diagrama de modelo. A figura a seguir mostra os elementos do diagrama.  
   
- ![designer de DSL com raias](../modeling/media/dsl_desinger.png "dsl_desinger")  
+ ![designer de DSL com raias](~/modeling/media/dsl_desinger.png "dsl_desinger")  
   
  A tabela a seguir explica alguns dos elementos do diagrama de modelo de domínio.  
   

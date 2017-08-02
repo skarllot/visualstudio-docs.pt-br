@@ -63,7 +63,7 @@ As RTVS não serão instaladas se você tiver somente o Shell do Visual Studio i
 1. Execute o instalador do Visual Studio.
 2. Selecione a carga de trabalho **Ciência de dados e aplicativos analíticos**:
 
-    ![Carga de trabalho de ciência de dados e aplicativos analíticos no VS2017](media/installation-data-science-workload.png)
+    ![Carga de trabalho de ciência de dados e aplicativos analíticos no VS2017](~/rtvs/media/installation-data-science-workload.png)
 
 3. Defina quaisquer opções adicionais no lado direito, sob o mesmo nome de carga de trabalho. Observe que, por padrão, essa carga de trabalho inclui suporte a F# e Python. Para R, você deve no mínimo selecionar **Suporte à linguagem R**, **Suporte de tempo de execução para desenvolvimento em R** e **Microsoft R Client**.
 

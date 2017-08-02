@@ -74,7 +74,7 @@ Veja como iniciar processos de depuração, alternar entre processos, interrompe
 ###  <a name="BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution"></a> Inicie vários processos de depuração em uma solução do Visual Studio  
  Quando você tiver mais de um projeto em uma solução do Visual Studio que pode executar de forma independente \(projetos que são executados em processos separados\), será possível selecionar quais projetos o depurador inicia.  
   
- ![Alterar o tipo de inicialização para um projeto](../debugger/media/dbg_execution_startmultipleprojects.png "DBG\_Execution\_StartMultipleProjects")  
+ ![Alterar o tipo de inicialização para um projeto](~/debugger/media/dbg_execution_startmultipleprojects.png "DBG\_Execution\_StartMultipleProjects")  
   
 ####  <a name="BKMK_Change_the_startup_project"></a> Altere o projeto de inicialização  
  Para alterar o projeto de inicialização de uma solução, selecione o projeto no Solution Explorer e selecione **Definir como projeto de inicialização** do menu de contexto.  
@@ -107,7 +107,7 @@ Veja como iniciar processos de depuração, alternar entre processos, interrompe
   
  Escolha **Depurar**, **Anexar ao Processo**.  Na caixa de diálogo **Anexar ao Processo**, selecione o processo da lista de **Processos Disponíveis** e, em seguida, escolha **Anexar**.  
   
- ![Anexar a caixa de diálogo do processo](../debugger/media/dbg_attachtoprocessdlg.png "DBG\_AttachToProcessDlg")  
+ ![Anexar a caixa de diálogo do processo](~/debugger/media/dbg_attachtoprocessdlg.png "DBG\_AttachToProcessDlg")  
   
  ![Back to top](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Conteúdo](#BKMK_Contents)  
   
@@ -130,9 +130,9 @@ Veja como iniciar processos de depuração, alternar entre processos, interrompe
   
 7.  Na caixa de diálogo Editar Cadeia de Caracteres, digite `vsjitdebugger.exe` na caixa **Dados de Valor**.  
   
-     ![Editar caixa de diálogo String](../debugger/media/dbg_execution_automaticstart_editstringdlg.png "DBG\_Execution\_AutomaticStart\_EditStringDlg")  
+     ![Editar caixa de diálogo String](~/debugger/media/dbg_execution_automaticstart_editstringdlg.png "DBG\_Execution\_AutomaticStart\_EditStringDlg")  
   
- ![Depurador automática iniciar entrada em regedit.exe](../debugger/media/dbg_execution_automaticstart_result.png "DBG\_Execution\_AutomaticStart\_Result")  
+ ![Depurador automática iniciar entrada em regedit.exe](~/debugger/media/dbg_execution_automaticstart_result.png "DBG\_Execution\_AutomaticStart\_Result")  
   
  ![Back to top](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Conteúdo](#BKMK_Contents)  
   
@@ -147,13 +147,13 @@ Veja como iniciar processos de depuração, alternar entre processos, interrompe
   
 -   Na barra de ferramentas do local de depuração, escolha **Processo** para exibir a caixa de listagem **Processo**.  Selecione o processo que você deseja designar como o processo atual.  
   
-     ![Alternar entre processos](../debugger/media/dbg_execution_switchbetweenmodules.png "DBG\_Execution\_SwitchBetweenModules")  
+     ![Alternar entre processos](~/debugger/media/dbg_execution_switchbetweenmodules.png "DBG\_Execution\_SwitchBetweenModules")  
   
      Se a barra de ferramentas **Local de Depuração** não estiver visível, escolha **Ferramentas**, **Personalizar**.  Na guia **Barras de Ferramentas**, escolha **Local de Depuração**.  
   
 -   Abra a janela **Processos** \(atalho **Ctrl\+Alt\+Z**\), localize o processo que você deseja definir como o processo atual e clique duas vezes nele.  
   
-     ![Janela de processos](../debugger/media/dbg_processeswindow.png "DBG\_ProcessesWindow")  
+     ![Janela de processos](~/debugger/media/dbg_processeswindow.png "DBG\_ProcessesWindow")  
   
      O processo atual é marcado por uma seta amarela.  
   

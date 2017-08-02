@@ -54,12 +54,12 @@ Neste tutorial, você cria um programa que carrega uma imagem de um arquivo e a 
   
  Quando você terminar, seu programa será como a imagem a seguir.  
   
- ![Imagem criada neste tutorial](../ide/media/express_pictureviewerdone.png "Express_PictureViewerDone")  
+ ![Imagem criada neste tutorial](~/ide/media/express_pictureviewerdone.png "Express_PictureViewerDone")  
 Mostre que você cria neste tutorial  
   
  Para baixar uma versão concluída do exemplo, consulte [Exemplo de tutorial completo do Visualizador de Imagens](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8).  
   
- ![link para o vídeo](../data-tools/media/playvideo.gif "PlayVideo")Para ver uma versão em vídeo deste tópico, consulte [Como eu faço para: criar um visualizador de imagens no Visual Basic?](http://go.microsoft.com/fwlink/?LinkId=205207) ou [Como eu faço para: criar um visualizador de imagens em C#?](http://go.microsoft.com/fwlink/?LinkId=205198).  
+ ![link para o vídeo](~/data-tools/media/playvideo.gif "PlayVideo")Para ver uma versão em vídeo deste tópico, consulte [Como eu faço para: criar um visualizador de imagens no Visual Basic?](http://go.microsoft.com/fwlink/?LinkId=205207) ou [Como eu faço para: criar um visualizador de imagens em C#?](http://go.microsoft.com/fwlink/?LinkId=205198).  
   
 > [!NOTE]
 >  Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio. O Visual C# e o Visual Basic são abordados neste tutorial, portanto concentre-se nas informações específicas da linguagem de programação que você está usando.  

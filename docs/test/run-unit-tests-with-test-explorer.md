@@ -66,13 +66,13 @@ Use o Gerenciador de Testes para executar testes de unidade do Visual Studio ou 
   
  Quando você compila o projeto de teste, os testes são exibidos no Gerenciador de Testes. Se o Gerenciador de Testes não estiver visível, escolha **Teste** no menu do Visual Studio, escolha **Windows** e, em seguida, escolha **Gerenciador de Testes**.  
   
- ![Gerenciador de testes de unidade](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![Gerenciador de testes de unidade](~/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  Conforme você executa, grava e executa novamente os testes, o Gerenciador de Testes exibe os resultados nos grupos padrão de **Testes com Falha**, **Testes Aprovados**, **Testes Ignorados** e **Testes Não Executados**. Você pode alterar a forma como o Gerenciador de Testes agrupa seus testes.  
   
  Você pode executar a maior parte do trabalho de encontrar, organizar e executar testes usando a barra de ferramentas do Gerenciador de Testes.  
   
- ![Executar testes na barra de ferramentas do Gerenciador de Testes](../test/media/ute_toolbar.png "UTE_ToolBar")  
+ ![Executar testes na barra de ferramentas do Gerenciador de Testes](~/test/media/ute_toolbar.png "UTE_ToolBar")  
   
  ![Voltar ao início](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Conteúdo](#BKMK_Contents)  
   
@@ -98,7 +98,7 @@ Use o Gerenciador de Testes para executar testes de unidade do Visual Studio ou 
   
 |||  
 |-|-|  
-|![Executar após o build](../test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|Para executar os testes de unidade após cada build local, escolha **Teste** no menu padrão e, em seguida, escolha **Executar testes após build** na barra de ferramentas do Gerenciador de Testes.|  
+|![Executar após o build](~/test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|Para executar os testes de unidade após cada build local, escolha **Teste** no menu padrão e, em seguida, escolha **Executar testes após build** na barra de ferramentas do Gerenciador de Testes.|  
   
  ![Voltar ao início](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Conteúdo](#BKMK_Contents)  
   
@@ -110,7 +110,7 @@ Use o Gerenciador de Testes para executar testes de unidade do Visual Studio ou 
 ###  <a name="BKMK_View_test_details"></a> Exibir detalhes do teste  
  Para exibir os detalhes de um teste individual, selecione o teste.  
   
- ![Detalhes da execução do teste](../test/media/ute_testdetails.png "UTE_TestDetails")  
+ ![Detalhes da execução do teste](~/test/media/ute_testdetails.png "UTE_TestDetails")  
   
  O painel de detalhes de teste exibe as seguintes informações:  
   
@@ -139,7 +139,7 @@ Use o Gerenciador de Testes para executar testes de unidade do Visual Studio ou 
  O Gerenciador de Testes permite agrupar os testes em categorias predefinidas. A maioria das estruturas de teste de unidade executados no Gerenciador de Testes permitem que você defina suas próprias categorias e pares de valor/categoria para agrupar os testes. Você também pode filtrar a lista de testes por correspondência de cadeias de caracteres em relação a propriedades de teste.  
   
 ###  <a name="BKMK_Grouping_the_test_list"></a> Agrupar a lista de testes  
- Para alterar a maneira que testes são organizados, escolha a seta para baixo ao lado do botão **Agrupar por** ![botão de agrupar o Gerenciador de Testes](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn") e selecione novos critérios de agrupamento.  
+ Para alterar a maneira que testes são organizados, escolha a seta para baixo ao lado do botão **Agrupar por** ![botão de agrupar o Gerenciador de Testes](~/test/media/ute_groupby_btn.png "UTE_GroupBy_btn") e selecione novos critérios de agrupamento.  
   
  ![Agrupar testes por categoria no Gerenciador de testes](../test/media/ute_groupbycategory.png "UTE_GroupByCategory")  
   

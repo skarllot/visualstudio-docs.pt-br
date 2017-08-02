@@ -63,7 +63,7 @@ Neste tópico, abordaremos a análise do uso de CPU no fluxo de trabalho de depu
 
 4.  Você pode optar por ver **Uso de CPU** e/ou [Uso de Memória](../profiling/Memory-Usage.md), com a configuração **Selecionar Ferramentas** na barra de ferramentas. Se estiver executando o Visual Studio Enterprise, você também poderá habilitar ou desabilitar o IntelliTrace em **Ferramentas/Opções/IntelliTrace**.
 
-     ![Mostrar Ferramentas de Diagnósticos](../profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
+     ![Mostrar Ferramentas de Diagnósticos](~/profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
 
      Vamos observar principalmente a utilização da CPU, portanto verifique se **Uso de CPU** está habilitado (é habilitado por padrão).
 
@@ -71,7 +71,7 @@ Neste tópico, abordaremos a análise do uso de CPU no fluxo de trabalho de depu
 
      Quando o aplicativo terminar de ser carregado, a exibição Resumo das Ferramentas de Diagnóstico será exibida.
 
-     ![Guia Resumo das Ferramentas de Diagnóstico](../profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
+     ![Guia Resumo das Ferramentas de Diagnóstico](~/profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
 
      Para obter mais informações sobre os eventos, consulte [Searching and filtering the Events tab of the Diagnostic Tools window](http://blogs.msdn.com/b/visualstudioalm/archive/2015/11/12/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window.aspx) (Pesquisando e filtrando a guia Eventos da janela Ferramentas de Diagnóstico)
 
@@ -79,7 +79,7 @@ Neste tópico, abordaremos a análise do uso de CPU no fluxo de trabalho de depu
 
 7.  Enquanto o depurador estiver em pausa, habilite a coleta dos dados de Uso da CPU e, em seguida, abra a guia **Uso da CPU**.
 
-     ![Ferramentas de Diagnóstico, Habilitar a Criação de Perfil de CPU](../profiling/media/DiagToolsEnableCPUProfiling.png "DiagToolsEnableCPUProfiling")
+     ![Ferramentas de Diagnóstico, Habilitar a Criação de Perfil de CPU](~/profiling/media/DiagToolsEnableCPUProfiling.png "DiagToolsEnableCPUProfiling")
 
      Quando você escolher **Habilitar Criação de Perfil de CPU**, o Visual Studio começará a registrar suas funções e quanto tempo elas levam para ser executadas. Você somente poderá exibir esses dados coletados quando o aplicativo for parado em um ponto de interrupção.
 
@@ -89,15 +89,15 @@ Neste tópico, abordaremos a análise do uso de CPU no fluxo de trabalho de depu
 
 9.  Selecione a região que você deseja analisar na linha do tempo da CPU (precisa ser uma região que mostre dados de criação de perfil).
 
-     ![Ferramentas de Diagnóstico, Selecionando um Segmento de Tempo](../profiling/media/DiagToolsSelectTimeSegment.png "DiagToolsSelectTimeSegment")
+     ![Ferramentas de Diagnóstico, Selecionando um Segmento de Tempo](~/profiling/media/DiagToolsSelectTimeSegment.png "DiagToolsSelectTimeSegment")
 
      O criador de perfil começa a preparar os dados de thread. Aguarde sua conclusão.
 
-     ![Ferramentas de Diagnóstico, Preparando Threads](../profiling/media/DiagToolsPreparingThreads.png "DiagToolsPreparingThreads")
+     ![Ferramentas de Diagnóstico, Preparando Threads](~/profiling/media/DiagToolsPreparingThreads.png "DiagToolsPreparingThreads")
   
      A ferramenta de Uso de CPU exibe o relatório na guia **Uso da CPU**.
   
-     ![Guia Uso da CPU da Ferramentas de Diagnóstico](../profiling/media/DiagToolsCPUUsageTab.png "DiagToolsCPUUsageTab")
+     ![Guia Uso da CPU da Ferramentas de Diagnóstico](~/profiling/media/DiagToolsCPUUsageTab.png "DiagToolsCPUUsageTab")
 
      Neste ponto, você pode começar a analisar os dados.
 
@@ -107,7 +107,7 @@ Recomendamos que você comece a analisar os dados examinando a lista de funçõe
 
 1. Na lista de funções, examine as funções que fazem a maior parte do trabalho.
 
-    ![Lista de Funções de Uso de CPU das Ferramentas de Diagnóstico](../profiling/media/DiagToolsCPUUsageFunctionList.png "DiagToolsCPUUsageFunctionList")
+    ![Lista de Funções de Uso de CPU das Ferramentas de Diagnóstico](~/profiling/media/DiagToolsCPUUsageFunctionList.png "DiagToolsCPUUsageFunctionList")
 
     > [!TIP]
     > As funções são listadas em ordem, começando com as que fazem a maior parte do trabalho (elas não ficam na ordem de chamada). Isso ajuda a identificar rapidamente as funções com execução mais longa.
@@ -116,7 +116,7 @@ Recomendamos que você comece a analisar os dados examinando a lista de funçõe
 
     Quando você clica duas vezes em uma função, a exibição **Chamador/Computador Chamado** é aberta no painel esquerdo. 
 
-    ![Exibição Chamador/Computador Chamado da Chamada das Ferramentas de Diagnóstico](../profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
+    ![Exibição Chamador/Computador Chamado da Chamada das Ferramentas de Diagnóstico](~/profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
 
     Nesta exibição, a função selecionada aparece no título e na caixa **Função Atual** (GetNumber, neste exemplo). A função que chamou a função atual é mostrada à esquerda em **Função Chamadora** e todas as funções chamadas pela função atual são mostradas na caixa **Funções Chamadas** à direita. (Você pode selecionar cada uma das caixas para alterar a função atual.)
 
@@ -131,7 +131,7 @@ Recomendamos que você comece a analisar os dados examinando a lista de funçõe
  
     Cada área enumerada na figura está relacionada a uma etapa do procedimento.
   
-    ![Árvore de Chamadas das Ferramentas de Diagnóstico](../profiling/media/DiagToolsCallTree.png "DiagToolsCallTree")
+    ![Árvore de Chamadas das Ferramentas de Diagnóstico](~/profiling/media/DiagToolsCallTree.png "DiagToolsCallTree")
   
 |||
 |-|-|
@@ -154,7 +154,7 @@ O código externo é uma função nos componentes do sistema e do framework exec
   
 Se você quiser exibir os caminhos de chamada do código externo, escolha **Mostrar Código Externo** na lista **Filtrar exibição** e, em seguida, escolha **Aplicar**.  
   
-![Escolha Filtrar Exibição, em seguida, Mostrar Código Externo](../profiling/media/DiagToolsShowExternalCode.png "DiagToolsShowExternalCode")  
+![Escolha Filtrar Exibição, em seguida, Mostrar Código Externo](~/profiling/media/DiagToolsShowExternalCode.png "DiagToolsShowExternalCode")  
   
 Saiba que muitas correntes de chamada de código externo são muito aninhadas, de forma que a largura da coluna Nome da Função pode exceder a largura da tela de todos os monitores de computador, exceto dos maiores. Quando isso acontece, os nomes de função são mostrados como **[...]** .
   

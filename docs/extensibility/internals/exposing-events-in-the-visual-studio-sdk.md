@@ -77,7 +77,7 @@ ms.lasthandoff: 02/22/2017
   
  Quando qualquer um dos seus objetos de evento são solicitados por um consumidor de automação, cria um objeto de raiz que tem métodos para qualquer evento que suporta o VSPackage. O ambiente chama apropriado `get_` método nesse objeto. Por exemplo, se `DTE.Events.AutomationProjectsEvents` é chamado, o `get_AutomationProjectsEvents` método no objeto raiz é invocado.  
   
- ![Eventos de projeto do Visual Studio](../../extensibility/internals/media/projectevents.gif "ProjectEvents")  
+ ![Eventos de projeto do Visual Studio](~/extensibility/internals/media/projectevents.gif "ProjectEvents")  
 Modelo de automação de eventos  
   
  A classe `CProjectEventsContainer` representa o objeto de origem para BscProjectsEvents, enquanto `CProjectItemsEventsContainer` representa o objeto de origem para BscProjectItemsEvents.  

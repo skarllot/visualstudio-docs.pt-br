@@ -25,7 +25,7 @@ O depurador HLSL no analisador de elementos gráficos do Visual Studio o ajuda a
   
  Este é o depurador HLSL:  
   
- ![Depuração usando HLSL Assista e janelas de pilha de chamada.](../debugger/media/gfx_diag_demo_hlsl_debugger_orientation.png "gfx\_diag\_demo\_hlsl\_debugger\_orientation")  
+ ![Depuração usando HLSL Assista e janelas de pilha de chamada.](~/debugger/graphics/media/gfx_diag_demo_hlsl_debugger_orientation.png "gfx\_diag\_demo\_hlsl\_debugger\_orientation")  
   
 ## Noções básicas do depurador HLSL  
  O depurador HLSL pode ajudar você a entender os problemas que ocorrem no código do sombreador.  A depuração do código HLSL no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] se parece com a depuração de código que foi escrito em outras linguagem, como no C\+\+, C\# ou Visual Basic.  Você pode inspecionar o conteúdo das variáveis, definir pontos de interrupção, avançar no código e percorrer até a pilha de chamadas, exatamente como faz ao depurar outras linguagens.  

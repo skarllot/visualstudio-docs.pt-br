@@ -301,7 +301,7 @@ Matizes para cada um dos nomes de token permitidos em uma superfície de editor,
   
 Exemplos da superfície de editor no tema azul:  
   
-![Editor no tema azul](../../extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />Editor no tema azul
+![Editor no tema azul](~/extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />Editor no tema azul
   
 ![Editor do tema de alto contraste n º 1](../../extensibility/ux-guidelines/media/030303-d_editorhc1.png "030303-d_EditorHC1")<br />Editor do tema de alto contraste n º 1
   
@@ -725,11 +725,11 @@ As Visual Studio host gatilhos plug-in tema as alterações quando um usuário f
   
 **Tema de cores:**  
   
-![Alterações de tema de cores](../../extensibility/ux-guidelines/media/0305-a_colortheme.png "0305-a_ColorTheme")<br />Alterações de tema de cores  
+![Alterações de tema de cores](~/extensibility/ux-guidelines/media/0305-a_colortheme.png "0305-a_ColorTheme")<br />Alterações de tema de cores  
   
 **Tema de ambiente:**  
   
-![Alterações de tema do ambiente](../../extensibility/ux-guidelines/media/0305-b_environmenttheme.png "0305-b_EnvironmentTheme")<br />Alterações de tema do ambiente  
+![Alterações de tema do ambiente](~/extensibility/ux-guidelines/media/0305-b_environmenttheme.png "0305-b_EnvironmentTheme")<br />Alterações de tema do ambiente  
   
 **Tema do sistema operacional** (somente quando alterar para e de alto contraste):  
   

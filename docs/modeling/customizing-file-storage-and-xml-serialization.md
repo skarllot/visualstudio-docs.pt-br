@@ -53,11 +53,11 @@ Quando o usuário salva uma instância ou *modelo*, de uma linguagem específica
 ## <a name="the-default-serialization-scheme"></a>O esquema de serialização padrão  
  Para criar um exemplo deste tópico, a seguinte definição de DSL foi usada.  
   
- ![Diagrama de definição de DSL - modelo de árvore genealógica](../modeling/media/familyt_person.png "FamilyT_Person")  
+ ![Diagrama de definição de DSL - modelo de árvore genealógica](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
  Essa DSL foi usado para criar um modelo que tem a seguinte aparência na tela.  
   
- ![Diagrama de árvore genealógica, caixa de ferramentas e o explorer](../modeling/media/familyt_instance.png "FamilyT_Instance")  
+ ![Diagrama de árvore genealógica, caixa de ferramentas e o explorer](~/modeling/media/familyt_instance.png "FamilyT_Instance")  
   
  Esse modelo foi salvo e aberto novamente no editor de texto XML:  
   

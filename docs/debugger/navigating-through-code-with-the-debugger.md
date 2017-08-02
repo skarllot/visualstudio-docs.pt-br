@@ -77,7 +77,7 @@ Há várias maneiras para percorrer seu código no depurador: etapa para ou pass
   
      Para definir um ponto de interrupção simple em seu código, abra o arquivo de origem no editor do Visual Studio. Coloque o cursor na linha de código que você deseja parar no e, em seguida, clique na janela de código para ver o menu de contexto e escolha **ponto de interrupção \/ Inserir ponto de interrupção** \(ou pressione **F9**\). O depurador interrompe a execução correta antes da execução da linha.  
   
-     ![Definir um ponto de interrupção](../debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
+     ![Definir um ponto de interrupção](~/debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
   
      Pontos de interrupção no Visual Studio fornecem um conjunto rico de funcionalidades adicionais, como pontos de interrupção condicionais e tracepoints. Consulte [Usando pontos de interrupção](../debugger/using-breakpoints.md).  
   
@@ -112,16 +112,16 @@ Há várias maneiras para percorrer seu código no depurador: etapa para ou pass
   
  Para especificar uma função por nome, escolha **Depurar**, **novo ponto de interrupção**, **Interromper na função**, em seguida, digite o nome da função e outras informações de identificação.  
   
- ![Caixa de diálogo Novo ponto de interrupção](../debugger/media/dbg_execution_newbreakpoint.png "DBG\_Execution\_NewBreakpoint")  
+ ![Caixa de diálogo Novo ponto de interrupção](~/debugger/media/dbg_execution_newbreakpoint.png "DBG\_Execution\_NewBreakpoint")  
   
  Se a função está sobrecarregada ou em vários namespaces, você pode escolher as funções que você deseja o **Escolher pontos de interrupção** caixa de diálogo.  
   
- ![Escolha a caixa de diálogo pontos de interrupção](../debugger/media/dbg_execution_overloadedbreakpoints.png "DBG\_Execution\_OverloadedBreakpoints")  
+ ![Escolha a caixa de diálogo pontos de interrupção](~/debugger/media/dbg_execution_overloadedbreakpoints.png "DBG\_Execution\_OverloadedBreakpoints")  
   
 ##  <a name="BKMK_Set_the_next_statement_to_execute"></a> Definir a próxima instrução a executar  
  Depois de quebrar no depurador, você pode mover o ponto de execução para definir a próxima instrução de código a ser executado. Uma seta amarela na margem de uma fonte ou a janela de desmontagem marca o local da próxima instrução a ser executada. Movendo essa seta, você pode ignorar uma parte de código ou retornar a uma linha executada anteriormente. Você pode usar isso para situações como ignorar uma seção de código que contém um bug conhecido.  
   
- ![Exemplo2](../debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
+ ![Exemplo2](~/debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
   
  Para definir a próxima instrução a ser executada, use um dos seguintes procedimentos:  
   

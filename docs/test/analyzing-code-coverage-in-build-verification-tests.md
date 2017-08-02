@@ -49,7 +49,7 @@ A análise de cobertura de código no Microsoft Visual Studio mostra quanto de s
   
          Em **Testes Automatizados**, selecione **Assembly de Teste** e escolha o botão de reticências **[...]** no final da linha. Na caixa de diálogo **Adicionar/Editar Execução de Teste**, em **Test Runner**, selecione **Visual Studio Test Runner**.  
   
- ![Configurar a definição de build para cobertura de código](../test/media/codecoverage-plaincc.png "CodeCoverage plainCC")  
+ ![Configurar a definição de build para cobertura de código](~/test/media/codecoverage-plaincc.png "CodeCoverage plainCC")  
   
  Após a execução do build, os resultados da cobertura de código aparecem no resumo do build.  
   

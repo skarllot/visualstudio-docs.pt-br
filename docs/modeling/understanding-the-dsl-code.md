@@ -44,7 +44,7 @@ Uma solução de Linguagem Específica do Domínio (DSL) gera uma API que pode s
   
  Pressione F5 e experimente, se ainda não estiver familiarizado com esse modelo de solução. Observe especificamente que é possível criar portas arrastando uma ferramenta de porta para um componente e que é possível conectar portas.  
   
- ![Componentes e portas interconectadas](../modeling/media/componentsample.png "ComponentSample")  
+ ![Componentes e portas interconectadas](~/modeling/media/componentsample.png "ComponentSample")  
   
 ## <a name="the-structure-of-the-dsl-solution"></a>A Estrutura da Solução DSL  
  O **Dsl** projeto define a API da DSL. O **DslPackage** projeto define como ele se integra ao [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Também é possível adicionar seus próprios projetos, que também podem conter código gerado a partir do modelo.  

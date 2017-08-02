@@ -61,7 +61,7 @@ Aqui estão mais detalhes sobre algumas de nossas alterações mais importantes.
 
  A alteração mais importante que você verá ao instalar o Visual Studio é a nova experiência de instalação. Na guia **Cargas de Trabalho**, você verá opções de instalação que estão agrupadas para representar estruturas comuns, linguagens e plataformas. Ela abrange tudo, desde o desenvolvimento de área de trabalho do .NET até o desenvolvimento de aplicativos do C++ no Windows, Linux e iOS.   
 
- ![Caixa de diálogo de instalação do Visual Studio 2017](../install/media/vs2017-workloads.PNG "Tela de instalação do Visual Studio 2017")
+ ![Caixa de diálogo de instalação do Visual Studio 2017](~/install/media/vs2017-workloads.PNG "Tela de instalação do Visual Studio 2017")
 
 Escolha as cargas de trabalho de que você precisa e altere-as quando necessário.
 
@@ -75,12 +75,12 @@ O novo Centro de Desempenho do Visual Studio pode ajudá-lo a otimizar o tempo d
 ### <a name="decrease-solution-load-time"></a>Diminuir o tempo de carregamento da solução
 Trabalhar em soluções que contêm grandes quantidades de projetos não significa que você precisa trabalhar com todos os arquivos ou projetos de uma só vez. Agora você pode editar e depurar sem ter que aguardar o Visual Studio carregar todos os projetos. Para experimentar com projetos gerenciados, ative **Carregar Solução Leve** em Ferramentas-> Opções-> Projetos e Soluções.
 
-  ![Caixa de diálogo Opções no Visual Studio 2017](../ide/media/vs2017ide-LightweightSolutionLoad.PNG "Visual Studio 2017 – caixa de diálogo Opções – Carga de Solução Leve")
+  ![Caixa de diálogo Opções no Visual Studio 2017](~/ide/media/vs2017ide-LightweightSolutionLoad.PNG "Visual Studio 2017 – caixa de diálogo Opções – Carga de Solução Leve")
 
 ### <a name="faster-on-demand-loading-of-extensions"></a>Carregamento sob demanda de extensões mais rápido
 O Visual Studio está movendo suas extensões (e trabalhando com extensões de terceiros também) para que elas sejam carregadas sob demanda, em vez de na inicialização do IDE. Curioso para saber quais extensões afetam a inicialização, carga de solução e desempenho de digitação? Você pode ver essas informações em Ajuda -> Gerenciar desempenho do Visual Studio.
 
-  ![Caixa de diálogo Opções no Visual Studio 2017](../ide/media/vs2017ide-manage-vs-perf.png "Caixa de diálogo Ajuda do Visual Studio – Gerenciamento de Desempenho")
+  ![Caixa de diálogo Opções no Visual Studio 2017](~/ide/media/vs2017ide-manage-vs-perf.png "Caixa de diálogo Ajuda do Visual Studio – Gerenciamento de Desempenho")
 
 ## <a name="productivity-improvements"></a>Aprimoramentos de produtividade
 
@@ -94,18 +94,18 @@ Agora ficou ainda mais fácil configurar cada ambiente de desenvolvimento com su
 
 Para ver uma lista de suas extensões no Visual Studio, clique em Ferramentas > Extensões e Atualizações e, em seguida, clique em Roaming Extension Manager.
 
-![Visual Studio 2017 – Caixa de diálogo Extensões e Atualizações](../ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 – Ferramentas > Caixa de diálogo Extensões e Atualizações")
+![Visual Studio 2017 – Caixa de diálogo Extensões e Atualizações](~/ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 – Ferramentas > Caixa de diálogo Extensões e Atualizações")
 
 O Roaming Extension Manager rastreia todas as extensões instaladas, mas você pode escolher quais você deseja adicionar à lista de Roaming.
 
-![Visual Studio 2017 – Caixa de diálogo Extensões e Atualizações](../ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 – Roaming Extension Manager")
+![Visual Studio 2017 – Caixa de diálogo Extensões e Atualizações](~/ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 – Roaming Extension Manager")
 
 Ao usar o Roaming Extension Manager, você perceberá 3 tipos de ícones em sua lista:
-* ![Ícone de Roaming](../ide/media/vs2017ide-roamedicon.png "Ícone de Roaming") ***Roaming***: uma extensão que faz parte dessa Lista de Roaming, mas que não está instalada no computador.
+* ![Ícone de Roaming](~/ide/media/vs2017ide-roamedicon.png "Ícone de Roaming") ***Roaming***: uma extensão que faz parte dessa Lista de Roaming, mas que não está instalada no computador.
   (Você pode instalá-las usando o botão **Download**).
-* ![Ícone de Roaming e Instalado](../ide/media/vs2017ide-roamedinstalledicon.png "Ícone de Roaming e Instalado") ***Roaming e Instalado***: todas as extensões que fazem parte dessa Lista de Roaming e que estão instaladas no ambiente de desenvolvimento.
+* ![Ícone de Roaming e Instalado](~/ide/media/vs2017ide-roamedinstalledicon.png "Ícone de Roaming e Instalado") ***Roaming e Instalado***: todas as extensões que fazem parte dessa Lista de Roaming e que estão instaladas no ambiente de desenvolvimento.
   (Se você decidir que não deseja usar perfil móvel, poderá remover essas extensões usando o botão **Parar Roaming**).
-* ![Ícone de Instalado](../ide/media/vs2017ide-installedicon.png "Ícone de Instalado") ***Instalado***: todas as extensões que estão instaladas nesse ambiente, mas que não fazem parte da Lista de Roaming.
+* ![Ícone de Instalado](~/ide/media/vs2017ide-installedicon.png "Ícone de Instalado") ***Instalado***: todas as extensões que estão instaladas nesse ambiente, mas que não fazem parte da Lista de Roaming.
   (Você pode adicionar extensões à Lista de Roaming usando o botão **Iniciar Roaming**).
 
 Qualquer extensão que você baixar enquanto estiver conectado será adicionada à lista como **Roaming e Instalado** e fará parte da Lista de Roaming, que fornece acesso a ela em qualquer computador.
@@ -116,13 +116,13 @@ Agora, o Visual Studio pode notificá-lo em tempo real de violações de regra d
 
 Os erros são exibidos na Lista de Erros e os rabiscos serão exibidos no editor de texto que mostra o local exato da violação. Agora há menor probabilidade de introduzir dependências indesejáveis.
 
-![Validação da arquitetura em tempo real](../ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "Validação de dependência de arquitetura em tempo real")
+![Validação da arquitetura em tempo real](~/ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "Validação de dependência de arquitetura em tempo real")
 
 #### <a name="live-unit-testing"></a>Live Unit Testing:
 
 No Visual Studio Enterprise 2017, o Live Unit Testing fornece resultados de teste de unidade dinâmicos e a cobertura de código no editor durante a codificação. Ele funciona com projetos do C# e Visual Basic para o .NET Framework e dá suporte a três estruturas de teste do MSTest, xUnit e NUnit.
 
-![Live Unit Testing](../ide/media/lut-codewindow.png "Um exemplo de nosso novo recurso Live Unit Testing na edição Enterprise do Visual Studio")
+![Live Unit Testing](~/ide/media/lut-codewindow.png "Um exemplo de nosso novo recurso Live Unit Testing na edição Enterprise do Visual Studio")
 
 Para obter mais informações, consulte a postagem de blog [Live Unit Testing no Visual Studio 2017 Enterprise](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/).
 
@@ -143,12 +143,12 @@ Para obter mais informações, consulte nossa postagem de blog [Redgate Data Too
 #### <a name="interact-with-git"></a>Interagir com o Git:
 Quando estiver trabalhando com um projeto no Visual Studio, é possível configurar, confirmar rapidamente e publicar o código em um serviço Git. Também é possível gerenciar os repositórios Git usando o menu e cliques de botões no canto direito inferior do IDE.
 
-![Caixa de diálogo Interagir com o Git do Visual Studio 2017](../ide/media/vsIDE-GitInteraction.png "Ferramentas do Git no IDE do Visual Studio")
+![Caixa de diálogo Interagir com o Git do Visual Studio 2017](~/ide/media/vsIDE-GitInteraction.png "Ferramentas do Git no IDE do Visual Studio")
 
 #### <a name="view-and-navigate-code-with-structure-visualizer"></a>Exibir e navegar no código com o Visualizador de Estrutura:
 O Visualizador de Estrutura desenha linhas guia de estrutura (também conhecidas como guias de recuo) no código. É possível usá-las para visualizar e descobrir em qual bloco de código você está a qualquer momento, sem a necessidade de rolagem. Focalizar as linhas mostra as dicas de ferramentas que permitem a abertura desse bloco e de seus pais. Esse recurso está disponível para todas as linguagens com suporte por meio de gramáticas TextMate, bem como C#, Visual Basic e XAML.
 
-![Visualizador de estrutura do Visual Studio 2017](../ide/media/vsIDE-StructureVisualizer.png "Visualizador de estrutura no Visual Studio")
+![Visualizador de estrutura do Visual Studio 2017](~/ide/media/vsIDE-StructureVisualizer.png "Visualizador de estrutura no Visual Studio")
 
 #### <a name="experience-improved-navigation-controls"></a>Melhoria da experiência de controles de navegação:
 Atualizamos a experiência de navegação para ajudá-lo a chegar de um lugar a outro com mais confiança e menos distrações.
@@ -157,11 +157,11 @@ Atualizamos a experiência de navegação para ajudá-lo a chegar de um lugar a 
 
 * **Ir Para Todos** (Ctrl+T ou Ctrl+,) &ndash; navegue diretamente para qualquer declaração de arquivo/tipo/membro/símbolo. É possível filtrar a lista de resultados ou usar a sintaxe de consulta (por exemplo, “f searchTerm” para arquivos, “t searchTerm” para tipos, etc.).
 
- ![Melhoria de Ir Para Todos](../ide/media/vs2017ide-navigation-go-to.png "Melhoria do recurso Ir Para Todos")
+ ![Melhoria de Ir Para Todos](~/ide/media/vs2017ide-navigation-go-to.png "Melhoria do recurso Ir Para Todos")
 
 * **Localizar Todas as Referências (Shift+F12)** &ndash; com a coloração de sintaxe, é possível agrupar os resultados de Localizar Todas as Referências com uma combinação de projeto, definição e caminho. Também é possível “bloquear” os resultados para que você possa continuar encontrando outras referências sem perder os resultados originais.
 
- ![Nova ferramenta Localizar Todas as Referências](../ide/media/vs2017ide-find-all-references.png "Exemplo da nova ferramenta Localizar Todas as Referências")
+ ![Nova ferramenta Localizar Todas as Referências](~/ide/media/vs2017ide-find-all-references.png "Exemplo da nova ferramenta Localizar Todas as Referências")
 
 * **Guias de Recuo** &ndash; as linhas verticais cinzas pontilhadas atuam como pontos de referência no código para fornecer o contexto no quadro de visão. É possível reconhecê-las nas populares Productivity Power Tools.
 
@@ -180,13 +180,13 @@ Para obter detalhes completos, consulte nossa página [Novidades do Visual C++ n
 
 Agora, é possível avançar com mais facilidade durante a depuração, sem configurar um ponto de interrupção para parar na linha desejada. Quando estiver parado no depurador, basta clicar no ícone exibido ao lado da linha de código que o mouse está focalizando. O código será executado e parará nessa linha na próxima vez que for acessado no caminho do código.
 
-![Depuração do Visual Studio 2017 – Executar com um Clique](../ide/media/vs2017ide-RunToClick.png "Executar com um Clique na depuração e no diagnóstico do Visual Studio")
+![Depuração do Visual Studio 2017 – Executar com um Clique](~/ide/media/vs2017ide-RunToClick.png "Executar com um Clique na depuração e no diagnóstico do Visual Studio")
 
 #### <a name="the-new-exception-helper"></a>O novo Auxiliar de Exceção:
 
 O novo Auxiliar de Exceção ajuda você a exibir as informações de exceção rapidamente. As informações são apresentadas em um formato compacto, com acesso instantâneo às exceções internas. Ao diagnosticar uma NullReferenceException, é possível ver rapidamente o que era nulo diretamente dentro do Auxiliar de Exceção.
 
-![A nova caixa de diálogo Auxiliar de Exceção no Visual Studio](../ide/media/vs2017ide-ExceptionHelper.png "A nova caixa de diálogo Auxiliar de Exceção")
+![A nova caixa de diálogo Auxiliar de Exceção no Visual Studio](~/ide/media/vs2017ide-ExceptionHelper.png "A nova caixa de diálogo Auxiliar de Exceção")
 
 Para obter mais informações, consulte a postagem de blog [Usando o novo Auxiliar de Exceção no Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/).
 

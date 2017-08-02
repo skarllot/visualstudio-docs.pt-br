@@ -159,7 +159,7 @@ A maioria das caixas de diálogo do Visual Studio [layout de caixa de diálogo u
   
  **Figura 08.01-h: Caixa de diálogo com temas**  
   
- ![Dimensões da caixa de diálogo com temas](../../extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801 i_ThemedDialogDimensions")  
+ ![Dimensões da caixa de diálogo com temas](~/extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801 i_ThemedDialogDimensions")  
   
  **Figura 08.01-i: Temas diálogo – dimensões**  
   
@@ -167,7 +167,7 @@ A maioria das caixas de diálogo do Visual Studio [layout de caixa de diálogo u
   
  **Figura 08.01-j: Temas diálogo – fontes**  
   
- ![Cores do tema diálogo](../../extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801 k_ThemedDialogColors")  
+ ![Cores do tema diálogo](~/extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801 k_ThemedDialogColors")  
   
  **Figura 08.01-k Com temas diálogo – cores**  
   

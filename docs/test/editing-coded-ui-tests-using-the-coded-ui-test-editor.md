@@ -48,7 +48,7 @@ o Editor de testes de interface de usuário codificada permite modificar facilme
 ## <a name="why-should-i-do-this"></a>Por que devo fazer isso?  
  Usar o Editor de Teste de IU Codificado é mais rápido e eficiente do que editar o código utilizando métodos de testes de IU codificados por meio do Editor de Códigos. Com o Editor de Teste de IU Codificado, é possível usar a barra de ferramentas e os menus de atalho para localizar e modificar rapidamente valores de propriedade associados a ações e controles de interface do usuário. Por exemplo, é possível usar a barra de ferramentas do Editor de Teste de IU Codificado para executar os seguintes comandos:  
   
- ![UI Test Edito](../test/media/uitesteditor.png "UITestEditor")  
+ ![UI Test Edito](~/test/media/uitesteditor.png "UITestEditor")  
   
 1.  [Localizar](../ide/finding-and-replacing-text.md) ajuda a localizar ações e controles de interface do usuário.  
   
@@ -74,7 +74,7 @@ o Editor de testes de interface de usuário codificada permite modificar facilme
 ## <a name="open-a-coded-ui-test"></a>Abrir um teste de IU codificado  
  É possível exibir e editar testes de IU codificado baseados no Visual C# e no Visual Basic por meio do Editor de Teste de IU Codificado.  
   
- ![Menu de contexto Editar com o Construtor de Teste de IU Codificado](../test/media/editcodeduitest.png "EditCodedUITest")  
+ ![Menu de contexto Editar com o Construtor de Teste de IU Codificado](~/test/media/editcodeduitest.png "EditCodedUITest")  
   
  No Gerenciador de Soluções, abra o menu de atalho do **UIMap.uitest** e escolha **Abrir**. O teste de IU codificado é exibido no Editor de Teste de IU Codificado. Agora, é possível exibir e editar os métodos, as ações e os controles correspondentes registrados no teste de IU codificado.  
   
@@ -87,14 +87,14 @@ o Editor de testes de interface de usuário codificada permite modificar facilme
 ##  <a name="CodedUITestEditor_EditActionAndControlProperties"></a> Modificar propriedades de ação de interface do usuário e as propriedades de controle correspondentes  
  Por meio do Editor de Teste de IU Codificado, é possível localizar e exibir rapidamente todas as ações de interface do usuário de métodos de teste. Ao selecionar a ação de interface do usuário no editor, o controle correspondente será realçado automaticamente. Do mesmo modo, ao selecionar um controle, as ações de interface do usuário correspondentes serão realçadas. Selecionar uma ação ou controle de interface do usuário facilita o uso da janela Propriedades para modificar as propriedades correspondentes.  
   
- ![Propriedades de ações de interface do usuário](../test/media/codeduiedituiaction.png "CodedUIEditUIAction")  
+ ![Propriedades de ações de interface do usuário](~/test/media/codeduiedituiaction.png "CodedUIEditUIAction")  
 Editar propriedades de ações de interface do usuário  
   
  Para modificar as propriedades de uma ação de interface do usuário, no painel **Ações de interface do usuário**, expanda o método de teste que contém uma ação de IU cujas propriedades você deseja editar, selecione a ação de interface do usuário e, em seguida, modifique as propriedades usando a janela Propriedades.  
   
  Por exemplo, se um servidor estiver indisponível e houver uma ação de interface do usuário associada ao navegador da Web com a instrução **Acessar página da Web ‘http://Contoso1/default.aspx’**, será possível alterar a URL para `'http://Contoso2/default.aspx'`.  
   
- ![Propriedades de controle](../test/media/codeduitestcontrolprop.png "CodedUITestControlProp")  
+ ![Propriedades de controle](~/test/media/codeduitestcontrolprop.png "CodedUITestControlProp")  
 Editar propriedades de controle  
   
  Os procedimentos usados para modificar as ações de interface do usuário também podem ser utilizados para modificar as propriedades de um controle. No painel **Mapa do Controle de interface do usuário**, selecione o controle a ser editado e modifique as propriedades por meio da janela Propriedades.  
@@ -106,29 +106,29 @@ Editar propriedades de controle
  *O que mais eu deveria saber?*  
  **Dicas**  
   
--   ![Dica](../test/media/tip.png "Dica") Se a janela Propriedades não for exibida, pressione e segure a tecla **Alt** ao mesmo tempo em que pressiona **Enter** ou pressione a tecla **F4**.  
+-   ![Dica](~/test/media/tip.png "Dica") Se a janela Propriedades não for exibida, pressione e segure a tecla **Alt** ao mesmo tempo em que pressiona **Enter** ou pressione a tecla **F4**.  
   
--   ![Dica](../test/media/tip.png "Dica") Para desfazer as alterações de propriedade, selecione **Desfazer** no menu **Editar** ou pressione Ctrl+Z.  
+-   ![Dica](~/test/media/tip.png "Dica") Para desfazer as alterações de propriedade, selecione **Desfazer** no menu **Editar** ou pressione Ctrl+Z.  
   
--   ![Dica](../test/media/tip.png "Dica") É possível usar o botão **Localizar** na barra de ferramentas do Editor de Teste de IU Codificado para abrir a ferramenta Localizar e Substituir no Visual Studio. Em seguida, será possível usar o controle Localizar para localizar uma ação de interface do usuário no Editor de Teste de IU Codificado. Por exemplo, você pode tentar localizar “Clicar no botão ‘Logon’”. Isso pode ser útil em testes grandes. Não é possível utilizar a funcionalidade de substituição na ferramenta Localizar e Substituir no Editor de Teste de IU Codificado. Para obter mais informações, consulte o controle Localizar em [Localizando e Substituindo Texto](../ide/finding-and-replacing-text.md).  
+-   ![Dica](~/test/media/tip.png "Dica") É possível usar o botão **Localizar** na barra de ferramentas do Editor de Teste de IU Codificado para abrir a ferramenta Localizar e Substituir no Visual Studio. Em seguida, será possível usar o controle Localizar para localizar uma ação de interface do usuário no Editor de Teste de IU Codificado. Por exemplo, você pode tentar localizar “Clicar no botão ‘Logon’”. Isso pode ser útil em testes grandes. Não é possível utilizar a funcionalidade de substituição na ferramenta Localizar e Substituir no Editor de Teste de IU Codificado. Para obter mais informações, consulte o controle Localizar em [Localizando e Substituindo Texto](../ide/finding-and-replacing-text.md).  
   
--   ![Dica](../test/media/tip.png "Dica") Algumas vezes, pode ser difícil visualizar onde os controles estão localizados na interface do usuário do aplicativo em teste. Um dos recursos do Editor de Teste de IU Codificado é a seleção de um controle listado no mapa de controle da interface do usuário e a exibição da localização desse controle no aplicativo em teste. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Localizar um Controle de interface do usuário no aplicativo em Teste](#CodedUITestEditor_LocateUIControl) pode ser consultado mais adiante neste tópico.  
+-   ![Dica](~/test/media/tip.png "Dica") Algumas vezes, pode ser difícil visualizar onde os controles estão localizados na interface do usuário do aplicativo em teste. Um dos recursos do Editor de Teste de IU Codificado é a seleção de um controle listado no mapa de controle da interface do usuário e a exibição da localização desse controle no aplicativo em teste. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Localizar um Controle de interface do usuário no aplicativo em Teste](#CodedUITestEditor_LocateUIControl) pode ser consultado mais adiante neste tópico.  
   
--   ![Dica](../test/media/tip.png "Dica") Pode ser necessário expandir a caixa de controles que contém o controle a ser editado. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Localizar um controle e seus descendentes](#CodedUITestEditor_LocateDecendants) pode ser consultado mais adiante neste tópico.  
+-   ![Dica](~/test/media/tip.png "Dica") Pode ser necessário expandir a caixa de controles que contém o controle a ser editado. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Localizar um controle e seus descendentes](#CodedUITestEditor_LocateDecendants) pode ser consultado mais adiante neste tópico.  
   
 ##  <a name="CodedUITestEditor_DeleteUIActions"></a> Excluir ações de interface do usuário indesejadas  
  É possível remover ações de interface do usuário indesejadas do teste de IU codificado facilmente.  
   
- ![Excluir a ação de interface do usuário](../test/media/codeduideleteuiaction.png "CodedUIDeleteUIAction")  
+ ![Excluir a ação de interface do usuário](~/test/media/codeduideleteuiaction.png "CodedUIDeleteUIAction")  
   
  No painel **Ações de interface do usuário**, expanda o método de teste que contém a ação de interface do usuário a ser excluída. Abra o menu de atalho da ação de interface do usuário e escolha **Excluir**.  
   
 ##  <a name="CodedUITestEditor_SplitMethods"></a> Dividir um método de teste em dois métodos separados  
  É possível dividir um método de teste para refinar ou modularizar as ações de interface do usuário. Por exemplo, o teste pode ter um único método de teste com ações de interface do usuário em duas caixas de controles. As ações de interface do usuário podem ser modularizadas com mais eficiência em dois métodos que correspondam a um contêiner.  
   
- ![Dividir um método de teste](../test/media/codeduitestsplitmethod1.png "CodedUITestSplitMethod1")  
+ ![Dividir um método de teste](~/test/media/codeduitestsplitmethod1.png "CodedUITestSplitMethod1")  
   
- ![Dois métodos de teste](../test/media/codeduitestsplitmethod2.png "CodedUITestSplitMethod2")  
+ ![Dois métodos de teste](~/test/media/codeduitestsplitmethod2.png "CodedUITestSplitMethod2")  
   
  No painel **Ações de interface do usuário**, expanda o método de teste a ser dividido em dois métodos separados e selecione a ação de interface do usuário em que o novo método de teste começará. Abra o menu de atalho da ação de interface do usuário e escolha **Dividir em um novo método** ou escolha o botão **Dividir em um novo método** na barra de ferramentas do Editor de Teste de IU Codificado. O novo método de teste será exibido no painel Ações de interface do usuário. Ele contém as ações de interface do usuário da ação em que a divisão foi especificada.  
   
@@ -137,13 +137,13 @@ Editar propriedades de controle
  *O que mais eu deveria saber?*  
  **Questões importantes**  
   
--   ![Ícone Cuidado](../test/media/caution.gif "cuidado") **Aviso:** ao dividir um método, modifique os códigos que chamam o método existente para que eles também chamem o novo método a ser criado caso ainda deseje incluir essas ações de interface do usuário. Quando um método é dividido, uma caixa de diálogo do Microsoft Visual Studio é exibida. Ela avisa que é necessário modificar os códigos que chamam o método existente para que eles também chamem o novo método a ser criado. Escolha **Sim**.  
+-   ![Ícone Cuidado](~/test/media/caution.gif "cuidado") **Aviso:** ao dividir um método, modifique os códigos que chamam o método existente para que eles também chamem o novo método a ser criado caso ainda deseje incluir essas ações de interface do usuário. Quando um método é dividido, uma caixa de diálogo do Microsoft Visual Studio é exibida. Ela avisa que é necessário modificar os códigos que chamam o método existente para que eles também chamem o novo método a ser criado. Escolha **Sim**.  
   
  **Dicas**  
   
--   ![Dica](../test/media/tip.png "Dica") Para desfazer a divisão, escolha **Desfazer** no menu **Editar** ou pressione Ctrl+Z.  
+-   ![Dica](~/test/media/tip.png "Dica") Para desfazer a divisão, escolha **Desfazer** no menu **Editar** ou pressione Ctrl+Z.  
   
--   ![Dica](../test/media/tip.png "Dica") É possível renomear o novo método. Selecione-o no painel Ações de interface do usuário e escolha o botão **Renomear** na barra de ferramentas do Editor de Teste de IU Codificado.  
+-   ![Dica](~/test/media/tip.png "Dica") É possível renomear o novo método. Selecione-o no painel Ações de interface do usuário e escolha o botão **Renomear** na barra de ferramentas do Editor de Teste de IU Codificado.  
   
      -ou-  
   
@@ -161,50 +161,50 @@ Editar propriedades de controle
  *O que mais eu deveria saber?*  
  **Questões importantes**  
   
--   ![Ícone Cuidado](../test/media/caution.gif "Cuidado") **Aviso:** depois de mover o método, não é possível editá-lo usando o Editor de Teste de IU Codificado. Você deve adicionar seu código personalizado e mantê-lo usando o Editor de Códigos. Quando um método é movido, uma caixa de diálogo do Microsoft Visual Studio é exibida. Ela avisa que o método será movido do arquivo UIMap.uitest para o arquivo UIMap.cs ou UIMap.vb e que não será possível editar o método usando o Editor de Teste de IU Codificado. Escolha **Sim**.  
+-   ![Ícone Cuidado](~/test/media/caution.gif "Cuidado") **Aviso:** depois de mover o método, não é possível editá-lo usando o Editor de Teste de IU Codificado. Você deve adicionar seu código personalizado e mantê-lo usando o Editor de Códigos. Quando um método é movido, uma caixa de diálogo do Microsoft Visual Studio é exibida. Ela avisa que o método será movido do arquivo UIMap.uitest para o arquivo UIMap.cs ou UIMap.vb e que não será possível editar o método usando o Editor de Teste de IU Codificado. Escolha **Sim**.  
   
  **Dicas**  
   
--   ![Dica](../test/media/tip.png "Dica") Para desfazer a movimentação, selecione **Desfazer** no menu **Editar** ou pressione Ctrl+Z. No entanto, em seguida, será necessário remover manualmente o código do arquivo UIMap.cs ou UIMap.vb.  
+-   ![Dica](~/test/media/tip.png "Dica") Para desfazer a movimentação, selecione **Desfazer** no menu **Editar** ou pressione Ctrl+Z. No entanto, em seguida, será necessário remover manualmente o código do arquivo UIMap.cs ou UIMap.vb.  
   
 ##  <a name="CodedUITestEditor_LocateUIControl"></a> Localizar um Controle de interface do usuário no aplicativo em teste  
  Algumas vezes, pode ser difícil visualizar onde os controles estão localizados na interface do usuário do aplicativo em teste. Um dos recursos do Editor de Teste de IU Codificado é a seleção de um controle listado no mapa de controle da interface do usuário e a exibição da localização desse controle no aplicativo em teste. O recurso **Localizar o Controle de interface do usuário** no aplicativo em teste também pode ser usado para verificar modificações na propriedade de pesquisa de um controle.  
   
- ![Localizar o controle de interface do usuário](../test/media/codeduilocatecontrol.png "CodedUILocateControl")  
+ ![Localizar o controle de interface do usuário](~/test/media/codeduilocatecontrol.png "CodedUILocateControl")  
   
- ![Controle localizado no aplicativo em teste](../test/media/codeduilocatecontrol2.png "CodedUILocateControl2")  
+ ![Controle localizado no aplicativo em teste](~/test/media/codeduilocatecontrol2.png "CodedUILocateControl2")  
   
  No painel **Mapa de Controle de interface do usuário**, selecione o controle a ser localizado no aplicativo associado ao teste. Depois, abra o menu de atalho do controle e, em seguida, escolha **Localizar o Controle de interface do usuário**. No aplicativo em teste, o controle será designado com uma borda azul.  
   
  *O que mais eu deveria saber?*  
  **Questões importantes**  
   
--   ![Ícone Cuidado](../test/media/caution.gif "cuidado") **Aviso:** antes de localizar um controle de interface do usuário, verifique se o aplicativo associado ao teste está em execução.  
+-   ![Ícone Cuidado](~/test/media/caution.gif "cuidado") **Aviso:** antes de localizar um controle de interface do usuário, verifique se o aplicativo associado ao teste está em execução.  
   
  **Dicas**  
   
--   ![Dica](../test/media/tip.png "dica") Como alternativa, é possível usar a opção **Localizar Tudo** para verificar se todos os controles em um contêiner estão localizados corretamente. Essa opção será descrita na próxima seção.  
+-   ![Dica](~/test/media/tip.png "dica") Como alternativa, é possível usar a opção **Localizar Tudo** para verificar se todos os controles em um contêiner estão localizados corretamente. Essa opção será descrita na próxima seção.  
   
 ##  <a name="CodedUITestEditor_LocateDecendants"></a> Localizar um controle e seus descendentes  
  É possível verificar se todos os controles em um contêiner estão localizados corretamente na interface do usuário do aplicativo em teste. Isso pode ser útil para verificar alterações de propriedade de pesquisa realizadas no contêiner. Além disso, se houve alterações significativas na interface do usuário do aplicativo em teste, é possível validar se os controles de propriedades de pesquisa existentes ainda estão corretos.  
   
- ![Localizar todos os controles descendentes](../test/media/codeduilocateall.png "CodedUILocateAll")  
+ ![Localizar todos os controles descendentes](~/test/media/codeduilocateall.png "CodedUILocateAll")  
   
- ![Todos os controles localizados](../test/media/codeduilocateall2.png "CodedUILocateAll2")  
+ ![Todos os controles localizados](~/test/media/codeduilocateall2.png "CodedUILocateAll2")  
   
  No painel **Mapa de Controle de Interface do Usuário**, selecione a caixa de controles cujos descendentes você deseja localizar e exibir. Depois, abra o menu de atalho do controle e escolha **Localizar Tudo**. A caixa de controles e todos os controles descendentes serão marcados no Editor de Teste de IU Codificado com uma marca de seleção verde ou um ‘X’ vermelho. Essas marcas permitem saber se os controles foram localizados com êxito no aplicativo em teste.  
   
  *O que mais eu deveria saber?*  
  **Questões importantes**  
   
--   ![Ícone Cuidado](../test/media/caution.gif "cuidado") **Aviso:** antes de localizar os controles de interface do usuário, verifique se o aplicativo associado ao teste está em execução.  
+-   ![Ícone Cuidado](~/test/media/caution.gif "cuidado") **Aviso:** antes de localizar os controles de interface do usuário, verifique se o aplicativo associado ao teste está em execução.  
   
 ##  <a name="CodedUITestEditor_InsertDelay"></a> Inserir um atraso antes de uma ação de interface do usuário  
  Ocasionalmente, convém instruir o teste a aguardar a ocorrência de determinados eventos, como a exibição de uma janela, o desaparecimento da barra de progresso etc. Ao utilizar o Editor de Teste de IU Codificado, isso pode ser feito inserindo um atraso antes de uma ação de interface do usuário. É possível especificar quantos segundos o atraso durará.  
   
- ![Inserir um atraso antes de uma ação de interface do usuário](../test/media/codeduidelay.png "CodedUIDelay")  
+ ![Inserir um atraso antes de uma ação de interface do usuário](~/test/media/codeduidelay.png "CodedUIDelay")  
   
- ![Atraso de 5 segundos adicionado](../test/media/codeduidealy2.png "CodedUIDealy2")  
+ ![Atraso de 5 segundos adicionado](~/test/media/codeduidealy2.png "CodedUIDealy2")  
   
  No painel **Ações de interface do usuário**, expanda o método de teste que contém a ação de interface do usuário na qual o atraso será inserido. Selecione a ação de interface do usuário. Depois, abra o menu de atalho da ação de interface do usuário e escolha **Inserir Atraso Antes**. Um atraso será inserido e realçado antes da ação de interface do usuário selecionada com o seguinte texto: **Aguarde 1 segundo de atraso de usuário entre ações**. Na janela Propriedades, altere o valor para da propriedade **Atraso** para o número desejado de milissegundos.  
   
@@ -213,11 +213,11 @@ Editar propriedades de controle
  *O que mais eu deveria saber?*  
  **Observações**  
   
--   ![Pré-requisitos](../test/media/prereq.png "pré-requisitos") Se for necessário garantir que um controle específico esteja disponível antes de uma ação de interface do usuário, considere a adição de código personalizado ao método de teste por meio do método UITestControl.WaitForControlXXX() apropriado. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Fazendo Testes de IU Codificados Aguardarem Eventos Específicos Durante a Reprodução](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).  
+-   ![Pré-requisitos](~/test/media/prereq.png "pré-requisitos") Se for necessário garantir que um controle específico esteja disponível antes de uma ação de interface do usuário, considere a adição de código personalizado ao método de teste por meio do método UITestControl.WaitForControlXXX() apropriado. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Fazendo Testes de IU Codificados Aguardarem Eventos Específicos Durante a Reprodução](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).  
   
  **Dicas**  
   
--   ![Dica](../test/media/tip.png "Dica") Se a janela Propriedades não for exibida, pressione e segure a tecla Alt ao mesmo tempo em que pressiona Enter ou pressione a tecla F4.  
+-   ![Dica](~/test/media/tip.png "Dica") Se a janela Propriedades não for exibida, pressione e segure a tecla Alt ao mesmo tempo em que pressiona Enter ou pressione a tecla F4.  
   
 ## <a name="external-resources"></a>Recursos externos  
   

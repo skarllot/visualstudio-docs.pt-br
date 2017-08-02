@@ -47,7 +47,7 @@ Um TableAdapter é o componente que preenche um DataSet com dados do banco de da
 ## Visão geral de TableAdapters  
  TableAdapters são componentes gerados pelo designer que se conectar a um banco de dados, executam consultas ou procedimentos armazenados e preencher seu DataTable com os dados retornados. TableAdapters também são usados para enviar dados atualizados de seu aplicativo de volta para o banco de dados. Você pode ter tantas consultas quanto você deseja em um TableAdapter desde que elas retornem dados de acordo com o esquema da tabela à qual o TableAdapter está associado. O diagrama a seguir mostra como os TableAdapters interagir com bancos de dados e outros objetos na memória:  
   
- ![Fluxo de dados em um aplicativo cliente](../data-tools/media/clientdatadiagram.png "ClientDataDiagram")  
+ ![Fluxo de dados em um aplicativo cliente](~/data-tools/media/clientdatadiagram.gif "ClientDataDiagram")  
   
  Enquanto TableAdapters são criados com o **Dataset Designer**, as classes TableAdapter geradas não são geradas como classes aninhadas do <xref:System.Data.DataSet>. Eles estão localizados em um namespace separado específico para cada conjunto de dados. Por exemplo, se você tiver um dataset chamado `NorthwindDataSet`, os TableAdapters associados com a <xref:System.Data.DataTable>s no `NorthwindDataSet` no `NorthwindDataSetTableAdapters` namespace. Para acessar um determinado TableAdapter programaticamente, você deve declarar uma nova instância do TableAdapter. Por exemplo:  
   
@@ -60,7 +60,7 @@ Um TableAdapter é o componente que preenche um DataSet com dados do banco de da
  A funcionalidade de atualização de um TableAdapter é dependente de quanta informação está disponível com base na consulta principal fornecida no TableAdapter Wizard. Por exemplo, TableAdapters que estejam configurados para buscar valores de várias tabelas \(JOINs\), valores escalares, exibições ou os resultados de funções de agregação não são criadas inicialmente com a capacidade de enviar atualizações de volta para o banco de dados subjacente. No entanto, você pode configurar os comandos INSERT, UPDATE e DELETE manualmente no **propriedades** janela.  
   
 ## Consultas TableAdapter  
- ![TableAdapter com múltiplas consultas](../data-tools/media/tableadapter.png "TableAdapter")  
+ ![TableAdapter com múltiplas consultas](~/data-tools/media/tableadapter.gif "TableAdapter")  
   
  TableAdapters podem conter consultas múltiplas para preencher suas tabelas de dados associados. Você pode definir tantas consultas para um TableAdapter quanto seu aplicativo requer, desde que cada consulta retorna dados de acordo com o mesmo esquema que sua tabela de dados associada. Isso permite o carregamento de dados que satisfaçam critérios diferentes. Por exemplo, se seu aplicativo contiver uma tabela de clientes, você pode criar uma consulta que preenche a tabela com todos os clientes cujo nome começa com uma letra específica e outra consulta que preenche a tabela com todos os clientes localizados no mesmo estado. Para preencher um `Customers` tabela com clientes em um estado determinado você pode criar um `FillByState` consulta que leva um parâmetro para o valor de estado: `SELECT * FROM Customers WHERE State = @State`. Você executa a consulta chamando o `FillByState` método e passando o valor do parâmetro assim: `CustomerTableAdapter.FillByState("WA")`.  
   

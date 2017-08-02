@@ -77,7 +77,7 @@ Visual Studio o ajuda a entender, discutir e se comunicar suas necessidades de u
   
  Muitas regras de negócios são restrições nas relações entre as classes conceituais. Você pode escrever esses *estático**as regras de negócio* como comentários associados as classes relevantes em um diagrama de classe conceitual. Por exemplo:  
   
- ![Regra em comentário anexado à classe Order. ] (../modeling/media/uml_reqmcd2.png "UML_ReqmCD2")  
+ ![Regra em comentário anexado à classe Order. ] (~/modeling/media/uml_reqmcd2.png "UML_ReqmCD2")  
   
  *Regras de negócio dinâmico* restringir as sequências permitidas de eventos. Por exemplo, você deve usar um diagrama de sequência ou atividade para mostrar que um usuário deve fazer logon antes de executar outras operações em seu sistema.  
   

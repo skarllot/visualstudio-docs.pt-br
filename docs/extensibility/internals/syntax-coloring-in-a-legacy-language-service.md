@@ -41,7 +41,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="colorizer-model"></a>Modelo de colorizador  
  A linguagem serviço implementa a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>interface, que é usada por editores.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> Essa implementação é um objeto separado do serviço de linguagem, conforme mostrado na ilustração a seguir.  
   
- ![Gráfico do colorizador SVC](../../extensibility/internals/media/figlgsvccolorizer.gif "FigLgSvcColorizer")  
+ ![Gráfico do colorizador SVC](~/extensibility/internals/media/figlgsvccolorizer.gif "FigLgSvcColorizer")  
 Modelo de colorizador simples  
   
 > [!NOTE]

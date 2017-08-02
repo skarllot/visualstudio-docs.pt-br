@@ -51,7 +51,7 @@ Você verá uma lâmpada se houver um rabisco vermelho e o Visual Studio tiver u
 
 2. Pressione **Ctrl + .** em qualquer lugar de uma linha para invocar a lâmpada e ir diretamente para a lista de possíveis correções.  
 
-   ![Lâmpada com o mouse focalizando](../ide/media/vs2015_lightbulb_hover.png "VS2017_LightBulb_Hover")  
+   ![Lâmpada com o mouse focalizando](~/ide/media/vs2015_lightbulb_hover.png "VS2017_LightBulb_Hover")  
 
 ### Para ver as possíveis correções
 <a id="to-see-potential-fixes" class="xliff"></a>  
@@ -357,47 +357,47 @@ Dim s As String = $"My string with {num} in the middle"
 <a id="remove-merge-conflict-markers" class="xliff"></a>
 Essas ações rápidas permitem que você resolva conflitos de mesclagem "fazendo uma alteração", que remove o código conflitante e os marcadores. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
 
-![Refatoração - resolver conflitos de mesclagem](../ide/media/vside-refactoring-merge-conflicts.png)
+![Refatoração - resolver conflitos de mesclagem](~/ide/media/vside-refactoring-merge-conflicts.png)
 
 ### Adicionar verificações de null para parâmetros
 <a id="add-null-checks-for-parameters" class="xliff"></a>
 Essa Ação Rápida permite que você adicione uma verificação ao código para determinar se um parâmetro é nulo. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
 
-![Refatoração - adicionar verificação de nulos](../ide/media/vside-refactoring-nullcheck.png)
+![Refatoração - adicionar verificação de nulos](~/ide/media/vside-refactoring-nullcheck.png)
 
 ### Aperfeiçoamentos do gerador de construtor
 <a id="constructor-generator-improvements" class="xliff"></a>
 Quando você está criando um construtor, essa ação rápida permite selecionar as propriedades ou os campos a serem gerados ou você pode gerar o construtor com base em um corpo vazio. Você também pode usá-lo para adicionar parâmetros a um construtor existente do site de chamada. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
 
-![Refatoração - gerar construtores](../ide/media/vside-refactoring-constructors.png)
+![Refatoração - gerar construtores](~/ide/media/vside-refactoring-constructors.png)
 
 ### Remover variáveis não utilizadas
 <a id="remove-unused-variables" class="xliff"></a>
 Essa Ação Rápida permite remover variáveis que foram declaradas, mas nunca foram usadas no código. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
 
-![Refatoração - variáveis não utilizadas](../ide/media/vside-refactoring-unusedvars.png)
+![Refatoração - variáveis não utilizadas](~/ide/media/vside-refactoring-unusedvars.png)
 
 ### Gerar substituições
 <a id="generate-overrides" class="xliff"></a>
 Essa Ação Rápida permite que você crie uma substituição de uma linha em branco em uma classe ou estrutura. A caixa de diálogo **Escolher Membros** permite que você escolha os membros a serem substituídos. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
 
-![Refatoração - substituições](../ide/media/vside-refactoring-overrides.png)
+![Refatoração - substituições](~/ide/media/vside-refactoring-overrides.png)
 
-![Refatoração - caixa de diálogo de substituições](../ide/media/vside-refactoring-overrides-dialog.png)
+![Refatoração - caixa de diálogo de substituições](~/ide/media/vside-refactoring-overrides-dialog.png)
 
 ### Alterar base para literais numéricas
 <a id="change-base-for-numeric-literals" class="xliff"></a>
 Essa Ação Rápida permite que você converta um literal numérico de um sistema numérico base para outro. Por exemplo, você pode alterar um número para hexadecimal ou formato binário. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
 
-![Refatoração - alterar base](../ide/media/vside-refactoring-changebase1.png)
+![Refatoração - alterar base](~/ide/media/vside-refactoring-changebase1.png)
 
-![Refatoração - alterar base](../ide/media/vside-refactoring-changebase2.png)
+![Refatoração - alterar base](~/ide/media/vside-refactoring-changebase2.png)
 
 ### Inserir separadores de dígitos em literais
 <a id="insert-digit-separators-into-literals" class="xliff"></a>
 Essa Ação Rápida permite que você adicione caracteres separadores em valores literais. (Disponível apenas no Visual Studio 2017 (versão 15.3 - versão prévia)).
 
-![Refatoração - alterar separadores de dígitos](../ide/media/vside-refactoring-separators.png)
+![Refatoração - alterar separadores de dígitos](~/ide/media/vside-refactoring-separators.png)
 
 ### Converter construtor **se** para **alternar**
 <a id="convert-if-construct-to-switch" class="xliff"></a>

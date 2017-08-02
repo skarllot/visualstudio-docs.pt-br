@@ -1,7 +1,7 @@
 ---
 title: Entrar no Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 01/23/2016
+ms.date: 7/20/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -13,26 +13,11 @@ caps.latest.revision: 30
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 8b1f56944190c60795d5bbd726388309caca7070
+ms.translationtype: HT
+ms.sourcegitcommit: c3521e1de25854db012cb91bbe09d9463ecb42c7
+ms.openlocfilehash: e329cd4df5ea0dd1e369207bca75e063936bc88f
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/21/2017
 
 ---
 # <a name="sign-in-to-visual-studio"></a>Entrar no Visual Studio
@@ -51,31 +36,28 @@ Será possível personalizar e otimizar sua experiência de desenvolvimento do V
 
 -   **Estende o período de avaliação do Visual Studio** – você pode usar o Visual Studio Professional ou o Visual Studio Enterprise por um período adicional de 90 dias, em vez ficar limitado ao período de avaliação de 30 dias.  
 
--   **Desbloqueia o Visual Studio se você usa uma conta associada a uma assinatura do MSDN ou VSO**. Veja [Como desbloquear o Visual Studio](../ide/how-to-unlock-visual-studio.md).  
+-   **Desbloqueia o Visual Studio se você usa uma conta associada a uma assinatura do MSDN ou Visual Studio Team Services**. Veja [Como desbloquear o Visual Studio](../ide/how-to-unlock-visual-studio.md).  
 
 -   **Conecta-se automaticamente a serviços como o Azure e Visual Studio Team Services** no IDE sem solicitar credenciais para a mesma conta novamente.  
 
 ## <a name="how-to-sign-in-to-visual-studio"></a>Como entrar no Visual Studio  
  Ao iniciar o Visual Studio pela primeira vez, será solicitado que você entre e forneça algumas informações básicas de registro. Você deve escolher uma conta da Microsoft ou uma conta corporativa ou de estudante que melhor lhe representa. Se você não tiver uma conta da Microsoft, poderá criar uma gratuitamente. Consulte [Como me inscrevo em uma conta da Microsoft?](http://windows.microsoft.com/en-us/windows-live/sign-up-create-account-how)  
 
- Em seguida, escolha as configurações da interface de usuário e o tema de cor que você deseja usar no Visual Studio. O Visual Studio se lembra essas configurações e sincroniza-as em todos os ambientes do Visual Studio nos quais você entrou. Para obter uma lista das configurações que são sincronizadas, consulte [Configurações Sincronizadas](../ide/synchronized-settings-in-visual-studio.md). Você pode alterar as configurações posteriormente se abrir o menu **Ferramentas &#124; Opções** do Visual Studio.  
+ Em seguida, escolha as configurações da interface de usuário e o tema de cor que você deseja usar no Visual Studio. O Visual Studio se lembra essas configurações e sincroniza-as em todos os ambientes do Visual Studio nos quais você entrou. Para obter uma lista das configurações que são sincronizadas, consulte [Configurações Sincronizadas](../ide/synchronized-settings-in-visual-studio.md). Você pode alterar as configurações posteriormente se abrir o menu **Ferramentas > Opções** do Visual Studio.  
 
  Depois de fornecer as configurações, o Visual Studio é iniciado, e você está conectado e pronto para começar. Para verificar se você entrou, procure seu nome de perfil no canto superior direito do ambiente do Visual Studio.  
 
- ![Usuário atualmente conectado](../ide/media/vs2015_username.png "VS2017_UserName")  
+ ![Usuário atualmente conectado no VS2017](~/ide/media/vs2017_username.png)
 
- A menos que você se desconecte, você será conectado automaticamente ao Visual Studio sempre que o iniciar e todas as alterações nas configurações sincronizadas são aplicadas automaticamente. Para se desconectar, escolha a seta para baixo próxima do seu nome de perfil no ambiente do Visual Studio, escolha o comando **Configurações da conta** e escolha o link **Sair**. Para entrar novamente, escolha o comando **Entrar** no canto superior direito do ambiente do Visual Studio.  
+ A menos que você se desconecte, você será conectado automaticamente ao Visual Studio sempre que o iniciar, e todas as alterações nas configurações sincronizadas são aplicadas automaticamente. Para se desconectar, escolha a seta para baixo próxima do seu nome de perfil no ambiente do Visual Studio, escolha o comando **Configurações da conta** e escolha o link **Sair**. Para entrar novamente, escolha o comando **Entrar** no canto superior direito do ambiente do Visual Studio.  
 
 ## <a name="to-change-your-profile-information"></a>Para alterar as informações do perfil  
- Em **Arquivo &#124; Configurações da Conta**, você pode ver e atualizar informações sobre sua licença e seu perfil do Visual Studio. Para editar suas informações de perfil, como o nome de conta, a imagem de avatar ou o endereço de email:  
+ 
+1.  Vá para **Arquivo > Configurações da Conta** e escolha o link **Gerenciar Perfil do Visual Studio**.  
 
-1.  Vá para **Arquivo &#124; Configurações da Conta**.  
+1.  No navegador, selecione o nome da sua conta na parte superior e selecione **Perfil do Visual Studio**.  
 
-2.  Na caixa de diálogo **Configurações da Conta**, escolha o link **Gerenciar Perfil do Visual Studio**.  
+1.  Selecione **Editar perfil** e altere as configurações desejadas.  
 
-3.  Na página **Minhas Informações da Microsoft** no navegador, escolha o botão **Editar Informações**.  
-
-4.  Altere as configurações que deseja.  
-
-5.  Quando terminar, escolha o botão **Salvar alterações**.
+1.  Quando terminar, selecione **Salvar alterações**.
 

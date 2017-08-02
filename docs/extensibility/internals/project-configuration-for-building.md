@@ -47,7 +47,7 @@ A lista de configurações de solução para uma determinada solução é gerenc
   
  Quando o usuário seleciona o **seleção múltipla** item na lista suspensa de configuração, o ambiente exibe uma caixa de diálogo que fornece a lista de configurações disponíveis.  
   
- ![Várias configurações](../../extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
+ ![Várias configurações](~/extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
 Várias configurações  
   
  Na caixa de diálogo, o usuário pode selecionar uma ou várias configurações. Quando selecionado, os valores de propriedade exibidos na caixa de diálogo páginas de propriedade refletem a interseção dos valores para as configurações selecionadas.  
@@ -56,7 +56,7 @@ Várias configurações
   
  Dependências do projeto e ordem de compilação são independentes de configuração da solução: ou seja, você só pode definir a árvore de uma dependência para todos os projetos na solução. Clicando duas vezes a solução ou projeto e selecionando o **dependências do projeto** ou **ordem de compilação de projeto** opção abre a **dependências do projeto** caixa de diálogo. Ela também pode ser aberta pelo **projeto** menu.  
   
- ![Dependências do projeto](../../extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
+ ![Dependências do projeto](~/extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
 Dependências do projeto  
   
  Dependências do projeto determinam a ordem em que os projetos são compilados. Use a guia ordem de compilação na caixa de diálogo para exibir a ordem exata em que projetos dentro de uma solução de compilação e use a guia dependências para modificar a ordem de compilação.  

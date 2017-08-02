@@ -39,7 +39,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="saving-a-standard-document"></a>Salvar um documento padrão
 O ambiente manipula a salvar, salvar como e salvar todos os comandos. Quando um usuário seleciona **salvar**, **Salvar como**, ou **Salvar tudo** do **arquivo** menu ou fecha a solução, resultando em uma **Salvar tudo**, o seguinte processo ocorre.  
   
- ![Editor padrão](../../extensibility/internals/media/public.gif "Public")  
+ ![Editor padrão](~/extensibility/internals/media/public.gif "Public")  
 Salvar, salvar como e salvar tudo manipulação de comando para um editor padrão  
   
  Esse processo é detalhado nas etapas a seguir:  

@@ -57,7 +57,7 @@ Este tópico demonstra como usar o recurso [Gerar do Uso](../ide/visual-csharp-i
   
 3.  No painel **Modelos**, clique em **Projeto de teste de unidade** e aceite o nome padrão UnitTestProject1. A ilustração a seguir mostra a caixa de diálogo quando ele for exibido em [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]. Em [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], a caixa de diálogo tem aparência semelhante.  
   
-     ![Caixa de diálogo Novo Projeto de Teste](../ide/media/newproject_test.png "NewProject_Test")  
+     ![Caixa de diálogo Novo Projeto de Teste](~/ide/media/newproject_test.png "NewProject_Test")  
 Caixa de diálogo Novo Projeto  
   
 4.  Clique em **OK** para fechar a caixa de diálogo **Novo Projeto**. Agora você está pronto para começar a escrever testes  
@@ -73,25 +73,25 @@ Caixa de diálogo Novo Projeto
   
 3.  Localize o método `TestMethod1()` e renomeie-o para `DefaultAutomobileIsInitializedCorrectly()`. Dentro desse método, crie uma nova instância de uma classe chamada `Automobile`, conforme mostrado nas ilustrações a seguir. Um sublinhado ondulado aparece, indicando um erro em tempo de compilação e uma marcação inteligente aparece sob o nome do tipo. O local exato da marcação inteligente varia, dependendo se você estiver usando [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ou [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)].  
   
-     ![Sublinhado de Marcação Inteligente no Visual Basic](../ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
+     ![Sublinhado de Marcação Inteligente no Visual Basic](~/ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
 Visual Basic  
   
-     ![Sublinhado de Marcação Inteligente no C&#35;](../ide/media/genclass_underline.png "GenClass_Underline")  
+     ![Sublinhado de Marcação Inteligente no C&#35;](~/ide/media/genclass_underline.png "GenClass_Underline")  
 Visual C#  
   
 4.  Pare o ponteiro do mouse sobre a marcação inteligente para ver uma mensagem de erro afirmando que nenhum tipo com nome `Automobile` foi definido. Clique na marcação inteligente ou pressione CTRL +. (CTRL + ponto) para abrir o menu de atalho Gerar do Uso, conforme mostrado nas ilustrações a seguir.  
   
-     ![Menu de contexto de Marcação Inteligente no Visual Basic](../ide/media/genclass_smartvb.png "GenClass_SmartVB")  
+     ![Menu de contexto de Marcação Inteligente no Visual Basic](~/ide/media/genclass_smartvb.png "GenClass_SmartVB")  
 Visual Basic  
   
-     ![Menu de contexto de Marcação Inteligente no C&#35;](../ide/media/genclass_smartcs.png "GenClass_SmartCS")  
+     ![Menu de contexto de Marcação Inteligente no C&#35;](~/ide/media/genclass_smartcs.png "GenClass_SmartCS")  
 Visual C#  
   
 5.  Agora você tem duas opções. Você pode clicar em **Gerar 'Classe Automobile'** para criar um novo arquivo no seu projeto de teste e preenchê-lo com uma classe vazia chamada `Automobile`. Essa é uma maneira rápida para criar uma nova classe em um novo arquivo que tenha os modificadores de acesso padrão no projeto atual. Você também pode clicar em **Gerar novo tipo** para abrir a caixa de diálogo **Gerar Novo Tipo**. Isso fornece opções que incluem colocar a classe em um arquivo existente e adicionar o arquivo em outro projeto.  
   
      Clique em **Gerar novo tipo** para abrir a caixa de diálogo **Gerar Novo Tipo** mostrada na ilustração a seguir. No lista **Projetos**, clique em **GFUDemo_VB** ou **GFUDemo_CS** para instruir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a adicionar o arquivo ao projeto de código-fonte em vez do projeto de teste.  
   
-     ![Caixa de diálogo Gerar Novo Tipo](../ide/media/genotherdialog.png "GenOtherDialog")  
+     ![Caixa de diálogo Gerar Novo Tipo](~/ide/media/genotherdialog.png "GenOtherDialog")  
 Caixa de diálogo Gerar Novo Tipo  
   
 6.  Clique em **OK** para fechar a caixa de diálogo e criar o novo arquivo.  
@@ -112,10 +112,10 @@ Caixa de diálogo Gerar Novo Tipo
   
      A ilustração a seguir mostra o menu de atalho da marcação inteligente.  
   
-     ![Gerar o menu de contexto Propriedades no Visual Basic](../ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
+     ![Gerar o menu de contexto Propriedades no Visual Basic](~/ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
 Visual Basic  
   
-     ![Gerar o menu de contexto Propriedades no C&#35;](../ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
+     ![Gerar o menu de contexto Propriedades no C&#35;](~/ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
 Visual C#  
   
 ### <a name="to-locate-the-source-code"></a>Para localizar o código-fonte  
@@ -128,7 +128,7 @@ Visual C#
   
      A janela **Navegar Para** é mostrada na ilustração a seguir.  
   
-     ![Caixa de diálogo Navegar Para](../ide/media/navigate_2.png "Navigate_2")  
+     ![Caixa de diálogo Navegar Para](~/ide/media/navigate_2.png "Navigate_2")  
 Janela Navegar Para  
   
 ### <a name="to-generate-a-stub-for-a-new-constructor"></a>Para gerar um stub para um novo construtor  
@@ -161,7 +161,7 @@ Janela Navegar Para
   
      A janela **Resultados do Teste** é mostrada na ilustração a seguir.  
   
-     ![Resultados do teste que falharam](../ide/media/testsfailed.png "TestsFailed")  
+     ![Resultados do teste que falharam](~/ide/media/testsfailed.png "TestsFailed")  
 Janela Resultados de Teste  
   
 2.  Na janela **Resultados do Teste**, clique duas vezes em cada linha de resultado do teste para ir até o local de cada falha de teste.  
@@ -180,7 +180,7 @@ Janela Resultados de Teste
   
 1.  No menu **Testar**, aponte para **Executar** e, em seguida, clique em **Todos os Testes na Solução**. Dessa vez os testes são aprovados. A janela **Resultados do Teste** é mostrada na ilustração a seguir.  
   
-     ![Resultados de teste que foram aprovados](../ide/media/testspassed.png "TestsPassed")  
+     ![Resultados de teste que foram aprovados](~/ide/media/testspassed.png "TestsPassed")  
 Janela Resultados de Teste  
   
 ## <a name="see-also"></a>Consulte também  

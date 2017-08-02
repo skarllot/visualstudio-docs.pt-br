@@ -36,7 +36,7 @@ Este passo a passo demonstra como usar o [!INCLUDE[vsprvs](../code-quality/inclu
   
  Nesse cenário, quando o aplicativo é executado para testá\-lo, o plano de fundo é renderizado conforme o esperado, mas um dos objetos não aparecerá. Usando o diagnóstico de gráficos, você captura o problema para um log de gráficos para que você pode depurar o aplicativo. O problema parece com isso no aplicativo:  
   
- ![O objeto não pode ser visto.](../debugger/media/gfx_diag_demo_missing_object_shader_problem.png "gfx\_diag\_demo\_missing\_object\_shader\_problem")  
+ ![O objeto não pode ser visto.](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_problem.png "gfx\_diag\_demo\_missing\_object\_shader\_problem")  
   
 ## Investigação  
  Usando as ferramentas de diagnóstico de gráficos, você pode carregar o arquivo de log de gráficos para inspecionar os quadros que foram capturados durante o teste.  
@@ -47,7 +47,7 @@ Este passo a passo demonstra como usar o [!INCLUDE[vsprvs](../code-quality/inclu
   
 2.  No **lista quadro**, selecione um quadro que demonstra que o objeto não é exibido. O destino de renderização é atualizado para refletir o quadro selecionado. Nesse cenário, os gráficos de log guia é semelhante ao seguinte:  
   
-     ![O documento de log de elementos gráficos no Visual Studio](../debugger/media/gfx_diag_demo_missing_object_shader_step_1.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_1")  
+     ![O documento de log de elementos gráficos no Visual Studio](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_1.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_1")  
   
  Depois de selecionar um quadro que demonstra o problema, você pode começar a diagnosticá\-lo usando o **lista de eventos gráficos**. O **lista de eventos gráficos** contém todas as chamadas de API da Direct3D que foi feita para processar o quadro ativo, por exemplo, chamadas de API para configurar o estado do dispositivo, para criar e atualizar buffers e desenhar objetos que aparecem no quadro. Muitos tipos de chamadas são interessantes porque há normalmente \(mas nem sempre\) uma alteração correspondente no destino de renderização quando o aplicativo está funcionando conforme o esperado, por exemplo desenhar, expedição, copiar ou chamadas claras. Chamadas de desenho são particularmente interessantes porque cada um deles representa a geometria que o aplicativo processado \(chamadas de expedição também podem processar geometria\).  
   
@@ -68,7 +68,7 @@ Este passo a passo demonstra como usar o [!INCLUDE[vsprvs](../code-quality/inclu
   
 4.  Pare quando atingir a chamada de desenho que corresponde ao objeto ausente. Nesse cenário, o **estágios de Pipeline gráficos** janela indica que a geometria foi emitida para a GPU \(indicada pela miniatura Assembler de entrada\), mas não aparecem no alvo de renderização porque algo deu errado durante o estágio de sombreador de vértices \(indicado pela miniatura sombreador de vértices\):  
   
-     ![Um evento de DrawIndexed e seu efeito sobre o pipeline](../debugger/media/gfx_diag_demo_missing_object_shader_step_2.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_2")  
+     ![Um evento de DrawIndexed e seu efeito sobre o pipeline](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_2.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_2")  
   
  Depois de confirmar que o aplicativo emitiu uma chamada de desenho de geometria do objeto ausente e descobrir que o problema ocorre durante o estágio de sombreador de vértices, você pode usar o depurador HLSL para examinar o sombreador de vértices e descubra o que aconteceu com a geometria do objeto. Você pode usar o depurador HLSL para examinar o estado de HLSL variáveis durante a execução, percorrer o código HLSL e defina pontos de interrupção para ajudá\-lo a diagnosticar o problema.  
   
@@ -80,19 +80,19 @@ Este passo a passo demonstra como usar o [!INCLUDE[vsprvs](../code-quality/inclu
   
 3.  Na primeira vez que `output` é modificado, o membro `worldPos` é gravado.  
   
-     ![O valor de "output.worldPos" aparece razoável](../debugger/media/gfx_diag_demo_missing_object_shader_step_4.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_4")  
+     ![O valor de "output.worldPos" aparece razoável](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_4.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_4")  
   
      Como seu valor parece ser razoável, você continuar percorrendo o código até a próxima linha modifica `output`.  
   
 4.  Na próxima vez que `output` é modificado, o membro `pos` é gravado.  
   
-     ![O valor de "output.pos" foi zerado](../debugger/media/gfx_diag_demo_missing_object_shader_step_5.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_5")  
+     ![O valor de "output.pos" foi zerado](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_5.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_5")  
   
      Neste momento, o valor da `pos` membro — todos os zeros — parecer suspeito. Em seguida, você deseja determinar como `output.pos` passou a ter um valor de zeros.  
   
 5.  Observe que `output.pos` leva seu valor de uma variável chamada `temp`. Na linha anterior, você vê que o valor de `temp` é o resultado da multiplicação do valor anterior por uma constante chamada `projection`. Você suspeita que `temp`do valor suspeita é o resultado dessa multiplicação. Quando você posiciona o ponteiro no `projection`, você notar que o seu valor é também todos os zeros.  
   
-     ![A matriz de projeção contém uma transformação incorreta](../debugger/media/gfx_diag_demo_missing_object_shader_step_6.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_6")  
+     ![A matriz de projeção contém uma transformação incorreta](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_6.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_6")  
   
      Nesse cenário, a análise revela que `temp`do valor suspeito provavelmente é causado pelo seu multiplicação por `projection`, e porque `projection` é uma constante que é indicado para conter uma matriz de projeção, você sabe que ele não deve conter todos os zeros.  
   
@@ -104,7 +104,7 @@ Este passo a passo demonstra como usar o [!INCLUDE[vsprvs](../code-quality/inclu
   
 2.  Navegue até a pilha de chamada no código\-fonte do aplicativo. No **pilha de chamadas do evento de gráficos** janela, escolha a chamada principal para ver se o buffer constante lá está sendo preenchido. Se não estiver, continue a pilha de chamadas até encontrar onde ele está sendo preenchido. Nesse cenário, você descobre que o buffer constante está sendo preenchido — usando o `UpdateSubresource` API do Direct3D — ainda mais para cima a pilha de chamadas em uma função chamada `MarbleMaze::Render`, e seu valor proveniente de um objeto de buffer constante chamada `m_marbleConstantBufferData`:  
   
-     ![O código que define o buffer de constante do objeto](../debugger/media/gfx_diag_demo_missing_object_shader_step_7.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_7")  
+     ![O código que define o buffer de constante do objeto](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_7.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_7")  
   
     > [!TIP]
     >  Se você estiver depurando simultaneamente seu aplicativo, você pode definir um ponto de interrupção nesse local e será atingido quando o próximo quadro é renderizado. Em seguida, você pode inspecionar os membros de `m_marbleConstantBufferData` para confirmar se o valor da `projection` membro é definido como zeros quando o buffer de constante é preenchido.  
@@ -119,12 +119,12 @@ Este passo a passo demonstra como usar o [!INCLUDE[vsprvs](../code-quality/inclu
   
  Depois de localizar o local onde `m_marbleConstantBufferData.projection` estiver definido, você pode examinar o código\-fonte ao redor para determinar a origem do valor incorreto. Nesse cenário, você descobre que o valor de `m_marbleConstantBufferData.projection` é definido como uma variável local denominada `projection` antes que ela foi inicializada com um valor que é fornecido pelo código `m_camera->GetProjection(&projection);` na próxima linha.  
   
- ![A projeção de mármore é definida antes da inicialização](../debugger/media/gfx_diag_demo_missing_object_shader_step_9.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_9")  
+ ![A projeção de mármore é definida antes da inicialização](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_9.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_9")  
   
  Para corrigir o problema, você move a linha de código que define o valor de `m_marbleConstantBufferData.projection` após a linha que inicializa o valor da variável local `projection`.  
   
- ![O código&#45;fonte C&#43;&#43; corrigido](../debugger/media/gfx_diag_demo_missing_object_shader_step_10.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_10")  
+ ![O código&#45;fonte C&#43;&#43; corrigido](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_step_10.png "gfx\_diag\_demo\_missing\_object\_shader\_step\_10")  
   
  Depois de corrigir o código, você pode recriá\-lo e executar o aplicativo novamente para descobrir o que é resolvido o problema de renderização:  
   
- ![O objeto agora é exibido.](../debugger/media/gfx_diag_demo_missing_object_shader_resolution.png "gfx\_diag\_demo\_missing\_object\_shader\_resolution")
+ ![O objeto agora é exibido.](~/debugger/graphics/media/gfx_diag_demo_missing_object_shader_resolution.png "gfx\_diag\_demo\_missing\_object\_shader\_resolution")

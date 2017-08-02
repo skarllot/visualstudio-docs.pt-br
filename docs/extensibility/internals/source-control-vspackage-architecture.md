@@ -56,7 +56,7 @@ Um pacote de controle de origem é um VSPackage que usa serviços que o [!INCLUD
   
  Quando um pacote de controle de origem é o pacote do ativo, por outro lado, o Stub de controle de origem se comunica diretamente com o pacote usando o [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] interfaces do pacote de controle de origem. O pacote de controle de origem é responsável por hospedar o seu próprio controle da fonte de interface do usuário.  
   
- ![Gráfico de arquitetura de controle do código-fonte](../../extensibility/internals/media/vsipsccarch.gif "VSIPSCCArch")  
+ ![Gráfico de arquitetura de controle do código-fonte](~/extensibility/internals/media/vsipsccarch.gif "VSIPSCCArch")  
   
  Para um pacote de controle de origem, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] fornecem código de controle de origem ou uma API de integração. Compare isso com a abordagem descrita no [criar um plug-in de controle de origem](../../extensibility/internals/creating-a-source-control-plug-in.md) onde o plug-in de controle de origem tem que implementar um conjunto rígido de funções e retornos de chamada.  
   

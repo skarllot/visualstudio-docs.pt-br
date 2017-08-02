@@ -49,13 +49,13 @@ Alguns exemplos simples:
 
 Trechos de código podem ser muito mais do que apenas preenchimento de caracteres. Por exemplo, eles podem poupar você de precisar se lembrar dos nomes dos parâmetros em chamadas de função complexas, como este trecho para ler um arquivo CSV com a função `read.csv`:
 
-![Animação do uso de um trecho de código para inserir uma chamada de read.csv](media/code-snippet-expansion.gif)
+![Animação do uso de um trecho de código para inserir uma chamada de read.csv](~/rtvs/media/code-snippet-expansion.gif)
 
 Nesse caso, à medida que você digita `readc`, o IntelliSense exibe uma lista de conclusão. Selecionar esse preenchimento no menu suspenso e pressionar Tab seleciona `readc` e pressionar Tab novamente expande o trecho. (Por esse motivo, a expansão de trecho de código geralmente é considerada como "digitar o trecho e pressionar a tecla Tab duas vezes"). Na maioria dos casos, a primeira Tab preenche a seleção do IntelliSense e a segunda Tab dispara a expansão.
 
 Para ver todos os trechos disponíveis, abra a caixa de diálogo **Ferramentas > Gerenciador de Trechos de Código...** (Ctrl + K, B) e selecione **R** para **Linguagem**. Expanda os grupos e selecione trechos individuais para ver uma descrição e o texto de atalho:
 
-![Caixa de diálogo de trechos de código para R](media/code-snippet-dialog.png)
+![Caixa de diálogo de trechos de código para R](~/rtvs/media/code-snippet-dialog.png)
 
 Para criar trechos de código personalizados, siga as instruções em [Instruções passo a passo: criando um trecho de código](../ide/walkthrough-creating-a-code-snippet.md). Por fim, um trecho de código é apenas um arquivo XML. Por exemplo, o seguinte é o trecho para a operação de pipe (atalho `>`)
 

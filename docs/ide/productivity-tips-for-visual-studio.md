@@ -97,13 +97,13 @@ Seguindo estas dicas, você pode gravar, navegar e depurar seu código no Visual
   
      Figure 1: Marcas Inteligentes de erro  
   
-     ![Sugestões de marcação inteligente de erro](../ide/media/productivity_bluesmarttags.png "Productivity_BlueSmartTags")  
+     ![Sugestões de marcação inteligente de erro](~/ide/media/productivity_bluesmarttags.png "Productivity_BlueSmartTags")  
   
      As caixas vermelhas sugerem maneiras de refatorar seu código.  
   
      Figure 2: Refatorando Marcas Inteligentes  
   
-     ![Sugestões de marcação inteligente de refatoração](../ide/media/productivity_redsmarttags.png "Productivity_RedSmartTags")  
+     ![Sugestões de marcação inteligente de refatoração](~/ide/media/productivity_redsmarttags.png "Productivity_RedSmartTags")  
   
 -   **Exibir e editar a definição de um elemento de código**. Você pode exibir e editar rapidamente o módulo no qual um elemento de código, como um membro, uma variável ou um local, é definido.  
   
@@ -133,7 +133,7 @@ Seguindo estas dicas, você pode gravar, navegar e depurar seu código no Visual
   
      Figura 3: lista de resultados do Início Rápido para `new project`  
   
-     ![Resultados de Início Rápido para 'novo projeto'](../ide/media/productivity_quicklaunch.png "Productivity_QuickLaunch")  
+     ![Resultados de Início Rápido para 'novo projeto'](~/ide/media/productivity_quicklaunch.png "Productivity_QuickLaunch")  
   
      O **Início Rápido** exibe links para a caixa de diálogo de **Novo Projeto**, a caixa de diálogo **Adicionar Novo Item** e a página Projetos e Soluções na caixa de diálogo **Opções**, entre outros. Os resultados do Início Rápido também podem incluir arquivos de projeto e janelas de ferramenta.  
   
@@ -142,7 +142,7 @@ Seguindo estas dicas, você pode gravar, navegar e depurar seu código no Visual
   
 -   **Teste a mesma página, aplicativo ou site em navegadores diferentes**. À medida que você depura seu código, poderá facilmente mudar entre os navegadores da Web instalados, incluindo o [Inspetor de Página (Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209), sem ter que abrir a caixa de diálogo **Procurar Com**. Você pode usar a lista **Destino de Depuração**, que está na barra de ferramentas **Standard** ao lado do botão **Iniciar Depuração**, para verificar rapidamente qual navegador está utilizando enquanto depura ou exibe as páginas.  
   
-     ![Selecionar as opções de depuração do navegador da Web](../ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")  
+     ![Selecionar as opções de depuração do navegador da Web](~/ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")  
   
 -   **Definir pontos de interrupção temporários**. Você pode criar um ponto de interrupção temporário na linha de código atual e iniciar o depurador simultaneamente. Quando você atinge esta linha de código, o depurador entra em modo de interrupção. Para obter mais informações, veja [Navegação pelo código com o depurador](../debugger/navigating-through-code-with-the-debugger.md).  
   

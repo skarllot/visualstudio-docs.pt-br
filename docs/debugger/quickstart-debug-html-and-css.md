@@ -128,7 +128,7 @@ manager: "ghogen"
   
 11. Na janela Explorador do DOM, selecione o elemento DIV correspondente à seção cuja ID é `"fView"`. Use as teclas de seta para exibir e selecionar o elemento DIV correto. \(A tecla de seta para a direita permite que você exiba os filhos de um elemento.\)  
   
-     ![DOM Explorer](../debugger/media/js_dom_explorer.png "JS\_DOM\_Explorer")  
+     ![DOM Explorer](~/debugger/media/js_dom_explorer.png "JS\_DOM\_Explorer")  
   
     > [!TIP]
     >  Você também pode selecionar o elemento DIV no canto inferior esquerdo da janela Console do JavaScript digitando `select(fView)` no prompt de entrada \>\> e pressionando Enter.  
@@ -194,7 +194,7 @@ manager: "ghogen"
   
 2.  Abra o default.html e modifique o código\-fonte alterando a altura e a largura do elemento DIV `"fView"` para 100%.  
   
-3.  Escolha o botão **Atualizar aplicativo do Windows** na barra de ferramentas Depurar \(ou pressione F4\). O botão tem esta aparência: ![Atualizar botão de aplicativo do Windows](../debugger/media/js_refresh.png "JS\_Refresh").  
+3.  Escolha o botão **Atualizar aplicativo do Windows** na barra de ferramentas Depurar \(ou pressione F4\). O botão tem esta aparência: ![Atualizar botão de aplicativo do Windows](~/debugger/media/js_refresh.png "JS\_Refresh").  
   
      As páginas do aplicativo são recarregadas e o Simulador ou Emulador do Windows Phone volta para o primeiro plano.  
   
@@ -211,7 +211,7 @@ manager: "ghogen"
   
  Quando você usa a janela Explorador de DOMs para selecionar elementos e posiciona o ponteiro do mouse em um elemento, o elemento correspondente é realçado no aplicativo em execução. Você deve clicar no elemento, no Explorador do DOM, para selecioná\-lo, ou pode usar as teclas de direção para realçar e selecionar elementos. Você também pode selecionar elementos no Explorador do DOM usando o botão **Selecionar elemento**. A ilustração a seguir mostra o botão **Selecionar Elemento**.  
   
- ![Selecione o elemento botão no Explorer do DOM](../debugger/media/js_dom_select_element_button.png "JS\_DOM\_Select\_Element\_Button")  
+ ![Selecione o elemento botão no Explorer do DOM](~/debugger/media/js_dom_select_element_button.png "JS\_DOM\_Select\_Element\_Button")  
   
  Quando você clica em **Selecionar elemento** \(ou pressiona Ctrl\+B\), isso altera o modo de seleção para que você possa selecionar um item no Explorador do DOM clicando nele no aplicativo em execução. O modo retorna à seleção normal após um único clique. Quando você clica em **Selecionar elemento**, o aplicativo vai para o primeiro plano e o cursor muda para refletir o novo modo de seleção. Quando você clica no elemento com o contorno, o Explorador de DOMs volta para o primeiro plano com o elemento especificado selecionado.  
   

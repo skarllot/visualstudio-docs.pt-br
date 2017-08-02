@@ -77,7 +77,7 @@ Uma sessão de depuração é iniciada com o comando **Depurar > Iniciar Depura�
 
 Os pontos de interrupção interrompem a execução de código em um ponto marcado, para que você possa inspecionar o estado do programa. Eles são definidos clicando na margem esquerda do editor de código ou clicando com o botão direito do mouse em uma linha de código e selecionando **Ponto de Interrupção > Inserir Ponto de Interrupção**. Um ponto vermelho é exibido em cada linha com um ponto de interrupção.
 
-![Pontos de interrupção no Visual Studio](media/debugging-breakpoints.png)
+![Pontos de interrupção no Visual Studio](~/python/media/debugging-breakpoints.png)
 
 Clicar no ponto vermelho ou clicar com o botão direito do mouse na linha de código e selecionar **Ponto de Interrupção > Excluir Ponto de Interrupção** remove o ponto de interrupção. Também é possível desabilitá-lo sem removê-lo usando o comando **Ponto de Interrupção > Desabilitar Ponto de Interrupção**.
 
@@ -88,7 +88,7 @@ Clicar no ponto vermelho ou clicar com o botão direito do mouse na linha de có
 
 Ao configurar condições, também é possível definir **Ação** e criar uma mensagem a ser registrada na janela de saída, opcionalmente, continuando a execução automaticamente. Isso cria o que é chamado de um *tracepoint*, sem a necessidade de introduzir um código de log no aplicativo diretamente:
 
-![Criando um tracepoint com um ponto de interrupção](media/debugging-tracepoint.png)
+![Criando um tracepoint com um ponto de interrupção](~/python/media/debugging-tracepoint.png)
 
 ### <a name="stepping-through-code"></a>Executando o código em etapas
 
@@ -110,27 +110,27 @@ Quando estiver parado no depurador, é possível inspecionar e modificar os valo
 
 Para exibir um valor usando DataTips, basta focalizar qualquer variável no editor. É possível clicar no valor para alterá-lo:
 
-![DataTips no depurador](media/debugging-quick-tips.png)
+![DataTips no depurador](~/python/media/debugging-quick-tips.png)
 
 A janela Automáticos (**Depurar > Janelas > Automáticos**) contém variáveis e expressões que estão próximas à instrução atual. É possível clicar duas vezes na coluna de valor ou selecionar e pressionar F2 para editar o valor:
 
-![Janela Automáticos no depurador](media/debugging-autos-window.png)
+![Janela Automáticos no depurador](~/python/media/debugging-autos-window.png)
 
 A janela Locais (**Depurar > Janelas > Locais**) exibe todas as variáveis que estão no escopo atual, que podem ser editadas novamente:
 
-![Janela Locais no depurador](media/debugging-locals-window.png)
+![Janela Locais no depurador](~/python/media/debugging-locals-window.png)
 
 Para obter mais informações sobre como usar Automáticos e Locais, consulte [Inspecionando variáveis nas janelas Automáticas e Locais](../debugger/autos-and-locals-windows.md).
 
 A janela Inspeção (**Depurar > Janelas > Inspeção > Inspecionar 1-4**) permite inserir expressões arbitrárias do Python e exibir os resultados. As expressões são reavaliadas para cada etapa:
 
-![Janela Inspeção no depurador](media/debugging-watch-window.png)
+![Janela Inspeção no depurador](~/python/media/debugging-watch-window.png)
 
 Para obter mais informações sobre como usar a janela Inspeção, consulte [Configurando uma inspeção em variáveis usando as janelas Inspeção e QuickWatch](../debugger/watch-and-quickwatch-windows.md).
 
 Ao inspecionar um valor de cadeia de caracteres (`str`, `unicode`, `bytes` e `bytearray` são considerados cadeias de caracteres para essa finalidade), você verá um ícone de lupa do lado direito do valor. Se você clicar nele, o valor de cadeia de caracteres sem aspas será exibido em uma caixa de diálogo pop-up, com encapsulamento e rolagem, o que é útil para cadeias de caracteres longas. Além disso, se você clicar na seta suspensa no ícone, poderá selecionar visualizações de texto sem formatação, HTML, XML e JSON:
 
-![Visualizadores de cadeia de caracteres](media/debugging-string-visualizers.png)
+![Visualizadores de cadeia de caracteres](~/python/media/debugging-string-visualizers.png)
 
 As visualizações de HTML, XML e JSON são exibidas em janelas pop-up separadas com modos de exibição de árvore e realce de sintaxe.
 
@@ -138,13 +138,13 @@ As visualizações de HTML, XML e JSON são exibidas em janelas pop-up separadas
 
 Se ocorrer um erro enquanto o programa estiver sendo depurado e você não tiver um manipulador de exceção para ele, o depurador interromperá no ponto da exceção:
 
-![Pop-up de exceção](media/debugging-exception-popup.png)
+![Pop-up de exceção](~/python/media/debugging-exception-popup.png)
 
 Neste ponto, é possível inspecionar o estado do programa, incluindo a pilha de chamadas. No entanto, se você tentar executar o código em etapas, a exceção continuará sendo gerada até que ela seja tratada ou o programa seja encerrado.
 
 O comando de menu **Depurar > Janelas > Configurações de Exceção** abre uma janela na qual é possível expandir **Exceções do Python**:
 
-![Janela Exceções](media/debugging-exception-settings.png)
+![Janela Exceções](~/python/media/debugging-exception-settings.png)
 
 A caixa de seleção de cada exceção controla se o depurador *sempre* interrompe quando é acionado. Marque essa caixa quando desejar interromper com mais frequência para uma exceção específica.
 
@@ -156,7 +156,7 @@ Para configurar uma exceção que não aparece nessa lista, clique no botão **A
 
 Por padrão, o depurador inicia o programa com o inicializador padrão do Python, sem argumentos de linha de comando e sem nenhum outro caminho ou condição especial. Eles podem ser alterados por meio das propriedades de depuração do projeto, acessadas ao clicar com o botão direito do mouse no seu projeto, no Gerenciador de Soluções, selecionando **Propriedades** e a guia **Depuração**.
 
-![Propriedades de depuração de projeto](media/debugging-project-properties.png)
+![Propriedades de depuração de projeto](~/python/media/debugging-project-properties.png)
 
 ### <a name="launch-mode-options"></a>Opções de modo de inicialização
 
@@ -188,7 +188,7 @@ A janela Imediata (**Depurar > Janelas > Imediata**) é usada para avaliação r
 
 A janela Interativa de Depuração do Python (**Depurar > Janelas > Interativa de Depuração do Python**) é mais avançada, pois disponibiliza toda a experiência de [REPL Interativo](interactive-repl.md) durante a depuração, incluindo a escrita e execução de código. Ela se conecta automaticamente a qualquer processo iniciado no depurador usando o inicializador padrão do Python (incluindo os processos anexados por meio de **Depurar > Anexar ao Processo*). No entanto, ela não está disponível ao usar a depuração de modo misto do C/C++.
 
-![Janela Interativa de Depuração do Python](media/debugging-interactive.png)
+![Janela Interativa de Depuração do Python](~/python/media/debugging-interactive.png)
 
 A janela Interativa de Depuração dá suporte a metacomandos especiais, além dos [comandos REPL padrão](interactive-repl.md#meta-commands):
 
@@ -215,4 +215,4 @@ Observe que as janelas padrão do depurador, como Processos, Threads e Pilha de 
 
 A janela Interativa de Depuração tem seu próprio conjunto de opções, que pode ser acessado por meio de **Ferramentas > Opções > Ferramentas Python > Janela Interativa de Depuração**. Ao contrário da janela Interativa normal do Python, que tem uma instância separada para cada ambiente do Python, há apenas uma janela Interativa de Depuração e ela sempre usa o interpretador do Python do processo que está sendo depurado.
 
-![Opções da Janela Interativa de Depuração](media/debugging-interactive-options.png)
+![Opções da Janela Interativa de Depuração](~/python/media/debugging-interactive-options.png)

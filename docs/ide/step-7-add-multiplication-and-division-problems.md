@@ -62,7 +62,7 @@ Na sétima parte deste tutorial, você adicionará problemas de multiplicação 
   
      Os participantes de teste devem responder quatro problemas para concluir o teste, conforme mostrado na ilustração.  
   
-     ![Teste de matemática com quatro problemas](../ide/media/express_finishedquiz.png "Express_FinishedQuiz")  
+     ![Teste de matemática com quatro problemas](~/ide/media/express_finishedquiz.png "Express_FinishedQuiz")  
 Teste de matemática com quatro problemas  
   
 ### <a name="to-continue-or-review"></a>Para continuar ou revisar  

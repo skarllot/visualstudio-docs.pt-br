@@ -38,7 +38,7 @@ manager: "ghogen"
 ##  <a name="BKMK_How_to_run_on_a_local_machine"></a> Como executar em um computador local  
  Para executar o aplicativo no computador local, escolha **Computador Local** na lista suspensa ao lado do botão Iniciar Depuração, na barra de ferramentas **Padrão**.  
   
- ![Executado na máquina Local](../debugger/media/vsrun_f5_local.png "VSRUN\_F5\_Local")  
+ ![Executado na máquina Local](~/debugger/media/vsrun_f5_local.png "VSRUN\_F5\_Local")  
   
  Se você não conseguir ver a barra de ferramentas **Padrão**, clique no menu **Exibir**, aponte para **Barra de Ferramentas** e clique em **Padrão**.  
   
@@ -48,11 +48,11 @@ manager: "ghogen"
   
 -   Em projetos C\# e Visual Basic, clique em **Depurar** e escolha **Computador Local** da lista suspensa **Dispositivo de Destino**.  
   
-     ![Página de propriedades de projeto C&#35; e Visual Basic](../debugger/media/vsrun_cs_vb_projprop_local.png "VSRUN\_CS\_VB\_ProjProp\_Local")  
+     ![Página de propriedades de projeto C&#35; e Visual Basic](~/debugger/media/vsrun_cs_vb_projprop_local.png "VSRUN\_CS\_VB\_ProjProp\_Local")  
   
 -   Em projetos C\+\+ e JavaScript, expanda o nó **Propriedades de Configuração**, clique em **Depurar** e escolha **Depurador Local** da lista **Depurador a iniciar**.  
   
-     ![Página de propriedades do projeto C&#43;&#43; e JavaScript](../debugger/media/vsrun_cpp_js_projprop_local.png "VSRUN\_CPP\_JS\_ProjProp\_Local")  
+     ![Página de propriedades do projeto C&#43;&#43; e JavaScript](~/debugger/media/vsrun_cpp_js_projprop_local.png "VSRUN\_CPP\_JS\_ProjProp\_Local")  
   
 ##  <a name="BKMK_How_to_switch_between_a_Windows_Store_app_and_Visual_Studio_on_a_single_monitor"></a> Como alternar entre um aplicativo da Windows Store e do Visual Studio em um único monitor  
  **Para alternar de uma instância em execução de um aplicativo da Windows Store ao Visual Studio**  

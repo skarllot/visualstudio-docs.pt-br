@@ -75,7 +75,7 @@ Este tópico descreve uma maneira de criar testes de unidade para uma classe Vis
   
 5.  Na caixa de diálogo **Novo Projeto**, expanda **Instalado** e **Visual C#** e, em seguida, escolha **Windows Store**. Em seguida, escolha **Biblioteca de Teste de Unidade (aplicativos da Windows Store)** na lista de modelos de projeto.  
   
-     ![Crie o projeto de teste de unidade](../test/media/ute_cs_windows_createunittestproject.png "UTE_Cs_windows_CreateUnitTestProject")  
+     ![Crie o projeto de teste de unidade](~/test/media/ute_cs_windows_createunittestproject.png "UTE_Cs_windows_CreateUnitTestProject")  
   
 6.  Abra UnitTest1.cs no editor do Visual Studio.  
   
@@ -131,7 +131,7 @@ Este tópico descreve uma maneira de criar testes de unidade para uma classe Vis
   
      O projeto de teste é compilado e executado. A janela Gerenciador de Testes é exibida e o teste é listado em **Testes Aprovados**. O painel Resumo, na parte inferior da janela, fornece mais detalhes sobre o teste selecionado.  
   
-     ![Gerenciador de testes](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
+     ![Gerenciador de testes](~/test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
   
 ##  <a name="BKMK_Add_the_Rooter_class_to_the_Maths_project"></a> Adição da classe Rooter ao projeto Matemática  
   
@@ -167,7 +167,7 @@ Este tópico descreve uma maneira de criar testes de unidade para uma classe Vis
   
     2.  Na caixa de diálogo **Adicionar Referência - RooterTests**, expanda **Solução** e escolha **Projetos**. Então, selecione o item **Matemática**.  
   
-         ![Adicione uma referência ao projeto Matemática](../test/media/ute_cs_windows_addreference.png "UTE_Cs_windows_AddReference")  
+         ![Adicione uma referência ao projeto Matemática](~/test/media/ute_cs_windows_addreference.png "UTE_Cs_windows_AddReference")  
   
 2.  Adicione uma instrução Using ao arquivo UnitTest1.cs:  
   
@@ -200,7 +200,7 @@ Este tópico descreve uma maneira de criar testes de unidade para uma classe Vis
   
 5.  No Gerenciador de Testes, escolha **Executar Todos**.  
   
-     ![Teste básico aprovado](../test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
+     ![Teste básico aprovado](~/test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
   
  Você configurou o teste e os projetos de código, além de ter verificado que pode executar testes que executam funções no projeto de código. Agora, você pode começar a escrever testes e códigos reais.  
   
@@ -233,7 +233,7 @@ Este tópico descreve uma maneira de criar testes de unidade para uma classe Vis
   
 3.  O teste falhará.  
   
-     ![Falha em RangeTest](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
+     ![Falha em RangeTest](~/test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
   
     > [!TIP]
     >  Logo após escrevê-los, verifique se cada um deles falha. Isso ajuda a impedir a facilidade de errar ao escrever um teste que nunca falha.  
@@ -302,7 +302,7 @@ Este tópico descreve uma maneira de criar testes de unidade para uma classe Vis
   
      O teste falhará. Escolha o nome do teste no Gerenciador de Testes. A asserção com falha é realçada. A mensagem de falha fica visível no painel de detalhes do Gerenciador de Testes.  
   
-     ![Falha em NegativeRangeTests](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
+     ![Falha em NegativeRangeTests](~/test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
   
 3.  Para ver o motivo da falha do teste, percorra a função:  
   
@@ -328,7 +328,7 @@ Este tópico descreve uma maneira de criar testes de unidade para uma classe Vis
   
  Todos os testes agora foram aprovados.  
   
- ![Todos os testes foram aprovados](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
+ ![Todos os testes foram aprovados](~/test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
   
 ##  <a name="BKMK_Refactor_the_code_"></a> Como refatorar o código  
  **Simplifique o cálculo central na função SquareRoot.**  

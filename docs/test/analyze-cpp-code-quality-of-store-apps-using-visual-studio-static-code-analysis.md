@@ -69,16 +69,16 @@ ms.lasthandoff: 02/22/2017
   
  A solução é compilada e a análise de código é executada. Os resultados aparecem na janela Análise de Código.  
   
- ![Janela Análise de Código](../test/media/ca_cpp_collapsed.png "CA_CPP_Collapsed")  
+ ![Janela Análise de Código](~/test/media/ca_cpp_collapsed.png "CA_CPP_Collapsed")  
   
 ##  <a name="BKMK_Analyze"></a> Analisando e resolvendo avisos da análise de código  
  Para analisar um aviso específico, escolha o título do aviso na janela Análise de Código. O aviso se expande para exibir informações detalhadas sobre o problema. Quando possível, a análise de código exibe o número da linha e a lógica da análise que levou ao aviso.  
   
- ![Aviso de análise de código expandido](../test/media/ca_cpp_expanded_callout.png "CA_CPP_Expanded_Callout")  
+ ![Aviso de análise de código expandido](~/test/media/ca_cpp_expanded_callout.png "CA_CPP_Expanded_Callout")  
   
  Quando você expande um aviso, as linhas de código que causaram o aviso são realçadas no editor de códigos do Visual Studio.  
   
- ![Código-fonte destacado](../test/media/ca_cpp_sourceline.png "CA_CPP_SourceLine")  
+ ![Código-fonte destacado](~/test/media/ca_cpp_sourceline.png "CA_CPP_SourceLine")  
   
  Depois de entender o problema, você pode resolvê-lo no seu código. Em seguida, torne a executar a análise de código para verificar se o aviso não aparece mais na janela Análise de Código e se a sua correção não gerou novos avisos.  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 02/22/2017
 ##  <a name="BKMK_Search"></a> Pesquisando e filtrando resultados de análise de código  
  Você pode pesquisar listas longas de mensagens de aviso e pode filtrar avisos em soluções multiprojeto.  
   
- ![Pesquisar e filtrar a janela de análise de código](../test/media/ca_searchfilter.png "CA_SearchFilter")  
+ ![Pesquisar e filtrar a janela de análise de código](~/test/media/ca_searchfilter.png "CA_SearchFilter")  
   
 ##  <a name="Warnings"></a> Avisos da análise de código C++  
  A análise de código gera os seguintes avisos para o código C++:  

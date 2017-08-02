@@ -102,7 +102,7 @@ A primeira etapa da criação de um jogo da memória é criar o projeto e adicio
   
      Agora seu formulário é apresentado. Ele deve se parecer com a imagem a seguir.  
   
-     ![Formulário inicial do jogo da memória](../ide/media/express_tut4step1.png "Express_Tut4Step1")  
+     ![Formulário inicial do jogo da memória](~/ide/media/express_tut4step1.png "Express_Tut4Step1")  
 Formulário inicial do jogo da memória  
   
 ### <a name="to-continue-or-review"></a>Para continuar ou revisar  

@@ -90,13 +90,13 @@ Você pode usar as ferramentas de criação de perfil do Visual Studio para anal
   
  Cada área enumerada na figura está relacionada a uma etapa do procedimento.  
   
- ![Exibição de relatório de resumo de amostragem](../profiling/media/summary_sampling.png "Summary_Sampling")  
+ ![Exibição de relatório de resumo de amostragem](~/profiling/media/summary_sampling.png "Summary_Sampling")  
   
 #### <a name="to-analyze-sampling-data"></a>Para analisar os dados de amostragem  
   
 1.  Na exibição **Resumo**, o **Afunilamento** mostra a ramificação da árvore de chamadas do aplicativo com as amostras mais inclusivas. Este é o caminho de execução que estava mais ativo quando os dados foram coletados. Valores inclusivos altos podem indicar que o algoritmo que gera a árvore de chamadas pode ser otimizado. Localize a função no código que está mais inferior no caminho. Observe que o caminho também pode incluir funções do sistema ou funções em módulos externos.  
   
-     ![Afunilamento do Criador de Perfil](../profiling/media/profiler_hotpath.png "Profiler_HotPath")  
+     ![Afunilamento do Criador de Perfil](~/profiling/media/profiler_hotpath.png "Profiler_HotPath")  
   
     1.  **Amostras Inclusivas** indicam quanto trabalho foi feito pela função e todas as funções chamadas por ela. Contagens inclusivas altas apontam para as funções que são mais dispendiosas em geral.  
   
@@ -112,13 +112,13 @@ Você pode usar as ferramentas de criação de perfil do Visual Studio para anal
   
 3.  Para continuar sua análise, retorne à exibição **Resumo**, selecionando **Resumo** na lista suspensa Exibir. Examine as funções em **Funções que Fazem o Trabalho Mais Individual**. Esta lista exibe as funções com as amostras mais exclusivas. O código no corpo da função dessas funções executou um trabalho significativo e talvez seja possível otimizá-lo. Para analisar melhor uma função específica, clique no nome da função para mostrá-la na exibição **Detalhes da Função**.  
   
-     ![Lista de funções que fazem a maior parte do trabalho](../profiling/media/functions_mostwork.png "Functions_MostWork")  
+     ![Lista de funções que fazem a maior parte do trabalho](~/profiling/media/functions_mostwork.png "Functions_MostWork")  
   
      Para continuar a investigação sobre a execução de criação de perfil, você pode analisar novamente um segmento dos dados de criação de perfil usando a linha do tempo na exibição **Resumo** para mostrar o **Afunilamento** e as **Funções que fazem a maior parte do trabalho individual** de um segmento selecionado. Por exemplo, focar um pico menor na linha do tempo pode revelar árvores de chamadas e funções dispendiosas que não foram mostradas na análise da execução inteira da criação de perfil.  
   
      Para analisar um segmento novamente, selecione um segmento dentro da caixa de Linha do Tempo de Resumo e, em seguida, clique em **Filtrar por Seleção**.  
   
-     ![Linha do tempo de exibição de Resumo de Desempenho](../profiling/media/performancesummary.png "PerformanceSummary")  
+     ![Linha do tempo de exibição de Resumo de Desempenho](~/profiling/media/performancesummary.png "PerformanceSummary")  
   
 4.  O criador de perfil também usa um conjunto de regras para sugerir maneiras de melhorar a execução de criação de perfil e identificar possíveis problemas de desempenho. Quando um problema é encontrado, um aviso é exibido na **Lista de Erros**. Para abrir a janela **Lista de Erros**, no menu **Exibição**, clique em **Lista de Erros**.  
   

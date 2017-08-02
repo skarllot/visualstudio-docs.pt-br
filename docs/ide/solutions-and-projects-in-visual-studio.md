@@ -91,7 +91,7 @@ Quando você cria um app, aplicativo, site da Web, aplicativo Web, script, plug-
 
  O diagrama a seguir mostra a relação entre projetos e soluções e os itens que eles contêm logicamente.  
 
- ![Projetos e solução do Visual Studio](../ide/media/vside-project-diagram.png)  
+ ![Projetos e solução do Visual Studio](~/ide/media/vside-project-diagram.png)  
 
  Também é possível criar modelos de item e de projeto personalizados. Para obter mais informações, consulte [Criando modelos de item e de projeto](../ide/creating-project-and-item-templates.md).  
 

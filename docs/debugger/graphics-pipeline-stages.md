@@ -25,7 +25,7 @@ A janela estágios de Pipeline gráficos ajuda a entender como uma chamada de de
   
  Esta é a janela estágios de Pipeline:  
   
- ![Um objeto 3D passa por estágios de pipeline.](../debugger/media/gfx_diag_demo_pipeline_stages_orientation.png "gfx\_diag\_demo\_pipeline\_stages\_orientation")  
+ ![Um objeto 3D passa por estágios de pipeline.](~/debugger/graphics/media/gfx_diag_demo_pipeline_stages_orientation.png "gfx\_diag\_demo\_pipeline\_stages\_orientation")  
   
 ## Noções básicas sobre a janela Estágios de Pipeline Gráficos  
  A janela estágios de Pipeline visualiza o resultado de cada estágio do pipeline gráfico separadamente para cada chamada de desenho.  Normalmente, os resultados dos estágios no meio do pipeline estiverem ocultos, tornando difícil saber onde iniciou um problema de renderização.  Visualizando separadamente cada estágio, a janela estágios de Pipeline torna mais fácil ver onde o problema começa — por exemplo, você pode ver facilmente quando o estágio de sombreador de vértices inesperadamente faz com que um objeto a ser desenhado fora da tela.  
@@ -124,7 +124,7 @@ A janela estágios de Pipeline gráficos ajuda a entender como uma chamada de de
   
  Para exibir o resultado do estágio de sombreador de vértices, escolha a miniatura do estágio de sombreador de vértices para exibir um tamanho máximo, wireframe varredura da malha após sua foram transformados pelo sombreador de vértices.  
   
- ![The vertex shader stage result preview](../debugger/media/gfx_diag_vertex_shader_preview.png "gfx\_diag\_vertex\_shader\_preview")  
+ ![The vertex shader stage result preview](~/debugger/graphics/media/gfx_diag_vertex_shader_preview.png "gfx\_diag\_vertex\_shader\_preview")  
   
 ## Consulte também  
  [Instruções passo a passo: objetos ausentes devido ao sombreamento de vértice](../debugger/walkthrough-missing-objects-due-to-vertex-shading.md)   

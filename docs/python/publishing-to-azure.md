@@ -67,11 +67,11 @@ Para criar um site temporário no Serviço de Aplicativo do Azure, sem a necessi
 
 1. Quando solicitado a instalar pacotes externos, selecione **Instalar em um ambiente virtual**. Observe o controle **Mostrar os pacotes necessários** na parte inferior da caixa de diálogo que mostrará quais pacotes serão instalados:
 
-  ![Instalando os pacotes necessários](media/tutorials-common-external-packages.png)
+  ![Instalando os pacotes necessários](~/python/media/tutorials-common-external-packages.png)
 
 1. Selecione o interpretador base preferencial para o ambiente virtual (por exemplo, **Python 2.7** ou **Python 3.4**) e clique em **Criar**:
 
-  ![Adicionando um ambiente virtual ao criar um projeto](media/tutorials-common-add-virtual-environment.png)
+  ![Adicionando um ambiente virtual ao criar um projeto](~/python/media/tutorials-common-add-virtual-environment.png)
 
 1. Quando o projeto for criado, teste-o localmente selecionando **Depurar > Iniciar Depuração** ou pressionando F5. Por padrão, o aplicativo usa um repositório na memória que não exige nenhuma configuração. Todos os dados são perdidos quando o servidor Web é interrompido.
 
@@ -85,7 +85,7 @@ Para criar um site temporário no Serviço de Aplicativo do Azure, sem a necessi
 
 1. Na caixa de diálogo **Publicar**, selecione **Serviço de Aplicativo do Microsoft Azure**:
 
-  ![Publicar no Azure etapa 1](media/tutorials-common-publish-1.png)
+  ![Publicar no Azure etapa 1](~/python/media/tutorials-common-publish-1.png)
 
 1. Selecione um destino:
 
@@ -94,7 +94,7 @@ Para criar um site temporário no Serviço de Aplicativo do Azure, sem a necessi
 
 1. Os detalhes do Serviço de Aplicativo são exibidos na guia **Conexão** da caixa de diálogo **Publicar** abaixo.
 
-  ![Publicar no Azure etapa 2](media/tutorials-common-publish-2.png)
+  ![Publicar no Azure etapa 2](~/python/media/tutorials-common-publish-2.png)
 
 1. Selecione **Avançar >**, conforme necessário, para examinar as configurações adicionais. Se você pretende [depurar o código do Python remotamente no Azure](debugging-azure-remote.md), defina **Configuração** como **Depuração**
 1. Selecione **Publicar**. Depois que o aplicativo for implantado no Azure, o navegador padrão será aberto nesse site. 

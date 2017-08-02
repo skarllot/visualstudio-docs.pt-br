@@ -59,7 +59,7 @@ Os teste de IU codificados incluem suporte a alguns dos controles HTML5 incluíd
 ###  <a name="UsingHTML5ControlsCodedUITestsAudio"></a> Controle de áudio  
  **Controle de áudio:** ações no controle do HTML5 áudio são registradas e reproduzidas corretamente.  
   
- ![Controle Audio do HTML5](../test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
+ ![Controle Audio do HTML5](~/test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
   
 |Ação|Gravando|Código gerado|  
 |------------|---------------|--------------------|  
@@ -102,7 +102,7 @@ string Volume
 ###  <a name="UsingHTML5ControlsCodedUITestsVideo"></a> Controle Video  
  **Controle de vídeo:** ações no controle de vídeo HTML5 são registradas e reproduzidas corretamente.  
   
- ![Controle Video do HTML5](../test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
+ ![Controle Video do HTML5](~/test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
   
 |Ação|Gravando|Código gerado|  
 |------------|---------------|--------------------|  
@@ -132,7 +132,7 @@ string VideoWidth
 ###  <a name="UsingHTML5ControlsCodedUITestsSlider"></a> Slider  
  **Controle deslizante:** ações no controle deslizante de HTML5 são registradas e reproduzidas corretamente.  
   
- ![Controle Slider do HTML5](../test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
+ ![Controle Slider do HTML5](~/test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
   
 |Ação|Gravando|Código gerado|  
 |------------|---------------|--------------------|  
@@ -152,7 +152,7 @@ string ValueAsNumber
 ###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar  
  **Controle ProgreesBar:** o ProgressBar é um controle não interagível. Você pode adicionar asserções nas propriedades `Value` e `Max` desse controle.  
   
- ![Controle ProgressBar do HTML5](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
+ ![Controle ProgressBar do HTML5](~/test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
   
 ## <a name="see-also"></a>Consulte também  
  [Elementos HTML](http://go.microsoft.com/fwlink/?LinkID=232441)   

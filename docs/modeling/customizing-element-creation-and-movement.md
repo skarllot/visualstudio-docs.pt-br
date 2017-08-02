@@ -40,7 +40,7 @@ Você pode permitir que um elemento a ser arrastado para outra, da caixa de ferr
   
  A responsabilidade de uma EMD é decidir como um objeto ou grupo de objetos deve ser mesclado em um local específico no modelo. Em particular, ele decide quais relações devem ser instanciadas para vincular o grupo mesclado no modelo. Você também pode personalizá-lo para definir propriedades e criar objetos adicionais.  
   
- ![EMD_Merge DSL](../modeling/media/dsl-emd_merge.png "DSL-EMD_Merge")  
+ ![EMD_Merge DSL](~/modeling/media/dsl-emd_merge.png "DSL-EMD_Merge")  
 A função de uma diretiva Element Merge  
   
  Uma EMD é gerada automaticamente quando você define uma relação de incorporação. Esse padrão EMD cria uma instância da relação quando os usuários adicionam novas instâncias filho ao pai. Você pode modificar essas EMDs padrão, por exemplo, adicionando código personalizado.  
@@ -50,7 +50,7 @@ A função de uma diretiva Element Merge
 ## <a name="defining-an-element-merge-directive"></a>Definindo uma diretiva Element Merge  
  Você pode adicionar diretivas de mesclagem de elementos para classes de domínio, relações de domínio, formas, conectores e diagramas. Você pode adicionar ou encontrá-los no Gerenciador de DSL sob a classe receptora do domínio. A classe de recebimento é a classe de domínio do elemento que já está no modelo e, em que o elemento novo ou copiado será mesclado.  
   
- ![DSL EMD_Details](../modeling/media/dsl-emd_details.png "EMD_Details DSL")  
+ ![DSL EMD_Details](~/modeling/media/dsl-emd_details.png "EMD_Details DSL")  
   
  O **classe indexação** é a classe de domínio de elementos que podem ser mescladas em membros da classe receptora. Instâncias das subclasses da classe indexação também serão mescladas por este EMD, a menos que você defina **aplica-se à subclasses** como False.  
   

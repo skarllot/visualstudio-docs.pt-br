@@ -47,7 +47,7 @@ Editores do Visual Studio são frequentemente associadas um serviço de linguage
   
  Um serviço de linguagem básica é mostrado na ilustração a seguir.  
   
- ![Gráfico de modelo de serviço de linguagem](../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
+ ![Gráfico de modelo de serviço de linguagem](~/extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
 Objetos de serviço de editor e o idioma principal  
   
  O objeto de dados de documento para o editor de núcleo é chamado de um buffer de texto e é representado pelo <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>objeto.</xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> O objeto de exibição de documento é chamado uma exibição de texto e é representado pelo <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>objeto.</xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> Esses dois objetos interagem por meio do serviço de linguagem para fornecer uma visão unificada do editor principal. Informações do buffer de texto e exibir o texto é exibido em uma janela de documento chamado uma janela de código. O documento da janela de código é gerenciado por um Gerenciador de janela de código.  

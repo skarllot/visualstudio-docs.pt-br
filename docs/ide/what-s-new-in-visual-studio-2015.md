@@ -33,7 +33,7 @@ Bem\-vindo ao Visual Studio 2015, um conjunto integrado de ferramentas de produt
   
  A experiência de instalação do Visual Studio 2015 tem sido dividido em componentes para que você só precisa instalar as partes que você precisa. Isso torna a instalação mais rápida para muitos cenários comuns envolvendo desenvolvimento .NET ou da Web. Se você faz com outros tipos de desenvolvimento, como o desenvolvimento móvel entre plataformas, ou trabalhar em C\+\+ ou F \#, escolha **personalizado** instalação e, em seguida, escolha os componentes e SDKs de terceiros opcionais que você precisa. Você também pode instalar qualquer um dos componentes personalizados posteriormente. Por exemplo, se você escolher a instalação básica e, em seguida, tente criar um novo projeto C\+\+, você precisará baixar as ferramentas de desenvolvimento do C\+\+.  
   
- ![Visual Studio 2015 Setup Dialog](../ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
+ ![Visual Studio 2015 Setup Dialog](~/ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
   
 ## Entrar em várias contas  
  Com o Visual Studio 2015, a novo simplificada experiência de logon foi projetada para simplificar o acesso a recursos online, mesmo quando você tiver várias contas do Visual Studio. Depois que você entrar no Visual Studio, você entrará automaticamente para todas as instâncias do Visual Studio 2015 e Blend no seu computador. Entrar automaticamente inicia o roaming as configurações para você. No Visual Studio 2015, sua conta é compartilhada entre recursos assim, contanto que tenha um bom token, você pode acessar suas contas do Visual Studio Team Services de **Team Explorer**, recursos e sites de sua assinatura do Microsoft Azure no Gerenciador de servidores. Você também verá os recursos do Azure na caixa de diálogo Novo projeto para projetos do Application Insights e você verá móvel do Azure, armazenamento do Azure, [Microsoft Office 365](http://msdn.microsoft.com/office/aa905340.aspx) e [Saleforce.com desenvolvedor](https://developer.salesforce.com/) contas no novo **Adicionar um serviço conectado** caixa de diálogo.  
@@ -113,7 +113,7 @@ Bem\-vindo ao Visual Studio 2015, um conjunto integrado de ferramentas de produt
   
  Novos serviços serão adicionados continuamente, e você pode descobrir os clicando no "localizar novos serviços link" no assistente.  
   
- ![Add Connected Services Dialog](../ide/media/vs2015_addconnectedservicedialog.png "VS2015\_AddConnectedServiceDialog")  
+ ![Add Connected Services Dialog](~/ide/media/vs2015_addconnectedservicedialog.png "VS2015\_AddConnectedServiceDialog")  
   
 ## Projetar sua interface do usuário  
  A experiência do Blend para criar interfaces do usuário XAML foi aprimorada significativamente. Blend foi completamente remodelado para fornecer uma interface do usuário mais intuitiva, mais poderosos recursos de edição de XAML incluindo IntelliSense e melhor integração com o Visual Studio. Para obter mais informações, consulte [Criando o XAML no Visual Studio e no Blend para Visual Studio](../designers/designing-xaml-in-visual-studio.md).  
@@ -189,7 +189,7 @@ Bem\-vindo ao Visual Studio 2015, um conjunto integrado de ferramentas de produt
   
 -   Ver um gráfico que mostra as pessoas que alteraram seu código. Isso pode ajudá\-lo a encontrar padrões nas alterações da sua equipe e avaliar seu impacto.  
   
-     ![CodeLens: See code changes history as a graph](../ide/media/codelens.png "CodeLens")  
+     ![CodeLens: See code changes history as a graph](~/ide/media/codelens.png "CodeLens")  
   
 -   Ver facilmente quando seu código foi alterado pela última vez.  
   

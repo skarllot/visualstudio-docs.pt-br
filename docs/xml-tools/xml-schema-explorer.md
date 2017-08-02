@@ -60,7 +60,7 @@ O XML Schema Explorer está integrado com o Microsoft Visual Studio e o Editor d
   
  A seguir veja um exemplo de uma estrutura de árvore:  
   
- ![XML Schema Explorer](../xml-tools/media/xmlschemaexplorer.gif "XMLSchemaExplorer")  
+ ![XML Schema Explorer](~/xml-tools/media/xmlschemaexplorer.gif "XMLSchemaExplorer")  
   
 ## Seleção e ativação  
  Para realçar e selecionar um nó, clique uma vez no Schema Explorer.  

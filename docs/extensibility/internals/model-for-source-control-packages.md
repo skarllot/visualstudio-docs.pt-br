@@ -37,7 +37,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="model-for-source-control-packages"></a>Modelo de pacotes de controle de origem
 O modelo a seguir representa um exemplo de uma implementação de controle de origem. No modelo, você pode ver as que você deve implementar interfaces e os serviços de ambiente que você deve chamar. Como todos os serviços, você realmente chamar os métodos de uma interface específica que você obtém por meio do serviço. Os nomes das classes são identificados para torná-lo mais fácil ver como controle de origem é realizado.  
   
- ![Exemplos SCC_TUP](../../extensibility/internals/media/scc_tup.gif "SCC_TUP")  
+ ![Exemplos SCC_TUP](~/extensibility/internals/media/scc_tup.gif "SCC_TUP")  
 Exemplo de projeto de controle de origem  
   
 ## <a name="interfaces"></a>Interfaces  

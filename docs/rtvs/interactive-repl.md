@@ -67,7 +67,7 @@ Todas as entradas e saídas anteriores da REPL são somente leitura e não podem
 
 Ou seja, quando você começar a digitar uma instrução e pressionar Enter, as RTVS saberam quando a instrução deve ser continuada e entrarão no modo de várias linha com um + prompt no recuo apropriado à esquerda. As RTVS também preencherão as chaves, os colchetes e os parênteses:
 
-![Entrada de instrução de várias linhas na janela interativa](media/repl-multiline-entry.png)
+![Entrada de instrução de várias linhas na janela interativa](~/rtvs/media/repl-multiline-entry.png)
 
 Nesse modo de várias linhas, a tecla Enter executa o bloco de código somente quando posicionada no final do bloco, caso contrário, insere uma nova linha. No entanto, você pode pressionar Ctrl + Enter em qualquer posição para executar esse bloco de código imediatamente.
 
@@ -75,23 +75,23 @@ Nesse modo de várias linhas, a tecla Enter executa o bloco de código somente q
 
 A janela interativa com sua barra de ferramentas é mostrada abaixo:
 
-![Janela interativa com barra de ferramentas](media/repl-window.png)
+![Janela interativa com barra de ferramentas](~/rtvs/media/repl-window.png)
 
 Os comandos da barra de ferramentas são os mostrados a seguir. A maioria deles tem equivalentes de teclado e também está disponível nos menus **Ferramentas do R > Sessão** e **Ferramentas do R > Diretório de Trabalho** (ou conforme observado):
 
 | Botão | Comando | Combinação de teclas | Descrição | 
 | --- | --- | --- | --- |
-| ![Botão Redefinir](media/repl-toolbar-01-reset.png) | Redefinir | Ctrl+Shift+F10 | Redefine a sessão de janela interativa, limpando todas as variáveis e o histórico. |
-| ![Botão Limpar](media/repl-toolbar-02-clear.png) | Clear | Ctrl+L | Limpa a saída mostrada na janela interativa. não afeta as variáveis de sessão nem o histórico. |
-| ![Botões Histórico](media/repl-toolbar-03-history.png) | Comando Histórico anterior<br/>Comando Próximo histórico | Para cima, para baixo<br/>ALT + seta para cima, Alt + seta para baixo | Percorre o histórico, com alguns comportamentos de blocos de código de várias linhas. Consulte [Histórico](#history). |
-| ![Botão Carregar espaço de trabalho](media/repl-toolbar-04-load-workspace.png) | Carregar espaço de trabalho | N/D | Carrega um espaço de trabalho anterior salvo (consulte [Espaços de trabalho e sessões](#workspaces-and-sessions). |
-| ![Botão Salvar espaço de trabalho como](media/repl-toolbar-05-save-workspace-as.png)| Salvar espaço de trabalho | N/D | Salva o estado atual da sessão como um espaço de trabalho (consulte [Espaços de trabalho e sessões](#workspaces-and-sessions). |
-| ![Botão Script R de origem](media/repl-toolbar-06-source-r-script.png) | Script R de origem | Ctrl+Shift+S | Chama `source` com o script R atualmente ativo no editor do Visual Studio, que executa o código.  Esse botão só aparece quando um arquivo R é aberto no editor do Visual Studio. | 
-| ![Botão Script R de origem com eco](media/repl-toolbar-07-source-r-script-with-echo.png) | Script R de Origem com Eco | Ctrl+Shift+Enter | Igual ao Script R de Origem, mas exibe o conteúdo do script na janela interativa. | 
-| ![Botão Interromper R](media/repl-toolbar-08-interrupt-r.png)| Interromper R | Esc | Interrompe qualquer código em execução na janela interativa, como o loop `while` na captura de tela acima. |
-| ![Botão Anexar depurador](media/repl-toolbar-09b-attach-debugger.png)| Anexar depurador | N/D | Também disponível usando o comando **Depurar > Anexar a R Interativo**. | 
-| ![Botão Definir diretório de trabalho para o local do arquivo de origem](media/repl-toolbar-10-set-working-directory-source.png)| Definir diretório de trabalho para o local do arquivo de origem | Ctrl+Shift+E | Define o diretório de trabalho para o último arquivo de origem carregado na janela interativa (usando `source`). Consulte [Diretório de trabalho](#working-directory). |
-| ![Botão Definir diretório de trabalho para o local do projeto](media/repl-toolbar-11-set-working-directory-to-project.png) | Definir diretório de trabalho para o local do projeto | Ctrl+Shift+P | Define o diretório de trabalho para a raiz do projeto carregado atualmente no Visual Studio. Consulte [Diretório de trabalho](#working-directory). |
+| ![Botão Redefinir](~/rtvs/media/repl-toolbar-01-reset.png) | Redefinir | Ctrl+Shift+F10 | Redefine a sessão de janela interativa, limpando todas as variáveis e o histórico. |
+| ![Botão Limpar](~/rtvs/media/repl-toolbar-02-clear.png) | Clear | Ctrl+L | Limpa a saída mostrada na janela interativa. não afeta as variáveis de sessão nem o histórico. |
+| ![Botões Histórico](~/rtvs/media/repl-toolbar-03-history.png) | Comando Histórico anterior<br/>Comando Próximo histórico | Para cima, para baixo<br/>ALT + seta para cima, Alt + seta para baixo | Percorre o histórico, com alguns comportamentos de blocos de código de várias linhas. Consulte [Histórico](#history). |
+| ![Botão Carregar espaço de trabalho](~/rtvs/media/repl-toolbar-04-load-workspace.png) | Carregar espaço de trabalho | N/D | Carrega um espaço de trabalho anterior salvo (consulte [Espaços de trabalho e sessões](#workspaces-and-sessions). |
+| ![Botão Salvar espaço de trabalho como](~/rtvs/media/repl-toolbar-05-save-workspace-as.png)| Salvar espaço de trabalho | N/D | Salva o estado atual da sessão como um espaço de trabalho (consulte [Espaços de trabalho e sessões](#workspaces-and-sessions). |
+| ![Botão Script R de origem](~/rtvs/media/repl-toolbar-06-source-r-script.png) | Script R de origem | Ctrl+Shift+S | Chama `source` com o script R atualmente ativo no editor do Visual Studio, que executa o código.  Esse botão só aparece quando um arquivo R é aberto no editor do Visual Studio. | 
+| ![Botão Script R de origem com eco](~/rtvs/media/repl-toolbar-07-source-r-script-with-echo.png) | Script R de Origem com Eco | Ctrl+Shift+Enter | Igual ao Script R de Origem, mas exibe o conteúdo do script na janela interativa. | 
+| ![Botão Interromper R](~/rtvs/media/repl-toolbar-08-interrupt-r.png)| Interromper R | Esc | Interrompe qualquer código em execução na janela interativa, como o loop `while` na captura de tela acima. |
+| ![Botão Anexar depurador](~/rtvs/media/repl-toolbar-09b-attach-debugger.png)| Anexar depurador | N/D | Também disponível usando o comando **Depurar > Anexar a R Interativo**. | 
+| ![Botão Definir diretório de trabalho para o local do arquivo de origem](~/rtvs/media/repl-toolbar-10-set-working-directory-source.png)| Definir diretório de trabalho para o local do arquivo de origem | Ctrl+Shift+E | Define o diretório de trabalho para o último arquivo de origem carregado na janela interativa (usando `source`). Consulte [Diretório de trabalho](#working-directory). |
+| ![Botão Definir diretório de trabalho para o local do projeto](~/rtvs/media/repl-toolbar-11-set-working-directory-to-project.png) | Definir diretório de trabalho para o local do projeto | Ctrl+Shift+P | Define o diretório de trabalho para a raiz do projeto carregado atualmente no Visual Studio. Consulte [Diretório de trabalho](#working-directory). |
 | (Campo de texto) | Selecionar Diretório de Trabalho | N/D | Campo de entrada direta para o diretório de trabalho. Consulte [Diretório de trabalho](#working-directory). |
 
 

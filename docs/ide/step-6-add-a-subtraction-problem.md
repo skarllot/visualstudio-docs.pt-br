@@ -71,7 +71,7 @@ Dica de ferramenta da janela do Intellisense
   
      A dica de ferramenta exibe **(+ 2 sobrecarga(s))**, o que significa que você pode chamar o método `Next()` de outras duas maneiras. As sobrecargas contêm números ou tipos diferentes de argumentos, para que funcionem ligeiramente diferentes um do outro. Por exemplo, um método pode levar um único argumento inteiro, enquanto uma de suas sobrecargas pode levar um inteiro e uma cadeia de caracteres. Você escolhe a sobrecarga correta com base no que você deseja fazer. Quando você adiciona código ao método de `StartTheQuiz()`, mais informações aparecem na janela do Intellisense para você inserir `randomizer.Next(`. Pressione as teclas de seta para cima e seta para baixo para percorrer as sobrecargas, como mostra a ilustração a seguir.  
   
-     ![Sobrecarga para o método Next&#40;&#41; no IntelliSense](../ide/media/express_nextoverload.png "Express_NextOverload")  
+     ![Sobrecarga para o método Next&#40;&#41; no IntelliSense](~/ide/media/express_nextoverload.png "Express_NextOverload")  
 Sobrecarga para o método Next() no IntelliSense  
   
      Nesse caso, você deseja escolher a última sobrecarga, porque você pode especificar valores mínimo e máximo.  
@@ -90,7 +90,7 @@ Sobrecarga para o método Next() no IntelliSense
   
      Seu programa inclui um problema de subtração, como mostra a ilustração a seguir.  
   
-     ![Teste de matemática com problema de subtração](../ide/media/express_addsubtract.png "Express_AddSubtract")  
+     ![Teste de matemática com problema de subtração](~/ide/media/express_addsubtract.png "Express_AddSubtract")  
 Teste de matemática com problema de subtração  
   
 ### <a name="to-continue-or-review"></a>Para continuar ou revisar  

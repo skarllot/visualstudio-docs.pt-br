@@ -54,7 +54,7 @@ Você pode vincular fontes de dados a controles arrastando objetos a partir de  
   
  A ilustração a seguir mostra o padrão controles ligados a dados que são adicionados ao formulário depois que a propriedade de pedidos na tabela Customers é associada a "Detalhes" na janela fontes de dados.  
   
- ![Orders table bound to details](../data-tools/media/raddata-orders-table-bound-to-details.png "raddata Orders table bound to details")  
+ ![Orders table bound to details](~/data-tools/media/raddata-orders-table-bound-to-details.png "raddata Orders table bound to details")  
   
  Observe também que cada controle tem uma marca inteligente que permite que as personalizações que se aplicam a esse controle somente.  
   

@@ -29,11 +29,11 @@ O recurso de extensibilidade do IntelliSense Javascript permite que você person
   
  O serviço linguístico Javascript fornece recursos do IntelliSense para bibliotecas de terceiros Javascript que são adicionadas a um projeto.  Para a maioria das bibliotecas, a instrução completada é fornecida automaticamente pelo serviço linguístico.  A ilustração a seguir mostra um exemplo de conclusão da instrução:  
   
- ![Exemplo de conclusão da instrução](../ide/media/js_intellisense_completion.png "js\_intellisense\_completion")  
+ ![Exemplo de conclusão da instrução](~/ide/media/js_intellisense_completion.png "js\_intellisense\_completion")  
   
  Se sua biblioteca inclui descrições de variáveis, funções, e objetos em marcas padrões de comentário Javascript \(\/\), você se beneficia automaticamente, por padrão, os recursos de extensibilidade do IntelliSense, que fornecem informações descritivas em uma caixa pop\-up que aparece ao lado direito dos elementos em uma lista de conclusão, ou quando você digita o parêntese de abertura em uma chamada de função.  Os comentários na caixa pop\-up contêm a descrição do membro.  O exemplo a seguir mostra a caixa pop\-up para obter uma lista de conclusão.  
   
- ![Exemplo de uma caixa pop&#45;up de informações rápidas](../ide/media/js_intellisense_quickinfo.png "js\_intellisense\_quickinfo")  
+ ![Exemplo de uma caixa pop&#45;up de informações rápidas](~/ide/media/js_intellisense_quickinfo.png "js\_intellisense\_quickinfo")  
   
  Para melhorar mais a experiência do desenvolvedor, você pode fornecer informações de tipo para os desenvolvedores na caixa janela pop\-up.  Você pode fornecer informações de tipo usando Javascript [Comentários da documentação XML](../ide/xml-documentation-comments-javascript.md) em vez de marcas padrões de comentário.  Você adicionar comentários de documentação XML usando marcas de comentário de triplo\- barra \(\/\) e um conjunto de elementos XML definido.  
   
@@ -311,11 +311,11 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 4.  Em appCode.js, digite o código a seguir.  Você verá os comentários de documentação XML na extensão exibida como informações de parâmetro do IntelliSense.  
   
-     ![Exemplo mostrando o uso de intellisense.annotate](../ide/media/js_intellisense_annotate_paraminfo.png "js\_intellisense\_annotate\_paraminfo")  
+     ![Exemplo mostrando o uso de intellisense.annotate](~/ide/media/js_intellisense_annotate_paraminfo.png "js\_intellisense\_annotate\_paraminfo")  
   
 5.  Em appCode.js, digite o código a seguir.  Quando você digita, você verá os comentários padrão na extensão exibida como informações rápidas do IntelliSense.  
   
-     ![Exemplo mostrando o uso de intellisense.annotate](../ide/media/js_intellisense_annotations.png "js\_intellisense\_annotations")  
+     ![Exemplo mostrando o uso de intellisense.annotate](~/ide/media/js_intellisense_annotations.png "js\_intellisense\_annotations")  
   
 ###  <a name="Logging"></a> Enviar mensagens para a janela de saída  
  O procedimento a seguir mostra como enviar mensagens para a janela de saída.  Você pode enviar mensagens para ajudá\-lo a depurar extensões do IntelliSense.  
@@ -488,11 +488,11 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 4.  Em appCode.js, digite o código a seguir.  Quando você digita, você verá que o ícone para o namespace mudou “{}”, como é usado em C\#.  
   
-     ![Exemplo mostrando o uso da propriedade de glifo](../ide/media/js_intellisense_glyph_namespace.png "js\_intellisense\_glyph\_namespace")  
+     ![Exemplo mostrando o uso da propriedade de glifo](~/ide/media/js_intellisense_glyph_namespace.png "js\_intellisense\_glyph\_namespace")  
   
 5.  Em appCode.js, digite o código a seguir.  Quando você digita, você verá um novo ícone de enumeração para o membro Enum1, e um novo ícone de classe para o membro SomeClass1.  
   
-     ![Exemplo mostrando o uso da propriedade de glifo](../ide/media/js_intellisense_glyph_class_enum.png "js\_intellisense\_glyph\_class\_enum")  
+     ![Exemplo mostrando o uso da propriedade de glifo](~/ide/media/js_intellisense_glyph_class_enum.png "js\_intellisense\_glyph\_class\_enum")  
   
 ###  <a name="Overriding"></a> Evitando efeitos de tempo de execução nos resultados do IntelliSense  
  O código de blocos de serviço linguístico Javascript para fornecer dinamicamente informações do IntelliSense.  Como resultado, o comportamento em tempo de execução pode ocasionalmente interferir com os resultados desejados.  O procedimento a seguir mostra como substituir resultados do IntelliSense quando o comportamento em tempo de execução resulta em IntelliSense incorreto.  
@@ -530,7 +530,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 3.  Em appCode.js, digite o código a seguir.  A lista do IntelliSense aparece em vez de como a função é chamada nunca definido, o que significa que a função de `throttled` não retorna os resultados.  
   
-     ![Exemplo de substituição intellisense resultados](../ide/media/js_intellisense_override.png "js\_intellisense\_override")  
+     ![Exemplo de substituição intellisense resultados](~/ide/media/js_intellisense_override.png "js\_intellisense\_override")  
   
 4.  Adicione o seguinte código a exampleLib.intellisense.js.  Isso irá alterar o comportamento de tempo de design para que o IntelliSense é mostrado para a função set, como esperado.  
   
@@ -543,7 +543,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 5.  Em appCode.js, testar os resultados digitando o mesmo código que você digitou anteriormente.  Desta vez, o IntelliSense fornecem informações desejada.  
   
-     ![Exemplo de substituição IntelliSense resultados](../ide/media/js_intellisense_override_fixed.png "js\_intellisense\_override\_fixed")  
+     ![Exemplo de substituição IntelliSense resultados](~/ide/media/js_intellisense_override_fixed.png "js\_intellisense\_override\_fixed")  
   
 ## Consulte também  
  [JavaScript IntelliSense](../ide/javascript-intellisense.md)   

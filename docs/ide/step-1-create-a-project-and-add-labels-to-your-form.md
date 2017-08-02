@@ -85,7 +85,7 @@ Nas primeiras etapas do desenvolvimento deste teste, você o cria o projeto, e a
   
      É possível alterar várias propriedades de fonte, como mostra a imagem a seguir.  
   
-     ![Tamanho da fonte de exibição na janela Propriedades](../ide/media/express_setfontsize.png "Express_setFontSize")  
+     ![Tamanho da fonte de exibição na janela Propriedades](~/ide/media/express_setfontsize.png "Express_setFontSize")  
 Tamanho da fonte de exibição na janela Propriedades  
   
 8.  Adicione outro controle de **Label** da caixa de ferramentas e, em seguida, defina seu tamanho da fonte para **15,75**.  
@@ -134,7 +134,7 @@ Tamanho da fonte de exibição na janela Propriedades
   
      Você criou a primeira linha, como mostra a imagem a seguir.  
   
-     ![A primeira linha do teste de matemática](../ide/media/express_firstrow.png "Express_firstRow")  
+     ![A primeira linha do teste de matemática](~/ide/media/express_firstrow.png "Express_firstRow")  
 A primeira linha do teste de matemática  
   
 ### <a name="to-add-controls-for-the-subtraction-multiplication-and-division-problems"></a>Para adicionar controles para subtração, multiplicação e problemas de divisão  
@@ -185,7 +185,7 @@ A primeira linha do teste de matemática
   
      O formulário deve parecer com a ilustração a seguir.  
   
-     ![Formulário inicial do teste de matemática](../ide/media/express_formlaidout.png "Express_FormLaidOut")  
+     ![Formulário inicial do teste de matemática](~/ide/media/express_formlaidout.png "Express_FormLaidOut")  
 Formulário inicial do teste de matemática  
   
 8.  Para verificar se a propriedade **TabIndex** funciona como você espera, salve e execute seu programa escolhendo a tecla F5 ou escolhendo a barra de menus **Depurar**, **Iniciar Depuração** na barra de menus e então escolha a tecla Tab algumas vezes.  

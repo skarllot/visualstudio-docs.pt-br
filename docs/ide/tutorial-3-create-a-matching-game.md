@@ -48,7 +48,7 @@ Neste tutorial, você cria um jogo da memória, onde o jogador deve combinar par
   
  Quando terminar este tutorial, seu programa se parecerá com a imagem a seguir.  
   
- ![Jogo criado neste tutorial](../ide/media/express_finishedgame.png "Express_FinishedGame")  
+ ![Jogo criado neste tutorial](~/ide/media/express_finishedgame.png "Express_FinishedGame")  
 Jogo que você cria neste tutorial  
   
  Para baixar uma versão completa do exemplo, consulte [Complete Matching Game tutorial sample (Exemplo de tutorial completo de jogo da memória)](http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba).  

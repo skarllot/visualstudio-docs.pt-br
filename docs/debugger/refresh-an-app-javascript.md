@@ -78,7 +78,7 @@ manager: "ghogen"
     Hello!  
     ```  
   
-7.  Clique no botão **Atualizar aplicativo do Windows**, que tem esta aparência: ![Atualizar botão de aplicativo do Windows](../debugger/media/js_refresh.png "JS\_Refresh").  \(Ou pressione F4.\)  
+7.  Clique no botão **Atualizar aplicativo do Windows**, que tem esta aparência: ![Atualizar botão de aplicativo do Windows](~/debugger/media/js_refresh.png "JS\_Refresh").  \(Ou pressione F4.\)  
   
 8.  Altere para o aplicativo.  O aplicativo é recarregado sem que o depurador seja reiniciado, e o novo título da página é exibido.  
   

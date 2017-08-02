@@ -46,7 +46,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
   
 2.  No Gerenciador de Soluções, abra MainPage.xaml. Na Caixa de Ferramentas, arraste um controle de botão e um controle de caixa de texto para a superfície do design.  
   
-     ![Adicionar controles a MainPage.xaml](../test/media/cuit_phone_app_addcontrols.png "CUIT_Phone_App_AddControls")  
+     ![Adicionar controles a MainPage.xaml](~/test/media/cuit_phone_app_addcontrols.png "CUIT_Phone_App_AddControls")  
   
 3.  Na janela Propriedades, atribua um nome ao controle de botão.  
   
@@ -104,7 +104,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
   
 2.  Escolha editar o mapa de interface do usuário usando a ferramenta de fios.  
   
-     ![Gerar um teste de IU codificado usando a ferramenta de fios.] (../test/media/cuit_phone_howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
+     ![Gerar um teste de IU codificado usando a ferramenta de fios.] (~/test/media/cuit_phone_howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
   
 3.  Use a ferramenta de fios para selecionar o aplicativo. Em seguida, copie o valor da propriedade **AutomationId** do aplicativo, que será usado posteriormente para iniciar o aplicativo no teste.  
   

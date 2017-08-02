@@ -43,7 +43,7 @@ No contexto de associação de dados .NE no Visual Studio, o termo *fonte de dad
   
  Depois de criar uma fonte de dados, ele aparece na janela da ferramenta de fontes de dados \(**Shift \+ Alt \+ D** ou **Exibir &#124; Outras janelas &#124; Fonte de dados**\). Você pode arrastar uma fonte de dados da janela fontes de dados para uma superfície de design do formulário ou controle. Isso faz com que o código clichê ser gerado que exibe os dados que se origina no armazenamento de dados para o usuário. A ilustração a seguir mostra um conjunto de dados foi descartado em um Windows Form. Se você pressionou F5 no aplicativo, os dados do banco de dados subjacente será exibido nos controles de formulários.  
   
- ![Data Source drag operation](../data-tools/media/raddata-data-source-drag-operation.png "raddata Data Source drag operation")  
+ ![Data Source drag operation](~/data-tools/media/raddata-data-source-drag-operation.png "raddata Data Source drag operation")  
   
 ## Fontes de dados para bancos de dados ou arquivos de banco de dados  
   

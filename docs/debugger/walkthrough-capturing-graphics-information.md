@@ -48,7 +48,7 @@ Este passo a passo demonstra como usar o [!INCLUDE[vsprvs](../code-quality/inclu
   
 #### Para capturar informações gráficas  
   
--   Na barra de ferramentas de diagnóstico de gráficos, escolha o **capturar** botão.![Ícone de botão de captura de gráficos](../debugger/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
+-   Na barra de ferramentas de diagnóstico de gráficos, escolha o **capturar** botão.![Ícone de botão de captura de gráficos](~/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
   
      \- ou \-  
   
