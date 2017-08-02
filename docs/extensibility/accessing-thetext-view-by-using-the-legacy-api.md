@@ -40,7 +40,7 @@ Uma exibição de texto é uma apresentação do texto que é armazenado em um b
 ## <a name="text-view-object"></a>Objeto de exibição de texto  
  Cada exibição é associada com o próprio buffer de texto e o modo de exibição é uma janela nos dados no buffer. O diagrama a seguir mostra as interfaces principais do objeto de exibição de texto, que é representado pelo <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>.</xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>  
   
- ![Objeto de exibição de texto do Visual Studio](~/docs/extensibility/media/vstextview.gif "vstextview")  
+ ![Objeto de exibição de texto do Visual Studio](~/extensibility/media/vstextview.gif "vstextview")  
 Objeto de exibição de texto  
   
  O modo de exibição é uma maneira de apresentar o texto no buffer. Ele inclui recursos como quebra automática de linha e a estrutura de tópicos, para que o que você vê no modo de exibição não é uma representação exata do texto no buffer.  

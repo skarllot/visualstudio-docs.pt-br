@@ -116,7 +116,7 @@ Você pode usar as ferramentas no [!INCLUDE[blend_first](../debugger/includes/bl
   
 5.  Clique duas vezes em "A propriedade 'Mame' não existe no namespace 'http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml'." O "M", em "Mame" deve ser um "N". Substitua o "M" por um "N". Agora que o XAML pode ser analisado, o aplicativo aparece na superfície de design.  
   
-     ![Debugging XAML in Blend for Visual Studio](~/docs/debugger/media/blend_debugartboard_xaml.png "blend\_debugArtboard\_XAML")  
+     ![Debugging XAML in Blend for Visual Studio](~/debugger/media/blend_debugartboard_xaml.png "blend\_debugArtboard\_XAML")  
   
      Pressione Ctrl\+Shift\+B para compilar um projeto e confirmar que não há restam erros.  
   

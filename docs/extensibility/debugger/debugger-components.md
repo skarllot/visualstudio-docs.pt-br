@@ -53,7 +53,7 @@ O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] depurador é impl
   
  O diagrama a seguir mostra a relação entre esses elementos do depurador do Visual Studio.  
   
- ![Visão geral dos componentes de depuração](~/docs/extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
+ ![Visão geral dos componentes de depuração](~/extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Pacote de depuração](../../extensibility/debugger/debug-package.md)  

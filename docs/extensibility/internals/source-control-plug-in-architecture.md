@@ -45,7 +45,7 @@ Você pode adicionar suporte a controle de origem para o [!INCLUDE[vsprvs](../..
 ## <a name="components"></a>Componentes  
  O pacote de adaptador de controle de origem no diagrama é o componente do IDE que converte a solicitação do usuário para uma operação de controle de origem em uma chamada de função com suporte a plug-in de controle de origem. Para isso acontecer, o IDE e o plug-in de controle de origem devem ter uma caixa de diálogo efetiva que passa informações e para trás entre o IDE e o plug-in. Para este diálogo ocorra, ambos devem falarem o mesmo idioma. A API de plug-in de controle de origem descritos nesta documentação é o vocabulário comum para essa troca.  
   
- ![Diagrama de arquitetura de controle do código fonte](~/docs/extensibility/internals/media/vs_sccsdk_plug_in_arch.gif "vs_sccsdk_plug_in_arch")  
+ ![Diagrama de arquitetura de controle do código fonte](~/extensibility/internals/media/vs_sccsdk_plug_in_arch.gif "vs_sccsdk_plug_in_arch")  
 Diagrama de arquitetura mostrando a interação entre VS e o controle da fonte de plug-in  
   
  Conforme mostrado no diagrama da arquitetura, o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell, rotulado como VS shell no diagrama, hospeda projetos de trabalho e componentes associados, como editores e do Gerenciador de soluções do usuário. O pacote de adaptador de controle de origem trata a interação entre o IDE e o plug-in de controle de origem. O pacote de adaptador de controle de origem fornece seu próprio controle da fonte de interface do usuário. Ele é a interface de usuário de nível superior que o usuário interage com para iniciar e definir o escopo de uma operação de controle de origem.  

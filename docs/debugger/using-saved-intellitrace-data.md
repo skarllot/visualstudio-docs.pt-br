@@ -120,7 +120,7 @@ Vá para pontos específicos da execução do aplicativo ao iniciar a depuraçã
   
      Se for o método no código do aplicativo, o Visual Studio irá para esse método.  
   
-     ![Go to application code from performance event](~/docs/debugger/media/ffr_itsummarypageperformancegotocode.png "FFR\_ITSummaryPagePerformanceGoToCode")  
+     ![Go to application code from performance event](~/debugger/media/ffr_itsummarypageperformancegotocode.png "FFR\_ITSummaryPagePerformanceGoToCode")  
   
      Agora você pode revisar outros valores gravados, a pilha de chamadas, depurar seu código, ou use o **IntelliTrace** janela [Mover para trás ou para frente "no tempo" entre outros métodos](../debugger/intellitrace.md) que foram chamados durante esse evento de desempenho.  
   
@@ -163,11 +163,11 @@ Vá para pontos específicos da execução do aplicativo ao iniciar a depuraçã
   
      Por exemplo:  
   
-     ![ID de correlação IntelliTrace &#45; erro do SharePoint&#45;](~/docs/debugger/media/sharepointerror_intellitrace.png "SharePointError\_IntelliTrace")  
+     ![ID de correlação IntelliTrace &#45; erro do SharePoint&#45;](~/debugger/media/sharepointerror_intellitrace.png "SharePointError\_IntelliTrace")  
   
 2.  Abra o arquivo. itrace e vá para **análise** e insira a ID de correlação do SharePoint para revisar a solicitação da web correspondente e os eventos registrados.  
   
-     ![Log IntelliTrace &#45; ID de correlação Inserir SharePoint](~/docs/debugger/media/entersharepointcorrelationid.png "EnterSharePointCorrelationID")  
+     ![Log IntelliTrace &#45; ID de correlação Inserir SharePoint](~/debugger/media/entersharepointcorrelationid.png "EnterSharePointCorrelationID")  
   
 3.  Em **eventos de solicitação**, examine os eventos. A partir da parte superior, eventos aparecem na ordem em que eles ocorreram.  
   
@@ -175,7 +175,7 @@ Vá para pontos específicos da execução do aplicativo ao iniciar a depuraçã
   
     2.  Escolha **Iniciar depuração** para iniciar a depuração no ponto em que o evento ocorreu.  
   
-     ![Arquivo de log IntelliTrace &#45; solicitação do modo de exibição da web e eventos](~/docs/debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")  
+     ![Arquivo de log IntelliTrace &#45; solicitação do modo de exibição da web e eventos](~/debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")  
   
  Você pode ver esses tipos de eventos do SharePoint com eventos do IntelliTrace:  
   
@@ -205,7 +205,7 @@ Vá para pontos específicos da execução do aplicativo ao iniciar a depuraçã
   
 3.  Escolha **exceção da depuração** para iniciar a depuração no ponto onde e quando a exceção ocorreu.  
   
-     ![Exceções não tratadas IntelliTrace log &#45; SharePoint](~/docs/debugger/media/sharepointunhandledexceptions_intellitrace.png "SharePointUnhandledExceptions\_IntelliTrace")  
+     ![Exceções não tratadas IntelliTrace log &#45; SharePoint](~/debugger/media/sharepointunhandledexceptions_intellitrace.png "SharePointUnhandledExceptions\_IntelliTrace")  
   
  Para obter instruções, consulte [Instruções passo a passo: depurando um aplicativo do SharePoint usando o IntelliTrace](../Topic/Walkthrough:%20Debugging%20a%20SharePoint%20Application%20by%20Using%20IntelliTrace.md). Para os tipos de dados que os registros de agente, consulte [Recursos do IntelliTrace](../debugger/intellitrace-features.md).  
   

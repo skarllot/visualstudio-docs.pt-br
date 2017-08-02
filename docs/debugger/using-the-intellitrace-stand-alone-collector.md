@@ -365,7 +365,7 @@ O **coletor autônomo do IntelliTrace** permite coletar dados de diagnóstico do
   
      O `Employee` tipo tem os seguintes atributos: `Id`, `Name`, e `HomeAddress`. Existe uma relação de associação entre `Employee` e `Address` tipo.  
   
-     ![Relação entre o funcionário e o endereço](~/docs/debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")  
+     ![Relação entre o funcionário e o endereço](~/debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")  
   
      O coletor registra valores de `id`, `Employee.Id`, `Employee.Name` e o `Employee` objeto retornado do `AlterEmployee` método. No entanto, o coletor não registra informações sobre o `Address` objeto diferente se ele era nulo ou não. O coletor não registra dados sobre variáveis locais no `AlterEmployee` método, a menos que outros métodos usem essas variáveis locais como parâmetros no ponto em que eles são gravados como parâmetros de método.  
   

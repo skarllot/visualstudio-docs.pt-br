@@ -60,13 +60,13 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
  Figura 2: IDE do Visual Studio  
   
- ![IDE com configurações gerais aplicadas](~/docs/ide/media/exploreide-idewithgeneralsettings.png "ExploreIDE-IDEwithgeneralsettings")  
+ ![IDE com configurações gerais aplicadas](~/ide/media/exploreide-idewithgeneralsettings.png "ExploreIDE-IDEwithgeneralsettings")  
   
  É possível fazer personalizações adicionais no Visual Studio, como alterar a face da fonte e o tamanho do texto no editor ou o tema da cor do IDE, usando a caixa de diálogo **Opções**. Dependendo da combinação de configurações que você tiver aplicado, alguns itens na caixa de diálogo poderão não aparecer automaticamente. É possível garantir que todas as opções possíveis são exibidas escolhendo a caixa de seleção **Mostrar todas as configurações**.  
   
  Figura 3: Caixa de diálogo Opções  
   
- ![Caixa de diálogo Opções com Mostrar todas as opções de configuração](~/docs/ide/media/exploreide-optionsdialogbox.png "ExploreIDE-Optionsdialogbox")  
+ ![Caixa de diálogo Opções com Mostrar todas as opções de configuração](~/ide/media/exploreide-optionsdialogbox.png "ExploreIDE-Optionsdialogbox")  
   
  Nesse exemplo, você alterará o tema de cores do IDE de claro para escuro.  É possível ignorar para criar um projeto, se desejado.  
   
@@ -74,15 +74,15 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
 1.  Abra a caixa de diálogo **Opções** escolhendo o menu **Ferramentas** na parte superior e, em seguida, o item **Opções…**.  
   
-     ![Comando Opções no menu Ferramentas](~/docs/ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")  
+     ![Comando Opções no menu Ferramentas](~/ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")  
   
 2.  Altere o **Tema da cor** para **Escuro** e clique em **OK**.  
   
-     ![Tema de cor escura selecionado](~/docs/ide/media/exploreide-darkthemeoptionsdlgbox.png "ExploreIDE-Darkthemeoptionsdlgbox")  
+     ![Tema de cor escura selecionado](~/ide/media/exploreide-darkthemeoptionsdlgbox.png "ExploreIDE-Darkthemeoptionsdlgbox")  
   
  As cores no Visual Studio devem corresponder à seguinte imagem:  
   
- ![IDE com tema escuro aplicado](~/docs/ide/media/exploreide-darkthemeide.png "ExploreIDE-DarkThemeIDE")  
+ ![IDE com tema escuro aplicado](~/ide/media/exploreide-darkthemeide.png "ExploreIDE-DarkThemeIDE")  
   
  O tema da cor usado para as imagens no restante deste passo a passo é o tema claro. Para obter mais informações sobre como personalizar o IDE, confira [Personalizar o IDE do Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
@@ -95,25 +95,25 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
 1.  Crie um novo projeto. Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto...**.  
   
-     ![Na barra de menus, escolha Arquivo, Novo, Projeto](~/docs/ide/media/exploreide-filenewproject.png "ExploreIDE-FileNewProject")  
+     ![Na barra de menus, escolha Arquivo, Novo, Projeto](~/ide/media/exploreide-filenewproject.png "ExploreIDE-FileNewProject")  
   
      Você também pode digitar **Novo Projeto** na caixa **Início Rápido** para obter o mesmo resultado.  
   
-     ![Na caixa Início Rápido, especificar novo projeto](~/docs/ide/media/exploreide-quicklaunchnewprojectsmall.png "ExploreIDE-QuickLaunchNewProjectsmall")  
+     ![Na caixa Início Rápido, especificar novo projeto](~/ide/media/exploreide-quicklaunchnewprojectsmall.png "ExploreIDE-QuickLaunchNewProjectsmall")  
   
 2.  Escolha o modelo de Aplicativo WPF do Visual Basic ou do Visual C# escolhendo no painel esquerdo **Instalados**, **Modelos**, **Visual C#**, **Windows**, por exemplo e, em seguida, escolhendo Aplicativo WPF no painel central.  Nomeie o projeto HelloWPFApp na parte inferior da caixa de diálogo Novo Projeto.  
   
-     ![Criar um projeto do WPF do Visual Basic, HelloWPFApp](~/docs/ide/media/exploreide-newprojectvb.png "ExploreIDE-NewProjectVB")  
+     ![Criar um projeto do WPF do Visual Basic, HelloWPFApp](~/ide/media/exploreide-newprojectvb.png "ExploreIDE-NewProjectVB")  
   
      OU  
   
-     ![Criar um projeto do WPF do Visual C&#35;, HelloWPFApp](~/docs/ide/media/exploreide-newprojectcsharp.png "ExploreIDE-NewProjectcsharp")  
+     ![Criar um projeto do WPF do Visual C&#35;, HelloWPFApp](~/ide/media/exploreide-newprojectcsharp.png "ExploreIDE-NewProjectcsharp")  
   
  O Visual Studio cria o projeto HelloWPFApp e a solução, e o **Gerenciador de Soluções** mostra os vários arquivos. O Designer do WPF mostra um modo de exibição de Design e um modo de exibição XAML de MainWindow.xaml em um modo divisão. É possível deslizar o divisor para mostrar mais ou menos de cada exibição.  É possível optar por ver apenas a exibição visual ou apenas a exibição XAML. (Para obter mais informações, consulte [Designer do WPF para desenvolvedores do Windows Forms](http://msdn.microsoft.com/en-us/47ad0909-e89b-4996-b4ac-874d929f94ca)). Os seguintes itens aparecem no **Gerenciador de Soluções**:  
   
  Figura 5: Itens do projeto  
   
- ![Gerenciador de Soluções com os arquivos do HelloWPFApp carregados](~/docs/ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
+ ![Gerenciador de Soluções com os arquivos do HelloWPFApp carregados](~/ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
   
  Depois de criar o projeto, você poderá personalizá-lo. Ao usar a janela **Propriedades** (encontrada no menu **Exibir**), é possível exibir e alterar opções para itens de projeto, controles e outros itens em um aplicativo. Usando as propriedades e as páginas de propriedades do projeto, você pode exibir e alterar opções para projetos e soluções.  
   
@@ -121,7 +121,7 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
 1.  No procedimento a seguir, você dará à MainWindow um nome mais específico. No **Gerenciador de Soluções**, selecione MainWindow.xaml. Você deverá ver a janela **Propriedades**, mas se ela não for exibida, escolha o menu **Exibir** e o item **Janela de Propriedades**. Altere a propriedade **Nome de Arquivo** para `Greetings.xaml`.  
   
-     ![Janela Propriedades com nome de arquivo realçado](~/docs/ide/media/exploreide-filenameinpropertieswindow.png "ExploreIDE-FilenameinPropertiesWindow")  
+     ![Janela Propriedades com nome de arquivo realçado](~/ide/media/exploreide-filenameinpropertieswindow.png "ExploreIDE-FilenameinPropertiesWindow")  
   
      O **Gerenciador de Soluções** mostra que o nome do arquivo agora é Greetings.xaml e, se você expandir o nó MainWindow.xaml (colocando o foco no nó e pressionando a tecla de seta para a direita), verá que o nome MainWindow.xaml.vb ou MainWindow.xaml.cs agora é Greetings.xaml.vb ou Greetings.xaml.cs. Esse arquivo de código é aninhado sob o nó do arquivo .xaml para mostrar que eles estão intimamente relacionados.  
   
@@ -143,7 +143,7 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
 2.  Na **Caixa de Ferramentas**, pesquise controle TextBlock.  
   
-     ![Caixa de ferramentas com o controle TextBlock realçado](~/docs/ide/media/exploreide-textblocktoolbox.png "ExploreIDE-TextBlockToolbox")  
+     ![Caixa de ferramentas com o controle TextBlock realçado](~/ide/media/exploreide-textblocktoolbox.png "ExploreIDE-TextBlockToolbox")  
   
 3.  Adicione um controle TextBlock à superfície de design escolhendo o item TextBlock e arrastando-o para a janela na superfície de design.  Centralize o controle próximo à parte superior da janela.  
   
@@ -151,7 +151,7 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
  Figura 7: Janela Saudações com controle TextBlock  
   
- ![Controle TextBlock no formulário Greetings](~/docs/ide/media/exploreide-greetingswithtextblockonly.png "ExploreIDE-GreetingswithTextblockonly")  
+ ![Controle TextBlock no formulário Greetings](~/ide/media/exploreide-greetingswithtextblockonly.png "ExploreIDE-GreetingswithTextblockonly")  
   
  A marcação XAML deve ter uma aparência semelhante a esta:  
   
@@ -173,7 +173,7 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
 1.  Na **Caixa de Ferramentas**, pesquise controle RadioButton.  
   
-     ![Janela de ferramentas com o controle RadioButton selecionado](~/docs/ide/media/exploreide-radiobuttontoolbox.png "ExploreIDE-RadioButtonToolbox")  
+     ![Janela de ferramentas com o controle RadioButton selecionado](~/ide/media/exploreide-radiobuttontoolbox.png "ExploreIDE-RadioButtonToolbox")  
   
 2.  Adicione dois controles RadioButton à superfície de design escolhendo o item RadioButton e arrastando-o para a janela na superfície de design duas vezes e mova os botões (selecionando-os e usando as teclas de direção), para que eles sejam exibidos lado a lado sob o controle TextBlock.  
   
@@ -181,7 +181,7 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
      Figura 8: RadioButtons na janela Saudações.  
   
-     ![Formulário Greetings com bloco de texto e dois botões de opção](~/docs/ide/media/exploreide-greetingswithradiobuttons.png "ExploreIDE-Greetingswithradiobuttons")  
+     ![Formulário Greetings com bloco de texto e dois botões de opção](~/ide/media/exploreide-greetingswithradiobuttons.png "ExploreIDE-Greetingswithradiobuttons")  
   
 3.  Na janela **Propriedades** do controle RadioButton esquerdo, altere a propriedade **Nome** (a propriedade na parte superior da janela **Propriedades**) para `RadioButton1`.  Verifique se você selecionou o RadioButton e não o Grid da tela de fundo no formulário; o campo Type da Janela de Propriedade sob o campo Name deve indicar RadioButton.  
   
@@ -209,7 +209,7 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
  Figura 9: Interface do usuário final de Saudações  
   
- ![Formulário Greetings com rótulos de controle](~/docs/ide/media/exploreide-greetingswithconrollabels.png "ExploreIDE-Greetingswithconrollabels")  
+ ![Formulário Greetings com rótulos de controle](~/ide/media/exploreide-greetingswithconrollabels.png "ExploreIDE-Greetingswithconrollabels")  
   
 ### <a name="add-code-to-the-display-button"></a>Adicionar código ao botão Exibir  
  Quando esse aplicativo é executado, uma caixa de mensagem é exibida depois que um usuário escolhe pela primeira vez um botão de opção e depois escolhe o botão **Exibição**. Uma caixa de mensagem será exibida para Olá e outra para Até logo. Para criar esse comportamento, você adicionará código ao evento Button_Click em Greetings.xaml.vb ou em Greetings.xaml.cs.  
@@ -274,13 +274,13 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
 1.  Inicie o depurador selecionando **Depurar** e **Iniciar Depuração**.  
   
-     ![Comando Iniciar Depuração no menu Depurar](~/docs/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
+     ![Comando Iniciar Depuração no menu Depurar](~/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
   
      Uma caixa de diálogo aparece, indicando que uma IOException ocorreu: não é possível localizar o recurso 'mainwindow.xaml'.  
   
 2.  Escolha o botão **OK** e pare o depurador.  
   
-     ![Comando Parar Depuração no menu Depurar](~/docs/ide/media/exploreide-stopdebugging.png "ExploreIDE-StopDebugging")  
+     ![Comando Parar Depuração no menu Depurar](~/ide/media/exploreide-stopdebugging.png "ExploreIDE-StopDebugging")  
   
  Renomeamos Mainwindow.xaml como Greetings.xaml no início deste passo a passo, mas o código ainda se refere ao Mainwindow.xaml como o URI de inicialização do aplicativo. Portanto, o projeto não pode ser iniciado.  
   
@@ -301,7 +301,7 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
 2.  Adicione um ponto de interrupção por meio do menu selecionando **Depurar** e, em seguida, **Ativar/Desativar Ponto de Interrupção**.  
   
-     ![Comando Ativar/Desativar Pontos de Interrupção no menu Depurar](~/docs/ide/media/exploreide-togglebreakpoint.png "ExploreIDE-ToggleBreakpoint")  
+     ![Comando Ativar/Desativar Pontos de Interrupção no menu Depurar](~/ide/media/exploreide-togglebreakpoint.png "ExploreIDE-ToggleBreakpoint")  
   
      Um círculo vermelho aparece ao lado da linha de código na margem da extrema esquerda da janela do editor.  
   
@@ -336,15 +336,15 @@ Ao concluir este passo a passo, você estará familiarizado com vários designer
   
 1.  No menu principal, selecione **Build** e, em seguida, **Limpar solução** para excluir arquivos intermediários e arquivos de saída criados durante builds anteriores.  Isso não é necessário, mas limpa as saídas de build de depuração.  
   
-     ![O comando Limpar Solução no menu Compilar](~/docs/ide/media/exploreide-cleansolution.png "ExploreIDE-CleanSolution")  
+     ![O comando Limpar Solução no menu Compilar](~/ide/media/exploreide-cleansolution.png "ExploreIDE-CleanSolution")  
   
 2.  Altere a configuração de build de HelloWPFApp, de **Depuração** para **Versão**, usando o controle suspenso na barra de ferramentas (no momento, seu nome é “Depuração”).  
   
-     ![A barra de ferramentas Padrão com Versão selecionada](~/docs/ide/media/exploreide-releaseversion.png "ExploreIDE-ReleaseVersion")  
+     ![A barra de ferramentas Padrão com Versão selecionada](~/ide/media/exploreide-releaseversion.png "ExploreIDE-ReleaseVersion")  
   
 3.  Compile a solução escolhendo **Build** e, em seguida, **Compilar Solução** ou pressione a tecla F6.  
   
-     ![Comando Compilar Solução no menu Compilar](~/docs/ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
+     ![Comando Compilar Solução no menu Compilar](~/ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
   
  Parabéns por concluir este passo a passo! É possível encontrar o .exe compilado na solução e no diretório do projeto (…\HelloWPFApp\HelloWPFApp\bin\Release\\). Se desejar explorar mais exemplos, consulte [Amostras do Visual Studio](../ide/visual-studio-samples.md).  
   

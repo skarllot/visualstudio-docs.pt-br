@@ -48,11 +48,11 @@ Este tópico contém detalhes sobre o modelo de projeto e outros tipos de suport
 1. Instale o [SDK do .NET do Azure para Visual Studio](https://www.visualstudio.com/vs/azure-tools/), que é necessário para usar o modelo do Serviço de Nuvem.
 1. No Visual Studio, selecione **Arquivo > Novo > Projeto...**, pesquise “Azure Python” e selecione **Serviço de Nuvem do Azure** na lista:
 
-    ![Modelo de Projeto de Nuvem do Azure para o Python](~/docs/python/media/template-azure-cloud-project.png)
+    ![Modelo de Projeto de Nuvem do Azure para o Python](~/python/media/template-azure-cloud-project.png)
 
 1. Selecione uma ou mais funções a serem incluídas. Projetos de nuvem podem combinar funções escritas em linguagens diferentes; portanto, é possível escrever com facilidade cada parte do aplicativo na linguagem mais adequada. Para adicionar novas funções ao projeto depois de concluir essa caixa de diálogo, clique com o botão direito do mouse em **Funções** no Gerenciador de Soluções e selecione um dos itens em **Adicionar**.
 
-    ![Adicionando funções no modelo de Projeto de Nuvem do Azure](~/docs/python/media/template-azure-cloud-service-project-wizard.png)
+    ![Adicionando funções no modelo de Projeto de Nuvem do Azure](~/python/media/template-azure-cloud-service-project-wizard.png)
 
 1. Conforme os projetos de função individuais são criados, você poderá precisar instalar pacotes adicionais do Python, como as estruturas Django, Bottle ou Flask, caso tenha selecionado uma função que usa uma delas.
 
@@ -60,7 +60,7 @@ Este tópico contém detalhes sobre o modelo de projeto e outros tipos de suport
 
 1. Uma pasta `bin` do projeto também contém um ou dois scripts do PowerShell que são usados para configurar a máquina virtual remota, incluindo a instalação do Python, qualquer arquivo [requirements.txt](#dependencies) no projeto e a configuração do IIS, se necessário. É possível editar esses arquivos conforme desejado para sua implantação, embora as opções mais comuns possam ser gerenciadas de outras maneiras (consulte [Configurando a implantação de função](#configuring-role-deployment) abaixo). Não sugerimos a remoção desses arquivos, pois um script de configuração herdado será usado no lugar deles, caso eles não estejam disponíveis.
 
-    ![Arquivos de suporte à função de trabalho](~/docs/python/media/template-azure-cloud-service-worker-role-support-files.png)
+    ![Arquivos de suporte à função de trabalho](~/python/media/template-azure-cloud-service-worker-role-support-files.png)
 
     Para adicionar esses scripts de configuração a um novo projeto, clique com o botão direito do mouse no projeto, selecione **Adicionar > Novo Item...** e selecione **Arquivos de Suporte da Função Web** ou **Arquivos de Suporte da Função de Trabalho**.
    

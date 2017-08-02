@@ -52,7 +52,7 @@ A abordagem usada aqui é a mesma usada nas extensões padrão do CPython, confo
 
 Este passo a passo foi escrito para o Visual Studio 2017 com as cargas de trabalho **Desenvolvimento da Área de Trabalho com o C++** e **Desenvolvimento do Python** com suas opções padrão (como o Python 3.6 como o interpretador padrão). Na carga de trabalho **Desenvolvimento do Python**, marque também a caixa à direita **Ferramentas de desenvolvimento nativo do Python**, que definirá a maior parte das opções descritas neste tópico. (Essa opção também incluirá a carga de trabalho do C++ automaticamente.) 
 
-![Selecionando a opção de ferramentas de desenvolvimento nativo do Python](~/docs/python/media/cpp-install-native.png)
+![Selecionando a opção de ferramentas de desenvolvimento nativo do Python](~/python/media/cpp-install-native.png)
 
 Para obter mais detalhes, consulte [Instalando o suporte do Python para Visual Studio](installation.md), incluindo o uso de outras versões do Visual Studio. Se você instalar o Python separadamente, lembre-se de selecionar **Baixar símbolos de depuração** e **Baixar binários de depuração** em **Opções Avançadas** no instalador. Isso garante que você terá as bibliotecas de depuração necessárias disponíveis se optar por fazer um build de depuração.
 
@@ -278,7 +278,7 @@ O [suporte do Python no Visual Studio](installation.md) inclui a capacidade de [
 
 1. No código do C++, defina um ponto de interrupção na primeira linha dentro do método `tanh` e, em seguida, inicie o depurador. Você verá o depurador parar quando esse código for chamado:
 
-    ![Parando em um ponto de interrupção no código C++](~/docs/python/media/cpp-debugging.png)
+    ![Parando em um ponto de interrupção no código C++](~/python/media/cpp-debugging.png)
 
 1. Neste ponto, você poderá executar o código C++ em etapas, examinar variáveis e assim por diante, conforme detalhado em [Depurando o C++ e o Python juntos](debugging-mixed-mode.md).
 

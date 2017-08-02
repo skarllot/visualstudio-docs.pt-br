@@ -156,7 +156,7 @@ public partial class ParentsHaveChildren
   
  O exemplo aplica-se ao seguinte modelo de domínio. A relação ParentsHaveChildren tem funções que são nomeadas Child e Parent.  
   
- ![Diagrama de definição de DSL - modelo de árvore genealógica](~/docs/modeling/media/familyt_person.png "FamilyT_Person")  
+ ![Diagrama de definição de DSL - modelo de árvore genealógica](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
 ## <a name="validation-categories"></a>Categorias de validação  
  No <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>atributo, especifique quando o método de validação deve ser executado.</xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>  

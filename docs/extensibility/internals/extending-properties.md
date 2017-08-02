@@ -39,7 +39,7 @@ O [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **propriedades** 
   
  O **propriedades** janela, que pode ser aberta pressionando F4 no teclado ou selecionando **janela propriedades** no **exibição** menu, é usado para exibir e editar propriedades de tempo de design, independente de configuração e os eventos dos objetos selecionados. Propriedades de configuração dependente, associadas com soluções e projetos, são exibidas na [páginas de propriedade](../../extensibility/internals/property-pages.md). Para obter mais informações, consulte [NIB: Project Properties](http://msdn.microsoft.com/en-us/fb126574-24ad-4c96-9b2b-6e1f3879ba50), [opções de configuração de gerenciamento de](../../extensibility/internals/managing-configuration-options.md), e [NIB: Item Management in Projects](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0).  
   
- ![Visão geral da janela Propriedades](~/docs/extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
+ ![Visão geral da janela Propriedades](~/extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
 Janela de Propriedades  
   
  Esta seção fornece informações detalhadas que se relacionam às áreas individuais do **propriedades** janela e as interfaces que você deve implementar e chamada para preencher a janela.  

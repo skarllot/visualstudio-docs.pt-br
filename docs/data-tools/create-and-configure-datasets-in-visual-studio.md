@@ -37,7 +37,7 @@ Um conjunto de dados é um conjunto de objetos que armazenam dados de um banco d
   
 3.  Para bancos de dados, escolha o banco de dados ou bancos de dados que serão a fonte de dados para o conjunto de dados.  
   
-     ![Data source choose a connection](~/docs/data-tools/media/data-source-choose-a-connection.png "Data source choose a connection")  
+     ![Data source choose a connection](~/data-tools/media/data-source-choose-a-connection.png "Data source choose a connection")  
   
 4.  Escolha as tabelas \(ou colunas individuais\), procedimentos armazenados, funções e exibições do banco de dados que você deseja ser representado no conjunto de dados.  
   
@@ -76,7 +76,7 @@ Um conjunto de dados é um conjunto de objetos que armazenam dados de um banco d
   
 3.  Clique com botão direito no nó do conjunto de dados e escolha **"Configurar a fonte de dados com o assistente...".**  
   
-     ![Data Source context menu](~/docs/data-tools/media/data-source-context-menu.png "Data Source context menu")  
+     ![Data Source context menu](~/data-tools/media/data-source-context-menu.png "Data Source context menu")  
   
 4.  Use o Assistente para especificar quais tabelas adicionais, ou procedimentos armazenados ou outro objeto de banco de dados para adicionar ao conjunto de dados.  
   

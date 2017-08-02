@@ -44,7 +44,7 @@ manager: "ghogen"
 ## Criar uma nova relação entre tabelas  
  Para criar uma nova relação entre duas tabelas no Dataset Designer, selecione a barra de título de cada tabela, em seguida, clique com botão direito e escolha **Adicionar relação**.  
   
- ![Hierarchical update add relation menu](~/docs/data-tools/media/hierarchical-update-add-relation-menu.png "Hierarchical update add relation menu")  
+ ![Hierarchical update add relation menu](~/data-tools/media/hierarchical-update-add-relation-menu.png "Hierarchical update add relation menu")  
   
 ## Restrições de chave estrangeira e atualizações em cascata e exclusões  
  É importante compreender como restrições de chave externa e comportamento em cascata no banco de dados são criados no código de dataset gerado.  

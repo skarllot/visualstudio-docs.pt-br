@@ -99,7 +99,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
   
      Por padrão, o projeto de inicialização atual é analisado. Se desejar alterar o destino da análise, escolha **Alterar Destino**.  
   
-     ![Alterar destino de análise](~/docs/profiling/media/js_tools_target.png "JS_Tools_Target")  
+     ![Alterar destino de análise](~/profiling/media/js_tools_target.png "JS_Tools_Target")  
   
      As seguintes opções estão disponíveis para o destino de análise:  
   
@@ -177,7 +177,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
   
      A ilustração a seguir mostra um exemplo de um segundo e um terceiro instantâneos.  
   
-     ![Segundo e terceiro instantâneos](~/docs/profiling/media/js_mem_leak_workflow.png "JS_Mem_Leak_Workflow")  
+     ![Segundo e terceiro instantâneos](~/profiling/media/js_mem_leak_workflow.png "JS_Mem_Leak_Workflow")  
   
      Ao determinar uma linha de base, um segundo e um terceiro instantâneos neste fluxo de trabalho, você pode descartar com mais facilidade as alterações que não estiverem associadas aos vazamentos de memória. Por exemplo, pode haver alterações previstas, como a atualização de cabeçalhos e rodapés em uma página, que criarão algumas alterações no uso da memória, mas tais alterações podem não estar relacionadas aos vazamentos de memória.  
   
@@ -213,7 +213,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
   
  O gráfico de memória mostra uma exibição em tempo real da memória do processo do aplicativo, que inclui bytes particulares, a memória nativa e o heap de JavaScript. O gráfico de memória é uma exibição rolável da memória do processo. Veja como ela se parece:  
   
- ![Gráfico de memória do Analisador de memória de JavaScript](~/docs/profiling/media/js_mem_memory_graph.png "JS_Mem_Memory_Graph")  
+ ![Gráfico de memória do Analisador de memória de JavaScript](~/profiling/media/js_mem_memory_graph.png "JS_Mem_Memory_Graph")  
   
  Se você tiver adicionado marcas de usuário ao código do aplicativo (consulte [Associar o código-fonte com os dados de uso de memória](#JSConsoleCommands)), um triângulo invertido aparecerá no gráfico de uso de memória para indicar quando essa seção de código for atingida.  
   
@@ -227,7 +227,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
   
  Este é um exemplo de resumo de instantâneo quando se obtém vários instantâneos.  
   
- ![Resumo de instantâneo](~/docs/profiling/media/js_mem_snapshot_summary.png "JS_Mem_Snapshot_Summary")  
+ ![Resumo de instantâneo](~/profiling/media/js_mem_snapshot_summary.png "JS_Mem_Snapshot_Summary")  
   
  O resumo de instantâneo inclui:  
   
@@ -252,7 +252,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
   
  Esta ilustração mostra a exibição Tipos, em um detalhe do instantâneo, com os dados de uso da memória classificados por tamanho retido.  
   
- ![Exibição de detalhes do instantâneo mostrando problemas potenciais](~/docs/profiling/media/js_mem_snapshot_details.png "JS_Mem_Snapshot_Details")  
+ ![Exibição de detalhes do instantâneo mostrando problemas potenciais](~/profiling/media/js_mem_snapshot_details.png "JS_Mem_Snapshot_Details")  
   
  Na exibição de detalhes de instantâneo, você pode examinar os dados de uso de memória por dominador, tipo ou raiz, escolhendo uma opção da barra de ferramentas:  
   
@@ -316,7 +316,7 @@ O analisador de memória do JavaScript está disponível no Visual Studio para a
 ##  <a name="FoldObjects"></a> Exibir objetos por dominador  
  Nas exibições Tipos e Dominadores, você pode escolher ver os objetos classificados pelos dominadores (esta é a exibição padrão da guia Dominadores). Ao selecionar esta exibição, somente os dominadores são mostrados na exibição superior dos objetos. (Objetos descendentes de objetos não globais ficam ocultos na exibição superior.) Para alguns aplicativos, isso pode indicar quais objetos estão causando a perda de memória ao reduzir o ruído nos dados.  
   
- Para alternar a exibição de objetos por dominador, pressione o botão **Dobrar objetos pelo dominador**. ![Dobrando objetos em seus dominadores](~/docs/profiling/media/js_mem_fold_objects.png "JS_Mem_Fold_Objects")  
+ Para alternar a exibição de objetos por dominador, pressione o botão **Dobrar objetos pelo dominador**. ![Dobrando objetos em seus dominadores](~/profiling/media/js_mem_fold_objects.png "JS_Mem_Fold_Objects")  
   
  Para obter mais informações sobre dominadores, consulte [Exibir detalhes do instantâneo](#SnapshotDetails).  
   

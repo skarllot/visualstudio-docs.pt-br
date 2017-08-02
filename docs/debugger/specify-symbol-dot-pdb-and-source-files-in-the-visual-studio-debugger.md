@@ -63,9 +63,9 @@ Um arquivo de banco de dados \(. PDB\) do programa, também chamado de arquivo d
   
 1.  No Visual Studio, abra o **Ferramentas \/ opções \/ depuração \/ símbolos** página.  
   
-     ![Ferramentas &#45; página de opções &#45; depuração &#45; símbolos](~/docs/debugger/media/dbg_tools_options_symbols.gif "DBG\_Tools\_Options\_Symbols")  
+     ![Ferramentas &#45; página de opções &#45; depuração &#45; símbolos](~/debugger/media/dbg_tools_options_symbols.gif "DBG\_Tools\_Options\_Symbols")  
   
-2.  Escolha a pasta ![Ferramentas &#47; opções &#47; ícone de pasta&#47;símbolos de depuração](~/docs/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") ícone. Texto editável aparece no **símbolos de locais de arquivo \(. PDB\)** caixa.  
+2.  Escolha a pasta ![Ferramentas &#47; opções &#47; ícone de pasta&#47;símbolos de depuração](~/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") ícone. Texto editável aparece no **símbolos de locais de arquivo \(. PDB\)** caixa.  
   
 3.  Digite a URL ou caminho do diretório do servidor de símbolos ou local do símbolo. Conclusão de instrução ajuda a localizar o formato correto.  
   
@@ -135,7 +135,7 @@ Um arquivo de banco de dados \(. PDB\) do programa, também chamado de arquivo d
   
  Quando um desses eventos ocorre, o depurador exibe o **Nenhum símbolo carregado** página para ajudá\-lo a localizar e carregar os símbolos necessários.  
   
- ![Nenhuma página carregada de símbolos](~/docs/debugger/media/dbg_nosymbolsloaded.png "DBG\_NoSymbolsLoaded")  
+ ![Nenhuma página carregada de símbolos](~/debugger/media/dbg_nosymbolsloaded.png "DBG\_NoSymbolsLoaded")  
   
 -   Para alterar os caminhos de pesquisa, escolha um caminho não selecionado ou escolha **novo** e digite um novo caminho. Escolha **carregar** para procurar novamente os caminhos e carregar o arquivo de símbolo se ela for encontrada.  
   
@@ -147,7 +147,7 @@ Um arquivo de banco de dados \(. PDB\) do programa, também chamado de arquivo d
   
 -   Para sempre mostrar a desmontagem quando os arquivos de origem ou de símbolo não forem localizados, escolha o **caixa de diálogo Opções** link e selecione **Habilitar depuração no nível do endereço** e **Mostrar desmontagem se a origem não está disponível**.  
   
-     ![Opções &#47; depuração &#47; geral opções de desmontagem](~/docs/debugger/media/dbg_options_general_disassembly_checkbox.png "DBG\_Options\_General\_disassembly\_checkbox")  
+     ![Opções &#47; depuração &#47; geral opções de desmontagem](~/debugger/media/dbg_options_general_disassembly_checkbox.png "DBG\_Options\_General\_disassembly\_checkbox")  
   
  **Alterar opções de símbolo no menu de atalho**  
   
@@ -214,7 +214,7 @@ Um arquivo de banco de dados \(. PDB\) do programa, também chamado de arquivo d
   
 2.  Sob o **Propriedades comuns** nó, escolha **depurar arquivos fonte**.  
   
-3.  Clique na pasta ![Ferramentas &#47; opções &#47; ícone de pasta&#47;símbolos de depuração](~/docs/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") ícone. Texto editável aparece no **diretórios que contêm o código\-fonte** lista.  
+3.  Clique na pasta ![Ferramentas &#47; opções &#47; ícone de pasta&#47;símbolos de depuração](~/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") ícone. Texto editável aparece no **diretórios que contêm o código\-fonte** lista.  
   
 4.  Adicione o caminho que você deseja pesquisar.  
   
@@ -238,7 +238,7 @@ Um arquivo de banco de dados \(. PDB\) do programa, também chamado de arquivo d
   
 4.  Selecione o **Habilitar suporte de servidor de origem** caixa de seleção.  
   
-     ![Ativar opções do servidor de origem](~/docs/debugger/media/dbg_options_general_enablesrcsrvr_checkbox.png "DBG\_Options\_General\_EnableSrcSrvr\_checkbox")  
+     ![Ativar opções do servidor de origem](~/debugger/media/dbg_options_general_enablesrcsrvr_checkbox.png "DBG\_Options\_General\_EnableSrcSrvr\_checkbox")  
   
 5.  \(Opcional\) Escolha o filho opções que você deseja.  
   

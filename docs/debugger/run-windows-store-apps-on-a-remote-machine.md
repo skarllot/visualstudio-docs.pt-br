@@ -148,7 +148,7 @@ manager: "ghogen"
 ##  <a name="BKMK_ConnectVS"></a> Configurando o projeto do Visual Studio para depuração remota  
  Especifique o dispositivo remoto para se conectar nas propriedades do projeto.  O procedimento varia dependendo da linguagem de programação.  Você pode digitar o nome de rede do dispositivo remoto, ou você pode selecioná\-lo na caixa de diálogo Selecionar conexão de depurador remoto.  
   
- ![Marque a caixa de diálogo conexão de depurador remoto](~/docs/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
+ ![Marque a caixa de diálogo conexão de depurador remoto](~/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
   
  A caixa de diálogo lista somente os dispositivos que estão na sub\-rede local do computador do Visual Studio e que estão executando o depurador remoto.  
   
@@ -156,7 +156,7 @@ manager: "ghogen"
 >  Se você tiver problemas para se conectar a um dispositivo remoto, tente digitar o endereço IP do dispositivo.  Para determinar o endereço IP de um dispositivo, abra uma janela de comando e digite**ipconfig**.  O endereço IP é listado como**IPv4 Address**.  
   
 ###  <a name="BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects"></a> Escolhendo o dispositivo remoto para projetos c\# e Visual Basic  
- ![Gerenciado de propriedades do projeto para depuração remota](~/docs/debugger/media/vsrun_managed_projprop_remote.png "VSRUN\_Managed\_ProjProp\_Remote")  
+ ![Gerenciado de propriedades do projeto para depuração remota](~/debugger/media/vsrun_managed_projprop_remote.png "VSRUN\_Managed\_ProjProp\_Remote")  
   
 1.  Selecione o nome do projeto no Solution Explorer e escolha**propriedades**no menu de atalho.  
   
@@ -167,7 +167,7 @@ manager: "ghogen"
 4.  Digite o nome de rede do dispositivo remoto no**máquina remota**caixa ou escolha**localizar**para escolher o dispositivo do**Selecionar conexão de depurador remoto**caixa de diálogo.  
   
 ###  <a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a> Escolhendo o dispositivo remoto para projetos em JavaScript e C\+\+  
- ![Propriedades do projeto C&#43;&#43; para depuração remota](~/docs/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
+ ![Propriedades do projeto C&#43;&#43; para depuração remota](~/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
   
 1.  Selecione o nome do projeto no Solution Explorer e escolha**propriedades**no menu de atalho.  
   

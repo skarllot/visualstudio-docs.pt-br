@@ -66,7 +66,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
   
  Quando você inicia uma sessão de diagnóstico, seu aplicativo é iniciado e a janela **Ferramentas de Diagnóstico** mostra um gráfico de linha do tempo do uso de memória do aplicativo.  
   
- ![Página de visão geral do uso de memória](~/docs/profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
+ ![Página de visão geral do uso de memória](~/profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
   
  O gráfico de linha do tempo mostra flutuações na memória do seu aplicativo, conforme ele é executado. Picos no gráfico geralmente indicam que um código está coletando ou criando dados e, em seguida, descartando-os quando o processamento é concluído. Grandes picos indicam áreas que você pode otimizar. O que mais preocupa é o aumento no consumo de memória que não é devolvido, pois pode indicar uso de memória ineficiente ou mesmo uma perda de memória.  
   
@@ -83,7 +83,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
 ##  <a name="BKMK_Memory_Usage_overview_page"></a> Página de visão geral do uso de memória  
  Depois de parar a coleta de dados, a ferramenta Uso de Memória para o aplicativo e exibe o relatório geral.  
   
- ![Página de visão geral do uso de memória](~/docs/profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
+ ![Página de visão geral do uso de memória](~/profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
   
 ###  <a name="BKMK_Memory_Usage_snapshot_views"></a> Exibições de instantâneo do uso de memória  
  Você usa as exibições de instantâneos para abrir relatórios detalhados em novas janelas do Visual Studio. Há dois tipos de exibições de instantâneos:  
@@ -98,10 +98,10 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
   
 |||  
 |-|-|  
-|![Etapa 1](~/docs/profiling/media/procguid_1.png "ProcGuid_1")|O texto do link mostra o número total de bytes na memória quando o instantâneo foi tirado.<br /><br /> Selecione esse link para exibir um relatório de detalhes do instantâneo, que é classificado pelo tamanho total de instâncias do tipo.|  
-|![Etapa 2](~/docs/profiling/media/procguid_2.png "ProcGuid_2")|O texto do link mostra o número total de objetos na memória quando o instantâneo foi tirado.<br /><br /> Selecione esse link para exibir um relatório de detalhes do instantâneo, que é classificado pela contagem de instâncias dos tipos.|  
-|![Etapa 3](~/docs/profiling/media/procguid_3.png "ProcGuid_3")|O texto do link mostra a diferença entre o tamanho total de objetos na memória no momento desse instantâneo e o tamanho total do instantâneo anterior.<br /><br /> O texto do link é um número positivo quando o tamanho da memória desse instantâneo for maior do que o anterior, e um número negativo quando o tamanho for menor. O texto do link **Linha de Base** indica que esse instantâneo é o primeiro na sessão de diagnóstico, **Nenhuma Diferença** indica que a diferença é igual a zero.<br /><br /> Escolha esse link para exibir um relatório diferente do instantâneo, que é classificado pela diferença no tamanho total das instâncias dos tipos.|  
-|![Etapa 4](~/docs/profiling/media/procguid_4.png "ProcGuid_4")|O texto do link mostra a diferença entre o tamanho total de objetos de memória nesse instantâneo e o número de objetos no instantâneo anterior.<br /><br /> Escolha esse link para exibir um relatório diferente do instantâneo, que é classificado pela diferença na contagem total das instâncias dos tipos.|  
+|![Etapa 1](~/profiling/media/procguid_1.png "ProcGuid_1")|O texto do link mostra o número total de bytes na memória quando o instantâneo foi tirado.<br /><br /> Selecione esse link para exibir um relatório de detalhes do instantâneo, que é classificado pelo tamanho total de instâncias do tipo.|  
+|![Etapa 2](~/profiling/media/procguid_2.png "ProcGuid_2")|O texto do link mostra o número total de objetos na memória quando o instantâneo foi tirado.<br /><br /> Selecione esse link para exibir um relatório de detalhes do instantâneo, que é classificado pela contagem de instâncias dos tipos.|  
+|![Etapa 3](~/profiling/media/procguid_3.png "ProcGuid_3")|O texto do link mostra a diferença entre o tamanho total de objetos na memória no momento desse instantâneo e o tamanho total do instantâneo anterior.<br /><br /> O texto do link é um número positivo quando o tamanho da memória desse instantâneo for maior do que o anterior, e um número negativo quando o tamanho for menor. O texto do link **Linha de Base** indica que esse instantâneo é o primeiro na sessão de diagnóstico, **Nenhuma Diferença** indica que a diferença é igual a zero.<br /><br /> Escolha esse link para exibir um relatório diferente do instantâneo, que é classificado pela diferença no tamanho total das instâncias dos tipos.|  
+|![Etapa 4](~/profiling/media/procguid_4.png "ProcGuid_4")|O texto do link mostra a diferença entre o tamanho total de objetos de memória nesse instantâneo e o número de objetos no instantâneo anterior.<br /><br /> Escolha esse link para exibir um relatório diferente do instantâneo, que é classificado pela diferença na contagem total das instâncias dos tipos.|  
   
 ##  <a name="BKMK_Snapshot_reports"></a> Relatórios de instantâneos  
  ![Relatório de instantâneo do uso de memória](../profiling/media/memuse_snapshotreport_all.png "MEMUSE_SnapshotReport_All")  
@@ -141,7 +141,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
 ##  <a name="BKMK_Snapshot_details_reports"></a> Relatórios de detalhes do instantâneo  
  Você usa um relatório de detalhes do instantâneo para se concentrar em um instantâneo de uma sessão de diagnóstico. Para abrir um relatório de detalhes, escolha um dos links em uma exibição de instantâneo, como mostrado na figura a seguir. Os dois links abrem o mesmo relatório, a única diferença é a ordem de classificação inicial da árvore **Heap Gerenciado** no relatório. Em ambos os casos, você pode mudar a ordem de classificação depois que o relatório abre.  
   
- ![Links para o relatório do instantâneo na exibição de instantâneo](~/docs/profiling/media/memuse_snapshotview_snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
+ ![Links para o relatório do instantâneo na exibição de instantâneo](~/profiling/media/memuse_snapshotview_snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
   
 -   O link **MB** classifica o relatório pela coluna **Tamanho Inclusivo (Bytes)**.  
   
@@ -189,7 +189,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
 ###  <a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a> Árvore de Heap Gerenciado (diferenças de instantâneo)  
  A árvore **Heap Gerenciado** lista os tipos de objetos que são mantidos na memória. Você pode expandir um nome do tipo para ver as dez maiores instâncias do tipo, classificadas por tamanho. Escolher um tipo ou instância exibe as árvores **Caminhos para a Raiz** e **Objetos Referenciados** para o item selecionado.  
   
- ![Árvore de Heap Gerenciado para um tipo no relatório de diferença](~/docs/profiling/media/memuse_snapshotdiff_type_heap.png "MEMUSE_SnapshotDiff_Type_Heap")  
+ ![Árvore de Heap Gerenciado para um tipo no relatório de diferença](~/profiling/media/memuse_snapshotdiff_type_heap.png "MEMUSE_SnapshotDiff_Type_Heap")  
   
  Observe que as colunas **Contagem**, **Tamanho (Bytes)** e **Tamanho Inclusivo (Bytes)** foram recolhidas na imagem.  
   
@@ -206,7 +206,7 @@ Você pode usar a ferramenta **Uso de Memória** sem depuração para fazer o se
 ###  <a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a> Árvore de Caminhos para a Raiz (diferenças do instantâneo)  
  A **árvore de Caminhos para a Raiz** mostra a cadeia de objetos que faz referência ao tipo ou instância. O coletor de lixo .NET Framework limpa a memória de um objeto apenas quando todas as referências a ele foram liberadas.  
   
- ![Árvore de Caminhos para a Raiz para instâncias em uma exibição de diferenças](~/docs/profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "MEMUSE_SnapshotDiff_PathsToRoot_Instance_All")  
+ ![Árvore de Caminhos para a Raiz para instâncias em uma exibição de diferenças](~/profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "MEMUSE_SnapshotDiff_PathsToRoot_Instance_All")  
   
 ###  <a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a> Árvore de Objetos Referenciados (diferenças do instantâneo)  
  A árvore de **Objetos Referenciados** mostra a cadeia de objetos que mencionam o tipo primário ou a instância.  

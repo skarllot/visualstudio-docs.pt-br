@@ -63,7 +63,7 @@ Você pode usar o IntelliTrace para coletar informações sobre eventos específ
   
      Captura de tela a seguir é da atualização 1 do Visual Studio 2015.  
   
-     ![IntelliTrace&#45;Update1](~/docs/debugger/media/intellitrace-update1.png "IntelliTrace\-Update1")  
+     ![IntelliTrace&#45;Update1](~/debugger/media/intellitrace-update1.png "IntelliTrace\-Update1")  
   
 7.  Selecione o evento para expandir seus detalhes.  
   
@@ -77,7 +77,7 @@ Você pode usar o IntelliTrace para coletar informações sobre eventos específ
   
      Captura de tela a seguir é da atualização 1 do Visual Studio 2015.  
   
-     ![HistoricalDebugging&#45;Update1](~/docs/debugger/media/historicaldebugging-update1.png "HistoricalDebugging\-Update1")  
+     ![HistoricalDebugging&#45;Update1](~/debugger/media/historicaldebugging-update1.png "HistoricalDebugging\-Update1")  
   
 8.  Se você não encontrar o erro, tente examinar outros eventos que levam ao bug. Você também pode ter informações de chamada de registro do IntelliTrace para que você possa depurar chamadas de função.  
   

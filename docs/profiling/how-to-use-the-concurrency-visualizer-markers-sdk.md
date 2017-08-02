@@ -72,7 +72,7 @@ Este tópico mostra como usar o SDK da Visualização Simultânea para criar int
   
 4.  Na barra de menus, escolha **Analisar**, **Visualização Simultânea**, **Iniciar com Projeto Atual** para executar o aplicativo e exibir a Visualização Simultânea. A ilustração a seguir mostra os três intervalos e os três marcadores na Visualização Simultânea.  
   
-     ![Visualização Simultânea com três marcadores e alertas](~/docs/profiling/media/cvmarkersnative.png "CvMarkersNative")  
+     ![Visualização Simultânea com três marcadores e alertas](~/profiling/media/cvmarkersnative.png "CvMarkersNative")  
   
 5.  Adicione código para criar a série de marcador personalizada adicional chamando o construtor para `marker_series` que aceita um nome de cadeia de caracteres para uma série de marcadores.  
   
@@ -96,7 +96,7 @@ Este tópico mostra como usar o SDK da Visualização Simultânea para criar int
   
 6.  Inicie o projeto atual para exibir Visualização Simultânea. As duas séries de marcador aparecem em suas próprias pistas na Exibição de Threads. A ilustração a seguir mostra os dois novos intervalos.  
   
-     ![Visualização Simultânea com três séries de marcador personalizadas](~/docs/profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")  
+     ![Visualização Simultânea com três séries de marcador personalizadas](~/profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")  
   
 ### <a name="to-use-visual-basic-or-c"></a>Para usar o Visual Basic ou C# #
   
@@ -156,7 +156,7 @@ Este tópico mostra como usar o SDK da Visualização Simultânea para criar int
   
 4.  Na barra de menus, escolha **Analisar**, **Visualização Simultânea**, **Iniciar com Projeto Atual** para executar o aplicativo e exibir a Visualização Simultânea. A ilustração a seguir mostra os três intervalos e os três marcadores na Exibição de Threads da Visualização Simultânea.  
   
-     ![Visualização Simultânea com marcadores e alertas](~/docs/profiling/media/cvmarkersmanaged.png "CvMarkersManaged")  
+     ![Visualização Simultânea com marcadores e alertas](~/profiling/media/cvmarkersmanaged.png "CvMarkersManaged")  
   
 5.  Adicione código para criar a série de marcador do cliente usando o método estático <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.CreateMarkerSeries%2A>. O classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries> contém métodos para criar spans e escrever sinalizadores, mensagens e alertas.  
   
@@ -194,7 +194,7 @@ Este tópico mostra como usar o SDK da Visualização Simultânea para criar int
   
 6.  Inicie o projeto atual para exibir Visualização Simultânea. As três séries de marcador aparecem em suas próprias pistas na Exibição de Threads. A ilustração a seguir mostra os três novos intervalos.  
   
-     ![Visualização Simultânea com três séries de marcador personalizadas](~/docs/profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")  
+     ![Visualização Simultânea com três séries de marcador personalizadas](~/profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")  
   
 ## <a name="see-also"></a>Consulte também  
  [SDK da Visualização Simultânea](../profiling/concurrency-visualizer-sdk.md)

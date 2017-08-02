@@ -36,7 +36,7 @@ ms.openlocfilehash: fc20c01f7bb5a6f9065494994308adbee023462d
 # <a name="step-1-create-a-windows-forms-application-project"></a>Etapa 1: Criar um projeto de aplicativo do Windows Forms
 Ao criar um visualizador de imagens, a primeira etapa é criar um projeto de aplicativo do Windows Forms.  
   
- ![link para vídeo](~/docs/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205209) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205199). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
+ ![link para vídeo](~/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205209) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205199). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
   
 ### <a name="to-create-a-windows-forms-application-project"></a>Para criar um projeto de aplicativo do Windows Forms  
   
@@ -56,7 +56,7 @@ Caixa de diálogo Novo Projeto
     > [!NOTE]
     >  O layout da janela pode não ser exatamente como esta ilustração. O layout preciso da janela depende da versão do Visual Studio, da linguagem de programação usada e de outros fatores. Entretanto, você deve verificar que todas as três janelas aparecem.  
   
-     ![Janela IDE](~/docs/ide/media/express_ideoverview_visio.png "Express_IDEOverview_Visio")  
+     ![Janela IDE](~/ide/media/express_ideoverview_visio.png "Express_IDEOverview_Visio")  
 Janela IDE  
   
      A interface contém três janelas: uma janela principal, o **Gerenciador de Soluções** e a janela **Propriedades**.  
@@ -78,7 +78,7 @@ Janela IDE
   
      Como alternativa, escolha o botão **Salvar Todos** na barra de ferramentas, demostrado na ilustração a seguir.  
   
-     ![Botão de barra de ferramentas Salvar Todos](~/docs/ide/media/express_iconsaveall.png "Express_IconSaveAll")  
+     ![Botão de barra de ferramentas Salvar Todos](~/ide/media/express_iconsaveall.png "Express_IconSaveAll")  
 Botão da barra de ferramentas Salvar todos  
   
      O Visual Studio preenche automaticamente o nome da pasta e o nome do projeto e, em seguida, salva o projeto na sua pasta de projeto.  

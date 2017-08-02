@@ -34,7 +34,7 @@ Para evitar a extensão do tempo de inicialização, o Visual Studio 2017 evita 
 
 Se o Visual Studio detectar lentidão na inicialização, uma mensagem pop-up será exibida, alertando-o para a janela de ferramentas ou extensão que está causando a lentidão. A mensagem também fornece um link para a caixa de diálogo **Gerenciar o Desempenho no Visual Studio**, que também pode ser aberta usando o comando de menu **Ajuda > Gerenciar o Desempenho do Visual Studio**.
 
-![Gerenciar o Desempenho do Visual Studio – pop-up indicando "Observamos que a extensão ... está deixando o Visual Studio mais lento"](~/docs/ide/media/vside_perfdialog_popup.PNG)
+![Gerenciar o Desempenho do Visual Studio – pop-up indicando "Observamos que a extensão ... está deixando o Visual Studio mais lento"](~/ide/media/vside_perfdialog_popup.PNG)
 
 A caixa de diálogo lista as janelas de ferramentas e extensões que estão afetando o desempenho de inicialização. Essa caixa de diálogo permite que você altere as configurações de janela de ferramentas e extensão para melhorar o desempenho de inicialização.
 
@@ -42,7 +42,7 @@ A caixa de diálogo lista as janelas de ferramentas e extensões que estão afet
 
 Se uma extensão estiver tornando a inicialização do Visual Studio lenta, a extensão aparecerá na caixa de diálogo **Gerenciar o Desempenho do Visual Studio** quando você escolher um dos tipos de extensão. A caixa de diálogo mostra quais extensões afetam o desempenho na inicialização, ao carregar uma solução e ao digitar no editor.
 
-![Gerenciar o Desempenho do Visual Studio – exibição de extensões](~/docs/ide/media/vside_perfdialog_extensions.PNG)
+![Gerenciar o Desempenho do Visual Studio – exibição de extensões](~/ide/media/vside_perfdialog_extensions.PNG)
 
 Se o impacto na inicialização, carregamento da solução ou tempo de digitação for inaceitavelmente alto, desabilite a extensão para esse cenário selecionando o botão **Desabilitar**. Você pode sempre habilitar novamente a extensão para sessões futuras usando o Gerenciador de Extensões ou a caixa de diálogo Gerenciar o Desempenho do Visual Studio.
 
@@ -53,7 +53,7 @@ Se uma janela de ferramentas estiver retardando a inicialização do Visual Stud
 - **Não mostrar janela na inicialização:** a janela de ferramentas especificada sempre estará fechada ao abrir o Visual Studio, mesmo se ela for deixada aberta em uma sessão anterior. Você pode abrir a janela de ferramentas no menu apropriado.
 - **Ocultar automaticamente janela na inicialização:** se uma janela de ferramentas tiver sido deixada aberta em uma sessão anterior, essa opção recolherá o grupo da janela de ferramentas na inicialização para evitar inicializar a janela de ferramentas. Essa é uma boa opção se você usar uma janela de ferramentas com frequência, pois a janela de ferramentas ainda estará disponível, mas não afetará negativamente o tempo de inicialização do Visual Studio.
 
-![Gerenciar o Desempenho do Visual Studio – exibição da janela de ferramentas](~/docs/ide/media/vside_perfdialog_toolwindows.PNG)
+![Gerenciar o Desempenho do Visual Studio – exibição da janela de ferramentas](~/ide/media/vside_perfdialog_toolwindows.PNG)
 
 Você poderá retornar a este diálogo a qualquer momento para alterar as configurações de qualquer janela de ferramentas.
 
@@ -69,7 +69,7 @@ Você pode habilitar a carga de solução leve para o IDE como um todo ou para s
 
 Para alterar a carga de solução leve para configurações de todos os projetos e soluções, acesse **Ferramentas > Opções > Projetos e Soluções > Geral** e selecione uma das três opções de carregamento:
 
-![Caixa de diálogo Opções de Ferramentas](~/docs/ide/media/VSIDE_LightweightSolutionLoad.png)
+![Caixa de diálogo Opções de Ferramentas](~/ide/media/VSIDE_LightweightSolutionLoad.png)
 
 - **Deixar o Visual Studio escolher o que é melhor para minha solução:** o Visual Studio determina automaticamente se deve aplicar o carregamento de solução leve analisando cada solução quando você abri-las. 
 - **Habilitar:** a carga de solução leve será habilitada para esta solução, independentemente da configuração de todo o IDE.
@@ -77,7 +77,7 @@ Para alterar a carga de solução leve para configurações de todos os projetos
 
 Para habilitar a carga de solução leve para uma solução individual, selecione o nó da solução de nó superior no Gerenciador de Soluções. Na janela **Propriedades**, escolha **Padrão**, **Habilitar** ou **Desabilitar** para a propriedade **Carga leve**.
 
-![Gerenciador de Soluções](~/docs/ide/media/VSIDE_LSL Solution Setting.png)
+![Gerenciador de Soluções](~/ide/media/VSIDE_LSL Solution Setting.png)
 
 Você também pode clicar com o botão direito no nó da solução no Gerenciador de Soluções e selecionar **Habilitar a Carga de Solução Leve** (se o recurso estiver desabilitado no momento) ou **Desabilitar a Carga de Solução Leve** (se o recurso estiver habilitado no momento):
 
@@ -87,7 +87,7 @@ Quando você altera a configuração da carga de solução leve, a alteração e
 
 Ao abrir uma solução grande no Visual Studio 2017, você poderá ver uma mensagem pop-up oferecendo para habilitar a carga de solução leve. A mensagem só será exibida para soluções que contêm vários projetos C#, VB ou C++. Escolher **habilitar** ativará a carga de solução leve apenas para aquela solução. A configuração de todo o IDE não será alterada.
 
-![Janela pop-up](~/docs/ide/media/VSIDE_LSL Popup.png)
+![Janela pop-up](~/ide/media/VSIDE_LSL Popup.png)
 
 Você pode desabilitar a carga de solução leve posteriormente na janela **Propriedades** da solução.
 

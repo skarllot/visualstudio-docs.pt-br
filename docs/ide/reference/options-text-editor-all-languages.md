@@ -82,7 +82,7 @@ Esta caixa de diálogo permite alterar o comportamento padrão do Editor de Cód
  Glifos visuais de apresentação para a quebra automática de linha  
  Quando selecionada, um indicador de seta d retorno é exibido no ponto em que uma linha longa quebra-se para uma segunda linha.  
   
- ![Captura de tela de LineBreakSymbol](~/docs/ide/reference/media/linebreak.gif "linebreak")  
+ ![Captura de tela de LineBreakSymbol](~/ide/reference/media/linebreak.gif "linebreak")  
   
  Desmarque esta opção se preferir não exibir esses indicadores.  
   

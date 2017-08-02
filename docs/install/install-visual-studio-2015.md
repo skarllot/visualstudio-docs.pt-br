@@ -34,7 +34,7 @@ Esta página inclui informações detalhadas para ajudá\-lo a instalar o Visual
 ## Links rápidos  
  Antes de nos aprofundar detalhes, aqui está uma lista de links nosso solicitadas com mais freqüência.  
   
-|![Learn more about features](~/docs/install/media/features.png "Features")|  
+|![Learn more about features](~/install/media/features.png "Features")|  
 |----------------------------------------------------------------------------------|  
 |**Recursos**: para saber mais sobre os recursos novos ou atualizados no Visual Studio 2015, consulte as notas de versão para [RTM](https://www.visualstudio.com/news/vs2015-vs), [atualização 1](https://www.visualstudio.com/news/vs2015-update1-vs), [atualização 2](https://www.visualstudio.com/news/vs2015-update2-vs), e [Atualização 3](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs).|  
 |**SKUs**: para descobrir o que está disponível em cada edição do Visual Studio 2015, consulte nosso [Comparar ofertas do Visual Studio](http://go.microsoft.com/fwlink/?LinkID=242142) página.|  
@@ -46,7 +46,7 @@ Esta página inclui informações detalhadas para ajudá\-lo a instalar o Visual
 ##  <a name="custom"></a> Vs padrão. Instalação personalizada  
  Quando você instala o Visual Studio 2015, você pode incluir ou excluir componentes que você deseja usar em uma base diária. Isso significa que uma instalação padrão será muitas vezes menor e instalar mais rápido do que uma instalação personalizada. Isso também significa que muitos componentes que foram instalados por padrão em versões anteriores agora são considerados como componentes personalizados que você deve selecionar explicitamente nesta versão.  
   
- ![Visual Studio 2015 Setup Dialog](~/docs/ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
+ ![Visual Studio 2015 Setup Dialog](~/ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
   
  Componentes personalizados incluem o Visual C\+\+, Visual F \#, SQL Server Data Tools, ferramentas de plataforma cruzada móveis e SDKs e terceiros SDKs e extensões. Você pode instalar qualquer um dos componentes personalizados em um momento posterior, se você não os selecione durante a instalação inicial.  
   

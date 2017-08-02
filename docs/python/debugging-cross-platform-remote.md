@@ -119,7 +119,7 @@ Nestas etapas, definiremos um ponto de interrupção simples para interromper o 
 
 1. Pressione Enter para preencher a lista de processos ptvsd disponíveis nesse computador:
 
-    ![Inserir o destino da conexão e listar processos](~/docs/python/media/remote-debugging-qualifier.png)
+    ![Inserir o destino da conexão e listar processos](~/python/media/remote-debugging-qualifier.png)
 
     Se outro programa for iniciado no computador remoto após a lista ser preenchida, selecione o botão **Atualizar**.
 
@@ -127,7 +127,7 @@ Nestas etapas, definiremos um ponto de interrupção simples para interromper o 
 
 1. Então, o Visual Studio alternará para o modo de depuração enquanto o script continuará a ser executado no computador remoto, fornecendo todos os recursos normais de [depuração](debugging.md). Por exemplo, defina um ponto de interrupção na linha `if guess < number:` e, em seguida, mude para o computador remoto e insira outra tentativa. Após fazer isso, o Visual Studio do seu computador local parará no ponto de interrupção, mostrará variáveis locais e assim por diante:
 
-    ![O ponto de interrupção é atingido](~/docs/python/media/remote-debugging-breakpoint-hit.png)
+    ![O ponto de interrupção é atingido](~/python/media/remote-debugging-breakpoint-hit.png)
 
 1. Ao interromper a depuração, o Visual Studio se desanexa do programa, que continua a ser executado no computador remoto. O ptvsd também continua a escuta para anexar depuradores, assim, é possível anexá-los novamente ao processo a qualquer momento.
 
@@ -183,7 +183,7 @@ Por padrão, a conexão com o servidor de depuração remota do ptvsd é protegi
 
 1. Agora, repita o processo de anexação no Visual Studio, conforme descrito anteriormente, usando `tcps://` como protocolo para o **Destino de Conexão** (ou **Qualificador**).
 
-    ![Escolhendo o transporte de depuração remota com SSL](~/docs/python/media/remote-debugging-qualifier-ssl.png)
+    ![Escolhendo o transporte de depuração remota com SSL](~/python/media/remote-debugging-qualifier-ssl.png)
 
 ### <a name="warnings"></a>Avisos
 
@@ -191,11 +191,11 @@ O Visual Studio o avisará sobre possíveis problemas de certificado ao se conec
 
 1. Caso veja o aviso “o certificado remoto não é confiável” abaixo, significa que o certificado não foi adicionado corretamente à AC Raiz Confiável. Verifique essas etapas e tente novamente.
 
-    ![Aviso de certificado SSL confiável](~/docs/python/media/remote-debugging-ssl-warning.png)
+    ![Aviso de certificado SSL confiável](~/python/media/remote-debugging-ssl-warning.png)
 
 1. Caso veja o aviso “o nome do certificado remoto não corresponde ao nome do host” abaixo, significa que o nome de host ou endereço IP correto não foi usado como o **Nome Comum** ao criar o certificado.
 
-    ![Aviso de nome de host do certificado SSL](~/docs/python/media/remote-debugging-ssl-warning2.png)
+    ![Aviso de nome de host do certificado SSL](~/python/media/remote-debugging-ssl-warning2.png)
 
 > [!Warning]
 > No momento, o Visual Studio 2017 travará quando esses avisos forem ignorados. Verifique se todos os problemas foram corrigidos antes de tentar se conectar.

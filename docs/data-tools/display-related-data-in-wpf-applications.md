@@ -56,7 +56,7 @@ Em alguns aplicativos, convém trabalhar com dados provenientes de várias tabel
   
      A figura a seguir demonstra o relacionado **pedidos** índice da **clientes** tabela em um conjunto de dados a **fontes de dados** janela.  
   
-     ![Relação de exibição de janela de fontes de dados](~/docs/data-tools/media/datasources2.gif "DataSources2")  
+     ![Relação de exibição de janela de fontes de dados](~/data-tools/media/datasources2.gif "DataSources2")  
   
 ## Consulte também  
  [Associar controles WPF a dados no Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)   

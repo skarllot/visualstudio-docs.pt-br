@@ -73,7 +73,7 @@ static void Main(string[] args)
   
  O **depurador do Visual Studio Just\-In\-Time** janela é exibida:  
   
- ![JustInTimeDialog](~/docs/debugger/media/justintimedialog.png "JustInTimeDialog")  
+ ![JustInTimeDialog](~/debugger/media/justintimedialog.png "JustInTimeDialog")  
   
  Em **possíveis depuradores**, você verá que o **nova instância do Microsoft Visual Studio 2015** linha está selecionada. Se ainda não estiver selecionado, selecione\-o agora.  
   

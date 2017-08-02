@@ -53,7 +53,7 @@ O Designer XAML no Visual Studio fornece uma interface visual para ajudá-lo a c
   
  No modo de exibição de Design, a janela que contém a *prancheta* é a janela ativa e você pode usá-la como superfície de trabalho primária. Você pode usá-la para criar visualmente uma página em seu aplicativo adicionando ou desenhando elementos e depois modificando-os. Para obter mais informações, consulte [Trabalhando com elementos no Designer XAML](../designers/working-with-elements-in-xaml-designer.md). Esta ilustração mostra o artboard no modo Design.  
   
- ![Modo de Exibição de Design do Designer XAML](~/docs/designers/media/xaml_editor_design_view.png "xaml_editor_design_view")  
+ ![Modo de Exibição de Design do Designer XAML](~/designers/media/xaml_editor_design_view.png "xaml_editor_design_view")  
   
  Estas funcionalidades estão disponíveis no artboard:  
   
@@ -82,7 +82,7 @@ Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Gr
   
  No modo Design, os comandos adicionais do artboard estão disponíveis na área esquerda inferior da tela, como mostrado aqui:  
   
- ![Comandos do modo de exibição de Design](~/docs/designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
+ ![Comandos do modo de exibição de Design](~/designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
   
  Estes comandos estão disponíveis na barra de ferramentas:  
   
@@ -100,7 +100,7 @@ Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Gr
   
  No modo de exibição XAML, a janela que contém o editor XAML é a janela ativa, e o editor XAML é a ferramenta de criação primária. A linguagem XAML fornece um vocabulário declarativo, com base em XML, para especificar a interface do usuário de um aplicativo. O modo de exibição XAML inclui o IntelliSense, formatação automática, realce de sintaxe e navegação de marcação. Esta ilustração mostra o modo de exibição XAML:  
   
- ![Exibição XAML](~/docs/designers/media/xaml_editor.png "xaml_editor")  
+ ![Exibição XAML](~/designers/media/xaml_editor.png "xaml_editor")  
   
  **Barra do modo divisão**  
  A barra do modo divisão é exibida na parte superior do modo de exibição XAML quando o editor XAML está na janela inferior. A barra do modo divisão permite controlar os tamanhos relativos do modo Design e do modo de exibição XAML. Você também pode trocar os locais das exibições (usando o botão **Alternar Painéis**), especificar se as exibições são organizadas horizontal ou verticalmente e recolher a exibição.  
@@ -111,7 +111,7 @@ Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Gr
 ## <a name="device-window"></a>Janela Dispositivo  
  A janela Dispositivo no Designer XAML permite simular em tempo de design vários modos de exibição, vídeos e opções de exibição para seu projeto da Windows Store ou do Windows Phone. A janela Dispositivo está disponível no menu **Design** quando você estiver trabalhando no Designer XAML. Veja como ela se parece:  
   
- ![Janela Dispositivo](~/docs/designers/media/xaml_editor_device_panel.png "xaml_editor_device_panel")  
+ ![Janela Dispositivo](~/designers/media/xaml_editor_device_panel.png "xaml_editor_device_panel")  
   
  Estas são as opções disponíveis na janela Dispositivo:  
   
@@ -155,7 +155,7 @@ Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Gr
   
  Para exibir a janela de Estrutura de tópicos do documento na barra de menus, escolha **Exibição**, **Outras Janelas**, **Estrutura de Tópicos do Documento**.  
   
- ![Janela de Estrutura de tópicos do documento](~/docs/designers/media/xaml_editor_doc_outline.png "xaml_editor_doc_outline")  
+ ![Janela de Estrutura de tópicos do documento](~/designers/media/xaml_editor_doc_outline.png "xaml_editor_doc_outline")  
   
  Estas são as opções disponíveis na janela Estrutura de Tópicos de Documento:  
   
@@ -174,7 +174,7 @@ Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Gr
 ## <a name="properties-window"></a>Janela de Propriedades  
  A janela Propriedades permite definir valores de propriedade em controles. Veja como ela se parece:  
   
- ![Janela Propriedades](~/docs/designers/media/xaml_editor_prop_window.png "xaml_editor_prop_window")  
+ ![Janela Propriedades](~/designers/media/xaml_editor_prop_window.png "xaml_editor_prop_window")  
   
  Há várias opções na parte superior da janela Propriedades. Você pode alterar o nome do elemento atualmente selecionado usando a caixa **Nome**. No canto esquerdo superior, há um ícone que representa o elemento atualmente selecionado. Para organizar as propriedades por categoria ou em ordem alfabética, clique em **Categoria**, **Nome** ou **Fonte** na lista **Organizar por**. Para ver a lista de eventos de um controle, clique no botão **Eventos**, que exibe um símbolo de relâmpago. Para pesquisar uma propriedade, comece a digitar o nome da propriedade na caixa **Propriedades de Pesquisa**. A janela Propriedades exibe as propriedades que correspondem à pesquisa à medida que você digita. Algumas propriedades permitem que você defina propriedades avançadas selecionando um botão de seta para baixo. Para obter mais informações sobre como usar propriedades e manipular eventos, veja o artigo sobre [Guia de início rápido: adicionando controles e manipulando eventos](http://go.microsoft.com/fwlink/?LinkID=247983)  
   

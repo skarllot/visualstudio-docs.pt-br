@@ -38,7 +38,7 @@ ms.openlocfilehash: eb49815ed120ee4ff65dfc04764282f1ac6d1ff8
 
 Ao usar diversas *ações rápidas* ou ferramentas de *refatoração* no Visual Studio, geralmente é possível visualizar as alterações que serão feitas ao seu projeto antes de aceitá-las.  Isso é feito na janela **Visualizar Alterações**.  Por exemplo, aqui está a janela **Visualizar Alterações** mostrando o que será alterado durante uma refatoração de renomeação em um projeto C#:
 
-![Visualizar Alterações](~/docs/ide/media/previewchanges.png)
+![Visualizar Alterações](~/ide/media/previewchanges.png)
 
 A metade superior da janela mostra as linhas específicas que serão alteradas, cada uma com uma caixa de seleção.  Você poderá marcar ou desmarcar cada caixa de seleção se você quiser aplicar a refatoração seletivamente, apenas a linhas específicas.
 

@@ -71,7 +71,7 @@ Verifique se seu código está funcionando conforme o esperado criando e executa
 ##  <a name="BKMK_The_MyBank_Solution_example"></a> O exemplo da Solução MyBank  
  Neste tópico, usamos o desenvolvimento de um aplicativo fictício chamado `MyBank` como exemplo. Você não precisa do código real para seguir as explicações neste tópico. Os métodos de teste são escritos em C# e apresentados usando o Microsoft Unit Testing Framework para Código Gerenciado. No entanto, os conceitos podem ser facilmente transferidos para outros idiomas e estruturas.  
   
- ![Solução MyBank](~/docs/test/media/ute_mybanksolution.png "UTE_MyBankSolution")  
+ ![Solução MyBank](~/test/media/ute_mybanksolution.png "UTE_MyBankSolution")  
   
  Nossa primeira tentativa de um projeto para o aplicativo `MyBank` inclui um componente de contas, que representa uma conta individual e suas transações com o banco, e um componente de banco de dados, que representa a funcionalidade de agregação e gerenciamento das contas individuais.  
   
@@ -237,7 +237,7 @@ public void My_Test ()
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> Executar testes de unidade no Gerenciador de Testes  
  Quando você compila o projeto de teste, os testes são exibidos no Gerenciador de Testes. Se o Gerenciador de Testes não estiver visível, escolha **Teste** no menu do Visual Studio, escolha **Windows** e, em seguida, escolha **Gerenciador de Testes**.  
   
- ![Gerenciador de testes de unidade](~/docs/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![Gerenciador de testes de unidade](~/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  Conforme você executa, grava e executa novamente os testes, o modo de exibição padrão do Gerenciador de Testes exibe os resultados em grupos **Testes Reprovados**, **Testes Aprovados**, **Testes Ignorados** e **Testes Não Executados**. Você pode escolher um cabeçalho de grupo para abrir o modo de exibição que exibe todos os testes no grupo.  
   
@@ -246,7 +246,7 @@ public void My_Test ()
 ###  <a name="BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar"></a>Executar e exibir testes  
  A barra de ferramentas do Gerenciador de Testes ajuda você a descobrir, organizar e executar os testes desejados.  
   
- ![Executar testes na barra de ferramentas do Gerenciador de Testes](~/docs/test/media/ute_toolbar.png "UTE_ToolBar")  
+ ![Executar testes na barra de ferramentas do Gerenciador de Testes](~/test/media/ute_toolbar.png "UTE_ToolBar")  
   
  Você pode escolher **Executar Tudo** para executar todos os testes ou **Executar** para escolher um subconjunto de testes a serem executados. Depois de executar um conjunto de testes, um resumo da execução do teste é exibido na parte inferior da janela do Gerenciador de Testes. Selecione um teste para exibir seus detalhes no painel inferior. Escolha **Abrir Teste** no menu de contexto (Teclado: F12) para exibir o código-fonte do teste selecionado.  
   
@@ -259,16 +259,16 @@ public void My_Test ()
   
 |||  
 |-|-|  
-|![Executar após a compilação](~/docs/test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|Para executar os testes de unidade após cada compilação local, escolha **Teste** no menu padrão e escolha **Executar testes após compilação** na barra de ferramentas do Gerenciador de Testes.|  
+|![Executar após a compilação](~/test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|Para executar os testes de unidade após cada compilação local, escolha **Teste** no menu padrão e escolha **Executar testes após compilação** na barra de ferramentas do Gerenciador de Testes.|  
   
 ###  <a name="BKMK_Filtering_and_grouping_the_test_list"></a> Filtrar e agrupar a lista de teste  
  Quando você tiver um grande número de testes, pode digitar na caixa de pesquisa do Gerenciador de Testes para filtrar a lista por cadeia de caracteres especificada. Você pode restringir seu evento de filtro ainda mais escolhendo na lista de filtros.  
   
- ![Categorias de filtro de pesquisa](~/docs/test/media/ute_searchfilter.png "UTE_SearchFilter")  
+ ![Categorias de filtro de pesquisa](~/test/media/ute_searchfilter.png "UTE_SearchFilter")  
   
 |||  
 |-|-|  
-|![Botão de grupo do Gerenciador de Testes](~/docs/test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|Para agrupar testes por categoria, escolha o botão **Agrupar por**.|  
+|![Botão de grupo do Gerenciador de Testes](~/test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|Para agrupar testes por categoria, escolha o botão **Agrupar por**.|  
   
  Para obter mais informações, consulte [Executar testes de unidade com o Gerenciador de Testes](../test/run-unit-tests-with-test-explorer.md)  
   
@@ -290,7 +290,7 @@ public void My_Test ()
   
  **R:** use o IntelliSense para gerar classes e métodos no código do seu projeto. Escreva uma instrução em um método de teste que chama a classe ou o método que você deseja gerar e abra o menu do IntelliSense na chamada. Se a chamada é um construtor da nova classe, escolha **Gerar novo tipo** no menu e siga o assistente para inserir a classe em seu projeto de código. Se a chamada é para um método, escolha **Gerar novo método** no menu IntelliSense.  
   
- ![Gerar menu Intellisense do Stub de Método](~/docs/test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
+ ![Gerar menu Intellisense do Stub de Método](~/test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
   
  **P: posso criar testes de unidade que usam vários conjuntos de dados como entrada para executar o teste?**  
   
@@ -336,7 +336,7 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
   
  Os resultados da cobertura aparecem na janela Resultados de Cobertura de Código.  
   
- ![Resultados de Cobertura de Código](~/docs/test/media/ute_codecoverageresults.png "UTE_CodeCoverageResults")  
+ ![Resultados de Cobertura de Código](~/test/media/ute_codecoverageresults.png "UTE_CodeCoverageResults")  
   
  Saiba mais sobre [cobertura de código](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).  
   
@@ -358,7 +358,7 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
   
  **R:** Sim, siga estas etapas para [encontrar e instalar outras estruturas](../test/install-third-party-unit-test-frameworks.md). Depois de reiniciar o Visual Studio, reabra a solução para criar testes de unidade e selecione suas estruturas instaladas aqui:  
   
- ![Selecione outra estrutura de teste de unidade instalada](~/docs/test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
+ ![Selecione outra estrutura de teste de unidade instalada](~/test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
   
  Seu stubs de teste de unidade serão criados usando a estrutura selecionada.
 

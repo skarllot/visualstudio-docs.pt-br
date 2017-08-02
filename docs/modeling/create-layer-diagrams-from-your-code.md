@@ -88,7 +88,7 @@ Para visualizar a arquitetura de alto nível, a lógica do seu sistema de softwa
 
 7. Isso mostra a arquitetura do aplicativo atual. Decidir o que você deseja que a arquitetura seja e modificar o diagrama de dependência de acordo.
 
-![Diagrama de dependência gerado a partir de um mapa de código](~/docs/modeling/media/dependency-validation-01.png)
+![Diagrama de dependência gerado a partir de um mapa de código](~/modeling/media/dependency-validation-01.png)
   
 ##  <a name="a-namecreatelayersa-create-layers-from-artifacts"></a><a name="CreateLayers"></a>Criar camadas de artefatos  
  É possível criar camadas dos itens de solução do Visual Studio como, por exemplo, projetos, arquivos de código, namespaces, classes e métodos. Isso cria automaticamente links entre camadas e itens, incluindo-os no processo de validação da camada.  

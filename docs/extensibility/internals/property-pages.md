@@ -48,7 +48,7 @@ Os usuários podem exibir e alterar propriedades de configuração dependente de
   
  Há dois tipos gerais de **ProjectProperty páginas** caixas de diálogo disponíveis no [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. No primeiro, para projetos do Visual Basic, por exemplo, as páginas de propriedade são exibidas usando um formato de campo, conforme mostrado na seguinte captura de tela. Na segunda, mostrado posteriormente nesta seção, a propriedade hosts página uma grade de propriedades semelhantes àquelas encontradas na janela Propriedades.  
   
- ![Páginas de propriedades do Visual Basic](~/docs/extensibility/internals/media/vsvbproppages.gif "vsVBPropPages")  
+ ![Páginas de propriedades do Visual Basic](~/extensibility/internals/media/vsvbproppages.gif "vsVBPropPages")  
 Caixa de diálogo páginas de propriedades de projeto com a estrutura de árvore e o formato do campo  
   
  A estrutura de árvore na caixa de diálogo páginas de propriedade não é compilada usando <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>.</xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> O ambiente, com base no nível nome passado para ele pelo <xref:Microsoft.VisualStudio.OLE.Interop.ISpecifyPropertyPages>e as <xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage>interfaces, compila o proprietário.</xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage> </xref:Microsoft.VisualStudio.OLE.Interop.ISpecifyPropertyPages>  
@@ -73,7 +73,7 @@ Caixa de diálogo páginas de propriedades de projeto com a estrutura de árvore
   
  O segundo tipo de páginas de propriedades exibidas nos hosts exemplos um formulário da grade de propriedades, conforme mostrado na seguinte captura de tela.  
   
- ![Páginas de propriedades VC](~/docs/extensibility/internals/media/vsvcproppages.gif "vsVCPropPages")  
+ ![Páginas de propriedades VC](~/extensibility/internals/media/vsvcproppages.gif "vsVCPropPages")  
 Caixa de diálogo páginas de propriedades com a grade de propriedades  
   
  As interfaces `IVSMDPropertyBrowser` e `IVSMDPropertyGrid` (declarado em vsmanaged.h) são usados para criar e preencher a grade de propriedades em uma caixa de diálogo ou janela.  

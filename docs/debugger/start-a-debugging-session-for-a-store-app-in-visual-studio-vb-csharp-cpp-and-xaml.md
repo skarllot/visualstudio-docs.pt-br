@@ -149,7 +149,7 @@ manager: "ghogen"
   
     -   Para aplicativos em C\+\+, escolha a seta para baixo da caixa **Nome do Computador** e escolha **\<Localizar...\>**.  
   
-     ![Marque a caixa de diálogo conexão de depurador remoto](~/docs/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
+     ![Marque a caixa de diálogo conexão de depurador remoto](~/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
   
     > [!NOTE]
     >  A caixa de diálogo **Selecionar Conexão de Depurador Remoto** exibe os computadores que estão na sub\-rede local e os computadores que estão diretamente conectados ao computador com o Visual Studio por um cabo Ethernet. Para especificar outro computador, digite o nome na caixa **Nome do Computador**.  

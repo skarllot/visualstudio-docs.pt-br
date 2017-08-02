@@ -66,7 +66,7 @@ Para atualizar as referências de NuGet para Microsoft.VSSDK.BuildTools:
 * Selecione Microsoft.VSSDK.BuildTools (versão mais recente).
 * Pressione **atualização**.
 
-![Ferramentas de compilação VSSDK](~/docs/extensibility/media/vssdk-build-tools.png)
+![Ferramentas de compilação VSSDK](~/extensibility/media/vssdk-build-tools.png)
 
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>Faça as alterações para o manifesto de extensão do VSIX
 
@@ -103,18 +103,18 @@ Em vez de editar diretamente o XML do manifesto, você pode usar o novo **pré-r
 * Abra o arquivo source.extension.vsixmanifest [Design].
 * Selecione **pré-requisitos** guia e pressione **novo** botão.
 
-  ![Designer de manifesto VSIX](~/docs/extensibility/media/vsix-manifest-designer.png)
+  ![Designer de manifesto VSIX](~/extensibility/media/vsix-manifest-designer.png)
 
 * O **adicionar novo pré-requisito** janela será aberta.
 
-  ![Adicionar vsix pré-requisito](~/docs/extensibility/media/add-vsix-prerequisite.png)
+  ![Adicionar vsix pré-requisito](~/extensibility/media/add-vsix-prerequisite.png)
 
 * Clique no menu suspenso para **nome** e selecione o pré-requisito desejado.
 * Atualize a versão, se necessário.
 
   >Observação: O campo de versão será preenchido com a versão do componente instalado no momento, com um intervalo até a abrangência de chave (mas não incluindo) a próxima versão principal do componente.
 
-  ![Adicionar o pré-requisito de roslyn](~/docs/extensibility/media/add-roslyn-prerequisite.png)
+  ![Adicionar o pré-requisito de roslyn](~/extensibility/media/add-roslyn-prerequisite.png)
 
 * Press **OK**.
 
@@ -133,7 +133,7 @@ Ele pode parecer com:
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe
 ```
 
-![Iniciar programa externo](~/docs/extensibility/media/start-external-program.png)
+![Iniciar programa externo](~/extensibility/media/start-external-program.png)
 
 >**Observação:** depurar iniciar ação normalmente é armazenada na. csproj.user arquivo. Esse arquivo geralmente está incluído no arquivo. gitignore e, portanto, não é normalmente salvo com outros arquivos de projeto quando o compromisso de controle de origem. Assim, se você tiver extraídos sua solução atualizada do controle de origem é provavelmente que o projeto não terá nenhum valor definido para iniciar ação. Novos projetos do VSIX criados com o Visual Studio 2017 terá um. csproj.user arquivo criado com padrões apontando para o diretório de instalação atual do Visual Studio. No entanto se você estiver migrando uma extensão do VSIX v2, é provável que o. csproj.user arquivo irá conter referências para o diretório de instalação da versão do Visual Studio anterior. Definir o valor de **depurar** > **iniciar ação** permitirá que a instância experimental do Visual Studio correta iniciar quando você tenta depurar sua extensão.
 
@@ -158,7 +158,7 @@ Ao tente instalar a extensão:
 
 * No Visual Studio 2017
 
-![Instalador VSIX no Visual Studio 2017](~/docs/extensibility/media/vsixinstaller-vs-2017.png)
+![Instalador VSIX no Visual Studio 2017](~/extensibility/media/vsixinstaller-vs-2017.png)
 
 * Opcional: Verifique nas versões anteriores do Visual Studio.
   * Prova de compatibilidade com versões anteriores.
@@ -169,7 +169,7 @@ Ao tente instalar a extensão:
 
 Se o Visual Studio foi aberto recentemente, você poderá ver uma caixa de diálogo como esta:
 
-![VS processos em execução](~/docs/extensibility/media/vs-running-processes.png)
+![VS processos em execução](~/extensibility/media/vs-running-processes.png)
 
 Aguarde os processos desligar ou encerrar as tarefas manualmente. Você pode encontrar os processos pelo nome listado ou com o PID listado entre parênteses.
 
@@ -181,7 +181,7 @@ Aguarde os processos desligar ou encerrar as tarefas manualmente. Você pode enc
 * Verifique se a instalação identifica o componente ausente/s e lista como um pré-requisito no VSIXInstaller.
 * Observação: Elevação será obrigatória se todos os pré-requisitos precisam ser instalados com a extensão.
 
-![pré-requisito ausente vsixinstaller](~/docs/extensibility/media/vsixinstaller-missing-prerequisite.png)
+![pré-requisito ausente vsixinstaller](~/extensibility/media/vsixinstaller-missing-prerequisite.png)
 
 ## <a name="deciding-on-components"></a>Decidindo sobre componentes
 

@@ -75,7 +75,7 @@ Crie um mapa de códigos para acompanhar visualmente a pilha de chamadas durante
   
 2.  Depois que seu aplicativo entra em modo de interrupção ou entrar em uma função, escolha **mapa de código**. (Keyboard: **Ctrl** + **Shift** + **`**)  
   
-     ![Escolha o mapa de código para iniciar a pilha de chamadas de mapeamento](~/docs/debugger/media/debuggermap_choosecodemap.png "DebuggerMap_ChooseCodeMap")  
+     ![Escolha o mapa de código para iniciar a pilha de chamadas de mapeamento](~/debugger/media/debuggermap_choosecodemap.png "DebuggerMap_ChooseCodeMap")  
   
      A pilha de chamadas atual aparece em laranja em um novo mapeamento de código:  
   

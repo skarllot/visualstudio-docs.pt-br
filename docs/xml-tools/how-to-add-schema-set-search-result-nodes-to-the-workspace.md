@@ -32,7 +32,7 @@ Este tópico explica como adicionar os nós que são realçadas em XML Schema Ex
   
 2.  O tipo “purchaseOrder” na caixa de texto de pesquisa de barra de ferramentas de [XML Explorer](../xml-tools/xml-schema-explorer.md) e clique no botão de pesquisa.  
   
-     ![XML Schema Explorer Keyword Search](~/docs/xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
+     ![XML Schema Explorer Keyword Search](~/xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
   
      Os resultados de pesquisa são realçadas em XML Schema Explorer e marcados por escalas na barra de rolagem vertical.  
   

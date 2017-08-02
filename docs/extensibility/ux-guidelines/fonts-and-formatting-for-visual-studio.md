@@ -300,11 +300,11 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ### <a name="testing-the-environment-font"></a>A fonte do ambiente de teste  
  Para garantir que a interface do usuário está usando a fonte de ambiente e respeita as configurações de tamanho, abra **Ferramentas > Opções > ambiente > fontes e cores** e selecione "Fonte de ambiente" sob a "Mostrar configurações de:" menu suspenso.  
   
- ![Configurações de fontes e cores nas ferramentas de &gt; caixa de diálogo Opções](~/docs/extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />Configurações de fontes e cores nas ferramentas de &gt; caixa de diálogo Opções
+ ![Configurações de fontes e cores nas ferramentas de &gt; caixa de diálogo Opções](~/extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />Configurações de fontes e cores nas ferramentas de &gt; caixa de diálogo Opções
   
  Defina a fonte para algo muito diferente do padrão. Para deixar claro que não atualizar a interface do usuário, escolha uma fonte com serifas (como "Times New Roman") e definir um tamanho muito grande. A interface do usuário para garantir que ele respeita o ambiente de teste. Aqui está um exemplo usando a caixa de diálogo de licença:  
   
- ![Exemplo de texto de interface do usuário que não respeita a fonte de ambiente](~/docs/extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />Exemplo de texto de interface do usuário que não respeita a fonte de ambiente
+ ![Exemplo de texto de interface do usuário que não respeita a fonte de ambiente](~/extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />Exemplo de texto de interface do usuário que não respeita a fonte de ambiente
   
  Nesse caso, "Informações de usuário" e "Informações de produto" são não respeitar a fonte. Em alguns casos, isso pode ser uma opção de design explícito, mas pode ser um erro se a fonte explícita não for especificada como parte das especificações redline.  
   
@@ -443,7 +443,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 |||  
 |-|-|  
-|**Uso:**<br /><br /> -Títulos seção documento bem da interface do usuário<br />-Relatórios<br /><br /> **Tarefas pendentes:** sentença caso de uso<br /><br /> **Não:**<br /><br /> -Em negrito, itálico ou negrito, itálico<br />-Use para corpo de texto<br />-Usar em controles padrão do Visual Studio<br />-Usar em janelas de ferramentas|**Aparece como:** 14 pt Segoe UI<br /><br /> **Exemplo de Visual:**<br /><br /> ![Exemplo de título de fonte de ambiente 155%](~/docs/extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|  
+|**Uso:**<br /><br /> -Títulos seção documento bem da interface do usuário<br />-Relatórios<br /><br /> **Tarefas pendentes:** sentença caso de uso<br /><br /> **Não:**<br /><br /> -Em negrito, itálico ou negrito, itálico<br />-Use para corpo de texto<br />-Usar em controles padrão do Visual Studio<br />-Usar em janelas de ferramentas|**Aparece como:** 14 pt Segoe UI<br /><br /> **Exemplo de Visual:**<br /><br /> ![Exemplo de título de fonte de ambiente 155%](~/extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|  
   
 #### <a name="133-environment-font"></a>Fonte de ambiente % 133  
   

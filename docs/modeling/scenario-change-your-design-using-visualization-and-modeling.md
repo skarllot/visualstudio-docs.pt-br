@@ -178,13 +178,13 @@ Itens em diagramas de dependência estão localizados no projeto de modelagem, m
   
  Por exemplo, o desenvolvedor cria um mapa de código. Ela ajusta seu escopo para se concentrar nas áreas que serão afetadas pelo novo cenário. Essas áreas são selecionadas e realçadas no mapa:  
   
- ![Gráfico de dependência de Namespace](~/docs/modeling/media/namespace_reviewsystem.png "Namespace_ReviewSystem")  
+ ![Gráfico de dependência de Namespace](~/modeling/media/namespace_reviewsystem.png "Namespace_ReviewSystem")  
   
  **Mapa de código de Namespace**  
   
  O desenvolvedor expande os namespaces selecionados para ver suas classes, métodos e relações:  
   
- ![Gráfico de dependência de namespace expandido](~/docs/modeling/media/dep_reviewsystem.png "Dep_ReviewSystem")  
+ ![Gráfico de dependência de namespace expandido](~/modeling/media/dep_reviewsystem.png "Dep_ReviewSystem")  
   
  **Mapa de código de namespace expandido com links de grupo cruzado visíveis**  
   
@@ -205,7 +205,7 @@ Itens em diagramas de dependência estão localizados no projeto de modelagem, m
   
  Por exemplo, o diagrama de dependência a seguir descreve as dependências entre camadas e o número de artefatos que estão associados com cada camada:  
   
- ![Diagrama de dependência do sistema de pagamento integrado](~/docs/modeling/media/layer_integrated_dnlucerne.png "Layer_Integrated_DNLucerne")  
+ ![Diagrama de dependência do sistema de pagamento integrado](~/modeling/media/layer_integrated_dnlucerne.png "Layer_Integrated_DNLucerne")  
   
  **Diagrama de dependência**  
   
@@ -301,19 +301,19 @@ Itens em diagramas de dependência estão localizados no projeto de modelagem, m
   
  O mapa a seguir mostra as dependências entre a classe PaymentProcessing e outras partes do sistema jantar agora, que aparecem selecionadas:  
   
- ![Gráfico de dependência para jantar agora o sistema de pagamento](~/docs/modeling/media/dep_dnpayment.png "Dep_DNPayment")  
+ ![Gráfico de dependência para jantar agora o sistema de pagamento](~/modeling/media/dep_dnpayment.png "Dep_DNPayment")  
   
  **Mapa de códigos para jantar agora o sistema de pagamento**  
   
  O desenvolvedor explora o mapa expandindo a classe PaymentProcessing e selecionando seus membros para ver as áreas que são potencialmente afetadas:  
   
- ![Métodos dentro de PaymentProcessing e dependências](~/docs/modeling/media/depgraph_expandeddn.png "DepGraph_ExpandedDN")  
+ ![Métodos dentro de PaymentProcessing e dependências](~/modeling/media/depgraph_expandeddn.png "DepGraph_ExpandedDN")  
   
  **Métodos na classe PaymentProcessing e suas dependências**  
   
  Elas geram o mapa a seguir para o sistema de pagamento Zulu inspecionar suas classes, métodos e dependências. A equipe vê que o sistema Zulu também pode exigir trabalho interagir com outras partes do jantar agora:  
   
- ![Gráfico de dependência para o sistema de pagamento Zulu](~/docs/modeling/media/depgraph_lucernepay.png "DepGraph_LucernePay")  
+ ![Gráfico de dependência para o sistema de pagamento Zulu](~/modeling/media/depgraph_lucernepay.png "DepGraph_LucernePay")  
   
  **Mapa de códigos para o sistema de pagamento Zulu**  
   
@@ -321,7 +321,7 @@ Itens em diagramas de dependência estão localizados no projeto de modelagem, m
   
  Após a reorganização de código, as equipes de geram um novo mapa de código para ver a estrutura atualizada e relações:  
   
- ![Gráfico de dependência com código reorganizado](~/docs/modeling/media/depgraph_integrated.png "DepGraph_Integrated")  
+ ![Gráfico de dependência com código reorganizado](~/modeling/media/depgraph_integrated.png "DepGraph_Integrated")  
   
  **Mapa de código com código reorganizado**  
   
@@ -362,7 +362,7 @@ Itens em diagramas de dependência estão localizados no projeto de modelagem, m
   
  Para ajudar a Zulu descrever e discutir as entidades que participam do caso de uso do processo de pagamento, eles desenhar o diagrama de classe a seguir:  
   
- ![Processar pagamento entidades no diagrama de classe](~/docs/modeling/media/uml_payentities.png "UML_PayEntities")  
+ ![Processar pagamento entidades no diagrama de classe](~/modeling/media/uml_payentities.png "UML_PayEntities")  
   
  **Processar pagamento entidades em um diagrama de classe**  
   
@@ -370,7 +370,7 @@ Itens em diagramas de dependência estão localizados no projeto de modelagem, m
   
  Durante o desenvolvimento, o Zulu usa o diagrama de classe a seguir para descrever e discutir os detalhes de cada classe:  
   
- ![Processar os detalhes de entidade de pagamento em um diagrama de classe](~/docs/modeling/media/uml_payment.png "UML_Payment")  
+ ![Processar os detalhes de entidade de pagamento em um diagrama de classe](~/modeling/media/uml_payment.png "UML_Payment")  
   
  **Detalhes de pagamento do processo no diagrama de classe**  
     
@@ -430,7 +430,7 @@ Itens em diagramas de dependência estão localizados no projeto de modelagem, m
   
  Para manter o código consistente com o design, jantar agora e Zulu usam o seguinte diagrama de dependência para validar o código conforme ele evolui:  
   
- ![Diagrama de dependência do sistema de pagamento integrado](~/docs/modeling/media/layer_integrated_dnlucerne.png "Layer_Integrated_DNLucerne")  
+ ![Diagrama de dependência do sistema de pagamento integrado](~/modeling/media/layer_integrated_dnlucerne.png "Layer_Integrated_DNLucerne")  
   
  **Diagrama de dependência para jantar agora integrado ao Zulu**  
   
@@ -440,13 +440,13 @@ Itens em diagramas de dependência estão localizados no projeto de modelagem, m
   
  O mapa de código a seguir mostra as novas chamadas entre o jantar agora e PaymentApprover:  
   
- ![Gráfico de dependência atualizado com o sistema integrado](~/docs/modeling/media/depgraph_intsystem.png "DepGraph_IntSystem")  
+ ![Gráfico de dependência atualizado com o sistema integrado](~/modeling/media/depgraph_intsystem.png "DepGraph_IntSystem")  
   
  **Mapa de código com chamadas de método atualizado**  
   
  Depois que confirmarem que o sistema funciona conforme o esperado, comentários jantar agora o código PaymentProcessing. Os relatórios de validação de camada são limpos e o mapa de código resultante mostra que não há mais dependências PaymentProcessing existem:  
   
- ![Gráfico de dependência sem PaymentProcessing](~/docs/modeling/media/depgraph_nomore.png "DepGraph_NoMore")  
+ ![Gráfico de dependência sem PaymentProcessing](~/modeling/media/depgraph_nomore.png "DepGraph_NoMore")  
   
  **Mapa de código sem PaymentProcessing**  
   

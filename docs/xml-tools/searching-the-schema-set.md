@@ -28,7 +28,7 @@ XML Schema Explorer permite que você procurar o esquema define as seguintes man
 ## Palavra\-chave pesquisa  
  Você executar pesquisas de palavras\-chave inserindo uma subcadeia de caracteres na caixa de texto **Pesquisa SchemaSet** da barra de ferramentas XML Schema Explorer.  
   
- ![XML Schema Explorer Keyword Search](~/docs/xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
+ ![XML Schema Explorer Keyword Search](~/xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
   
  XML Schema Explorer procura o esquema definido pelo seguinte:  
   

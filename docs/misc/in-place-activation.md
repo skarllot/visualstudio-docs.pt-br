@@ -32,7 +32,7 @@ Se o modo de exibição do editor hospeda ActiveX ou outros controles ativos, vo
 ## Objetos e Interfaces usadas  
  Os objetos que são usados para criar a ativação no local são mostrados na ilustração a seguir.  
   
- ![Editor de ativação in&#45;loco](~/docs/extensibility/media/vsinplaceactivationeditor.gif "vsInPlaceActivationEditor")  
+ ![Editor de ativação in&#45;loco](~/extensibility/media/vsinplaceactivationeditor.gif "vsInPlaceActivationEditor")  
 Editor de ativação no local  
   
 > [!NOTE]

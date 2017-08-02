@@ -51,7 +51,7 @@ Você pode fornecer mais de uma exibição de um documento, criando dados de doc
 ## <a name="determining-whether-document-data-is-already-open"></a>Determinar se os dados dos documentos ainda estiver aberto  
  A tabela de documento (RDT) em execução no ambiente de desenvolvimento integrado (IDE) ajuda a controlar se os dados para um documento já estão abertos, conforme mostrado no diagrama a seguir.  
   
- ![Gráfico de DocDataView](~/docs/extensibility/media/docdataview.gif "Docdataview")  
+ ![Gráfico de DocDataView](~/extensibility/media/docdataview.gif "Docdataview")  
 Várias exibições  
   
  Por padrão, cada modo de exibição (objeto de exibição de documento) é contido em seu próprio quadro de janela (<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>).</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> Como já mencionado, no entanto, os dados de documentos podem ser exibidos em vários modos de exibição. Para habilitar isso, o Visual Studio verifica o RDT para determinar se o documento em questão já está aberto em um editor. Quando o IDE chama <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>para criar o editor, um valor não nulo retornado no `punkDocDataExisting` parâmetro indica que o documento já está aberto em outro editor.</xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> Para obter mais informações sobre como as funções RDT, consulte [executando tabela Document](../extensibility/internals/running-document-table.md).  

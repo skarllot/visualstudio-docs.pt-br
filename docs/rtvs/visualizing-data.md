@@ -41,7 +41,7 @@ ms.lasthandoff: 05/12/2017
 
 Criar gráficos é uma parte fundamental do fluxo de trabalho de um cientista de dados. Nas RTVS (Ferramentas do R para Visual Studio), todas as atividades de criação de gráficos giram em torno de uma ou mais janelas de gráficos, que são projetadas para melhorar a produtividade nesta importante atividade.
 
-![Imagem hero de criação de gráficos](~/docs/rtvs/media/plotting-hero-image.png)
+![Imagem hero de criação de gráficos](~/rtvs/media/plotting-hero-image.png)
 
 Neste tópico:
 
@@ -58,7 +58,7 @@ O vídeo a seguir (2min02s) fornece uma breve visão geral de criação de gráf
 
 Uma janela de gráficos contém uma série de gráficos, em que cada gráfico é gerado por um comando `plot`. Por exemplo, usar `plot(1:100)` cria uma nova janela de gráficos se já não houver alguma disponível:
 
-![Gráfico linear de 1 a 100](~/docs/rtvs/media/plotting-1-to-100.png)
+![Gráfico linear de 1 a 100](~/rtvs/media/plotting-1-to-100.png)
 
 Tecnicamente falando, os comandos R `plot` renderizam a saída para um dispositivo de gráficos do R. Uma janela de gráficos renderiza o conteúdo de um dispositivo de gráficos do R, por isso, cada janela de gráficos recebe um número de dispositivo.
 
@@ -76,16 +76,16 @@ A barra de ferramentas da janela de gráficos contém comandos aplicáveis e a m
 
 | Botão | Comando | Descrição | 
 | --- | --- | --- |
-| ![Botão Nova janela de gráficos](~/docs/rtvs/media/plotting-toolbar-01-new-plot-window.png) | Nova janela de gráficos | Cria uma janela de gráficos separada com seu próprio histórico. Consulte [Várias janelas de gráficos](#multiple-plot-windows). |
-| ![Botão Ativar janela de gráficos](~/docs/rtvs/media/plotting-toolbar-02-activate-plot-window.png) | Ativar a janela de gráficos | Define a janela de gráficos atual como a janela ativa, de modo que os próximos comandos `plot` sejam renderizados para essa janela. Consulte [Várias janelas de gráficos](#multiple-plot-windows). Consulte [Várias janelas de gráficos](#multiple-plot-windows). |
-| ![Botão Janela de histórico de gráficos](~/docs/rtvs/media/plotting-toolbar-03-plot-history.png) | Janela de histórico de gráficos | Abre uma janela com todos os gráficos no histórico mostrados como miniaturas. Consulte [Histórico de gráficos](#plot-history). |
-| ![Botões Histórico de gráficos](~/docs/rtvs/media/plotting-toolbar-04-plot-history-arrows.png) | Gráfico anterior/seguinte |  Navega para gráfico anterior ou seguinte no histórico. Você também pode navegar no histórico com Ctrl + Alt + F11 (anterior) e Ctrl + Alt + F12 (seguinte). Consulte [Histórico de gráficos](#plot-history). |
-| ![Botão Salvar como imagem](~/docs/rtvs/media/plotting-toolbar-05-save-as-image.png)| Salvar como imagem | Solicita um nome de arquivo e salva o gráfico atual (o conteúdo da janela, no tamanho da janela) em um arquivo de imagem. Os formatos disponíveis são `.png`, `.jpg`, `.bmp` e `.tif`. |
-| ![Botão Salvar como PDF](~/docs/rtvs/media/plotting-toolbar-06-save-as-pdf.png)| Salvar como PDF | Salva o gráfico atual em um arquivo PDF, usando o tamanho da janela atual. O gráfico será renderizado novamente se o PDF for dimensionado. |
-| ![Botão Copiar como bitmap](~/docs/rtvs/media/plotting-toolbar-07-copy-as-bitmap.png)| Copiar como bitmap | Copia o gráfico na área de transferência como um bitmap de varredura, usando o tamanho da janela atual. | 
-| ![Botão Copiar como metarquivo](~/docs/rtvs/media/plotting-toolbar-08-copy-as-metafile.png)| Copiar como metarquivo | Copia o gráfico na área de transferência como um [metarquivo do Windows](https://en.wikipedia.org/wiki/Windows_Metafile) (Wikipédia). | 
-| ![Botão Remover gráfico](~/docs/rtvs/media/plotting-toolbar-09-remove-plot.png)| Remover gráfico | Remove o gráfico atual do histórico. |
-| ![Botão Limpar todos os gráficos](~/docs/rtvs/media/plotting-toolbar-10-clear-all-plots.png) | Limpar todos os gráficos | Remove todos os gráficos do histórico (solicita confirmação). |
+| ![Botão Nova janela de gráficos](~/rtvs/media/plotting-toolbar-01-new-plot-window.png) | Nova janela de gráficos | Cria uma janela de gráficos separada com seu próprio histórico. Consulte [Várias janelas de gráficos](#multiple-plot-windows). |
+| ![Botão Ativar janela de gráficos](~/rtvs/media/plotting-toolbar-02-activate-plot-window.png) | Ativar a janela de gráficos | Define a janela de gráficos atual como a janela ativa, de modo que os próximos comandos `plot` sejam renderizados para essa janela. Consulte [Várias janelas de gráficos](#multiple-plot-windows). Consulte [Várias janelas de gráficos](#multiple-plot-windows). |
+| ![Botão Janela de histórico de gráficos](~/rtvs/media/plotting-toolbar-03-plot-history.png) | Janela de histórico de gráficos | Abre uma janela com todos os gráficos no histórico mostrados como miniaturas. Consulte [Histórico de gráficos](#plot-history). |
+| ![Botões Histórico de gráficos](~/rtvs/media/plotting-toolbar-04-plot-history-arrows.png) | Gráfico anterior/seguinte |  Navega para gráfico anterior ou seguinte no histórico. Você também pode navegar no histórico com Ctrl + Alt + F11 (anterior) e Ctrl + Alt + F12 (seguinte). Consulte [Histórico de gráficos](#plot-history). |
+| ![Botão Salvar como imagem](~/rtvs/media/plotting-toolbar-05-save-as-image.png)| Salvar como imagem | Solicita um nome de arquivo e salva o gráfico atual (o conteúdo da janela, no tamanho da janela) em um arquivo de imagem. Os formatos disponíveis são `.png`, `.jpg`, `.bmp` e `.tif`. |
+| ![Botão Salvar como PDF](~/rtvs/media/plotting-toolbar-06-save-as-pdf.png)| Salvar como PDF | Salva o gráfico atual em um arquivo PDF, usando o tamanho da janela atual. O gráfico será renderizado novamente se o PDF for dimensionado. |
+| ![Botão Copiar como bitmap](~/rtvs/media/plotting-toolbar-07-copy-as-bitmap.png)| Copiar como bitmap | Copia o gráfico na área de transferência como um bitmap de varredura, usando o tamanho da janela atual. | 
+| ![Botão Copiar como metarquivo](~/rtvs/media/plotting-toolbar-08-copy-as-metafile.png)| Copiar como metarquivo | Copia o gráfico na área de transferência como um [metarquivo do Windows](https://en.wikipedia.org/wiki/Windows_Metafile) (Wikipédia). | 
+| ![Botão Remover gráfico](~/rtvs/media/plotting-toolbar-09-remove-plot.png)| Remover gráfico | Remove o gráfico atual do histórico. |
+| ![Botão Limpar todos os gráficos](~/rtvs/media/plotting-toolbar-10-clear-all-plots.png) | Limpar todos os gráficos | Remove todos os gráficos do histórico (solicita confirmação). |
 
 ## <a name="multiple-plot-windows"></a>Várias janelas de gráficos
 
@@ -104,7 +104,7 @@ Os comandos de gráficos são mantidos em um histórico de gráficos de cada jan
 Para ver a coleção inteira de gráficos, abra a janela de histórico de gráficos usando o botão de barra de ferramentas ou **Ferramentas do R > Gráficos > Janela de histórico de gráficos**.
 Isso fornece uma lista de miniaturas dos gráficos que foram exibidos nessa janela, agrupadas por diferentes janelas de gráficos (ou dispositivos). Usar os botões de zoom na barra de ferramentas altera o tamanho das miniaturas.
 
-![Janela de histórico de gráficos](~/docs/rtvs/media/plotting-plot-history-window.png)
+![Janela de histórico de gráficos](~/rtvs/media/plotting-plot-history-window.png)
 
 Para abrir um gráfico em sua janela associada, selecione-o clicando duas vezes e, em seguida, selecione o botão de barra de ferramentas **Mostrar gráfico** ou clique como botão direito do mouse e selecione **Mostrar Gráfico**. Você também pode selecionar um gráfico individual e copiar, recortar ou excluir usando o menu de contexto acionado com um clique do botão direito do mouse ou o menu **Editar**.
 

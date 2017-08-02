@@ -47,7 +47,7 @@ A Hierarquia de Chamada permite navegar pelo seu código exibindo todas as chama
   
  O nome do membro é exibido em um painel de modo de exibição de árvore na janela **Hierarquia de Chamada**. Se você expandir o nó membro, os subnós **Chamadas para***nome do membro* e **Chamadas de***nome do membro* serão exibidos. A ilustração a seguir mostra esses nós na janela **Hierarquia de Chamada**.  
   
- ![Hierarquia de Chamada com um nó aberto](~/docs/ide/reference/media/onenode.png "OneNode")  
+ ![Hierarquia de Chamada com um nó aberto](~/ide/reference/media/onenode.png "OneNode")  
 Janela de Hierarquia de Chamada  
   
 -   Se você expandir o nó **Chamadas para**, todos os membros que chamam o membro selecionado serão exibidos.  
@@ -56,7 +56,7 @@ Janela de Hierarquia de Chamada
   
  Você pode, então, expandir cada um dos membros desses subnós em nós **Chamadas para** e **Chamadas de**. Isso permite navegar pela pilha de chamadores, conforme mostrado na ilustração a seguir.  
   
- ![Hierarquia de Chamada com vários nós abertos](~/docs/ide/media/multiplenodes.png "MultipleNodes")  
+ ![Hierarquia de Chamada com vários nós abertos](~/ide/media/multiplenodes.png "MultipleNodes")  
 Janela de Hierarquia de Chamada  
   
  Para membros definidos como virtuais ou abstratos, um nó **Substitui o nome do método** é exibido. Para membros de interface, um nó **Implementa o nome do método** é exibido. Esses nós expansíveis aparecem no mesmo nível que os nós **Chamadas para** e **Chamadas de**.  

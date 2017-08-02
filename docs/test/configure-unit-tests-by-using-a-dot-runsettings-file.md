@@ -58,7 +58,7 @@ Os testes de unidade no Visual Studio podem ser configurados com um arquivo *.ru
   
  É possível criar mais de um arquivo \*.runsettings em sua solução e habilitá-los ou desabilitá-los em momentos diferentes com o menu **Configurações de Teste**.  
   
- ![Habilitando um arquivo de configurações de execução](~/docs/test/media/runsettings-1.png "RunSettings-1")  
+ ![Habilitando um arquivo de configurações de execução](~/test/media/runsettings-1.png "RunSettings-1")  
   
 ##  <a name="example"></a> Copiar este exemplo de arquivo .runsettings  
  Veja um arquivo *.runsettings típico. Cada elemento do arquivo é opcional, porque cada valor possui um padrão.  

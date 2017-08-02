@@ -37,7 +37,7 @@ Este passo a passo demonstra como criar um simples [!INCLUDE[vsindigo](../data-t
     > [!NOTE]
     >  Isso cria um serviço de trabalho que pode ser testado e acessado. As duas etapas a seguir demonstram como você pode modificar o método padrão para usar um tipo de dados diferente. Em um aplicativo real, você também poderia adicionar suas próprias funções para o serviço.  
   
-3.  ![The IService1 file](~/docs/data-tools/media/wcf2.png "wcf2")  
+3.  ![The IService1 file](~/data-tools/media/wcf2.png "wcf2")  
   
      Em **Solution Explorer**, clique duas vezes em Iservice1 ou IService1. cs e localize a seguinte linha:  
   
@@ -120,7 +120,7 @@ Este passo a passo demonstra como criar um simples [!INCLUDE[vsindigo](../data-t
   
 5.  Pressione **F5** para executar o projeto. Digite algum texto e clique no botão. Exibirá o rótulo "você digitou:" e o texto que você inseriu.  
   
-     ![The form showing the result](~/docs/data-tools/media/wcf10.png "wcf10")  
+     ![The form showing the result](~/data-tools/media/wcf10.png "wcf10")  
   
 ## Consulte também  
  [Serviços do Windows Communication Foundation e WCF Data Services no Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

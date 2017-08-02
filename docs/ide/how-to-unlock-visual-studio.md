@@ -50,7 +50,7 @@ ed## Para desbloquear o Visual Studio usando uma assinatura online
 ### <a name="update-stale-licenses"></a>Atualizar licenças obsoletas  
  Você poderá ver a mensagem abaixo informando que sua licença está obsoleta no Visual Studio, indicando "Sua licença ficou obsoleta e deve ser atualizada".
   
- ![Mensagem de licença obsoleta do Visual Studio](~/docs/ide/media/vs2017_stale-license.png)  
+ ![Mensagem de licença obsoleta do Visual Studio](~/ide/media/vs2017_stale-license.png)  
   
  Essa mensagem indica que embora sua assinatura ainda possa ser válida, o token de licença que o Visual Studio usa para manter sua assinatura atualizada ainda não foi atualizado e se tornou obsoleto devido a um dos motivos a seguir:  
   

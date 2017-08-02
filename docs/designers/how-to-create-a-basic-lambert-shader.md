@@ -66,13 +66,13 @@ Este documento demonstra como usar o Designer de Sombreador e o DGSL (Directed G
 > [!NOTE]
 >  Para demonstrar melhor o efeito do sombreador nesta ilustração, foi especificada uma cor laranja usando o parâmetro **MaterialDiffuse** do sombreador. Um jogo ou um aplicativo pode usar esse parâmetro para fornecer um valor de cor exclusivo para cada objeto. Para obter informações sobre parâmetros de material, consulte a seção Visualização de Sombreadores em [Designer de Sombreador](../designers/shader-designer.md).  
   
- ![O gráfico de sombreador e uma visualização do seu efeito.](~/docs/designers/media/digit-lambert-effect-graph.png "Digit-Lambert-Effect-Graph")  
+ ![O gráfico de sombreador e uma visualização do seu efeito.](~/designers/media/digit-lambert-effect-graph.png "Digit-Lambert-Effect-Graph")  
   
  Determinadas formas podem fornecer melhores visualizações para alguns sombreadores. Para obter mais informações sobre como visualizar sombreadores no Designer de Sombreador, consulte a seção Visualização de Sombreadores em [Designer de Sombreador](../designers/shader-designer.md).  
   
  A ilustração a seguir mostra o sombreador que é descrito neste documento, aplicado a um modelo 3D.  
   
- ![Iluminação Lambert aplicada a um modelo.](~/docs/designers/media/digit-lambert-effect-result.png "Digit-Lambert-Effect-Result")  
+ ![Iluminação Lambert aplicada a um modelo.](~/designers/media/digit-lambert-effect-result.png "Digit-Lambert-Effect-Result")  
   
  Para obter mais informações sobre como aplicar um sombreador a um modelo 3D, consulte [Como aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md).  
   

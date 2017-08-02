@@ -80,11 +80,11 @@ Quando você cria um projeto de teste no Microsoft Visual Studio, a versão mais
   
 5.  Na guia **Compilar** escolha **Opções de Compilação Avançadas** conforme mostrado na ilustração a seguir.  
   
-     ![Opções de compilação Avançadas](~/docs/test/media/howtoconfigureunittest35frameworka.png "HowToConfigureUnitTest35FrameworkA")  
+     ![Opções de compilação Avançadas](~/test/media/howtoconfigureunittest35frameworka.png "HowToConfigureUnitTest35FrameworkA")  
   
 6.  Use a lista suspensa **Estrutura de destino (todas as configurações)** para alterar a estrutura de destino para **.NET Framework 3.5** ou uma versão posterior, conforme mostrado no texto explicativo B na ilustração a seguir. Não especifique uma versão de cliente.  
   
-     ![Lista de lista suspensa de estrutura de destino](~/docs/test/media/howtoconfigureunitest35frameworkstepb.png "HowToConfigureUniTest35FrameworkStepB")  
+     ![Lista de lista suspensa de estrutura de destino](~/test/media/howtoconfigureunitest35frameworkstepb.png "HowToConfigureUniTest35FrameworkStepB")  
   
 ### <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-visual-c-unit-test-projects"></a>Redirecionar para uma versão específica do .NET Framework para projetos de teste de unidade do Visual C#  
   
@@ -102,7 +102,7 @@ Quando você cria um projeto de teste no Microsoft Visual Studio, a versão mais
   
 5.  Na guia **Aplicativo** escolha **Estrutura de destino** e, em seguida, escolha **.NET Framework 3.5** ou uma versão posterior na lista suspensa para alterar a estrutura de destino conforme mostrado na ilustração a seguir. Não especifique uma versão de cliente.  
   
-     ![Lista de lista suspensa de estrutura de destino](~/docs/test/media/howtoconfigureunittest35frameworkcsharp.png "HowToConfigureUnitTest35FrameworkCSharp")  
+     ![Lista de lista suspensa de estrutura de destino](~/test/media/howtoconfigureunittest35frameworkcsharp.png "HowToConfigureUnitTest35FrameworkCSharp")  
   
 ### <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-ccli-unit-test-projects"></a>Redirecionar para uma versão específica do .NET Framework para projetos de teste de unidade do C++/CLI  
   

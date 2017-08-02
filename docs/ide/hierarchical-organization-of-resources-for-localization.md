@@ -57,11 +57,11 @@ No Visual Studio, os recursos localizados (dados como cadeias de caracteres e im
   
  A melhor maneira de armazenar seus recursos é generalizá-los o máximo possível. Isso significa armazenar cadeias de caracteres localizadas, imagens e assim por diante nos arquivos de recursos para culturas neutras em vez de culturas específicas sempre que possível. Por exemplo, se você tiver recursos para a cultura francês belga ("fr-BE") e os recursos imediatamente acima forem os recursos de fallback em inglês, poderá ocorrer um problema quando alguém usar o aplicativo em um sistema configurado para a cultura do francês canadense. O sistema procurará por um assembly satélite para “fr-CA”, não o encontrará e carregará o assembly principal que contém o recurso de fallback, que está em inglês, em vez de carregar os recursos em francês. A figura a seguir mostra este cenário indesejável.  
   
- ![Apenas recursos específicos](~/docs/ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
+ ![Apenas recursos específicos](~/ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
   
  Se você seguir a prática recomendada de colocar o máximo de recursos possível em um arquivo de recurso neutro para a cultura “fr”, o usuário do francês canadense não verá os recursos marcados para a cultura “fr-BE”, mas verá cadeias de caracteres em francês. A situação a seguir mostra esse cenário preferencial.  
   
- ![Gráfico NeutralSpecificResources](~/docs/ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
+ ![Gráfico NeutralSpecificResources](~/ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
   
 ## <a name="see-also"></a>Consulte também  
  [Neutral Resources Languages for Localization](../ide/neutral-resources-languages-for-localization.md)  (Idiomas de recursos neutros para localização)  

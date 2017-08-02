@@ -27,7 +27,7 @@ Quando você abre pela primeira vez Spy \+ \+, o modo de exibição do Windows e
   
  A figura abaixo mostra um modo de exibição típico do Spy \+ \+ Windows com o nó superior expandido.  
   
- ![Exibição do Windows Spy &#43; &#43;](~/docs/debugger/media/spy--_windowsview.png "Spy\+\+\_WindowsView")  
+ ![Exibição do Windows Spy &#43; &#43;](~/debugger/media/spy--_windowsview.png "Spy\+\+\_WindowsView")  
 Exibição do Windows Spy \+ \+  
   
  A janela da área de trabalho atual está no topo da árvore.  Todas as outras janelas são filhos da área de trabalho e são listadas de acordo com a hierarquia de janela padrão, com o windows irmão, ordenados por ordem Z.  Expandir ou recolher qualquer nó pai da árvore clicando a \+ ou \- símbolo ao lado do nó.  

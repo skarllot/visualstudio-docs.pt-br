@@ -48,7 +48,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
  Conforme mostrado na ilustração a seguir, uma experiência de desenvolvimento típica pode ser uma em que, inicialmente, você só compila o aplicativo (F5) e clica nos controles de interface de usuário para verificar se as coisas estão funcionando corretamente. Em seguida, você pode optar por criar um teste codificado para não precisar mais testar o aplicativo manualmente. Dependendo da funcionalidade específica testada no aplicativo, você pode gravar código para um teste funcional ou para um teste de integração que pode ou não incluir testes no nível da interface do usuário. Se quiser apenas acessar diretamente uma lógica de negócios, você poderá codificar um teste de unidade. Porém, em determinadas circunstâncias, pode ser benéfico incluir testes dos diversos controles de interface de usuário no aplicativo. Um teste de IU codificado pode automatizar o cenário inicial (F5), verificando se a variação de código não afeta a funcionalidade do aplicativo.  
   
- ![Testes durante o desenvolvimento de aplicativos](~/docs/test/media/cuit_overview.png "CUIT_Overview")  
+ ![Testes durante o desenvolvimento de aplicativos](~/test/media/cuit_overview.png "CUIT_Overview")  
   
  É fácil criar um teste de IU codificado. Basta realizar o teste manualmente enquanto o CUIT Test Builder é executado em segundo plano. Também é possível especificar quais valores devem ser exibidos em campos específicos. O CUIT Test Builder registra as ações e gera códigos a partir delas. Depois que o teste for criado, será possível editá-lo em um editor especializado que permite modificar a sequência de ações.  
   
@@ -96,15 +96,15 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
      Se tiver acabado de criar um projeto de IU codificado, o primeiro arquivo CUIT será adicionado automaticamente. Para adicionar outro arquivo de teste, abra o menu de atalho no projeto de teste de IU codificado, aponte para **Adicionar** e, em seguida, escolha **Teste de IU Codificado**.  
   
-     ![Criar um Teste de IU Codificado](~/docs/test/media/codedui_create.png "CodedUI_Create")  
+     ![Criar um Teste de IU Codificado](~/test/media/codedui_create.png "CodedUI_Create")  
   
      Na caixa de diálogo **Gerar Código para Teste de IU Codificado**, escolha **Registrar ações, editar o mapa de interface do usuário ou adicionar asserções**.  
   
-     ![Selecione registrar ações](~/docs/test/media/codedui_codegendialogb.png "CodedUI_CodeGenDialogB")  
+     ![Selecione registrar ações](~/test/media/codedui_codegendialogb.png "CodedUI_CodeGenDialogB")  
   
      O Construtor de Teste de IU Codificado é exibido, e o Visual Studio é minimizado.  
   
-     ![Construtor de Teste de IU Codificado](~/docs/test/media/codedui_testbuilder.png "CodedUI_TestBuilder")  
+     ![Construtor de Teste de IU Codificado](~/test/media/codedui_testbuilder.png "CodedUI_TestBuilder")  
   
 3.  **Registre uma sequência de ações**.  
   
@@ -127,7 +127,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
      Feche a janela de asserção e escolha **Gerar Código**.  
   
-     ![Elemento de destino do teste de IU codificado](~/docs/test/media/codedui_1.png "CodedUI_1")  
+     ![Elemento de destino do teste de IU codificado](~/test/media/codedui_1.png "CodedUI_1")  
   
     > [!TIP]
     >  Alterne entre o registro de ações e a verificação de valores. Gere códigos no final de cada sequência de ações ou verificações. Se quiser, você poderá inserir novas ações e verificações depois.  
@@ -161,7 +161,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
      Abra UIMap.uitest. Esse arquivo é aberto no Editor de testes de interface de usuário codificada, em que é possível editar qualquer sequência de ações registradas, além de editar as asserções.  
   
-     ![Editor de Teste de IU Codificado](~/docs/test/media/cuit_editor_edit.png "CUIT_Editor_edit")  
+     ![Editor de Teste de IU Codificado](~/test/media/cuit_editor_edit.png "CUIT_Editor_edit")  
   
      Para obter mais informações, consulte [Editing Coded UI Tests Using the Coded UI Test Editor](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md) (Editando testes de IU codificada usando o Editor de teste de IU codificado).  
   
@@ -176,26 +176,26 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
 ###  <a name="starting"></a> Iniciando e parando o aplicativo em teste  
  *Não desejo iniciar e parar meu aplicativo, navegador ou banco de dados separadamente para cada teste. Como evito isso?*  
   
--   ![Pré-requisito](~/docs/test/media/prereq.png "Prereq") Se não quiser registrar as ações para iniciar o aplicativo em teste, será necessário iniciá-lo antes de escolher o ícone **Registrar**.  
+-   ![Pré-requisito](~/test/media/prereq.png "Prereq") Se não quiser registrar as ações para iniciar o aplicativo em teste, será necessário iniciá-lo antes de escolher o ícone **Registrar**.  
   
--   ![Pré-requisito](~/docs/test/media/prereq.png "Prereq")No final de um teste, o processo no qual o teste é executado será encerrado. Se tiver iniciado o aplicativo no teste, normalmente, o aplicativo é fechado.  Se não quiser que o teste feche o aplicativo quando terminar, você deverá adicionar um arquivo .runsettings à solução e usar a opção `KeepExecutorAliveAfterLegacyRun`. Para obter mais informações, consulte [Configurar testes de unidade usando um arquivo .runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).  
+-   ![Pré-requisito](~/test/media/prereq.png "Prereq")No final de um teste, o processo no qual o teste é executado será encerrado. Se tiver iniciado o aplicativo no teste, normalmente, o aplicativo é fechado.  Se não quiser que o teste feche o aplicativo quando terminar, você deverá adicionar um arquivo .runsettings à solução e usar a opção `KeepExecutorAliveAfterLegacyRun`. Para obter mais informações, consulte [Configurar testes de unidade usando um arquivo .runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).  
   
--   ![Prerequsite](~/docs/test/media/prereq.png "Prereq") É possível adicionar um método de inicialização do teste, identificado por um atributo [TestInitialize], que executa o código no início de cada método de teste. Por exemplo, você poderia iniciar o aplicativo do método TestInitialize.  
+-   ![Prerequsite](~/test/media/prereq.png "Prereq") É possível adicionar um método de inicialização do teste, identificado por um atributo [TestInitialize], que executa o código no início de cada método de teste. Por exemplo, você poderia iniciar o aplicativo do método TestInitialize.  
   
--   ![Prerequsite](~/docs/test/media/prereq.png "Prereq") É possível adicionar um método de limpeza de teste, identificado por um atributo [TestCleanup], que executa o código no fim de cada método de teste. Por exemplo, o método para fechar o aplicativo poderia ser chamado do método TestCleanup.  
+-   ![Prerequsite](~/test/media/prereq.png "Prereq") É possível adicionar um método de limpeza de teste, identificado por um atributo [TestCleanup], que executa o código no fim de cada método de teste. Por exemplo, o método para fechar o aplicativo poderia ser chamado do método TestCleanup.  
   
 ###  <a name="VerifyingCodeUsingCUITGenerateAssertions"></a> Validando as propriedades de controles de interface do usuário  
  É possível usar o **Construtor de Teste de IU Codificado** para adicionar um controle de interface do usuário ao <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> para o teste ou gerar código para um método de validação que usa uma asserção para um controle de interface do usuário.  
   
  Para gerar asserções para os controles de interface do usuário, escolha a ferramenta **Adicionar Asserções** no Construtor de Teste de IU Codificado e arraste-a até o controle no aplicativo em teste que você deseja verificar se está correto. Quando a caixa contornar o controle, solte o mouse. O código da classe de controle é criado imediatamente no arquivo `UIMap.Designer.cs`.  
   
- ![Elemento de destino do teste de IU codificado](~/docs/test/media/codedui_1.png "CodedUI_1")  
+ ![Elemento de destino do teste de IU codificado](~/test/media/codedui_1.png "CodedUI_1")  
   
  Agora, as propriedades desse controle serão listadas na caixa de diálogo **Adicionar Asserções**.  
   
  Outra maneira de navegar até um determinado controle é escolhendo a seta **(<<)** para expandir a exibição do **Mapa de Controles de interface do usuário**. Para encontrar um controle pai, irmão ou filho, é possível clicar em qualquer lugar no mapa e usar as telas de direção para navegar pela árvore.  
   
- ![Propriedades de teste de IU codificado](~/docs/test/media/codedui_2.png "CodedUI_2")  
+ ![Propriedades de teste de IU codificado](~/test/media/codedui_2.png "CodedUI_2")  
   
 -   *Não vejo nenhuma propriedade quando seleciono um controle no aplicativo ou não vejo o controle no Mapa de Controles da interface do usuário.*  
   
@@ -203,7 +203,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
  Depois, abra o menu de atalho na propriedade do controle de interface do usuário que você deseja verificar e aponte para **Adicionar Asserção**. Na caixa de diálogo **Adicionar Asserção**, selecione o **Comparador** da asserção, por exemplo, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> e digite o valor da asserção em **Valor de Comparação**.  
   
- ![Asserções do teste de IU codificado](~/docs/test/media/codedui_3.png "CodedUI_3")  
+ ![Asserções do teste de IU codificado](~/test/media/codedui_3.png "CodedUI_3")  
   
  Quando tiver adicionado todas as asserções do teste, escolha **OK**.  
   
@@ -224,7 +224,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
 -   Adiciona um método chamado `AssertForAddTwoNumbers` ao mapa de interface do usuário (UIMap.uitest). Esse arquivo é aberto no Editor de testes de interface de usuário codificada, em que é possível editar as asserções.  
   
-     ![Editar asserção usando o Editor de Teste de IU Codificado](~/docs/test/media/cuit_editor_assert.png "CUIT_Editor_assert")  
+     ![Editar asserção usando o Editor de Teste de IU Codificado](~/test/media/cuit_editor_assert.png "CUIT_Editor_assert")  
   
      Para obter mais informações, consulte [Editing Coded UI Tests Using the Coded UI Test Editor](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md) (Editando testes de IU codificada usando o Editor de teste de IU codificado).  
   
@@ -242,7 +242,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
  Às vezes, ao [adicionar controles e validar suas propriedades](#VerifyingCodeUsingCUITGenerateAssertions), será necessário usar o teclado. Por exemplo, quando você tenta registrar um teste de IU codificado que usa um controle de menu de contexto, a lista de itens de menu no controle perderá o foco e desaparecerá quando você tentar selecionar a ferramenta Adicionar Asserções no Construtor de Teste de IU Codificado. Isso é demonstrado na ilustração a seguir, em que o menu de contexto no Internet Explorer perderá o foco e desaparecerá se você tentar selecioná-lo usando a ferramenta Adicionar Asserções.  
   
- ![CodedUITest&#95;SelectControlKeyboard](~/docs/test/media/codeduitest_selectcontrolkeyboard.png "CodedUITest_SelectControlKeyboard")  
+ ![CodedUITest&#95;SelectControlKeyboard](~/test/media/codeduitest_selectcontrolkeyboard.png "CodedUITest_SelectControlKeyboard")  
   
  Para usar o teclado e selecionar um controle de interface de usuário, focalize o controle usando o mouse. Em seguida, mantenha as teclas **Ctrl** e **I** pressionadas simultaneamente. Solte as teclas. O controle é registrado pelo Construtor de Teste de IU Codificado.  
   
@@ -256,7 +256,7 @@ Os testes automatizados que orientam o aplicativo por meio da interface do usuá
   
  Ao realizar o teste de IU codificado, focalize o controle. Em seguida, mantenha a tecla Ctrl pressionada, enquanto pressiona e solta as teclas Shift e R do teclado. Solte as teclas. Um evento de passagem do mouse é registrado pelo Construtor de Teste de IU Codificado.  
   
- ![CodedUI&#95;Hover](~/docs/test/media/codedui_hover.png "CodedUI_Hover")  
+ ![CodedUI&#95;Hover](~/test/media/codedui_hover.png "CodedUI_Hover")  
   
  Depois que você gerar o método de teste, um código semelhante ao exemplo a seguir será adicionado ao arquivo UIMap.Desinger.cs:  
   

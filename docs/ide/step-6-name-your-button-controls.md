@@ -43,13 +43,13 @@ Há apenas uma PictureBox em seu formulário. Quando você a adicionou, o IDE a 
   
  Há quatro botões no formulário e o IDE os nomeou **button1**, **button2**, **button3** e **button4**. Apenas olhando seus nomes atuais, você não consegue saber qual botão é o botão de **Fechar** e qual é o botão **Mostrar uma imagem**. É por isso que é útil atribuir nomes mais informativos aos controles de botão.  
   
- ![link para vídeo](~/docs/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 3](http://go.microsoft.com/fwlink/?LinkId=205213) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 3](http://go.microsoft.com/fwlink/?LinkId=205202). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
+ ![link para vídeo](~/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 3](http://go.microsoft.com/fwlink/?LinkId=205213) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 3](http://go.microsoft.com/fwlink/?LinkId=205202). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
   
 ### <a name="to-name-your-button-controls"></a>Para nomear os controles de botão  
   
 1.  No formulário, clique no botão **Fechar**. (Se você ainda tiver todos os botões selecionados, pressione a tecla ESC para cancelar a seleção.) Role pela janela **Propriedades**, até ver a propriedade **(Name)**. (A propriedade **(Name)** fica próxima à parte superior quando as propriedades são alfabéticas.) Altere o nome para **closeButton**, conforme mostrado na imagem a seguir.  
   
-     ![A janela Propriedades com nome de closeButton](~/docs/ide/media/express_setnameproperty.png "Express_SetNameProperty")  
+     ![A janela Propriedades com nome de closeButton](~/ide/media/express_setnameproperty.png "Express_SetNameProperty")  
 A janela Propriedades com nome de closeButton  
   
     > [!NOTE]
@@ -59,7 +59,7 @@ A janela Propriedades com nome de closeButton
   
 3.  Clique duas vezes no botão **Mostrar uma imagem** no formulário. Como alternativa, escolha o botão **Mostrar uma imagem** no formulário e, em seguida, pressione a tecla ENTER. Quando você fizer isso, o IDE abrirá uma guia adicional na janela principal chamada **Form1.cs** (**Form1.vb** se você estiver usando Visual Basic). Esta guia mostra o arquivo de código por trás do formulário, conforme mostrado na seguinte imagem.  
   
-     ![Guia Form1.cs com código do Visual C&#35;](~/docs/ide/media/express_showbuttoncode.png "Express_ShowButtonCode")  
+     ![Guia Form1.cs com código do Visual C&#35;](~/ide/media/express_showbuttoncode.png "Express_ShowButtonCode")  
 Guia Form1.cs com código do Visual c#  
   
 4.  Foco nesta parte do código. (Escolha a guia **VB** abaixo se você estiver usando o Visual Basic para exibir a versão de Visual Basic do código.)  

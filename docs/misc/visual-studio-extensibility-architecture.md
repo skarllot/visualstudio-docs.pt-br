@@ -23,7 +23,7 @@ O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] o ambiente de desenv
 ## Arquitetura de extensibilidade  
  A ilustração a seguir mostra a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] arquitetura de extensibilidade.  Observe que o conceito de um aplicativo de software está ausente.  Em vez disso, os componentes de software de hosts do IDE, chamado VSPackages, que fornecem a funcionalidade do aplicativo.  Essa funcionalidade, por sua vez, é compartilhada entre o IDE como serviços.  Os VSPackages oferecem serviços que usam a eles e outros VSPackages.  O padrão IDE também oferece uma ampla gama de serviços, tais como <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>, que fornecem acesso à funcionalidade de janelas do IDE.  
   
- ![Gráfico de arquitetura do ambiente](~/docs/extensibility/internals/media/environment.gif "environment")  
+ ![Gráfico de arquitetura do ambiente](~/extensibility/internals/media/environment.gif "environment")  
 Visão generalizada da arquitetura Visual Studio  
   
  Observe que a relação entre os VSPackages e serviços é bidirecional.  Embora VSPackages utilizar serviços oferecidos por outras pessoas, elas também podem oferecer serviços de seus próprios por usar o <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService> interface.  Essa arquitetura baseada em serviços foi desenvolvido a partir da implementação do Microsoft ActiveX Designer, no qual um serviço é um grupo de interfaces relacionadas que executam uma tarefa.  A partir de um ponto de vista COM estrito, todas as interfaces de um serviço devem ser implementadas em uma única classe COM.  

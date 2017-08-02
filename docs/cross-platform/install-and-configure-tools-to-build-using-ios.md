@@ -127,7 +127,7 @@ ms.lasthandoff: 05/13/2017
   
  Na primeira vez em que você iniciar o agente e sempre que criar um novo certificado de cliente, serão fornecidas as informações necessárias para configurar o agente no Visual Studio, incluindo o nome do host, a porta e o PIN.  
   
- ![Usar o vcremote para gerar um PIN seguro](~/docs/cross-platform/media/cppmdd_vcremote_generateclientcert.png "CPPMDD_vcremote_generateClientCert")  
+ ![Usar o vcremote para gerar um PIN seguro](~/cross-platform/media/cppmdd_vcremote_generateclientcert.png "CPPMDD_vcremote_generateClientCert")  
   
  Se você pretende configurar o agente remoto no Visual Studio usando o nome do host, execute o ping para o Mac do Windows usando o nome de host para verificar se ele está acessível. Caso contrário, poderá ser necessário usar o endereço IP em vez disso.  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 05/13/2017
   
 7.  Escolha **Emparelhamento** para habilitar o emparelhamento.  
   
-     ![Configurar a conexão de vcremote para compilações do iOS](~/docs/cross-platform/media/cppmdd_options_ios.PNG "CPPMDD_Options_iOS")  
+     ![Configurar a conexão de vcremote para compilações do iOS](~/cross-platform/media/cppmdd_options_ios.PNG "CPPMDD_Options_iOS")  
   
      O emparelhamento persiste até que você altere o nome do host ou a porta. Se você alterar o nome do host ou a porta na caixa de diálogo **Opções**, para desfazer a alteração, escolha o botão **Reverter** para reverter o emparelhamento anterior.  
   

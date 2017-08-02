@@ -68,7 +68,7 @@ Este documento demonstra como usar o Designer de Sombreador e a DGSL (Directed G
 > [!NOTE]
 >  Na ilustração foi especificada uma cor laranja para demonstrar melhor o efeito do sombreador.  
   
- ![Gráfico de sombreador e seu resultado em um modelo 3D](~/docs/designers/media/digit-flat-color-effect.png "Digit-Flat-Color-Effect")  
+ ![Gráfico de sombreador e seu resultado em um modelo 3D](~/designers/media/digit-flat-color-effect.png "Digit-Flat-Color-Effect")  
   
  Determinadas formas podem fornecer melhores visualizações para alguns sombreadores. Para obter mais informações sobre como visualizar sombreadores no Designer de Sombreador, consulte [Designer de Sombreador](../designers/shader-designer.md).  
   

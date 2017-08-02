@@ -49,7 +49,7 @@ O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] fornece ferramentas 
   
  O diagrama a seguir mostra o fluxo normal das operações durante a conexão aos dados, executando uma consulta TableAdapter para buscar dados e exibi\-lo em um formulário em um aplicativo do Windows.  
   
- ![Fluxo de dados em um aplicativo cliente](~/docs/data-tools/media/clientdatadiagram.gif "ClientDataDiagram")  
+ ![Fluxo de dados em um aplicativo cliente](~/data-tools/media/clientdatadiagram.gif "ClientDataDiagram")  
   
  Em algumas situações, é conveniente criar um objeto de conexão sem o auxílio de ferramentas de design de dados.  Para obter informações sobre como criar conexões programaticamente, consulte [Conectando a uma fonte de dados](../Topic/Connecting%20to%20a%20Data%20Source%20in%20ADO.NET.md).  
   

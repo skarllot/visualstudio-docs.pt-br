@@ -40,7 +40,7 @@ ms.lasthandoff: 03/27/2017
 # <a name="code-styles-and-quick-actions"></a>Estilos de Código e Ações Rápidas
 As preferências de estilo de código podem ser definidas para os projetos do C# e do Visual Basic abrindo a janela **Ferramentas > Opções** e, em seguida, selecionando **Editor de Texto > C#/Basic > Estilo de Código > Geral**.  As opções definidas nessa janela são aplicáveis ao computador local.  Cada item da lista mostrará uma visualização da preferência quando selecionado, conforme mostrado abaixo.
 
-![Opções de Estilo de Código](~/docs/ide/media/code-style-quick-actions-dialog.png)
+![Opções de Estilo de Código](~/ide/media/code-style-quick-actions-dialog.png)
 
 Para cada item, é possível definir a **Preferência** e a **Gravidade** usando as listas suspensas de cada linha.  A gravidade pode ser definida como **Nenhuma**, **Sugestão**, **Aviso** ou **Erro** e o Visual Studio terá o comportamento apropriado.  Se desejar usar as [Ações Rápidas](quick-actions.md) com esses estilos de código para reescrever o código automaticamente no estilo preferencial, verifique se a configuração está definida com uma opção diferente de **Nenhum**, para que o ícone de lâmpada ![Ícone de lâmpada pequeno](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") seja exibido quando os estilos não preferenciais forem usados.  Em seguida, essas preferências poderão ser aplicadas clicando no ícone de Lâmpada ou pressionando **Ctrl + .** quando o cursor estiver sobre a linha de código apropriada.
 

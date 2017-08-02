@@ -25,7 +25,7 @@ Use a lista de eventos de gráficos no analisador de gráficos do Visual Studio 
   
  Esta é a lista de eventos:  
   
- ![Uma lista de eventos que têm "Index" em seu nome.](~/docs/debugger/graphics/media/gfx_diag_demo_event_list_orientation.png "gfx_diag_demo_event_list_orientation")  
+ ![Uma lista de eventos que têm "Index" em seu nome.](~/debugger/graphics/media/gfx_diag_demo_event_list_orientation.png "gfx_diag_demo_event_list_orientation")  
   
 ## <a name="using-the-event-list"></a>Usando a lista de eventos  
  Quando você seleciona um evento na lista, isso se reflete nas informações exibidas por outras ferramentas de análise de gráficos; do evento usando a lista de eventos em conjunto com essas outras ferramentas, você pode examinar detalhadamente para determinar a causa de um problema de renderização. Para saber mais sobre como você pode resolver problemas de processamento usando a lista de eventos junto com outras ferramentas de análise de gráficos, consulte [exemplos](../debugger/graphics-diagnostics-examples.md).  

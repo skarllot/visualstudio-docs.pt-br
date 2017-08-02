@@ -39,7 +39,7 @@ A ferramenta de análise da cobertura de código no Visual Studio coleta dados p
 ## <a name="what-you-should-see"></a>O que você deve ver  
  Se você escolher um comando **Analisar Cobertura de Código** no menu Teste e se o build e os testes forem executados com êxito, você deverá ver uma lista de resultados na janela Cobertura de Código. Você talvez tenha que expandir os itens para ver os detalhes.  
   
- ![Resultados da cobertura de código com coloração](~/docs/test/media/codecoverage1.png "CodeCoverage1")  
+ ![Resultados da cobertura de código com coloração](~/test/media/codecoverage1.png "CodeCoverage1")  
   
  Para obter mais informações, consulte [Usando cobertura de código para determinar quanto código está sendo testado](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).  
   

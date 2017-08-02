@@ -70,7 +70,7 @@ Este documento demonstra como usar o Designer de Sombreador e o DGSL (Directed G
 > [!NOTE]
 >  Para demonstrar melhor o efeito do sombreador nesta ilustração, foi especificada uma cor laranja usando o parâmetro **MaterialDiffuse** do sombreador e foi especificado um acabamento de aparência metálica usando os parâmetros **MaterialSpecular** e **MaterialSpecularPower**. Para obter informações sobre parâmetros de material, consulte a seção Visualização de Sombreadores em [Designer de Sombreador](../designers/shader-designer.md).  
   
- ![Gráfico de sombreador e uma visualização de seu efeito](~/docs/designers/media/digit-lighting-graph.png "Digit-Lighting-Graph")  
+ ![Gráfico de sombreador e uma visualização de seu efeito](~/designers/media/digit-lighting-graph.png "Digit-Lighting-Graph")  
   
  Determinadas formas podem fornecer melhores visualizações para alguns sombreadores. Para obter mais informações sobre como visualizar sombreadores no Designer de Sombreador, consulte a seção Visualização de Sombreadores em [Designer de Sombreador](../designers/shader-designer.md)  
   
@@ -81,7 +81,7 @@ Este documento demonstra como usar o Designer de Sombreador e o DGSL (Directed G
 >   
 >  A propriedade **MaterialSpecularPower** determina a intensidade dos realces especulares. Alta potência especular simula realces mais opacos e localizados. A potência especular muito baixa simula realces intensos e abrangentes que podem saturar e ocultar a cor da superfície inteira.  
   
- ![Iluminação de Phong aplicada a um modelo](~/docs/designers/media/digit-lighting-model.png "Digit-Lighting-Model")  
+ ![Iluminação de Phong aplicada a um modelo](~/designers/media/digit-lighting-model.png "Digit-Lighting-Model")  
   
  Para obter mais informações sobre como aplicar um sombreador a um modelo 3D, consulte [Como aplicar um sombreador a um modelo 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md).  
   

@@ -64,7 +64,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
  Para exibir o código de referência, mova seu mouse na parte superior da referência.  
   
- ![CodeLens &#45; Espie a referência](~/docs/ide/media/codelensviewreferencespeekreference.png "CodeLensViewReferencesPeekReference")  
+ ![CodeLens &#45; Espie a referência](~/ide/media/codelensviewreferencespeekreference.png "CodeLensViewReferencesPeekReference")  
   
  Para abrir o arquivo que contém a referência, clique duas vezes na referência.  
   
@@ -93,18 +93,18 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
  Para usar o teclado para selecionar indicadores, pressione e segure a tecla **ALT** para exibir as teclas numéricas relacionadas.  
   
- ![Pressione ALT para ver os números de acesso do teclado](~/docs/ide/media/codelensaltkeyindicators.png "CodeLensAltKeyIndicators")  
+ ![Pressione ALT para ver os números de acesso do teclado](~/ide/media/codelensaltkeyindicators.png "CodeLensAltKeyIndicators")  
   
 ### <a name="find-changes-in-your-code"></a>Encontre alterações no código  
  Descubra quem alterou seu código C# ou Visual Basic, e as alterações feitas, em indicadores de nível de elemento de código. Isso é o que você vê ao usar TFVC (Controle de Versão do Team Foundation) no Team Foundation Server ou no Visual Studio Team Services.  
   
- ![CodeLens: obtenha o histórico de alterações para seu código no TFVC](~/docs/ide/media/codelenscodechanges.png "CodeLensCodeChanges")  
+ ![CodeLens: obtenha o histórico de alterações para seu código no TFVC](~/ide/media/codelenscodechanges.png "CodeLensCodeChanges")  
   
  O período de tempo padrão são os últimos 12 meses. Se seu código estiver armazenado no Team Foundation Server, será possível alterar isso executando o [comando TFSConfig](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62) com o [comando CodeIndex](../ide/codeindex-command.md) e com o sinalizador **/indexHistoryPeriod**.  
   
  Para ver um histórico detalhado de todas as alterações, inclusive aquelas de mais de um ano atrás, escolha **Mostrar todas as alterações do arquivo**.  
   
- ![Mostrar todas as alterações do código](~/docs/ide/media/codelensshowsallchanges.png "CodeLensShowsAllChanges")  
+ ![Mostrar todas as alterações do código](~/ide/media/codelensshowsallchanges.png "CodeLensShowsAllChanges")  
   
  Isso abre a janela Histórico dos conjuntos de alterações.  
   
@@ -112,7 +112,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
  Quando seus arquivos estão em um repositório Git e você escolhe o indicador de alterações de nível de elemento de código, isso é o que você vê.  
   
- ![CodeLens: obtenha o histórico de alterações para seu código no Git](~/docs/ide/media/codelenscodechangesgit.png "CodeLensCodeChangesGit")  
+ ![CodeLens: obtenha o histórico de alterações para seu código no Git](~/ide/media/codelenscodechangesgit.png "CodeLensCodeChangesGit")  
   
  Localize alterações para um arquivo inteiro (exceto para arquivos C# e Visual Basic) nos indicadores de nível de arquivo na parte inferior da janela.  
   
@@ -122,7 +122,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
  É possível ver quem alterou seu código ao longo do tempo. Isso pode ajudá-lo a encontrar padrões nas alterações da sua equipe e avaliar o impacto delas.  
   
- ![CodeLens: ver o histórico de alterações do código como um gráfico](~/docs/ide/media/codelens.png "CodeLens")  
+ ![CodeLens: ver o histórico de alterações do código como um gráfico](~/ide/media/codelens.png "CodeLens")  
   
 #### <a name="find-changes-in-your-current-branch"></a>Encontre alterações na sua ramificação atual  
  Suponha que sua equipe tenha várias ramificações - uma ramificação principal e um desenvolvimento filho - para reduzir o risco de ruptura de código estável:  
@@ -139,7 +139,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
  ![CodeLens: localizar quando seu código foi ramificado](../ide/media/codelensfirstbranchscreenshot.png "CodeLensFirstBranchScreenshot")  
   
 #### <a name="find-incoming-changes-from-other-branches"></a>Descubra alterações recebidas de outras ramificações  
- ![CodeLens: localize alterações do código em outros branches](~/docs/ide/media/codelensbranchchangecheckinconceptual.png "CodeLensBranchChangeCheckinConceptual")  
+ ![CodeLens: localize alterações do código em outros branches](~/ide/media/codelensbranchchangecheckinconceptual.png "CodeLensBranchChangeCheckinConceptual")  
   
  …como essa correção de bug na ramificação Dev aqui:  
   
@@ -174,7 +174,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
 |![CodeLens &#45; alteração do ícone de afastamento do branch](../ide/media/codelensbranchfurtherawayicon.png "CodeLensBranchFurtherAwayIcon")|Uma ramificação mais distante que uma pai, filha ou par|  
 |![CodeLens: mesclagem do ícone pai](../ide/media/codelensbranchmergefromparenticon.png "CodeLensBranchMergeFromParentIcon")|Uma mesclagem da ramificação pai para uma ramificação filha|  
 |![CodeLens: mesclagem do ícone do branch filho](../ide/media/codelensbranchmergefromchildicon.png "CodeLensBranchMergeFromChildIcon")|Uma mesclagem de uma ramificação filha para a ramificação pai|  
-|![CodeLens: mesclagem do ícone do branch não relacionado](~/docs/ide/media/codelensbranchmergefromunrelatedicon.png "CodeLensBranchMergeFromUnrelatedIcon")|Uma mesclagem de uma ramificação não relacionada (mesclagem sem base)|  
+|![CodeLens: mesclagem do ícone do branch não relacionado](~/ide/media/codelensbranchmergefromunrelatedicon.png "CodeLensBranchMergeFromUnrelatedIcon")|Uma mesclagem de uma ramificação não relacionada (mesclagem sem base)|  
   
 ### <a name="find-linked-work-items"></a>Localizar itens de trabalho vinculados  
  ![CodeLens &#45; localizar itens de trabalho para um código específico](../ide/media/codelensworkitems.png "CodeLensWorkItems")  
@@ -190,7 +190,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
  Abra o menu de atalho de um item para ver as opções de contato. Se você tiver o Lync ou o Skype for Business instalado, você verá estas opções:  
   
- ![Opções de contato e um item](~/docs/ide/media/codelensitemcontactmenu.png "CodeLensItemContactMenu")  
+ ![Opções de contato e um item](~/ide/media/codelensitemcontactmenu.png "CodeLensItemContactMenu")  
   
 ##  <a name="FindRunUnitTests"></a> Localizar testes de unidade para seu código  
  Saiba mais sobre testes de unidade que existem para seu código sem abrir o Gerenciador de Testes. Itens necessários:  
@@ -207,7 +207,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
      ![CodeLens &#45; Escolher status de teste no editor de código](../ide/media/codelenschoosetestindicator.png "CodeLensChooseTestIndicator")  
   
-3.  Se você vir um ícone de aviso ![CodeLens &#45; aviso de que os testes ainda não foram executados](~/docs/ide/media/codelenstestwarningicon.png "CodeLensTestWarningIcon"), execute os testes.  
+3.  Se você vir um ícone de aviso ![CodeLens &#45; aviso de que os testes ainda não foram executados](~/ide/media/codelenstestwarningicon.png "CodeLensTestWarningIcon"), execute os testes.  
   
      ![CodeLens &#45; exibir testes de unidade que ainda não foram executados](../ide/media/codelenstestsnotyetrun.png "CodeLensTestsNotYetRun")  
   
@@ -281,7 +281,7 @@ Mantenha o foco no trabalho enquanto descobre o que aconteceu com seu código �
   
  ![Encaixar a janela do indicador do CodeLens](../ide/media/codelensselectdockwindow.png "CodeLensSelectDockWindow")  
   
- ![A janela Referências do CodeLens encaixada](~/docs/ide/media/codelensreferencesdockedwindow.png "CodeLensReferencesDockedWindow")  
+ ![A janela Referências do CodeLens encaixada](~/ide/media/codelensreferencesdockedwindow.png "CodeLensReferencesDockedWindow")  
   
 ### <a name="q-how-do-i-refresh-the-indicators"></a>P: Como posso atualizar os indicadores?  
  **R:** isso depende do indicador:  

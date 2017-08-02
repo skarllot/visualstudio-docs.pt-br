@@ -70,11 +70,11 @@ Você pode escrever código para criar e excluir elementos de modelo, defina sua
 ##  <a name="a-nameexamplea-an-example-dsl-definition"></a><a name="example"></a>Um exemplo de definição de DSL  
  Essa é a parte principal do Dsldefinition para os exemplos neste tópico:  
   
- ![Diagrama de definição de DSL - modelo de árvore genealógica](~/docs/modeling/media/familyt_person.png "FamilyT_Person")  
+ ![Diagrama de definição de DSL - modelo de árvore genealógica](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
  Esse modelo é uma instância dessa DSL:  
   
- ![Modelo de árvore da família Tudor](~/docs/modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
+ ![Modelo de árvore da família Tudor](~/modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
   
 ### <a name="references-and-namespaces"></a>Referências e Namespaces  
  Para executar o código neste tópico, consulte:  
@@ -365,7 +365,7 @@ using (Transaction t = targetDiagram.Store.
  Em uma DSL, o elemento de modelo de domínio, que representa um conceito como pessoa ou música, é separado do elemento de forma que representa o que você vê no diagrama. O elemento de modelo de domínio armazena as propriedades importantes e as relações dos conceitos. O elemento de forma armazena o tamanho, posição e cor do modo de exibição do objeto no diagrama e o layout de seus componentes.  
   
 ### <a name="presentation-elements"></a>Elementos da apresentação  
- ![Diagrama de classes de tipos de forma e o elemento base](~/docs/modeling/media/dslshapesandelements.png "DSLshapesAndElements")  
+ ![Diagrama de classes de tipos de forma e o elemento base](~/modeling/media/dslshapesandelements.png "DSLshapesAndElements")  
   
  Em sua definição de DSL, cada elemento especificado por você cria uma classe que é derivada de uma das seguintes classes padrão.  
   
@@ -524,7 +524,7 @@ partial class MyDiagram
  Formas, conectores e diagramas são subtipos de <xref:Microsoft.VisualStudio.Modeling.ModelElement>e ao vivo no repositório.</xref:Microsoft.VisualStudio.Modeling.ModelElement> Você deve, portanto, fazer alterações neles dentro de uma transação. Para obter mais informações, consulte [como: usar transações para atualizar o modelo](../modeling/how-to-use-transactions-to-update-the-model.md).  
   
 ##  <a name="a-namedocdataa-document-view-and-document-data"></a><a name="docdata"></a>Exibição de documentos e dados de documentos  
- ![Diagrama de classes de tipos de diagrama padrão](~/docs/modeling/media/dsldiagramsanddocs.png "DSLDiagramsandDocs")  
+ ![Diagrama de classes de tipos de diagrama padrão](~/modeling/media/dsldiagramsanddocs.png "DSLDiagramsandDocs")  
   
 ## <a name="store-partitions"></a>Partições de armazenamento  
  Quando um modelo é carregado, o diagrama a seguir é carregado ao mesmo tempo. Normalmente, o modelo é carregado no Store.DefaultPartition, e o conteúdo de diagrama é carregado em outra partição. Geralmente, o conteúdo de cada partição é carregado e salvas em um arquivo separado.  

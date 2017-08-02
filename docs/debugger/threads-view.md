@@ -31,7 +31,7 @@ O modo de exibição de Threads é uma lista simples de todos os segmentos assoc
   
 1.  Do  **Spy** menu, escolha  **segmentos**.  
   
- ![Visualização de Threads Spy &#43; &#43;](~/docs/debugger/media/spy--_threads.png "Spy\+\+\_Threads")  
+ ![Visualização de Threads Spy &#43; &#43;](~/debugger/media/spy--_threads.png "Spy\+\+\_Threads")  
 Visualização de Threads Spy \+ \+  
   
  A figura acima mostra a visualização de Threads.  

@@ -51,7 +51,7 @@ As interfaces e as implementações de todos os projetos em [!INCLUDE[vsprvs](..
   
  A ilustração a seguir mostra as interfaces principais, serviços e objetos que compõem uma implementação típica do projeto. Você pode usar o auxiliar de aplicativo, HierUtil7, para criar os objetos subjacentes e outro clichê de programação. Para obter mais informações sobre o auxiliar do aplicativo HierUtil7, consulte [fora da compilação: usando Classes do projeto HierUtil7 para implementar um tipo de projeto (C++)](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346).  
   
- ![Gráfico de modelo de projeto do Studio Visual](~/docs/extensibility/internals/media/vsprojectmodel.gif "vsProjectModel")  
+ ![Gráfico de modelo de projeto do Studio Visual](~/extensibility/internals/media/vsprojectmodel.gif "vsProjectModel")  
 Modelo de projeto  
   
  Para obter mais informações sobre as interfaces e serviços listados no diagrama anterior e outras interfaces opcionais não são incluídos no diagrama, consulte [componentes principais do projeto modelo](../../extensibility/internals/project-model-core-components.md).  

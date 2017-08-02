@@ -58,7 +58,7 @@ ms.lasthandoff: 05/13/2017
 -   [Compilar um jogo multiplataforma para Android, iOS e Windows usando as ferramentas do Visual Studio para Unity](#Unity)
 
 ##  <a name="NET"></a> Compilar um aplicativo para o Android, iOS e Windows (.NET Framework)
- ![Dispositivos](~/docs/cross-platform/media/homedevices.png "HomeDevices")
+ ![Dispositivos](~/cross-platform/media/homedevices.png "HomeDevices")
 
  Com o Xamarin, é possível ter o Android, iOS e Windows como destino na mesma solução, compartilhando o código e até mesmo a interface do usuário.
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 05/13/2017
 ####  <a name="ShareHTML"></a> Compartilhar código entre aplicativos Android, iOS e Windows
  Se você não estiver usando o Xamarin.Forms e optar por criar para cada plataforma individualmente, compartilhe a maior parte do código que não é da interface do usuário entre os projetos de plataforma (Android, iOS e Windows). Isso inclui qualquer lógica de negócios, integração de nuvem, acesso a banco de dados ou qualquer outro código destinado ao .NET Framework. O único código que não pode ser compartilhado é aquele que é destinado a uma plataforma específica.
 
- ![Compartilhar código entre as interfaces do usuário do Windows, iOS e Android](~/docs/cross-platform/media/sharecode.png "ShareCode")
+ ![Compartilhar código entre as interfaces do usuário do Windows, iOS e Android](~/cross-platform/media/sharecode.png "ShareCode")
 
  Você pode compartilhar o código usando um projeto compartilhado, um projeto de Biblioteca de Classes Portátil ou ambos. Você pode achar que alguns códigos ficam melhores em um projeto compartilhado e outros em um projeto de Biblioteca de Classes Portátil.
 
@@ -98,7 +98,7 @@ ms.lasthandoff: 05/13/2017
 |Escolha se deseja compartilhar o código usando projetos compartilhados, projetos de Biblioteca de Classes Portátil ou ambos.<br /><br /> [Compartilhando código entre plataformas](http://blogs.msdn.com/b/dotnet/archive/2014/04/21/sharing-code-across-platforms.aspx) (blog do .NET Framework)<br /><br /> [Opções de compartilhamento de código](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/sharing_code_options/) (Xamarin)<br /><br /> [Opções de compartilhamento de código com o .NET Framework](http://msdn.microsoft.com/library/dn720832.aspx) (Biblioteca MSDN)|
 
 ###  <a name="WindowsHTML"></a> Ter dispositivos Windows 10 como destino
- ![Dispositivos Windows](~/docs/cross-platform/media/windowsdevices.png "WindowsDevices")
+ ![Dispositivos Windows](~/cross-platform/media/windowsdevices.png "WindowsDevices")
 
  Se você desejar criar um único aplicativo que se destina a toda a amplitude de dispositivos Windows 10, crie um aplicativo universal do Windows. Você criará o aplicativo usando um único projeto e as páginas serão renderizadas corretamente, independentemente de qual dispositivo seja usado para exibi-las.
 
@@ -114,7 +114,7 @@ ms.lasthandoff: 05/13/2017
 |[Migrar aplicativos para a UWP (Plataforma Universal do Windows)](https://msdn.microsoft.com/en-us/library/mt148501.aspx)|
 
 ##  <a name="HTML"></a> Compilar um aplicativo para o Android, iOS e Windows (HTML/JavaScript)
- ![Dispositivos](~/docs/cross-platform/media/homedevices.png "HomeDevices")
+ ![Dispositivos](~/cross-platform/media/homedevices.png "HomeDevices")
 
  Se você é desenvolvedor da Web e está familiarizado com HTML e JavaScript, pode direcionar ao Windows, Android e iOS usando as Ferramentas do Visual Studio para Apache Cordova. Esses aplicativos podem ser destinados às três plataformas e você pode criá-los usando as habilidades e os processos com os quais está mais familiarizado.
 
@@ -122,7 +122,7 @@ ms.lasthandoff: 05/13/2017
 
  Como essas APIs são multiplataforma, é possível compartilhar a maior parte do que você escreve entre todas as três plataformas. Isso reduz os custos de desenvolvimento e manutenção. Além disso, não é necessário começar do zero. Se você já criou outros tipos de aplicativos Web, poderá compartilhar esses arquivos com o aplicativo Cordova sem precisar modificar ou criá-los novamente de nenhuma maneira.
 
- ![Aplicativos híbridos de vários dispositivos](~/docs/cross-platform/media/multidevicehybridapps.png "MultiDeviceHybridApps")
+ ![Aplicativos híbridos de vários dispositivos](~/cross-platform/media/multidevicehybridapps.png "MultiDeviceHybridApps")
 
  Para começar, instale o Visual Studio 2015 e escolha o recurso **HTML/JavaScript (Apache Cordova)** durante a instalação. Se você estiver usando o Visual Studio 2013, instale a extensão Ferramentas do Visual Studio para Apache Cordova. De qualquer forma, as ferramentas do Cordova instalam automaticamente todos os softwares de terceiros necessários para criar seu aplicativo multiplataforma.
 
@@ -139,13 +139,13 @@ ms.lasthandoff: 05/13/2017
 |[Saiba mais sobre o Emulador do Visual Studio para Android](http://www.visualstudio.com/explore/msft-android-emulator-vs) (VisualStudio.com)|
 
 ##  <a name="CPP"></a> Compilar um aplicativo para o Android e Windows (C++)
- ![Usar o C&#43;&#43; para criar para Android, iOS e Windows](~/docs/cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
+ ![Usar o C&#43;&#43; para criar para Android, iOS e Windows](~/cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
 
  Primeiro, instale o Visual Studio 2015 e as ferramentas do Visual C++ para Desenvolvimento Móvel Multiplataforma. Em seguida, é possível criar um aplicativo de atividade nativa para o Android ou um aplicativo que se destina ao Windows. Modelos C++ que se destinam ao iOS ainda não estão disponíveis. É possível ter o Android e o Windows como destino na mesma solução, se desejar e, em seguida, compartilhar o código entre eles usando uma biblioteca compartilhada estática ou dinâmica multiplataforma.
 
  Se você precisar criar um aplicativo para o Android que precisa de algum tipo de manipulação avançada de elementos gráficos, como um jogo, poderá usar o C++ para fazer isso. Comece com o projeto **Aplicativo de Atividade Nativa (Android)**. Este projeto tem suporte completo na cadeia de ferramentas Clang.
 
- ![Modelo de projeto de atividade nativa](~/docs/cross-platform/media/cross-plat_cpp_native.png "Cross-Plat_CPP_Native")
+ ![Modelo de projeto de atividade nativa](~/cross-platform/media/cross-plat_cpp_native.png "Cross-Plat_CPP_Native")
 
  Quando estiver pronto para executar o aplicativo e ver a aparência dele, use o Emulador do Visual Studio para Android. É rápido, confiável e fácil de instalar e configurar.
 
@@ -153,7 +153,7 @@ ms.lasthandoff: 05/13/2017
 
  É possível compartilhar o código C++ entre o Android e o Windows criando uma biblioteca compartilhada estática ou dinâmica.
 
- ![Bibliotecas compartilhadas estáticas e dinâmicas](~/docs/cross-platform/media/cross_plat_cpp_libraries.png "Cross_Plat_CPP_Libraries")
+ ![Bibliotecas compartilhadas estáticas e dinâmicas](~/cross-platform/media/cross_plat_cpp_libraries.png "Cross_Plat_CPP_Libraries")
 
  É possível consumir essa biblioteca em um projeto do Windows ou do Android, como aqueles descritos anteriormente nesta seção. Você pode também consumi-la em um aplicativo compilado usando o Xamarin, Java ou qualquer linguagem que permite invocar funções em uma DLL não gerenciada.
 
@@ -173,7 +173,7 @@ ms.lasthandoff: 05/13/2017
 ##  <a name="Unity"></a> Compilar um jogo multiplataforma para o Android, iOS e Windows usando as ferramentas do Visual Studio para Unity
  As Ferramentas do Visual Studio para Unity são uma extensão gratuita do Visual Studio que integram as ferramentas avançadas de edição de código, produtividade e depuração do Visual Studio ao *Unity*, o mecanismo popular de jogos/elementos gráficos de plataforma cruzada e o ambiente de desenvolvimento para aplicativos imersivos destinados a Windows, iOS, Android e outras plataformas, incluindo a Web.
 
- ![Ambiente de desenvolvimento do VSTU](~/docs/cross-platform/media/vstu_overview.png "VSTU_Overview")
+ ![Ambiente de desenvolvimento do VSTU](~/cross-platform/media/vstu_overview.png "VSTU_Overview")
 
  Com o VSTU (Ferramentas do Visual Studio para Unity), é possível usar o Visual Studio para escrever scripts de jogo e editor em C# e, em seguida, usar seu depurador avançado para encontrar e corrigir erros. A última versão do VSTU traz suporte para o Unity 5 e inclui a coloração de sintaxe da linguagem de sombreador ShaderLab do Unity, melhor sincronização com o Unity, depuração mais avançada e geração de código aprimorada para o assistente MonoBehavior. O VSTU também leva seus arquivos de projeto do Unity, mensagens do console e a capacidade de iniciar seu jogo para o Visual Studio, para que você possa gastar menos tempo mudando do e para o Editor do Unity durante a escrita do código.
 

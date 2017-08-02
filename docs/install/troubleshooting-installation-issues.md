@@ -65,9 +65,9 @@ Em algumas situações, como aquelas relacionadas a arquivos corrompidos, os pro
 
 1. Baixe o [Microsoft Visual Studio e a ferramenta de coleta de Log do .NET Framework](https://www.microsoft.com/en-us/download/details.aspx?id=12493) e execute-o. Essa ferramenta coleta e compila os logs de instalação disponíveis para instalações do Visual Studio, do .NET Framework e do SQL Server.
 2. Abra o instalador do Visual Studio e clique em **Relatar um problema** para abrir a ferramenta de comentários do Visual Studio.
-![Você pode pressionar Tab até acessar o botão Fornecer Comentários para abrir a ferramenta de comentários](~/docs/install/media/report-a-problem.png)
+![Você pode pressionar Tab até acessar o botão Fornecer Comentários para abrir a ferramenta de comentários](~/install/media/report-a-problem.png)
 3. Dê um título ao relatório de problemas e forneça detalhes relevantes. Clique em **Avançar** para ir até a seção **Anexos** e anexar o arquivo de log gerado (normalmente, o arquivo está em %TEMP%\vslogs.zip).
-![Pressione Tab até acessar o botão Relatar Novo Problema e siga as etapas](~/docs/install/media/problem-report-details.png)
+![Pressione Tab até acessar o botão Relatar Novo Problema e siga as etapas](~/install/media/problem-report-details.png)
 4. Clique em **Avançar** para examinar o relatório de problemas e clique em **Enviar**.
 
 ### <a name="step-5---run-installcleanupexe-to-clean-up-installation-files"></a>Etapa 5 - Executar InstallCleanup.exe para limpar os arquivos de instalação

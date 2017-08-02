@@ -46,7 +46,7 @@ ms.lasthandoff: 05/13/2017
 -   Consulte todas as informações que você precisa em uma janela.  
   
 ## <a name="using-test-explorer"></a>Usando o Gerenciador de Testes  
- ![Gerenciador de Testes de unidade mostrando o Botão Executar Todos](~/docs/test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
+ ![Gerenciador de Testes de unidade mostrando o Botão Executar Todos](~/test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
   
 #### <a name="to-run-unit-tests-by-using-test-explorer"></a>Para executar testes de unidade usando o Gerenciador de Testes  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 05/13/2017
   
     -   Na caixa de diálogo **Novo Projeto**, escolha **Visual C#**, **Teste** e escolha **Projeto de Teste de Unidade**.  
   
-         ![Novos projetos de código e teste](~/docs/test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")  
+         ![Novos projetos de código e teste](~/test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")  
   
 3.  Escreva um método de teste básico. Verifique o resultado obtido para uma entrada específica:  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/13/2017
   
 7.  Selecione os itens em **Rastreamento de pilha** para ver onde o teste falhou.  
   
- ![Gerenciador de Testes de unidade mostrando teste com falha.](~/docs/test/media/unittestexplorerwalkthrough2.png "UnitTestExplorerWalkthrough2")  
+ ![Gerenciador de Testes de unidade mostrando teste com falha.](~/test/media/unittestexplorerwalkthrough2.png "UnitTestExplorerWalkthrough2")  
   
  Neste ponto, você criou um teste e um stub que você modificará para que o teste seja aprovado.  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 05/13/2017
   
      O teste é aprovado.  
   
-     ![Gerenciador de Testes de unidade mostrando teste com aprovação.](~/docs/test/media/unittestexplorerwalkthrough3.png "UnitTestExplorerWalkthrough3")  
+     ![Gerenciador de Testes de unidade mostrando teste com aprovação.](~/test/media/unittestexplorerwalkthrough3.png "UnitTestExplorerWalkthrough3")  
   
 #### <a name="add-tests-to-extend-the-range-of-inputs"></a>Adicionar testes para estender o intervalo de entradas  
   
@@ -304,5 +304,5 @@ ms.lasthandoff: 05/13/2017
   
      Todos os testes ainda são aprovados.  
   
-     ![Gerenciador de Testes de unidade mostrando 3 testes com aprovação.](~/docs/test/media/unittestexplorerwalkthrough4.png "UnitTestExplorerWalkthrough4")
+     ![Gerenciador de Testes de unidade mostrando 3 testes com aprovação.](~/test/media/unittestexplorerwalkthrough4.png "UnitTestExplorerWalkthrough4")
 

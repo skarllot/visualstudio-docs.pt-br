@@ -73,7 +73,7 @@ O exemplo a seguir mostra como clonar um repositório GitHub e, em seguida, abri
 1. Acesse o repositório que você deseja clonar.
 1. Na página do GitHub do repositório, escolha o botão **Clonar ou Baixar** e, em seguida, escolha o botão **Copiar para Área de Transferência** no menu suspenso para copiar a URL segura do site do GitHub.
 
-  ![Botão de clone do GitHub](~/docs/ide/media/VSIDE_Code_Clone.png)
+  ![Botão de clone do GitHub](~/ide/media/VSIDE_Code_Clone.png)
 
     > [!NOTE]
     >  Embora você também tenha a opção de abrir o projeto na área de trabalho ou baixar um arquivo .zip do projeto, este exemplo demonstra como clonar o repositório usando o método de URL segura.
@@ -81,12 +81,12 @@ O exemplo a seguir mostra como clonar um repositório GitHub e, em seguida, abri
 1. No Visual Studio, escolha a guia **Team Explorer** para abrir o Team Explorer.
 1. No Team Explorer, na seção **Repositórios Git Locais**, escolha o comando **Clonar** e, em seguida, cole a URL da página do GitHub na caixa de texto.
 
-  ![Clonar o projeto](~/docs/ide/media/VSIDE_Code_Clone2.png)
+  ![Clonar o projeto](~/ide/media/VSIDE_Code_Clone2.png)
 
 1. Escolha o botão **Clonar** para clonar os arquivos do projeto para um repositório Git local. Dependendo do tamanho do repositório, esse processo poderá levar vários minutos.
 1. Depois que o repositório for clonado para o sistema, no Team Explorer, escolha o comando **Abrir** no menu de contexto (acesso com clique com o botão direito do mouse) do projeto recém-clonado.
 
-  ![Projeto clonado](~/docs/ide/media/VSIDE_Code_Clone3.png)
+  ![Projeto clonado](~/ide/media/VSIDE_Code_Clone3.png)
 
 1. Escolha o comando **Mostrar Exibição de Pasta** para exibir os arquivos no Gerenciador de Soluções
 
@@ -94,7 +94,7 @@ O exemplo a seguir mostra como clonar um repositório GitHub e, em seguida, abri
 
   Agora é possível procurar pastas e arquivos no projeto clonado e exibir e pesquisar o código no editor de código do Visual Studio, completo com a colorização de sintaxe e outros recursos.
 
-    ![Pesquisando o código do projeto clonado](~/docs/ide/media/VSIDE_Code_Clone4.png)
+    ![Pesquisando o código do projeto clonado](~/ide/media/VSIDE_Code_Clone4.png)
 
 
 ## <a name="debug-your-code"></a>Depurar seu código
@@ -102,7 +102,7 @@ O exemplo a seguir mostra como clonar um repositório GitHub e, em seguida, abri
 
 A caixa de listagem suspensa ao lado do botão Iniciar na barra de ferramentas lista todos os itens de inicialização detectados pelo Visual Studio, bem como os itens especificamente escolhidos em uma pasta.
 
-![Botão Executar](~/docs/ide/media/VSIDE_Code_Run_Button.png)
+![Botão Executar](~/ide/media/VSIDE_Code_Run_Button.png)
 
 O Visual Studio reconhece os projetos automaticamente, mas os scripts (como o Python e o JavaScript) precisam ser explicitamente selecionados como um item de inicialização antes que sejam exibidos na lista.
 Além disso, alguns itens de inicialização, como o MSBuild e CMake, podem ter várias configurações de build que são exibidas na lista suspensa do Botão Executar.
@@ -138,11 +138,11 @@ Você também pode criar tarefas de build arbitrárias que podem fazer quase tud
 
 1. Escolha o arquivo ou a pasta do projeto no Gerenciador de Soluções na qual você deseja a tarefa e, no arquivo ou no menu de contexto (acesso por clique com o botão direito do mouse) da pasta, escolha **Configurar Tarefas**.
 
-  ![Configurar tarefas](~/docs/ide/media/VSIDE_Code_Config_Task.png)
+  ![Configurar tarefas](~/ide/media/VSIDE_Code_Config_Task.png)
 
   Se você escolher **Configurar Tarefas**, um arquivo chamado tasks.vs.json será aberto. Se esse arquivo não existir, ele será criado. Esse arquivo contém as tarefas de build para a pasta ou o arquivo selecionado.
 
-  ![Arquivo tasks.vs.json](~/docs/ide/media/VSIDE_Code_Tasks_JSON.png)
+  ![Arquivo tasks.vs.json](~/ide/media/VSIDE_Code_Tasks_JSON.png)
 
 1. Adicione a tarefa de build a seguir a tasks.vs.json. Para este exemplo, adicionaremos uma tarefa simples chamada “Listar saídas”, que lista os arquivos e as subpastas da pasta selecionada na janela de Saída. (A nova tarefa deve ser adicionada dentro da matriz de “tarefas” existente.)
 
@@ -159,12 +159,12 @@ Você também pode criar tarefas de build arbitrárias que podem fazer quase tud
   ```
   A tarefa de build completa deve ser parecida com a mostrada abaixo.
 
-  ![Tarefa de build arbitrária](~/docs/ide/media/VSIDE_Code_Tasks_ArbTask.png)
+  ![Tarefa de build arbitrária](~/ide/media/VSIDE_Code_Tasks_ArbTask.png)
 
 1. Salvar o projeto.
 1. Abra o menu de contexto da pasta selecionada. Você deverá ver a nova tarefa de build arbitrária exibida na parte inferior do menu de contexto.
 
-  ![Comando arbitrário de tarefa de build](~/docs/ide/media/VSIDE_Code_Tasks_ArbTask2.png)
+  ![Comando arbitrário de tarefa de build](~/ide/media/VSIDE_Code_Tasks_ArbTask2.png)
 
 1. Escolha o novo comando **Listar saídas** para executar a tarefa.
 
@@ -174,7 +174,7 @@ Neste procedimento, adicionaremos duas tarefas de build personalizadas que usam 
 
 1. Escolha um arquivo do projeto no Gerenciador de Soluções que você deseja designar posteriormente como o item de inicialização. No menu de contexto (acesso por clique com o botão direito do mouse) do arquivo, escolha **Configurar Tarefas**.
 
-  ![Comando personalizado de tarefa de build](~/docs/ide/media/VSIDE_Code_Tasks_CustTask1.png)
+  ![Comando personalizado de tarefa de build](~/ide/media/VSIDE_Code_Tasks_CustTask1.png)
 
 1. Adicione as tarefas de build a seguir a tasks.vs.json. Para este exemplo, adicionaremos duas tarefas: uma chamada “makefile-build”, que usa o comando nMake para compilar o projeto e a outra chamada “makefile-clean”, que chama o comando nMake com o argumento “limpo”. Essas tarefas devem ser adicionadas dentro da matriz de “tarefas” existente. (Observe que essas são apenas tarefas de build de exemplo. Para que elas realmente funcionem, você precisa ter a carga de trabalho que contém [nNake](https://docs.microsoft.com/en-us/cpp/build/nmake-reference) instalada no sistema.)
 
@@ -199,12 +199,12 @@ Neste procedimento, adicionaremos duas tarefas de build personalizadas que usam 
   ```
   A tarefa de build personalizada completa deve ser parecida com a mostrada abaixo.
 
-  ![Tarefa de build personalizada](~/docs/ide/media/VSIDE_Code_Tasks_CustTask2.png)
+  ![Tarefa de build personalizada](~/ide/media/VSIDE_Code_Tasks_CustTask2.png)
 
 1. Salvar o projeto.
 1. Abra o menu de contexto do arquivo selecionado. As novas tarefas de build personalizadas devem ser exibidas na parte central do menu de contexto.
 
-  ![Comando personalizado de tarefa de build](~/docs/ide/media/VSIDE_Code_Tasks_CustTask3.png)
+  ![Comando personalizado de tarefa de build](~/ide/media/VSIDE_Code_Tasks_CustTask3.png)
 
   > [!NOTE]
   > Os comandos são exibidos sob o comando **Configurar Tarefas** devido a suas configurações `contextType`; “build” e “clean” são comandos de build e, portanto, são exibidos na seção de build na parte central do menu de contexto.
@@ -213,11 +213,11 @@ Neste procedimento, adicionaremos duas tarefas de build personalizadas que usam 
 
 1. No menu de contexto do arquivo, escolha **Definir como Item de Inicialização**.
 
-  ![Comando personalizado de tarefa de build](~/docs/ide/media/VSIDE_Code_Tasks_CustTask4.png)
+  ![Comando personalizado de tarefa de build](~/ide/media/VSIDE_Code_Tasks_CustTask4.png)
 
 1. Na barra de ferramentas, escolha a seta suspensa ao lado do botão Iniciar. O item de inicialização agora aparece como uma opção.
 
-  ![Comando personalizado de tarefa de build](~/docs/ide/media/VSIDE_Code_Tasks_CustTask5.png)
+  ![Comando personalizado de tarefa de build](~/ide/media/VSIDE_Code_Tasks_CustTask5.png)
 
 Agora é possível escolher o botão Iniciar ou a tecla F5 para executar a base de código. É possível editar e depurar a base de código no Visual Studio, mesmo que o Visual Studio não reconheça as ferramentas de build da base de código. A saída da tarefa de build é exibida na janela **Saída** e os erros de build são exibidos na **Lista de Erros**. O arquivo de tarefa de build tasks.vs.json associa o loop de desenvolvimento interno do Visual Studio às ferramentas de build personalizadas usadas pela base de código.
 
@@ -237,7 +237,7 @@ A especificação da localização de saída notifica o Visual Studio em que loc
 
 Por padrão, o arquivo tasks.vs.json está localizado em uma pasta oculta chamada `.vs`. Para exibir arquivos ocultos no Visual Studio, escolha o botão **Mostrar Todos os Arquivos** na barra de ferramentas do Gerenciador de Soluções.
 
-![Comando arbitrário de tarefa de build](~/docs/ide/media/VSIDE_Code_Tasks_FileLocation.png)
+![Comando arbitrário de tarefa de build](~/ide/media/VSIDE_Code_Tasks_FileLocation.png)
 
 O arquivo tasks.vs.json é oculto porque a maioria dos usuários geralmente não deseja verificá-lo no controle do código-fonte. No entanto, se desejar verificá-lo no controle do código-fonte, arraste o arquivo para a raiz do projeto na qual ele estará visível.
 

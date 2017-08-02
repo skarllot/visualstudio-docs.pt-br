@@ -38,7 +38,7 @@ Capture informações de seu aplicativo Direct3D gráficos de forma que você po
   
 #### Para capturar um quadro  
   
--   No Visual Studio, no **gráficos** barra de ferramentas, escolha o **capturar quadro** botão![Ícone de botão de captura de gráficos](~/docs/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics").  
+-   No Visual Studio, no **gráficos** barra de ferramentas, escolha o **capturar quadro** botão![Ícone de botão de captura de gráficos](~/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics").  
   
 -   No teclado, pressione Print Screen.  
   

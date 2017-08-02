@@ -42,7 +42,7 @@ O Microsoft Fakes ajuda a isolar o código em teste substituindo outras partes d
   
 -   Um [shim](#shims) modifica o código compilado do aplicativo no tempo de execução para que, em vez de fazer uma chamada de método específica, ele execute o código shim que fornecido pelo teste. Os shims podem ser usados para substituir chamadas para assemblies que você não pode modificar, como assemblies do .NET.  
   
- ![O Fakes substitui outros componentes](~/docs/test/media/fakes-2.png "Fakes-2")  
+ ![O Fakes substitui outros componentes](~/test/media/fakes-2.png "Fakes-2")  
   
  **Requisitos**  
   

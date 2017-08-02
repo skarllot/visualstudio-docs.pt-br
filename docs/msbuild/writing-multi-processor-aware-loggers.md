@@ -51,7 +51,7 @@ A capacidade do [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vste
 ### <a name="central-logging-model"></a>Modelo de registro em log central  
  No modelo de registro em log central, uma única instância de MSBuild.exe age como o "nó central" e as instâncias filho do nó central ("nós secundários") são anexadas ao nó central para ajudar na execução de tarefas de build.  
   
- ![Modelo de agente central](~/docs/msbuild/media/centralnode.png "CentralNode")  
+ ![Modelo de agente central](~/msbuild/media/centralnode.png "CentralNode")  
   
  Agentes de vários tipos anexados ao nó central são conhecidos como "agentes centrais". Apenas uma instância de cada tipo de agente pode ser anexada ao nó central ao mesmo tempo.  
   
@@ -71,7 +71,7 @@ public interface INodeLogger: ILogger
 ### <a name="distributed-logging-model"></a>Modelo de Registro em Log Distribuído  
  No modelo de registro em log central, muito tráfego de mensagens de entrada pode sobrecarregar o nó central, por exemplo, ao criar vários projetos ao mesmo tempo. Isso pode enfatizar os recursos do sistema e diminuir o desempenho do build. Para facilitar esse problema, o [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] dá suporte a um modelo de registro em log distribuído.  
   
- ![Modelo de registro em log distribuído](~/docs/msbuild/media/distnode.png "DistNode")  
+ ![Modelo de registro em log distribuído](~/msbuild/media/distnode.png "DistNode")  
   
  O modelo de registro em log distribuído estende o modelo de registro em log central, permitindo que você crie um agente de encaminhamento.  
   

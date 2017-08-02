@@ -74,7 +74,7 @@ Na segunda parte deste tutorial, você deixa o teste desafiador adicionando prob
   
      Observe que quando você digita o ponto (.) após **randomizer** no código, uma janela do IntelliSense abre e mostra todos os métodos do objeto `Random` que você pode chamar. Por exemplo, o Intellisense lista o método `Next()`, como segue.  
   
-     ![Próximo método](~/docs/ide/media/express_randomwhite.png "Express_RandomWhite")  
+     ![Próximo método](~/ide/media/express_randomwhite.png "Express_RandomWhite")  
 Próximo método  
   
      Quando você inseri um ponto depois de um objeto, o IntelliSense exibe uma lista de membros do objeto, como propriedades, métodos e eventos.  
@@ -102,7 +102,7 @@ Próximo método
   
      Um problema aleatório de adição aparece, conforme mostra a ilustração a seguir.  
   
-     ![Problema aleatório de adição](~/docs/ide/media/express_additionproblem.png "Express_AdditionProblem")  
+     ![Problema aleatório de adição](~/ide/media/express_additionproblem.png "Express_AdditionProblem")  
 Problema aleatório de adição  
   
      Na próxima etapa do tutorial, você adicionará o resultado.  

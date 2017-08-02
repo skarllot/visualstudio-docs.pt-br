@@ -56,7 +56,7 @@ manager: "ghogen"
   
 2.  Na barra de ferramentas do depurador do Visual Studio, escolha o destino da implantação da lista suspensa ao lado do botão **Iniciar Depuração**.  
   
-     ![Executado na máquina Local](~/docs/debugger/media/vsrun_f5_local.png "VSRUN\_F5\_Local")  
+     ![Executado na máquina Local](~/debugger/media/vsrun_f5_local.png "VSRUN\_F5\_Local")  
   
 3.  No menu **Compilar**, escolha **Implantar**  
   
@@ -81,13 +81,13 @@ manager: "ghogen"
   
 4.  Você pode digitar o nome ou o endereço IP do dispositivo remoto ou escolhê\-lo na caixa de diálogo **Selecionar Conexão de Depurador Remoto**.  
   
-     ![Marque a caixa de diálogo conexão de depurador remoto](~/docs/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
+     ![Marque a caixa de diálogo conexão de depurador remoto](~/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
   
      A caixa de diálogo **Selecionar Conexão de Depurador Remoto** exibe os dispositivos na sub\-rede local e qualquer dispositivo que está diretamente conectado ao computador com o Visual Studio por um cabo Ethernet.  
   
  **Como especificar o dispositivo remoto na página de projetos em JavaScript ou Visual C\+\+**  
   
- ![Propriedades do projeto C&#43;&#43; para depuração remota](~/docs/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
+ ![Propriedades do projeto C&#43;&#43; para depuração remota](~/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
   
 1.  Escolha **Depurador Remoto** na lista **Depurador a iniciar**.  
   
@@ -95,7 +95,7 @@ manager: "ghogen"
   
  **Como especificar o dispositivo remoto na página de projetos em Visual C\# e Visual Basic**  
   
- ![Gerenciado de propriedades do projeto para depuração remota](~/docs/debugger/media/vsrun_managed_projprop_remote.png "VSRUN\_Managed\_ProjProp\_Remote")  
+ ![Gerenciado de propriedades do projeto para depuração remota](~/debugger/media/vsrun_managed_projprop_remote.png "VSRUN\_Managed\_ProjProp\_Remote")  
   
 1.  Escolha **Computador Remoto** na lista **Dispositivo de Destino**.  
   

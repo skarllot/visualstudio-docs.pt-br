@@ -40,7 +40,7 @@ ms.lasthandoff: 05/12/2017
 
 Obrigado por instalar às RTVS (Ferramentas do R para Visual Studio)! Confira e dê a sua opinião sobre o uso dos links em [Recursos](#resources) abaixo.
 
-![Captura de tela das RTVS](~/docs/rtvs/media/installer-screenshot.png)
+![Captura de tela das RTVS](~/rtvs/media/installer-screenshot.png)
 
 ## <a name="resources"></a>Recursos
 

@@ -39,7 +39,7 @@ ms.lasthandoff: 05/19/2017
 # <a name="sample-coded-ui-test-extension-for-excel"></a>Extensão de teste de IU codificado de amostra para Excel
 O componente de extensão da amostra é executado no processo de teste de IU codificado do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e é ligeiramente hierárquico com a classe `ExtensionPackage` na base. As classes `TechnologyManager`, `ActionFilter` e `PropertyProvider` estão no próximo nível, com os elementos de controle no nível superior.  
   
- ![Arquitetura de extensão de teste do Excel](~/docs/test/media/excel_extarch.png "Excel_ExtArch")  
+ ![Arquitetura de extensão de teste do Excel](~/test/media/excel_extarch.png "Excel_ExtArch")  
 Arquitetura de extensão do Excel  
   
 ## <a name="extension-points"></a>Pontos de extensão  

@@ -42,7 +42,7 @@ Normalmente, os aplicativos do Python são definidos com o uso somente de arquiv
 
 Além disso, os projetos são sempre gerenciados em uma *solução* do Visual Studio, que pode conter vários projetos que podem se referenciar mutuamente. Por exemplo, um projeto do Python pode referenciar um módulo de extensão de um projeto do C++, de modo que o Visual Studio compilará o projeto do C++ automaticamente (se necessário) ao iniciar a depuração do projeto do Python. (Para obter uma discussão geral, consulte [Soluções e projetos no Visual Studio](../ide/solutions-and-projects-in-visual-studio.md).)
 
-![Projeto do Python no Gerenciador de Soluções](~/docs/python/media/projects-solution-explorer.png)
+![Projeto do Python no Gerenciador de Soluções](~/python/media/projects-solution-explorer.png)
 
 O Visual Studio fornece uma variedade de modelos de projeto do Python para configurar diversas estruturas de aplicativo rapidamente, incluindo um modelo para criar um projeto com base em uma árvore de pastas existente e um modelo para criar um projeto limpo e vazio. Consulte [Modelos de projeto](#project-templates) abaixo para obter um índice.
 
@@ -79,14 +79,14 @@ Cada projeto do Python tem um arquivo de inicialização atribuído, mostrado em
 
 Um novo projeto sempre é associado ao ambiente global padrão do Python. Para associar o projeto a outro ambiente (incluindo ambientes virtuais), clique com o botão direito do mouse no nó **Ambientes do Python** do projeto, selecione **Adicionar/Remover Ambientes do Python** e selecione os ambientes desejados. Para alterar o ambiente ativo, clique com o botão direito do mouse no ambiente desejado e selecione **Ativar Ambiente**, conforme mostrado abaixo. Para obter mais detalhes, consulte [Ambientes do Python](python-environments.md#project-specific-environments).
 
-![Ativando um ambiente para um projeto do Python](~/docs/python/media/projects-activate-environment.png)
+![Ativando um ambiente para um projeto do Python](~/python/media/projects-activate-environment.png)
 
 <a name="project-types"</a>
 ## <a name="project-templates"></a>Modelos de projeto
 
 O Visual Studio fornece várias maneiras para configurar um projeto do Python, do zero ou com base em um código existente. Para usar um modelo, selecione o comando de menu **Arquivo > Novo > Projeto...** ou clique com o botão direito do mouse na solução, no Gerenciador de Soluções e selecione **Adicionar > Novo Projeto...**, que abrirá a caixa de diálogo **Novo Projeto** abaixo. Para ver modelos específicos ao Python, pesquise “Python” ou selecione o nó **Modelos > Outros Linguagens > Python**:
 
-![Nova caixa de diálogo do projeto com modelos do Python](~/docs/python/media/projects-new-project-dialog.png)
+![Nova caixa de diálogo do projeto com modelos do Python](~/python/media/projects-new-project-dialog.png)
 
 A seguinte tabela resume os modelos disponíveis no Visual Studio 2017 (nem todos os modelos estão disponíveis em todas as versões anteriores):
 
@@ -109,21 +109,21 @@ A seguinte tabela resume os modelos disponíveis no Visual Studio 2017 (nem todo
 1. Selecione o menu **Arquivo > Novo > Projeto...** e, em seguida, selecione o modelo **Com Base em um Código Existente do Python**.
 1. Na próxima caixa de diálogo, defina o caminho para o código existente, um filtro para tipos de arquivo e os caminhos de pesquisa exigidos pelo projeto e, em seguida, selecione **Avançar**:
 
-    ![Novo Projeto com base em um Código Existente, etapa 1](~/docs/python/media/projects-from-existing-1.png)
+    ![Novo Projeto com base em um Código Existente, etapa 1](~/python/media/projects-from-existing-1.png)
 
 1. Escolha um ambiente para o projeto e o arquivo de inicialização e, em seguida, pressione **Avançar**. (Observe que a caixa de diálogo mostra somente os arquivos na raiz da árvore de pastas; se o arquivo desejado estiver em uma subpasta, deixe o arquivo de inicialização em branco e defina-o mais tarde no Gerenciador de Soluções).
 
-    ![Novo Projeto com base em um Código Existente, etapa 2](~/docs/python/media/projects-from-existing-2.png)
+    ![Novo Projeto com base em um Código Existente, etapa 2](~/python/media/projects-from-existing-2.png)
 
 1. Selecione a localização para salvar o arquivo de projeto (isso não move nem copia os arquivos de origem; portanto, se desejar uma cópia, você deverá fazer uma antes de usar o modelo). Nesta caixa de diálogo, também é possível incluir a detecção automática de ambientes virtuais e personalizar o projeto para outras estruturas Web.
 
-    ![Novo Projeto com base em um Código Existente, etapa 3](~/docs/python/media/projects-from-existing-3.png)
+    ![Novo Projeto com base em um Código Existente, etapa 3](~/python/media/projects-from-existing-3.png)
 
 1.  Selecione **Concluir** e o Visual Studio criará o projeto e o abrirá no Gerenciador de Soluções. Se desejar mover o arquivo .pyproj para outro lugar, selecione-o no Gerenciador de Soluções e escolha **Arquivo > Salvar Como**. Isso atualiza as referências de arquivo no projeto, mas não moverá nenhum arquivo de código.
 
 ## <a name="linked-files"></a>Arquivos vinculados
 
-Arquivos vinculados são aqueles que são inseridos em um projeto, mas que geralmente residem fora das pastas do projeto do aplicativo. Eles são exibidos no Gerenciador de Soluções como arquivos normais com um ícone de atalho sobreposto: ![Ícone de arquivo vinculado](~/docs/python/media/projects-linked-file-icon.png)
+Arquivos vinculados são aqueles que são inseridos em um projeto, mas que geralmente residem fora das pastas do projeto do aplicativo. Eles são exibidos no Gerenciador de Soluções como arquivos normais com um ícone de atalho sobreposto: ![Ícone de arquivo vinculado](~/python/media/projects-linked-file-icon.png)
 
 Arquivos vinculados são especificados no arquivo `.pyproj` usando o elemento `<Compile Include="...">` normal. Eles poderão ser arquivos vinculados implícitos se usarem um caminho relativo fora da estrutura do diretório ou poderão ser arquivos de link explícito com a especificação do caminho no Gerenciador de Soluções:
 
@@ -154,7 +154,7 @@ Os arquivos vinculados não podem ser renomeados.
 
 Os projetos do Visual Studio dão suporte à adição de referências a projetos e extensões, que são exibidas no nó **Referências** do Gerenciador de Soluções:
 
-![Referências de extensão em projetos do Python](~/docs/python/media/projects-extension-references.png)
+![Referências de extensão em projetos do Python](~/python/media/projects-extension-references.png)
 
 Geralmente, referências de extensão indicam dependências entre projetos e são usadas para fornecer o IntelliSense em tempo de design ou a vinculação em tempo de compilação. Os projetos do Python usam referências de forma semelhante, mas devido à natureza dinâmica do Python, elas são usadas principalmente em tempo de design para fornecer um IntelliSense avançado. Elas também podem ser usadas para implantação no Microsoft Azure para instalar dependências adicionais.
 
@@ -176,4 +176,4 @@ Como as referências no IronPython só estarão disponíveis quando uma chamada 
 
 É possível adicionar referências a entradas de produto do WebPI para implantação no Serviço de Nuvem do Microsoft Azure, em que é possível instalar componentes adicionais por meio do feed do WebPI. Por padrão, o feed exibido é específico ao Python e inclui o Django, o CPython e outros componentes básicos. Você também pode selecionar seu próprio feed, conforme mostrado abaixo. Ao publicar no Microsoft Azure, uma tarefa de instalação instala todos os produtos referenciados.
 
-![Referências do WebPI](~/docs/python/media/projects-webPI-components.png)
+![Referências do WebPI](~/python/media/projects-webPI-components.png)

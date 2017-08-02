@@ -231,7 +231,7 @@ Este tópico contém informações para ajudá-lo a resolver problemas que podem
   
          As propriedades do adaptador são mostradas aqui.  
   
-         ![Propriedades do adaptador virtual](~/docs/cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")  
+         ![Propriedades do adaptador virtual](~/cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")  
   
     3.  Para esse adaptador, os únicos itens que devem ser selecionados em **Esta conexão utiliza os seguintes itens** devem ser os seguintes:  
   
@@ -259,7 +259,7 @@ Este tópico contém informações para ajudá-lo a resolver problemas que podem
   
     -   Abra o Hyper V e vá para o Gerenciador de Comutador Virtual. Crie um comutador virtual chamado "Comutador interno do emulador do Windows Phone" e defina o tipo de conexão à **rede interna**.  
   
-         ![Gerenciador de comutador virtual](~/docs/cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")  
+         ![Gerenciador de comutador virtual](~/cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")  
   
      Agora inicialize o emulador. Ele deve funcionar.  
   

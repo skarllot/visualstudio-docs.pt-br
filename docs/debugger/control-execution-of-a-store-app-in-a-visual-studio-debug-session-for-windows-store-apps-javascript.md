@@ -95,7 +95,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 3.  **Entrar na função.** No menu **Depurar**, escolha **Entrar** \(teclado: **F11**\).  
   
-     ![Entrar em uma linha de código](~/docs/debugger/media/dbg_jsnav_example1_step_into.png "DBG\_JSNAV\_example1\_step\_into")  
+     ![Entrar em uma linha de código](~/debugger/media/dbg_jsnav_example1_step_into.png "DBG\_JSNAV\_example1\_step\_into")  
   
      Observe que o depurador se move para a próxima linha, que é uma chamada para a função `example1`. Escolha **Entrar** novamente. O depurador vai para a primeira linha de código da função `example1`. A linha realçada não foi sido executada, mas a função foi carregada na pilha de chamadas e a memória para variáveis locais foi alocada.  
   
@@ -109,11 +109,11 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 5.  **Exiba os valores de variáveis em dicas de dados.** Prossiga para entrar nas instruções de `example1` até atingir o ponto de saída. O depurador realça a chave de fechamento da função. Quando você pausa o mouse em um nome de variável, o nome e o valor da variável são exibidos em uma dica de dados.  
   
-     ![Modo de exibição de valores de variáveis na dica de dados](~/docs/debugger/media/dbg_jsnav_data_tip.png "DBG\_JSNAV\_data\_tip")  
+     ![Modo de exibição de valores de variáveis na dica de dados](~/debugger/media/dbg_jsnav_data_tip.png "DBG\_JSNAV\_data\_tip")  
   
 6.  **Adicione uma inspeção para a variável callTrack.** A variável `callTrack` é usada em todo este guia rápido para mostrar as funções chamadas nos exemplos. Para facilitar a exibição do valor da variável, adicione\-o uma janela Inspeção. Selecione o nome da variável no editor e, em seguida, escolha **Adicionar Inspeção** no menu de atalho.  
   
-     ![Assista a uma variável](~/docs/debugger/media/dbg_jsnav_watch_window.png "DBG\_JSNAV\_watch\_window")  
+     ![Assista a uma variável](~/debugger/media/dbg_jsnav_watch_window.png "DBG\_JSNAV\_watch\_window")  
   
      Você pode inspecionar diversas variáveis em uma janela Inspeção. Os valores de variáveis inspecionadas, como valores em janelas de dica de dados, são atualizados sempre que a execução é suspensa. As variáveis inspecionadas são salvas nas sessões de depuração.  
   
@@ -128,14 +128,14 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
  Tanto passar sobre quanto sair de uma função executam a função.  
   
- ![Para sobre e de métodos](~/docs/debugger/media/dbg_basics_stepintooverout.png "DBG\_Basics\_StepIntoOverOut")  
+ ![Para sobre e de métodos](~/debugger/media/dbg_basics_stepintooverout.png "DBG\_Basics\_StepIntoOverOut")  
   
 ###  <a name="BKMK_Example_2"></a> Exemplo 2  
  Neste exemplo, você pode entrar, passar sobre e sair de funções.  
   
 1.  **Chame a função example2 na função de módulo.** Edite a função `module` e substitua a linha após `var callTrack = "module function"` por `example2();`.  
   
-     ![Chamar a função exemplo2](~/docs/debugger/media/dbg_jsnav_example2.png "DBG\_JSNAV\_example2")  
+     ![Chamar a função exemplo2](~/debugger/media/dbg_jsnav_example2.png "DBG\_JSNAV\_example2")  
   
 2.  **Execute até o ponto de interrupção.** Inicie a sessão de depuração escolhendo **Iniciar Depuração** no menu **Depurar** \(teclado: F5\). O depurador suspende a execução no ponto de interrupção.  
   
@@ -143,7 +143,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 4.  **Entrar em example2 e example2\_a.** Escolha a tecla **F11** para entrar na função `example2`. Continue a entrar nas instruções `example2` até chegar à linha `var x = example2_a();`. Novamente, entre nessa linha para mover para o ponto de entrada de `example2_a`. Continue a entrar em cada instrução de `example2_a` até retornar a `example2`.  
   
-     ![Depurar uma função](~/docs/debugger/media/dbg_jsnav_example2_a.png "DBG\_JSNAV\_example2\_a")  
+     ![Depurar uma função](~/debugger/media/dbg_jsnav_example2_a.png "DBG\_JSNAV\_example2\_a")  
   
 5.  **Passar sobre uma função.** Observe que na próxima linha em `example2`, `var y = example2_a();` é basicamente igual à linha anterior. Você pode passar sobre essa linha com segurança. Escolha a tecla **F10** para a retomada de `example2` para essa segunda chamada para `example2_a`. Observe que a cadeia de caracteres `callTrack` indica que a função `example2_a` foi executada duas vezes.  
   
@@ -163,7 +163,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 1.  **Chame a função example3 na função de módulo.** Edite a função `module` e substitua a linha após `var callTrack = "module function";` por `example3();`.  
   
-     ![Exemplo 3 de chamada](~/docs/debugger/media/dbg_jsnav_example3.png "DBG\_JSNAV\_example3")  
+     ![Exemplo 3 de chamada](~/debugger/media/dbg_jsnav_example3.png "DBG\_JSNAV\_example3")  
   
 2.  **Execute até o ponto de interrupção.** Inicie a sessão de depuração escolhendo **Iniciar Depuração** no menu **Depurar** \(teclado: **F5**\). O depurador suspende a execução no ponto de interrupção na função `module`.  
   
@@ -173,7 +173,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
      Selecione a caixa de seleção **Condição** e digite `i == 500;` na caixa de texto. Escolha a opção **É verdadeiro** e escolha **OK**. O ponto de interrupção permite verificar o valor à 500ª iteração do loop `for`. Você pode identificar um ícone de ponto de interrupção condicional pela sua cruz branca.  
   
-     ![Ícone de ponto de interrupção de Conditonal](~/docs/debugger/media/dbg_jsnav_breakpoint_condition_icon.png "DBG\_JSNAV\_Breakpoint\_Condition\_icon")  
+     ![Ícone de ponto de interrupção de Conditonal](~/debugger/media/dbg_jsnav_breakpoint_condition_icon.png "DBG\_JSNAV\_Breakpoint\_Condition\_icon")  
   
 5.  **Execute até o ponto de interrupção.** No menu **Depurar**, escolha **Continuar** \(teclado: **F5**\). Pause sobre `i` para confirmar que o valor atual de `i` é 500. Observe também que a variável `s` é representada como uma linha e é muito maior que a janela de dica de dados.  
   
@@ -181,7 +181,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
      A janela do Visualizador de texto é exibida e o valor da cadeia de caracteres é apresentado como uma cadeia de caracteres de várias linhas.  
   
-     ![Depurar o Visualizador de texto](~/docs/debugger/media/dbg_jsnav_text_visualizer.png "DBG\_JSNAV\_Text\_Visualizer")  
+     ![Depurar o Visualizador de texto](~/debugger/media/dbg_jsnav_text_visualizer.png "DBG\_JSNAV\_Text\_Visualizer")  
   
 7.  **Execute até o cursor.** Selecione a linha `callTrack += "->example3";` e, em seguida, escolha **Executar até o Cursor** no menu de atalho \(teclado: **Ctrl\+F10**\). O depurador conclui as iterações do loop e então suspende a execução na linha.  
   
@@ -207,7 +207,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 1.  **Adicione um objeto de matriz à função do módulo.** Edite a função `module` e substitua a linha após `var callTrack = "module function"` por `var myArray = new Array(1, 2, 3);`  
   
-     ![definição de myArray](~/docs/debugger/media/dbg_jsnav_myarray.png "DBG\_JSNAV\_myArray")  
+     ![definição de myArray](~/debugger/media/dbg_jsnav_myarray.png "DBG\_JSNAV\_myArray")  
   
 2.  **Execute até o ponto de interrupção.** Inicie a sessão de depuração escolhendo **Iniciar Depuração** no menu **Depurar** \(teclado: **F5**\). O depurador suspende a execução no ponto de interrupção. Entre na linha.  
   
@@ -215,13 +215,13 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 4.  **Examinar as variáveis locais na função do módulo** As janelas de Locais exibem as variáveis da função atualmente em execução \(a função `module`\) como nós de nível superior da árvore. Quando você inserir uma função, o JavaScript criará todas as variáveis e atribuirá a elas um valor de `undefined`. Funções que são definidas na função têm seu texto como um valor.  
   
-     ![Janela Variáveis locais](~/docs/debugger/media/dbg_jsnav_locals_window.png "DBG\_JSNAV\_Locals\_window")  
+     ![Janela Variáveis locais](~/debugger/media/dbg_jsnav_locals_window.png "DBG\_JSNAV\_Locals\_window")  
   
 5.  **Percorra as definições de callTrack e myArray.** Encontre as variáveis callTrack e myArray na janela Locais. Percorra \(**F10**\) as duas definições e observe que os campos **Valor** e **Tipo** são alterados. A janela Locais realça os valores das variáveis que foram alterados desde a última interrupção.  
   
 6.  **Examine o objeto myArray** e expanda a variável `myArray`. Cada elemento da matriz é listado O nó **\[protótipo\]** que contém a hierarquia de herança do objeto `Array`. Expanda esse nó.  
   
-     ![Cadeia de protótipos na janela Variáveis locais](~/docs/debugger/media/dbg_jsnav_locals_proto_chain.png "DBG\_JSNAV\_Locals\_proto\_chain")  
+     ![Cadeia de protótipos na janela Variáveis locais](~/debugger/media/dbg_jsnav_locals_proto_chain.png "DBG\_JSNAV\_Locals\_proto\_chain")  
   
     -   O nó **Métodos** lista todos os métodos do objeto `Array`.  
   
@@ -244,7 +244,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 1.  **Chame a função example4 da função de módulo.** Edite a função `module` e substitua a linha após `var callTrack = "module function"` por `example4()`:  
   
-     ![Chamada Exemplo4](~/docs/debugger/media/dbg_jsnav_example4.png "DBG\_JSNAV\_example4")  
+     ![Chamada Exemplo4](~/debugger/media/dbg_jsnav_example4.png "DBG\_JSNAV\_example4")  
   
 2.  **Execute até o ponto de interrupção.** Inicie a sessão de depuração escolhendo **Iniciar Depuração** no menu **Depurar** \(teclado: **F5**\). O depurador suspende a execução no ponto de interrupção.  
   
@@ -254,7 +254,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 5.  **Entre no example4 e examine suas variáveis de eu local e escopo** Entre \(teclado: **F11**\) na função `example4`. Uma vez que `example4` é definido na função `module`, a função `module` torna\-se o escopo pai. `example4` pode chamar qualquer uma das funções na função `module` e acessar suas variáveis. Expanda o nó **\[escopo\]** na janela Locais e observe que ele contém as mesmas variáveis da função `module`.  
   
-     ![Escopos do método Exemplo4](~/docs/debugger/media/dbg_jsnav_locals_example4_scope.png "DBG\_JSNAV\_Locals\_example4\_scope")  
+     ![Escopos do método Exemplo4](~/debugger/media/dbg_jsnav_locals_example4_scope.png "DBG\_JSNAV\_Locals\_example4\_scope")  
   
 6.  **Entre em example4\_a e examine suas variáveis de local e escopo** Continuar para entrar em `example4` e na chamada para `example4_a`. Observe que as variáveis locais agora são de `example4_a`, e que o nó **\[Escopo\]** continua contendo as variáveis da função `module`. Embora as variáveis de `example4` estejam ativas, elas não podem ser acessadas por `example4_a` e não fazem parte da cadeia de escopo.  
   
@@ -266,7 +266,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 8.  Na janela Locais, somente o parâmetro `b` é listado como uma variável local em `multiplyXby`, mas um novo nível **\[Escopo\]** foi adicionado. Expandindo esse nó, você verá que ele contém os parâmetros, as funções e as variáveis de `multiplyClosure`, incluindo a variável `a` chamada na primeira linha de `multiplyXby`. Uma verificação rápida do segundo nó **\[Escopo\]** revela as variáveis de função do módulo, que `multiplyXby` acessa em sua próxima linha.  
   
-     ![Escopos de um fechamento na janela Variáveis locais](~/docs/debugger/media/dbg_jsnav_scope_mulitplyxby.png "DBG\_JSNAV\_scope\_mulitplyXby")  
+     ![Escopos de um fechamento na janela Variáveis locais](~/debugger/media/dbg_jsnav_scope_mulitplyxby.png "DBG\_JSNAV\_scope\_mulitplyXby")  
   
 9. **Pare a depuração.** No menu **Depurar**, escolha **Parar Depuração** \(atalho do teclado: **Shift\+F5**\). Isso encerra a sessão de depuração.  
   
@@ -280,7 +280,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 1.  **Chame a função example5 na função de módulo.** Edite a função `module` e substitua a linha após `var callTrack = "module function";` pela linha `example5();`.  
   
-     ![Exemplo 5 de chamada](~/docs/debugger/media/dbg_jsnav_example5.png "DBG\_JSNAV\_example5")  
+     ![Exemplo 5 de chamada](~/debugger/media/dbg_jsnav_example5.png "DBG\_JSNAV\_example5")  
   
 2.  **Execute até o ponto de interrupção.** Inicie a sessão de depuração escolhendo **Iniciar Depuração** no menu **Depurar** \(teclado: **F5**\). O depurador suspende a execução no ponto de interrupção na função de módulo.  
   
@@ -292,7 +292,7 @@ Esse guia de início rápido demonstra como navegar no depurador do Visual Studi
   
 4.  **Entre nas funções para chegar à função example5\_d.** Escolha **Entrar** no menu **Depurar** \(teclado: **F11**\) para executar as chamadas no caminho de chamada até que o ponto de entrada da função example5\_d. Observe que cada vez que uma função chama uma função, o número de linha da função de chamada é salvo e a função chamada é colocada na parte superior da pilha. O número de linha da função de chamada é o ponto em que a função de chamada suspendeu a execução. Uma seta amarela aponta para a função atualmente em execução.  
   
-     ![Janela Pilha de chamadas](~/docs/debugger/media/dbg_jsnav_callstack_windows.png "DBG\_JSNAV\_CallStack\_windows")  
+     ![Janela Pilha de chamadas](~/debugger/media/dbg_jsnav_callstack_windows.png "DBG\_JSNAV\_CallStack\_windows")  
   
 5.  **Use a janela Pilha de Chamadas para navegar até o código example5\_a e definir um ponto de interrupção.** Na janela Pilha de Chamadas, selecione o item de lista `example5_a` e, em seguida, escolha **Ir para Fonte** no menu de atalho. O editor de código define o cursor na linha de retorno da função. Defina um ponto de interrupção nessa linha. Observe que a linha de execução atual não é alterada. Somente o cursor do editor foi movido.  
   

@@ -201,17 +201,17 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
  **Conexão vindo para uma OutPort de um componente aninhado**  
   
- ![Construtor de Conexão](~/docs/modeling/media/connectionbuilder_3.png "ConnectionBuilder_3")  
+ ![Construtor de Conexão](~/modeling/media/connectionbuilder_3.png "ConnectionBuilder_3")  
   
  Portanto, pode ser desejável especificar que uma conexão pode vir de um componente aninhado para uma OutPort. Para especificar tal uma conexão, defina **usos da aceitação personalizada** no **InPort** tipo como função de origem e o **OutPort** tipo como função de destino no **detalhes de DSL** janela conforme mostrado nas ilustrações a seguir:  
   
  **Diretiva no Gerenciador de DSL de conexão de link**  
   
- ![Imagem do construtor de Conexão](~/docs/modeling/media/connectionbuilder_4a.png "ConnectionBuilder_4a")  
+ ![Imagem do construtor de Conexão](~/modeling/media/connectionbuilder_4a.png "ConnectionBuilder_4a")  
   
  **Diretiva na janela de detalhes DSL de conexão de link**  
   
- ![](~/docs/modeling/media/connectionbuilder_4b.png "ConnectionBuilder_4b")  
+ ![](~/modeling/media/connectionbuilder_4b.png "ConnectionBuilder_4b")  
   
  É necessário fornecer métodos na classe ConnectionBuilder:  
   

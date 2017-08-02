@@ -73,7 +73,7 @@ O pacote Microsoft.SharePoint.Emulators fornece um conjunto de bibliotecas que a
 ##  <a name="BKMK_The_AppointmentsWebPart_example"></a> O exemplo AppointmentsWebPart  
  O AppointmentsWebPart permite exibir e gerenciar uma lista de seus compromissos do SharePoint.  
   
- ![Appointments WebPart](~/docs/test/media/ut_emulators_appointmentswebpart.png "UT_EMULATORS_AppointmentsWebPart")  
+ ![Appointments WebPart](~/test/media/ut_emulators_appointmentswebpart.png "UT_EMULATORS_AppointmentsWebPart")  
   
  Testaremos dois métodos da web part neste exemplo:  
   
@@ -162,7 +162,7 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
   
 3.  Pesquise `Microsoft.SharePoint.Emulators` na categoria **Online** e escolha **Instalar**.  
   
- ![Pacote NuGet de emuladores do SharePoint emuladores](~/docs/test/media/ut_emulators_nuget.png "UT_EMULATORS_Nuget")  
+ ![Pacote NuGet de emuladores do SharePoint emuladores](~/test/media/ut_emulators_nuget.png "UT_EMULATORS_Nuget")  
   
  [Neste tópico](#BKMK_In_this_topic)  
   
@@ -201,7 +201,7 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
   
  Quando o método de teste é executado, o tempo de execução do Emulador chama o Microsoft Fakes para injetar código dinamicamente nos métodos do SharePoint para desviar as chamadas a esses métodos para representantes que são declarados em Microsoft.SharePoint.Fakes.dll. O Microsoft.SharePoint.Emulators.dll implementa os representantes para os métodos emulados imitando atentamente o comportamento real do SharePoint. Quando o método de teste ou o componente em teste chama um método do SharePoint, o comportamento resultante é o da emulação.  
   
- ![Fluxo de execução do emulador](~/docs/test/media/ut_emulators_flowchart.png "UT_EMULATORS_FlowChart")  
+ ![Fluxo de execução do emulador](~/test/media/ut_emulators_flowchart.png "UT_EMULATORS_FlowChart")  
   
  [Neste tópico](#BKMK_In_this_topic)  
   
@@ -318,11 +318,11 @@ namspace MySPAppTests
   
 1.  Se você quiser fazer shim em uma classe do SharePoint que não é emulada, edite o arquivo Microsoft.SharePoint.fakes e adicione a classe à lista de classes com shims. Consulte a seção [Configurando a geração de código de stubs e shims](http://msdn.microsoft.com/library/hh708916.aspx#bkmk_configuring_code_generation_of_stubs) em [Geração de código, compilação e convenções de nomenclatura no Microsoft Fakes](../test/code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md).  
   
-     ![Pasta Fakes no Gerenciador de Soluções](~/docs/test/media/ut_emulators_fakesfilefolder.png "UT_EMULATORS_FakesFileFolder")  
+     ![Pasta Fakes no Gerenciador de Soluções](~/test/media/ut_emulators_fakesfilefolder.png "UT_EMULATORS_FakesFileFolder")  
   
 2.  Recompile o projeto de teste pelo menos uma vez após instalar o pacote de emuladores do Microsoft SharePoint e se você editou o arquivo Microsoft.SharePoint.Fakes. A criação do projeto cria e preenche uma pasta **FakesAssembly** na pasta raiz do projeto em disco.  
   
-     ![Pasta de FakesAssembly](~/docs/test/media/ut_emulators_fakesassemblyfolder.png "UT_EMULATORS_FakesAssemblyFolder")  
+     ![Pasta de FakesAssembly](~/test/media/ut_emulators_fakesassemblyfolder.png "UT_EMULATORS_FakesAssemblyFolder")  
   
 3.  Adicione uma referência ao assembly **Microsoft.SharePoint.14.0.0.0.Fakes.dll** que está localizado na pasta **FakesAssembly**.  
   

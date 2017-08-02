@@ -46,14 +46,14 @@ Incluir testes de IU codificados em um aplicativo do SharePoint permite verifica
   
  **Observações**  
   
--   ![Pré-requisito](~/docs/test/media/prereq.png "Prereq") Testes de IU codificado para aplicativos do SharePoint têm suporte apenas com SharePoint 2010.  
+-   ![Pré-requisito](~/test/media/prereq.png "Prereq") Testes de IU codificado para aplicativos do SharePoint têm suporte apenas com SharePoint 2010.  
   
--   ![Pré-requisito](~/docs/test/media/prereq.png "Prereq") Não há suporte para controles do Visio e PowerPoint 2010 no seu aplicativo do SharePoint.  
+-   ![Pré-requisito](~/test/media/prereq.png "Prereq") Não há suporte para controles do Visio e PowerPoint 2010 no seu aplicativo do SharePoint.  
   
 ## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>Criando um teste de IU codificado para seu aplicativo do SharePoint  
  [Criar testes de IU codificados](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) para seus aplicativos do SharePoint 2010 é o mesmo processo que criar testes para outros tipos de aplicativos. A gravação e reprodução têm suporte para todos os controles na interface de edição na Web. A interface para a seleção de categorias e as Web parts são controles da Web padrão.  
   
- ![Web parts do SharePoint](~/docs/test/media/cuit_sharepoint.png "CUIT_SharePoint")  
+ ![Web parts do SharePoint](~/test/media/cuit_sharepoint.png "CUIT_SharePoint")  
   
 > [!NOTE]
 >  Se você estiver registrando a ação, valide as ações antes de gerar código. Como há vários comportamentos associados à passagem do Mouse, ela é ativada por padrão. Tenha cuidado para remover passagens redundantes de testes de IU codificados. Você pode fazer isso editando o código para o teste ou usando o [Editor de testes de IU codificados](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md).  

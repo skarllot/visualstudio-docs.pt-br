@@ -27,7 +27,7 @@ O documento de Log de gráficos é o registro de eventos de gráficos que ocorre
   
  Isso é o que um documento de log gráficos é semelhante no analisador de gráficos:  
   
- ![Um log de gráficos contendo dois quadros capturados.](~/docs/debugger/graphics/media/gfx_diag_demo_graphics_log_orientation.png "gfx\_diag\_demo\_graphics\_log\_orientation")  
+ ![Um log de gráficos contendo dois quadros capturados.](~/debugger/graphics/media/gfx_diag_demo_graphics_log_orientation.png "gfx\_diag\_demo\_graphics\_log\_orientation")  
   
 ## Entendendo os documentos de log de gráficos  
  Usando o analisador de gráficos para examinar um documento de log de gráficos, você pode visualizar os efeitos de eventos do Direct3D no destino de renderização que ocorreram durante a captura.  É possível indicar as áreas exatas do destino de renderização com saídas inesperadas.  Ao selecionar um pixel na área afetada, você pode usar os diagnósticos gráficos para inspecioná\-la e inspecionar seus sombreadores, os eventos do Direct3D que a afetaram, a pilha de chamadas do aplicativo que resultou nesses eventos e os objetos do DirectX compatíveis com esses eventos.  Você pode usar essas informações para diagnosticar problemas de renderização em seu jogo ou aplicativo.  

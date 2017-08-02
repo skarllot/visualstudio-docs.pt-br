@@ -59,23 +59,23 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
 ##  <a name="Tools"></a> Tour pelo painel Ferramentas  
  É possível usar o painel **Ferramentas** no Blend for Visual Studio para criar e modificar objetos no aplicativo. Você cria os objetos selecionando uma ferramenta e desenhando na prancheta com o mouse.  
   
- ![Painel Ferramentas](~/docs/designers/media/blend5toolspanel.png "Blend5Toolspanel")  
+ ![Painel Ferramentas](~/designers/media/blend5toolspanel.png "Blend5Toolspanel")  
   
 |||||  
 |-|-|-|-|  
-|![](../designers/media/b1_1.png "B1_1")|**Ferramentas Seleção** Selecione objetos e demarcadores.<br /><br /> Use a ferramenta **Seleção Direta** para selecionar objetos aninhados e segmentos de caminho.|![Texto explicativo A](~/docs/designers/media/b5_label_a.png "b5_label_A")|**Ferramentas gradiente e pincel**|  
-|![](../designers/media/b1_2.png "B1_2")|**Ferramentas de exibição** Ajuste a prancheta, como para zoom e movimento panorâmico.|![Texto explicativo B](~/docs/designers/media/b5_label_b.png "b5_label_B")|**Ferramentas de caminho**|  
-|![](../designers/media/b1_3.png "B1_3")|**Ferramentas pincel** Trabalhe com os atributos visuais de um objeto, como transformar um pincel, pintar um objeto ou selecionar os atributos de um objeto para aplicação em outro objeto.|![Texto explicativo C](~/docs/designers/media/b5_label_c.png "b5_label_C")|**Ferramentas Forma**|  
-|![](../designers/media/b1_4.png "B1_4")|**Ferramentas de objeto** Desenhe os objetos mais comuns na prancheta, como demarcadores, formas, painéis de layout, texto e controles.|![Texto explicativo D](~/docs/designers/media/b5_label_d.png "b5_label_D")|**Painéis de layout**|  
-|![](../designers/media/b1_5.png "B1_5")|**Ferramentas de ativos** Acesse o painel **Ativos** e mostre o ativo usado mais recentemente na biblioteca.|![Texto explicativo E](~/docs/designers/media/b5_label_e.png "b5_label_E")|**Controles de texto**|  
-|||![Texto explicativo F](~/docs/designers/media/b5_label_f.png "b5_label_F")|**Controles comuns**|  
+|![](../designers/media/b1_1.png "B1_1")|**Ferramentas Seleção** Selecione objetos e demarcadores.<br /><br /> Use a ferramenta **Seleção Direta** para selecionar objetos aninhados e segmentos de caminho.|![Texto explicativo A](~/designers/media/b5_label_a.png "b5_label_A")|**Ferramentas gradiente e pincel**|  
+|![](../designers/media/b1_2.png "B1_2")|**Ferramentas de exibição** Ajuste a prancheta, como para zoom e movimento panorâmico.|![Texto explicativo B](~/designers/media/b5_label_b.png "b5_label_B")|**Ferramentas de caminho**|  
+|![](../designers/media/b1_3.png "B1_3")|**Ferramentas pincel** Trabalhe com os atributos visuais de um objeto, como transformar um pincel, pintar um objeto ou selecionar os atributos de um objeto para aplicação em outro objeto.|![Texto explicativo C](~/designers/media/b5_label_c.png "b5_label_C")|**Ferramentas Forma**|  
+|![](../designers/media/b1_4.png "B1_4")|**Ferramentas de objeto** Desenhe os objetos mais comuns na prancheta, como demarcadores, formas, painéis de layout, texto e controles.|![Texto explicativo D](~/designers/media/b5_label_d.png "b5_label_D")|**Painéis de layout**|  
+|![](../designers/media/b1_5.png "B1_5")|**Ferramentas de ativos** Acesse o painel **Ativos** e mostre o ativo usado mais recentemente na biblioteca.|![Texto explicativo E](~/designers/media/b5_label_e.png "b5_label_E")|**Controles de texto**|  
+|||![Texto explicativo F](~/designers/media/b5_label_f.png "b5_label_F")|**Controles comuns**|  
   
- **Assista a um breve vídeo:** ![Configure Installed Features (Configurar recursos instalados)](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [A Barra de Ferramentas](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4).  
+ **Assista a um breve vídeo:** ![Configure Installed Features (Configurar recursos instalados)](~/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [A Barra de Ferramentas](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4).  
   
 ##  <a name="Assets"></a> Tour pelo painel Ativos  
  É possível encontrar todos os controles no painel **Ativos**, semelhante à **Caixa de ferramentas** no Visual Studio. Além dos controles, você encontrará tudo o que pode adicionar à sua prancheta no painel **Ativos**, incluindo estilos, mídias, comportamentos e efeitos.  
   
- ![Painel Ativos](~/docs/designers/media/blend5_assets_panel.png "Blend5_Assets_panel")  
+ ![Painel Ativos](~/designers/media/blend5_assets_panel.png "Blend5_Assets_panel")  
   
 |||  
 |-|-|  
@@ -88,7 +88,7 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
 ##  <a name="Objects"></a> Tour pelo painel Objetos e Linha do Tempo  
  Use esse painel para organizar os objetos na prancheta e, se quiser, para animá-los.  
   
- ![Painel Objetos e Linha do Tempo no modo de animação](~/docs/designers/media/b5_object_timeline_animation.png "b5_object_timeline_animation")  
+ ![Painel Objetos e Linha do Tempo no modo de animação](~/designers/media/b5_object_timeline_animation.png "b5_object_timeline_animation")  
   
 |||  
 |-|-|  
@@ -98,23 +98,23 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
 |![](../designers/media/b1_4.png "B1_4")|**Fechar storyboard** Feche o storyboard atual.|  
 |![](../designers/media/b1_5.png "B1_5")|**Opções de storyboard** Crie, duplique, inverta, exclua, renomeie ou feche um storyboard.|  
 |![](../designers/media/b1_6.png "B1_6")|**Controles de reprodução** Navegue pela linha do tempo. Também é possível arrastar o playhead para navegar pela linha do tempo (ou *remover*).|  
-|![](~/docs/designers/media/b1_7.png "B1_7")|**Retornar escopo para** Defina o escopo da exibição Objetos de volta ao objeto raiz anterior ou ao escopo anterior. Você poderá fazer isso somente quando estiver modificando um estilo ou um modelo.|  
-|![](~/docs/designers/media/b1_8.png "B1_8")|**Registrar um quadro chave** Registre um instantâneo das propriedades do objeto selecionado no ponto no tempo atual.|  
-|![](~/docs/designers/media/b1_9.png "B1_9")|**Opções de ajuste** Defina o ajuste da linha do tempo, a resolução de ajuste e desligue o ajuste da linha do tempo.|  
-|![](~/docs/designers/media/97fa60b9-0caf-4387-9225-b57510d32209.png "97fa60b9-0caf-4387-9225-b57510d32209")|**Mostrar/ocultar**, **Bloquear/desbloquear** Mostre ou oculte opções de visibilidade e bloqueio para a exibição Objetos.|  
-|![](~/docs/designers/media/b1_11.png "B1_11")|**Posição do playhead na linha do tempo** Mostre o tempo atual em milissegundos. Você também pode inserir um valor de tempo diretamente nesse campo para saltar até um ponto no tempo específico. A precisão depende da resolução de ajuste definida nas **Opções de Ajuste**.|  
-|![](~/docs/designers/media/b1_12.png "B1_12")|**Playhead** Determine em qual ponto no tempo a animação está. É possível arrastar o playhead na linha do tempo para visualizar a animação.|  
-|![](~/docs/designers/media/b1_13.png "B1_13")|**Quadros chave definidos em linhas do tempo** Altere um valor da propriedade em um ponto no tempo específico.|  
-|![](~/docs/designers/media/d839d12c-07a1-4127-a830-4a8e7069f4fe.png "d839d12c-07a1-4127-a830-4a8e7069f4fe")|**Alterar a ordem dos objetos** Defina a ordem de exibição dos objetos. Clique neste botão para organizar os objetos na exibição de estrutura pela ordem Z (de frente para trás) ou pela ordem de marcação (a ordem na qual eles aparecem na exibição **XAML**).|  
-|![](~/docs/designers/media/b1_15.png "B1_15")|**Zoom da linha do tempo** Defina a resolução de zoom da linha do tempo. Aumentar o zoom permite editar uma animação com mais detalhes e diminuir o zoom mostra mais uma visão geral do que está acontecendo no decorrer de períodos de tempo mais longos. Se você aumentar o zoom, mas não conseguir definir um quadro chave na posição de tempo desejada, verifique se a resolução de ajuste está definida com um valor suficientemente alto.|  
-|![Texto explicativo 16](~/docs/designers/media/b5_label_16.png "b5_label_16")|**Área de composição da linha do tempo** Exiba a linha do tempo e mova quadros chave arrastando-os ou usando os menus de atalho.|  
+|![](~/designers/media/b1_7.png "B1_7")|**Retornar escopo para** Defina o escopo da exibição Objetos de volta ao objeto raiz anterior ou ao escopo anterior. Você poderá fazer isso somente quando estiver modificando um estilo ou um modelo.|  
+|![](~/designers/media/b1_8.png "B1_8")|**Registrar um quadro chave** Registre um instantâneo das propriedades do objeto selecionado no ponto no tempo atual.|  
+|![](~/designers/media/b1_9.png "B1_9")|**Opções de ajuste** Defina o ajuste da linha do tempo, a resolução de ajuste e desligue o ajuste da linha do tempo.|  
+|![](~/designers/media/97fa60b9-0caf-4387-9225-b57510d32209.png "97fa60b9-0caf-4387-9225-b57510d32209")|**Mostrar/ocultar**, **Bloquear/desbloquear** Mostre ou oculte opções de visibilidade e bloqueio para a exibição Objetos.|  
+|![](~/designers/media/b1_11.png "B1_11")|**Posição do playhead na linha do tempo** Mostre o tempo atual em milissegundos. Você também pode inserir um valor de tempo diretamente nesse campo para saltar até um ponto no tempo específico. A precisão depende da resolução de ajuste definida nas **Opções de Ajuste**.|  
+|![](~/designers/media/b1_12.png "B1_12")|**Playhead** Determine em qual ponto no tempo a animação está. É possível arrastar o playhead na linha do tempo para visualizar a animação.|  
+|![](~/designers/media/b1_13.png "B1_13")|**Quadros chave definidos em linhas do tempo** Altere um valor da propriedade em um ponto no tempo específico.|  
+|![](~/designers/media/d839d12c-07a1-4127-a830-4a8e7069f4fe.png "d839d12c-07a1-4127-a830-4a8e7069f4fe")|**Alterar a ordem dos objetos** Defina a ordem de exibição dos objetos. Clique neste botão para organizar os objetos na exibição de estrutura pela ordem Z (de frente para trás) ou pela ordem de marcação (a ordem na qual eles aparecem na exibição **XAML**).|  
+|![](~/designers/media/b1_15.png "B1_15")|**Zoom da linha do tempo** Defina a resolução de zoom da linha do tempo. Aumentar o zoom permite editar uma animação com mais detalhes e diminuir o zoom mostra mais uma visão geral do que está acontecendo no decorrer de períodos de tempo mais longos. Se você aumentar o zoom, mas não conseguir definir um quadro chave na posição de tempo desejada, verifique se a resolução de ajuste está definida com um valor suficientemente alto.|  
+|![Texto explicativo 16](~/designers/media/b5_label_16.png "b5_label_16")|**Área de composição da linha do tempo** Exiba a linha do tempo e mova quadros chave arrastando-os ou usando os menus de atalho.|  
   
 ##  <a name="Properties"></a> Tour pelo painel Propriedades  
  Use esse painel para exibir e modificar as propriedades de um objeto. Você também pode defini-las diretamente na prancheta. Nesse caso, as alterações na propriedade serão refletidas no painel **Propriedades**.  
   
- ![Painel Propriedades](~/docs/designers/media/blend5_properties_panel.png "Blend5_properties_panel")  
+ ![Painel Propriedades](~/designers/media/blend5_properties_panel.png "Blend5_properties_panel")  
   
- **Categorias** Expanda e recolha categorias de propriedades. Clique em **Expandir** ![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074c-421a-bbb3-6f5055b67b64") e em **Recolher** ![Collapse](~/docs/designers/media/b5_collapse_button.png "b5_collapse_button") para mostrar ou ocultar detalhes da categoria.  
+ **Categorias** Expanda e recolha categorias de propriedades. Clique em **Expandir** ![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074c-421a-bbb3-6f5055b67b64") e em **Recolher** ![Collapse](~/designers/media/b5_collapse_button.png "b5_collapse_button") para mostrar ou ocultar detalhes da categoria.  
   
 |||  
 |-|-|  
@@ -124,19 +124,19 @@ O Blend for Visual Studio ajuda a criar aplicativos da área de trabalho do Wind
 |![](../designers/media/b1_4.png "B1_4")|**Editor de cor** Use para cor sólida e pincéis de gradiente.|  
 |![](../designers/media/b1_5.png "B1_5")|**Seletor de cor** Selecione uma cor.|  
 |![](../designers/media/b1_6.png "B1_6")|**Chips de cor** Exiba a cor inicial, a cor atual e a última cor|  
-|![](~/docs/designers/media/b1_7.png "B1_7")|**Conta-gotas** Use a cor de qualquer elemento na tela. O **Conta-gotas de cor** fica disponível quando o **Pincel de cor sólida** é selecionado. O **Conta-gotas de gradiente** fica disponível quando o **Pincel de gradiente** é selecionado.|  
-|![](~/docs/designers/media/b1_8.png "B1_8")|**Propriedades e Eventos** Defina as propriedades ou escolha os eventos de um elemento selecionado.|  
-|![](~/docs/designers/media/b1_9.png "B1_9")|**Caixa de pesquisa** Pesquise propriedades. Filtre as propriedades exibidas digitando na caixa **Pesquisar**.||  
-|![](~/docs/designers/media/97fa60b9-0caf-4387-9225-b57510d32209.png "97fa60b9-0caf-4387-9225-b57510d32209")|**Guias do editor de pincel** Use-as para selecionar um editor de pincel. Você pode escolher **Sem pincel**, **Pincel de cor sólida**, **Pincel de gradiente**, **Pincel de bloco** ou **Recurso pincel**.|  
-|![](~/docs/designers/media/b1_11.png "B1_11")|**Recursos de cor** Aplique exatamente a mesma cor a propriedades diferentes. A guia **Recursos de Cor** inclui **Recursos Locais** e **Recursos do Sistema**.|  
-|![](~/docs/designers/media/b1_12.png "B1_12")|**Espaço de cores RGB** Modifique a cor ajustando os valores para os editores de número **R**, **G** ou **B** (vermelho, verde, azul).|  
-|![](~/docs/designers/media/b1_13.png "B1_13")|**Canal alfa** Modifique o valor Alfa usando o editor de número ao lado de **A**.|  
-|![](~/docs/designers/media/d839d12c-07a1-4127-a830-4a8e7069f4fe.png "d839d12c-07a1-4127-a830-4a8e7069f4fe")|**Converter cor em recurso** Converta a cor selecionada em um recurso de cor. Os recursos de cor ficam disponíveis ao clicar na guia Recursos de cor.|  
-|![](~/docs/designers/media/b1_15.png "B1_15")|**Valor hexadecimal** Exibe o valor hexadecimal da cor exibida.|  
-|![Texto explicativo 16](~/docs/designers/media/b5_label_16.png "b5_label_16")|**Controle deslizante de gradiente** É exibido somente se um pincel de gradiente é selecionado.|  
-|![](~/docs/designers/media/d50027a1-6824-4ad8-8b4e-558b0756dcf8.png "d50027a1-6824-4ad8-8b4e-558b0756dcf8")|**Mostrar propriedades avançadas** Exiba categorias das propriedades menos usadas.|  
+|![](~/designers/media/b1_7.png "B1_7")|**Conta-gotas** Use a cor de qualquer elemento na tela. O **Conta-gotas de cor** fica disponível quando o **Pincel de cor sólida** é selecionado. O **Conta-gotas de gradiente** fica disponível quando o **Pincel de gradiente** é selecionado.|  
+|![](~/designers/media/b1_8.png "B1_8")|**Propriedades e Eventos** Defina as propriedades ou escolha os eventos de um elemento selecionado.|  
+|![](~/designers/media/b1_9.png "B1_9")|**Caixa de pesquisa** Pesquise propriedades. Filtre as propriedades exibidas digitando na caixa **Pesquisar**.||  
+|![](~/designers/media/97fa60b9-0caf-4387-9225-b57510d32209.png "97fa60b9-0caf-4387-9225-b57510d32209")|**Guias do editor de pincel** Use-as para selecionar um editor de pincel. Você pode escolher **Sem pincel**, **Pincel de cor sólida**, **Pincel de gradiente**, **Pincel de bloco** ou **Recurso pincel**.|  
+|![](~/designers/media/b1_11.png "B1_11")|**Recursos de cor** Aplique exatamente a mesma cor a propriedades diferentes. A guia **Recursos de Cor** inclui **Recursos Locais** e **Recursos do Sistema**.|  
+|![](~/designers/media/b1_12.png "B1_12")|**Espaço de cores RGB** Modifique a cor ajustando os valores para os editores de número **R**, **G** ou **B** (vermelho, verde, azul).|  
+|![](~/designers/media/b1_13.png "B1_13")|**Canal alfa** Modifique o valor Alfa usando o editor de número ao lado de **A**.|  
+|![](~/designers/media/d839d12c-07a1-4127-a830-4a8e7069f4fe.png "d839d12c-07a1-4127-a830-4a8e7069f4fe")|**Converter cor em recurso** Converta a cor selecionada em um recurso de cor. Os recursos de cor ficam disponíveis ao clicar na guia Recursos de cor.|  
+|![](~/designers/media/b1_15.png "B1_15")|**Valor hexadecimal** Exibe o valor hexadecimal da cor exibida.|  
+|![Texto explicativo 16](~/designers/media/b5_label_16.png "b5_label_16")|**Controle deslizante de gradiente** É exibido somente se um pincel de gradiente é selecionado.|  
+|![](~/designers/media/d50027a1-6824-4ad8-8b4e-558b0756dcf8.png "d50027a1-6824-4ad8-8b4e-558b0756dcf8")|**Mostrar propriedades avançadas** Exiba categorias das propriedades menos usadas.|  
   
- **Assista a um breve vídeo:** ![Configure Installed Features (Configurar recursos instalados)](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Painel Propriedades](https://www.youtube.com/watch?v=HCqQfiobdag&list=PLBDF977B2F1DAB358&index=7).  
+ **Assista a um breve vídeo:** ![Configure Installed Features (Configurar recursos instalados)](~/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Painel Propriedades](https://www.youtube.com/watch?v=HCqQfiobdag&list=PLBDF977B2F1DAB358&index=7).  
   
 ## <a name="see-also"></a>Consulte também  
  [Inserir controles e modificar seu comportamento](../designers/insert-controls-and-modify-their-behavior-in-xaml-designer.md)   

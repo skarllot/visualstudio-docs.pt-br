@@ -27,7 +27,7 @@ Cada janela possui um fluxo de mensagem associada.  Uma janela de exibição de 
   
  Uma janela típica de modo de exibição de mensagens é exibida abaixo.  Observe que a primeira coluna contém o identificador de janela e a segunda coluna contém um código de mensagem \(explicado em  [Códigos de mensagem](../debugger/message-codes.md)\).  Mensagem decodificada parâmetros e valores de retorno estão à direita.  
   
- ![Exibição de mensagens Spy &#43; &#43;](~/docs/debugger/media/spy--_messagesview.png "Spy\+\+\_MessagesView")  
+ ![Exibição de mensagens Spy &#43; &#43;](~/debugger/media/spy--_messagesview.png "Spy\+\+\_MessagesView")  
 Exibição de mensagens Spy \+ \+  
   
 ## Procedimentos  

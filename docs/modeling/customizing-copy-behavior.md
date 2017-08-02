@@ -31,7 +31,7 @@ Em uma linguagem específica de domínio (DSL) criada com o SDK de Visualizaçã
   
  Esta regra aplica-se recursivamente aos elementos e links copiados.  
   
- ![Copiado e colado elementos](~/docs/modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")  
+ ![Copiado e colado elementos](~/modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")  
   
  Os elementos e links copiados são serializados e armazenados em um <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>(EGP), que é colocado na área de transferência.</xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>  
   
@@ -219,7 +219,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 ##  <a name="a-namecustomizelinksa-customizing-link-copy-behavior"></a><a name="customizeLinks"></a>Personalizando comportamento Copiar Link  
  Quando o usuário copia um elemento, o comportamento padrão é que todos os elementos incorporados também sejam copiados. Você pode modificar o comportamento de cópia padrão. Na definição de DSL, selecione uma função em um dos lados de um relacionamento e na janela Propriedades, configure o **propaga cópia** valor.  
   
- ![Propaga a propriedade de cópia da função de domínio de](~/docs/modeling/media/dslpropagatescopy.png "DslPropagatesCopy")  
+ ![Propaga a propriedade de cópia da função de domínio de](~/modeling/media/dslpropagatescopy.png "DslPropagatesCopy")  
   
  Há três valores:  
   
@@ -229,7 +229,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
   
 -   Propagar cópia para link e usuário oposto - o grupo copiado inclui uma cópia do elemento na outra extremidade do link.  
   
- ![Efeito de cópia com PropagateCopyToLinkOnly](~/docs/modeling/media/dslpropagatecopy.png "DslPropagateCopy")  
+ ![Efeito de cópia com PropagateCopyToLinkOnly](~/modeling/media/dslpropagatecopy.png "DslPropagateCopy")  
   
  As mudanças que você fizer afetarão os elementos e a imagem que é copiada.  
   
@@ -239,9 +239,9 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 > [!TIP]
 >  Para obter mais informações sobre como personalizar o modelo usando o código do programa, consulte [Navegando e atualizando um modelo no código do programa](../modeling/navigating-and-updating-a-model-in-program-code.md).  
   
- ![Diagrama de sequência para a operação de cópia](~/docs/modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")  
+ ![Diagrama de sequência para a operação de cópia](~/modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")  
   
- ![Diagrama de sequência da operação de colagem](~/docs/modeling/media/dslpasteseqdiagram.png "dslPasteSeqDiagram")  
+ ![Diagrama de sequência da operação de colagem](~/modeling/media/dslpasteseqdiagram.png "dslPasteSeqDiagram")  
   
 #### <a name="to-define-your-own-elementoperations"></a>Para definir seus próprios ElementOperations  
   

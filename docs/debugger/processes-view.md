@@ -35,7 +35,7 @@ O modo de exibição processos exibe uma árvore de todos os processos ativos no
   
 1.  Do  **Spy** menu, escolha  **processos**.  
   
- ![Visualização de processos Spy &#43; &#43;](~/docs/debugger/media/spy--_processes.png "Spy\+\+\_Processes")  
+ ![Visualização de processos Spy &#43; &#43;](~/debugger/media/spy--_processes.png "Spy\+\+\_Processes")  
 Visualização de processos Spy \+ \+  
   
  A figura acima mostra a visualização de processos conosco de processo e thread expandidos.  

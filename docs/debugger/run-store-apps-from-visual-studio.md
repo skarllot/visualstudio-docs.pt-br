@@ -26,7 +26,7 @@ manager: "ghogen"
 
 Os aplicativos da Windows Store são executados em uma grande variedade de dispositivos e o Visual Studio fornece a você uma série de maneiras de executar e interagir com esses aplicativos.  A experiência "F5" é aprimorada para facilitar a depuração, a criação de perfil e o teste de aplicativos durante o desenvolvimento.  
   
- ![Inicie o degugging e selecione o destino](~/docs/debugger/media/vsrun_dropdownlist.png "VSRUN\_DropDownList")  
+ ![Inicie o degugging e selecione o destino](~/debugger/media/vsrun_dropdownlist.png "VSRUN\_DropDownList")  
   
 ## Nesta seção  
   

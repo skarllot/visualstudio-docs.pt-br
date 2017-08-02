@@ -62,7 +62,7 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
 3.  Especifique `Introduction` na caixa de pesquisa para encontrar a amostra.  
   
-     ![Caixa de diálogo Extensões e Atualizações](~/docs/ide/media/buildwalk_extensionsdialogsampledownload.png "BuildWalk_ExtensionsDialogSampleDownload")  
+     ![Caixa de diálogo Extensões e Atualizações](~/ide/media/buildwalk_extensionsdialogsampledownload.png "BuildWalk_ExtensionsDialogSampleDownload")  
   
 4.  Na lista de resultados, escolha **Introdução à compilação de aplicativos WPF (Visual C#)** ou **Introdução à compilação de aplicativos WPF (Visual Basic)**.  
   
@@ -74,19 +74,19 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
 1.  Abra a caixa de diálogo **Novo Projeto**.  
   
-     ![Na barra de menus, escolha Arquivo, Novo, Projeto](~/docs/ide/media/exploreide-filenewproject.png "ExploreIDE-FileNewProject")  
+     ![Na barra de menus, escolha Arquivo, Novo, Projeto](~/ide/media/exploreide-filenewproject.png "ExploreIDE-FileNewProject")  
   
 2.  Na categoria **Instaladas**, escolha a categoria **Amostras** para exibir a amostra Introdução à compilação de aplicativos WPF.  
   
 3.  Nomeie a solução `IntroWPFcsharp` do Visual C#.  
   
-     ![Caixa de diálogo Novo Projeto, Amostras Instaladas](~/docs/ide/media/buildwalk_newprojectdlgintrotowpfsample.png "BuildWalk_NewProjectdlgIntrotoWPFsample")  
+     ![Caixa de diálogo Novo Projeto, Amostras Instaladas](~/ide/media/buildwalk_newprojectdlgintrotowpfsample.png "BuildWalk_NewProjectdlgIntrotoWPFsample")  
   
      OU  
   
      Nomeie a solução `IntroWPFvb` do Visual Basic.  
   
-     ![Caixa de diálogo Novo Projeto, Amostra do Visual Basic](~/docs/ide/media/buildwalk_newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")  
+     ![Caixa de diálogo Novo Projeto, Amostra do Visual Basic](~/ide/media/buildwalk_newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")  
   
 4.  Escolha o botão **OK**.  
   
@@ -99,29 +99,29 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
 1.  Abra a caixa de diálogo **Configuration Manager**.  
   
-     ![Menu Build, comando do Configuration Manager](~/docs/ide/media/buildwalk_configurationmanagerdialogbox.png "BuildWalk_ConfigurationManagerDialogBox")  
+     ![Menu Build, comando do Configuration Manager](~/ide/media/buildwalk_configurationmanagerdialogbox.png "BuildWalk_ConfigurationManagerDialogBox")  
   
 2.  Na lista **Configuração da solução ativa**, escolha **Nova**.  
   
 3.  Na caixa de diálogo **Nova Configuração da Solução**, nomeie a nova configuração `Test`, copie as configurações da configuração de Depuração existentes e, em seguida, escolha o botão **OK**.  
   
-     ![Caixa de diálogo Nova Configuração da Solução](~/docs/ide/media/buildwalk_newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
+     ![Caixa de diálogo Nova Configuração da Solução](~/ide/media/buildwalk_newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
   
 4.  Na lista **Plataforma da solução ativa**, escolha **Nova**.  
   
 5.  Na caixa de diálogo **Nova Plataforma da Solução**, escolha**x64** e não copie as configurações da plataforma x86.  
   
-     ![Caixa de diálogo Nova Plataforma da Solução](~/docs/ide/media/buildwalk_newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
+     ![Caixa de diálogo Nova Plataforma da Solução](~/ide/media/buildwalk_newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
   
 6.  Escolha o botão **OK**.  
   
  A configuração da solução ativa foi alterada para Teste com a plataforma da solução ativa definida como x64.  
   
- ![Configuration Manager com a configuração de Teste](~/docs/ide/media/buildwalk_configmanagertestconfig.png "BuildWalk_ConfigManagerTestconfig")  
+ ![Configuration Manager com a configuração de Teste](~/ide/media/buildwalk_configmanagertestconfig.png "BuildWalk_ConfigManagerTestconfig")  
   
  É possível verificar ou alterar de forma rápida a configuração da solução ativa usando a lista **Configurações da Solução** na barra de ferramentas **Padrão**.  
   
- ![Opção de Configuração da Solução na barra de ferramentas Padrão](~/docs/ide/media/buildwalk_standardtoolbarsolutioncongfig.png "BuildWalk_StandardToolbarSolutionCongfig")  
+ ![Opção de Configuração da Solução na barra de ferramentas Padrão](~/ide/media/buildwalk_standardtoolbarsolutioncongfig.png "BuildWalk_StandardToolbarSolutionCongfig")  
   
 ##  <a name="BKMK_building"></a> Compilar o aplicativo  
  Em seguida, você compilará a solução com a configuração de build personalizada.  
@@ -134,11 +134,11 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
  Figura 1: Avisos do Visual Basic  
   
- ![Janela de Saída do Visual Basic](~/docs/ide/media/buildwalk_vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")  
+ ![Janela de Saída do Visual Basic](~/ide/media/buildwalk_vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")  
   
  Figura 2: Avisos do Visual C#  
   
- ![Janela de Saída do Visual C&#35;](~/docs/ide/media/buildwalk_csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")  
+ ![Janela de Saída do Visual C&#35;](~/ide/media/buildwalk_csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")  
   
 ##  <a name="BKMK_hidewarning"></a> Ocultar avisos do compilador  
  Temporariamente, é possível ocultar determinadas mensagens de aviso durante um build, em vez de deixá-las acumular a saída do build.  
@@ -153,7 +153,7 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
 3.  Escolha a página **Build** e, em seguida, na caixa **Suprimir avisos**, especifique o número de aviso `1762`.  
   
-     ![Página Build, Designer de Projeto](~/docs/ide/media/buildwalk_csharpsupresswarnings.png "BuildWalk_CsharpSupressWarnings")  
+     ![Página Build, Designer de Projeto](~/ide/media/buildwalk_csharpsupresswarnings.png "BuildWalk_CsharpSupressWarnings")  
   
      Para obter mais informações, consulte [Página Build, Designer de Projeto (C#)](../ide/reference/build-page-project-designer-csharp.md).  
   
@@ -161,7 +161,7 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
      A Janela de **Saída** exibe apenas informações de resumo do build.  
   
-     ![Janela de Saída, Avisos de Build do Visual C&#35;](~/docs/ide/media/buildwalk_visualcsharpbuildwarnings.png "BuildWalk_VisualCsharpBuildWarnings")  
+     ![Janela de Saída, Avisos de Build do Visual C&#35;](~/ide/media/buildwalk_visualcsharpbuildwarnings.png "BuildWalk_VisualCsharpBuildWarnings")  
   
 #### <a name="to-suppress-all-visual-basic-build-warnings"></a>Para suprimir todos os avisos de build do Visual Basic  
   
@@ -173,7 +173,7 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
 3.  Na página **Compilar**, marque a caixa de seleção **Desabilitar todos os avisos**.  
   
-     ![Página Compilar, Designer de Projeto](~/docs/ide/media/buildwalk_vbsupresswarnings.png "BuildWalk_VBSupressWarnings")  
+     ![Página Compilar, Designer de Projeto](~/ide/media/buildwalk_vbsupresswarnings.png "BuildWalk_VBSupressWarnings")  
   
      Para obter mais informações, consulte [Configurando avisos no Visual Basic](../ide/configuring-warnings-in-visual-basic.md).  
   
@@ -181,7 +181,7 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
  A Janela de **Saída** exibe apenas informações de resumo do build.  
   
- ![Janela de Saída, Avisos de Build do Visual Basic](~/docs/ide/media/buildwalk_visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")  
+ ![Janela de Saída, Avisos de Build do Visual Basic](~/ide/media/buildwalk_visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")  
   
  Para obter mais informações, consulte [Como suprimir avisos do compilador](../ide/how-to-suppress-compiler-warnings.md).  
   
@@ -195,7 +195,7 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
 1.  Abra a caixa de diálogo **Opções**.  
   
-     ![Comando Opções no menu Ferramentas](~/docs/ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")  
+     ![Comando Opções no menu Ferramentas](~/ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")  
   
 2.  Escolha a categoria **Projetos e Soluções** e, em seguida, a página **Compilar e Executar**.  
   
@@ -225,7 +225,7 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
 1.  Abra o **Designer de Projeto**.  
   
-     ![Menu Exibir, comando Páginas de Propriedades](~/docs/ide/media/buildwalk_viewpropertypages.png "BuildWalk_ViewPropertyPages")  
+     ![Menu Exibir, comando Páginas de Propriedades](~/ide/media/buildwalk_viewpropertypages.png "BuildWalk_ViewPropertyPages")  
   
 2.  Escolha a página **Compilar**.  
   
@@ -242,13 +242,13 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
 6.  Compile o aplicativo.  
   
-     ![Comando Compilar Solução no menu Compilar](~/docs/ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
+     ![Comando Compilar Solução no menu Compilar](~/ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
   
 #### <a name="to-specify-a-release-build-for-visual-c"></a>Para especificar um build de versão para o Visual C# #
   
 1.  Abra o **Designer de Projeto**.  
   
-     ![Menu Exibir, comando Páginas de Propriedades](~/docs/ide/media/buildwalk_viewpropertypages.png "BuildWalk_ViewPropertyPages")  
+     ![Menu Exibir, comando Páginas de Propriedades](~/ide/media/buildwalk_viewpropertypages.png "BuildWalk_ViewPropertyPages")  
   
 2.  Escolha a página **Build**.  
   
@@ -265,7 +265,7 @@ Ao concluir este passo a passo, você ficará mais familiarizado com as várias 
   
 6.  Compile o aplicativo.  
   
-     ![Comando Compilar Solução no menu Compilar](~/docs/ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
+     ![Comando Compilar Solução no menu Compilar](~/ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
   
  O arquivo executável é copiado para o caminho de rede especificado. O caminho será \\\myserver\builds\\*FileName*.exe.  
   

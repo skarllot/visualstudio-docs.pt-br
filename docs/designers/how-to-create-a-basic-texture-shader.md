@@ -76,7 +76,7 @@ Este documento demonstra como usar o Designer de Sombreador e a DGSL (Directed G
 > [!NOTE]
 >  Nesta ilustração foi usado um plano como a forma de visualização e foi especificada uma textura para demonstrar melhor o efeito do sombreador.  
   
- ![Gráfico de sombreador e uma visualização de seu efeito](~/docs/designers/media/digit-texture-effect.png "Digit-Texture-Effect")  
+ ![Gráfico de sombreador e uma visualização de seu efeito](~/designers/media/digit-texture-effect.png "Digit-Texture-Effect")  
   
  Determinadas formas podem fornecer melhores visualizações para alguns sombreadores. Para obter mais informações sobre como visualizar sombreadores no Designer de Sombreador, consulte [Designer de Sombreador](../designers/shader-designer.md)  
   

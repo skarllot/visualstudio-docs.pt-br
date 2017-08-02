@@ -67,11 +67,11 @@ Por convenção, o Visual Studio identifica os testes como métodos cujos nomes 
 
 1. O Gerenciador de Testes pesquisará testes no projeto e os exibirá, conforme mostrado abaixo. Se você clicar duas vezes em um teste, seu arquivo de origem será aberto.
 
-    ![Gerenciador de Testes mostrando o test_A padrão](~/docs/python/media/unit-test-A.png)
+    ![Gerenciador de Testes mostrando o test_A padrão](~/python/media/unit-test-A.png)
 
 1. Conforme você adiciona mais testes ao projeto, é possível organizar a exibição no Gerenciador de Testes usando o menu Agrupar Por na barra de ferramentas:
 
-    ![Menu da barra de ferramentas Agrupar Por do Gerenciador de Testes](~/docs/python/media/unit-test-group-menu.png)
+    ![Menu da barra de ferramentas Agrupar Por do Gerenciador de Testes](~/python/media/unit-test-group-menu.png)
 
 1. Também é possível inserir um texto no campo de pesquisa para filtrar os testes por nome.
 
@@ -89,13 +89,13 @@ Os testes são executados em segundo plano e o Gerenciador de Testes atualiza o 
 
 - Os testes aprovados mostram um tique verde e o tempo necessário para executar o teste:
 
-    ![Status do test_A aprovado](~/docs/python/media/unit-test-A-pass.png)
+    ![Status do test_A aprovado](~/python/media/unit-test-A-pass.png)
 
 - Os testes com falha mostram uma cruz vermelha com um link **Saída** que mostra a saída do console e a saída `unittest` da execução de teste:
 
-    ![Status do test_A com falha](~/docs/python/media/unit-test-A-fail.png)
+    ![Status do test_A com falha](~/python/media/unit-test-A-fail.png)
 
-    ![test_A com falha com motivo](~/docs/python/media/unit-test-A-fail-reason.png)
+    ![test_A com falha com motivo](~/python/media/unit-test-A-fail-reason.png)
 
 ## <a name="debugging-tests"></a>Depurando testes
 
@@ -103,7 +103,7 @@ Como os testes de unidade são partes do código, eles estão sujeitos a bugs, a
 
 Para iniciar a depuração, defina um ponto de interrupção inicial no código, clique com o botão direito do mouse no teste (ou em uma seleção) no Gerenciador de Testes e selecione **Depurar Testes Selecionados**. O Visual Studio iniciará o depurador do Python como faria com o código do aplicativo.
 
-![Depurando um teste](~/docs/python/media/unit-test-debugging.png)
+![Depurando um teste](~/python/media/unit-test-debugging.png)
 
 Também é possível usar os comandos **Analisar Cobertura de Código nos Testes Selecionados** e **Teste de Perfil**, dependendo da versão do Visual Studio (consulte a [Matriz de recursos](python-in-visual-studio.md#features-matrix)).
 

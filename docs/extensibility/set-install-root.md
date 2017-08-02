@@ -49,13 +49,13 @@ Começando com o Visual Studio 2017 e VSIX v3 (versão 3), há agora oferecem su
 
 Para suportar a instalação para esses diretórios, VSIX deve ser instalado "por instância por máquina". Isso pode ser habilitado, marcando a caixa de seleção "todos os usuários" no designer de vsixmanifest:
 
-![Verifique todos os usuários](~/docs/extensibility/media/check-all-users.png)
+![Verifique todos os usuários](~/extensibility/media/check-all-users.png)
 
 ## <a name="how-to-set-the-installroot"></a>Como definir a Raiz_da_instalação
 
 Para definir os diretórios de instalação, você pode usar o **propriedades** janela no Visual Studio. Por exemplo, você pode definir o `InstallRoot` propriedade de uma referência de projeto para um dos locais acima:
 
-![instalar propriedades raiz](~/docs/extensibility/media/install-root-properties.png)
+![instalar propriedades raiz](~/extensibility/media/install-root-properties.png)
 
 Isso irá adicionar alguns metadados para os respectivos `ProjectReference` propriedade dentro do arquivo do projeto VSIX. csproj:
 
@@ -73,7 +73,7 @@ Isso irá adicionar alguns metadados para os respectivos `ProjectReference` prop
 
 Se você gostaria de instalar um subcaminho sob o `InstallRoot`, você pode fazer isso definindo o `VsixSubPath` propriedade assim o `InstallRoot` propriedade. Por exemplo, digamos que queremos que a saída da nossa referência de projeto para instalar ' [installdir]\MSBuild\MyCompany\MySDK\1.0'. Podemos fazer isso facilmente com o designer de propriedade:
 
-![subcaminho de conjunto](~/docs/extensibility/media/set-subpath.png)
+![subcaminho de conjunto](~/extensibility/media/set-subpath.png)
 
 As alterações. csproj correspondentes terá esta aparência:
 

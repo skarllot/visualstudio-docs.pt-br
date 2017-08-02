@@ -27,7 +27,7 @@ O designer de esquema XML está integrado com o editor XML.  Se você alterar um
   
  A captura de tela a seguir mostra um esquema XML aberto em XML Schema Explorer.  XML Schema Explorer exibe o esquema definido em um modo de exibição de árvore.  O editor XML exibe a exibição do texto do nó que está atualmente ativa em XML Schema Explorer.  
   
- ![XSDDesignerWithXMLEditor](~/docs/xml-tools/media/xsddesignerwithxmleditor.gif "XSDDesignerWithXMLEditor")  
+ ![XSDDesignerWithXMLEditor](~/xml-tools/media/xsddesignerwithxmleditor.gif "XSDDesignerWithXMLEditor")  
   
  Às vezes é útil consulte o código no editor XML e no designer gráfico lado a lado.  Para exibir ao mesmo tempo ambos os arquivos, clique com o botão direito do mouse em qualquer lugar no editor XML e selecione **Exibir Designer**.  No menu do Visual Studio Windows, **Novo grupo \(horizontal ou vertical\) da guia**.  
   

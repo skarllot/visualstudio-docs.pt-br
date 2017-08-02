@@ -41,7 +41,7 @@ ms.lasthandoff: 05/12/2017
 
 A ajuda do R está integrada diretamente na janela interativa no Visual Studio. Sempre que você usar o comando `?`, como `?mtcars`, a ajuda da documentação do R aparecerá em uma janela do Visual Studio:
 
-![janela da Ajuda no Visual Studio](~/docs/rtvs/media/help-window.png)
+![janela da Ajuda no Visual Studio](~/rtvs/media/help-window.png)
 
 > [!Tip]
 > A janela da Ajuda, como todas as outras no Visual Studio, pode ser organizada e encaixada conforme o desejado. Consulte [Personalização de layouts de janela no Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md).
@@ -54,11 +54,11 @@ Para pesquisar a ajuda, use o comando `??` com o termo de pesquisa entre aspas s
 ??"Motor Trend"
 ```
 
-![Resultados da pesquisa da ajuda](~/docs/rtvs/media/help-search1.png)
+![Resultados da pesquisa da ajuda](~/rtvs/media/help-search1.png)
 
 A janela da Ajuda também tem um campo de entrada de pesquisa por meio do qual você pode realizar mais pesquisas diretamente na documentação do R:
 
-![Resultados da pesquisa da ajuda usando o campo de entrada](~/docs/rtvs/media/help-search2.png)
+![Resultados da pesquisa da ajuda usando o campo de entrada](~/rtvs/media/help-search2.png)
 
 ## <a name="integrated-help-lookup"></a>Pesquisa da ajuda integrada
 
@@ -67,7 +67,7 @@ Como os desenvolvedores geralmente pesquisam a documentação do R para obter aj
 - Pressionar F1 durante uma operação de preenchimento automático produz uma lista de resultados da ajuda que correspondem à subcadeia de caracteres.
 - Clique com o botão direito do mouse em um termo de pesquisa (como uma função) e selecione o comando **Ajuda sobre** ou simplesmente pressione F1 para abrir a ajuda para essa função. Você também pode invocar **Ajuda sobre** para qualquer seleção.
 
-    ![Invocando a ajuda por meio do menu de contexto acionado com um clique no botão direito do mouse](~/docs/rtvs/media/help-right-click.png)
+    ![Invocando a ajuda por meio do menu de contexto acionado com um clique no botão direito do mouse](~/rtvs/media/help-right-click.png)
 
 > [!Tip]
 > Para abrir a ajuda integrada em um navegador, selecione **Ferramentas do R > Opções** e defina **Navegador da Web F1** para `External`. Consulte [Opções](options.md).
@@ -76,8 +76,8 @@ Como os desenvolvedores geralmente pesquisam a documentação do R para obter aj
 
 Além de pesquisar na documentação do R, os desenvolvedores geralmente pesquisam no StackOverflow enquanto escrevem o código. As RTVS simplificam o processo. Quando você clica com o botão direito do mouse em um termo ou em uma seleção e seleciona o comando **Pesquisar na Web** ou simplesmente pressiona Ctrl + F1, uma janela do Visual Studio (ou um navegador, se você tiver alterado a opção **Navegador da Web F1**) será aberta contendo os resultados da pesquisa do termo que tem como escopo o StackOverflow por padrão:
 
-![Resultados da pesquisa da Web no Visual Studio](~/docs/rtvs/media/help-web-search-results.png)
+![Resultados da pesquisa da Web no Visual Studio](~/rtvs/media/help-web-search-results.png)
 
 Você pode alterar a cadeia de caracteres acrescentada, `R site:stackoverflow`, por meio da opção **Ferramentas do R > Opções > Cadeia de Pesquisa da Web F1**:
 
-![Alterando a opção de cadeia de pesquisa da Web F1](~/docs/rtvs/media/options-dialog.png)
+![Alterando a opção de cadeia de pesquisa da Web F1](~/rtvs/media/options-dialog.png)

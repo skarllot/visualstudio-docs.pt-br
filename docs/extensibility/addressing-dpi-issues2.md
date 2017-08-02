@@ -94,7 +94,7 @@ ImageList_Create(VsUI::DpiHelper::LogicalToDeviceUnitsX(16),VsUI::DpiHelper::Log
   
  A tabela a seguir mostra exemplos de como as imagens devem ser dimensionadas em DPI correspondente fatores de dimensionamento. As imagens em verde indicam nossa prática recomendada a partir do Visual Studio 2013 (100 a 200% dimensionamento de DPI):  
   
- ![Problemas DPI dimensionamento](~/docs/extensibility/media/dpi-issues-scaling.png "problemas DPI dimensionamento")  
+ ![Problemas DPI dimensionamento](~/extensibility/media/dpi-issues-scaling.png "problemas DPI dimensionamento")  
   
 ## <a name="layout-issues"></a>Problemas de layout  
  Problemas comuns de layout podem ser evitados principalmente mantendo pontos na interface do usuário dimensionado e relação uns aos outros em vez de usar locais absolutos (especificamente, em unidades de pixels). Por exemplo:  

@@ -34,7 +34,7 @@ Editar consultas TableAdapter com o [Editando TableAdapters](../data-tools/editi
 > [!NOTE]
 >  Se o [TableAdapter Assistente de Configuração](../Topic/TableAdapter%20Configuration%20Wizard.md) é aberto, em vez do **Assistente de configuração de consulta do TableAdapter**, talvez você tenha selecionado principal do TableAdapter `Fill` consulta e não uma das consultas adicionais do TableAdapter. Para obter informações sobre como editar o TableAdapter principais do `Fill` de consulta, consulte [Como editar TableAdapters](../Topic/How%20to:%20Edit%20TableAdapters.md).  
   
- ![TableAdapter com múltiplas consultas](~/docs/data-tools/media/tableadapter.gif "TableAdapter")  
+ ![TableAdapter com múltiplas consultas](~/data-tools/media/tableadapter.gif "TableAdapter")  
   
 ### Para editar uma consulta do TableAdapter  
   

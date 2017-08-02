@@ -29,7 +29,7 @@ C\+\+ nativo com freqüência pode fornecer o desempenho mais rápido ao acessar
   
 3.  Use o SQL Server Management Studio para anexar o arquivo mdf descompactado para o localDB. Quando o SSMS é iniciado, se conecte ao \(localdb\) \\MSSQLLocalDB.  
   
-     ![SSMS connect dialog](~/docs/data-tools/media/raddata-ssms-connect-dialog.png "raddata SSMS connect dialog")  
+     ![SSMS connect dialog](~/data-tools/media/raddata-ssms-connect-dialog.png "raddata SSMS connect dialog")  
   
      Em seguida, clique com botão direito no nó do localdb na página esquerda e escolha anexar.  
   

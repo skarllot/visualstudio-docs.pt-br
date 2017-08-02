@@ -40,7 +40,7 @@ Ao contrário de uma linguagem de finalidade geral, como c# ou UML, uma linguage
   
  A figura a seguir mostra um modelo pequeno em uma DSL diagramática:  
   
- ![Modelo de árvore da família Tudor](~/docs/modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
+ ![Modelo de árvore da família Tudor](~/modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
   
 ## <a name="what-you-can-do-with-dsls"></a>O que você pode fazer com as DSLs  
  Um aplicativo típico de uma DSL é gerar o código do programa ou outros artefatos. Quando você define sua DSL, você pode definir *modelos de texto* que ler um modelo da DSL e gerar arquivos de texto.  

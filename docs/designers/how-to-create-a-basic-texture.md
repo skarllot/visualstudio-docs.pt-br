@@ -53,7 +53,7 @@ Este documento demonstra como usar o Editor de Imagens para criar uma textura b�
   
  As etapas a seguir mostram como criar uma textura que representa um destino de "alvo". Quando terminar, a textura deverá ser parecida com a figura a seguir. Para demonstrar melhor a transparência na textura, o Editor de Imagens foi configurado para usar um padrão quadriculado verde para exibi-la.  
   
- ![Destino de "Alvo" com transparência mostrada em verde](~/docs/designers/media/digit-bullseye-texture-in-editor.png "Digit-Bullseye-Texture-In-Editor")  
+ ![Destino de "Alvo" com transparência mostrada em verde](~/designers/media/digit-bullseye-texture-in-editor.png "Digit-Bullseye-Texture-In-Editor")  
   
  Antes de começar, verifique se a janela **Propriedades** está sendo exibida. A janela **Propriedades** é usada para definir o tamanho da imagem, alterar as propriedades da ferramenta e especificar cores enquanto você trabalha.  
   
@@ -101,7 +101,7 @@ Este documento demonstra como usar o Editor de Imagens para criar uma textura b�
   
  A textura de destino de "alvo" foi concluída. Aqui está a imagem final, mostrada com transparência.  
   
- ![A textura de destino de "alvo" concluída](~/docs/designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")  
+ ![A textura de destino de "alvo" concluída](~/designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")  
   
  Como uma próxima etapa, você pode gerar níveis de MIP para essa textura. Para obter informações, consulte [Como criar e modificar níveis de MIP](../designers/how-to-create-and-modify-mip-levels.md).  
   

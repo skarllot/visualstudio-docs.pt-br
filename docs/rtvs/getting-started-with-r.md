@@ -52,7 +52,7 @@ Depois de instalar as RTVS (Ferramentas do R para Visual Studio) (consulte [Inst
 1. Escolha **Arquivo > Novo > Projeto...** (Ctrl + Shift + N)
 1. Selecione "Projeto R" em **Modelos > R**, dê ao projeto um nome e um local e selecione **OK**:
 
-   ![Caixa de diálogo Novo Projeto para R no Visual Studio (RTVS no VS2017)](~/docs/rtvs/media/getting-started-01-new-project.png)
+   ![Caixa de diálogo Novo Projeto para R no Visual Studio (RTVS no VS2017)](~/rtvs/media/getting-started-01-new-project.png)
 
 1. Quando o projeto for criado, você verá o seguinte:
 
@@ -67,29 +67,29 @@ Depois de instalar as RTVS (Ferramentas do R para Visual Studio) (consulte [Inst
 
 1. Teste se a janela interativa está funcionando digitando `3 + 4` e pressionando Enter para ver o resultado:
 
-    ![Janela R Interativo no Visual Studio 2017 (VS2017)](~/docs/rtvs/media/getting-started-02-interactive1.png)
+    ![Janela R Interativo no Visual Studio 2017 (VS2017)](~/rtvs/media/getting-started-02-interactive1.png)
 
 1. Insira algo um pouco mais complicado, `ds <- c(1.5, 6.7, 8.9) * 1:12` e, em seguida, insira `ds` para ver o resultado:
 
-    ![Exemplo interativo adicional do R no Visual Studio](~/docs/rtvs/media/getting-started-03-interactive2.png)
+    ![Exemplo interativo adicional do R no Visual Studio](~/rtvs/media/getting-started-03-interactive2.png)
 
 1. Digite `mean(ds)`, mas observe que assim que você digitar `m` ou `me`, o Visual Studio IntelliSense fornecerá opções de preenchimento automático conforme mostrado abaixo. Quando o preenchimento que você deseja for selecionado na lista, pressione a tecla Tab para inseri-lo. Você pode alterar a seleção usando o mouse ou as teclas de direção.
 
-    ![O IntelliSense que aparece quando você insere código](~/docs/rtvs/media/getting-started-04-intellisense1.png)
+    ![O IntelliSense que aparece quando você insere código](~/rtvs/media/getting-started-04-intellisense1.png)
 
 1. Depois de preencher `mean`, digite o parêntese de abertura `(` e observe como o IntelliSense fornece ajuda embutida para a função:
 
-    ![IntelliSense mostrando ajuda para uma função](~/docs/rtvs/media/getting-started-05-intellisense2.png)
+    ![IntelliSense mostrando ajuda para uma função](~/rtvs/media/getting-started-05-intellisense2.png)
 
 1. Preencha a linha `mean(ds)` e pressione Enter para ver o resultado (`[1] 39.51667`).
 
 1. A janela interativa é integrada à ajuda, portanto, insira `?mean`, por exemplo, e a ajuda para essa função será exibida na janela **Ajuda do R** no Visual Studio. Para obter detalhes adicionais sobre este recurso, consulte [Ajuda nas Ferramentas do R para Visual Studio](getting-started-help.md).
 
-    ![Janela Ajuda do R no Visual Studio](~/docs/rtvs/media/getting-started-06-help.png)
+    ![Janela Ajuda do R no Visual Studio](~/rtvs/media/getting-started-06-help.png)
 
 1. Alguns comandos, como `plot(1:100)`, abrem uma nova janela no Visual Studio quando a saída não pode ser exibida diretamente na janela interativa:
 
-    ![Exibição de um gráfico no Visual Studio](~/docs/rtvs/media/getting-started-07-plot-window.png)
+    ![Exibição de um gráfico no Visual Studio](~/rtvs/media/getting-started-07-plot-window.png)
 
 A janela interativa também permite que você examine seu histórico, carregue e salve espaços de trabalho, anexe a um depurador e interaja com os arquivos de código-fonte como um atalho para as operações de copiar e colar. Consulte [Trabalhando com a janela do R Interativo](interactive-repl.md) para obter detalhes.
 
@@ -113,7 +113,7 @@ Por exemplo, as seguintes etapas criam um pequeno código para explorar o [Teore
 
 1. Para ver os resultados rapidamente, selecione todo o código (Ctrl + A), pressione Ctrl + Enter ou clique com botão direito do mouse e selecione **Executar em Interativo**. Isso insere o todo o código selecionado na janela interativa como se você o digitasse diretamente, mostrando o resultado em uma janela de gráficos:
 
-    ![Exibição de um gráfico no Visual Studio](~/docs/rtvs/media/getting-started-08-plot1.png)
+    ![Exibição de um gráfico no Visual Studio](~/rtvs/media/getting-started-08-plot1.png)
 
 1. Para uma única linha, basta pressionar Ctrl + Enter a qualquer momento para executar essa linha na janela interativa.
 
@@ -132,7 +132,7 @@ Por exemplo, as seguintes etapas criam um pequeno código para explorar o [Teore
 
 1. Pressione Ctrl + A e Ctrl + Enter novamente para executar o código novamente a fim de produzir o seguinte:
 
-    ![Gráfico dual atualizado no Visual Studio](~/docs/rtvs/media/getting-started-09-plot2.png)
+    ![Gráfico dual atualizado no Visual Studio](~/rtvs/media/getting-started-09-plot2.png)
 
 1. O problema é que o primeiro gráfico determina a escala vertical, portanto, o segundo gráfico (com `lines`) não se encaixa. Para corrigir isso, precisamos definir o parâmetro `ylim` na chamada `plot`, mas para fazer isso corretamente, precisamos adicionar código para calcular o valor máximo da vertical. Fazer isso linha por linha na janela interativa é um pouco inconveniente porque é preciso reorganizar o código para usar `samp.means` antes de chamar `plot`. No entanto, em um arquivo de código, podemos fazer as edições apropriadas com facilidade:
 
@@ -154,7 +154,7 @@ Por exemplo, as seguintes etapas criam um pequeno código para explorar o [Teore
 
 1. CTRL + A e Ctrl + Enter novamente para ver o resultado:
 
-    ![Gráfico dual atualizado no Visual Studio com a escala ajustada corretamente](~/docs/rtvs/media/getting-started-10-plot3.png)
+    ![Gráfico dual atualizado no Visual Studio com a escala ajustada corretamente](~/rtvs/media/getting-started-10-plot3.png)
 
 Há mais coisas que você pode fazer no editor. Para obter detalhes, consulte [editando código](code-editing.md), [IntelliSense](code-intellisense.md) e [trechos de código](code-snippets.md).
 
@@ -166,23 +166,23 @@ Uma das principais vantagens do Visual Studio é sua interface do usuário de de
 
 1. Com o arquivo `script.R` criado na seção anterior, defina um ponto de interrupção na linha que começa com `pop <-` colocando o cursor nessa linha e, em seguida, pressionando F9 ou selecionando o comando de menu **Depurar > Alternar Ponto de Interrupção**. Você pode fazer isso em uma única etapa, clicando na margem esquerda (ou medianiz) dessa linha em que o ponto de interrupção vermelho aparece:
 
-    ![Definindo um ponto de interrupção no editor](~/docs/rtvs/media/getting-started-11-debug1.png)
+    ![Definindo um ponto de interrupção no editor](~/rtvs/media/getting-started-11-debug1.png)
 
 1. Inicie o depurador com o código em `script.R` selecionando o botão **Arquivo de inicialização de origem** na barra de ferramentas, selecionando os itens de menu **Depurar > Arquivo de inicialização de origem** ou pressionando F5. Isso coloca o Visual Studio em seu modo de depuração e inicia a execução do código. No entanto, a execução é interrompida na linha em que você definiu o ponto de interrupção:
 
-    ![Parando em um ponto de interrupção no depurador do Visual Studio](~/docs/rtvs/media/getting-started-12-debug2.png)
+    ![Parando em um ponto de interrupção no depurador do Visual Studio](~/rtvs/media/getting-started-12-debug2.png)
 
 1. Durante a depuração, o Visual Studio fornece a capacidade de percorrer o código linha por linha, inclusive a capacidade de intervir em funções, avançá-las ou sair delas no contexto de chamada. Esses recursos, juntamente com outros, podem ser encontrados no menu **Depurar**, o menu de contexto acionado com um clique do botão direito do mouse no editor e na barra de ferramentas Depuração:
 
-    ![Barra de ferramentas de depuração no Visual Studio](~/docs/rtvs/media/getting-started-13-debug3.png)
+    ![Barra de ferramentas de depuração no Visual Studio](~/rtvs/media/getting-started-13-debug3.png)
 
 1. Ao interromper no ponto de interrupção, você pode examinar os valores das variáveis. Localize a janela **Autos** no Visual Studio e selecione a guia na parte inferior chamada **Locais**. A janela **Locais** mostra as variáveis locais no ponto atual no programa. Se você tiver interrompido no ponto de interrupção definido anteriormente, você verá que a variável `pop` ainda não está definida. Agora, use o comando **Depurar > Avançar** (F10) e você verá o valor de pop aparecer:
 
-    ![Janela Locais no Visual Studio](~/docs/rtvs/media/getting-started-14-debug4.png)
+    ![Janela Locais no Visual Studio](~/rtvs/media/getting-started-14-debug4.png)
 
 1. Para examinar variáveis em escopos diferentes, incluindo o escopo global e escopos de pacote, use o [Gerenciador de Variáveis](variable-explorer.md) mostrado abaixo. O Gerenciador de Variáveis também oferece a capacidade de mudar para um modo de exibição de tabela com colunas classificáveis e exportar dados para um arquivo CSV.
 
-    ![Exibição expandida do Gerenciador de Variáveis](~/docs/rtvs/media/variable-explorer-expanded-results.png)
+    ![Exibição expandida do Gerenciador de Variáveis](~/rtvs/media/variable-explorer-expanded-results.png)
 
 1. Você pode continuar percorrendo o programa linha por linha ou selecionar **Continuar** (F5) para executá-lo até a conclusão (ou o até o próximo ponto de interrupção).
 

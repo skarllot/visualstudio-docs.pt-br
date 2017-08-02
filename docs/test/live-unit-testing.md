@@ -76,7 +76,7 @@ Em alguns casos, talvez seja necessário restaurar explicitamente os pacotes NuG
 
 É possível configurar o Live Unit Testing selecionando **Ferramentas**, **Opções** no menu de nível superior do Visual Studio e, em seguida, selecionando **Live Unit Testing** no painel esquerdo da caixa de diálogo **Opções**. A figura a seguir mostra as opções de configuração do Live Unit Testing disponíveis na caixa de diálogo.
 
-  ![Image](~/docs/test/media/lut-options.png)
+  ![Image](~/test/media/lut-options.png)
 
 As opções configuráveis incluem:
 
@@ -105,21 +105,21 @@ A qualquer momento, é possível pausar temporariamente ou parar por completo o 
 
 Depois de habilitado, o Live Unit Testing atualiza cada linha de código no editor do Visual Studio para mostrar se o código que está sendo escrito é abrangido por testes de unidade e se os testes que os abrangem são aprovados.  A figura a seguir mostra linhas de código com testes aprovados e não aprovados, bem como linhas de código que não são abrangidas por testes. As linhas decoradas com um "✓" verde são cobertas apenas por testes aprovados, as linhas decoradas com um "🞩" vermelho são cobertas por um ou mais testes com falha e as linhas decoradas por um "" azul não são cobertas por nenhum teste.
 
-  ![Image](~/docs/ide/media/lut-codewindow.png)
+  ![Image](~/ide/media/lut-codewindow.png)
 
 A visualização de cobertura do Live Unit Testing é atualizada imediatamente conforme o código é modificado no editor de código. Durante o processamento das edições, a visualização é alterada para indicar que os dados não estão atualizados, com a adição de uma imagem de temporizador redondo abaixo dos símbolos de aprovado, não aprovado e não abrangido, como mostra a figura a seguir.
 
-  ![Image](~/docs/test/media/lut-codeupdating.png)
+  ![Image](~/test/media/lut-codeupdating.png)
  
 ## <a name="getting-information-on-successful-or-failed-tests"></a>Obtendo informações sobre testes com êxito ou com falha
 
 Ao focalizar o símbolo de êxito ou de falha na janela de código, é possível ver quantos testes estão atingindo essa linha. Se você clicar no símbolo, poderá ver o status dos testes individuais, como mostra a figura a seguir.
  
-  ![Image](~/docs/test/media/lut-failedinfo.png) 
+  ![Image](~/test/media/lut-failedinfo.png) 
 
 Ao focalizar o teste com falha na dica de ferramenta, ele é expandido para fornecer informações adicionais sobre a falha, conforme mostrado na imagem abaixo. Se você clicar no teste com falha na dica de ferramenta, poderá acessá-lo diretamente.
 
-  ![Image](~/docs/test/media/lut-failedmsg.png) 
+  ![Image](~/test/media/lut-failedmsg.png) 
 
 ## <a name="diagnosing-and-correcting-test-failures"></a>Diagnosticando e corrigindo falhas de teste
 

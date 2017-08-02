@@ -44,7 +44,7 @@ O SDK do Visual Studio é um recurso opcional na instalação do Visual Studio. 
 ## <a name="installing-the-visual-studio-sdk-from-a-solution"></a>Instalar o SDK do Visual Studio de uma solução  
  Se você abrir uma solução com um projeto de extensibilidade sem precisar instalar primeiro o VSSDK, você será solicitado por uma barra de informações realçadas acima do Gerenciador de soluções. Ele deve ser semelhante ao seguinte:  
   
- ![SolutionExplorerInstall](~/docs/extensibility/media/solutionexplorerinstall.png "SolutionExplorerInstall")  
+ ![SolutionExplorerInstall](~/extensibility/media/solutionexplorerinstall.png "SolutionExplorerInstall")  
   
 ## <a name="installing-the-visual-studio-sdk-from-the-command-line"></a>Instalar o SDK do Visual Studio na linha de comando  
 Assim como acontece com qualquer componente ou carga de trabalho do Visual Studio, você também pode instalar o item da linha de comando. Consulte [usar parâmetros de linha de comando para instalar o Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md) para obter detalhes sobre as opções de linha de comando apropriada e como determinar os identificadores de carga de trabalho ou componente.

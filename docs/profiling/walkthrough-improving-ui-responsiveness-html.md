@@ -200,13 +200,13 @@ Este passo a passo o orienta no processo de identificação e correção de um p
   
 7.  Selecione uma parte de um a dois segundos no meio do gráfico de utilização da CPU (ou clique e arraste, ou use as teclas Tab e de direção). A ilustração a seguir mostra o gráfico de utilização da CPU depois de ser feita uma seleção. A área não sombreada é a seleção.  
   
-     ![Gráfico de utilização de CPU](~/docs/profiling/media/js_htmlviz_app_cpu.png "JS_HTMLViz_App_CPU")  
+     ![Gráfico de utilização de CPU](~/profiling/media/js_htmlviz_app_cpu.png "JS_HTMLViz_App_CPU")  
   
 8.  Escolha **Ampliar**.  
   
      O gráfico muda para mostrar mais detalhadamente o período selecionado. A ilustração a seguir mostra o gráfico de utilização da CPU após a ampliação. (Os dados específicos podem variar, mas o padrão geral será aparente.)  
   
-     ![Exibição ampliada](~/docs/profiling/media/js_htmlviz_app_zoom.png "JS_HTMLViz_App_Zoom")  
+     ![Exibição ampliada](~/profiling/media/js_htmlviz_app_zoom.png "JS_HTMLViz_App_Zoom")  
   
      Os Detalhes da linha do tempo no painel inferior mostram um exemplo de detalhes para o período selecionado.  
   

@@ -81,7 +81,7 @@ ms.lasthandoff: 02/22/2017
   
  **Texto complementar no Visual Studio**  
   
- ![Texto complementar no Visual Studio](~/docs/extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "c_SupplementalText2&0601;")  
+ ![Texto complementar no Visual Studio](~/extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "c_SupplementalText2&0601;")  
   
  **Texto complementar no Visual Studio**  
   
@@ -124,7 +124,7 @@ ms.lasthandoff: 02/22/2017
   
 -   Ao iniciar as caixas de diálogo, manter os padrões elipses: nenhum reticências para navegação, elipses, se a tarefa exigir adicional da interface do usuário.  
   
-     ![Link de Ajuda no Visual Studio](~/docs/extensibility/ux-guidelines/media/0601-e_helplink.png "e_HelpLink&0601;")  
+     ![Link de Ajuda no Visual Studio](~/extensibility/ux-guidelines/media/0601-e_helplink.png "e_HelpLink&0601;")  
   
      **Reticências (...) em um link de ajuda indicam que a tarefa exigirá adicional da interface do usuário.**  
   
@@ -276,7 +276,7 @@ ms.lasthandoff: 02/22/2017
   
 |Bom|Incorreta|  
 |----------|---------|  
-|"O número discado não está mais no serviço. Verifique o número e disque novamente ou discar 0 para o operador."|-"(449) erro: número inválido"<br />-"Esse erro de exceção sem tratamento indica que a operação foi concluída com êxito."<br /><br /> ![Mensagem de erro inválido no Visual Studio](~/docs/extensibility/ux-guidelines/media/0602-a_errordialog.png "0602-a_ErrorDialog")|  
+|"O número discado não está mais no serviço. Verifique o número e disque novamente ou discar 0 para o operador."|-"(449) erro: número inválido"<br />-"Esse erro de exceção sem tratamento indica que a operação foi concluída com êxito."<br /><br /> ![Mensagem de erro inválido no Visual Studio](~/extensibility/ux-guidelines/media/0602-a_errordialog.png "0602-a_ErrorDialog")|  
   
 ## <a name="accessing-help"></a>Acessando a Ajuda  
   

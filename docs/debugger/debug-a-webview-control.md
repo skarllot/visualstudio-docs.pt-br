@@ -79,7 +79,7 @@ manager: "ghogen"
   
 5.  Na janela Console, selecione a página da Web ou um `iFrame` exibido pelo controle `WebView` na lista **Alvo**.  
   
-     ![Target selection in the JavaScript console window](~/docs/debugger/media/js_console_target.png "JS\_Console\_Target")  
+     ![Target selection in the JavaScript console window](~/debugger/media/js_console_target.png "JS\_Console\_Target")  
   
     > [!NOTE]
     >  Usando o console, você pode interagir com um único `WebView`, `iFrame`, compartilhar o contrato ou web worker por vez. Cada elemento requer uma instância separada do host da plataforma web \(WWAHost.exe\). Você pode interagir com um host por vez.  

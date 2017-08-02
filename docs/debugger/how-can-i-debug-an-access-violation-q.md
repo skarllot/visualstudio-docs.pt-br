@@ -69,7 +69,7 @@ int main() {
   
  Se você executar esse código na atualização 1 do Visual Studio 2015, você verá a seguinte caixa de diálogo de exceção:  
   
- ![AccessViolationCPlus](~/docs/debugger/media/accessviolationcplus.png "AccessViolationCPlus")  
+ ![AccessViolationCPlus](~/debugger/media/accessviolationcplus.png "AccessViolationCPlus")  
   
  Se você não puder determinar por que o ponteiro causou uma violação de acesso, rastrear o código para certificar\-se de que o ponteiro causando o problema foi atribuído corretamente.  Se ele é passado como um parâmetro, certifique\-se de que ela é passada corretamente e você não criar acidentalmente um [superficial cópia](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy). Em seguida, verificar se os valores não são sendo acidentalmente alterados em algum lugar no programa criando um ponto de interrupção de dados para o ponteiro em questão para certificar\-se de que não está sendo modificada em outro lugar no programa. Para obter mais informações sobre pontos de interrupção de dados, consulte a seção de ponto de interrupção de dados em [Usando pontos de interrupção](../debugger/using-breakpoints.md).  
   
