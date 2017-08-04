@@ -30,9 +30,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
 ms.openlocfilehash: 24bd28ad78f1cd3a21167215ed8348dc79edce6b
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/05/2017
 
 ---
@@ -48,7 +49,7 @@ Um VSPackage pode definir uma ou mais categorias de configurações, que são gr
      Se um único VSPackage dá suporte a vários pontos de configurações personalizadas, cada ponto de configurações personalizada é implementado por uma classe separada, e cada um é registrada por uma instância exclusiva da <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>classe.</xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> Consequentemente, as configurações de classe de implementação podem dar suporte a mais de uma categoria de configurações.  
   
 ## <a name="custom-settings-point-registry-entry-details"></a>Detalhes de entrada de registro de ponto configurações personalizadas  
- Os pontos de configurações personalizadas são criados em uma entrada de registro no seguinte local: HKLM\Software\Microsoft\VisualStudio\\*\<versão >*\UserSettings\\`<CSPName>`, onde `<CSPName>` é o nome do ponto de configurações personalizada suporta o VSPackage e *\<versão >* é a versão do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], por exemplo 8.0.  
+ Os pontos de configurações personalizadas são criados em uma entrada de registro no seguinte local: HKLM\Software\Microsoft\VisualStudio\\*\<versão >*\UserSettings\\`<CSPName>`, onde `<CSPName>` é o nome do ponto de configurações personalizada suporta o VSPackage e  *\<versão >* é a versão do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], por exemplo 8.0.  
   
 > [!NOTE]
 >  O caminho raiz de HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<versão >* pode ser substituído por uma alternativa raiz quando o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ambiente de desenvolvimento integrado (IDE) é inicializado. Para obter mais informações, consulte [opções de linha de comando](../../extensibility/command-line-switches-visual-studio-sdk.md).  
