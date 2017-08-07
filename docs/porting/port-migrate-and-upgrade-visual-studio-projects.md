@@ -1,7 +1,7 @@
 ---
 title: Portar, migrar e atualizar projetos do Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 04/28/2017
+ms.date: 7/14/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -23,48 +23,40 @@ ms.assetid: bee759bd-6ff5-4c2e-913a-ea7d3c906c29
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bd2199e68bf23a191efe624da311dd11217028a8
-ms.openlocfilehash: 77042a35175aa13d27ed31d1562198e800e065ae
+ms.translationtype: HT
+ms.sourcegitcommit: dc7a0c10390de67b56a83d2824224bed24125db0
+ms.openlocfilehash: 922bec8857910ae4fa1497137eb2e3d70ee133c7
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/17/2017
 
 ---
+
 # <a name="port-migrate-and-upgrade-visual-studio-projects"></a>Portar, migrar e atualizar projetos do Visual Studio
 
-Geralmente, cada nova versão do Visual Studio dá suporte à maioria dos tipos anteriores de projetos, arquivos e outros ativos. É possível trabalhar com eles como você sempre trabalhou e, desde que não dependa de recursos mais novos, o Visual Studio preservará a compatibilidade com versões anteriores, como o Visual Studio 2015, Visual Studio 2013 e Visual Studio 2012. (Consulte as [Notas de versão](https://www.visualstudio.com/vs/release-notes/) para saber quais recursos são específicos a quais versões.) No entanto, o suporte para alguns tipos é alterado ao longo do tempo. Uma versão mais nova do Visual Studio pode não dar mais suporte a determinados tipos ou exigir que eles sejam migrados e atualizados, de modo que não são mais compatíveis com versões anteriores. Este tópico fornece detalhes sobre os tipos de projeto afetados no Visual Studio 2017. Uma lista dos tipos com suporte do Visual Studio 2017 pode ser encontrada no tópico [Definição de destino e compatibilidade da plataforma](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs).
+Geralmente, cada nova versão do Visual Studio dá suporte à maioria dos tipos anteriores de projetos, arquivos e outros ativos. É possível trabalhar com eles como você sempre trabalhou e, desde que não dependa de recursos mais novos, o Visual Studio preservará a compatibilidade com versões anteriores, como o Visual Studio 2015, Visual Studio 2013 e Visual Studio 2012. (Consulte as [Notas de versão](https://www.visualstudio.com/vs/release-notes/) para saber quais recursos são específicos a quais versões.)
 
-> [!Note]
-> Abrir alguns tipos de projeto exigirá a adição da carga de trabalho apropriada por meio do Instalador do Visual Studio.
+No entanto, o suporte para alguns tipos é alterado ao longo do tempo. Uma versão mais nova do Visual Studio pode não dar mais suporte a determinados tipos ou exigir que eles sejam migrados e atualizados, de modo que não são mais compatíveis com versões anteriores. Para obter o status atual de problemas de migração, consulte o [site Developer Community (Comunidade do Desenvolvedor) do Visual Studio](https://developercommunity.visualstudio.com).
 
+> [!Important]
+> Este tópico fornece detalhes apenas para tipos de projeto no Visual Studio de 2017 que envolvem a migração. Ele não inclui os tipos de projeto com suporte que não têm nenhum problema de migração, essa lista é encontrada em [Direcionamento e compatibilidade da plataforma](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs). Observe também que alguns tipos de projeto não têm mais suporte nenhum no Visual Studio 2017 e, portanto, não podem ser migrados.
+
+> [!Important]
+> É necessário adicionar as cargas de trabalho apropriadas no instalador do Visual Studio para abrir determinados tipos de projeto. Se você não tiver a carga de trabalho instalada, o Visual Studio relatará um tipo de projeto incompatível ou desconhecido. Nesse caso, verifique as opções de instalação e tente novamente. Novamente, consulte o tópico [Direcionamento e compatibilidade da plataforma](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs) para obter detalhes sobre o suporte ao projeto no Visual Studio 2017.
 
 ## <a name="projects"></a>Projetos
 
-A lista a seguir descreve o suporte do Visual Studio 2017 a projetos que foram criados em versões anteriores. Se você não vir um projeto ou um tipo de arquivo que deveria estar listado aqui, consulte a [versão do Visual Studio 2015 deste tópico](https://msdn.microsoft.com/library/hh266747.aspx) e faça uma observação nos comentários abaixo.
+A lista a seguir descreve o suporte do Visual Studio 2017 a projetos que foram criados em versões anteriores.
+
+Se você não vir um projeto ou um tipo de arquivo que deveria estar listado aqui, consulte a [versão do Visual Studio 2015 deste tópico](https://msdn.microsoft.com/library/hh266747.aspx) e faça uma observação nos comentários abaixo.
 
 | Tipo de projeto | Suporte |
 | --- | --- |
-| Projetos do .NET Core (.xproj) | Projetos criados com o Visual Studio 2015 usavam as ferramentas de visualização que incluem um arquivo de projeto .xproj. Ao abrir um arquivo .xproj com o Visual Studio 2017, você deverá migrar o arquivo para o formato .csproj (será feito um backup do arquivo .xproj). Não há suporte para esse formato .csproj em projetos do .NET Core no VS2015 e anterior.  Não há suporte para o formato .xproj no Visual Studio 2017 além da migração para o .csproj. Para obter mais informações, consulte [Migrando projetos do .NET Core para o formato .csproj](https://docs.microsoft.com/dotnet/articles/core/migration/#visual-studio-2017).|
+| Projetos do .NET Core (.xproj) | Projetos criados com o Visual Studio 2015 usavam as ferramentas de visualização que incluem um arquivo de projeto .xproj. Ao abrir um arquivo .xproj com o Visual Studio 2017, você deverá migrar o arquivo para o formato .csproj (será feito um backup do arquivo .xproj). Não há suporte para esse formato .csproj em projetos do .NET Core no VS2015 e anterior.  Não há suporte para o formato .xproj no Visual Studio 2017 além da migração para o .csproj. Para obter mais informações, consulte [Migrando projetos do .NET Core para o formato .csproj](https://docs.microsoft.com/dotnet/core/migration/#visual-studio-2017).|
 | Aplicativo Web ASP.NET e Aplicativo Web ASP.NET Core com o Application Insights habilitado | Para cada usuário do Visual Studio, as informações de recurso são armazenadas no Registro por instância de usuário. Isso é usado quando o usuário não tem um projeto aberto e deseja pesquisar dados do Azure Application Insights. O Visual Studio 2015 usa um local de Registro diferente do Visual Studio 2017 e não entra em conflito com ele.<br/><br/>Quando um usuário cria um aplicativo Web ASP.NET ou um Aplicativo Web ASP.NET Core, os recursos são armazenados no arquivo .suo. O usuário pode abrir o projeto no Visual Studio 2015 ou 2017 e as informações de recurso serão usadas para ambos, desde que o Visual Studio dê suporte a projetos e soluções usadas em ambas as versões. Os usuários precisarão se autenticarem uma vez em cada produto. Por exemplo, se um projeto for criado com o Visual Studio 2015 e aberto no Visual Studio 2017, o usuário precisará se autenticar no Visual Studio 2017. |
 | Formulário da Web ou Windows Form em C#/Visual Basic | É possível abrir o projeto no Visual Studio 2017 e no Visual Studio 2015. |
 | Projetos de teste de unidade de banco de dados (.csproj, .vbproj)    | Projetos de teste de Unidade de Dados antigos serão carregados no Visual Studio 2017, mas usarão a versão do GAC de dependências. Para atualizar o projeto de teste de unidade para usar as últimas dependências, clique com o botão direito do mouse no projeto no Gerenciador de Soluções e selecione **Converter para Projeto de Teste de Unidade do SQL Server...**. |
 | F# | O Visual Studio 2017 pode abrir projetos criados no Visual Studio 2013 e 2015. No entanto, para habilitar os recursos do Visual Studio 2017 nesses projetos, abra as propriedades do projeto e altere o destino fsharp.core para F# 4.1. Observe também que a opção **Suporte à linguagem F#** no instalador do Visual Studio não é selecionada por padrão com as cargas de trabalho do .NET. Você deve incluí-la selecionando essa opção para a carga de trabalho ou selecionando-a na guia **Componentes individuais** em **Atividades de desenvolvimento**. |
-| InstallShield<br/>Instalação do MSI | Projetos do instalador criados no Visual Studio 2010 podem ser abertos em versões posteriores com a ajuda da [extensão Projetos do Instalador do Visual Studio](https://marketplace.visualstudio.com/items?itemName=UnniRavindranathan-MSFT.MicrosoftVisualStudio2013InstallerProjects). Também é possível manter projetos como esse usando o [InstallShield Limited Edition](https://blogs.msdn.microsoft.com/visualstudio/2013/08/15/whats-new-in-visual-studio-2013-and-installshield-limited-edition/). |
+| InstallShield<br/>Instalação do MSI | Projetos do instalador criados no Visual Studio 2010 podem ser abertos em versões posteriores com a ajuda da [extensão Projetos do Instalador do Visual Studio](https://marketplace.visualstudio.com/items?itemName=UnniRavindranathan-MSFT.MicrosoftVisualStudio2013InstallerProjects). Consulte também o [WiX Toolset Visual Studio 2017 Extension](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension) (Extensão do Conjunto de Ferramentas WiX do Visual Studio 2017). O InstallShield Limited Edition não está mais incluído com o Visual Studio. Consulte a [Flexera Software](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) sobre a disponibilidade para o Visual Studio 2017. |
 | LightSwitch | Não há mais suporte para o LightSwitch no Visual Studio 2017. Projetos criados com o Visual Studio 2012 e anterior abertos no Visual Studio 2013 ou Visual Studio 2015 serão atualizados e podem ser abertos apenas no Visual Studio 2013 ou no Visual Studio 2015 em diante. |
 | Ferramentas do Microsoft Azure para Visual Studio | Para abrir esses tipos de projetos, primeiro instale o [SDK do Azure para .NET](http://azure.microsoft.com/downloads/) e, em seguida, abra o projeto. Se necessário, o projeto será atualizado. |
 | Estrutura Modelo-Exibição-Controlador (ASP.NET MVC) | Suporte para versões do MVC e para o Visual Studio:<ul><li>O Visual Studio 2010 SP1 dá suporte ao MVC 2 e MVC 3; o suporte MVC 4 é adicionado por meio do [download do ASP.NET 4 MVC 4 para Visual Studio 2010 SP1](https://www.microsoft.com/download/details.aspx?id=30683)</li><li>O Visual Studio 2012 dá suporte apenas ao MVC 3 e ao MVC 4</li><li>O Visual Studio 2013 dá suporte apenas ao MVC 4 e ao MVC 5</li><li>O Visual Studio 2017 e o Visual Studio 2015 dão suporte ao MVC 4 (é possível abrir projetos existentes, mas não criar novos) e ao MVC 5</li></ul><br/><br/>Atualizando versões do MVC:<ul><li>Para obter informações sobre como atualizar automaticamente do MVC 2 para o MVC 3, consulte [Atualizador do aplicativo ASP.NET MVC 3](http://go.microsoft.com/fwlink/?LinkID=238178).</li><li>Para obter informações sobre como atualizar manualmente do MVC 2 para o MVC 3, consulte [Atualizando um projeto ASP.NET MVC 2 para atualização de ferramentas do ASP.NET MVC 3](http://go.microsoft.com/fwlink/?linkid=238178).</li><li>Para obter informações sobre como atualizar manualmente do MVC 3 para o MVC 4, consulte [Atualizando um projeto ASP.NET MVC 3 para o ASP.NET MVC 4](http://www.asp.net/whitepapers/mvc4-release-notes). Se o projeto se destinar ao .NET Framework 3.5 SP1, você deverá redirecioná-lo para usar o .NET Framework 4.</li><li>Para obter informações sobre como atualizar manualmente do MVC 4 para o MVC 5, consulte [Como atualizar um projeto do ASP.NET MVC 4 e API Web para o ASP.NET MVC 5 e API Web 2](https://www.asp.net/mvc/overview/releases/how-to-upgrade-an-aspnet-mvc-4-and-web-api-project-to-aspnet-mvc-5-and-web-api-2)</li></ul> |

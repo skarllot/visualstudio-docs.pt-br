@@ -1,12 +1,13 @@
 ---
 title: "Extensão do CookieCutter para o Python no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 5/8/2017
+ms.date: 7/12/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 783da5fd-726c-4716-994e-aa04d6b75896
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: 44aa74104cbb27de62fe739dbdd8f269fbf42c53
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 6db7e2efc54414dcb72899ab3238a9b7a0390921
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -44,7 +31,7 @@ O Cookiecutter exige o Python 3.3 ou posterior (32 ou 64 bits) ou o Anaconda 3 4
 
 Depois de instalado, selecione **Exibir > Cookiecutter Explorer** para abrir sua janela:
 
-![Janela principal do Cookiecutter](~/python/media/cookiecutter-overview.png)
+![Janela principal do Cookiecutter](media/cookiecutter-overview.png)
 
 ## <a name="cookiecutter-workflow"></a>Fluxo de trabalho do Cookiecutter
 
@@ -76,27 +63,27 @@ Se você selecionar um modelo do grupo **Instalados** ou inserir um caminho de p
 
 Depois que o modelo for instalado localmente, o Cookiecutter exibirá uma página de opções na qual é possível especificar a localização em que você deseja que o Cookiecutter gere arquivos, junto com outras opções:
 
-![Página de opções do Cookiecutter](~/python/media/cookiecutter-template-options.png)
+![Página de opções do Cookiecutter](media/cookiecutter-template-options.png)
 
 Cada modelo do Cookiecutter define seu próprio conjunto de opções e especifica um valor padrão para cada um (exibido como o texto sugerido em cada campo de entrada). Um valor padrão pode ser um trecho de código, geralmente, quando ele é um valor dinâmico que usa outras opções. 
 
-É possível personalizar os valores padrão de opções específicas com um arquivo de configuração do usuário. Quando a extensão Cookiecutter detecta um arquivo de configuração do usuário, ela substitui os valores padrão do modelo pelos valores padrão da configuração do usuário. Isso é abordado na seção [Configuração do usuário](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html) da documentação do Cookiecutter.
+É possível personalizar os valores padrão de opções específicas com um arquivo de configuração do usuário. Quando a extensão Cookiecutter detecta um arquivo de configuração do usuário, ela substitui os valores padrão do modelo pelos valores padrão da configuração do usuário. Esse comportamento é abordado na seção [Configuração do usuário](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html) da documentação do Cookiecutter.
 
 Se o modelo especificar tarefas específicas do Visual Studio a serem executadas após a geração de código, uma opção adicional **Executar tarefas adicionais após a conclusão** será exibida, que permite recusar essas tarefas. O uso mais comum de tarefas é abrir um navegador da Web, abrir arquivos no editor, instalar dependências e assim por diante.
 
 ### <a name="create"></a>Create
 
-Depois de configurar as opções, selecione **Criar** para gerar o código. Observe que, se a pasta de saída não estiver vazia, você verá um aviso. Se estiver familiarizado com a saída do modelo e não se incomodar em substituir arquivos, ignore o aviso. Caso contrário, selecione **Cancelar**, especifique uma pasta vazia e, em seguida, copie manualmente os arquivos criados para a pasta de saída não vazia.
+Depois de configurar as opções, selecione **Criar** para gerar o código (um aviso será exibido se a pasta de saída não estiver vazia). Se estiver familiarizado com a saída do modelo e não se incomodar em substituir arquivos, ignore o aviso. Caso contrário, selecione **Cancelar**, especifique uma pasta vazia e, em seguida, copie manualmente os arquivos criados para a pasta de saída não vazia.
 
 Depois que os arquivos forem criados com êxito, o Cookiecutter fornecerá uma opção para abri-los no **Gerenciador de Soluções**:
 
-![Cookiecutter mostrando o comando Gerenciador de Soluções](~/python/media/cookiecutter-files-created.png)
+![Cookiecutter mostrando o comando Gerenciador de Soluções](media/cookiecutter-files-created.png)
 
 ## <a name="cookiecutter-options"></a>Opções do Cookiecutter
 
 As opções do Cookiecutter estão disponíveis por meio de **Ferramentas > Opções > Cookiecutter**:
 
-![Opções do Cookiecutter](~/python/media/cookiecutter-tools-options.png)
+![Opções do Cookiecutter](media/cookiecutter-tools-options.png)
 
 | Opção | Descrição |
 | --- | --- |
@@ -105,19 +92,19 @@ As opções do Cookiecutter estão disponíveis por meio de **Ferramentas > Opç
 
 ## <a name="optimizing-cookiecutter-templates-for-visual-studio"></a>Otimizando os modelos do Cookiecutter para o Visual Studio
 
-Para obter noções básicas sobre como criar um modelo do Cookiecutter, consulte a [documentação do Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/first_steps.html). Observe que a extensão Cookiecutter para o Visual Studio dá suporte aos modelos criados para o Cookiecutter v1.4.
+Para obter noções básicas sobre como criar um modelo do Cookiecutter, consulte a [documentação do Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/first_steps.html). A extensão Cookiecutter para o Visual Studio dá suporte aos modelos criados para o Cookiecutter v1.4.
 
 A renderização padrão de uma variável de modelo depende do tipo de dados (cadeia de caracteres ou lista):
 
 - Cadeia de caracteres: rótulo do nome da variável, caixa de texto para inserção do valor e uma marca-d'água mostrando o valor padrão. A dica de ferramenta na caixa de texto mostra o valor padrão.
 - Lista: rótulo do nome da variável e caixa de combinação para seleção de um valor. A dica de ferramenta na caixa de combinação mostra o valor padrão.
 
-É possível melhorar isso especificando metadados adicionais no arquivo `cookiecutter.json` que são específicos ao Visual Studio (e ignorados pela CLI do Cookiecutter). Todas as propriedades são opcionais:
+É possível melhorar essa renderização especificando metadados adicionais no arquivo `cookiecutter.json` que são específicos ao Visual Studio (e ignorados pela CLI do Cookiecutter). Todas as propriedades são opcionais:
 
 | Propriedade | Descrição |
 | --- | --- |
 | Rotular | Especifica o que é exibido acima do editor para a variável, em vez do nome da variável. |
-| Descrição | Especifica a dica de ferramenta que é exibida no controle de edição mostrará essa descrição, em vez do valor padrão dessa variável. |
+| Descrição | Especifica a dica de ferramenta que é exibida no controle de edição, em vez do valor padrão dessa variável. |
 | URL | Altera o rótulo para um hiperlink, com uma dica de ferramenta que mostra a URL. Se você clicar no hiperlink, o navegador padrão do usuário será aberto nessa URL. |
 | Seletor | Permite a personalização do editor para uma variável. Atualmente, há suporte para os seguintes seletores:<ul><li>`string`: caixa de texto padrão, o padrão para cadeias de caracteres.</li><li>`list`: caixa de combinação padrão, o padrão para listas.</li><li>`yesno`: caixa de combinação para escolher entre `y` e `n`, para cadeias de caracteres.</li><li>`odbcConnection`: caixa de texto com um botão “…” que exibe uma caixa de diálogo de conexão de banco de dados.</li></ul> |
 
@@ -189,7 +176,7 @@ Se não precisar passar um argumento, deixe-o como uma cadeia de caracteres vazi
 ]
 ```
 
-Use uma matriz para vários argumentos. Para opções, divida a opção e seu valor em argumentos separados e garanta a delimitação correta. Por exemplo:
+Use uma matriz para vários argumentos. Para opções, divida a opção e seu valor em argumentos separados e use a delimitação correta. Por exemplo:
 
 ```json
 "_visual_studio_post_cmds": [
@@ -206,21 +193,21 @@ Use uma matriz para vários argumentos. Para opções, divida a opção e seu va
 
 Os argumentos podem se referir a outras variáveis do Cookiecutter. Nos exemplos acima, a variável `_output_folder_path` interna é usada para formar um caminho absoluto para os arquivos gerados.
 
-Observe que o comando `Python.InstallProjectRequirements` apenas funciona ao adicionar arquivos a um projeto existente. Isso ocorre porque ele é processado pelo projeto do Python no Gerenciador de Soluções e não há nenhum projeto para receber a mensagem no Gerenciador de Soluções – Exibição de Pasta. Essa é uma limitação que esperamos resolver em uma versão futura (um melhor suporte à Exibição de Pasta em geral).
+Observe que o comando `Python.InstallProjectRequirements` apenas funciona ao adicionar arquivos a um projeto existente. Essa limitação existe porque o comando é processado pelo projeto do Python no Gerenciador de Soluções e não há nenhum projeto para receber a mensagem no Gerenciador de Soluções – Exibição de Pasta. Esperamos remover a limitação em uma versão futura (e fornecer um melhor suporte à Exibição de Pasta em geral).
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
 ### <a name="error-loading-template"></a>Erro ao carregar o modelo
 
-Alguns modelos podem estar usando tipos de dados inválidos, como booliano, em seu `cookiecutter.json`. Isso deve ser relatado para o autor do modelo. Clique no link **Problemas** no painel de informações do modelo.
+Alguns modelos podem estar usando tipos de dados inválidos, como booliano, em seu `cookiecutter.json`. Reporte essas instâncias para o autor do modelo selecionando o link **Problemas** no painel de informações do modelo.
 
 ### <a name="hook-script-failed"></a>Script de gancho com falha
 
-Alguns modelos podem usar scripts pós-geração que não são compatíveis com a interface do usuário do Cookiecutter. Por exemplo, os scripts que consultam a entrada do usuário falharão devido a não terem um console de terminal.
+Alguns modelos podem usar scripts pós-geração que não são compatíveis com a interface do usuário do Cookiecutter. Por exemplo, os scripts que consultam a entrada do usuário falha devido a não ter um console de terminal.
 
 ### <a name="hook-script-not-supported-on-windows"></a>Script de gancho sem suporte no Windows
 
-Se o pós-script for `.sh`, ele poderá não ser associado a um aplicativo no computador Windows. Você poderá ver uma caixa de diálogo pop-up do Windows solicitando que você encontre um aplicativo compatível na Windows Store.
+Se o pós-script for `.sh`, ele poderá não ser associado a um aplicativo no computador Windows. Você poderá ver uma caixa de diálogo do Windows solicitando que você encontre um aplicativo compatível na Windows Store.
 
 ### <a name="templates-with-known-issues"></a>Modelos com problemas conhecidos
 
@@ -237,7 +224,7 @@ Falhas de carregamento:
 Falhas de execução:
 
 - **iknite/cookiecutter-ansible-role** (pós-script de gancho exige entrada do console)
-- **iknite/cookiecutter-ansible-role** (erro jinja)
+- **benregn/cookiecutter-django-ansible** (Erro Jinja)
 
 Usa bash (não fatal):
 

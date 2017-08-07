@@ -1,12 +1,13 @@
 ---
 title: "Depuração remota multiplataforma Python no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 4/4/2017
+ms.date: 7/12/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa667357-763f-4ce6-8e47-48f9337658a8
@@ -14,52 +15,38 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: fa3d69cbb34a61a327d0b4c27430ff04b670a568
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: b18efd1fb488c0d07b9a0ffa41f9b4e3613ef17c
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
-# <a name="remotely-debugging-python-code"></a>Depurando o código do Python remotamente
+# <a name="remotely-debugging-python-code-on-linux"></a>Depurar o código do Python remotamente no Linux
 
 O Visual Studio pode iniciar e depurar aplicativos Python local e remotamente em um computador Windows (consulte [Depuração remota](../debugger/remote-debugging.md)). Ela também pode depurar remotamente em um dispositivo ou sistema operacional diferente ou em uma implementação Python que não seja o CPython usando a [biblioteca ptvsd](https://pypi.python.org/pypi/ptvsd).
 
-Ao usar a ptvsd, o código do Python que está sendo depurado hospeda o servidor de depuração ao qual o Visual Studio pode se anexar. Isso exige uma pequena modificação no código para importar e habilitar o servidor e pode exigir configurações de rede ou de firewall no computador remoto para permitir conexões TCP.
+Ao usar a ptvsd, o código do Python que está sendo depurado hospeda o servidor de depuração ao qual o Visual Studio pode se anexar. Essa hospedagem exige uma pequena modificação no código para importar e habilitar o servidor e pode exigir configurações de rede ou de firewall no computador remoto para permitir conexões TCP.
 
 Para obter uma introdução à depuração remota, assista a [Deep Dive: Cross-Platform Remote Debugging](https://youtu.be/y1Qq7BrV6Cc) (Aprofundamento: Depuração remota de plataforma cruzada) (youtube.com, 6min22s).
 
 > [!VIDEO https://www.youtube.com/embed/y1Qq7BrV6Cc]
 
-## <a name="setting-up-a-linux-machine"></a>Configurando um computador Linux
+## <a name="setting-up-a-linux-computer"></a>Configurando um computador Linux
 
-Os seguintes itens serão necessários para concluir este passo a passo:
+Os itens a seguir são necessários para acompanhar esse passo a passo:
 
 - Um computador remoto que execute o Python em um sistema operacional como o Mac OSX ou Linux.
-- A porta de entrada 5678 aberta no firewall desse computador, que é o padrão para a depuração remota.
+- A porta 5678 (entrada) aberta no firewall desse computador, que é o padrão para a depuração remota.
 
-É possível criar facilmente [máquinas virtuais do Linux no Azure](https://docs.microsoft.com/azure/virtual-machines/linux/creation-choices) e [acessá-las usando a Área de Trabalho Remota](https://docs.microsoft.com/azure/virtual-machines/linux/use-remote-desktop) do Windows. É conveniente usar o Ubuntu para a VM, pois o Python é instalado por padrão. Caso contrário, consulte a lista em [Instalar um interpretador do Python de sua escolha](python-environments.md#selecting-and-installing-python-interpreters) para obter mais locais de download do Python.
+É possível criar facilmente [máquinas virtuais do Linux no Azure](https://docs.microsoft.com/azure/virtual-machines/linux/creation-choices) e [acessá-las usando a Área de Trabalho Remota](https://docs.microsoft.com/azure/virtual-machines/linux/use-remote-desktop) do Windows. É conveniente um Ubuntu para a VM, pois o Python é instalado por padrão. Caso contrário, consulte a lista em [Instalar um interpretador do Python de sua escolha](python-environments.md#selecting-and-installing-python-interpreters) para obter mais locais de download do Python.
 
 Para obter detalhes sobre como criar uma regra de firewall para uma VM do Azure, consulte [Abrir portas para uma VM no Azure usando o Portal do Azure](https://docs.microsoft.com/azure/virtual-machines/windows/nsg-quickstart-portal).
 
 ## <a name="preparing-the-script-for-debugging"></a>Preparando o script para depuração
 
-1. No computador remoto, crie um arquivo do Python com o chamado `guessing-game.py` com o seguinte código:
+1. No computador remoto, crie um arquivo do Python chamado `guessing-game.py` com o seguinte código:
 
   ```python
     import random
@@ -93,7 +80,7 @@ Para obter detalhes sobre como criar uma regra de firewall para uma VM do Azure,
    ptvsd.enable_attach('my_secret')
    ```
 
-   O primeiro argumento passado para `enable_attach` (chamado de "secreto") restringe o acesso para o script em execução e esse segredo será inserido ao anexar o depurador remoto. (Embora não seja recomendado, é possível permitir que qualquer pessoa se conecte, use `enable_attach(secret=None)`.)
+   O primeiro argumento passado para `enable_attach` (chamado de "segredo") restringe o acesso para o script em execução e esse segredo é inserido ao anexar o depurador remoto. (Embora não seja recomendado, é possível permitir que qualquer pessoa se conecte, use `enable_attach(secret=None)`.)
 
 1. Salve o arquivo e execute `python3 guessing-game.py`. A chamada para `enable_attach` é executada em segundo plano e aguarda as conexões de entrada enquanto você interage com o programa de outra maneira. Se desejado, a função `wait_for_attach` pode ser chamada após `enable_attach` para bloquear o programa até que o depurador seja anexado.
 
@@ -104,34 +91,32 @@ Para obter detalhes sobre como criar uma regra de firewall para uma VM do Azure,
 
 Nestas etapas, definiremos um ponto de interrupção simples para interromper o processo remoto.
 
-1. Crie uma cópia do arquivo remoto no computador local e abra-a no Visual Studio. Não importa a localização do arquivo, mas o nome deve corresponder ao nome do script no computador remoto ao qual ele será anexado.
+1. Crie uma cópia do arquivo remoto no computador local e abra-a no Visual Studio. Não importa a localização do arquivo, mas o nome deve corresponder ao nome do script no computador remoto.
 
 1. (Opcional) Para ter o IntelliSense para ptvsd no computador local, instale o pacote de ptvsd em seu ambiente de Python.
 
 1. Selecione **Depurar > Anexar ao processo**.
 
-1. No diálogo **Anexar ao Processo** que será exibido, configure o **Tipo de Conexão** como **Python remoto (ptvsd)**. (Em versões anteriores do Visual Studio, tais ações são denominadas **Transporte** e **Depuração remota do Python**.)
+1. No diálogo **Anexar ao Processo** que será exibido, configure o **Tipo de Conexão** como **Python remoto (ptvsd)**. (Em versões anteriores do Visual Studio, esses comandos são denominados **Transporte** e **Depuração remota do Python**.)
 
 1. No campo **Destino da Conexão** (**Qualificador** em versões anteriores), insira `tcp://<secret>@<ip_address>:5678`, em que `<secret>` é a cadeia de caracteres `enable_attach` passada no código Python, `<ip_address>` é o do computador remoto (que pode ser um endereço explícito ou um nome como myvm.cloudapp.net) e `:5678` é o número da porta de depuração remota.
 
     > [!Warning]
     > Se estiver fazendo uma conexão pela Internet pública, você deverá usar `tcps` e seguir as instruções abaixo para [Proteger a conexão do depurador com SSL](#securing-the-debugger-connection-with-ssl).
 
-1. Pressione Enter para preencher a lista de processos ptvsd disponíveis nesse computador:
+1. Pressione Enter para popular a lista de processos ptvsd disponíveis nesse computador:
 
-    ![Inserir o destino da conexão e listar processos](~/python/media/remote-debugging-qualifier.png)
+    ![Inserir o destino da conexão e listar processos](media/remote-debugging-qualifier.png)
 
-    Se outro programa for iniciado no computador remoto após a lista ser preenchida, selecione o botão **Atualizar**.
+    Se outro programa for iniciado no computador remoto após a lista ser populada, selecione o botão **Atualizar**.
 
 1. Selecione o processo a ser depurado e, em seguida, **Anexar** ou clique duas vezes no processo.
 
 1. Então, o Visual Studio alternará para o modo de depuração enquanto o script continuará a ser executado no computador remoto, fornecendo todos os recursos normais de [depuração](debugging.md). Por exemplo, defina um ponto de interrupção na linha `if guess < number:` e, em seguida, mude para o computador remoto e insira outra tentativa. Após fazer isso, o Visual Studio do seu computador local parará no ponto de interrupção, mostrará variáveis locais e assim por diante:
 
-    ![O ponto de interrupção é atingido](~/python/media/remote-debugging-breakpoint-hit.png)
+    ![O ponto de interrupção é atingido](media/remote-debugging-breakpoint-hit.png)
 
 1. Ao interromper a depuração, o Visual Studio se desanexa do programa, que continua a ser executado no computador remoto. O ptvsd também continua a escuta para anexar depuradores, assim, é possível anexá-los novamente ao processo a qualquer momento.
-
-1. Se o programa remoto for interrompido, o Visual Studio não desanexará o depurador automaticamente, mas 
 
 ### <a name="connection-troubleshooting"></a>Solução de problemas de conexão
 
@@ -179,23 +164,23 @@ Por padrão, a conexão com o servidor de depuração remota do ptvsd é protegi
     1. Copie o arquivo de certificado do computador remoto para o computador local.
     1. Abra o Painel de Controle e acesse **Ferramentas Administrativas > Gerenciar certificados de computador**.
     1. Na janela exibida, expanda **Autoridades de Certificação Confiáveis** no lado esquerdo, clique com botão direito do mouse em **Certificados** e selecione **Todas as Tarefas > Importar...**.
-    1. Vá até o arquivo `.cer` copiado do computador remoto, selecione-o e, em seguida, clique nas caixas de diálogo para concluir a importação.
+    1. Navegue até o arquivo `.cer` copiado do computador remoto, selecione-o e, em seguida, clique nas caixas de diálogo para concluir a importação.
 
 1. Agora, repita o processo de anexação no Visual Studio, conforme descrito anteriormente, usando `tcps://` como protocolo para o **Destino de Conexão** (ou **Qualificador**).
 
-    ![Escolhendo o transporte de depuração remota com SSL](~/python/media/remote-debugging-qualifier-ssl.png)
+    ![Escolhendo o transporte de depuração remota com SSL](media/remote-debugging-qualifier-ssl.png)
 
 ### <a name="warnings"></a>Avisos
 
-O Visual Studio o avisará sobre possíveis problemas de certificado ao se conectar via SSL, conforme descrito abaixo. É possível ignorar os avisos e continuar, porém, embora o canal ainda esteja criptografado contra interceptação, ele poderá estar aberto a ataques man-in-the-middle.
+O Visual Studio o avisará sobre possíveis problemas de certificado ao se conectar via SSL, conforme descrito abaixo. É possível ignorar os avisos e continuar, porém, embora o canal ainda esteja criptografado contra interceptação, ele pode estar aberto a ataques man-in-the-middle.
 
 1. Caso veja o aviso “o certificado remoto não é confiável” abaixo, significa que o certificado não foi adicionado corretamente à AC Raiz Confiável. Verifique essas etapas e tente novamente.
 
-    ![Aviso de certificado SSL confiável](~/python/media/remote-debugging-ssl-warning.png)
+    ![Aviso de certificado SSL confiável](media/remote-debugging-ssl-warning.png)
 
 1. Caso veja o aviso “o nome do certificado remoto não corresponde ao nome do host” abaixo, significa que o nome de host ou endereço IP correto não foi usado como o **Nome Comum** ao criar o certificado.
 
-    ![Aviso de nome de host do certificado SSL](~/python/media/remote-debugging-ssl-warning2.png)
+    ![Aviso de nome de host do certificado SSL](media/remote-debugging-ssl-warning2.png)
 
 > [!Warning]
 > No momento, o Visual Studio 2017 travará quando esses avisos forem ignorados. Verifique se todos os problemas foram corrigidos antes de tentar se conectar.

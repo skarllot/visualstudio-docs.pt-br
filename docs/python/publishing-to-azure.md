@@ -1,12 +1,13 @@
 ---
 title: "Publicando um aplicativo do Python no Serviço de Aplicativo do Azure por meio do Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 7/13/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85031f91-3a65-463b-a678-1e69f1b843e6
@@ -14,24 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 0163d1279b41ef8fecf9ca774cd3e67f0f47f1b1
-ms.lasthandoff: 03/07/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 9bce1901cc86eea29638d4a715c18c6367fa6dc6
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -65,17 +53,17 @@ Para criar um site temporário no Serviço de Aplicativo do Azure, sem a necessi
 
 1. No Visual Studio, selecione **Arquivo > Novo > Projeto**, pesquise “Bottle”, selecione o **Projeto Web do Bottle** e clique em **OK**.    
 
-1. Quando solicitado a instalar pacotes externos, selecione **Instalar em um ambiente virtual**. Observe o controle **Mostrar os pacotes necessários** na parte inferior da caixa de diálogo que mostrará quais pacotes serão instalados:
+1. Quando solicitado a instalar pacotes externos, selecione **Instalar em um ambiente virtual**. Observe o controle **Mostrar os pacotes necessários** na parte inferior da caixa de diálogo que mostra quais pacotes serão instalados:
 
-  ![Instalando os pacotes necessários](~/python/media/tutorials-common-external-packages.png)
+  ![Instalando os pacotes necessários](media/tutorials-common-external-packages.png)
 
 1. Selecione o interpretador base preferencial para o ambiente virtual (por exemplo, **Python 2.7** ou **Python 3.4**) e clique em **Criar**:
 
-  ![Adicionando um ambiente virtual ao criar um projeto](~/python/media/tutorials-common-add-virtual-environment.png)
+  ![Adicionando um ambiente virtual ao criar um projeto](media/tutorials-common-add-virtual-environment.png)
 
 1. Quando o projeto for criado, teste-o localmente selecionando **Depurar > Iniciar Depuração** ou pressionando F5. Por padrão, o aplicativo usa um repositório na memória que não exige nenhuma configuração. Todos os dados são perdidos quando o servidor Web é interrompido.
 
-1. Clique em torno do aplicativo para ver sua operação.
+1. Clique em torno do aplicativo para testar seu funcionamento.
 
 1. Pare o depurador quando terminar (**Depurar > Parar Depuração** ou Shift-F5).
 
@@ -85,7 +73,7 @@ Para criar um site temporário no Serviço de Aplicativo do Azure, sem a necessi
 
 1. Na caixa de diálogo **Publicar**, selecione **Serviço de Aplicativo do Microsoft Azure**:
 
-  ![Publicar no Azure etapa 1](~/python/media/tutorials-common-publish-1.png)
+  ![Publicar no Azure etapa 1](media/tutorials-common-publish-1.png)
 
 1. Selecione um destino:
 
@@ -94,7 +82,7 @@ Para criar um site temporário no Serviço de Aplicativo do Azure, sem a necessi
 
 1. Os detalhes do Serviço de Aplicativo são exibidos na guia **Conexão** da caixa de diálogo **Publicar** abaixo.
 
-  ![Publicar no Azure etapa 2](~/python/media/tutorials-common-publish-2.png)
+  ![Publicar no Azure etapa 2](media/tutorials-common-publish-2.png)
 
 1. Selecione **Avançar >**, conforme necessário, para examinar as configurações adicionais. Se você pretende [depurar o código do Python remotamente no Azure](debugging-azure-remote.md), defina **Configuração** como **Depuração**
 1. Selecione **Publicar**. Depois que o aplicativo for implantado no Azure, o navegador padrão será aberto nesse site. 

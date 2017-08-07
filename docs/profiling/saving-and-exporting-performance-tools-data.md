@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 12d07b6c0afe54f8c2334273df835006bf78468e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 8bd34de7603efac080f3321a87ba3badf85dd1fb
+ms.openlocfilehash: 44988d8c5ff8b541b090f2baf48005d82caa2c10
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/15/2017
 
 ---
 # <a name="saving-and-exporting-performance-tools-data"></a>Salvando e Exportando Dados de Ferramentas de Desempenho
@@ -80,7 +81,7 @@ Este tópico descreve como salvar e exportar arquivos de dados de desempenho.
   
 4.  Em **Local de Relatório Exportado**, especifique o diretório.  
   
-5.  Em **Formato de Relatório Exportado**, selecione (*.csv) (delimitado por vírgulas) ou Dados XML (\*.xml).  
+5.  Em **Formato de relatório exportado**, selecione (delimitado por vírgula) (\*.csv\) ou Dados XML (\*.xml\).  
   
 6.  Clique em **Exportar**.  
   
@@ -100,7 +101,7 @@ Este tópico descreve como salvar e exportar arquivos de dados de desempenho.
   
 6.  Em **Local de Relatório Exportado**, especifique o diretório.  
   
-7.  Em **Formato de Relatório Exportado**, selecione (*.csv) (delimitado por vírgulas) ou Dados XML (\*.xml).  
+7.  Em **Formato de relatório exportado**, selecione (delimitado por vírgula) (\*.csv) ou Dados XML (\*.xml).  
   
 8.  Clique em **Exportar**.  
   
@@ -111,3 +112,4 @@ Este tópico descreve como salvar e exportar arquivos de dados de desempenho.
  [Analisando dados de ferramentas de desempenho](../profiling/analyzing-performance-tools-data.md)   
  [Comparando Arquivos de Dados de Desempenho](../profiling/comparing-performance-data-files.md)   
  [VSPerfReport](../profiling/vsperfreport.md)
+

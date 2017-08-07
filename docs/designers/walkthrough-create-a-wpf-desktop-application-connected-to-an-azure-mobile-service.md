@@ -13,26 +13,11 @@ caps.latest.revision: 7
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7716a0e9249c67760ae7b31160dcae89b77b9ca7
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: b42e50dcfc4820b750c04085f1e881ee25f786f9
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>Passo a passo: Criar um aplicativo de área de trabalho do WPF conectado a um serviço móvel do Azure
@@ -41,7 +26,7 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
 ##  <a name="Requirements"></a> Pré-requisitos  
  Você precisará dos seguintes itens para concluir este passo a passo:  
   
--   Visual Studio 2015 – qualquer versão que dê suporte ao desenvolvimento no WPF.  
+-   Visual Studio 2017 ou qualquer versão que dê suporte ao desenvolvimento no WPF.  
   
 -   Uma conta ativa do Microsoft Azure.  
   
@@ -115,7 +100,7 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
   
      Esse código XAML cria um layout reutilizável com espaços reservados para campos de número, título e campos de descrição. Em tempo de execução, os espaços reservados podem ser substituídos por texto, conforme mostrado na ilustração a seguir.  
   
-     ![O controle de usuário QuickStartTask](~/designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
+     ![O controle de usuário QuickStartTask](../designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
   
 6.  No **Gerenciador de Soluções**, expanda o nó **QuickStartTask.xaml** e abra o arquivo **QuickStartTask.xaml.cs** ou **QuickStartTask.xaml.vb**.  
   
@@ -302,7 +287,7 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
   
      Neste ponto, seu design deve ser semelhante à ilustração a seguir.  
   
-     ![MainWindow no designer](~/designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
+     ![MainWindow no designer](../designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
   
     > [!NOTE]
     >  Ao seguir os próximos procedimentos, você poderá ver erros na **Lista de Erros** se ela estiver aberta. Não se preocupe, esses erros desaparecerão depois que você concluir os procedimentos restantes.  
@@ -572,7 +557,7 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
   
      Observe que as duas entradas são adicionadas á lista **Consultar e Atualizar Dados**, conforme mostrado na ilustração a seguir.  
   
-     ![Os itens Todo são adicionados à lista. ] (~/designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
+     ![Os itens Todo são adicionados à lista. ] (../designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
   
 4.  Marque a caixa de seleção para a entrada **Fazer algo mais** na lista.  
   
@@ -581,8 +566,8 @@ Você pode usar o WPF (Windows Presentation Foundation) para criar rapidamente u
 ## <a name="next-steps"></a>Próximas etapas  
  Você concluiu um exemplo muito simples de um aplicativo de área de trabalho do WPF com um back-end do Azure. Naturalmente um aplicativo real é muito mais complexo, mas os mesmos conceitos básicos se aplicam. Consulte [WPF no .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx).  
   
- Você pode tornar a interface do usuário mais atraente adicionando cores, formas, gráficos e até animações. Consulte [Criando o XAML no Visual Studio e no Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md).  
-  
+ Você pode tornar a interface do usuário mais atraente adicionando cores, formas, gráficos e até animações. Consulte [Criando uma interface do usuário usando o Designer XAML no Visual Studio](creating-a-ui-by-using-xaml-designer-in-visual-studio.md) e [Criando uma interface do usuário usando o Blend for Visual Studio](creating-a-ui-by-using-blend-for-visual-studio.md). Para obter uma comparação entre as ferramentas, consulte [Criando o XAML no Visual Studio e no Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md).  
+
  Você pode se conectar a bancos de dados do SQL existentes ou outras fontes de dados usando os serviços móveis do Azure. Consulte [Documentação dos serviços móveis](http://azure.microsoft.com/en-us/services/app-service/mobile/).  
   
 ## <a name="see-also"></a>Consulte também  

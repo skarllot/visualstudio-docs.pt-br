@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 65bceca75b87aaf187926ebbed1a54ce4f0e8eec
-ms.openlocfilehash: db7c9121beea3b6a27a435680dfe01cbc8cba8b6
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: 845811bb9ee9552f8fc66b2d2b4b24ecdb04baf0
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="perftips"></a>PerfTips
@@ -72,7 +74,5 @@ O depurador do Visual Studio *PerfTips* e as **Ferramentas de Diagnóstico** int
   
 2.  Marque ou desmarque **Habilitar ferramentas de diagnóstico durante a depuração**.
 
-
-<!--HONumber=Feb17_HO4-->
-
-
+## <a name="see-also"></a>Consulte também
+ [Criação de perfil no Visual Studio](../profiling/index.md) [Tour pelos recursos de criação de perfil](../profiling/profiling-feature-tour.md)

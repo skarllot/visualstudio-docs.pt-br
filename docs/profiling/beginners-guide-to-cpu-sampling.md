@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: ddd52c1af0a164235de2e5055896e020dc8715c3
+ms.translationtype: HT
+ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
+ms.openlocfilehash: 251b00c479c3853ba4fc00521f3e4cac74a93d27
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 07/13/2017
 
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>Guia do Iniciante para amostragem de CPU
@@ -90,13 +90,13 @@ Você pode usar as ferramentas de criação de perfil do Visual Studio para anal
   
  Cada área enumerada na figura está relacionada a uma etapa do procedimento.  
   
- ![Exibição de relatório de resumo de amostragem](~/profiling/media/summary_sampling.png "Summary_Sampling")  
+ ![Exibição de relatório de resumo de amostragem](../profiling/media/summary_sampling.png "Summary_Sampling")  
   
 #### <a name="to-analyze-sampling-data"></a>Para analisar os dados de amostragem  
   
 1.  Na exibição **Resumo**, o **Afunilamento** mostra a ramificação da árvore de chamadas do aplicativo com as amostras mais inclusivas. Este é o caminho de execução que estava mais ativo quando os dados foram coletados. Valores inclusivos altos podem indicar que o algoritmo que gera a árvore de chamadas pode ser otimizado. Localize a função no código que está mais inferior no caminho. Observe que o caminho também pode incluir funções do sistema ou funções em módulos externos.  
   
-     ![Afunilamento do Criador de Perfil](~/profiling/media/profiler_hotpath.png "Profiler_HotPath")  
+     ![Afunilamento do Criador de Perfil](../profiling/media/profiler_hotpath.png "Profiler_HotPath")  
   
     1.  **Amostras Inclusivas** indicam quanto trabalho foi feito pela função e todas as funções chamadas por ela. Contagens inclusivas altas apontam para as funções que são mais dispendiosas em geral.  
   
@@ -112,13 +112,13 @@ Você pode usar as ferramentas de criação de perfil do Visual Studio para anal
   
 3.  Para continuar sua análise, retorne à exibição **Resumo**, selecionando **Resumo** na lista suspensa Exibir. Examine as funções em **Funções que Fazem o Trabalho Mais Individual**. Esta lista exibe as funções com as amostras mais exclusivas. O código no corpo da função dessas funções executou um trabalho significativo e talvez seja possível otimizá-lo. Para analisar melhor uma função específica, clique no nome da função para mostrá-la na exibição **Detalhes da Função**.  
   
-     ![Lista de funções que fazem a maior parte do trabalho](~/profiling/media/functions_mostwork.png "Functions_MostWork")  
+     ![Lista de funções que fazem a maior parte do trabalho](../profiling/media/functions_mostwork.png "Functions_MostWork")  
   
      Para continuar a investigação sobre a execução de criação de perfil, você pode analisar novamente um segmento dos dados de criação de perfil usando a linha do tempo na exibição **Resumo** para mostrar o **Afunilamento** e as **Funções que fazem a maior parte do trabalho individual** de um segmento selecionado. Por exemplo, focar um pico menor na linha do tempo pode revelar árvores de chamadas e funções dispendiosas que não foram mostradas na análise da execução inteira da criação de perfil.  
   
      Para analisar um segmento novamente, selecione um segmento dentro da caixa de Linha do Tempo de Resumo e, em seguida, clique em **Filtrar por Seleção**.  
   
-     ![Linha do tempo de exibição de Resumo de Desempenho](~/profiling/media/performancesummary.png "PerformanceSummary")  
+     ![Linha do tempo de exibição de Resumo de Desempenho](../profiling/media/performancesummary.png "PerformanceSummary")  
   
 4.  O criador de perfil também usa um conjunto de regras para sugerir maneiras de melhorar a execução de criação de perfil e identificar possíveis problemas de desempenho. Quando um problema é encontrado, um aviso é exibido na **Lista de Erros**. Para abrir a janela **Lista de Erros**, no menu **Exibição**, clique em **Lista de Erros**.  
   
@@ -139,9 +139,9 @@ Você pode usar as ferramentas de criação de perfil do Visual Studio para anal
   
 4.  Depois que você executar novamente a sessão, outro arquivo de dados será adicionado à pasta **Relatórios** da sessão no **Gerenciador de Desempenho**. Selecione tanto os dados de criação perfil originais quanto os novos, clique com o botão direito do mouse na seleção e, em seguida, clique em **Comparar Relatórios de Desempenho**.  
   
-     Uma nova janela de relatório é aberta, exibindo os resultados da comparação. Para obter mais informações sobre como usar a exibição de comparação, consulte [How to: Compare Performance Data Files](../profiling/how-to-compare-performance-data-files.md) (Instruções: comparar arquivos de dados de desempenho).  
+     Uma nova janela de relatório é aberta, exibindo os resultados da comparação. Para obter mais informações sobre como usar a exibição de comparação, consulte [How to: Compare Performance Data Files](../profiling/how-to-compare-performance-data-files.md) (Instruções: comparar arquivos de dados de desempenho).
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciador de Desempenho](../profiling/performance-explorer.md)   
  [Introdução](../profiling/getting-started-with-performance-tools.md)   
- [Visões gerais](../profiling/overviews-performance-tools.md)
+ [Visões gerais](../profiling/overviews-performance-tools.md) [Criação de perfil no Visual Studio](../profiling/index.md) [Tour pelos recursos de criação de perfil](../profiling/profiling-feature-tour.md)
