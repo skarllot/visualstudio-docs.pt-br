@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 79d77230e46bade8e89d4503dbf95b1f1831e464
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 44e9d5e7af0994c494522a043c74046c6667abeb
+ms.openlocfilehash: 3b7d14a96683da16d1c7e6bae6a5226bfbaaa616
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="msbuild"></a>MSBuild
@@ -152,7 +153,7 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
 ###  <a name="BKMK_Tasks"></a> Tarefas  
  As tarefas são unidades de código executável que os projetos [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] usam para executar operações de build. Por exemplo, uma tarefa pode compilar os arquivos de entrada ou executar uma ferramenta externa. As tarefas podem ser reutilizadas e podem ser compartilhadas por diferentes desenvolvedores em projetos diferentes.  
   
- A lógica de execução de uma tarefa é escrita em código gerenciado e mapeada para [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] usando o elemento [UsingTask](../msbuild/usingtask-element-msbuild.md). Você pode criar sua própria tarefa criando um tipo gerenciado que implementa a interface <xref:Microsoft.Build.Framework.ITask>. Para obter mais informações sobre como escrever tarefas, consulte [Escrevendo tarefas](../msbuild/task-writing.md).  
+ A lógica de execução de uma tarefa é escrita em código gerenciado e mapeada para [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] usando o elemento [UsingTask](../msbuild/usingtask-element-msbuild.md). Você pode escrever sua própria tarefa por meio da criação de um tipo gerenciado que implementa a interface <xref:Microsoft.Build.Framework.ITask>. Para obter mais informações sobre como escrever tarefas, consulte [Escrevendo tarefas](../msbuild/task-writing.md).  
   
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] inclui tarefas comuns que você pode modificar para atender às suas necessidades.  Os exemplos são [Copy](../msbuild/copy-task.md), que copia arquivos, [MakeDir](../msbuild/makedir-task.md), que cria diretórios e [Csc](../msbuild/csc-task.md), que compila os arquivos de código-fonte do Visual C#. Para obter uma lista das tarefas disponíveis juntamente com as informações de uso, consulte [Referência das tarefas](../msbuild/msbuild-task-reference.md).  
   
@@ -224,5 +225,6 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
  [Referência do MSBuild](../msbuild/msbuild-reference.md)  
  Links para tópicos que contêm informações de referência.  
   
- Glossário  
+ [Glossário](msbuild-glossary.md)
  Define termos comuns do MSBuild.
+

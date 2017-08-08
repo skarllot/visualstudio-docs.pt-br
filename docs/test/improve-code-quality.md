@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: fbc3a182d2c3dbceaa17685f649ea73a3e73ed85
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: db500747061b436db2a0897e5b43a1cae4a3acae
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="improve-code-quality"></a>Melhorar a qualidade do código
@@ -54,8 +54,8 @@ O que é a qualidade do código? Correção, facilidade de manutenção e até m
 |[Medindo complexidade e facilidade de manutenção do código gerenciado](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|As métricas de código são um conjunto de medidas de software que fornecem aos desenvolvedores uma visão melhor do código que estão desenvolvendo. As métricas incluem um índice de facilidade de manutenção para funções e classes, a complexidade ciclomática de funções, a profundidade de herança de classes e a quantidade de acoplamento entre classes.|  
   
 ## <a name="related-scenarios"></a>Cenários relacionados  
- [Adotando Visual Studio e Team Foundation Server para gerenciamento de ciclo de vida do aplicativo](assetId:///7ae9182f-4762-4bd3-b238-39ce987932e5)  
- Se você não estiver familiarizado com o Visual Studio Team Foundation, pode aprender mais sobre como pode usá-lo em um ambiente de desenvolvimento em equipe para melhorar a produtividade e reduzir os riscos associados ao desenvolvimento de aplicativos.  
+ [Visão geral de DevOps para Team Services e TFS](https://www.visualstudio.com/docs/devops-alm-overview)  
+ Se você não estiver familiarizado com o Visual Studio Team Foundation e com o Visual Studio Team Services, poderá aprender mais sobre como pode usá-los em um ambiente de desenvolvimento em equipe para melhorar a produtividade e reduzir os riscos associados ao desenvolvimento de aplicativos.  
   
  [Análise e modelagem de arquitetura](../modeling/analyze-and-model-your-architecture.md)  
  Você pode usar [!INCLUDE[vsPreExt](../test/includes/vspreext_md.md)] para gerenciar os desafios e a complexidade da criação de software. O [!INCLUDE[vsPreShort](../test/includes/vspreshort_md.md)] permite que você modele visualmente o aplicativo, como ele existe agora e como você deseja que exista no futuro. Você pode criar e manter diagramas para ajudá-lo a visualizar os modelos lógicos do seu aplicativo ao mesmo tempo que eles mapeiam para os modelos físicos, isso permite que você altere, valide e analise o software que está “em design”.  

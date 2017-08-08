@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b699132bf1a31d3ef9dc3ba5af3f99c22890c632
+ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
+ms.openlocfilehash: 0a939044b9806236cf55333c30bce24ae0fdb28a
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 
@@ -39,10 +39,9 @@ ms.lasthandoff: 05/13/2017
 Durante o desenvolvimento de um aplicativo, o Live Unit Testing executa os testes de unidade afetados automaticamente em segundo plano e apresenta os resultados e a cobertura de código de forma dinâmica no IDE do Visual Studio em tempo real. Durante a modificação do código, o Live Unit Testing fornece comentários sobre como as alterações afetaram os testes existentes e se o novo código adicionado é abrangido por um ou mais testes existentes. Cuidadosamente, isso o lembrará de escrever testes de unidade durante as correções de bugs ou a adição novos recursos.
 
 > [!NOTE]
-> O Live Unit Testing está disponível para projetos do C# e do Visual Basic que se destinam ao .NET Framework na Enterprise Edition do Visual Studio 2017. Atualmente, ele não está disponível no .NET Core.
+> O Live Unit Testing está disponível para projetos do C# e do Visual Basic que se destinam ao .NET Core ou ao .NET Framework na Enterprise Edition do Visual Studio 2017.
 
 ## <a name="supported-test-frameworks"></a>Estruturas de teste com suporte
-
 O Live Unit Testing funciona com as três estruturas de teste de unidade populares listadas na tabela a seguir. A versão mínima com suporte de seus adaptadores e suas estruturas também é listada na tabela. As estruturas de teste de unidade estão disponíveis em NuGet.org.
  
 <table> 
@@ -63,8 +62,8 @@ O Live Unit Testing funciona com as três estruturas de teste de unidade popular
 </tr>
 <tr>
    <td>MSTest</td>
-   <td>MSTest.TestAdapter 1.1.4-preview</td>
-   <td>MSTest.TestFramework 1.0.5-preview</td>
+   <td>MSTest.TestAdapter 1.1.11</td>
+   <td>MSTest.TestFramework 1.1.11</td>
 </tr>
 </table>
 
@@ -72,11 +71,11 @@ Se você tiver referências mais antigas de adaptador e estrutura de teste dos p
 
 Em alguns casos, talvez seja necessário restaurar explicitamente os pacotes NuGet referenciados pelos projetos na solução para que o Live Unit Testing funcione. Faça isso executando um build explícito da solução (selecione **Compilar**, **Recompilar Solução** no menu de nível superior do Visual Studio) ou restaurando pacotes da solução (clique com o botão direito do mouse na solução e selecione **Restaurar Pacotes NuGet**) antes de habilitar o Live Unit Testing. 
 
-#    <a name="configuring-live-unit-testing"></a>Configurando o Live Unit Testing
+#   <a name="configuring-live-unit-testing"></a>Configurando o Live Unit Testing
 
 É possível configurar o Live Unit Testing selecionando **Ferramentas**, **Opções** no menu de nível superior do Visual Studio e, em seguida, selecionando **Live Unit Testing** no painel esquerdo da caixa de diálogo **Opções**. A figura a seguir mostra as opções de configuração do Live Unit Testing disponíveis na caixa de diálogo.
 
-  ![Image](~/test/media/lut-options.png)
+  ![Image](./media/lut-options.png)
 
 As opções configuráveis incluem:
 
@@ -101,25 +100,25 @@ A qualquer momento, é possível pausar temporariamente ou parar por completo o 
 - **Parar**, para parar o Live Unit Testing por completo. O Live Unit Testing descarta todos os dados coletados
 - **Reiniciar**, que é equivalente a selecionar **Parar** seguido por **Iniciar** no menu **Live Unit Testing**.
 
-##    <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>Exibindo a visualização de cobertura no editor durante a digitação
+##  <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>Exibindo a visualização de cobertura no editor durante a digitação
 
 Depois de habilitado, o Live Unit Testing atualiza cada linha de código no editor do Visual Studio para mostrar se o código que está sendo escrito é abrangido por testes de unidade e se os testes que os abrangem são aprovados.  A figura a seguir mostra linhas de código com testes aprovados e não aprovados, bem como linhas de código que não são abrangidas por testes. As linhas decoradas com um "✓" verde são cobertas apenas por testes aprovados, as linhas decoradas com um "🞩" vermelho são cobertas por um ou mais testes com falha e as linhas decoradas por um "" azul não são cobertas por nenhum teste.
 
-  ![Image](~/ide/media/lut-codewindow.png)
+  ![Image](./media/lut-codewindow.png)
 
 A visualização de cobertura do Live Unit Testing é atualizada imediatamente conforme o código é modificado no editor de código. Durante o processamento das edições, a visualização é alterada para indicar que os dados não estão atualizados, com a adição de uma imagem de temporizador redondo abaixo dos símbolos de aprovado, não aprovado e não abrangido, como mostra a figura a seguir.
 
-  ![Image](~/test/media/lut-codeupdating.png)
+  ![Image](./media/lut-codeupdating.png)
  
 ## <a name="getting-information-on-successful-or-failed-tests"></a>Obtendo informações sobre testes com êxito ou com falha
 
 Ao focalizar o símbolo de êxito ou de falha na janela de código, é possível ver quantos testes estão atingindo essa linha. Se você clicar no símbolo, poderá ver o status dos testes individuais, como mostra a figura a seguir.
  
-  ![Image](~/test/media/lut-failedinfo.png) 
+  ![Image](./media/lut-failedinfo.png) 
 
 Ao focalizar o teste com falha na dica de ferramenta, ele é expandido para fornecer informações adicionais sobre a falha, conforme mostrado na imagem abaixo. Se você clicar no teste com falha na dica de ferramenta, poderá acessá-lo diretamente.
 
-  ![Image](~/test/media/lut-failedmsg.png) 
+  ![Image](./media/lut-failedmsg.png) 
 
 ## <a name="diagnosing-and-correcting-test-failures"></a>Diagnosticando e corrigindo falhas de teste
 
@@ -143,8 +142,8 @@ Para soluções com vários projetos de teste, é possível controlar quais proj
 
 Por exemplo, se você tiver uma solução com centenas de projetos de teste, será possível selecionar um conjunto direcionado de projetos de teste para fazer parte do Live Unit Testing. Para selecionar os projetos individuais em testes de unidade, faça o seguinte após a inicialização do Live Unit Testing:
 
-1.    Clique com o botão direito do mouse na solução, no Gerenciador de Soluções e escolha **Testes Dinâmicos**, **Excluir** para excluir toda a solução.
-2.    Clique com o botão direito do mouse em cada projeto de teste que você deseja incluir nos testes e escolha **Testes Dinâmicos**, **Incluir**.
+1.  Clique com o botão direito do mouse na solução, no Gerenciador de Soluções e escolha **Testes Dinâmicos**, **Excluir** para excluir toda a solução.
+2.  Clique com o botão direito do mouse em cada projeto de teste que você deseja incluir nos testes e escolha **Testes Dinâmicos**, **Incluir**.
  
 É possível usar a janela do editor de código para incluir ou excluir métodos de teste individuais. Clique com o botão direito do mouse na assinatura do método de teste na janela do editor de código e selecione **Testes Dinâmicos**, **Incluir** ou **Testes Dinâmicos**, **Excluir**. 
 

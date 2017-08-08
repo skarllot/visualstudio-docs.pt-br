@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 203e1e27cc892e96b103fc6cb22a73672a8e16af
-ms.openlocfilehash: f351952a256679ec2d6c9dc2daa5288ca7214ad0
-ms.lasthandoff: 03/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: c52ed7c7e6de33d10d2a653a1072766aa9fb8023
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="property-functions"></a>Funções de propriedade
@@ -98,6 +99,10 @@ Nas versões .NET Framework 4 e 4.5, as funções de propriedade podem ser usada
 -   System.IO.Path  
 
 -   System.Math  
+
+-   System.Runtime.InteropServices.OSPlatform
+
+-   System.Runtime.InteropServices.RuntimeInformation
 
 -   System.UInt16  
 
@@ -195,13 +200,22 @@ Nas versões .NET Framework 4 e 4.5, as funções de propriedade podem ser usada
 |int BitwiseAnd(int first, int second)|Realizar um bit a bit `AND` no primeiro e segundo (primeiro e segundo).|  
 |int BitwiseXor(int first, int second)|Realizar um bit a bit `XOR` no primeiro e segundo (primeiro ^ segundo).|  
 |int BitwiseNot(int first)|Realizar um bit a bit `NOT` (~primeiro).|  
+|bool IsOsPlatform(string platformString)|Especifique se a plataforma do sistema operacional atual é `platformString`. `platformString` deve ser um membro do `OSPlatform`.|
+|bool IsOSUnixLike|True se o sistema operacional atual for um sistema Unix.|
+|string NormalizePath(params string[] path)|Obtém o caminho completo canonizado do caminho fornecido e garante que ele contém os caracteres do separador de diretório corretos para o sistema operacional atual.|
+|string NormalizeDirectory(params string[] path)|Obtém o caminho completo canonizado do diretório fornecido e garante que ele contém os caracteres do separador de diretório corretos para o sistema operacional atual, enquanto garante que tem uma barra à direita.|
+|string EnsureTrailingSlash(string path)|Se o caminho especificado não tiver uma barra à direita, adicione uma. Se o caminho for uma cadeia de caracteres vazia, não a modifique.|
+|string GetPathOfFileAbove(string file, string startingDirectory)|Pesquisa um arquivo com base no local do arquivo de build atual, ou em `startingDirectory`, se especificado.|
+|GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|Localize um arquivo no diretório especificado ou em um local na estrutura de diretório acima desse diretório.|
+|string MakeRelative(string basePath, string path)|Torna o `path` relativo a `basePath`. `basePath` deve ser um diretório absoluto. Se `path` não puder ser tornado relativo, ele será retornado de forma textual. Semelhante a `Uri.MakeRelativeUri`.|
+|string ValueOrDefault(string conditionValue, string defaultValue)|Retorna a cadeia de caracteres no parâmetro 'defaultValue' somente se o parâmetro 'conditionValue' está vazio, caso contrário, retorna o valor conditionValue.|
 
 ##  <a name="nested-property-functions"></a>Funções de propriedade aninhadas  
  Você pode combinar funções de propriedade para formar funções mais complexas, como mostra o exemplo a seguir.  
 
  `$([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))`  
 
- Este exemplo retorna o valor dos bits <xref:System.IO.FileAttributes>`Archive` (32 ou 0) do arquivo dado pelo caminho `tempFile`. Observe que os valores dos dados enumerados não podem aparecer por nome nas funções de propriedade. O valor numérico (32) deve ser usado em seu lugar.  
+ Este exemplo retorna o valor dos bits (32 ou 0) do <xref:System.IO.FileAttributes>`Archive` do arquivo dado pelo caminho `tempFile`. Observe que os valores dos dados enumerados não podem aparecer por nome nas funções de propriedade. O valor numérico (32) deve ser usado em seu lugar.  
 
  Metadados também podem aparecer em funções de propriedade aninhadas. Para obter mais informações, consulte [Envio em lote](../msbuild/msbuild-batching.md).  
 

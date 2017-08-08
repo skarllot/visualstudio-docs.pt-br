@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: d4cb33cd46ab45c580e70ce7e590960ed4fd75a9
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 88b72484342e3658babf519ab746be3dc71aadb6
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="markupcompilepass1-task"></a>Tarefa MarkupCompilePass1
@@ -51,7 +52,7 @@ A tarefa <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> converte arquiv
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |`AllGeneratedFiles`|Parâmetro de saída opcional **ITaskItem[]**.<br /><br /> Contém uma lista completa dos arquivos que são gerados pela tarefa <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1>.|  
-|`AlwaysCompileMarkupFilesInSeparateDomain`|Parâmetro **Boolean** opcional.<br /><br /> Especifica se a tarefa deve ou não ser executada em um <xref:System.AppDomain> separado. Se esse parâmetro retorna **false**, a tarefa é executada no mesmo <xref:System.AppDomain> que [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] e é executada mais rapidamente. Se o parâmetro retorna **true**, a tarefa é executada em um segundo <xref:System.AppDomain> que é isolado de [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] e é executada de modo mais lento.|  
+|`AlwaysCompileMarkupFilesInSeparateDomain`|Parâmetro **Boolean** opcional.<br /><br /> Especifica se a tarefa deve ser executada em um <xref:System.AppDomain> separado. Se esse parâmetro retorna **false**, a tarefa é executada no mesmo <xref:System.AppDomain> que [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] e é executada mais rapidamente. Se o parâmetro retorna **true**, a tarefa é executada em um segundo <xref:System.AppDomain> que é isolado de [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] e é executada de modo mais lento.|  
 |`ApplicationMarkup`|Parâmetro opcional **ITaskItem[]**.<br /><br /> Especifica o nome do arquivo [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] de definição de aplicativo.|  
 |`AssembliesGeneratedDuringBuild`|Parâmetro **String[]** opcional.<br /><br /> Especifica as referências aos assemblies alterados durante o processo de build. Por exemplo, uma solução [!INCLUDE[TLA#tla_visualstu2005](../msbuild/includes/tlasharptla_visualstu2005_md.md)] pode conter um projeto que faz referência à saída compilada de outro projeto. Nesse caso, a saída compilada do segundo projeto pode ser adicionada ao parâmetro **AssembliesGeneratedDuringBuild**.<br /><br /> Observação: o parâmetro **AssembliesGeneratedDuringBuild** deve conter referências ao conjunto completo de assemblies que são gerados por uma solução de build.|  
 |`AssemblyName`|Parâmetro obrigatório **string**.<br /><br /> Especifica o nome curto do assembly que é gerado para um projeto. Por exemplo, se um projeto está gerando um executável [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)] cujo nome é **WinExeAssembly.exe**, o parâmetro **AssemblyName** tem um valor de **WinExeAssembly**.|  
@@ -59,7 +60,7 @@ A tarefa <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> converte arquiv
 |`AssemblyVersion`|Parâmetro **String** opcional.<br /><br /> Especifica o número de versão do assembly.|  
 |`ContentFiles`|Parâmetro opcional **ITaskItem[]**.<br /><br /> Especifica a lista de arquivos de conteúdo flexível.|  
 |`DefineConstants`|Parâmetro **String** opcional.<br /><br /> Especifica que o valor atual de **DefineConstants** é mantido. o que a afeta a geração do assembly de destino. se esse parâmetro é alterado, a API pública do assembly de destino pode ser alterada e a compilação de arquivos [!INCLUDE[TLA2#tla_titlexaml](../msbuild/includes/tla2sharptla_titlexaml_md.md)] que fazem referência a tipos de locais pode ser afetada.|  
-|`ExtraBuildControlFiles`|Parâmetro opcional **ITaskItem[]**.<br /><br /> Especifica uma lista de arquivos que controlam se uma recompilação é disparada quando a tarefa <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> é re-executada; uma recompilação será acionada se um desses arquivos for alterado.|  
+|`ExtraBuildControlFiles`|Parâmetro opcional **ITaskItem[]**.<br /><br /> Especifica uma lista de arquivos que controlam se uma recompilação é disparada quando a tarefa <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> é executada novamente, uma recompilação será acionada se um desses arquivos for alterado.|  
 |`GeneratedBamlFiles`|Parâmetro de saída opcional **ITaskItem[]**.<br /><br /> Contém a lista de arquivos gerados no formato binário [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)].|  
 |`GeneratedCodeFiles`|Parâmetro de saída opcional **ITaskItem[]**.<br /><br /> Contém a lista de arquivos de código gerenciado gerados.|  
 |`GeneratedLocalizationFiles`|Parâmetro de saída opcional **ITaskItem[]**.<br /><br /> Contém a lista de arquivos de localização que foram gerados para cada arquivo [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] localizável.|  
@@ -80,7 +81,7 @@ A tarefa <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> converte arquiv
 |`XAMLDebuggingInformation`|Parâmetro **Boolean** opcional.<br /><br /> Quando é **true**, informações de diagnóstico são geradas e incluídas no [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] compilado para auxiliar na depuração.|  
   
 ## <a name="remarks"></a>Comentários  
- A tarefa <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> normalmente compila [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] em um formato binário e gera arquivos de código. Se um arquivo [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] contém referências a tipos definidos no mesmo projeto, sua compilação para o formato binário é adiada por **MarkupCompilePass1** para uma segunda passagem de compilação de marcação (**MarkupCompilePass2**). Esses arquivos devem ter sua compilação adiada porque eles devem aguardar até que os tipos referenciados definidos localmente sejam compilados. No entanto, se um arquivo [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] tem um atributo `x:Class`, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> gera o arquivo de código específico a um idioma para ele.  
+ A tarefa <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> normalmente compila [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] em um formato binário e gera arquivos de código. Se um arquivo [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] contém referências a tipos definidos no mesmo projeto, sua compilação para o formato binário é adiada por **MarkupCompilePass1** para uma segunda passagem de compilação de marcação (**MarkupCompilePass2**). Esses arquivos devem ter sua compilação adiada porque eles devem aguardar até que os tipos referenciados definidos localmente sejam compilados. No entanto, se um arquivo [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] tiver um atributo `x:Class`, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> gerará o arquivo de código específico da linguagem para ele.  
   
  Um arquivo [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] é localizável se ele contém elementos que usam o atributo `x:Uid`:  
   
@@ -140,5 +141,5 @@ A tarefa <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> converte arquiv
  [Referência de tarefas](../msbuild/wpf-msbuild-task-reference.md)   
  [Referência do MSBuild](../msbuild/msbuild-reference.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
- [Compilando um aplicativo WPF (WPF)](http://msdn.microsoft.com/Library/a58696fd-bdad-4b55-9759-136dfdf8b91c)   
- [Visão geral dos aplicativos de navegador XAML do WPF](http://msdn.microsoft.com/Library/3a7a86a8-75d5-4898-96b9-73da151e5e16)
+ [Compilando um aplicativo WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)   
+ [Visão geral dos aplicativos de navegador XAML do WPF](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

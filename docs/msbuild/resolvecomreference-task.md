@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3bf546a3b8fced45ddadac952b2bcb1643cbf3db
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: 2448ac7c838c9ee1a22e7923e130688d24c398f0
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="resolvecomreference-task"></a>Tarefa ResolveComReference
@@ -60,11 +61,11 @@ Obtém uma lista de um ou mais nomes de bibliotecas de tipo ou arquivos .tlb e r
 |`NoClassMembers`|Parâmetro `Boolean` opcional.|  
 |`ResolvedAssemblyReferences`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Especifica as referências do assembly resolvidas.|  
 |`ResolvedFiles`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Especifica os arquivos totalmente qualificados no disco que correspondem aos locais físicos das bibliotecas de tipo que foram fornecidas como entrada para esta tarefa.|  
-|`ResolvedModules`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.|  
-|`SdkToolsPath`|Parâmetro [String](assetId:///String?qualifyHint=False&autoUpgrade=True) opcional.<br /><br /> Se `ExecuteAsTool` for `true`, esse parâmetro deverá ser definido como o caminho de ferramentas do SDK para a versão da estrutura de destino.|  
-|`StateFile`|Parâmetro opcional assetId:///String?qualifyHint=False&autoUpgrade=True.<br /><br /> Especifica o arquivo de cache dos carimbos de hora/hora de componente COM. Se não existir, cada execução regenerará todos os invólucros.|  
-|`TargetFrameworkVersion`|Parâmetro opcional assetId:///String?qualifyHint=False&autoUpgrade=True.<br /><br /> Especifica a versão da estrutura de destino do projeto.<br /><br /> O padrão é `String.Empty`. o que significa que não há nenhuma filtragem para uma referência com base na estrutura de destino.|  
-|`TargetProcessorArchitecture`|Parâmetro opcional assetId:///String?qualifyHint=False&autoUpgrade=True.<br /><br /> Especifica a arquitetura do processador de destino preferencial. Passado para o sinalizador de /machine tlbimp.exe após a tradução.<br /><br /> O valor do parâmetro deve ser um membro de <xref:Microsoft.Build.Utilities.ProcessorArchitecture>.|  
+|`ResolvedModules`|Parâmetro <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.|  
+|`SdkToolsPath`|Parâmetro <xref:System.String?displayProperty=fullName> opcional.<br /><br /> Se `ExecuteAsTool` for `true`, esse parâmetro deverá ser definido como o caminho de ferramentas do SDK para a versão da estrutura de destino.|  
+|`StateFile`|Parâmetro `String` opcional.<br /><br /> Especifica o arquivo de cache dos carimbos de hora/hora de componente COM. Se não existir, cada execução regenerará todos os invólucros.|  
+|`TargetFrameworkVersion`|Parâmetro `String` opcional.<br /><br /> Especifica a versão da estrutura de destino do projeto.<br /><br /> O padrão é `String.Empty`. o que significa que não há nenhuma filtragem para uma referência com base na estrutura de destino.|  
+|`TargetProcessorArchitecture`|Parâmetro `String` opcional.<br /><br /> Especifica a arquitetura do processador de destino preferencial. Passado para o sinalizador de /machine tlbimp.exe após a tradução.<br /><br /> O valor do parâmetro deve ser um membro de <xref:Microsoft.Build.Utilities.ProcessorArchitecture>.|  
 |`TypeLibFiles`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Especifica o caminho do arquivo de biblioteca de tipo para referências COM. Itens incluídos nesse parâmetro podem conter metadados do item. Para obter mais informações, consulte a seção “Metadados do Item TypeLibFiles” abaixo.|  
 |`TypeLibNames`|Parâmetro opcional <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Especifica os nomes da biblioteca de tipos a serem resolvidos. Itens incluídos nesse parâmetro devem conter alguns metadados do item. Para obter mais informações, consulte a seção “Metadados do Item TypeLibNames” abaixo.|  
 |`WrapperOutputDirectory`|Parâmetro `String` opcional.<br /><br /> O local no disco no qual o assembly de interoperabilidade gerado é colocado. Se esses metadados de item não forem especificados, a tarefa usará o caminho absoluto do diretório em que o arquivo de projeto está localizado.|  

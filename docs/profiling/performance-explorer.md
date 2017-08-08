@@ -1,7 +1,7 @@
 ---
 title: Gerenciador de Desempenho | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -33,9 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f08c0a0d9e6d9ab0b8c2aed79ed65e05b4e7402d
+ms.translationtype: Human Translation
+ms.sourcegitcommit: baf12bba10dfba15f10d75fd1f7a4cdc4000e441
+ms.openlocfilehash: 1c3893e6028dd0efeee8d4f4b62d73765a8d2e18
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/21/2017
 
 ---
 # <a name="performance-explorer"></a>Performance Explorer
@@ -51,7 +53,7 @@ As Ferramentas de Criação de Perfil do [!INCLUDE[vsprvs](../code-quality/inclu
   
 |Tarefa|Conteúdo relacionado|  
 |----------|---------------------|  
-|**Novas técnicas para o Windows 8**|[Ferramentas de desempenho em aplicativos do Windows 8 e do Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)|  
+|**Técnicas para o Windows 8 e posterior**|[Ferramentas de desempenho em aplicativos do Windows 8 e do Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)|  
 |**Compreender os conceitos de criação de perfil:** aprenda os conceitos e termos que você usará para coletar, exibir e analisar o desempenho do código usando as ferramentas de criação de perfil.|[Visões gerais](../profiling/overviews-performance-tools.md)|  
 |**Coloque a mão na massa:** aprenda os procedimentos básicos que você usará ao coletar, exibir e analisar o desempenho do código usando as ferramentas de criação de perfil. Experimente com esse passo a passo prático.|[Introdução](../profiling/getting-started-with-performance-tools.md)|  
 |**Configure a sessão de criação de perfil:** aprenda métodos avançados de como especificar os projetos ou os binários para analisar, selecione um método de criação de perfil, escolha os dados de desempenho para coletar e defina outras opções de sessão de criação de perfil.|[Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)|  
@@ -65,8 +67,3 @@ As Ferramentas de Criação de Perfil do [!INCLUDE[vsprvs](../code-quality/inclu
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de Criação de Perfil](../profiling/profiling-tools.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

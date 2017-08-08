@@ -28,14 +28,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f73a2832bf139699e06d55b24f577ef8dcdc688e
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: 9e2e028f720ffd4b7146c057656732f0d0fb8500
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="xelement-class-dynamic-properties"></a>Propriedades dinâmicas da classe de XElement
-Esta seção descreve as propriedades dinâmicas da classe <xref:System.Xml.Linq.XElemen?displayProperty=fullName>[t](assetId:///t?qualifyHint=False&autoUpgrade=True).  
+Esta seção descreve as propriedades dinâmicas da classe de <xref:System.Xml.Linq.XElement?displayProperty=fullName>.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

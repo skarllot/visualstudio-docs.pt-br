@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a00b80092a44190d626b93b0ecc5689bafd1a4e3
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: 8b60481a9895e818773273cecbf89212f557d620
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>Instruções passo a passo: criando e executando testes de unidade para código gerenciado
@@ -140,7 +141,7 @@ public void Debit(double amount)
   
 5.  No projeto **BankTests** adicione uma referência à solução **Banco**.  
   
-     No Gerenciador de Soluções, selecione **Referências** no projeto **BankTests** e escolha **Adicionar Referência...** no menu de contexto.  
+     No Gerenciador de Soluções, selecione **Referências** no projeto **BankTests** e escolha **Adicionar Referência...**  no menu de contexto.  
   
 6.  Na caixa de diálogo Gerenciador de Referências, expanda **Solução** e marque o item **Banco**.  
   
@@ -193,7 +194,7 @@ using BankAccountNS;
   
  Ao analisar o método em teste, podemos determinar que há pelo menos três comportamentos que precisam ser verificados:  
   
-1.  O método lança um [ArgumentOutOfRangeException](assetId:///ArgumentOutOfRangeException?qualifyHint=False&autoUpgrade=True) se o valor do débito for maior que o saldo.  
+1.  O método lançará um <xref:System.ArgumentOutOfRangeException> se o valor do débito for maior que o saldo.  
   
 2.  Ele também gerará `ArgumentOutOfRangeException` se o valor do débito for menor que zero.  
   
@@ -253,7 +254,7 @@ using BankAccountNS;
 ##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> Corrigir o código e executar novamente os testes  
  **Analisar os resultados de teste**  
   
- O resultado do teste contém uma mensagem que descreve a falha. Para o método `AreEquals`, a mensagem exibe o que era esperado (o parâmetro (**esperado\<*XXX*>**) e o que foi de fato recebido (o parâmetro**real\<*YYY*>**). Esperávamos que o saldo diminuísse do saldo inicial, mas em vez disso, aumentou o valor da retirada.  
+ O resultado do teste contém uma mensagem que descreve a falha. Para o método `AreEquals`, a mensagem exibe o que era esperado (o parâmetro (**esperado\<*XXX*>**) e o que foi de fato recebido (o parâmetro **real\<*YYY*>**). Esperávamos que o saldo diminuísse do saldo inicial, mas em vez disso, aumentou o valor da retirada.  
   
  Um reexame do código de débito mostra que o teste da unidade conseguiu encontrar um bug. A quantidade de retirada é adicionada ao saldo da conta, quando deveria ser subtraída.  
   
@@ -309,7 +310,7 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
   
 ```  
   
- Usamos o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> para declarar que a exceção certa foi lançada. O atributo faz com que o teste falhe, a menos que uma `ArgumentOutOfRangeException` seja lançada. A execução do teste com valores positivos e negativos `debitAmount` e a modificação temporária do método em teste para lançar um <xref:System.ApplicationException> genérico quando o valor é menor que zero, demonstra que o teste se comporta corretamente. Para testar o caso quando o valor retirado é maior que o saldo, tudo o que precisamos fazer é:  
+ Usamos o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> para declarar que a direita exceção foi gerada. O atributo faz com que o teste falhe, a menos que uma `ArgumentOutOfRangeException` seja lançada. A execução do teste com valores positivos e negativos `debitAmount` e a modificação temporária do método em teste para lançar um <xref:System.ApplicationException> genérico quando o valor é menor que zero, demonstra que o teste se comporta corretamente. Para testar o caso quando o valor retirado é maior que o saldo, tudo o que precisamos fazer é:  
   
 1.  Criar um novo método de teste chamado `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange`.  
   
@@ -368,7 +369,7 @@ public const string DebitAmountLessThanZeroMessage = "Debit amount less than zer
   
 -   Declare que a mensagem (o terceiro parâmetro do construtor) inclui o `DebitAmountExceedsBalanceMessage` definido na classe `BankAccount`.  
   
- O método <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> na estrutura de teste de unidade do Microsoft permite-nos verificar a segunda opção sem os cálculos necessários da primeira opção.  
+ O método <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> na estrutura de teste de unidade da Microsoft nos permite verificar a segunda opção sem os cálculos que são necessários para a primeira opção.  
   
  Uma segunda tentativa de revisão de `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` pode parecer com:  
   

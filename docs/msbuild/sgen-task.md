@@ -37,14 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: e4ba336071a8b9e311ffe67330677cb25ff92751
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: d027716980368a7c812ebda6fac6884c9481af12
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="sgen-task"></a>Tarefa SGen
-Cria um assembly de serialização de XML para tipos no assembly especificado. A tarefa encapsula a Ferramenta Geradora de Serializador XML (Sgen.exe). Para obter mais informações, consulte [Ferramenta Geradora de Serializador XML (Sgen.exe)](http://msdn.microsoft.com/Library/cc1d1f1c-fb26-4be9-885a-3fe84c81cec6).  
+Cria um assembly de serialização de XML para tipos no assembly especificado. A tarefa encapsula a Ferramenta Geradora de Serializador XML (Sgen.exe). Para obter mais informações, consulte [Ferramenta Geradora de Serializador XML (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).  
   
 ## <a name="parameters"></a>Parâmetros  
  A tabela a seguir descreve os parâmetros da tarefa `SGen`.  
@@ -68,7 +69,7 @@ Cria um assembly de serialização de XML para tipos no assembly especificado. A
 |`UseProxyTypes`|Parâmetro `Boolean` obrigatório.<br /><br /> Se `true`, a tarefa SGen gera o código de serialização somente para os tipos de proxy de serviço Web XML.|  
   
 ## <a name="remarks"></a>Comentários  
- Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.ToolTaskExtension>, que, por sua vez, herda da classe <xref:Microsoft.Build.Utilities.ToolTask>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base ToolTaskExtension](../msbuild/tooltaskextension-base-class.md).  
+ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <xref:Microsoft.Build.Tasks.ToolTaskExtension>, que herda da classe <xref:Microsoft.Build.Utilities.ToolTask>. Para obter uma lista desses parâmetros adicionais e suas descrições, consulte [Classe base ToolTaskExtension](../msbuild/tooltaskextension-base-class.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
