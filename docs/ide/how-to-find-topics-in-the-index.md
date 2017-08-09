@@ -35,9 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 884530b6c2ebc44f935dd814a39bbf0495764303
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="how-to-find-topics-in-the-index"></a>Como localizar tópicos no Índice
@@ -60,8 +62,3 @@ O índice contém uma lista de palavras-chave que são associadas a tópicos no 
   
 ## <a name="see-also"></a>Consulte também  
  [Index Search Tips](../ide/index-search-tips.md) (Dicas de pesquisa do índice)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
