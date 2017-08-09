@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: b59b417eb16674ff8c6c5223d790ae174ba20e09
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a3c0f4d3bde8bb03d3766383eba01665e58458be
+ms.openlocfilehash: 18f1ea2f5ee76f4f8457b7254ff3dd3b7b3e4901
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>Como assinar manifestos de aplicativo e implantação
@@ -49,10 +50,10 @@ Se você desejar publicar um aplicativo usando a implantação do ClickOnce, os 
   
  A assinatura dos manifestos do ClickOnce é opcional para aplicativos baseados em .exe. Para obter mais informações, consulte a seção “Gerando manifestos não assinados” deste documento.  
   
- Para obter informações sobre como criar arquivos de chave, consulte [Como criar um par de chaves pública-privada](http://msdn.microsoft.com/Library/05026813-f3bd-4d7c-9e0b-fc588eb3d114).  
+ Para obter informações sobre como criar arquivos de chave, consulte [Como criar um par de chaves pública-privada](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair).  
   
 > [!NOTE]
-> O  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dá suporte apenas a arquivos de chave de Troca de Informações Pessoais (PFX) que têm a extensão .pfx. No entanto, é possível selecionar outros tipos de certificados do repositório de certificados do Windows do usuário atual, clicando em **Selecionar do Repositório** na página **Assinatura** das propriedades do projeto.  
+>  O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dá suporte apenas a arquivos de chave de Troca de Informações Pessoais (PFX) que têm a extensão .pfx. No entanto, é possível selecionar outros tipos de certificados do repositório de certificados do Windows do usuário atual, clicando em **Selecionar do Repositório** na página **Assinatura** das propriedades do projeto.  
   
 ### <a name="to-sign-application-and-deployment-manifests-using-a-certificate"></a>Para assinar os manifestos do aplicativo e de implantação usando um certificado  
   
@@ -124,7 +125,7 @@ Se você desejar publicar um aplicativo usando a implantação do ClickOnce, os 
 3.  Publique o aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assemblies de nomes fortes](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)   
- [Como criar um par de chaves pública/privada](http://msdn.microsoft.com/Library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)   
+ [Assemblies de nomes fortes](/dotnet/framework/app-domains/strong-named-assemblies)   
+ [Como criar um par de chaves pública/privada](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)   
  [Página Assinatura, Designer de Projeto](../ide/reference/signing-page-project-designer.md)   
  [Segurança e implantação do ClickOnce](../deployment/clickonce-security-and-deployment.md)
