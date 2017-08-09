@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: c64d1abc2266b7e2edbb2c81a46c53c39eb9a85a
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 89de0d11791dbf13b9d4fcfcea8168b443d2777b
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -45,7 +45,7 @@ A documentação pode ser encontrada em [azure-sdk-for-python.readthedocs.org](h
 
 O [SDK do Azure para a Central de desenvolvedores do Python](http://azure.microsoft.com/develop/python/) também conta com diversos recursos úteis, incluindo vários tutoriais, como:
 
-  - Criando aplicativos Web com o [Django](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-python-how-to-use-topics-subscriptions), [Flask](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-flask-app) e [Bottle](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-bottle-app).
+  - Criando aplicativos Web com o [Django](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-django-app), [Flask](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-flask-app) e [Bottle](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-bottle-app).
   - [Armazenamento de Blobs](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
   - [Armazenamento de tabelas](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-table-storage)
   - [Armazenamento de filas](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-queue-storage)
@@ -66,3 +66,4 @@ Para as APIs públicas sem a documentação, os testes de unidade no [repositór
 O repositório Git do SDK está localizado em [https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python).
 
 [Registre problemas no repositório](https://github.com/Azure/azure-sdk-for-python/issues) se encontrar problemas ou tiver dúvidas relacionadas ao uso do SDK.
+
