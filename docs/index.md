@@ -3,11 +3,11 @@ layout: HubPage
 hide_bc: true
 title: "Documentação do Visual Studio"
 description: "Saiba como usar o Visual Studio 2017 para desenvolver aplicativos, serviços e ferramentas na linguagem de sua escolha para suas plataformas e dispositivos."
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 601cfd86b10f6194d817fc02e6ea0087608fd0ff
-ms.openlocfilehash: ec537370a7bc42a6d93ac377b9cd280733da6799
+ms.translationtype: HT
+ms.sourcegitcommit: df126a2964f2d60ecdd5d33bc68efb041bfe9878
+ms.openlocfilehash: 305044ddc8b5b117b6a7eff30b50834d966a3d7b
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 <div id="main" class="v2">
@@ -307,7 +307,7 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Desenvolvimento móvel para .NET</h3>
+                                                    <h3>Desenvolvimento móvel com o .NET</h3>
                                                     <p>Crie aplicativos multiplataforma para iOS, Android ou Windows usando o Xamarin.</p>
                                                 </div>
                                             </div>
