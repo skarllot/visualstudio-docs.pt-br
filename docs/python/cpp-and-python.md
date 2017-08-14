@@ -148,7 +148,7 @@ Para obter mais informações, consulte [Instalando o suporte do Python para Vis
         return (1 + pow(e, (-2 * x))) / (2 * pow(e, -x));
     }
 
-    double tanh(x) {
+    double tanh(double x) {
         return sinh(x) / cosh(x);
     }
     ```
@@ -163,7 +163,7 @@ Para transformar a DLL do C++ em uma extensão para o Python, você precisa modi
 1. No arquivo do C++, inclua `Python.h` na parte superior:
 
     ```cpp
-    include <Python.h>
+    #include <Python.h>
     ```
 
 1. Modifique o método `tanh` para aceitar e retornar tipos do Python:
