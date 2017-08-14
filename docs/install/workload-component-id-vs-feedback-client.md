@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 05/10/2017
+ms.date: 08/09/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -62,6 +62,7 @@ Para obter mais informações sobre como usar essas IDs, consulte a página [Usa
 ID do componente | Nome | Versão | Tipo de dependência
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26208.0 | Necessária
+
 ## <a name="unaffiliated-components"></a>Componentes não afiliados
 
 Estes são os componentes que não são incluídos com nenhuma carga de trabalho, mas que podem ser selecionados como um componente individual.
@@ -69,6 +70,7 @@ Estes são os componentes que não são incluídos com nenhuma carga de trabalho
 ID do componente | Nome | Versão
 --- | --- | ---
 N/D | N/D | N/D
+
 
 ## <a name="see-also"></a>Consulte também
 
