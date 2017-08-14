@@ -37,11 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
-ms.openlocfilehash: 029b5627cf8f7213dfe3bab233db01fe27aa6c49
+ms.translationtype: HT
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: d1e2efc557f90d01a955710d53a1f2724b5f5f7d
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/03/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="generateresource-task"></a>Tarefa GenerateResource
@@ -58,7 +58,7 @@ Converte entre arquivos .txt e .resx (formato de recurso com base em XML) e arqu
 |`ExecuteAsTool`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, executa tlbimp.exe e aximp.exe da estrutura de destino apropriada fora de processo para gerar os assemblies de wrapper necessários. Esse parâmetro habilita multi-targeting de `ResolveComReferences`.|  
 |`FilesWritten`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Contém os nomes de todos os arquivos gravados em disco. Isso inclui o arquivo de cache, se houver. Esse parâmetro é útil para implementações do Clean.|  
 |`MinimalRebuildFromTracking`|Parâmetro `Boolean` opcional.<br /><br /> Obtém ou define uma opção que especifica se o build incremental controlado será usado. Se `true`, o build incremental é ativado; caso contrário, será forçada uma recompilação.|  
-|`NeverLockTypeAssemblies`|Parâmetro `Boolean` opcional.<br /><br /> Especifica o nome dos arquivos gerados, como arquivos .resources. Se você não especificar um nome, o nome do arquivo de entrada correspondente será usado e o arquivo .resources criado será colocado no diretório contendo o arquivo de entrada.|  
+|`NeverLockTypeAssemblies`|Parâmetro `Boolean` opcional.<br /><br /> Obtém ou define um valor booliano que especifica se é preciso criar um novo [AppDomain](https://docs.microsoft.com/dotnet/api/system.appdomain) para avaliar os arquivos (verdadeiro) de recursos (.resx) ou criar um novo [AppDomain](https://docs.microsoft.com/dotnet/api/system.appdomain) somente quando os arquivos de recursos fizerem referência ao assembly do usuário (falso).|  
 |`OutputResources`|Parâmetro de saída <xref:Microsoft.Build.Framework.ITaskItem>`[]` opcional.<br /><br /> Especifica o nome dos arquivos gerados, como arquivos .resources. Se você não especificar um nome, o nome do arquivo de entrada correspondente será usado e o arquivo .resources criado será colocado no diretório contendo o arquivo de entrada.|  
 |`PublicClass`|Parâmetro `Boolean` opcional.<br /><br /> Se `true`, cria uma classe de recurso fortemente tipada como uma classe pública.|  
 |`References`|Parâmetro `String[]` opcional.<br /><br /> Referências das quais carregar arquivos .resx. Elementos de dados de arquivo resx podem ter um tipo .NET. Quando o arquivo. resx é lido, isso deve ser resolvido. Normalmente, ele é resolvido com êxito usando o tipo padrão ao carregar regras. Se você fornecer assemblies em `References`, eles terão prioridade.<br /><br /> Esse parâmetro não é necessário para recursos fortemente tipados.|  
@@ -112,3 +112,4 @@ Converte entre arquivos .txt e .resx (formato de recurso com base em XML) e arqu
 ## <a name="see-also"></a>Consulte também  
  [Tarefas](../msbuild/msbuild-tasks.md)   
  [Referência de tarefas](../msbuild/msbuild-task-reference.md)
+

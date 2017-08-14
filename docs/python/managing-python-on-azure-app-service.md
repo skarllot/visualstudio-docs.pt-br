@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 5b509a46dd3dbee3a45ab2eac57242636beee17b
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 56fccdd5e103cf29c8ea4a93ab80de7187275642
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -176,7 +176,7 @@ Em vez de usar o console de Kudu por meio do portal do Azure, você pode executa
 }
 ```
 
-Para obter informações sobre comandos e autenticação, consulte a [Documentação do Kudu](https://github.com/projectkudu/kudu/wiki/REST-API). Você também pode ver as credenciais usando o [`az webapp deployment list-publishing-profiles command`](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles) da CLI do Azure. Uma biblioteca de ajuda para postar comandos do Kudu também está disponível no GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).
+Para obter informações sobre comandos e autenticação, consulte a [Documentação do Kudu](https://github.com/projectkudu/kudu/wiki/REST-API). Você também pode ver as credenciais usando o [`az webapp deployment list-publishing-profiles command`](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles) da CLI do Azure. Uma biblioteca de ajuda para publicar comandos Kudu também está [disponível no GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).
 
 
 ### <a name="copying-libraries-into-app-source-code"></a>Copiando bibliotecas no código-fonte do aplicativo
@@ -188,3 +188,4 @@ A limitação é que essas bibliotecas devem corresponder precisamente à versã
 ### <a name="avoiding-virtual-environments"></a>Evitando ambientes virtuais
 
 Embora trabalhar em um ambiente virtual localmente possa ajudá-lo a entender completamente as dependências necessárias para seu site, o uso de ambientes virtuais no Serviço de Aplicativo não é recomendável. Em vez disso, apenas instale as bibliotecas em sua pasta principal do Python e implante-as com seu aplicativo para evitar ter dependências conflitantes.
+

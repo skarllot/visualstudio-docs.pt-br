@@ -35,10 +35,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
-ms.openlocfilehash: 6e4094925eec3e4a8768219180e75fa9d1f1fa03
+ms.sourcegitcommit: 14c21f67beb92d3b13a5c54c755ccb846d116a9c
+ms.openlocfilehash: aaa19a3a818c3fa3196d79959ee30c5eae4c1b5f
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="beginners-guide-to-performance-profiling"></a>Guia do iniciante à criação de perfil do desempenho
@@ -48,7 +48,9 @@ Quando o depurador pausa, a ferramenta **Uso de CPU** coleta informações sobre
 
 O Hub de diagnósticos oferece várias outras opções para executar e gerenciar sua sessão de diagnóstico. Se **Uso de CPU** não fornecer os dados que você precisa, as [outras ferramentas de criação de perfil](../profiling/Profiling-Tools.md) fornecem diferentes tipos de informações que poderão ser úteis. Em muitos casos, o afunilamento de desempenho do aplicativo pode ser causado por algo que não seja a CPU, como memória, interface do usuário de renderização ou tempo de solicitação de rede. O Hub de diagnósticos oferece várias outras opções para registrar e analisar esse tipo de dados.
 
-Você também pode [assistir a um vídeo sobre como usar as ferramentas de diagnóstico](#video) que mostra como analisar o uso da CPU e como analisar o uso de memória.
+|         |         |
+|---------|---------|
+| ![Assista a um vídeo](../install/media/video-icon.png "WatchVideo") | [Assista a um vídeo](#video) sobre como usar as ferramentas de diagnóstico que mostra como analisar o uso da CPU e como analisar o uso de memória. |
 
 Neste tópico, abordaremos a análise do uso de CPU no fluxo de trabalho de depuração normal. Você também pode analisar o uso da CPU sem um depurador anexado ou focando um aplicativo em execução. Para obter mais informações, consulte [Run profiling tools without debugging](../profiling/running-profiling-tools-with-or-without-the-debugger.md) (Executar ferramentas de criação de perfil sem depuração).
   
