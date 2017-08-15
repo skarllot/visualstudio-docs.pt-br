@@ -24,10 +24,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
-ms.openlocfilehash: 8124ac4629b337faeb88ce40b1e162d7ce012e7f
+ms.sourcegitcommit: 223750aef8d997c6ae017f49ea0a9522bdba72bc
+ms.openlocfilehash: 39fbd930d6a819f64c3e3ebc27fadb732adafc46
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 
@@ -67,7 +67,7 @@ Se você não vir um projeto ou um tipo de arquivo que deveria estar listado aqu
 | SharePoint 2010 | Quando um projeto de solução do SharePoint for aberto com o Visual Studio 2017, ele será atualizado para o SharePoint 2013 ou SharePoint 2016. A carga de trabalho "Desenvolvimento de área de trabalho do .NET" deve ser instalada no Visual Studio 2017 para a atualização.<br/><br/>Para obter mais informações sobre como atualizar projetos do SharePoint, consulte [Atualizar para o SharePoint 2013](https://technet.microsoft.com/library/cc303420.aspx), [Atualizar fluxo de trabalho no SharePoint Server 2013](https://technet.microsoft.com/library/dn133867.aspx) e [Criar o farm do SharePoint Server 2016 para uma atualização de anexação de banco de dados](https://technet.microsoft.com/library/cc263026(v=office.16).aspx). |
 | SharePoint 2016 | Projetos de Suplemento do SharePoint criados no Office Developer Tools Visualização 2 não podem ser abertos no Visual Studio 2017. Para resolver isso, você precisará atualizar o `MinimumVisualStudioVersion` para 12.0 e `MinimumOfficeToolsVersion` para 12.2 no arquivo `.csproj` ou `.vbproj`. |
 | Silverlight | Não há suporte para projetos do Silverlight no Visual Studio 2017. Para manter os aplicativos do Silverlight, continue a usar o Visual Studio 2015. |
-| SQL Server Reporting Services e SQL Server Analysis Services (SSRS, SSDT, SSAS, MSAS) | O suporte para esses tipos de projeto é fornecido por meio de duas extensões na Galeria do Visual Studio: [Projetos de Modelagem do Microsoft Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) e [Projetos de Serviços de Relatório da Microsoft](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio). Suporte do SSDT também está incluso com a carga de trabalho de Processamento e Armazenamento de Dados no Visual Studio de 2017. |
+| SQL Server Reporting Services e SQL Server Analysis Services (SSRS, SSDT, SSAS, MSAS) | O suporte para esses tipos de projeto é fornecido por meio de duas extensões na Galeria do Visual Studio: [Projetos de Modelagem do Microsoft Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) e [Projetos do Microsoft Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio). Suporte do SSDT também está incluso com a carga de trabalho de Processamento e Armazenamento de Dados no Visual Studio de 2017. |
 | SQL Server Integration Services (SSIS) | Ainda não há suporte disponível para o Visual Studio 2017. Ele será anunciado no [blog do SQL Server Integration Services](https://blogs.msdn.microsoft.com/ssis/). A recomendação atual para SSIS é continuar usando o Visual Studio 2015. |
 | Visual C++ | É possível usar o Visual Studio 2017 para abrir soluções e projetos que foram criados no Visual Studio 2015 no estado em que se encontram, mas os projetos criados em versões anteriores do Visual Studio podem exigir a atualização do projeto ou a redefinição do destino para um conjunto de ferramentas mais recente para build com o Visual Studio 2017. Para obter mais informações, consulte [Guia de portabilidade e de atualização do Visual C++](https://docs.microsoft.com/cpp/porting/visual-cpp-porting-and-upgrading-guide). |
 | Extensibilidade/VSIX do Visual Studio | Projetos com MinimumVersion 14.0 ou inferior serão atualizados para declarar a MinimumVersion 15.0, que impede que o projeto seja aberto em versões anteriores do Visual Studio. Para permitir que um projeto seja aberto em versões anteriores, defina MinimumVersion como `$(VisualStudioVersion)`. Consulte também [Como migrar projetos de extensibilidade para o Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md). |
