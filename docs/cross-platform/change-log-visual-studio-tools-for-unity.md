@@ -29,45 +29,23 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: cd8418f782f800390d166403374ecb879970dbc3
-ms.openlocfilehash: 92304c73b1a098c32a74011956dadd8097b8329d
+ms.sourcegitcommit: a2cfae1be1415a2d770d1467a09f207f73eafd05
+ms.openlocfilehash: 5b872f1d28c132fe2910bed16882ba6fb01e6782
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>Log de alterações (Ferramentas do Visual Studio para Unity)
 Log de alterações de Ferramentas do Visual Studio para Unity.  
 
-## <a name="3400"></a>3.4.0.0
- Lançado em 22/08/2017
+## <a name="3302"></a>3.3.0.2
+ Lançado em 15/08/2017
 
-### <a name="new-features"></a>Novos recursos  
-
--   **Geração do Projeto:**  
-
-    -   Adicionado suporte para unidades de compilação assembly.json.
-
-    -   Cópia de assemblies do Unity para a pasta do projeto interrompida.
-    
--   **Depurador:**  
-
-    -   Adicionado suporte para definir a próxima instrução com o novo tempo de execução do Unity.
-    
-    -   Adicionado suporte para o tipo Decimal com o novo tempo de execução do Unity.
-    
-    -   Adicionado suporte para conversões implícitas/explícitas.
-    
 ### <a name="bug-fixes"></a>Correções de bug  
   
--   **Avaliação:**  
-
-    -   Corrigida a criação de matriz com tamanho implícito.
-    
-    -   Corrigidos os itens com locais gerados pelo compilador.
-   
 -   **Geração do Projeto:**  
    
-    -   Corrigida a referência a Microsoft.CSharp fixa para nível de API 4.6.
+    -   Correção da geração de solução do Visual Studio no Unity 5.5 e nas versões anteriores.
    
 ## <a name="3300"></a>3.3.0.0
  Lançado em 14/08/2017
