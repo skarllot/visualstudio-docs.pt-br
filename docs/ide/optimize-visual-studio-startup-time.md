@@ -18,15 +18,17 @@ manager: ghogen
 f1_keywords:
 - vs.performancecenter
 ms.translationtype: HT
-ms.sourcegitcommit: 3037d92e9de377ab4b306a5a0e164e29fa6659e7
-ms.openlocfilehash: 5448253ae93b82a2631e6c48495a31d2724ed0b7
+ms.sourcegitcommit: fe6d864baf518cba882cea8e985fdacbfdf5b8b2
+ms.openlocfilehash: f4e915655ffe11f28c071864cb2cbd68dc799881
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
 # <a name="optimize-visual-studio-startup-time"></a>Otimizar o tempo de inicialização do Visual Studio
 Idealmente, o Visual Studio sempre deve iniciar o mais rápido possível. No entanto, extensões do Visual Studio e janelas de ferramentas abertas podem afetar o tempo de inicialização porque eles são carregados automaticamente na inicialização. A janela **Gerenciar Desempenho do Visual Studio** permite ver quais extensões e recursos afetam o tempo de inicialização do Visual Studio e controlar o comportamento de carregamento dessas extensões e recursos.
+
+Para ver mais dicas gerais sobre como melhorar o desempenho, consulte [Dicas e truques de desempenho do Visual Studio](../ide/visual-studio-performance-tips-and-tricks.md).
 
 ## <a name="control-startup-behavior"></a>Controlar o comportamento de inicialização
 
@@ -98,4 +100,7 @@ A maioria dos recursos do IDE estão totalmente disponíveis quando a carga de s
 - Algumas extensões de terceiros podem não se comportar da forma esperada quando a carga de solução leve está habilitada.
 - Editar e continuar não funcionam em projetos que não são carregados ao iniciar a depuração. Os arquivos contidos no projeto serão somente leitura e será relatado um erro de que o projeto não foi carregado se houver a tentativa de realizar uma edição.
 - Quando a carga da solução leve está habilitada, os projetos do F# podem não ser compilados corretamente e os símbolos podem não estar totalmente disponíveis em GoTo.
+
+## <a name="see-also"></a>Consulte também
+[Dicas e truques de desempenho do Visual Studio](../ide/visual-studio-performance-tips-and-tricks.md)
 
