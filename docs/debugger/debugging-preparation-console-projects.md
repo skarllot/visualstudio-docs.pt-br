@@ -1,68 +1,84 @@
 ---
-title: "Prepara&#231;&#227;o de depura&#231;&#227;o: projetos de console | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "aplicativos de console, depuração"
-  - "depurando [Visual Studio], aplicativos de console"
-  - "depurando aplicativos de console"
+title: 'Debugging Preparation: Console Projects | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging [Visual Studio], console applications
+- debugging console applications
+- console applications, debugging
 ms.assetid: 9641f1d9-2d5a-48b1-8731-6525e8f67892
 caps.latest.revision: 26
-caps.handback.revision: 26
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Prepara&#231;&#227;o de depura&#231;&#227;o: projetos de console
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 5cb0008579e05b4b6f6281057106547c647734db
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Preparar para depurar um projeto de console é semelhante à preparar para depurar um projeto do Windows, com algumas considerações adicionais.  Para obter mais informações, consulte [Aplicativos dos Windows Forms](../debugger/debugging-preparation-windows-forms-applications.md) e [Debugging Preparation: Windows Forms Applications \(.NET\)](http://msdn.microsoft.com/pt-br/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5).  Devido à semelhança de todos os aplicativos do console, este tópico abrange os seguintes tipos de projeto:  
+---
+# <a name="debugging-preparation-console-projects"></a>Debugging Preparation: Console Projects
+Preparing to debug a Console project is similar to preparing to debug a Windows project, with some additional considerations. For more information, see [Windows Forms Applications](../debugger/debugging-preparation-windows-forms-applications.md), and [Debugging Preparation: Windows Forms Applications (.NET)](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5). Because of the similarity of all console applications, this topic covers the following project types:  
   
--   Aplicativo do Console C\#  
+-   C# Console Application  
   
--   Aplicativo do Console do Visual Basic  
+-   Visual Basic Console Application  
   
--   Aplicativo do Console C\+\+ \(.NET\)  
+-   C++ Console Application (.NET)  
   
--   Aplicativo do Console C\+\+ \(Win32\)  
+-   C++ Console Application (Win32)  
   
- Talvez seja preciso especificar argumentos de linha de comando para o aplicativo de console.  Para obter mais informações, consulte [Definições do projeto para uma configuração de depuração do C\+\+](../debugger/project-settings-for-a-cpp-debug-configuration.md), [Configurações do projeto para uma configuração de depuração do Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) ou [Definições do projeto para configurações de depuração do C\#](../debugger/project-settings-for-csharp-debug-configurations.md).  
+ You might have to specify command-line arguments for your console application. For more information, see [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md), [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md), or [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md).  
   
- Como todas as propriedades do projeto, esses argumentos persistem entre sessões de depuração e entre sessões do Visual Studio.  Em virtude disso, se o aplicativo de console for um que você tenha depurado anteriormente, lembre\-se de que pode haver argumentos das sessões anteriores inseridas na caixa de diálogo **\<Projeto\> Páginas de Propriedades**.  
+ Like all project properties, these arguments persist between debug sessions and between  Visual Studio sessions. Therefore, if the console application is one that you have debugged previously, remember that there might be arguments from previous sessions entered in the **\<Project> Property Pages** dialog box.  
   
- Um aplicativo de console usa a janela **Console** para aceitar a entrada e exibir mensagens de saída.  Para gravar na janela **Console**, seu aplicativo deve usar o objeto **Console** em vez do objeto de depuração.  Para gravar na janela **Saída do Visual Studio**, use o objeto de depuração, como de costume.  Confira se você sabe onde seu aplicativo está sendo gravado ou você pode procurar mensagens no local errado.  Para obter mais informações, consulte [Classe de console](https://msdn.microsoft.com/en-us/library/system.console.aspx), [Classe de depuração](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.aspx) e [Janela de saída](../ide/reference/output-window.md).  
+ A console application uses the **Console** window to accept input and to display output messages. To write to the **Console** window, your application must use the **Console** object instead of the Debug object. To write to the **Visual Studio Output** window, use the Debug object, as usual. Be sure that you know where your application is writing or you might be looking for messages in the wrong place. For more information, see [Console Class](/dotnet/api/system.console), [Debug Class](/dotnet/api/system.diagnostics.debug), and [Output Window](../ide/reference/output-window.md).  
   
-## Iniciando o aplicativo  
- Quando alguns aplicativos do console iniciarem, eles são executados até a conclusão e, em seguida, são fechados.  Esse comportamento pode não oferecer tempo suficiente para interromper a execução e a depuração.  Para poder depurar um aplicativo, use um dos seguintes procedimentos para iniciar o aplicativo:  
+## <a name="starting-the-application"></a>Starting the application  
+ When some console applications start, they run to completion and then exit. This behavior might not give you enough time to break execution and debug. To be able to debug an application, use one of the following procedures to start the application:  
   
--   O aplicativo inicia a execução e é executado até alcançar o ponto de interrupção.  
+-   Your application starts executing and runs until it reaches the breakpoint.  
   
--   Seus aplicativo inicia e é interrompido imediatamente na primeira linha do código\-fonte.  
+-   Your application starts and immediately breaks at the first line of source code.  
   
--   Em uma janela do código\-fonte, clique com o botão direito em uma linha e selecione **Executar até o cursor**.  
+-   In a source code window, right-click a line and select **Run to cursor**.  
   
-     Seu aplicativo é iniciado e executado até a linha selecionada, ou até um ponto de interrupção, se o ponto de interrupção for atingido antes da linha.  
+     Your application starts and runs to the selected line, or to a breakpoint, if the breakpoint is hit before the line.  
   
- Quando você depura um aplicativo de console, inicie o aplicativo do prompt de comando em vez do Visual Studio.  Nesse caso, você poderá iniciar o aplicativo de prompt de comando e anexar o depurador do Visual Studio a ele.  Para obter mais informações, consulte [Anexar a processos em execução](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
+ When you debug a console application, you might want to start the application from the command prompt rather than from Visual Studio. In that case, you can start the application from the command prompt and attach the Visual Studio debugger to it. For more information, see [Attach to Running Processes](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
- Quando você inicia um aplicativo de console do Visual Studio, a janela **Console** às vezes aparece por trás da janela do Visual Studio.  Se você tentar iniciar o aplicativo de console do Visual Studio e nada acontecer, tente mover a janela do Visual Studio.  
+ When you start a console application from Visual Studio, the **Console** window sometimes appears behind the Visual Studio window. If you try to start your console application from Visual Studio and nothing seems to happen, try to move the Visual Studio window.  
   
-## Consulte também  
- [Depurando código nativo](../debugger/debugging-native-code.md)   
- [Depurando código gerenciado](../debugger/debugging-managed-code.md)   
- [Tipos de projeto do Visual C\+\+](../debugger/debugging-preparation-visual-cpp-project-types.md)   
- [Tipos de projeto C\#, F\# e Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
- [Definições do projeto para uma configuração de depuração do C\+\+](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [Segurança do depurador](../debugger/debugger-security.md)
+## <a name="see-also"></a>See Also  
+ [Debugging Native Code](../debugger/debugging-native-code.md)   
+ [Debugging Managed Code](../debugger/debugging-managed-code.md)   
+ [Visual C++ Project Types](../debugger/debugging-preparation-visual-cpp-project-types.md)   
+ [C#, F#, and Visual Basic Project Types](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
+ [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
+ [Debugger Security](../debugger/debugger-security.md)

@@ -1,83 +1,97 @@
 ---
-title: "Como usar a janela M&#243;dulos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.modules"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "depurador, Janela Módulos"
-  - "depurando [Visual Studio], exibindo módulos"
-  - "DLLs, exibindo durante a depuração"
-  - "arquivos executáveis, exibindo durante a depuração"
-  - "Janela Módulos"
-  - "módulos, exibindo"
+title: View DLLs and Executables in the Debugger | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.modules
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- debugger, Modules window
+- Modules window
+- executable files, displaying while debugging
+- debugging [Visual Studio], displaying modules
+- DLLs, displaying while debugging
+- modules, displaying
 ms.assetid: d840fdca-b035-4452-b652-72580c831896
 caps.latest.revision: 36
-caps.handback.revision: 36
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: e0e565507f2ae48992231a122d32971d90c461c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
+
 ---
-# Como usar a janela M&#243;dulos
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+# <a name="view-dlls-and-executables-using-the-modules-window-in-the-visual-studio-debugger"></a>View DLLs and Executables using the Modules Window in the Visual Studio Debugger
+ 
+The **Modules** window lists the DLLs and executables (EXE) that are used by your program and shows relevant information for each. 
 
 > [!NOTE]
->  Esse recurso não está disponível para depuração do SQL ou script.  
+>  This feature is not available for SQL or script debugging. 
   
- A janela **Módulos** lista as DLLs e EXE que são usados pelo programa e mostra as informações relevantes para cada um.  
+### <a name="to-display-the-modules-window"></a>To display the Modules window  
   
-### Para exibir a janela Módulos no modo de interrupção ou no modo de execução  
+-   While you are debugging, select **Debug > Windows** and then click **Modules**.  
   
--   No menu **Depurar**, escolha **Janelas** e clique em **Módulos**.  
+     By default, the **Modules** window sorts modules by load order. However, you can choose to sort by any column.  
   
-     Por padrão, a janela **Módulos** classifica os módulos pela ordem de carregamento.  No entanto, você pode escolher classificar por qualquer coluna.  
+### <a name="to-sort-by-any-column"></a>To sort by any column  
   
-### Para classificar por qualquer coluna  
+-   Click the button at the top of the column.  
   
--   Clique no botão na parte superior da coluna.  
+     You can load symbols or specify a symbol path from the **Modules** window by using the shortcut menu.  
   
-     Você pode carregar símbolos ou especificar um caminho do símbolo da janela **Módulos** usando o menu de atalho.  
+## <a name="loading-symbols"></a>Loading Symbols  
+ In the **Modules** window, you can see which modules have debugging symbols loaded. This information appears in the **Symbol Status** column. If the status says **Skipped loadingCannot find or open the PDB file**, or **Loading disabled by include/exclude setting**, you can direct the debugger to download symbols from the Microsoft public symbol servers or to load symbols from a symbol directory on your computer. For more information, see [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
-## Carregando símbolos  
- Na janela **Módulos**, você pode consultar quais módulos têm símbolos de depuração carregados.  Essas informações são exibidas na coluna **Status do Símbolo**.  Se o status informar **Carregamento ignoradoNão é possível localizar ou abrir o arquivo PDB** ou **Carregamento desabilitado por configuração Incluir\/Excluir**, você poderá dirigir o depurador para baixar símbolos de servidores de símbolos públicos da Microsoft ou carregar símbolos de um diretório de símbolo em seu computador.  Para obter mais informações, consulte [Especificar arquivos de símbolo \(.pdb\) e de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+#### <a name="to-load-symbols-manually"></a>To load symbols manually  
   
-#### Para carregar símbolos manualmente  
+1.  In the **Modules** window, right-click a module for which symbols have not loaded.  
   
-1.  Na janela **Módulos**, clique com o botão direito do mouse em um módulo para o qual os símbolos não foram carregados.  
+2.  Point to **Load Symbols From** and then click **Microsoft Symbol Servers** or **Symbol Path**.  
   
-2.  Aponte para **Carregar Símbolos de** e depois clique em **Servidores de Símbolo Microsoft** ou em **Caminho do Símbolo**.  
+#### <a name="to-change-symbol-load-settings"></a>To change symbol load settings  
   
-#### Para alterar as configurações de carregamento do símbolo  
+1.  In the **Modules** window, right-click any module.  
   
-1.  Na janela **Módulos**, clique com o botão direito em qualquer módulo.  
+2.  Click **Symbol Settings**.  
   
-2.  Clique em **Configurações de Símbolo**.  
+     You can now change the symbol load settings, as described in [Specify symbol locations and loading behavior](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior). Changes do not take effect until you restart the debugging session.  
   
-     Você agora pode alterar as configurações de carregamento do símbolo, conforme descrito em [Especificar o comportamento de carregamento e locais de símbolos](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior).  As alterações não terão efeito até você reiniciar a sessão de depuração.  
+#### <a name="to-change-symbol-load-behavior-for-a-specific-module"></a>To change symbol load behavior for a specific module  
   
-#### Para alterar o comportamento de carregamento do símbolo para um módulo específico  
+1.  In the **Modules** window, right-click the module.  
   
-1.  Na janela **Módulos**, clique com o botão direito no módulo.  
+2.  Point to **Automatic Symbol Load Settings** and then click **Always Load Manually** or **Default**. Changes do not take effect until you restart the debugging session.  
   
-2.  Aponte para **Configurações Automáticas de Carregamento de Símbolos** e clique em **Sempre Carregar Manualmente** ou **Padrão**.  As alterações não terão efeito até você reiniciar a sessão de depuração.  
-  
-## Consulte também  
- [Breaking Execution](http://msdn.microsoft.com/pt-br/30fc4643-f337-4651-b1ff-f2de2c098d40)   
- [Exibindo dados no depurador](../debugger/viewing-data-in-the-debugger.md)   
- [Especificar arquivos de símbolo \(.pdb\) e de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+## <a name="see-also"></a>See Also  
+ [Breaking Execution](http://msdn.microsoft.com/en-us/30fc4643-f337-4651-b1ff-f2de2c098d40)   
+ [Viewing Data in the Debugger](../debugger/viewing-data-in-the-debugger.md)   
+ [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

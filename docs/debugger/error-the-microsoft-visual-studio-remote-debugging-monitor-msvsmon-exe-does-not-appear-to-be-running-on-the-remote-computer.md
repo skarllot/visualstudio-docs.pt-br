@@ -1,80 +1,97 @@
 ---
-title: "Erro: o Monitor de Depura&#231;&#227;o Remota do Microsoft Visual Studio (MSVSMON.EXE) parece n&#227;o estar sendo executado no computador remoto. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.server_machine_no_default"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: 'Error: The Microsoft Visual Studio Remote Debugging Monitor (MSVSMON.EXE) does not appear to be running on the remote computer. | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.server_machine_no_default
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 86db9931-50e3-4095-b161-802ed8ef39c9
 caps.latest.revision: 21
-caps.handback.revision: 21
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Erro: o Monitor de Depura&#231;&#227;o Remota do Microsoft Visual Studio (MSVSMON.EXE) parece n&#227;o estar sendo executado no computador remoto.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 17c436f1fc74d2b06eb98b0bbfb71634563fe558
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Essa mensagem de erro significa que o Visual Studio não pôde localizar a instância correta do Visual Studio Monitor de depuração remota no computador remoto. O Visual Studio Monitor de depuração remota deve estar instalado para depuração remota funcione. Para obter informações sobre como baixar e configurar o depurador remoto, consulte [Configurar as Ferramentas Remotas no dispositivo](../Topic/Set%20Up%20the%20Remote%20Tools%20on%20the%20Device.md).  
+---
+# <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>Error: The Microsoft Visual Studio Remote Debugging Monitor (MSVSMON.EXE) does not appear to be running on the remote computer.
+This error message means that Visual Studio could not find the correct instance of the Visual Studio Remote Debugging Monitor on the remote computer. The Visual Studio Remote Debugging Monitor must be installed for remote debugging to work. For information about downloading and setting up the remote debugger, see [Remote Debugging](../debugger/remote-debugging.md).  
   
 > [!IMPORTANT]
->  Se você acredita ter recebido esta mensagem por causa de um bug no produto, relate esse problema ao Visual Studio [Enviar um Smiley](../Topic/Visual%20Studio%20Send%20a%20Smile%20Instructions.md). Se você precisar de mais ajuda, consulte [Fale conosco](../ide/talk-to-us.md) para obter formas de contatar a Microsoft.  
+>  If you believe you have received this message because of a product bug, please [report this issue to Visual Studio](../ide/how-to-report-a-problem-with-visual-studio-2017.md). If you need more help, see [Talk to Us](../ide/talk-to-us.md) for ways to contact Microsoft.  
   
-## Recebi a seguinte mensagem enquanto eu estava depurando no Visual Studio 2010 ou anterior  
- Se a versão do Visual Studio que você estiver usando o Visual Studio 2010 ou anterior, você também poderá receber esse erro se o compartilhamento de arquivo e impressora não está habilitado. Para obter mais informações sobre esse problema, consulte a versão do Visual Studio 2010 desta documentação: [erro: O Microsoft Visual Studio Monitor de depuração remota \(MSVSMON. EXE\) não parece estar em execução no computador remoto. \-Visual Studio 2010](https://msdn.microsoft.com/en-us/library/ms164726\(v=vs.100\).aspx)  
+## <a name="i-got-this-message-while-i-was-debugging-in-visual-studio-2010-or-earlier"></a>I got this message while I was debugging in Visual Studio 2010 or earlier  
+ If the version of Visual Studio that you are using is Visual Studio 2010 or earlier, you might also receive this error if file and printer sharing is not enabled. To find out more about this issue, please refer to the Visual Studio 2010 version of this documentation: [Error: The Microsoft Visual Studio Remote Debugging Monitor (MSVSMON.EXE) does not appear to be running on the remote computer. - Visual Studio 2010](https://msdn.microsoft.com/en-us/library/ms164726\(v=vs.100\).aspx)  
   
-## Recebi a seguinte mensagem enquanto eu estava depurando localmente  
- Se você estiver recebendo essa mensagem enquanto você estiver depurando localmente, o software antivírus ou um firewall de terceiros pode ser culpado. Visual Studio é um aplicativo de 32 bits, portanto, ele usa a versão de 64 bits do depurador remoto para depurar aplicativos de 64 bits. Os dois processos se comunicar usando a rede local no computador local. Nenhum tráfego deixa o computador, mas é possível que o software de segurança de terceiros pode bloquear a comunicação.  
+## <a name="i-got-this-message-while-i-was-debugging-locally"></a>I got this message while I was debugging locally  
+ If you are getting this message while you are debugging locally, your anti-virus software or a third-party firewall may be to blame. Visual Studio is a 32-bit application, so it uses the 64-bit version of the remote debugger to debug 64-bit applications. The two processes communicate using the local network within the local computer. No traffic leaves the computer, but it is possible that third party security software may block the communication.  
   
- As seções a seguir listam alguns outros motivos por que você talvez tenha essa mensagem e o que você pode fazer para corrigir o problema.  
+ The following sections list some other reasons why you might have gotten this message, and what you can do to fix the issue.  
   
-## O computador remoto não está acessível  
- Tente [ping](https://technet.microsoft.com/en-us/library/ee624059\(v=ws.10\).aspx) a máquina remota. Se ele não responder ao ping, as ferramentas remotas não poderá se conectar. Tente reiniciar a máquina remota e caso contrário, certificando\-se de que ele está configurado corretamente na rede.  
+## <a name="the-remote-machine-is-not-reachable"></a>The remote machine is not reachable  
+ Try to [ping](https://technet.microsoft.com/en-us/library/ee624059\(v=ws.10\).aspx) the remote machine. If it doesn't reply to the ping, the remote tools won't be able to connect either. Try rebooting the remote machine and otherwise making sure that it is correctly configured on the network.  
   
-## A versão do depurador remoto não corresponde à versão do Visual Studio  
- A versão do Visual Studio que você está executando localmente precisa corresponder à versão do monitor de depuração remota em execução no computador remoto. Para corrigir esse problema, baixe e instale a versão correspondente do monitor de depuração remota. Vá para o [Centro de Download](http://www.microsoft.com/en-us/download) para localizar a versão correta do depurador remoto.  
+## <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>The version of the remote debugger doesn't match the version of Visual Studio  
+ The version of Visual Studio that you are running locally needs to match the version of the remote debugging monitor that is running on the remote machine. To fix this, download and install the matching version of the remote debugging monitor. Go to the [Download Center](http://www.microsoft.com/en-us/download) to find the right version of the remote debugger.  
   
-## As máquinas locais e remotas têm diferentes modos de autenticação  
- As máquinas locais e remotas precisam usar o mesmo modo de autenticação. Para corrigir esse problema, certifique\-se de que ambos os computadores estão usando o mesmo modo de autenticação. Para obter mais informações sobre modos de autenticação, consulte [Visão geral sobre a autenticação do Windows](https://technet.microsoft.com/en-us/library/hh831472.aspx).  
+## <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>The local and remote machines have different authentication modes  
+ The local and remote machines need to use the same authentication mode. To fix this, make sure that both machines are using the same authentication mode. For more information about authentication modes, see [Windows Authentication Overview](https://technet.microsoft.com/en-us/library/hh831472.aspx).  
   
-## O depurador remoto é executado sob uma conta de usuário diferente  
- Você pode resolver isso em uma das seguintes maneiras:  
+## <a name="the-remote-debugger-is-running-under-a-different-user-account"></a>The remote debugger is running under a different user account  
+ You can solve this in one of the following ways:  
   
--   Você pode parar o depurador remoto e reiniciá\-lo com a conta que você está usando no computador local.  
+-   You can stop the remote debugger and restart it with the account you are using on the local computer.  
   
--   Você pode iniciar o depurador remoto na linha de comando com o **\/Allow \< username \>** parâmetro: `msvsmon /allow <username@computer>`  
+-   You can start the remote debugger from the command line with the **/allow \<username>** parameter: `msvsmon /allow <username@computer>`  
   
--   Você pode adicionar o usuário com permissões do depurador remoto \(na janela do depurador remoto, **Ferramentas \/ permissões**\).  
+-   You can add the user to the remote debugger's permissions (in the remote debugger window, **Tools > Permissions**).  
   
--   Se você não pode usar os métodos nas etapas anteriores, você pode permitir que qualquer usuário pode fazer a depuração remota. Na janela do depurador remoto, vá para o **\/Opções de ferramentas** caixa de diálogo. Quando você seleciona   **sem autenticação**, em seguida, você pode verificar **Permitir que qualquer usuário depure**. No entanto, você deve usar essa opção somente se você não tem escolha, ou se você estiver em uma rede privada.  
+-   If you can't use the methods in the preceding steps, you can allow any user to do remote debugging. In the remote debugger window, go to the **Tools > Options** dialog. When you select   **No Authentication**, you can then check **Allow any user to debug**. However, you should use this option only if you have no choice, or if you are on a private network.  
   
-## O firewall na máquina remota não permite conexões de entrada para o depurador remoto  
- O firewall no computador do Visual Studio e o firewall no computador remoto devem ser configurados para permitir a comunicação entre o Visual Studio e o depurador remoto. Para obter informações sobre as portas que o depurador remoto está usando, consulte [Atribuições de porta do depurador remoto](../debugger/remote-debugger-port-assignments.md). Para obter informações sobre como configurar o firewall do Windows, consulte [Configurar o Firewall do Windows para a depuração remota](../debugger/configure-the-windows-firewall-for-remote-debugging.md).  
+## <a name="the-firewall-on-the-remote-machine-doesnt-allow-incoming-connections-to-the-remote-debugger"></a>The firewall on the remote machine doesn't allow incoming connections to the remote debugger  
+ The firewall on the Visual Studio machine and the firewall on the remote machine must be configured to allow communication between Visual Studio and the remote debugger. For information about the ports the remote debugger is using, see [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md). For information about configuring the Windows firewall, see [Configure the Windows Firewall for Remote Debugging](../debugger/configure-the-windows-firewall-for-remote-debugging.md).  
   
-## O software antivírus está bloqueando as conexões  
- Software de antivírus do Windows permite conexões de depurador remoto, mas alguns softwares antivírus de terceiros podem bloqueá\-los. Verifique a documentação do seu software antivírus saber como permitir que essas conexões.  
+## <a name="anti-virus-software-is-blocking-the-connections"></a>Anti-virus software is blocking the connections  
+ Windows anti-virus software allows remote debugger connections, but some third-party anti-virus software may block them. Check the documentation for your anti-virus software to find out how to allow these connections.  
   
-## Política de segurança de rede está bloqueando a comunicação entre o computador remoto e o Visual Studio  
- Examine a segurança da rede para certificar\-se de que ele não está bloqueando a comunicação. Para obter mais informações sobre a política de segurança de rede do Windows, consulte [gerenciamento de segurança](https://msdn.microsoft.com/en-us/library/windows/desktop/ms721855\(v=vs.85\).aspx).  
+## <a name="network-security-policy-is-blocking-communication-between-the-remote-machine-and-visual-studio"></a>Network security policy is blocking communication between the remote machine and Visual Studio  
+ Review your network security to make sure that it is not blocking communication. For more information about Windows network security policy, see [Security policy settings](/windows/device-security/security-policy-settings/security-policy-settings).  
   
-## A rede está muito ocupada para dar suporte à depuração remota  
- Talvez seja necessário fazer a depuração remota em um momento diferente ou reagendar o trabalho na rede para um horário diferente.  
+## <a name="the-network-is-too-busy-to-support-remote-debugging"></a>The network is too busy to support remote debugging  
+ You may need to do remote debugging at a different time, or reschedule work on the network for a different time.  
   
-## Mais ajuda  
- Para obter ajuda de depurador mais remota, incluindo opções de linha de comando, clique em **Ajuda \/ uso** na janela do depurador remoto. Se você não estiver com ele aberto você pode ver a página da web, copie a seguinte linha para um  **File Explorer** janela. \(Você precisa substituir \< diretório de instalação do Visual Studio \> com o local de instalação do Visual Studio.\)  
+## <a name="more-help"></a>More help  
+ To get more remote debugger help, including command-line switches, click **Help > Usage** in the remote debugger window. If you don't have it open you can see the web page by copying the following line to a  **File Explorer** window. (You need to replace \<Visual Studio installation directory> with the location of your Visual Studio installation.)  
   
- res: \/ \/*\< diretório de instalação do Visual Studio \>*\\Common7\\IDE\\Remote%20Debugger\\x64\\msvsmon.exe\/help.htm  
+ res://*\<Visual Studio installation directory>*\Common7\IDE\Remote%20Debugger\x64\msvsmon.exe/help.htm  
   
-## Consulte também  
- [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)
+## <a name="see-also"></a>See Also  
+ [Remote Debugging Errors and Troubleshooting](../debugger/remote-debugging-errors-and-troubleshooting.md)

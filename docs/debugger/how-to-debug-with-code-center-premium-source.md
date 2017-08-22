@@ -1,145 +1,161 @@
 ---
-title: "Como depurar com a origem do Code Center Premium | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Code Center Premium"
-  - "depurando [Visual Studio], Code Center Premium"
+title: 'How to: Debug with Code Center Premium Source | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- Code Center Premium
+- debugging [Visual Studio], Code Center Premium
 ms.assetid: 18b4769d-b007-4428-9dae-9e72c283ff0d
 caps.latest.revision: 23
-caps.handback.revision: 23
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Como depurar com a origem do Code Center Premium
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 9d9c246234bc86cefb9e0a24f97f4c3d692d3942
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Com o depurador do [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)], você pode depurar a origem compartilhada segura do Microsoft MSDN Code Center Premium.  
+---
+# <a name="how-to-debug-with-code-center-premium-source"></a>How to: Debug with Code Center Premium Source
+With the [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] debugger, you can debug secure shared source from Microsoft MSDN Code Center Premium.  
   
- Este tópico explica como configurar e depurar o código\-fonte superior do Code Center Premium no Visual Studio.  
+ This topic explains how to set up and debug Code Center Premium source code in Visual Studio.  
   
-### Para preparar para depurar com o Code Center Premium  
+### <a name="to-prepare-for-debugging-with-code-center-premium"></a>To prepare for debugging with Code Center Premium  
   
-1.  Conecte seu leitor de cartão inteligente e insira o cartão obtido da Shared Source Initiative.  
+1.  Connect your SmartCard reader and insert the card you obtained from the Shared Source Initiative.  
   
-2.  Inicie o Visual Studio.  
+2.  Launch Visual Studio.  
   
-3.  No menu **Ferramentas**, clique em **Opções**.  
+3.  On the **Tools** menu, click **Options**.  
   
-4.  Na caixa de diálogo **Opções**, abra o nó **Depuração** e clique em **Geral**.  
+4.  In the **Options** dialog box, open the **Debugging** node and click **General**.  
   
-5.  Desmarque a caixa de seleção **Habilitar Apenas Meu Código \(Gerenciado Somente\)**.  
+5.  Clear the **Enable Just My Code (Managed Only)** check box.  
   
-6.  Selecione **Habilitar Suporte a Servidor de Código\-fonte**.  
+6.  Select **Enable Enable Source Server Support**.  
   
-7.  Desmarque **Requerer que os arquivos de código\-fonte correspondam exatamente à versão original**.  
+7.  Clear **Require source files to exactly match the original version**.  
   
-8.  No nó **Depuração**, clique em **Símbolos**.  
+8.  Under the **Debugging** node, click **Symbols**.  
   
-9. Na caixa **Locais do Arquivo de Símbolo \(.pdb\)**, desmarque a caixa de seleção **Servidores de Símbolo Microsoft** e adicione os seguintes locais:  
+9. In the **Symbol File (.pdb) Locations** box, clear the **Microsoft Server Symbols** check box and add the following locations:  
   
      `https://codepremium.msdn.microsoft.com/symbols`  
   
      `src=https://codepremium.msdn.microsoft.com/source/Visual%20Studio%202010/SP1/`  
   
     > [!NOTE]
-    >  Inclua a barra à direita **\/** no final do caminho.  
+    >  Be sure to include the trailing slash**/** at the end of the path.  
   
-     Mova esses locais até a parte superior da lista para garantir que os símbolos sejam carregados primeiro.  
+     Move these locations to the top of the list to ensure that these symbols are loaded first.  
   
     > [!NOTE]
-    >  Esses locais do Code Center Premium devem ser listados primeiro para que sejam os primeiros locais a serem carregados.  No Visual Studio 2010, você não pode mover servidores acima de entrada **Servidores de Símbolo Microsoft**, motivo pelo qual você deve desmarcar a caixa de seleção.  
+    >  These Code Center Premium locations must be listed first so that they are the first locations that are loaded. In Visual Studio 2010, you cannot move any servers above the **Microsoft Symbol Servers** entry, which is why you must clear the check box.  
     >   
-    >  Para carregar símbolos dos símbolos Microsoft durante uma sessão de depuração, faça isso:  
+    >  To load symbols from the Microsoft symbols during a debug session, do this:  
     >   
-    >  1.  No menu **Depurar**, escolha **Janelas** e clique em **Módulos**.  
-    > 2.  Selecione o módulo para o qual você deseja símbolos e abra o menu de atalho.  Escolha **Carregar Símbolos de** e escolha **Servidores de Símbolo Microsoft**.  
+    >  1.  On the **Debug** menu, choose **Windows** and then choose **Modules**.  
+    > 2.  Select the module that you want symbols for, and then open the shortcut menu. Choose **Load Symbols From** and then choose **Microsoft Symbol Servers**.  
   
-10. Na caixa **Armazenar em cache os símbolos neste diretório**, insira um local como `C:\symbols` onde o Code Center Premium pode armazenar em cache os símbolos.  O armazenamento em cache dos símbolos pode melhorar significativamente o desempenho durante a depuração.  
+10. In the **Cache symbols from symbol servers in this directory** box, enter a location such as `C:\symbols` where Code Center Premium can cache the symbols. Caching symbols can significantly improve performance during debugging.  
   
-     Se você tiver dificuldade para depurar código\-fonte com o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] depois de concluir este procedimento, verifique o local do cache para arquivos previamente armazenados em cache e arquivos de símbolo desatualizados.  Remova os arquivos antigos desatualizados.  
+     If you experience difficulty debugging source code with [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] after you complete this procedure, check your cache location for previously cached and outdated symbol files. Remove the outdated symbol files.  
   
-11. Clique em **OK**.  
+11. Click **OK**.  
   
-12. Reinicie o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para assegurar que as configurações persistiram.  
+12. Restart [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] to ensure that settings are persisted.  
   
-### Para depurar seu código\-fonte usando Anexar ao Processo  
+### <a name="to-debug-your-source-code-using-attach-to-process"></a>To debug your source code using Attach to Process  
   
-1.  Conecte seu leitor de cartão inteligente e insira o cartão obtido da Shared Source Initiative.  
+1.  Connect your SmartCard reader and insert the card you obtained from the Shared Source Initiative.  
   
-2.  Inicie o Visual Studio.  
+2.  Launch Visual Studio.  
   
-3.  Abra seu projeto do Visual Studio.  
+3.  Open your Visual Studio project.  
   
-4.  No menu **Ferramentas**, clique em **Anexar ao Processo**.  
+4.  On the **Tools** menu, click **Attach to Process**.  
   
-5.  Na caixa de diálogo **Anexar ao Processo**, clique em **Selecionar**.  
+5.  In the **Attach to Process** dialog box, click **Select**.  
   
-6.  Na caixa de diálogo **Selecionar Tipo de Código**, em **Detectar estes tipos de código**, selecione **Nativo**, **Gerenciado** e **Gerenciado \(v4.0\)**.  
+6.  In the **Select Code Type** dialog box, under **Detect these code types**, select **Native**, **Managed**, and **Managed(v4.0)**.  
   
-7.  Clique em **OK** para ignorar a caixa de diálogo **Selecionar Tipo de Código**.  
+7.  Click **OK** to dismiss the **Select Code Type** dialog box.  
   
-8.  Na caixa **Processos Disponíveis**, selecione o processo que você deseja depurar.  
+8.  In the **Available Processes** box, select the process you want to debug.  
   
-9. Clique em **Anexar**.  
+9. Click **Attach**.  
   
-10. Quando você é solicitado a confirmar seu certificado, clique **OK**.  Em seguida, insira seu PIN.  Aceite os termos de uso do Code Center Premium, se for solicitado.  
+10. When you are prompted to confirm your certificate, click **OK**. Then enter your PIN. Accept the terms of use for Code Center Premium, if you are prompted,.  
   
-     O download de símbolos pode demorar muito tempo, dependendo da velocidade da rede.  A barra de status indica quando todos os símbolos foram baixados com êxito.  
+     Downloading symbols can take lots of time, depending on the network speed. The status bar will indicate when all symbols have been downloaded successfully.  
   
-11. Repita as etapas de anexação para todos os projetos gerenciados em sua solução.  
+11. Repeat the attach steps for all managed projects in your Solution.  
   
-### Para depurar o código\-fonte de uma solução existente  
+### <a name="to-debug-source-code-from-an-existing-solution"></a>To debug source code from an existing solution  
   
-1.  No **Gerenciador de Soluções**, abra o menu de atalho da solução e selecione **Propriedades**.  
+1.  In **Solution Explorer**, open the shortcut menu for the solution and then choose **Properties**.  
   
-2.  Na caixa de diálogo Páginas de Propriedades de Solução, escolha **Depurar Arquivos Fonte** no nó **Propriedades Comuns**.  
+2.  In the Solution Property Pages dialog box, choose **Debug Source Files** in the **Common Properties** node.  
   
-3.  Adicione o seguinte local à lista **Diretórios que contêm arquivos de origem**:  
+3.  Add the following location to the **Directories containing source files** list:  
   
      `https://codepremium.msdn.microsoft.com/source/Visual%20Studio%202010/SP1/`  
   
     > [!NOTE]
-    >  Inclua a barra à direita **\/** no final do caminho.  
+    >  Be sure to include the trailing slash**/** at the end of the path.  
   
-4.  Para cada projeto gerenciado na sua solução, faça o seguinte  
+4.  For each managed project in your solution, do the following  
   
-    1.  No Gerenciador de Soluções, abra o menu de atalho do projeto e selecione **Propriedades**.  
+    1.  In Solution Explorer, open the shortcut menu for the project and then choose **Properties**.  
   
-    2.  Selecione **Depurar** e escolha **Habilitar depuração de código não gerenciado**.  
+    2.  Select **Debug** and then choose **Enable unmanaged code debugging**.  
   
-### Para depurar sua solução com código do Code Center Premium  
+### <a name="to-debug-your-solution-with-code-center-premium-source"></a>To debug your solution with Code Center Premium source  
   
-1.  Na sua classe `Package`, defina um ponto de interrupção no construtor do pacote.  
+1.  In your `Package` class, set a breakpoint on the package constructor.  
   
-2.  No menu `Debug`, clique em **Iniciar Depuração**.  
+2.  In the `Debug` menu, click **Start Debugging**.  
   
-3.  Quando atingir o ponto de interrupção no construtor de pacote, vá para a janela **Pilha de Chamadas** e clique com o botão direito do mouse no registro de ativação do assembly do qual você deseja carregar símbolos e clique em **Carregar Símbolos**.  
+3.  When you hit the breakpoint in the package constructor, go to the **Call Stack** window and right-click the stack frame of the assembly you want to load symbols from, then click **Load Symbols**.  
   
-     Clique duas vezes no quadro de chamada para carregar a origem.  
+     Double-click the call frame to load the source.  
   
-### Para procurar o código\-fonte no Code Center Premium  
+### <a name="to-browse-source-code-on-code-center-premium"></a>To browse source code on Code Center Premium  
   
-1.  Conecte seu leitor de cartão inteligente e insira o cartão obtido da Shared Source Initiative.  
+1.  Connect your SmartCard reader and insert the card you obtained from the Shared Source Initiative.  
   
-2.  Inicie o Internet Explorer e insira esta URL: `https://codepremium.msdn.microsoft.com`  
+2.  Launch Internet Explorer enter the following URL: `https://codepremium.msdn.microsoft.com`  
   
-3.  Navegue para encontrar a fonte que você deseja.  
+3.  Browse to find the source you want.  
   
-## Consulte também  
- [Configurações de depuração e preparação](../debugger/debugger-settings-and-preparation.md)   
- [Segurança do depurador](../debugger/debugger-security.md)   
+## <a name="see-also"></a>See Also  
+ [Debugger Settings and Preparation](../debugger/debugger-settings-and-preparation.md)   
+ [Debugger Security](../debugger/debugger-security.md)   
  [Code Center Premium](http://www.microsoft.com/resources/sharedsource/ccp.mspx)

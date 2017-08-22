@@ -1,187 +1,269 @@
 ---
-title: "Inspe&#231;&#227;o e Windows QuickWatch | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/10/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.watch"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "janela de inspeção de depuração [Visual Studio]"
-  - "avaliar as expressões [depurador]"
-  - "variáveis [depurador] avaliar"
-  - "avaliação de expressão"
-  - "registros, avaliar"
-  - "depuração [Visual Studio], a avaliação de expressão"
+title: Set a Watch on Variables in Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/04/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.watch
+helpviewer_keywords:
+- debugging [Visual Studio], Watch window
+- expressions [debugger], evaluating
+- variables [debugger], evaluating
+- expression evaluation
+- registers, evaluating
+- debugging [Visual Studio], expression evaluation
 ms.assetid: d5c18377-2a0e-4819-a645-407e24ccc58c
 caps.latest.revision: 45
-caps.handback.revision: 44
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Inspe&#231;&#227;o e Windows QuickWatch
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: c443f4aa25ff4fcc672be11fc3d4ee296a196e2b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Você pode usar o **inspeção** \(**Debug \/ Windows \/ Assista \/ assistir \(1, 2, 3 e 4\)**\) e **QuickWatch** \(**Debug \/ QuickWatch**\) windows para inspecionar variáveis e expressões durante uma sessão de depuração. A diferença é que o **inspeção** janela pode exibir várias variáveis, enquanto o **QuickWatch** janela exibe uma única variável por vez.  
+---
+# <a name="set-a-watch-on-variables-using-the-watch-and-quickwatch-windows-in-visual-studio"></a>Set a Watch on Variables using the Watch and QuickWatch Windows in Visual Studio
+While you are debugging, you can use the **Watch** (**Debug > Windows > Watch > Watch (1, 2, 3, 4)**) and **QuickWatch** (right-click on variable / **Debug > QuickWatch**) windows to watch variables and expressions.  The difference is that the **Watch** window can display several variables, while the **QuickWatch** window displays a single variable at a time.
+
+The windows are only available during a debugging session. 
   
-## Observando uma única variável com QuickWatch  
- Você pode usar o **QuickWatch** janela para observar uma única variável. Por exemplo, se você tiver o código a seguir:  
+## <a name="observing-a-single-variable-with-quickwatch"></a>Observing a single variable with QuickWatch  
+ You can use the **QuickWatch** window to observe a single variable. For example, if you have the following code:  
   
-```c#  
-static void Main(string[] args) { int a, b; a = 1; b = 2; for (int i = 0; i < 10; i++) { a = a + b; } }  
+```CSharp
+static void Main(string[] args)  
+{  
+    int a, b;  
+    a = 1;  
+    b = 2;  
+    for (int i = 0; i < 10; i++)  
+    {  
+        a = a + b;  
+    }   
+}  
 ```  
   
- Você pode observar a uma variável na janela QuickWatch da seguinte maneira:  
+ You can observe the a variable in the QuickWatch window as follows:  
   
-1.  Definir um ponto de interrupção no `a = a + b;` linha.  
+1.  Set a breakpoint on the `a = a + b;` line.  
   
-2.  Inicie a depuração. A execução pára no ponto de interrupção.  
+2.  Start debugging. Execution stops at the breakpoint.  
   
-3.  Abra o **QuickWatch** janela \(com o botão direito em a, escolha **Depurar \/ QuickWatch**, ou **SHIFT \+ F9**\). Você pode abrir a janela e adicionar a uma variável para o **expressão** janela, clique em **reavaliar**. Você deve ver a uma variável o **valores** janela, com um valor de 2.  
+3.  Open the **QuickWatch** window (right-click on a, then choose **QuickWatch**, or **SHIFT+F9**).
+
+    You should see the a variable in the **Values** window, with a value of 1.
+
+    ![QuickWatch Expression](../debugger/media/watchexpression.png "QuickWatchExpression")  
+
+    If you want to evaluate an expression using the variable, add an expression such as `a + b` to the **Expression** window and click **Reevaluate**. 
   
-4.  O **QuickWatch** janela é uma janela de caixa de diálogo modal, portanto você não pode continuar a depuração enquanto ele está aberto. Você pode adicionar a variável para o **inspeção** janela clicando **Adicionar inspeção**.  
+4.  Add the variable to the **Watch** window from **QuickWatch** by clicking **Add Watch**. 
+
+    > [!NOTE]
+    > The **QuickWatch** window is a modal dialog window, so you can't continue debugging as long as it is open.  
   
-5.  Feche o **QuickWatch** janela. Agora você pode continuar a depuração enquanto você observar o valor de **inspeção** janela  
+5.  Close the **QuickWatch** window. Now you can continue debugging while you observe the value in the **Watch** window.  
   
-## Observando as variáveis com a janela de Observação  
- Você pode observar várias variáveis com o **inspeção** janela. Por exemplo, se você tiver o código a seguir:  
+## <a name="observing-variables-with-the-watch-window"></a>Observing variables with the Watch window  
+ You can observe multiple variables with the **Watch** window. For example, if you have the following code:  
   
-```c#  
-static void Main(string[] args) { int a, b, c; a = 1; b = 2; c = 0; for (int i = 0; i < 10; i++) { a++; b *= 2; c = a + b; } }  
-  
-```  
-  
- Adicione os valores das três variáveis à janela Inspeção da seguinte maneira:  
-  
-1.  Definir um ponto de interrupção no `c = a + b;` linha.  
-  
-2.  Iniciar a depuração \(**F5**\). A execução pára no ponto de interrupção.  
-  
-3.  Abra a janela Watch \(**Debug \/ Windows \/ Assista \/ Assista 1**, ou **CTRL \+ ALT \+ W, 1**\).  
-  
-4.  Adicionar o `a` variável para a primeira linha, o `b` variável na segunda linha e o `c` variável para a terceira linha.  
-  
-5.  Continue a depuração.  
-  
- Você deve ver os valores da variável alterado conforme você itera através de `for` loop.  
-  
- Se você estiver programando em código nativo, às vezes, você precisará qualificar o contexto de um nome de variável ou uma expressão contendo um nome de variável. O contexto é a função, arquivo de origem e módulo onde uma variável está localizada. Se você precisar fazer isso, você pode usar a sintaxe do operador de contexto. Para obter mais informações, consulte expressões em C\+\+.  
-  
-## Observando as expressões com a janela de Observação  
- Agora vamos tentar usar uma expressão em vez disso. Você pode adicionar qualquer expressão válida reconhecida pelo depurador.  
-  
- Por exemplo, se você tiver o código listado na seção anterior, você pode obter a média dos três valores assim:  
-  
- ![WatchExpression](../debugger/media/watchexpression.png "WatchExpression")  
-  
- Em geral, as regras de avaliação de expressões no **inspeção** janela são as mesmas que as regras para avaliar expressões na linguagem de codificação. Se a expressão tiver um erro de sintaxe, você pode esperar o mesmo erro de compilador que você veria no editor de códigos. Aqui está um exemplo:  
-  
- ![WatchExpressionError](~/debugger/media/watchexpressionerror.png "WatchExpressionError")  
-  
-##  <a name="bkmk_refreshWatch"></a> Atualizando valores de inspeção estão desatualizados  
- Em determinadas circunstâncias, você poderá ver um ícone de atualização \(um círculo com duas setas ou um círculo com duas linhas onduladas\) quando uma expressão é avaliada no **inspeção** janela.  Por exemplo, se você tiver a avaliação da propriedade desativada \(**Ferramentas \/ opções \/ depuração \/ habilitar avaliação de propriedades e outras chamadas de função implícitas**\), e você tem o seguinte código:  
-  
-```c#  
-static void Main(string[] args) { List<string> list = new List<string>(); list.Add("hello"); list.Add("goodbye"); }  
+```C++  
+int main()
+{
+    int a, b, c;
+    a = 1;
+    b = 2;
+    c = 0;
+
+    for (int i = 0; i < 10; i++)
+    {
+        a++;
+        b *= 2;
+        c = a + b;
+    }
+
+    return 0;
+}
   
 ```  
   
- Se você definir um observador do `Count` propriedade da lista, você verá algo parecido com o seguinte:  
+ Add the values of the three variables to the Watch window as follows:  
+  
+1.  Set a breakpoint on the `c = a + b;` line.  
+  
+2.  Start debugging (**F5**). Execution stops at the breakpoint.  
+  
+3.  Open the Watch window (**Debug > Windows > Watch > Watch 1**, or **CTRL+ALT+W, 1**).  
+  
+4.  Add the `a` variable to the first row, the `b` variable to the second row, and the `c` variable to the third row.
+
+    You can add variables by clicking an empty row and typing the variable name.
+  
+5.  Continue debugging (press **F11** to advance the debugger).  
+  
+ You should see the variable values changing as you iterate through the `for` loop.  
+  
+ If you are programming in native code, you may sometimes need to qualify the context of a variable name or an expression containing a variable name. The context is the function, source file, and module where a variable is located. If you have to do this, you can use the context operator syntax. For more information, see [Context Operator (C++)](../debugger/context-operator-cpp.md).  
+  
+## <a name="observing-expressions-with-the-watch-window"></a>Observing expressions with the Watch window  
+ Now let's try using an expression instead. You can add any valid expression recognized by the debugger.  
+  
+ For example, if you have the code listed in the preceding section, you can get the average of the three values like this:  
+  
+ ![Watch Expression](../debugger/media/watchexpression.png "WatchExpression")  
+  
+ In general, the rules for evaluating expressions in the **Watch** window are the same as the rules for evaluating expressions in your coding language. If your expression has a syntax error, you can expect the same compiler error that you would see in the code editor. Here's an example:  
+  
+ ![Watch Expression Error](../debugger/media/watchexpressionerror.png "WatchExpressionError")  
+  
+##  <a name="bkmk_refreshWatch"></a> Refreshing Watch values that are out of date  
+ In certain circumstances you might see a refresh icon (a circular arrow) when an expression is evaluated in the **Watch** window.  For example, if you have property evaluation turned off (**Tools > Options > Debugging > Enable property evaluation and other implicit function calls**), and you have the following code:  
+  
+```CSharp  
+static void Main(string[] args)  
+{  
+    List<string> list = new List<string>();  
+    list.Add("hello");  
+    list.Add("goodbye");  
+}  
+  
+```  
+  
+ If you set a watch on the `Count` property of the list, you should see something like the following:  
   
  ![RefreshWatch](../debugger/media/refreshwatch.png "RefreshWatch")  
   
- Isso indica um erro ou um valor que está desatualizado. Geralmente você pode atualizar o valor clicando no ícone, mas em alguns casos você pode preferir não atualizá\-la. Primeiro, você precisa saber por que o valor não foi avaliado.  
+ This indicates an error or a value that is out of date. You can generally refresh the value by clicking on the icon, but in some cases you might prefer not to refresh it. First you need to know why the value was not evaluated.  
   
- Se você apontar para o ícone, uma dica de ferramenta fornece informações sobre por que a expressão não foi avaliada. Se as setas de circundamento aparecerem, a expressão não foi avaliada para um dos seguintes motivos:  
+ If you point to the icon, a tooltip provides information about why the expression was not evaluated.  If the circling arrows appear, the expression was not evaluated for one of the following reasons:  
   
--   •	Ocorreu um erro porque a expressão estava sendo avaliada. Por exemplo, pode ter ocorrido um tempo limite, ou uma variável pode ter ficado fora do escopo.  
+-   An error occurred as the expression was being evaluated. For example, a time-out might have occurred, or a variable might have been out of scope.  
   
--   •	A expressão contém uma chamada de função que pode disparar um efeito colateral do aplicativo \(consulte [Efeitos colaterais e expressões](#bkmk_sideEffects)\).  
+-   The expression contains a function call which could trigger a side effect in the application (see [Side Effects and Expressions](#bkmk_sideEffects)).  
   
--   A avaliação automática de propriedades e chamadas de função implícitas pelo depurador é desativada \(**Ferramentas \/ opções \/ depuração \/ habilitar avaliação de propriedades e outras chamadas de função implícitas**\), e, em seguida, a expressão não pode ser avaliada automaticamente.  
+-   Automatic evaluation of properties and implicit functions calls by the debugger is turned off (**Tools > Options > Debugging > Enable property evaluation and other implicit function calls**), and then the expression cannot be automatically evaluated.  
   
- Para atualizar o valor, clique no ícone de atualização ou pressione a barra de espaços. O depurador tenta reavaliar a expressão. Se o ícone de atualização apareceu porque a avaliação automática de propriedades e efeitos colaterais implícitos tiver foi desligada, a expressão pode ser avaliada.  
+ To refresh the value, click the refresh icon or press the spacebar. The debugger will try to reevaluate the expression. If the refresh icon appeared because automatic evaluation of properties and implicit side effects was turned off, the expression can be evaluated.  
   
- Se você vir um ícone que é um círculo com duas linhas onduladas semelhantes a cordas, a expressão não foi avaliada devido à dependência potencial entre threads. Em outras palavras, avaliar o código requer que outros threads em seu aplicativo sejam executados temporariamente. Quando você estiver no modo de interrupção, todos os threads em seu aplicativo normalmente estão parados. Permitir que outros threads sejam executados temporariamente pode ter inesperado efeitos sobre o estado do seu programa e faz com que o depurador ignorar eventos como pontos de interrupção e as exceções geradas nesses threads.  
+ If you see an icon that is a circle with two wavy lines that resemble threads, the expression was not evaluated because of a potential cross-thread dependency. In other words, evaluating the code requires other threads in your application to run temporarily. When you are in break mode, all threads in your application are typically stopped. Allowing other threads to run temporarily can have unexpected effects on the state of your program and causes the debugger to ignore events such as breakpoints and exceptions thrown on those threads.  
   
-##  <a name="bkmk_sideEffects"></a> Efeitos colaterais e expressões  
- Avaliar algumas expressões pode alterar o valor de uma variável ou afetar o estado do programa. Por exemplo, avaliar a expressão a seguir altera o valor de `var1`:  
+##  <a name="bkmk_sideEffects"></a> Side Effects and Expressions  
+ Evaluating some expressions can change the value of a variable or otherwise affect the state of your program. For example, evaluating the following expression changes the value of `var1`:  
   
 ```  
 var1 = var2  
 ```  
   
- Isso é chamado de um [efeito colateral](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)). Efeitos colaterais podem tornar a depuração mais difícil alterando o modo de que operação do seu programa.  
+ This is called  a [side effect](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)). Side effects can make debugging more difficult by changing the way your program operates.  
   
- Uma expressão que é conhecida por ter efeitos colaterais é avaliada apenas uma vez, quando você primeiro inseri\-la. Avaliações subseqüentes são desativadas. Manualmente, você pode substituir esse comportamento, clicando no ícone de atualização que aparece ao lado do valor.  
+ An expression that is known to have side effects is  evaluated only once, when you first enter it. Subsequent evaluations are disabled. You can manually override this behavior by clicking the update icon that appears next to the value.  
   
- Uma maneira de evitar todos os efeitos colaterais é desativar a avaliação automática de funções \(**Ferramentas \/ opções \/ depuração \/ habilitar avaliação de propriedades e outras chamadas de função implícitas**\).  
+ One way to avoid all side effects is to turn off automatic function evaluation (**Tools > Options > Debugging > Enable property evaluation and other implicit function calls**).  
   
- Quando a avaliação de propriedades ou chamadas de função implícitas é desativada, você pode forçar a avaliação usando o **CA** modificador de formato \(para c\# somente\). Consulte [Especificadores de formato em C\#](../debugger/format-specifiers-in-csharp.md).  
+ When evaluation of properties or implicit function calls is turned off, you can force evaluation by using the **ac** format modifier (for C# only). See [Format Specifiers in C#](../debugger/format-specifiers-in-csharp.md).  
   
-## Usando identificadores de objeto na janela Watch \(c\# e Visual Basic\)  
- Há momentos em que você deseja observar o comportamento de um objeto específico; Por exemplo, você talvez queira controlar um objeto referenciado por uma variável local depois que essa variável tiver saído do escopo. Em c\# e Visual Basic, você pode criar IDs para instâncias específicas de tipos de referência de objeto e usá\-los na janela de inspeção e em condições de ponto de interrupção. A ID do objeto é gerada, o common language runtime \(CLR\) serviços de depuração e associada ao objeto.  
+## <a name="bkmk_objectIds"></a> Using Object IDs in the Watch window (C# and Visual Basic)  
+ There are times when you want to observe the behavior of a specific object; for example, you might want to track an object referred to by a local variable after that variable has gone out of scope. In C# and Visual Basic, you can create object IDs for specific instances of reference types and use them in the Watch window and in breakpoint conditions. The object ID is generated by the common language runtime (CLR) debugging services and associated with the object.  
   
 > [!NOTE]
->  IDs de objeto criar referências fracas e não impede que o objeto seja coletado como lixo. Eles só são válidos para a sessão de depuração atual.  
+>  Object IDs create weak references, and do not prevent the object from being garbage collected. They are valid only for the current debugging session.  
   
- No código a seguir cria um método um `Person` usando uma variável local, mas você deseja descobrir o que o `Person`do nome é um método diferente:  
+ In the following code one method creates a `Person` using a local variable, but you want to find out what the `Person`'s name is in a different method:  
   
-```c#  
-class Person { public Person(string name) { Name = name; } public string Name { get; set; } } public class Program { List<Person> _people = new List<Person>(); public static void Main(string[] args) { MakePerson(); DoSomething(); } private static void MakePerson() { var p = new Person("Bob"); _people.Add(p); } private static void DoSomething() { // more processing Console.WriteLine("done"); } }  
+```CSharp  
+class Person  
+{  
+    public Person(string name)  
+    {  
+        Name = name;  
+    }  
+    public string Name { get; set; }  
+}  
+  
+public class Program  
+{  
+    List<Person> _people = new List<Person>();  
+    public static void Main(string[] args)  
+    {  
+        MakePerson();  
+        DoSomething();  
+    }  
+  
+    private static void MakePerson()  
+    {  
+        var p = new Person("Bob");  
+        _people.Add(p);  
+    }  
+  
+    private static void DoSomething()  
+    {  
+        // more processing  
+         Console.WriteLine("done");  
+    }  
+}  
   
 ```  
   
- Você pode adicionar uma referência à `Person` objeto o **inspeção** janela da seguinte maneira:  
+ You can add a reference to that `Person` object in the **Watch** window as follows:  
   
-1.  Defina um ponto de interrupção no código algum tempo depois que o objeto foi criado.  
+1.  Set a breakpoint in the code some time after the object has been created.  
   
-2.  Iniciar a depuração e quando a execução parar no ponto de interrupção, localize a variável de **locais** janela, clique sobre ela e selecione **Criar ID de objeto**.  
+2.  Start debugging, and when execution stops in the breakpoint, find the variable in the **Locals** window, right-click it, and select **Make Object ID**.  
   
-3.  Você deve ver um **$** mais um número no **locais** janela. Isso é o ID do objeto.  
+3.  You should see a **$** plus a number in the **Locals** window. This is the object ID.  
   
-4.  Adicione a ID de objeto para a janela de observação.  
+4.  Add the object ID to the Watch window.  
   
-5.  Defina um ponto de interrupção em que você deseja observar o comportamento do objeto.  No código acima, que seria no `DoSomething()` método.  
+5.  Set a breakpoint where you want to observe the object's behavior.  In the code above, that would be in the `DoSomething()` method.  
   
-6.  Continuar a depuração e execução parada no `DoSomething()` método, o **inspeção** janela exibe o `Person` objeto.  
+6.  Continue debugging, and when execution stops in the `DoSomething()` method, the **Watch** window displays the `Person` object.  
   
 > [!NOTE]
->  Se você deseja ver as propriedades do objeto, como `Person.Name` no exemplo acima, você deve habilitar avaliação da propriedade.  
+>  If you want to see the object's properties, such as `Person.Name` in the example above, you must have enabled property evaluation .  
   
-## Usando os registros na janela Watch \(C\+\+\)  
- Se você estiver depurando código nativo, você pode adicionar nomes de registro, bem como nomes de variáveis usando **$\< nome do registro \>** ou **@\< registrar nome \>**.  Para obter mais informações, consulte [Pseudovariáveis](../debugger/pseudovariables.md).  
+## <a name="using-registers-in-the-watch-window-c-only"></a>Using registers in the Watch window (C++ only)  
+ If you are debugging native code, you can add register names as well as variable names using **$\<register name>** or **@\<register name>**.  For more information, see [Pseudovariables](../debugger/pseudovariables.md).  
   
-## DynamicView e a janela de Observação  
- Algumas linguagens de script \(por exemplo, JavaScript ou Python\) usam dinâmico ou [digitação pato](https://en.wikipedia.org/wiki/Duck_typing), e linguagens .NET \(na versão 4.0 e posterior\) oferece suporte a objetos que são difíceis de observar usando as janelas de depuração normais, porque eles podem ter métodos e propriedades de tempo de execução que não podem ser exibidos.  
+## <a name="dynamicview-and-the-watch-window"></a>DynamicView and the Watch window  
+ Some scripting languages (e.g. JavaScript or Python) use dynamic or [duck typing](https://en.wikipedia.org/wiki/Duck_typing), and .NET languages (in version 4.0 and later) support objects that are difficult to observe using the normal debugging windows, because they may have runtime properties and methods that cannot be displayed.  
   
- Quando a janela de observação exibe um ou um objeto criado a partir de um tipo que implementa o [IDynamicMetaObjectProvider Interface](../Topic/IDynamicMetaObjectProvider%20Interface.md), o depurador adiciona um especial **exibição dinâmica**  nó para o **Autos** exibir. Esse nó mostra os membros dinâmicos do objeto dinâmico, mas não permite editar os valores dos membros.  
+ When the Watch window displays a or an object created from a type that implements the [IDynamicMetaObjectProvider Interface](http://msdn.microsoft.com/Library/e887a72d-ebe2-4253-a7e8-3d8d05154647), the debugger adds a special **Dynamic View**  node to the **Autos** display. This node shows the dynamic members of the dynamic object but does not allow editing of the member values.  
   
- Se clicar duas vezes qualquer filho de um **exibição dinâmica** e escolha **Adicionar inspeção**, o depurador vai inserir uma nova variável de inspeção que converte um objeto em um objeto dinâmico. Em outras palavras, **nome do objeto** torna\-se \(**objeto \(dinâmico\)\). Nome**.  
+ If you right-click any child of a **Dynamic View** and choose **Add Watch**, the debugger inserts a new watch variable that casts an object to a dynamic object. In other words, **object Name** becomes (**(dynamic)object).Name**.  
   
- Avaliar os membros de um **exibição dinâmica** pode ter efeitos colaterais. Para obter uma explicação dos efeitos colaterais, consulte [Efeitos colaterais e expressões](#bkmk_sideEffects). Para c\#, o depurador não reavalia automaticamente os valores mostrados na **exibição dinâmica** quando você depura em uma nova linha de código. Para Visual Basic, as expressões são adicionados por meio de **exibição dinâmica** são atualizados automaticamente.  
+ Evaluating the members of a **Dynamic View** can have side effects. For an explanation of what side effects are, see [Side Effects and Expressions](#bkmk_sideEffects). For C#, the debugger does not automatically reevaluate the values shown in the **Dynamic View** when you step to a new line of code. For Visual Basic, expressions added through the **Dynamic View** are automatically refreshed.  
   
- Para obter instruções sobre como atualizar os valores de exibição dinâmica, consulte [Atualizando valores de inspeção estão desatualizados](#bkmk_refreshWatch).  
+ For instructions about how to refresh the Dynamic View values, see [Refreshing Watch values that are out of date](#bkmk_refreshWatch).  
   
- Se você quiser exibir apenas a **exibição dinâmica** para um objeto, você pode usar o **dinâmico** especificador de formato:  
+ If you want to display only the **Dynamic View** for an object, you can use the **dynamic** format specifier:  
   
--   C\#: **ObjectName, dinâmico**  
+-   C#: **ObjectName, dynamic**  
   
 -   Visual Basic:: **$dynamic, ObjectName**  
   
- O **exibição dinâmica** também melhora a experiência de depuração para objetos COM. Quando o depurador encontrar um objeto COM envolvido no **ComObject**, ele adiciona um **exibição dinâmica** nó do objeto.  
+ The **Dynamic View** also enhances the debugging experience for COM objects. When the debugger encounters a COM object wrapped in **System.__ComObject**, it adds a **Dynamic View** node for the object.  
   
-## Consulte também  
- [Janelas do depurador](../debugger/debugger-windows.md)
+## <a name="see-also"></a>See Also  
+ [Debugger Windows](../debugger/debugger-windows.md)

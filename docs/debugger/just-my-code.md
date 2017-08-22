@@ -1,108 +1,124 @@
 ---
-title: "Apenas Meu C&#243;digo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Debug user code with Just My Code | Microsoft Docs
+ms.custom: 
+ms.date: 05/18/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f0df097-bbaf-46ad-9ad1-ef5f40435079
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Apenas Meu C&#243;digo
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 7022188e0771c19d5f6def0d4ac9f3a4f45576f7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Os desenvolvedores que usam linguagens do .NET Framework estão familiarizados com Just My Code recurso do depurador que as etapas de sistema, estrutura e outras chamadas de não usuário e recolhe essas chamadas nas janelas de pilha de chamada. Apenas meu código foi estendido para as linguagens C\+\+ e JavaScript. Este tópico descreve os detalhes do uso de Just My Code no .NET Framework, C\+\+ nativo e JavaScript projetos.  
+---
+# <a name="specify-whether-to-debug-only-user-code-using-just-my-code-in-visual-studio"></a>Specify whether to debug only user code using Just My Code in Visual Studio
+You can configure Visual Studio to automatically step over system, framework, and other non-user calls and collapse those calls in the call stack window. The feature that enables or disables this behavior is called *Just My Code*. This topic describes how to use Just My Code in C#, Visual Basic, C++, and JavaScript projects.
+
+For most programming languages, Just My Code is enabled by default.
   
-##  <a name="BKMK_Enable_or_disable_Just_My_Code"></a> Ativar ou desativar o Just My Code  
- Para ativar ou desativar o Just My Code, escolha **Opções e configurações** sobre o **Depurar** menu. No **depuração** \/ **geral** nó, marque ou desmarque **Habilitar Just My Code**.  
+##  <a name="BKMK_Enable_or_disable_Just_My_Code"></a> Enable or disable Just My Code  
+ To enable or disable Just My Code, choose the **Tools > Options** menu in Visual Studio. In the **Debugging** > **General** node, choose or clear **Enable Just My Code**.
   
- ![Enable Just My Code in the Options dialog box](../debugger/media/dbg_justmycode_options.png "DBG\_JustMyCode\_Options")  
-  
-> [!NOTE]
->  O **Habilitar Just My Code** configuração é uma configuração global que é aplicada a todos os projetos do Visual Studio em todos os idiomas.  
-  
-###  <a name="BKMK_Override_call_stack_filtering"></a> Substituir filtragem da pilha de chamada  
- Em exibições da pilha de chamadas, como as janelas pilha de chamadas e tarefas, apenas meu código recolhe o código não\-usuário em um quadro anotado rotulado `[External Code]`. Para exibir os quadros recolhidos, escolha **Mostrar código externo** no menu de contexto da pilha de chamadas exibir.  
+ ![Enable Just My Code in the Options dialog box](../debugger/media/dbg_justmycode_options.png "DBG_JustMyCode_Options")  
   
 > [!NOTE]
->  O **Mostrar código externo** configuração é salva para o criador de perfil do usuário atual. Ela é aplicada a todos os projetos em todos os idiomas que são abertos pelo usuário.  
+>  The **Enable Just My Code** setting is a global setting that is applied to all Visual Studio projects in all languages.  
   
-##  <a name="BKMK__NET_Framework_Just_My_Code"></a> Apenas meu código do .NET framework  
+###  <a name="BKMK_Override_call_stack_filtering"></a> Show non-user code in call stack views  
+ In views that show the call stack, such as the **Call Stack** and **Tasks** windows, Just My Code collapses non-user code into an annotated frame labeled `[External Code]`. To view the collapsed frames, choose **Show External Code** on the context menu of the call stack display.
+
+ ![Show External Code in the Call Stack Window](../debugger/media/dbg_justmycode_showexternalcode.png "DBG_JustMyCode_ShowExternalCode")
   
-###  <a name="BKMK_NET_User_and_non_user_code"></a> Código de não usuário e  
- Para distinguir código de usuário de código não\-usuário, Just My Code examina arquivos de símbolo \(. PDB\) e otimizações de programa. O depurador considera o código para ser o código não\-usuário quando o binário é otimizado ou quando o arquivo. PDB não está disponível.  
+> [!NOTE]
+>  The **Show External Code** setting is saved to the current user's profiler. It is applied to all projects in all languages that are opened by the user.
   
- Três atributos também afetam o que o depurador considera como meu código:  
+##  <a name="BKMK__NET_Framework_Just_My_Code"></a> .NET Framework Just My Code  
   
--   <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> informa o depurador que o código para que é aplicado não é meu código.  
+###  <a name="BKMK_NET_User_and_non_user_code"></a> User and non-user code  
+ To distinguish user code from non-user code, Just My Code looks at symbol (.pdb) files and program optimizations. The debugger considers code to be non-user code when the binary is optimized or when the .pdb file is not available.
   
--   <xref:System.Diagnostics.DebuggerHiddenAttribute> oculta o código do depurador, mesmo se Just My Code está desativado.  
+ Three attributes also affect what the debugger considers to be My Code:  
   
--   <xref:System.Diagnostics.DebuggerStepThroughAttribute> informa o depurador para percorrer o código que ele é aplicado, em vez de depurar o código.  
+-   <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> tells the debugger that the code it is applied to is not My Code.  
   
- Todos os demais códigos são considerados código de usuário.  
+-   <xref:System.Diagnostics.DebuggerHiddenAttribute> hides the code from the debugger, even if Just My Code is turned off.  
   
-###  <a name="BKMK_NET_Stepping_behavior"></a> Comportamento de depuração  
- Quando você **Step Into** \(atalho de teclado: F11\) código de não usuário, o depurador percorre o código para a próxima instrução do usuário. Quando você **Sair** \(teclado: Shift \+ F11\), o depurador executa a próxima linha do código do usuário. Se nenhum código de usuário for encontrado, a execução continua até que o aplicativo é encerrado, um ponto de interrupção é atingido ou ocorre uma exceção.  
+-   <xref:System.Diagnostics.DebuggerStepThroughAttribute> tells the debugger to step through the code it is applied to, rather than step into the code.  
   
-###  <a name="BKMK_NET_Breakpoint_behavior"></a> Comportamento de ponto de interrupção  
- Quando o Just My Code estiver habilitado, você pode escolher **Interromper tudo** \(teclado: Ctrl \+ Alt \+ Break\) e interromper a execução em um local onde não há nenhum código de usuário para exibir. Quando isso acontece, a janela de origem não é exibida. Se você, em seguida, escolha um comando de depuração, o depurador leva você para a próxima linha do código do usuário.  
+ All other code is considered to be user code.  
   
-###  <a name="BKMK_NET_Exception_behavior"></a> Comportamento de exceção  
- Se uma exceção não tratada ocorrer em código não\-usuário, o depurador interrompe na linha de código de usuário em que a exceção foi gerada.  
+###  <a name="BKMK_NET_Stepping_behavior"></a> Stepping behavior  
+ When you **Step Into** (Keyboard shortcut: F11) non-user code, the debugger steps over the code to the next user statement. When you **Step Out** (Keyboard: Shift + F11), the debugger runs to the next line of user code. If no user code is encountered, then execution continues until the app exits, a breakpoint is hit, or an exception occurs.  
   
- Se as exceções de primeira chance são habilitadas para a exceção, a linha de código do usuário é realçada em verde. A pilha de chamadas exibe um quadro anotado rotulado **\[código externo\]**.  
+###  <a name="BKMK_NET_Breakpoint_behavior"></a> Breakpoint behavior  
+ When Just My Code is enabled, you can choose **Break All** (Keyboard: Ctrl + Alt + Break) and stop execution at a location where there is no user code to display. When this happens, the No Source window is displayed. If you then choose a Step command, the debugger takes you to the next line of user code.  
   
-##  <a name="BKMK_C___Just_My_Code"></a> Apenas meu código do C\+\+  
+###  <a name="BKMK_NET_Exception_behavior"></a> Exception behavior  
+ If an unhandled exception occurs in non-user code, the debugger breaks at the line in user code where the exception was generated.  
   
-###  <a name="BKMK_CPP_User_and_non_user_code"></a> Código de não usuário e  
- C\+\+ Just My Code é diferente do .NET Framework e o JavaScript Just My Code, como o comportamento de depuração é independente do comportamento da pilha de chamada.  
+ If first chance exceptions are enabled for the exception, the user-code line is highlighted in green. The call stack displays an annotated frame labeled **[External Code]**.  
   
- **Pilhas de chamadas**  
+##  <a name="BKMK_C___Just_My_Code"></a> C++ Just My Code  
   
- Por padrão, o depurador considera estas funções código de não usuário nas janelas de pilha de chamada:  
+###  <a name="BKMK_CPP_User_and_non_user_code"></a> User and non-user code  
+ C++ Just My Code is different than .NET Framework and JavaScript Just My Code because the stepping behavior is independent of the call stack behavior.  
   
--   Funções com informações de origem retiradas no respectivo arquivo de símbolos.  
+ **Call stacks**  
   
--   Funções de onde os arquivos de símbolos indicam que não há nenhum arquivo de origem correspondente para o quadro de pilha.  
+ By default, the debugger considers these functions to be non-user code in call stack windows:  
   
--   Funções especificadas na `*.natjmc` arquivos de `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` pasta.  
+-   Functions with stripped source information in their symbols file.  
   
- **Passo a passo**  
+-   Functions where the symbol files indicate that there is no source file corresponding to the stack frame.  
   
- Por padrão, somente as funções especificadas em `*.natstepfilter` arquivos de `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` pasta são considerados código não\-usuário.  
+-   Functions specified in `*.natjmc` files in the `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` folder.  
   
- Você pode criar seu próprio `.natstepfilter` e `.natjmc` para personalizar a depuração e chamar o comportamento da janela de pilha no `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`.  
+ **Stepping**  
   
-###  <a name="BKMK_CPP_Stepping_behavior"></a> Comportamento de depuração  
- Quando você **Step Into** \(atalho de teclado: F11\) código não\-usuário do código do usuário, o depurador percorre o código para a próxima linha de código do usuário. Quando você **Sair** \(teclado: Shift \+ F11\), o depurador executa a próxima linha do código do usuário. Se nenhum código de usuário for encontrado, a execução continua até que o aplicativo é encerrado, um ponto de interrupção é atingido ou ocorre uma exceção.  
+ By default, only functions specified in `*.natstepfilter` files in the `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` folder are considered non-user code.  
   
- Se o depurador for interrompido no código de não usuário \(por exemplo, se um comando interromper tudo parar em código não\-usuário\), depuração continua no código não\-usuário.  
+ You can create your own `.natstepfilter` and `.natjmc` to customize the stepping and call stack window behavior in the `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`.  
   
-###  <a name="BKMK_CPP_Exception_behavior"></a> Comportamento de exceção  
- Quando o depurador atinge uma exceção, ele irá parar na exceção independentemente de ser em usuário ou código não\-usuário. O **sem tratamento do usuário** opções no **exceções** caixa de diálogo são ignorados.  
+###  <a name="BKMK_CPP_Stepping_behavior"></a> Stepping behavior  
+ When you **Step Into** (Keyboard shortcut: F11) non-user code from user code, the debugger steps over the code to the next line of user-code. When you **Step Out** (Keyboard: Shift + F11), the debugger runs to the next line of user code. If no user code is encountered, then execution continues until the app exits, a breakpoint is hit, or an exception occurs.  
   
-###  <a name="BKMK_CPP_Customize_stepping_behavior"></a> Personalizar o comportamento de depuração  
- Você pode especificar funções para percorrer listando\-os como código de não usuário em `*.natstepfilter` arquivos.  
+ If the debugger breaks in non-user code (for example, if a Break All command stops in non-user code), stepping continues in the non-user code.  
   
--   Para especificar o código de não usuário para todos os usuários do computador do Visual Studio, adicione o arquivo. natstepfilter para o `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` pasta.  
+###  <a name="BKMK_CPP_Exception_behavior"></a> Exception behavior  
+ When the debugger hits an exception, it stops on the exception regardless of whether it is in user or non-user code. The **User-unhandled** options in the **Exceptions** dialog box are ignored.  
   
--   Para especificar o código de não usuário para um usuário individual, adicione o arquivo. natstepfilter para o `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` pasta.  
+###  <a name="BKMK_CPP_Customize_stepping_behavior"></a> Customize stepping behavior  
+ You can specify functions to step over by listing them as non-user code in `*.natstepfilter` files.  
   
- os arquivos. natstepfilter são arquivos xml com esta sintaxe:  
+-   To specify non-user code for all users of the Visual Studio machine, add the .natstepfilter file to the `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` folder.  
+  
+-   To specify non-user code for an individual user, add the .natstepfilter file to the `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` folder.  
+  
+ .natstepfilter files are xml files with this syntax:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -120,21 +136,21 @@ Os desenvolvedores que usam linguagens do .NET Framework estão familiarizados c
   
 ```  
   
-|Elemento|Descrição|  
-|--------------|---------------|  
-|Função|Obrigatório. Especifica uma ou mais funções como funções de não usuário.|  
-|`Name`|Obrigatório. Especificando o nome completo da função para fazer a correspondência de expressão regular formatada como uma ECMA\-262. Por exemplo:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> informa o depurador que todos os métodos `MyNS::MyClass` devem ser considerados código não\-usuário. A correspondência diferencia maiúsculas de minúsculas.|  
-|`Module`|Opcional. Especificando o caminho completo para o módulo que contém a função de expressão regular formatada como uma ECMA\-262. A correspondência diferencia maiúsculas de minúsculas.|  
-|`Action`|Obrigatório. Um desses valores diferenciam maiúsculas de minúsculas:<br /><br /> -   `NoStepInto`  – informa o depurador para depurar a função correspondente.<br />-   `StepInto`  – informa o depurador para percorrer funções correspondentes, substituindo qualquer outro `NoStepInto` pelas funções correspondentes.|  
+|Element|Description|  
+|-------------|-----------------|  
+|Function|Required. Specifies one or more functions as non-user functions.|  
+|`Name`|Required. An ECMA-262 formatted regular expression specifying the full function name to match. For example:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> tells the debugger that all methods in `MyNS::MyClass` are to be considered non-user code. The match is case-sensitive.|  
+|`Module`|Optional. An ECMA-262 formatted regular expression specifying the full path to the module containing the function. The match is case-insensitive.|  
+|`Action`|Required. One of these case-sensitive values:<br /><br /> -   `NoStepInto`  - tells the debugger to step over the matched function.<br />-   `StepInto`  - tells the debugger to step into the matched functions, overriding any other `NoStepInto` for the matched functions.|  
   
-###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a> Personalizar comportamento da pilha de chamada  
- Você pode especificar módulos, arquivos de origem e funções para serem tratados como código de não usuário em pilhas de chamadas especificando\-os em `*.natjmc` arquivos.  
+###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a> Customize call stack behavior  
+ You can specify modules, source files, and functions to treat as non-user code in call stacks by specifying them in `*.natjmc` files.  
   
--   Para especificar o código de não usuário para todos os usuários do computador do Visual Studio, adicione o arquivo. natjmc para o `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` pasta.  
+-   To specify non-user code for all users of the Visual Studio machine, add the .natjmc file to the `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` folder.  
   
--   Para especificar o código de não usuário para um usuário individual, adicione o arquivo. natjmc para o `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` pasta.  
+-   To specify non-user code for an individual user, add the .natjmc file to the `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` folder.  
   
- os arquivos. natjmc são arquivos xml com esta sintaxe:  
+ .natjmc files are xml files with this syntax:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -156,103 +172,103 @@ Os desenvolvedores que usam linguagens do .NET Framework estão familiarizados c
   
 ```  
   
- **Atributos do elemento de módulo**  
+ **Module element attributes**  
   
-|Atributo|Descrição|  
-|--------------|---------------|  
-|`Name`|Obrigatório. O caminho completo do módulo ou módulos. Você pode usar os caracteres curinga do Windows `?` \(zero ou um caractere\) e `*` \(zero ou mais caracteres\). Por exemplo,<br /><br /> `<Module Name=”?:\3rdParty\UtilLibs\*” />`<br /><br /> informa o depurador para tratar todos os módulos no `\3rdParty\UtilLibs` em qualquer unidade como código externo.|  
-|`Company`|Opcional. O nome da empresa que publica o módulo que está incorporado no arquivo executável. Você pode usar esse atributo para resolver a ambiguidade dos módulos.|  
+|Attribute|Description|  
+|---------------|-----------------|  
+|`Name`|Required. The full path of the module or modules. You can use the Windows wildcard characters `?` (zero or one character) and `*` (zero or more characters). For example,<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> tells the debugger to treat all modules in `\3rdParty\UtilLibs` on any drive as external code.|  
+|`Company`|Optional. The name of the company that publishes the module that is embedded in the executable file. You can use this attribute to disambiguate the modules.|  
   
- **Atributos do elemento de arquivo**  
+ **File element attributes**  
   
-|Atributo|Descrição|  
-|--------------|---------------|  
-|`Name`|Obrigatório. O caminho completo do arquivo de origem ou arquivos a serem tratados como código externo. Você pode usar os caracteres curinga do Windows `?` e `*` ao especificar o caminho.|  
+|Attribute|Description|  
+|---------------|-----------------|  
+|`Name`|Required. The full path of the source file or files to treat as external code. You can use the Windows wildcard characters `?` and `*` when specifying the path.|  
   
- **Atributos do elemento de função**  
+ **Function element attributes**  
   
-|Atributo|Descrição|  
-|--------------|---------------|  
-|`Name`|Obrigatório. O nome totalmente qualificado da função a ser tratados como código externo.|  
-|`Module`|Opcional. O nome ou o caminho completo para o módulo que contém a função. Você pode usar esse atributo para resolver a ambiguidade de funções com o mesmo nome.|  
-|`ExceptionImplementation`|Quando definido como `true`, a pilha de chamadas exibe a função que lançou a exceção em vez dessa função.|  
+|Attribute|Description|  
+|---------------|-----------------|  
+|`Name`|Required. The fully qualified name of the function to treat as external code.|  
+|`Module`|Optional. The name or full path to the module that contains the function. You can use this attribute to disambiguate functions with the same name.|  
+|`ExceptionImplementation`|When set to `true`, the call stack displays the function that threw the exception rather than this function.|  
   
-##  <a name="BKMK_JavaScript_Just_My_Code"></a> Apenas meu código do JavaScript  
+##  <a name="BKMK_JavaScript_Just_My_Code"></a> JavaScript Just My Code  
   
-###  <a name="BKMK_JS_User_and_non_user_code"></a> Código de não usuário e  
- **Classificações de código**  
+###  <a name="BKMK_JS_User_and_non_user_code"></a> User and non-user code  
+ **Code classifications**  
   
- JavaScript Just My Code controla a exibição de pilha de revisão e chame categorizando o código em uma destas classificações:  
+ JavaScript Just My Code controls stepping and call stack display by categorizing code in one of these classifications:  
   
 |||  
 |-|-|  
-|**MyCode**|Código do usuário que você possui e controla.|  
-|**LibraryCode**|Código não\-usuário de bibliotecas que você usa regularmente e seu aplicativo depende para funcionar corretamente \(por exemplo WinJS ou jQuery\).|  
-|**UnrelatedCode**|Código de não usuário que pode ser executado no seu aplicativo, mas você não possui e seu aplicativo não depende diretamente para funcionar corretamente \(por exemplo, o SDK de publicidade que exibe anúncios\). Em projetos da Windows Store, qualquer código que é carregado no seu aplicativo de um URI HTTP ou HTTPS também é considerado UnrelatedCode.|  
+|**MyCode**|User code that you own and control.|  
+|**LibraryCode**|Non-user code from libraries that you use regularly and your application relies on to function correctly (for example WinJS or jQuery).|  
+|**UnrelatedCode**|Non-user code that could be running in your application, but you don't own it and your application doesn't directly rely on it to function correctly. (For example, this could include an advertising SDK that displays ads.) In Windows Store projects, any code that is loaded into your app from an HTTP or HTTPS URI is also considered UnrelatedCode.|  
   
- O depurador do JavaScript classifica automaticamente estes tipos de código:  
+ The JavaScript debugger automatically classifies these types of code:  
   
--   Script que é executado passando uma cadeia de caracteres para o host fornecido `eval` função é classificada como **MyCode**.  
+-   Script that is executed by passing a string to the host-provided `eval` function is classified as **MyCode**.  
   
--   Script que é executado passando uma cadeia de caracteres para o `Function` construtor é classificado como **LibraryCode**.  
+-   Script that is executed by passing a string to the `Function` constructor is classified as **LibraryCode**.  
   
--   O script que está contido em uma referência da estrutura, como WinJS ou o SDK do Azure, é classificado como **LibraryCode**.  
+-   Script that is contained in a framework reference, such as WinJS or the Azure SDK, is classified as **LibraryCode**.  
   
--   Script que é executado passando uma cadeia de caracteres para o `setTimeout`, `setImmediate`, ou `setInterval` é classificado como **UnrelatedCode**.  
+-   Script that is executed by passing a string to the `setTimeout`, `setImmediate`, or `setInterval` functions is classified as **UnrelatedCode**.  
   
--   O `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` Especifica outro código não\-usuário e para todos os projetos de JavaScript do Visual Studio.  
+-   The `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` specifies other user and non-user code for all Visual Studio JavaScript projects.  
   
- Você pode alterar as classificações padrão e classificar arquivos específicos e urls adicionando um arquivo. JSON chamado `mycode.json` para a pasta raiz de um projeto.  
+ You can modify the default classifications and classify specific files and urls by add a .json file named `mycode.json` to the root folder of a project.  
   
- Todos os demais códigos são classificados como **MyCode**.  
+ All other code is classified as **MyCode**.  
   
-###  <a name="BKMK_JS_Stepping_behavior"></a> Comportamento de depuração  
+###  <a name="BKMK_JS_Stepping_behavior"></a> Stepping behavior  
   
--   Se uma função não for um usuário \(**MyCode**\) código, **Step Into** \(atalho de teclado: F11\) se comporta como **passar** \(teclado: F10\).  
+-   If a function is not user (**MyCode**) code, **Step Into** (Keyboard shortcut: F11) behaves as **Step Over** (Keyboard: F10).  
   
--   Se uma etapa começar em não\-usuário \(**LibraryCode** ou **UnrelatedCode**\) de código, em seguida, depuração temporária se comportará como se Just My Code não está habilitado. Assim que você percorrer voltar ao código do usuário, Just My Code revisão é reativado.  
+-   If a step begins in non-user (**LibraryCode** or **UnrelatedCode**) code, then stepping temporarily behaves as if Just My Code is not enabled. When you step back to user code, Just My Code stepping is re-enabled.  
   
--   Quando uma etapa nos resultados de código do usuário em deixar o contexto de execução atual \(por exemplo, executar uma etapa na última linha de um manipulador de eventos\), o depurador pára na próxima linha do código do usuário executada. Por exemplo, se um retorno de chamada é executado em **LibraryCode** código o depurador continua até que a próxima linha de código do usuário seja executada.  
+-   When a step in user code results in leaving the current execution context (such as doing a step on the last line of an event handler), the debugger stops at the next executed line of user code. For example, if a callback executes in **LibraryCode** code the debugger continues until the next line of user code executes.
   
--   **Step Out** \(teclado: Shift \+ F11\) pára na próxima linha do código do usuário. Se nenhum código de usuário for encontrado, a execução continua até que o aplicativo é encerrado, um ponto de interrupção é atingido ou ocorre uma exceção.  
+-   **Step Out** (Keyboard: Shift + F11) stops on the next line of user code. If no user code is encountered, then execution continues until the app exits, a breakpoint is hit, or an exception occurs.  
   
-###  <a name="BKMK_JS_Breakpoint_behavior"></a> Comportamento de ponto de interrupção  
+###  <a name="BKMK_JS_Breakpoint_behavior"></a> Breakpoint behavior  
   
--   Pontos de interrupção definidos em qualquer código serão sempre atingidos independentemente da classificação do código  
+-   Breakpoints set in code will always be hit regardless of the classification of that code  
   
--   Se o `debugger` palavra\-chave é encontrado em:  
+-   If the `debugger` keyword is encountered in:  
   
-    -   **LibraryCode** código, o depurador sempre interromperá.  
+    -   **LibraryCode** code, the debugger always breaks.  
   
-    -   **UnrelatedCode** código, o depurador não pára.  
+    -   **UnrelatedCode** code, the debugger doesn't stop.  
   
-###  <a name="BKMK_JS_Exception_behavior"></a> Comportamento de exceção  
- Se uma exceção não tratada ocorrer em:  
+###  <a name="BKMK_JS_Exception_behavior"></a> Exception behavior  
+ If an unhandled exception occurs in:  
   
--   **MyCode** ou **LibraryCode** código, o depurador sempre interromperá.  
+-   **MyCode** or **LibraryCode** code, the debugger always breaks.  
   
--   **UnrelatedCode** código, e **MyCode** ou **LibraryCode** código está na pilha de chamadas, o depurador será interrompido.  
+-   **UnrelatedCode** code, and **MyCode** or **LibraryCode** code is on the call stack, the debugger breaks.  
   
- Se as exceções de primeira chance são habilitadas para a exceção na caixa de diálogo exceções e a exceção é lançada **LibraryCode** ou **UnrelatedCode** código:  
+ If first chance exceptions are enabled for the exception on the Exceptions dialog box, and the exception is thrown in **LibraryCode** or **UnrelatedCode** code:  
   
--   Se a exceção for tratada, o depurador não será interrompido.  
+-   If the exception is handled, the debugger doesn't break.  
   
--   Se a exceção não for tratada, o depurador interrompe.  
+-   If the exception is not handled, the debugger breaks.  
   
-###  <a name="BKMK_JS_Customize_Just_My_Code"></a> Personalizar apenas meu código  
- Para categorizar o usuário e código de não usuário para um único projeto do Visual Studio, adicione um arquivo. JSON chamado `mycode.json` para a pasta raiz do projeto.  
+###  <a name="BKMK_JS_Customize_Just_My_Code"></a> Customize Just My Code  
+ To categorize user and non-user code for a single Visual Studio project, add a .json file named `mycode.json` to the root folder of the project.  
   
- As classificações são executadas nesta ordem:  
+ Classifications are performed in this order:  
   
-1.  Classificações padrão  
+1.  Default classifications  
   
-2.  Classificações no `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` arquivo  
+2.  Classifications in the `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` file  
   
-3.  Classificações no `mycode. json` arquivo do projeto atual.  
+3.  Classifications in the `mycode. json` file of the current project.  
   
- Cada etapa de classificação substitui as etapas anteriores. Um arquivo. JSON não é necessário listar todos os pares de chave\-valor e o **MyCode**, **bibliotecas**, e **Unrelated** valores podem ser matrizes vazias.  
+ Each classification step overrides the previous steps. A .json file does not need to list all key value pairs, and the **MyCode**, **Libraries**, and **Unrelated** values can be empty arrays.  
   
- Meus arquivos. JSON de código usam a seguinte sintaxe:  
+ My Code .json files use this syntax:  
   
 ```json  
 {  
@@ -260,50 +276,50 @@ Os desenvolvedores que usam linguagens do .NET Framework estão familiarizados c
     "Function" : "Classification",  
     "ScriptBlock" : "Classification",  
     "MyCode" : [  
-        "UrlOrFileSpec”,  
+        "UrlOrFileSpec",  
         . . .  
-        "UrlOrFileSpec”  
+        "UrlOrFileSpec"  
     ],  
     "Libraries" : [  
-        "UrlOrFileSpec”,  
+        "UrlOrFileSpec",  
         . .  
-        "UrlOrFileSpec”  
+        "UrlOrFileSpec"  
     ],  
     "Unrelated" : [  
-        "UrlOrFileSpec”,  
+        "UrlOrFileSpec",  
         . . .  
-        "UrlOrFileSpec”  
+        "UrlOrFileSpec"  
     ]  
 }  
   
 ```  
   
- **Eval, Function e ScriptBlock**  
+ **Eval, Function, and ScriptBlock**  
   
- O **Eval**, **função**, e **ScriptBlock** pares chave\-valor determinam como dinamicamente código gerado é classificado.  
-  
-|||  
-|-|-|  
-|**Eval**|Script que é executado passando uma cadeia de caracteres para o host fornecido `eval` função. Por padrão, o script Eval é classificado como **MyCode**.|  
-|**Função**|Script que é executado passando uma cadeia de caracteres para o `Function` construtor. Por padrão, o script Function é classificado como **LibraryCode**.|  
-|**ScriptBlock**|Script que é executado passando uma cadeia de caracteres para o `setTimeout`, `setImmediate`, ou `setInterval` funções. Por padrão, o script ScriptBlock é classificado como **UnrelatedCode**.|  
-  
- Você pode alterar o valor a uma dessas palavras\-chave:  
-  
--   `MyCode`  classifica o script como **MyCode**.  
-  
--   `Library`  classifica o script como **LibraryCode**.  
-  
--   `Unrelated`  classifica o script como **UnrelatedCode**.  
-  
- **MyCode, Libraries e não relacionados**  
-  
- O **MyCode**, **bibliotecas**, e **Unrelated** pares chave\-valor especificam as urls ou arquivos que você deseja incluir em uma classificação:  
+ The **Eval**, **Function**, and **ScriptBlock** key value pairs determine how dynamically generated code is classified.  
   
 |||  
 |-|-|  
-|**MyCode**|Uma matriz de urls ou arquivos que são classificados como **MyCode**.|  
-|**Libraries**|Uma matriz de urls ou arquivos que são classificados como **LibraryCode**.|  
-|**Não relacionados**|Uma matriz de urls ou arquivos que são classificados como **UnrelatedCode**.|  
+|**Eval**|Script that is executed by passing a string to the host-provided `eval` function. By default, Eval script is classified as **MyCode**.|  
+|**Function**|Script that is executed by passing a string to the `Function` constructor. By default, Function script is classified as **LibraryCode**.|  
+|**ScriptBlock**|Script that is executed by passing a string to the `setTimeout`, `setImmediate`, or `setInterval` functions. By default, ScriptBlock script is classified as **UnrelatedCode**.|  
   
- A cadeia de caracteres de url ou o arquivo pode conter um ou mais `*` caracteres, que correspondem a zero ou mais caracteres.`*` é o equivalente da expressão regular `.*`.
+ You can change the value to one of these keywords:  
+  
+-   `MyCode`  classifies the script as **MyCode**.  
+  
+-   `Library`  classifies the script as **LibraryCode**.  
+  
+-   `Unrelated`  classifies the script as **UnrelatedCode**.  
+  
+ **MyCode, Libraries, and Unrelated**  
+  
+ The **MyCode**, **Libraries**, and **Unrelated** key value pairs specify the urls or files that you want to include in a classification:  
+  
+|||  
+|-|-|  
+|**MyCode**|An array of urls or files that are classified as **MyCode**.|  
+|**Libraries**|An array of urls or files that are classified as **LibraryCode**.|  
+|**Unrelated**|An array of urls or files that are classified as **UnrelatedCode**.|  
+  
+ The url or file string can contain one or more `*` characters, which match zero or more characters. `*` is the equivalent of the regular expression `.*`.

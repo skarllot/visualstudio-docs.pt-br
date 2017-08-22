@@ -1,131 +1,148 @@
 ---
-title: "Como disparar eventos de suspens&#227;o, retomada e segundo plano para aplicativos da Windows Store no Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.background_task_activate_failure"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: How to trigger suspend, resume, and background events for Windows Store apps in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.background_task_activate_failure
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 824ff3ca-fedf-4cf5-b3e2-ac8dc82d40ac
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Como disparar eventos de suspens&#227;o, retomada e segundo plano para aplicativos da Windows Store no Visual Studio
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pt-br
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: f1ec5363d5561fbca1a706831e4d4da7e935b48f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Quando você não está depurando, o **Gerenciamento de Vida Útil de Processos** \(PLM\) do Windows controla o estado da execução de seu aplicativo, iniciando, suspendendo, retomando e encerrando o aplicativo em resposta às ações do usuário e ao estado do dispositivo.  Quando você está depurando, o Windows desabilita esses eventos de ativação.  Este tópico descreve como acionar esses eventos no depurador.  
+---
+# <a name="how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio"></a>How to trigger suspend, resume, and background events for Windows Store apps in Visual Studio
+When you are not debugging, Windows **Process Lifetime Management** (PLM) controls the execution state of your app—starting, suspending, resuming, and terminating the app in response to user actions and the state of the device. When you are debugging, Windows disables these activation events. This topic describes how to fire these events in the debugger.  
   
- Este tópico também descreve como depurar **tarefas em segundo plano**.  Essas tarefas permitem que você execute certas operações em um processo em segundo plano, mesmo quando o aplicativo não está sendo executado.  Você pode usar o depurador para colocar o aplicativo no modo de depuração e depois, sem iniciar a interface de usuário, iniciar e depurar a tarefa em segundo plano.  
+ This topic also describes how to debug **Background tasks**. Background tasks enable you to perform certain operations in a background process, even when you app is not running. You can use the debugger to put your app in debug mode and then— without starting the UI—start and debug the background task.  
   
- Para obter mais informações sobre o Gerenciamento de Vida Útil de Processos e as tarefas em segundo plano, consulte [Launching, resuming, and multitasking](http://msdn.microsoft.com/pt-br/04307b1b-05af-46a6-b639-3f35e297f71b).  
+ For more information about Process Lifetime Management and background tasks see [Launching, resuming, and multitasking](http://msdn.microsoft.com/en-us/04307b1b-05af-46a6-b639-3f35e297f71b).  
   
-##  <a name="BKMK_In_this_topic"></a> Neste tópico  
- [Disparar eventos do Gerenciamento de Vida Útil de Processos](#BKMK_Trigger_Process_Lifecycle_Management_events)  
+##  <a name="BKMK_In_this_topic"></a> In this topic  
+ [Trigger Process Lifetime Management events](#BKMK_Trigger_Process_Lifecycle_Management_events)  
   
- [Disparar tarefas em segundo plano](#BKMK_Trigger_background_tasks)  
+ [Trigger background tasks](#BKMK_Trigger_background_tasks)  
   
--   [Disparar um evento de tarefa em segundo plano por meio de uma sessão de depuração padrão](#BKMK_Trigger_a_background_task_event_from_a_standard_debug_session)  
+-   [Trigger a background task event from a standard debug session](#BKMK_Trigger_a_background_task_event_from_a_standard_debug_session)  
   
--   [Disparar uma tarefa em segundo plano quando o aplicativo não está sendo executado](#BKMK_Trigger_a_background_task_when_the_app_is_not_running)  
+-   [Trigger a background task when the app is not running](#BKMK_Trigger_a_background_task_when_the_app_is_not_running)  
   
- [Disparar eventos e tarefas em segundo plano do Gerenciamento de Vida Útil de Processos de um aplicativo instalado](#BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app)  
+ [Trigger Process Lifetime Management events and background tasks from an installed app](#BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app)  
   
- [Diagnosticando erros de ativação de tarefas em segundo plano](#BKMK_Diagnosing_background_task_activation_errors)  
+ [Diagnosing background task activation errors](#BKMK_Diagnosing_background_task_activation_errors)  
   
-##  <a name="BKMK_Trigger_Process_Lifecycle_Management_events"></a> Disparar eventos do Gerenciamento de Vida Útil de Processos  
- O Windows pode suspender o aplicativo quando o usuário sai dele ou quando o Windows entra em um estado de baixo consumo de energia.  Você pode responder ao evento `Suspending` para salvar dados relevantes do aplicativo e do usuário em um armazenamento persistente e para liberar recursos.  Quando um aplicativo é retomado do estado **Suspenso**, ele entra no estado **Em Execução** e continua de onde estava quando foi suspenso.  Você pode responder ao evento `Resuming` para restaurar ou atualizar o estado do aplicativo e recuperar recursos.  
+##  <a name="BKMK_Trigger_Process_Lifecycle_Management_events"></a> Trigger Process Lifetime Management events  
+ Windows can suspend your app when the user switches away from it or when Windows enters a low power state. You can respond to the `Suspending` event to save relevant app and user data to persistent storage and to release resources. When an app is resumed from the **Suspended** state, it enters the **Running** state and continues from where it was when it was suspended. You can respond to the `Resuming` event to restore or refresh application state and reclaim resources.  
   
- Embora o Windows tente manter o máximo possível de aplicativos suspensos na memória, ele poderá terminar o aplicativo se não houver recursos suficientes para mantê\-lo na memória.  Um usuário também pode fechar o aplicativo explicitamente.  Não há nenhum evento especial para indicar que o usuário fechou um aplicativo.  
+ Although Windows attempts to keep as many suspended apps in memory as possible, Windows can terminate your app if there aren't enough resources to keep it in memory. A user can also explicitly close your app. There's no special event to indicate that the user has closed an app.  
   
- No depurador do Visual Studio, você pode manualmente suspender, retomar e terminar seus aplicativos para depurar eventos do ciclo de vida do processo.  Para depurar um evento do ciclo de vida do processo:  
+ In the Visual Studio debugger, you can manually suspend, resume, and terminate your apps to debug process lifecycle events. To debug a process lifecycle event:  
   
-1.  Defina um ponto de interrupção no manipulador do evento que você deseja depurar.  
+1.  Set a breakpooint in the handler of the event that you want to debug.  
   
-2.  Pressione **F5** para iniciar a depuração.  
+2.  Press **F5** to start debugging.  
   
-3.  Na barra de ferramentas **Local do Depurador**, escolha o evento que você deseja acionar:  
+3.  On the **Debug Location** toolbar, choose the event that you want to fire:  
   
-     ![Suspender, continuar, terminar e tarefas em segundo plano](~/debugger/media/dbg_suspendresumebackground.png "DBG\_SuspendResumeBackground")  
+     ![Suspend, resume, terminate, and background tasks](../debugger/media/dbg_suspendresumebackground.png "DBG_SuspendResumeBackground")  
   
-     Observe que **Suspender e desligar** fecha o aplicativo e encerra a sessão de depuração.  
+     Note that **Suspend and terminate** closes the app and ends the debug session.  
   
-##  <a name="BKMK_Trigger_background_tasks"></a> Disparar tarefas em segundo plano  
- Qualquer aplicativo pode registrar uma tarefa em segundo plano para responder a determinados eventos do sistema, mesmo quando o aplicativo não está sendo executado.  As tarefas em segundo plano não podem executar o código que atualiza diretamente a interface do usuário; em vez disso, elas mostram informações para o usuário com atualizações de bloco, atualizações de notificação e notificações do sistema.  Para obter mais informações, consulte [Supporting your app with background tasks](http://msdn.microsoft.com/pt-br/4c7bb148-eb1f-4640-865e-41f627a46e8e).  
+##  <a name="BKMK_Trigger_background_tasks"></a> Trigger background tasks  
+ Any app can register a background task to respond to certain system events, even when the app is not running. Background tasks can't run code that directly updates the UI; instead, they show information to the user with tile updates, badge updates, and toast notifications. For more information, see [Supporting your app with background tasks](http://msdn.microsoft.com/en-us/4c7bb148-eb1f-4640-865e-41f627a46e8e)  
   
- Você pode disparar os eventos que iniciam as tarefas em segundo plano do aplicativo por meio do depurador.  
+ You can trigger the events that start background tasks for your app from the debugger.  
   
 > [!NOTE]
->  O depurador só pode disparar os eventos que não contêm dados, como os que indicam uma alteração de estado no dispositivo.  Você precisa disparar manualmente as tarefas em segundo plano que exigem a entrada do usuário ou outros dados.  
+>  The debugger can trigger only those events that do not contain data, such as events that indicate a change of state in the device. You have to manually trigger background tasks that require user input or other data.  
   
- A maneira mais realística de disparar um evento de tarefa em segundo plano é quando o aplicativo não está sendo executado.  No entanto, também é possível disparar o evento em uma sessão de depuração padrão.  
+ The most realistic way to trigger a background task event is when your app is not running. However, triggering the event in a standard debugging session is also supported.  
   
-###  <a name="BKMK_Trigger_a_background_task_event_from_a_standard_debug_session"></a> Disparar um evento de tarefa em segundo plano por meio de uma sessão de depuração padrão  
+###  <a name="BKMK_Trigger_a_background_task_event_from_a_standard_debug_session"></a> Trigger a background task event from a standard debug session  
   
-1.  Defina um ponto de interrupção no código de tarefa em segundo plano que você deseja depurar.  
+1.  Set a breakpoint in the background task code that you want to debug.  
   
-2.  Pressione **F5** para iniciar a depuração.  
+2.  Press **F5** to start debugging.  
   
-3.  Na lista de eventos na barra de ferramentas **Local do Depurador**, escolha a tarefa em segundo plano que você deseja iniciar.  
+3.  From the events list on the **Debug Location** toolbar, choose the background task that you want to start.  
   
-     ![Suspender, continuar, terminar e tarefas em segundo plano](~/debugger/media/dbg_suspendresumebackground.png "DBG\_SuspendResumeBackground")  
+     ![Suspend, resume, terminate, and background tasks](../debugger/media/dbg_suspendresumebackground.png "DBG_SuspendResumeBackground")  
   
-###  <a name="BKMK_Trigger_a_background_task_when_the_app_is_not_running"></a> Disparar uma tarefa em segundo plano quando o aplicativo não está sendo executado  
+###  <a name="BKMK_Trigger_a_background_task_when_the_app_is_not_running"></a> Trigger a background task when the app is not running  
   
-1.  Defina um ponto de interrupção no código de tarefa em segundo plano que você deseja depurar.  
+1.  Set a breakpoint in the background task code that you want to debug.  
   
-2.  Abra a página de propriedades de depuração do projeto de inicialização.  No Gerenciador de Soluções, selecione o projeto.  No menu **Depurar**, escolha **Propriedades**.  
+2.  Open the debug property page for the start-up project. In Solution Explorer, select the project. On the **Debug** menu, choose **Properties**.  
   
-     Para projetos em C\+\+, poderá ser necessário expandir **Propriedades de Configuração** e então escolher **Depuração**.  
+     For C++ projects, you might have to expand **Configuration Properties** and then choose **Debugging**.  
   
-3.  Siga um destes procedimentos:  
+3.  Do one of the following:  
   
-    -   Para projetos em Visual C\# e Visual Basic, escolha **Não iniciar, mas depurar meu código quando ele começar**.  
+    -   For Visual C# and Visual Basic projects, choose **Do not launch, but debug my code when it starts**  
   
-         ![Propriedade de inicialização de depuração C &#35;&#47;VB aplicativo](~/debugger/media/dbg_csvb_dontlaunchapp.png "DBG\_CsVb\_DontLaunchApp")  
+         ![C&#35;&#47;VB debug launch application property](../debugger/media/dbg_csvb_dontlaunchapp.png "DBG_CsVb_DontLaunchApp")  
   
-    -   Para projetos em JavaScript e Visual C\+\+, escolha **Não** na lista **Iniciar aplicativo**.  
+    -   For JavaScript and Visual C++ projects, choose **No** from the **Launch application** list.  
   
-         ![C &#43; &#43; &#47; VB iniciar propriedade de depuração do aplicativo](~/debugger/media/dbg_cppjs_dontlaunchapp.png "DBG\_CppJs\_DontLaunchApp")  
+         ![C&#43;&#43;&#47;VB Launch application debug property](../debugger/media/dbg_cppjs_dontlaunchapp.png "DBG_CppJs_DontLaunchApp")  
   
-4.  Pressione **F5** para colocar o aplicativo no modo de depuração.  Observe que a lista **Processo** na barra de ferramentas **Local do Depurador** exibe o nome do pacote do aplicativo para indicar que você está no modo de depuração.  
+4.  Press **F5** to put the app in debug mode. Note the **Process** list on the **Debug Location** toolbar displays the app package name to indicate that you are in debug mode.  
   
-     ![Lista de tarefas do processo de plano de fundo](~/debugger/media/dbg_backgroundtask_processlist.png "DBG\_BackgroundTask\_ProcessList")  
+     ![Background task Process list](../debugger/media/dbg_backgroundtask_processlist.png "DBG_BackgroundTask_ProcessList")  
   
-5.  Na lista de eventos na barra de ferramentas **Local do Depurador**, escolha a tarefa em segundo plano que você deseja iniciar.  
+5.  From the events list on the **Debug Location** toolbar, choose the background task that you want to start.  
   
-     ![Suspender, continuar, terminar e tarefas em segundo plano](~/debugger/media/dbg_suspendresumebackground.png "DBG\_SuspendResumeBackground")  
+     ![Suspend, resume, terminate, and background tasks](../debugger/media/dbg_suspendresumebackground.png "DBG_SuspendResumeBackground")  
   
-##  <a name="BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app"></a> Disparar eventos e tarefas em segundo plano do Gerenciamento de Vida Útil de Processos de um aplicativo instalado  
- Use a caixa de diálogo Depurar Aplicativo Instalado para carregar um aplicativo que já está instalado no depurador.  Por exemplo, você pode depurar um aplicativo instalado da Windows Store ou depurar um aplicativo quando tiver seus arquivos de origem, mas não um projeto do Visual Studio para o aplicativo.  A caixa de diálogo Depurar Aplicativo Instalado permite que você inicie um aplicativo no modo de depuração no computador do Visual Studio ou em um dispositivo remoto, ou que você defina que o aplicativo seja executado no modo de depuração, mas não seja iniciado.  Consulte a seção **Iniciar um aplicativo instalado no depurador** da versão para [JavaScript](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Start_an_installed_app_in_the_debugger) ou [Visual C\+\+, Visual C\# e Visual Basic](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md#BKMK_Start_an_installed_app_in_the_debugger) de **Como iniciar uma sessão de depuração** para obter mais informações.  
+##  <a name="BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app"></a> Trigger Process Lifetime Management events and background tasks from an installed app  
+ Use the Debug Installed App dialog box to load an app that is already installed into the debugger. For example, you might debug an app that was installed from the Windows store, or debug an app when you have the source files for the app, but not a Visual Studio project for the app. The Debug Installed App dialog box allows you start an app in debug mode on the Visual Studio machine or on a remote device, or to set the app to run in debug mode but not start it. See the **Start an installed app in the debugger** section of either the [JavaScript](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Start_an_installed_app_in_the_debugger) or [Visual C++, Visual C#, and Visual Basic](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md#BKMK_Start_an_installed_app_in_the_debugger) versions of **How to start a debugging session** for more information.  
   
- Após o aplicativo ser carregado no depurador, você poderá executar qualquer um dos procedimentos acima.  
+ Once the app is loaded into the debugger, you can use any of the procedures described above.  
   
-##  <a name="BKMK_Diagnosing_background_task_activation_errors"></a> Diagnosticando erros de ativação de tarefas em segundo plano  
- Os logs de diagnóstico no Visualizador de Eventos do Windows referentes à infraestrutura em segundo plano contêm informações detalhadas que podem ser usadas para diagnosticar e solucionar erros de tarefas em segundo plano.  Para exibir o log:  
+##  <a name="BKMK_Diagnosing_background_task_activation_errors"></a> Diagnosing background task activation errors  
+ The diagnostic logs in Windows Event Viewer for the background infrastructure contained detailed information that you can use to diagnose and troubleshoot background task errors. To view the log:  
   
-1.  Abra o aplicativo Visualizador de Eventos.  
+1.  Open the Event Viewer application.  
   
-2.  No painel **Ações**, escolha **Exibir** e verifique se a opção **Mostrar Logs Analíticos e de Depuração** está marcada.  
+2.  In the **Actions** pane, choose **View** and make sure **Show Analytic and Debug Logs** is checked.  
   
-3.  Na árvore **Visualizador de Eventos \(Local\)**, expanda os nós **Logs de Aplicativos e Serviços** \/ **Microsoft** \/ **Windows** \/ **BackgroundTasksInfrastructure**.  
+3.  On the **Event Viewer (Local)** tree, expand the nodes **Applications and Services Logs** > **Microsoft** > **Windows** > **BackgroundTasksInfrastructure**.  
   
-4.  Escolha o log **Diagnóstico**.  
+4.  Choose the **Diagnostic** log.  
   
-## Consulte também  
- [Testando aplicativos da Store com o Visual Studio](../test/testing-store-apps-with-visual-studio.md)   
- [Depurar aplicativos no Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
- [Application lifecycle](http://msdn.microsoft.com/pt-br/53cdc987-c547-49d1-a5a4-fd3f96b2259d)   
- [Launching, resuming, and multitasking](http://msdn.microsoft.com/pt-br/04307b1b-05af-46a6-b639-3f35e297f71b)
+## <a name="see-also"></a>See Also  
+ [Testing Store apps with Visual Studio](../test/testing-store-apps-with-visual-studio.md)   
+ [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
+ [Application lifecycle](http://msdn.microsoft.com/en-us/53cdc987-c547-49d1-a5a4-fd3f96b2259d)   
+ [Launching, resuming, and multitasking](http://msdn.microsoft.com/en-us/04307b1b-05af-46a6-b639-3f35e297f71b)

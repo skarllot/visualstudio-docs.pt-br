@@ -1,144 +1,134 @@
 ---
-title: "Usar arquivos de despejo para depurar falhas e travamentos de aplicativo no Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.crashdump"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "despejos de memória"
-  - "arquivos de despejo"
-  - "despejos"
-  - "despejos, sobre despejos"
+title: Use Dump Files | Microsoft Docs
+ms.custom: H1HackMay2017
+ms.date: 03/08/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.crashdump
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- dumps, about dumps
+- crash dumps
+- dump files
+- dumps
 ms.assetid: b71be6dc-57e0-4730-99d2-b540a0863e49
 caps.latest.revision: 53
-caps.handback.revision: 53
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Usar arquivos de despejo para depurar falhas e travamentos de aplicativo no Visual Studio
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 16bde940901ea4e807b0975412082449c0df96f0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Arquivos de despejo com ou sem heaps; crie um arquivo de despejo; abra um arquivo de despejo; localize os binários, os pdbs, e o arquivo de origem para um arquivo de despejo.  
+---
+# <a name="use-dump-files-with-visual-studio"></a>Use Dump Files with Visual Studio
+Dump files with or without heaps; create a dump file; open a dump file; find the binaries, pdb's, and source file for a dump file.
   
-##  <a name="BKMK_Contents"></a> Sumário  
- [O que é um arquivo de despejo?](#BKMK_What_is_a_dump_file_)  
+##  <a name="BKMK_What_is_a_dump_file_"></a> What is a dump file?  
+ A *dump file* is a snapshot of an app at the point in time the dump is taken. It shows what process was executing and what modules were loaded. If the dump was saved with heap information, the dump file contains a snapshot of what was in the app's memory at that point in time. Opening a dump file with a heap in Visual Studio is like stopping at a breakpoint in a debug session. Although you cannot continue execution, you can examine the stacks, threads, and variable values of the app at the time the dump occurred.  
   
- [Arquivos de despejo, com ou sem heaps](#BKMK_Dump_files__with_or_without_heaps)  
+ Dumps are primarily used for debugging issues that occur on machines that the developer doesn't have access to. For example, you can use a dump file from a customer's machine when you can't reproduce the customer's crash or hang on your machine. Dumps are also created by testers to save crash or hang data so that the test machine can be used for more testing. The Visual Studio debugger can save dump files for managed or native code. The debugger can load dump files that were created by Visual Studio or by other programs that save files in the *minidump* format.  
   
- [Requisitos e restrições](#BKMK_Requirements_and_limitations)  
+##  <a name="BKMK_Dump_files__with_or_without_heaps"></a> Dump files, with or without heaps  
+ You can create dump files with or without heap information.  
   
- [Criar um arquivo de despejo.](#BKMK_Create_a_dump_file)  
+-   **Dump files with heaps** contain a snapshot of the app's memory. This includes the values of variables at the time the dump was created. If you load a dump file that was saved with a heap, Visual Studio can load the symbols even if the application binary is not found. Visual Studio also saves the binaries of loaded native modules in the dump file, which can make debugging much easier.  
   
- [Abra um arquivo de despejo.](#BKMK_Open_a_dump_file)  
+-   **Dump files without heaps** are much smaller than dumps with heap information. However, the debugger has to load the app binaries to find the symbol information. The binaries must be an exact match of the binaries that were used when the dump was created. Only the values of stack variables are saved in dump files without heap data.  
   
- [Localizar arquivos binários, de símbolo (.pdb), e arquivos de origem](#BKMK_Find_binaries__symbol___pdb__files__and_source_files)  
+##  <a name="BKMK_Requirements_and_limitations"></a> Requirements and limitations  
   
-##  <a name="BKMK_What_is_a_dump_file_"></a> O que é um arquivo de despejo?  
- Um *arquivo de despejo* é um instantâneo de um aplicativo no momento em que o despejo é realizado.  Mostra que processo estava sendo executado e que módulos foram carregados.  Se o despejo foi salvo com informações de heap, o arquivo de despejo conterá um instantâneo do que estava na memória do aplicativo naquele momento.  Abrir um arquivo de despejo com um heap no Visual Studio é como parar em um ponto de interrupção em uma sessão de depuração.  Embora você não possa continuar a execução, você pode examinar as pilhas, os threads e os valores das variáveis do aplicativo no momento em que o despejo ocorreu.  
+-   Debugging dump files of optimized code can be confusing. For example, compiler inlining of functions can result in unexpected call stacks and other optimizations might change the lifetime of variables.  
   
- Os despejos são usados principalmente para depuração de problemas que ocorrem em máquinas a que o desenvolvedor não tem acesso.  Por exemplo, será possível usar um arquivo de despejo no computador de um cliente quando você não puder reproduzir a pane nem parar o computador.  Os despejos também são criados por testadores para salvar dados de pane ou parada para que o computador de teste possa ser usado para mais testes.  O depurador do Visual Studio pode salvar arquivos de despejo para código gerenciado ou nativo.  O depurador pode carregar arquivos de despejo que foram criados pelo Visual Studio ou por outros programas que salvam arquivos no formato *de minidump* .  
+-   Dump files from 64-bit machines must be debugged on an instance of Visual Studio that is running on a 64-bit computer.  
   
- ![Back to top](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sumário](#BKMK_Contents)  
+-   In versions of Visual Studio before VS 2013, dumps of 32-bit apps that were run on 64-bit machines that were collected by some tools (such as Task Manager and 64-bit WinDbg) could not be opened in Visual Studio. This limitation has been removed in VS 2013.  
   
-##  <a name="BKMK_Dump_files__with_or_without_heaps"></a> Arquivos de despejo, com ou sem heaps  
- Você pode criar arquivos de despejo com ou sem informações de heap.  
+-   Visual Studio can debug dump files of native apps from ARM devices. Visual Studio can also debug apps dump files of managed apps from ARM devices, but only in the native debugger.  
   
--   **Arquivos de despejo com heaps** contêm um instantâneo da memória do aplicativo.  Isso inclui os valores das variáveis no momento em que o despejo foi criado.  Se você carregar um arquivo de despejo que foi salvo com um heap, o Visual Studio poderá carregar os símbolos, mesmo se o binário do aplicativo não for encontrado.  O Visual Studio também salva os binários nativos dos módulos carregados no arquivo de despejo, o que pode facilitar muito a depuração.  
+-   To debug [kernel-mode](http://msdn.microsoft.com/library/windows/hardware/ff551880.aspx) dump files in Visual Studio 2013, download the [Windows 8.1 Version of Debugging Tools for Windows](http://msdn.microsoft.com/windows/hardware/gg463009). See [Kernel Debugging in Visual Studio](http://msdn.microsoft.com/library/windows/hardware/jj149675.aspx).  
   
--   **Arquivos de despejo sem heaps** são muito menores do que despejos com informações de heap.  No entanto, o depurador precisa carregar os binários de aplicativo para localizar as informações do símbolo.  Os binários devem ter uma correspondência exata dos binários que foram usados quando o despejo foi criado.  Somente os valores das variáveis de pilha são salvos em arquivos de despejo sem dados do heap.  
+-   Visual Studio can't debug dump files saved in the older dump format known as a [full user-mode dump](http://msdn.microsoft.com/library/windows/hardware/ff545506.aspx). Note that a full user-mode dump is not the same a dump with heap.  
   
- ![Back to top](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sumário](#BKMK_Contents)  
+-   To debug with the [SOS.dll (SOS Debugging Extension)](/dotnet/framework/tools/sos-dll-sos-debugging-extension) in Visual Studio, you must install the Debugging Tools for Windows that is part of the Windows Driver Kit (WDK). See [Windows 8.1 Preview: Download kits, bits, and tools](http://msdn.microsoft.com/library/windows/hardware/bg127147.aspx).  
   
-##  <a name="BKMK_Requirements_and_limitations"></a> Requisitos e restrições  
+##  <a name="BKMK_Create_a_dump_file"></a> Create a dump file  
+ To create a dump file with Visual Studio:  
   
--   Depurar arquivos de despejo de código otimizado pode ser confuso.  Por exemplo, inlining de compilador de funções pode resultar em pilhas de chamadas inesperadas e outras otimizações podem alterar o tempo de vida de variáveis.  
+-   While you are debugging a process in Visual Studio, you can save a dump file when the debugger has stopped at an exception or at a breakpoint. Choose **Debug**, then **Save Dump As**, then **Debug**. In the **Save Dump As** dialog box, in the **Save as type** list, you can select **Minidump** or **Minidump with Heap** (the default).  
   
--   Os arquivos de despejo de computadores de 64 bits devem ser depurados em uma instância do Visual Studio em execução em um computador de 64 bits.  
+-   With [Just-In-Time Debugging](../debugger/just-in-time-debugging-in-visual-studio.md) enabled, you can attach the debugger to a crashed process that is running outside the debugger, and then save a dump file. See [Attach to Running Processes](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)  
   
--   Em versões do Visual Studio anteriores ao VS 2013, os despejos de aplicativos de 32 bits que eram executados em computadores de 64 bits que foram coletados por algumas ferramentas \(como o Gerenciador de Tarefas e o WinDbg de 64 bits\) não podiam ser abertos no Visual Studio.  Essa limitação foi removida do VS 2013.  
+ You can also create dump files with any program that supports the Windows minidump format. For example, the **Procdump** command-line utility from [Windows Sysinternals](http://technet.microsoft.com/sysinternals/default) can create process crash dump files based on triggers or on-demand. See [Requirements and limitations](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations) in this topic for additional information about using other tools to create dump files. 
   
--   O Visual Studio pode depurar arquivos de despejo de aplicativos nativos de dispositivos ARM.  O Visual Studio também pode depurar arquivos de despejo de aplicativos de gerenciados de dispositivos ARM, mas somente no depurador nativo.  
+##  <a name="BKMK_Open_a_dump_file"></a> Open a dump file  
   
--   Para depurar [modo kernel](http://msdn.microsoft.com/library/windows/hardware/ff551880.aspx) despejo de arquivos no Visual Studio 2013, baixe o [Windows 8.1 versão das ferramentas de depuração para Windows](http://msdn.microsoft.com/windows/hardware/gg463009).  Consulte [depuração de Kernel no Visual Studio](http://msdn.microsoft.com/library/windows/hardware/jj149675.aspx).  
+1.  In Visual Studio, choose **File**, **Open**, **File**.  
   
--   O Visual Studio não pode depurar arquivos de despejo salvos no formato de despejo mais antigo conhecido como um [despejo completo do modo de usuário](http://msdn.microsoft.com/library/windows/hardware/ff545506.aspx).  Observe se um despejo de modo de usuário completo não é igual a um despejo com heap.  
+2.  In the **Open File** dialog box, locate and select the dump file. It will usually have a .dmp extension. Then choose **OK**.  
   
--   Para depurar com o [SOS.dll \(Extensão de Depuração SOS\)](../Topic/SOS.dll%20\(SOS%20Debugging%20Extension\).md) no Visual Studio, você deve instalar as ferramentas de depuração para Windows que faz parte do Windows Driver Kit \(WDK\).  Consulte [Windows 8.1 Preview: Baixe kits, bits e ferramentas](http://msdn.microsoft.com/library/windows/hardware/bg127147.aspx).  
+3.  The **Dump File Summary** window appears. In this window, you can view debugging summary information for the dump file, set the symbol path, start debugging, and copy the summary information to the clipboard.  
   
- ![Back to top](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sumário](#BKMK_Contents)  
+     ![Minidump summary page](../debugger/media/dbg_dump_summarypage.png "DBG_DUMP_SummaryPage")  
   
-##  <a name="BKMK_Create_a_dump_file"></a> Criar um arquivo de despejo.  
- Para criar um arquivo de despejo com o Visual Studio:  
+4.  To start debugging, go to the **Actions** section, and choose either **Debug with Managed Only**, **Debug with Native Only** or **Debug with Mixed**.  
   
--   Enquanto você estiver depurando um processo no Visual Studio, você pode salvar um arquivo de despejo quando o depurador parar em uma exceção ou em um ponto de interrupção.  Escolha **Salvar Despejo como**, **Depurar**.  Na caixa de diálogo **Salvar Despejo como**, na lista **Salvar como tipo**, você pode selecionar **Minidespejo** ou **Minidespejo com Heap** \(o padrão\).  
+##  <a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> Find binaries, symbol (.pdb) files, and source files  
+ To use the full features of Visual Studio to debug a dump file, you need access to:  
   
--   Com [Depuração Just\-In\-Time](../debugger/just-in-time-debugging-in-visual-studio.md) habilitado, você pode anexar o depurador a um processo travado que está em execução fora do depurador e salvar um arquivo de despejo.  Consulte [Anexar a processos em execução](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)  
+-   The .exe file for which the dump was taken and other binaries (DLLs, etc.) that were used in the dump process.  
   
- Você também pode criar arquivos de despejo com qualquer programa com suporte ao formato minidump do Windows.  Por exemplo, o **Procdump** utilitário de linha de comando do [Windows Sysinternals](http://technet.microsoft.com/sysinternals/default) pode criar arquivos de despejo de falha do processo com base em disparadores ou sob demanda.  See [Requisitos e restrições](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations) neste tópico para obter informações adicionais sobre como usar outras ferramentas para criar arquivos de despejo.  
+     If you are debugging a dump with heap data, Visual Studio can cope with missing binaries for some modules, but it must have binaries for enough modules to generate valid call stacks. Visual Studio includes the native modules in a dump file with heap.  
   
- ![Back to top](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sumário](#BKMK_Contents)  
+-   Symbol (.pdb) files for the .exe and other binaries.  
   
-##  <a name="BKMK_Open_a_dump_file"></a> Abra um arquivo de despejo.  
+-   Source files for the modules that you are interested in.  
   
-1.  No Visual Studio, escolha **Arquivo**, **Abrir**, **Arquivo**.  
+     The executable and the .pdb files must match exactly the version and build of the files used when the dump was created.  
   
-2.  Na caixa de diálogo **Abrir Arquivo**, localize e selecione o arquivo de despejo.  Geralmente terá uma extensão .dmp.  Em seguida, escolha **OK**.  
+     You can debug using the disassembly of the modules if you can't find the source files,  
   
-3.  A janela de **Resumo de Arquivo de Despejo** aparece.  Nesta janela, você pode exibir informações de resumo de depuração para o arquivo de despejo, definir o caminho do símbolo, iniciar a depuração e copiar as informações de resumo para a área de transferência.  
+ **Default search paths for executable files**  
   
-     ![Página de resumo de minidespejo](~/debugger/media/dbg_dump_summarypage.png "DBG\_DUMP\_SummaryPage")  
+ Visual Studio automatically searches these locations for executable files that aren't included in the dump file:  
   
-4.  Para iniciar a depuração, vá para o **ações** seção e escolha a opção **Depurar somente com nativo** ou **depurar com misto**.  
+1.  The directory that contains the dump file.  
   
-##  <a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> Localizar arquivos binários, de símbolo \(.pdb\), e arquivos de origem  
- Para usar os recursos do Visual Studio para depurar um arquivo de despejo, você precisa de acesso a:  
+2.  The path of the module that is specified in the dump file. This is the module path on the machine where the dump was collected.  
   
--   O arquivo .exe para o qual o despejo foi feitos e outros binários \(DLLs, etc.\) que foram usados no processo de despejo.  
+3.  The symbol paths specified in the **Debugging**, **Options**, **Symbols** page of the Visual Studio **Tools**, **Options** dialog box. You can add more locations to search on this page.  
   
-     Se você estiver depurando um despejo com dados da heap, o Visual Studio poderá lidar com os binários ausentes para quaisquer módulos, mas deverá ter binários para módulos suficientes para poder gerar pilhas de chamadas válidas.  O Visual Studio inclui os módulos nativos em um arquivo de despejo com heap.  
+ **Using the No Binary > Symbol > Source pages**  
   
--   Os arquivos do símbolo \(.pdb\) para o .exe e outros binários.  
+ If Visual Studio can't find the files needed to debug a module in the dump, it displays an appropriate page (**No Binary Found**, **No Symbols Found**, or **No Source Found**). These pages provide detailed information about the cause of the issue and provide action links that can help you identify the correct location of the files. See [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
--   Arquivos de origem para os módulos que você está interessado.  
-  
-     Os arquivos executável e de .pdb devem corresponder exatamente à versão e a compilação de arquivos usados quando o despejo foi criado.  
-  
-     Você pode depurar com a desmontagem dos módulos, se não conseguir localizar os arquivos de origem,  
-  
- **Caminhos de pesquisa padrão para arquivos executáveis**  
-  
- O Visual Studio procura automaticamente nesses locais por arquivos executáveis que não estão incluídos no arquivo de despejo:  
-  
-1.  O diretório que contém o arquivo de despejo.  
-  
-2.  O caminho do módulo que é especificado no arquivo de despejo.  Este é o caminho do módulo no computador onde o despejo foi coletado.  
-  
-3.  Os caminhos de símbolo especificados em **Depuração**, **Opções**, página **Símbolos** do Visual Studio **Ferramentas**, caixa de diálogo **Opções**.  Você pode adicionar mais locais para a pesquisa nessa página.  
-  
- **Usando as páginas Não binário\/Símbolo\/Código\-fonte**  
-  
- Se o Visual Studio não puder localizar os arquivos necessários para depurar um módulo no despejo, ele exibirá uma página apropriada \(**Nenhum Binário Encontrado**, **Nenhum Símbolo Encontrado** ou **Nenhuma Origem Encontrada**\).  Essas páginas fornecem informações detalhadas sobre a causa do problema e fornecem links de ação que podem ajudá\-lo a identificar o local correto dos arquivos.  Consulte [Especificar arquivos de símbolo \(.pdb\) e de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
-  
- ![Back to top](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sumário](#BKMK_Contents)  
-  
-## Consulte também  
- [Depuração Just\-In\-Time](../debugger/just-in-time-debugging-in-visual-studio.md)   
- [Especificar arquivos de símbolo \(.pdb\) e de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+## <a name="see-also"></a>See Also  
+ [Just-In-Time Debugging](../debugger/just-in-time-debugging-in-visual-studio.md)   
+ [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [IntelliTrace](../debugger/intellitrace.md)

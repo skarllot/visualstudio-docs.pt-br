@@ -1,42 +1,58 @@
 ---
-title: "Depura&#231;&#227;o de hist&#243;rico | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Historical Debugging | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7cc5ddf2-2f7c-4f83-b7ca-58e92e9bfdd2
 caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Depura&#231;&#227;o de hist&#243;rico
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 9f73ccc235c3b893b2ad8d2ddb07dd1848414734
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Depuração de histórico é um modo de depuração que depende das informações coletadas pelo IntelliTrace.  Ele permite voltar e por meio da execução do seu aplicativo e verificar seu estado.  
+---
+# <a name="historical-debugging"></a>Historical Debugging
+Historical debugging is a mode of debugging that depends on the information collected by IntelliTrace. It allows you to move backward and forward through the execution of your application and inspect its state.  
   
- Você pode usar o IntelliTrace no Visual Studio Enterprise edition \(mas não as edições Professional ou comunidade\).  
+ You can use IntelliTrace in Visual Studio Enterprise edition (but not the Professional or Community editions).  
   
-## Por que usar a depuração de histórico?  
- Pontos de interrupção para encontrar bugs podem ser uma questão bastante inexata.  Você define um ponto de interrupção perto o local no código onde você suspeitar que o bug seja e executa o aplicativo no depurador e espero que seu ponto de interrupção obtém acertos e que o local onde a execução quebra pode revelar a origem do erro.  Caso contrário, você terá que tente definir um ponto de interrupção em outro lugar no código e executar novamente o depurador, executando as etapas de teste repetidamente até encontrar o problema.  
+## <a name="why-use-historical-debugging"></a>Why use Historical Debugging?  
+ Setting breakpoints to find bugs can be a rather hit-or-miss affair. You set a breakpoint close to the place in your code where you suspect the bug to be, then run the application in the debugger and hope your breakpoint gets hit, and that the place where execution breaks can reveal the source of the bug. If not, you'll have to try setting a breakpoint somewhere else in the code and rerun the debugger, executing your test steps over and over until you find the problem.  
   
  ![setting a breakpoint](../debugger/media/breakpointprocesa.png "BreakpointProcesa")  
   
- Você pode usar o IntelliTrace e a depuração de histórico circulem por em seu aplicativo e inspecionar o estado \(pilha de chamadas e variáveis locais\) sem precisar definir pontos de interrupção, reinicie a depuração e repita as etapas de teste.  Isso pode economizar muito tempo, especialmente quando o bug está localizado abaixo em um cenário de teste que leva muito tempo para executar.  
+ You can use IntelliTrace and Historical Debugging to roam around in your application and inspect its state (call stack and local variables) without having to set breakpoints, restart debugging, and repeat test steps. This can save you a lot of time, especially when the bug is located deep in a test scenario that takes a long time to execute.  
   
-## Como iniciar usando a depuração de histórico?  
- IntelliTrace está ativado por padrão.  Tudo o que você precisa fazer é decidir quais eventos e chamadas de função são de interesse.  Para obter mais informações sobre como definir o que você deseja procurar, consulte[Recursos do IntelliTrace](../debugger/intellitrace-features.md).  Para uma conta de passo a passo de depuração com o IntelliTrace, consulte[Passo a passo: usando o IntelliTrace](../debugger/walkthrough-using-intellitrace.md).  
+## <a name="how-do-i-start-using-historical-debugging"></a>How do I start using Historical Debugging?  
+ IntelliTrace is on by default. All you have to do is decide which events and function calls are of interest to you. For more information about defining what you want to look for, see [IntelliTrace Features](../debugger/intellitrace-features.md). For a step-by-step account of debugging with IntelliTrace, see [Walkthrough: Using IntelliTrace](../debugger/walkthrough-using-intellitrace.md).  
   
-## Seu código com depuração de histórico de navegação  
- Vamos começar com um programa simples que tem um bug.  Em um aplicativo de console c\#, adicione o seguinte código:  
+## <a name="navigating-your-code-with-historical-debugging"></a>Navigating your code with Historical Debugging  
+ Let's start with a simple program that has a bug. In a C# console application, add the following code:  
   
-```c#  
+```CSharp  
 static void Main(string[] args)  
 {  
     int testInt = 0;  
@@ -62,28 +78,28 @@ private static int AddInt(int add)
 }  
 ```  
   
- Vamos supor que o valor esperado de`resultInt`depois de chamar`AddAll()`é 20 \(o resultado do incremento dos`testInt`20 vezes\).  \(Vamos também supor que você não consegue ver o bug no`AddInt()`\). Mas o resultado é, na verdade, 44.  Como podemos encontrar o bug sem percorrendo`AddAll()`10 vezes?  Podemos usar depuração de histórico para localizar o bug mais rápida e facilmente.  Veja como:  
+ We'll assume that the expected value of `resultInt` after calling `AddAll()` is 20 (the result of incrementing `testInt` 20 times). (We'll also assume that you can't see the bug in `AddInt()`).But the result is actually 44. How can we find the bug without stepping through `AddAll()` 10 times? We can use Historical Debugging to find the bug faster and more easily. Here's how:  
   
-1.  Em Ferramentas \/ opções \/ IntelliTrace \/ geral, verifique se IntelliTrace estiver habilitado e selecionar eventos do IntelliTrace e informações de opção de chamada.  Se você não selecionar essa opção, você não poderá ver a medianiz de navegação \(como explicado abaixo\).  
+1.  In Tools > Options > IntelliTrace > General, make sure that IntelliTrace is enabled, and select the IntelliTrace events and call information option. If you do not select this option, you will not be able to see the navigation gutter (as explained below).  
   
-2.  Definir um ponto de interrupção no`Console.WriteLine(resultInt);`linha.  
+2.  Set a breakpoint on the `Console.WriteLine(resultInt);` line.  
   
-3.  Inicie a depuração.  O código é executado no ponto de interrupção.  No**locais**janela, você pode ver que o valor de`resultInt`é 44.  
+3.  Start debugging. The code executes to the breakpoint. In the **Locals** window, you can see that the value of `resultInt` is 44.  
   
-4.  Abra o**Ferramentas de diagnóstico**janela \(**Debug \/ Mostrar ferramentas de diagnóstico**\).  A janela de código deve ter esta aparência:  
+4.  Open the **Diagnostic Tools** window (**Debug > Show Diagnostic Tools**). The code window should look like this:  
   
      ![Code window at the breakpoint](../debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")  
   
-5.  Você deve ver uma seta dupla na margem esquerda, logo acima do ponto de interrupção.  Essa área é chamada a medianiz de navegação e é usada para depuração de histórico.  Clique na seta.  
+5.  You should see a double arrow next to the left margin, just above the breakpoint. This area is called the navigation gutter, and is used for Historical Debugging. Click the arrow.  
   
-     Na janela de código, você verá que a linha de código anterior \(`int resultInt = AddIterative(testInt);`\) é colorido rosa.  Acima da janela, você verá uma mensagem que agora você está na depuração de histórico.  
+     In the code window, you should see that the preceding line of code (`int resultInt = AddIterative(testInt);`) is colored pink. Above the window, you should see a message that you are now in Historical Debugging.  
   
-     Agora, a janela de código é semelhante a:  
+     The code window now looks like this:  
   
      ![code window in historical debugging mode](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")  
   
-6.  Agora você pode entrar no`AddAll()`método \(**F11**ou**Step Into**botão na medianiz de navegação.  Avançar uma etapa \(**F10**ou**Ir para próxima chamada**na medianiz de navegação.  A linha rosa está agora no`j = AddInt(j);`linha.  **F10**nesse caso não passar para a próxima linha de código.  Em vez disso, ele passa para a próxima chamada de função.  Depuração de histórico navega entre uma chamada e ignora a linhas de código que não inclua uma chamada de função.  
+6.  Now you can step into the `AddAll()` method (**F11**, or the **Step Into** button in the navigation gutter. Step forward (**F10**, or **Go to Next Call** in the navigation gutter. The pink line is now on the `j = AddInt(j);` line. **F10** in this case does not step to the next line of code. Instead, it steps to the next function call. Historical debugging navigates from call to call, and it skips lines of code that do not include a function call.  
   
-7.  Entrar agora o`AddInt()`método.  Você deve ver imediatamente o bug no código.  
+7.  Now step into the `AddInt()` method. You should see the bug in this code immediately.  
   
- Esse procedimento apenas uma pequena amostra do que você pode fazer com a depuração de histórico.  Para saber mais sobre as diferentes configurações e os efeitos dos botões diferentes na medianiz de navegação, consulte[Recursos do IntelliTrace](../debugger/intellitrace-features.md).
+ This procedure just scratched the surface of what you can do with Historical Debugging. To find out more about the different settings and the effects of the different buttons in the navigation gutter, see [IntelliTrace Features](../debugger/intellitrace-features.md).

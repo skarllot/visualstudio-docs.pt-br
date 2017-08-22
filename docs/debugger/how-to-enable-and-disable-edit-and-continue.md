@@ -1,60 +1,85 @@
 ---
-title: "Como habilitar e desabilitar Editar e Continuar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de vinculador /INCREMENTAL"
-  - "Comando Aplicar Alterações de Código"
-  - "Modo de interrupção, aplicando alterações de código"
-  - "alterações de código, aplicando no modo de interrupção"
-  - "Editar e continuar, aplicando alterações de código"
-  - "Editar e continuar, desabilitando"
-  - "Editar e continuar, ativando"
-  - "Comando Ir"
-  - "opção de vinculador INCREMENTAL"
-  - "Comando Etapa"
+title: 'How to: Enable and Disable Edit and Continue (C#, VB, C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- /INCREMENTAL linker option
+- Apply Code Changes command
+- Edit and Continue, disabling
+- code changes, applying in break mode
+- INCREMENTAL linker option
+- Edit and Continue, enabling
+- break mode, applying code changes
+- Edit and Continue, applying code changes
+- Step command
+- Go command
 ms.assetid: fd961a1c-76fa-420d-ad8f-c1a6c003b0db
 caps.latest.revision: 26
-caps.handback.revision: 26
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Como habilitar e desabilitar Editar e Continuar
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: e47cf3946f303bde8274006c092562d1883fd422
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Você pode desabilitar ou habilitar editar e continuar no **opções** caixa de diálogo em tempo de design. Você não pode alterar essa configuração enquanto você está depurando.  
+---
+# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>How to: Enable and Disable Edit and Continue (C#, VB, C++)
+You can disable or enable Edit and Continue in the **Options** dialog box at design time. You cannot change this setting while you are debugging.  
   
- Editar e continuar funciona somente em compilações de depuração. Para C\+\+ nativo, editar e continuar requer o uso de \/incremental. opção.  
+Edit and Continue works only in debug builds. For native C++, Edit and Continue requires using the /INCREMENTAL option. For more information about feature requirements in C++, see this [blog post](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/) and [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md).
   
-## Procedimentos  
+#### <a name="to-enabledisable-edit-and-continue"></a>To enable/disable Edit and Continue  
   
-#### Para habilitar\/desabilitar editar e continuar  
+1.  If you are in a debugging session, stop debugging (**Shift + F5**).
+
+2.  Open debugging options page (**Tools > Options > Debugging**).
   
-1.  Abrir página de opções de depuração \(**Ferramentas \/ opções \/ depuração**\).  
+3.  Select **General**, and scroll down to **Edit and Continue** category (right pane).  
   
-2.  Role para baixo até **Editar e continuar** categoria.  
-  
-3.  Para habilitar, selecione o **Habilitar Editar e continuar** caixa de seleção. Para desabilitar, desmarque a caixa de seleção.  
+4.  To enable, select the **Enable Edit and Continue** check box. To disable, clear the check box.  
   
     > [!NOTE]
-    >  Se IntelliTrace estiver habilitado e coletar eventos do IntelliTrace e informações de chamada, editar e continuar está desabilitado. Para obter mais informações, consulte [Configurar IntelliTrace](http://msdn.microsoft.com/pt-br/7657ecab-e07e-4b1b-872d-f05d966be37e).  
+    >  If IntelliTrace is enabled and you collect both IntelliTrace events and call information, Edit and Continue is disabled. For more information, see [IntelliTrace](../debugger/intellitrace.md).
+
+5. (C++) To enable, select **Enable Native Edit and Continue**. To disable, clear the check box.
+
+6. (C++) Set additional options for native code.
+
+    - **Apply changes on continue (Native only)**  
+        Visual Studio automatically compiles and applies any outstanding code changes you have made when continuing the process from a break state. If not selected, you can choose to apply changes using the "Apply Code Changes" item under the Debug menu.  
   
-4.  Clique em **OK**.  
+    - **Warn about stale code (Native only)**  
+        Get warnings about stale code. 
   
- Para obter mais informações sobre essas opções, consulte [Caixa de diálogo Geral, Depuração, Opções](../debugger/general-debugging-options-dialog-box.md).  
+7.  Click **OK**.    
   
-## Consulte também  
- [Editar e continuar](../debugger/edit-and-continue.md)
+## <a name="see-also"></a>See Also  
+ [Edit and Continue](../debugger/edit-and-continue.md)

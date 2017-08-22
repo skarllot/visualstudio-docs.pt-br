@@ -1,59 +1,53 @@
----
-title: "Como depurar aplicativos Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
+-- title: "How to: Debug Web Applications | Microsoft Docs" ms.custom: "" ms.date: "11/04/2016" ms.reviewer: "" ms.suite: "" ms.technology: 
+  - "vs-ide-debug" ms.tgt_pltfrm: "" ms.topic: "article" dev_langs: 
   - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Web Forms do ASP.NET, depuração"
-  - "ASP.NET, depurando aplicativos da Web"
-  - "depurando aplicativos Web ASP.NET, durante o desenvolvimento"
-  - "Serviços Web, depuração"
-ms.assetid: 6440d12e-6b29-42c5-a958-99aeaaff480f
-caps.latest.revision: 37
-caps.handback.revision: 37
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+  - "VB"
+  - "FSharp"
+  - "C++" helpviewer_keywords: 
+  - "Web services, debugging"
+  - "ASP.NET Web Forms, debugging"
+  - "ASP.NET, debugging Web applications"
+  - "debugging ASP.NET Web applications, during development" ms.assetid: 6440d12e-6b29-42c5-a958-99aeaaff480f caps.latest.revision: 37 author: "mikejo5000" ms.author: "mikejo" manager: "ghogen" translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Como depurar aplicativos Web
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-O [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] é a tecnologia primária para desenvolver aplicativos Web no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  O depurador do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] fornece ferramentas avançadas para depurar aplicativos Web do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] localmente ou em um servidor remoto.  Este tópico descreve como depurar um projeto do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] durante o desenvolvimento.  Para obter informações sobre como depurar um aplicativo Web do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] já implantado em um servidor de produção, consulte [Depurando aplicativos Web implantados](../debugger/debugging-deployed-web-applications.md).  
+# <a name="how-to-debug-web-applications"></a>How to: Debug Web Applications
+[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] is the primary technology for developing Web applications in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger provides powerful tools for debugging [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web applications locally or on a remote server. This topic describes how to debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] project during development. For information about how to debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web application already deployed on a production server, see [Debugging Deployed Web Applications](../debugger/debugging-deployed-web-applications.md).  
   
- Para depurar um aplicativo do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]:  
+ To debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application:  
   
--   Você deve ter as permissões necessárias.  Para obter mais informações, consulte [Requisitos do sistema](../debugger/aspnet-debugging-system-requirements.md).  
+-   You must have required permissions. For more information, see [System Requirements](../debugger/aspnet-debugging-system-requirements.md).  
   
--   A depuração do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] deve ser habilitada em **Propriedades do Projeto**.  
+-   [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] debugging must be enabled in **Project Properties**.  
   
--   O arquivo de configuração do aplicativo \(Web.config\) deve ser definido para o modo de depuração.  O modo de depuração faz com que o [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] gere símbolos para arquivos gerados dinamicamente e permite que o depurador se anexe ao aplicativo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)].  O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] define isso automaticamente quando você inicia a depuração, caso você tenha criado o projeto do modelo Projetos Web.  
+-   The configuration file of your application (Web.config) must be set to debug mode. Debug mode causes [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] to generate symbols for dynamically generated files and enables the debugger to attach to the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sets this automatically when you start to debug, if you created your project from the Web projects template.  
   
--   Para obter mais informações, consulte [Como habilitar a depuração para aplicativos ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md).  
+-   For more information, see [How to: Enable Debugging for ASP.NET Applications](../debugger/how-to-enable-debugging-for-aspnet-applications.md).  
   
-### Para depurar um aplicativo Web durante o desenvolvimento  
+### <a name="to-debug-a-web-application-during-development"></a>To debug a Web application during development  
   
-1.  No menu **Depurar**, clique em **Iniciar** para iniciar a depuração do aplicativo Web.  
+1.  On the **Debug** menu, click **Start** to begin debugging the Web application.  
   
-     O [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] cria o projeto de aplicativo Web, implanta o aplicativo se for necessário, inicia o ASP.NET Development Server se você estiver depurando localmente e anexa ao processo de trabalho do [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)].  
+     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] builds the Web application project, deploys the application if necessary, starts the ASP.NET Development Server if you are debugging locally, and attaches to the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] worker process.  
   
-2.  Use o depurador para definir e desmarcar pontos de interrupção, depurar e executar outras operações de depuração, como faria para qualquer aplicativo.  
+2.  Use the Debugger to set and clear breakpoints, step, and perform other debugging operations, as you would for any application.  
   
-     Para obter mais informações, consulte [Noções básicas do depurador](../debugger/debugger-basics.md).  
+     For more information, see [Debugger Basics](../debugger/debugger-basics.md).  
   
-3.  No menu **Depurar**, clique em **Parar Depuração** para terminar a sessão de depuração ou, no menu **Arquivo** no Internet Explorer, clique em **Fechar**.  
+3.  On the **Debug** menu, click **Stop Debugging** to end the debugging session or on the **File** menu in Internet Explorer, click **Close**.  
   
-## Consulte também  
- [Depurando aplicativos Web e script](../debugger/debugging-web-applications-and-script.md)   
- [Depurando aplicativos ASP.NET e AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)   
- [Como habilitar a depuração para aplicativos ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
+## <a name="see-also"></a>See Also  
+ [Debugging Web Applications and Script](../debugger/debugging-web-applications-and-script.md)   
+ [Debugging ASP.NET and AJAX Applications](../debugger/debugging-aspnet-and-ajax-applications.md)   
+ [How to: Enable Debugging for ASP.NET Applications](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
