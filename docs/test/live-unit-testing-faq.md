@@ -27,19 +27,38 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 359e1eb5df8f19774d352ace631802367b6dd8c9
-ms.openlocfilehash: 2a58b84403189d824494af85bc732a1b8cf3d0b6
+ms.sourcegitcommit: fb6b4a06790dd1b63a182355a545c76c8dcb4dd7
+ms.openlocfilehash: c68217eb3b8917ba54b59d58f3230a5e45d7c4a4
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Perguntas frequentes sobre o Live Unit Testing
+
+## <a name="whats-new-in-live-unit-testing-for-visual-studio-2017-version-153"></a>O que há de novo no Live Unit Testing para Visual Studio 2017 versão 15.3? 
+
+**Resposta:**
+
+- Suporte para .NET Core/.NET Standard e melhorias de desempenho são os dois grandes destaques. Você notará que o desempenho é significativamente mais rápido após o primeiro build completo e a execução de testes no Live Unit Testing. Você também perceberá melhoria de desempenho significativa em inícios subsequentes do Live Unit Testing na mesma solução. Agora nós persistimos os dados gerados pelo Live Unit Testing e os reutilizamos tanto quanto possível com verificações de estado de atualização. Além dessas adições principais, também foram feitas as seguintes melhorias: 
+
+  - Um novo ícone de proveta agora é usado para distinguir um método de teste de métodos comuns. Um ícone de proveta vazio indica que o teste específico não está incluído no teste de unidade ao vivo. 
+
+  - Ao clicar em um método de teste na janela pop-up da interface do usuário de um ícone do Live Unit Testing, agora você tem a opção de depurar o teste diretamente do contexto dentro da janela de interface do usuário e sem precisar deixar o editor de código. Isso é muito útil especialmente quando você se depara com um teste com falha.  
+
+  - Algumas opções mais configuráveis foram adicionadas para Ferramentas/Opções/Live Unit Testing/Geral. Você pode limitar a memória usada para o Live Unit Testing. Você também pode especificar o caminho do arquivo para o diretório de dados do Live Unit Testing persistente para sua solução aberta. 
+
+  - Foram adicionados mais dois itens de menu na barra de menus Teste/Live Unit Testing. Um deles é chamado 'Redefinição Limpa' e exclui os dados persistentes e gera-os novamente. O outro se chama 'Opções', para ir até Ferramentas/Opções/Live Unit Testing/Geral.
+  
+  - Adicionamos um mecanismo para reconhecer os atributos a seguir, caso você deseje especificar no código-fonte para excluir os métodos de teste direcionados do Live Unit Testing.
+    - For xUnit: [Trait("Category", "SkipWhenLiveUnitTesting")]
+    - For NUnit: [Category("SkipWhenLiveUnitTesting")]
+    - For MSTest: [TestCategory("SkipWhenLiveUnitTesting")]
 
 ## <a name="does-live-unit-testing-work-with-net-core"></a>O Live Unit Testing funciona com o .NET Core?  
 
 **Resposta:**
 
-Sim. O Live Unit Testing funciona com o .NET Core e .NET Frameworks. O suporte ao .NET Core foi adicionado recentemente ao Visual Studio 2017 versão 15.3 Versão Prévia. 
+Sim. O Live Unit Testing funciona com o .NET Core e .NET Frameworks. O suporte ao .NET Core foi adicionado recentemente ao Visual Studio 2017 versão 15.3. Faça a atualização para esta versão do Visual Studio, se você quiser suporte ao Live Unit Testing para .NET Core. 
 
 ## <a name="why-doesnt-live-unit-testing-work-when-i-turn-it-on"></a>Por que o Live Unit Testing não funciona ao ser ligado? 
 
@@ -177,7 +196,9 @@ public class Class1
 
 **Resposta:**
 
-Há um bug conhecido que pode resultar na falha dos builds do Live Unit Testing em inserir os seguintes dados de Cabeçalho do Win32 PE: 
+Esse problema foi corrigido e não consta no Visual Studio 2017 versão 15.3. Faça a atualização para esta versão do Visual Studio.
+
+Para versões mais antigas do Visual Studio 2017, há um bug conhecido que pode resultar na falha dos builds do Live Unit Testing em inserir os seguintes dados de Cabeçalho do Win32 PE: 
 
 - Versão de Arquivo (especificada por @System.Reflection.AssemblyFileVersionAttribute no código). 
 
@@ -199,19 +220,21 @@ O Live Unit Testing inicia um build sempre que detecta uma alteração nos arqui
 
 **Resposta:**
 
-Atualmente, o Live Unit Testing não funciona bem com o recurso de carga de Solução Leve quando ainda não estão carregados todos os projetos na solução. Talvez você obtenha informações de cobertura incorretas nesses cenários.
+Atualmente o Live Unit Testing não funciona bem com o recurso de Carregamento de Solução Leve. Ele funciona somente depois que pelo menos um dos projetos de teste é carregado. Até lá, ele não funcionará porque atualmente o Live Unit Testing depende que de pelo menos um dos projetos de teste referenciando um adaptador de teste (MSTest, xUnit ou NUnit) seja carregado.
  
 ## <a name="why-does-live-unit-testing-does-not-capture-coverage-from-a-new-process-created-by-a-test"></a>Por que o Live Unit Testing não captura a cobertura de um novo processo criado por um teste?
  
 **Resposta:**
 
-Esse é um problema conhecido que não pôde ser resolvido na versão do Visual Studio 2017. Ele deverá ser corrigido em uma próxima atualização do Visual Studio 2017. 
+Esse é um problema conhecido e deverá ser corrigido em uma próxima atualização do Visual Studio 2017. 
 
 ## <a name="why-does-nothing-happen-after-i-include-or-exclude-tests-from-the-live-test-set"></a>Por que nada acontece depois de incluir ou excluir testes do conjunto de Teste Dinâmico? 
 
 **Resposta:**
 
-Este é um problema conhecido. Para solucionar esse problema, você precisará fazer uma edição em qualquer arquivo depois de incluir ou excluir os testes.  
+Esse problema foi corrigido e não consta no Visual Studio 2017 versão 15.3. Faça a atualização para esta versão do Visual Studio. 
+
+Para versões anteriores do Visual Studio de 2017, esse é um problema conhecido. Para solucionar esse problema, você precisará fazer uma edição em qualquer arquivo depois de incluir ou excluir os testes.  
 
 ## <a name="live-unit-testing-and-editor-icons"></a>Live Unit Testing e ícones do editor 
 
