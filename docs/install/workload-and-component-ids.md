@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 04/07/2017
+ms.date: 08/14/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -17,31 +17,16 @@ ms.technology:
 - vs-ide-install
 - vs-ide-sdk
 ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: c3fea7195cd41a48654ea4356ef67627ddcc25dc
-ms.openlocfilehash: 2c288a22c46a21b998bcc5aecf3c0a20f46e06c0
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: 2c4491ffbcc0fed757a18e044b9efdfe48898c3a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
 # <a name="visual-studio-2017-workload-and-component-ids"></a>IDs de carga de trabalho e de componente do Visual Studio 2017
-Clique nos nomes de edições abaixo para ver as IDs de carga de trabalho e de componente disponíveis que você precisará para instalar o Visual Studio usando uma linha de comando ou para especificar como uma dependência em um manifesto do VSIX.
+Clique nos nomes de edições na tabela a seguir para ver as IDs de carga de trabalho e de componente disponíveis que você precisará para instalar o Visual Studio usando uma linha de comando ou para especificar como uma dependência em um manifesto do VSIX.
 
 | **Edição** | **ID** | **Descrição** |
 | ----------- | ------ | --------------- |
