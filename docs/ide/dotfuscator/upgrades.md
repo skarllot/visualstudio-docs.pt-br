@@ -1,12 +1,12 @@
 ---
-title: Atualizar o Dotfuscator CE (Community Edition) | Microsoft Docs
+title: Upgrade Dotfuscator Community Edition (CE) | Microsoft Docs
 ms.date: 2017-02-08
 ms.prod: visual-studio-dev15
 ms.devlang: dotnet
 ms.technology:
 - dotfuscator
 ms.topic: article
-keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, proteção, community edition, ofuscação, .NET, gratuito, Visual Studio 2017, atualização, linha de comando"
+keywords: Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, obfuscation, .NET, free, Visual Studio 2017, upgrade, command line
 helpviewer_keywords:
 - PreEmptive Protection - Dotfuscator
 - Dotfuscator Community Edition
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - registering Dotfuscator
 - Dotfuscator command line
 - Dotfuscator Professional
-description: "Saiba como atualizar o Dotfuscator Community Edition gratuito incluído no Visual Studio 2017."
+description: Learn how to upgrade the free Dotfuscator Community Edition included in Visual Studio 2017.
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
 manager: ghogen
@@ -39,66 +39,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
-ms.openlocfilehash: 60ca38639f6523cdbace4efa4aa48b48d5e9a886
+ms.translationtype: HT
+ms.sourcegitcommit: a81ef70613931a23121aae0b4817553c1f170e5f
+ms.openlocfilehash: fe29d3990faa138d121fcc972fa2e732e505c988
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 
-# Atualizar o Dotfuscator CE (Community Edition)
-<a id="upgrade-dotfuscator-community-edition-ce" class="xliff"></a>
+# <a name="upgrade-dotfuscator-community-edition-ce"></a>Upgrade Dotfuscator Community Edition (CE)
 
-O Dotfuscator CE (Dotfuscator Community Edition) oferece vários recursos de proteção do aplicativo imediatamente para todos os desenvolvedores que usam o Microsoft Visual Studio.
-No entanto, há mais recursos disponíveis aos usuários que atualizam a versão do Dotfuscator.
+Dotfuscator Community Edition (Dotfuscator CE) offers many application protection and hardening features immediately to all developers using Microsoft Visual Studio.
+However, there are more features available to users who upgrade their version of Dotfuscator.
 
-## Registrando o Dotfuscator CE
-<a id="registering-dotfuscator-ce" class="xliff"></a>
+## <a name="registering-dotfuscator-ce"></a>Registering Dotfuscator CE
 
-Os usuários registrados do Dotfuscator CE obtém acesso a recursos adicionais, como [suporte de linha de comando][cli], o que facilita a integração do Dotfuscator CE no processo de build automatizado.
+Registered users of Dotfuscator CE get access to additional features, such as [command line support][cli], which makes it easy to integrate Dotfuscator CE into your automated build process.
 
-O registro é rápido, simples e gratuito.
-Para registrar o Dotfuscator CE, consulte [a seção Registrando o Dotfuscator CE na página Introdução do Guia do Usuário completo do Dotfuscator CE][register-ce].
+Registration is quick, simple, and free of charge.
+To register Dotfuscator CE, see [the Registering Dotfuscator CE section on the Getting Started page of the full Dotfuscator CE User Guide][register-ce].
 
-## Dotfuscator Professional
-<a id="dotfuscator-professional" class="xliff"></a>
+## <a name="dotfuscator-professional"></a>Dotfuscator Professional
 
-Embora o Dotfuscator Community Edition forneça um nível básico de proteção, o **_PreEmptive Protection – Dotfuscator_ Professional Edition** inclui funcionalidades de proteção e transformações de ofuscação avançadas.
-Elas incluem:
+While Dotfuscator Community Edition provides a basic level of protection, **_PreEmptive Protection - Dotfuscator_ Professional Edition** includes enhanced obfuscation transforms and protection capabilities.
+These include:
 
-* *Proteção de propriedade intelectual*
-  * Opções de renomeação avançadas, incluindo Enhanced Overload Induction™ e seleção de identificador aleatória.
-  * Ferramentas de decodificação de rastreamentos de pilha ofuscados.
-  * Acesso a transformações de ofuscação de nível empresarial, incluindo [transformações destinadas a acabar com a descompilação automatizada de código][control-flow].
-  * A capacidade de [obscurecer cadeias de caracteres confidenciais][string-encryption], impossibilitando uma pesquisa simples do código descompilado.
-  * A capacidade de [inserir discretamente cadeias de caracteres de propriedade e de distribuição nos assemblies][watermarking] (marca-d'água de software), permitindo determinar a origem de perdas de software não autorizadas.
-  * A capacidade de [combinar vários assemblies em um][linking], tornando ainda mais difícil para invasores determinar as funções de elementos de código, pois a separação de preocupações foi eliminada.
-  * A capacidade de [remover automaticamente o código não utilizado do aplicativo][pruning], reduzindo a quantidade de código confidencial fornecido.
-* *Proteção de integridade do aplicativo*
-  * [Comportamentos de defesa do aplicativo][check-actions] adicionais.
-  * A capacidade de injetar código antiadulteração e antidepuração em assemblies `.dll`.
-  * A capacidade de fornecer um período de aviso antes da data limite do fim da vida útil do aplicativo.
-  * A capacidade de notificar o código do aplicativo durante um período de aviso do fim da vida útil ou após a data limite.
-  * Criptografia de telemetria.
-* *Monitoramento de aplicativos*
-  * A capacidade de coletar e salvar as informações coletadas durante interrupções de rede temporárias.
-  * A capacidade de coletar informações de identificação pessoal.
-  * Uso ilimitado de [acompanhamento de recursos][features].
-  * A capacidade de acompanhar exceções capturadas e geradas pelo código, além de exceções sem tratamento.
-  * A capacidade de acompanhar exceções em assemblies `.dll`.
-  * Criptografia de telemetria.
+* *Intellectual Property Protection*
+  * Additional renaming options, including Enhanced Overload Induction™ and randomized identifier selection.
+  * Tooling for decoding obfuscated stack traces.
+  * Access to enterprise-level obfuscation transforms, including [transforms targeted at defeating automated code decompilation][control-flow].
+  * The ability to [obscure sensitive strings][string-encryption], making a simple search of the decompiled code impossible.
+  * The ability to [discreetly embed ownership and distribution strings into your assemblies][watermarking] (software watermarking), allowing you to determine the source of unauthorized software leaks.
+  * The ability to [combine multiple assemblies into one][linking], making it even more difficult for attackers to determine the roles of code elements, as separation of concerns has been eliminated.
+  * The ability to [automatically remove unused code from your application][pruning], reducing the amount of sensitive code that is shipped.
+* *Application Integrity Protection*
+  * Additional [application defense behaviors][check-actions].
+  * The ability to inject anti-tamper and anti-debug code into `.dll` assemblies.
+  * The ability to provide a warning period before an application's end-of-life deadline.
+  * The ability to notify application code during an end-of-life warning period or after the deadline.
+  * Telemetry encryption.
+* *Application Monitoring*
+  * The ability to collect and save collected information during temporary network outages.
+  * The ability to collect personally-identifiable information.
+  * Unlimited use of [feature tracking][features].
+  * The ability to track exceptions caught and thrown by your code, in addition to unhandled exceptions.
+  * The ability to track exceptions in `.dll` assemblies.
+  * Telemetry encryption.
 
-O Dotfuscator Professional é o [.NET Obfuscator][net-obfuscator] padrão do setor e é adequado para desenvolvedores empresariais que precisam de atualizações de produto, manutenção e suporte contínuos.
-Além disso, o Dotfuscator Professional oferece maior integração com o Visual Studio e é licenciado para uso comercial.
+Dotfuscator Professional is the industry standard [.NET Obfuscator][net-obfuscator] and is suitable for enterprise developers requiring ongoing support, maintenance, and product updates.
+Additionally, Dotfuscator Professional offers tighter integration with Visual Studio and is licensed for commercial use.
 
-Para obter mais informações sobre os recursos avançados de proteção do aplicativo do Dotfuscator Professional, visite a [página de Visão geral do Dotfuscator][product-about] do PreEmptive Solutions e [faça uma comparação com o Community Edition][product-compare].
-[Avaliações com suporte completo estão disponíveis mediante solicitação em preemptive.com][eval].
+For more information on the advanced application protection features of Dotfuscator Professional, please visit PreEmptive Solutions' [Dotfuscator Overview page][product-about] and [compare it to Community Edition][product-compare].
+[Fully-supported trials are available on request at preemptive.com][eval].
 
-## Consulte também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>See Also
 
-[Este tópico no Guia do Usuário completo do Dotfuscator CE][full]
+[This topic in the full Dotfuscator CE User Guide][full]
 
 <!-- Copyright © 2017 PreEmptive Solutions, LLC -->
 
@@ -108,8 +104,8 @@ Para obter mais informações sobre os recursos avançados de proteção do apli
 [linking]: https://www.preemptive.com/products/dotfuscator/features#linking
 [pruning]: https://www.preemptive.com/products/dotfuscator/features#pruning
 
-[check-actions]: https://www.preemptive.com/images/stories/Dotfuscator/webframe.html#Check%20Actions.html
-[features]: https://www.preemptive.com/images/stories/Dotfuscator/webframe.html#Feature_Usage_Tracking_and_the_Feature_Attribute.html
+[check-actions]: https://www.preemptive.com/dotfuscator/pro/userguide/en/protection_checks_overview.html#actions
+[features]: https://www.preemptive.com/dotfuscator/pro/userguide/en/instrumentation_features.html
 
 [net-obfuscator]: https://www.preemptive.com/products/dotfuscator/overview
 [eval]: https://www.preemptive.com/eval-request
