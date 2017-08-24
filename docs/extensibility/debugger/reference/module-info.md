@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO | Documentos do Microsoft
+title: MODULE_INFO | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 93b749d382d3fadcf50c0a4ae84aa14b200a67aa
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2ad0fe31572fda794a8be06580330a63c0ca0d0b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="moduleinfo"></a>MODULE_INFO
-Descreve um módulo específico (DLL, EXE ou assembly).  
+Describes a particular module (DLL, EXE, or assembly).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagMODULE_INFO {   
@@ -58,7 +59,7 @@ typedef struct tagMODULE_INFO {
 } MODULE_INFO;  
 ```  
   
-```c#  
+```cs  
 public struct MODULE_INFO {   
    public uint     dwValidFields;  
    public string   m_bstrName;  
@@ -75,57 +76,57 @@ public struct MODULE_INFO {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  dwValidFields  
- Uma combinação de sinalizadores do [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) enumeração que especifica quais campos estão preenchidos.  
+ A combination of flags from the [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) enumeration that specifies which fields are filled out.  
   
  m_bstrName  
- O nome do módulo.  
+ The module name.  
   
  m_bstrUrl  
- A URL do módulo.  
+ The module URL.  
   
  m_bstrVersion  
- A versão do módulo.  
+ The module version.  
   
  m_bstrDebugMessage  
- Uma mensagem opcional sobre o módulo, por exemplo, "símbolos não podem ser carregados."  
+ An optional message about the module, for example, "Symbols cannot be loaded."  
   
  m_addrLoadAddress  
- O endereço de carregamento do módulo.  
+ The module load address.  
   
  m_addrPreferredLoadAddress  
- O endereço de carregamento preferido do módulo.  
+ The preferred load address of the module.  
   
  m_dwSize  
- O tamanho do módulo.  
+ The module size.  
   
  m_dwLoadOrder  
- A ordem de carregamento do módulo.  
+ The module load order.  
   
  m_TimeStamp  
- A hora em que o arquivo de símbolo foi modificado pela última vez.  
+ The time the symbol file was last modified.  
   
  m_bstrUrlSymbolLocation  
- O local do arquivo de símbolo (por exemplo, ".\\") especificado no módulo. Usado como um local inicial para localizar símbolos para um módulo.  
+ The location of the symbol file (for example, ".\\") specified in the module. Used as a starting location to find symbols for a module.  
   
  m_dwModuleFlags  
- Uma combinação de sinalizadores do [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) enumeração que descreve o módulo.  
+ A combination of flags from the [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) enumeration that describes the module.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é passada para o [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) método onde ele é preenchido.  
+## <a name="remarks"></a>Remarks  
+ This structure is passed to the [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) method where it is filled in.  
   
- Essa estrutura corresponde a cada módulo listado no **módulos** janela.  
+ This structure corresponds to each module listed in the **Modules** window.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)   
  [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)

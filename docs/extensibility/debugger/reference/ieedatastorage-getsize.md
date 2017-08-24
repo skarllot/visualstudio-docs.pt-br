@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetSize | Documentos do Microsoft
+title: IEEDataStorage::GetSize | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0b532cc4e804e9928f90c46f018fdeb066946493
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 60176876d9eba4b599348c562b812deec9fae589
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="ieedatastoragegetsize"></a>IEEDataStorage::GetSize
-Retorna o número de bytes contidos nesse objeto.  
+Returns the number of bytes contained in this object.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetSize(  
@@ -47,22 +48,22 @@ HRESULT GetSize(
 );  
 ```  
   
-```c#  
+```cs  
 int GetSize(  
    out uint size  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `size`  
- [out] O número de bytes contidos nesse objeto.  
+ [out] The number of bytes contained in this object.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Use o [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md) método para recuperar os bytes de dados reais.  
+## <a name="remarks"></a>Remarks  
+ Use the [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md) method to retrieve the actual data bytes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md)

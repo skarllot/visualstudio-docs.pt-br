@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::CauseBreak | Documentos do Microsoft
+title: IDebugProgram2::CauseBreak | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1c057978837ce0fadfa4cb6ce7ee70f60cf0ee28
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 32c85b2a83012d867e6b6d5a6336b948589c6c32
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprogram2causebreak"></a>IDebugProgram2::CauseBreak
-O programa parar na próxima execução de solicitações de tempo entre as tentativas de threads para executar.  
+Requests that the program stop execution the next time one of its threads attempts to run.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT CauseBreak(   
@@ -47,18 +48,18 @@ HRESULT CauseBreak(
 );  
 ```  
   
-```c#  
+```cs  
 int CauseBreak();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Um [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) evento é enviado quando o programa tenta executar código após esse método é chamado em seguida.  
+## <a name="remarks"></a>Remarks  
+ An [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) event is sent when the program next attempts to run code after this method is called.  
   
- Esse método é assíncrono, o método retorna imediatamente sem esperar que o programa pare necessariamente.  
+ This method is asynchronous in that the method returns immediately without necessarily waiting for the program to stop.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)

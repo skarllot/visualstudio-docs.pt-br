@@ -1,5 +1,5 @@
 ---
-title: Controlando cor, estilo de linha e outras propriedades de forma | Documentos do Microsoft
+title: Controlling Color, Line Style, and other Shape Properties | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,26 +25,27 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7071fcbff2e3f787ccb42a2b1987e628faaa7a9c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: db240f8b5eefd0c633a370fa27d148291de47140
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="controlling-color-line-style-and-other-shape-properties"></a>Controlando cor, estilo de linha e outras propriedades de formas
-Algumas propriedades de forma, como cor pode ser 'exposta' – ou seja, vinculado a uma propriedade de domínio da forma. Outros têm seja controlado diretamente.  
+# <a name="controlling-color-line-style-and-other-shape-properties"></a>Controlling Color, Line Style, and other Shape Properties
+Some shape properties such as color can be 'exposed' - that is, linked to a domain property of the shape. Others have to be controlled directly.  
   
-## <a name="exposing-a-property"></a>Expor uma propriedade  
- Algumas propriedades da forma como cor podem ser vinculadas ao valor de uma propriedade de domínio.  
+## <a name="exposing-a-property"></a>Exposing a property  
+ Some shape properties such as color can be linked to the value of a domain property.  
   
- Na definição de DSL, selecione uma forma, conector ou classe de diagrama. No menu de contexto, escolha **adicionar exposto**e, em seguida, escolha a propriedade que você deseja, como cor de preenchimento.  
+ In the DSL Definition, select a shape, connector or diagram class. On its context menu, choose **Add Exposed**, and then choose the property you want, such as Fill Color.  
   
- A forma agora tem uma propriedade de domínio que podem ser definidas no código do programa ou como um usuário.  
+ The shape now has a domain property that you can set in program code or as a user.  
   
-## <a name="dynamically-updating-an-exposed-property"></a>Atualizando dinamicamente uma propriedade exposta  
- Normalmente você deseja fazer a propriedade exposta dependente de outra propriedade. Por exemplo, convém uma forma fique vermelho sempre que uma propriedade de domínio específico é menor que zero. Para fazer essa dependência, crie uma [regra](../modeling/rules-propagate-changes-within-the-model.md). Por exemplo:  
+## <a name="dynamically-updating-an-exposed-property"></a>Dynamically updating an exposed property  
+ Typically you want to make the exposed property dependent on another property. For example, you might want a shape to turn red whenever a particular domain property is less than zero. To make this dependency, create a [rule](../modeling/rules-propagate-changes-within-the-model.md). For example:  
   
-```c#  
+```cs  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

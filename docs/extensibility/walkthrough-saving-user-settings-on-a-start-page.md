@@ -1,5 +1,5 @@
 ---
-title: "Passo a passo: Salvando as configurações do usuário em uma página inicial | Documentos do Microsoft"
+title: 'Walkthrough: Saving User Settings on a Start Page | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,35 +26,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c358bf79945b4f4eef5b19c60cad0bd866c175b3
-ms.openlocfilehash: 1bf8a313898f9c12312beedb31238fb74e1a56a8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c5c07ba1c70371f2a8093af99a46e2f3c7e2cd0e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="walkthrough-saving-user-settings-on-a-start-page"></a>Passo a passo: Salvando as configurações do usuário em uma página inicial
-Você pode persistir configurações de usuário para sua página inicial. Seguindo este passo a passo, você pode criar um controle que salva uma configuração no registro quando o usuário clica em um botão e, em seguida, recupera a configuração sempre que carrega a página inicial. Como o modelo de projeto de página inicial inclui um controle de usuário personalizável, e o padrão iniciar página XAML chama esse controle, você não precisa modificar a página de início em si.  
+# <a name="walkthrough-saving-user-settings-on-a-start-page"></a>Walkthrough: Saving User Settings on a Start Page
+You can persist user settings for your start page. By following this walkthrough, you can create a control that saves a setting to the registry when the user clicks a button, and then retrieves that setting every time the Start Page loads. Because the Start Page project template includes a customizable user control, and the default Start Page XAML calls that control, you do not have to modify the Start Page itself.  
   
- O armazenamento de configurações é instanciado neste passo a passo é uma ocorrência da <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore>interface, que lê e grava no seguinte local do registro quando ele é chamado: HKCU\Software\Microsoft\VisualStudio\14.0\\*CollectionName* </xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore>  
+ The settings store that is instantiated in this walkthrough is an instance of the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> interface, which reads and writes to the following registry location when it is called: HKCU\Software\Microsoft\VisualStudio\14.0\\*CollectionName*  
   
- Quando ele está em execução na instância experimental do Visual Studio, o repositório de configurações lê e grava HKCU\Software\Microsoft\VisualStudio\14.0Exp\\*CollectionName.*  
+ When it is running in the experimental instance of Visual Studio, the settings store reads and writes to HKCU\Software\Microsoft\VisualStudio\14.0Exp\\*CollectionName.*  
   
- Para obter mais informações sobre como manter as configurações, consulte [opções e configurações de usuário estendendo](../extensibility/extending-user-settings-and-options.md).  
+ For more information about how to persist settings, see [Extending User Settings and Options](../extensibility/extending-user-settings-and-options.md).  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 > [!NOTE]
->  Para seguir este passo a passo, você deve instalar o SDK do Visual Studio. Para obter mais informações, consulte [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+>  To follow this walkthrough, you must install the Visual Studio SDK. For more information, see [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
 >   
->  Você pode baixar o modelo de projeto de página inicial usando **Extension Manager**.  
+>  You can download the Start Page project template by using **Extension Manager**.  
   
-## <a name="setting-up-the-project"></a>Configurar o projeto  
+## <a name="setting-up-the-project"></a>Setting Up the Project  
   
-#### <a name="to-configure-the-project-for-this-walkthrough"></a>Para configurar o projeto para este passo a passo  
+#### <a name="to-configure-the-project-for-this-walkthrough"></a>To configure the project for this walkthrough  
   
-1.  Criar um projeto de página inicial, conforme descrito em [criar uma página de início personalizado](creating-a-custom-start-page.md). Nomeie o projeto **SaveMySettings**.  
+1.  Create a Start Page project as described in [Creating a Custom Start Page](creating-a-custom-start-page.md). Name the project **SaveMySettings**.  
   
-2.  Em **Solution Explorer**, adicione as seguintes referências de assembly ao projeto StartPageControl:  
+2.  In **Solution Explorer**, add the following assembly references to the StartPageControl project:  
   
     -   EnvDTE  
   
@@ -64,23 +65,23 @@ Você pode persistir configurações de usuário para sua página inicial. Segui
   
     -   Microsoft.VisualStudio.Shell.Interop.11.0  
   
-3.  Abra MyControl.xaml.  
+3.  Open MyControl.xaml.  
   
-4.  No painel XAML, no nível superior <xref:System.Windows.Controls.UserControl>definição de elemento, adicione a seguinte declaração de evento após as declarações de namespace.</xref:System.Windows.Controls.UserControl>  
+4.  From the XAML pane, in the top-level <xref:System.Windows.Controls.UserControl> element definition, add the following event declaration after the namespace declarations.  
   
     ```  
     Loaded="OnLoaded"  
     ```  
   
-5.  No painel de design, clique na área principal do controle e, em seguida, pressione DELETE.  
+5.  In the design pane, click the main area of the control, and then press DELETE.  
   
-     Isso remove o <xref:System.Windows.Controls.Border>elemento e tudo nele e deixa somente o primeiro nível <xref:System.Windows.Controls.Grid>elemento.</xref:System.Windows.Controls.Grid> </xref:System.Windows.Controls.Border>  
+     This removes the <xref:System.Windows.Controls.Border> element and everything in it, and leaves only the top-level <xref:System.Windows.Controls.Grid> element.  
   
-6.  Do **Toolbox**, arraste um <xref:System.Windows.Controls.StackPanel>controle à grade.</xref:System.Windows.Controls.StackPanel>  
+6.  From the **Toolbox**, drag a <xref:System.Windows.Controls.StackPanel> control to the grid.  
   
-7.  Agora, arraste um <xref:System.Windows.Controls.TextBlock>, um <xref:System.Windows.Controls.TextBox>e um botão para <xref:System.Windows.Controls.StackPanel>.</xref:System.Windows.Controls.StackPanel> </xref:System.Windows.Controls.TextBox> </xref:System.Windows.Controls.TextBlock>  
+7.  Now drag a <xref:System.Windows.Controls.TextBlock>, a <xref:System.Windows.Controls.TextBox>, and a Button to the <xref:System.Windows.Controls.StackPanel>.  
   
-8.  Adicionar uma **X:Name** de atributo para o <xref:System.Windows.Controls.TextBox>e um `Click` eventos para o <xref:System.Windows.Controls.Button>, conforme mostrado no exemplo a seguir.</xref:System.Windows.Controls.Button> </xref:System.Windows.Controls.TextBox>  
+8.  Add an **x:Name** attribute for the <xref:System.Windows.Controls.TextBox>, and a `Click` event for the <xref:System.Windows.Controls.Button>, as shown in the following example.  
   
     ```xml  
     <StackPanel Width="300" HorizontalAlignment="Center" VerticalAlignment="Center">  
@@ -90,21 +91,21 @@ Você pode persistir configurações de usuário para sua página inicial. Segui
     </StackPanel>  
     ```  
   
-## <a name="implementing-the-user-control"></a>Implementando o controle de usuário  
+## <a name="implementing-the-user-control"></a>Implementing the User Control  
   
-#### <a name="to-implement-the-user-control"></a>Para implementar o controle de usuário  
+#### <a name="to-implement-the-user-control"></a>To implement the user control  
   
-1.  No painel de XAML, com o botão direito do `Click` atributo do <xref:System.Windows.Controls.Button>elemento e depois clique em **navegar até manipulador de eventos**.</xref:System.Windows.Controls.Button>  
+1.  In the XAML pane, right-click the `Click` attribute of the <xref:System.Windows.Controls.Button> element, and then click **Navigate to Event Handler**.  
   
-     Isso abre o MyControl.xaml.cs e cria um manipulador de stub para o `Button_Click` evento.  
+     This opens MyControl.xaml.cs, and creates a stub handler for the `Button_Click` event.  
   
-2.  Adicione o seguinte `using` instruções na parte superior do arquivo.  
+2.  Add the following `using` statements to the top of the file.  
   
-     [!code-cs[StartPageDTE n º&11;](../extensibility/codesnippet/CSharp/walkthrough-saving-user-settings-on-a-start-page_1.cs)]  
+     [!code-cs[StartPageDTE#11](../extensibility/codesnippet/CSharp/walkthrough-saving-user-settings-on-a-start-page_1.cs)]  
   
-3.  Adicionar uma privada `SettingsStore` propriedade, conforme mostrado no exemplo a seguir.  
+3.  Add a private `SettingsStore` property, as shown in the following example.  
   
-    ```c#  
+    ```cs  
     private IVsWritableSettingsStore _settingsStore = null;  
     private IVsWritableSettingsStore SettingsStore  
     {  
@@ -134,11 +135,11 @@ Você pode persistir configurações de usuário para sua página inicial. Segui
     }  
     ```  
   
-     Essa propriedade primeiro obtém uma referência para o <xref:EnvDTE80.DTE2>interface, que contém o modelo de objeto de automação do <xref:System.Windows.FrameworkElement.DataContext%2A>do controle de usuário e, em seguida, usa DTE para obter uma instância do <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager>interface.</xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> </xref:System.Windows.FrameworkElement.DataContext%2A> </xref:EnvDTE80.DTE2> Em seguida, ele usa essa instância para retornar as configurações do usuário atual.  
+     This property first gets a reference to the <xref:EnvDTE80.DTE2> interface, which contains the Automation object model, from the <xref:System.Windows.FrameworkElement.DataContext%2A> of the user control, and then uses the DTE to get an instance of the <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> interface. Then it uses that instance to return the current user settings.  
   
-4.  Preencha o `Button_Click` evento da seguinte maneira.  
+4.  Fill in the `Button_Click` event as follows.  
   
-    ```c#  
+    ```cs  
     private void Button_Click(object sender, RoutedEventArgs e)  
     {  
         int exists = 0;  
@@ -151,11 +152,11 @@ Você pode persistir configurações de usuário para sua página inicial. Segui
     }  
     ```  
   
-     Grava o conteúdo da caixa de texto a um campo de "MySetting" em uma coleção de "MySettings" no registro. Se a coleção não existir, ele será criado.  
+     This writes the content of the text box to a "MySetting" field in a "MySettings" collection in the registry. If the collection does not exist, it is created.  
   
-5.  Adicione o seguinte manipulador de `OnLoaded` eventos do controle de usuário.  
+5.  Add the following handler for the `OnLoaded` event of the user control.  
   
-    ```c#  
+    ```cs  
     private void OnLoaded(Object sender, RoutedEventArgs e)  
     {  
         string value;  
@@ -165,57 +166,57 @@ Você pode persistir configurações de usuário para sua página inicial. Segui
     }  
     ```  
   
-     Define o texto da caixa de texto para o valor atual do "MySetting".  
+     This sets the text of the text box to the current value of "MySetting".  
   
-6.  Crie o controle de usuário.  
+6.  Build the user control.  
   
-7.  Em **Solution Explorer**, abra source.extension.vsixmanifest.  
+7.  In **Solution Explorer**, open source.extension.vsixmanifest.  
   
-8.  No editor de manifesto, defina **nome do produto** para **salvar minhas configurações Start Page**.  
+8.  In the manifest editor, set **Product Name** to **Save My Settings Start Page**.  
   
-     Isso define o nome da página de início como aparece no **Personalizar página inicial** lista no **opções** caixa de diálogo.  
+     This sets the name of the Start Page as it is to appear in the **Customize Start Page** list in the **Options** dialog box.  
   
-9. Crie StartPage.  
+9. Build StartPage.xaml.  
   
-## <a name="testing-the-control"></a>Testando o controle  
+## <a name="testing-the-control"></a>Testing the Control  
   
-#### <a name="to-test-the-user-control"></a>Para testar o controle de usuário  
+#### <a name="to-test-the-user-control"></a>To test the user control  
   
-1.  Pressione F5.  
+1.  Press F5.  
   
-     A instância experimental do Visual Studio é aberto.  
+     The experimental instance of Visual Studio opens.  
   
-2.  Na instância experimental, sobre o **ferramentas** menu, clique em **opções**.  
+2.  In the experimental instance, on the **Tools** menu, click **Options**.  
   
-3.  No **ambiente** nó, clique em **inicialização**e em seguida, no **Personalizar página inicial** lista, selecione **[extensão instalado] salvar minhas configurações de página inicial**.  
+3.  In the **Environment** node, click **Startup**, and then, in the **Customize Start Page** list, select **[Installed Extension] Save My Settings Start Page**.  
   
-     Clique em **OK**.  
+     Click **OK**.  
   
-4.  Feche a página de início se estiver aberto e, no **exibição** menu, clique em **Start Page**.  
+4.  Close the Start Page if it is open, and then, on the **View** menu, click **Start Page**.  
   
-5.  Na página início, clique o **MyControl** guia.  
+5.  On the Start Page, click the **MyControl** tab.  
   
-6.  Na caixa de texto, digite **Cat**e, em seguida, clique em **salvar minha configuração**.  
+6.  In the text box, type **Cat**, and then click **Save My Setting**.  
   
-7.  Feche a página de início e abra-o novamente.  
+7.  Close the Start Page and then open it again.  
   
-     A palavra "Gato" deve ser exibida na caixa de texto.  
+     The word "Cat" should be displayed in the text box.  
   
-8.  Substitua a palavra "Gato" com a palavra "Cachorro". Não clique no botão.  
+8.  Replace the word "Cat" with the word "Dog". Do not click the button.  
   
-9. Feche a página de início e abra-o novamente.  
+9. Close the Start Page and then open it again.  
   
-     A palavra "Cachorro" deve ser exibida na caixa de texto, mesmo que a configuração não foi salvo. Isso acontece porque o Visual Studio mantém janelas de ferramenta na memória, mesmo se eles forem fechados, até que o próprio Visual Studio é fechado.  
+     The word "Dog" should be displayed in the text box, even though the setting was not saved. This happens because Visual Studio keeps tool windows in memory, even if they are closed, until Visual Studio itself is closed.  
   
-10. Feche a instância experimental do Visual Studio.  
+10. Close the experimental instance of Visual Studio.  
   
-11. Pressione F5 para abrir novamente a instância experimental.  
+11. Press F5 to re-open the experimental instance.  
   
-12. A palavra "Gato" deve ser exibida na caixa de texto.  
+12. The word "Cat" should be displayed in the text box.  
   
-## <a name="next-steps"></a>Próximas etapas  
- Você pode modificar esse controle de usuário para salvar e recuperar qualquer número de configurações personalizadas usando valores diferentes de manipuladores de eventos diferentes para obter e definir o `SettingsStore` propriedade. Contanto que você use outro `propertyName` parâmetro para cada chamada para <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore.SetString%2A>, os valores não substituirão uns dos outros no registro.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore.SetString%2A>  
+## <a name="next-steps"></a>Next Steps  
+ You can modify this user control to save and retrieve any number of custom settings by using different values from different event handlers to get and set the `SettingsStore` property. As long as you use a different `propertyName` parameter for each call to <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore.SetString%2A>, the values will not overwrite one another in the registry.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:EnvDTE80.DTE2?displayProperty=fullName></xref:EnvDTE80.DTE2?displayProperty=fullName>     
- [Adicionando comandos do Visual Studio para uma página inicial](../extensibility/adding-visual-studio-commands-to-a-start-page.md)
+## <a name="see-also"></a>See Also  
+ <xref:EnvDTE80.DTE2?displayProperty=fullName>     
+ [Adding Visual Studio Commands to a Start Page](../extensibility/adding-visual-studio-commands-to-a-start-page.md)

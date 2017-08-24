@@ -1,5 +1,5 @@
 ---
-title: PORT_SUPPLIER_DESCRIPTION_FLAGS | Documentos do Microsoft
+title: PORT_SUPPLIER_DESCRIPTION_FLAGS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,16 +28,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 51bde506f94e17658db515967197bd2221152ea4
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 57568fab23c8f853a841afaded4e921f84c3e4eb
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="portsupplierdescriptionflags"></a>PORT_SUPPLIER_DESCRIPTION_FLAGS
-Define os metadados que podem ser recuperados sobre um fornecedor de porta.  
+Defines the metadata that can be retrieved about a port supplier.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS  
@@ -47,27 +48,27 @@ enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS
 typedef DWORD PORT_SUPPLIER_DESCRIPTION_FLAGS;  
 ```  
   
-```c#  
+```cs  
 public enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS  
 {  
    PSDFLAG_SHOW_WARNING_ICON = 0x1  
 };  
 ```  
   
-## <a name="terms"></a>Termos  
+## <a name="terms"></a>Terms  
  PSDFLAG_SHOW_WARNING_ICON  
- Se selecionada, o ícone de aviso será exibido na interface do usuário.  
+ If selected, the warning icon will be displayed in the UI.  
   
-## <a name="remarks"></a>Comentários  
- Essa enumeração é retornada pelo [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) método.  
+## <a name="remarks"></a>Remarks  
+ This enumeration is returned by the [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: Msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md)

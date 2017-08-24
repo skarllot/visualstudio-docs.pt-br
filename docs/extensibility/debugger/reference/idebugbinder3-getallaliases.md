@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetAllAliases | Documentos do Microsoft
+title: IDebugBinder3::GetAllAliases | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e3663d77938a3986f5ea5fcd59bcfc0fae52b626
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e39fb66c7618085393dfdb6a14ec085aa0f4b99e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugbinder3getallaliases"></a>IDebugBinder3::GetAllAliases
-Esse método recupera uma lista de aliases do programa.  
+This method retrieves a list of aliases from the program.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetAllAliases(  
@@ -49,7 +50,7 @@ HRESULT GetAllAliases(
 );  
 ```  
   
-```c#  
+```cs  
 int GetAllAliases(  
    uint          uRequest,   
    IDebugAlias[] ppAliases,   
@@ -57,18 +58,18 @@ int GetAllAliases(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `uRequest`  
- [in] O número máximo de aliases para retornar (Especifica o comprimento da matriz passada em `ppAliases`).  
+ [in] The maximum number of aliases to return (specifies the length of the array passed into `ppAliases`).  
   
  `ppAliases`  
- [no, out] Matriz preencherem com aliases (se esse for um valor nulo e `uRequest` é 0, a contagem de aliases que podem ser retornados será retornada por `puFetched`).  
+ [in, out] Array to fill in with aliases (if this is a null value and `uRequest` is 0, the count of aliases that can be returned will be returned by `puFetched`).  
   
  `puFetched`  
- [out] Retorna o número de aliases obtido.  
+ [out] Returns the number of aliases obtained.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

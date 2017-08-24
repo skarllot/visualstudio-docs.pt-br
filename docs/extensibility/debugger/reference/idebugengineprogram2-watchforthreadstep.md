@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::WatchForThreadStep | Documentos do Microsoft
+title: IDebugEngineProgram2::WatchForThreadStep | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 83fdc61616ae42c9b1a553aeee24a238b51da574
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 965b7866e0afcf0de99a71643d995591bd6ff524
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugengineprogram2watchforthreadstep"></a>IDebugEngineProgram2::WatchForThreadStep
-Aguarda a execução (ou para assistir a execução) para ocorrer em determinado thread.  
+Watches for execution (or stops watching for execution) to occur on the given thread.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT WatchForThreadStep(   
@@ -50,7 +51,7 @@ HRESULT WatchForThreadStep(
 );  
 ```  
   
-```c#  
+```cs  
 int WatchForThreadStep(   
    IDebugProgram2 pOriginatingProgram,  
    uint           dwTid,  
@@ -59,27 +60,27 @@ int WatchForThreadStep(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pOriginatingProgram`  
- [in] Um [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto que representa o programa que está sendo passado.  
+ [in] An [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object representing the program being stepped.  
   
  `dwTid`  
- [in] Especifica o identificador do segmento para assistir.  
+ [in] Specifies the identifier of the thread to watch.  
   
  `fWatch`  
- [in] Diferente de zero (`TRUE`) significa começar a observar para execução no thread identificado por `dwTid`; caso contrário, zero (`FALSE`) significa parar de monitorar para execução em `dwTid`.  
+ [in] Non-zero (`TRUE`) means start watching for execution on the thread identified by `dwTid`; otherwise, zero (`FALSE`) means stop watching for execution on `dwTid`.  
   
  `dwFrame`  
- [in] Especifica um índice de quadro que controla o tipo de etapa. Quando se trata de valor é zero (0), o tipo de etapa é "step into" e o programa deve interromper sempre que o thread identificado pelo `dwTid` executa. Quando `dwFrame` é diferente de zero, o tipo de etapa é "step over" e o programa deve parar apenas se o thread identificado por `dwTid` está em execução em um quadro cujo índice é igual ou superior na pilha de `dwFrame`.  
+ [in] Specifies a frame index that controls the step type. When this is value is zero (0), the step type is "step into" and the program should stop whenever the thread identified by `dwTid` executes. When `dwFrame` is non-zero, the step type is "step over" and the program should stop only if the thread identified by `dwTid` is running in a frame whose index is equal to or higher on the stack than `dwFrame`.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Quando o Gerenciador de sessão de depuração (SDM) etapas de um programa, identificado pelo `pOriginatingProgram` parâmetro, ele notifica todos os outros programas anexados ao chamar esse método.  
+## <a name="remarks"></a>Remarks  
+ When the session debug manager (SDM) steps a program, identified by the `pOriginatingProgram` parameter, it notifies all other attached programs by calling this method.  
   
- Esse método é aplicável apenas a revisão do mesmo thread.  
+ This method is applicable only to same-thread stepping.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

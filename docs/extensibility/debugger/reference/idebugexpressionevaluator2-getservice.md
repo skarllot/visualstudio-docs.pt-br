@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::GetService | Documentos do Microsoft
+title: IDebugExpressionEvaluator2::GetService | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 67b087300c6263234c7bd73d156f3c44b80427d5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 00e201b6ccdd3a0277c4a26deb0b25970fc19d82
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
-Recupera um objeto de serviço recebe seu identificador exclusivo.  
+Retrieves a service object given its unique identifier.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetService (  
@@ -47,25 +48,25 @@ HRESULT GetService (
 );  
 ```  
   
-```c#  
+```cs  
 int GetService (  
    Guid       uid,  
    out object ppService  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `uid`  
- [in] Identificador exclusivo do serviço para recuperar.  
+ [in] Unique identifier of the service to retrieve.  
   
  `ppService`  
- [out] Retorna um objeto que representa o serviço.  
+ [out] Returns an object that represents the service.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Isso pode ser consumido por um avaliador de expressão de terceiros para obter serviços de outro avaliador de expressão. Por exemplo, esse método pode ser usado para obter a interface para o serviço Visualizador de avaliador de expressão padrão. Avaliadores de expressão de terceiros são provavelmente não precisa implementar esta interface.  
+## <a name="remarks"></a>Remarks  
+ This can be consumed by a third-party expression evaluator to obtain services from another expression evaluator. For example, this method could be used to obtain the interface for the visualizer service from the default expression evaluator. Third-party expression evaluators are unlikely to need to implement this interface.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

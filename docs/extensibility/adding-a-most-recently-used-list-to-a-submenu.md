@@ -1,5 +1,5 @@
 ---
-title: Adicionando um usados recentemente lista a um Submenu | Documentos do Microsoft
+title: Adding a Most Recently Used List to a Submenu | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,44 +30,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 873d2b57f7b8b942ab5dbd54d3bedad53a8bbd49
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7553609afc0fdc17f48634046dcb531db65b5f8b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="adding-a-most-recently-used-list-to-a-submenu"></a>Adicionar um mais recentemente usada lista a um Submenu
-Este passo a passo se baseia nas demonstrações [adicionar um Submenu a um Menu](../extensibility/adding-a-submenu-to-a-menu.md)e mostra como adicionar uma lista dinâmica a um submenu. A lista dinâmica constitui a base para a criação de uma lista de usados mais recentemente (MRU).  
+# <a name="adding-a-most-recently-used-list-to-a-submenu"></a>Adding a Most Recently Used List to a Submenu
+This walkthrough builds on the demonstrations in [Adding a Submenu to a Menu](../extensibility/adding-a-submenu-to-a-menu.md), and shows how to add a dynamic list to a submenu. The dynamic list forms the basis for creating a Most Recently Used (MRU) list.  
   
- Inicia uma lista de menu dinâmico com um espaço reservado em um menu. Sempre que o menu é exibido, o ambiente de desenvolvimento integrado (IDE) do Visual Studio solicita o VSPackage todos os comandos que devem ser mostrados no espaço reservado. Uma lista dinâmica pode ocorrer em qualquer lugar em um menu. No entanto, listas dinâmicas normalmente serão armazenadas e exibidas por si mesmos submenus ou na parte inferior dos menus. Usando esses padrões de design, você deve habilitar a lista dinâmica de comandos para expandir e contrair sem afetar a posição dos outros comandos no menu. Neste passo a passo, a lista MRU dinâmica é exibida na parte inferior de um submenu existente, separado do resto do submenu por uma linha.  
+ A dynamic menu list starts with a placeholder on a menu. Every time the menu is shown, the Visual Studio integrated development environment (IDE) asks the VSPackage for all commands that should be shown at the placeholder. A dynamic list can occur anywhere on a menu. However, dynamic lists are typically stored and displayed by themselves on submenus or at the bottoms of menus. By using these design patterns, you enable the dynamic list of commands to expand and contract without affecting the position of other commands on the menu. In this walkthrough, the dynamic MRU list is displayed at the bottom of an existing submenu, separated from the rest of the submenu by a line.  
   
- Tecnicamente, uma lista dinâmica também pode ser aplicada à barra de ferramentas. No entanto, que não é recomendável que o uso como uma barra de ferramentas deve permanecer inalterada, a menos que o usuário executa as etapas específicas para alterá-lo.  
+ Technically, a dynamic list can also be applied to a toolbar. However, we discourage that usage because a toolbar should remain unchanged unless the user takes specific steps to change it.  
   
- Este passo a passo cria uma lista MRU de quatro itens que alterar sua ordem toda vez que um deles está selecionado (o item selecionado se move para o topo da lista).  
+ This walkthrough creates an MRU list of four items that change their order every time that one of them is selected (the selected item moves to the top of the list).  
   
- Para obter mais informações sobre menus e arquivos. VSCT, consulte [comandos, Menus e barras de ferramentas](../extensibility/internals/commands-menus-and-toolbars.md).  
+ For more information about menus and .vsct files, see [Commands, Menus, and Toolbars](../extensibility/internals/commands-menus-and-toolbars.md).  
   
-## <a name="prerequisites"></a>Pré-requisitos  
- Para seguir este passo a passo, você deve instalar o SDK do Visual Studio. Para obter mais informações, consulte [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ To follow this walkthrough, you must install the Visual Studio SDK. For more information, see [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
-## <a name="creating-an-extension"></a>Criando uma extensão  
+## <a name="creating-an-extension"></a>Creating an Extension  
   
--   Siga os procedimentos [adicionar um Submenu a um Menu](../extensibility/adding-a-submenu-to-a-menu.md) para criar o submenu é modificado nos procedimentos a seguir.  
+-   Follow the procedures in [Adding a Submenu to a Menu](../extensibility/adding-a-submenu-to-a-menu.md) to create the submenu that is modified in the following procedures.  
   
- Os procedimentos neste passo a passo supõem que o nome do VSPackage é `TopLevelMenu`, que é o nome que é usado em [adicionar um Menu a barra de menus do Visual Studio](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md).  
+ The procedures in this walkthrough assume that the name of the VSPackage is `TopLevelMenu`, which is the name that is used in [Adding a Menu to the Visual Studio Menu Bar](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md).  
   
-## <a name="creating-a-dynamic-item-list-command"></a>Criar um comando de lista de Item dinâmico  
+## <a name="creating-a-dynamic-item-list-command"></a>Creating a Dynamic Item List Command  
   
-1.  Abra TestCommandPackage.vsct.  
+1.  Open TestCommandPackage.vsct.  
   
-2.  No `Symbols` seção, o `GuidSymbol` nó chamado guidTestCommandPackageCmdSet, adicione o símbolo para o `MRUListGroup` grupo e o `cmdidMRUList` de comando, da seguinte maneira.  
+2.  In the `Symbols` section, in the `GuidSymbol` node named guidTestCommandPackageCmdSet, add the symbol for the `MRUListGroup` group and the `cmdidMRUList` command, as follows.  
   
-    ```c#  
+    ```cs  
     <IDSymbol name="MRUListGroup" value="0x1200"/>  
     <IDSymbol name="cmdidMRUList" value="0x0200"/>  
     ```  
   
-3.  No `Groups` seção, adicione o grupo declarado após as entradas existentes do grupo.  
+3.  In the `Groups` section, add the declared group after the existing group entries.  
   
     ```cpp  
     <Group guid="guidTestCommandPackageCmdSet" id="MRUListGroup"   
@@ -77,9 +78,9 @@ Este passo a passo se baseia nas demonstrações [adicionar um Submenu a um Menu
   
     ```  
   
-4.  No `Buttons` seção, adicione um nó para representar o comando recentemente declarado, após as entradas existentes do botão.  
+4.  In the `Buttons` section, add a node to represent the newly declared command, after the existing button entries.  
   
-    ```c#  
+    ```cs  
     <Button guid="guidTestCommandPackageCmdSet" id="cmdidMRUList"  
         type="Button" priority="0x0100">  
         <Parent guid="guidTestCommandPackageCmdSet" id="MRUListGroup" />  
@@ -91,36 +92,36 @@ Este passo a passo se baseia nas demonstrações [adicionar um Submenu a um Menu
     </Button>  
     ```  
   
-     O `DynamicItemStart` sinalizador permite que o comando a ser gerado dinamicamente.  
+     The `DynamicItemStart` flag enables the command to be generated dynamically.  
   
-5.  Compile o projeto e iniciar a depuração para testar a exibição do comando novo.  
+5.  Build the project and start debugging to test the display of the new command.  
   
-     Sobre o **TestMenu** menu, clique em novo submenu, **submenu**para exibir o novo comando, **espaço reservado MRU**. Depois de uma lista MRU dinâmica dos comandos é implementada no próximo procedimento, este rótulo de comando será substituído por essa lista toda vez que o submenu é aberto.  
+     On the **TestMenu** menu, click the new submenu, **Sub Menu**, to display the new command, **MRU Placeholder**. After a dynamic MRU list of commands is implemented in the next procedure, this command label will be replaced by that list every time that the submenu is opened.  
   
-## <a name="filling-the-mru-list"></a>Preencher a lista MRU  
+## <a name="filling-the-mru-list"></a>Filling the MRU List  
   
-1.  No TestCommandPackageGuids.cs, adicione as seguintes linhas após as IDs de comando existente no `TestCommandPackageGuids` definição de classe.  
+1.  In TestCommandPackageGuids.cs, add the following lines after the existing command IDs in the `TestCommandPackageGuids` class definition.  
   
-    ```c#  
+    ```cs  
     public const string guidTestCommandPackageCmdSet = "00000000-0000-0000-0000-00000000"; // get the GUID from the .vsct file  
     public const uint cmdidMRUList = 0x200;  
     ```  
   
-2.  Em TestCommand.cs, adicione a seguinte instrução using.  
+2.  In TestCommand.cs add the following using statement.  
   
-    ```c#  
+    ```cs  
     using System.Collections;  
     ```  
   
-3.  Adicione o seguinte código no construtor TestCommand após a última chamada AddCommand. O `InitMRUMenu` serão definidas posteriormente  
+3.  Add the following code in the TestCommand constructor after the last AddCommand call. The `InitMRUMenu` will be defined later  
   
-    ```c#  
+    ```cs  
     this.InitMRUMenu(commandService);  
     ```  
   
-4.  Adicione o seguinte código na classe TestCommand. Esse código inicializa a lista de cadeias de caracteres que representam os itens a serem mostrados na lista MRU.  
+4.  Add the following code in the TestCommand class. This code initializes the list of strings that represent the items to be shown on the MRU list.  
   
-    ```c#  
+    ```cs  
     private int numMRUItems = 4;  
     private int baseMRUID = (int)TestCommandPackageGuids.cmdidMRUList;  
     private ArrayList mruList;  
@@ -142,9 +143,9 @@ Este passo a passo se baseia nas demonstrações [adicionar um Submenu a um Menu
     }  
     ```  
   
-5.  Após o `InitializeMRUList` método, adicione o `InitMRUMenu` método. Isso inicializa os comandos de menu lista MRU.  
+5.  After the `InitializeMRUList` method, add the `InitMRUMenu` method. This initializes the MRU list menu commands.  
   
-    ```c#  
+    ```cs  
     private void InitMRUMenu(OleMenuCommandService mcs)  
     {  
         InitializeMRUList();  
@@ -160,11 +161,11 @@ Este passo a passo se baseia nas demonstrações [adicionar um Submenu a um Menu
     }  
     ```  
   
-     Você deve criar um objeto de comando de menu para cada item possíveis da lista. O IDE chama o `OnMRUQueryStatus` método para cada item da lista até que não haja nenhum outro item. No código gerenciado, a única maneira para que o IDE sabe que não há nenhum outro item é primeiro criar todos os itens possíveis. Se desejar, você pode marcar itens adicionais como não visíveis no primeiro usando `mc.Visible = false;` depois que o comando de menu é criado. Esses itens podem, em seguida, ficar visíveis posteriormente usando `mc.Visible = true;` no `OnMRUQueryStatus` método.  
+     You must create a menu command object for every possible item in the MRU list. The IDE calls the `OnMRUQueryStatus` method for each item in the MRU list until there are no more items. In managed code, the only way for the IDE to know that there are no more items is to create all possible items first. If you want, you can mark additional items as not visible at first by using `mc.Visible = false;` after the menu command is created. These items can then be made visible later by using `mc.Visible = true;` in the `OnMRUQueryStatus` method.  
   
-6.  Após o `InitMRUMenu` método, adicione o seguinte `OnMRUQueryStatus` método. Esse é o manipulador que define o texto para cada item MRU.  
+6.  After the `InitMRUMenu` method, add the following `OnMRUQueryStatus` method. This is the handler that sets the text for each MRU item.  
   
-    ```c#  
+    ```cs  
     private void OnMRUQueryStatus(object sender, EventArgs e)  
     {  
         OleMenuCommand menuCommand = sender as OleMenuCommand;  
@@ -179,9 +180,9 @@ Este passo a passo se baseia nas demonstrações [adicionar um Submenu a um Menu
     }  
     ```  
   
-7.  Após o `OnMRUQueryStatus` método, adicione o seguinte `OnMRUExec` método. Esse é o manipulador para selecionar um item MRU. Esse método Move o item selecionado na parte superior da lista e, em seguida, exibe o item selecionado em uma caixa de mensagem.  
+7.  After the `OnMRUQueryStatus` method, add the following `OnMRUExec` method. This is the handler for selecting an MRU item. This method moves the selected item to the top of the list and then displays the selected item in a message box.  
   
-    ```c#  
+    ```cs  
     private void OnMRUExec(object sender, EventArgs e)  
     {  
         var menuCommand = sender as OleMenuCommand;  
@@ -205,20 +206,20 @@ Este passo a passo se baseia nas demonstrações [adicionar um Submenu a um Menu
   
     ```  
   
-## <a name="testing-the-mru-list"></a>Testar a lista MRU  
+## <a name="testing-the-mru-list"></a>Testing the MRU List  
   
-#### <a name="to-test-the-mru-menu-list"></a>Para testar a lista de menu MRU  
+#### <a name="to-test-the-mru-menu-list"></a>To test the MRU menu list  
   
-1.  Compile o projeto e iniciar a depuração  
+1.  Build the project and start debugging  
   
-2.  Sobre o **TestMenu** menu, clique em **TestCommand invocar**. Isso exibe uma caixa de mensagem que indica que o comando foi selecionado.  
+2.  On the **TestMenu** menu, click **Invoke TestCommand**. Doing this displays a message box that indicates that the command was selected.  
   
     > [!NOTE]
-    >  Essa etapa é necessária para forçar o VSPackage para carregar e exibir a lista MRU corretamente. Se você ignorar essa etapa, a lista MRU não é exibida.  
+    >  This step is required to force the VSPackage to load and correctly display the MRU list. If you skip this step, the MRU list is not displayed.  
   
-3.  Sobre o **Menu Test** menu, clique em **submenu**. É exibida uma lista de quatro itens no final do submenu, abaixo do separador. Quando você clica em **Item 3**, uma caixa de mensagem deve aparecer e exibir o texto "Selected Item 3". (Se a lista de quatro itens não for exibida, certifique-se que você seguiu as instruções na etapa anterior.)  
+3.  On the **Test Menu** menu, click **Sub Menu**. A list of four items is displayed at the end of the submenu, below a separator. When you click **Item 3**, a message box should appear and display the text, "Selected Item 3". (If the list of four items is not displayed, ensure that you have followed the instructions in the earlier step.)  
   
-4.  Abra o submenu novamente. Observe que **Item 3** agora está na parte superior da lista e os outros itens foram empurrados para uma posição para baixo. Clique em **Item 3** novamente e observe que a caixa de mensagem ainda exibe "Selected Item 3", que indica que o texto foi movido corretamente para a nova posição junto com o rótulo de comando.  
+4.  Open the submenu again. Notice that **Item 3** is now at the top of the list and the other items have been pushed down one position. Click **Item 3** again and notice that the message box still displays "Selected Item 3", which indicates that the text has correctly moved to the new position together with the command label.  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar itens de Menu dinamicamente](../extensibility/dynamically-adding-menu-items.md)
+## <a name="see-also"></a>See Also  
+ [Dynamically Adding Menu Items](../extensibility/dynamically-adding-menu-items.md)

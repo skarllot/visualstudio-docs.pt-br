@@ -1,5 +1,5 @@
 ---
-title: CONST_GUID_ARRAY | Documentos do Microsoft
+title: CONST_GUID_ARRAY | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9f61d6ebb7f10336572dbd6259c300711598406b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6d819936facdd2f1c05af41b584d167aa39c7bd3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="constguidarray"></a>CONST_GUID_ARRAY
-Uma estrutura que mantém uma lista de `GUID`s.  
+A structure that holds a list of `GUID`s.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagCONST_GUID_ARRAY {  
@@ -48,34 +49,34 @@ typedef struct tagCONST_GUID_ARRAY {
 } CONST_GUID_ARRAY;  
 ```  
   
-```c#  
+```cs  
 public struct CONST_GUID_ARRAY {  
    public uint   dwCount;  
    public Guid[] Members;  
 }  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  dwCount  
- Número de `GUID`s na `Members` matriz.  
+ Number of `GUID`s in the `Members` array.  
   
- Membros  
- Matriz de `GUID`s.  
+ Members  
+ Array of `GUID`s.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é passada para o [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) método e é retornado a partir de [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) e [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) métodos.  
+## <a name="remarks"></a>Remarks  
+ This structure is passed to the [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) method, and is returned from the [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) and [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) methods.  
   
- O proprietário de uma instância dessa estrutura é responsável por liberar a memória alocada.  
+ The owner of an instance of this structure is responsible for freeing any memory allocated.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)   
  [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)   
  [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)

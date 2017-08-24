@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetType | Documentos do Microsoft
+title: IDebugField::GetType | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: aa5f17aad42f4433b42fb69668662a1b8b0b62af
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6f2c8564fc2397743b31ad92f2d1517c16848696
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugfieldgettype"></a>IDebugField::GetType
-Esse método obtém o tipo de campo.  
+This method gets the type of field.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetType(   
@@ -47,18 +48,18 @@ HRESULT GetType(
 );  
 ```  
   
-```c#  
+```cs  
 int GetType(  
    out IDebugField ppType  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ppType`  
- [out] Retorna o tipo de campo como outra [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto.  
+ [out] Returns the field type as another [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

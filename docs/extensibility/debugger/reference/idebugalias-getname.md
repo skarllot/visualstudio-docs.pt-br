@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias::GetName | Documentos do Microsoft
+title: IDebugAlias::GetName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2c3f265749227289eb28b9099bd71f45d83c8bf8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e687f6858f2b6205f8f53ce17e2990ccf375d55b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugaliasgetname"></a>IDebugAlias::GetName
-Obtém o nome desse alias.  
+Gets the name of this alias.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetName(  
@@ -47,18 +48,18 @@ HRESULT GetName(
 );  
 ```  
   
-```c#  
+```cs  
 int GetName(  
    out string pbstrName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pbstrName`  
- [out] Nome do alias.  
+ [out] Name of the alias.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

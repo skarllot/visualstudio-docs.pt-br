@@ -1,5 +1,5 @@
 ---
-title: Implementando um Service2 de idioma herdado | Documentos do Microsoft
+title: Implementing a Legacy Language Service2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,36 +28,37 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 40df713356e33feecd9caf0372d569f88a40af6a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f8d3d90b9ccdd1e13dde34622e2d730b0ab376b3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="implementing-a-legacy-language-service"></a>Implementando um serviço de linguagem herdado
-Para implementar um serviço de idioma usando a estrutura de pacote gerenciado (MPF), você deve derivar uma classe a partir de <xref:Microsoft.VisualStudio.Package.LanguageService>classe e implementar as propriedades e métodos abstratos seguintes:</xref:Microsoft.VisualStudio.Package.LanguageService>  
+# <a name="implementing-a-legacy-language-service"></a>Implementing a Legacy Language Service
+To implement a language service using the managed package framework (MPF), you must derive a class from the <xref:Microsoft.VisualStudio.Package.LanguageService> class and implement the following abstract methods and properties:  
   
--   O <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>método</xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>  
+-   The <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> method  
   
--   O <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>método</xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>  
+-   The <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> method  
   
--   O <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>método</xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>  
+-   The <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method  
   
--   A <xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A>propriedade</xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A>  
+-   The <xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A> property  
   
- Consulte as seções apropriadas abaixo para obter detalhes sobre como implementar esses métodos e propriedades.  
+ See the appropriate sections below for details on implementing these methods and properties.  
   
- Para oferecer suporte a recursos adicionais, o serviço de linguagem talvez precise derivar uma classe de uma das classes de serviço de linguagem MPF; Por exemplo, para oferecer suporte a comandos de menu adicionais, você deve derivar uma classe a partir de <xref:Microsoft.VisualStudio.Package.ViewFilter>classe e substituir vários os métodos de manipulação de comandos (consulte <xref:Microsoft.VisualStudio.Package.ViewFilter>para obter detalhes).</xref:Microsoft.VisualStudio.Package.ViewFilter> </xref:Microsoft.VisualStudio.Package.ViewFilter> A <xref:Microsoft.VisualStudio.Package.LanguageService>classe fornece vários métodos que são chamados para criar novas instâncias de várias classes e substituir o método apropriado de criação para fornecer uma instância de sua classe.</xref:Microsoft.VisualStudio.Package.LanguageService> Por exemplo, você precisa substituir o <xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A>método na <xref:Microsoft.VisualStudio.Package.LanguageService>classe para retornar uma instância de sua própria <xref:Microsoft.VisualStudio.Package.ViewFilter>classe.</xref:Microsoft.VisualStudio.Package.ViewFilter> </xref:Microsoft.VisualStudio.Package.LanguageService> </xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A> Consulte a seção "Criando Classes personalizadas" para obter mais detalhes.  
+ To support additional features, your language service may have to derive a class from one of the MPF language service classes; for example, to support additional menu commands, you must derive a class from the <xref:Microsoft.VisualStudio.Package.ViewFilter> class and override several of the command handling methods (see <xref:Microsoft.VisualStudio.Package.ViewFilter> for details). The <xref:Microsoft.VisualStudio.Package.LanguageService> class provides a number of methods that are called to create new instances of various classes and you override the appropriate creation method to provide an instance of your class. For example, you need to override the <xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A> method in the <xref:Microsoft.VisualStudio.Package.LanguageService> class to return an instance of your own <xref:Microsoft.VisualStudio.Package.ViewFilter> class. See the "Instantiating Custom Classes" section for more details.  
   
- O serviço de linguagem também pode fornecer seus próprios ícones, que são usados em vários locais. Por exemplo, quando uma lista de conclusão do IntelliSense é exibida, cada item na lista pode ter um ícone associado a ele, marcando o item como um método de classe, namespace, propriedade, ou o que for necessário para seu idioma. Esses ícones são usados em todas as listas do IntelliSense, o **barra de navegação**e no **Error List** janela tarefas. Consulte a seção "Imagens do serviço de linguagem" abaixo para obter detalhes.  
+ Your language service can also supply its own icons, which are used in many places. For example, when an IntelliSense completion list is shown, each item in the list can have an icon associated with it, marking the item as a method, class, namespace, property, or whatever is necessary for your language. These icons are used in all IntelliSense lists, the **Navigation bar**, and in the **Error List** task window. See the "Language Service Images" section below for details.  
   
-## <a name="getlanguagepreferences-method"></a>Método GetLanguagePreferences  
- O <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>método sempre retorna a mesma instância de uma <xref:Microsoft.VisualStudio.Package.LanguagePreferences>classe.</xref:Microsoft.VisualStudio.Package.LanguagePreferences> </xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> Você pode usar a base de <xref:Microsoft.VisualStudio.Package.LanguagePreferences>classe se você não precisar de qualquer preferências adicionais para seu serviço de linguagem.</xref:Microsoft.VisualStudio.Package.LanguagePreferences> As classes de serviço de linguagem MPF pressupõem a presença de pelo menos a base <xref:Microsoft.VisualStudio.Package.LanguagePreferences>classe.</xref:Microsoft.VisualStudio.Package.LanguagePreferences>  
+## <a name="getlanguagepreferences-method"></a>GetLanguagePreferences Method  
+ The <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> method always returns the same instance of a <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class. You can use the base <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class if you do not need any additional preferences for your language service. The MPF language service classes assume the presence of at least the base <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class.  
   
-### <a name="example"></a>Exemplo  
- Este exemplo mostra uma implementação típica do <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>método.</xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> Este exemplo usa a <xref:Microsoft.VisualStudio.Package.LanguagePreferences>classe</xref:Microsoft.VisualStudio.Package.LanguagePreferences> de base  
+### <a name="example"></a>Example  
+ This example shows a typical implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> method. This example uses the base <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class.  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -82,13 +83,13 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="getscanner-method"></a>Método GetScanner  
- Esse método retorna uma instância de um <xref:Microsoft.VisualStudio.Package.IScanner>objeto que implementa um analisador orientado por linhas ou scanner usado para a obtenção de tokens e seus tipos e disparadores.</xref:Microsoft.VisualStudio.Package.IScanner> Este scanner é usado na <xref:Microsoft.VisualStudio.Package.Colorizer>classe para colorir, embora o scanner também pode ser usado para obter tipos de tokens e gatilhos, como um prelúdio para uma operação de análise mais complexa.</xref:Microsoft.VisualStudio.Package.Colorizer> Você deve fornecer a classe que implementa o <xref:Microsoft.VisualStudio.Package.IScanner>interface e você deve implementar todos os métodos de <xref:Microsoft.VisualStudio.Package.IScanner>interface.</xref:Microsoft.VisualStudio.Package.IScanner> </xref:Microsoft.VisualStudio.Package.IScanner>  
+## <a name="getscanner-method"></a>GetScanner Method  
+ This method returns an instance of an <xref:Microsoft.VisualStudio.Package.IScanner> object that implements a line-oriented parser or scanner used for obtaining tokens and their types and triggers. This scanner is used in the <xref:Microsoft.VisualStudio.Package.Colorizer> class for colorization although the scanner can also be used for getting token types and triggers as a prelude to a more complex parsing operation. You must supply the class that implements the <xref:Microsoft.VisualStudio.Package.IScanner> interface and you must implement all the methods on the <xref:Microsoft.VisualStudio.Package.IScanner> interface.  
   
-### <a name="example"></a>Exemplo  
- Este exemplo mostra uma implementação típica do <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>método.</xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> O `TestScanner` classe implementa o <xref:Microsoft.VisualStudio.Package.IScanner>interface (não mostrado).</xref:Microsoft.VisualStudio.Package.IScanner>  
+### <a name="example"></a>Example  
+ This example shows a typical implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> method. The `TestScanner` class implements the <xref:Microsoft.VisualStudio.Package.IScanner> interface (not shown).  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -133,13 +134,13 @@ namespace TestLanguagePackage
   
 ```  
   
-## <a name="parsesource-method"></a>Método ParseSource  
- Analisa o arquivo de origem com base em uma série de motivos diferentes. Esse método recebe um <xref:Microsoft.VisualStudio.Package.ParseRequest>objeto que descreve o que é esperado de uma determinada operação de análise.</xref:Microsoft.VisualStudio.Package.ParseRequest> O <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>método invoca um analisador mais complexo que determina a funcionalidade de token e escopo.</xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> O <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>método é usado no suporte para operações do IntelliSense, bem como a correspondência de colchetes.</xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> Mesmo se você não dão suporte a essas operações avançadas, você ainda deverá retornar válido <xref:Microsoft.VisualStudio.Package.AuthoringScope>objeto e que precisa criar uma classe que implementa o <xref:Microsoft.VisualStudio.Package.AuthoringScope>da interface e implementar todos os métodos nessa interface.</xref:Microsoft.VisualStudio.Package.AuthoringScope> </xref:Microsoft.VisualStudio.Package.AuthoringScope> Você pode retornar valores nulos de todos os métodos, mas o <xref:Microsoft.VisualStudio.Package.AuthoringScope>objeto propriamente dito não deve ser um valor nulo.</xref:Microsoft.VisualStudio.Package.AuthoringScope>  
+## <a name="parsesource-method"></a>ParseSource Method  
+ Parses the source file based on a number of different reasons. This method is given a <xref:Microsoft.VisualStudio.Package.ParseRequest> object that describes what is expected from a particular parsing operation. The <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method invokes a more complex parser that determines token functionality and scope. The <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method is used in support for IntelliSense operations as well as brace matching. Even if you do not support such advanced operations, you still must return a valid <xref:Microsoft.VisualStudio.Package.AuthoringScope> object and that requires you to create a class that implements the <xref:Microsoft.VisualStudio.Package.AuthoringScope> interface and implement all methods on that interface. You can return null values from all methods but the <xref:Microsoft.VisualStudio.Package.AuthoringScope> object itself must not be a null value.  
   
-### <a name="example"></a>Exemplo  
- Este exemplo mostra uma implementação mínima do <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>método e o <xref:Microsoft.VisualStudio.Package.AuthoringScope>classe, suficiente para permitir que o serviço de linguagem ser compilado e funcionar sem suporte, na verdade, qualquer um dos recursos mais avançados.</xref:Microsoft.VisualStudio.Package.AuthoringScope> </xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>  
+### <a name="example"></a>Example  
+ This example shows a minimal implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method and the <xref:Microsoft.VisualStudio.Package.AuthoringScope> class, sufficient to allow the language service to compile and function without actually supporting any of the more advanced features.  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -183,13 +184,13 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="name-property"></a>Propriedade Name  
- Essa propriedade retorna o nome do serviço de idioma. Isso deve ser o mesmo nome fornecido quando o serviço de linguagem foi registrado. Esse nome é usado em vários lugares, é o mais proeminente de <xref:Microsoft.VisualStudio.Package.LanguagePreferences>classe onde o nome é usado para acessar o registro.</xref:Microsoft.VisualStudio.Package.LanguagePreferences> O nome retornado por essa propriedade não deve ser localizado como ele é usado no registro para a entrada do registro e nomes de chave.  
+## <a name="name-property"></a>Name Property  
+ This property returns the name of the language service. This must be the same name given when the language service was registered. This name is used in a number of places, the most prominent of which is the <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class where the name is used to access the registry. The name returned by this property must not be localized as it is used in the registry for registry entry and key names.  
   
-### <a name="example"></a>Exemplo  
- Este exemplo mostra uma possível implementação de <xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A>propriedade.</xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A> Observe que o nome aqui é embutido em código: o nome real deve ser obtido de um arquivo de recurso para que possa ser usado no registro de um serviço de linguagem (consulte [registrar um serviço de linguagem herdado](../../extensibility/internals/registering-a-legacy-language-service1.md)).  
+### <a name="example"></a>Example  
+ This example shows one possible implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A> property. Note that the name here is hard-coded: the actual name should be obtained from a resource file so it can be used in registering a language service (see [Registering a Legacy Language Service](../../extensibility/internals/registering-a-legacy-language-service1.md)).  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -205,56 +206,56 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="instantiating-custom-classes"></a>Criando Classes personalizadas  
- Os seguintes métodos nas classes especificados podem ser substituídos para fornecer instâncias de suas próprias versões de cada classe.  
+## <a name="instantiating-custom-classes"></a>Instantiating Custom Classes  
+ The following methods in the specified classes can be overridden to provide instances of your own versions of each class.  
   
-### <a name="in-the-languageservice-class"></a>Na classe LanguageService  
+### <a name="in-the-languageservice-class"></a>In the LanguageService Class  
   
-|Método|Classe retornados|Descrição|  
+|Method|Class Returned|Description|  
 |------------|--------------------|-----------------|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateCodeWindowManager%2A></xref:Microsoft.VisualStudio.Package.LanguageService.CreateCodeWindowManager%2A>|<xref:Microsoft.VisualStudio.Package.CodeWindowManager></xref:Microsoft.VisualStudio.Package.CodeWindowManager>|Para oferecer suporte a adições personalizadas para a exibição de texto.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A></xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A>|<xref:Microsoft.VisualStudio.Package.DocumentProperties></xref:Microsoft.VisualStudio.Package.DocumentProperties>|Para oferecer suporte a propriedades de documento personalizadas.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A></xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>|<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars></xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>|Para oferecer suporte a **barra de navegação**.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A></xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A>|<xref:Microsoft.VisualStudio.Package.ExpansionFunction></xref:Microsoft.VisualStudio.Package.ExpansionFunction>|Para oferecer suporte a funções em modelos de trecho de código.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionProvider%2A></xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionProvider%2A>|<xref:Microsoft.VisualStudio.Package.ExpansionProvider></xref:Microsoft.VisualStudio.Package.ExpansionProvider>|Para oferecer suporte a trechos de código (esse método normalmente não é substituído).|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateParseRequest%2A></xref:Microsoft.VisualStudio.Package.LanguageService.CreateParseRequest%2A>|<xref:Microsoft.VisualStudio.Package.ParseRequest></xref:Microsoft.VisualStudio.Package.ParseRequest>|Para oferecer suporte a personalização do <xref:Microsoft.VisualStudio.Package.ParseRequest>estrutura (esse método normalmente não é substituído).</xref:Microsoft.VisualStudio.Package.ParseRequest>|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateSource%2A></xref:Microsoft.VisualStudio.Package.LanguageService.CreateSource%2A>|<xref:Microsoft.VisualStudio.Package.Source></xref:Microsoft.VisualStudio.Package.Source>|Para oferecer suporte a formatação código-fonte, especificando os caracteres de comentário e personalização de assinaturas de método.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A></xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A>|<xref:Microsoft.VisualStudio.Package.ViewFilter></xref:Microsoft.VisualStudio.Package.ViewFilter>|Para oferecer suporte a comandos de menu adicionais.|  
-|<xref:Microsoft.VisualStudio.Package.Source.GetColorizer%2A></xref:Microsoft.VisualStudio.Package.Source.GetColorizer%2A>|<xref:Microsoft.VisualStudio.Package.Colorizer></xref:Microsoft.VisualStudio.Package.Colorizer>|Para oferecer suporte a realce de sintaxe (esse método normalmente não é substituído).|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A></xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>|<xref:Microsoft.VisualStudio.Package.LanguagePreferences></xref:Microsoft.VisualStudio.Package.LanguagePreferences>|Para dar suporte ao acesso às preferências de idioma. Esse método deve ser implementado, mas pode retornar uma instância da classe base.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A></xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>|<xref:Microsoft.VisualStudio.Package.IScanner></xref:Microsoft.VisualStudio.Package.IScanner>|Para fornecer um analisador usado para identificar os tipos de tokens em uma linha. Este método deve ser implementado e <xref:Microsoft.VisualStudio.Package.IScanner>deve ser derivado de.</xref:Microsoft.VisualStudio.Package.IScanner>|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A></xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>|<xref:Microsoft.VisualStudio.Package.AuthoringScope></xref:Microsoft.VisualStudio.Package.AuthoringScope>|Para fornecer um analisador usado para identificar a funcionalidade e escopo em todo um arquivo de origem inteiro. Esse método deve ser implementado e deve retornar uma instância de sua versão da <xref:Microsoft.VisualStudio.Package.AuthoringScope>classe.</xref:Microsoft.VisualStudio.Package.AuthoringScope> Se tudo o que você deseja oferecer suporte é realce de sintaxe (que exige o <xref:Microsoft.VisualStudio.Package.IScanner>Analisador retornado do <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>método), pode fazer nada nesse método diferente de retorno de uma versão do <xref:Microsoft.VisualStudio.Package.AuthoringScope>classe cujos todos os métodos retornam valores nulos.</xref:Microsoft.VisualStudio.Package.AuthoringScope> </xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> </xref:Microsoft.VisualStudio.Package.IScanner>|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateCodeWindowManager%2A>|<xref:Microsoft.VisualStudio.Package.CodeWindowManager>|To support custom additions to the text view.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A>|<xref:Microsoft.VisualStudio.Package.DocumentProperties>|To support custom document properties.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>|<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>|To support the **Navigation bar**.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A>|<xref:Microsoft.VisualStudio.Package.ExpansionFunction>|To support functions in code snippet templates.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionProvider%2A>|<xref:Microsoft.VisualStudio.Package.ExpansionProvider>|To support code snippets (this method is typically not overridden).|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateParseRequest%2A>|<xref:Microsoft.VisualStudio.Package.ParseRequest>|To support customization of the <xref:Microsoft.VisualStudio.Package.ParseRequest> structure (this method is typically not overridden).|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateSource%2A>|<xref:Microsoft.VisualStudio.Package.Source>|To support formatting source code, specifying comment characters, and customizing method signatures.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A>|<xref:Microsoft.VisualStudio.Package.ViewFilter>|To support additional menu commands.|  
+|<xref:Microsoft.VisualStudio.Package.Source.GetColorizer%2A>|<xref:Microsoft.VisualStudio.Package.Colorizer>|To support syntax highlighting (this method is typically not overridden).|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>|<xref:Microsoft.VisualStudio.Package.LanguagePreferences>|To support access to language preferences. This method must be implemented but can return an instance of the base class.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>|<xref:Microsoft.VisualStudio.Package.IScanner>|To provide a parser used for identifying types of tokens on a line. This method must be implemented and <xref:Microsoft.VisualStudio.Package.IScanner> must be derived from.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>|<xref:Microsoft.VisualStudio.Package.AuthoringScope>|To provide a parser used for identifying functionality and scope throughout an entire source file. This method must be implemented and must return an instance of your version of the <xref:Microsoft.VisualStudio.Package.AuthoringScope> class. If all you want to support is syntax highlighting (which requires the <xref:Microsoft.VisualStudio.Package.IScanner> parser returned from the <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> method), you can do nothing in this method other than return a version of the <xref:Microsoft.VisualStudio.Package.AuthoringScope> class whose methods all return null values.|  
   
-### <a name="in-the-source-class"></a>Na classe de origem  
+### <a name="in-the-source-class"></a>In the Source Class  
   
-|Método|Classe retornados|Descrição|  
+|Method|Class Returned|Description|  
 |------------|--------------------|-----------------|  
-|<xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A></xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A>|<xref:Microsoft.VisualStudio.Package.CompletionSet></xref:Microsoft.VisualStudio.Package.CompletionSet>|Para personalizar a exibição de listas de conclusão do IntelliSense (esse método normalmente não é substituído).|  
-|<xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A></xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A>|<xref:Microsoft.VisualStudio.Package.DocumentTask></xref:Microsoft.VisualStudio.Package.DocumentTask>|Para oferecer suporte a marcadores na lista de tarefas da lista de erros; Especificamente, suporte para recursos além de abrir o arquivo e saltar para a linha que causou o erro.|  
-|<xref:Microsoft.VisualStudio.Package.Source.CreateMethodData%2A></xref:Microsoft.VisualStudio.Package.Source.CreateMethodData%2A>|<xref:Microsoft.VisualStudio.Package.MethodData></xref:Microsoft.VisualStudio.Package.MethodData>|Para personalizar a exibição de dicas de ferramenta do IntelliSense parâmetro Info.|  
-|<xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A></xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A>|<xref:Microsoft.VisualStudio.Package.CommentInfo></xref:Microsoft.VisualStudio.Package.CommentInfo>|Para dar suporte a comentando o código.|  
-|<xref:Microsoft.VisualStudio.Package.Source.CreateAuthoringSink%2A></xref:Microsoft.VisualStudio.Package.Source.CreateAuthoringSink%2A>|<xref:Microsoft.VisualStudio.Package.AuthoringSink></xref:Microsoft.VisualStudio.Package.AuthoringSink>|Para coletar informações durante a operação de análise.|  
+|<xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A>|<xref:Microsoft.VisualStudio.Package.CompletionSet>|For customizing the display of IntelliSense completion lists (this method is typically not overridden).|  
+|<xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A>|<xref:Microsoft.VisualStudio.Package.DocumentTask>|For supporting markers in the Error List task list; specifically, support for features beyond opening the file and jumping to the line that caused the error.|  
+|<xref:Microsoft.VisualStudio.Package.Source.CreateMethodData%2A>|<xref:Microsoft.VisualStudio.Package.MethodData>|For customizing the display of IntelliSense Parameter Info ToolTips.|  
+|<xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A>|<xref:Microsoft.VisualStudio.Package.CommentInfo>|For supporting commenting code.|  
+|<xref:Microsoft.VisualStudio.Package.Source.CreateAuthoringSink%2A>|<xref:Microsoft.VisualStudio.Package.AuthoringSink>|For gathering information during the parse operation.|  
   
-### <a name="in-the-authoringscope-class"></a>Na classe AuthoringScope  
+### <a name="in-the-authoringscope-class"></a>In the AuthoringScope Class  
   
-|Método|Classe retornados|Descrição|  
+|Method|Class Returned|Description|  
 |------------|--------------------|-----------------|  
-|<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A></xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A>|<xref:Microsoft.VisualStudio.Package.Declarations></xref:Microsoft.VisualStudio.Package.Declarations>|Fornece uma lista de declarações como membros ou tipos. Esse método deve ser implementado, mas pode retornar um valor nulo. Se esse método retorna um objeto válido, o objeto deve ser uma instância de sua versão da <xref:Microsoft.VisualStudio.Package.Declarations>classe.</xref:Microsoft.VisualStudio.Package.Declarations>|  
-|<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetMethods%2A></xref:Microsoft.VisualStudio.Package.AuthoringScope.GetMethods%2A>|<xref:Microsoft.VisualStudio.Package.Methods></xref:Microsoft.VisualStudio.Package.Methods>|Fornece uma lista de assinaturas de método para um determinado contexto. Esse método deve ser implementado, mas pode retornar um valor nulo. Se esse método retorna um objeto válido, o objeto deve ser uma instância de sua versão da <xref:Microsoft.VisualStudio.Package.Methods>classe.</xref:Microsoft.VisualStudio.Package.Methods>|  
+|<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A>|<xref:Microsoft.VisualStudio.Package.Declarations>|Provides a list of declarations such as members or types. This method must be implemented but can return a null value. If this method returns a valid object, the object must be an instance of your version of the <xref:Microsoft.VisualStudio.Package.Declarations> class.|  
+|<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetMethods%2A>|<xref:Microsoft.VisualStudio.Package.Methods>|Provides a list of method signatures for a given context. This method must be implemented but can return a null value. If this method returns a valid object, the object must be an instance of your version of the <xref:Microsoft.VisualStudio.Package.Methods> class.|  
   
-## <a name="language-service-images"></a>Imagens de serviço de linguagem  
- Para fornecer uma lista de ícones a serem usados em todo o serviço de linguagem, substituir o <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A>método o <xref:Microsoft.VisualStudio.Package.LanguageService>da classe e retornar um <xref:System.Windows.Forms.ImageList>que contém os ícones.</xref:System.Windows.Forms.ImageList> </xref:Microsoft.VisualStudio.Package.LanguageService> </xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> A base <xref:Microsoft.VisualStudio.Package.LanguageService>classe carrega um conjunto padrão de ícones.</xref:Microsoft.VisualStudio.Package.LanguageService> Desde que você especifique o índice de imagem exata nesses lugares que precisam de ícones, como organizar sua própria lista de imagens é integralmente com você.  
+## <a name="language-service-images"></a>Language Service Images  
+ To provide a list of icons to be used throughout the language service, override the <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> method in the <xref:Microsoft.VisualStudio.Package.LanguageService> class and return an <xref:System.Windows.Forms.ImageList> containing the icons. The base <xref:Microsoft.VisualStudio.Package.LanguageService> class loads a default set of icons. Since you specify the exact image index in those places that need icons, how you arrange your own image list is entirely up to you.  
   
-### <a name="images-used-in-intellisense-completion-lists"></a>Imagens usadas em listas de conclusão do IntelliSense  
- Para listas de conclusão do IntelliSense, o índice de imagem é especificado para cada item a <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A>método o <xref:Microsoft.VisualStudio.Package.Declarations>classe, que você deve substituir se quiser fornecer um índice de imagem.</xref:Microsoft.VisualStudio.Package.Declarations> </xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> O valor retornado do <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A>método é um índice na lista de imagens fornecida para o <xref:Microsoft.VisualStudio.Package.CompletionSet>construtor da classe e é a mesma lista de imagem retornado do <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A>método no <xref:Microsoft.VisualStudio.Package.LanguageService>classe (você pode alterar a lista imagem a ser usado para o <xref:Microsoft.VisualStudio.Package.CompletionSet>se você substituir o <xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A>método na <xref:Microsoft.VisualStudio.Package.Source>classe para fornecer uma lista de imagens diferentes).</xref:Microsoft.VisualStudio.Package.Source> </xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A> </xref:Microsoft.VisualStudio.Package.CompletionSet> </xref:Microsoft.VisualStudio.Package.LanguageService> </xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> </xref:Microsoft.VisualStudio.Package.CompletionSet> </xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A>  
+### <a name="images-used-in-intellisense-completion-lists"></a>Images Used In IntelliSense Completion Lists  
+ For IntelliSense completion lists, the image index is specified for each item in the <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> method of the <xref:Microsoft.VisualStudio.Package.Declarations> class, which you must override if you want to supply an image index. The value returned from the <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> method is an index into the image list supplied to the <xref:Microsoft.VisualStudio.Package.CompletionSet> class constructor and that is the same image list returned from the <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> method in the <xref:Microsoft.VisualStudio.Package.LanguageService> class (you can change which image list to use for the <xref:Microsoft.VisualStudio.Package.CompletionSet> if you override the <xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A> method in the <xref:Microsoft.VisualStudio.Package.Source> class to supply a different image list).  
   
-### <a name="images-used-in-the-navigation-bar"></a>Imagens usadas na barra de navegação  
- O **barra de navegação** exibe listas de tipos e membros e é usado para navegação rápida pode mostrar ícones. Esses ícones são obtidos a partir de <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A>método no <xref:Microsoft.VisualStudio.Package.LanguageService>classe e não pode ser substituída especificamente para o **barra de navegação**.</xref:Microsoft.VisualStudio.Package.LanguageService> </xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> Os índices usados para cada item nas caixas de combinação são especificados quando as listas que representa as caixas de combinação são preenchidas o <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>método o <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>classe (consulte [suporte para a barra de navegação em um serviço de linguagem herdado](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)).</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> </xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> Esses índices de imagem são obtidos de alguma forma do analisador, normalmente por meio de sua versão da <xref:Microsoft.VisualStudio.Package.Declarations>classe.</xref:Microsoft.VisualStudio.Package.Declarations> Como os índices são obtidos é integralmente com você.  
+### <a name="images-used-in-the-navigation-bar"></a>Images Used in the Navigation Bar  
+ The **Navigation bar** displays lists of types and members and is used for quick navigation can show icons. These icons are obtained from the <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> method in the <xref:Microsoft.VisualStudio.Package.LanguageService> class and cannot be overridden specifically for the **Navigation bar**. The indices used for each item in the combo-boxes are specified when the lists representing the combo-boxes are filled in the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method in the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> class (see [Support for the Navigation Bar in a Legacy Language Service](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)). These image indices are obtained somehow from the parser, typically through your version of the <xref:Microsoft.VisualStudio.Package.Declarations> class. How the indices are obtained is entirely up to you.  
   
-### <a name="images-used-in-the-error-list-task-window"></a>Imagens usadas na janela de tarefas da lista de erros  
- Sempre que o <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Analisador de método (consulte [analisador de serviço de linguagem herdado e Scanner](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)) encontra um erro e passa esse erro para o <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A>método na <xref:Microsoft.VisualStudio.Package.AuthoringSink>classe, o erro é relatado no **lista de erros** janela tarefas.</xref:Microsoft.VisualStudio.Package.AuthoringSink> </xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> </xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> Um ícone pode ser associado a cada item que aparece na janela de tarefas e esse ícone proveniente da mesma lista de imagem retornada do <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A>método de <xref:Microsoft.VisualStudio.Package.LanguageService>classe.</xref:Microsoft.VisualStudio.Package.LanguageService> </xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> O comportamento padrão das classes MPF é não mostrar uma imagem com a mensagem de erro. No entanto, você pode substituir esse comportamento derivando uma classe a partir de <xref:Microsoft.VisualStudio.Package.Source>classe e substituindo o <xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A>método.</xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A> </xref:Microsoft.VisualStudio.Package.Source> Nesse método, você cria um novo <xref:Microsoft.VisualStudio.Package.DocumentTask>objeto.</xref:Microsoft.VisualStudio.Package.DocumentTask> Antes de retornar esse objeto, você pode usar o <xref:Microsoft.VisualStudio.Shell.Task.ImageIndex%2A>propriedade o <xref:Microsoft.VisualStudio.Package.DocumentTask>objeto para definir o índice de imagem.</xref:Microsoft.VisualStudio.Package.DocumentTask> </xref:Microsoft.VisualStudio.Shell.Task.ImageIndex%2A> Isso seria algo como o exemplo a seguir. Observe que `TestIconImageIndex` é uma enumeração que lista todos os ícones e é específico para este exemplo. Você pode ter uma maneira diferente de identificação de ícones no seu serviço de linguagem.  
+### <a name="images-used-in-the-error-list-task-window"></a>Images Used in the Error List Task Window  
+ Whenever the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method parser (see [Legacy Language Service Parser and Scanner](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)) encounters an error and passes that error to the <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> method in the <xref:Microsoft.VisualStudio.Package.AuthoringSink> class, the error is reported in the **Error List** task window. An icon can be associated with each item that appears in the task window and that icon comes from the same image list returned from the <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> method in the <xref:Microsoft.VisualStudio.Package.LanguageService> class. The default behavior of the MPF classes is to not show an image with the error message. However, you can override this behavior by deriving a class from the <xref:Microsoft.VisualStudio.Package.Source> class and overriding the <xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A> method. In that method, you create a new <xref:Microsoft.VisualStudio.Package.DocumentTask> object. Before returning that object, you can use the <xref:Microsoft.VisualStudio.Shell.Task.ImageIndex%2A> property on the <xref:Microsoft.VisualStudio.Package.DocumentTask> object to set the image index. This would look something like the following example. Note that `TestIconImageIndex` is an enumeration that lists all icons and is specific to this example. You may have a different way of identifying icons in your language service.  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.Shell;  
 using Microsoft.VisualStudio.TextManager.Interop;  
@@ -290,12 +291,12 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="the-default-image-list-for-a-language-service"></a>A lista de imagem padrão para um serviço de linguagem  
- A lista de imagem padrão fornecida com as classes de serviço de linguagem MPF base contém um número de ícones associados os elementos de linguagem mais comuns. A maior parte desses ícones são organizadas em conjuntos de seis variações, correspondentes aos conceitos de acesso do público, interno, amigo, protegido, particular e atalho. Por exemplo, você pode ter diferentes ícones para um método dependendo se é pública, protegida ou privada.  
+## <a name="the-default-image-list-for-a-language-service"></a>The Default Image List for a Language Service  
+ The default image list supplied with the base MPF language service classes contains a number of icons associated with the more common language elements. The bulk of these icons are arranged in sets of six variations, corresponding to the access concepts of public, internal, friend, protected, private, and shortcut. For example, you can have different icons for a method depending on whether it is public, protected or private.  
   
- A enumeração a seguir especifica nomes típicos para cada conjunto de ícones e especifica o índice associado. Por exemplo, com base na enumeração, você pode especificar o índice de imagem para um método protegido como `(int)IconImageIndex.Method + (int)IconImageIndex.AccessProtected`. Você pode alterar os nomes desta enumeração conforme desejado.  
+ The following enumeration specifies typical names for each icon set and specifies the associated index. For example, based on the enumeration, you can specify the image index for a protected method as `(int)IconImageIndex.Method + (int)IconImageIndex.AccessProtected`. You can change the names in this enumeration as desired.  
   
-```c#  
+```cs  
 public enum IconImageIndex  
         {  
             // access types  
@@ -375,8 +376,8 @@ public enum IconImageIndex
         }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Implementando um serviço de linguagem herdado](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
- [Visão geral do serviço de linguagem herdada](../../extensibility/internals/legacy-language-service-overview.md)   
- [Registrar um serviço de linguagem herdado](../../extensibility/internals/registering-a-legacy-language-service1.md)   
- [Scanner e Parser de serviço de linguagem herdada](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)
+## <a name="see-also"></a>See Also  
+ [Implementing a Legacy Language Service](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
+ [Legacy Language Service Overview](../../extensibility/internals/legacy-language-service-overview.md)   
+ [Registering a Legacy Language Service](../../extensibility/internals/registering-a-legacy-language-service1.md)   
+ [Legacy Language Service Parser and Scanner](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)

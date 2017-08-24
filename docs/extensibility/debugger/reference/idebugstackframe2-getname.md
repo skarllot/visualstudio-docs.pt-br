@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetName | Documentos do Microsoft
+title: IDebugStackFrame2::GetName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 87e7572dc438f489b4c2daf2b8e5fdb15021e5a2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: efd0c15d84924fc1416023576671b6917c1067e8
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugstackframe2getname"></a>IDebugStackFrame2::GetName
-Obtém o nome da estrutura de pilhas.  
+Gets the name of the stack frame.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetName (   
@@ -47,21 +48,21 @@ HRESULT GetName (
 );  
 ```  
   
-```c#  
+```cs  
 int GetName (   
    out string pbstrName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pbstrName`  
- [out] Retorna o nome da estrutura de pilhas.  
+ [out] Returns the name of the stack frame.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- O nome de um quadro de pilha é normalmente o nome do método que está sendo executado.  
+## <a name="remarks"></a>Remarks  
+ The name of a stack frame is typically the name of the method being executed.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

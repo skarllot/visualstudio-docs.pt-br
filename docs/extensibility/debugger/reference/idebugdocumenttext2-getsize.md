@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetSize | Documentos do Microsoft
+title: IDebugDocumentText2::GetSize | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f5af97d594d7160d33628c8a8248decb4f2a1e91
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 640e10cff94d598e91e2627b574e010d6cc1fcf7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugdocumenttext2getsize"></a>IDebugDocumentText2::GetSize
-Recupera o tamanho do texto nessa posição no documento.  
+Retrieves the size of the text at this position in the document.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetSize(   
@@ -48,27 +49,27 @@ HRESULT GetSize(
 );  
 ```  
   
-```c#  
+```cs  
 int GetSize(   
    ref uint pcNumLines,  
    ref uint pcNumChars  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pcNumLines`  
- [out] Retorna o número de linhas de texto.  
+ [out] Returns the number of lines of text.  
   
  `pcNumChars`  
- [out] Retorna o número de caracteres de texto.  
+ [out] Returns the number of characters of text.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- [C++] Se um valor específico não for desejado, passe um valor nulo para o parâmetro.  
+## <a name="remarks"></a>Remarks  
+ [C++ only] If a particular value is not desired, pass a NULL for the parameter.  
   
- [Apenas c#] Ambos os parâmetros devem ser especificados.  
+ [C# only] Both parameters must be specified.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)

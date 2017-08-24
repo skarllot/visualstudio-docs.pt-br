@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramHost2::GetHostMachineName | Documentos do Microsoft
+title: IDebugProgramHost2::GetHostMachineName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 810fde1521b0e66cd9fc12b7e015c113181f2c02
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: aecabc41bc28d2603bd2a22fd4b3053398ba7b55
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprogramhost2gethostmachinename"></a>IDebugProgramHost2::GetHostMachineName
-Obtém o nome da máquina que o processo que hospeda este programa está em execução no.  
+Gets the name of the machine that the process hosting this program is running on.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetHostMachineName(   
@@ -47,18 +48,18 @@ HRESULT GetHostMachineName(
 );  
 ```  
   
-```c#  
+```cs  
 int GetHostMachineName(   
    out string pbstrHostMachineName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pbstrHostMachineName`  
- [out] Retorna o nome da máquina.  
+ [out] Returns the name of the machine.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)

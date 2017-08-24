@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetMetricGuid | Documentos do Microsoft
+title: IDebugSettingsCallback2::GetMetricGuid | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,16 +28,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bb96e99b4ab6a002c8b061761fd797ed09d0272a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e41173b13100c2e0e9ccf4c91f56b4fd94889958
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugsettingscallback2getmetricguid"></a>IDebugSettingsCallback2::GetMetricGuid
-Recupera o identificador exclusivo de uma métrica recebe seu nome.  
+Retrieves the unique identifier of a metric given its name.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetMetricGuid(  
@@ -48,7 +49,7 @@ HRESULT GetMetricGuid(
 );  
 ```  
   
-```c#  
+```cs  
 private int GetMetricGuid(  
    string   pszType,  
    ref Guid guidSection,  
@@ -57,21 +58,21 @@ private int GetMetricGuid(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pszType`  
- [in] Tipo da métrica.  
+ [in] Type of the metric.  
   
  `guidSection`  
- [in] Identificador exclusivo da seção.  
+ [in] Unique identifier of the section.  
   
  `pszMetric`  
- [in] Nome da métrica.  
+ [in] Name of the metric.  
   
  `pguidValue`  
- [out] Retorna o identificador exclusivo da métrica.  
+ [out] Returns the unique identifier of the metric.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

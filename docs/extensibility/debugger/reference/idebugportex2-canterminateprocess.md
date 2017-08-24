@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::CanTerminateProcess | Documentos do Microsoft
+title: IDebugPortEx2::CanTerminateProcess | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5ea402e3141ca069812c42e5208d9f7710f607d5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8d1f2772d2aed5876a4cf725d0460d227688e04d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugportex2canterminateprocess"></a>IDebugPortEx2::CanTerminateProcess
-Determina se um processo pode ser encerrado.  
+Determines whether a process can be terminated.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT CanTerminateProcess(   
@@ -47,19 +48,19 @@ HRESULT CanTerminateProcess(
 );  
 ```  
   
-```c#  
+```cs  
 HRESULT CanTerminateProcess(   
    IDebugProcess2 pPortProcess  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pPortProcess`  
- [in] Um [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) objeto que representa o processo a ser encerrado.  
+ [in] An [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) object representing the process to be terminated.  
   
-## <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK` se o processo pode ser encerrado; caso contrário, retornará `S_FALSE`.  
+## <a name="return-value"></a>Return Value  
+ Returns `S_OK` if the process can be terminated; otherwise, returns `S_FALSE`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

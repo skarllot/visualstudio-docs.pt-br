@@ -1,5 +1,5 @@
 ---
-title: MESSAGETYPE | Documentos do Microsoft
+title: MESSAGETYPE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e224392640ce21c3d5501596f533f325b9f3f301
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 10bcd50f0c285640d5e13f5306f4863e73152d6b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="messagetype"></a>MESSAGETYPE
-Especifica o tipo de mensagem e o motivo.  
+Specifies the message type and reason.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_MESSAGETYPE {   
@@ -53,7 +54,7 @@ enum enum_MESSAGETYPE {
 typedef DWORD MESSAGETYPE;  
 ```  
   
-```c#  
+```cs  
 public enum enum_MESSAGETYPE {   
    MT_OUTPUTSTRING      = 0x0000001,  
    MT_MESSAGEBOX        = 0x00000002,  
@@ -64,38 +65,38 @@ public enum enum_MESSAGETYPE {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  MT_OUTPUTSTRING  
- Indica que a mensagem deve ser enviada para a janela de saída. Isso é mutuamente exclusivo do `MT_MESSAGEBOX`.  
+ Indicates that the message should be sent to the output window. This is mutually exclusive from `MT_MESSAGEBOX`.  
   
  MT_MESSAGEBOX  
- Indica que a mensagem deve ser mostrada em uma caixa de mensagem. Isso é mutuamente exclusivo do `MT_OUTPUTSTRING`.  
+ Indicates that the message should be shown in a message box. This is mutually exclusive from `MT_OUTPUTSTRING`.  
   
  MT_TYPE_MASK  
- Um valor de máscara para isolar o destino da mensagem.  
+ A mask value to isolate the destination for the message.  
   
  MT_REASON_EXCEPTION  
- Indica que uma caixa de mensagem está sendo mostrada como resultado de uma exceção. Isso é mutuamente exclusivo do `MT_REASON_TRACEPOINT`.  
+ Indicates that a message box is being shown as a result of an exception. This is mutually exclusive from `MT_REASON_TRACEPOINT`.  
   
  MT_REASON_TRACEPOINT  
- Indica que uma caixa de mensagem está sendo mostrada como resultado de atingir um tracepoint. Isso é mutuamente exclusivo com `MT_REASON_EXCEPTION`.  
+ Indicates that a message box is being shown as a result of hitting a tracepoint. This is mutually exclusive to `MT_REASON_EXCEPTION`.  
   
  MT_REASON_MASK  
- Um valor de máscara para isolar o motivo para a mensagem que está sendo mostrado.  
+ A mask value to isolate the reason for the message being shown.  
   
-## <a name="remarks"></a>Comentários  
- Esses valores são retornados do [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) e [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) métodos.  
+## <a name="remarks"></a>Remarks  
+ These values are returned from the [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) and [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) methods.  
   
- Um dos valores de razão pode ser combinado com um dos valores de destino de saída usando um bit a bit `OR`.  
+ One of the reason values can be combined with one of the output destination values using a bitwise `OR`.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)   
  [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md)

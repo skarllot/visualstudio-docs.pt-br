@@ -1,5 +1,5 @@
 ---
-title: CANSTOP_REASON | Documentos do Microsoft
+title: CANSTOP_REASON | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: cce6acec5227a1861791d89cb352bb662ed515e2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 3bd7a0a30d7fa505da342350cf2ade487b58828d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="canstopreason"></a>CANSTOP_REASON
-Usado para determinar se um programa pode interromper a execução depois de atingir um ponto específico na execução.  
+Used to determine if a program can stop execution after reaching a particular point in the execution.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_CANSTOP_REASON {   
@@ -49,30 +50,30 @@ enum enum_CANSTOP_REASON {
 typedef DWORD CANSTOP_REASON;  
 ```  
   
-```c#  
+```cs  
 public enum enum_CANSTOP_REASON {   
    CANSTOP_ENTRYPOINT = 0x0000,  
    CANSTOP_STEPIN     = 0x0001  
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  CANSTOP_ENTRYPOINT  
- Especifica o ponto de entrada de um determinado programa.  
+ Specifies the entry point of the given program.  
   
  CANSTOP_STEPIN  
- Especifica a entrar em uma função.  
+ Specifies stepping into a function.  
   
-## <a name="remarks"></a>Comentários  
- Passada como um argumento para o [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) método para confirmar com a sessão de depuração Manager (SDM) se for okey parar depois de atingir o ponto de entrada do programa, ou depois de entrar em uma função ou método.  
+## <a name="remarks"></a>Remarks  
+ Passed as an argument to the [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) method to confirm with the Session Debug Manager (SDM) if it is okay to stop after reaching the entry point of the program or after stepping into a function or method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)

@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO_FIELDS | Documentos do Microsoft
+title: PROCESS_INFO_FIELDS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b4bb8747a150a1652e0f25dcd25ff3b92954c472
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7a0c4c4312113081cf00f3a9e2b60a637d8f278e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="processinfofields"></a>PROCESS_INFO_FIELDS
-Especificar o tipo de informação para recuperar para um processo.  
+Specified what kind of information to retrieve for a process.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_PROCESS_INFO_FIELDS {   
@@ -56,7 +57,7 @@ enum enum_PROCESS_INFO_FIELDS {
 typedef DWORD PROCESS_INFO_FIELDS;  
 ```  
   
-```c#  
+```cs  
 public enum enum_PROCESS_INFO_FIELDS {   
    PIF_FILE_NAME             = 0x00000001,  
    PIF_BASE_NAME             = 0x00000002,  
@@ -70,48 +71,48 @@ public enum enum_PROCESS_INFO_FIELDS {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  PIF_FILE_NAME  
- Inicializar/usar o `bstrFileName` campo o [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) estrutura.  
+ Initialize/use the `bstrFileName` field of the [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) structure.  
   
  PIF_BASE_NAME  
- Inicializar/usar o `bstrBaseName` campo o `PROCESS_INFO` estrutura.  
+ Initialize/use the `bstrBaseName` field of the `PROCESS_INFO` structure.  
   
  PIF_TITLE  
- Inicializar/usar o `bstrTitle` campo o `PROCESS_INFO` estrutura.  
+ Initialize/use the `bstrTitle` field of the `PROCESS_INFO` structure.  
   
  PIF_PROCESS_ID  
- Inicializar/usar o `ProcessId` campo o `PROCESS_INFO` estrutura.  
+ Initialize/use the `ProcessId` field of the `PROCESS_INFO` structure.  
   
  PIF_SESSION_ID  
- Inicializar/usar o `dwSessionId` campo o `PROCESS_INFO` estrutura.  
+ Initialize/use the `dwSessionId` field of the `PROCESS_INFO` structure.  
   
  PIF_ATTACHED_SESSION_NAME  
- Inicializar/usar o `bstrAttachedSessionName` campo o `PROCESS_INFO` estrutura.  
+ Initialize/use the `bstrAttachedSessionName` field of the `PROCESS_INFO` structure.  
   
  PIF_CREATION_TIME  
- Inicializar/usar o `CreationTime` campo o `PROCESS_INFO` estrutura.  
+ Initialize/use the `CreationTime` field of the `PROCESS_INFO` structure.  
   
  PIF_FLAGS  
- Inicializar/usar o `Flags` campo o `PROCESS_INFO` estrutura.  
+ Initialize/use the `Flags` field of the `PROCESS_INFO` structure.  
   
  PIF_ALL  
- Preencha todos os campos.  
+ Fills out all fields.  
   
-## <a name="remarks"></a>Comentários  
- Passado para o [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) método para indicar quais campos do [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) estrutura devem ser inicializado.  
+## <a name="remarks"></a>Remarks  
+ Passed to the [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) method to indicate which fields of the [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) structure are to be initialized.  
   
- Também é usado em `Fields` campo o `PROCESS_INFO` estrutura para indicar quais campos são usados e válido.  
+ Also used in `Fields` field of the `PROCESS_INFO` structure to indicate which fields are used and valid.  
   
- Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
+ These flags may be combined with a bitwise `OR`.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

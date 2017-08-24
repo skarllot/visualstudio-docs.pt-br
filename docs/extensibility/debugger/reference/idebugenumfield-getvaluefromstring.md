@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetValueFromString | Documentos do Microsoft
+title: IDebugEnumField::GetValueFromString | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d487112c6bb7e88b88f932eb15a6e1d6d4fe905b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e9d9368e4400f15ee8cfceb59f132ed4c65bd051
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugenumfieldgetvaluefromstring"></a>IDebugEnumField::GetValueFromString
-Esse método retorna o valor associado ao nome de uma constante de enumeração.  
+This method returns the value associated with the name of an enumeration constant.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetValueFromString(  
@@ -48,26 +49,26 @@ HRESULT GetValueFromString(
 );  
 ```  
   
-```c#  
+```cs  
 int GetValueFromString(  
    string    pszValue,  
    out ulong pValue  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pszValue`  
- [in] Uma cadeia de caracteres especificando o nome para o qual obter o valor. Observe que para C++, essa é uma cadeia de caracteres largos.  
+ [in] A string specifying the name for which to get the value. Note that for C++, this is a wide character string.  
   
  `pValue`  
- [out] Retorna o valor numérico associado.  
+ [out] Returns the associated numerical value.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE`, se o nome não é parte de enumeração ou um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns `S_FALSE`, if the name is not part of the enumeration, or an error code.  
   
-## <a name="remarks"></a>Comentários  
- Esse método diferencia maiusculas de minúsculas. Se for necessária uma pesquisa diferencia maiusculas de minúsculas (por exemplo, em uma linguagem como Visual Basic, onde os nomes não diferenciam maiusculas de minúsculas), use [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md).  
+## <a name="remarks"></a>Remarks  
+ This method is case-sensitive. If a case-insensitive search is needed (for example, in a language such as Visual Basic where names are not case sensitive), use [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)

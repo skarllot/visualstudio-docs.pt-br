@@ -1,5 +1,5 @@
 ---
-title: MODULE_FLAGS | Documentos do Microsoft
+title: MODULE_FLAGS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 31c3782eb1d6cc82a4ffea5b5b6f98c5f2829470
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e75c67cb3660353c33a26a8f0c8cf141b18e014b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="moduleflags"></a>MODULE_FLAGS
-Usado para descrever um módulo.  
+Used to describe a module.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_MODULE_FLAGS {   
@@ -53,7 +54,7 @@ enum enum_MODULE_FLAGS {
 typedef DWORD MODULE_FLAGS;  
 ```  
   
-```c#  
+```cs  
 public enum enum_MODULE_FLAGS {   
    MODULE_FLAG_NONE        = 0x0000,  
    MODULE_FLAG_SYSTEM      = 0x0001,  
@@ -64,37 +65,37 @@ public enum enum_MODULE_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  MODULE_FLAG_NONE  
- Não especifica que nenhum módulo.  
+ Specifies no module.  
   
  MODULE_FLAG_SYSTEM  
- Especifica um módulo do sistema.  
+ Specifies a system module.  
   
  MODULE_FLAG_SYMBOLS  
- Especifica um módulo de símbolo.  
+ Specifies a symbol module.  
   
  MODULE_FLAG_64BIT  
- Especifica um módulo de 64 bits.  
+ Specifies a 64-bit module.  
   
  MODULE_FLAG_OPTIMIZED  
- Especifica que o módulo foi otimizado. Esse estado é refletido no **módulos** janela.  
+ Specifies the module has been optimized. This state is reflected in the **Modules** window.  
   
  MODULE_FLAG_UNOPTIMIZED  
- Especifica que o módulo não foi otimizado. Esse estado é refletido no **módulos** janela. Este é o estado padrão.  
+ Specifies the module has not been optimized. This state is reflected in the **Modules** window. This is the default state.  
   
-## <a name="remarks"></a>Comentários  
- Usado para o `m_dwModuleFlags` membro do [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) estrutura.  
+## <a name="remarks"></a>Remarks  
+ Used for the `m_dwModuleFlags` member of the [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) structure.  
   
- Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
+ These flags may be combined with a bitwise `OR`.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)

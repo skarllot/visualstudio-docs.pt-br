@@ -1,5 +1,5 @@
 ---
-title: "Noções básicas de teste de unidade | Microsoft Docs"
+title: Unit Test Basics | Microsoft Docs
 ms.custom: 
 ms.date: 2016-01-07
 ms.reviewer: 
@@ -29,69 +29,69 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 67f42e3a79d30254d3f5942b3fc9938957d5ff99
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 073f129aa2761ee095c4475a34ee9ef44ee5e081
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="unit-test-basics"></a>Noções básicas de teste de unidade
-Verifique se seu código está funcionando conforme o esperado criando e executando testes de unidade. Ele se chama teste de unidade porque a funcionalidade de seu programa é dividida em comportamentos distintos que podem ser testados individualmente como *unidades*. O Gerenciador de Testes do Visual Studio oferece uma maneira flexível e eficiente de executar seus testes de unidade e exibir seus resultados no Visual Studio. O Visual Studio instala as estruturas de teste de unidade da Microsoft para código gerenciado e nativo. Use uma *estrutura de teste de unidade* para criar testes de unidade, executá-los e relatar os resultados desses testes. Execute os testes de unidade novamente quando realizar alterações para testar se o código ainda está funcionando corretamente. Quando você usa o Visual Studio Enterprise, pode executar testes automaticamente após cada compilação.  
+# <a name="unit-test-basics"></a>Unit Test Basics
+Check that your code is working as expected by creating and running unit tests. It's called unit testing because you break down the functionality of your program into discrete testable behaviors that you can test as individual *units*. Visual Studio Test Explorer provides a flexible and efficient way to run your unit tests and view their results in Visual Studio. Visual Studio installs the Microsoft unit testing frameworks for managed and native code. Use a *unit testing framework* to create unit tests, run them, and report the results of these tests. Rerun unit tests when you make changes to test that your code is still working correctly. When you use Visual Studio Enterprise, you can run tests automatically after every build.  
   
- O teste de unidade tem o maior efeito sobre a qualidade do código quando é parte integrante do fluxo de trabalho de desenvolvimento de software. Assim que você escrever uma função ou outro bloco de código do aplicativo, crie testes de unidade que verifique o comportamento do código em resposta a casos padrão, limite e incorretos de dados de entrada e verifique se não houve nenhuma suposição explícita ou implícita feita pelo código. Com o *desenvolvimento orientado por testes*, você cria os testes de unidade antes de escrever o código e, portanto, os testes de unidade são usados tanto como documentação de design quando especificações funcionais.  
+ Unit testing has the greatest effect on the quality of your code when it's an integral part of your software development workflow. As soon as you write a function or other block of application code, create unit tests that verify the behavior of the code in response to standard, boundary, and incorrect cases of input data, and that check any explicit or implicit assumptions made by the code. With *test driven development*, you create the unit tests before you write the code, so you use the unit tests as both design documentation and functional specifications.  
   
- Você pode gerar os projetos de teste e métodos de teste rapidamente do seu código ou criar os testes manualmente conforme a necessidade. Quando você usar o IntelliTest para explorar seu código .NET, poderá gerar dados de teste e um conjunto de testes de unidade. Para cada instrução no código, é gerada uma entrada de teste para executar essa instrução. Descubra como [gerar testes de unidade para seu código](http://msdn.microsoft.com/library/dn823749.aspx).  
+ You can quickly generate test projects and test methods from your code, or manually create the tests as you need them. When you use IntelliTest to explore your .NET code, you can generate test data and a suite of unit tests. For every statement in the code, a test input is generated that will execute that statement. Find out how to [generate unit tests for your code](http://msdn.microsoft.com/library/dn823749.aspx).  
   
- O Gerenciador de Testes também pode executar estruturas de teste de unidade de código aberto e de terceiros que implementaram interfaces de complemento do Gerenciador de Testes. Você pode adicionar muitas dessas estruturas por meio do gerenciador de extensões do Visual Studio e da galeria do Visual Studio. Confira [Instalar estruturas de teste de unidade de terceiros](../test/install-third-party-unit-test-frameworks.md)  
+ Test Explorer can also run third-party and open source unit test frameworks that have implemented Test Explorer add-on interfaces. You can add many of these frameworks through the Visual Studio Extension Manager and the Visual Studio gallery. See [Install third-party unit test frameworks](../test/install-third-party-unit-test-frameworks.md)  
   
--   [Início rápido](#BKMK_Quick_starts)  
+-   [Quick starts](#BKMK_Quick_starts)  
   
--   [O exemplo da Solução MyBank](#BKMK_The_MyBank_Solution_example)  
+-   [The MyBank Solution example](#BKMK_The_MyBank_Solution_example)  
   
--   [Criar projetos de teste de unidade e métodos de teste](#BKMK_Creating_the_unit_test_projects)  
+-   [Create unit test projects and test methods](#BKMK_Creating_the_unit_test_projects)  
   
--   [Escrever seus testes](#BKMK_Writing_your_tests)  
+-   [Write your tests](#BKMK_Writing_your_tests)  
   
--   [Executar testes de unidade no Gerenciador de Testes](#BKMK_Running_tests_in_Test_Explorer)  
+-   [Run tests in Test Explorer](#BKMK_Running_tests_in_Test_Explorer)  
   
--   [Executar e exibir testes](#BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar)  
+-   [Run and view tests](#BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar)  
   
-##  <a name="BKMK_Unit_testing_overview"></a> Visão geral de teste de unidade  
+##  <a name="BKMK_Unit_testing_overview"></a> Unit testing overview  
   
-###  <a name="BKMK_Quick_starts"></a> Início rápido  
- Para obter uma introdução ao teste de unidade que leva você diretamente para a parte de codificação, confira um destes tópicos:  
+###  <a name="BKMK_Quick_starts"></a> Quick starts  
+ For an introduction to unit testing that takes you directly into coding, see one of these topics:  
   
--   [Passo a passo: criando e executando testes de unidade para código gerenciado](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)  
+-   [Walkthrough: Creating and Running Unit Tests for Managed Code](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)  
   
--   [Início Rápido: desenvolvimento orientado por testes com o Gerenciador de Testes](../test/quick-start-test-driven-development-with-test-explorer.md)  
+-   [Quick Start: Test Driven Development with Test Explorer](../test/quick-start-test-driven-development-with-test-explorer.md)  
   
--   [Código nativo de testes de unidade com o Gerenciador de Testes](http://msdn.microsoft.com/en-us/8a09d6d8-3613-49d8-9ffe-11375ac4736c)  
+-   [Unit testing native code with Test Explorer](http://msdn.microsoft.com/en-us/8a09d6d8-3613-49d8-9ffe-11375ac4736c)  
   
-##  <a name="BKMK_The_MyBank_Solution_example"></a> O exemplo da Solução MyBank  
- Neste tópico, usamos o desenvolvimento de um aplicativo fictício chamado `MyBank` como exemplo. Você não precisa do código real para seguir as explicações neste tópico. Os métodos de teste são escritos em C# e apresentados usando o Microsoft Unit Testing Framework para Código Gerenciado. No entanto, os conceitos podem ser facilmente transferidos para outros idiomas e estruturas.  
+##  <a name="BKMK_The_MyBank_Solution_example"></a> The MyBank Solution example  
+ In this topic, we use the development of a fictional application called `MyBank` as an example. You don't need the actual code to follow the explanations in this topic. Test methods are written in C# and presented by using the Microsoft Unit Testing Framework for Managed Code, However, the concepts are easily transferred to other languages and frameworks.  
   
- ![Solução MyBank](~/test/media/ute_mybanksolution.png "UTE_MyBankSolution")  
+ ![MyBank Solution](../test/media/ute_mybanksolution.png "UTE_MyBankSolution")  
   
- Nossa primeira tentativa de um projeto para o aplicativo `MyBank` inclui um componente de contas, que representa uma conta individual e suas transações com o banco, e um componente de banco de dados, que representa a funcionalidade de agregação e gerenciamento das contas individuais.  
+ Our first attempt at a design for the `MyBank` application includes an accounts component that represents an individual account and its transactions with the bank, and a database component that represents the functionality to aggregate and manage the individual accounts.  
   
- Criamos uma solução `MyBank` que contém dois projetos:  
+ We create a `MyBank` solution that contains two projects:  
   
 -   `Accounts`  
   
 -   `BankDb`  
   
- Nossa primeira tentativa de criação do projeto `Accounts` contém uma classe para manter informações básicas sobre uma conta, uma interface que especifica a funcionalidade comum dos tipos de conta, como depositar e sacar ativos da conta, e uma classe derivada da interface que representa uma conta corrente. Começamos os projetos Contas criando os seguintes arquivos de origem:  
+ Our first attempt at designing the `Accounts` project contain a class to hold basic information about an account, an interface that specifies the common functionality of any type of account, like depositing and withdrawing assets from the account, and a class derived from the interface that represents a checking account. We begin the Accounts projects by creating the following source files:  
   
--   `AccountInfo.cs` define as informações básicas de uma conta.  
+-   `AccountInfo.cs` defines the basic information for an account.  
   
--   `IAccount.cs` define uma interface padrão `IAccount` de uma conta, incluindo métodos de depósito e saque de ativos de uma conta e de recuperação do saldo da conta.  
+-   `IAccount.cs` defines a standard `IAccount` interface for an account, including methods to deposit and withdraw assets from an account and to retrieve the account balance.  
   
--   `CheckingAccount.cs` contém a classe `CheckingAccount` que implementa a interface `IAccounts` de uma conta corrente.  
+-   `CheckingAccount.cs` contains the `CheckingAccount` class that implements the `IAccounts` interface for a checking account.  
   
- Sabemos por experiência própria que uma das coisas que um saque de conta corrente deve fazer é garantir que o valor sacado seja, no máximo, o que existe como saldo na conta. Podemos substituir o método `IAccount.Withdaw` na `CheckingAccount` por um método que verifica essa condição. O método pode ser mais ou menos assim:  
+ We know from experience that one thing a withdrawal from a checking account must do is to make sure that the amount withdrawn is less than the account balance. So we override the `IAccount.Withdaw` method in `CheckingAccount` with a method that checks for this condition. The method might look like this:  
   
-```c#  
+```cs  
   
 public void Withdraw(double amount)  
 {  
@@ -107,72 +107,72 @@ public void Withdraw(double amount)
   
 ```  
   
- Agora que temos alguns códigos, é hora de testar.  
+ Now that we have some code, it's time for testing.  
   
-##  <a name="BKMK_Creating_the_unit_test_projects"></a> Criar projetos de teste de unidade e métodos de teste  
- Geralmente é mais rápido gerar o projeto de teste de unidade e os stubs de teste de unidade no seu código. Ou você pode optar por criar o projeto de teste de unidade e os testes manualmente, dependendo dos seus requisitos.  
+##  <a name="BKMK_Creating_the_unit_test_projects"></a> Create unit test projects and test methods  
+ It is often quicker to generate the unit test project and unit test stubs from your code. Or you can choose to create the unit test project and tests manually depending on your requirements.  
   
- **Gerar o projeto de teste de unidade e os stubs de teste de unidade**  
+ **Generate unit test project and unit test stubs**  
   
-1.  Na janela do editor de código, clique com botão direito do mouse e escolha **Criar Testes de Unidade** no menu de contexto.  
+1.  From the code editor window, right-click and choose **Create Unit Tests** from the context menu.  
   
-     ![Na janela do editor, exiba o menu de contexto](../test/media/createunittestsrightclick.png "CreateUnitTestsRightClick")  
+     ![From the editor window, view the context menu](../test/media/createunittestsrightclick.png "CreateUnitTestsRightClick")  
   
-2.  Clique em OK para aceitar os padrões e criar testes de unidade ou altere os valores usados para criar e nomear o teste de unidade de projeto e os testes de unidade. Você pode selecionar o código que é adicionado por padrão aos métodos de teste de unidade.  
+2.  Click OK to accept the defaults to create your unit tests, or change the values used to create and name the unit test project and the unit tests. You can select the code that is added by default to the unit test methods.  
   
-     ![Clique com o botão direito do mouse no editor e escolha Criar Testes de Unidade](../test/media/createunittestsdialog.png "CreateUnitTestsDialog")  
+     ![Right&#45;click in editor and choose Create Unit Tests](../test/media/createunittestsdialog.png "CreateUnitTestsDialog")  
   
-3.  Os stubs de teste de unidade são criados em um novo projeto de teste de unidade para todos os métodos na classe.  
+3.  The unit test stubs are created in a new unit test project for all the methods in the class.  
   
-     ![Os testes de unidade são criados](../test/media/createunittestsstubs.png "CreateUnitTestsStubs")  
+     ![The unit tests are created](../test/media/createunittestsstubs.png "CreateUnitTestsStubs")  
   
-4.  Agora, avance para saber como [adicionar código aos métodos de teste de unidade](#BKMK_Writing_your_tests) a fim de fazer o teste de unidade ser relevante ou outros testes de unidade extra que você queira adicionar para testar seu código.  
+4.  Now jump ahead to learn how to [add code to the unit test methods](#BKMK_Writing_your_tests) to make your unit test meaningful, and any extra unit tests that you might want to add to thoroughly test your code.  
   
- **Criar projeto de teste de unidade e testes de unidade manualmente**  
+ **Create your unit test project and unit tests manually**  
   
- Um projeto de teste de unidade geralmente espelha a estrutura de um projeto de código único. No exemplo MyBank, você adicionará dois projetos de teste de unidade chamados `AccountsTests` e `BankDbTests` à solução `MyBanks`. Os nomes de projeto de teste são arbitrários, mas convém adotar uma convenção de nomenclatura padrão.  
+ A unit test project usually mirrors the structure of a single code project. In the MyBank example, you add two unit test projects named `AccountsTests` and `BankDbTests` to the `MyBanks` solution. The test project names are arbitrary, but adopting a standard naming convention is a good idea.  
   
- **Para adicionar um projeto de teste de unidade a uma solução:**  
+ **To add a unit test project to a solution:**  
   
-1.  No menu **Arquivo**, escolha **Novo** e, em seguida, escolha **Projeto** (Teclado: Ctrl + Shift + N).  
+1.  On the **File** menu, choose **New** and then choose **Project** (Keyboard Ctrl + Shift + N).  
   
-2.  Na caixa de diálogo Novo Projeto, expanda o nó **Instalado**, escolha o idioma que você deseja usar para o projeto de teste e escolha **Testar**.  
+2.  On the New Project dialog box, expand the **Installed** node, choose the language that you want to use for your test project, and then choose **Test**.  
   
-3.  Para usar uma das estruturas de teste de unidade da Microsoft, escolha **Projeto de Teste de Unidade** na lista de modelos de projeto. Caso contrário, escolha o modelo de projeto da estrutura de teste de unidade que você deseja usar. Para testar o projeto `Accounts` do nosso exemplo, você deve nomear o projeto `AccountsTests`.  
+3.  To use one of the Microsoft unit test frameworks, choose **Unit Test Project** from the list of project templates. Otherwise, choose the project template of the unit test framework that you want to use. To test the `Accounts` project of our example, you would name the project `AccountsTests`.  
   
     > [!WARNING]
-    >  Nem todas as estruturas de teste de unidade de código aberto e de terceiros fornecem um modelo de projeto do Visual Studio. Consulte o documento da estrutura para saber como criar um projeto.  
+    >  Not all third-party and open source unit test frameworks provide a Visual Studio project template. Consult the framework document for information about creating a project.  
   
-4.  Em seu projeto de teste de unidade, adicione uma referência ao projeto de código em teste, neste caso, ao projeto Contas.  
+4.  In your unit test project, add a reference to the code project under test, in our example to the Accounts project.  
   
-     Para criar a referência ao projeto de código:  
+     To create the reference to the code project:  
   
-    1.  Selecione o projeto no Gerenciador de Soluções.  
+    1.  Select the project in Solution Explorer.  
   
-    2.  No menu **Projeto**, escolha **Adicionar Referência**.  
+    2.  On the **Project** menu, choose **Add Reference**.  
   
-    3.  Na caixa de diálogo Gerenciador de Referência, abra o nó **Solução** e escolha **Projetos**. Selecione o nome do projeto de código e feche a caixa de diálogo.  
+    3.  On the Reference Manager dialog box, open the **Solution** node and choose **Projects**. Select the code project name and close the dialog box.  
   
- Cada projeto de teste de unidade contém classes que refletem os nomes das classes no projeto do código. Em nosso exemplo, o projeto `AccountsTests` contém as seguintes classes:  
+ Each unit test project contains classes that mirror the names of the classes in the code project. In our example, the `AccountsTests` project would contain the following classes:  
   
--   A classe `AccountInfoTests` contém os métodos de teste de unidade para a classe `AccountInfo` no projeto `BankAccount`  
+-   `AccountInfoTests` class contains the unit test methods for the `AccountInfo` class in the `BankAccount` project  
   
--   A classe `CheckingAccountTests` contém os métodos de teste de unidade para a classe `CheckingAccount`.  
+-   `CheckingAccountTests` class contains the unit test methods for `CheckingAccount` class.  
   
-##  <a name="BKMK_Writing_your_tests"></a> Escrever seus testes  
- A estrutura de teste de unidade que você usa e o Visual Studio IntelliSense vão guiá-lo durante a criação do código para os testes de unidade de um projeto de código. Para poder executar no Gerenciador de Testes, a maioria das estruturas exige que você adicione atributos específicos para identificar os métodos de teste de unidade. As estruturas também fornecem uma maneira, geralmente por meio de instruções assert ou atributos de método, para indicar se o método de teste foi aprovado ou reprovado. Outros atributos identificam métodos de instalação opcionais que estão na inicialização da classe e antes de cada método de teste e dos métodos de subdivisão que serão executados após cada método de teste e antes que a classe seja destruída.  
+##  <a name="BKMK_Writing_your_tests"></a> Write your tests  
+ The unit test framework that you use and Visual Studio IntelliSense will guide you through writing the code for your unit tests for a code project. To run in Test Explorer, most frameworks require that you add specific attributes to identify unit test methods. The frameworks also provide a way—usually through assert statements or method attributes—to indicate whether the test method has passed or failed. Other attributes identify optional setup methods that are at class initialization and before each test method and teardown methods that are run after each test method and before the class is destroyed.  
   
- O padrão AAA (Arrange, Act, Assert) é uma maneira comum de escrever testes de unidade para um método em teste.  
+ The AAA (Arrange, Act, Assert) pattern is a common way of writing unit tests for a method under test.  
   
--   A seção **Organizar** (Arrange) de um método de teste de unidade inicializa os objetos e define o valor dos dados que são passados para o método sendo testado.  
+-   The **Arrange** section of a unit test method initializes objects and sets the value of the data that is passed to the method under test.  
   
--   A seção **Agir** (Act) invoca o método sendo testado com os parâmetros organizados.  
+-   The **Act** section invokes the method under test with the arranged parameters.  
   
--   A seção **Declarar** (Assert) verifica se a ação do método em teste se comporta conforme o esperado.  
+-   The **Assert** section verifies that the action of the method under test behaves as expected.  
   
- Para testar o método `CheckingAccount.Withdraw` de nosso exemplo, podemos escrever dois testes: um que verifica o comportamento padrão do método e outro que verifica se um saque acima do saldo falhará. Na classe `CheckingAccountTests`, podemos adicionar os seguintes métodos:  
+ To test the `CheckingAccount.Withdraw` method of our example, we can write two tests: one that verifies the standard behavior of the method, and one that verifies that a withdrawal of more than the balance will fail. In the `CheckingAccountTests` class, we add the following methods:  
   
-```c#  
+```cs  
 [TestMethod]  
 public void Withdraw_ValidAmount_ChangesBalance()  
 {  
@@ -201,18 +201,18 @@ public void Withdraw_AmountMoreThanBalance_Throws()
   
 ```  
   
- Observe que `Withdraw_ValidAmount_ChangesBalance` usa uma instrução `Assert` explícita para determinar se o método de teste é aprovado ou reprovado, ao passo que `Withdraw_AmountMoreThanBalance_Throws` usa o atributo `ExpectedException` para determinar o êxito do método de teste. Nos bastidores, uma estrutura de teste de unidade encapsula os métodos de teste em instruções try/catch. Na maioria dos casos, se uma exceção é detectada, o método de teste falha e a exceção é ignorada. O atributo `ExpectedException` faz com que o método de teste seja aprovado se a exceção for gerada.  
+ Note that `Withdraw_ValidAmount_ChangesBalance` uses an explicit `Assert` statement to determine whether the test method passes or fails, while `Withdraw_AmountMoreThanBalance_Throws` uses the `ExpectedException` attribute to determine the success of the test method. Under the covers, a unit test framework wraps test methods in try/catch statements. In most cases, if an exception is caught, the test method fails and the exception is ignored. The `ExpectedException` attribute causes the test method to pass if the specified exception is thrown.  
   
- Para saber mais sobre o Microsoft Unit Testing Frameworks, confira um dos seguintes tópicos:  
+ For more information about the Microsoft Unit Testing Frameworks, see one of the following topics:  
   
--   [Escrevendo testes de unidade para .NET Framework com a estrutura de teste de unidade Microsoft para código gerenciado](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)  
+-   [Writing Unit Tests for the .NET Framework with the Microsoft Unit Test Framework for Managed Code](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)  
   
--   [Escrevendo testes de unidade para C/C++ com o Microsoft Unit Testing Framework para C++](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)  
+-   [Writing Unit tests for C/C++ with the Microsoft Unit Testing Framework for C++](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)  
   
-## <a name="set-timeouts-for-unit-tests"></a>Definir tempos limite para testes de unidade  
- Para definir um tempo limite em um método de teste individual:  
+## <a name="set-timeouts-for-unit-tests"></a>Set timeouts for unit tests  
+ To set a timeout on an individual test method:  
   
-```c#  
+```cs  
 [TestMethod]  
 [Timeout(2000)]  // Milliseconds  
 public void My_Test()  
@@ -224,9 +224,9 @@ public void My_Test()
   
 ```  
   
- Para definir o tempo limite como o máximo permitido:  
+ To set the timeout to the maximum allowed:  
   
-```c#  
+```cs  
 [TestMethod]  
 [Timeout(TestTimeout.Infinite)]  // Milliseconds  
 public void My_Test ()  
@@ -234,76 +234,76 @@ public void My_Test ()
 }  
 ```  
   
-##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> Executar testes de unidade no Gerenciador de Testes  
- Quando você compila o projeto de teste, os testes são exibidos no Gerenciador de Testes. Se o Gerenciador de Testes não estiver visível, escolha **Teste** no menu do Visual Studio, escolha **Windows** e, em seguida, escolha **Gerenciador de Testes**.  
+##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> Run tests in Test Explorer  
+ When you build the test project, the tests appear in Test Explorer. If Test Explorer is not visible, choose **Test** on the Visual Studio menu, choose **Windows**, and then choose **Test Explorer**.  
   
- ![Gerenciador de testes de unidade](~/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![Unit Test Explorer](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
- Conforme você executa, grava e executa novamente os testes, o modo de exibição padrão do Gerenciador de Testes exibe os resultados em grupos **Testes Reprovados**, **Testes Aprovados**, **Testes Ignorados** e **Testes Não Executados**. Você pode escolher um cabeçalho de grupo para abrir o modo de exibição que exibe todos os testes no grupo.  
+ As you run, write, and rerun your tests, the default view of Test Explorer displays the results in groups of **Failed Tests**, **Passed Tests**, **Skipped Tests** and **Not Run Tests**. You can choose a group heading to open the view that displays all them tests in that group.  
   
- Você também pode filtrar os testes em qualquer modo de exibição correspondendo o texto na caixa de pesquisa em nível global ou selecionando um dos filtros predefinidos. Você pode executar uma seleção de testes a qualquer momento. Os resultados de uma execução de teste aparecem imediatamente na barra de aprovação/reprovação na parte superior da janela do Gerenciador. Os detalhes do resultado de um método de teste são exibidos quando você seleciona o teste.  
+ You can also filter the tests in any view by matching text in the search box at the global level or by selecting one of the pre-defined filters. You can run any selection of the tests at any time. The results of a test run are immediately apparent in the pass/fail bar at the top of the explorer window. Details of a test method result are displayed when you select the test.  
   
-###  <a name="BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar"></a>Executar e exibir testes  
- A barra de ferramentas do Gerenciador de Testes ajuda você a descobrir, organizar e executar os testes desejados.  
+###  <a name="BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar"></a> Run and view tests  
+ The Test Explorer toolbar helps you discover, organize, and run the tests that you are interested in.  
   
- ![Executar testes na barra de ferramentas do Gerenciador de Testes](~/test/media/ute_toolbar.png "UTE_ToolBar")  
+ ![Run tests from the Test Explorer toolbar](../test/media/ute_toolbar.png "UTE_ToolBar")  
   
- Você pode escolher **Executar Tudo** para executar todos os testes ou **Executar** para escolher um subconjunto de testes a serem executados. Depois de executar um conjunto de testes, um resumo da execução do teste é exibido na parte inferior da janela do Gerenciador de Testes. Selecione um teste para exibir seus detalhes no painel inferior. Escolha **Abrir Teste** no menu de contexto (Teclado: F12) para exibir o código-fonte do teste selecionado.  
+ You can choose **Run All** to run all your tests, or choose **Run** to choose a subset of tests to run. After you run a set of tests, a summary of the test run appears at the bottom of the Test Explorer window. Select a test to view the details of that test in the bottom pane. Choose **Open Test** from the context menu (Keyboard: F12) to display the source code for the selected test.  
   
- Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o botão de alternância ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.  
+ If individual tests have no dependencies that prevent them from being run in any order, turn on parallel test execution with the ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") toggle button on the toolbar. This can noticeably reduce the time taken to run all the tests.  
   
-###  <a name="BKMK_Running_tests_after_every_build"></a> Executar testes depois de cada compilação  
+###  <a name="BKMK_Running_tests_after_every_build"></a> Run tests after every build  
   
 > [!WARNING]
->  A execução de testes de unidade após cada compilação só tem suporte no Visual Studio Enterprise.  
+>  Running unit tests after every build is supported only in Visual Studio Enterprise.  
   
 |||  
 |-|-|  
-|![Executar após a compilação](~/test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|Para executar os testes de unidade após cada compilação local, escolha **Teste** no menu padrão e escolha **Executar testes após compilação** na barra de ferramentas do Gerenciador de Testes.|  
+|![Run after build](../test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|To run your unit tests after each local build, choose **Test** on the standard menu, choose **Run Tests After Build** on the Test Explorer toolbar.|  
   
-###  <a name="BKMK_Filtering_and_grouping_the_test_list"></a> Filtrar e agrupar a lista de teste  
- Quando você tiver um grande número de testes, pode digitar na caixa de pesquisa do Gerenciador de Testes para filtrar a lista por cadeia de caracteres especificada. Você pode restringir seu evento de filtro ainda mais escolhendo na lista de filtros.  
+###  <a name="BKMK_Filtering_and_grouping_the_test_list"></a> Filter and group the test list  
+ When you have a large number of tests, you can Type in Test Explorer search box to filter the list by the specified string. You can restrict your filter event more by choosing from the filter list.  
   
- ![Categorias de filtro de pesquisa](~/test/media/ute_searchfilter.png "UTE_SearchFilter")  
+ ![Search filter categories](../test/media/ute_searchfilter.png "UTE_SearchFilter")  
   
 |||  
 |-|-|  
-|![Botão de grupo do Gerenciador de Testes](~/test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|Para agrupar testes por categoria, escolha o botão **Agrupar por**.|  
+|![Test Explorer group button](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|To group your tests by category, choose the **Group By** button.|  
   
- Para obter mais informações, consulte [Executar testes de unidade com o Gerenciador de Testes](../test/run-unit-tests-with-test-explorer.md)  
+ For more information, see [Run unit tests with Test Explorer](../test/run-unit-tests-with-test-explorer.md)  
   
-## <a name="qa"></a>PERGUNTAS E RESPOSTAS  
- **P: como posso depurar testes de unidade?**  
+## <a name="qa"></a>Q&A  
+ **Q: How do I debug unit tests?**  
   
- **R:** você pode usar o Gerenciador de Testes para iniciar uma sessão de depuração para os testes. Passar pelo código com o depurador do Visual Studio permite-lhe navegar facilmente entre os testes de unidade e o projeto sendo testado. Para iniciar a depuração:  
+ **A:** Use Test Explorer to start a debugging session for your tests. Stepping through your code with the Visual Studio debugger seamlessly takes you back and forth between the unit tests and the project under test. To start debugging:  
   
-1.  No editor do Visual Studio, defina um ponto de interrupção em um ou mais métodos de teste que deseje depurar.  
+1.  In the Visual Studio editor, set a breakpoint in one or more test methods that you want to debug.  
   
     > [!NOTE]
-    >  Como os métodos de teste podem ser executados em qualquer ordem, defina pontos de interrupção em todos os métodos de teste que deseje depurar.  
+    >  Because test methods can run in any order, set breakpoints in all the test methods that you want to debug.  
   
-2.  No Gerenciador de Testes, selecione os métodos de teste e escolha **Depurar Testes Selecionados** no menu de atalho.  
+2.  In Test Explorer, select the test methods and then choose **Debug Selected Tests** from the shortcut menu.  
   
- Obter mais detalhes sobre [como depurar testes de unidade](../debugger/debugging-in-visual-studio.md).  
+ Learn more details about [debugging unit tests](../debugger/debugging-in-visual-studio.md).  
   
- **P: se estou usando TDD, como faço para gerar código de meus testes?**  
+ **Q: If I'm using TDD, how do I generate code from my tests?**  
   
- **R:** use o IntelliSense para gerar classes e métodos no código do seu projeto. Escreva uma instrução em um método de teste que chama a classe ou o método que você deseja gerar e abra o menu do IntelliSense na chamada. Se a chamada é um construtor da nova classe, escolha **Gerar novo tipo** no menu e siga o assistente para inserir a classe em seu projeto de código. Se a chamada é para um método, escolha **Gerar novo método** no menu IntelliSense.  
+ **A:** Use IntelliSense to generate classes and methods in your project code. Write a statement in a test method that calls the class or method that you want to generate, then open the IntelliSense menu under the call. If the call is to a constructor of the new class, choose **Generate new type** from the menu and follow the wizard to insert the class in your code project. If the call is to a method, choose **Generate new method** from the IntelliSense menu.  
   
- ![Gerar menu Intellisense do Stub de Método](~/test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
+ ![Generate Method Stub Intellisense Menu](../test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
   
- **P: posso criar testes de unidade que usam vários conjuntos de dados como entrada para executar o teste?**  
+ **Q: Can I create unit tests that take multiple sets of data as input to run the test?**  
   
- **R:** Sim. Os *métodos de teste voltados para dados* permitem que você teste um intervalo de valores com um método de teste de unidade. Use um atributo `DataSource` para o método de teste que especifica a fonte de dados e a tabela que contém os valores de variáveis que você deseja testar.  No corpo do método, atribua os valores de linha às variáveis usando o indexador `TestContext.DataRow[`*ColumnName*`]`.  
+ **A:** Yes. *Data-driven test methods* let you test a range of values with a single unit test method. Use a `DataSource` attribute for the test method that specifies the data source and table that contains the variable values that you want to test.  In the method body, you assign the row values to variables using the `TestContext.DataRow[`*ColumnName*`]` indexer.  
   
 > [!NOTE]
->  Esses procedimentos se aplicam somente ao teste de métodos que você escreve usando o Microsoft Unit Test Framework para código gerenciado. Se você estiver usando uma estrutura diferente, consulte a documentação dela para ver a funcionalidade equivalente.  
+>  These procedures apply only to test methods that you write by using the Microsoft unit test framework for managed code. If you're using a different framework, consult the framework documentation for equivalent functionality.  
   
- Por exemplo, suponha que adicionamos um método desnecessário para a classe `CheckingAccount` chamada `AddIntegerHelper`. `AddIntegerHelper` adiciona dois números inteiros.  
+ For example, assume we add an unnecessary method to the `CheckingAccount` class that is named `AddIntegerHelper`. `AddIntegerHelper` adds two integers.  
   
- Para criar um teste voltado para dados para o método `AddIntegerHelper`, primeiro criamos um banco de dados do Access denominado `AccountsTest.accdb` e uma tabela chamada `AddIntegerHelperData`. A tabela `AddIntegerHelperData` define colunas para especificar o primeiro e o segundo operandos da adição e uma coluna para especificar o resultado esperado. Vamos preencher um número de linhas com valores apropriados.  
+ To create a data-driven test for the `AddIntegerHelper` method, we first create an Access database named `AccountsTest.accdb` and a table named `AddIntegerHelperData`. The `AddIntegerHelperData` table defines columns to specify the first and second operands of the addition and a column to specify the expected result. We fill a number of rows with appropriate values.  
   
-```c#  
+```cs  
   
 [DataSource(  
     @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Projects\MyBank\TestData\AccountsTest.accdb",   
@@ -322,43 +322,43 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
   
 ```  
   
- O método atribuído é executado uma vez para cada linha na tabela. O Gerenciador de Testes relata uma falha de teste para o método se uma das iterações falhar. O painel de detalhes de resultados de teste para o método mostra o método de status de aprovação/reprovação para cada linha de dados.  
+ The attributed method runs once for each row in the table. Test Explorer reports a test failure for the method if any of the iterations fail. The test results detail pane for the method shows you the pass/fail status method for each row of data.  
   
- Saiba mais sobre [testes de unidade voltados para dados](../test/how-to-create-a-data-driven-unit-test.md).  
+ Learn more about [data-driven unit tests](../test/how-to-create-a-data-driven-unit-test.md).  
   
- **P: posso exibir quanto do meu código é testado pelos meus testes de unidade?**  
+ **Q: Can I view how much of my code is tested by my unit tests?**  
   
- **R:** Sim. Você pode determinar a quantidade de código que realmente está sendo testada por seus testes de unidade usando a ferramenta de cobertura de código do Visual Studio. Há suporte para idiomas nativos e gerenciados e todas as estruturas de teste de unidade que podem ser executadas pela estrutura de teste de unidade.  
+ **A:** Yes. You can determine the amount of your code that is actually being tested by your unit tests by using the Visual Studio code coverage tool. Native and managed languages and all unit test frameworks that can be run by the Unit Test Framework are supported.  
   
- Você pode executar a cobertura de código em testes selecionados ou em todos os testes em uma solução. A janela Resultados de Cobertura do Código exibe a porcentagem dos blocos que foram exercidos por linha, função, classe, namespace e módulo de código do produto.  
+ You can run code coverage on selected tests or on all tests in a solution. The Code Coverage Results window displays the percentage of the blocks of product code that were exercised by line, function, class, namespace and module.  
   
- Para executar a cobertura de código para métodos de teste em uma solução, escolha **Testes** no menu do Visual Studio e escolha **Analisar cobertura de código**.  
+ To run code coverage for test methods in a solution, choose **Tests** on the Visual Studio menu and then choose **Analyze code coverage**.  
   
- Os resultados da cobertura aparecem na janela Resultados de Cobertura de Código.  
+ Coverage results appear in the Code Coverage Results window.  
   
- ![Resultados de Cobertura de Código](~/test/media/ute_codecoverageresults.png "UTE_CodeCoverageResults")  
+ ![Code coverage results](../test/media/ute_codecoverageresults.png "UTE_CodeCoverageResults")  
   
- Saiba mais sobre [cobertura de código](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).  
+ Learn more about [code coverage](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md) .  
   
- **P: como posso testar métodos no meu código que possuem dependências externas?**  
+ **Q: How can I test methods in my code that have external dependencies?**  
   
- **R:** Sim. Se você tiver o Visual Studio Enterprise, o Microsoft Fakes pode ser usado com método de teste que você escrever usando estruturas de teste de unidade para código gerenciado.  
+ **A:** Yes. If you have Visual Studio Enterprise, Microsoft Fakes can be used with test methods that you write by using unit test frameworks for managed code.  
   
- O Microsoft Fakes usa duas abordagens a fim de criar classes substitutas para dependências externas.  
+ Microsoft Fakes uses two approaches to create substitute classes for external dependencies.  
   
-1.  *Stubs* geram classes substitutas derivadas da interface pai da classe de dependência de destino. Os métodos stub podem ser substituídos por métodos virtuais públicos da classe de destino.  
+1.  *Stubs* generate substitute classes derived from the parent interface of the target dependency class. Stub methods can be substituted for public virtual methods of the target class.  
   
-2.  *Shims* usam a instrumentação de tempo de execução para desviar as chamadas a um método de destino para um método shim substituto no caso de métodos não virtuais.  
+2.  *Shims* use runtime instrumentation to divert calls to a target method to a substitute shim method for non-virtual methods.  
   
- Em ambas as abordagens, você pode usar os representantes de chamadas gerados para o método de dependência a fim de especificar o comportamento desejado no método de teste.  
+ In both approaches, you use the generated delegates of calls to the dependency method to specify the behavior that you want in the test method.  
   
- Saiba mais sobre [como isolar métodos de teste de unidade com o Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md).  
+ Learn more about [isolating unit test methods with Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md).  
   
- **P: posso usar outras estruturas de teste de unidade para criar testes de unidade?**  
+ **Q: Can I use other unit test frameworks to create unit tests?**  
   
- **R:** Sim, siga estas etapas para [encontrar e instalar outras estruturas](../test/install-third-party-unit-test-frameworks.md). Depois de reiniciar o Visual Studio, reabra a solução para criar testes de unidade e selecione suas estruturas instaladas aqui:  
+ **A:** Yes, follow these steps to [find and install other frameworks](../test/install-third-party-unit-test-frameworks.md). After you restart Visual Studio, reopen your solution to create your unit tests, and then select your installed frameworks here:  
   
- ![Selecione outra estrutura de teste de unidade instalada](~/test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
+ ![Select other installed unit test framework](../test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
   
- Seu stubs de teste de unidade serão criados usando a estrutura selecionada.
+ Your unit test stubs will be created using the selected framework.
 

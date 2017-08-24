@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::EnumEEs | Documentos do Microsoft
+title: IDebugSettingsCallback2::EnumEEs | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,16 +28,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5167ed353089718ac179f8b138183ef594f6057d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b2ca6d2ce1e9dfa59957a080ddfb4e8a0fcffcb5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugsettingscallback2enumees"></a>IDebugSettingsCallback2::EnumEEs
-Enumera os avaliadores de expressão disponível considerando os identificadores de idioma e o fornecedor.  
+Enumerates the available expression evaluators given the language and vendor identifiers.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT EnumEEs(  
@@ -48,7 +49,7 @@ HRESULT EnumEEs(
 );  
 ```  
   
-```c#  
+```cs  
 public int EnumEEs(  
    uint       celtBuffer,  
    ref Guid   rgguidLang,  
@@ -57,21 +58,21 @@ public int EnumEEs(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `celtBuffer`  
- [in] Número de elementos a `pceltEEs` buffer.  
+ [in] Number of elements in the `pceltEEs` buffer.  
   
  `rgguidLang`  
- [no, out] Identificador exclusivo para a linguagem de programação.  
+ [in, out] Unique identifier for the programming language.  
   
  `rgguidVendor`  
- [no, out] Identificador exclusivo para o fornecedor.  
+ [in, out] Unique identifier for the vendor.  
   
  `pceltEEs`  
- [no, out] Matriz de avaliadores de expressão.  
+ [in, out] Array of expression evaluators.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

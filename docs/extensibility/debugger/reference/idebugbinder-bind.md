@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::Bind | Documentos do Microsoft
+title: IDebugBinder::Bind | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: cbccf366c845038bbf57a4184938ee5137cbb8e2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2b17712ac56903fdd85c0cf539b779c965156e44
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugbinderbind"></a>IDebugBinder::Bind
-Esse método obtém o contexto de memória ou o objeto que contém o valor atual do símbolo.  
+This method gets the memory context or object that contains the symbol's current value.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Bind(   
@@ -49,7 +50,7 @@ HRESULT Bind(
 );  
 ```  
   
-```c#  
+```cs  
 int Bind(  
    IDebugObject     pContainer,  
    IDebugField      pField,  
@@ -57,20 +58,20 @@ int Bind(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pContainer`  
- [in] O [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) que contém o filho referenciado por `pField`.  
+ [in] The [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) that contains the child referenced by `pField`.  
   
  `pField`  
- [in] O [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) que representa o símbolo.  
+ [in] The [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) that represents the symbol.  
   
  `ppObject`  
- [out] Retorna o `IDebugObject` que representa a instância do símbolo.  
+ [out] Returns the `IDebugObject` that represents the instance of the symbol.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

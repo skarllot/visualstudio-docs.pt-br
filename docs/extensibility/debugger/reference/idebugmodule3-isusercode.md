@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::IsUserCode | Documentos do Microsoft
+title: IDebugModule3::IsUserCode | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fc8797e00a2c7304cf9a132eac957c4101f8eecf
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ffa5be1e9fb92bdc5b2e8193922228a5129a2188
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugmodule3isusercode"></a>IDebugModule3::IsUserCode
-Recupera informações sobre se o módulo representa o código do usuário ou não.  
+Retrieves information on whether the module represents user code or not.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT IsUserCode(  
@@ -47,18 +48,18 @@ HRESULT IsUserCode(
 );  
 ```  
   
-```c#  
+```cs  
 int IsUserCode(  
    out int pfUser  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pfUser`  
- [out] Diferente de zero (`TRUE`) se o módulo representa o código do usuário, zero (`FALSE`) se não existir.  
+ [out] Nonzero (`TRUE`) if module represents user code, zero (`FALSE`) if it does not.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

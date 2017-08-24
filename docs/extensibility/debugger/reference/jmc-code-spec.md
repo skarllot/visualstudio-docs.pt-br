@@ -1,5 +1,5 @@
 ---
-title: JMC_CODE_SPEC | Documentos do Microsoft
+title: JMC_CODE_SPEC | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e6380fa925eb8213423793176ccb2ce592b2b468
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 378d21c576d9fb59a9ee3bdd4003a94a5924144b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="jmccodespec"></a>JMC_CODE_SPEC
-Essa estrutura é usada para definir as informações de JustMyCode para um módulo.  
+This structure is used to set the JustMyCode information for a module.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _JMC_CODE_SPEC {  
@@ -48,30 +49,30 @@ typedef struct _JMC_CODE_SPEC {
 } JMC_CODE_SPEC;  
 ```  
   
-```c#  
+```cs  
 public struct JMC_CODE_SPEC {  
    public int    fIsUserCode;  
    public string bstrModuleName;  
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  fIsUserCode  
- Diferente de zero (`TRUE`) se o módulo for considerado código de usuário; caso contrário, zero (`FALSE`) se o módulo estiver para ser tratados como código externo e não para ser depurado.  
+ Non-zero (`TRUE`) if the module is to be considered user code; otherwise, zero (`FALSE`) if the module is to be treated as external code and not to be debugged.  
   
  bstrModuleName  
- Nome do módulo em questão.  
+ Name of the module in question.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é passada como uma lista dessas estruturas para o [SetJustMyCodeState](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md) método.  
+## <a name="remarks"></a>Remarks  
+ This structure is passed as a list of such structures to the [SetJustMyCodeState](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [SetJustMyCodeState](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md)

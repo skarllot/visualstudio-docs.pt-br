@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::GetName | Documentos do Microsoft
+title: IDebugMemoryContext2::GetName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,16 +31,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9679de3a084eaa67b57a798bf3d965a22418f5b8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: bffed81dc6971d8eb84fc5c8577cbcbd7eec27aa
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugmemorycontext2getname"></a>IDebugMemoryContext2::GetName
-Recupera o nome de exibição de usuário para este contexto.  
+Retrieves the user-displayable name for this context.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetName(   
@@ -48,21 +49,21 @@ HRESULT GetName(
 );  
 ```  
   
-```c#  
+```cs  
 int GetName(  
    out string pbstrName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pbstrName`  
- [out] Retorna o nome do contexto da memória.  
+ [out] Returns the name of the memory context.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- O nome de um contexto de memória não é usado normalmente.  
+## <a name="remarks"></a>Remarks  
+ The name of a memory context is not normally used.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

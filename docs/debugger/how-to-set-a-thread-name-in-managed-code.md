@@ -1,41 +1,80 @@
 ---
-title: "Como definir um nome de thread no c&#243;digo gerenciado | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "depurando [Visual Studio], threads"
-  - "nomes de thread"
-  - "Propriedade Thread.Name"
-  - "threading [Visual Studio], nomes"
+title: 'How to: Set a Thread Name in Managed Code | Microsoft Docs'
+ms.custom: 
+ms.date: 04/27/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- Thread.Name property
+- threading [Visual Studio], names
+- thread names
+- debugging [Visual Studio], threads
 ms.assetid: c0c4d74a-0314-4b71-81c9-b0b019347ab8
 caps.latest.revision: 28
-caps.handback.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Como definir um nome de thread no c&#243;digo gerenciado
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d3398729e3b32842dc47cff2d191a18085d29626
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
-A nomeação de thread é possível em qualquer edição do Visual Studio.  A nomeação de thread é útil para manter o controle de threads na janela **Threads**.  Como a janela **Threads** não está disponível nas edições do Visual Studio Express, a nomeação de thread tem pouca utilidade nas edições Express.  
+---
+# <a name="how-to-set-a-thread-name-in-managed-code"></a>How to: Set a Thread Name in Managed Code
+Thread naming is possible in any edition of Visual Studio. Thread naming is useful for keeping track of threads in the **Threads** window.
   
- Para definir um nome do thread no código gerenciado, use a propriedade <xref:System.Threading.Thread.Name%2A>.  
+ To set a thread name in managed code, use the <xref:System.Threading.Thread.Name%2A> property.  
   
-## Exemplo  
-  
-```  
+## <a name="example"></a>Example  
+
+```cs
+public class Needle
+{
+    // This method will be called when the thread is started.  
+    public void Baz()
+    {
+        Console.WriteLine("Needle Baz is running on another thread");
+    }
+}
+
+public void Main()
+{
+    Console.WriteLine("Thread Simple Sample");
+    Needle oNeedle = new Needle();
+    // Create a Thread object.   
+    System.Threading.Thread oThread = new System.Threading.Thread(oNeedle.Baz);
+    // Set the Thread name to "MyThread".  
+    oThread.Name = "MyThread";
+    // Starting the thread invokes the ThreadStart delegate  
+    oThread.Start();
+}
+```
+
+```VB 
 Public Class Needle  
     ' This method will be called when the thread is started.  
     Sub Baz()  
@@ -48,13 +87,13 @@ Sub Main()
     Dim oNeedle As New Needle()  
    ' Create a Thread object.   
     Dim oThread As New System.Threading.Thread(AddressOf oNeedle.Baz)  
-    ' Set the Thread name to "MainThread".  
-    oThread.Name = "MainThread"  
+    ' Set the Thread name to "MyThread".  
+    oThread.Name = "MyThread"  
     ' Starting the thread invokes the ThreadStart delegate  
     oThread.Start()  
 End Sub  
 ```  
   
-## Consulte também  
- [Depurar aplicativos multithread](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [Como definir um nome de thread em código nativo](../debugger/how-to-set-a-thread-name-in-native-code.md)
+## <a name="see-also"></a>See Also  
+ [Debug Multithreaded Applications](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [How to: Set a Thread Name in Native Code](../debugger/how-to-set-a-thread-name-in-native-code.md)

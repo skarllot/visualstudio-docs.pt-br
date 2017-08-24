@@ -1,5 +1,5 @@
 ---
-title: COMPUTER_INFO | Documentos do Microsoft
+title: COMPUTER_INFO | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,16 +28,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: db08e808083569c285117ee1f89ed2bfb558b731
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ce68aed4f200d0a9d51f71b5967c3b0e4c6e40d6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="computerinfo"></a>COMPUTER_INFO
-Descreve o computador no qual o depurador está em execução.  
+Describes the computer on which the debugger is running.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagCOMPUTER_INFO  
@@ -48,7 +49,7 @@ typedef struct tagCOMPUTER_INFO
 } COMPUTER_INFO;  
 ```  
   
-```c#  
+```cs  
 public struct COMPUTER_INFO  
 {  
     public ushort wProcessorArchitecture;  
@@ -57,26 +58,26 @@ public struct COMPUTER_INFO
 }  
 ```  
   
-## <a name="terms"></a>Termos  
+## <a name="terms"></a>Terms  
  wProcessorArchitecture  
- Identifica a arquitetura do microprocessador.  
+ Identifies the architecture of the microprocessor.  
   
  wSuiteMask  
- Identifica a máscara de pacote.  
+ Identifies the suite mask.  
   
  dwOperatingSystemVersion  
- Número de versão do sistema operacional.  
+ Operating system version number.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é retornada pelo [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) método.  
+## <a name="remarks"></a>Remarks  
+ This structure is returned by the [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: Msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)

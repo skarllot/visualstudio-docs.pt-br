@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::GetNewObjectForVisualizer | Documentos do Microsoft
+title: IEEVisualizerDataProvider::GetNewObjectForVisualizer | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9ba65ef23e146f92179422f5020f896e5d198410
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 715b363ddfd2f5415d5ff91e4c4c1ead34555019
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="ieevisualizerdataprovidergetnewobjectforvisualizer"></a>IEEVisualizerDataProvider::GetNewObjectForVisualizer
-Esse método obtém um novo objeto para o visualizador. Esse método sempre criará um novo objeto do objeto existente.  
+This method gets a new object for the visualizer. This method will always create a new object from the existing object.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetNewObjectForVisualizer(  
@@ -47,22 +48,22 @@ HRESULT GetNewObjectForVisualizer(
 );  
 ```  
   
-```c#  
+```cs  
 int GetNewObjectForVisualizer(  
    out IDebugObject ppObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ppObject`  
- [out] O novo objeto.  
+ [out] The new object.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- `This method`reavalia o objeto representa atualmente e retorna o resultado como um novo objeto. O objeto existente será atualizado como resultado da avaliação.  
+## <a name="remarks"></a>Remarks  
+ `This method` re-evaluates the object it currently represents and returns the result as a new object. The existing object will be updated as a result of the evaluation.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

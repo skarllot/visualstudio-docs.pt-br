@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::CauseBreak | Documentos do Microsoft
+title: IDebugProcess2::CauseBreak | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 8c7f51b3736ff934826d8333804b677962bdcee3
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 321acc41193cdc4bb4abf45c57dba7ea25f2357c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprocess2causebreak"></a>IDebugProcess2::CauseBreak
-Solicitações que o próximo código de programa que é em execução nesse processo interrompido e enviar uma [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) o objeto de evento.  
+Requests that the next program that is running code in this process halt and send an [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) event object.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT CauseBreak(   
@@ -47,12 +48,12 @@ HRESULT CauseBreak(
 );  
 ```  
   
-```c#  
+```cs  
 int CauseBreak();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

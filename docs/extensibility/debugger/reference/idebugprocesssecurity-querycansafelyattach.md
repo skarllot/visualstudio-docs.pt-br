@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessSecurity::QueryCanSafelyAttach | Documentos do Microsoft
+title: IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,33 +28,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bd37974453939cb0af7d5a4ff2cd1ff2b5d0315c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1766aa7425ddc031d5a47913496d5edcd806636d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprocesssecurityquerycansafelyattach"></a>IDebugProcessSecurity::QueryCanSafelyAttach
-Esse método permite que o fornecedor de porta exibir um aviso antes do usuário anexar a um processo não é seguro.  
+This method allows the port supplier to display a warning before the user attaches to an unsafe process.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT QueryCanSafelyAttach();  
 ```  
   
-```c#  
+```cs  
 int QueryCanSafelyAttach();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Os valores de retorno são os seguintes:  
+## <a name="return-value"></a>Return Value  
+ The return values are as follows:  
   
--   `S_OK`: Anexar a processo é seguro e nenhuma caixa de diálogo de aviso é mostrada.  
+-   `S_OK`: Attaching to process is safe and no warning dialog box is shown.  
   
--   `S_FALSE`: Anexando poderia ser um problema de segurança e uma caixa de diálogo com um aviso é mostrada.  
+-   `S_FALSE`: Attaching could be a security problem and a dialog box with a warning is shown.  
   
--   `FAILURE`: Anexar a processo falhará.  
+-   `FAILURE`: Attaching to process fails.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

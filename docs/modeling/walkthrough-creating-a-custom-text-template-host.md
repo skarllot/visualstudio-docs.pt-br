@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Criando um Host de modelo de texto personalizado | Documentos do Microsoft'
+title: 'Walkthrough: Creating a Custom Text Template Host | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,49 +28,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ddc9fb9371b19b3472272b4b38131f7a48d8f0b1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 9999709a1185834224e273682a9eaaf4a789f75f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="walkthrough-creating-a-custom-text-template-host"></a>Instruções passo a passo: criando um host de modelo de texto personalizado
-A *modelo de texto**host* fornece um ambiente que permite a *mecanismo de transformação do modelo de texto* para executar. O host é responsável por gerenciar a interação do mecanismo com o sistema de arquivos. O mecanismo ou *processador de diretriz* que precisa de um arquivo ou assembly podem solicitar um recurso do host. O host pode pesquisar em diretórios e no cache de assembly global para localizar o recurso solicitado. Para obter mais informações, consulte [o processo de transformação de modelo de texto](../modeling/the-text-template-transformation-process.md).  
+# <a name="walkthrough-creating-a-custom-text-template-host"></a>Walkthrough: Creating a Custom Text Template Host
+A *text template**host* provides an environment that enables the *text template transformation engine* to run. The host is responsible for managing the engine's interaction with the file system. The engine or *directive processor* that needs a file or an assembly can request a resource from the host. The host can then search directories and the global assembly cache to locate the requested resource. For more information, see [The Text Template Transformation Process](../modeling/the-text-template-transformation-process.md).  
   
- Você pode escrever um host personalizado se você deseja usar o *transformação do modelo de texto* funcionalidade de fora [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ou se você quiser integrar essa funcionalidade ferramentas personalizadas. Para criar um host personalizado, você deve criar uma classe que herda de <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>.</xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> Para obter a documentação dos métodos individuais, consulte <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>.</xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>  
+ You can write a custom host if you want to use the *text template transformation* functionality from outside [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] or if you want to integrate that functionality into custom tools. To create a custom host, you must create a class that inherits from <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>. For the documentation of the individual methods, see <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>.  
   
 > [!WARNING]
->  Se você estiver escrevendo uma extensão ou um pacote do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], considere usar o serviço de modelagem de texto em vez de criar seu próprio host. Para obter mais informações, consulte [invocando transformação de texto em uma extensão VS](../modeling/invoking-text-transformation-in-a-vs-extension.md).  
+>  If you are writing a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extension or package, consider using the text templating service instead of creating your own host. For more information, see [Invoking Text Transformation in a VS Extension](../modeling/invoking-text-transformation-in-a-vs-extension.md).  
   
- As tarefas ilustradas nesta explicação passo a passo incluem o seguinte:  
+ Tasks illustrated in this walkthrough include the following:  
   
--   Criar um host de modelo de texto personalizado.  
+-   Creating a custom text template host.  
   
--   Testar o host personalizado.  
+-   Testing the custom host.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
- Para concluir esta explicação passo a passo, você precisará do seguinte:  
+## <a name="prerequisites"></a>Prerequisites  
+ To complete this walkthrough, you must have the following:  
   
--   Visual Studio 2010 ou posterior  
+-   Visual Studio 2010 or later  
   
--   SDK do Visual Studio  
+-   Visual Studio SDK  
   
-## <a name="creating-a-custom-text-template-host"></a>Criando um host de modelo de texto personalizado  
- Neste passo a passo, você cria um host personalizado em um aplicativo executável que pode ser chamado da linha de comando. O aplicativo aceita um arquivo de modelo de texto como argumento, lê o modelo, chama o mecanismo para transformar o modelo e exibe todos os erros que ocorrem na janela do prompt de comando.  
+## <a name="creating-a-custom-text-template-host"></a>Creating a Custom Text Template Host  
+ In this walkthrough, you create a custom host in an executable application that can be called from the command line. The application accepts a text template file as an argument, reads the template, calls the engine to transform the template, and displays any errors that occur in the command prompt window.  
   
-#### <a name="to-create-a-custom-host"></a>Para criar um host personalizado  
+#### <a name="to-create-a-custom-host"></a>To create a custom host  
   
-1.  No Visual Studio, crie um novo aplicativo de console Visual Basic ou C# chamado CustomHost.  
+1.  In Visual Studio, create a new Visual Basic or a C# console application named CustomHost.  
   
-2.  Adicione referências aos assemblies a seguir:  
+2.  Add references to the following assemblies:  
   
-    -   **Microsoft.VisualStudio.TextTemplating. \*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating.\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 e versões posteriores**  
+    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 and later versions**  
   
-3.  Substitua o código no arquivo Program.cs ou Module1.vb pelo seguinte código:  
+3.  Replace the code in the Program.cs or Module1.vb file with the following code:  
   
-    ```c#  
+    ```cs  
     using System;  
     using System.IO;  
     using System.CodeDom.Compiler;  
@@ -420,7 +421,7 @@ A *modelo de texto**host* fornece um ambiente que permite a *mecanismo de transf
     }  
     ```  
   
-    ```vb#  
+    ```vb  
     Imports System  
     Imports System.IO  
     Imports System.CodeDom.Compiler  
@@ -727,27 +728,27 @@ A *modelo de texto**host* fornece um ambiente que permite a *mecanismo de transf
     End Namespace  
     ```  
   
-4.  Para [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] apenas, abra o **projeto** menu e clique em **propriedades de CustomHost**. No **o objeto de inicialização** lista, clique em **Customhost**.  
+4.  For [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] only, open the **Project** menu, and click **CustomHost Properties**. In the **Startup object** list, click **CustomHost.Program**.  
   
-5.  Sobre o **arquivo** menu, clique em **Salvar tudo**.  
+5.  On the **File** menu, click **Save All**.  
   
-6.  No menu **Compilar**, clique em **Compilar Solução**.  
+6.  On the **Build** menu, click **Build Solution**.  
   
-## <a name="testing-the-custom-host"></a>Testando o host personalizado  
- Para testar o host personalizado, você escreve um modelo de texto, executa o host personalizado, passa o nome do modelo de texto e verifica se o modelo é transformado.  
+## <a name="testing-the-custom-host"></a>Testing the Custom Host  
+ To test the custom host, you write a text template, then you run the custom host, pass it the name of the text template, and verify that the template is transformed.  
   
-#### <a name="to-create-a-text-template-to-test-the-custom-host"></a>Para criar um modelo de texto para testar o host personalizado  
+#### <a name="to-create-a-text-template-to-test-the-custom-host"></a>To create a text template to test the custom host  
   
-1.  Crie um arquivo de texto e nomeie-o `TestTemplate.tt`.  
+1.  Create a text file, and name it `TestTemplate.tt`.  
   
-     Você pode usar qualquer editor de texto (por exemplo, o Bloco de Notas) para criar o arquivo.  
+     You can use any text editor (for example, Notepad) to create the file.  
   
-2.  Adicione o seguinte ao arquivo:  
+2.  Add the following to the file:  
   
     > [!NOTE]
-    >  A linguagem de programação do modelo de texto não precisa corresponder à linguagem do host personalizado.  
+    >  The programming language of the text template does not have to match that of the custom host.  
   
-    ```c#  
+    ```cs  
     Text Template Host Test  
   
     <#@ template debug="true" #>  
@@ -765,7 +766,7 @@ A *modelo de texto**host* fornece um ambiente que permite a *mecanismo de transf
     #>  
     ```  
   
-    ```vb#  
+    ```vb  
     Text Template Host Test  
   
     <#@ template debug="true" language="VB"#>  
@@ -785,41 +786,41 @@ A *modelo de texto**host* fornece um ambiente que permite a *mecanismo de transf
   
     ```  
   
-3.  Salve e feche o arquivo.  
+3.  Save and close the file.  
   
-#### <a name="to-test-the-custom-host"></a>Para testar o host personalizado  
+#### <a name="to-test-the-custom-host"></a>To test the custom host  
   
-1.  Abra a janela Prompt de Comando.  
+1.  Open the Command Prompt window.  
   
-2.  Digite o caminho do arquivo executável para o host personalizado, mas não pressione ENTER ainda.  
+2.  Type the path of the executable file for the custom host, but do not press ENTER yet.  
   
-     Por exemplo, digite:  
+     For example, type:  
   
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`  
   
     > [!NOTE]
-    >  Em vez de digitar o endereço, você pode navegar até o arquivo CustomHost.exe na **Windows Explorer** e, em seguida, arraste o arquivo para a janela do Prompt de comando.  
+    >  Instead of typing the address, you can browse to the file CustomHost.exe in **Windows Explorer** and then drag the file into the Command Prompt window.  
   
-3.  Digite um espaço.  
+3.  Type a space.  
   
-4.  Digite o caminho do arquivo de modelo de texto e pressione ENTER.  
+4.  Type the path of the text template file, and then press ENTER.  
   
-     Por exemplo, digite:  
+     For example, type:  
   
      `C:\<YOUR PATH>TestTemplate.tt`  
   
     > [!NOTE]
-    >  Em vez de digitar o endereço, você pode navegar até o arquivo TestTemplate.tt no **Windows Explorer** e, em seguida, arraste o arquivo para a janela do Prompt de comando.  
+    >  Instead of typing the address, you can browse to the file TestTemplate.tt in **Windows Explorer** and then drag the file into the Command Prompt window.  
   
-     O aplicativo host personalizado é executado e conclui o processo de transformação do modelo de texto.  
+     The custom host application runs and completes the text template transformation process.  
   
-5.  Em **Windows Explorer**, navegue até a pasta que contém o arquivo TestTemplate.tt.  
+5.  In **Windows Explorer**, browse to the folder that contains the file TestTemplate.tt.  
   
-     Essa pasta também contém o arquivo TestTemplate1.txt.  
+     That folder also contains the file TestTemplate1.txt.  
   
-6.  Abra esse arquivo para ver os resultados da transformação do modelo de texto.  
+6.  Open this file to see the results of the text template transformation.  
   
-     A saída de texto gerada aparecerá e será semelhante a esta:  
+     The generated text output appears and looks like this:  
   
     ```  
     Text Template Host Test  
@@ -829,8 +830,8 @@ A *modelo de texto**host* fornece um ambiente que permite a *mecanismo de transf
     This is a test  
     ```  
   
-## <a name="next-steps"></a>Próximas etapas  
- Neste passo a passo, você criou um host de transformação de modelo de texto que oferece suporte à funcionalidade de transformação básica. Você pode expandir o host para oferecer suporte a modelos de texto que chamam processadores de diretriz personalizados ou gerados. Para obter mais informações, consulte [passo a passo: conectando um Host a um processador de diretriz gerado](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md).  
+## <a name="next-steps"></a>Next Steps  
+ In this walkthrough, you created a text template transformation host that supports the basic transformation functionality. You can expand your host to support text templates that call custom or generated directive processors. For more information, see [Walkthrough: Connecting a Host to a Generated Directive Processor](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost></xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>
+## <a name="see-also"></a>See Also  
+ <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>

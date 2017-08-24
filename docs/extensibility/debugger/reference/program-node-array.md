@@ -1,5 +1,5 @@
 ---
-title: PROGRAM_NODE_ARRAY | Documentos do Microsoft
+title: PROGRAM_NODE_ARRAY | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 50aabe2da4f55c54e32f10b7746bc87109c56f1e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 9768c4fdf392ad83277bfd7c77b63c59eab08737
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="programnodearray"></a>PROGRAM_NODE_ARRAY
-Contém uma matriz de objetos que descrevem os programas de interesse.  
+Contains an array of objects that describe programs of interest.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct tagPROGRAM_NODE_ARRAY {  
@@ -48,32 +49,32 @@ typedef struct tagPROGRAM_NODE_ARRAY {
 } PROGRAM_NODE_ARRAY;  
 ```  
   
-```c#  
+```cs  
 public struct tagPROGRAM_NODE_ARRAY {  
    public uint                 dwCount;  
    public IDebugProgramNode2[] Members;  
 }  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  dwCount  
- Número de objetos na `Members` matriz.  
+ Number of objects in the `Members` array.  
   
- Membros  
- Uma matriz de [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objetos que descrevem os programas solicitados.  
+ Members  
+ An array of [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objects describing the programs requested.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é parte do [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) estrutura que por sua vez é preenchida por uma chamada para o [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) método.  
+## <a name="remarks"></a>Remarks  
+ This structure is part of the [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) structure which in turn is filled in by a call to the [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)

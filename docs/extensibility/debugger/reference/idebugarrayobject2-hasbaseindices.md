@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject2::HasBaseIndices | Documentos do Microsoft
+title: IDebugArrayObject2::HasBaseIndices | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 65689126912ebdb57c8e0855e31715d3f9a1bb1d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c1d92848141326a8fb0e574d04178d9ae2434194
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugarrayobject2hasbaseindices"></a>IDebugArrayObject2::HasBaseIndices
-Determina se a matriz tem índices base (limites inferiores) definidos.  
+Determines if the array has base indices (lower bounds) defined.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT HasBaseIndices (  
@@ -46,15 +47,15 @@ HRESULT HasBaseIndices (
 );  
 ```  
   
-```c#  
+```cs  
 int HasBaseIndices (  
    out bool pfHasBaseIndices  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pfHasBaseIndices`  
- [out] TRUE para especificar que a matriz tem índices base (limite inferior); Caso contrário, FALSE.  
+ [out] TRUE to specify that the array has base indices (lower bounds); otherwise, FALSE.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.

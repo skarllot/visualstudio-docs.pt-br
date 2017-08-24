@@ -1,5 +1,5 @@
 ---
-title: "Navegar e atualizar modelos de camada no código do programa | Documentos do Microsoft"
+title: Navigate and update layer models in program code | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,19 +28,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: fd26c504273cae739ccbeef5e406891def732985
-ms.openlocfilehash: 626fc2b217285ae0c79dbd57f925281e10a0efbb
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 781b57612e3fe26f2edd7754442def5eb1341a93
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="navigate-and-update-layer-models-in-program-code"></a>Navegar e atualizar modelos de camada no código do programa
-Este tópico descreve os elementos e relações em modelos de camadas, que você pode navegar e atualizar usando o código do programa. Para obter mais informações sobre diagramas de dependência do ponto de vista do usuário, consulte [diagramas de dependência: referência](../modeling/layer-diagrams-reference.md) e [diagramas de dependência: diretrizes](../modeling/layer-diagrams-guidelines.md).  
+# <a name="navigate-and-update-layer-models-in-program-code"></a>Navigate and update layer models in program code
+This topic describes the elements and relationships in layer models, which you can navigate and update by using program code. For more information about dependency diagrams from the user's point of view, see [Dependency Diagrams: Reference](../modeling/layer-diagrams-reference.md) and [Dependency Diagrams: Guidelines](../modeling/layer-diagrams-guidelines.md).  
   
- O <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer>modelo descrito neste tópico é uma fachada em geral mais <xref:Microsoft.VisualStudio.GraphModel>modelo.</xref:Microsoft.VisualStudio.GraphModel> </xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer> Se você estiver escrevendo um [menu comando ou extensão de gesto](../modeling/add-commands-and-gestures-to-layer-diagrams.md), use o `Layer` modelo. Se você estiver escrevendo um [extensão de validação de camada](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), é mais fácil usar o `GraphModel`.  
+ The <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer> model described in this topic is a facade on a more general <xref:Microsoft.VisualStudio.GraphModel> model. If you are writing a [menu command or gesture extension](../modeling/add-commands-and-gestures-to-layer-diagrams.md), use the `Layer` model. If you are writing a [layer validation extension](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), it is easier to use the `GraphModel`.  
   
-## <a name="transactions"></a>Transações  
- Ao atualizar um modelo, considere incluir as alterações em uma `ILinkedUndoTransaction`. Esse procedimento agrupará as alterações em uma transação. Se qualquer uma das alterações falhar, toda a transação será revertida. Se o usuário desfizer uma alteração, todas as alterações serão desfeitas em conjunto.  
+## <a name="transactions"></a>Transactions  
+ When you update a model, consider enclosing the changes in a `ILinkedUndoTransaction`. This groups your changes into one transaction. If any of the changes fails, the whole transaction will be rolled back. If the user undoes a change, all the changes will be undone together.  
   
 ```  
 using (ILinkedUndoTransaction t =  
@@ -51,32 +52,32 @@ using (ILinkedUndoTransaction t =
 }  
 ```  
   
-## <a name="containment"></a>Confinamento  
- ![ILayer e ILayerModel podem conter ILayers. ] (~/modeling/media/layerapi_containment.png "LayerApi_Containment")  
+## <a name="containment"></a>Containment  
+ ![ILayer and ILayerModel can both contain ILayers.](../modeling/media/layerapi_containment.png "LayerApi_Containment")  
   
- Camadas (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>) e o modelo de camada (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>) podem conter comentários e camadas.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel> </xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>  
+ Layers (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>) and the layer model (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>) can contain Comments and Layers.  
   
- Uma camada (`ILayer`) pode estar contida em um modelo de camada (`ILayerModel`) ou pode ser aninhada em outra `ILayer`.  
+ A layer (`ILayer`) can be contained in a layer model (`ILayerModel`) or it can be nested within another `ILayer`.  
   
- Para criar um comentário ou uma camada, use os métodos de criação no contêiner apropriado.  
+ To create a comment or a layer, use the creation methods on the appropriate container.  
   
-## <a name="dependency-links"></a>Vínculos de dependência  
- Um vínculo de dependência é representado por um objeto. Ele pode ser navegado em qualquer direção:  
+## <a name="dependency-links"></a>Dependency Links  
+ A dependency link is represented by an object. It can be navigated in either direction:  
   
- ![Um ILayerDependencyLink conecta dois ILayers. ] (~/modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
+ ![An ILayerDependencyLink connects two ILayers.](../modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
   
- Para criar um vínculo de dependência, chame `source.CreateDependencyLink(target)`.  
+ To create a dependency link, call `source.CreateDependencyLink(target)`.  
   
-## <a name="comments"></a>Comentários  
- Os comentários podem ser encontrados dentro de camadas ou do modelo de camada e também podem ser vinculados a qualquer elemento de camada:  
+## <a name="comments"></a>Comments  
+ Comments can be contained inside layers or the layer model, and can also be linked to any layer element:  
   
- ![Comentários podem ser anexados a qualquer elemento de camada. ] (~/modeling/media/layerapi_comments.png "LayerApi_Comments")  
+ ![Comments can be attached to any layer element.](../modeling/media/layerapi_comments.png "LayerApi_Comments")  
   
- Um comentário pode ser vinculado a qualquer número de elementos, incluindo zero.  
+ A comment can be linked to any number of elements, including none.  
   
- Para obter os comentários anexados a um elemento de camada, use:  
+ To get the comments that are attached to a layer element, use:  
   
-```c#  
+```cs  
 ILayerModel model = diagram.GetLayerModel();   
 IEnumerable<ILayerComment> comments =   
    model.Comments.Where(comment =>   
@@ -85,39 +86,39 @@ IEnumerable<ILayerComment> comments =
 ```  
   
 > [!CAUTION]
->  A propriedade `Comments` de uma `ILayer` recebe comentários que estão contidos na `ILayer`. Não recebe os comentários vinculados a ela.  
+>  The `Comments` property of an `ILayer` gets comments that are contained within the `ILayer`. It does not get the comments that are linked to it.  
   
- Crie um comentário, invocando `CreateComment()` no contêiner adequado.  
+ Create a comment by invoking `CreateComment()` on the appropriate container.  
   
- Crie um link usando `CreateLink()` no comentário.  
+ Create a link by using `CreateLink()` on the comment.  
   
-## <a name="layer-elements"></a>Elementos de camada  
- Todos os tipos de elementos que podem estar contidos em um modelo são elementos de camada:  
+## <a name="layer-elements"></a>Layer Elements  
+ All the types of element that can be contained in a model are layer elements:  
   
- ![conteúdo do diagrama de dependência é ILayerElements. ] (~/modeling/media/layerapi_layerelements.png "LayerApi_LayerElements")  
+ ![dependency diagram contents are ILayerElements.](../modeling/media/layerapi_layerelements.png "LayerApi_LayerElements")  
   
-## <a name="properties"></a>Propriedades  
- Cada `ILayerElement` tem um dicionário de cadeia chamado `Properties`. Você pode usar este dicionário para anexar informações arbitrárias a qualquer elemento da camada.  
+## <a name="properties"></a>Properties  
+ Each `ILayerElement` has a string dictionary named `Properties`. You can use this dictionary to attach arbitrary information to any layer element.  
   
-## <a name="artifact-references"></a>Referências de artefato  
- Uma referência de artefato (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>) representa um vínculo entre uma camada e um item de projeto como um arquivo, uma classe ou uma pasta.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference> O usuário cria artefatos quando criar uma camada ou adicionar a ele arrastando itens do Gerenciador de soluções, exibição de classe ou Pesquisador de objetos para um diagrama de dependência. Qualquer número de referências de artefato pode ser vinculado a uma camada.  
+## <a name="artifact-references"></a>Artifact References  
+ An artifact reference (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>) represents the link between a layer and a project item such as a file, class, or folder. The user creates artifacts when they create a layer or add to it by dragging items from Solution Explorer, Class View, or Object Browser onto a dependency diagram. Any number of artifact references can be linked to a layer.  
   
- Cada linha do Gerenciador de Camadas exibe uma referência de artefato. Para obter mais informações, consulte [criar diagramas de dependência de seu código](../modeling/create-layer-diagrams-from-your-code.md).  
+ Each row in Layer Explorer displays an artifact reference. For more information, see [Create dependency diagrams from your code](../modeling/create-layer-diagrams-from-your-code.md).  
   
- Os principais tipos e métodos relacionados a referências de artefato são os seguintes:  
+ The principal types and methods concerned with artifact references are as follows:  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference> A propriedade Categorias indica que tipo de artefato é referenciado, tal como uma classe, arquivo executável ou assembly. As categorias determinam como o Identificador identifica o artefato de destino.  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>. The Categories property indicates what kind of artifact is referenced, such as a class, executable file, or assembly. Categories determines how the Identifier identifies the target artifact.  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A>cria uma referência de artefato de um <xref:EnvDTE.Project>ou <xref:EnvDTE.ProjectItem>.</xref:EnvDTE.ProjectItem> </xref:EnvDTE.Project></xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A> Esta é uma operação assíncrona. Portanto, você geralmente fornece um retorno de chamada realizado quando a criação é concluída.  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A> creates an artifact reference from an <xref:EnvDTE.Project> or <xref:EnvDTE.ProjectItem>. This is an asynchronous operation. Therefore, you usually provide a callback that is called when the creation is complete.  
   
- As referências de artefato de camada não devem ser confundidas com artefatos em diagramas de casos de uso.  
+ Layer Artifact References should not be confused with Artifacts in use case diagrams.  
   
-## <a name="shapes-and-diagrams"></a>Formas e diagramas  
- Dois objetos são usados para representar cada elemento em um modelo de camada: um <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement>e <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> </xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> O `IShape` representa a posição e o tamanho da forma no diagrama. Em modelos de camada, cada `ILayerElement` tem um `IShape`e cada `IShape` em uma dependência de diagrama tem um `ILayerElement`. `IShape` também é usado para modelos UML. Portanto, nem todo `IShape` tem um elemento de camada.  
+## <a name="shapes-and-diagrams"></a>Shapes and Diagrams  
+ Two objects are used to represent each element in a layer model: an <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement>, and an <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>. The `IShape` represents the position and size of the shape on the diagram. In layer models, every `ILayerElement` has one `IShape`, and every `IShape` on a dependency diagram has one `ILayerElement`. `IShape` is also used for UML models. Therefore, not every `IShape` has a layer element.  
   
- Da mesma forma, o que <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>é exibido em um <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram> </xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>  
+ In the same manner, the <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel> is displayed on one <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>.  
   
- No código de um comando personalizado ou manipulador de gestos, você pode obter o diagrama atual e a seleção atual de formas da importação do `DiagramContext`:  
+ In the code of a custom command or gesture handler, you can get the current diagram and the current selection of shapes from the `DiagramContext` import:  
   
 ```  
 public class ... {  
@@ -134,14 +135,14 @@ public void ... (...)
     if (element != null) ... }}  
 ```  
   
- ![Cada ILayerElement é apresentado por um IShape. ] (~/modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
+ ![Each ILayerElement is presented by an IShape.](../modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>e <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>também são usados para exibir modelos UML.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram></xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> Para obter mais informações, consulte [exibir um modelo UML em diagramas](../modeling/display-a-uml-model-on-diagrams.md).  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> and <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram> are also used to display UML models. For more information, see [Display a UML model on diagrams](../modeling/display-a-uml-model-on-diagrams.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar comandos e gestos a diagramas de dependência](../modeling/add-commands-and-gestures-to-layer-diagrams.md)   
- [Adicionar validação de arquitetura personalizada a diagramas de dependência](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   
- [Adicionar propriedades personalizadas a diagramas de dependência](../modeling/add-custom-properties-to-layer-diagrams.md)   
- [Diagramas de dependência: referência](../modeling/layer-diagrams-reference.md)   
- [Diagramas de dependência: diretrizes](../modeling/layer-diagrams-guidelines.md)   
+## <a name="see-also"></a>See Also  
+ [Add commands and gestures to dependency diagrams](../modeling/add-commands-and-gestures-to-layer-diagrams.md)   
+ [Add custom architecture validation to dependency diagrams](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   
+ [Add custom properties to dependency diagrams](../modeling/add-custom-properties-to-layer-diagrams.md)   
+ [Dependency Diagrams: Reference](../modeling/layer-diagrams-reference.md)   
+ [Dependency Diagrams: Guidelines](../modeling/layer-diagrams-guidelines.md)   
 

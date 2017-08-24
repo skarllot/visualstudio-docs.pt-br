@@ -1,5 +1,5 @@
 ---
-title: ADDRESS_KIND | Documentos do Microsoft
+title: ADDRESS_KIND | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 12446992390bbe63b8ced91b730f9721c3e2e5ef
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 945be4e668266f67dfcdd6ef6732a1ea95e365a3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="addresskind"></a>ADDRESS_KIND
-Especifica os tipos de endereços.  
+Specifies the kinds of addresses.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 enum enum_ADDRESS_KIND {  
@@ -56,7 +57,7 @@ enum enum_ADDRESS_KIND {
 typedef DWORD ADDRESS_KIND;  
 ```  
   
-```c#  
+```cs  
 public enum enum_ADDRESS_KIND {  
    ADDRESS_KIND_NATIVE                  = 0x0001,  
    ADDRESS_KIND_UNMANAGED_THIS_RELATIVE = 0x0002,  
@@ -70,46 +71,46 @@ public enum enum_ADDRESS_KIND {
 };  
 ```  
   
-## <a name="terms"></a>Termos  
+## <a name="terms"></a>Terms  
  ADDRESS_KIND_NATIVE  
- Um endereço nativo, representado pelo [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) estrutura.  
+ A native address, represented by the [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) structure.  
   
  ADDRESS_KIND_UNMANAGED_THIS_RELATIVE  
- Um endereço não gerenciado relativo a um `this` (`Me` no Visual Basic) ponteiro e são representados pelo [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) estrutura.  
+ An unmanaged address relative to a `this` (`Me` in Visual Basic) pointer and represented by the [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) structure.  
   
  ADDRESS_KIND_UNMANAGED_PHYSICAL  
- Um endereço físico não gerenciado, representado pelo [UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) estrutura.  
+ An unmanaged physical address, represented by the [UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) structure.  
   
  ADDRESS_KIND_METHOD  
- Um método de uma classe, representado pelo [METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) estrutura.  
+ A method of a class, represented by the [METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) structure.  
   
  ADDRESS_KIND_FIELD  
- Um campo de uma classe, representado pelo [METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) estrutura.  
+ A field of a class, represented by the [METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) structure.  
   
  ADDRESS_KIND_LOCAL  
- O endereço é para uma variável local e é representado pelo [METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) estrutura.  
+ The address is for a local variable and is represented by the [METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) structure.  
   
  ADDRESS_KIND_PARAM  
- Um parâmetro de método ou função, representado pelo [METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) estrutura.  
+ A method or function parameter, represented by the [METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) structure.  
   
  ADDRESS_KIND_ARRAYELEM  
- Um elemento de matriz, representado pelo [METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) estrutura.  
+ An array element, represented by the [METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) structure.  
   
  ADDRESS_KIND_RETVAL  
- Um valor de retorno, representado pelo [METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) estrutura.  
+ A return value, represented by the [METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) structure.  
   
-## <a name="remarks"></a>Comentários  
- O [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) método retorna o [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) estrutura que contém uma união de estruturas possíveis, o [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura. O `dwKind` campo o `DEBUG_ADDRESS_UNION` estrutura mantém o `ADDRESS_KIND` valor e descreve como interpretar o campo de união.  
+## <a name="remarks"></a>Remarks  
+ The [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) method returns the [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) structure which contains a union of possible structures, the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure. The `dwKind` field of the `DEBUG_ADDRESS_UNION` structure holds the `ADDRESS_KIND` value and describes how to interpret the union field.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)   
  [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)

@@ -1,5 +1,5 @@
 ---
-title: "T4 Diretiva de parâmetro | Documentos do Microsoft"
+title: T4 Parameter Directive | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,26 +25,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: cbffe1545d9cfd9abd62eb357e4236e853c67249
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f29eb8610b8ed6e7d0d66fc9513754cdb05bac63
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="t4-parameter-directive"></a>Diretiva de parâmetro T4
-Em um [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] modelo de texto, o `parameter` diretiva declara propriedades em seu código de modelo que são inicializadas de valores passados do contexto externo. Você pode definir esses valores se você escrever código que chama a transformação de texto.  
+# <a name="t4-parameter-directive"></a>T4 Parameter Directive
+In a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] text template, the `parameter` directive declares properties in your template code that are initialized from values passed in from the external context. You can set these values if you write code that invokes text transformation.  
   
-## <a name="using-the-parameter-directive"></a>Usando a diretiva de parâmetro  
+## <a name="using-the-parameter-directive"></a>Using the Parameter Directive  
   
 ```  
 <#@ parameter type="Full.TypeName" name="ParameterName" #>  
 ```  
   
- A `parameter` diretiva declara propriedades em seu código de modelo que são inicializadas de valores passados do contexto externo. Você pode definir esses valores se você escrever código que chama a transformação de texto. Os valores podem ser passados no `Session` dicionário, ou em <xref:System.Runtime.Remoting.Messaging.CallContext>.</xref:System.Runtime.Remoting.Messaging.CallContext>  
+ The `parameter` directive declares properties in your template code that are initialized from values passed in from the external context. You can set these values if you write code that invokes text transformation. The values can be passed either in the `Session` dictionary, or in <xref:System.Runtime.Remoting.Messaging.CallContext>.  
   
- Você pode declarar parâmetros de qualquer tipo remoto. Ou seja, o tipo deve ser declarado com <xref:System.SerializableAttribute>, ou ele deve derivar de <xref:System.MarshalByRefObject>.</xref:System.MarshalByRefObject> </xref:System.SerializableAttribute> Isso permite que os valores de parâmetro a ser passado para o AppDomain em que o modelo é processado.  
+ You can declare parameters of any remotable type. That is, the type must be declared with <xref:System.SerializableAttribute>, or it must derive from <xref:System.MarshalByRefObject>. This allows parameter values to be passed into the AppDomain in which the template is processed.  
   
- Por exemplo, você poderia escrever um modelo de texto com o seguinte conteúdo:  
+ For example, you could write a text template with the following content:  
   
 ```  
 <#@ template language="C#" #>  
@@ -57,11 +58,11 @@ Line <#= i #>
   
 ```  
   
-## <a name="passing-parameter-values-to-a-template"></a>Passando valores de parâmetro para um modelo  
- Se você estiver escrevendo um [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extensão como um comando de menu ou um manipulador de eventos, você pode processar um modelo usando o serviço de modelagem de texto:  
+## <a name="passing-parameter-values-to-a-template"></a>Passing parameter values to a template  
+ If you are writing a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension such as a menu command or an event handler, you can process a template by using the text templating service:  
   
-```c#  
-// Get a service provider – how you do this depends on the context:  
+```cs  
+// Get a service provider - how you do this depends on the context:  
 IServiceProvider serviceProvider = dte; // or dslDiagram.Store, for example   
 // Get the text template service:  
 ITextTemplating t4 = serviceProvider.GetService(typeof(STextTemplating)) as ITextTemplating;  
@@ -76,12 +77,12 @@ string result = t4.ProcessTemplate("MyTemplateFile.t4",
   
 ```  
   
-## <a name="passing-values-in-the-call-context"></a>Passando valores no contexto de chamada  
- Você também pode passar valores como dados lógicos no <xref:System.Runtime.Remoting.Messaging.CallContext>.</xref:System.Runtime.Remoting.Messaging.CallContext>  
+## <a name="passing-values-in-the-call-context"></a>Passing values in the Call Context  
+ You can alternatively pass values as logical data in <xref:System.Runtime.Remoting.Messaging.CallContext>.  
   
- O exemplo a seguir passa valores usando os dois métodos:  
+ The following example passes values by using both methods:  
   
-```c#  
+```cs  
 ITextTemplating t4 = this.Store.GetService(typeof(STextTemplating)) as ITextTemplating;  
 ITextTemplatingSessionHost host = t4 as ITextTemplatingSessionHost;  
 host.Session = host.CreateSession();  
@@ -101,12 +102,12 @@ string result = t4.ProcessTemplate("",
   
 ```  
   
-## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>Passar valores para um modelo de texto de tempo de execução (pré-processado)  
- Não é geralmente necessário usar o `<#@parameter#>` diretiva com modelos de texto de tempo de execução (pré-processado). Em vez disso, você pode definir um construtor adicional ou uma propriedade configurável para o código gerado, por meio do qual você pode passar valores de parâmetro. Para obter mais informações, consulte [geração de texto de tempo de execução com modelos de texto T4](../modeling/run-time-text-generation-with-t4-text-templates.md).  
+## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>Passing values to a Run-Time (Preprocessed) Text Template  
+ It is not usually necessary to use the `<#@parameter#>` directive with run-time (preprocessed) text templates. Instead, you can define an additional constructor or a settable property for the generated code, through which you pass parameter values. For more information, see [Run-Time Text Generation with T4 Text Templates](../modeling/run-time-text-generation-with-t4-text-templates.md).  
   
- No entanto, se você quiser usar `<#@parameter>` em um modelo de tempo de execução, você pode passar valores a ele usando o dicionário de sessão. Por exemplo, suponha que você criou o arquivo como um modelo pré-processado chamado `PreTextTemplate1`. Você pode chamar o modelo em seu programa usando o código a seguir.  
+ However, if you want to use `<#@parameter>` in a run-time template, you can pass values to it by using the Session dictionary. As an example, suppose you have created the file as a preprocessed template called `PreTextTemplate1`. You can invoke the template in your program by using the following code.  
   
-```c#  
+```cs  
 PreTextTemplate1 t = new PreTextTemplate1();  
 t.Session = new Microsoft.VisualStudio.TextTemplating.TextTemplatingSession();  
 t.Session["TimesToRepeat"] = 5;  
@@ -116,7 +117,7 @@ string resultText = t.TransformText();
   
 ```  
   
-## <a name="obtaining-arguments-from-texttemplateexe"></a>Obtendo argumentos de TextTemplate.exe  
+## <a name="obtaining-arguments-from-texttemplateexe"></a>Obtaining arguments from TextTemplate.exe  
   
 > [!IMPORTANT]
->  O `parameter` diretiva não recuperar os valores definidos na `–a` parâmetro o `TextTransform.exe` utilitário. Para obter esses valores, defina `hostSpecific="true"` no `template` diretiva e usar `this.Host.ResolveParameterValue("","","argName")`.
+>  The `parameter` directive does not retrieve values set in the `-a` parameter of the `TextTransform.exe` utility. To get those values, set `hostSpecific="true"` in the `template` directive, and use `this.Host.ResolveParameterValue("","","argName")`.

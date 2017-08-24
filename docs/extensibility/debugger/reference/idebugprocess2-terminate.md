@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::Terminate | Documentos do Microsoft
+title: IDebugProcess2::Terminate | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f8a6e1f07bbfbb5feebddb0d1ec07d09774cca11
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d9da17db3268a413ef07915cdf087e50a7cee48b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprocess2terminate"></a>IDebugProcess2::Terminate
-Encerra o processo.  
+Terminates the process.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Terminate(   
@@ -47,15 +48,15 @@ HRESULT Terminate(
 );  
 ```  
   
-```c#  
+```cs  
 int Terminate();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Quando um processo for encerrado, todos os programas do processo são finalizados. Nenhum têm permissão para executar qualquer código mais.  
+## <a name="remarks"></a>Remarks  
+ When a process is terminated, all programs within that process are terminated; none are allowed to run any more code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

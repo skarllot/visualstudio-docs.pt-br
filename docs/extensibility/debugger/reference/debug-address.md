@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS | Documentos do Microsoft
+title: DEBUG_ADDRESS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: da49dd8fc94a4ede1f1973ce9658797767e08d64
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 676ecb8e2d52cfdae70218c2405f1b691ae87aab
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="debugaddress"></a>DEBUG_ADDRESS
-Esta estrutura representa um endereço.  
+This structure represents an address.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagDEBUG_ADDRESS {  
@@ -50,7 +51,7 @@ typedef struct _tagDEBUG_ADDRESS {
 } DEBUG_ADDRESS;  
 ```  
   
-```c#  
+```cs  
 public struct DEBUG_ADDRESS {  
    public uint                ulAppDomainID;  
    public Guid                guidModule;  
@@ -59,28 +60,28 @@ public struct DEBUG_ADDRESS {
 }  
 ```  
   
-## <a name="terms"></a>Termos  
+## <a name="terms"></a>Terms  
  ulAppDomainID  
- A ID de processo.  
+ The process ID.  
   
  guidModule  
- O GUID do módulo que contém esse endereço.  
+ The GUID of the module that contains this address.  
   
  tokClass  
- O token que identifica a classe ou o tipo desse endereço.  
+ The token identifying the class or type of this address.  
   
 > [!NOTE]
->  Esse valor é específico para um provedor de símbolo e, portanto, não tem nenhum significado geral de como um identificador para um tipo de classe.  
+>  This value is specific to a symbol provider and therefore has no general meaning other than as an identifier for a class type.  
   
- endereço  
- A [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura, que contém uma união de estruturas que descrevem os tipos de endereço individual. O valor `addr`.`dwKind` é proveniente do [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração, que explica como interpretar a união.  
+ addr  
+ A [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure, which contains a union of structures that describe the individual address types. The value `addr`.`dwKind` comes from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration, which explains how to interpret the union.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é passada para o [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) método a ser preenchido.  
+## <a name="remarks"></a>Remarks  
+ This structure is passed to the [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) method to be filled in.  
   
- **Aviso [C++]**  
+ **Warning [C++ only]**  
   
- Se `addr.dwKind` é `ADDRESS_KIND_METADATA_LOCAL` e se `addr.addr.addrLocal.pLocal` não é um valor nulo, em seguida, você deve chamar `Release` no ponteiro de token:  
+ If `addr.dwKind` is `ADDRESS_KIND_METADATA_LOCAL` and if `addr.addr.addrLocal.pLocal` is not a null value, then you must call `Release` on the token pointer:  
   
 ```  
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal != NULL)  
@@ -89,15 +90,15 @@ if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal !=
 }  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
  [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

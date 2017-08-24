@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_COMPARE | Documentos do Microsoft
+title: REFERENCE_COMPARE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6f27a141254a1ffb263a47227491ebaf913173a4
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 767f841a637405a642e84674e979cf55adeea2bb
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="referencecompare"></a>REFERENCE_COMPARE
-Especifica o tipo de comparação de referências.  
+Specifies the type of comparison for references.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_REFERENCE_COMPARE {   
@@ -50,7 +51,7 @@ enum enum_REFERENCE_COMPARE {
 typedef DWORD REFERENCE_COMPARE;  
 ```  
   
-```c#  
+```cs  
 public enum enum_REFERENCE_COMPARE {   
    REF_COMPARE_EQUAL        = 0x0001,  
    REF_COMPARE_LESS_THAN    = 0x0002,  
@@ -58,26 +59,26 @@ public enum enum_REFERENCE_COMPARE {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  REF_COMPARE_EQUAL  
- Especifica uma comparação de igualdade.  
+ Specifies an equal-to comparison.  
   
  REF_COMPARE_LESS_THAN  
- Especifica um menor-que a comparação.  
+ Specifies a less-than comparison.  
   
  REF_COMPARE_GREATER_THAN  
- Especifica um maior-de comparação.  
+ Specifies a greater-than comparison.  
   
-## <a name="remarks"></a>Comentários  
- Passada como um argumento para o [comparar](../../../extensibility/debugger/reference/idebugreference2-compare.md) método.  
+## <a name="remarks"></a>Remarks  
+ Passed as an argument to the [Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md)

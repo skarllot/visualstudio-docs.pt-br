@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_LOCAL | Documentos do Microsoft
+title: METADATA_ADDRESS_LOCAL | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e085f8573bc67c8c4337bbd83a6c5983c1a7e0eb
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8f49d61f3a8de0ed3e5d2e3c084becfd3701f69e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="metadataaddresslocal"></a>METADATA_ADDRESS_LOCAL
-Esta estrutura representa o endereço de uma variável local dentro de um escopo (geralmente uma função ou método).  
+This structure represents the address of a local variable within a scope (usually a function or method).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_LOCAL {  
@@ -49,7 +50,7 @@ typedef struct _tagMETADATA_ADDRESS_LOCAL {
 } METADATA_ADDRESS_LOCAL;  
 ```  
   
-```c#  
+```cs  
 public struct METADATA_ADDRESS_LOCAL {  
    public int    tokMethod;  
    public object pLocal;  
@@ -57,22 +58,22 @@ public struct METADATA_ADDRESS_LOCAL {
 }  
 ```  
   
-## <a name="terms"></a>Termos  
+## <a name="terms"></a>Terms  
  tokMethod  
- A ID do método ou da função à variável local faz parte.  
+ The ID of the method or function the local variable is part of.  
   
  [C++] `_mdToken` is a `typedef` for a 32-bit `int`.  
   
  pLocal  
- O token cujo endereço dessa estrutura representa.  
+ The token whose address this structure represents.  
   
  dwIndex  
- Pode ser o índice da variável local no método ou função ou algum outro valor (específicos do idioma).  
+ Can be the index of this local variable in the method or function, or some other value (language-specific).  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é parte da união no [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura quando o `dwKind` campo o `DEBUG_ADDRESS_UNION` estrutura é definida como `ADDRESS_KIND_LOCAL` (um valor da [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração).  
+## <a name="remarks"></a>Remarks  
+ This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_LOCAL` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
   
- `Warning:`[C++]  Se `pLocal` não for nulo, então você deve chamar `Release` no ponteiro de token (`addr` é um campo de [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) estrutura):  
+ `Warning:` [C++ only]  If `pLocal` is not null, then you must call `Release` on the token pointer (`addr` is a field in the [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) structure):  
   
 ```  
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal != NULL)  
@@ -81,15 +82,15 @@ if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal !=
 }  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
  [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)   
  [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

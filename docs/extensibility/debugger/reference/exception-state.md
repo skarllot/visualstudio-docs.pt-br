@@ -1,5 +1,5 @@
 ---
-title: EXCEPTION_STATE | Documentos do Microsoft
+title: EXCEPTION_STATE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f93e60c76f08dbee7162debabe9eb40909bed7e1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 32c278218eb5001e370f45e870c06093acfd6d04
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="exceptionstate"></a>EXCEPTION_STATE
-Especifica o estado de exceção.  
+Specifies the exception state.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_EXCEPTION_STATE {   
@@ -66,7 +67,7 @@ enum enum_EXCEPTION_STATE {
 typedef DWORD EXCEPTION_STATE;  
 ```  
   
-```c#  
+```cs  
 public enum enum_EXCEPTION_STATE {   
    EXCEPTION_NONE                          = 0x0000,  
    EXCEPTION_STOP_FIRST_CHANCE             = 0x0001,  
@@ -90,67 +91,67 @@ public enum enum_EXCEPTION_STATE {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  EXCEPTION_NONE  
- Não pare a exceção.  
+ Do not stop at the exception.  
   
  EXCEPTION_STOP_FIRST_CHANCE  
- Pare no primeiro acionamento de exceção. Ao descrever um evento de exceção, esse sinalizador indica que o evento de exceção é uma exceção de primeira chance.  
+ Stop at first firing of exception. When describing an exception event, this flag indicates that the exception event is a first-chance exception event.  
   
  EXCEPTION_STOP_SECOND_CHANCE  
- Pare no segundo acionamento de exceção. Ao descrever um evento de exceção, indica que o evento de exceção é uma exceção de segunda chance.  
+ Stop at second firing of exception. When describing an exception event, indicates that the exception event is a second-chance exception event.  
   
  EXCEPTION_STOP_USER_FIRST_CHANCE  
- Pare no primeiro acionamento de uma exceção do modo de usuário. Ao descrever um evento de exceção, indica que a exceção é um evento de exceção do usuário de primeira chance.  
+ Stop at first firing of a user mode exception. When describing an exception event, indicates that the exception event is a first-chance user exception event.  
   
  EXCEPTION_STOP_USER_UNCAUGHT  
- Interrompa quando uma exceção do modo de usuário não é capturada. Ao descrever um evento de exceção, indica que o evento de exceção é um evento de exceção do modo de usuário não identificadas.  
+ Stop when a user mode exception is not caught. When describing an exception event, indicates that the exception event is an uncaught user mode exception event.  
   
  EXCEPTION_STOP_ALL  
- Interrompa qualquer exceção. Não é usado para descrever um evento de exceção.  
+ Stop on any exception. Not used when describing an exception event.  
   
  EXCEPTION_CANNOT_BE_CONTINUED  
- Ao descrever um evento de exceção, indica que a exceção não pode ser continuada de.  
+ When describing an exception event, indicates that the exception cannot be continued from.  
   
  EXCEPTION_CODE_SUPPORTED  
- Indica que a exceção não tem código de suporte a ele. Usados para exibir uma exceção  
+ Indicates that the exception has code supporting it. Used in displaying an exception  
   
  EXCEPTION_CODE_DISPLAY_IN_HEX  
- Indica que o código de exceção deve ser exibido em hexadecimal. Usados para exibir uma exceção.  
+ Indicates that the exception code should be displayed in hexadecimal. Used in displaying an exception.  
   
  EXCEPTION_JUST_MY_CODE_SUPPORTED  
- Indica que o código de exceção oferece suporte a JustMyCode. Usados para exibir uma exceção.  
+ Indicates that the exception code supports JustMyCode. Used in displaying an exception.  
   
  EXCEPTION_MANAGED_DEBUG_ASSISTANT  
- Indica que o depurador de código gerenciado deve tratar as exceções. Se não for definido, o depurador padrão manipula as exceções. Isso é passado para o [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) método e não usado o [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura.  
+ Indicates that the managed code debugger should handle exceptions. If not set, the default debugger handles the exceptions. This is passed to the [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) method and not used in the [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure.  
   
  EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT  
- OBSOLETO, NÃO USE.  
+ OBSOLETE, DO NOT USE.  
   
  EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT  
- OBSOLETO, NÃO USE.  
+ OBSOLETE, DO NOT USE.  
   
  EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT  
- OBSOLETO, NÃO USE.  
+ OBSOLETE, DO NOT USE.  
   
  EXCEPTION_STOP_USER_SECOND_CHANCE_USE_PARENT  
- OBSOLETO, NÃO USE.  
+ OBSOLETE, DO NOT USE.  
   
-## <a name="remarks"></a>Comentários  
- Usado como o `dwState` membro do [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura para indicar o estado da exceção e o que pode ser feito sobre isso.  
+## <a name="remarks"></a>Remarks  
+ Used as the `dwState` member of the [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure to indicate the state of the exception and what can be done about it.  
   
- Esses valores também são passados para o [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) método para definir o estado de todas as exceções.  
+ These values are also passed to the [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) method to set the state of all exceptions.  
   
- Esses sinalizadores podem ser combinados com um OR bit a bit.  
+ These flags may be combined with a bitwise OR.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)   
  [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)

@@ -1,5 +1,5 @@
 ---
-title: THREADPROPERTIES | Documentos do Microsoft
+title: THREADPROPERTIES | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 674c0fefa41f6c193bf4f603fc0af23de12eb454
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ddad1390c0b9b899e3e6a545f56d24f555c76cee
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
-Descreve as propriedades de um thread.  
+Describes the properties of a thread.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagTHREADPROPERTIES {   
@@ -53,7 +54,7 @@ typedef struct _tagTHREADPROPERTIES {
 } THREADPROPERTIES;  
 ```  
   
-```c#  
+```cs  
 public struct THREADPROPERTIES {   
    public uint   dwFields;  
    public uint   dwThreadId;  
@@ -65,40 +66,40 @@ public struct THREADPROPERTIES {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  dwFields  
- Uma combinação de sinalizadores do [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) enumeração, que descreve os campos nessa estrutura são válidos.  
+ A combination of flags from the [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) enumeration, describing which fields in this structure are valid.  
   
  dwThreadId  
- A ID do thread.  
+ The thread ID.  
   
  dwSuspendCount  
- Contagem de suspensões do thread.  
+ The thread suspend count.  
   
  dwThreadState  
- Um valor a partir de [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md) enumeração que indica o estado do thread operacional.  
+ A value from the [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md) enumeration indicating the state of the operating thread.  
   
  bstrPriority  
- Uma cadeia de caracteres que especifica a prioridade de thread; Por exemplo, "Acima do Normal", "Normal" ou "Tempo crítico".  
+ A string specifying the thread priority; for example, "Above Normal", "Normal", or "Time Critical".  
   
  bstName  
- O nome do thread.  
+ The thread name.  
   
  bstrLocation  
- O local de thread (geralmente o quadro de pilha mais alto), geralmente expressado como o nome do método em que a execução é interrompida no momento.  
+ The thread location (usually the topmost stack frame), typically expressed as the name of the method where execution is currently halted.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é preenchida por uma chamada para o [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) método. As informações retornadas então normalmente são usadas para popular o **Threads** janela.  
+## <a name="remarks"></a>Remarks  
+ This structure is filled in by a call to the [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) method. The information so returned is typically used in populating the **Threads** window.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)   
  [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)   
  [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)

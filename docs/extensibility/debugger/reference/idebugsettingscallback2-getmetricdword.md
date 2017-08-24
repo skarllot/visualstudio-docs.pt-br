@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetMetricDword | Documentos do Microsoft
+title: IDebugSettingsCallback2::GetMetricDword | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,16 +28,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4e31934cb3754f27bcdb71b5770fdc7b2f2af07c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e9e13d5994dbd423ffdff3e62e2cfedfe1a08490
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugsettingscallback2getmetricdword"></a>IDebugSettingsCallback2::GetMetricDword
-Recupera o valor de uma métrica recebe seu nome.  
+Retrieves the value of a metric given its name.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetMetricDword(  
@@ -48,7 +49,7 @@ HRESULT GetMetricDword(
 );  
 ```  
   
-```c#  
+```cs  
 private int GetMetricDword(  
    string   pszType,  
    ref Guid guidSection,  
@@ -57,21 +58,21 @@ private int GetMetricDword(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pszType`  
- [in] Tipo da métrica.  
+ [in] Type of the metric.  
   
  `guidSection`  
- [in] Identificador exclusivo da seção.  
+ [in] Unique identifier of the section.  
   
  `pszMetric`  
- [in] Nome da métrica.  
+ [in] Name of the metric.  
   
  `pdwValue`  
- [out] Retorna o valor da métrica.  
+ [out] Returns the value of the metric.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

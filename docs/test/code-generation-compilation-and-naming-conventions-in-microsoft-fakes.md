@@ -1,5 +1,5 @@
 ---
-title: "Convenções de nomenclatura, geração de código e compilação no Microsoft Fakes | Microsoft Docs"
+title: Code generation, compilation, and naming conventions in Microsoft Fakes | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,56 +26,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 5acc74abd56b128bf9df708ab7c0f3451c6eb270
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2b5a72042d2c0d9115cdce835f681ac7b29d69de
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Geração de código, compilação e convenções de nomenclatura no Microsoft Fakes
-Este tópico discute problemas e opções na compilação e geração de código do Fakes e descreve as convenções de nomenclatura para tipos, membros e parâmetros gerados pelo Fakes.  
+# <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Code generation, compilation, and naming conventions in Microsoft Fakes
+This topic discusses options and issues in Fakes code generation and compilation, and describes the naming conventions for Fakes generated types, members, and parameters.  
   
- **Requisitos**  
+ **Requirements**  
   
 -   Visual Studio Enterprise  
   
-##  <a name="BKMK_In_this_topic"></a> Neste tópico  
+##  <a name="BKMK_In_this_topic"></a> In this topic  
   
--   [Geração e compilação de código](#BKMK_Code_generation_and_compilation)  
+-   [Code generation and compilation](#BKMK_Code_generation_and_compilation)  
   
--   [Configurando a geração de código de stubs](#BKMK_Configuring_code_generation_of_stubs)
+-   [Configuring code generation of stubs](#BKMK_Configuring_code_generation_of_stubs)
   
--   [Filtragem de tipo](#BKMK_Type_filtering)
+-   [Type filtering](#BKMK_Type_filtering)
   
--   [Stub de classes concretas e métodos virtuais](#BKMK_Stubbing_concrete_classes_and_virtual_methods)
+-   [Stubbing concrete classes and virtual methods](#BKMK_Stubbing_concrete_classes_and_virtual_methods)
   
--   [Tipos internos](#BKMK_Internal_types)
+-   [Internal types](#BKMK_Internal_types)
   
--   [Otimizando tempos de build](#BKMK_Optimizing_build_times)
+-   [Optimizing build times](#BKMK_Optimizing_build_times)
   
--   [Evitando conflitos de nome de assembly](#BKMK_Avoiding_assembly_name_clashing)  
+-   [Avoiding assembly name clashing](#BKMK_Avoiding_assembly_name_clashing)  
   
--   [Convenções de nomenclatura do Fakes](#BKMK_Fakes_naming_conventions)  
+-   [Fakes naming conventions](#BKMK_Fakes_naming_conventions)  
   
--   [Convenções de nomenclatura de tipo de shim e de tipo de stub](#BKMK_Shim_type_and_stub_type_naming_conventions)
+-   [Shim type and stub type naming conventions](#BKMK_Shim_type_and_stub_type_naming_conventions)
   
--   [Convenções de nomenclatura de campo de propriedade de delegado ou de delegado de stub](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions)
+-   [Shim delegate property or stub delegate field naming conventions](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions)
   
--   [Convenções de nomenclatura de tipo de parâmetro](#BKMK_Parameter_type_naming_conventions)
+-   [Parameter type naming conventions](#BKMK_Parameter_type_naming_conventions)
   
--   [Regras recursivas](#BKMK_Recursive_rules)  
+-   [Recursive rules](#BKMK_Recursive_rules)  
   
--   [Recursos externos](#BKMK_External_resources)  
+-   [External resources](#BKMK_External_resources)  
   
--   [Diretrizes](#BKMK_Guidance)  
+-   [Guidance](#BKMK_Guidance)  
   
-##  <a name="BKMK_Code_generation_and_compilation"></a> Geração e compilação de código  
+##  <a name="BKMK_Code_generation_and_compilation"></a> Code generation and compilation  
   
-###  <a name="BKMK_Configuring_code_generation_of_stubs"></a> Configurando a geração de código de stubs  
- A geração de tipos de stub é configurada em um arquivo XML que tem a extensão de arquivo .fakes. A estrutura do Fakes integra-se no processo de build por meio de tarefas personalizadas do MSBuild e detecta esses arquivos no momento do build. O gerador de código do Fakes compila os tipos de stub em um assembly e adiciona a referência ao projeto.  
+###  <a name="BKMK_Configuring_code_generation_of_stubs"></a> Configuring code generation of stubs  
+ The generation of stub types is configured in an XML file that has the .fakes file extension. The Fakes framework integrates in the build process through custom MSBuild tasks and detects those files at build time. The Fakes code generator compiles the stub types into an assembly and adds the reference to the project.  
   
- O exemplo a seguir ilustra os tipos de stub definidos em FileSystem.dll:  
+ The following example illustrates stub types defined in FileSystem.dll:  
   
 ```xml  
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">  
@@ -84,10 +84,10 @@ Este tópico discute problemas e opções na compilação e geração de código
   
 ```  
   
-###  <a name="BKMK_Type_filtering"></a> Filtragem de tipo  
- Filtros podem ser configurados no arquivo .fakes para restringir os tipos que devem conter stubs. Você pode adicionar um número ilimitado de elementos Clear, Add e Remove sob o elemento StubGeneration para criar a lista de tipos selecionados.  
+###  <a name="BKMK_Type_filtering"></a> Type filtering  
+ Filters can be set in the .fakes file to restrict which types should be stubbed. You can add an unbounded number of Clear, Add, Remove elements under the StubGeneration element to build the list of selected types.  
   
- Por exemplo, esse arquivo .fakes gera stubs para tipos nos namespaces System e System.IO mas exclui qualquer tipo que contém "Handle" em System:  
+ For example, this .fakes file generates stubs for types under the System and System.IO namespaces, but excludes any type containing "Handle" in System:  
   
 ```xml  
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">  
@@ -103,30 +103,30 @@ Este tópico discute problemas e opções na compilação e geração de código
 </Fakes>  
 ```  
   
- As cadeias de caracteres de filtro usam uma gramática simples para definir como a correspondência deve ser feita:  
+ The filter strings use a simple grammar to define how the matching should be done:  
   
--   Filtros não diferenciam maiúsculas de minúsculas por padrão; os filtros executam uma correspondência de subcadeia de caracteres:  
+-   Filters are case-insensitive by default; filters perform a substring matching:  
   
-     `el` corresponde a "hello"  
+     `el` matches "hello"  
   
--   Adicionar `!` ao final do filtro tornará essa uma correspondência perfeita de maiúsculas e minúsculas:  
+-   Adding `!` to the end of the filter will make it a precise case-sensitive match:  
   
-     `el!` não corresponde a "hello"  
+     `el!` does not match "hello"  
   
-     `hello!` corresponde a "hello"  
+     `hello!` matches "hello"  
   
--   Adicionar `*` ao final do filtro fará com que ele corresponda ao prefixo da cadeia de caracteres:  
+-   Adding `*` to the end of the filter will make it match the prefix of the string:  
   
-     `el*` não corresponde a "hello"  
+     `el*` does not match "hello"  
   
-     `he*` corresponde a "hello"  
+     `he*` matches "hello"  
   
--   Vários filtros em uma lista separada por ponto e vírgula são combinados como uma disjunção:  
+-   Multiple filters in a semicolon-separated list are combined as a disjunction:  
   
-     `el;wo` corresponde a "hello" e "world"  
+     `el;wo` matches "hello" and "world"  
   
-###  <a name="BKMK_Stubbing_concrete_classes_and_virtual_methods"></a> Usando stubs em classes concretas e métodos virtuais  
- Por padrão, os tipos de stub são gerados para todas as classes não lacradas. É possível restringir os tipos de stub para classes abstratas por meio do arquivo de configuração .fakes:  
+###  <a name="BKMK_Stubbing_concrete_classes_and_virtual_methods"></a> Stubbing concrete classes and virtual methods  
+ By default, stub types are generated for all non-sealed classes. It is possible to restrict the stub types to abstract classes through the .fakes configuration file:  
   
 ```xml  
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">  
@@ -142,24 +142,24 @@ Este tópico discute problemas e opções na compilação e geração de código
 </Fakes>  
 ```  
   
-###  <a name="BKMK_Internal_types"></a> Tipos internos  
- O gerador de código do Fakes gerará tipos de shim e tipos de stub que são visíveis para o assembly do Fakes gerado. Para tornar os tipos internos de um assembly com shims visível para o Fakes e para seu assembly de teste, adicione atributos <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> no código do assembly com shims que proporciona visibilidade para o assembly do Fakes gerado e para o assembly de teste. Veja um exemplo:  
+###  <a name="BKMK_Internal_types"></a> Internal types  
+ The Fakes code generator will generate shim types and stub types for types that are visible to the generated Fakes assembly. To make internal types of a shimmed assembly visible to Fakes and your test assembly, add  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attributes to the shimmed assembly code that gives visibility to the generated Fakes assembly and to the test assembly. Here's an example:  
   
-```c#  
+```cs  
 // FileSystem\AssemblyInfo.cs  
 [assembly: InternalsVisibleTo("FileSystem.Fakes")]  
 [assembly: InternalsVisibleTo("FileSystem.Tests")]  
 ```  
   
- **Tipos internos em assemblies com nomes fortes**  
+ **Internal types in strongly named assemblies**  
   
- Se o assembly com shims tiver um nome forte e você quiser acessar tipos internos do assembly:  
+ If the shimmed assembly is strongly named and you want access internal types of the assembly:  
   
--   Ambos seu assembly de teste e o assembly do Fakes devem ter nomes fortes.  
+-   Both your test assembly and the Fakes assembly must be strongly named.  
   
--   Você deve adicionar as chaves públicas do assemblies do Fakes e do teste aos atributos **InternalsVisibleToAttribute** nos assemblies com shims. Eis aqui como nossos atributos de exemplo no código de assembly com shims ficariam quando o assembly com shims tivesse nome forte:  
+-   You must add the public keys of the test and Fakes assembly to the **InternalsVisibleToAttribute** attributes in the shimmed assemblies. Here's how our example attributes in the shimmed assembly code would look when the shimmed assembly is strongly named:  
   
-    ```c#  
+    ```cs  
     // FileSystem\AssemblyInfo.cs  
     [assembly: InternalsVisibleTo("FileSystem.Fakes",  
         PublicKey=<Fakes_assembly_public_key>)]  
@@ -167,15 +167,15 @@ Este tópico discute problemas e opções na compilação e geração de código
         PublicKey=<Test_assembly_public_key>)]  
     ```  
   
- Se o assembly com shims tiver nome forte, a estrutura do Fakes assinará fortemente o assembly do Fakes gerado, automaticamente. Você precisa assinar fortemente o assembly de teste. Consulte [Criando e usando assemblies de nomes fortes](http://msdn.microsoft.com/Library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9).  
+ If the shimmed assembly is strongly named, the Fakes framework will automatically strongly sign the generated Fakes assembly. You have to strong sign the test assembly. See [Creating and Using Strong-Named Assemblies](http://msdn.microsoft.com/Library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9).  
   
- A estrutura do Fakes usa a mesma chave para assinar assemblies gerados, então você pode usar este trecho de código como um ponto de partida para adicionar o atributo **InternalsVisibleTo** do assembly do Fakes ao seu código de assembly com shims.  
+ The Fakes framework uses the same key to sign all generated assemblies, so you can use this snippet as a starting point to add the **InternalsVisibleTo** attribute for the fakes assembly to your shimmed assembly code.  
   
-```c#  
+```cs  
 [assembly: InternalsVisibleTo("FileSystem.Fakes, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e92decb949446f688ab9f6973436c535bf50acd1fd580495aae3f875aa4e4f663ca77908c63b7f0996977cb98fcfdb35e05aa2c842002703cad835473caac5ef14107e3a7fae01120a96558785f48319f66daabc862872b2c53f5ac11fa335c0165e202b4c011334c7bc8f4c4e570cf255190f4e3e2cbc9137ca57cb687947bc")]  
 ```  
   
- Você pode especificar uma chave pública diferente para o assembly do Fakes, por exemplo, uma chave que você tenha criado para o assembly com shims, especificando o caminho completo para o arquivo **.snk** que contém a chave alternativa como o valor do atributo `KeyFile` no elemento `Fakes`\\`Compilation` do arquivo **.fakes**. Por exemplo:  
+ You can specify a different public key for the Fakes assembly, such as a key you have created for the shimmed assembly, by specifying the full path to the **.snk** file that contains the alternate key as the `KeyFile` attribute value in the `Fakes`\\`Compilation` element of the **.fakes** file. For example:  
   
 ```xml  
 <-- FileSystem.Fakes.fakes -->  
@@ -185,9 +185,9 @@ Este tópico discute problemas e opções na compilação e geração de código
   
 ```  
   
- Em seguida, você deve usar a chave pública do arquivo **.snk** alternativo como o segundo parâmetro do atributo InternalVisibleTo para o assembly do Fakes no código de assembly com shims:  
+ You then have to use the public key of the alternate **.snk** file as the second parameter of the InternalVisibleTo attribute for the Fakes assembly in the shimmed assembly code:  
   
-```c#  
+```cs  
 // FileSystem\AssemblyInfo.cs  
 [assembly: InternalsVisibleTo("FileSystem.Fakes",  
     PublicKey=<Alternate_public_key>)]  
@@ -195,35 +195,35 @@ Este tópico discute problemas e opções na compilação e geração de código
     PublicKey=<Test_assembly_public_key>)]  
 ```  
   
- No exemplo acima, os valores de `Alternate_public_key` e `Test_assembly_public_key` podem ser iguais.  
+ In the example above, the values `Alternate_public_key` and the `Test_assembly_public_key` can be the same.  
   
-###  <a name="BKMK_Optimizing_build_times"></a> Otimizando tempos de build  
- O build de assemblies do Fakes pode aumentar significativamente o tempo de build. Você pode minimizar o tempo de build, gerando os assemblies do Fakes para assemblies do .NET System e assemblies de terceiros em um projeto centralizado separado. Já que esses assemblies raramente são alterados em seu computador, é possível reutilizar os assemblies do Fakes gerados em outros projetos.  
+###  <a name="BKMK_Optimizing_build_times"></a> Optimizing build times  
+ The compilation of Fakes assemblies can significantly increase your build time. You can minimize the build time by generating the Fakes assemblies for .NET System assemblies and third-party assemblies in a separate centralized project. Because such assemblies rarely change on your machine, you can reuse the generated Fakes assemblies in other projects.  
   
- De seus projetos de teste de unidade, você pode simplesmente fazer uma referência aos assemblies do Fakes compilados que são colocados em FakesAssemblies na pasta do projeto.  
+ From your unit test projects, you can simply take a reference to the compiled Fakes assemblies that are placed under the FakesAssemblies in the project folder.  
   
-1.  Crie uma nova biblioteca de classes com a versão de tempo de execução do .NET que corresponde aos seus projetos de teste. Vamos chamá-lo de Fakes.Prebuild. Remova o arquivo class1.cs so projeto, ele não é necessário.  
+1.  Create a new Class Library with the .NET runtime version matching your test projects. Let's call it Fakes.Prebuild. Remove the class1.cs file from the project, not needed.  
   
-2.  Adicione uma referência a todos os assemblies do System e de terceiros para os quais você precisa do Fakes.  
+2.  Add reference to all the System and third-party assemblies you need Fakes for.  
   
-3.  Adicione um arquivo .fakes para cada um dos assemblies e compile.  
+3.  Add a .fakes file for each of the assemblies and build.  
   
-4.  Do seu projeto de teste  
+4.  From your test project  
   
-    -   Certifique-se de que você tem uma referência para a DLL de tempo de execução do Fakes:  
+    -   Make sure that you have a reference to the Fakes runtime DLL:  
   
-         C:\Arquivos de Programas\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.QualityTools.Testing.Fakes.dll  
+         C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.QualityTools.Testing.Fakes.dll  
   
-    -   Para cada assembly para o qual você criou o Fakes, adicione uma referência para o arquivo DLL correspondente na pasta Fakes.Prebuild\FakesAssemblies do seu projeto.  
+    -   For each assembly that you have created Fakes for, add a reference to the corresponding DLL file in the Fakes.Prebuild\FakesAssemblies folder of your project.  
   
-###  <a name="BKMK_Avoiding_assembly_name_clashing"></a> Evitando conflitos entre nomes de assembly  
- Em um ambiente do Team Build, todas as saídas de build são mescladas em um único diretório. No caso de vários projetos usando falsificações, pode acontecer que assemblies do Fakes de versões diferentes substituam uns aos outros. Por exemplo, TestProject1 fakes mscorlib.dll do .NET Framework 2.0 e TestProject2 fakes mscorlib.dll para o .NET Framework 4 produziriam ambos um assembly do Fakes mscorlib.Fakes.dll.  
+###  <a name="BKMK_Avoiding_assembly_name_clashing"></a> Avoiding assembly name clashing  
+ In a Team Build environment, all build outputs are merged into a single directory. In the case of multiple projects using Fakes, it might happen that Fakes assemblies from different version override each other. For example, TestProject1 fakes mscorlib.dll from the .NET Framework 2.0 and TestProject2 fakes mscorlib.dll for the .NET Framework 4 would both yield to a mscorlib.Fakes.dll Fakes assembly.  
   
- Para evitar esse problema, o Fakes deve criar automaticamente nomes de assembly do Fakes de versão qualificada para referências que não sejam de projeto ao adicionar os arquivos .fakes. Um nome de assembly do Fakes de versão qualificada incorpora um número de versão quando você cria o nome de assembly do Fakes:  
+ To avoid this issue, Fakes should automatically create version qualified Fakes assembly names for non-project references when adding the .fakes files. A version-qualified Fakes assembly name embeds a version number when you create the Fakes assembly name:  
   
- Dado um assembly MyAssembly e uma versão 1.2.3.4, o nome de assembly do Fakes é MyAssembly.1.2.3.4.Fakes.  
+ Given an assembly MyAssembly and a version 1.2.3.4, the Fakes assembly name is MyAssembly.1.2.3.4.Fakes.  
   
- Você pode alterar ou remover essa versão editando o atributo Version do elemento Assembly no .fakes:  
+ You can change or remove this version by the editing the Version attribute of the Assembly element in the .fakes:  
   
 ```xml  
 attribute of the Assembly element in the .fakes:  
@@ -234,92 +234,92 @@ attribute of the Assembly element in the .fakes:
   
 ```  
   
-##  <a name="BKMK_Fakes_naming_conventions"></a> Convenções de nomenclatura do Fakes  
+##  <a name="BKMK_Fakes_naming_conventions"></a> Fakes naming conventions  
   
-###  <a name="BKMK_Shim_type_and_stub_type_naming_conventions"></a> Convenções de nomenclatura de tipo de shim e tipo de stub  
+###  <a name="BKMK_Shim_type_and_stub_type_naming_conventions"></a> Shim type and stub type naming conventions  
  **Namespaces**  
   
--   O sufixo .fakes é adicionado ao namespace.  
+-   .Fakes suffix is added to the namespace.  
   
-     Por exemplo, o namespace `System.Fakes` contém os tipos de shim do namespace System.  
+     For example, `System.Fakes` namespace contains the shim types of System namespace.  
   
--   Global.Fakes contém o tipo de shim do namespace vazio.  
+-   Global.Fakes contains the shim type of the empty namespace.  
   
- **Nomes de tipo**  
+ **Type names**  
   
--   O prefixo Shim é adicionado ao nome de tipo para criar o nome de tipo do shim.  
+-   Shim prefix is added to the type name to build the shim type name.  
   
-     Por exemplo, ShimExample é o tipo de shim do tipo Example.  
+     For example, ShimExample is the shim type of the Example type.  
   
--   O prefixo Stub é adicionado ao nome de tipo para criar o nome de tipo do stub.  
+-   Stub prefix is added to the type name to build the stub type name.  
   
-     Por exemplo, StubIExample é o tipo de stub do tipo IExample.  
+     For example, StubIExample is the stub type of the IExample type.  
   
- **Argumentos de tipo e estruturas de tipo aninhado**  
+ **Type Arguments and Nested Type Structures**  
   
--   Os argumentos de tipo genérico são copiados.  
+-   Generic type arguments are copied.  
   
--   A estrutura de tipo aninhado é copiada para os tipos de shim.  
+-   Nested type structure is copied for shim types.  
   
-###  <a name="BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions"></a> Convenções de nomenclatura de propriedade delegada de shim ou campo delegado de stub  
- **Regras básicas** para nomenclatura de campos, começando por um nome vazio:  
+###  <a name="BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions"></a> Shim delegate property or stub delegate field naming conventions  
+ **Basic rules** for field naming, starting from an empty name:  
   
--   O nome do método é acrescentado.  
+-   The method name is appended.  
   
--   Se o nome do método for uma implementação de interface explícita, os pontos serão removidos.  
+-   If the method name is an explicit interface implementation, the dots are removed.  
   
--   Se o método for genérico, `Of`*n* será acrescentado, em que *n* é o número de argumentos de método genérico.  
+-   If the method is generic, `Of`*n* is appended where *n* is the number of generic method arguments.  
   
- **Nomes de método especiais** como setters ou getter da propriedade são tratados conforme descrito na tabela a seguir.  
+ **Special method names** such as property getter or setters are treated as described in the following table.  
   
-|Se o método for...|Exemplo|Nome do método anexado|  
+|If method is...|Example|Method name appended|  
 |-------------------|-------------|--------------------------|  
-|Um **construtor**|`.ctor`|`Constructor`|  
-|Um **construtor** estático|`.cctor`|`StaticConstructor`|  
-|Um **acessador** com nome de método composto de duas partes separadas por "_" (como getters de propriedade)|*kind_name* (caso mais frequente, mas não imposto por ECMA)|*NameKind*, em que ambas as partes foram colocadas em maiusculas e trocadas|  
-||Getter de propriedade `Prop`|`PropGet`|  
-||Setter de propriedade `Prop`|`PropSet`|  
-||Adicionador de eventos|`Add`|  
-||Removedor de eventos|`Remove`|  
-|Um **operador** composto de duas partes|`op_name`|`NameOp`|  
-|Por exemplo: operador +|`op_Add`|`AddOp`|  
-|Para um **operador de conversão**, o tipo retornado é anexado.|`T op_Implicit`|`ImplicitOpT`|  
+|A **constructor**|`.ctor`|`Constructor`|  
+|A static **constructor**|`.cctor`|`StaticConstructor`|  
+|An **accessor** with method name composed of two parts separated by "_" (such as property getters)|*kind_name* (common case, but not enforced by ECMA)|*NameKind*, where both parts have been capitalized and swapped|  
+||Getter of property `Prop`|`PropGet`|  
+||Setter of property `Prop`|`PropSet`|  
+||Event adder|`Add`|  
+||Event remover|`Remove`|  
+|An **operator** composed of two parts|`op_name`|`NameOp`|  
+|For example: + operator|`op_Add`|`AddOp`|  
+|For a **conversion operator**, the return type is appended.|`T op_Implicit`|`ImplicitOpT`|  
   
- **Observações**  
+ **Notes**  
   
--   **Getters e setters de indexadores** são tratados de modo similar à propriedade. O nome padrão de um indexador é `Item`.  
+-   **Getters and setters of indexers** are treated similarly to the property. The default name for an indexer is `Item`.  
   
--   Os nomes de **tipo de parâmetro** são transformados e concatenados.  
+-   **Parameter type** names are transformed and concatenated.  
   
--   **Tipo de retorno** será ignorado a menos que haja uma ambiguidade de sobrecarga. Se esse for o caso, o tipo retornado será acrescentado ao final do nome  
+-   **Return type** is ignored unless there's an overload ambiguity. If this is the case, the return type is appended at the end of the name  
   
-###  <a name="BKMK_Parameter_type_naming_conventions"></a> Convenções de nomenclatura de tipo de parâmetro  
+###  <a name="BKMK_Parameter_type_naming_conventions"></a> Parameter type naming conventions  
   
-|Fornecido|A cadeia de caracteres acrescentada é...|  
+|Given|Appended string is...|  
 |-----------|-------------------------|  
-|Um **tipo**`T`|T<br /><br /> O namespace, estrutura aninhada e tics genéricos são descartados.|  
-|Um **parâmetro de saída**`out T`|`TOut`|  
-|Um **parâmetro ref**`ref T`|`TRef`|  
-|Um **tipo de matriz**`T[]`|`TArray`|  
-|Uma **matriz multidimensional** tipo `T[ , , ]`|`T3`|  
-|Um **ponteiro** tipo `T*`|`TPtr`|  
-|Um **tipo genérico**`T<R1, ...>`|`TOfR1`|  
-|Um **argumento de tipo genérico**`!i` de tipo `C<TType>`|`Ti`|  
-|Um **argumento de tipo genérico**`!!i` do método `M<MMethod>`|`Mi`|  
-|Um **tipo aninhado**`N.T`|`N` é acrescentado, depois `T`|  
+|A **type**`T`|T<br /><br /> The namespace, nested structure, and generic tics are dropped.|  
+|An **out parameter**`out T`|`TOut`|  
+|A **ref parameter** `ref T`|`TRef`|  
+|An **array type**`T[]`|`TArray`|  
+|A **multi-dimensional array** type `T[ , , ]`|`T3`|  
+|A **pointer** type `T*`|`TPtr`|  
+|A **generic type**`T<R1, ...>`|`TOfR1`|  
+|A **generic type argument**`!i` of type `C<TType>`|`Ti`|  
+|A **generic method argument**`!!i` of method `M<MMethod>`|`Mi`|  
+|A **nested type**`N.T`|`N` is appended, then `T`|  
   
-###  <a name="BKMK_Recursive_rules"></a> Regras recursivas  
- As regras a seguir são aplicadas recursivamente:  
+###  <a name="BKMK_Recursive_rules"></a> Recursive rules  
+ The following rules are applied recursively:  
   
--   Já que o Fakes usa C# para gerar os assemblies do Fakes, qualquer caractere que produziria um token do C# inválido é escapado para "_" (sublinhado).  
+-   Because Fakes uses C# to generate the Fakes assemblies, any character that would produce an invalid C# token is escaped to "_" (underscore).  
   
--   Se um nome resultante corresponde a qualquer membro do tipo declarativo, um esquema de numeração é usado, acrescentando um contador de dois dígitos, começando por 01.  
+-   If a resulting name clashes with any member of the declaring type, a numbering scheme is used by appending a two-digit counter, starting at 01.  
   
-##  <a name="BKMK_External_resources"></a> Recursos externos  
+##  <a name="BKMK_External_resources"></a> External resources  
   
-###  <a name="BKMK_Guidance"></a> Diretrizes  
- [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
+###  <a name="BKMK_Guidance"></a> Guidance  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>Consulte também  
- [Isolando código em teste com Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)
+## <a name="see-also"></a>See Also  
+ [Isolating Code Under Test with Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)
 

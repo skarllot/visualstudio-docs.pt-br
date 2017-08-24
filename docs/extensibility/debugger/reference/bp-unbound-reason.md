@@ -1,5 +1,5 @@
 ---
-title: BP_UNBOUND_REASON | Documentos do Microsoft
+title: BP_UNBOUND_REASON | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c7cc94a3ef2599b5b39fc8c5335a5a065146ef27
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6c3663e6c37a77634473e0a552c80401b964ea06
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="bpunboundreason"></a>BP_UNBOUND_REASON
-Fornece o motivo de que um ponto de interrupção foi desassociado.  
+Gives the reason a breakpoint was unbound.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_UNBOUND_REASON {   
@@ -51,7 +52,7 @@ enum enum_BP_UNBOUND_REASON {
 typedef DWORD BP_UNBOUND_REASON;  
 ```  
   
-```c#  
+```cs  
 public enum enum_BP_UNBOUND_REASON {   
    BPUR_UNKNOWN           = 0x0000,  
    BPUR_CODE_UNLOADED     = 0x0002,  
@@ -60,29 +61,29 @@ public enum enum_BP_UNBOUND_REASON {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  BPUR_UNKNOWN  
- O motivo é desconhecido.  
+ The reason is unknown.  
   
  BPUR_CODE_UNLOADED  
- O código que contém o ponto de interrupção foi descarregado.  
+ The code that contains the breakpoint has been unloaded.  
   
  BPUR_BREAKPOINT_REBIND  
- O ponto de interrupção tem sido se recuperar para um local diferente. Isso pode acontecer após editar e continuar as operações quando move o ponto de interrupção ou quando o ponto de interrupção é associado a um arquivo com um caminho que não é mais válido.  
+ The breakpoint has been rebound to a different location. This can happen after Edit and Continue operations when the breakpoint moves, or when the breakpoint is bound to a file with a path that is no longer valid.  
   
  BPUR_ BREAKPOINT_ERROR  
- O ponto de interrupção é considerado erro depois que ele está vinculado. Isso acontece para pontos de interrupção gerenciados cujas condições não são mais válidas.  
+ The breakpoint is determined to be in error after it is bound. This happens to managed breakpoints whose conditions are no longer valid.  
   
-## <a name="remarks"></a>Comentários  
- Retornado pelo [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) método.  
+## <a name="remarks"></a>Remarks  
+ Returned by the [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)

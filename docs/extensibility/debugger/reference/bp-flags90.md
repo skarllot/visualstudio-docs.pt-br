@@ -1,5 +1,5 @@
 ---
-title: BP_FLAGS90 | Documentos do Microsoft
+title: BP_FLAGS90 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,16 +28,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4dfb7dc681519b37fe5cb9cd20e4bca22d800b96
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 18cb86f1a1105cfb34be2e16c58824314f9f55c8
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="bpflags90"></a>BP_FLAGS90
-Enumera os valores válidos para sinalizadores opcionais. Os sinalizadores opcionais podem ser usados para especificar informações adicionais quando você definir um ponto de interrupção. Esta enumeração estende o [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) enumeração.  
+Enumerates valid values for optional flags. The optional flags may be used to specify additional information when you set a breakpoint. This enumeration extends the [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) enumeration.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_FLAGS90  
@@ -53,7 +54,7 @@ enum enum_BP_FLAGS90
 typedef DWORD BP_FLAGS90;  
 ```  
   
-```c#  
+```cs  
 public enum enum_BP_FLAGS90  
 {  
    // VS 8.0 values  
@@ -66,25 +67,25 @@ public enum enum_BP_FLAGS90
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  BP90_FLAG_NONE  
- Não especifica que nenhum sinalizador de ponto de interrupção.  
+ Specifies no breakpoint flag.  
   
  BP90_FLAG_MAP_DOCPOSITION  
- Especifica que o mecanismo de depuração (DE) deve mapear o ponto de interrupção usando a posição do documento. Isso é aplicável somente a pontos de interrupção definidos em arquivos de origem orientado por script, como Active Server Pages (ASP).  
+ Specifies that the debug engine (DE) should map the breakpoint by using the document position. This is applicable only to breakpoints set in script-oriented source files such as Active Server Pages (ASP).  
   
  BP90_FLAG_DONT_STOP  
- Especifica que o ponto de interrupção deve ser processado pelo mecanismo de depuração, mas que o mecanismo de depuração, por fim, não deve parar lá; ou seja, um [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) o objeto de evento não deve ser enviado. Esse sinalizador é projetado para ser usado principalmente com pontos de rastreamento.  
+ Specifies that the breakpoint should be processed by the debug engine, but that the debug engine ultimately should not stop there; that is, an [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) event object should not be sent. This flag is designed to be used primarily with trace points.  
   
  BP90_FLAG_TRACEPOINT_CONTINUE  
- Usado pelo mecanismo de depuração nativa para determinar se o estado de revisão deve ser desmarcado. Ele difere BP90_FLAG_DONT_STOP porque BP90_FLAG_DONT_STOP não está definido se o ponto de rastreamento executa uma macro.  
+ Used by the native debug engine to determine whether the stepping state should be cleared. It differs from BP90_FLAG_DONT_STOP because BP90_FLAG_DONT_STOP is not set if the trace point executes a macro.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: Msdbg90.h  
+## <a name="requirements"></a>Requirements  
+ Header: Msdbg90.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

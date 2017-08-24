@@ -1,5 +1,5 @@
 ---
-title: BP_COND_STYLE | Documentos do Microsoft
+title: BP_COND_STYLE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2e4a1f2f2ce07b2ae6abfa80f2c21d44d8374205
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6de2918532eb5b2c92b25fd3485cb53ed2265d86
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="bpcondstyle"></a>BP_COND_STYLE
-Especifica o estilo de condição de ponto de interrupção para pendente e associados a pontos de interrupção.  
+Specifies the breakpoint condition style for pending and bound breakpoints.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_COND_STYLE {   
@@ -50,7 +51,7 @@ enum enum_BP_COND_STYLE {
 typedef DWORD BP_COND_STYLE;  
 ```  
   
-```c#  
+```cs  
 public enum enum_BP_COND_STYLE {   
    BP_COND_NONE         = 0x0000,  
    BP_COND_WHEN_TRUE    = 0x0001,  
@@ -58,26 +59,26 @@ public enum enum_BP_COND_STYLE {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  BP_COND_NONE  
- Dispara o ponto de interrupção quando a posição do ponto de interrupção é atingida. Nenhuma condição de ponto de interrupção especificada.  
+ Fires the breakpoint when the breakpoint's position is reached. No breakpoint condition specified.  
   
  BP_COND_WHEN_TRUE  
- Dispara o ponto de interrupção somente quando a expressão condicional associado com o ponto de interrupção é avaliada como `true`.  
+ Fires the breakpoint only when the conditional expression associated with the breakpoint evaluates to `true`.  
   
  BP_COND_WHEN_CHANGED  
- Dispara o ponto de interrupção somente quando o valor da expressão condicional associada com o ponto de interrupção foi alterado de sua avaliação anterior.  
+ Fires the breakpoint only when the value of the conditional expression associated with the breakpoint has changed from its previous evaluation.  
   
-## <a name="remarks"></a>Comentários  
- Usado para o `styleCondition` membro do [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) estrutura.  
+## <a name="remarks"></a>Remarks  
+ Used for the `styleCondition` member of the [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) structure.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::GetEngineFilter | Documentos do Microsoft
+title: IDebugProcess3::GetEngineFilter | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 92abcc35c3d8a84ddd24db4e1b1c47bb4ad3c918
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1ce2c9029ad729f9974def324b33457fb5009a30
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprocess3getenginefilter"></a>IDebugProcess3::GetEngineFilter
-Recupera uma matriz de identificadores exclusivos para os mecanismos de depuração disponíveis.  
+Retrieves an array of unique identifiers for available debug engines.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetEngineFilter(  
@@ -46,19 +47,19 @@ HRESULT GetEngineFilter(
 );  
 ```  
   
-```c#  
+```cs  
 public int GetEngineFilter(  
    out GUID_ARRAY[] pEngineArray  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pEngineArray`  
- [out] Referência a uma estrutura que contém identificadores exclusivos para os mecanismos de depuração.  
+ [out] Reference to a structure that contains unique identifiers for debug engines.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [GUID_ARRAY](../../../extensibility/debugger/reference/guid-array.md)

@@ -1,5 +1,5 @@
 ---
-title: "Adicionar o controle de usuário para a página inicial | Documentos do Microsoft"
+title: Adding User Control to the Start Page | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,34 +30,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 69c2ff24616af373461de0cbf4456499db63f902
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 421de69556d8833b78b401331db4584d7243cdb7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="adding-user-control-to-the-start-page"></a>Adicionar o controle de usuário para a página inicial
-Este passo a passo mostra como adicionar uma referência DLL para uma página de início personalizados. O exemplo adiciona um controle de usuário para a solução se baseia no controle de usuário e, em seguida, faz referência ao assembly compilado do arquivo Start Page. XAML. Uma nova guia hospeda o controle de usuário, que funciona como um navegador da Web básico.  
+# <a name="adding-user-control-to-the-start-page"></a>Adding User Control to the Start Page
+This walkthrough shows how to add a DLL reference to a custom Start Page. The example adds a user control to the solution, builds the user control, and then references the built assembly from the Start Page .xaml file. A new tab hosts the user control, which functions as a basic Web browser.  
   
- Você pode usar o mesmo processo para adicionar qualquer assembly que pode ser chamado de um arquivo. XAML.  
+ You can use the same process to add any assembly that can be called from a .xaml file.  
   
-## <a name="adding-a-wpf-user-control-to-the-solution"></a>Adicionando um controle de usuário do WPF à solução  
- Primeiro, adicione um controle de usuário do Windows Presentation Foundation (WPF) para a solução de página inicial.  
+## <a name="adding-a-wpf-user-control-to-the-solution"></a>Adding a WPF User Control to the Solution  
+ First, add a Windows Presentation Foundation (WPF) user control to the Start Page solution.  
   
-1.  Criar uma página de início usando criados em [criando uma página de início personalizado](../extensibility/creating-a-custom-start-page.md).  
+1.  Create a Start Page by using we created in [Creating a Custom Start Page](../extensibility/creating-a-custom-start-page.md).  
   
-2.  Em **Solution Explorer**, com o botão direito na solução, clique em **adicionar**e, em seguida, clique em **novo projeto**.  
+2.  In **Solution Explorer**, right-click the solution, click **Add**, and then click **New Project**.  
   
-3.  No painel esquerdo do **novo projeto** caixa de diálogo caixa, expanda o o **Visual Basic** ou **Visual C#** nó e clique em **Windows**. No painel central, selecione **biblioteca de controle de usuário do WPF**.  
+3.  In the left pane of the **New Project** dialog box, expand either the **Visual Basic** or **Visual C#** node, and click **Windows**. In the middle pane, select **WPF User Control Library**.  
   
-4.  Nomeie o controle `WebUserControl` e, em seguida, clique em **Okey**.  
+4.  Name the control `WebUserControl` and then click **OK**.  
   
-## <a name="implementing-the-user-control"></a>Implementando o controle de usuário  
- Para implementar um controle de usuário do WPF, criar a interface do usuário (UI) em XAML e, em seguida, gravar os eventos de lógica em c# ou outra linguagem .NET.  
+## <a name="implementing-the-user-control"></a>Implementing the User Control  
+ To implement a WPF user control, build the user interface (UI) in XAML and then write the code-behind events in C# or another .NET language.  
   
-#### <a name="to-write-the-xaml-for-the-user-control"></a>Para gravar o XAML para o controle de usuário  
+#### <a name="to-write-the-xaml-for-the-user-control"></a>To write the XAML for the user control  
   
-1.  Abra o arquivo XAML para o controle de usuário. No \<grade > elemento, adicione as seguintes definições de linha para o controle.  
+1.  Open the XAML file for the user control. In the \<Grid> element, add the following row definitions to the control.  
   
     ```vb  
     <Grid.RowDefinitions>  
@@ -67,7 +68,7 @@ Este passo a passo mostra como adicionar uma referência DLL para uma página de
   
     ```  
   
-2.  No principal `Grid` elemento, adicione a seguinte nova `Grid` elemento, que contém uma caixa de texto para digitar endereços da Web e um botão para definir o novo endereço.  
+2.  In the main `Grid` element, add the following new `Grid` element, which contains a text box for typing Web addresses and a button for setting the new address.  
   
     ```xml  
     <Grid Grid.Row="0">  
@@ -80,13 +81,13 @@ Este passo a passo mostra como adicionar uma referência DLL para uma página de
     </Grid>  
     ```  
   
-3.  Adicionar o quadro a seguir ao nível superior `Grid` elemento logo após o `Grid` elemento que contém o botão e a caixa de texto.  
+3.  Add the following frame to the top-level `Grid` element just after the `Grid` element that contains the button and textbox.  
   
     ```vb  
     <Frame Grid.Row="1" x:Name="WebFrame" Source="http://www.bing.com" Navigated="WebFrame_Navigated" />  
     ```  
   
-4.  O exemplo a seguir mostra o XAML completo para o controle de usuário.  
+4.  The following example shows the completed XAML for the user control.  
   
     ```xml  
     <UserControl x:Class="WebUserControl.UserControl1"  
@@ -115,15 +116,15 @@ Este passo a passo mostra como adicionar uma referência DLL para uma página de
   
     ```  
   
-#### <a name="to-write-the-code-behind-events-for-the-user-control"></a>Para gravar os eventos de lógica do controle de usuário  
+#### <a name="to-write-the-code-behind-events-for-the-user-control"></a>To write the code-behind events for the user control  
   
-1.  No designer do XAML, clique duas vezes o **endereço defina** adicionado ao controle de botão.  
+1.  In the XAML designer, double-click the **Set Address** button you added to the control.  
   
-     O arquivo Usercontrol1 é aberto no editor de códigos.  
+     The UserControl1.cs file opens in the code editor.  
   
-2.  Preencha o manipulador de eventos SetButton_Click da seguinte maneira.  
+2.  Fill in the SetButton_Click Event Handler as follows.  
   
-    ```c#  
+    ```cs  
     private void SetButton_Click(object sender, RoutedEventArgs e)  
     {  
         try  
@@ -137,45 +138,45 @@ Este passo a passo mostra como adicionar uma referência DLL para uma página de
     }  
     ```  
   
-     Esse código define o endereço da Web que é digitado na caixa de texto como o destino para o navegador da Web. Se o endereço não é válido, o código gera um erro.  
+     This code sets the Web address that is typed in the text box as the target for the Web browser. If the address is not valid, the code throws an error.  
   
-3.  Você também deve tratar o evento WebFrame_Navigated:  
+3.  You must also handle the WebFrame_Navigated event:  
   
-    ```c#  
+    ```cs  
     private void WebFrame_Navigated(object sender, EventArgs e)  
     { }  
     ```  
   
-4.  Compile a solução.  
+4.  Build the solution.  
   
-## <a name="adding-the-user-control-to-the-start-page"></a>Adicionando o controle de usuário para a página inicial  
- Para disponibilizar esse controle para o projeto de página inicial, no arquivo de página de início do projeto, adicione uma referência para a nova biblioteca de controle. Em seguida, você pode adicionar o controle à marcação XAML de página Iniciar.  
+## <a name="adding-the-user-control-to-the-start-page"></a>Adding the User Control to the Start Page  
+ To make this control available to the Start Page project, in the Start Page project file, add a reference to the new control library. Then you can add the control to the Start Page XAML markup.  
   
-1.  Em **Solution Explorer**, no projeto de página inicial, clique com botão direito **referências** e, em seguida, clique em **adicionar referência**.  
+1.  In **Solution Explorer**, in the Start Page project, right-click **References** and then click **Add Reference**.  
   
-2.  Sobre o **projetos** selecione **WebUserControl** e, em seguida, clique em **Okey**.  
+2.  On the **Projects** tab, select **WebUserControl** and then click **OK**.  
   
-3.  No menu **Compilar**, clique em **Compilar Solução**.  
+3.  On the **Build** menu, click **Build Solution**.  
   
-     Compilar a solução disponibiliza o controle de usuário ao IntelliSense para outros arquivos na solução.  
+     Building the solution makes the user control available to IntelliSense for other files in the solution.  
   
- Para adicionar o controle à marcação XAML de página Iniciar, adicione uma referência ao namespace para o assembly e colocar o controle na página.  
+ To add the control to the Start Page XAML markup, add a namespace reference to the assembly, then put the control on the page.  
   
-#### <a name="to-add-the-control-to-the-markup"></a>Para adicionar o controle à marcação  
+#### <a name="to-add-the-control-to-the-markup"></a>To add the control to the markup  
   
-1.  Em **Solution Explorer**, abra o arquivo Start Page. XAML.  
+1.  In **Solution Explorer**, open the Start Page .xaml file.  
   
-2.  No **XAML** painel, adicione a seguinte declaração de namespace para o nível superior <xref:System.Windows.Controls.Grid>elemento.</xref:System.Windows.Controls.Grid>  
+2.  In the **XAML** pane, add the following namespace declaration to the top-level <xref:System.Windows.Controls.Grid> element.  
   
     ```xml  
     xmlns:vsc="clr-namespace:WebUserControl;assembly=WebUserControl"  
     ```  
   
-3.  No **XAML** painel, role até o \<grade > seção.  
+3.  In the **XAML** pane, scroll to the \<Grid> section.  
   
-     A seção contém um <xref:System.Windows.Controls.TabControl>elemento em um <xref:System.Windows.Controls.Grid>elemento.</xref:System.Windows.Controls.Grid> </xref:System.Windows.Controls.TabControl>  
+     The section contains a <xref:System.Windows.Controls.TabControl> element in a <xref:System.Windows.Controls.Grid> element.  
   
-4.  Adicionar uma \<TabControl > elemento que contém um \<TabItem > que contém uma referência ao controle de usuário.  
+4.  Add a \<TabControl> element containing a \<TabItem> that contains a reference to your user control.  
   
     ```xml  
   
@@ -185,22 +186,22 @@ Este passo a passo mostra como adicionar uma referência DLL para uma página de
   
     ```  
   
- Agora você pode testar o controle.  
+ Now you can test the control.  
   
-## <a name="testing-a-manually-created-custom-start-page"></a>Testando uma página de início personalizados criados manualmente  
+## <a name="testing-a-manually-created-custom-start-page"></a>Testing a manually created custom Start Page  
   
-1.  Copie o arquivo XAML e qualquer texto arquivos de suporte ou marcação arquivos, como o **%USERPROFILE%\My Documents\Visual Studio 2015\StartPages\\ ** pasta.  
+1.  Copy your XAML file, and any supporting text files or markup files, to the **%USERPROFILE%\My Documents\Visual Studio 2015\StartPages\\** folder.  
   
-2.  Se sua página inicial fizer referência a quaisquer controles ou tipos em assemblies que não são instalados pelo Visual Studio, copie os assemblies e colá-los em *pasta de instalação do Visual Studio***\Common7\IDE\PrivateAssemblies\\**.  
+2.  If your start page references any controls or types in assemblies that are not installed by Visual Studio, copy the assemblies and then paste them in *Visual Studio installation folder***\Common7\IDE\PrivateAssemblies\\**.  
   
-3.  Em um prompt de comando do Visual Studio, digite **devenv /rootsuffix Exp** para abrir uma instância experimental do Visual Studio.  
+3.  At a Visual Studio command prompt, type **devenv /rootsuffix Exp** to open an experimental instance of Visual Studio.  
   
-4.  Na instância experimental, vá para o **Ferramentas / opções / ambiente / inicialização** página e selecione seu arquivo XAML do **Personalizar página inicial** lista suspensa.  
+4.  In the experimental instance, go to the **Tools / Options / Environment / Startup** page and select your XAML file from the **Customize Start Page** dropdown.  
   
-5.  Sobre o **exibição** menu, clique em **Start Page**.  
+5.  On the **View** menu, click **Start Page**.  
   
-     Sua página inicial personalizada deve ser exibida. Se você quiser alterar os arquivos, você deve fechar a instância experimental, faça as alterações, copie e cole os arquivos alterados e, em seguida, abra novamente a instância experimental para exibir as alterações.  
+     Your custom start page should be displayed. If you want to change any files, you must close the experimental instance, make the changes, copy and paste the changed files, and then re-open the experimental instance to view the changes.  
   
-## <a name="see-also"></a>Consulte também  
- [Controles de contêiner WPF](http://msdn.microsoft.com/en-us/a0177167-d7db-4205-9607-8ae316952566)   
- [Passo a passo: Adicionando XAML personalizado para a página inicial](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)
+## <a name="see-also"></a>See Also  
+ [WPF Container Controls](http://msdn.microsoft.com/en-us/a0177167-d7db-4205-9607-8ae316952566)   
+ [Walkthrough: Adding Custom XAML to the Start Page](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)

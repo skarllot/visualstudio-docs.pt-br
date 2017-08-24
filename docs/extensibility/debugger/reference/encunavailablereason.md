@@ -1,5 +1,5 @@
 ---
-title: EncUnavailableReason | Documentos do Microsoft
+title: EncUnavailableReason | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: db9d76add958ecac1b97479da544a1515e2ca385
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8c9f25370aefdf68a97fcb0ab4af6acf3fd6eafe
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="encunavailablereason"></a>EncUnavailableReason
-`This is for internal use only!`Representa os motivos que **editar e continuar** não está disponível.  
+`This is for internal use only!` Represents the reasons that **Edit and Continue** is not available.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum tagEncUnavailableReason {  
@@ -54,7 +55,7 @@ enum tagEncUnavailableReason {
 typedef enum tagEncUnavailableReason EncUnavailableReason;  
 ```  
   
-```c#  
+```cs  
 public enum EncUnavailableReason {  
    ENCUN_NONE,  
    ENCUN_INTEROP,  
@@ -66,39 +67,39 @@ public enum EncUnavailableReason {
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  ENCUN_NONE  
- Nenhum motivo específico por que editar e continuar não está disponível.  
+ No specific reason why Edit and Continue is not available.  
   
  ENCUN_INTEROP  
- Editar e continuar não está disponível durante uma chamada de interoperabilidade.  
+ Edit and Continue is not available during an InterOp call.  
   
  ENCUN_SQLCLR  
- Editar e continuar não está disponível durante uma chamada de procedimento SQL que usa o tempo de execução do CLR (Common Language).  
+ Edit and Continue is not available during an SQL procedure call that uses the Common Language Runtime (CLR).  
   
  ENCUN_MINIDUMP  
- Editar e continuar não está disponível durante o processamento de um minidespejo.  
+ Edit and Continue is not available while processing a mini-dump.  
   
  ENCUN_EMBEDDED  
- Editar e continuar não está disponível durante o processamento de código inserido.  
+ Edit and Continue is not available when processing embedded code.  
   
  ENCUN_ATTACH  
- Editar e continuar não está disponível porque a sessão foi anexada ao, não é iniciado pelo depurador.  
+ Edit and Continue is not available because the session was attached to, not launched by, the debugger.  
   
  ENCUN_WIN64  
- Editar e continuar não está disponível durante o processamento de código de 64 bits do Windows.  
+ Edit and Continue is not available while processing 64-bit Windows code.  
   
-## <a name="remarks"></a>Comentários  
- Essa enumeração é para uso interno apenas por [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]. O [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) e [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) métodos conforme implementado por um fornecedor de porta personalizada devem retornar sempre `E_NOTIMPL`.  
+## <a name="remarks"></a>Remarks  
+ This enumeration is for internal use only by [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]. The [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) and [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) methods as implemented by a custom port supplier should always return `E_NOTIMPL`.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.idl  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.idl  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)   
  [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)

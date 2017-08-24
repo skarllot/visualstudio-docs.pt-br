@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetEEMetricFile | Documentos do Microsoft
+title: IDebugSettingsCallback2::GetEEMetricFile | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,16 +28,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 82e8cc0f9a1be8a9b48f0d0e109cfe67c5f4075e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: efc609e9dc8c60d6c797c5ab42e9fafa465bd57b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugsettingscallback2geteemetricfile"></a>IDebugSettingsCallback2::GetEEMetricFile
-Recupera o arquivo métrica de avaliador de expressão recebe o nome ou a métrica.  
+Retrieves the expression evaluator metric file given the name or the metric.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetEEMetricFile(  
@@ -48,7 +49,7 @@ HRESULT GetEEMetricFile(
 );  
 ```  
   
-```c#  
+```cs  
 private int GetEEMetricFile(  
    ref Guid   guidLang,  
    ref Guid   guidVendor,  
@@ -57,21 +58,21 @@ private int GetEEMetricFile(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `guidLang`  
- [in] Identificador exclusivo da linguagem de programação.  
+ [in] Unique identifier of the programming language.  
   
  `guidVendor`  
- [in] Identificador exclusivo do fornecedor.  
+ [in] Unique identifier of the vendor.  
   
  `pszMetric`  
- [in] Nome da métrica.  
+ [in] Name of the metric.  
   
  `pbstrValue`  
- [out] Retorna o conteúdo do arquivo métrico como uma cadeia de caracteres.  
+ [out] Returns the contents of the metric file as a string.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

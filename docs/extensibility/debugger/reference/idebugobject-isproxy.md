@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsProxy | Documentos do Microsoft
+title: IDebugObject::IsProxy | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 11ccd72fa6c71974cdc1670467944bc7e937a6ae
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 65702f87e1d482ab6c1920bb9b75ba9ed97718cf
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugobjectisproxy"></a>IDebugObject::IsProxy
-Determina se o objeto for um proxy transparente.  
+Determines if the object is a transparent proxy.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT IsProxy (  
@@ -46,21 +47,21 @@ HRESULT IsProxy (
 );  
 ```  
   
-```c#  
+```cs  
 int IsProxy (  
    out bool pfIsProxy  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pfIsProxy`  
- [out] `TRUE` se o objeto for um proxy transparente; caso contrário, `FALSE`.  
+ [out] `TRUE` if the object is a transparent proxy; otherwise, `FALSE`.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Esse método é implementado pelo mecanismo de depuração de C++ padrão.  
+## <a name="remarks"></a>Remarks  
+ This method is implemented by the default C++ debug engine.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

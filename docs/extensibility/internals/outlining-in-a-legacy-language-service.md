@@ -1,5 +1,5 @@
 ---
-title: "Estrutura de tópicos em um serviço de linguagem herdado | Documentos do Microsoft"
+title: Outlining in a Legacy Language Service | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,42 +30,43 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 15eb40ed290d1f4389d3c9876c965a7070993cec
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e5cf0a9d11720022861231ba434e56050c664c64
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="outlining-in-a-legacy-language-service"></a>Estrutura de tópicos em um serviço de linguagem herdado
-Estrutura de tópicos torna possível recolher um programa complexo em uma visão geral ou a estrutura de tópicos. Por exemplo, no c# todos os métodos podem ser recolhidos em uma única linha, mostrando apenas a assinatura do método. Além disso, as estruturas e classes podem ser recolhidos para mostrar apenas os nomes de estruturas e classes. Lógica complexa em um único método, pode ser recolhida para mostrar o fluxo geral mostrando somente a primeira linha das instruções como `foreach`, `if`, e `while`.  
+# <a name="outlining-in-a-legacy-language-service"></a>Outlining in a Legacy Language Service
+Outlining makes it possible to collapse a complex program into an overview or outline. For example, in C# all methods can be collapsed to a single line, showing only the method signature. In addition, structures and classes can be collapsed to show only the names of the structures and classes. Inside a single method, complex logic can be collapsed to show the overall flow by showing only the first line of statements such as `foreach`, `if`, and `while`.  
   
- Serviços de linguagem herdada são implementados como parte de um VSPackage, mas a maneira mais recente para implementar recursos de serviço de linguagem é usar extensões MEF. Para obter mais informações, consulte [passo a passo: estrutura de tópicos](../../extensibility/walkthrough-outlining.md).  
+ Legacy language services are implemented as part of a VSPackage, but the newer way to implement language service features is to use MEF extensions. To find out more, see [Walkthrough: Outlining](../../extensibility/walkthrough-outlining.md).  
   
 > [!NOTE]
->  É recomendável que você comece a usar o novo editor de API assim que possível. Isso irá melhorar o desempenho do seu serviço de linguagem e lhe permitem tirar proveito dos novos recursos do editor.  
+>  We recommend that you begin to use the new editor API as soon as possible. This will improve the performance of your language service and let you take advantage of new editor features.  
   
-## <a name="enabling-support-for-outlining"></a>Habilitando o suporte para a estrutura de tópicos  
- O `AutoOutlining` entrada do registro é definida como 1 para ativar a estrutura de tópicos automática. Estrutura de tópicos automática configura uma análise da fonte inteira quando um arquivo for carregado ou alterado para identificar regiões ocultas e mostrar os glifos de estrutura de tópicos. Estrutura de tópicos também pode ser controlada manualmente pelo usuário.  
+## <a name="enabling-support-for-outlining"></a>Enabling Support for Outlining  
+ The `AutoOutlining` registry entry is set to 1 to enable automatic outlining. Automatic outlining sets up a parse of the whole source when a file is loaded or changed in order to identify hidden regions and show the outlining glyphs. Outlining can also be controlled manually by the user.  
   
- O valor de `AutoOutlining` entrada do registro pode ser obtida por meio da <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A>propriedade de <xref:Microsoft.VisualStudio.Package.LanguagePreferences>classe.</xref:Microsoft.VisualStudio.Package.LanguagePreferences> </xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> O `AutoOutlining` entrada do registro pode ser inicializada com um parâmetro nomeado para o <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>atributo (consulte [registrar um serviço de linguagem herdado](../../extensibility/internals/registering-a-legacy-language-service1.md) para obter detalhes).</xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>  
+ The value of the `AutoOutlining` registry entry can be obtained through the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> property on the <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class. The `AutoOutlining` registry entry can be initialized with a named parameter to the <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> attribute (see [Registering a Legacy Language Service](../../extensibility/internals/registering-a-legacy-language-service1.md) for details).  
   
-## <a name="the-hidden-region"></a>A região ocultada  
- Para fornecer a estrutura de tópicos, seu serviço de linguagem deve oferecer suporte a regiões ocultas. Esses são os intervalos de texto que pode ser expandido ou recolhido. Regiões ocultas podem ser delimitados por símbolos de linguagem padrão, como chaves, ou símbolos personalizados. Por exemplo, o c# tem um `#region` / `#endregion` par que delimita uma região oculta.  
+## <a name="the-hidden-region"></a>The Hidden Region  
+ To provide outlining, your language service must support hidden regions. These are spans of text that can be expanded or collapsed. Hidden regions can be delimited by standard language symbols, such as curly braces, or by custom symbols. For example, C# has a `#region`/`#endregion` pair that delimits a hidden region.  
   
- Regiões ocultas são gerenciados por um Gerenciador de região oculta, que é exposto como o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>interface.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>  
+ Hidden regions are managed by a hidden region manager, which is exposed as the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> interface.  
   
- Estrutura de tópicos usa regiões ocultas o <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegion>da interface e contém o período de região oculta, o estado de visibilidade atual e a faixa a ser mostrado quando o período é recolhido.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegion>  
+ Outlining uses hidden regions the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegion> interface and contain the span of the hidden region, the current visible state, and the banner to be shown when the span is collapsed.  
   
- O analisador de serviço de linguagem usa o <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A>para adicionar uma nova região oculta com o comportamento padrão para regiões ocultas, enquanto o <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A>método permite que você personalize a aparência e comportamento do contorno.</xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> </xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> Depois de regiões ocultas são fornecidos para a sessão de região oculta, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] gerencia as regiões ocultas para o serviço de linguagem.  
+ The language service parser uses the <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> method to add a new hidden region with the default behavior for hidden regions, while the <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> method allows you to customize the appearance and behavior of the outline. Once hidden regions are given to the hidden region session, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] manages the hidden regions for the language service.  
   
- Se você precisar determinar quando a sessão de região oculta é destruída, uma região oculta for alterada, ou você precisa certificar-se de que uma determinada região oculta estiver visível; Você deve derivar uma classe a partir de <xref:Microsoft.VisualStudio.Package.Source>classe e substituir os métodos apropriados, <xref:Microsoft.VisualStudio.Package.Source.OnBeforeSessionEnd%2A>, <xref:Microsoft.VisualStudio.Package.Source.OnHiddenRegionChange%2A>, e <xref:Microsoft.VisualStudio.Package.Source.MakeBaseSpanVisible%2A>, respectivamente.</xref:Microsoft.VisualStudio.Package.Source.MakeBaseSpanVisible%2A> </xref:Microsoft.VisualStudio.Package.Source.OnHiddenRegionChange%2A> </xref:Microsoft.VisualStudio.Package.Source.OnBeforeSessionEnd%2A> </xref:Microsoft.VisualStudio.Package.Source>  
+ If you need to determine when the hidden region session is destroyed, a hidden region is changed, or you need to make sure a particular hidden region is visible; you must derive a class from the <xref:Microsoft.VisualStudio.Package.Source> class and override the appropriate methods, <xref:Microsoft.VisualStudio.Package.Source.OnBeforeSessionEnd%2A>, <xref:Microsoft.VisualStudio.Package.Source.OnHiddenRegionChange%2A>, and <xref:Microsoft.VisualStudio.Package.Source.MakeBaseSpanVisible%2A>, respectively.  
   
-### <a name="example"></a>Exemplo  
- Aqui está um exemplo simplificado da criação de regiões ocultas para todos os pares de chaves. Supõe-se que a linguagem fornece correspondência de chaves e as chaves a ser correspondido incluem pelo menos as chaves ({e}). Essa abordagem é apenas para fins ilustrativos. Uma implementação completa teria um tratamento completo de casos no <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>.</xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> Este exemplo também mostra como definir o <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A>preferência para `true` temporariamente.</xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> Uma alternativa é especificar o `AutoOutlining` chamado parâmetro no `ProvideLanguageServiceAttribute` atributo em seu pacote de idioma.  
+### <a name="example"></a>Example  
+ Here is a simplified example of creating hidden regions for all pairs of curly braces. It is assumed that the language provides brace matching, and that the braces to be matched include at least the curly braces ({ and }). This approach is for illustrative purposes only. A full implementation would have a complete handling of cases in <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>. This example also shows how to set the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> preference to `true` temporarily. An alternative is to specify the `AutoOutlining` named parameter in the `ProvideLanguageServiceAttribute` attribute in your language package.  
   
- Este exemplo pressupõe c# regras para comentários, cadeias de caracteres e literais.  
+ This example assumes C# rules for comments, strings, and literals.  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -134,6 +135,6 @@ namespace MyLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos de serviço de linguagem herdada](../../extensibility/internals/legacy-language-service-features1.md)   
- [Registrar um serviço de linguagem herdado](../../extensibility/internals/registering-a-legacy-language-service1.md)
+## <a name="see-also"></a>See Also  
+ [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)   
+ [Registering a Legacy Language Service](../../extensibility/internals/registering-a-legacy-language-service1.md)

@@ -1,5 +1,5 @@
 ---
-title: "Validando os pontos de interrupção em um serviço de linguagem herdado | Documentos do Microsoft"
+title: Validating Breakpoints in a Legacy Language Service | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,33 +29,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3a8c2df45c0a834430a499cf6a7e7ef2da10bdbf
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ca3399abbcb3f1238c7f2481a59403412c50fd0c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="validating-breakpoints-in-a-legacy-language-service"></a>Validando os pontos de interrupção em um serviço de linguagem herdado
-Um ponto de interrupção indica que a execução do programa deve parar em um momento específico, enquanto ele está sendo executado em um depurador. Um usuário pode colocar um ponto de interrupção em qualquer linha no arquivo de origem, uma vez que o editor não tem conhecimento do que constitui um local válido para um ponto de interrupção. Quando o depurador é iniciado, todos os pontos de interrupção marcados (chamados de pontos de interrupção pendentes) são vinculados para o local apropriado no programa em execução. Ao mesmo tempo que os pontos de interrupção são validados para garantir que eles marcam os locais de código válido. Por exemplo, um ponto de interrupção em um comentário não é válido, porque não há nenhum código nesse local no código-fonte. O depurador desabilita os pontos de interrupção inválidos.  
+# <a name="validating-breakpoints-in-a-legacy-language-service"></a>Validating Breakpoints in a Legacy Language Service
+A breakpoint indicates that program execution should stop at a particular point while it is being run in a debugger. A user can place a breakpoint on any line in the source file, since the editor has no knowledge of what constitutes a valid location for a breakpoint. When the debugger is launched, all of the marked breakpoints (called pending breakpoints) are bound to the appropriate location in the running program. At the same time the breakpoints are validated to ensure that they mark valid code  locations. For example, a breakpoint on a comment is not valid, because there is no code at that location in the source code. The debugger disables invalid breakpoints.  
   
- Desde que o serviço de linguagem sabe sobre o código-fonte que está sendo exibido, ele pode validar os pontos de interrupção antes que o depurador é iniciado. Você pode substituir o <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>método retorne um intervalo especificando um local válido para um ponto de interrupção.</xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> O local do ponto de interrupção ainda será validado quando o depurador é iniciado, mas o usuário é notificado de pontos de interrupção inválida sem esperar que o depurador carregar.  
+ Since the language service knows about the source code being displayed, it can validate breakpoints before the debugger is launched. You can override the <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method to return a span specifying a valid location for a breakpoint. The breakpoint location is still validated when the debugger is launched, but the user is notified of invalid breakpoints without waiting for the debugger to load.  
   
-## <a name="implementing-support-for-validating-breakpoints"></a>Implementando o suporte para validação de pontos de interrupção  
+## <a name="implementing-support-for-validating-breakpoints"></a>Implementing Support for Validating Breakpoints  
   
--   O <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>método é dada a posição do ponto de interrupção.</xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> Sua implementação deve decidir se ou não o local é válido e indicar isso retornando um intervalo de texto que identifica o código associado à posição de linha no ponto de interrupção.  
+-   The <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method is given the position of the breakpoint. Your implementation must decide whether or not the location is valid, and indicate this by returning a text span that identifies the code associated with the line position the breakpoint.  
   
--   Retornar <xref:Microsoft.VisualStudio.VSConstants.S_OK>se o local é válido, ou <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>se ele não é válido.</xref:Microsoft.VisualStudio.VSConstants.S_FALSE> </xref:Microsoft.VisualStudio.VSConstants.S_OK>  
+-   Return <xref:Microsoft.VisualStudio.VSConstants.S_OK> if the location is valid, or <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> if it is not valid.  
   
--   Se o ponto de interrupção é válido do trecho de texto será realçado juntamente com o ponto de interrupção.  
+-   If the breakpoint is valid the text span is highlighted along with the breakpoint.  
   
--   Se o ponto de interrupção for inválido, uma mensagem de erro será exibida na barra de status.  
+-   If the breakpoint is invalid, an error message appears in the status bar.  
   
-### <a name="example"></a>Exemplo  
- Este exemplo mostra uma implementação de <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>método que chama o analisador para obter o trecho de código (se houver) no local especificado.</xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>  
+### <a name="example"></a>Example  
+ This example shows an implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method that calls the parser to obtain the span of code (if any) at the specified location.  
   
- Este exemplo pressupõe que você tenha adicionado um `GetCodeSpan` método para o <xref:Microsoft.VisualStudio.Package.AuthoringSink>classe valida o trecho de texto e retorna `true` se for um local de ponto de interrupção válido.</xref:Microsoft.VisualStudio.Package.AuthoringSink>  
+ This example assumes that you have added a `GetCodeSpan` method to the <xref:Microsoft.VisualStudio.Package.AuthoringSink> class that validates the text span and returns `true` if it is a valid breakpoint location.  
   
-```c#  
+```cs  
 using Microsoft VisualStudio;  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
@@ -115,5 +116,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos de serviço de linguagem herdada](../../extensibility/internals/legacy-language-service-features1.md)
+## <a name="see-also"></a>See Also  
+ [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)

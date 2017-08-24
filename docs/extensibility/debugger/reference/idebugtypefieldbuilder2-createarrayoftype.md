@@ -1,5 +1,5 @@
 ---
-title: IDebugTypeFieldBuilder2::CreateArrayOfType | Documentos do Microsoft
+title: IDebugTypeFieldBuilder2::CreateArrayOfType | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 51f7ca69cc93a281da311af8af6d416c8e94f440
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: a40f6124acf092f3c799fbf971419d3b435af9a6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugtypefieldbuilder2createarrayoftype"></a>IDebugTypeFieldBuilder2::CreateArrayOfType
-Cria uma matriz do tipo especificado e tamanho.  
+Creates an array of the specified type and size.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT CreateArrayOfType (  
@@ -48,7 +49,7 @@ HRESULT CreateArrayOfType (
 );  
 ```  
   
-```c#  
+```cs  
 int CreateArrayOfType (  
    IDebugField     pTypeField,  
    uint            rank,  
@@ -56,18 +57,18 @@ int CreateArrayOfType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pTypeField`  
- [in] Tipo de elementos de que matriz conterá.  
+ [in] Type of elements the array will hold.  
   
  `rank`  
- [in] Número de elementos na matriz.  
+ [in] Number of elements in the array.  
   
  `pArrayOfTypeField`  
- [out] Retorna o [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objetos que representam a nova matriz.  
+ [out] Returns the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objects that represent the new array.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugTypeFieldBuilder2](../../../extensibility/debugger/reference/idebugtypefieldbuilder2.md)

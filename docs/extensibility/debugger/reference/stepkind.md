@@ -1,5 +1,5 @@
 ---
-title: STEPKIND | Documentos do Microsoft
+title: STEPKIND | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1365ba8a43bcd8b997bae460a4300ccd81c0e688
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0580bfdf454f577131487a80ec4f19df95b82f58
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="stepkind"></a>STEPKIND
-Especifica o tipo de etapa de revisão.  
+Specifies the step kind for stepping.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_STEPKIND {   
@@ -51,7 +52,7 @@ enum enum_STEPKIND {
 typedef DWORD STEPKIND;  
 ```  
   
-```c#  
+```cs  
 public enum enum_STEPKIND {   
    STEP_INTO      = 0,  
    STEP_OVER      = 1,  
@@ -60,29 +61,29 @@ public enum enum_STEPKIND {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  STEP_INTO  
- Etapas em uma função.  
+ Steps into a function.  
   
  STEP_OVER  
- Etapas em uma função.  
+ Steps over a function.  
   
  STEP_OUT  
- Etapas de uma função.  
+ Steps out of a function.  
   
  STEP_BACKWARDS  
- Etapas para trás em uma função.  
+ Steps backward into a function.  
   
-## <a name="remarks"></a>Comentários  
- Passada como um argumento para o [etapa](../../../extensibility/debugger/reference/idebugprocess3-step.md) método.  
+## <a name="remarks"></a>Remarks  
+ Passed as an argument to the [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Etapa](../../../extensibility/debugger/reference/idebugprocess3-step.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)

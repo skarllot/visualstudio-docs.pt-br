@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetException | Documentos do Microsoft
+title: IDebugEngine2::SetException | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ab78d776c54f476d651a5c92f63d2f5f2fccacc8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f63df6e184be9312982c13b962b830d596052e6b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugengine2setexception"></a>IDebugEngine2::SetException
-Especifica como o mecanismo de depuração (DE) deve tratar de uma determinada exceção.  
+Specifies how the debug engine (DE) should handle a given exception.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT SetException(   
@@ -47,22 +48,22 @@ HRESULT SetException(
 );  
 ```  
   
-```c#  
+```cs  
 int SetException(   
    EXCEPTION_INFO[] pException  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pException`  
- [in] Um [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura que descreve a exceção e depurá-lo.  
+ [in] An [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure that describes the exception and how to debug it.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- A DE podia ser instruída para interromper o programa gera uma exceção na primeira oportunidade, segunda chance, ou não.  
+## <a name="remarks"></a>Remarks  
+ A DE could be instructed to stop the program generating an exception at first chance, second chance, or not at all.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)

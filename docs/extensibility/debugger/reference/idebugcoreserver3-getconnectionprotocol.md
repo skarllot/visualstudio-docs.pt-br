@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::GetConnectionProtocol | Documentos do Microsoft
+title: IDebugCoreServer3::GetConnectionProtocol | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: da90a4143297af71ae85f10b10ca31c66f617e17
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 78e1ad6e35ef53bb2ee1a19af6fbfe7c3a045382
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="idebugcoreserver3getconnectionprotocol"></a>IDebugCoreServer3::GetConnectionProtocol
-Retorna um valor que indica o protocolo que está sendo usado para a comunicação entre o servidor e o pacote de depuração.  
+# IDebugCoreServer3::GetConnectionProtocol
+Returns a value indicating the protocol that is being used to communicate between the server and the debug package.  
   
-## <a name="syntax"></a>Sintaxe  
+## Syntax  
   
 ```cpp#  
 HRESULT GetConnectionProtocol(  
@@ -47,19 +48,19 @@ HRESULT GetConnectionProtocol(
 );  
 ```  
   
-```c#  
+```cs  
 int GetConnectionProtocol(  
    CONNECTION_PROTOCOL[] pProtocol  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### Parameters  
  `pProtocol`  
- [out] Retorna um dos valores a partir de [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) enumeração.  
+ [out] Returns one of the values from the [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) enumeration.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
+## Return Value  
+ If successful, returns `S_OK`; otherwise, returns error code.  
   
-## <a name="see-also"></a>Consulte também  
+## See Also  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)

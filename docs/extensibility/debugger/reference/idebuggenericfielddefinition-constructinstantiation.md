@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldDefinition::ConstructInstantiation | Documentos do Microsoft
+title: IDebugGenericFieldDefinition::ConstructInstantiation | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b4b7f2571690c3fe05fdf048cf9c06a41b18b13c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ba5b7fc4f1ba4cf73fbd7c4425bfdd65dadf2c41
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebuggenericfielddefinitionconstructinstantiation"></a>IDebugGenericFieldDefinition::ConstructInstantiation
-Cria uma instância do campo dada uma matriz de argumentos de tipo.  
+Constructs a field instance given an array of type arguments.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT ConstructInstantiation(  
@@ -48,7 +49,7 @@ HRESULT ConstructInstantiation(
 );  
 ```  
   
-```c#  
+```cs  
 int ConstructInstantiation(  
    uint            cArgs,  
    IDebugField[]   ppArgs,  
@@ -56,21 +57,21 @@ int ConstructInstantiation(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `cArgs`  
- [in] Número de argumentos a `ppArgs` matriz.  
+ [in] Number of arguments in the `ppArgs` array.  
   
  `ppArgs`  
- [in] Matriz que contém os argumentos de tipo. Os argumentos de tipo devem ser tipos fechados (não-genérica ou totalmente instanciados genéricos).  
+ [in] Array that contains the type arguments. The type arguments must be closed types (non-generic or fully instantiated generics).  
   
  `ppConstructedField`  
- [out] Retorna o [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface que representa o novo campo.  
+ [out] Returns the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface that represents the new field.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- As restrições não são verificadas.  
+## <a name="remarks"></a>Remarks  
+ Constraints are not checked.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

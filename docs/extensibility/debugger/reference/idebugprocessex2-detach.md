@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2::Detach | Documentos do Microsoft
+title: IDebugProcessEx2::Detach | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 579b8a5aaf4aff6c2629a7bcc2cc92d66b208870
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c78c0a3c9cfa600d331b77cd10e59b5e73f60169
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprocessex2detach"></a>IDebugProcessEx2::Detach
-Esse método informa o processo que uma sessão não está depurando o processo.  
+This method informs the process that a session is no longer debugging the process.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Detach(   
@@ -47,21 +48,21 @@ HRESULT Detach(
 );  
 ```  
   
-```c#  
+```cs  
 int Detach(  
    IDebugSession2 pSession  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pSession`  
- [in] Um valor que identifica exclusivamente a sessão para desanexar este processo de.  
+ [in] A value that uniquely identifies the session to detach this process from.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- A interface passado `pSession` é deve ser tratada apenas como um cookie, um valor que identifica exclusivamente o Gerenciador de sessão de depuração que originalmente anexado a esse processo; nenhum dos métodos na interface fornecida é funcional.  
+## <a name="remarks"></a>Remarks  
+ The interface passed in `pSession` is to be treated only as a cookie, a value that uniquely identifies the session debug manager that originally attached to this process; none of the methods on the supplied interface are functional.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

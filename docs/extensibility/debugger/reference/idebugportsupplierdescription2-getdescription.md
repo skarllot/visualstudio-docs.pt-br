@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplierDescription2::GetDescription | Documentos do Microsoft
+title: IDebugPortSupplierDescription2::GetDescription | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,16 +28,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: eb12be31bb9cb0ed62e8787478054b129982e334
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 06c3d5b5a584ab3fc7ecf48d1eae6eef8c8f124d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugportsupplierdescription2getdescription"></a>IDebugPortSupplierDescription2::GetDescription
-Recupera a descrição e a descrição de metadados para o fornecedor de porta.  
+Retrieves the description and description metadata for the port supplier.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetDescription(  
@@ -46,22 +47,22 @@ HRESULT GetDescription(
 );  
 ```  
   
-```c#  
+```cs  
 public int GetDescription(  
    out enum_PORT_SUPPLIER_DESCRIPTION_FLAGS pdwFlags,  
    out string pbstrText  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pdwFlags`  
- [out] Sinalizadores de metadados para a descrição.  
+ [out] Metadata flags for the description.  
   
  `pbstrText`  
- [out] Descrição do fornecedor de porta.  
+ [out] Description of the port supplier.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugPortSupplierDescription2](../../../extensibility/debugger/reference/idebugportsupplierdescription2.md)

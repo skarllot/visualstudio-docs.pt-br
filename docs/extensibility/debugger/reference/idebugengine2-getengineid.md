@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::GetEngineID | Documentos do Microsoft
+title: IDebugEngine2::GetEngineID | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e8c01994e5267758c2aae177450cf6f6392781b1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0f680816fb7471334cb081e8d9bcac07faf92a87
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugengine2getengineid"></a>IDebugEngine2::GetEngineID
-Obtém o GUID do mecanismo de depuração (DE).  
+Gets the GUID of the debug engine (DE).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetEngineID(   
@@ -47,24 +48,24 @@ HRESULT GetEngineID(
 );  
 ```  
   
-```c#  
+```cs  
 int GetEngineID(   
    out Guid pguidEngine  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pguidEngine`  
- [out] Retorna o GUID DE.  
+ [out] Returns the GUID of the DE.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Alguns exemplos de GUIDs típicos são `guidScriptEng`, `guidNativeEng`, ou `guidSQLEng`. Novos mecanismos de depuração criará seu próprio GUID para identificação.  
+## <a name="remarks"></a>Remarks  
+ Some examples of typical GUIDs are `guidScriptEng`, `guidNativeEng`, or `guidSQLEng`. New debug engines will create their own GUID for identification.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um simples `CEngine` objeto que implementa o [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) interface.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CEngine` object that implements the [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) interface.  
   
 ```cpp#  
 HRESULT CEngine::GetEngineId(GUID *pguidEngine){    
@@ -80,5 +81,5 @@ HRESULT CEngine::GetEngineId(GUID *pguidEngine){
 }    
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

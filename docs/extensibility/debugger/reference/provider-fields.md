@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_FIELDS | Documentos do Microsoft
+title: PROVIDER_FIELDS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fd20f9912736581cb702e4bc6f85ac1bd8f10ca9
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 281ff0ecb84f0bcdf464b4b7919a84e58f13b5d5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="providerfields"></a>PROVIDER_FIELDS
-Especifica as propriedades associadas a um provedor de programa.  
+Specifies properties associated with a program provider.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_PROVIDER_FIELDS {  
@@ -49,32 +50,32 @@ enum enum_PROVIDER_FIELDS {
 typedef DWORD PROVIDER_FIELDS;  
 ```  
   
-```c#  
+```cs  
 public enum enum_PROVIDER_FIELDS {  
    PFIELD_PROGRAM_NODES       = 0x01,  
    PFIELD_IS_DEBUGGER_PRESENT = 0x02  
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  PFIELD_PROGRAM_NODES  
- O `ProgramNodes` campo é válido.  
+ The `ProgramNodes` field is valid.  
   
  PFIELD_IS_DEBUGGER_PRESENT  
- O `fIsDebuggerPresent` campo é válido.  
+ The `fIsDebuggerPresent` field is valid.  
   
-## <a name="remarks"></a>Comentários  
- Esses valores são retornados no `Fields` membro do [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) estrutura para indicar quais campos da estrutura foram preenchidos explicitamente.  
+## <a name="remarks"></a>Remarks  
+ These values are returned in the `Fields` member of the [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) structure to indicate which fields of the structure were explicitly filled in.  
   
- Esses valores podem ser combinados com um bit a bit `OR`.  
+ These values can be combined with a bitwise `OR`.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)

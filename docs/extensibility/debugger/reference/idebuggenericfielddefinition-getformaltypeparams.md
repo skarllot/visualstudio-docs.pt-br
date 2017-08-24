@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldDefinition::GetFormalTypeParams | Documentos do Microsoft
+title: IDebugGenericFieldDefinition::GetFormalTypeParams | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ef4c6325c46ec0a2591130fcc8b0fc25cdb96b49
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 13c02837a42de9c22dc2cc21194aa7f8e1ebdfee
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebuggenericfielddefinitiongetformaltypeparams"></a>IDebugGenericFieldDefinition::GetFormalTypeParams
-Recupera os parâmetros de tipo dado o número de parâmetros.  
+Retrieves the type parameters given the number of parameters.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetFormalTypeParams(  
@@ -48,7 +49,7 @@ HRESULT GetFormalTypeParams(
 );  
 ```  
   
-```c#  
+```cs  
 int GetFormalTypeParams(  
    uint                          cParams,  
    out IDebugGenericParamField[] ppParams,  
@@ -56,21 +57,21 @@ int GetFormalTypeParams(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `cParams`  
- [in] Número de parâmetros.  
+ [in] Number of parameters.  
   
  `ppParams`  
- [out] Matriz de parâmetros de tipo.  
+ [out] Array of type parameters.  
   
  `pcParams`  
- [no, out] Número de parâmetros na `ppParams` matriz.  
+ [in, out] Number of parameters in the `ppParams` array.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Retorne os parâmetros de tipo em ordem da esquerda para a direita. Por exemplo, o dicionário\<K, V > retorna IDebugFormalGenericParameters {K, V}.  
+## <a name="remarks"></a>Remarks  
+ Return the type parameters in order from left to right. For example, Dictionary\<K,V> returns IDebugFormalGenericParameters {K,V}.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

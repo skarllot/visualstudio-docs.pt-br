@@ -1,5 +1,5 @@
 ---
-title: CONSTRUCTOR_ENUM | Documentos do Microsoft
+title: CONSTRUCTOR_ENUM | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 08da7be8e0985b9ee8098c99b219553ab7d517cd
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 3e5ea6b486d267dc9330e576eab6a73f644226cd
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="constructorenum"></a>CONSTRUCTOR_ENUM
-Seleciona os diferentes tipos de construtores.  
+Selects different types of constructors.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef enum ConstructorMatchOptions {   
@@ -49,7 +50,7 @@ typedef enum ConstructorMatchOptions {
 } CONSTRUCTOR_ENUM;  
 ```  
   
-```c#  
+```cs  
 public enum ConstructorMatchOptions {   
    crAll       = 0,  
    crNonStatic = 1,  
@@ -57,26 +58,26 @@ public enum ConstructorMatchOptions {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  crAll  
- Seleciona todos os construtores.  
+ Selects all constructors.  
   
  crNonStatic  
- Seleciona os construtores não estático.  
+ Selects non-static constructors.  
   
  crStatic  
- Seleciona os construtores estáticos.  
+ Selects static constructors.  
   
-## <a name="remarks"></a>Comentários  
- Passada como um argumento para o [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) método.  
+## <a name="remarks"></a>Remarks  
+ Passed as an argument to the [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)

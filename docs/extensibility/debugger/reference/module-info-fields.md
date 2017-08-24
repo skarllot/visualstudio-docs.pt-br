@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO_FIELDS | Documentos do Microsoft
+title: MODULE_INFO_FIELDS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 02a1c842e4292729d6bebb451c46dbc8f804ec81
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 10412354e5cdad73b43d432026ce02add56bcab5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="moduleinfofields"></a>MODULE_INFO_FIELDS
-Especifica os sinalizadores para as informações de módulo de depuração.  
+Specifies the flags for the debug module information.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_MODULE_INFO_FIELDS {   
@@ -60,7 +61,7 @@ enum enum_MODULE_INFO_FIELDS {
 typedef DWORD MODULE_INFO_FIELDS;  
 ```  
   
-```c#  
+```cs  
 public enum enum_MODULE_INFO_FIELDS {   
    MIF_NONE              = 0x0000,  
    MIF_NAME              = 0x0001,  
@@ -78,61 +79,61 @@ public enum enum_MODULE_INFO_FIELDS {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  MIF_NONE  
- Inicializar/usar nenhum dos campos na estrutura.  
+ Initialize/use none of the fields in the structure.  
   
  MIF_NAME  
- Inicializar/usar o `m_bstrName` campo o [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) estrutura.  
+ Initialize/use the `m_bstrName` field in the [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) structure.  
   
  MIF_URL  
- Inicializar/usar o `m_bstrUrl` campo o `MODULE_INFO` estrutura.  
+ Initialize/use the `m_bstrUrl` field in the `MODULE_INFO` structure.  
   
  MIF_VERSION  
- Inicializar/usar o `m_bstrVersion` campo o `MODULE_INFO` estrutura.  
+ Initialize/use the `m_bstrVersion` field in the `MODULE_INFO` structure.  
   
  MIF_DEBUGMESSAGE  
- Inicializar/usar o `m_bstrDebugMessage` campo o `MODULE_INFO` estrutura.  
+ Initialize/use the `m_bstrDebugMessage` field in the `MODULE_INFO` structure.  
   
  MIF_LOADADDRESS  
- Inicializar/usar o `m_addrLoadAddress` campo o `MODULE_INFO` estrutura.  
+ Initialize/use the `m_addrLoadAddress` field in the `MODULE_INFO` structure.  
   
  MIF_PREFFEREDADDRESS  
- Inicializar/usar o `m_addrPreferredLoadAddress` campo o `MODULE_INFO` estrutura.  
+ Initialize/use the `m_addrPreferredLoadAddress` field in the `MODULE_INFO` structure.  
   
  MIF_SIZE  
- Inicializar/usar o `m_dwSize` campo o `MODULE_INFO` estrutura.  
+ Initialize/use the `m_dwSize` field in the `MODULE_INFO` structure.  
   
  MIF_LOADORDER  
- Inicializar/usar o `m_dwLoadOrder` campo o `MODULE_INFO` estrutura.  
+ Initialize/use the `m_dwLoadOrder` field in the `MODULE_INFO` structure.  
   
  MIF_TIMESTAMP  
- Inicializar/usar o `m_TimeStamp` campo o `MODULE_INFO` estrutura.  
+ Initialize/use the `m_TimeStamp` field in the `MODULE_INFO` structure.  
   
  MIF_URLSYMBOLLOCATION  
- Inicializar/usar o `m_bstrUrlSymbolLocation` campo o `MODULE_INFO` estrutura.  
+ Initialize/use the `m_bstrUrlSymbolLocation` field in the `MODULE_INFO` structure.  
   
  MIF_FLAGS  
- Inicializar/usar o `m_dwModuleFlags` campo o `MODULE_INFO` estrutura.  
+ Initialize/use the `m_dwModuleFlags` field in the `MODULE_INFO` structure.  
   
  MIF_ALLFIELDS  
- Inicializar/usar todos os campos de `MODULE_INFO` estrutura.  
+ Initialize/use all of the fields in the `MODULE_INFO` structure.  
   
-## <a name="remarks"></a>Comentários  
- Esses valores são passados como um argumento para o [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) método para indicar quais campos do [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) estrutura devem ser inicializado.  
+## <a name="remarks"></a>Remarks  
+ These values are passed as an argument to the [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) method to indicate which fields of the [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) structure are to be initialized.  
   
- Esses valores também são usados no `MODULE_INFO` estrutura para indicar quais campos são usados e válido.  
+ These values are also used in the `MODULE_INFO` structure to indicate which fields are used and valid.  
   
- Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
+ These flags may be combined with a bitwise `OR`.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)

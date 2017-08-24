@@ -1,5 +1,5 @@
 ---
-title: TEXT_POSITION | Documentos do Microsoft
+title: TEXT_POSITION | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ed0adbcfe59bc9bc44e52b3e25751007cc733ff7
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f456e2e19e8a4e29fd5a324164d0ff91600f6912
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="textposition"></a>TEXT_POSITION
-Descreve o local de linha e coluna no texto especificado.  
+Describes the line and column location in the given text.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagTEXT_POSITION {   
@@ -48,24 +49,24 @@ typedef struct _tagTEXT_POSITION {
 } TEXT_POSITION;  
 ```  
   
-```c#  
+```cs  
 public struct TEXT_POSITION {   
    public uint dwLine;  
    public uint dwColumn;  
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  dwLine  
- Índice de linha no arquivo de origem.  
+ Index of line in source file.  
   
  dwColumn  
- Deslocamento de caractere na linha.  
+ Character offset into line.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é usada no [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) e [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estruturas.  
+## <a name="remarks"></a>Remarks  
+ This structure is used in the [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) and [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) structures.  
   
- Essa estrutura é preenchida por uma chamada para os seguintes métodos:  
+ This structure is filled in by a call to the following methods:  
   
 -   [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)  
   
@@ -75,7 +76,7 @@ public struct TEXT_POSITION {
   
 -   [GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)  
   
- Essa estrutura é passada como um parâmetro para os seguintes métodos:  
+ This structure is passed as a parameter to the following methods:  
   
 -   [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)  
   
@@ -87,15 +88,15 @@ public struct TEXT_POSITION {
   
 -   [onUpdateTextAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatetextattributes.md)  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)   
  [GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)   
  [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)   

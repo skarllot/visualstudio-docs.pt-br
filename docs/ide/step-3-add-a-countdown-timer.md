@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 3: Adicionar um temporizador de contagem regressiva | Microsoft Docs'
+title: 'Step 3: Add a Countdown Timer | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,51 +28,51 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 451635681519303b5e85b70788534e22af21707c
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 475d67f74c6fdecf970b5bb25f672b17560c1338
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="step-3-add-a-countdown-timer"></a>Etapa 3: Adicionar um temporizador de contagem regressiva
-Na terceira parte deste tutorial, você adicionará um timer de contagem regressiva para controlar o número de segundos restantes até o término do teste.  
+# <a name="step-3-add-a-countdown-timer"></a>Step 3: Add a Countdown Timer
+In the third part of this tutorial, you'll add a countdown timer to track the number of seconds that remain for the quiz taker to finish.  
   
 > [!NOTE]
->  Esse tópico faz parte de uma série de tutoriais sobre conceitos de codificação básica. Para obter uma visão geral do tutorial, consulte [Tutorial 2: criar um teste de matemática temporizado](../ide/tutorial-2-create-a-timed-math-quiz.md).  
+>  This topic is part of a tutorial series about basic coding concepts. For an overview of the tutorial, see [Tutorial 2: Create a Timed Math Quiz](../ide/tutorial-2-create-a-timed-math-quiz.md).  
   
-### <a name="to-add-a-countdown-timer"></a>Para adicionar um timer de contagem regressiva  
+### <a name="to-add-a-countdown-timer"></a>To add a countdown timer  
   
-1.  Adicione uma variável de inteiro chamada **timeLeft**, exatamente como você fez no procedimento anterior. Seu código deve se parecer com o seguinte.  
+1.  Add an integer variable that's named **timeLeft**, just like you did in the previous procedure. Your code should look like the following.  
   
      [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]  [!code-cs[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]  
   
-     Agora você precisa de um método que realmente conte os segundos, assim como um timer, que gera um evento após a quantidade de tempo que você especificar.  
+     Now you need a method that actually counts the seconds, such as a timer, which raises an event after the amount of time that you specify.  
   
-2.  Na janela de design, mova um controle de `Timer` da categoria **Componentes** da caixa de ferramentas para seu formulário.  
+2.  In the design window, move a `Timer` control from the **Components** category of the Toolbox to your form.  
   
-     O controle aparece na área cinza na parte inferior da janela de design.  
+     The control appears in the gray area at the bottom of the design window.  
   
-3.  No formulário, escolha o ícone **timer1** que você acabou de adicionar e defina sua propriedade **Interval** para **1000**.  
+3.  On the form, choose the **timer1** icon that you just added, and set its **Interval** property to **1000**.  
   
-     Como o valor do intervalo é milissegundos, um valor de 1000 fará com que o evento de escala seja acionado a cada segundo.  
+     Because the interval value is milliseconds, a value of 1000 causes the Tick event to fire every second.  
   
-4.  No formulário, clique duas vezes no controle de timer, ou selecione-o e pressione a tecla Enter.  
+4.  On the form, double-click the Timer control, or choose it and then choose the Enter key.  
   
-     O editor de códigos aparece e exibe o método para a marcação que o manipulador de eventos que você adicionou.  
+     The code editor appears and displays the method for the Tick event handler that you just added.  
   
-5.  Adicione as seguintes instruções ao novo método do manipulador de eventos.  
+5.  Add the following statements to the new event handler method.  
   
      [!code-vb[VbExpressTutorial3Step3#6](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_2.vb)]  [!code-cs[VbExpressTutorial3Step3#6](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_2.cs)]  
   
-     Com base no que você adicionou, o temporizador verificará a cada segundo se o tempo limite foi ou não atingido determinando se a variável de inteiro **timeLeft** é ou não maior que 0. Se for, o tempo ainda permanece. Primeiro, o temporizador subtrai 1 de timeLeft e atualiza a propriedade **Text** do controle `timeLabel` para exibir quantos segundos restam à pessoa realizando o teste.  
+     Based on what you added, the timer checks each second whether time has run out by determining whether the **timeLeft** integer variable is greater than 0. If it is, time still remains. The timer first subtracts 1 from timeLeft and then updates the **Text** property of the `timeLabel` control to show the quiz taker how many seconds remain.  
   
-     Se não houver nenhum tempo restante, o temporizador parará e alterará o texto do controle `timeLabel` de modo que ele exiba **Tempo esgotado!** Uma caixa de mensagem informa que o teste acabou, e a resposta é revelada, nesse caso, adicionando addend1 e addend2. A propriedade **Enabled** do controle `startButton` está definida como `true` de modo que a pessoa realizando o teste pode começar outro teste.  
+     If no time remains, the timer stops and changes the text of the `timeLabel` control so that it shows **Time's up!** A message box announces that the quiz is over, and the answer is revealed—in this case, by adding addend1 and addend2. The **Enabled** property of the `startButton` control is set to `true` so that the quiz taker can start another quiz.  
   
-     Você adicionou uma instrução de `if else`, que é como você informa os programas a tomar decisões. Uma instrução de `if else` se parece com o seguinte.  
+     You just added an `if else` statement, which is how you tell programs to make decisions. An `if else` statement looks like the following.  
   
     > [!NOTE]
-    >  O exemplo a seguir é somente para ilustração – não o adicione ao seu projeto.  
+    >  The following example is for illustration only-don't add it to your project.  
   
     ```vb  
     If (something that your program will check) Then  
@@ -84,7 +84,7 @@ Na terceira parte deste tutorial, você adicionará um timer de contagem regress
     End If  
     ```  
   
-    ```c#  
+    ```cs  
     if (something that your program will check)  
     {  
         // One or more statements that will run  
@@ -97,29 +97,29 @@ Na terceira parte deste tutorial, você adicionará um timer de contagem regress
     }  
     ```  
   
-     Examine atenciosamente a instrução que você adicionou no bloco de `else` para mostrar a resposta ao problema de adição.  
+     Look closely at the statement that you added in the `else` block to show the answer to the addition problem.  
   
      [!code-vb[VbExpressTutorial3Step3#24](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_3.vb)]  [!code-cs[VbExpressTutorial3Step3#24](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_3.cs)]  
   
-     A instrução `addend1 + addend2` adiciona os valores em duas variáveis juntas. A primeira parte (`sum.Value`) usa a propriedade **Value** do controle `NumericUpDown` da soma para exibir a resposta correta. Você usa a mesma propriedade posteriormente para verificar as respostas para o teste.  
+     The statement `addend1 + addend2` adds the values in the two variables together. The first part (`sum.Value`) uses the **Value** property of the sum `NumericUpDown` control to display the correct answer. You use the same property later to check the answers for the quiz.  
   
-     As pessoas realizando testes podem inserir números mais facilmente usando um controle `NumericUpDown`, que é o motivo pelo qual você usa um controle desse tipo para as respostas dos problemas matemáticos. Todas as respostas possíveis são números inteiros de 0 a 100. Deixando os valores padrão das propriedades de **Minimum**, **Maximum** e **DecimalPlaces**, você garante que as pessoas realizando testes não possam inserir decimais, números negativos ou números muito altos. (Se você quiser permitir que as pessoas realizando testes digitem 3,141 mas não 3,1415, você pode definir a propriedade **DecimalPlaces** para 3.)  
+     Quiz takers can enter numbers more easily by using a `NumericUpDown` control, which is why you use one for the answers to the math problems. All of the potential answers are whole numbers from 0 through 100. By leaving the default values of the **Minimum**, **Maximum**, and **DecimalPlaces** properties, you ensure that quiz takers can't enter decimals, negative numbers, or numbers that are too high. (If you wanted to allow quiz takers to enter 3.141 but not 3.1415, you could set the **DecimalPlaces** property to 3.)  
   
-6.  Adicione três linhas ao final do método de `StartTheQuiz()`, para que o código se pareça com o seguinte.  
+6.  Add three lines to the end of the `StartTheQuiz()` method, so the code looks like the following.  
   
      [!code-vb[VbExpressTutorial3Step3#7](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_4.vb)]  [!code-cs[VbExpressTutorial3Step3#7](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_4.cs)]  
   
-     Agora, quando seu teste for iniciado, a variável **timeLeft** será definida para 30 e a propriedade **Text** do controle `timeLabel` será definida para 30 segundos. Em seguida, o método `Start()` do controle `Timer` inicia a contagem regressiva. (O teste não verifica a resposta ainda, isso acontece em seguida.)  
+     Now, when your quiz starts, the **timeLeft** variable is set to 30 and the **Text** property of the `timeLabel` control is set to 30 seconds. Then the `Start()` method of the `Timer` control starts the countdown. (The quiz doesn't check the answer yet—that comes next.)  
   
-7.  Salve seu programa, execute-o e então escolha o botão **Iniciar** no formulário.  
+7.  Save your program, run it, and then choose the **Start** button on the form.  
   
-     O temporizador inicia a contagem regressiva. Quando o tempo se esgota, o teste termina e a resposta aparece. A ilustração a seguir mostra o teste em andamento.  
+     The timer starts to count down. When time runs out, the quiz ends, and the answer appears. The following illustration shows the quiz in progress.  
   
-     ![Teste de matemática em andamento](~/ide/media/express_addcountdown.png "Express_AddCountdown")  
-Teste de matemática em andamento  
+     ![Math quiz in progress](../ide/media/express_addcountdown.png "Express_AddCountdown")  
+Math quiz in progress  
   
-### <a name="to-continue-or-review"></a>Para continuar ou revisar  
+### <a name="to-continue-or-review"></a>To continue or review  
   
--   Para ir para a próxima etapa do tutorial, veja [Etapa 4: adicionar o método CheckTheAnswer()](../ide/step-4-add-the-checktheanswer-parens-method.md).  
+-   To go to the next tutorial step, see [Step 4: Add the CheckTheAnswer() Method](../ide/step-4-add-the-checktheanswer-parens-method.md).  
   
--   Para retornar à etapa anterior do tutorial, veja [Etapa 2: criar um problema de adição aleatório](../ide/step-2-create-a-random-addition-problem.md).
+-   To return to the previous tutorial step, see [Step 2: Create a Random Addition Problem](../ide/step-2-create-a-random-addition-problem.md).

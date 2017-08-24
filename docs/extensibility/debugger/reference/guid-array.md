@@ -1,5 +1,5 @@
 ---
-title: GUID_ARRAY | Documentos do Microsoft
+title: GUID_ARRAY | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,16 +28,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e167424c1778a949860daf40bfcbb5af4d1d93ab
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 85f72389bed0d6c69714cac4f0b0666924bc88c2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="guidarray"></a>GUID_ARRAY
-Descreve uma matriz de identificadores exclusivos para os mecanismos de depuração disponíveis.  
+Describes an array of unique identifiers for available debug engines.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagGUID_ARRAY  
@@ -47,7 +48,7 @@ typedef struct tagGUID_ARRAY
 } GUID_ARRAY;  
 ```  
   
-```c#  
+```cs  
 public struct GUID_ARRAY  
 {  
    public uint dwCount;  
@@ -55,23 +56,23 @@ public struct GUID_ARRAY
 }  
 ```  
   
-## <a name="terms"></a>Termos  
+## <a name="terms"></a>Terms  
  dwCount  
- Número de identificadores exclusivos na matriz.  
+ Number of unique identifiers in the array.  
   
- Membros  
- Matriz que contém identificadores exclusivos.  
+ Members  
+ Array that contains unique identifiers.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é retornada pelo [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md) método.  
+## <a name="remarks"></a>Remarks  
+ This structure is returned by the [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: Msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)

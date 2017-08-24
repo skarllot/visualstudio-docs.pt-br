@@ -1,5 +1,5 @@
 ---
-title: IDebugAddress::GetAddress | Documentos do Microsoft
+title: IDebugAddress::GetAddress | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e009aab7bbadfc40d807e67a9bad71764b132fbd
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7626226e7deffdfacf4b4ac435a0d0fd6a11691f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugaddressgetaddress"></a>IDebugAddress::GetAddress
-Retorna uma estrutura que descreve um objeto e seu local dentro de seu escopo ou contêiner.  
+Returns a structure describing an object and its location within its scope or container.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetAddress (  
@@ -47,21 +48,21 @@ HRESULT GetAddress (
 );  
 ```  
   
-```c#  
+```cs  
 int GetAddress(  
    DEBUG_ADDRESS[] pAddress  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pAddress`  
- [no, out] A [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) estrutura é preenchida por esse método.  
+ [in, out] A [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) structure that is filled in by this method.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- O [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) estrutura é passada para este método, que, em seguida, preenche-a com as informações apropriadas. Como essas informações são interpretadas depende do tipo de informações retornadas e o manipulador de símbolo em si. Consulte [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) para obter mais detalhes.  
+## <a name="remarks"></a>Remarks  
+ The [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) structure is passed to this method, which then fills it in with the appropriate information. How this information is interpreted depends on the kind of information returned and the symbol handler itself. See [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) for more details.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)

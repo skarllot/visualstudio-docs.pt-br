@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::EnableAutoAttach | Documentos do Microsoft
+title: IDebugCoreServer3::EnableAutoAttach | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1401f15584f270a859e8bded192b3a6af54e7040
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e3b398e69db2cd16e9f8f277265ac100e48e7681
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugcoreserver3enableautoattach"></a>IDebugCoreServer3::EnableAutoAttach
-Permite anexar automática para os mecanismos de depuração especificado.  
+Enables automatic attaching for the specified debug engines.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT EnableAutoAttach(  
@@ -50,7 +51,7 @@ HRESULT EnableAutoAttach(
 );  
 ```  
   
-```c#  
+```cs  
 int EnableAutoAttach(  
    Guid[]     rgguidSpecificEngines,  
    uint       celtSpecificEngines,  
@@ -59,24 +60,24 @@ int EnableAutoAttach(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `rgguidSpecificEngines`  
- [in] Matriz de GUIDs para cada mecanismo de depuração para marcar como anexar automaticamente.  
+ [in] Array of GUIDs for each debug engine to mark as auto-attaching.  
   
  `celtSpecificEngines`  
- [in] O número de mecanismos especificado em `rgguidSpecificEngines`.  
+ [in] The number of engines specified in `rgguidSpecificEngines`.  
   
  `pszStartPageUrl`  
- [in] A URL inicial a ser usado ao conectar automaticamente.  
+ [in] The starting URL to use when auto-attaching.  
   
  `pbstrSessionID`  
- [out] ID da sessão que foi anexado automaticamente.  
+ [out] ID of the session that was auto-attached.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna o código de erro. Um código de erro é `E_AUTO_ATTACH_NOT_REGISTERED`, que indica que a fábrica de classes auto-attach não foi registrada.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns error code. One error code is `E_AUTO_ATTACH_NOT_REGISTERED`, which indicates that the auto-attach class factory has not been registered.  
   
-## <a name="remarks"></a>Comentários  
- Quando um programa associado a URL especificada é iniciado, os mecanismos de depuração especificado são iniciados automaticamente e anexados.  
+## <a name="remarks"></a>Remarks  
+ When a program associated with the specified URL is started, the specified debug engines are automatically started and attached.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

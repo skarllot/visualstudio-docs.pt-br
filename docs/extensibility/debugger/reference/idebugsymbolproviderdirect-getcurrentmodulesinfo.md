@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetCurrentModulesInfo | Documentos do Microsoft
+title: IDebugSymbolProviderDirect::GetCurrentModulesInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9da25d96555e7121374f305b3a842c7155f5f636
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0290eadffa24db79f901f6d78511dc9b18f8823e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesinfo"></a>IDebugSymbolProviderDirect::GetCurrentModulesInfo
-Recupera informações sobre os módulos no grupo de símbolo.  
+Retrieves information about the modules in the symbol group.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetCurrentModulesInfo(  
@@ -50,7 +51,7 @@ HRESULT GetCurrentModulesInfo(
 );  
 ```  
   
-```c#  
+```cs  
 int GetCurrentModulesInfo(  
    uint       pCount,  
    Guid       ppGuids,  
@@ -60,24 +61,24 @@ int GetCurrentModulesInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pCount`  
- [in] Número de módulos de `ppGuids` matriz.  
+ [in] Number of modules in the `ppGuids` array.  
   
  `ppGuids`  
- [in] Matriz que contém os identificadores exclusivos para os módulos.  
+ [in] Array that contains the unique identifiers for the modules.  
   
  `pADIds`  
- [in] Identificadores para os domínios de aplicativo.  
+ [in] Identifiers for the application domains.  
   
  `pCurrentState`  
- [in] Estado atual do grupo de símbolo.  
+ [in] Current state of the symbol group.  
   
  `ppCDModItfs`  
- [out] Retorna um objeto que contém os módulos no grupo de símbolo.  
+ [out] Returns an object that contains the modules in the symbol group.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

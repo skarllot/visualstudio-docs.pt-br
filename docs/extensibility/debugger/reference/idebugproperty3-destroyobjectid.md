@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::DestroyObjectID | Documentos do Microsoft
+title: IDebugProperty3::DestroyObjectID | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e5edb1969d2673e245bb6a7b3ca043fdea160fce
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: cbea09405c1cc7f7f808d7dd8b5261b52291603f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugproperty3destroyobjectid"></a>IDebugProperty3::DestroyObjectID
-Destrói a ID exclusiva associada a essa propriedade, indicando que o chamador não se importa identificar essa propriedade exclusivamente de todas as outras propriedades.  
+Destroys the unique ID associated with this property, indicating that the caller no longer cares to identify this property uniquely from all other properties.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT DestroyObjectID(  
@@ -47,18 +48,18 @@ HRESULT DestroyObjectID(
 );  
 ```  
   
-```c#  
+```cs  
 int DestroyObjectID();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Se o mecanismo de depuração não precisar oferecer suporte a IDs exclusivas para uma propriedade (porque ele já rastreia exclusivamente internamente), em seguida, ele pode simplesmente retornar `E_NOTIMPL` para esse método.  
+## <a name="remarks"></a>Remarks  
+ If the debug engine doesn't need to support unique IDs for a property (because it already tracks them uniquely internally), then it can simply return `E_NOTIMPL` for this method.  
   
- Identificações exclusivas são criadas com uma chamada para o [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) método quando o chamador deseja certificar-se de que esta propriedade é identificada exclusivamente entre todas as outras propriedades.  
+ Unique IDs are created with a call to the [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) method when the caller wants to make sure that this property is uniquely identified among all other properties.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md)

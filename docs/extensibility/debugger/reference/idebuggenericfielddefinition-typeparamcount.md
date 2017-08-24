@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldDefinition::TypeParamCount | Documentos do Microsoft
+title: IDebugGenericFieldDefinition::TypeParamCount | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c08c572b38cab76e35a40e75b668a91ba26556eb
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6299d757b8e77dbeb7dc5e5fb5bdf2087f810cf2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebuggenericfielddefinitiontypeparamcount"></a>IDebugGenericFieldDefinition::TypeParamCount
-Recupera o número de parâmetros que estão associados com o campo genérico.  
+Retrieves the number of type parameters that are associated with the generic field.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT TypeParamCount(  
@@ -46,21 +47,21 @@ HRESULT TypeParamCount(
 );  
 ```  
   
-```c#  
+```cs  
 int TypeParamCount(  
    ref uint pcParams  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pcParams`  
- [no, out] Número de parâmetros de tipo.  
+ [in, out] Number of type parameters.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Se lista\<T >, esse método retornará 1 e, se lista\<T1, T2 >, esse método retorna 2. Esse método retorna 0 se não houver nenhum parâmetro de tipo.  
+## <a name="remarks"></a>Remarks  
+ If List\<T>, this method returns 1, and, if List\<T1,T2>, this method returns 2. This method returns 0 if there are no type parameters.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

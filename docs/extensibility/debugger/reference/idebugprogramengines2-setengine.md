@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEngines2::SetEngine | Documentos do Microsoft
+title: IDebugProgramEngines2::SetEngine | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e9234ccdd8fd9a408e5e8cde9fd2e85737e0f671
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8164b95af3f67faec8aa76be34653ca9d679d4bc
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprogramengines2setengine"></a>IDebugProgramEngines2::SetEngine
-O programa ou o nó de programa informa qual mecanismo de depuração (DE) usar para depurá-lo.  
+Tells the program or program node which debug engine (DE) to use to debug this program.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT SetEngine(   
@@ -47,18 +48,18 @@ HRESULT SetEngine(
 );  
 ```  
   
-```c#  
+```cs  
 int SetEngine(   
    ref Guid guidEngine  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `guidEngine`  
- [in] O GUID do DE.  
+ [in] The GUID of the DE.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)

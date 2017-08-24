@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID_TYPE | Documentos do Microsoft
+title: AD_PROCESS_ID_TYPE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3723ab8521a497c03d605498e459618b51ee7955
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 5d47e901dd3c0236641a558ab8520b09e246adb5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="adprocessidtype"></a>AD_PROCESS_ID_TYPE
-Especifica como interpretar uma ID de processo no [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura.  
+Specifies how to interpret a process ID in the [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_AD_PROCESS_ID {  
@@ -49,30 +50,30 @@ enum enum_AD_PROCESS_ID {
 typedef DWORD AD_PROCESS_ID_TYPE;  
 ```  
   
-```c#  
+```cs  
 public enum enum_AD_PROCESS_ID {  
    AD_PROCESS_ID_SYSTEM = 0,  
    AD_PROCESS_ID_GUID   = 1  
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  AD_PROCESS_ID_SYSTEM  
- ID do processo é um identificador de sistema. Use o `ProcessId.dwProcessId` campo o [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura.  
+ Process ID is a system identifier. Use the `ProcessId.dwProcessId` field of the [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure.  
   
  AD_PROCESS_ID_GUID  
- ID do processo é um GUID. Use o `ProcessId.guidProcessId` campo o `AD_PROCESS_ID` estrutura.  
+ Process ID is a GUID. Use the `ProcessId.guidProcessId` field of the `AD_PROCESS_ID` structure.  
   
-## <a name="remarks"></a>Comentários  
- Usado para o `ProcessIdType` membro o [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura para identificar o tipo de ID do processo que está contido na estrutura. Determina como interpretar o `ProcessId` union na estrutura.  
+## <a name="remarks"></a>Remarks  
+ Used for the `ProcessIdType` member of the [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure to identify the type of process ID that is contained in the structure. Determines how to interpret the `ProcessId` union in the structure.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

@@ -1,5 +1,5 @@
 ---
-title: Registrando uma janela de ferramentas | Documentos do Microsoft
+title: Registering a Tool Window | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,18 +29,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 81edb71b450eeee40eae4e73ba38f5db52d6eaf2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 9587f6fa3ad0e23969af83da91a85895ee33bc16
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="registering-a-tool-window"></a>Registrando uma janela de ferramentas
-Você pode registrar as janelas de ferramenta usando <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>e <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute></xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> </xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>  
+# <a name="registering-a-tool-window"></a>Registering a Tool Window
+You can register your tool windows using <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> and  <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute>  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
-```c#  
+```cs  
   
       [ProvideToolWindow(typeof(PersistedWindowPane), Style = MsVsShell.VsDockStyle.Tabbed, Window = "3ae79031-e1bc-11d0-8f78-00a0c9110057")] [ProvideToolWindow(typeof(DynamicWindowPane), PositionX=250, PositionY=250, Width=160, Height=180, Transient=true)] [ProvideToolWindowVisibility(typeof(DynamicWindowPane), /*UICONTEXT_SolutionExists*/"f1536ef8-92ec-443c-9ed7-fdadf150da82")]  
 [ProvideMenuResource(1000, 1)]  
@@ -50,4 +51,4 @@ public class PackageToolWindow : Package
 {  
 ```  
   
- No código acima, o <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>registra as janelas de ferramenta PersistedWindowPane e DynamicWindowPane com o Visual Studio.</xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> A janela da ferramenta persistente é encaixada e guias com **Solution Explorer**, e a janela dinâmica recebe um inicial posição e tamanho padrão. A janela dinâmica é feita transitória, que indica que ele não será criado na inicialização. Grava um valor de DontForceCreate na chave ToolWindows no registro do sistema. Para obter mais informações, consulte [configuração de exibição da janela de ferramenta](../extensibility/tool-window-display-configuration.md).
+ In the code above, the <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> registers the PersistedWindowPane and DynamicWindowPane tool windows with Visual Studio. The persisted tool window is docked and tabbed with **Solution Explorer**, and the dynamic window is given a default starting position and size. The dynamic window is made transient, which indicates that it is not created on startup. This writes a DontForceCreate value in the ToolWindows key in the system registry. For more information, see [Tool Window Display Configuration](../extensibility/tool-window-display-configuration.md).

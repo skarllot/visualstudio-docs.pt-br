@@ -1,5 +1,5 @@
 ---
-title: BP_RES_DATA_FLAGS | Documentos do Microsoft
+title: BP_RES_DATA_FLAGS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7bcea31cc195f252a3f0e14c0a3becd8819ed7aa
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 3c43cb5da0ebcc125bdad760b48e5fcc39fbb7c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="bpresdataflags"></a>BP_RES_DATA_FLAGS
-Especifica se o ponto de interrupção de dados está sendo emulado ou implementado no hardware.  
+Specifies whether the data breakpoint is being emulated or implemented in hardware.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_RES_DATA_FLAGS {   
@@ -48,26 +49,26 @@ enum enum_BP_RES_DATA_FLAGS {
 typedef DWORD BP_RES_DATA_FLAGS;  
 ```  
   
-```c#  
+```cs  
 public enum enum_BP_RES_DATA_FLAGS {   
    BP_RES_DATA_EMULATED = 0x0001  
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  BP_RES_DATA_EMULATED  
- Especifica que o ponto de interrupção de dados está sendo emulado.  
+ Specifies that the data breakpoint is being emulated.  
   
-## <a name="remarks"></a>Comentários  
- Usado para o `dwFlags` membro do [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) estrutura.  
+## <a name="remarks"></a>Remarks  
+ Used for the `dwFlags` member of the [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) structure.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)

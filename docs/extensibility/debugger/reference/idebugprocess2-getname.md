@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetName | Documentos do Microsoft
+title: IDebugProcess2::GetName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ba6dbfd5843afe03abcc8546679978a79716feed
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 09b4c9304c13632b1a5a988257ac81d446d69f89
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprocess2getname"></a>IDebugProcess2::GetName
-Obtém o título, o nome amigável ou o nome de arquivo do processo.  
+Gets the title, friendly name, or file name of the process.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetName(   
@@ -48,23 +49,23 @@ HRESULT GetName(
 );  
 ```  
   
-```c#  
+```cs  
 int GetName(   
    enum_GETNAME_TYPE  gnType,  
    out string         pbstrName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `gnType`  
- [in] Um valor a partir de [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) enumeração que especifica o tipo de nome a ser retornado.  
+ [in] A value from the [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) enumeration that specifies what type of name to return.  
   
  `pbstrName`  
- [out] Retorna o nome do processo.  
+ [out] Returns the name of the process.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)

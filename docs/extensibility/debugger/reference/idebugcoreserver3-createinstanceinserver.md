@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::CreateInstanceInServer | Documentos do Microsoft
+title: IDebugCoreServer3::CreateInstanceInServer | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 34d5fa61447d85d64b1860c8fe32f955089d0258
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b3dfdec89632fd5228801fb1f33f513b533505cc
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugcoreserver3createinstanceinserver"></a>IDebugCoreServer3::CreateInstanceInServer
-Cria uma instância de um mecanismo de depuração no servidor.  
+Creates an instance of a debug engine on the server.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT CreateInstanceInServer(  
@@ -51,7 +52,7 @@ HRESULT CreateInstanceInServer(
 );  
 ```  
   
-```c#  
+```cs  
 int CreateInstanceInServer(  
    string     szDll,   
    ushort     wLangID,   
@@ -61,25 +62,25 @@ int CreateInstanceInServer(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `szDll`  
- [in] Caminho para a dll que implementa o CLSID especificado no `clsidObject` parâmetro. Se isso for `NULL`, em seguida, COM `CoCreateInstance` função é chamada.  
+ [in] Path to the dll that implements the CLSID specified in the `clsidObject` parameter. If this is `NULL`, then COM's `CoCreateInstance` function is called.  
   
  `wLangId`  
- [in] Localidade do mecanismo de depuração. Isso pode ser 0 se o [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) método não deve ser chamado.  
+ [in] Locale of the debug engine. This can be 0 if the [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) method should not be called.  
   
  `clsidObject`  
- [in] CLSID do mecanismo de depuração para criar.  
+ [in] CLSID of the debug engine to create.  
   
  `riid`  
- [in] ID de interface de uma interface específica para recuperar o objeto de classe.  
+ [in] Interface ID of the specific interface to retrieve from the class object.  
   
  `ppvObject`  
- [out] `IUnknown` interface do objeto instanciado. Converter ou empacotar este objeto para a interface desejada.  
+ [out] `IUnknown` interface from the instantiated object. Cast or marshal this object to the desired interface.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)

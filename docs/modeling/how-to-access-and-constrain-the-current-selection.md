@@ -1,5 +1,5 @@
 ---
-title: "Como: acessar e restringir a seleção atual | Documentos do Microsoft"
+title: 'How to: Access and Constrain the Current Selection | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,55 +27,56 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 43c66804a42e6af9ba8ee5c9ced5aea6194a9a39
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b604773481c2b4ad64a91e08e857e25bd7a07207
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
-# <a name="how-to-access-and-constrain-the-current-selection"></a>Como acessar e restringir a seleção atual
-Quando você escreve um manipulador de comando ou gesto para sua linguagem específica do domínio, você pode determinar qual elemento o usuário pequeno. Você também pode impedir alguns campos ou formas seja selecionada. Por exemplo, você pode organizar que quando o usuário clica em um decorador de ícone, de forma que o contém for selecionada. Restringir a seleção dessa maneira reduz o número de manipuladores que você precisa escrever. Ele também torna mais fácil para o usuário, que pode clicar em qualquer lugar na forma sem a necessidade de evitar o decorador.  
+# <a name="how-to-access-and-constrain-the-current-selection"></a>How to: Access and Constrain the Current Selection
+When you write a command or gesture handler for your domain-specific language, you can determine what element the user right-clicked. You can also prevent some shapes or fields from being selected. For example, you can arrange that when the user clicks an icon decorator, the shape that contains it is selected instead. Constraining the selection in this manner reduces the number of handlers that you have to write. It also makes it easier for the user, who can click anywhere in the shape without having to avoid the decorator.  
   
-## <a name="accessing-the-current-selection-from-a-command-handler"></a>Acessando a seleção atual de um manipulador de comando  
- A classe do conjunto de comandos para uma linguagem específica do domínio contém os manipuladores de comando para os comandos personalizados. O <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>classe, da qual deriva a classe do conjunto de comandos para uma linguagem específica do domínio, fornece alguns membros para acessar a seleção atual.</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>  
+## <a name="accessing-the-current-selection-from-a-command-handler"></a>Accessing the Current Selection from a Command Handler  
+ The command set class for a domain-specific language contains the command handlers for your custom commands. The <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> class, from which the command set class for a domain-specific language derives, provides a few members for accessing the current selection.  
   
- Dependendo do comando, o manipulador de comandos talvez precise a seleção no designer de modelo, o Gerenciador de modelos ou a janela ativa.  
+ Depending on the command, the command handler might need the selection in the model designer, the model explorer, or the active window.  
   
-#### <a name="to-access-selection-information"></a>Para acessar informações sobre a seleção  
+#### <a name="to-access-selection-information"></a>To access selection information  
   
-1.  O <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>classe define os seguintes membros que podem ser usados para acessar a seleção atual.</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>  
+1.  The <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> class defines the following members that can be used to access the current selection.  
   
-    |Membro|Descrição|  
+    |Member|Description|  
     |------------|-----------------|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A>método</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A>|Retorna `true` se qualquer um dos elementos selecionados no designer de modelo é uma forma de compartimento; caso contrário, `false`.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A>método</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A>|Retorna `true` se o diagrama for selecionado no designer de modelo; caso contrário, `false`.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A>método</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A>|Retorna `true` se exatamente um elemento é selecionado no designer de modelo; caso contrário, `false`.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A>método</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A>|Retorna `true` se exatamente um elemento é selecionado na janela ativa; caso contrário, `false`.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A>propriedade</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A>|Obtém uma coleção somente leitura dos elementos selecionados no designer de modelo.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A>propriedade</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A>|Obtém uma coleção somente leitura dos elementos selecionados na janela ativa.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A>propriedade</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A>|Obtém o elemento principal da seleção no designer de modelo.|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A>propriedade</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A>|Obtém o elemento principal da seleção da janela ativa.|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> method|Returns `true` if any of the elements selected in the model designer is a compartment shape; otherwise, `false`.|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> method|Returns `true` if the diagram is selected in the model designer; otherwise, `false`.|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> method|Returns `true` if exactly one element is selected in the model designer; otherwise, `false`.|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> method|Returns `true` if exactly one element is selected in the active window; otherwise, `false`.|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> property|Gets a read-only collection of the elements selected in the model designer.|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> property|Gets a read-only collection of the elements selected in the active window.|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> property|Gets the primary element of the selection in the model designer.|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> property|Gets the primary element of the selection in the active window.|  
   
-2.  O <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A>propriedade o <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>classe fornece acesso ao <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>objeto que representa a janela do designer de modelo e fornece acesso adicional elementos selecionados no designer de modelo.</xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> </xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> </xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A>  
+2.  The <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A> property of the <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> class provides access to the <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> object that represents the model designer window and provides additional access the selected elements in the model designer.  
   
-3.  Além disso, o código gerado define uma propriedade de janela de ferramenta do explorer e uma propriedade de seleção do explorer no comando definir a classe para a linguagem específica do domínio.  
+3.  In addition, the generated code defines an explorer tool window property and an explorer selection property in the command set class for the domain-specific language.  
   
-    -   A propriedade de janela de ferramenta explorer retorna uma instância da classe de janela de ferramenta explorer para a linguagem específica do domínio. A classe de janela de ferramenta explorer deriva de <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow>classe e representa o Gerenciador de modelos para a linguagem específica do domínio.</xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow>  
+    -   The explorer tool window property returns an instance of the explorer tool window class for the domain-specific language. The explorer tool window class derives from the <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow> class and represents the model explorer for the domain-specific language.  
   
-    -   O `ExplorerSelection` propriedade retorna o elemento selecionado na janela do Gerenciador de modelo para a linguagem específica do domínio.  
+    -   The `ExplorerSelection` property returns the selected element in the model explorer window for the domain-specific language.  
   
-## <a name="determining-which-window-is-active"></a>Determinando qual janela está ativa  
- O <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>contém interface define os membros que fornecem acesso ao estado atual de seleção no shell.</xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> Você pode obter um <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>a classe do pacote ou a classe do conjunto de comandos para a linguagem específica do domínio por meio do objeto de `MonitorSelection` propriedade definida na classe base de cada um.</xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> A classe de pacote deriva de <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>classe e a classe do conjunto de comandos deriva de <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>classe.</xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> </xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>  
+## <a name="determining-which-window-is-active"></a>Determining which window is active  
+ The <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> interface contains defines members that provide access to the current selection state in the shell. You can get an <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> object from either the package class or the command set class for the domain-specific language through the `MonitorSelection` property defined in the base class of each. The package class derives from the <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage> class, and the command set class derives from the <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> class.  
   
-#### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>Para determinar de um manipulador de comandos que tipo de janela está ativo  
+#### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>To determine from a command handler what type of window is active  
   
-1.  O <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A>propriedade o <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>classe retorna um <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>objeto que fornece acesso para o estado da seleção atual no shell.</xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> </xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> </xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A>  
+1.  The <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A> property of the <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> class returns an <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> object that provides access to the current selection state in the shell.  
   
-2.  O <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A>propriedade o <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>interface obtém o contêiner de seleção ativa, que pode ser diferente da janela ativa.</xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> </xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A>  
+2.  The <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A> property of the <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> interface gets the active selection container, which can be different from the active window.  
   
-3.  Adicione que as seguintes propriedades para o comando definido classe para você linguagem específica do domínio para determinar que tipo de janela está ativo.  
+3.  Add the following properties to the command set class for you domain-specific language to determine what type of window is active.  
   
-    ```c#  
+    ```cs  
     // using Microsoft.VisualStudio.Modeling.Shell;  
   
     // Returns true if the model designer is the active selection container;  
@@ -101,29 +102,29 @@ Quando você escreve um manipulador de comando ou gesto para sua linguagem espec
     }  
     ```  
   
-## <a name="constraining-the-selection"></a>Restringir a seleção  
- Adicionando regras de seleção, você pode controlar quais elementos são selecionados quando o usuário seleciona um elemento no modelo. Por exemplo, para permitir que o usuário tratar um número de elementos como uma única unidade, você pode usar uma regra de seleção.  
+## <a name="constraining-the-selection"></a>Constraining the Selection  
+ By adding selection rules, you can control which elements are selected when the user selects an element in the model. For example, to allow the user to treat a number of elements as a single unit, you can use a selection rule.  
   
-#### <a name="to-create-a-selection-rule"></a>Para criar uma regra de seleção  
+#### <a name="to-create-a-selection-rule"></a>To create a selection rule  
   
-1.  Crie um arquivo de código personalizado no projeto DSL  
+1.  Create a custom code file in the DSL project  
   
-2.  Defina uma classe de regra de seleção que deriva de <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules>classe.</xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules>  
+2.  Define a selection rule class that is derived from the <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules> class.  
   
-3.  Substituir o <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A>método da classe de regra de seleção para aplicar os critérios de seleção.</xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A>  
+3.  Override the <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A> method of the selection rule class to apply the selection criteria.  
   
-4.  Adicione uma definição de classe parcial para a classe ClassDiagram ao seu arquivo de código personalizado.  
+4.  Add a partial class definition for the ClassDiagram class to your custom code file.  
   
-     O `ClassDiagram` classe deriva de <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>classe e é definido no arquivo de código gerado, a Diagram.cs, no projeto DSL.</xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>  
+     The `ClassDiagram` class derives from the <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> class and is defined in the generated code file, Diagram.cs, in the DSL project.  
   
-5.  Substituir o <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A>propriedade o `ClassDiagram` classe para retornar a regra de seleção personalizada.</xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A>  
+5.  Override the <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> property of the `ClassDiagram` class to return the custom selection rule.  
   
-     A implementação padrão de <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A>propriedade obtém um objeto de regra de seleção que não modifica a seleção.</xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A>  
+     The default implementation of the <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> property gets a selection rule object that does not modify the selection.  
   
-### <a name="example"></a>Exemplo  
- O arquivo de código a seguir cria uma regra de seleção que expande a seleção para incluir todas as instâncias de cada uma das formas de domínio que foi inicialmente selecionado.  
+### <a name="example"></a>Example  
+ The following code file creates a selection rule that expands the selection to include all instances of each of the domain shapes that was initially selected.  
   
-```c#  
+```cs  
 using System;  
 using System.Collections.Generic;  
 using Microsoft.VisualStudio.Modeling;  
@@ -221,11 +222,11 @@ namespace CompanyName.ProductName.GroupingDsl
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet></xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>   
- <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage></xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>   
- <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView></xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>   
- <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow></xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow>   
- <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService></xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>   
- <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules></xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules>   
- <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram></xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>
+## <a name="see-also"></a>See Also  
+ <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>   
+ <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>   
+ <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>   
+ <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow>   
+ <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>   
+ <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules>   
+ <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>

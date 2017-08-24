@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetAddressesFromContext | Documentos do Microsoft
+title: IDebugSymbolProvider::GetAddressesFromContext | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 72fc9d2d9c0d216331bff5a26fa0c1562a3451c6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: cb8b0c2178e9b4ab274db07c48263862b6229a21
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugsymbolprovidergetaddressesfromcontext"></a>IDebugSymbolProvider::GetAddressesFromContext
-Esse método mapeia um contexto de documento em uma matriz de endereços de depuração.  
+This method maps a document context into an array of debug addresses.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetAddressesFromContext(   
@@ -50,7 +51,7 @@ HRESULT GetAddressesFromContext(
 );  
 ```  
   
-```c#  
+```cs  
 int GetAddressesFromContext(  
    IDebugDocumentContext2  pDocContext,  
    bool                    fStatmentOnly,  
@@ -59,28 +60,28 @@ int GetAddressesFromContext(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pDocContext`  
- [in] O contexto do documento.  
+ [in] The document context.  
   
  `fStatmentOnly`  
- [in] Se TRUE, limita os endereços de depuração para uma única instrução.  
+ [in] If TRUE, limits the debug addresses to a single statement.  
   
  `ppEnumBegAddresses`  
- [out] Retorna um enumerador para os endereços iniciais de depuração associados com esta instrução ou linha.  
+ [out] Returns an enumerator for the starting debug addresses associated with this statement or line.  
   
  `ppEnumEndAddresses`  
- [out] Retorna um [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) enumerador para os endereços de depuração final associados com esta instrução ou linha.  
+ [out] Returns an [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) enumerator for the ending debug addresses associated with this statement or line.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Um contexto de documento normalmente indica um intervalo de linhas de origem. Este método fornece inicial e final depuração endereços associados a essas linhas. Algumas linguagens permitem que as instruções que abrangem várias linhas e linhas que contém mais de uma instrução. Este método fornece um sinalizador para limitar os endereços de depuração para uma única instrução.  
+## <a name="remarks"></a>Remarks  
+ A document context typically indicates a range of source lines. This method provides the starting and ending debug addresses associated with these lines. Some languages allow statements that span multiple lines, or lines that contains more than one statement. This method provides a flag to limit the debug addresses to a single statement.  
   
- É possível que uma única instrução ter vários endereços de depuração, como no caso de modelos.  
+ It is possible for a single statement to have multiple debug addresses, as in the case of templates.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [GetAddressesFromPosition](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition.md)   
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

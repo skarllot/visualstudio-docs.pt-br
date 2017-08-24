@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::Compare | Documentos do Microsoft
+title: IDebugReference2::Compare | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 36d9d19354eebeb30fe69f9b0822b86b598f14eb
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f4de78b3e6886643a51c417683921e175ececeb7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugreference2compare"></a>IDebugReference2::Compare
-Compara uma referência para outro. Reservado para uso futuro.  
+Compares one reference to another. Reserved for future use.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Compare (   
@@ -48,23 +49,23 @@ HRESULT Compare (
 );  
 ```  
   
-```c#  
+```cs  
 int Compare (   
    enum_REFERENCE_COMPARE dwCompare,  
    IDebugReference2       pReference  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `dwCompare`  
- [in] Um valor a partir de [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) enumeração que especifica a operação de comparação, por exemplo, maior ou igual a, menor.  
+ [in] A value from the [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) enumeration that specifies the comparison operation, for example, equal to, less than, or greater than.  
   
  `pReference`  
- [in] Um [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto que representa a referência a ser comparado com.  
+ [in] An [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object representing the reference to be compared to.  
   
-## <a name="return-value"></a>Valor de retorno  
- Sempre retorna `E_NOTIMPL`.  
+## <a name="return-value"></a>Return Value  
+ Always returns `E_NOTIMPL`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
  [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessQueryProperties::QueryProperties | Documentos do Microsoft
+title: IDebugProcessQueryProperties::QueryProperties | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,16 +28,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c54b8bd91150296640d4491d02e1cd0e55e5e0c4
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 84860410167cf7ad5905ed378aa4a3fc5a78292f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprocessquerypropertiesqueryproperties"></a>IDebugProcessQueryProperties::QueryProperties
-Essa consulta método um valores de propriedade especificada do processo de depuração.  
+This method queries for a specified property values of the debugging process.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT QueryProperties(  
@@ -46,19 +47,19 @@ HRESULT QueryProperties(
    VARIANT               *rgtPropValues);  
 ```  
   
-```c#  
+```cs  
 int QueryProperties(  
    uint                       celt,  
    enum_PROCESS_PROPERTY_TYPE rgdwPropTypes,  
    out object[ ]              rgtPropValues);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `celt`  
- [in] Tamanho das matrizes que contém as definições de propriedade e valores de propriedade.  
+ [in] Size of the arrays containing the property definitions and property values.  
   
  `dwPropType`  
- [in] Uma matriz que contém as definições das propriedades consultadas. Os valores possíveis são:  
+ [in] An array that contains definitions of the queried properties. The possible values are:  
   
 -   PROCESS_PROPERTY_COMMAND_LINE = 1  
   
@@ -67,13 +68,13 @@ int QueryProperties(
 -   PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3  
   
  `pvarPropValue`  
- [out] Uma matriz que contém os valores de propriedade.  
+ [out] An array containing the property values.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Esse método é usado raramente.  
+## <a name="remarks"></a>Remarks  
+ This method is seldom used.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

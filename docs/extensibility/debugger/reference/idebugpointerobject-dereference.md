@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::Dereference | Documentos do Microsoft
+title: IDebugPointerObject::Dereference | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 06af31ef9bd784ad4dc4797eeb3d7ddbaf3ed8c6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d86b9e1f8352ff827bf6cc6919c048c60f17e890
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugpointerobjectdereference"></a>IDebugPointerObject::Dereference
-Obtém o objeto apontado.  
+Gets the object pointed to.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT DeReference(   
@@ -48,25 +49,25 @@ HRESULT DeReference(
 );  
 ```  
   
-```c#  
+```cs  
 int Dereference(  
    uint             dwIndex,   
    out IDebugObject ppObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `dwIndex`  
- [in] Um deslocamento de byte simples desde o início do objeto apontado.  
+ [in] A simple byte offset from the beginning of the object pointed to.  
   
  `ppObject`  
- [out] Retorna um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) do objeto que representa o objeto apontado, além de deslocamento, se houver.  
+ [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the object pointed to, plus offset, if any.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro. Retornará E_FAIL se este objeto não aponta para um outro objeto.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code. Returns E_FAIL if this object does not point to another object.  
   
-## <a name="remarks"></a>Comentários  
- O objeto apontado pode ser um primitivo ou um tipo mais complexo, como uma classe ou estrutura.  
+## <a name="remarks"></a>Remarks  
+ The object pointed to can be a primitive or a more complex type such as a class or structure.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)

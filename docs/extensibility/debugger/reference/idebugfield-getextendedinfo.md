@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetExtendedInfo | Documentos do Microsoft
+title: IDebugField::GetExtendedInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c452ac23c276ca7fabe2d889e35c1c4d9d5d21e9
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f37bc822231380dd5dc5c07cdf0d93b13b919c88
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
-Esse método obtém informações estendido sobre um campo.  
+This method gets extended information about a field.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetExtendedInfo(   
@@ -49,7 +50,7 @@ HRESULT GetExtendedInfo(
 );  
 ```  
   
-```c#  
+```cs  
 int GetExtendedInfo(  
    ref Guid guidExtendedInfo,   
    IntPtr[] prgBuffer,   
@@ -57,26 +58,26 @@ int GetExtendedInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `guidExtendedInfo`  
- [in] Seleciona as informações a serem retornadas. Os valores válidos são:  
+ [in] Selects the information to be returned. Valid values are:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|`guidConstantValue`|O valor como uma sequência de bytes.|  
-|`guidConstantType`|O tipo como uma assinatura de tipo.|  
+|`guidConstantValue`|The value as a sequence of bytes.|  
+|`guidConstantType`|The type as a type signature.|  
   
  `prgBuffer`  
- [out] Retorna as informações estendidas.  
+ [out] Returns the extended information.  
   
  `pdwLen`  
- [no, out] Retorna o tamanho das informações estendidas, em bytes.  
+ [in, out] Returns the size of the extended information, in bytes.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Atualmente, esse método retorna apenas o tipo ou valor de uma constante. O chamador deve liberar o buffer retornado em `prgBuffer` chamando COM `CoTaskMemFree` função (C++) ou <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>(c#).</xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>  
+## <a name="remarks"></a>Remarks  
+ Currently, this method returns only the type or value of a constant. The caller must free the buffer returned in `prgBuffer` by calling COM's `CoTaskMemFree` function (C++) or <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> (C#).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

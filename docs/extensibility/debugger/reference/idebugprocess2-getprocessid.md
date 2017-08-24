@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetProcessId | Documentos do Microsoft
+title: IDebugProcess2::GetProcessId | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 46581f9ea2c6662ee70f031c446b6d9883127f1b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: a89cb13322019ef22af927974afab48f10626598
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugprocess2getprocessid"></a>IDebugProcess2::GetProcessId
-Obtém o GUID para esse processo.  
+Gets the GUID for this process.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetProcessId(  
@@ -47,21 +48,21 @@ HRESULT GetProcessId(
 );  
 ```  
   
-```c#  
+```cs  
 int GetProcessId(  
    out Guid pguidProcessId  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pguidProcessId`  
- [out] Retorna o GUID para esse processo.  
+ [out] Returns the GUID for this process.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- O identificador global exclusivo (GUID) identifica esse processo de todos os outros processos em execução no sistema.  
+## <a name="remarks"></a>Remarks  
+ The Globally Unique IDentifier (GUID) identifies this process from all other processes running in the system.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

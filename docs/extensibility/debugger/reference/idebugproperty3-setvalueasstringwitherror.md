@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::SetValueAsStringWithError | Documentos do Microsoft
+title: IDebugProperty3::SetValueAsStringWithError | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9f41873f442cf513f85515019f8bdc949e2fe5ca
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ea47050c28041ee660f971c8f0bafc2f57916724
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
-Define o valor dessa propriedade e retorna uma mensagem de erro, se necessário.  
+Sets the value of this property and returns an error message, if necessary.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT SetValueAsStringWithError(  
@@ -50,7 +51,7 @@ HRESULT SetValueAsStringWithError(
 );  
 ```  
   
-```c#  
+```cs  
 int SetValueAsStringWithError(  
    string     pszValue,  
    uint       dwRadix,  
@@ -59,27 +60,27 @@ int SetValueAsStringWithError(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pszValue`  
- [in] Valor a ser definido.  
+ [in] Value to set.  
   
  `dwRadix`  
- [in] A base do valor que está sendo definido.  
+ [in] The radix of the value being set.  
   
  `dwTimeout`  
- [in] O período de tempo de espera para o valor a ser definido (`INFINITE` significa aguardar indefinidamente).  
+ [in] The length of time to wait for the value to be set (`INFINITE` means wait forever).  
   
  `errorString`  
- [out] Se houver um erro ao definir o valor, ele mantém o motivo da falha.  
+ [out] If there was an error setting the value, this holds the reason for the failure.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- O valor de entrada pode ser uma expressão a ser avaliada.  
+## <a name="remarks"></a>Remarks  
+ The incoming value could be an expression to be evaluated.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CProperty** objeto expõe o [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interface.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CProperty** object that exposes the [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interface.  
   
 ```cpp#  
 HRESULT CProperty::SetValueAsStringWithError(   
@@ -183,5 +184,5 @@ HRESULT CProperty::SetValueAsStringWithError(
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)
