@@ -1,64 +1,74 @@
 ---
-title: "Ferramentas de dados do Visual Studio para .NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/23/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Visual Studio data tools for .NET | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c3175080-1dfb-4ab8-a460-92dadbb844b4
 caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a70efa7c969ee0bec6975278b877d4ab69a0d039
+ms.openlocfilehash: 2077782fd7fa253f9fa542b87ac5c94978141dae
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/25/2017
+
 ---
-# Ferramentas de dados do Visual Studio para .NET
-O Visual Studio e o .NET Framework juntos fornecem API abrangentes e ferramentas de suporte para se conectar a bancos de dados, modelagem de dados na memória e exibir os dados na interface do usuário.  As classes do .NET Framework que fornecem funcionalidade de acesso a dados são conhecidas como [ADO.NET](https://msdn.microsoft.com/en-us/library/e80y5yhx\(v=vs.110\).aspx). ADO.NET, juntamente com os dados das ferramentas no Visual Studio, foi originalmente projetado principalmente para oferecer suporte a bancos de dados relacionais e XML. Atualmente, muitos fornecedores de banco de dados NoSQL, ou de terceiros, oferecem provedores ADO.NET.  
+# <a name="visual-studio-data-tools-for-net"></a>Visual Studio data tools for .NET
+Visual Studio and the .NET Framework together provide extensive API and tooling support for connecting to databases, modeling data in memory, and displaying the data in the user interface.  The .NET Framework classes that provide data-access functionality are known as [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx). ADO.NET, along with the data tooling in Visual Studio, was originally designed primarily to support relational databases and XML. These days,  many NoSQL database vendors, or third parties, offer ADO.NET providers.  
   
- Atualização 2 do Visual Studio 2015 inclui as atualizações mais recentes de [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686\(v=vs.103\).aspx), que permitem que o suporte para os recursos mais recentes no Azure [banco de dados SQL](https://azure.microsoft.com/en-us/services/sql-database/) e [SQL Server 2016](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2016/).[.NET core](https://www.dotnetfoundation.org/netcore) suporta ADO.NET, exceto para conjuntos de dados e os tipos relacionados. Se você tiver como alvo o .NET Core e exige uma camada de mapeamento relacional de objeto \(ORM\), use [Entity Framework Core](https://msdn.microsoft.com/en-us/data/ef.aspx).  
+[.NET Core](https://www.dotnetfoundation.org/netcore) supports ADO.NET, except for datasets and related types. If you are targeting .NET Core and require an object-relational mapping (ORM) layer, use [Entity Framework Core](https://docs.microsoft.com/ef/core/).  
   
- O diagrama a seguir mostra uma exibição simplificada da arquitetura básica:  
+ The following diagram shows a simplified view of  the basic architecture:  
   
- ![ADO.NET Architecture](../data-tools/media/raddata-ado.net-architecture-diagram.png "raddata ADO.NET Architecture Diagram")  
+ ![ADO.NET Architecture](../data-tools/media/raddata-ado-net-architecture-diagram.png "raddata ADO.NET Architecture Diagram")  
   
- O fluxo de trabalho típico é o seguinte:  
+ The typical workflow is this:  
   
-1.  Instale um banco de dados de teste ou desenvolvimento em sua máquina local. Consulte [Instalar sistemas de banco de dados, ferramentas e exemplos](../data-tools/installing-database-systems-tools-and-samples.md). Se você estiver usando um serviço de dados do Azure, essa etapa não é necessária.  
+1.  Install a development or test database on your local machine. See [Installing database systems, tools, and samples](../data-tools/installing-database-systems-tools-and-samples.md). If you are using an Azure data service, this step is not necessary.  
   
-2.  Teste a conexão com o banco de dados \(ou serviço ou arquivo local\) no Visual Studio. Consulte [Adicionar novas conexões](../data-tools/add-new-connections.md).  
+2.  Test the connection to the database (or service or local file) in Visual Studio. See [Add new connections](../data-tools/add-new-connections.md).  
   
-3.  \(Opcional\) Use as ferramentas para gerar e configurar um novo modelo. Modelos com base no Entity Framework são a recomendação padrão para novos aplicativos. O modelo, qualquer um que você usa, é a fonte de dados que o aplicativo interage com. O modelo situada logicamente entre o banco de dados ou serviço e o aplicativo.  Consulte [Adicionar novas fontes de dados](../data-tools/add-new-data-sources.md).  
+3.  (Optional) Use the tools to generate and configure a new model. Models based on Entity Framework are the default recommendation for new applications. The model, whichever one you use,  is the data source that the application interacts with. The model sits logically between the database or service and the application.  See [Add new data sources](../data-tools/add-new-data-sources.md).  
   
-4.  Arraste a fonte de dados de **fontes de dados** janela em uma superfície de design do Windows Forms, ASP.NET ou Windows Presentation Foundation para gerar o código de associação de dados que exibirão os dados para o usuário da maneira que você especificar. Consulte [Associar controles a dados no Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).  
+4.  Drag the data source from the **Data Sources** window onto a Windows Forms, ASP.NET, or Windows Presentation Foundation design surface to generate the data-binding code that will display the data to the user in the way that you specify. See [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).  
   
-5.  Adicione código personalizado para coisas como as regras de negócio, pesquisa e validação de dados ou para tirar proveito da funcionalidade personalizada que expõe o banco de dados subjacente.  
+5.  Add custom code for things like business rules, search, and data validation, or to take advantage of custom functionality that the underlying database exposes.  
   
- Você pode ignorar a etapa 3 e programar um aplicativo .NET para emitir comandos diretamente para um banco de dados, em vez de usar um modelo. Nesse caso, você encontrará a documentação relevante aqui: [ADO.NET](https://msdn.microsoft.com/en-us/library/e80y5yhx\(v=vs.110\).aspx). Observe que você ainda pode usar o Assistente de configuração de fonte de dados e designers para gerar código de associação de dados ao preencher seus próprios objetos na memória e, em seguida, controles de interface do usuário de ligação de dados para esses objetos.  
+ You can skip step 3 and program a .NET application to issue commands directly to a database, rather than using a model. In this case, you will find the relevant documentation here: [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx). Note that you still can use the   Data Source Configuration Wizard and designers to generate data-binding code when you populate your own objects in memory and then data-bind UI controls to those objects.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>In this section  
   
--   [Criar um aplicativo simples de dados usando o ADO.NET](../data-tools/create-a-simple-data-application-by-using-adonet.md)  
+-   [Create a simple data application by using ADO.NET](../data-tools/create-a-simple-data-application-by-using-adonet.md)  
   
--   [Adicionar novas conexões](../data-tools/add-new-connections.md)  
+-   [Add new connections](../data-tools/add-new-connections.md)  
   
--   [Adicionar novas fontes de dados](../data-tools/add-new-data-sources.md)  
+-   [Add new data sources](../data-tools/add-new-data-sources.md)  
   
--   [Ferramentas do modelo de dados de entidade no Visual Studio](../data-tools/entity-data-model-tools-in-visual-studio.md)  
+-   [Entity Data Model Tools in Visual Studio](../data-tools/entity-data-model-tools-in-visual-studio.md)  
   
--   [Ferramentas do conjunto de dados no Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)  
+-   [Dataset tools in Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)  
   
--   [LINQ to SQL Tools no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)  
+-   [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)  
   
--   [Associar controles a dados no Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)  
+-   [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)  
   
--   [Recursos adicionais para solucionar problemas de erros de acesso a dados](../data-tools/additional-resources-for-troubleshooting-data-access-errors.md)  
+-   [Additional resources for troubleshooting data access errors](../data-tools/additional-resources-for-troubleshooting-data-access-errors.md)  
   
--   [Serviços do Windows Communication Foundation e WCF Data Services no Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)  
+-   [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)  
   
--   [Criar e gerenciar bancos de dados e aplicativos de camada de dados no Visual Studio](../data-tools/creating-and-managing-databases-and-data-tier-applications-in-visual-studio.md)  
+-   [Creating and managing databases and data-tier applications in Visual Studio](../data-tools/creating-and-managing-databases-and-data-tier-applications-in-visual-studio.md)  
   
--   [Recursos adicionais para solucionar problemas de erros de acesso a dados](../data-tools/additional-resources-for-troubleshooting-data-access-errors.md)  
+-   [Additional resources for troubleshooting data access errors](../data-tools/additional-resources-for-troubleshooting-data-access-errors.md)  
   
-## Consulte também  
- [Acessando dados no Visual Studio](../data-tools/accessing-data-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Accessing data in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)
