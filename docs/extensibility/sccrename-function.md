@@ -1,5 +1,5 @@
 ---
-title: "Função SccRename | Documentos do Microsoft"
+title: SccRename Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c896688743e6ff41fcc2fd5e11197ab36c45719e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 58a500fe775bb7837e6132bd918be63fb68b7fe2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sccrename-function"></a>Função SccRename
-Essa função renomeia um arquivo no sistema de controle de origem.  
+# <a name="sccrename-function"></a>SccRename Function
+This function renames a file in the source control system.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccRename(  
    LPVOID pvContext,  
    HWND   hWnd,  
@@ -50,35 +51,35 @@ SCCRTN SccRename(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- [in] A estrutura de contexto de plug-in de controle de origem.  
+ [in] The source control plug-in context structure.  
   
  hWnd  
- [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para as caixas de diálogo que ele fornece.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  lpFileName  
- [in] O nome de arquivo totalmente qualificado do arquivo que está sendo renomeado.  
+ [in] The fully qualified file name of the file being renamed.  
   
  lpNewName  
- [in] O novo nome totalmente qualificado. Se o caminho do diretório é diferente, o arquivo foi movido de um subdiretório para outro.  
+ [in] The fully qualified new name. If the directory path is different, then the file has moved from one subdirectory to another.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|SCC_OK|A operação de renomeação foi concluída com êxito.|  
-|SCC_E_PROJNOTOPEN|O projeto não está aberto no controle de origem.|  
-|SCC_E_FILENOTCONTROLLED|O arquivo não está sob controle de origem.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção.|  
-|SCC_E_NOTAUTHORIZED|O usuário não está autorizado para concluir esta operação.|  
-|SCC_E_COULDNOTCREATEPROJECT|O projeto não pôde ser criado como parte do processo de renomeação.|  
-|SCC_E_OPNOTPERFORMED|A operação não foi executada.|  
-|SCC_E_NONSPECIFICERROR|Ocorreu um erro geral ou não especificado.|  
+|SCC_OK|The renaming operation completed successfully.|  
+|SCC_E_PROJNOTOPEN|The project is not open under source control.|  
+|SCC_E_FILENOTCONTROLLED|The file is not under source control.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues.|  
+|SCC_E_NOTAUTHORIZED|The user is not authorized to complete this operation.|  
+|SCC_E_COULDNOTCREATEPROJECT|The project could not be created as part of the renaming process.|  
+|SCC_E_OPNOTPERFORMED|The operation was not performed.|  
+|SCC_E_NONSPECIFICERROR|An unspecified or general error occurred.|  
   
-## <a name="remarks"></a>Comentários  
- Essa função pode ser usada para renomear um arquivo ou movê-lo de um local para outro no sistema de controle de origem. O plug-in de controle de origem não deve tentar acessar o arquivo no disco. É responsabilidade do IDE para renomear o arquivo local.  
+## <a name="remarks"></a>Remarks  
+ This function can be used to rename a file or move it from one location to another in the source control system. The source control plug-in should not attempt to access the file on disk. It is the IDE's responsibility to rename the local file.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: "Função SccDirDiff | Documentos do Microsoft"
+title: SccDirDiff Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3f39f9aa781751ae3f750aae5dccd694cd6a5d58
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 8dd2e57fc177f726cc08226df9f7e1e0a520b74b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sccdirdiff-function"></a>Função SccDirDiff
-Esta função exibe as diferenças entre o diretório local atual no disco do cliente e o projeto sob controle de origem correspondente.  
+# <a name="sccdirdiff-function"></a>SccDirDiff Function
+This function displays the differences between the current local directory on the client disk and the corresponding project under source control.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccDirDiff(  
    LPVOID    pContext,  
    HWND      hWnd,  
@@ -51,51 +52,51 @@ SCCRTN SccDirDiff(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  pContext  
- [in] A estrutura de contexto de plug-in de controle de origem.  
+ [in] The source control plug-in context structure.  
   
  hWnd  
- [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para as caixas de diálogo que ele fornece.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  lpDirName  
- [in] Caminho totalmente qualificado para o diretório local para o qual mostram uma diferença visual.  
+ [in] Fully qualified path to the local directory for which to show a visual difference.  
   
  dwFlags  
- [in] Sinalizadores de comando (consulte comentários seção).  
+ [in] Command flags (see Remarks section).  
   
  pvOptions  
- [in] Opções de plug-in específico de controle de origem.  
+ [in] Source control plug-in-specific options.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|SCC_OK|O diretório em disco é o mesmo que o projeto no controle do código fonte.|  
-|SCC_I_FILESDIFFER|O diretório no disco é diferente do projeto no controle do código fonte.|  
-|SCC_I_RELOADFILE|Um arquivo ou projeto precisa ser recarregado.|  
-|SCC_E_FILENOTCONTROLLED|O diretório não está sob controle do código fonte.|  
-|SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Falha não específica.|  
-|SCC_E_FILENOTEXIST|Não foi possível localizar o diretório local.|  
+|SCC_OK|The directory on disk is the same as the project in source code control.|  
+|SCC_I_FILESDIFFER|The directory on disk is different from the project in source code control.|  
+|SCC_I_RELOADFILE|A file or project needs to be reloaded.|  
+|SCC_E_FILENOTCONTROLLED|The directory is not under source code control.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nonspecific failure.|  
+|SCC_E_FILENOTEXIST|Local directory could not be found.|  
   
-## <a name="remarks"></a>Comentários  
- Essa função é usada para instruir o controle da fonte de plug-in para exibir ao usuário uma lista de alterações para um diretório especificado. O plug-in abre sua própria janela, em um formato de sua escolha, para exibir as diferenças entre o diretório do usuário no disco e o projeto sob controle de versão correspondente.  
+## <a name="remarks"></a>Remarks  
+ This function is used to instruct the source control plug-in to display to the user a list of changes to a specified directory. The plug-in opens its own window, in a format of its choice, to display the differences between the user's directory on disk and the corresponding project under version control.  
   
- Se uma comparação oferece suporte a plug-in de diretórios em todas, deve suportar comparação de diretórios em uma base de nome de arquivo mesmo se não há suporte para as opções "comparação rápida".  
+ If a plug-in supports comparison of directories at all, it must support comparison of directories on a file-name basis even if the "quick-diff" options are not supported.  
   
-|`dwFlags`|Interpretação|  
+|`dwFlags`|Interpretation|  
 |---------------|--------------------|  
-|SCC_DIFF_IGNORECASE|Comparação de maiusculas e minúsculas (pode ser usado para comparação rápida ou visual).|  
-|SCC_DIFF_IGNORESPACE|Ignora o espaço em branco (pode ser usado para comparação rápida ou visual).|  
-|SCC_DIFF_QD_CONTENTS|Se houver suporte a plug-in de controle de origem, compara silenciosamente o diretório, byte por byte.|  
-|SCC_DIFF_QD_CHECKSUM|Se suportado pelo plug-in, silenciosamente compara o diretório por meio de uma soma de verificação ou, se não houver suporte, volta para SCC_DIFF_QD_CONTENTS.|  
-|SCC_DIFF_QD_TIME|Se suportado pelo plug-in, silenciosamente compara o diretório por meio de seu carimbo de hora ou, se não houver suporte, recai em SCC_DIFF_QD_CHECKSUM ou SCC_DIFF_QD_CONTENTS.|  
+|SCC_DIFF_IGNORECASE|Case-insensitive comparison (may be used for either quick diff or visual).|  
+|SCC_DIFF_IGNORESPACE|Ignores white space (may be used for either quick-diff or visual).|  
+|SCC_DIFF_QD_CONTENTS|If supported by the source control plug-in, silently compares the directory, byte by byte.|  
+|SCC_DIFF_QD_CHECKSUM|If supported by plug-in, silently compares the directory via a checksum, or, if not supported, falls back to SCC_DIFF_QD_CONTENTS.|  
+|SCC_DIFF_QD_TIME|If supported by plug-in, silently compares the directory via its timestamp, or, if not supported, falls back on SCC_DIFF_QD_CHECKSUM or SCC_DIFF_QD_CONTENTS.|  
   
 > [!NOTE]
->  Essa função usa os mesmos sinalizadores de comando como o [SccDiff](../extensibility/sccdiff-function.md). No entanto, um plug-in de controle de origem pode optar por não oferece suporte à operação de "comparação rápida" para diretórios.  
+>  This function uses the same command flags as the [SccDiff](../extensibility/sccdiff-function.md). However, a source control plug-in may choose to not support the "quick-diff" operation for directories.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)

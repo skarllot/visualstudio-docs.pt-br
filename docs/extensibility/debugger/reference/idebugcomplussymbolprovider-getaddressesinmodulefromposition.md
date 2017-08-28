@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition | Documentos do Microsoft
+title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 62b1761fc1c1ec58ef0c02fa7bfa57bc20f2eea9
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 8f7e77903d98943b1f1d0d5b879656c67b1ac223
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugcomplussymbolprovidergetaddressesinmodulefromposition"></a>IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
-Mapeia uma posição de documento no módulo especificado para uma matriz de endereços de depuração.  
+Maps a document position in the specified module to an array of debug addresses.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 [C++]  
@@ -64,32 +65,32 @@ int GetAddressesInModuleFromPosition(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- [in] Identificador de domínio de aplicativo.  
+ [in] Application domain identifier.  
   
  `guidModule`  
- [in] Identificador exclusivo do módulo.  
+ [in] Unique identifier of the module.  
   
  `pDocPos`  
- [in] A posição do documento.  
+ [in] The document position.  
   
  `fStatmentOnly`  
- [in] Se `TRUE`, limita os endereços de depuração para uma única instrução.  
+ [in] If `TRUE`, limits the debug addresses to a single statement.  
   
  `ppEnumBegAddresses`  
- [out] Retorna um enumerador para os endereços iniciais de depuração que estão associadas essa instrução ou linha.  
+ [out] Returns an enumerator for the starting debug addresses that are associated with this statement or line.  
   
  `ppEnumEndAddresses`  
- [out] Retorna um enumerador para os endereços de depuração final que estão associadas essa instrução ou linha.  
+ [out] Returns an enumerator for the ending debug addresses that are associated with this statement or line.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::GetAddressesInModuleFromPosition(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -238,5 +239,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

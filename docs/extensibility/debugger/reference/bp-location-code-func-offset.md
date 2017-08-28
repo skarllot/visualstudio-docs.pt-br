@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_FUNC_OFFSET | Documentos do Microsoft
+title: BP_LOCATION_CODE_FUNC_OFFSET | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,44 +30,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 65fce02d0f6a5ae4ea7e800d9568c97d0419645c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 142a6ad44d0c505ff45491b13c686e77ffd95bec
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="bplocationcodefuncoffset"></a>BP_LOCATION_CODE_FUNC_OFFSET
-Descreve o local de deslocamento de um ponto de interrupção em uma função no código.  
+Describes the offset location of a breakpoint in a function in code.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 typedef struct _BP_LOCATION_CODE_FUNC_OFFSET {   
    BSTR                     bstrContext;  
    IDebugFunctionPosition2* pFuncPos;  
 } BP_LOCATION_CODE_FUNC_OFFSET;  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  `bstrContext`  
- O contexto do ponto de interrupção, normalmente um nome de função ou método como visto em uma pilha de chamadas.  
+ The context of the breakpoint, typically a method or function name as seen on a call stack.  
   
  `pFuncPos`  
- O [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md) objeto que descreve o nome da função e a posição relativa do início da função.  
+ The [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md) object that describes the name of the function and the relative position from the beginning of the function.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
+## <a name="remarks"></a>Remarks  
+ This structure is a member of the [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) structure as part of a union.  
   
- O `pFuncPos` membro indica onde definir o ponto de interrupção de função.  
+ The `pFuncPos` member indicates where to set the function breakpoint.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)

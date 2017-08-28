@@ -1,5 +1,5 @@
 ---
-title: "Função SccGet | Documentos do Microsoft"
+title: SccGet Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 97f79ca001a2e79c6abb8dec0fc738694cb95e7b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2c761f90eaf4882407122336827e2d95f3edf2ac
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sccget-function"></a>Função SccGet
-Esta função recupera uma cópia de um ou mais arquivos para exibição e compilação, mas não para edição. Na maioria dos sistemas, os arquivos são marcados como somente leitura.  
+# <a name="sccget-function"></a>SccGet Function
+This function retrieves a copy of one or more files for viewing and compiling but not for editing. In most systems, the files are tagged as read-only.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccGet(  
    LPVOID    pvContext,  
    HWND      hWnd,  
@@ -52,71 +53,71 @@ SCCRTN SccGet(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- [in] A estrutura de contexto de plug-in de controle de origem.  
+ [in] The context structure of the source control plug-in.  
   
  hWnd  
- [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para as caixas de diálogo que ele fornece.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  nFiles  
- [in] Número de arquivos especificados na `lpFileNames` matriz.  
+ [in] Number of files specified in the `lpFileNames` array.  
   
  lpFileNames  
- [in] Matriz de nomes totalmente qualificados dos arquivos a serem recuperados.  
+ [in] Array of fully qualified names of files to be retrieved.  
   
  fOptions  
- [in] Sinalizadores de comando (`SCC_GET_ALL`, `SCC_GET_RECURSIVE`).  
+ [in] Command flags (`SCC_GET_ALL`, `SCC_GET_RECURSIVE`).  
   
  pvOptions  
- [in] Opções de plug-in específico de controle de origem.  
+ [in] Source control plug-in-specific options.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|SCC_OK|Sucesso da operação get.|  
-|SCC_E_FILENOTCONTROLLED|O arquivo não está sob controle de origem.|  
-|SCC_E_OPNOTSUPPORTED|O sistema de controle de origem não oferece suporte a esta operação.|  
-|SCC_E_FILEISCHECKEDOUT|Não é possível obter o arquivo no momento o usuário fez check-out.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
-|SCC_E_NOSPECIFIEDVERSION|Uma versão inválida ou a data/hora especificado.|  
-|SCC_E_NONSPECIFICERROR|Falha não específica; arquivo não foi sincronizado.|  
-|SCC_I_OPERATIONCANCELED|Operação cancelada antes da conclusão.|  
-|SCC_E_NOTAUTHORIZED|O usuário não está autorizado para executar esta operação.|  
+|SCC_OK|Success of get operation.|  
+|SCC_E_FILENOTCONTROLLED|The file is not under source control.|  
+|SCC_E_OPNOTSUPPORTED|The source control system does not support this operation.|  
+|SCC_E_FILEISCHECKEDOUT|Cannot get the file that the user currently has checked out.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NOSPECIFIEDVERSION|Specified an invalid version or date/time.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure; file was not synchronized.|  
+|SCC_I_OPERATIONCANCELED|Operation cancelled before completion.|  
+|SCC_E_NOTAUTHORIZED|The user is not authorized to perform this operation.|  
   
-## <a name="remarks"></a>Comentários  
- Essa função é chamada com uma contagem e uma matriz de nomes de arquivos a serem recuperados. Se o IDE passar o sinalizador `SCC_GET_ALL`, isso significa que os itens na `lpFileNames` não são arquivos, mas pastas e todos os arquivos sob controle de origem nos diretórios determinados devem ser recuperadas.  
+## <a name="remarks"></a>Remarks  
+ This function is called with a count and an array of names of the files to be retrieved. If the IDE passes the flag `SCC_GET_ALL`, this means that the items in `lpFileNames` are not files but directories, and that all files under source control in the given directories are to be retrieved.  
   
- O `SCC_GET_ALL` sinalizador pode ser combinado com o `SCC_GET_RECURSIVE` sinalizador para recuperar todos os arquivos nos diretórios determinados e todos os subdiretórios também.  
+ The `SCC_GET_ALL` flag can be combined with the `SCC_GET_RECURSIVE` flag to retrieve all files in the given directories and all subdirectories as well.  
   
 > [!NOTE]
->  `SCC_GET_RECURSIVE`nunca deve ser passado sem `SCC_GET_ALL`. Além disso, observe que se diretórios C:\A e C:\A\B são ambos passado recursiva obtém, C:\A\B e todas as suas subpastas serão realmente recuperadas duas vezes. É responsabilidade do IDE, e não a fonte de controle do plug-in — para certificar-se de que duplicatas como essa são mantidas fora da matriz.  
+>  `SCC_GET_RECURSIVE` should never be passed without `SCC_GET_ALL`. Also, note that if directories C:\A and C:\A\B are both passed on a recursive get, C:\A\B and all its subdirectories will actually be retrieved twice. It is the IDE's responsibility—and not the source control plug-in's—to make sure that duplicates such as this are kept out of the array.  
   
- Por fim, mesmo que o plug-in de controle de uma origem especificada a `SCC_CAP_GET_NOUI` sinalizador na inicialização, indicando que ele não tem uma interface de usuário para um comando Get, essa função ainda pode ser chamada pelo IDE para recuperar arquivos. O sinalizador significa simplesmente que o IDE não exibirá um item de menu Get e que o plug-in não é esperado para fornecer qualquer interface de usuário.  
+ Finally, even if a source control plug-in specified the `SCC_CAP_GET_NOUI` flag on initialization, indicating that it does not have a user interface for a Get command, this function may still be called by the IDE to retrieve files. The flag simply means that the IDE does not display a Get menu item and that the plug-in is not expected to provide any UI.  
   
-## <a name="renaming-and-sccget"></a>Renomear e SccGet  
- Situação: um usuário faz check-out de um arquivo, por exemplo, a.txt e modifica a ele. Antes de a.txt pode fazer check-in, um segundo usuário renomeia a.txt para b. txt no banco de dados de controle de origem, o check-out b. txt, faz algumas modificações no arquivo e verifica o arquivo. O primeiro usuário que deseja que as alterações feitas pelo usuário segundo para que o primeiro usuário renomeia sua versão local do arquivo a. txt para b. txt e faz um get no arquivo. No entanto, o cache local que mantém o controle de números de versão ainda considera a primeira versão do a.txt é armazenada localmente e então o controle de origem não pode resolver as diferenças.  
+## <a name="renaming-and-sccget"></a>Renaming and SccGet  
+ Situation: a user checks out a file, for example, a.txt, and modifies it. Before a.txt can be checked in, a second user renames a.txt to b.txt in the source control database, checks out b.txt, makes some modifications to the file, and checks the file in. The first user wants the changes made by the second user so the first user renames their local version of a.txt file to b.txt and does a get on the file. However, the local cache that keeps track of version numbers still thinks the first version of a.txt is stored locally and so source control cannot resolve the differences.  
   
- Há duas maneiras de resolver essa situação em que o cache local de versões de controle de origem se torna fora de sincronia com o banco de dados de controle de origem:  
+ There are two ways to resolve this situation where the local cache of source control versions becomes out of sync with the source control database:  
   
-1.  Não permite a renomeação de um arquivo de banco de dados de controle de origem que está sendo verificado.  
+1.  Do not allow renaming a file in the source control database that is currently checked out.  
   
-2.  É o equivalente de "excluir antigo" seguido de "Adicionar novo". O seguinte algoritmo é uma forma de fazer isso.  
+2.  Do the equivalent of "delete old" followed by "add new". The following algorithm is one way to accomplish this.  
   
-    1.  Chamar o [SccQueryChanges](../extensibility/sccquerychanges-function.md) função para saber mais sobre a renomeação de a.txt para b. txt no banco de dados de controle de origem.  
+    1.  Call the [SccQueryChanges](../extensibility/sccquerychanges-function.md) function to learn about the renaming of a.txt to b.txt in the source control database.  
   
-    2.  Renomeie o a.txt local para b. txt.  
+    2.  Rename the local a.txt to b.txt.  
   
-    3.  Chamar o `SccGet` função a.txt e b. txt.  
+    3.  Call the `SccGet` function for both a.txt and b.txt.  
   
-    4.  Porque a.txt não existe no banco de dados de controle de origem, o cache local de versão é limpos das informações de versão a.txt ausente.  
+    4.  Because a.txt does not exist in the source control database, the local version cache is purged of the missing a.txt version information.  
   
-    5.  O arquivo b. txt que está sendo extraído é mesclado com o conteúdo do arquivo local b. txt.  
+    5.  The b.txt file being checked out is merged with the contents of the local b.txt file.  
   
-    6.  O arquivo b. txt atualizado agora pode fazer check-in.  
+    6.  The updated b.txt file can now be checked in.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
- [Sinalizadores de bit usados pelos comandos específicos](../extensibility/bitflags-used-by-specific-commands.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md)

@@ -1,5 +1,5 @@
 ---
-title: Iniciando um build pelo IDE | Microsoft Docs
+title: Starting a Build from within the IDE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,24 +29,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: accbe2bded66b0c82f047ec0621f9ac55d466730
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4480985bdbca5225703d5efafc87c553e02f4b22
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="starting-a-build-from-within-the-ide"></a>Iniciando um build pelo IDE
-Os sistemas de projeto personalizados devem usar <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> para iniciar os builds. Este tópico descreve as razões para isso e o procedimento.  
+# <a name="starting-a-build-from-within-the-ide"></a>Starting a Build from within the IDE
+Custom project systems must use <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> to start builds. This topic describes the reasons for this and outlines the procedure.  
   
-## <a name="parallel-builds-and-threads"></a>Builds paralelas e threads  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] permite builds paralelas que exigem a mediação de acesso aos recursos comuns. Os sistemas de projeto podem executar builds de forma assíncrona, mas esses sistemas não devem chamar funções de build das quais o retorno de chamada é fornecido para o gerenciador de build.  
+## <a name="parallel-builds-and-threads"></a>Parallel Builds and Threads  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] allows parallel builds which requires mediation for access to common resources. Project systems can run builds asynchronously, but such systems must not call build functions from within call backs is provided to the build manager.  
   
- Se o sistema de projeto modificar variáveis de ambiente, ele deverá definir o NodeAffinity do build para OutOfProc. Isso significa que você não pode usar objetos de host, já que eles exigem o nó em processamento.  
+ If the project system modifies environment variables, it must set the NodeAffinity of the build to OutOfProc. This means that you cannot use host objects, since they require the in-proc node.  
   
-## <a name="using-ivsbuildmanageraccessor"></a>Usando o IVSBuildManagerAccessor  
- O código a seguir descreve um método que um sistema de projeto pode usar para iniciar um build:  
+## <a name="using-ivsbuildmanageraccessor"></a>Using IVSBuildManagerAccessor  
+ The code below outlines a method that a project system can use to start a build:  
   
-```cs
+```csharp
   
 public bool Build(Project project, bool isDesignTimeBuild)  
 {  

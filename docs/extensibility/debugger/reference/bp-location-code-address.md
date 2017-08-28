@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_ADDRESS | Documentos do Microsoft
+title: BP_LOCATION_CODE_ADDRESS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fecb86022522800128a20545a59db40f11bc6b4e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2e70f232c0e2cc212b7cb8a473b0a7efc222740b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="bplocationcodeaddress"></a>BP_LOCATION_CODE_ADDRESS
-Descreve o local de um ponto de interrupção em um endereço no código.  
+Describes the location of a breakpoint at an address in code.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 typedef struct _BP_LOCATION_CODE_ADDRESS {   
    BSTR bstrContext;  
    BSTR bstrModuleUrl;  
@@ -50,30 +51,30 @@ typedef struct _BP_LOCATION_CODE_ADDRESS {
 } BP_LOCATION_CODE_ADDRESS;  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  `bstrContext`  
- O contexto do ponto de interrupção, normalmente um nome de função ou método como visto em uma pilha de chamadas.  
+ The context of the breakpoint, typically a method or function name as seen on a call stack.  
   
  `bstrModuleUrl`  
- A URL do módulo que contém o ponto de interrupção.  
+ The URL of the module that contains the breakpoint.  
   
  `bstrFunction`  
- O nome da função que contém o ponto de interrupção.  
+ The name of the function that contains the breakpoint.  
   
  `bstrAddress`  
- O endereço do ponto de interrupção, que é analisada por um avaliador de expressão para associá-lo a um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objeto.  
+ The address of the breakpoint, which is parsed by an expression evaluator to bind it to an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) object.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
+## <a name="remarks"></a>Remarks  
+ This structure is a member of the [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) structure as part of a union.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)

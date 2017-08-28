@@ -1,5 +1,5 @@
 ---
-title: Registrando em logs em um ambiente multiprocessador | Microsoft Docs
+title: Logging in a Multi-Processor Environment | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,42 +30,43 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 7fefa5483ece9c0f32c93addee44c10652175268
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e78d6c35fa294d2f1a39c91af5e278e9e4519d2d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="logging-in-a-multi-processor-environment"></a>Registrando em logs em um ambiente multiprocessador
-A capacidade do MSBuild de usar vários processadores pode diminuir bastante o tempo de criação do projeto, mas também adiciona complexidade ao registrar em logs. Em um ambiente de processador único, o agente pode gerenciar eventos recebidos, mensagens, avisos e erros de uma maneira previsível e sequencial. No entanto, em um ambiente com vários processadores, eventos de origens diferentes podem surgir simultaneamente ou fora de sequência. O MSBuild fornece um novo agente com reconhecimento de vários processadores e permite a criação de “agentes de encaminhamento” personalizados.  
+# <a name="logging-in-a-multi-processor-environment"></a>Logging in a Multi-Processor Environment
+The ability of MSBuild to use multiple processors can greatly decrease project building time, but it also adds complexity to logging. In a single-processor environment, the logger can handle incoming events, messages, warnings, and errors in a predictable, sequential manner. However, in a multi-processor environment, events from several sources can arrive simultaneously or out of sequence. MSBuild provides a new multi-processor-aware logger and enables the creation of custom "forwarding loggers."  
   
-## <a name="logging-multiple-processor-builds"></a>Registrando em log builds de vários processadores  
- Quando você cria um ou mais projetos em um sistema com vários processadores ou vários núcleos, os eventos de build do MSBuild para todos os projetos são gerados simultaneamente. Uma avalanche de dados de eventos pode chegar ao agente ao mesmo tempo ou fora de sequência. Isso pode sobrecarregar o agente e causar tempos de build maiores, saída de agente incorreta ou até mesmo um build danificado. Para resolver esses problemas, o agente do MSBuild pode processar eventos fora de sequência e correlacionar eventos e suas fontes.  
+## <a name="logging-multiple-processor-builds"></a>Logging Multiple-Processor Builds  
+ When you build one or more projects in a multi-processor or multi-core system, MSBuild build events for all the projects are generated simultaneously. An avalanche of event data may arrive at the logger at the same time or out of sequence. This can overwhelm the logger and cause increased build times, incorrect logger output, or even a broken build. To address these issues, the MSBuild logger can process out-of-sequence events and correlate events and their sources.  
   
- Você pode melhorar a eficiência de registro em log ainda mais criando um agente personalizado de encaminhamento. Um agente personalizado de encaminhamento atua como um filtro, permitindo que você escolha, antes de criar, os eventos que você deseja monitorar. Quando você usa um agente personalizado de encaminhamento, eventos indesejados não sobrecarregam o agente, truncam os logs nem reduzem os tempos de build.  
+ You can improve logging efficiency even more by creating a custom forwarding logger. A custom-forwarding logger acts as a filter by letting you choose, before you build, the events you want to monitor. When you use a custom forwarding logger, unwanted events do not overwhelm the logger, clutter your logs, or slow build times.  
   
-### <a name="central-logging-model"></a>Modelo de registro em log central  
- Para builds para vários processadores, o MSBuild usa um "modelo de log central". No modelo de log central, uma instância de MSBuild.exe atua como o processo de build principal ou "nó central". Instâncias secundárias do MSBuild.exe ou "nós secundários," são anexadas ao nó central. Qualquer agente de ILogger anexado ao nó central é conhecido como "agentes centrais" e agentes anexados a nós secundários são conhecidos como "agentes secundários".  
+### <a name="central-logging-model"></a>Central Logging Model  
+ For multi-processor builds, MSBuild uses a "central logging model." In the central logging model, an instance of MSBuild.exe acts as the primary build process, or "central node." Secondary instances of MSBuild.exe, or "secondary nodes," are attached to the central node. Any ILogger-based loggers attached to the central node are known as "central loggers" and loggers attached to secondary nodes are known as "secondary loggers."  
   
- Quando ocorre um build, os agentes secundários encaminham o tráfego de eventos para os agentes centrais. Como eventos se originam em vários nós secundários, os dados chegam ao nó central simultaneamente, mas intercalados. Para resolver referências de evento para projeto e evento para destino, os argumentos do evento incluem informações adicionais de contexto do evento de build.  
+ When a build occurs, the secondary loggers route their event traffic to the central loggers. Because events originate at several secondary nodes, the data arrives at the central node simultaneously but interleaved. To resolve event-to-project and event-to-target references, the event arguments include additional build event context information.  
   
- Embora somente <xref:Microsoft.Build.Framework.ILogger> seja necessário ser implementado pelo agente central, é recomendável que você implemente também <xref:Microsoft.Build.Framework.INodeLogger> se desejar que o agente central inicialize com o número de nós que participam do build. A seguinte sobrecarga do método <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> é chamada quando o mecanismo inicializa o agente:  
+ Although only <xref:Microsoft.Build.Framework.ILogger> is required to be implemented by the central logger, we recommend that you also implement <xref:Microsoft.Build.Framework.INodeLogger> if you want the central logger to initialize with the number of nodes that are participating in the build. The following overload of the <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> method is invoked when the engine initializes the logger:  
   
-```cs
+```csharp
 public interface INodeLogger: ILogger  
 {  
     public void Initialize(IEventSource eventSource, int nodeCount);  
 }  
 ```  
   
-### <a name="distributed-logging-model"></a>Modelo de Registro em Log Distribuído  
- No modelo de log central, muito tráfego de mensagens recebidas, como quando muitos projetos são criados ao mesmo tempo, pode sobrecarregar o nó central, que desgasta o sistema e reduz o desempenho do build.  
+### <a name="distributed-logging-model"></a>Distributed Logging Model  
+ In the central logging model, too much incoming message traffic, such as when many projects build at once, can overwhelm the central node, which stresses the system and lowers build performance.  
   
- Para reduzir esse problema, o MSBuild também permite um "modelo de registro em log distribuído" que estende o modelo de registro em log central, permitindo criar agentes de encaminhamento. Um agente de encaminhamento está conectado a um nó secundário e recebe eventos de build de entrada desse nó. O agente de encaminhamento é como um agente comum, exceto que pode filtrar os eventos e, em seguida, encaminhar somente os desejados para o nó central. Isso reduz o tráfego de mensagens no nó central e, portanto, permite um melhor desempenho.  
+ To reduce this problem, MSBuild also enables a "distributed logging model" that extends the central logging model by letting you create forwarding loggers. A forwarding logger is attached to a secondary node and receives incoming build events from that node. The forwarding logger is just like a regular logger except that it can filter the events and then forward only the desired ones to the central node. This reduces the message traffic at the central node and therefore enables better performance.  
   
- Você pode criar um agente de encaminhamento ao implementar a interface <xref:Microsoft.Build.Framework.IForwardingLogger>, que deriva de <xref:Microsoft.Build.Framework.ILogger>. A interface é definida como:  
+ You can create a forwarding logger by implementing the <xref:Microsoft.Build.Framework.IForwardingLogger> interface, which derives from <xref:Microsoft.Build.Framework.ILogger>. The interface is defined as:  
   
-```cs
+```csharp
 public interface IForwardingLogger: INodeLogger  
 {  
     public IEventRedirector EventRedirector { get; set; }  
@@ -73,12 +74,12 @@ public interface IForwardingLogger: INodeLogger
 }  
 ```  
   
- Para encaminhar eventos em um agente de encaminhamento, chame o método <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> da interface <xref:Microsoft.Build.Framework.IEventRedirector>. Passe o <xref:Microsoft.Build.Framework.BuildEventArgs> adequado ou um derivativo, como o parâmetro.  
+ To forward events in a forwarding logger, call the <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> method of the <xref:Microsoft.Build.Framework.IEventRedirector> interface. Pass the appropriate <xref:Microsoft.Build.Framework.BuildEventArgs>, or a derivative, as the parameter.  
   
- Para obter mais informações, consulte [Criando Agentes de Encaminhamento](../msbuild/creating-forwarding-loggers.md).  
+ For more information, see [Creating Forwarding Loggers](../msbuild/creating-forwarding-loggers.md).  
   
-### <a name="attaching-a-distributed-logger"></a>Anexando um Agente Distribuído  
- Para anexar um agente distribuído em um build de linha de comando, use a opção `/distributedlogger` (ou, `/dl` de forma abreviada). O formato para especificar os nomes dos tipos de agente e classes é o mesmo que para a opção `/logger`, exceto em casos em que um agente distribuído seja composto por duas classes de registro em log: um agente de encaminhamento e um agente central. A seguir, está um exemplo de como anexar um agente distribuído:  
+### <a name="attaching-a-distributed-logger"></a>Attaching a Distributed Logger  
+ To attaching a distributed logger on a command line build, use the `/distributedlogger` (or, `/dl` for short) switch. The format for specifying the names of the logger types and classes are the same as those for the `/logger` switch, except that a distributed logger is comprised of two logging classes: a forwarding logger and a central logger. Following is an example of attaching a distributed logger:  
   
 ```  
 msbuild.exe *.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,  
@@ -86,8 +87,8 @@ Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,
 Culture=neutral  
 ```  
   
- Um asterisco (*) separa os dois nomes de agentes na opção `/dl`.  
+ An asterisk (*) separates the two logger names in the `/dl` switch.  
   
-## <a name="see-also"></a>Consulte também  
- [Agentes de Log de Build](../msbuild/build-loggers.md)   
- [Criando agentes de log de encaminhamento](../msbuild/creating-forwarding-loggers.md)
+## <a name="see-also"></a>See Also  
+ [Build Loggers](../msbuild/build-loggers.md)   
+ [Creating Forwarding Loggers](../msbuild/creating-forwarding-loggers.md)

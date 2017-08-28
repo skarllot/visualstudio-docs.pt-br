@@ -1,5 +1,5 @@
 ---
-title: "Modos de exibição únicos e multi-guia | Documentos do Microsoft"
+title: Single and Multi-tab Views | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,53 +28,54 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 464270ec43f788200de8c0c04d4325776f262a5e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 94b10507be59b2ead785e8b03f12c71e33874407
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="single-and-multi-tab-views"></a>Modos de exibição únicos e multi-guia
-Um editor pode criar diferentes tipos de modos de exibição. Um exemplo é uma janela do editor de código, o outro é um designer de formulários.  
+# <a name="single-and-multi-tab-views"></a>Single and Multi-tab Views
+An editor can create different types of views. One example is a code editor window, another is a forms designer.  
   
- Uma exibição de várias guias é um modo de exibição que tem várias guias. Por exemplo, o editor de HTML possui duas guias na parte inferior: **Design** e **fonte**, cada uma exibição lógica. O modo de exibição de design exibe uma página da web processada, enquanto o outro exibe o HTML que compõe a página da web.  
+ A multi-tabbed view is a view that has multiple tabs. For example, the HTML editor has two tabs at the bottom: **Design** and **Source**, each a logical view. The design view displays a rendered web page, while the other displays the HTML that comprises the web page.  
   
-## <a name="accessing-physical-views"></a>O acesso a visualizações físicas  
- Modos de exibição físicos hospedam objetos de exibição de documento, cada um representando uma exibição dos dados no buffer, como código ou um formulário. Da mesma forma, cada objeto de exibição de documento tem uma exibição física (identificado por algo conhecido como uma cadeia de caracteres de exibição física) e, em geral, uma única exibição lógica.  
+## <a name="accessing-physical-views"></a>Accessing Physical Views  
+ Physical views host document view objects, each representing a view of data in the buffer, such as code or a form. Accordingly, each document view object has a physical view (identified by something known as a physical view string), and generally a single logical view.  
   
- Em alguns casos, no entanto, uma exibição física pode ter dois ou mais modos de exibição lógicos. Alguns exemplos são um editor que tem uma janela dividida com modos de exibição lado a lado ou um designer de formulários que tem um modo de exibição de design/GUI e um modo de exibição de código behind-o formulário.  
+ In some cases, though, a physical view can have two or more logical views. Some examples are an editor that has a split window with side-by-side views, or a forms designer that has a GUI/design view and a code-behind-the-form view.  
   
- Para habilitar o editor acessar todos os modos de exibição físicos disponíveis, você deve criar uma cadeia de caracteres de exibição física exclusivo para cada tipo de objeto de exibição de documento que pode criar sua fábrica de editor. Por exemplo, o [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] fábrica de editor pode criar documento objetos de exibição para uma janela de código e uma janela de designer de formulários.  
+ To enable your editor to access all of the available physical views, you must create a unique physical view string for each type of document view object that your editor factory can create. For example, the [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] editor factory can create document view objects for a code window and a forms designer window.  
   
-## <a name="creating-multi-tabbed-views"></a>Criando modos de exibição de várias guias  
- Embora um objeto de exibição de documento deve ser associado uma exibição física por meio de uma cadeia de caracteres de exibição física exclusivo, você pode colocar várias guias no modo de exibição físico para ativar a visualização de dados de maneiras diferentes. Nessa configuração de várias guias, todas as guias estão associadas com a mesma cadeia de caracteres de exibição física, mas cada guia é fornecido uma GUID de exibição lógica diferente.  
+## <a name="creating-multi-tabbed-views"></a>Creating Multi-Tabbed Views  
+ Though a document view object must be associated with a physical view through a unique physical view string, you can place multiple tabs within the physical view to enable the viewing of data in different ways. In this multi-tabbed configuration, all tabs are associated with the same physical view string, but each tab is given a different logical view GUID.  
   
- Para criar um modo de exibição de várias guias para um editor, implementar o <xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView>da interface e, em seguida, associar uma exibição lógica diferente GUID (<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID>) com cada guia criar.</xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID> </xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView>  
+ To create a multi-tabbed view for an editor, implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView> interface and then associate a different logical view GUID (<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID>) with each tab you create.  
   
- O editor de HTML do Visual Studio é um exemplo de um editor com um modo de exibição de multi-guia. Ele tem **Design** e **fonte** guias. Para habilitar isso, uma exibição lógica diferente está associada a cada guia `LOGICALVIEWID_TextView` para o **Design** guia e `LOGICALVIEWID_Code` para o **fonte** guia.  
+ The Visual Studio HTML editor is an example of an editor with a multi-tab view. It has **Design** and **Source** tabs. To enable this, a different logical view is associated with each tab, `LOGICALVIEWID_TextView` for the **Design** tab and `LOGICALVIEWID_Code` for the **Source** tab.  
   
- Especificando o modo de exibição lógico apropriado, um VSPackage pode acessar o modo de exibição que corresponde a uma finalidade específica, como criação de um formulário, edição de código ou depurar o código. No entanto, uma das janelas deve ser identificada pela cadeia de caracteres nula e isso deve corresponder ao modo de exibição lógico primário (`LOGVIEWID_Primary`).  
+ By specifying the appropriate logical view, a VSPackage can access the view that corresponds to a particular purpose, such as designing a form, editing code, or debugging code. However, one of the windows must be identified by the NULL string and this must correspond to the primary logical view (`LOGVIEWID_Primary`).  
   
- A tabela a seguir lista os valores do modo de exibição lógico disponível e seu uso.  
+ The following table lists the available logical view values and their use.  
   
-|GUID DE LOGVIEWID|Uso recomendado|  
+|LOGVIEWID GUID|Recommended Use|  
 |--------------------|---------------------|  
-|`LOGVIEWID_Primary`|Modo de exibição padrão/primário da fábrica de editor.<br /><br /> Todas as fábricas devem oferecer suporte a esse valor. Este modo de exibição deve usar a cadeia de caracteres nula como sua cadeia de caracteres de exibição física. Pelo menos uma exibição lógica deve ser definida para esse valor.|  
-|`LOGVIEWID_Debugging`|Modo de depuração. Normalmente, `LOGVIEWID_Debugging` mapeia para a mesma exibição da `LOGVIEWID_Code`.|  
-|`LOGVIEWID_Code`|Exibição iniciado pela **Exibir código** comando.|  
-|`LOGVIEWID_Designer`|Exibição iniciado pela **Exibir formulário** comando.|  
-|`LOGVIEWID_TextView`|Exibição do editor de texto. Esta é a exibição que retorna <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>, na qual você pode acessar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> </xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>|  
-|`LOGVIEWID_UserChooseView`|Solicita que o usuário escolha qual modo de exibição para usar.|  
-|`LOGVIEWID_ProjectSpecificEditor`|Passados pelo **abrir com** caixa de diálogo<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A></xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> Quando o usuário escolhe a entrada "(editor padrão do projeto)".|  
+|`LOGVIEWID_Primary`|Default/primary view of the editor factory.<br /><br /> All editor factories must support this value. This view must use the NULL string as its physical view string. At least one logical view must be set to this value.|  
+|`LOGVIEWID_Debugging`|Debugging view. Typically, `LOGVIEWID_Debugging` maps to the same view as `LOGVIEWID_Code`.|  
+|`LOGVIEWID_Code`|View launched by the **View Code** command.|  
+|`LOGVIEWID_Designer`|View launched by the **View Form** command.|  
+|`LOGVIEWID_TextView`|Text editor view. This is the view that returns <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>, from which you can access <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.|  
+|`LOGVIEWID_UserChooseView`|Prompts the user to choose which view to use.|  
+|`LOGVIEWID_ProjectSpecificEditor`|Passed by the **Open With** dialog box to<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> when the user chooses the "(Project default editor)" entry.|  
   
- Embora o modo de exibição lógico GUIDs são extensíveis, você pode usar somente os GUIDs de modo de exibição lógico definidos no seu VSPackage.  
+ Although logical view GUIDs are extensible, you can use only the logical view GUIDs defined in your VSPackage.  
   
- Durante o desligamento, o Visual Studio mantém o GUID da fábrica de editor e as cadeias de exibição física associadas à janela de documento para que ele pode ser usado para reabrir janelas de documento quando a solução é reaberta. Somente as janelas que estão abertas quando uma solução é fechada são mantidas no arquivo de solução (. sln). Esses valores correspondem do `VSFPROPID_guidEditorType` e `VSFPROPID_pszPhysicalView` valores passados a `propid` parâmetro no <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>método.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>  
+ On shutdown, Visual Studio retains the GUID of the editor factory and the physical view strings associated with the document window so that it can be used to re-open document windows when the solution is re-opened. Only windows that are open when a solution is closed are persisted in the solution (.suo) file. These values correspond to the `VSFPROPID_guidEditorType` and `VSFPROPID_pszPhysicalView` values passed in the `propid` parameter in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> method.  
   
-## <a name="example"></a>Exemplo  
- Este trecho de código ilustra como o <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView>objeto é usado para acessar uma exibição que implemente `IVsCodeWindow`.</xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView> Nesse caso, o <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument>serviço é usado para chamar <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A>e solicitação `LOGVIEWID_TextView`, que obtém um ponteiro para um quadro de janela.</xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> </xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument> Um ponteiro para o objeto de exibição do documento é obtido chamando <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>e especificando um valor de `VSFPROPID_DocView`.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> Do objeto de exibição de documento, `QueryInterface` é chamado para `IVsCodeWindow`. A expectativa nesse caso é que um editor de texto é retornado, e então o objeto de exibição de documento retornado no <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>método é uma janela de código.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>  
+## <a name="example"></a>Example  
+ This snippet illustrates how the <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView> object is used to access a view that implements `IVsCodeWindow`. In this case, the <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument> service is used to call <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> and request `LOGVIEWID_TextView`, which obtains a pointer to a window frame. A pointer to the document view object is obtained by calling <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> and specifying a value of `VSFPROPID_DocView`. From the document view object, `QueryInterface` is called for `IVsCodeWindow`. The expectation in this case is that a text editor is returned, and so the document view object returned in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> method is a code window.  
   
-```cpp#  
+```cpp  
 HRESULT CFindTool::GotoFileLocation(const WCHAR * szFile, long iLine, long iStart, long iLen)  
 {  
   HRESULT hr;  
@@ -129,7 +130,7 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Suporte a vários modos de exibição de documento](../extensibility/supporting-multiple-document-views.md)   
- [Como: anexar modos de exibição para dados de documentos](../extensibility/how-to-attach-views-to-document-data.md)   
- [Criar Designers e editores personalizados](../extensibility/creating-custom-editors-and-designers.md)
+## <a name="see-also"></a>See Also  
+ [Supporting Multiple Document Views](../extensibility/supporting-multiple-document-views.md)   
+ [How to: Attach Views to Document Data](../extensibility/how-to-attach-views-to-document-data.md)   
+ [Creating Custom Editors and Designers](../extensibility/creating-custom-editors-and-designers.md)

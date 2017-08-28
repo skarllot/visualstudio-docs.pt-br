@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetValueAsReference | Documentos do Microsoft
+title: IDebugReference2::SetValueAsReference | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 36c017b6579d5f6fa1e99f44470836e68640321f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e295ad3fd09a8b5dbaa17cdd6f10f3cb8a9ff1b9
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugreference2setvalueasreference"></a>IDebugReference2::SetValueAsReference
-Define o valor de uma referência de outra referência. Reservado para uso futuro.  
+Sets the value of a reference from another reference. Reserved for future use.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT SetValueAsReference (   
    IDebugReference2** rgpArgs,  
    DWORD              dwArgCount,  
@@ -50,7 +51,7 @@ HRESULT SetValueAsReference (
 );  
 ```  
   
-```cpp#  
+```cpp  
 int SetValueAsReference (   
    IDebugReference2[] rgpArgs,  
    uint               dwArgCount,  
@@ -59,21 +60,21 @@ int SetValueAsReference (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `rgpArgs`  
- [in] Uma matriz de [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objetos usados para determinar como definir o valor de referência.  
+ [in] An array of [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objects used to determine how to set the reference value.  
   
  `dwArgCount`  
- [in] O número de referências na matriz.  
+ [in] The number of references in the array.  
   
  `pValue`  
- [in] Um [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto no qual definir o valor da propriedade.  
+ [in] An [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object from which to set the property value.  
   
  `dwTimeout`  
- [in] Tempo máximo, em milissegundos, para aguardar antes de retornar desse método. Use `INFINITE` para aguardar indefinidamente.  
+ [in] Maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
   
-## <a name="return-value"></a>Valor de retorno  
- Sempre retorna `E_NOTIMPL`.  
+## <a name="return-value"></a>Return Value  
+ Always returns `E_NOTIMPL`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)
