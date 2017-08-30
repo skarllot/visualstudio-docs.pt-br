@@ -67,7 +67,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 
 Um instantâneo da ferramenta [Uso de Memória](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) sem o acompanhamento de heap personalizado mostrará apenas a única alocação de byte 8192 e nenhuma das alocações personalizadas feitas pelo pool:
 
-![Alocação de heap do Windows](~/profiling/media/heap-example-windows-heap.png)
+![Alocação de heap do Windows](media/heap-example-windows-heap.png)
 
 Ao realizar as etapas a seguir, podemos usar essa mesma ferramenta para acompanhar o uso de memória em nosso heap personalizado.
 
@@ -158,17 +158,17 @@ Essa biblioteca pode ser usada no C e C++ com facilidade.
 ## <a name="tracking-memory-usage"></a>Acompanhando o uso de memória
 Com essas chamadas implementadas, o uso de heap personalizado agora pode ser acompanhado usando a ferramenta padrão **Uso de Memória** no Visual Studio.  Para obter mais informações sobre como usar essa ferramenta, consulte a documentação [Uso de memória](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage). Verifique se você habilitou a de criação de perfil de heap com instantâneos; caso contrário, você não verá o uso de heap personalizado exibido. 
 
-![Habilitar a criação de perfil de heap](~/profiling/media/heap-enable-heap.png)
+![Habilitar a criação de perfil de heap](media/heap-enable-heap.png)
 
 Para exibir o acompanhamento de heap personalizado, use o menu suspenso **Heap** localizado no canto superior direito da janela **Instantâneo** para alterar a exibição de *Heap NT* para seu próprio heap nomeado anteriormente.
 
-![Seleção de heap](~/profiling/media/heap-example-custom-heap.png)
+![Seleção de heap](media/heap-example-custom-heap.png)
 
 Usando o exemplo de código acima, com `MemoryPool` criando um objeto `VSHeapTracker::CHeapTracker` e nosso próprio método `allocate` agora chamando o método `AllocateEvent`, agora é possível ver o resultado da alocação personalizada, mostrando 3 instâncias que totalizam 24 bytes, todos do tipo `Foo`.
 
 O heap padrão *Heap NT* tem a mesma aparência que anteriormente, com a adição de nosso objeto `CHeapTracker`.
 
-![Heap NT com controlador](~/profiling/media/heap-example-windows-heap.png)
+![Heap NT com controlador](media/heap-example-windows-heap.png)
 
 Assim como ocorre com o heap padrão do Windows, também é possível usar essa ferramenta para comparar instantâneos e procurar perdas e danos no heap personalizado, que é descrito na documentação principal [Uso de memória](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage).
 
