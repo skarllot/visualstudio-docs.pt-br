@@ -1,138 +1,146 @@
 ---
-title: "Instru&#231;&#245;es passo a passo: conectando a dados em um banco de dados do Access (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "Acessar bancos de dados, conectando"
-  - "conectando-se a dados, de Acessar bancos de dados"
-  - "dados [Visual Studio], conectando"
-  - "bancos de dados, Acesso"
-  - "bancos de dados, conectando a"
+title: Connect to data in an Access database (Windows Forms) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases, connecting to
+- databases, Access
+- data [Visual Studio], connecting
+- connecting to data, from Access databases
+- Access databases, connecting
 ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
 caps.latest.revision: 29
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: a41361bc4428beeb9f915ec99a609641d7c2f7fb
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
+
 ---
-# Instru&#231;&#245;es passo a passo: conectando a dados em um banco de dados do Access (Windows Forms)
-É possível se conectar a um banco de dados do Access \(um arquivo .mdf ou um arquivo .accdb\) usando\-se o Visual Studio.  Depois de definir a conexão, os dados são exibidos na **Janela Fontes de Dados**.  Nela, é possível arrastar tabelas ou exibições para os formulários.  Se você quiser compreender como o sistema de projeto no Visual Studio gerencia esses arquivos de banco de dados locais, consulte [Como gerenciar arquivos de dados locais no projeto](../data-tools/how-to-manage-local-data-files-in-your-project.md).  
+# <a name="connect-to-data-in-an-access-database-windows-forms"></a>Connect to data in an Access database (Windows Forms)
+You can connect to an Access database (either an .mdf file or an .accdb file) by using Visual Studio. After you define the connection, the data appears in the **Data Sources** window. From there, you can drag tables or views onto your forms.   
   
-## Pré-requisitos  
- Para usar esses procedimentos, você precisa de um Aplicativo Windows Forms e de um banco de dados do Access \(arquivo .accdb\) ou um banco de dados do Access 2000\-2003 \(arquivo .mdb\).  Siga o procedimento correspondente ao tipo de arquivo.  
+## <a name="prerequisites"></a>Prerequisites  
+ To use these procedures, you need a Windows Forms application project, and either an Access database (.accdb file) or an Access 2000-2003 database (.mdb file). Follow the procedure that corresponds to your file type.  
   
-## Criando o Conjunto de Dados para um arquivo .accdb  
- É possível se conectar aos bancos de dados criados com Access 2013, Office 365, Access 2010 ou Access 2007 usando\-se o procedimento a seguir.  
+## <a name="creating-the-dataset-for-an-accdb-file"></a>Creating the dataset for an .accdb file  
+ You can connect to databases created through Access 2013, Office 365, Access 2010, or Access 2007 by using the following procedure.  
   
-#### Para criar o conjunto de dados  
+#### <a name="to-create-the-dataset"></a>To create the dataset  
   
-1.  Abra o Aplicativo Windows Forms ao qual você deseja se conectar dados.  
+1.  Open the Windows Forms application to which you want to connect data.  
   
-2.  No menu **Exibir**, escolha **Outras Janelas** \> **Fontes de Dados**.  
+2.  On the **View** menu, select **Other Windows** > **Data Sources**.  
   
-     ![View Other Windows Data Sources](~/data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![View Other Windows Data Sources](../data-tools/media/viewdatasources.png "ViewDataSources")  
   
-3.  Na janela **Fontes de Dados**, clique em **Adicionar Nova Fonte de Dados**.  
+3.  In the **Data Sources** window, click **Add New Data Source**.  
   
-     ![Add New Data Source](~/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+     ![Add New Data Source](../data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
   
-4.  Escolha **Base de Dados** na página **Escolher um Tipo de Fonte de Dados** e, em seguida, escolha **Próximo**.  
+4.  Select **Database** on the **Choose a Data Source Type** page, and then select **Next**.  
   
-5.  Escolha **Dataset** na página **Escolha um Modelo de Banco de Dados** e, em seguida, escolha **Próximo**.  
+5.  Select **Dataset** on the **Choose a Database Model** page, and then select **Next**.  
   
-6.  Na página **Escolha a Conexão de Dados**, selecione **Nova Conexão** para configurar uma nova conexão de dados.  
+6.  On the **Choose your Data Connection** page, select **New Connection** to configure a new data connection.  
   
-7.  Altere **Fonte de dados** para **Provedor de Dados .NET Framework para OLE DB**.  
+7.  Change the **Data source** to **.NET Framework Data Provider for OLE DB**.  
   
      ![Change Data Provider to OLE DB](../data-tools/media/datachangedatasourceoledb.png "dataChangeDataSourceOLEDB")  
   
     > [!IMPORTANT]
-    >  Embora uma fonte de dados de **Arquivo de Banco de Dados do Microsoft Access \(OLE DB\)** possa ser aparentemente a escolha certa, você usa esse tipo de fonte de dados apenas para o banco de dados .mdb.  
+    >  Although a data source of **Microsoft Access Database File (OLE DB)** might seem like the right choice, you use that data-source type only for .mdb database files.  
   
-8.  No **Provedor OLE DB**, escolha **Provedor OLE DB do Mecanismo de Banco de Dados do Microsoft Office 12.0 Access**.  
+8.  In **OLE DB Provider**, select **Microsoft Office 12.0 Access Database Engine OLE DB Provider**.  
   
      ![OLE DB Provider Microsoft Office 12.0 Access](../data-tools/media/dataoledbprovideroffice12access.png "dataOLEDBProviderOffice12Access")  
   
-9. Em **Nome do servidor ou do arquivo**, especifique o caminho e o nome do arquivo .accdb ao qual você deseja se conectar e, em seguida, escolha **OK**.  
+9. In **Server or file name**, specify the path and name of the .accdb file to which you want to connect, and then select **OK**.  
   
     > [!NOTE]
-    >  Se o arquivo do banco de dados tiver um nome de usuário e uma senha, especifique\-os antes de escolher **OK**.  
+    >  If the database file has a user name and password, specify them before you select **OK**.  
   
-10. Escolha **Próximo** na página **Escolha a Conexão de Dados**.  
+10. Select **Next** on the **Choose your Data Connection** page.  
   
-11. Escolha **Próximo** na página **Salvar cadeia de conexão no arquivo de configuração do aplicativo**.  
+11. Select **Next** on the **Save connection string to the Application Configuration file** page.  
   
-12. Expanda o nó **Tabelas** na página **Escolher Objetos do Banco de Dados**.  
+12. Expand the **Tables** node on the **Choose your Database Objects** page.  
   
-13. Escolha as tabelas ou as exibições desejadas no Conjunto de Dados e **Finalizar**.  
+13. Select whatever tables or views you want in your dataset, and then select **Finish**.  
   
-     O Conjunto de Dados é adicionado ao projeto, e as tabelas e as exibições são mostradas na janela **Fontes de Dados**.  
+     The dataset is added to your project, and the tables and views appear in the **Data Sources** window.  
   
-## Criando o Conjunto de Dados para um arquivo .mdb  
- Você cria o conjunto de dados executando o **Assistente de Configuração de Fonte de Dados**.  
+## <a name="creating-the-dataset-for-an-mdb-file"></a>Creating the dataset for an .mdb file  
+ You create the dataset by running the **Data Source Configuration Wizard**.  
   
-#### Para criar o conjunto de dados  
+#### <a name="to-create-the-dataset"></a>To create the dataset  
   
-1.  Abra o Aplicativo Windows Forms ao qual você deseja se conectar dados.  
+1.  Open the Windows Forms application to which you want to connect data.  
   
-2.  No menu **Exibir**, escolha **Outras Janelas** \> **Fontes de Dados**.  
+2.  On the **View** menu, select **Other Windows** > **Data Sources**.  
   
-     ![View Other Windows Data Sources](~/data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![View Other Windows Data Sources](../data-tools/media/viewdatasources.png "ViewDataSources")  
   
-3.  Na janela **Fontes de Dados**, clique em **Adicionar Nova Fonte de Dados**.  
+3.  In the **Data Sources** window, click **Add New Data Source**.  
   
-     ![Add New Data Source](~/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+4.  Select **Database** on the **Choose a Data Source Type** page, and then select **Next**.  
   
-4.  Escolha **Base de Dados** na página **Escolher um Tipo de Fonte de Dados** e, em seguida, escolha **Próximo**.  
+5.  Select **Dataset** on the **Choose a Database Model** page, and then select **Next**.  
   
-5.  Escolha **Dataset** na página **Escolha um Modelo de Banco de Dados** e, em seguida, escolha **Próximo**.  
+6.  On the **Choose your Data Connection** page, select **New Connection** to configure a new data connection.  
   
-6.  Na página **Escolha a Conexão de Dados**, selecione **Nova Conexão** para configurar uma nova conexão de dados.  
+7.  If the data source is not **Microsoft Access Database File (OLE DB)**, select **Change** to open the **Change Data Source** dialog box and select **Microsoft Access Database File**, and then select **OK**.  
   
-7.  Se a **Fonte de dados** não for **Arquivo de Banco de Dados do Microsoft Access \(OLE DB\)**, escolha **Alterar** para abrir a caixa de diálogo **Alterar Fonte de Dados** e **Arquivo de Banco de Dados do Microsoft Access**, além de **OK**.  
-  
-8.  No **Nome do arquivo de banco de dados**, especifique o caminho e o nome do arquivo .mdb ao qual você deseja se conectar e, em seguida, escolha **OK**.  
+8.  In the **Database file name**, specify the path and name of the .mdb file to which you want to connect, and then select **OK**.  
   
      ![Add Connection Access Database File](../data-tools/media/dataaddconnectionaccessmdb.png "dataAddConnectionAccessMDB")  
   
-9. Escolha **Próximo** na página **Escolha a Conexão de Dados**.  
+9. Select **Next** on the **Choose your Data Connection** page.  
   
-10. Escolha **Próximo** na página **Salvar cadeia de conexão no arquivo de configuração do aplicativo**.  
+10. Select **Next** on the **Save connection string to the Application Configuration file** page.  
   
-11. Expanda o nó **Tabelas** na página **Escolher Objetos do Banco de Dados**.  
+11. Expand the **Tables** node on the **Choose your Database Objects** page.  
   
-12. Escolha as tabelas ou as exibições desejadas no Conjunto de Dados e **Finalizar**.  
+12. Select whatever tables or views you want in your dataset, and then select **Finish**.  
   
-     O Conjunto de Dados é adicionado ao projeto, e as tabelas e as exibições são mostradas na janela **Fontes de Dados**.  
+     The dataset is added to your project, and the tables and views appear in the **Data Sources** window.  
   
-## Segurança  
- O armazenamento das informações confidenciais \(como uma senha\) pode afetar a segurança do aplicativo.  O uso da Autenticação do Windows \(também conhecida como segurança integrada\) é uma maneira mais segura de controlar o acesso a um banco de dados.  Para obter mais informações, consulte [Protegendo informações de conexão](../Topic/Protecting%20Connection%20Information.md).  
+## <a name="security"></a>Security  
+ Storing sensitive information (such as a password) can affect the security of your application. Using Windows Authentication (also known as integrated security) is a more secure way to control access to a database. For more information, see [Protecting Connection Information](/dotnet/framework/data/adonet/protecting-connection-information).  
   
-## Próximas etapas  
- O conjunto de dados recém\-criado agora está disponível na janela **Fontes de Dados**.  Agora é possível realizar qualquer uma das seguintes tarefas:  
+## <a name="next-steps"></a>Next Steps  
+ The dataset that you just created is now available in the **Data Sources** window. You can now perform any of the following tasks:  
   
--   Selecione itens na janela **Fontes de Dados** e os arraste para o formulário \(consulte [Associar controles dos Windows Forms a dados no Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)\).  
+-   Select items in the **Data Sources** window and drag them onto your form (see [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)).  
   
--   Abra a fonte de dados no [Designer de Conjunto de Dados](../data-tools/creating-and-editing-typed-datasets.md) para adicionar ou editar os objetos que constituem o conjunto de dados.  
+-   Open the data source in the **Dataset Designer** to add or edit the objects that make up the dataset.  
   
--   Adicione a lógica de validação ao evento <xref:System.Data.DataTable.ColumnChanging> or <xref:System.Data.DataTable.RowChanging> das tabelas de dados no conjunto de dados \(consulte [Validar dados em conjuntos de dados](../data-tools/validate-data-in-datasets.md)\).  
+-   Add validation logic to the <xref:System.Data.DataTable.ColumnChanging> or <xref:System.Data.DataTable.RowChanging> event of the data tables in the dataset (see [Validate data in datasets](../data-tools/validate-data-in-datasets.md)).  
   
-## Consulte também  
- [Conectando a dados no Visual Studio](../data-tools/connecting-to-data-in-visual-studio.md)   
- [Preparando o aplicativo para receber dados](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [Buscando dados no aplicativo](../data-tools/fetching-data-into-your-application.md)   
- [Associar controles a dados no Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Editando dados no aplicativo](../data-tools/editing-data-in-your-application.md)   
- [Validando dados](../Topic/Validating%20Data.md)   
- [Salvando dados](../data-tools/saving-data.md)   
- [Instruções passo a passo de dados](../Topic/Data%20Walkthroughs.md)
+## <a name="see-also"></a>See Also  
+
+ [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)   
+ [Validating Data](validate-data-in-datasets.md)   
+ [Saving Data](../data-tools/saving-data.md)   
+
