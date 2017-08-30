@@ -1,86 +1,103 @@
 ---
-title: "CA2107: revisar uso de deny e permit only | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2107"
-  - "ReviewDenyAndPermitOnlyUsage"
-helpviewer_keywords: 
-  - "ReviewDenyAndPermitOnlyUsage"
-  - "CA2107"
+title: 'CA2107: Review deny and permit only usage | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2107
+- ReviewDenyAndPermitOnlyUsage
+helpviewer_keywords:
+- ReviewDenyAndPermitOnlyUsage
+- CA2107
 ms.assetid: 366f4a56-ae93-4882-81d0-bd0a55ebbc26
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2107: revisar uso de deny e permit only
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 2f0b71223049a22e040beffc7cfb012faf858c22
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Review deny and permit only usage
 |||  
 |-|-|  
 |TypeName|ReviewDenyAndPermitOnlyUsage|  
 |CheckId|CA2107|  
-|Categoria|Microsoft.Security|  
-|Alteração Significativa|Quebra|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## Causa  
- Um método contém uma verificação de segurança que especifica a ação de segurança de PermitOnly ou Deny.  
+## <a name="cause"></a>Cause  
+ A method contains a security check that specifies the PermitOnly or Deny security action.  
   
-## Descrição da Regra  
- As ações de segurança de [Using the PermitOnly Method](http://msdn.microsoft.com/pt-br/8c7bdb7f-882f-45b7-908c-6cbaa1767649) e de <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> só deve ser usada pelas que têm um conhecimento avançado de segurança de [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] .  O código que usa essas ações de segurança deve passar pela revisão de segurança.  
+## <a name="rule-description"></a>Rule Description  
+ The [Using the PermitOnly Method](http://msdn.microsoft.com/en-us/8c7bdb7f-882f-45b7-908c-6cbaa1767649) and <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> security actions should be used only by those who have an advanced knowledge of [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] security. Code that uses these security actions should undergo a security review.  
   
- Negar altera o comportamento padrão de exames da pilha que ocorre em resposta a uma pesquisa de segurança.  Permite especificar as permissões que não devem ser concedidas para a duração do método negando, independentemente das permissões reais dos chamadores na pilha de chamadas.  Se a exames da pilha detecta um método que esteja protegido Deny, e se a permissão necessária é incluída nas permissões negado, a exames da pilha falha.  PermitOnly também altera o comportamento padrão de exames de pilha.  Permite que o código especifica apenas as permissões que podem ser concedidas, independentemente das permissões dos chamadores.  Se a exames da pilha detecta um método que esteja protegido por PermitOnly, e se a permissão necessária não é incluída nas permissões que são especificadas por PermitOnly, a exames da pilha falha.  
+ Deny alters the default behavior of the stack walk that occurs in response to a security demand. It lets you specify permissions that must not be granted for the duration of the denying method, regardless of the actual permissions of the callers in the call stack. If the stack walk detects a method that is secured by Deny, and if the demanded permission is included in the denied permissions, the stack walk fails. PermitOnly also alters the default behavior of the stack walk. It allows code to specify only those permissions that can be granted, regardless of the permissions of the callers. If the stack walk detects a method that is secured by PermitOnly, and if the demanded permission is not included in the permissions that are specified by the PermitOnly, the stack walk fails.  
   
- O código que depende dessas ações deve ser cuidadosamente avaliado para vulnerabilidades de segurança devido à sua utilidade limitada e comportamento sutil.  Considere o seguinte:  
+ Code that relies on these actions should be carefully evaluated for security vulnerabilities because of their limited usefulness and subtle behavior. Consider the following:  
   
--   [Demandas de link](../Topic/Link%20Demands.md) não é afetado Deny ou por PermitOnly.  
+-   [Link Demands](/dotnet/framework/misc/link-demands) are not affected by Deny or PermitOnly.  
   
--   Se negar ou o PermitOnly ocorrem no mesmo quadro de pilhas que a demanda que causa a exames da pilha, as ações de segurança não têm nenhum efeito.  
+-   If the Deny or PermitOnly occurs in the same stack frame as the demand that causes the stack walk, the security actions have no effect.  
   
--   Os valores que são usados para construir permissões baseadas em geral caminho\- podem ser especificados em várias maneiras.  Negar acesso a um formulário de caminho não nega acesso a todos os formulários.  Por exemplo, se \\ de compartilhamento de arquivos servidor \\ \\ share é mapeado para uma unidade de rede X: , para negar acesso a um arquivo no compartilhamento, você deve negar servidor \\ \\ \\ share \\ Arquivo, X:\\File e todos os outros caminho que acessa o arquivo.  
+-   Values that are used to construct path-based permissions can usually be specified in multiple ways. Denying access to one form of the path does not deny access to all forms. For example, if a file share \\\Server\Share is mapped to a network drive X:, to deny access to a file on the share, you must deny \\\Server\Share\File, X:\File and every other path that accesses the file.  
   
--   <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> pode finalizar uma exames de pilha antes que negar ou o PermitOnly seja alcançado.  
+-   An <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> can terminate a stack walk before the Deny or PermitOnly is reached.  
   
--   Deny se tiver qualquer efeito, isto é, quando um chamador tem uma permissão que está bloqueada negar, o chamador pode acessar o recurso protegido diretamente, ignorando negar.  Da mesma forma, se o chamador não tiver a permissão negada, a exames da pilha falharia sem negar.  
+-   If a Deny has any effect, namely, when a caller has a permission that is blocked by the Deny, the caller can access the protected resource directly, bypassing the Deny. Similarly, if the caller does not have the denied permission, the stack walk would fail without the Deny.  
   
-## Como Corrigir Violações  
- O uso dessas ações causar uma violação de segurança.  Para corrigir uma violação, não use estas ações de segurança.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ Any use of these security actions will cause a violation. To fix a violation, do not use these security actions.  
   
-## Quando Suprimir Alertas  
- Suprima um aviso desta regra somente depois que você concluir uma análise de segurança.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Suppress a warning from this rule only after you complete a security review.  
   
-## Exemplo  
- O exemplo a seguir demonstra algumas restrições Deny.  
+## <a name="example"></a>Example  
+ The following example demonstrates some limitations of Deny.  
   
- A seguinte biblioteca contém uma classe que tem dois métodos que são idênticos com exceção das demandas de segurança que as protegem.  
+ The following library contains a class that has two methods that are identical except for the security demands that protect them.  
   
- [!CODE [FxCop.Security.PermitAndDeny#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Security.PermitAndDeny#1)]  
+ [!code-csharp[FxCop.Security.PermitAndDeny#1](../code-quality/codesnippet/CSharp/ca2107-review-deny-and-permit-only-usage_1.cs)]  
   
-## Exemplo  
- O aplicativo seguir demonstra os efeitos Deny os métodos seguros de biblioteca.  
+## <a name="example"></a>Example  
+ The following application demonstrates the effects of Deny on the secured methods from the library.  
   
- [!code-cs[FxCop.Security.TestPermitAndDeny#1](../code-quality/codesnippet/CSharp/ca2107-review-deny-and-permit-only-usage_1.cs)]  
+ [!code-csharp[FxCop.Security.TestPermitAndDeny#1](../code-quality/codesnippet/CSharp/ca2107-review-deny-and-permit-only-usage_2.cs)]  
   
- O exemplo produz a seguinte saída.  
+ This example produces the following output.  
   
-  **Procura: Deny do chamador não tem nenhum efeito sob demanda com a permissão declarada.**  
-**LinkDemand: Deny do chamador não tem nenhum efeito em LinkDemand com a permissão declarada.**  
-**LinkDemand: Deny do chamador não tem nenhum efeito com o código LinkDemand\- protegido.**  
-**LinkDemand: Este Deny não tem nenhum efeito com o código LinkDemand\- protegido.**   
-## Consulte também  
+ **Demand: Caller's Deny has no effect on Demand with the asserted permission.**  
+**LinkDemand: Caller's Deny has no effect on LinkDemand with the asserted permission.**  
+**LinkDemand: Caller's Deny has no effect with LinkDemand-protected code.**  
+**LinkDemand: This Deny has no effect with LinkDemand-protected code.**   
+## <a name="see-also"></a>See Also  
  <xref:System.Security.CodeAccessPermission.PermitOnly%2A?displayProperty=fullName>   
  <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>   
  <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>   
  <xref:System.Security.IStackWalk.PermitOnly%2A?displayProperty=fullName>   
- [Diretrizes de codificação segura](../Topic/Secure%20Coding%20Guidelines.md)   
- [Overriding Security Checks](http://msdn.microsoft.com/pt-br/4acdeff5-fc05-41bf-8505-7387cdbfca28)   
- [Using the PermitOnly Method](http://msdn.microsoft.com/pt-br/8c7bdb7f-882f-45b7-908c-6cbaa1767649)
+ [Secure Coding Guidelines](/dotnet/standard/security/secure-coding-guidelines)   
+ [Overriding Security Checks](http://msdn.microsoft.com/en-us/4acdeff5-fc05-41bf-8505-7387cdbfca28)   
+ [Using the PermitOnly Method](http://msdn.microsoft.com/en-us/8c7bdb7f-882f-45b7-908c-6cbaa1767649)

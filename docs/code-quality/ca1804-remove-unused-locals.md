@@ -1,59 +1,76 @@
 ---
-title: "CA1804: remover locais n&#227;o usados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1804"
-  - "RemoveUnusedLocals"
-helpviewer_keywords: 
-  - "RemoveUnusedLocals"
-  - "CA1804"
+title: 'CA1804: Remove unused locals | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1804
+- RemoveUnusedLocals
+helpviewer_keywords:
+- RemoveUnusedLocals
+- CA1804
 ms.assetid: cc332e67-6543-4813-bd8a-6f6fc75bf22a
 caps.latest.revision: 18
-caps.handback.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1804: remover locais n&#227;o usados
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 59d25656b929c36978f609f8b97da506e582f6af
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1804-remove-unused-locals"></a>CA1804: Remove unused locals
 |||  
 |-|-|  
 |TypeName|RemoveUnusedLocals|  
 |CheckId|CA1804|  
-|Categoria|Microsoft.Performance|  
-|Alteração Significativa|Sem quebra|  
+|Category|Microsoft.Performance|  
+|Breaking Change|Non-breaking|  
   
-## Causa  
- Um método declara uma variável local mas não usa a variável exceto possivelmente como o destinatário da instrução de atribuição.  Para análise por esta regra, o assembly deve ser testado compilado com informações de depuração e o arquivo associado de base de dados do programa \(.pdb\) deve estar disponível.  
+## <a name="cause"></a>Cause  
+ A method declares a local variable but does not use the variable except possibly as the recipient of an assignment statement. For analysis by this rule, the tested assembly must be built with debugging information and the associated program database (.pdb) file must be available.  
   
-## Descrição da Regra  
- As variáveis locais não usado e as atribuições desnecessários aumenta o tamanho de um desempenho do assembly e a diminuição.  
+## <a name="rule-description"></a>Rule Description  
+ Unused local variables and unnecessary assignments increase the size of an assembly and decrease performance.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, remover ou usar variável local.  Observe que o compilador C\# que é incluído com [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] remove as variáveis locais não usado quando a opção de `optimize` está habilitada.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, remove or use the local variable. Note that the C# compiler that is included with [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] removes unused local variables when the `optimize` option is enabled.  
   
-## Quando Suprimir Alertas  
- Suprima um aviso dessa regra se a variável foi compilador emissor.  Também é seguro suprimir um aviso desta regra, ou desabilitar a regra, se o desempenho e a manutenção do código não são principais preocupações.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Suppress a warning from this rule if the variable was compiler emitted. It is also safe to suppress a warning from this rule, or to disable the rule, if performance and code maintenance are not primary concerns.  
   
-## Exemplo  
- O exemplo a seguir mostra várias variáveis locais não usado.  
+## <a name="example"></a>Example  
+ The following example shows several unused local variables.  
   
- [!CODE [FxCop.Performance.UnusedLocals#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Performance.UnusedLocals#1)]  
+ [!code-vb[FxCop.Performance.UnusedLocals#1](../code-quality/codesnippet/VisualBasic/ca1804-remove-unused-locals_1.vb)] [!code-csharp[FxCop.Performance.UnusedLocals#1](../code-quality/codesnippet/CSharp/ca1804-remove-unused-locals_1.cs)]  
   
-## Regras Relacionadas  
- [CA1809: evitar locais excessivos](../code-quality/ca1809-avoid-excessive-locals.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1809: Avoid excessive locals](../code-quality/ca1809-avoid-excessive-locals.md)  
   
- [CA1811: evitar código privado não chamado](../code-quality/ca1811-avoid-uncalled-private-code.md)  
+ [CA1811: Avoid uncalled private code](../code-quality/ca1811-avoid-uncalled-private-code.md)  
   
- [CA1812: evitar classes internas sem instâncias](../Topic/CA1812:%20Avoid%20uninstantiated%20internal%20classes.md)  
+ [CA1812: Avoid uninstantiated internal classes](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)  
   
- [CA1801: revisar parâmetros não usados](../Topic/CA1801:%20Review%20unused%20parameters.md)
+ [CA1801: Review unused parameters](../code-quality/ca1801-review-unused-parameters.md)

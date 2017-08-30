@@ -1,65 +1,81 @@
 ---
-title: "CA2243: os literais da cadeia de caracteres de atributo devem ser analisados corretamente | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2243"
-  - "AttributeStringLiteralsShouldParseCorrectly"
-helpviewer_keywords: 
-  - "AttributeStringLiteralsShouldParseCorrectly"
-  - "CA2243"
+title: 'CA2243: Attribute string literals should parse correctly | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2243
+- AttributeStringLiteralsShouldParseCorrectly
+helpviewer_keywords:
+- AttributeStringLiteralsShouldParseCorrectly
+- CA2243
 ms.assetid: bfadb366-379d-4ee4-b17b-c4a09bf1106b
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2243: os literais da cadeia de caracteres de atributo devem ser analisados corretamente
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: e79579bec2c181775f6c6dc91a66e12793ac0319
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243: Attribute string literals should parse correctly
 |||  
 |-|-|  
 |TypeName|AttributeStringLiteralsShouldParseCorrectly|  
 |CheckId|CA2243|  
-|Categoria|Microsoft.Usage|  
-|Alteração Significativa|Sem Quebra|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## Causa  
- O parâmetro literal de cadeia de caracteres de um atributo não analisa corretamente para uma URL, GUID, ou a versão.  
+## <a name="cause"></a>Cause  
+ An attribute's string literal parameter does not parse correctly for a URL, GUID, or Version.  
   
-## Descrição da Regra  
- Como os atributos são derivados de <xref:System.Attribute?displayProperty=fullName>, e os atributos são usados em tempo de compilação, somente valores constantes podem ser passados para seus construtores.  Atribua parâmetros que devem representar URL, GUIDs e as versões não podem ser digitadas como <xref:System.Uri?displayProperty=fullName>, <xref:System.Guid?displayProperty=fullName>, e <xref:System.Version?displayProperty=fullName>, pois esses tipos não podem ser representados como constantes.  Em vez disso, devem ser representados por cadeias de caracteres.  
+## <a name="rule-description"></a>Rule Description  
+ Since attributes are derived from <xref:System.Attribute?displayProperty=fullName>, and attributes are used at compile time, only constant values can be passed to their constructors. Attribute parameters that must represent URLs, GUIDs and Versions cannot be typed as <xref:System.Uri?displayProperty=fullName>, <xref:System.Guid?displayProperty=fullName>, and <xref:System.Version?displayProperty=fullName>, because these types cannot be represented as constants. Instead, they must be represented by strings.  
   
- Porque o parâmetro é digitado como uma cadeia de caracteres, é possível que um parâmetro incorretamente formatado pode ser passado em tempo de compilação.  
+ Because the parameter is typed as a string, it is possible that an incorrectly formatted parameter could be passed at compile time.  
   
- Esta regra usa uma nomeação heurística para localizar os parâmetros que representam o Uniform Resource Identifier \(URI\), um GUID \(identificador global exclusivo\) ou uma versão e verifica se o valor passado está correto.  
+ This rule uses a naming heuristic to find parameters that represent a uniform resource identifier (URI), a Globally Unique Identifier (GUID) or a Version and verifies that the passed value is correct.  
   
-## Como Corrigir Violações  
- Altere a cadeia de caracteres de parâmetro em uma URL corretamente formado, a GUID, ou à versão.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ Change the parameter string to a correctly formed URL, GUID, or Version.  
   
-## Quando Suprimir Alertas  
- É seguro suprimir um aviso dessa regra se o parâmetro não representa uma URL, GUID, ou a versão.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule if the parameter does not represent a URL, GUID, or Version.  
   
-## Exemplo  
- O código a seguir mostra de exemplo para o AssemblyFileVersionAttribute que viola esta regra.  
+## <a name="example"></a>Example  
+ The following example shows code for the AssemblyFileVersionAttribute that violates this rule.  
   
- [!code-cs[FxCop.Usage.AttributeStringLiteralsShouldParseCorrectly#1](../code-quality/codesnippet/CSharp/ca2243-attribute-string-literals-should-parse-correctly_1.cs)]  
+ [!code-csharp[FxCop.Usage.AttributeStringLiteralsShouldParseCorrectly#1](../code-quality/codesnippet/CSharp/ca2243-attribute-string-literals-should-parse-correctly_1.cs)]  
   
- A regra é disparada pelo seguinte:  
+ The rule is triggered by the following:  
   
--   Parâmetros que contêm “versão” e não pode ser analisado a System.Version.  
+-   Parameters that contain 'version' and cannot be parsed to System.Version.  
   
--   Parâmetros que contêm “GUID” e não pode ser analisado a System.Guid.  
+-   Parameters that contain 'guid' and cannot be parsed to System.Guid.  
   
--   Os parâmetros que contêm “uri”, “urn,” ou “URL” e não pode ser analisado a System.Uri.  
+-   Parameters that contain 'uri', 'urn', or 'url' and cannot be parsed to System.Uri.  
   
-## Consulte também  
- [CA1054: os parâmetros de URI não devem ser cadeias de caracteres](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
+## <a name="see-also"></a>See Also  
+ [CA1054: URI parameters should not be strings](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)

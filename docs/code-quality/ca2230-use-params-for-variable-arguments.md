@@ -1,56 +1,72 @@
 ---
-title: "CA2230: usar par&#226;metros para argumentos vari&#225;veis | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "UseParamsForVariableArguments"
-  - "CA2230"
-helpviewer_keywords: 
-  - "CA2230"
-  - "UseParamsForVariableArguments"
+title: 'CA2230: Use params for variable arguments | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- UseParamsForVariableArguments
+- CA2230
+helpviewer_keywords:
+- CA2230
+- UseParamsForVariableArguments
 ms.assetid: bf98b733-4855-4110-9f16-eba5a9e79421
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2230: usar par&#226;metros para argumentos vari&#225;veis
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 8e7037e7b642aa36bb1a351113e7d09dc1ea2537
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: Use params for variable arguments
 |||  
 |-|-|  
 |TypeName|UseParamsForVariableArguments|  
 |CheckId|CA2230|  
-|Categoria|Microsoft.Usage|  
-|Alteração Significativa|Quebra|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Breaking|  
   
-## Causa  
- Um público ou um tipo protegido contêm um público ou protegido um método que usa `VarArgs` que chama a convenção.  
+## <a name="cause"></a>Cause  
+ A public or protected type contains a public or protected method that uses the `VarArgs` calling convention.  
   
-## Descrição da Regra  
- `VarArgs` que chama a convenção é usado com certas definições do método que têm um número variável de parâmetros.  Um método que usa `VarArgs` que chama a convenção não é compatível CLS \(CLS\) e pode não estar acessível através das linguagens de programação.  
+## <a name="rule-description"></a>Rule Description  
+ The `VarArgs` calling convention is used with certain method definitions that take a variable number of parameters. A method using the `VarArgs` calling convention is not Common Language Specification (CLS) compliant and might not be accessible across programming languages.  
   
- No C\#, `VarArgs` que chama a convenção é usado quando a lista de parâmetros de um método termina com a palavra\-chave de `__arglist` .  Visual Basic não da suporte `VarArgs` que chama a convenção, e o Visual C\+\+ permite o uso apenas em código não gerenciado usando a notação de `...` de reticências.  
+ In C#, the `VarArgs` calling convention is used when a method's parameter list ends with the `__arglist` keyword. Visual Basic does not support the `VarArgs` calling convention, and Visual C++  allows its use only in unmanaged code that uses the ellipse `...` notation.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra no C\#, use a palavra\-chave de [params](/dotnet/csharp/language-reference/keywords/params) em vez de `__arglist`.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule in C#, use the [params](/dotnet/csharp/language-reference/keywords/params) keyword instead of `__arglist`.  
   
-## Quando Suprimir Alertas  
- Não elimine um alerta desta regra.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Exemplo  
- O exemplo a seguir mostra dois métodos, um que viola a regra e outro que obedece à regra.  
+## <a name="example"></a>Example  
+ The following example shows two methods, one that violates the rule and one that satisfies the rule.  
   
- [!code-cs[FxCop.Usage.UseParams#1](../code-quality/codesnippet/CSharp/ca2230-use-params-for-variable-arguments_1.cs)]  
+ [!code-csharp[FxCop.Usage.UseParams#1](../code-quality/codesnippet/CSharp/ca2230-use-params-for-variable-arguments_1.cs)]  
   
-## Consulte também  
+## <a name="see-also"></a>See Also  
  <xref:System.Reflection.CallingConventions?displayProperty=fullName>   
- [Independência da linguagem e componentes independentes da linguagem](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md)
+ [Language Independence and Language-Independent Components](http://msdn.microsoft.com/Library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

@@ -1,66 +1,82 @@
 ---
-title: "CA1052: os tipos de suporte est&#225;tico devem ser lacrados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "StaticHolderTypesShouldBeSealed"
-  - "CA1052"
-helpviewer_keywords: 
-  - "CA1052"
-  - "StaticHolderTypesShouldBeSealed"
+title: 'CA1052: Static holder types should be sealed | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- StaticHolderTypesShouldBeSealed
+- CA1052
+helpviewer_keywords:
+- CA1052
+- StaticHolderTypesShouldBeSealed
 ms.assetid: 51a3165d-781e-4a55-aa0d-ea25fee7d4f2
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1052: os tipos de suporte est&#225;tico devem ser lacrados
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 9658a77e9504b08a523ca8fd31a60606cd8f8317
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1052-static-holder-types-should-be-sealed"></a>CA1052: Static holder types should be sealed
 |||  
 |-|-|  
 |TypeName|StaticHolderTypesShouldBeSealed|  
 |CheckId|CA1052|  
-|Categoria|Microsoft.Design|  
-|Alteração Significativa|Quebra|  
+|Category|Microsoft.Design|  
+|Breaking Change|Breaking|  
   
-## Causa  
- Um público ou um tipo protegido contêm apenas membros estáticos e não são declarados com o modificador de [sealed](/dotnet/csharp/language-reference/keywords/sealed) \([NotInheritable](/dotnet/visual-basic/language-reference/modifiers/notinheritable)\).  
+## <a name="cause"></a>Cause  
+ A public or protected type contains only static members and is not declared with the [sealed](/dotnet/csharp/language-reference/keywords/sealed) ([NotInheritable](/dotnet/visual-basic/language-reference/modifiers/notinheritable)) modifier.  
   
-## Descrição da Regra  
- Esta regra supõe que um tipo que contém apenas membros estáticos não é criado para ser herdado, como o tipo não fornece nenhuma funcionalidade que pode ser substituída em um tipo derivado.  Um tipo que não é significado ser herdado deve ser marcado com o modificador de `sealed` para impedir seu uso como um tipo de base.  
+## <a name="rule-description"></a>Rule Description  
+ This rule assumes that a type that contains only static members is not designed to be inherited, because the type does not provide any functionality that can be overridden in a derived type. A type that is not meant to be inherited should be marked with the `sealed` modifier to prohibit its use as a base type.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, marque o tipo como `sealed`.  Se você estiver destino [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 2,0 ou menos, uma abordagem melhor é marcar o tipo como `static`.  Assim, você evita a necessidade de declarar um construtor particular para impedir que a classe foi criada.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, mark the type as `sealed`. If you are targeting [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 2.0 or later, a better approach is to mark the type as `static`. In this manner, you avoid having to declare a private constructor to prevent the class from being created.  
   
-## Quando Suprimir Alertas  
- Suprima um aviso desta regra somente se o tipo é projetado para ser herdado.  A ausência de modificador de `sealed` sugere que o tipo é útil como um tipo de base.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Suppress a warning from this rule only if the type is designed to be inherited. The absence of the `sealed` modifier suggests that the type is useful as a base type.  
   
-## Exemplo de uma Violação  
+## <a name="example-of-a-violation"></a>Example of a Violation  
   
-### Descrição  
- O exemplo a seguir mostra um tipo que viola a regra.  
+### <a name="description"></a>Description  
+ The following example shows a type that violates the rule.  
   
-### Código  
- [!code-cs[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/CSharp/ca1052-static-holder-types-should-be-sealed_1.cs)]
- [!code-vb[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/VisualBasic/ca1052-static-holder-types-should-be-sealed_1.vb)]
- [!code-cpp[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/CPP/ca1052-static-holder-types-should-be-sealed_1.cpp)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/CSharp/ca1052-static-holder-types-should-be-sealed_1.cs)] [!code-vb[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/VisualBasic/ca1052-static-holder-types-should-be-sealed_1.vb)] [!code-cpp[FxCop.Design.StaticMembers#1](../code-quality/codesnippet/CPP/ca1052-static-holder-types-should-be-sealed_1.cpp)]  
   
-## Correção com o modificador estático  
+## <a name="fix-with-the-static-modifier"></a>Fix with the Static Modifier  
   
-### Descrição  
- O exemplo a seguir mostra como corrigir uma violação desta regra marcando o tipo com o modificador de `static` .  
+### <a name="description"></a>Description  
+ The following example shows how to fix a violation of this rule by marking the type with the `static` modifier.  
   
-### Código  
- [!code-cs[FxCop.Design.StaticMembersFixed#1](../code-quality/codesnippet/CSharp/ca1052-static-holder-types-should-be-sealed_2.cs)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.StaticMembersFixed#1](../code-quality/codesnippet/CSharp/ca1052-static-holder-types-should-be-sealed_2.cs)]  
   
-## Regras Relacionadas  
- [CA1053: os tipos de suporte estático não devem ter construtores](../code-quality/ca1053-static-holder-types-should-not-have-constructors.md)
+## <a name="related-rules"></a>Related Rules  
+ [CA1053: Static holder types should not have constructors](../code-quality/ca1053-static-holder-types-should-not-have-constructors.md)
+

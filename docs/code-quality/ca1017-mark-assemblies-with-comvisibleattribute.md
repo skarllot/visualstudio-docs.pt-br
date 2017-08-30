@@ -1,56 +1,71 @@
 ---
-title: "CA1017: marcar assemblies com ComVisibleAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1017"
-  - "MarkAssembliesWithComVisible"
-helpviewer_keywords: 
-  - "MarkAssembliesWithComVisible"
-  - "CA1017"
+title: 'CA1017: Mark assemblies with ComVisibleAttribute | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1017
+- MarkAssembliesWithComVisible
+helpviewer_keywords:
+- MarkAssembliesWithComVisible
+- CA1017
 ms.assetid: 4842cb49-8dd8-4e5d-a2d6-ceeaf6c6cf8e
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1017: marcar assemblies com ComVisibleAttribute
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 642740f4750d643fddf51ba405be4acad6733ea7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Mark assemblies with ComVisibleAttribute
 |||  
 |-|-|  
 |TypeName|MarkAssembliesWithComVisible|  
 |CheckId|CA1017|  
-|Categoria|Microsoft.Design|  
-|Alteração Significativa|Sem quebra|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## Causa  
- Um assembly não tenha um atributo de <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> aplicado a ela.  
+## <a name="cause"></a>Cause  
+ An assembly does not have the <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> attribute applied to it.  
   
-## Descrição da Regra  
- O atributo de <xref:System.Runtime.InteropServices.ComVisibleAttribute> determina como código gerenciado do acesso de clientes COM.  O bom design exige que os assemblies indica explicitamente a visibilidade da.  A visibilidade de COM pode ser definida para um assembly inteiro e então ser substituída para tipos e membros individuais do tipo.  Se o atributo não estiver presente, o conteúdo do assembly são visíveis aos clientes COM.  
+## <a name="rule-description"></a>Rule Description  
+ The <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute determines how COM clients access managed code. Good design dictates that assemblies explicitly indicate COM visibility. COM visibility can be set for a whole assembly and then overridden for individual types and type members. If the attribute is not present, the contents of the assembly are visible to COM clients.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, adicione o atributo ao assembly.  Se você não quiser que o assembly seja visível aos clientes COM, aplicar o atributo e defina seu valor como `false`.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, add the attribute to the assembly. If you do not want the assembly to be visible to COM clients, apply the attribute and set its value to `false`.  
   
-## Quando Suprimir Alertas  
- Não elimine um alerta desta regra.  Se você quiser que o assembly seja visível, aplicar o atributo e defina seu valor como `true`.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule. If you want the assembly to be visible, apply the attribute and set its value to `true`.  
   
-## Exemplo  
- O exemplo a seguir mostra um assembly que tem o atributo de <xref:System.Runtime.InteropServices.ComVisibleAttribute> aplicado para impedir que seja visível para clientes COM.  
+## <a name="example"></a>Example  
+ The following example shows an assembly that has the <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute applied to prevent it from being visible to COM clients.  
   
- [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)]
- [!code-vb[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/VisualBasic/ca1017-mark-assemblies-with-comvisibleattribute_1.vb)]
- [!code-cs[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CSharp/ca1017-mark-assemblies-with-comvisibleattribute_1.cs)]  
+ [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)] [!code-vb[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/VisualBasic/ca1017-mark-assemblies-with-comvisibleattribute_1.vb)] [!code-csharp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CSharp/ca1017-mark-assemblies-with-comvisibleattribute_1.cs)]  
   
-## Consulte também  
- [Interoperação com código não gerenciado](../Topic/Interoperating%20with%20Unmanaged%20Code.md)   
- [Qualificando tipos do .NET para interoperação](../Topic/Qualifying%20.NET%20Types%20for%20Interoperation.md)
+## <a name="see-also"></a>See Also  
+ [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)   
+ [Qualifying .NET Types for Interoperation](/dotnet/framework/interop/qualifying-net-types-for-interoperation)

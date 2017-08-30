@@ -1,52 +1,69 @@
 ---
-title: "CA2101: especificar marshaling para argumentos da cadeia de caracteres P/Invoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SpecifyMarshalingForPInvokeStringArguments"
-  - "CA2101"
-helpviewer_keywords: 
-  - "CA2101"
-  - "SpecifyMarshalingForPInvokeStringArguments"
+title: 'CA2101: Specify marshaling for P-Invoke string arguments | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SpecifyMarshalingForPInvokeStringArguments
+- CA2101
+helpviewer_keywords:
+- CA2101
+- SpecifyMarshalingForPInvokeStringArguments
 ms.assetid: 9d1abfc3-d320-41e0-9f6e-60cefe6ffe1b
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2101: especificar marshaling para argumentos da cadeia de caracteres P/Invoke
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 536195a8bd2a3d92e2fb5f784e29d01d9393e580
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2101-specify-marshaling-for-pinvoke-string-arguments"></a>CA2101: Specify marshaling for P/Invoke string arguments
 |||  
 |-|-|  
 |TypeName|SpecifyMarshalingForPInvokeStringArguments|  
 |CheckId|CA2101|  
-|Categoria|Microsoft.Globalization|  
-|Alteração Significativa|Sem quebra|  
+|Category|Microsoft.Globalization|  
+|Breaking Change|Non-breaking|  
   
-## Causa  
- Um membro da invocação de plataforma permitir chamadores parcialmente confiáveis, tem um parâmetro de cadeia de caracteres, e não faz explicitamente para realizar marshaling a cadeia de caracteres.  
+## <a name="cause"></a>Cause  
+ A platform invoke member allows for partially trusted callers, has a string parameter, and does not explicitly marshal the string.  
   
-## Descrição da Regra  
- Ao converter de Unicode para ANSI, é possível que nem todos os caracteres Unicode podem ser representados em uma página de código ANSI específica.  *o mapeamento de melhor ajuste* tenta resolver esse problema substituindo um caractere por caractere que não pode ser representado.  O uso desse recurso pode causar uma vulnerabilidade de segurança potencial porque você não pode controlar o caractere que é escolhido.  Por exemplo, o código mal\-intencionado pode intencionalmente criar uma cadeia de caracteres Unicode que contém os caracteres que não são encontrados em uma página de código específico, que são convertidos em caracteres especiais do sistema de arquivos como “.” ou “\/”.  Observe também que as verificações de segurança de caracteres especiais ocorrem frequentemente antes que a cadeia de caracteres é convertida em ANSI.  
+## <a name="rule-description"></a>Rule Description  
+ When you convert from Unicode to ANSI, it is possible that not all Unicode characters can be represented in a specific ANSI code page. *Best-fit mapping* tries to solve this problem by substituting a character for the character that cannot be represented. The use of this feature can cause a potential security vulnerability because you cannot control the character that is chosen. For example, malicious code could intentionally create a Unicode string that contains characters that are not found in a particular code page, which are converted to file system special characters such as '..' or '/'. Note also that security checks for special characters frequently occur before the string is converted to ANSI.  
   
- o mapeamento de melhor ajuste é o padrão para a conversão não gerenciado, WChar ao MByte.  A menos que você desabilitasse explicitamente o mapeamento de melhor ajuste, seu código pode conter uma vulnerabilidade de segurança explorável devido a esse problema.  
+ Best-fit mapping is the default for the unmanaged conversion, WChar to MByte. Unless you explicitly disable best-fit mapping, your code might contain an exploitable security vulnerability because of this issue.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, explicitamente tipos de dados de cadeia de caracteres de marshaling.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, explicitly marshal string data types.  
   
-## Quando Suprimir Alertas  
- Não elimine um alerta desta regra.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Exemplo  
- O exemplo a seguir mostra um método que viola essa regra, e depois mostra como corrigir a violação.  
+## <a name="example"></a>Example  
+ The following example shows a method that violates this rule, and then shows how to fix the violation.  
   
- [!code-cs[FxCop.Security.PinvokeAnsiUnicode#1](../code-quality/codesnippet/CSharp/ca2101-specify-marshaling-for-p-invoke-string-arguments_1.cs)]
+ [!code-csharp[FxCop.Security.PinvokeAnsiUnicode#1](../code-quality/codesnippet/CSharp/ca2101-specify-marshaling-for-p-invoke-string-arguments_1.cs)]

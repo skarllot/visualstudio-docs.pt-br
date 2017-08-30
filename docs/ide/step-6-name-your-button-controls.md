@@ -1,5 +1,5 @@
 ---
-title: "Etapa 6: nomear os controles de botão | Microsoft Docs"
+title: 'Step 6: Name Your Button Controls | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,70 +28,70 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 09ce424d13fd6fa2e6e511370f509dd54a7c1a1e
-ms.openlocfilehash: 9af9f76e799c39533785f9230be867ace4dbee6a
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 8bd8c04c9a9aba653f587d74b2c6e4fc7ce562f9
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="step-6-name-your-button-controls"></a>Etapa 6: Nomear os controles de botão
-Há apenas uma PictureBox em seu formulário. Quando você a adicionou, o IDE a nomeou automaticamente como **pictureBox1**. Há apenas uma CheckBox, que é denominada **checkBox1**. Em breve, você escreverá alguns códigos, e tais códigos se referirão à CheckBox e à PictureBox. Como há apenas um de cada desses controles, você saberá o que significa ver **pictureBox1** ou **checkBox1** em seu código.  
+# <a name="step-6-name-your-button-controls"></a>Step 6: Name Your Button Controls
+There's only one PictureBox on your form. When you added it, the IDE automatically named it **pictureBox1**. There's only one CheckBox, which is named **checkBox1**. Soon, you will write some code, and that code will refer to the CheckBox and PictureBox. Because there's only one of each of these controls, you will know what it means when you see **pictureBox1** or **checkBox1** in your code.  
   
 > [!NOTE]
->  No Visual Basic, a primeira letra padrão de qualquer nome de controle é uma maiúscula inicial e, portanto, os nomes são **PictureBox1**, **CheckBox1** e assim por diante.  
+>  In Visual Basic, the default first letter of any control name is initial cap, so the names are **PictureBox1**, **CheckBox1**, and so on.  
   
- Há quatro botões no formulário e o IDE os nomeou **button1**, **button2**, **button3** e **button4**. Apenas olhando seus nomes atuais, você não consegue saber qual botão é o botão de **Fechar** e qual é o botão **Mostrar uma imagem**. É por isso que é útil atribuir nomes mais informativos aos controles de botão.  
+ There are four buttons on your form, and the IDE named them **button1**, **button2**, **button3**, and **button4**. By just looking at their current names, you don't know which button is the **Close** button and which one is the **Show a picture** button. That's why giving your button controls more informative names is helpful.  
   
- ![link para vídeo](~/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 3](http://go.microsoft.com/fwlink/?LinkId=205213) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 3](http://go.microsoft.com/fwlink/?LinkId=205202). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
+ ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 3](http://go.microsoft.com/fwlink/?LinkId=205213) or [Tutorial 1: Create a Picture Viewer in C# - Video 3](http://go.microsoft.com/fwlink/?LinkId=205202). These videos use an earlier version of Visual Studio, so there are slight differences in some menu commands and other user interface elements. However, the concepts and procedures work similarly in the current version of Visual Studio.  
   
-### <a name="to-name-your-button-controls"></a>Para nomear os controles de botão  
+### <a name="to-name-your-button-controls"></a>To name your button controls  
   
-1.  No formulário, clique no botão **Fechar**. (Se você ainda tiver todos os botões selecionados, pressione a tecla ESC para cancelar a seleção.) Role pela janela **Propriedades**, até ver a propriedade **(Name)**. (A propriedade **(Name)** fica próxima à parte superior quando as propriedades são alfabéticas.) Altere o nome para **closeButton**, conforme mostrado na imagem a seguir.  
+1.  On the form, choose the **Close** button. (If you still have all the buttons selected, choose the ESC key to cancel the selection.) Scroll in the **Properties** window until you see the **(Name)** property. (The **(Name)** property is near the top when the properties are alphabetical.) Change the name to **closeButton**, as shown in the following picture.  
   
-     ![A janela Propriedades com nome de closeButton](~/ide/media/express_setnameproperty.png "Express_SetNameProperty")  
-A janela Propriedades com nome de closeButton  
-  
-    > [!NOTE]
-    >  Se você tentar alterar o nome do botão para **closeButton**, com um espaço entre as palavras close e Button, o IDE exibirá uma mensagem de erro: "O valor da propriedade não é válido." Espaços (e mais alguns caracteres) não são permitidos em nomes de controle.  
-  
-2.  Renomeie os outros três botões para **backgroundButton**, **clearButton** e **showButton**. Você pode verificar os nomes escolhendo a lista suspensa seletora de controle na janela **Propriedades**. Os nomes dos novos botões aparecem.  
-  
-3.  Clique duas vezes no botão **Mostrar uma imagem** no formulário. Como alternativa, escolha o botão **Mostrar uma imagem** no formulário e, em seguida, pressione a tecla ENTER. Quando você fizer isso, o IDE abrirá uma guia adicional na janela principal chamada **Form1.cs** (**Form1.vb** se você estiver usando Visual Basic). Esta guia mostra o arquivo de código por trás do formulário, conforme mostrado na seguinte imagem.  
-  
-     ![Guia Form1.cs com código do Visual C&#35;](~/ide/media/express_showbuttoncode.png "Express_ShowButtonCode")  
-Guia Form1.cs com código do Visual c#  
-  
-4.  Foco nesta parte do código. (Escolha a guia **VB** abaixo se você estiver usando o Visual Basic para exibir a versão de Visual Basic do código.)  
-  
-     [!code-vb[VbExpressTutorial1Step6#1](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_1.vb)]  [!code-cs[VbExpressTutorial1Step6#1](../ide/codesnippet/CSharp/step-6-name-your-button-controls_1.cs)]  
-  
-     Você está examinando um código chamado `showButton_Click()`. O IDE adicionou isto ao código do formulário quando você abriu o arquivo de código para o botão **showButton**. No tempo de design, quando você abre o arquivo de código para um controle em um formulário, o código é gerado para o controle se ainda não existir. Esse código, conhecido como *método*, é executado quando você executa seu programa e escolhe o controle – nesse caso, o botão **Mostrar uma imagem**.  
+     ![Properties window with closeButton name](../ide/media/express_setnameproperty.png "Express_SetNameProperty")  
+Properties window with closeButton name  
   
     > [!NOTE]
-    >  Neste tutorial, o código do Visual Basic que é gerado automaticamente foi simplificado por meio da remoção de tudo entre os parênteses, (). Sempre que isso ocorre, você pode remover o mesmo código. Seu programa irá trabalhar de qualquer maneira. Para o restante dos tutoriais, qualquer código automaticamente gerado será simplificado sempre que possível.  
+    >  If you try changing the name of your button to **closeButton**, with a space between the words close and Button, the IDE displays an error message: "Property value is not valid." Spaces (and a few other characters) are not allowed in control names.  
   
-5.  Escolha o guia do Designer de Formulários do Windows novamente (**Form1.cs [Design]** no Visual c#, **Form1.vb [Design]** no Visual Basic) e abra o arquivo de código do botão **Limpar a imagem** para criar um método para ele no código do formulário. Repita isso para os dois botões restantes. A cada vez, o IDE adiciona um novo método ao arquivo de código do formulário.  
+2.  Rename the other three buttons to **backgroundButton**, **clearButton**, and **showButton**. You can verify the names by choosing the control selector drop-down list in the **Properties** window. The new button names appear.  
   
-6.  Para adicionar mais um método, abra o arquivo de código para o controle CheckBox no Windows Forms Designer para fazer o IDE adicionar um método `checkBox1_CheckedChanged()`. Esse método é chamado sempre que o usuário seleciona ou desmarca a caixa de seleção.  
+3.  Double-click the **Show a picture** button on the form. As an alternative, choose the **Show a picture** button on the form, and then choose the ENTER key. When you do, the IDE opens an additional tab in the main window called **Form1.cs** (**Form1.vb** if you're using Visual Basic). This tab shows the code file behind the form, as shown in the following picture.  
+  
+     ![Form1.cs tab with Visual C&#35; code](../ide/media/express_showbuttoncode.png "Express_ShowButtonCode")  
+Form1.cs tab with Visual C# code  
+  
+4.  Focus on this part of the code. (Choose the **VB** tab below if you're using Visual Basic to view the Visual Basic version of the code.)  
+  
+     [!code-vb[VbExpressTutorial1Step6#1](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_1.vb)]  [!code-csharp[VbExpressTutorial1Step6#1](../ide/codesnippet/CSharp/step-6-name-your-button-controls_1.cs)]  
+  
+     You are looking at code called `showButton_Click()`. The IDE added this to the form's code when you opened the code file for the **showButton** button. At design-time, when you open the code file for a control in a form, code is generated for the control if it doesn't already exist. This code, known as a *method*, runs when you run your program and choose the control - in this case, the **Show a picture** button.  
   
     > [!NOTE]
-    >  Ao trabalhar em um programa, você geralmente move entre o editor de códigos e o designer do Windows Forms. O IDE torna fácil a navegação no projeto. Use o **Gerenciador de Soluções** para abrir o Designer de Formulários do Windows clicando duas vezes em **Form1.cs** no Visual C# ou **Form1.vb** no Visual Basic ou na barra de menus, escolha **Exibir**, **Designer**.  
+    >  In this tutorial, the Visual Basic code that's automatically generated has been simplified by removing everything between the parentheses, (). Whenever this occurs, you can remove the same code. Your program will work either way. For the remainder of the tutorials, any automatically generated code is simplified whenever possible.  
   
-     A seguir temos o novo código que você vê no editor de códigos.  
+5.  Choose the Windows Forms Designer tab again (**Form1.cs [Design]** in Visual C#, **Form1.vb [Design]** in Visual Basic) and then open the code file for the **Clear the picture** button to create a method for it in the form's code. Repeat this for the remaining two buttons. Each time, the IDE adds a new method to the form's code file.  
   
-     [!code-vb[VbExpressTutorial1Step6#2](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_2.vb)]  [!code-cs[VbExpressTutorial1Step6#2](../ide/codesnippet/CSharp/step-6-name-your-button-controls_2.cs)]  
+6.  To add one more method, open the code file for the CheckBox control in Windows Forms Designer to make the IDE add a `checkBox1_CheckedChanged()` method. That method is called whenever the user selects or clears the check box.  
   
-     Os cinco métodos que você adicionou são chamados *manipuladores de eventos* porque seu programa os chama sempre que um evento (como um usuário que escolhe um botão ou que seleciona uma caixa) acontece.  
+    > [!NOTE]
+    >  When working on a program, you often move between the code editor and Windows Forms Designer. The IDE makes it easy to navigate in your project. Use **Solution Explorer** to open Windows Forms Designer by double-clicking **Form1.cs** in Visual C# or **Form1.vb** in Visual Basic, or on the menu bar, choose **View**, **Designer**.  
   
-     Ao exibir o código para um controle no IDE em tempo de design, o Visual Studio adiciona um método manipulador de eventos para o controle se um não estiver presente. Por exemplo, quando você clica duas vezes em um botão, o IDE adiciona um manipulador de eventos para seu evento Clicar (que é chamado sempre que o usuário escolhe o botão). Quando você clica duas vezes em uma caixa de seleção, o IDE adiciona um manipulador de eventos para o evento CheckedChanged (que é chamado sempre que o usuário seleciona ou desmarca a caixa).  
+     The following shows the new code that you see in the code editor.  
   
-     Após adicionar um manipulador de eventos para um controle, você pode retornar a ele a qualquer momento do Designer de Formulários do Windows clicando duas vezes no controle ou na barra de menus, selecionando **Modo de Exibição**, **Código**.  
+     [!code-vb[VbExpressTutorial1Step6#2](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_2.vb)]  [!code-csharp[VbExpressTutorial1Step6#2](../ide/codesnippet/CSharp/step-6-name-your-button-controls_2.cs)]  
   
-     Os nomes são importantes quando você cria programas e métodos (incluindo manipuladores de eventos) podem ter qualquer nome que você desejar. Quando você adiciona um manipulador de eventos com o IDE, cria um nome com base no nome do controle e do evento que está sendo tratado. Por exemplo, o evento Click de um botão chamado **showButton** é chamado de o método manipulador de eventos de `showButton_Click()`. Além disso, os parênteses de abertura e fechamento () são adicionados geralmente após o nome do método para indicar que os métodos estão sendo discutidos. Se você decidir que deseja alterar um nome de variável de código, clique com o botão direito do mouse na variável no código e então escolha **Refatorar**, **Renomear**. Todas as instâncias desta variável no código são renomeadas. Consulte [Refatoração Renomear (c#)](../csharp-ide/refactoring/rename.md) ou [Refatoração Renomear (Visual Basic)](../vb-ide/refactoring/rename.md) para obter mais informações.
+     The five methods that you added are called *event handlers*, because your program calls them whenever an event (like a user choosing a button or selecting a box) happens.  
   
-### <a name="to-continue-or-review"></a>Para continuar ou revisar  
+     When you view the code for a control in the IDE at design time, Visual Studio adds an event handler method for the control if one isn't there. For example, when you double-click a button, the IDE adds an event handler for its Click event (which is called whenever the user chooses the button). When you double-click a check box, the IDE adds an event handler for its CheckedChanged event (which is called whenever the user selects or clears the box).  
   
--   Para ir para a próxima etapa do tutorial, consulte [Etapa 7: adicionar componentes de diálogo ao formulário](../ide/step-7-add-dialog-components-to-your-form.md).  
+     After you add an event handler for a control, you can return to it at any time from Windows Forms Designer by double-clicking the control, or on the menu bar, choosing **View**, **Code**.  
   
--   Para retornar à etapa anterior do tutorial, consulte [Etapa 5: adicionar controles ao formulário](../ide/step-5-add-controls-to-your-form.md).
+     Names are important when you build programs, and methods (including event handlers) can have any name that you want. When you add an event handler with the IDE, it creates a name based on the control's name and the event being handled. For example, the Click event for a button named **showButton** is called the `showButton_Click()` event handler method. Also, opening and closing parentheses () are usually added after the method name to indicate that methods are being discussed. If you decide you want to change a code variable name, right-click the variable in the code and then choose **Refactor**, **Rename**. All instances of that variable in the code are renamed. See [Rename Refactoring (C#)](../csharp-ide/refactoring/rename.md) or [Rename Refactoring (Visual Basic)](../vb-ide/refactoring/rename.md) for more information.
+  
+### <a name="to-continue-or-review"></a>To continue or review  
+  
+-   To go to the next tutorial step, see [Step 7: Add Dialog Components to Your Form](../ide/step-7-add-dialog-components-to-your-form.md).  
+  
+-   To return to the previous tutorial step, see [Step 5: Add Controls to Your Form](../ide/step-5-add-controls-to-your-form.md).

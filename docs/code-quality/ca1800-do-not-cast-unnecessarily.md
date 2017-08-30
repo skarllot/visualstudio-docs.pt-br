@@ -1,62 +1,78 @@
 ---
-title: "CA1800: n&#227;o converter desnecessariamente | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1800"
-  - "DoNotCastUnnecessarily"
-helpviewer_keywords: 
-  - "DoNotCastUnnecessarily"
-  - "CA1800"
+title: 'CA1800: Do not cast unnecessarily | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1800
+- DoNotCastUnnecessarily
+helpviewer_keywords:
+- DoNotCastUnnecessarily
+- CA1800
 ms.assetid: b79a010a-6627-421e-8955-6007e32fa808
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1800: n&#227;o converter desnecessariamente
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: e2c0d1e5c21661d1a6cc61f7ba7307812bb6a98b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1800-do-not-cast-unnecessarily"></a>CA1800: Do not cast unnecessarily
 |||  
 |-|-|  
 |TypeName|DoNotCastUnnecessarily|  
 |CheckId|CA1800|  
-|Categoria|Microsoft.Performance|  
-|Alteração Significativa|Sem quebra|  
+|Category|Microsoft.Performance|  
+|Breaking Change|Non-breaking|  
   
-## Causa  
- Um método executa conversões duplicados em um de seus argumentos ou variáveis locais.  Para a análise completa por esta regra, o assembly testado deve ser criado usando informações de depuração e o arquivo associado de base de dados do programa \(.pdb\) deve estar disponível.  
+## <a name="cause"></a>Cause  
+ A method performs duplicate casts on one of its arguments or local variables. For complete analysis by this rule, the tested assembly must be built by using debugging information and the associated program database (.pdb) file must be available.  
   
-## Descrição da Regra  
- As conversões duplicados diminui o desempenho, principalmente quando as conversões são executadas em instruções compactas da iteração.  Para operações de conversão explícitas duplicados, armazenar o resultado da conversão em uma variável local e usar variável local em vez das operações de conversão duplicados.  
+## <a name="rule-description"></a>Rule Description  
+ Duplicate casts decrease performance, especially when the casts are performed in compact iteration statements. For explicit duplicate cast operations, store the result of the cast in a local variable and use the local variable instead of the duplicate cast operations.  
   
- Se o operador C\# `is` é usado para testar se a conversão for bem\-sucedida antes que a conversão real seja executada, considere testar o resultado do operador de `as` em vez disso.  Isso fornece a mesma funcionalidade sem a operação de conversão implícita é executada pelo operador de `is` .  
+ If the C# `is` operator is used to test whether the cast will succeed before the actual cast is performed, consider testing the result of the `as` operator instead. This provides the same functionality without the implicit cast operation that is performed by the `is` operator.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, modifique a implementação do método para minimizar o número de operações de conversão.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, modify the method implementation to minimize the number of cast operations.  
   
-## Quando Suprimir Alertas  
- É seguro suprimir um aviso desta regra, ou ignorar completamente a regra, se o desempenho não é um problema.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule, or to ignore the rule completely, if performance is not a concern.  
   
-## Exemplo  
- O exemplo a seguir mostra um método que viola a regra usando o operador C\# `is` .  Um segundo método obedece à regra substituindo o operador de `is` com um teste no resultado do operador de `as` , que diminui o número de operações de conversão pela iteração de dois a uma.  
+## <a name="example"></a>Example  
+ The following example shows a method that violates the rule by using the C# `is` operator. A second method satisfies the rule by replacing the `is` operator with a test against the result of the `as` operator, which decreases the number of cast operations per iteration from two to one.  
   
- [!code-cs[FxCop.Performance.UnnecessaryCastsAsIs#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_1.cs)]  
+ [!code-csharp[FxCop.Performance.UnnecessaryCastsAsIs#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_1.cs)]  
   
-## Exemplo  
- O exemplo a seguir mostra um método, `start_Click`, que tem conversões explícitas duplicados de múltiplas, que viola a regra, e um método, `reset_Click`, que satisfaça a regra para armazenar a conversão em uma variável local.  
+## <a name="example"></a>Example  
+ The following example shows a method, `start_Click`, that has multiple duplicate explicit casts, which violates the rule, and a method, `reset_Click`, which satisfies the rule by storing the cast in a local variable.  
   
- [!code-vb[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/VisualBasic/ca1800-do-not-cast-unnecessarily_2.vb)]
- [!code-cs[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_2.cs)]  
+ [!code-vb[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/VisualBasic/ca1800-do-not-cast-unnecessarily_2.vb)] [!code-csharp[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_2.cs)]  
   
-## Consulte também  
+## <a name="see-also"></a>See Also  
  [as](/dotnet/csharp/language-reference/keywords/as)   
  [is](/dotnet/csharp/language-reference/keywords/is)

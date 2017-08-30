@@ -1,90 +1,105 @@
 ---
-title: "CA2100: revisar consultas SQL para vulnerabilidades de seguran&#231;a | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Review SQL queries for security vulnerabilities"
-  - "ReviewSqlQueriesForSecurityVulnerabilities"
-  - "CA2100"
-helpviewer_keywords: 
-  - "CA2100"
-  - "ReviewSqlQueriesForSecurityVulnerabilities"
+title: 'CA2100: Review SQL queries for security vulnerabilities | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Review SQL queries for security vulnerabilities
+- ReviewSqlQueriesForSecurityVulnerabilities
+- CA2100
+helpviewer_keywords:
+- CA2100
+- ReviewSqlQueriesForSecurityVulnerabilities
 ms.assetid: 79670604-c02a-448d-9c0e-7ea0120bc5fe
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2100: revisar consultas SQL para vulnerabilidades de seguran&#231;a
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 931e2dae6c7b773ca2b8236917146ab9410d3565
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100: Review SQL queries for security vulnerabilities
 |||  
 |-|-|  
 |TypeName|ReviewSqlQueriesForSecurityVulnerabilities|  
 |CheckId|CA2100|  
-|Categoria|Microsoft.Security|  
-|Alteração Significativa|Sem quebra|  
+|Category|Microsoft.Security|  
+|Breaking Change|Non-breaking|  
   
-## Causa  
- Um método define a propriedade de <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> usando uma cadeia de caracteres que é criada a partir de um argumento de cadeia de caracteres para o método.  
+## <a name="cause"></a>Cause  
+ A method sets the <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> property by using a string that is built from a string argument to the method.  
   
-## Descrição da Regra  
- Esta regra presume que o argumento de cadeia de caracteres contém a entrada do usuário.  Uma cadeia de caracteres de comando SQL que é criada da entrada do usuário é vulnerável a ataques de injeção SQL.  Em um ataque de injeção SQL, um usuário mal\-intencionado fornece entrada que modificar o design de uma consulta na tentativa de danificar ou ter acesso não autorizado a base de dados subjacente.  As técnicas básicas incluem a injeção de uma aspa simples ou de apóstrofo, que é o delimitador de cadeia de caracteres literal SQL; dois características, que significa um comentário SQL; e um ponto\-e\-vírgula, que indica que um novo comando a seguir.  Se a entrada de usuário deve fazer parte da consulta, use uma das opções a seguir, listados em ordem de eficiência, para reduzir o risco de ataque.  
+## <a name="rule-description"></a>Rule Description  
+ This rule assumes that the string argument contains user input. A SQL command string that is built from user input is vulnerable to SQL injection attacks. In a SQL injection attack, a malicious user supplies input that alters the design of a query in an attempt to damage or gain unauthorized access to the underlying database. Typical techniques include injection of a single quotation mark or apostrophe, which is the SQL literal string delimiter; two dashes, which signifies a SQL comment; and a semicolon, which indicates that a new command follows. If user input must be part of the query, use one of the following, listed in order of effectiveness, to reduce the risk of attack.  
   
--   Use um procedimento armazenado.  
+-   Use a stored procedure.  
   
--   Use uma cadeia de caracteres de comando com parâmetros.  
+-   Use a parameterized command string.  
   
--   Validar entrada do usuário para o tipo e o conteúdo antes de compilar a cadeia de caracteres de comando.  
+-   Validate the user input for both type and content before you build the command string.  
   
- Os seguintes tipos de [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] implementam a propriedade de <xref:System.Data.IDbCommand.CommandText%2A> ou fornecem construtores esse conjunto a propriedade usando um argumento de cadeia de caracteres.  
+ The following [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] types implement the <xref:System.Data.IDbCommand.CommandText%2A> property or provide constructors that set the property by using a string argument.  
   
--   <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> e <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>  
+-   <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> and <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>  
   
--   <xref:System.Data.OleDb.OleDbCommand?displayProperty=fullName> e <xref:System.Data.OleDb.OleDbDataAdapter?displayProperty=fullName>  
+-   <xref:System.Data.OleDb.OleDbCommand?displayProperty=fullName> and <xref:System.Data.OleDb.OleDbDataAdapter?displayProperty=fullName>  
   
--   <xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName> e <xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>  
+-   <xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName> and <xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>  
   
--   [System.Data.SqlServerCe.SqlCeCommand](assetId:///System.Data.SqlServerCe.SqlCeCommand?qualifyHint=False&autoUpgrade=True) e [System.Data.SqlServerCe.SqlCeDataAdapter](assetId:///System.Data.SqlServerCe.SqlCeDataAdapter?qualifyHint=False&autoUpgrade=True)  
+-   [System.Data.SqlServerCe.SqlCeCommand](https://msdn.microsoft.com/library/system.data.sqlserverce.sqlcecommand.aspx) and  [System.Data.SqlServerCe.SqlCeDataAdapter](https://msdn.microsoft.com/library/system.data.sqlserverce.sqlcedataadapter.aspx)  
   
--   <xref:System.Data.SqlClient.SqlCommand?displayProperty=fullName> e <xref:System.Data.SqlClient.SqlDataAdapter?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlCommand?displayProperty=fullName> and <xref:System.Data.SqlClient.SqlDataAdapter?displayProperty=fullName>  
   
- Observe que esta regra for violada quando o método ToString de um tipo é usado para construir explicitamente ou implicitamente a cadeia de caracteres da consulta.  A seguir temos um exemplo.  
+ Notice that this rule is violated when the ToString method of a type is used explicitly or implicitly to construct the query string. The following is an example.  
   
 ```  
 int x = 10;  
 string query = "SELECT TOP " + x.ToString() + " FROM Table";  
 ```  
   
- A regra é violada como um usuário mal\-intencionado pode substituir o método de ToString\(\) .  
+ The rule is violated because a malicious user can override the ToString() method.  
   
- A regra é violada também quando ToString é usado implicitamente.  
+ The rule also is violated when ToString is used implicitly.  
   
 ```  
 int x = 10;  
 string query = String.Format("SELECT TOP {0} FROM Table", x);  
 ```  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, use uma consulta parametrizada.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, use a parameterized query.  
   
-## Quando Suprimir Alertas  
- É seguro suprimir um aviso dessa regra se o texto do comando não contém nenhuma entrada do usuário.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule if the command text does not contain any user input.  
   
-## Exemplo  
- O exemplo a seguir mostra um método, `UnsafeQuery`, que viola a regra e um método, `SaferQuery`, que obedece à regra usando uma cadeia de caracteres de comando com parâmetros.  
+## <a name="example"></a>Example  
+ The following example shows a method, `UnsafeQuery`, that violates the rule and a method, `SaferQuery`, that satisfies the rule by using a parameterized command string.  
   
- [!code-vb[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/VisualBasic/ca2100-review-sql-queries-for-security-vulnerabilities_1.vb)]
- [!code-cs[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/CSharp/ca2100-review-sql-queries-for-security-vulnerabilities_1.cs)]
- [!code-cpp[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/CPP/ca2100-review-sql-queries-for-security-vulnerabilities_1.cpp)]  
+ [!code-vb[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/VisualBasic/ca2100-review-sql-queries-for-security-vulnerabilities_1.vb)] [!code-csharp[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/CSharp/ca2100-review-sql-queries-for-security-vulnerabilities_1.cs)] [!code-cpp[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/CPP/ca2100-review-sql-queries-for-security-vulnerabilities_1.cpp)]  
   
-## Consulte também  
- [Visão geral da segurança](../Topic/Security%20Overview2.md)
+## <a name="see-also"></a>See Also  
+ [Security Overview](/dotnet/framework/data/adonet/security-overview)

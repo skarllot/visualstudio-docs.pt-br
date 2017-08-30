@@ -1,51 +1,67 @@
 ---
-title: "CA2132: os construtores padr&#227;o devem ser pelo menos cr&#237;ticos como construtores padr&#227;o do tipo base | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2132"
+title: 'CA2132: Default constructors must be at least as critical as base type default constructors | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2132
 ms.assetid: e758afa1-8bde-442a-8a0a-bd1ea7b0ce4d
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2132: os construtores padr&#227;o devem ser pelo menos cr&#237;ticos como construtores padr&#227;o do tipo base
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: e8ef93606186f838a7ecda65928eca78e804c959
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors"></a>CA2132: Default constructors must be at least as critical as base type default constructors
 |||  
 |-|-|  
 |TypeName|DefaultConstructorsMustHaveConsistentTransparency|  
 |CheckId|CA2132|  
-|Categoria|Microsoft.Security|  
-|Alteração Significativa|Quebra|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
 > [!NOTE]
->  Esse aviso é aplicado somente ao código que está executando o CoreCLR \(a versão do CLR que é específica para aplicativos Web do Silverlight\).  
+>  This warning is only applied to code that is running the CoreCLR (the version of the CLR that is specific to Silverlight Web applications).  
   
-## Causa  
- O atributo de transparência do construtor padrão de uma classe derivada não é tão importante quanto a transparência da classe base.  
+## <a name="cause"></a>Cause  
+ The transparency attribute of the default constructor of a derived class is not as critical as the transparency of the base class.  
   
-## Descrição da Regra  
- Os tipos e os membros que têm <xref:System.Security.SecurityCriticalAttribute> não podem ser usados pelo código de aplicativo do Silverlight.  Os tipos de segurança importantes e os membros podem ser usados apenas pelo código de confiança no.NET Framework para a biblioteca de classes do Silverlight.  Como um público ou uma construção seguras em uma classe derivada devem ter o mesmo ou a transparência maior que a sua classe base, uma classe em um aplicativo não pode ser derivada de uma SecurityCritical marcado classe.  
+## <a name="rule-description"></a>Rule Description  
+ Types and members that have the <xref:System.Security.SecurityCriticalAttribute> cannot be used by Silverlight application code. Security-critical types and members can be used only by trusted code in the .NET Framework for Silverlight class library. Because a public or protected construction in a derived class must have the same or greater transparency than its base class, a class in an application cannot be derived from a class marked SecurityCritical.  
   
- Para o código da plataforma de CoreCLR, se um tipo de base tem um construtor público ou padrão não transparente protegido no tipo derivado deve obedecer as regras padrão de herança de construtor.  O tipo derivado também deve ter um construtor padrão e o construtor deve ser pelo menos crítico como o construtor padrão do tipo de base.  
+ For CoreCLR platform code, if a base type has a public or protected non-transparent default constructor then the derived type must obey the default constructor inheritance rules. The derived type must also have a default constructor and that constructor must be at least as critical default constructor of the base type.  
   
-## Como Corrigir Violações  
- Para corrigir a violação, remova o tipo ou não o derivar do tipo não transparente de segurança.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix the violation, remove the type or do not derive from security non-transparent type.  
   
-## Quando Suprimir Alertas  
- Não suprima avisos desta regra.  As violações desta regra pelo código de aplicativo resultarão na CoreCLR que não permite carregar o tipo com <xref:System.TypeLoadException>.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress warnings from this rule. Violations of this rule by application code will result in the CoreCLR refusing to load the type with a <xref:System.TypeLoadException>.  
   
-### Código  
- [!CODE [FxCop.Security.CA2132.DefaultConstructorsMustHaveConsistentTransparency#1](../CodeSnippet/VS_Snippets_CodeAnalysis/fxcop.security.ca2132.defaultconstructorsmusthaveconsistenttransparency#1)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Security.CA2132.DefaultConstructorsMustHaveConsistentTransparency#1](../code-quality/codesnippet/CSharp/ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors_1.cs)]  
   
-### Comentários
+### <a name="comments"></a>Comments

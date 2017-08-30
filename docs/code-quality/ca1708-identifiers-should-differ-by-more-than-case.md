@@ -1,55 +1,71 @@
 ---
-title: "CA1708: os identificadores devem ser diferentes al&#233;m de mai&#250;sculas de min&#250;sculas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IdentifiersShouldDifferByMoreThanCase"
-  - "CA1708"
-helpviewer_keywords: 
-  - "CA1708"
-  - "IdentifiersShouldDifferByMoreThanCase"
+title: 'CA1708: Identifiers should differ by more than case | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IdentifiersShouldDifferByMoreThanCase
+- CA1708
+helpviewer_keywords:
+- CA1708
+- IdentifiersShouldDifferByMoreThanCase
 ms.assetid: dac0f01d-dd21-484d-add1-c8cd2bf6969f
 caps.latest.revision: 21
-caps.handback.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1708: os identificadores devem ser diferentes al&#233;m de mai&#250;sculas de min&#250;sculas
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: d935ed7e683747bdbbbc1a24f0ccbee602d0b072
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1708-identifiers-should-differ-by-more-than-case"></a>CA1708: Identifiers should differ by more than case
 |||  
 |-|-|  
 |TypeName|IdentifiersShouldDifferByMoreThanCase|  
 |CheckId|CA1708|  
-|Categoria|Microsoft.Naming|  
-|Alteração Significativa|Quebra|  
+|Category|Microsoft.Naming|  
+|Breaking Change|Breaking|  
   
-## Causa  
- Os nomes de dois tipos, membros, de parâmetros, ou de namespaces totalmente qualificados forem idênticos quando são convertidos em minúsculas.  
+## <a name="cause"></a>Cause  
+ The names of two types, members, parameters, or fully qualified namespaces are identical when they are converted to lowercase.  
   
-## Descrição da Regra  
- Os identificadores de namespaces, tipos, membros, e parâmetros não podem diferir somente por casos como os idiomas que visam Common Language Runtime não é necessário fazer diferenciação de maiúsculas e minúsculas.  Por exemplo, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] é uma linguagem sem diferenciação de maiúsculas e minúsculas amplamente utilizado.  
+## <a name="rule-description"></a>Rule Description  
+ Identifiers for namespaces, types, members, and parameters cannot differ only by case because languages that target the common language runtime are not required to be case-sensitive. For example, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] is a widely used case-insensitive language.  
   
- Esta regra é acionado em membros publicamente visíveis apenas.  
+ This rule fires on publicly visible members only.  
   
-## Como Corrigir Violações  
- Selecione um nome que seja exclusivo quando comparado a outros identificadores em um modo sem diferenciação de maiúsculas e minúsculas.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ Select a name that is unique when it is compared to other identifiers in a case-insensitive manner.  
   
-## Quando Suprimir Alertas  
- Não elimine um alerta desta regra.  A biblioteca não pode ser útil em todos os idiomas disponíveis em [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule. The library might not be usable in all available languages in the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
-## Exemplo de uma Violação  
- O exemplo a seguir demonstra uma violação desta regra.  
+## <a name="example-of-a-violation"></a>Example of a Violation  
+ The following example demonstrates a violation of this rule.  
   
- [!code-cs[FxCop.Naming.IdentifiersShouldDifferByMoreThanCase#1](../code-quality/codesnippet/CSharp/ca1708-identifiers-should-differ-by-more-than-case_1.cs)]  
+ [!code-csharp[FxCop.Naming.IdentifiersShouldDifferByMoreThanCase#1](../code-quality/codesnippet/CSharp/ca1708-identifiers-should-differ-by-more-than-case_1.cs)]  
   
-## Regras Relacionadas  
- [CA1709: os identificadores do recurso devem ter maiúsculas e minúsculas corretas](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+## <a name="related-rules"></a>Related Rules  
+ [CA1709: Identifiers should be cased correctly](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
