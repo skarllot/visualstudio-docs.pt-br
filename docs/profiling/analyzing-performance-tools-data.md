@@ -36,9 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6631da900d2e0ed3e20e7385af37718eec87f9f6
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: f67e927ad2fdaa934027507441222af4bbde3394
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="analyzing-performance-tools-data"></a>Analisando dados de ferramentas de desempenho
@@ -58,9 +60,4 @@ Os relatórios de desempenho de Ferramentas de Criação de Perfil [!INCLUDE[vsp
  [Salvando e exportando dados de ferramentas de desempenho](../profiling/saving-and-exporting-performance-tools-data.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de Desempenho](../profiling/performance-explorer.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
+ [Gerenciador de Desempenho](../profiling/performance-explorer.md) [Criação de perfil no Visual Studio](../profiling/index.md) [Tour pelos recursos de criação de perfil](../profiling/profiling-feature-tour.md)

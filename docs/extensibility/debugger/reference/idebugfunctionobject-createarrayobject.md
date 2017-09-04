@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreateArrayObject | Documentos do Microsoft
+title: IDebugFunctionObject::CreateArrayObject | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e132376a8e02a956ce1451357b41047a21297bd0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4b4bad39cd9ad636d64ec4c6ea04583dab801e89
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugfunctionobjectcreatearrayobject"></a>IDebugFunctionObject::CreateArrayObject
-Cria um objeto de matriz. Essa matriz pode conter um primitivo ou valores de instância do objeto.  
+Creates an array object. This array can contain either primitive or object instance values.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT CreateArrayObject(   
    OBJECT_TYPE    ot,  
    IDebugField*   pClassField,  
@@ -52,7 +53,7 @@ HRESULT CreateArrayObject(
 );  
 ```  
   
-```c#  
+```csharp  
 int CreateArrayObject(  
    enum_OBJECT_TYPE ot,   
    IDebugField      pClassField,   
@@ -63,30 +64,30 @@ int CreateArrayObject(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ot`  
- [in] Especifica um valor a partir de [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) enumeração que indica o tipo do novo objeto de matriz.  
+ [in] Specifies a value from the [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) enumeration indicating the type of the new array object.  
   
  `pClassField`  
- [in] Um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto que representa a classe de um objeto, se criar uma matriz de objeto valores de instância. Se criar uma matriz de objetos primitivos, este parâmetro é um valor nulo.  
+ [in] An [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object representing the class of an object, if creating an array of object instance values. If creating an array of primitive objects, this parameter is a null value.  
   
  `dwRank`  
- [in] A classificação ou o número de dimensões da matriz.  
+ [in] The rank or number of dimensions of the array.  
   
  `dwDims`  
- [in] Os tamanhos de cada dimensão da matriz.  
+ [in] The sizes of each dimension of the array.  
   
  `dwLowBounds`  
- [in] A origem de cada dimensão (normalmente 0 ou 1).  
+ [in] The origin of each dimension (typically 0 or 1).  
   
  `ppObject`  
- [out] Retorna um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objeto que representa a matriz recém-criada. Isso é realmente um [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md) objeto.  
+ [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the newly created array. This is actually an [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md) object.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Chame esse método para criar um objeto que representa um parâmetro de matriz para a função que é representada pelo [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
+## <a name="remarks"></a>Remarks  
+ Call this method to create an object that represents an array parameter to the function which is represented by the [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

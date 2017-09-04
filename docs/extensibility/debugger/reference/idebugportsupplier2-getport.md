@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::GetPort | Documentos do Microsoft
+title: IDebugPortSupplier2::GetPort | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,41 +30,42 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d71286ba7d1f8aee2d1448786d11822c46c833c4
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 003a30dde6cc98ef1fa44bafa91e0a5bb09fbb22
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugportsupplier2getport"></a>IDebugPortSupplier2::GetPort
-Obtém uma porta de um fornecedor de porta.  
+Gets a port from a port supplier.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetPort(   
    REFGUID       guidPort,  
    IDebugPort2** ppPort  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetPort(   
    ref Guid        guidPort,  
    out IDebugPort2 ppPort  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `guidPort`  
- [in] Identificador global exclusivo (GUID) da porta.  
+ [in] Globally unique identifier (GUID) of the port.  
   
  `ppPort`  
- [out] Retorna um [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) objeto que representa a porta.  
+ [out] Returns an [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) object that represents the port.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_PORTSUPPLIER_NO_PORT` não se existir nenhuma porta com o identificador fornecido.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_PORTSUPPLIER_NO_PORT` if no port exists with the given identifier.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

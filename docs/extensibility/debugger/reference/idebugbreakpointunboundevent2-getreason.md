@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointUnboundEvent2::GetReason | Documentos do Microsoft
+title: IDebugBreakpointUnboundEvent2::GetReason | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,43 +30,44 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 62ec215ce07e750759599a795ece3ccd4703592f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 73fdb52435b4aa727b19786c99774f455bca579d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugbreakpointunboundevent2getreason"></a>IDebugBreakpointUnboundEvent2::GetReason
-Obtém o motivo pelo qual que o ponto de interrupção foi desassociado.  
+Gets the reason the breakpoint was unbound.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetReason(   
    BP_UNBOUND_REASON* pdwUnboundReason  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetReason(   
    out enum_ BP_UNBOUND_REASON pdwUnboundReason  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pdwUnboundReason`  
- [out] Retorna um valor a partir de [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) enumeração que especifica o motivo pelo qual o ponto de interrupção foi desassociado.  
+ [out] Returns a value from the [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) enumeration specifying the reason the breakpoint was unbound.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Os motivos são um ponto de interrupção está sendo se recuperar para um local diferente depois de uma operação Editar e continuar, ou uma determinação de que um ponto de interrupção foi associado em erro.  
+## <a name="remarks"></a>Remarks  
+ Reasons include a breakpoint being rebound to a different location after an edit-and-continue operation, or a determination that a breakpoint was bound in error.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CBreakpointUnboundDebugEventBase** objeto expõe o [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) interface.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CBreakpointUnboundDebugEventBase** object that exposes the [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) interface.  
   
-```cpp#  
+```cpp  
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetReason(  
     BP_UNBOUND_REASON* pdwUnboundReason)  
 {  
@@ -85,5 +86,5 @@ STDMETHODIMP CBreakpointUnboundDebugEventBase::GetReason(
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)

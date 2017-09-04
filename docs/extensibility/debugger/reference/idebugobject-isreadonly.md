@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsReadOnly | Documentos do Microsoft
+title: IDebugObject::IsReadOnly | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bec5ee3da5cdcf0c0148143ab33520757f00ca63
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 13ede24192408b7b5a68c13d37a4535ccf352fed
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugobjectisreadonly"></a>IDebugObject::IsReadOnly
-Determina se este objeto é somente leitura.  
+Determines if this object is read-only.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT IsReadOnly(   
    BOOL* pfIsReadOnly  
 );  
 ```  
   
-```c#  
+```csharp  
 int IsReadOnly(  
    out int pfIsReadOnly  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pfIsReadOnly`  
- [out] Retorna diferente de zero (`TRUE`) se esse objeto for somente leitura; caso contrário, retorna zero (`FALSE`).  
+ [out] Returns non-zero (`TRUE`) if this object is read-only; otherwise, returns zero (`FALSE`).  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Um objeto somente leitura não pode ter seu valor alterado depois que ele é criado.  
+## <a name="remarks"></a>Remarks  
+ A read-only object cannot have its value changed after it is created.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

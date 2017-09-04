@@ -1,5 +1,5 @@
 ---
-title: "Função SccEndBatch | Documentos do Microsoft"
+title: SccEndBatch Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,35 +30,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 62b5ca139d52854ae42622f7443145046e82bc6f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 9812491ac56c7a714dad200e4984afa348f564ed
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sccendbatch-function"></a>Função SccEndBatch
-Essa função conclui um lote de operações de controle do código-fonte. Esses lotes não podem ser aninhados.  
+# <a name="sccendbatch-function"></a>SccEndBatch Function
+This function concludes a batch of source control operations. These batches may not be nested.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccEndBatch(void);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- Nenhum.  
+#### <a name="parameters"></a>Parameters  
+ None.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|SCC_OK|Lote de operações concluídas com êxito.|  
-|SCC_E_UNKNOWNERROR|Falha não específica.|  
+|SCC_OK|Batch of operations successfully concluded.|  
+|SCC_E_UNKNOWNERROR|Nonspecific failure.|  
   
-## <a name="remarks"></a>Comentários  
- Lotes de controle do código-fonte são usados para executar as mesmas operações de controle de origem em vários projetos ou vários contextos. Lotes podem ser usados para eliminar as caixas de diálogo redundantes a experiência do usuário durante uma operação em lote. O [SccBeginBatch](../extensibility/sccbeginbatch-function.md) e `SccEndBatch` função são usados como um par para indicar o início e o final de uma operação. Eles não podem ser aninhados.  
+## <a name="remarks"></a>Remarks  
+ Source control batches are used to execute the same source control operations across multiple projects or multiple contexts. Batches can be used to eliminate redundant dialog boxes from the user experience during a batched operation. The [SccBeginBatch](../extensibility/sccbeginbatch-function.md) and the `SccEndBatch` function are used as a pair to indicate the beginning and end of an operation. They cannot be nested.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccBeginBatch](../extensibility/sccbeginbatch-function.md)

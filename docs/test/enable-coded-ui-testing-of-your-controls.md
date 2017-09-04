@@ -1,5 +1,5 @@
 ---
-title: Habilitar testes de IU codificados dos controles | Microsoft Docs
+title: Enable Coded UI Testing of Your Controls | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,45 +26,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 59c18804574725c584b1b06df8f1ba8a5cf37824
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 00f7cd1d45bca63387acc7f38b39b1cb51b4b2be
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="enable-coded-ui-testing-of-your-controls"></a>Habilitar testes de IU codificado dos controles
-É possível testar o controle mais facilmente se você implementar o suporte à estrutura de teste de IU codificado. É possível adicionar níveis crescentes de suporte incrementalmente. Você pode começar com o suporte ao registro e reprodução e à validação de propriedade. Você poderá, então, usar isso como base para permitir que o construtor de teste de IU codificado reconheça as propriedades personalizadas do controle e fornecer classes personalizadas para acessar as propriedades do código gerado. Você também pode ajudar o construtor de teste de IU codificado a capturar ações da maneira mais próxima à intenção da ação que está sendo registrada.  
+# <a name="enable-coded-ui-testing-of-your-controls"></a>Enable Coded UI Testing of Your Controls
+Your control can be more easily tested if you implement support for the coded UI testing framework. You can add increasing levels of support incrementally. You can start by supporting record and playback and property validation. You can build on that to allow the coded UI test builder to recognize your control's custom properties, and provide custom classes to access those properties from generated code. You can also help the coded UI test builder capture actions in a way that is closer to the intent of the action being recorded.  
   
- **Neste tópico:**  
+ **In this topic:**  
   
-1.  [Suporte ao registro e reprodução, e validação de propriedade com a implementação de acessibilidade](../test/enable-coded-ui-testing-of-your-controls.md#recordandplayback)  
+1.  [Support Record and Playback and Property Validation by implementing Accessibility](../test/enable-coded-ui-testing-of-your-controls.md#recordandplayback)  
   
-2.  [Suporte à validação de propriedade personalizada com a implementação de um provedor de propriedade](../test/enable-coded-ui-testing-of-your-controls.md#customproprties)  
+2.  [Support Custom Property Validation by implementing a Property Provider](../test/enable-coded-ui-testing-of-your-controls.md#customproprties)  
   
-3.  [Suporte à geração de código com a implementação de uma classe para propriedades personalizadas de acesso](../test/enable-coded-ui-testing-of-your-controls.md#codegeneration)  
+3.  [Support Code Generation by implementing a Class to Access Custom Properties](../test/enable-coded-ui-testing-of-your-controls.md#codegeneration)  
   
-4.  [Suporte a ações com reconhecimento de intenção com a implementação de um filtro de ação](../test/enable-coded-ui-testing-of-your-controls.md#intentawareactions)  
+4.  [Support Intent-Aware Actions by implementing an Action Filter](../test/enable-coded-ui-testing-of-your-controls.md#intentawareactions)  
   
- ![CUIT&#95;Full](~/test/media/cuit_full.png "CUIT_Full")  
+ ![CUIT&#95;Full](../test/media/cuit_full.png "CUIT_Full")  
   
-##  <a name="recordandplayback"></a> Suporte ao registro, reprodução e validação de propriedade com a implementação de acessibilidade  
- O construtor de teste de IU codificado captura informações sobre os controles que ele encontra durante uma gravação e, em seguida, gera código para repetir essa sessão. Se o controle não der suporte à acessibilidade, o teste de IU codificado capturará ações (como cliques do mouse) usando coordenadas da tela. Quando o teste é executado, o código gerado emitirá os cliques do mouse nas mesmas coordenadas de tela. Se o controle for exibido em um local diferente na tela quando o teste for reproduzido, o código gerado falhará ao executar essa ação em seu controle. Isso poderá resultar em falhas se o teste for reproduzido em diferentes configurações de tela, em diferentes ambientes ou após alterações no layout da interface do usuário.  
+##  <a name="recordandplayback"></a> Support Record and Playback and Property Validation by implementing Accessibility  
+ The coded UI test builder captures information about the controls that it encounters during a recording and then generates code to replay that session. If your control doesn't support accessibility, then the coded UI test builder will capture actions (like mouse clicks) using screen coordinates. When the test is played back, the generated code will issue those mouse clicks in the same screen coordinates. If your control appears in a different place on the screen when the test is played back, the generated code will fail to perform that action on your control. This can result in failures if the test is played back on different screen configurations, in different environments, or after there have been changes to the UI layout.  
   
- ![CUIT&#95;RecordNoSupport](~/test/media/cuit_recordnosupport.png "CUIT_RecordNoSupport")  
+ ![CUIT&#95;RecordNoSupport](../test/media/cuit_recordnosupport.png "CUIT_RecordNoSupport")  
   
- No entanto, se você implementar acessibilidade, o construtor de teste de IU codificado usará isso para capturar as informações sobre o controle quando ele registrar um teste e gerar o código. Em seguida, quando você executar o teste, o código gerado reproduzirá esses eventos em relação ao seu controle, mesmo que ele esteja em outro lugar na interface do usuário. Os autores do teste também serão capazes de criar asserções usando as propriedades básicas do controle.  
+ If you implement accessibility, though, the coded UI test builder will use that to capture information about your control when it records a test and generates code. Then, when you run the test, the generated code will replay those events against your control, even if it's somewhere else in the user interface. Test authors will also be able create asserts using the basic properties of your control.  
   
- ![CUIT&#95;Record](~/test/media/cuit_record.png "CUIT_Record")  
+ ![CUIT&#95;Record](../test/media/cuit_record.png "CUIT_Record")  
   
-### <a name="to-support-record-and-playback-property-validation-and-navigation-for-a-windows-forms-control"></a>Para dar suporte à gravação e reprodução, validação de propriedade e navegação para controle do Windows Forms  
- Implemente a acessibilidade para seu controle conforme descrito no procedimento a seguir e explicado em detalhes em <xref:System.Windows.Forms.AccessibleObject>.  
+### <a name="to-support-record-and-playback-property-validation-and-navigation-for-a-windows-forms-control"></a>To support record and playback, property validation, and navigation for a Windows forms control  
+ Implement accessibility for your control as outlined in the following procedure, and explained in detail in <xref:System.Windows.Forms.AccessibleObject>.  
   
- ![CUIT&#95;Accessible](~/test/media/cuit_accessible.png "CUIT_Accessible")  
+ ![CUIT&#95;Accessible](../test/media/cuit_accessible.png "CUIT_Accessible")  
   
-1.  Implemente uma classe que seja derivada de <xref:System.Windows.Forms.Control.ControlAccessibleObject> e substitua a propriedade <xref:System.Windows.Forms.Control.AccessibilityObject%2A> para retornar um objeto da sua classe.  
+1.  Implement a class that derives from <xref:System.Windows.Forms.Control.ControlAccessibleObject>, and override the <xref:System.Windows.Forms.Control.AccessibilityObject%2A> property to return an object of your class.  
   
-    ```c#  
+    ```csharp  
     public partial class ChartControl : UserControl  
     {  
         // Overridden to return the custom AccessibleObject for the control.  
@@ -87,26 +87,26 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-2.  Substitua as propriedades e os métodos <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> e <xref:System.Windows.Forms.AccessibleObject.GetChildCount%2A> do objeto acessível.  
+2.  Override the accessible object's <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> and <xref:System.Windows.Forms.AccessibleObject.GetChildCount%2A> properties and methods.  
   
-3.  Implemente outro objeto de acessibilidade para o controle filho e substitua a propriedade <xref:System.Windows.Forms.Control.AccessibilityObject%2A> do controle filho para retornar esse objeto de acessibilidade.  
+3.  Implement another accessibility object for the child control and   override the child control's <xref:System.Windows.Forms.Control.AccessibilityObject%2A> property to return that accessibility object.  
   
-4.  Substitua as propriedades e os métodos <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>, <xref:System.Windows.Forms.AccessibleObject.Name%2A>, <xref:System.Windows.Forms.AccessibleObject.Parent%2A>, <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.Navigate%2A> e <xref:System.Windows.Forms.AccessibleObject.Select%2A> para o objeto de acessibilidade do controle filho.  
+4.  Override the <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>, <xref:System.Windows.Forms.AccessibleObject.Name%2A>, <xref:System.Windows.Forms.AccessibleObject.Parent%2A>, <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.Navigate%2A>, and <xref:System.Windows.Forms.AccessibleObject.Select%2A> properties and methods for the child control's accessibility object.  
   
 > [!NOTE]
->  Este tópico começa com o exemplo de acessibilidade em <xref:System.Windows.Forms.AccessibleObject> neste procedimento e, em seguida, se baseia nisso nos procedimentos restantes. Se você quiser criar uma versão de trabalho do exemplo de acessibilidade, criar um aplicativo de console e, em seguida, substitua o código em Program.cs pelo código de exemplo. Você precisará adicionar referências a Acessibilidade, System.Drawing e System.Windows.Forms. Você deve alterar os **Tipos de Inserção de Interoperabilidade** de Acessibilidade para **False** para eliminar um aviso de build. Você pode alterar o tipo de saída do projeto de **Aplicativo de Console** para **Aplicativo do Windows** para que uma janela de console não apareça ao executar o aplicativo.  
+>  This topic starts with the accessibility sample in <xref:System.Windows.Forms.AccessibleObject> in this procedure, and then builds on that in the remaining procedures. If you want to create a working version of the accessibility sample, create a console application and then replace the code in Program.cs with the sample code. You'll need to add references to Accessibility, System.Drawing, and System.Windows.Forms. You should change the **Embed Interop Types** for Accessibility to **False** to eliminate a build warning. You can change the project's output type to from **Console Application** to **Windows Application** so that a console window doesn't appear when you run the application.  
   
-##  <a name="customproprties"></a> Suporte à validação de propriedade personalizada com a implementação de um provedor de propriedade  
- Depois de implementar o suporte básico para registro e reprodução e validação de propriedade, você poderá disponibilizar as propriedades personalizadas do controle para testes de IU codificados implementando um plug-in <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>. Por exemplo, o procedimento a seguir cria um provedor de propriedade que permite que os testes de IU codificados acessem a propriedade State dos controles filho de CurveLegend do controle do gráfico.  
+##  <a name="customproprties"></a> Support Custom Property Validation by implementing a Property Provider  
+ Once you've implemented basic support for record and playback and property validation, you can make your control's custom properties available to coded UI tests by implementing a <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> plug-in. For example, the following procedure creates a property provider that allows coded UI tests to access the State property of the chart control's CurveLegend child controls.  
   
- ![CUIT&#95;CustomProps](~/test/media/cuit_customprops.png "CUIT_CustomProps")  
+ ![CUIT&#95;CustomProps](../test/media/cuit_customprops.png "CUIT_CustomProps")  
   
-### <a name="to-support-custom-property-validation"></a>Para dar suporte à validação de propriedade personalizada  
- ![CUIT&#95;Props](~/test/media/cuit_props.png "CUIT_Props")  
+### <a name="to-support-custom-property-validation"></a>To support custom property validation  
+ ![CUIT&#95;Props](../test/media/cuit_props.png "CUIT_Props")  
   
-1.  Substitua a propriedade <xref:System.Windows.Forms.AccessibleObject.Description%2A> do objeto acessível da legenda de curva para passar valores avançados da propriedade na cadeia de caracteres de descrição, separados da descrição principal (e uns dos outros se você estiver implementando diversas propriedades) por ponto e vírgula (;).  
+1.  Override the curve legend accessible object's <xref:System.Windows.Forms.AccessibleObject.Description%2A> property to pass rich property values in the description string, separated from the main description (and each other if you are implementing multiple properties) by semicolons (;).  
   
-    ```c#  
+    ```csharp  
     public class CurveLegendAccessibleObject : AccessibleObject  
     {  
         // add the state property value to the description  
@@ -122,11 +122,11 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-2.  Crie um pacote de extensão de teste de interface do usuário para o seu controle, criando um projeto de biblioteca de classes e adicionando referências a Accessibility, Microsoft.VisualStudio.TestTools.UITesting, Microsoft.VisualStudio.TestTools.UITest.Common e Microsoft.VisualStudio.TestTools.Extension. Altere os **Tipos de Inserção de Interoperabilidade** para Acessibilidade para **False**.  
+2.  Create a UI test extension package for your control by creating a class library project and add references to Accessibility, Microsoft.VisualStudio.TestTools.UITesting, Microsoft.VisualStudio.TestTools.UITest.Common, and Microsoft.VisualStudio.TestTools.Extension. Change the **Embed Interop Types** for Accessibility to **False**.  
   
-3.  Adicionar uma classe de provedor de propriedade que seja derivada de <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>.  
+3.  Add a property provider class that's derived from <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>.  
   
-    ```c#  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using Accessibility;  
@@ -143,99 +143,99 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-4.  Implemente o provedor de propriedade colocando os nomes e descritores de propriedade em um <xref:System.Collections.Generic.Dictionary%602>.  
+4.  Implement the property provider by placing property names and property descriptors in a <xref:System.Collections.Generic.Dictionary%602>.  
   
 <CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
-5.  Substitua <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetControlSupportLevel%2A?displayProperty=fullName> para indicar que o assembly fornece suporte específico do controle para o controle e seus filhos.  
+5.  Override <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetControlSupportLevel%2A?displayProperty=fullName> to indicate that your assembly provides control-specific support for your control and its children.  
   
 <CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
-6.  Substitua os métodos abstratos restantes de <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider?displayProperty=fullName>.  
+6.  Override the remaining abstract methods of <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider?displayProperty=fullName>.  
   
 <CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
-7.  Adicione uma classe de pacote de extensão que seja derivada de <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>.  
+7.  Add an extension package class that's derived from <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>.  
   
 <CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
-8.  Defina o atributo `UITestExtensionPackage` do assembly.  
+8.  Define the `UITestExtensionPackage` attribute for the assembly.  
   
 <CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
-9. Na classe de pacote de extensão, substitua <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A?displayProperty=fullName> para retornar a classe do provedor de propriedade quando um provedor de propriedade for solicitado.  
+9. In the extension package class, override <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A?displayProperty=fullName> to return the property provider class when a property provider is requested.  
   
 <CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
-10. Substitua as propriedades e os métodos abstratos restantes de <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>.  
+10. Override the remaining abstract methods and properties of <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>.  
   
 <CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
-11. Compile seus binários e copie-os para **%ProgramFiles%\Common\Microsoft Shared\VSTT\10.0\UITestExtensionPackages**.  
+11. Build your binaries and copy them to **%ProgramFiles%\Common\Microsoft Shared\VSTT\10.0\UITestExtensionPackages**.  
   
 > [!NOTE]
->  Este pacote de extensão será aplicado a qualquer controle que seja do tipo "Texto". Se você estiver testando vários controles do mesmo tipo, precisará testá-los separadamente e gerenciar quais pacotes de extensão serão implantados ao registrar os testes.  
+>  This extension package will be applied to any control that is of type "Text". If you're testing multiple controls of the same type, you'll need to test them separately and manage which extension packages are deployed when you record the tests.  
   
-##  <a name="codegeneration"></a> Suporte à geração de código com a implementação de uma classe para propriedades personalizadas de acesso  
- Quando o construtor de teste de IU codificado gera código de uma gravação de sessão, ele usa a classe <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl> para acessar os controles.  
+##  <a name="codegeneration"></a> Support Code Generation by implementing a Class to Access Custom Properties  
+ When the coded UI test builder generates code from a session recording, it uses the <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl> class to access your controls.  
   
 <CodeContentPlaceHolder>10</CodeContentPlaceHolder>  
- Se você já implementou um provedor de propriedade para conceder acesso às propriedades personalizadas do controle, poderá adicionar uma classe especializada usada para acessar essas propriedades para que o código gerado seja simplificado.  
+ If you've implemented a property provider to provide access to your control's custom properties, you can add a specialized class that is used to access those properties so that the generated code is simplified.  
   
 <CodeContentPlaceHolder>11</CodeContentPlaceHolder>  
-### <a name="to-add-a-specialized-class-to-access-your-control"></a>Para adicionar uma classe especializada para acessar seu controle  
- ![CUIT&#95;CodeGen](~/test/media/cuit_codegen.png "CUIT_CodeGen")  
+### <a name="to-add-a-specialized-class-to-access-your-control"></a>To add a specialized class to access your control  
+ ![CUIT&#95;CodeGen](../test/media/cuit_codegen.png "CUIT_CodeGen")  
   
-1.  Implemente uma classe que seja derivada de <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinControl> e adicione o tipo do controle à coleção de propriedades de pesquisa no construtor.  
+1.  Implement a class that's derived from <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinControl> and add the control's type to the search properties collection in the constructor.  
   
 <CodeContentPlaceHolder>12</CodeContentPlaceHolder>  
-2.  Implemente as propriedades personalizadas do controle como propriedades da classe.  
+2.  Implement your control's custom properties as properties of the class.  
   
 <CodeContentPlaceHolder>13</CodeContentPlaceHolder>  
-3.  Substitua o método <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetSpecializedClass%2A?displayProperty=fullName> do provedor de propriedade para retornar o tipo da nova classe para os controles filho de legenda de curva.  
+3.  Override your property provider's <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetSpecializedClass%2A?displayProperty=fullName> method to return the type of the new class for the curve legend child controls.  
   
 <CodeContentPlaceHolder>14</CodeContentPlaceHolder>  
-4.  Substitua o método <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetPropertyNamesClassType%2A> do provedor de propriedade para retornar o tipo do método PropertyNames da nova classe.  
+4.  Override your property provider's <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider.GetPropertyNamesClassType%2A> method to return the type of the new class' PropertyNames method.  
   
 <CodeContentPlaceHolder>15</CodeContentPlaceHolder>  
-##  <a name="intentawareactions"></a> Suporte a ações com reconhecimento de intenção com a implementação de um filtro de ação  
- Quando o Visual Studio registra um teste, ele captura cada evento do mouse e do teclado. No entanto, em alguns casos, a intenção da ação pode ser perdida na série de eventos de mouse e de teclado. Por exemplo, se o controle dá suporte ao preenchimento automático, o mesmo conjunto de eventos de mouse e teclado podem resultar em um valor diferente quando o teste é reproduzido em um ambiente diferente. Você pode adicionar um plug-in de filtro de ação que substitui a série de eventos de teclado e mouse por uma única ação. Dessa forma, você pode substituir a série de eventos de mouse e de teclado, resultando na seleção de um valor com uma única ação que define o valor. Isso protege os testes de UI codificados contra as diferenças no preenchimento automático de um ambiente para outro.  
+##  <a name="intentawareactions"></a> Support Intent-Aware Actions by implementing an Action Filter  
+ When Visual Studio records a test, it captures each mouse and keyboard event. However, in some cases, the intent of the action can be lost in the series of mouse and keyboard events. For example, if your control supports autocomplete, the same set of mouse and keyboard events may result in a different value when the test is played back in a different environment. You can add an action filter plug-in that replaces the series of keyboard and mouse events with a single action. This way, you can replace the series of mouse and keyboard events resulting in the selection of a value with a single action that sets the value. Doing that protects coded UI tests from the differences in autocomplete from one environment to another.  
   
-### <a name="to-support-intent-aware-actions"></a>Para dar suporte a ações com reconhecimento de intenção  
- ![CUIT&#95;Actions](~/test/media/cuit_actions.png "CUIT_Actions")  
+### <a name="to-support-intent-aware-actions"></a>To support intent-aware actions  
+ ![CUIT&#95;Actions](../test/media/cuit_actions.png "CUIT_Actions")  
   
-1.  Implemente uma classe de filtro de ação que seja derivada de <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter>, substituindo as propriedades <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.ApplyTimeout%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Category%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Enabled%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.FilterType%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Group%2A> e <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Name%2A>.  
+1.  Implement an action filter class that's derived from <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter>, overriding the properties <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.ApplyTimeout%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Category%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Enabled%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.FilterType%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Group%2A> and <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Name%2A>.  
   
 <CodeContentPlaceHolder>16</CodeContentPlaceHolder>  
-2.  Substitua <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.ProcessRule%2A>. Esse exemplo substitui uma ação de clicar duas vezes por uma ação de clique único.  
+2.  Override <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.ProcessRule%2A>. The example here realpces a double-click action with a single click action.  
   
 <CodeContentPlaceHolder>17</CodeContentPlaceHolder>  
-3.  Adicione o filtro de ação ao método <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A> do seu pacote de extensão.  
+3.  Add the action filter to the <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A> method of your extension package.  
   
 <CodeContentPlaceHolder>18</CodeContentPlaceHolder>  
-4.  Compile seus binários e copie-os para %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages.  
+4.  Build your binaries and copy them to %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages.  
   
 > [!NOTE]
->  O filtro de ação não depende da implementação de acessibilidade ou do provedor de propriedade.  
+>  The action filter does not depend on the accessibility implementation or on the property provider.  
   
-## <a name="debug-your-property-provider-or-action-filter"></a>Depurar seu provedor de propriedade ou filtro de ação  
- O provedor de propriedade e filtro de ação são implementados em um pacote de extensão que é carregado e executado pelo construtor de teste de IU codificado em um processo separado do seu aplicativo.  
+## <a name="debug-your-property-provider-or-action-filter"></a>Debug Your Property Provider or Action Filter  
+ Your property provider and action filter are implemented in an extension package that is loaded and run by the coded UI test builder in a process separate from your application.  
   
-#### <a name="to-debug-your-property-provider-or-action-filter"></a>Para depurar seu provedor de propriedade ou filtro de ação  
+#### <a name="to-debug-your-property-provider-or-action-filter"></a>To debug your property provider or action filter  
   
-1.  Compile a versão de depuração do seu pacote de extensão e copie os arquivos .dll e .pdb para %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages.  
+1.  Build the debug version of your extension package copy the .dll and .pdb files to %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages.  
   
-2.  Execute seu aplicativo (não no depurador).  
+2.  Run your application (not in the debugger).  
   
-3.  Execute o construtor de teste de IU codificado.  
+3.  Run the coded UI test builder.  
   
      `codedUITestBuilder.exe  /standalone`  
   
-4.  Anexe o depurador ao processo codedUITestBuilder.  
+4.  Attach the debugger to the codedUITestBuilder process.  
   
-5.  Defina os pontos de interrupção no seu código.  
+5.  Set breakpoints in your code.  
   
-6.  No construtor de teste de IU codificado, crie asserções para exercitar seu provedor de propriedade e registrar ações para exercitar seus filtros de ação.  
+6.  In the coded UI test builder, create asserts to exercise your property provider, and record actions to exercise your action filters.  
   
-## <a name="external-resources"></a>Recursos externos  
+## <a name="external-resources"></a>External resources  
   
-### <a name="guidance"></a>Diretrizes  
- [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
+### <a name="guidance"></a>Guidance  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  <xref:System.Windows.Forms.AccessibleObject>   
- [Usar automação de interface do usuário para testar código](../test/use-ui-automation-to-test-your-code.md)
+ [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md)
 

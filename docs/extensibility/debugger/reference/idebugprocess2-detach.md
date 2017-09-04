@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::Detach | Documentos do Microsoft
+title: IDebugProcess2::Detach | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,32 +30,33 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: dbc32fdaf9780fa804f74ec799d823fe4fb6aa97
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2d327a5ef049a61da9e19227dae4c897764b0e7e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprocess2detach"></a>IDebugProcess2::Detach
-Desanexa o depurador desse processo desanexando todos os programas no processo.  
+Detaches the debugger from this process by detaching all of the programs in the process.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT Detach(   
    void   
 );  
 ```  
   
-```c#  
+```csharp  
 int Detach();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Todos os programas e o processo continuam sendo executado, mas não fazem mais parte da sessão de depuração. Após a operação desanexar depuração completa e não mais eventos para esse processo (e seus programas) serão enviados.  
+## <a name="remarks"></a>Remarks  
+ All programs and the process continue running, but are no longer part of the debug session. After the detach operation is complete, no more debug events for this process (and its programs) will be sent.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetMetaDataImport | Documentos do Microsoft
+title: IDebugSymbolProviderDirect::GetMetaDataImport | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,18 +29,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3ffb7dfc851dec0c0df796edf043d342f5a60271
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 98183a7d16bc953fdbd689e1afc9b9258dd9bbff
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugsymbolproviderdirectgetmetadataimport"></a>IDebugSymbolProviderDirect::GetMetaDataImport
-Recupera as informações de importação de metadados.  
+Retrieves the metadata import information.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetMetaDataImport (  
     GUID*      guid,  
     DWORD      appID,  
@@ -48,7 +49,7 @@ HRESULT GetMetaDataImport (
 );  
 ```  
   
-```c#  
+```csharp  
 int GetMetaDataImport (  
     Guid       guid,  
     uint       appID,  
@@ -56,18 +57,18 @@ int GetMetaDataImport (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `guid`  
- [in] Identificador exclusivo para o módulo.  
+ [in] Unique identifier for the module.  
   
  `appID`  
- [in] Identificador para o domínio de aplicativo.  
+ [in] Identifier for the application domain.  
   
  `ppImport`  
- [out] Retorna um objeto que contém os metadados de importa as informações.  
+ [out] Returns an object that contains the metadata import information.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

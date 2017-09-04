@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::WriteAt | Documentos do Microsoft
+title: IDebugMemoryBytes2::WriteAt | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,18 +31,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 69258e01dbef8e2666da19d248b73e52399992d0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 14d5aa4fa026f27f6b083d656cd5df3f8b7d7f41
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-Grava o número especificado de bytes de memória, começando no endereço especificado.  
+Writes the specified number of bytes of memory, starting at the specified address.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT WriteAt(   
    IDebugMemoryContext2* pStartContext,  
    DWORD                 dwCount,  
@@ -50,7 +51,7 @@ HRESULT WriteAt(
 );  
 ```  
   
-```c#  
+```csharp  
 int WriteAt(  
    IDebugMemoryContext2 pStartContext,  
    uint                 dwCount,  
@@ -58,22 +59,22 @@ int WriteAt(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pStartContext`  
- [in] O [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objeto que especifica onde iniciar a gravação de bytes.  
+ [in] The [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object that specifies where to start writing bytes.  
   
  `dwCount`  
- [in] O número de bytes a serem gravados.  
+ [in] The number of bytes to write.  
   
  `rgbMemory`  
- [in] Os bytes a serem gravados. Essa matriz deve para ser pelo menos `dwCount` bytes de tamanho.  
+ [in] The bytes to write. This array is assumed to be at least `dwCount` bytes in size.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` se nem todos os bytes poderia ser escritos ou retorna um código de erro (geralmente `E_FAIL`).  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns `S_FALSE` if not all bytes could be written or returns an error code (typically `E_FAIL`).  
   
-## <a name="remarks"></a>Comentários  
- Se o endereço inicial não está dentro da janela de memória representada por esse [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) do objeto, nenhuma gravação ocorre e um código de erro `E_FAIL` é retornado, mesmo que se sobreponha a quantidade para gravar no espaço de memória.  
+## <a name="remarks"></a>Remarks  
+ If the starting address is not within the memory window represented by this [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) object, no writing occurs and an error code of `E_FAIL` is returned — even if the amount to write overlaps into the memory space.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugManagedObject::GetManagedObject | Documentos do Microsoft
+title: IDebugManagedObject::GetManagedObject | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4cd3a8f67b4562812266c123866390a5f6f48ad6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4debd813235db6a397726a6ddf2377285de87dfe
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugmanagedobjectgetmanagedobject"></a>IDebugManagedObject::GetManagedObject
-Retorna uma interface que representa o objeto gerenciado.  
+Returns an interface that represents the managed object.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetManagedObject(   
    IUnknown** ppManagedObject  
 );  
 ```  
   
-```cpp#  
+```cpp  
 int GetManagedObject(  
    out object ppManagedObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ppManagedObject`  
- [out] Retorna uma interface que representa o objeto gerenciado.  
+ [out] Returns an interface that represents the managed object.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- A interface retornada desse método pode ser consultada para qualquer interface implementada pela classe gerenciada, permitindo que seus métodos sejam chamados.  
+## <a name="remarks"></a>Remarks  
+ The interface returned from this method can be queried for any interface implemented by the managed class, allowing its methods to be called.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

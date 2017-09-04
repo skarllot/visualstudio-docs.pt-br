@@ -1,5 +1,5 @@
 ---
-title: TEXT_DOC_ATTR_2 | Documentos do Microsoft
+title: TEXT_DOC_ATTR_2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,44 +30,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 490f3d261cb7d23b4795103600522364ba02bc44
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 396ca7cf5d18883aca2b2a3fa9eec8a133dc7a8f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="textdocattr2"></a>TEXT_DOC_ATTR_2
-Descreve os atributos de um documento.  
+Describes the attributes of a document.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 typedef DWORD TEXT_DOC_ATTR_2;  
 const TEXT_DOC_ATTR_2 TEXT_DOC_ATTR_READONLY_2 = 0x00000001;  
 ```  
   
-```c#  
+```csharp  
 public const uint TEXT_DOC_ATTR_READONLY_2 = 0x00000001;  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  TEXT_DOC_ATTR_READONLY_2  
- Indica que o documento é somente leitura.  
+ Indicates that the document is read-only.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  Esse valor não é realmente definido no assembly para c#. Em vez disso, você deve copiar a definição para seu arquivo de origem.  
+>  This value is not actually defined in the assembly for C#. Instead, you must copy the definition to your source file.  
   
- Passada como um argumento para o [onUpdateDocumentAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md) método.  
+ Passed as an argument to the [onUpdateDocumentAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [onUpdateDocumentAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md)

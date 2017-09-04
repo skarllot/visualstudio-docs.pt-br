@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Execute | Documentos do Microsoft
+title: IDebugProcess3::Execute | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,20 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e6035948a8129cfa7a5064760d89530f9e213306
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f1b377b1e4fa46d488851f7c63a27900272feb04
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprocess3execute"></a>IDebugProcess3::Execute
-Continua a execução desse processo de um estado parado. Qualquer estado de execução anterior (como uma etapa) está desmarcado e o processo começa a ser executada novamente.  
+Continues running this process from a stopped state. Any previous execution state (such as a step) is cleared and the process starts executing again.  
   
 > [!NOTE]
->  Esse método deve ser usado em vez de [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md).  
+>  This method should be used instead of [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Execute(  
@@ -50,27 +51,27 @@ HRESULT Execute(
 );  
 ```  
   
-```c#  
+```csharp  
 int Execute(  
    IDebugThread2 pThread  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pThread`  
- [in] Um [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa a execução do thread.  
+ [in] An [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object representing the thread to execute.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns error code.  
   
-## <a name="remarks"></a>Comentários  
- Quando o usuário inicia a execução de um estado parado no thread do outro processo, este método é chamado sobre esse processo. Esse método também é chamado quando o usuário seleciona o **iniciar** comando o **depurar** menu no IDE. A implementação desse método pode ser tão simple quanto chamar o [retomar](../../../extensibility/debugger/reference/idebugthread2-resume.md) método no thread atual no processo.  
+## <a name="remarks"></a>Remarks  
+ When the user starts execution from a stopped state in some other process's thread, this method is called on this process. This method is also called when the user selects the **Start** command from the **Debug** menu in the IDE. The implementation of this method may be as simple as calling the [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) method on the current thread in the process.  
   
 > [!WARNING]
->  Não enviar um evento de parada ou um evento (síncrono) imediato [evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) ao tratar essa chamada; caso contrário, o depurador pode travar.  
+>  Do not send a stopping event or an immediate (synchronous) event to [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) while handling this call; otherwise the debugger may hang.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [Retomar](../../../extensibility/debugger/reference/idebugthread2-resume.md)   
- [Evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)   
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

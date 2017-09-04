@@ -1,36 +1,52 @@
 ---
-title: "Refer&#234;ncia de API do visualizador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "APIs, visualizadores"
-  - "referência, APIs de visualizador"
-  - "visualizadores, Reference API"
+title: Visualizer API Reference | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- APIs, visualizers
+- reference, visualizer APIs
+- visualizers, API reference
 ms.assetid: b9ff4ed0-9e80-49df-9016-a81189319afd
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Refer&#234;ncia de API do visualizador
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: a5fbe3fa48f9330e67e58a96f5e1a556df493c9e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-As APIs do Visualizador são fornecidas para os usuários que quiserem escrever um visualizador para o depurador do Visual Studio.  Um visualizador é um aplicativo pequeno que estende a funcionalidade da interface de usuário do depurador do Visual Studio.  Um visualizador pode exibir \(e, opcionalmente, editar\) um objeto de dados de um tipo específico para o qual o visualizador é criado.  
+---
+# <a name="visualizer-api-reference"></a>Visualizer API Reference
+The Visualizer APIs are provided for users who want to write a visualizer for the Visual Studio debugger. A visualizer is a small application that extends the functionality of the Visual Studio debugger user interface. A visualizer can display (and optionally edit) a data object of a specific type for which the visualizer is designed.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>In This Section  
   
 -   <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer?displayProperty=fullName>  
   
@@ -42,7 +58,7 @@ As APIs do Visualizador são fornecidas para os usuários que quiserem escrever 
   
 -   <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource?displayProperty=fullName>  
   
-## Consulte também  
- [Instruções passo a passo: escrevendo um visualizador em C\#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
- [Como escrever um visualizador](../debugger/how-to-write-a-visualizer.md)   
- [Visualizadores](../debugger/create-custom-visualizers-of-data.md)
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Writing a Visualizer in C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
+ [How to: Write a Visualizer](../debugger/how-to-write-a-visualizer.md)   
+ [Create Custom Visualizers](../debugger/create-custom-visualizers-of-data.md)

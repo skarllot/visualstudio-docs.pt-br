@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetName | Documentos do Microsoft
+title: IDebugCustomAttribute::GetName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 80b2c003de7346cf72d5713d259a5f87d1b10be3
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: cd2356c36509eb1f3e6945a0a64f5add67df387c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
-Obtém o nome do atributo personalizado.  
+Gets the name of the custom attribute.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetName(   
    BSTR* bstrName  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetName(  
    out string bstrName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `bstrName`  
- [out] Retorna uma cadeia de caracteres que contém o nome do atributo personalizado.  
+ [out] Returns a string containing the name of the custom attribute.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- O nome retornado por esse método corresponde ao nome da classe usada para declarar o atributo. Isso poderá não exatamente corresponder ao nome da classe de atributo personalizado próprio c# permite que o sufixo "Attribute" a ser removido de um nome de atributo personalizado quando ele é usado em uma declaração.  
+## <a name="remarks"></a>Remarks  
+ The named returned by this method corresponds to the name of the class used to declare the attribute. This may not exactly correspond to the name of the custom attribute class itself as C# allows the "Attribute" suffix to be dropped from a custom attribute name when it is used in a declaration.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

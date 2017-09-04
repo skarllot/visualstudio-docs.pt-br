@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetMemoryObject | Documentos do Microsoft
+title: IDebugBinder3::GetMemoryObject | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a47d9e9b6e1dcd9a4c0408974c544afa2368e35d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: dc888c192209ae16b96e7b045f5a694b861c9db6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugbinder3getmemoryobject"></a>IDebugBinder3::GetMemoryObject
-Esse método recupera um objeto de memória que representa a memória associado a esse objeto.  
+This method retrieves a memory object that represents the memory that this object is bound to.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetMemoryObject(  
@@ -49,7 +50,7 @@ HRESULT GetMemoryObject(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetMemoryObject(  
    IDebugField      pField,  
    long             uConstant,  
@@ -57,20 +58,20 @@ int GetMemoryObject(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pField`  
- [in] Especifica o campo para obter o objeto de memória para.  
+ [in] Specifies which field to get the memory object for.  
   
  `uConstant`  
- [in] Representa um valor para um valor constante ou um endereço de memória.  
+ [in] Represents a memory address or value for a constant value.  
   
  `ppObject`  
- [out] Um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) que representa a memória associado a esse objeto.  
+ [out] An [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) representing the memory that this object is bound to.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

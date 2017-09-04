@@ -1,51 +1,68 @@
 ---
-title: "Estender a funcionalidade de um TableAdapter | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "dados [Visual Studio], TableAdapters"
-  - "dados [Visual Studio], estendendo o recurso TableAdapters"
-  - "TableAdapters, adicionando funcionalidade"
+title: Extend the functionality of a TableAdapter | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data [Visual Studio], TableAdapters
+- data [Visual Studio], extending TableAdapters
+- TableAdapters, adding functionality
 ms.assetid: 418249c8-c7f3-47ef-a94c-744cb6fe6aaf
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 96fbd4dd36ea375eb8928b4cdd42c5371f74503f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
+
 ---
-# Estender a funcionalidade de um TableAdapter
-Você pode estender a funcionalidade de um TableAdapter adicionando código ao arquivo de classe parcial do TableAdapter.  
+# <a name="extend-the-functionality-of-a-tableadapter"></a>Extend the functionality of a TableAdapter
+You can extend the functionality of a TableAdapter by adding code to the TableAdapter's partial class file.  
   
- O código que define um TableAdapter é regenerado quando alterações são feitas no TableAdapter \(no **Dataset Designer**\) ou quando alterações são feitas durante a execução de qualquer assistente que modifica a configuração de um TableAdapter. Para impedir que seu código seja excluído durante a regeneração de um TableAdapter, adicione código ao arquivo de classe parcial do TableAdapter.  
+ The code that defines a TableAdapter is regenerated when any changes are made to the TableAdapter in the **Dataset Designer**, or when a wizard  modifies the configuration of a TableAdapter. To prevent your code from being deleted during the regeneration of a TableAdapter, add code to the TableAdapter's partial class file.  
   
- \(Classes parciais permitem codificar uma classe específica ser dividida entre arquivos físicos múltiplos. Para obter mais informações, consulte [Parcial](/dotnet/visual-basic/language-reference/modifiers/partial) ou [partial \(tipo\)](/dotnet/csharp/language-reference/keywords/partial-type).\)  
+ Partial classes allow code for a specific class to be divided among multiple physical files. For more information, see [Partial](/dotnet/visual-basic/language-reference/modifiers/partial) or [partial (Type)](/dotnet/csharp/language-reference/keywords/partial-type).  
   
-## Localizando TableAdapters no código  
- Enquanto TableAdapters são criados com o **Dataset Designer**, as classes TableAdapter geradas não são geradas como classes aninhadas do <xref:System.Data.DataSet>. TableAdapters estão localizados em um namespace baseado no nome do dataset associado do TableAdapter. Por exemplo, se seu aplicativo contém um conjunto de dados chamado `HRDataSet`, o TableAdapters deve estar localizado no `HRDataSetTableAdapters` namespace. \(A convenção de nomeação segue este padrão: *DatasetName* \+ `TableAdapters`\).  
+## <a name="locate-tableadapters-in-code"></a>Locate TableAdapters in code  
+ While TableAdapters are designed with the **Dataset Designer**, the TableAdapter classes that are generated are not  nested classes of <xref:System.Data.DataSet>. TableAdapters are located in a namespace based on the name of the TableAdapter's associated dataset. For example, if your application contains a dataset named `HRDataSet`, the TableAdapters would be located in the `HRDataSetTableAdapters` namespace. (The naming convention follows this pattern: *DatasetName* + `TableAdapters`).  
   
- O exemplo a seguir supõe um TableAdapter chamado `CustomersTableAdapter` em um projeto com um `NorthwindDataSet`.  
+ The following example assumes a TableAdapter named `CustomersTableAdapter`is in a project with `NorthwindDataSet`.  
   
-#### Para criar uma classe parcial para um TableAdapter  
+#### <a name="to-create-a-partial-class-for-a-tableadapter"></a>To create a partial class for a TableAdapter  
   
-1.  Adicione uma nova classe ao seu projeto, escolhendo **Add Class** do **projeto** menu.  
+1.  Add a new class to your project by going to the **Project** menu and selecting **Add Class**.  
   
-2.  Nomeie a classe `CustomersTableAdapterExtended`.  
+2.  Name the class `CustomersTableAdapterExtended`.  
   
-3.  Clique em **Adicionar**.  
+3.  Select **Add**.  
   
-4.  Substitua o código com o namespace apropriado e o nome de classe parcial para seu projeto. Por exemplo:  
+4.  Replace the code with the correct namespace and partial class name for your project as follows:  
   
-     [!CODE [VbRaddataTableAdapters#2](../CodeSnippet/VS_Snippets_VBCSharp/VbRaddataTableAdapters#2)]  
+     [!code-csharp[VbRaddataTableAdapters#2](../data-tools/codesnippet/CSharp/extend-the-functionality-of-a-tableadapter_1.cs)]  [!code-vb[VbRaddataTableAdapters#2](../data-tools/codesnippet/VisualBasic/extend-the-functionality-of-a-tableadapter_1.vb)]  
   
-## Consulte também  
- [Preencher datasets usando TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md)
+## <a name="see-also"></a>See Also  
+ [Fill datasets by using TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md)

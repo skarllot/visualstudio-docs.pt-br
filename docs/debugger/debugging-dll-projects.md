@@ -1,152 +1,148 @@
 ---
-title: "Depurando projetos de DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "depurando DLLs"
-  - "modelos, depuração de DLLs"
-  - "DLLs, depuração"
-  - "depuração [Visual Studio], DLLs"
+title: Debugging DLL projects | Microsoft Docs
+ms.custom: 
+ms.date: 05/23/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging DLLs
+- templates, debugging DLLs
+- DLLs, debugging
+- debugging [Visual Studio], DLLs
 ms.assetid: 433cab30-d191-460b-96f7-90d2530ca243
 caps.latest.revision: 38
-caps.handback.revision: 38
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Depurando projetos de DLL
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: cee800302a1018b7d364f301bf5756e23d4c39e2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Os seguintes modelos criam DLLs:  
+---
+# <a name="debugging-dll-projects-from-visual-studio"></a>Debugging DLL projects from Visual Studio
+The following Visual Studio templates create DLLs:  
   
--   \(C\+\+, c\# e Visual Basic\) Biblioteca de classes  
+-   (C++, C#, and Visual Basic) Class Library   
+
+-   (C++): Win32 Console DLL project
   
--   \(C\+\+, c\# e Visual Basic\): biblioteca de controle do Windows Forms  
+     For more information, see [MFC Debugging Techniques](../debugger/mfc-debugging-techniques.md).
+
+-   (C++, C#, and Visual Basic): Windows Forms Control Library
   
-     Depuração de uma biblioteca de controle do Windows é semelhante a depuração de um projeto de biblioteca de classes. Na maioria dos casos, você chamará o controle do Windows de outro projeto. Quando você depurar o projeto de chamada, pode entrar no código do controle do Windows, definir pontos de interrupção e executar outras operações de depuração. Para obter mais informações, consulte [controles dos Windows Forms](../Topic/Windows%20Forms%20Controls.md).  
+     Debugging a Windows Forms Control Library is similar to debugging a Class Library project. In most cases, you will call the Windows control from another project. When you debug the calling project, you can step into the code of your Windows control, set breakpoints, and perform other debugging operations. For more information, see [Windows Forms Controls](/dotnet/framework/winforms/controls/index).  
+
   
--   \(C\# e Visual Basic\): biblioteca de controle Web  
+##  <a name="vxtskdebuggingdllprojectsbuildingadebugversion"></a> Building a debug version  
+ No matter how you start debugging, make sure that you build the Debug version of the DLL first and make sure that the Debug version is in the location where the application expects to find it. This may seem obvious, but if you forget this step, the application might find a different version of the DLL and load it. The program will then continue to run, while you wonder why your breakpoint was never hit. When you are debugging, you can verify which DLLs your program has loaded by opening the debugger's **Modules** window. The **Modules** window lists each DLL or EXE loaded in the process you are debugging. For more information, see [How to: Use the Modules Window](../debugger/how-to-use-the-modules-window.md).  
+ For the debugger to attach to code written in C++, the code must emit `DebuggableAttribute`. You can add this to your code automatically by linking with the [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) linker option.  
   
-     Para obter mais informações, consulte [Biblioteca de Controles da Web \(código gerenciado\)](../debugger/web-control-library-managed-code.md).  
+##  <a name="vxtskdebuggingdllprojectsmixedmodedebugging"></a> Mixed-Mode debugging  
+ The calling application that calls your DLL can be written in managed code or native code. If your managed DLL is called by native code and you want to debug both, managed and native debuggers must both be enabled. You can select this in the **\<Project> Property Pages** dialog box or window. How you do this depends on whether you start debugging from the DLL project or the calling application project. For more information, see [How to: Debug in Mixed Mode](../debugger/how-to-debug-in-mixed-mode.md).  
   
--   \(C\+\+\): controle ActiveX de dispositivo inteligente do controle ActiveX do MFC e MFC  
+##  <a name="vxtskdebuggingdllprojectschangingdefaultconfigurations"></a> Changing default configurations  
+ When you create a console application project with the project template, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automatically creates required settings for the Debug and Release configurations. If necessary, you can change those settings. For more information, see [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md), [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md), [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md), and [How to: Set Debug and Release Configurations](../debugger/how-to-set-debug-and-release-configurations.md).  
   
-     Controles ActiveX são controles que podem ser baixados pela Internet em um computador cliente e exibidos e ativados em páginas da Web.  
+##  <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a> Ways to debug the DLL  
+ Each of the projects in this section creates a DLL. You cannot run a DLL directly; it must be called by an application, usually an EXE. For more information, see [Creating and Managing Visual C++ Projects](/cpp/ide/creating-and-managing-visual-cpp-projects). The calling application might fit any one of the following criteria:  
   
-     Depurando controles ActiveX é semelhante à depuração de outros tipos de controles porque não é possível executar como autônomos, mas devem ser inseridos em uma página da HTML Web. Para obter mais informações, consulte [Como depurar um controle ActiveX](../debugger/how-to-debug-an-activex-control.md).  
+-   An application built in another project in the same [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution that contains the class library.  
   
--   \(C\+\+\): DLL de dispositivo inteligente do MFC  
+-   An existing application already deployed on a test or production computer.  
   
-     Para obter mais informações, consulte [Técnicas de depuração MFC](../debugger/mfc-debugging-techniques.md).  
+-   Located on the Web and accessed through a URL.  
   
- Esta seção também contém informações sobre os seguintes tópicos:  
+-   A Web application that contains a Web page which embeds the DLL.  
   
--   [Como depurar a partir de um projeto de DLL](../debugger/how-to-debug-from-a-dll-project.md)  
+###  <a name="vxtskdebuggingdllprojectsthecallingapplication"></a> Debugging the calling application  
+To debug a DLL, start by debugging the calling application, typically either an EXE or a Web application. There are several ways to debug it.  
   
--   [Como depurar no modo misto](../debugger/how-to-debug-in-mixed-mode.md)  
+-   If you have a project for the calling application, you can open that project and start execution from the **Debug** menu. For more information, see [Getting started with the debugger](../debugger/getting-started-with-the-debugger.md).  
   
- Este tópico contém as seções a seguir, que fornecem considerações sobre a preparação depurar bibliotecas de classes:  
+-   If the calling application is an existing program already deployed on a test or production computer and is already running you can attach to it. Use this method if the DLL is a control hosted by Internet Explorer, or a control on a Web page. For more information, see [How to: Attach to a Running Process](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
--   [Criação de uma versão de depuração](#vxtskdebuggingdllprojectsbuildingadebugversion)  
+-   You can debug it from the DLL project. For more information, see [How to: Debug from a DLL Project](../debugger/how-to-debug-from-a-dll-project.md).  
   
--   [Depuração de modo misto](#vxtskdebuggingdllprojectsmixedmodedebugging)  
+-   You can debug it from the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [Immediate window](#vxtskdebuggingdllprojectstheimmediatewindow). In this case, the **Immediate** window plays the role of the application.  
   
--   [Alterando configurações padrão](#vxtskdebuggingdllprojectschangingdefaultconfigurations)  
+Before you start debugging the calling application, you will usually want to set a breakpoint in the class library. For more information, see [Using Breakpoints](../debugger/using-breakpoints.md). When the breakpoint is hit, you can step through the code, observing the action at each line, until you isolate the problem. For more information, see [Navigate code in the debugger](../debugger/navigating-through-code-with-the-debugger.md).
   
--   [Maneiras de depurar a DLL](#vxtskdebuggingdllprojectswaystodebugthedll)  
+###  <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> The Immediate Window  
+ You can evaluate functions or methods in the DLL without having a calling application. You do design-time debugging and you use the **Immediate** window. To debug in this manner, do the follow these steps while the DLL project is open:  
   
--   [O aplicativo de chamada](#vxtskdebuggingdllprojectsthecallingapplication)  
+1.  Open the Debugger **Immediate** window.  
   
--   [Controles em uma página da Web](#vxtskdebuggingdllprojectscontrolsonawebpage)  
-  
--   [A janela imediata](#vxtskdebuggingdllprojectstheimmediatewindow)  
-  
-##  <a name="vxtskdebuggingdllprojectsbuildingadebugversion"></a> Criação de uma versão de depuração  
- Não importa como você iniciar a depuração, certifique\-se de que você compilar a versão de depuração da DLL primeiro e certifique\-se de que a versão de depuração está no local onde o aplicativo espera encontrá\-lo. Isso pode parecer óbvio, mas se você esquecer desta etapa, o aplicativo pode encontrar uma versão diferente da DLL e carregá\-lo. O programa continuará a executar, embora você esteja se perguntando por que o ponto de interrupção nunca foi atingido. Quando você estiver depurando, você pode verificar quais DLLs seu programa carregou abrindo o depurador **módulos** janela. O **módulos** janela lista cada DLL ou EXE carregados no processo que você está depurando. Para obter mais informações, consulte [Como usar a janela Módulos](../debugger/how-to-use-the-modules-window.md).  
-  
- Para o depurador anexar a códigos escritos em C\+\+, o código deve emitir `DebuggableAttribute`. Você pode adicionar isso ao seu código automaticamente por meio da vinculação com o [\/ASSEMBLYDEBUG](/visual-cpp/build/reference/assemblydebug-add-debuggableattribute) opção de vinculador.  
-  
-##  <a name="vxtskdebuggingdllprojectsmixedmodedebugging"></a> Depuração de modo misto  
- O aplicativo que chama sua DLL pode ser escrito em código gerenciado ou código nativo. Se a DLL gerenciada é chamada pelo código nativo e você deseja depurar ambos, gerenciado e nativos depuradores devem estar habilitadas. Você pode selecionar no **\< projeto \>páginas de propriedade** caixa de diálogo ou janela. Como fazer isso depende se você iniciar a depuração do projeto de DLL ou o projeto de aplicativo de chamada. Para obter mais informações, consulte [Como depurar no modo misto](../debugger/how-to-debug-in-mixed-mode.md).  
-  
-##  <a name="vxtskdebuggingdllprojectschangingdefaultconfigurations"></a> Alterando configurações padrão  
- Quando você cria um projeto de aplicativo de console com o modelo de projeto, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] cria automaticamente as configurações necessárias para as configurações Debug e Release. Se necessário, você pode alterar essas configurações. Para obter mais informações, consulte [Definições do projeto para uma configuração de depuração do C\+\+](../debugger/project-settings-for-a-cpp-debug-configuration.md), [Definições do projeto para configurações de depuração do C\#](../debugger/project-settings-for-csharp-debug-configurations.md), [Definições do projeto para uma configuração de depuração do Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md), e [Como definir configurações de depuração e versão](../debugger/how-to-set-debug-and-release-configurations.md).  
-  
-##  <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a> Maneiras de depurar a DLL  
- Cada um dos projetos nesta seção cria uma DLL. Não é possível executar uma DLL diretamente. ele deve ser chamado por um aplicativo, geralmente um EXE. Para obter mais informações, consulte [Criando e gerenciando projetos do Visual C\+\+](/visual-cpp/ide/creating-and-managing-visual-cpp-projects). O aplicativo de chamada pode conter qualquer um dos seguintes critérios:  
-  
--   Um aplicativo criado em outro projeto na mesma [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solução que contém a biblioteca de classes.  
-  
--   Um aplicativo existente já implantado em um computador de teste ou de produção.  
-  
--   Localizado na Web e acessado por meio de uma URL.  
-  
--   Um aplicativo Web que contém uma página da Web que incorpore a DLL.  
-  
-###  <a name="vxtskdebuggingdllprojectsthecallingapplication"></a> Depurando o aplicativo de chamada  
- Para depurar uma DLL, inicie depurando o aplicativo de chamada, geralmente um executável ou um aplicativo Web. Há várias maneiras de depurá\-lo.  
-  
--   Se você tiver um projeto para o aplicativo de chamada, você pode abrir o projeto e iniciar a execução do **Depurar** menu. Para obter mais informações, consulte [How to: Start Execution](http://msdn.microsoft.com/pt-br/b0fe0ce5-900e-421f-a4c6-aa44ddae453c).  
-  
--   Se o aplicativo de chamada é um programa existente já implantado em um computador de teste ou produção e já está em execução, você pode anexar a ele. Use esse método se a DLL for um controle hospedado pelo Internet Explorer, ou um controle em uma página da Web. Para obter mais informações, consulte [How to: Attach to a Running Process](http://msdn.microsoft.com/pt-br/636d0a52-4bfd-48d2-89ad-d7b9ca4dc4f4).  
-  
--   Você pode depurá\-la do projeto da DLL. Para obter mais informações, consulte [Como depurar a partir de um projeto de DLL](../debugger/how-to-debug-from-a-dll-project.md).  
-  
--   Você pode depurá\-lo do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **imediato** janela.  Nesse caso, o **imediato** janela desempenha a função do aplicativo.  
-  
- Antes de iniciar a depuração do aplicativo de chamada, você geralmente deseja definir um ponto de interrupção na biblioteca de classes. Para obter mais informações, consulte [Breakpoints and Tracepoints](http://msdn.microsoft.com/pt-br/fe4eedc1-71aa-4928-962f-0912c334d583). Quando o ponto de interrupção é atingido, você pode percorrer o código, observando a ação em cada linha até isolar o problema. Para obter mais informações, consulte [Code Stepping Overview](http://msdn.microsoft.com/pt-br/8791dac9-64d1-4bb9-b59e-8d59af1833f9).  
-  
-###  <a name="vxtskdebuggingdllprojectscontrolsonawebpage"></a> Controles em uma página da Web  
- Para depurar um controle de página da Web, crie um [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] página que incorpore, se essa página já não existir. Você colocar pontos de interrupção no código da página da Web, bem como o código de controle. Você então chama a página da Web [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
-  
- Antes de iniciar a depuração do aplicativo de chamada, você geralmente deseja definir um ponto de interrupção na DLL. Quando o ponto de interrupção é atingido, você pode percorrer o código, observando a ação em cada linha até isolar o problema. Para obter mais informações, consulte [Breakpoints and Tracepoints](http://msdn.microsoft.com/pt-br/fe4eedc1-71aa-4928-962f-0912c334d583).  
-  
-###  <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> A janela imediata  
- Você pode avaliar funções ou métodos na DLL sem ter um aplicativo de chamada. Faça a depuração em tempo de design e você usar o **imediato** janela. Para depurar dessa maneira, execute as seguintes etapas enquanto o projeto DLL está aberto:  
-  
-1.  Abra o depurador **imediato** janela.  
-  
-2.  Para testar um método denominado `Test` na classe `Class1`, instancie um objeto do tipo `Class1` digitando o código c\# a seguir na janela imediata. Esse código gerenciado funciona para Visual Basic e C\+\+, com alterações de sintaxe apropriadas:  
+2.  To test a method named `Test` in class `Class1`, instantiate an object of type `Class1` by typing the following C# code in the Immediate window. This managed code works for Visual Basic and C++, with appropriate syntax changes:  
   
     ```  
     Class1 obj = new Class1();  
     ```  
   
-     No c\#, todos os nomes devem ser totalmente qualificados. Além disso, quaisquer métodos ou variáveis devem estar no escopo atual e no contexto da sessão de depuração.  
+     In C#, all names must be fully qualified. In addition, any methods or variables must be in the current scope and context of the debugging session.  
   
-3.  Supondo que `Test` leva um `int` parâmetro, avaliar `Test` usando o **imediato** janela:  
+3.  Assuming that `Test` takes one `int` parameter, evaluate `Test` using the **Immediate** window:  
   
     ```  
     ?obj.Test(10)  
     ```  
   
-     O resultado será impresso no **imediato** janela.  
+     The result will be printed in the **Immediate** window.  
   
-4.  Você pode continuar a depuração `Test` colocando um ponto de interrupção dentro dele e avaliando a função novamente:  
+4.  You can continue to debug `Test` by placing a breakpoint inside it and then evaluating the function again:  
   
     ```  
     ?obj.Test(10);  
     ```  
   
-     O ponto de interrupção será atingido e você poderá percorrer `Test`. Após a execução `Test`, o depurador estará novamente no modo de Design.  
+     The breakpoint will be hit and you will be able to step through `Test`. After execution has left `Test`, the Debugger will be back in Design mode.
+
+## <a name="vxtskdebuggingdllprojectsexternal"></a> Debug an external DLL from a C++ project
+
+If you are debugging a DLL external to your project, the debugging features available (such as stepping through code) will depend on the [debug configuration of the DLL](#vxtskdebuggingdllprojectsbuildingadebugversion) when it was built and whether the [.pdb file](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) and other required files for the DLL are available.
+
+Your project needs to be able to find the DLL and the .pdb file used for debugging. You can create a custom build task to copy these files to the **\<project folder>\Debug** output folder, or you can copy the files into the output folder manually.
+
+You can easily set locations of header files and *.lib files in the Property Pages (right-click the C++ project and choose **View Properties**, and then choose **All Configurations**) without the need to copy them into your output folder:
+
+- C/C++ folder (General category) - Specify the folder containing header files in the **Additional Include Directories** field.
+- Linker folder (General category) - Specify the folder containing the .lib file in the **Additional Libraries Directories** field. 
+- Linker folder (Input category) - Specify the full path and filename for the .lib file in the **Additional Dependencies** field.
+
+When the configuration is correct, you can debug by starting execution from the **Debug** menu.
+
+For more information on project settings, see [Property Pages (Visual C++)](/cpp/ide/property-pages-visual-cpp).
   
-## Consulte também  
- [Depurando código gerenciado](../debugger/debugging-managed-code.md)   
- [Tipos de projeto do Visual C\+\+](../debugger/debugging-preparation-visual-cpp-project-types.md)   
- [Tipos de projeto C\#, F\# e Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
- [Definições do projeto para uma configuração de depuração do C\+\+](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [Definições do projeto para configurações de depuração do C\#](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Definições do projeto para uma configuração de depuração do Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [Segurança do depurador](../debugger/debugger-security.md)
+## <a name="see-also"></a>See Also  
+ [Debugging Managed Code](../debugger/debugging-managed-code.md)   
+ [Visual C++ Project Types](../debugger/debugging-preparation-visual-cpp-project-types.md)   
+ [C#, F#, and Visual Basic Project Types](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
+ [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
+ [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [Debugger Security](../debugger/debugger-security.md)

@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_DATA | Documentos do Microsoft
+title: BP_RESOLUTION_DATA | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3d9addc48c7960cbcbf2864619384633072dc51e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f5be75214e9ab112cc3af17bd8bdcfae00083661
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="bpresolutiondata"></a>BP_RESOLUTION_DATA
-Descreve o resultado de um ponto de interrupção de dados de associação.  
+Describes the result of binding a data breakpoint.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 typedef struct _BP_RESOLUTION_DATA {   
    BSTR              bstrDataExpr;  
    BSTR              bstrFunc;  
@@ -50,7 +51,7 @@ typedef struct _BP_RESOLUTION_DATA {
 } BP_RESOLUTION_DATA;  
 ```  
   
-```c#  
+```csharp  
 public struct BP_RESOLUTION_DATA {   
    public string bstrDataExpr;  
    public string bstrFunc;  
@@ -59,31 +60,31 @@ public struct BP_RESOLUTION_DATA {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  `bstrDataExpr`  
- A expressão de dados foi vinculada.  
+ The data expression that has been bound.  
   
  `bstrFunc`  
- O nome da função de ponto de interrupção de dados foi associado no (se houver).  
+ The name of the function the data breakpoint has bound in (if any).  
   
  `bstrImage`  
- O nome do módulo (MyModule.dll, por exemplo) que o ponto de interrupção de dados foi associado no.  
+ The name of the module (MyModule.dll, for example) that the data breakpoint has bound in.  
   
  `dwFlags`  
- Um valor a partir de [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) enumeração, que descreve como o ponto de interrupção de dados é implementado.  
+ A value from the [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) enumeration, describing how the data breakpoint is implemented.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é um membro do [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) estrutura, que está em um membro de ativar o [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) estrutura retornada pelo [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) método.  
+## <a name="remarks"></a>Remarks  
+ This structure is a member of the [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) structure, which is in turn a member of the [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) structure returned by the [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)   
  [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)   
  [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)

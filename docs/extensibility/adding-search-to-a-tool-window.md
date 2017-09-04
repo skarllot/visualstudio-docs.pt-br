@@ -1,5 +1,5 @@
 ---
-title: Adicionar pesquisa uma janela de ferramentas | Documentos do Microsoft
+title: Adding Search to a Tool Window | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,50 +28,51 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: bca8c87d4f7d89d491fab13e1a511febce81d3d8
-ms.openlocfilehash: 845bbc5c34280f7ceafcaa3d763065f6d73388fe
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: ecaa03757b5b40e92d343fa9328f9d3f9e584ba3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="adding-search-to-a-tool-window"></a>Adicionando pesquisa a uma janela de ferramentas
-Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você pode adicionar a mesma funcionalidade de pesquisa que aparece em outro lugar no Visual Studio. Essa funcionalidade inclui os seguintes recursos:  
+# <a name="adding-search-to-a-tool-window"></a>Adding Search to a Tool Window
+When you create or update a tool window in your extension, you can add the same search functionality that appears elsewhere in Visual Studio. This functionality includes the following features:  
   
--   Uma caixa de pesquisa está sempre localizada em uma área personalizada da barra de ferramentas.  
+-   A search box that's always located in a custom area of the toolbar.  
   
--   Um indicador de progresso sobreposto a própria caixa de pesquisa.  
+-   A progress indicator that's overlaid on the search box itself.  
   
--   A capacidade de mostrar os resultados assim que você insere cada caractere (pesquisa instantânea) ou somente depois que você escolhe a tecla Enter (pesquisa sob demanda).  
+-   The ability to show results as soon as you enter each character (instant search) or only after you choose the Enter key (search on demand).  
   
--   Uma lista que mostra os termos para os quais você pesquisou mais recentemente.  
+-   A list that shows terms for which you've searched most recently.  
   
--   A capacidade de filtrar pesquisas por campos específicos ou aspectos dos destinos de pesquisa.  
+-   The ability to filter searches by specific fields or aspects of the search targets.  
   
- Seguindo este passo a passo, você aprenderá como realizar as seguintes tarefas:  
+ By following this walkthrough, you'll learn how to perform the following tasks:  
   
-1.  Crie um projeto de VSPackage.  
+1.  Create a VSPackage project.  
   
-2.  Crie uma janela de ferramenta que contém um UserControl com uma caixa de texto somente leitura.  
+2.  Create a tool window that contains a UserControl with a read-only TextBox.  
   
-3.  Adicione uma caixa de pesquisa para a janela da ferramenta.  
+3.  Add a search box to the tool window.  
   
-4.  Adicione a implementação de pesquisa.  
+4.  Add the search implementation.  
   
-5.  Habilite a pesquisa instantânea e a exibição de uma barra de progresso.  
+5.  Enable instant search and display of a progress bar.  
   
-6.  Adicionar uma **diferenciar maiusculas de minúsculas** opção.  
+6.  Add a **Match case** option.  
   
-7.  Adicionar uma **pesquisar apenas linhas pares** filtro.  
+7.  Add a **Search even lines only** filter.  
   
-## <a name="to-create-a-vsix-project"></a>Para criar um projeto do VSIX  
+## <a name="to-create-a-vsix-project"></a>To create a VSIX project  
   
-1.  Crie um projeto do VSIX chamado `TestToolWindowSearch` com uma janela de ferramenta chamada **TestSearch**. Se você precisar de ajuda para fazer isso, consulte [criando uma extensão com uma janela da ferramenta](../extensibility/creating-an-extension-with-a-tool-window.md).  
+1.  Create a VSIX project named `TestToolWindowSearch` with a tool window named **TestSearch**. If you need help doing this, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-## <a name="to-create-a-tool-window"></a>Para criar uma janela de ferramentas  
+## <a name="to-create-a-tool-window"></a>To create a tool window  
   
-1.  No `TestToolWindowSearch` de projeto, abra o arquivo TestSearchControl.xaml.  
+1.  In the `TestToolWindowSearch` project, open the TestSearchControl.xaml file.  
   
-2.  Substituir o `<StackPanel>` bloco com o seguinte bloco, que adiciona somente leitura <xref:System.Windows.Controls.TextBox>para o <xref:System.Windows.Controls.UserControl>na janela da ferramenta.</xref:System.Windows.Controls.UserControl> </xref:System.Windows.Controls.TextBox>  
+2.  Replace the existing `<StackPanel>` block with the following block, which adds a read-only <xref:System.Windows.Controls.TextBox> to the <xref:System.Windows.Controls.UserControl> in the tool window.  
   
     ```xaml  
     <StackPanel Orientation="Vertical">  
@@ -82,19 +83,19 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
     </StackPanel>  
     ```  
   
-3.  No arquivo TestSearchControl.xaml.cs, adicione a seguinte instrução using:  
+3.  In the TestSearchControl.xaml.cs file, add the following using statement:  
   
-    ```c#  
+    ```csharp  
     using System.Text;  
     ```  
   
-4.  Remover o `button1_Click()` método.  
+4.  Remove the `button1_Click()` method.  
   
-     No **TestSearchControl** , adicione o código a seguir.  
+     In the **TestSearchControl** class, add the following code.  
   
-     Este código adiciona um público <xref:System.Windows.Controls.TextBox>propriedade chamada **SearchResultsTextBox** e uma propriedade de cadeia de caracteres pública chamada **SearchContent**.</xref:System.Windows.Controls.TextBox> No construtor, SearchResultsTextBox é definido para a caixa de texto e SearchContent é inicializada com um conjunto de cadeias de caracteres delimitada de nova linha. O conteúdo da caixa de texto também é inicializado com o conjunto de cadeias de caracteres.  
+     This code adds a public <xref:System.Windows.Controls.TextBox> property  named **SearchResultsTextBox** and a public string property named **SearchContent**. In the constructor, SearchResultsTextBox is set to the text box, and SearchContent is initialized to a newline-delimited set of strings. The content of the text box is also initialized to the set of strings.  
   
-    ```c#  
+    ```csharp  
     public partial class TestSearchControl : UserControl  
     {  
         public TextBox SearchResultsTextBox { get; set; }  
@@ -125,40 +126,39 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
     }  
     ```  
   
-     [!code-cs[&#1; ToolWindowSearch](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs) ] 
-     [!code-vb [ToolWindowSearch n º&1;](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]  
+     [!code-csharp[ToolWindowSearch#1](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs)]  [!code-vb[ToolWindowSearch#1](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]  
   
-5.  Compile o projeto e iniciar a depuração. A instância experimental do Visual Studio é exibida.  
+5.  Build the project and start debugging. The experimental instance of Visual Studio appears.  
   
-6.  Na barra de menus, escolha **exibição**, **outras janelas**, **TestSearch**.  
+6.  On the menu bar, choose **View**, **Other Windows**, **TestSearch**.  
   
-     A janela de ferramenta é exibida, mas o controle de pesquisa ainda não aparecer.  
+     The tool window appears, but the search control doesn't yet appear.  
   
-## <a name="to-add-a-search-box-to-the-tool-window"></a>Para adicionar uma caixa de pesquisa para a janela da ferramenta  
+## <a name="to-add-a-search-box-to-the-tool-window"></a>To add a search box to the tool window  
   
-1.  No arquivo TestSearch.cs, adicione o seguinte código para o `TestSearch` classe. O código substitui o <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>propriedade para que o acessador get retorna `true`.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. The code overrides the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> property so that the get accessor returns `true`.  
   
-     Para habilitar a pesquisa, você deve substituir o <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>propriedade.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> O <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>classe implementa <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch>e fornece uma implementação padrão que não permite a pesquisa.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> </xref:Microsoft.VisualStudio.Shell.ToolWindowPane>  
+     To enable search, you must override the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> property. The <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> class implements <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> and provides a default implementation that doesn't enable search.  
   
-    ```c#  
+    ```csharp  
     public override bool SearchEnabled  
     {  
         get { return true; }  
     }  
     ```  
   
-2.  Compile o projeto e iniciar a depuração. A instância experimental aparece.  
+2.  Build the project and start debugging. The experimental instance appears.  
   
-3.  Na instância experimental do Visual Studio, abra **TestSearch**.  
+3.  In the experimental instance of Visual Studio, open **TestSearch**.  
   
-     Na parte superior da janela de ferramenta, um controle de pesquisa é exibida com uma **pesquisa** marca d'água e um ícone de Lente de aumento. No entanto, a pesquisa não funciona ainda porque o processo de pesquisa ainda não foi implementado.  
+     At the top of the tool window, a search control appears with a **Search** watermark and a magnifying-glass icon. However, search doesn't work yet because the search process hasn't been implemented.  
   
-## <a name="to-add-the-search-implementation"></a>Para adicionar a implementação de pesquisa  
- Quando você habilita a pesquisa em um <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>, como no procedimento anterior, a janela da ferramenta cria um host de pesquisa.</xref:Microsoft.VisualStudio.Shell.ToolWindowPane> Esse host configura e gerencia os processos de pesquisa, que sempre ocorrem em um thread em segundo plano. Porque o <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>classe gerencia a criação do host de pesquisa e a configuração de backup da pesquisa, você só precisa criar uma tarefa de pesquisa e fornecem o método search.</xref:Microsoft.VisualStudio.Shell.ToolWindowPane> O processo de pesquisa ocorre em um thread em segundo plano, e chamadas para o controle de janela de ferramenta ocorrerem no thread da interface do usuário. Portanto, você deve usar o <xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>método para gerenciar todas as chamadas feitas ao lidar com o controle.</xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>  
+## <a name="to-add-the-search-implementation"></a>To add the search implementation  
+ When you enable search on a <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>, as in the previous procedure, the tool window creates a search host. This host sets up and manages search processes, which always occur on a background thread. Because the <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> class manages the creation of the search host and the setting up of the search, you need only create a search task and provide the search method. The search process occurs on a background thread, and calls to the tool window control occur on the UI thread. Therefore, you must use the <xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A> method to manage any calls that you make in dealing with the control.  
   
-1.  No arquivo TestSearch.cs, adicione o seguinte `using` instruções:  
+1.  In the TestSearch.cs file, add the following `using` statements:  
   
-    ```c#  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.Runtime.InteropServices;  
@@ -171,17 +171,17 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-2.  No `TestSearch` da classe, adicione o código a seguir, que executa as seguintes ações:  
+2.  In the `TestSearch` class, add the following code, which performs the following actions:  
   
-    -   Substitui o <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch>método para criar uma tarefa de pesquisa.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch>  
+    -   Overrides the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> method to create a search task.  
   
-    -   Substitui o <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A>método para restaurar o estado da caixa de texto.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> Esse método é chamado quando um usuário cancelou uma tarefa de pesquisa e quando um usuário configura ou desconfigura opções ou filtros. Ambos <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A>e <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A>são chamados no thread da interface do usuário.</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> </xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> Portanto, você não precisa acessar a caixa de texto por meio do <xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>método.</xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>  
+    -   Overrides the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> method to restore the state of the text box. This method is called when a user cancels a search task and when a user sets or unsets options or filters. Both <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> and <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> are called on the UI thread. Therefore, you don't need to access the text box by means of the <xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A> method.  
   
-    -   Cria uma classe chamada `TestSearchTask` que herda de <xref:Microsoft.VisualStudio.Shell.VsSearchTask>, que fornece uma implementação padrão de <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask>.</xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask> </xref:Microsoft.VisualStudio.Shell.VsSearchTask>  
+    -   Creates a class that's named `TestSearchTask` that inherits from <xref:Microsoft.VisualStudio.Shell.VsSearchTask>, which provides a default implementation of <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask>.  
   
-         Em `TestSearchTask`, o construtor define um campo privado que referencia a janela da ferramenta. Para fornecer o método de pesquisa, você deve substituir o <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A>e <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A>métodos.</xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A> </xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> O <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A>método é onde você pode implementar o processo de pesquisa.</xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> Esse processo inclui realizando a pesquisa, exibindo os resultados da pesquisa na caixa de texto e chamar a implementação da classe base desse método para relatar que a pesquisa foi concluída.  
+         In `TestSearchTask`, the constructor sets a private field that references the tool window. To provide the search method, you override the <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> and <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A> methods. The <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> method is where you implement the search process. This process includes performing the search, displaying the search results in the text box, and calling the base class implementation of this method to report that the search is complete.  
   
-    ```c#  
+    ```csharp  
     public override IVsSearchTask CreateSearch(uint dwCookie, IVsSearchQuery pSearchQuery, IVsSearchCallback pSearchCallback)  
     {  
         if (pSearchQuery == null || pSearchCallback == null)  
@@ -276,20 +276,20 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
     }  
     ```  
   
-3.  Teste a implementação de pesquisa, executando as seguintes etapas:  
+3.  Test your search implementation by performing the following steps:  
   
-    1.  Recompilar o projeto e iniciar a depuração.  
+    1.  Rebuild the project and start debugging.  
   
-    2.  Na instância experimental do Visual Studio, abra a janela da ferramenta novamente, digite algum texto de pesquisa na janela Pesquisar e clique em ENTER.  
+    2.  In the experimental instance of Visual Studio, open the tool window again, enter some search text in the search window, and click ENTER.  
   
-         Os resultados corretos devem aparecer.  
+         The correct results should appear.  
   
-## <a name="to-customize-the-search-behavior"></a>Para personalizar o comportamento de pesquisa  
- Alterando as configurações de pesquisa, você pode fazer várias alterações na aparência do controle de pesquisa e como a pesquisa é realizada. Por exemplo, você pode alterar a marca d'água (o texto padrão que aparece na caixa de pesquisa), o mínimo e máximo largura do controle de pesquisa e se deseja mostrar uma barra de progresso. Você também pode alterar o ponto no início dos resultados da pesquisa aparecem (sob demanda ou a pesquisa instantânea) e se deseja mostrar uma lista de termos recentemente procurada. Você encontrará a lista completa das configurações de <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource>classe.</xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource>  
+## <a name="to-customize-the-search-behavior"></a>To customize the search behavior  
+ By changing the search settings, you can make a variety of changes in how the search control appears and how the search is carried out. For example, you can change the watermark (the default text that appears in the search box), the minimum and maximum width of the search control, and whether to show a progress bar. You can also change the point at which search results start to appear (on demand or instant search) and whether to show a list of terms for which you recently searched. You can find the complete list of settings in the <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource> class.  
   
-1.  No arquivo TestSearch.cs, adicione o seguinte código para o `TestSearch` classe. Esse código permite que a pesquisa instantânea, em vez de pesquisa por demanda (significando que o usuário não precisa clicar em ENTER). O código substitui o `ProvideSearchSettings` método o `TestSearch` classe, que é necessário alterar as configurações padrão.  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. This code enables instant search instead of on-demand search (meaning that the user doesn't have to click ENTER). The code overrides the `ProvideSearchSettings` method in the `TestSearch` class, which is necessary to change the default settings.  
   
-    ```c#  
+    ```csharp  
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)  
     {  
         Utilities.SetValue(pSearchSettings,   
@@ -297,13 +297,13 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
             (uint)VSSEARCHSTARTTYPE.SST_INSTANT);}  
     ```  
   
-2.  Testar a nova configuração recompilar a solução e reiniciando o depurador.  
+2.  Test the new setting by rebuilding the solution and restarting the debugger.  
   
-     Resultados da pesquisa exibidos toda vez que você inserir um caractere na caixa de pesquisa.  
+     Search results appear every time that you enter a character in the search box.  
   
-3.  No `ProvideSearchSettings` método, adicione a seguinte linha, que permite a exibição de uma barra de progresso.  
+3.  In the `ProvideSearchSettings` method, add the following line, which enables the display of a progress bar.  
   
-    ```c#  
+    ```csharp  
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)  
     {  
         Utilities.SetValue(pSearchSettings,   
@@ -315,28 +315,28 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
     }  
     ```  
   
-     Para a barra de progresso seja exibida, o andamento deve ser relatado. Para relatar o progresso, remova o seguinte código no `OnStartSearch` método o `TestSearchTask` classe:  
+     For the progress bar to appear, the progress must be reported. To report the progress, uncomment the following code in the `OnStartSearch` method of the `TestSearchTask` class:  
   
-    ```c#  
+    ```csharp  
     SearchCallback.ReportProgress(this, progress++, (uint)contentArr.GetLength(0));  
     ```  
   
-4.  Diminuir o progresso de processamento suficiente para que a barra está visível, remova a seguinte linha a `OnStartSearch` método o `TestSearchTask` classe:  
+4.  To slow processing enough that the progress bar is visible, uncomment the following line in the `OnStartSearch` method of the `TestSearchTask` class:  
   
-    ```c#  
+    ```csharp  
     System.Threading.Thread.Sleep(100);  
     ```  
   
-5.  Teste as novas configurações de recompilar a solução e iniciando a debugb.  
+5.  Test the new settings by rebuilding the solution and starting to debugb.  
   
-     A barra de progresso é exibida na janela de pesquisa (como uma linha azul abaixo da caixa de texto de pesquisa) toda vez que você realiza uma pesquisa.  
+     The progress bar appears in the search window (as a blue line below the search text box) every time that you perform a search.  
   
-## <a name="to-enable-users-to-refine-their-searches"></a>Habilitar usuários a refinar suas pesquisas  
- Você pode permitir que os usuários a refinar suas pesquisas por meio de opções como **diferenciar maiusculas de minúsculas** ou **coincidir palavra inteira**. Opções podem ser boolianos, que aparecem como caixas de seleção ou comandos, que aparecem como botões. Para este passo a passo, você criará uma opção boolean.  
+## <a name="to-enable-users-to-refine-their-searches"></a>To enable users to refine their searches  
+ You can allow users to refine their searches by means of options such as **Match case** or **Match whole word**. Options can be boolean, which appear as check boxes, or commands, which appear as buttons. For this walkthrough, you'll create a boolean option.  
   
-1.  No arquivo TestSearch.cs, adicione o seguinte código para o `TestSearch` classe. O código substitui o `SearchOptionsEnum` método, que permite a implementação de pesquisa detectar se uma determinada opção está ativada ou desativada. O código na `SearchOptionsEnum` adiciona uma opção para diferenciar maiusculas de minúsculas para um <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions>enumerador.</xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> A opção para diferenciar maiusculas de minúsculas também é disponibilizada como o `MatchCaseOption` propriedade.  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. The code overrides the `SearchOptionsEnum` method, which allows the search implementation to detect whether a given option is on or off. The code in `SearchOptionsEnum` adds an option to match case to an <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> enumerator. The option to match case is also made available as the `MatchCaseOption` property.  
   
-    ```c#  
+    ```csharp  
     private IVsEnumWindowSearchOptions m_optionsEnum;  
     public override IVsEnumWindowSearchOptions SearchOptionsEnum  
     {  
@@ -368,9 +368,9 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
     }  
     ```  
   
-2.  No `TestSearchTask` classe, remova o comentário de linha matchCase o `OnStartSearch` método:  
+2.  In the `TestSearchTask` class, uncomment matchCase line in the `OnStartSearch` method:  
   
-    ```c#  
+    ```csharp  
     private IVsEnumWindowSearchOptions m_optionsEnum;  
     public override IVsEnumWindowSearchOptions SearchOptionsEnum  
     {  
@@ -402,22 +402,22 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
     }  
     ```  
   
-3.  A opção de teste:  
+3.  Test the option:  
   
-    1.  Compile o projeto e iniciar a depuração. A instância experimental aparece.  
+    1.  Build the project and start debugging. The experimental instance appears.  
   
-    2.  Na janela da ferramenta, escolha a seta para baixo no lado direito da caixa de texto.  
+    2.  In the tool window, choose the Down arrow on the right side of the text box.  
   
-         O **diferenciar maiusculas de minúsculas** caixa de seleção é exibida.  
+         The **Match case** check box appears.  
   
-    3.  Selecione o **diferenciar maiusculas de minúsculas** caixa de seleção e, em seguida, executar algumas pesquisas.  
+    3.  Select the **Match case** check box, and then perform some searches.  
   
-## <a name="to-add-a-search-filter"></a>Para adicionar um filtro de pesquisa  
- Você pode adicionar filtros de pesquisa que permitem aos usuários refinar o conjunto de destinos de pesquisa. Por exemplo, você pode filtrar arquivos no Explorador de arquivos, as datas em que foram modificados recentemente e as extensões de nome de arquivo. Este passo a passo, você adicionará um filtro para apenas linhas pares. Quando o usuário escolhe o filtro, o host de pesquisa adiciona as cadeias de caracteres que você especificar para a consulta de pesquisa. Você pode identificar essas cadeias de caracteres dentro do método de pesquisa e filtrar os destinos de pesquisa adequadamente.  
+## <a name="to-add-a-search-filter"></a>To add a search filter  
+ You can add search filters that allow users to refine the set of search targets. For example, you can filter files in File Explorer by the dates on which they were modified most recently and their file name extensions. In this walkthrough, you'll add a filter for even lines only. When the user chooses that filter, the search host adds the strings that you specify to the search query. You can then identify these strings inside your search method and filter the search targets accordingly.  
   
-1.  No arquivo TestSearch.cs, adicione o seguinte código para o `TestSearch` classe. O código implementa `SearchFiltersEnum` adicionando um <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter>que especifica para filtrar os resultados da pesquisa para que sejam exibidos apenas linhas pares.</xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter>  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. The code implements `SearchFiltersEnum` by adding a <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter> that specifies to filter the search results so that only even lines appear.  
   
-    ```c#  
+    ```csharp  
     public override IVsEnumWindowSearchFilters SearchFiltersEnum  
     {  
         get  
@@ -430,11 +430,11 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
   
     ```  
   
-     Agora o controle de pesquisa exibe o filtro de pesquisa `Search even lines only`. Quando o usuário escolhe o filtro, a cadeia de caracteres `lines:"even"` aparece na caixa de pesquisa. Outros critérios de pesquisa podem aparecer ao mesmo tempo como o filtro. Cadeias de caracteres de pesquisa podem aparecer antes do filtro, após o filtro, ou ambos.  
+     Now the search control displays the search filter `Search even lines only`. When the user chooses the filter, the string `lines:"even"` appears in the search box. Other search criteria can appear at the same time as the filter. Search strings may appear before the filter, after the filter, or both.  
   
-2.  No arquivo TestSearch.cs, adicione os seguintes métodos para o `TestSearchTask` classe, que é o `TestSearch` classe. Esses métodos aceitam o `OnStartSearch` método, que você modificará na próxima etapa.  
+2.  In the TestSearch.cs file, add the following methods to the `TestSearchTask` class, which is in the `TestSearch` class. These methods support the `OnStartSearch` method, which you'll modify in the next step.  
   
-    ```c#  
+    ```csharp  
     private string RemoveFromString(string origString, string stringToRemove)  
     {  
         int index = origString.IndexOf(stringToRemove);  
@@ -460,9 +460,9 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
     }  
     ```  
   
-3.  No `TestSearchTask` classe, atualize o `OnStartSearch` método com o código a seguir. Essa alteração atualiza o código para suportar o filtro.  
+3.  In the `TestSearchTask` class, update the `OnStartSearch` method with the following code. This change updates the code to support the filter.  
   
-    ```c#  
+    ```csharp  
     protected override void OnStartSearch()  
     {  
         // Use the original content of the text box as the target of the search.   
@@ -539,32 +539,32 @@ Quando você cria ou atualiza uma janela de ferramenta na sua extensão, você p
     }  
     ```  
   
-4.  Teste seu código.  
+4.  Test your code.  
   
-5.  Compile o projeto e iniciar a depuração. Na instância experimental do Visual Studio, abra a janela da ferramenta e, em seguida, escolha a seta para baixo no controle de pesquisa.  
+5.  Build the project and start debugging. In the experimental instance of Visual Studio, open the tool window, and then choose the Down arrow on the search control.  
   
-     O **diferenciar maiusculas de minúsculas** caixa de seleção e o **pesquisar apenas linhas pares** filtro aparecem.  
+     The **Match case** check box and the **Search even lines only** filter appear.  
   
-6.  Escolha o filtro.  
+6.  Choose the filter.  
   
-     A caixa de pesquisa contém **linhas: "mesmo"**, e os seguintes resultados são exibidos:  
+     The search box contains **lines:"even"**, and the following results appear:  
   
-     boa&2;  
+     2 good  
   
-     4 BOM  
+     4 Good  
   
-     Adeus&6;  
+     6 Goodbye  
   
-7.  Excluir `lines:"even"` na caixa de pesquisa, selecione o **diferenciar maiusculas de minúsculas** caixa de seleção e, em seguida, digite `g` na caixa de pesquisa.  
+7.  Delete `lines:"even"` from the search box, select the **Match case** check box, and then enter `g` in the search box.  
   
-     São exibidos os seguintes resultados:  
+     The following results appear:  
   
-     ir de&1;  
+     1 go  
   
-     boa&2;  
+     2 good  
   
-     adeus&5;  
+     5 goodbye  
   
-8.  Escolha o X no lado direito da caixa de pesquisa.  
+8.  Choose the X on the right side of the search box.  
   
-     A pesquisa está desmarcada e o conteúdo original é exibido. No entanto, o **diferenciar maiusculas de minúsculas** caixa de seleção ainda está selecionada.
+     The search is cleared, and the original contents appear. However, the **Match case** check box is still selected.

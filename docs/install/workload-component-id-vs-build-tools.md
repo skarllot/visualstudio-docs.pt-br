@@ -1,11 +1,11 @@
 ---
-title: IDs de carga de trabalho e de componente das Ferramentas de Build do Visual Studio 2017 | Microsoft Docs
-description: "Usar IDs de carga de trabalho e de componente do Visual Studio para criar aplicativos clássicos baseados no Windows"
+title: Visual Studio Build Tools 2017 workload and component IDs | Microsoft Docs
+description: Use Visual Studio workload and component IDs to build classic Windows-based applications
 keywords: 
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 05/10/2017
+ms.date: 08/30/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -31,98 +31,133 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: c8a3b886d32a2860a3b8acdd1cbb7d2830009dd4
+ms.translationtype: HT
+ms.sourcegitcommit: 96018963278cd1d53b226473baade41da1e98111
+ms.openlocfilehash: 86ac70e66b581a2e70dc8efa185b1e61d7d0204c
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 
-# <a name="visual-studio-build-tools-2017-component-directory"></a>Diretório de componentes das Ferramentas de Build do Visual Studio 2017
+# <a name="visual-studio-build-tools-2017-component-directory"></a>Visual Studio Build Tools 2017 component directory
 
-As tabelas desta página listam as IDs que podem ser usadas para instalar o Visual Studio usando a linha de comando. Observe que adicionaremos outros componentes conforme atualizações forem liberadas para o Visual Studio.
+The tables on this page list the IDs that you can use to install Visual Studio by using the command line. Note that we will add additional components as we release updates to Visual Studio.
 
-Além disso, observe o seguinte sobre essa página:
+Also note the following about this page:
 
-* Cada carga de trabalho tem sua própria seção, seguida pela ID da carga de trabalho e por uma tabela dos componentes que estão disponíveis para a carga de trabalho.
-* Por padrão, os componentes **Obrigatórios** serão instalados durante a instalação da carga de trabalho. Se preferir, também será possível instalar os componentes **Recomendados** e **Opcionais**.
-* Também adicionamos uma seção que lista os componentes adicionais que não são afiliados a nenhuma carga de trabalho.
+* Each workload has its own section, followed by the workload ID and a table of the components that are available for the workload.
+* By default, the **Required** components will be installed when you install the workload. If you choose to, you can also install the **Recommended** and **Optional** components.
+* We've also added a section that lists the additional components that are not affiliated with any workload.
 
-Para obter mais informações sobre como usar essas IDs, consulte a página [Usar parâmetros de linha de comando para instalar o Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md). Além disso, para obter uma lista de IDs de carga de trabalho e de componente para outros produtos, consulte a página [IDs de carga de trabalho e de componente do Visual Studio 2017](workload-and-component-ids.md).
+For more information about how to use these IDs, see [Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) page. And, for a list of workload and component IDs for other products, see [Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md) page.
 
-## <a name="msbuild-tools"></a>Ferramentas do MSBuild
+## <a name="msbuild-tools"></a>MSBuild Tools
 
 **ID:** Microsoft.VisualStudio.Workload.MSBuildTools
 
-**Descrição:** fornece as ferramentas necessárias para criar aplicativos baseados em MSBuild.
+**Description:** Provides the tools required to build MSBuild-based applications.
 
-### <a name="components-included-by-this-workload"></a>Componentes incluídos por essa carga de trabalho
+### <a name="components-included-by-this-workload"></a>Components included by this workload
 
-ID do componente | Nome | Versão | Tipo de dependência
+Component ID | Name | Version | Dependency type
 --- | --- | --- | ---
-Microsoft.Component.MSBuild | MSBuild | 15.0.26208.0 | Necessária
-Microsoft.VisualStudio.Component.CoreBuildTools | Principais Ferramentas de Build do Visual Studio | 15.0.26228.0 | Necessária
-Microsoft.VisualStudio.Component.Roslyn.Compiler | Compiladores Roslyn do C# e Visual Basic | 15.0.26208.0 | Necessária
+Microsoft.Component.MSBuild | MSBuild | 15.0.26208.0 | Required
+Microsoft.VisualStudio.Component.CoreBuildTools | Visual Studio Build Tools Core | 15.0.26711.1 | Required
+Microsoft.VisualStudio.Component.Roslyn.Compiler | C# and Visual Basic Roslyn compilers | 15.0.26208.0 | Required
+Microsoft.VisualStudio.Component.FSharp.MSBuild | F# compiler | 15.0.26606.0 | Optional
 
+## <a name="net-core-build-tools"></a>.NET Core build tools
 
-## <a name="visual-c-build-tools"></a>Ferramentas de build do Visual C++
+**ID:** Microsoft.VisualStudio.Workload.NetCoreBuildTools
+
+**Description:** Tools for building .NET Core applications.
+
+### <a name="components-included-by-this-workload"></a>Components included by this workload
+
+Component ID | Name | Version | Dependency type
+--- | --- | --- | ---
+Microsoft.Net.Core.Component.SDK | .NET Core 1.0 - 1.1 development tools | 15.0.26606.0 | Required
+
+## <a name="visual-c-build-tools"></a>Visual C++ build tools
 
 **ID:** Microsoft.VisualStudio.Workload.VCTools
 
-**Descrição:** criar aplicativos clássicos baseados no Windows usando o poder do conjunto de ferramentas do Visual C++, ATL e recursos opcionais como MFC e C++/CLI.
+**Description:** Build classic Windows-based applications using the power of the Visual C++ toolset, ATL, and optional features like MFC and C++/CLI.
 
-### <a name="components-included-by-this-workload"></a>Componentes incluídos por essa carga de trabalho
+### <a name="components-included-by-this-workload"></a>Components included by this workload
 
-ID do componente | Nome | Versão | Tipo de dependência
+Component ID | Name | Version | Dependency type
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.VC.CoreBuildTools | Principais recursos das Ferramentas de Build do Visual C++ | 15.0.26208.0 | Necessária
-Microsoft.VisualStudio.Component.Windows10SDK | Tempo de execução C Universal do Windows | 15.0.26208.0 | Necessária
-Microsoft.VisualStudio.Component.VC.CMake.Project | Ferramentas do Visual C++ para CMake | 15.0.26208.0 | Recomendado
-Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | SDK do Windows 10 (10.0.15063.0) para Desktop C++ x86 e x64 | 15.0.26403.0 | Recomendado
-Microsoft.Component.VC.Runtime.UCRTSDK | SDK do CRT Universal do Windows | 15.0.26208.0 | Opcional
-Microsoft.Net.Component.4.6.1.SDK | SDK do .NET Framework 4.6.1 | 15.0.26208.0 | Opcional
-Microsoft.Net.Component.4.6.1.TargetingPack | Pacote de direcionamento do .NET Framework 4.6.1 | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.Static.Analysis.Tools | Ferramentas de análise estática | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.VC.ATL | Suporte ao Visual C++ ATL | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.VC.ATLMFC | Suporte ao MFC e ATL (x86 e x64) | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.VC.ClangC2 | Clang/C2 (experimental) | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.VC.CLI.Support | Suporte ao C++/CLI | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.VC.CoreIde | Principais recursos do Visual Studio C++ | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.VC.Modules.x86.x64 | Módulos da Biblioteca Padrão | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | Conjunto de ferramentas do VC++ 2017 v141 (x86, x64) | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.Windows10SDK.10240 | SDK do Windows 10 (10.0.10240.0) | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.Windows10SDK.10586 | SDK do Windows 10 (10.0.10586.0) | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.Windows10SDK.14393 | SDK do Windows 10 (10.0.14393.0) | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.Component.Windows81SDK | SDK do Windows 8.1 | 15.0.26208.0 | Opcional
-Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | SDK do Windows 8.1 e SDK do UCRT | 15.0.26208.0 | Opcional
+Microsoft.VisualStudio.Component.VC.CoreBuildTools | Visual C++ Build Tools core features | 15.0.26208.0 | Required
+Microsoft.VisualStudio.Component.VC.Redist.14.Latest | Visual C++ 2017 Redistributable Update | 15.0.26606.0 | Required
+Microsoft.VisualStudio.Component.Windows10SDK | Windows Universal C Runtime | 15.0.26621.2 | Required
+Component.Microsoft.VisualStudio.RazorExtension | Razor Language Services | 15.0.26720.2 | Recommended
+Microsoft.VisualStudio.Component.Roslyn.Compiler | C# and Visual Basic Roslyn compilers | 15.0.26208.0 | Recommended
+Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# and Visual Basic | 15.0.26711.1 | Recommended
+Microsoft.VisualStudio.Component.Static.Analysis.Tools | Static analysis tools | 15.0.26208.0 | Recommended
+Microsoft.VisualStudio.Component.VC.CMake.Project | Visual C++ tools for CMake | 15.0.26621.2 | Recommended
+Microsoft.VisualStudio.Component.VC.Tools.x86.x64 | VC++ 2017 v141 toolset (x86,x64) | 15.0.26621.2 | Recommended
+Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop | Windows 10 SDK (10.0.15063.0) for Desktop C++ x86 and x64 | 15.0.26621.2 | Recommended
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP | Windows 10 SDK (10.0.15063.0) for UWP: C#, VB, JS | 15.0.26621.2 | Recommended
+Microsoft.VisualStudio.Component.Windows10SDK.15063.UWP.Native | Windows 10 SDK (10.0.15063.0) for UWP: C++ | 15.0.26621.2 | Recommended
+Microsoft.VisualStudio.ComponentGroup.WebToolsExtensions | ASP.NET and web development | 15.0.26606.0 | Recommended
+Microsoft.Component.VC.Runtime.UCRTSDK | Windows Universal CRT SDK | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.6.1.SDK | .NET Framework 4.6.1 SDK | 15.0.26621.2 | Optional
+Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 targeting pack | 15.0.26621.2 | Optional
+Microsoft.VisualStudio.Component.VC.140 | VC++ 2015.3 v140 toolset for desktop (x86,x64) | 15.0.26720.2 | Optional
+Microsoft.VisualStudio.Component.VC.ATL | Visual C++ ATL support | 15.0.26621.2 | Optional
+Microsoft.VisualStudio.Component.VC.ATLMFC | MFC and ATL support (x86 and x64) | 15.0.26621.2 | Optional
+Microsoft.VisualStudio.Component.VC.ClangC2 | Clang/C2 (experimental) | 15.0.26724.1 | Optional
+Microsoft.VisualStudio.Component.VC.CLI.Support | C++/CLI support | 15.0.26621.2 | Optional
+Microsoft.VisualStudio.Component.VC.Modules.x86.x64 | Modules for Standard Library (experimental) | 15.0.26720.2 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK (10.0.10240.0) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.10586 | Windows 10 SDK (10.0.10586.0) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.0.26208.0 | Optional
+Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK and UCRT SDK | 15.0.26208.0 | Optional
 
-
-## <a name="web-development-build-tools"></a>Ferramentas de build de desenvolvimento para a Web
+## <a name="web-development-build-tools"></a>Web development build tools
 
 **ID:** Microsoft.VisualStudio.Workload.WebBuildTools
 
-**Descrição:** tarefas e destinos do MSBuild para a compilação de aplicativos Web.
+**Description:** MSBuild tasks and targets for building web applications.
 
-### <a name="components-included-by-this-workload"></a>Componentes incluídos por essa carga de trabalho
+### <a name="components-included-by-this-workload"></a>Components included by this workload
 
-ID do componente | Nome | Versão | Tipo de dependência
+Component ID | Name | Version | Dependency type
 --- | --- | --- | ---
-Microsoft.VisualStudio.Web.BuildTools.ComponentGroup | Ferramentas de build de desenvolvimento para a Web | 15.0.26323.1 | Necessária
-## <a name="unaffiliated-components"></a>Componentes não afiliados
+Microsoft.Net.Component.4.6.1.SDK | .NET Framework 4.6.1 SDK | 15.0.26621.2 | Required
+Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 targeting pack | 15.0.26621.2 | Required
+Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 development tools | 15.0.26606.0 | Required
+Microsoft.VisualStudio.Web.BuildTools.ComponentGroup | Web development build tools | 15.0.26323.1 | Required
+Microsoft.Net.Component.4.5.1.TargetingPack | .NET Framework 4.5.1 targeting pack | 15.0.26621.2 | Recommended
+Microsoft.Net.Component.4.5.2.TargetingPack | .NET Framework 4.5.2 targeting pack | 15.0.26621.2 | Recommended
+Microsoft.Net.Component.4.5.TargetingPack | .NET Framework 4.5 targeting pack | 15.0.26621.2 | Recommended
+Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 targeting pack | 15.0.26621.2 | Recommended
+Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 targeting pack | 15.0.26621.2 | Recommended
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 development tools | 15.0.26606.0 | Recommended
+Microsoft.Net.Core.Component.SDK | .NET Core 1.0 - 1.1 development tools | 15.0.26606.0 | Recommended
+Microsoft.Net.Component.3.5.DeveloperTools | .NET Framework 3.5 development tools | 15.0.26621.2 | Optional
+Microsoft.Net.Component.4.6.2.SDK | .NET Framework 4.6.2 SDK | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.6.2.TargetingPack | .NET Framework 4.6.2 targeting pack | 15.0.26208.0 | Optional
+Microsoft.Net.Component.4.7.SDK | .NET Framework 4.7 SDK | 15.0.26419.1 | Optional
+Microsoft.Net.Component.4.7.TargetingPack | .NET Framework 4.7 targeting pack | 15.0.26621.2 | Optional
+Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools | .NET Framework 4.6.2 development tools | 15.0.26621.2 | Optional
+Microsoft.Net.ComponentGroup.4.7.DeveloperTools | .NET Framework 4.7 development tools | 15.0.26606.0 | Optional
 
-Estes são os componentes que não são incluídos com nenhuma carga de trabalho, mas que podem ser selecionados como um componente individual.
+## <a name="unaffiliated-components"></a>Unaffiliated components
 
-ID do componente | Nome | Versão
+These are components that are not included with any workload, but may be selected as an individual component.
+
+Component ID | Name | Version
 --- | --- | ---
-N/D | N/D | N/D
+n/a | n/a | n/a
 
+## <a name="see-also"></a>See also
 
-## <a name="see-also"></a>Consulte também
-
-* [Carga de trabalho do Visual Studio e IDs do componente](workload-and-component-ids.md)
-* [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
-* [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
-  * [Exemplos de parâmetro de linha de comando](command-line-parameter-examples.md)
-* [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio workload and component IDs](workload-and-component-ids.md)
+* [Visual Studio administrator guide](visual-studio-administrator-guide.md)
+* [Use command-line parameters to install Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+  * [Command-line parameter examples](command-line-parameter-examples.md)
+* [Create an offline installation of Visual Studio](create-an-offline-installation-of-visual-studio.md)
 

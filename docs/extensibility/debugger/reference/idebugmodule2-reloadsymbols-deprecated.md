@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2::ReloadSymbols_Deprecated | Documentos do Microsoft
+title: IDebugModule2::ReloadSymbols_Deprecated | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,44 +30,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d169e819e3096d72997ed3d86b90f58578d75c78
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 36a67a5a86bda48cbb71856b2c3e40043016d712
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugmodule2reloadsymbolsdeprecated"></a>IDebugModule2::ReloadSymbols_Deprecated
-OBSOLETO. NÃO USE. Recarrega os símbolos do módulo.  
+OBSOLETE. DO NOT USE. Reloads the symbols for this module.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT ReloadSymbols(   
    LPCOLESTR pszUrlToSymbols,  
    BSTR*     pbstrDebugMessage  
 );  
 ```  
   
-```c#  
+```csharp  
 int ReloadSymbols(   
    string     pszUrlToSymbols,  
    out string pbstrDebugMessage  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pszUrlToSymbols`  
- [in] O caminho para o repositório de símbolos.  
+ [in] The path to the symbol store.  
   
  `pbstrDebugMessage`  
- [out] Retorna uma mensagem informativa, como uma mensagem de erro ou de status, que é exibida à direita do nome do módulo na janela de módulos.  
+ [out] Returns an informational message, such as a status or error message, that is displayed to the right of the module name in the Modules window.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Um mecanismo de depuração deve retornar sempre `E_FAIL`.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. A debug engine should always return `E_FAIL`.  
   
-## <a name="remarks"></a>Comentários  
- Esse método não é mais suportado. Implementar o [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md) método em vez disso.  
+## <a name="remarks"></a>Remarks  
+ This method is no longer supported. Implement the [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md) method instead.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)   
  [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)

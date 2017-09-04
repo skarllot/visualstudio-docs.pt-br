@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetProgram | Documentos do Microsoft
+title: IDebugThread2::GetProgram | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,36 +30,37 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7183d1794ed499e967aabed1eba264cc70bfd16a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7d1c024819017f8c8ec86872fdc3f14a8b8046ca
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugthread2getprogram"></a>IDebugThread2::GetProgram
-Obtém o programa no qual um thread está em execução.  
+Gets the program in which a thread is running.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetProgram (   
    IDebugProgram2** ppProgram  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetProgram (   
    out IDebugProgram2 ppProgram  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ppProgram`  
- [out] Retorna um [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) que representa o programa esse thread está sendo executado no objeto.  
+ [out] Returns an [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object that represents the program this thread is running in.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

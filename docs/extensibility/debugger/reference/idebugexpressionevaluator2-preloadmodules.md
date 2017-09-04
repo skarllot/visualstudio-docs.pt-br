@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::PreloadModules | Documentos do Microsoft
+title: IDebugExpressionEvaluator2::PreloadModules | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,43 +29,44 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a09839b4cf1fb7c99c3d2c29301e83ec4278e816
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 1a827160e5c211bb7b87d7ea3620a72d53f48986
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
-Pré-carrega os módulos designados pelo provedor símbolo especificado.  
+Preloads the modules designated by the specified symbol provider.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT PreloadModules (  
    IDebugSymbolProvider* pSym  
 );  
 ```  
   
-```c#  
+```csharp  
 int PreloadModules (  
    IDebugSymbolProvider pSym  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pSym`  
- [in] Provedor de símbolo para o qual os módulos serão pré-carregadas.  
+ [in] Symbol provider for which the modules will be preloaded.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Esse método opcional é usado quando você anexar um processo de hospedagem. Ele dá a EE uma chance de 'aquecimento' como parte de attach.  
+## <a name="remarks"></a>Remarks  
+ This optional method is used when you do a hosting-process attach. It gives the EE a chance to 'warm up' as part of the attach.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **ExpressionEvaluatorPackage** objeto expõe o [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) interface.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **ExpressionEvaluatorPackage** object that exposes the [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) interface.  
   
-```cpp#  
+```cpp  
 STDMETHODIMP ExpressionEvaluatorPackage::PreloadModules  
 (  
     IDebugSymbolProvider *pSym  
@@ -91,5 +92,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

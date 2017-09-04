@@ -1,62 +1,77 @@
 ---
-title: "CA2205: usar equivalentes gerenciados da API do Win32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "UseManagedEquivalentsOfWin32Api"
-  - "CA2205"
-helpviewer_keywords: 
-  - "CA2205"
-  - "UseManagedEquivalentsOfWin32Api"
+title: 'CA2205: Use managed equivalents of Win32 API | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- UseManagedEquivalentsOfWin32Api
+- CA2205
+helpviewer_keywords:
+- UseManagedEquivalentsOfWin32Api
+- CA2205
 ms.assetid: 1c65ab59-3e50-4488-a727-3969c7f6cbe4
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2205: usar equivalentes gerenciados da API do Win32
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 16fdf2a733c4c41af35aae5c69a9e2e715501ab9
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Use managed equivalents of Win32 API
 |||  
 |-|-|  
 |TypeName|UseManagedEquivalentsOfWin32Api|  
 |CheckId|CA2205|  
-|Categoria|Microsoft.Usage|  
-|Alteração Significativa|Sem Quebra|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## Causa  
- Um método de invocação de plataforma é definido e um método com a funcionalidade equivalente existe na biblioteca de classes de [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] .  
+## <a name="cause"></a>Cause  
+ A platform invoke method is defined and a method with the equivalent functionality exists in the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] class library.  
   
-## Descrição da Regra  
- Um método de invocação de plataforma é usado para chamar uma função não gerenciado DLL e definido usando o atributo de <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> , ou a palavra\-chave de `Declare` no Visual Basic.  Um método definido incorretamente de invocação de plataforma pode resultar em exceções em tempo de execução devido a problemas como uma função misnamed, defeituoso um mapeamento de tipos de dados do parâmetro e o valor de retorno, e as especificações de campo incorretas, como a convenção de chamada e o conjunto de caracteres.  Se disponível, normalmente é mais simples e o sujeito a erros chamar o método gerenciado equivalente do que para definir diretamente e chamar o método não gerenciado.  Chamar um método de invocação de plataforma também pode resultar em problemas de segurança adicionais que precisam ser resolvidos.  
+## <a name="rule-description"></a>Rule Description  
+ A platform invoke method is used to call an unmanaged DLL function and is defined using the <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> attribute, or the `Declare` keyword in Visual Basic. An incorrectly defined platform invoke method can lead to runtime exceptions because of issues such as a misnamed function, faulty mapping of parameter and return value data types, and incorrect field specifications, such as the calling convention and character set. If available, it is generally simpler and less error prone to call the equivalent managed method than to define and call the unmanaged method directly. Calling a platform invoke method can also lead to additional security issues that need to be addressed.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, substitua a chamada para a função não gerenciado com uma chamada para seu equivalente gerenciado.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, replace the call to the unmanaged function with a call to its managed equivalent.  
   
-## Quando Suprimir Alertas  
- Suprima um aviso dessa regra se o método sugerido de substituição não fornece a funcionalidade necessária.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Suppress a warning from this rule if the suggested replacement method does not provide the needed functionality.  
   
-## Exemplo  
- O exemplo a seguir mostra uma definição do método de invocação de plataforma que viola a regra.  Além disso, as chamadas para o método de invocação de preparo e ao método gerenciado equivalente são mostrados.  
+## <a name="example"></a>Example  
+ The following example shows a platform invoke method definition that violates the rule. In addition, the calls to the platform invoke method and the equivalent managed method are shown.  
   
- [!code-cs[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/CSharp/ca2205-use-managed-equivalents-of-win32-api_1.cs)]
- [!code-vb[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/VisualBasic/ca2205-use-managed-equivalents-of-win32-api_1.vb)]  
+ [!code-csharp[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/CSharp/ca2205-use-managed-equivalents-of-win32-api_1.cs)] [!code-vb[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/VisualBasic/ca2205-use-managed-equivalents-of-win32-api_1.vb)]  
   
-## Regras Relacionadas  
- [CA1404: chamar GetLastError logo depois de P\/Invoke](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1404: Call GetLastError immediately after P/Invoke](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)  
   
- [CA1060: mover P\/Invokes para a classe NativeMethods](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)  
+ [CA1060: Move P/Invokes to NativeMethods class](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)  
   
- [CA1400: os pontos de entrada P\/Invoke devem existir](../Topic/CA1400:%20P-Invoke%20entry%20points%20should%20exist.md)  
+ [CA1400: P/Invoke entry points should exist](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)  
   
- [CA1401: P\/Invokes não deve estar visível](../Topic/CA1401:%20P-Invokes%20should%20not%20be%20visible.md)  
+ [CA1401: P/Invokes should not be visible](../code-quality/ca1401-p-invokes-should-not-be-visible.md)  
   
- [CA2101: especificar marshaling para argumentos da cadeia de caracteres P\/Invoke](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)
+ [CA2101: Specify marshaling for P/Invoke string arguments](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)

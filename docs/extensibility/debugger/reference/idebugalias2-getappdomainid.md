@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias2::GetAppDomainId | Documentos do Microsoft
+title: IDebugAlias2::GetAppDomainId | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,38 +29,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ae078e70d0feec0ec2d5e3dc5472e49461a428af
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c168e29ba4884ec10acac89c3cafb74e8d1c77ba
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugalias2getappdomainid"></a>IDebugAlias2::GetAppDomainId
-Recupera o identificador para o domínio de aplicativo.  
+Retrieves the identifier for the application domain.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetAppDomainId (  
    ULONG32* pappDomainId  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetAppDomainId (  
    out uint pappDomainId  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pappDomainId`  
- [out] Retorna o identificador de domínio de aplicativo.  
+ [out] Returns the application domain identifier.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- As alterações de identificador de domínio de aplicativo sempre que o aplicativo for reiniciado e um novo domínio de aplicativo é criado.  
+## <a name="remarks"></a>Remarks  
+ The application domain identifier changes whenever the application is restarted and a new application domain is created.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugAlias2](../../../extensibility/debugger/reference/idebugalias2.md)

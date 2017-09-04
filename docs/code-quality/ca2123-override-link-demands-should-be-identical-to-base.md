@@ -1,56 +1,72 @@
 ---
-title: "CA2123: as demandas de link de substitui&#231;&#227;o devem ser id&#234;nticas &#224; base | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2123"
-  - "OverrideLinkDemandsShouldBeIdenticalToBase"
-helpviewer_keywords: 
-  - "CA2123"
-  - "OverrideLinkDemandsShouldBeIdenticalToBase"
+title: 'CA2123: Override link demands should be identical to base | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2123
+- OverrideLinkDemandsShouldBeIdenticalToBase
+helpviewer_keywords:
+- OverrideLinkDemandsShouldBeIdenticalToBase
+- CA2123
 ms.assetid: 4538ecd5-fc6f-4480-ab00-90b2ce4730db
 caps.latest.revision: 18
-caps.handback.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2123: as demandas de link de substitui&#231;&#227;o devem ser id&#234;nticas &#224; base
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: b5ec358a3f42e8b82240e901cdad6a5201c41e7a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123: Override link demands should be identical to base
 |||  
 |-|-|  
 |TypeName|OverrideLinkDemandsShouldBeIdenticalToBase|  
 |CheckId|CA2123|  
-|Categoria|Microsoft.Security|  
-|Alteração Significativa|Quebra|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## Causa  
- Um público ou um método protegido em um tipo substituem um método público ou implementam uma interface, e não tenham o mesmo [Demandas de link](../Topic/Link%20Demands.md) que a interface ou o método virtual.  
+## <a name="cause"></a>Cause  
+ A public or protected method in a public type overrides a method or implements an interface, and does not have the same [Link Demands](/dotnet/framework/misc/link-demands) as the interface or virtual method.  
   
-## Descrição da Regra  
- Esta regra um método corresponde ao método de base, que é uma interface ou um método virtual em outro tipo, e então compara as demandas de link em cada um.  Uma violação será informada se o método ou o método de base têm uma procura de link e outros não.  
+## <a name="rule-description"></a>Rule Description  
+ This rule matches a method to its base method, which is either an interface or a virtual method in another type, and then compares the link demands on each. A violation is reported if either the method or the base method has a link demand and the other does not.  
   
- Se essa regra é violada, um chamador mal\-intencionado pode ignorar a procura de link simplesmente chamando o método não seguro.  
+ If this rule is violated, a malicious caller can bypass the link demand merely by calling the unsecured method.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, aplique a mesma procura de link para o método ou para a implementação de overide.  Se isso não for possível, marcar o método com uma procura completa ou remover completamente o atributo.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, apply the same link demand to the overide method or implementation. If this is not possible, mark the method with a full demand or remove the attribute altogether.  
   
-## Quando Suprimir Alertas  
- Não elimine um alerta desta regra.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Exemplo  
- O exemplo a seguir mostra mais violações desta regra.  
+## <a name="example"></a>Example  
+ The following example shows various violations of this rule.  
   
- [!code-cs[FxCop.Security.OverridesAndSecurity#1](../code-quality/codesnippet/CSharp/ca2123-override-link-demands-should-be-identical-to-base_1.cs)]  
+ [!code-csharp[FxCop.Security.OverridesAndSecurity#1](../code-quality/codesnippet/CSharp/ca2123-override-link-demands-should-be-identical-to-base_1.cs)]  
   
-## Consulte também  
- [Diretrizes de codificação segura](../Topic/Secure%20Coding%20Guidelines.md)   
- [Demandas de link](../Topic/Link%20Demands.md)
+## <a name="see-also"></a>See Also  
+ [Secure Coding Guidelines](/dotnet/standard/security/secure-coding-guidelines)   
+ [Link Demands](/dotnet/framework/misc/link-demands)

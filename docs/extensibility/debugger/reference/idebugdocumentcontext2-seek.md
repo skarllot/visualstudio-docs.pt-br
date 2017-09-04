@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::Seek | Documentos do Microsoft
+title: IDebugDocumentContext2::Seek | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,40 +30,41 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 64262aa2dd257d74d4f32ccea48ac4f9d1076259
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e532f27a8256206575f930862a3c7e85c66b3a37
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugdocumentcontext2seek"></a>IDebugDocumentContext2::Seek
-Move o contexto do documento por um determinado número de instruções ou linhas.  
+Moves the document context by a given number of statements or lines.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT Seek(   
    int                      nCount,  
    IDebugDocumentContext2** ppDocContext  
 );  
 ```  
   
-```cpp#  
+```cpp  
 int Seek(   
    int                        nCount,  
    out IDebugDocumentContext2 ppDocContext  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `nCount`  
- [in] O número de instruções ou linhas para mover para frente, dependendo do contexto do documento.  
+ [in] The number of statements or lines to move ahead, depending on the document context.  
   
  `ppDocContext`  
- [out] Retorna um novo [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objeto com a nova posição.  
+ [out] Returns a new [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) object with the new position.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

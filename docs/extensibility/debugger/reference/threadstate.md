@@ -1,5 +1,5 @@
 ---
-title: THREADSTATE | Documentos do Microsoft
+title: THREADSTATE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6280447105046761e9ca328fbdccbcdd344f2dae
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 32e6781b57a60ac39fa932ac5df5aea9e36b07b2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="threadstate"></a>THREADSTATE
-Especifica o estado do thread.  
+Specifies the state of the thread.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_THREADSTATE {   
    THREADSTATE_RUNNING = 0x0001,  
    THREADSTATE_STOPPED = 0x0002,  
@@ -52,7 +53,7 @@ enum enum_THREADSTATE {
 typedef DWORD THREADSTATE;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_THREADSTATE {   
    THREADSTATE_RUNNING = 0x0001,  
    THREADSTATE_STOPPED = 0x0002,  
@@ -62,32 +63,32 @@ public enum enum_THREADSTATE {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  THREADSTATE_RUNNING  
- Indica que o thread está em execução.  
+ Indicates that the thread is running.  
   
  THREADSTATE_STOPPED  
- Indica que o thread está parado devido a um ponto de interrupção.  
+ Indicates that the thread is stopped because of a breakpoint.  
   
  THREADSTATE_FRESH  
- Indica que o thread foi criado, mas ainda não está executando o código.  
+ Indicates that the thread has been created, but is not yet running code.  
   
  THREADSTATE_DEAD  
- Indica que o thread está inativo.  
+ Indicates that the thread is dead.  
   
  THREADSTATE_FROZEN  
- Indica que o thread está congelado (não podem ser executados).  
+ Indicates that the thread is frozen (no execution can be performed).  
   
-## <a name="remarks"></a>Comentários  
- Usado para o `dwThreadState` campo o [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) estrutura.  
+## <a name="remarks"></a>Remarks  
+ Used for the `dwThreadState` field of the [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) structure.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)

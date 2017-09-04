@@ -1,5 +1,5 @@
 ---
-title: Dicas e truques sobre o Visual Studio | Microsoft Docs
+title: Tips and Tricks for Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 06/21/2017
 ms.reviewer: 
@@ -28,122 +28,121 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
-ms.openlocfilehash: 27dc4d56a0608ddf031b47775bd9aaef20e24194
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 8413523efb6291b033447e5ea41eea824228f45f
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/22/2017
 
 ---
-# <a name="tips-and-tricks-for-visual-studio"></a>Dicas e truques sobre o Visual Studio
-É possível navegar no [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] de maneira mais fácil usando os atalhos neste tópico. Este tópico é apenas um subconjunto dos atalhos de teclado disponíveis. Para obter uma lista mais completa, consulte [Atalhos de teclado padrão no Visual Studio](../ide/default-keyboard-shortcuts-in-visual-studio.md). Para obter informações sobre como otimizar a acessibilidade do Visual Studio, consulte [Dicas e truques de acessibilidade](../ide/reference/accessibility-tips-and-tricks.md).  
+# <a name="tips-and-tricks-for-visual-studio"></a>Tips and Tricks for Visual Studio
+You can navigate in [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] more easily by using the shortcuts in this topic. This topic is only a subset of the available keyboard shortcuts. For a more complete list, see [Default Keyboard Shortcuts in Visual Studio](../ide/default-keyboard-shortcuts-in-visual-studio.md). For information about how to optimize Visual Studio for accessibility, see [Accessibility Tips and Tricks](../ide/reference/accessibility-tips-and-tricks.md).  
 
-##  <a name="BKMK_WindowMgmt"></a> Gerenciamento de Janelas  
-
-|||  
-|-|-|  
-|Arraste para fora das caixas de guias flutuantes|Ctrl+clique para multisseleção|  
-|Maximizar janela de flutuação|Clique duas vezes na barra de título|  
-|Reconectar Janela Flutuante|Ctrl+clique duplo na barra de título|  
-|Fechar o documento ativo|Ctrl+F4|  
-|Mostrar a Lista de Arquivos Abertos|Ctrl+Alt+Seta para baixo|  
-|Mostrar Todas as Janelas Flutuantes|Ctrl+Shift+M|  
-
-##  <a name="BKMK_WindowShortcuts"></a> Atalhos das Janelas  
+##  <a name="BKMK_WindowMgmt"></a> Window Management  
 
 |||  
 |-|-|  
-|Mover/encaixar janelas flutuantes|Win+Seta para a esquerda/Win+Seta para a direita|  
-|Maximizar/minimizar janelas|Win+Seta para cima/Win+Seta para baixo|  
-|Mostrar Lista de Atalhos|Win+Alt+n|  
-|Nova instância de Início|Win+Shift+n|  
-|Alternar entre as Janelas|Win+n|  
+|Drag Off Floating Tab Wells|Ctrl+click for multi-select|  
+|Maximize Floating Window|Double-click on title bar|  
+|Re-dock Floating Window|Ctrl+double-click title bar|  
+|Close Active Document|Ctrl+F4|  
+|Show Open File List|Ctrl+Alt+Down|  
+|Show All Floating Windows|Ctrl+Shift+M|  
 
-##  <a name="BKMK_Search"></a> Pesquisa do Visual Studio  
-
-|||  
-|-|-|  
-|Pesquisa do Gerenciador de Soluções|Ctrl+;|  
-|Foque na caixa de Pesquisa em qualquer janela de ferramentas|Alt+` quando a janela de ferramentas tem foco|  
-|Início Rápido|Ctrl+Q|  
-|Resultados de Escopo de Início Rápido|–   @opt Opções<br />–   @cmd Comandos<br />–   @mru Usado mais recentemente<br />–   @doc Abrir documentos|  
-|Pesquisar em Opções de Ferramentas|Ctrl+E|  
-
-##  <a name="BKMK_EditorFind"></a> Localização de editor  
+##  <a name="BKMK_WindowShortcuts"></a> Window Shortcuts  
 
 |||  
 |-|-|  
-|Localização Rápida|Ctrl+F|  
-|Resultado Seguinte Rápido de Alterações|Entrar|  
-|Resultado Anterior de Localização Rápida|Shift+Enter|  
-|Menu Suspenso Expansão de Localização Rápida|Alt+Seta para baixo|  
-|Ignorar Localizar|ESC|  
-|Substituição Rápida|Ctrl+H|  
-|Substituição Rápida - Substituir Próximo|Alt+R|  
-|Substituição Rápida Substituir Tudo|Alt+A|  
-|Localizar em Arquivos|Ctrl+Shift+F|  
-|Substituir nos Arquivos|Ctrl+Shift+H|  
+|Move/Dock Floating Windows|Win+Left / Win+Right|  
+|Maximize/Minimize Windows|Win+Up / Win+Down|  
+|Show Jump List|Win+Alt+n|  
+|Start New Instance|Win+Shift+n|  
+|Switch Between Windows|Win+n|  
 
-##  <a name="BKMK_CodeEditor"></a> Editor de código  
+##  <a name="BKMK_Search"></a> Visual Studio Search  
 
 |||  
 |-|-|  
-|Modo de Sugestão do IntelliSense|Ctrl+Alt+Space (Alternância)|  
-|Forçar a exibição do IntelliSense|Ctrl+J|  
-|Marcas inteligentes|Ctrl+.|  
-|Selecionador de trechos|Ctrl+K, X ou ?, Guia (VB)|  
-|Envolver com|Ctrl+K, S|  
-|Mostrar Informações Rápidas|Ctrl+K, I|  
-|Navegar para|Ctrl+,|  
-|Ir para definição|F12|  
-|Inspecionar Definição|Alt+F12|  
-|Ir para a pilha de definições|Ctrl+Shift+8 (Voltar), Ctrl+Shift+7 (Avançar)|  
-|Navegar em Referências Realçadas|Ctrl+Shift+Seta para cima (Anterior), Ctrl+Shift+Seta para baixo (Próxima)|  
-|Zoom de editor|Ctrl+Shift+> (entrada), Ctrl+Shift+< (saída)|  
-|Bloquear seleção|Mantenha a tecla ALT pressionada e arraste o mouse, Shift+Alt+Teclas de Seta|  
-|Mover uma Linha para Cima/para Baixo|Alt+Seta para cima / Alt+Seta para baixo|  
-|Inspecionar Definição|Alt+F12|  
-|Feche a janela Inspecionar Definição|ESC|  
-|Promover a janela Inspecionar Definição para uma guia de documento regular|Ctrl+Alt+Home|  
-|Navegar entre várias janelas Inspecionar Definição|Ctrl+Alt+- e Ctrl+Alt+=|  
-|Navegar entre vários resultados de espiada|F8 e Shift+F8|  
-|Alterne entre a janela do editor de códigos e a janela de definição de auge|Shift+Esc|  
+|Solution Explorer Search|Ctrl+;|  
+|Place Focus in Search box in any tool window|Alt+` when the tool window has focus|  
+|Quick Launch|Ctrl+Q|  
+|Quick Launch Scope Results|-   @opt Options<br />-   @cmd Commands<br />-   @mru Most recently used<br />-   @doc Open documents|  
+|Search in Tools Options|Ctrl+E|  
 
-##  <a name="BKMK_Toolbars"></a> Barras de ferramentas  
+##  <a name="BKMK_EditorFind"></a> Editor Find  
 
 |||  
 |-|-|  
-|Adicionar botões|Clique no botão de estouro da barra de ferramentas|  
-|Localize a combinação na barra de ferramentas Padrão|Ctrl+D|  
-|Localize o Módulo de Comando de Caixa de Texto|Digite “>”|  
-|Crie novos alias|>Comando do alias NewAlias|  
+|Quick Find|Ctrl+F|  
+|Quick Find Next Result|Enter|  
+|Quick Find Previous Result|Shift+Enter|  
+|Quick Find Expand Drop Down|Alt+Down|  
+|Dismiss Find|Esc|  
+|Quick Replace|Ctrl+H|  
+|Quick Replace Replace Next|Alt+R|  
+|Quick Replace Replace All|Alt+A|  
+|Find in Files|Ctrl+Shift+F|  
+|Replace in Files|Ctrl+Shift+H|  
 
-##  <a name="BKMK_Debugging"></a> Depuração  
+##  <a name="BKMK_CodeEditor"></a> Code Editor  
 
 |||  
 |-|-|  
-|Iniciar a depuração|F5|  
-|Para a depuração|Shift+F5|  
-|Reiniciar a depuração|Ctrl+Shift+F5|  
-|Depuração Parcial|F10|  
-|Entrar em|F11|  
-|Depuração Circular|Shift+F11|  
-|Executar até o cursor|Ctrl+F10|  
-|Definir próxima instrução|Ctrl+Shift+F10|  
-|Defina e Ative/Desative Pontos de interrupção|F9|  
-|Desabilitar Ponto de Interrupção|Ctrl+F9|  
-|Janela imediata|Ctrl + Alt + I|  
-|Modo de Comando de Janela Imediato|Digite “>”|  
-|Buffer de limpeza imediata da janela|>cls|  
-|Valor de Impressão de Janela Imediato|?varname|  
+|IntelliSense Suggestion Mode|Ctrl+Alt+Space (Toggle)|  
+|Force Show IntelliSense|Ctrl+J|  
+|Smart Tags|Ctrl+.|  
+|Snippet Picker|Ctrl+K,X or ?,Tab (VB)|  
+|Surround With|Ctrl+K,S|  
+|Show Quick Info|Ctrl+K,I|  
+|Navigate To|Ctrl+,|  
+|Navigate Highlighted References|Ctrl+Shift+Up (Previous), Ctrl+Shift+Down (Next)|  
+|Editor Zoom|Ctrl+Shift+> (In), Ctrl+Shift+< (Out)|  
+|Block Selection|Hold Alt and drag mouse, Shift+Alt+Arrow Keys|  
+|Move Line Up/Down|Alt+Up / Alt+Down|  
+|Go To Definition|F12|  
+|Peek Definition|Alt+F12|  
+|Go To Definition Stack|Ctrl+Shift+8 (Back), Ctrl+Shift+7 (Forward)|  
+|Close the Peek Definition window|Esc|  
+|Promote the Peek Definition window to a regular document tab|Ctrl+Alt+Home|  
+|Navigate between multiple Peek Definition windows|Ctrl+Alt+- and Ctrl+Alt+=|  
+|Navigate between multiple Peek results|F8 and Shift+F8|  
+|Toggle between the code editor window and the Peek Definition window|Shift+Esc|  
 
-##  <a name="BKMK_ALM"></a> Gerenciamento do Ciclo de Vida do Aplicativo  
- Veja [Atalhos de teclado: Visual Studio Online, portal da Web do TFS e Team Explorer](http://msdn.microsoft.com/en-us/35ea128b-7565-4ee3-8266-b9f0d32aecf4).  
+##  <a name="BKMK_Toolbars"></a> Toolbars  
 
-## <a name="see-also"></a>Consulte também  
- [Blog do Visual Studio](http://blogs.msdn.com/b/visualstudio)   
- [Blog de dicas e truques sobre o Visual Studio](http://blogs.msdn.com/b/zainnab)   
- [Caixa de Ferramentas do Visual Studio no Canal 9](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)   
+|||  
+|-|-|  
+|Add Buttons|Click toolbar overflow button|  
+|Find Combo in Standard toolbar|Ctrl+D|  
+|Find Textbox Command Mode|Type ">"|  
+|Create new alias|>alias NewAlias Command|  
+
+##  <a name="BKMK_Debugging"></a> Debugging  
+
+|||  
+|-|-|  
+|Start Debugging|F5|  
+|Stop Debugging|Shift+F5|  
+|Restart Debugging|Ctrl+Shift+F5|  
+|Step Over|F10|  
+|Step Into|F11|  
+|Step Out|Shift+F11|  
+|Run To Cursor|Ctrl+F10|  
+|Set Next Statement|Ctrl+Shift+F10|  
+|Set and Toggle Breakpoint|F9|  
+|Disable Breakpoint|Ctrl+F9|  
+|Immediate Window|Ctrl+Alt+I|  
+|Immediate Window Command Mode|Type ">"|  
+|Immediate Window Clear Buffer|>cls|  
+|Immediate Window Print Value|?varname|  
+
+##  <a name="BKMK_ALM"></a> Application Lifecycle Management  
+ See [Keyboard shortcuts: Visual Studio Online, TFS web portal, and Team Explorer](http://msdn.microsoft.com/en-us/35ea128b-7565-4ee3-8266-b9f0d32aecf4).  
+
+## <a name="see-also"></a>See Also  
+ [Visual Studio Blog](http://blogs.msdn.com/b/visualstudio)   
+ [Visual Studio Tips and Tricks Blog](http://blogs.msdn.com/b/zainnab)   
+ [Visual Studio Toolbox on Channel 9](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)   
  [Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)   
- [Bugs de conexão do Visual Studio](http://connect.microsoft.com/VisualStudio)
+ [Visual Studio Connect Bugs](http://connect.microsoft.com/VisualStudio)
 

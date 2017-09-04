@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetSize | Documentos do Microsoft
+title: IDebugField::GetSize | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ef74d7e7ff50691aace25108facf60ef17d6c8cf
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5f025b96c3a37cd55d8bc148d04196a862f7e7bc
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugfieldgetsize"></a>IDebugField::GetSize
-Esse método obtém o tamanho de um campo, em bytes.  
+This method gets the size of a field, in bytes.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetSize(   
    DWORD* pdwSize  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetSize(  
    out uint pdwSize  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pdwSize`  
- [out] Retorna o tamanho.  
+ [out] Returns the size.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Todos os campos têm um tipo e todos os tipos têm um tamanho. Por exemplo, um campo com um tipo de byte tem um tamanho de 1 byte.  
+## <a name="remarks"></a>Remarks  
+ All fields have a type and all types have a size. For example, a field with a type of byte has a size of 1 byte.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

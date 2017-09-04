@@ -1,45 +1,58 @@
 ---
-title: "Caixa de di&#225;logo Parar Depura&#231;&#227;o em Andamento | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.stopnow"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "SQL"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Caixa de diálogo Parar Depuração em Andamento"
+title: Stop Debugging In Progress Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.stopnow
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+- SQL
+helpviewer_keywords:
+- Stop Debugging in Progress dialog box
 ms.assetid: ed7ef49d-e25f-4a4d-9396-9bc7b4143117
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Caixa de di&#225;logo Parar Depura&#231;&#227;o em Andamento
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: d07ab45ca55e164f5b5eaff3603293c862bd7c7a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Essa caixa de diálogo aparece quando o depurador está tentando interromper uma sessão de depuração, mas parar a sessão deve demorar um pouco.  Parar uma sessão de depuração normalmente é muito rápido e essa caixa de diálogo não é exibida.  Entretanto, às vezes, leva mais tempo para desanexar de todos os processos que estão sendo depurados.  Se parar a sessão levar mais do que alguns segundos \(ou se ocorrer um erro de desanexação\), essa caixa de diálogo será exibida.  Se isso ocorrer com frequência, poderá ser devido a um problema interno e você deverá entrar em contato com o Product Support Services.  
+---
+# <a name="stop-debugging-in-progress-dialog-box"></a>Stop Debugging In Progress Dialog Box
+This dialog box appears when the debugger is trying to stop a debugging session, but stopping the session is going to take some time. Stopping a debugging session is normally very fast and this dialog box does not appear. Sometimes, however, it takes additional time to detach from all the processes being debugged. If stopping the session takes more than a few seconds (or if a detach error occurs), this dialog box appears. If this occurs frequently, it may be due to an internal problem and you may want to contact Product Support Services.  
   
- Você pode esperar os processos desanexarem e essa caixa de diálogo desaparecer ou usar o botão **Parar Agora** para forçar a terminação imediata.  
+ You can wait for the processes to detach and this dialog box to disappear, or use the **Stop Now** button to force immediate termination.  
   
- **Parar Agora**  
- Clique neste botão para encerrar imediatamente a sessão de depuração.  Usar **Parar Agora** encerrará em vez de desanexar os processos que estão sendo depurados.  Se você estiver depurando processos do sistema, encerrar os processos com **Parar Agora** poderá ter efeitos inesperados e indesejados.  
+ **Stop Now**  
+ Click this button to end the debugging session immediately. Using **Stop Now** will terminate rather than detaching the processes being debugged. If you are debugging system processes, terminating those processes with **Stop Now** can have unexpected and undesired effects.  
   
-## Consulte também  
- [Segurança do depurador](../debugger/debugger-security.md)   
- [Detaching Programs](http://msdn.microsoft.com/pt-br/f2c756c2-8079-474b-94c2-01c19a141a01)
+## <a name="see-also"></a>See Also  
+ [Debugger Security](../debugger/debugger-security.md)   
+ [Detaching Programs](http://msdn.microsoft.com/en-us/f2c756c2-8079-474b-94c2-01c19a141a01)

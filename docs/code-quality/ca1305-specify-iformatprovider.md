@@ -1,39 +1,56 @@
 ---
-title: "CA1305: especificar IFormatProvider | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SpecifyIFormatProvider"
-  - "CA1305"
-helpviewer_keywords: 
-  - "CA1305"
-  - "SpecifyIFormatProvider"
+title: 'CA1305: Specify IFormatProvider | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SpecifyIFormatProvider
+- CA1305
+helpviewer_keywords:
+- CA1305
+- SpecifyIFormatProvider
 ms.assetid: fb34ed9a-4eab-47cc-8eef-3068a4a1397e
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1305: especificar IFormatProvider
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 5c72a04c3fe0fb25777749c7b765464f440a0c9c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1305-specify-iformatprovider"></a>CA1305: Specify IFormatProvider
 |||  
 |-|-|  
 |TypeName|SpecifyIFormatProvider|  
 |CheckId|CA1305|  
-|Categoria|Microsoft.Globalization|  
-|Alteração Significativa|Sem quebra|  
+|Category|Microsoft.Globalization|  
+|Breaking Change|Non-breaking|  
   
-## Causa  
- Um método ou um construtor chamam um ou mais membros que têm as sobrecargas que aceitam um parâmetro de <xref:System.IFormatProvider?displayProperty=fullName> , e o método ou o construtor não chama a sobrecarga que usa o parâmetro de <xref:System.IFormatProvider> .  Esta regra ignora chamadas para os métodos de [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] que são documentados como ignorar o parâmetro de <xref:System.IFormatProvider> e adicionalmente os seguintes métodos:  
+## <a name="cause"></a>Cause  
+ A method or constructor calls one or more members that have overloads that accept a <xref:System.IFormatProvider?displayProperty=fullName> parameter, and the method or constructor does not call the overload that takes the <xref:System.IFormatProvider> parameter. This rule ignores calls to [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] methods that are documented as ignoring the <xref:System.IFormatProvider> parameter and additionally the following methods:  
   
 -   <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>  
   
@@ -41,41 +58,41 @@ manager: "wpickett"
   
 -   <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>  
   
-## Descrição da Regra  
- Quando um objeto de <xref:System.Globalization.CultureInfo?displayProperty=fullName> ou de <xref:System.IFormatProvider> não for fornecido, o valor padrão que é fornecido pelo membro sobrecarregado não pode ter o efeito desejado em todas as localidades.  Além disso, os membros de [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] eles escolhem a cultura padrão e a formatação com base nas suposições que podem não estar corretas para seu código.  Para garantir que o código funciona conforme o esperado para seus cenários, você deve fornecer informações específicas à cultura específica de acordo com as seguintes diretrizes:  
+## <a name="rule-description"></a>Rule Description  
+ When a <xref:System.Globalization.CultureInfo?displayProperty=fullName> or <xref:System.IFormatProvider> object is not supplied, the default value that is supplied by the overloaded member might not have the effect that you want in all locales. Also, [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] members choose default culture and formatting based on assumptions that might not be correct for your code. To make sure that the code works as expected for your scenarios, you should supply culture-specific information according to the following guidelines:  
   
--   Se o valor será exibido ao usuário, use a cultura atual.  Consulte <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>.  
+-   If the value will be displayed to the user, use the current culture. See <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>.  
   
--   Se o valor será armazenado e acessado pelo software \(persistente em um arquivo ou em uma base de dados\), use a cultura invariável.  Consulte <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>.  
+-   If the value will be stored and accessed by software (persisted to a file or database), use the invariant culture. See <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>.  
   
--   Se você não souber o destino do valor, tem o consumidor ou o provedor de dados especificar a cultura.  
+-   If you do not know the destination of the value, have the data consumer or provider specify the culture.  
   
- Observe que <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> é usado para recuperar apenas recursos encontrados usando uma instância da classe de <xref:System.Resources.ResourceManager?displayProperty=fullName> .  
+ Note that <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> is used only to retrieve localized resources by using an instance of the <xref:System.Resources.ResourceManager?displayProperty=fullName> class.  
   
- Se o comportamento padrão do membro sobrecarregado é apropriado para suas necessidades, é melhor chamar explicitamente a sobrecarga cultura específica para que seu código do seja documentando e mantido mais facilmente.  
+ Even if the default behavior of the overloaded member is appropriate for your needs, it is better to explicitly call the culture-specific overload so that your code is self-documenting and more easily maintained.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, use a sobrecarga necessária <xref:System.Globalization.CultureInfo> ou <xref:System.IFormatProvider> e especifique o argumento de acordo com as diretrizes que foi listada anteriormente.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, use the overload that takes a <xref:System.Globalization.CultureInfo> or <xref:System.IFormatProvider> and specify the argument according to the guidelines that were listed earlier.  
   
-## Quando Suprimir Alertas  
- É seguro suprimir um aviso desta regra quando você tiver certeza de que o provedor padrão de cultura\/formato é a escolha correta e onde a manutenibilidade de código não é uma prioridade importante de desenvolvimento.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule when it is certain that the default culture/format provider is the correct choice and where code maintainability is not an important development priority.  
   
-## Exemplo  
- No exemplo a seguir, `BadMethod` causa duas violações desta regra.  `GoodMethod` corrigir a primeira violação passando a cultura invariável a <xref:System.String.Compare%2A>, e corrigir a segunda violação passando a cultura atual a <xref:System.String.ToLower%2A> porque `string3` é exibido ao usuário.  
+## <a name="example"></a>Example  
+ In the following example, `BadMethod` causes two violations of this rule. `GoodMethod` corrects the first violation by passing the invariant culture to <xref:System.String.Compare%2A>, and corrects the second violation by passing the current culture to <xref:System.String.ToLower%2A> because `string3` is displayed to the user.  
   
- [!code-cs[FxCop.Globalization.CultureInfo#1](../code-quality/codesnippet/CSharp/ca1305-specify-iformatprovider_1.cs)]  
+ [!code-csharp[FxCop.Globalization.CultureInfo#1](../code-quality/codesnippet/CSharp/ca1305-specify-iformatprovider_1.cs)]  
   
-## Exemplo  
- O exemplo a seguir mostra o efeito da cultura atual da opção <xref:System.IFormatProvider> que é selecionada pelo tipo de <xref:System.DateTime> .  
+## <a name="example"></a>Example  
+ The following example shows the effect of current culture on the default <xref:System.IFormatProvider> that is selected by the <xref:System.DateTime> type.  
   
- [!code-cs[FxCop.Globalization.IFormatProvider#1](../code-quality/codesnippet/CSharp/ca1305-specify-iformatprovider_2.cs)]  
+ [!code-csharp[FxCop.Globalization.IFormatProvider#1](../code-quality/codesnippet/CSharp/ca1305-specify-iformatprovider_2.cs)]  
   
- O exemplo produz a seguinte saída.  
+ This example produces the following output.  
   
-  **4\/6\/1900 12:15:12 PM**  
-**06\/04\/1900 12:15:12**   
-## Regras Relacionadas  
- [CA1304: especificar CultureInfo](../Topic/CA1304:%20Specify%20CultureInfo.md)  
+ **6/4/1900 12:15:12 PM**  
+**06/04/1900 12:15:12**   
+## <a name="related-rules"></a>Related Rules  
+ [CA1304: Specify CultureInfo](../code-quality/ca1304-specify-cultureinfo.md)  
   
-## Consulte também  
- [NIB: Using the CultureInfo Class](http://msdn.microsoft.com/pt-br/d4329e34-64c3-4d1e-8c73-5b0ee626ba7a)
+## <a name="see-also"></a>See Also  
+ [NIB: Using the CultureInfo Class](http://msdn.microsoft.com/en-us/d4329e34-64c3-4d1e-8c73-5b0ee626ba7a)

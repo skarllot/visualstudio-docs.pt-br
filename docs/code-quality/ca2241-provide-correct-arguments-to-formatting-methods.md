@@ -1,51 +1,67 @@
 ---
-title: "CA2241: fornecer argumentos corretos para m&#233;todos de formata&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2241"
-  - "Provide correct arguments to formatting methods"
-  - "ProvideCorrectArgumentsToFormattingMethods"
-helpviewer_keywords: 
-  - "CA2241"
-  - "ProvideCorrectArgumentsToFormattingMethods"
+title: 'CA2241: Provide correct arguments to formatting methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2241
+- Provide correct arguments to formatting methods
+- ProvideCorrectArgumentsToFormattingMethods
+helpviewer_keywords:
+- ProvideCorrectArgumentsToFormattingMethods
+- CA2241
 ms.assetid: 83639bc4-4c91-4a07-a40e-dc5e49a84494
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2241: fornecer argumentos corretos para m&#233;todos de formata&#231;&#227;o
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4ed5e5210683f073abcc65943fc7ae01677bf775
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2241-provide-correct-arguments-to-formatting-methods"></a>CA2241: Provide correct arguments to formatting methods
 |||  
 |-|-|  
 |TypeName|ProvideCorrectArgumentsToFormattingMethods|  
 |CheckId|CA2241|  
-|Categoria|Microsoft.Usage|  
-|Alteração Significativa|Sem Quebra|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## Causa  
- O argumento de cadeia de caracteres de `format` passado ao método como <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>, ou <xref:System.String.Format%2A?displayProperty=fullName> não contém um item de formato que corresponde a cada argumento do objeto, ou vice\-versa.  
+## <a name="cause"></a>Cause  
+ The `format` string argument passed to a method such as <xref:System.Console.WriteLine%2A>,  <xref:System.Console.Write%2A>, or  <xref:System.String.Format%2A?displayProperty=fullName> does not contain a format item that corresponds to each object argument, or vice versa.  
   
-## Descrição da Regra  
- Os argumentos para os métodos como <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>, e <xref:System.String.Format%2A> consistem em uma cadeia de formato seguida por várias instâncias de <xref:System.Object?displayProperty=fullName> .  A cadeia de caracteres de formato consiste em texto e itens de formato inseridos do formulário, índice, alinhamento {\[\] \[: formatString\]}. os índices “é um inteiro baseado em zero que indica qual dos objetos no formato.  Se um objeto não tiver um índice correspondente na cadeia de caracteres de formato, o objeto será ignorado.  Se o objeto especificado por “índices não existir, <xref:System.FormatException?displayProperty=fullName> será gerado em tempo de execução.  
+## <a name="rule-description"></a>Rule Description  
+ The arguments to methods such as <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>, and <xref:System.String.Format%2A> consist of a format string followed by several <xref:System.Object?displayProperty=fullName> instances. The format string consists of text and embedded format items of the form, {index[,alignment][:formatString]}. 'index' is a zero-based integer that indicates which of the objects to format. If an object does not have a corresponding index in the format string, the object is ignored. If the object specified by 'index' does not exist, a <xref:System.FormatException?displayProperty=fullName> is thrown at runtime.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, forneça um item de formato para cada argumento de objeto e fornecer um argumento de objeto para cada item de formato.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, provide a format item for each object argument and provide an object argument for each format item.  
   
-## Quando Suprimir Alertas  
- Não elimine um alerta desta regra.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Exemplo  
- O exemplo a seguir mostra duas violações da regra.  
+## <a name="example"></a>Example  
+ The following example shows two violations of the rule.  
   
- [!CODE [FxCop.Usage.FormattingArguments#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Usage.FormattingArguments#1)]
+ [!code-vb[FxCop.Usage.FormattingArguments#1](../code-quality/codesnippet/VisualBasic/ca2241-provide-correct-arguments-to-formatting-methods_1.vb)] [!code-csharp[FxCop.Usage.FormattingArguments#1](../code-quality/codesnippet/CSharp/ca2241-provide-correct-arguments-to-formatting-methods_1.cs)]

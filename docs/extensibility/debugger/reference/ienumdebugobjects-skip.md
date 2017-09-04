@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugObjects::Skip | Documentos do Microsoft
+title: IEnumDebugObjects::Skip | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 191371ee2a091f95824b73d6e44df3d0d21980c5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 91351143b6983708845e72860d8b4b53df47ce29
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="ienumdebugobjectsskip"></a>IEnumDebugObjects::Skip
-Este método ignora o número especificado de elementos.  
+This method skips over the specified number of elements.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT Skip(  
    [in] ULONG celt  
 );  
 ```  
   
-```c#  
+```csharp  
 int Skip(  
    [In] uint celt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `celt`  
- [in] Número de elementos a serem ignorados.  
+ [in] Number of elements to skip.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se `celt` for maior que o número de elementos restantes; caso contrário, retornará um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`. Returns `S_FALSE` if `celt` is greater than the number of remaining elements; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Se `celt` Especifica um valor maior que o número de elementos restantes, a enumeração está definida para o fim e `S_FALSE` é retornado.  
+## <a name="remarks"></a>Remarks  
+ If `celt` specifies a value greater than the number of remaining elements, the enumeration is set to the end and `S_FALSE` is returned.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram3::ExecuteOnThread | Documentos do Microsoft
+title: IDebugProgram3::ExecuteOnThread | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,46 +28,47 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 535a7cd2925b2c88aad0e45f5d6f0c34b3259b6e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0df298d6291db40b9a333b9b8711a73620b44987
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
-Executa o programa de depurador. O thread é retornado para fornecer as informações do depurador em qual thread o usuário está exibindo ao executar o programa.  
+Executes the debugger program. The thread is returned to give the debugger information on which thread the user is viewing when executing the program.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT ExecuteOnThread(  
    [in] IDebugThread2* pThread)  
 ```  
   
-```c#  
+```csharp  
 int ExecuteOnThread(  
    IDebugThread2 pThread  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pThread`  
- [in] Um [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto.  
+ [in] An [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Há três maneiras diferentes que um depurador pode continuar a execução após a interrupção:  
+## <a name="remarks"></a>Remarks  
+ There are three different ways that a debugger can resume execution after stopping:  
   
--   Execute: Cancelar qualquer etapa anterior e executar até o próximo ponto de interrupção e assim por diante.  
+-   Execute: Cancel any previous step, and run until the next breakpoint and so on.  
   
--   Etapa: Cancelar qualquer etapa antiga e executar até que a nova etapa seja concluída.  
+-   Step: Cancel any old step, and run until the new step completes.  
   
--   Continuar: Executar novamente e deixar qualquer etapa antiga ativa.  
+-   Continue: Run again, and leave any old step active.  
   
- O thread passado para `ExecuteOnThread` é útil ao decidir qual etapa para cancelar. Se você não souber o thread em execução execute cancela todas as etapas. Com conhecimento do thread, você somente precisa cancelar a etapa de thread ativo.  
+ The thread passed to `ExecuteOnThread` is useful when deciding which step to cancel. If you do not know the thread, running execute cancels all steps. With knowledge of the thread, you only need to cancel the step on the active thread.  
   
-## <a name="see-also"></a>Consulte também  
- [Executar](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
+## <a name="see-also"></a>See Also  
+ [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
  [IDebugProgram3](../../../extensibility/debugger/reference/idebugprogram3.md)

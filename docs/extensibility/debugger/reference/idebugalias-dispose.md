@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias::Dispose | Documentos do Microsoft
+title: IDebugAlias::Dispose | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,33 +30,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a9cc51d28e20fcdddf9caba9febb7288762f8056
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 42be2874aeee7c1299f7e48ece58eef5c9493f9c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugaliasdispose"></a>IDebugAlias::Dispose
-Marca este alias para remoção.  
+Marks this alias for removal.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Dispose();  
 ```  
   
-```c#  
+```csharp  
 int Dispose();  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- Nenhum.  
+#### <a name="parameters"></a>Parameters  
+ None.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Quando esse método é chamado, o alias não está mais disponível.  
+## <a name="remarks"></a>Remarks  
+ Once this method is called, the alias is no longer available.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

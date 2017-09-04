@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_PARAM | Documentos do Microsoft
+title: METADATA_ADDRESS_PARAM | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9b5a8b43368572058f5e202e4504fc1565a5d14b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: edca5da7e4d417f6578946c824ac601dea516270
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="metadataaddressparam"></a>METADATA_ADDRESS_PARAM
-Esta estrutura representa um parâmetro de um método ou função.  
+This structure represents a parameter of a method or function.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_PARAM {  
@@ -49,7 +50,7 @@ typedef struct _tagMETADATA_ADDRESS_PARAM {
 } METADATA_ADDRESS_PARAM;  
 ```  
   
-```c#  
+```csharp  
 public struct METADATA_ADDRESS_PARAM {  
    public int  tokMethod;  
    public int  tokParam;  
@@ -57,27 +58,27 @@ public struct METADATA_ADDRESS_PARAM {
 }  
 ```  
   
-## <a name="terms"></a>Termos  
+## <a name="terms"></a>Terms  
  tokMethod  
- A ID do método o parâmetro faz parte.  
+ The ID of the method the parameter is part of.  
   
  tokParam  
- A ID do parâmetro.  
+ The ID of the parameter.  
   
  dwIndex  
- O índice do parâmetro em uma lista de parâmetros.  
+ The index of the parameter in a list of parameters.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é parte da união no [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura quando o `dwKind` campo o `DEBUG_ADDRESS_UNION` estrutura é definida como `ADDRESS_KIND_PARAM` (um valor da [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração).  
+## <a name="remarks"></a>Remarks  
+ This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_PARAM` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
  [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

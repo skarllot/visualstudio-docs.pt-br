@@ -38,11 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: e4abacb0286de16c148076572e73043daed4d567
+ms.translationtype: HT
+ms.sourcegitcommit: a3c0f4d3bde8bb03d3766383eba01665e58458be
+ms.openlocfilehash: 4ec9e4acb1cd859ca96498db42c1cab4473c4c83
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="signing-page-project-designer"></a>Página de Assinatura, Designer de Projeto
@@ -82,7 +82,7 @@ Use a página **Assinatura** do **Designer de Projeto** para assinar os manifest
   
 ## <a name="assembly-signing"></a>Assinatura de assembly  
  Caixa de seleção **Assinar o assembly**  
- Marque essa caixa de seleção para assinar o assembly e criar um arquivo de chave de nome forte. Para obter mais informações sobre como assinar um assembly usando o **Designer de Projeto**, consulte [Como assinar um assembly (Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564).  
+ Marque essa caixa de seleção para assinar o assembly e criar um arquivo de chave de nome forte. Para obter mais informações sobre como assinar um assembly usando o **Designer de Projeto**, consulte [Como assinar um assembly (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio).  
   
  Essa opção usa a ferramenta Al.exe fornecida pelo [!INCLUDE[winsdklong](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name).  
   
@@ -109,6 +109,6 @@ Use a página **Assinatura** do **Designer de Projeto** para assinar os manifest
  [Gerenciando a assinatura de assembly e de manifesto](../../ide/managing-assembly-and-manifest-signing.md)   
  [Assinatura de nome forte para aplicativos gerenciados](http://msdn.microsoft.com/en-us/5fef3490-c519-4363-94fd-8b1ad260dab5)   
  [Como assinar manifestos do aplicativo e de implantação](../../ide/how-to-sign-application-and-deployment-manifests.md)   
- [Como assinar um assembly (Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564)   
+ [Como assinar um assembly (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)   
  [Como assinar um assembly com um nome forte](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)   
- [Assemblies de nomes fortes](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)
+ [Assemblies de nomes fortes](/dotnet/framework/app-domains/strong-named-assemblies)   

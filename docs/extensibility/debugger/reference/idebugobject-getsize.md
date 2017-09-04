@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetSize | Documentos do Microsoft
+title: IDebugObject::GetSize | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,40 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7f484977381a878450cf23f1aa8adb177042930d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0a20f1d7d5f1e21823e06df5e26e0b8f8f45fa8f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugobjectgetsize"></a>IDebugObject::GetSize
-Obtém o tamanho do objeto em bytes.  
+Gets the size of the object in bytes.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetSize(   
    UINT* pnSize  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetSize(  
    out uint pnSize  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pnSize`  
- [out] Retorna o tamanho em bytes.  
+ [out] Returns the size in bytes.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Use o [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md) método para recuperar o valor como uma sequência de bytes.  
+## <a name="remarks"></a>Remarks  
+ Use the [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md) method to retrieve the value as a sequence of bytes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)

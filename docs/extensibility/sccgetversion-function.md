@@ -1,5 +1,5 @@
 ---
-title: "Função SccGetVersion | Documentos do Microsoft"
+title: SccGetVersion Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,34 +30,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0fcabba17dbc134d86c286c851054376dcc2cf39
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 10a9d2103684d28185f4c807cd0a65875360f8f7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sccgetversion-function"></a>Função SccGetVersion
-Essa função obtém o número de versão da API de plug-in de controle fonte compatíveis com o plug-in de controle de origem.  
+# <a name="sccgetversion-function"></a>SccGetVersion Function
+This function gets the version number of the Source Control Plug-in API supported by the source control plug-in.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 LONG SccGetVersion(void);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- Nenhum.  
+#### <a name="parameters"></a>Parameters  
+ None.  
   
-## <a name="return-value"></a>Valor de retorno  
- Um `LONG` tipo de dados que contém o número de versão da API do plug-in de controle de origem com suporte:  
+## <a name="return-value"></a>Return Value  
+ A `LONG` data type that contains the version number of the supported Source Control Plug-in API:  
   
-|WORD|Descrição|  
+|WORD|Description|  
 |----------|-----------------|  
-|HIWORD|Versão principal|  
-|LOWORD|Versão secundária|  
+|HIWORD|Major version|  
+|LOWORD|Minor version|  
   
-## <a name="remarks"></a>Comentários  
- Por exemplo, se um plug-in de controle de origem suporta a versão 1.3 da API de plug-in de controle de origem, essa função retornará 0x0103.  
+## <a name="remarks"></a>Remarks  
+ For example, if a source control plug-in supports version 1.3 of the Source Control Plug-in API, this function would return 0x0103.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)

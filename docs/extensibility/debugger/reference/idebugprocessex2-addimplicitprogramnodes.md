@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2::AddImplicitProgramNodes | Documentos do Microsoft
+title: IDebugProcessEx2::AddImplicitProgramNodes | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: cc4f2f9908826712ebb65ad1f8c22680226ecb54
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b248f3077a21e0e1f8dfc989971454a8e5c06aa7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprocessex2addimplicitprogramnodes"></a>IDebugProcessEx2::AddImplicitProgramNodes
-Este método adiciona um nó de programa para cada mecanismo de depuração (DE) especificado.  
+This method adds a program node for each debug engine (DE) specified.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT AddImplicitProgramNodes(  
    REFGUID guidLaunchingEngine,  
    GUID*   rgguidSpecificEngines,  
@@ -49,7 +50,7 @@ HRESULT AddImplicitProgramNodes(
 );  
 ```  
   
-```c#  
+```csharp  
 int AddImplicitProgramNodes(  
    ref Guid guidLaunchingEngine,  
    Guid[]   rgguidSpecificEngines,  
@@ -57,22 +58,22 @@ int AddImplicitProgramNodes(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `guidLaunchingEngine`  
- [in] O `GUID` de um DE que deve ser usado para iniciar programas (e é considerado como para adicionar seus próprio programa nós).  
+ [in] The `GUID` of a DE that is to be used to launch programs (and is assumed to add its own program nodes).  
   
  `rgguidSpecificEngines`  
- [in] Matriz de `GUID`s de DEs qual programa nós serão adicionados.  
+ [in] Array of `GUID`s of DEs for which program nodes will be added.  
   
  `celtSpecificEngines`  
- [in] O número de `GUID`s na `rgguidSpecificEngines` matriz.  
+ [in] The number of `GUID`s in the `rgguidSpecificEngines` array.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- [Programa nós](../../../extensibility/debugger/program-nodes.md) serão adicionados para cada DE listado na `rgguidSpecificEngines`— exceto o mecanismo de inicialização (conforme indicado nos `guidLaunchingEngine`), que é considerado como para adicionar seu próprio nó programa quando ele inicia um programa.  
+## <a name="remarks"></a>Remarks  
+ [Program Nodes](../../../extensibility/debugger/program-nodes.md) will be added for each DE listed in `rgguidSpecificEngines`—excluding the launching engine (as given in `guidLaunchingEngine`), which is assumed to add its own program node when it launches a program.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)   
- [Nós de programa](../../../extensibility/debugger/program-nodes.md)
+ [Program Nodes](../../../extensibility/debugger/program-nodes.md)

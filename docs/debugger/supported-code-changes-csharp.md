@@ -1,90 +1,106 @@
 ---
-title: "Altera&#231;&#245;es de c&#243;digo suportadas (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Editar e Continuar [C#], alterações de código com suporte"
+title: Supported Code Changes (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- Edit and Continue [C#], supported code changes
 ms.assetid: c7a48ea9-5a7f-4328-a9d7-f0e76fac399d
 caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Altera&#231;&#245;es de c&#243;digo suportadas (C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 6c870acd2a1a2339e66ef8e960657a44036057aa
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Editar e Continuar trata a maioria dos tipos de alterações de código dentro dos corpos do método.  A maioria das alterações fora dos corpos do método e algumas alterações dentro dos corpos do método, no entanto, não podem ser aplicadas durante a depuração.  Para aplicar essas alterações sem suporte, você deverá parar a depuração e reinicializar com uma versão atualizada do código.  
+---
+# <a name="supported-code-changes-c"></a>Supported Code Changes (C#)
+Edit and Continue handles most types of code changes within method bodies. Most changes outside method bodies, and a few changes within method bodies, cannot be applied during debugging, however. To apply those unsupported changes, you must stop debugging and restart with a fresh version of the code.  
   
- As seguintes alterações não podem ser aplicadas ao código C\# durante uma sessão de depuração:  
+ The following changes cannot be applied to C# code during a debugging session:  
   
--   As alterações na instrução atual ou qualquer outra instrução ativa.  
+-   Changes to the current statement or any other active statement.  
   
-     As instruções ativas incluem todas as instruções, em funções na pilha de chamadas, que foram chamadas para acessar a instrução atual.  
+     Active statements include any statements, in functions on the call stack, that were called to get to the current statement.  
   
-     A instrução atual é marcada por um plano de fundo amarelo na janela de origem.  Outras instruções ativas são marcadas por um plano de fundo sombreado e são somente leitura.  Essas cores padrão podem ser alteradas na caixa de diálogo **Opções**.  
+     The current statement is marked by a yellow background in the source window. Other active statements are marked by a shaded background and are read-only. These default colors can be changed in the **Options** dialog box.  
   
--   Alterando a assinatura de um tipo.  
+-   Changing the signature of a type.  
   
--   Adicionando um método anônimo que captura uma variável que ainda não foram capturada antes.  
+-   Adding an anonymous method that captures a variable that hasn't been captured before.  
   
--   Alterando, removendo ou alterando atributos.  
+-   Adding, removing, or changing attributes.  
   
--   Adicionando, removendo ou alterando políticas `using`.  
+-   Adding, removing, or changing `using` directives.  
   
--   Adicionando `foreach`, `using`, ou `lock` em torno da instrução ativa.  
+-   Adding a `foreach`, `using`, or `lock` around the active statement.  
   
-## Código não seguro  
- Alterações no código não seguro têm as mesmas limitações que alterações no código seguro, com uma restrição adicional: editar e continuar não dá suporte a alterações no código não seguro é encerrado dentro de um método que contém a`stackalloc`operador.  
+## <a name="unsafe-code"></a>Unsafe Code  
+ Changes to unsafe code have the same limitations as changes to safe code, with one additional restriction: Edit and Continue does not support changes to unsafe code that exits within a method that contains the `stackalloc` operator.  
   
-## Exceções  
- Editar e continuar dá suporte a alterações para`catch`e`finally`bloqueia, exceto que adicionando um`catch`ou`finally`em torno da instrução ativa não é permitido.  
+## <a name="exceptions"></a>Exceptions  
+ Edit and Continue supports changes to `catch` and `finally` blocks, except that adding a `catch` or `finally` block around the active statement is not allowed.  
   
-## Cenários sem suporte  
- Editar e Continuar não está disponível nos seguintes cenários de depuração:  
+## <a name="unsupported-scenarios"></a>Unsupported Scenarios  
+ Edit and Continue is not available in the following debugging scenarios:  
   
--   Depurando código LINQ em determinadas circunstâncias.  Para obter mais informações, consulte[Depurando LINQ](../debugger/debugging-linq.md).  
+-   Debugging LINQ code in certain circumstances. For more information, see [Debugging LINQ](../debugger/debugging-linq.md).  
   
-    -   Capturando uma variável que ainda não foram capturada antes.  
+    -   Capturing a variable that hasn't been captured before.  
   
-    -   Alterando o tipo de expressão de consulta \(por exemplo, selecione a \= \> Selecionar novo {A \= um}\)  
+    -   Changing the type of query expression. (e.g., select a => select new { A = a };)  
   
-    -   Removendo um`where`que contém uma instrução ativa.  
+    -   Removing a `where` that contains an active statement.  
   
-    -   Removendo um`let`que contém uma instrução ativa.  
+    -   Removing a `let` that contains an active statement.  
   
-    -   Removendo um`join`que contém uma instrução ativa.  
+    -   Removing a `join` that contains an active statement.  
   
-    -   Removendo um`orderby`que contém uma instrução ativa.  
+    -   Removing an `orderby` that contains an active statement.  
   
--   Depuração de modo misto \(nativo\/gerenciado\).  
+-   Mixed-mode (native/managed) debugging.  
   
--   Depuração de SQL.  
+-   SQL debugging.  
   
--   Depurando um despejo do Dr.  Watson.  
+-   Debugging a Dr. Watson dump.  
   
--   Editando o código após uma exceção sem tratamento, quando a opção "**Voltar para a pilha de chamadas em exceções não tratadas**" não está selecionada.  
+-   Editing code after an unhandled exception, when the "**Unwind the call stack on unhandled exceptions**" option is not selected.  
   
--   Depurando um aplicativo inserido de tempo de execução.  
+-   Debugging an embedded runtime application.  
   
--   Depurando um aplicativo que tem **Anexar a** em vez de executando o aplicativo escolhendo **Iniciar** no menu **Depurar**.  
+-   Debugging an application that has **Attach to** instead of running the application by choosing **Start** from the **Debug** menu.  
   
--   Depurando código otimizado.  
+-   Debugging optimized code.  
   
--   Depurando uma versão antiga do código depois que uma nova versão não é compilada devido a erros de compilação.  
+-   Debugging an old version of your code after a new version failed to build because of build errors.  
   
-## Consulte também  
- [Editar e continuar \(Visual C\#\)](../debugger/edit-and-continue-visual-csharp.md)   
- [Como usar Editar e Continuar \(C\#\)](../debugger/how-to-use-edit-and-continue-csharp.md)
+## <a name="see-also"></a>See Also  
+ [Edit and Continue (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)   
+ [How to: Use Edit and Continue (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)

@@ -1,12 +1,13 @@
 ---
 title: R Markdown com Ferramentas do R para Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 4/28/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3ac955b2-b6e1-4d32-b1a4-2882c93311fc
@@ -14,38 +15,24 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: 972abfcfda570d66b1b15b25b16e68157fc73b81
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: b29ae0240a29616edcdf2ae0dced7a9fca0f9584
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 
 # <a name="creating-r-markdown-documents"></a>Criando documentos R Markdown
 
-R Markdown (consulte [rmarkdown.rstudio.com](https://rmarkdown.rstudio.com/)) de um formato de documento que transforma a análise em R em painéis, relatórios, apresentações e documentos de alta qualidade.
+[R Markdown](https://rmarkdown.rstudio.com/) é um formato de documento que transforma a análise em R em painéis, relatórios, apresentações e documentos de alta qualidade.
 
-As Ferramentas do R para Visual Studio fornecem um modelo de item R Markdown, suporte a editor (incluindo IntelliSense para código R dentro do editor) e recursos de geração de arquivo.
+As RTVS (Ferramentas do R para Visual Studio) fornecem um modelo de item R Markdown, suporte a editor (incluindo IntelliSense para código R dentro do editor) e recursos de geração de arquivo.
 
 Para usar o R Markdown:
 
 1. Feche o Visual Studio.
-1. (Apenas uma vez) Instalar o pandoc de [pandoc.org](http://pandoc.org/installing.html).
+1. (Apenas uma vez) Instalar o `pandoc` do [pandoc.org](http://pandoc.org/installing.html).
 1. Reinicie o Visual Studio, que deve captar a instalação do pandoc.
 1. Instale os pacotes `knitr` e `rmarkdown`, o que pode ser feito na [janela interativa](interactive-repl.md):
 

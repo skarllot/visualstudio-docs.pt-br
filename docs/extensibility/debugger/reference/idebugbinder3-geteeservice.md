@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetEEService | Documentos do Microsoft
+title: IDebugBinder3::GetEEService | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 19e223d0a5252d454c97d11fbc8794fff59a3e47
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: db110733d543ac797d84c323c1d9f7b96b4ef8be
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugbinder3geteeservice"></a>IDebugBinder3::GetEEService
-Esse método retorna um serviço solicitado.  
+This method returns a requested service.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetEEService(  
@@ -50,7 +51,7 @@ HRESULT GetEEService(
 );  
 ```  
   
-```c#  
+```csharp  
 Int GetEEService(  
    Guid       vendor,  
    Guid       language,  
@@ -59,27 +60,27 @@ Int GetEEService(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `vendor`  
- [in] `GUID` de um fornecedor (um valor nulo é aceitável).  
+ [in] `GUID` of a vendor (a null value is acceptable).  
   
  `language`  
- [in] `GUID` de um idioma (um valor nulo é aceitável).  
+ [in] `GUID` of a language (a null value is acceptable).  
   
  `iid`  
- [in] `IID` do serviço para obter.  
+ [in] `IID` of the service to obtain.  
   
  `ppService`  
- [out] Uma interface para o serviço solicitado.  
+ [out] An interface to the requested service.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Passar o `IID` para o [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md) interface (`IID_IEEVisualizerServiceProvider`) para ver se o serviço Visualizador de tipo está disponível. Se assim, o avaliador de expressão pode obter o [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) interface para oferecer suporte a visualizadores de tipo. Consulte [visualizando e exibindo dados](../../../extensibility/debugger/visualizing-and-viewing-data.md) para obter detalhes.  
+## <a name="remarks"></a>Remarks  
+ Pass the `IID` for the [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md) interface (`IID_IEEVisualizerServiceProvider`) to see if the Type Visualizer service is available. If so, the expression evaluator can obtain the [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) interface to support type visualizers. See [Visualizing and Viewing Data](../../../extensibility/debugger/visualizing-and-viewing-data.md) for details.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)   
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   
- [Visualizando e exibindo dados](../../../extensibility/debugger/visualizing-and-viewing-data.md)
+ [Visualizing and Viewing Data](../../../extensibility/debugger/visualizing-and-viewing-data.md)

@@ -1,5 +1,5 @@
 ---
-title: "Idiomas de recursos neutros para localização | Microsoft Docs"
+title: Neutral Resources Languages for Localization | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,32 +34,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3000cf25ec1f070171185511a571abaaaecd5fac
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: eb1e4d30bb71fffc1de83c9c77e089ac8e912f0e
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="neutral-resources-languages-for-localization"></a>Idiomas de recursos naturais para localização
-A classe <xref:System.Resources.NeutralResourcesLanguageAttribute> especifica a cultura dos recursos incluídos no assembly principal. Esse atributo é usado como um aperfeiçoamento do desempenho, de modo que o objeto <xref:System.Resources.ResourceManager> não pesquise recursos que estão incluídos no assembly principal.  
+# <a name="neutral-resources-languages-for-localization"></a>Neutral Resources Languages for Localization
+The <xref:System.Resources.NeutralResourcesLanguageAttribute> class specifies the culture of the resources included in the main assembly. This attribute is used as a performance enhancement, so that the <xref:System.Resources.ResourceManager> object does not search for resources that are included in the main assembly.  
   
- O código a seguir mostra como definir o idioma de recursos neutros. O código pode ser colocado em um script de build ou no arquivo AssemblyInfo.vb ou AssemblyInfo.cs.  
+ The following code shows how to set the neutral resources language. The code can be placed in either a build script or in the AssemblyInfo.vb or AssemblyInfo.cs file.  
   
-```vb#  
+```vb  
 ' Set neutral resources language for assembly.  
 <Assembly: NeutralResourcesLanguageAttribute("en")>  
   
 ```  
   
-```c#  
+```csharp  
 // Set neutral resources language for assembly.  
 [assembly: NeutralResourcesLanguageAttribute("en")]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  <xref:System.Resources.ResourceManager>   
- [Introdução a aplicativos internacionais com base no .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)   
- [Organização hierárquica de recursos para localização](../ide/hierarchical-organization-of-resources-for-localization.md)   
- [Localizando aplicativos](../ide/localizing-applications.md)   
- [Globalizando e localizando aplicativos](../ide/globalizing-and-localizing-applications.md)
+ [Introduction to International Applications Based on the .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)   
+ [Hierarchical Organization of Resources for Localization](../ide/hierarchical-organization-of-resources-for-localization.md)   
+ [Localizing Applications](../ide/localizing-applications.md)   
+ [Globalizing and Localizing Applications](../ide/globalizing-and-localizing-applications.md)

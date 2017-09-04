@@ -1,5 +1,5 @@
 ---
-title: GETNAME_TYPE | Documentos do Microsoft
+title: GETNAME_TYPE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d60177d6a720ce7eb18143108a0e6f3234f72715
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e1c6a3fe365a19807d121739df6e3374dbe85129
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="getnametype"></a>GETNAME_TYPE
-Especifica o tipo de nome de arquivos a serem recuperados.  
+Specifies the name type of files to retrieve.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_GETNAME_TYPE {   
    GN_NAME         = 0,  
    GN_FILENAME     = 1,  
@@ -54,7 +55,7 @@ enum enum_GETNAME_TYPE {
 typedef DWORD GETNAME_TYPE;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_GETNAME_TYPE {   
    GN_NAME         = 0,  
    GN_FILENAME     = 1,  
@@ -66,40 +67,40 @@ public enum enum_GETNAME_TYPE {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  GN_NAME  
- Especifica um nome amigável do documento ou do contexto.  
+ Specifies a friendly name of the document or context.  
   
  GN_FILENAME  
- Especifica o caminho completo do documento ou do contexto.  
+ Specifies the full path of the document or context.  
   
  GN_BASENAME  
- Especifica um nome de arquivo de base, em vez de um caminho completo do documento ou do contexto.  
+ Specifies a base file name instead of a full path of the document or context.  
   
  GN_MONIKERNAME  
- Especifica um nome exclusivo do documento ou contexto na forma de um moniker.  
+ Specifies a unique name of the document or context in the form of a moniker.  
   
  GN_URL  
- Especifica um nome de URL do documento ou do contexto.  
+ Specifies a URL name of the document or context.  
   
  GN_TITLE  
- Especifica um título do documento, se houver.  
+ Specifies a title of the document, if one exists.  
   
  GN_STARTPAGEURL  
- Obtém a URL da página inicial de processos.  
+ Gets the starting page URL for processes.  
   
-## <a name="remarks"></a>Comentários  
- Esses valores são passados como parâmetros para o [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md), e [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) métodos para especificar o tipo de nome a ser retornado.  
+## <a name="remarks"></a>Remarks  
+ These values are passed as parameters to the [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md), and [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) methods to specify what kind of name to return.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)   
  [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)   
  [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)

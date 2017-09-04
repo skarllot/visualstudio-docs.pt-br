@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetParent | Documentos do Microsoft
+title: IDebugReference2::GetParent | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,35 +30,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 897c48932cdd3ceb1c307f3d2436634936936f56
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 6ad3a164eb6a214d0fa35cface5d157567d52eb7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugreference2getparent"></a>IDebugReference2::GetParent
-Obtém a referência do pai de uma referência. Reservado para uso futuro.  
+Gets the parent reference of a reference. Reserved for future use.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetParent (   
    IDebugReference2** ppParent  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetParent (   
    out IDebugReference2 ppParent  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ppParent`  
- [out] Retorna um [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto que representa o pai desta propriedade.  
+ [out] Returns an [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object that represents the parent of this property.  
   
-## <a name="return-value"></a>Valor de retorno  
- Sempre retorna `E_NOTIMPL`.  
+## <a name="return-value"></a>Return Value  
+ Always returns `E_NOTIMPL`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

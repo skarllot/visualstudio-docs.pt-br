@@ -1,5 +1,5 @@
 ---
-title: Propriedade AsyncVoidMethodBuilder.ObjectIdForDebugger | Documentos do Microsoft
+title: AsyncVoidMethodBuilder.ObjectIdForDebugger Property | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,27 +28,28 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ff32a24a23642e892cdc4613ee088ab14f489629
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 25d8b704815900ffe45e7e697d1d200d6d3f067e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>Propriedade AsyncVoidMethodBuilder.ObjectIdForDebugger
-Obtém um objeto que pode ser usado para identificar com exclusividade este construtor para o depurador.  
+# <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>AsyncVoidMethodBuilder.ObjectIdForDebugger Property
+Gets an object that may be used to uniquely identify this builder to the debugger.  
   
- **Namespace:**<xref:System.Runtime.CompilerServices?displayProperty=fullName></xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **Assembly:** mscorlib (em mscorlib. dll)  
+ **Assembly:** mscorlib (in mscorlib.dll)  
   
- Porque você não pode acessar esse membro interno do .NET Framework, a sintaxe a seguir é fornecida idioma intermediário comum (CIL).  
+ Because you cannot access this internal member from the .NET Framework, the following syntax is provided in Common Intermediate Language (CIL).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```c#  
+```csharp  
 private object ObjectIdForDebugger  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder></xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>   
- [Elementos internos de extensões paralelas para o .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+## <a name="see-also"></a>See Also  
+ <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>   
+ [Parallel Extension Internals for the .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEngines2::EnumPossibleEngines | Documentos do Microsoft
+title: IDebugProgramEngines2::EnumPossibleEngines | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 26fa06a27e16dafba676bf3d1ecaced327c1b865
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 64431c8adeeb56c17546f4aa6c16f517734f8941
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprogramengines2enumpossibleengines"></a>IDebugProgramEngines2::EnumPossibleEngines
-Retorna os GUIDs de todos os possíveis mecanismos de depuração (DE) que podem depurá-lo.  
+Returns the GUIDs for all the possible debug engines (DE) that can debug this program.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT EnumPossibleEngines(   
    DWORD  celtBuffer,  
    GUID*  rgguidEngines,  
@@ -49,7 +50,7 @@ HRESULT EnumPossibleEngines(
 );  
 ```  
   
-```c#  
+```csharp  
 int EnumPossibleEngines(   
    uint      celtBuffer,  
    GUID[]    rgguidEngines,  
@@ -57,21 +58,21 @@ int EnumPossibleEngines(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `celtBuffer`  
- [in] O número DE GUIDs para retornar. Isso também especifica o tamanho máximo da `rgguidEngines` matriz.  
+ [in] The number of DE GUIDs to return. This also specifies the maximum size of the `rgguidEngines` array.  
   
  `rgguidEngines`  
- [no, out] Uma matriz DE GUIDs para ser preenchido.  
+ [in, out] An array of DE GUIDs to be filled in.  
   
  `pceltEngines`  
- [out] Retorna o número real DE GUIDs que são retornados.  
+ [out] Returns the actual number of DE GUIDs that are returned.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna [C++] `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` ou [c#] 0x8007007A se o buffer não é grande o suficiente.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. Returns [C++] `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` or [C#] 0x8007007A if the buffer is not large enough.  
   
-## <a name="remarks"></a>Comentários  
- Para determinar quantos mecanismos lá, chamar esse método uma vez com o `celtBuffer` parâmetro definido como 0 e o `rgguidEngines` parâmetro definido como um valor nulo. Isso retorna `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` (0x8007007A para c#) e o `pceltEngines` parâmetro retorna o tamanho necessário do buffer.  
+## <a name="remarks"></a>Remarks  
+ In order to determine how many engines there are, call this method once with the `celtBuffer` parameter set to 0 and the `rgguidEngines` parameter set to a null value. This returns `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` (0x8007007A for C#), and the `pceltEngines` parameter returns the necessary size of the buffer.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)

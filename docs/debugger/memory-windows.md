@@ -1,125 +1,138 @@
 ---
-title: "Janelas de mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.memory"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "buffers, exibindo"
-  - "depurador [Visual Studio], Janela Memória"
-  - "depurando [Visual Studio], Janela Memória"
-  - "memória [Visual Studio ], depuração"
-  - "Janela Memória"
-  - "cadeias de caracteres [Visual Studio], exibindo"
+title: View Memory for Variables in the Debugger | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.memory
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- Memory window
+- strings [Visual Studio], viewing
+- debugger [Visual Studio], Memory window
+- memory [Visual Studio], debugging
+- debugging [Visual Studio], Memory window
+- buffers, viewing
 ms.assetid: 7f7a0439-10e4-4966-bb2d-51f04cda4fe2
 caps.latest.revision: 32
-caps.handback.revision: 32
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Janelas de mem&#243;ria
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 2b271eaf132aea65c1217d8b4f3bfef7e1e1ac0e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-A janela **Memória** fornece uma exibição no espaço de memória usado pelo seu aplicativo.  A janela **Inspeção**, a caixa de diálogo **QuickWatch**, a janela **Autos** e a janela **Locais** mostram o conteúdo de variáveis, que são armazenadas em locais específicos na memória.  Mas a janela **Memória** mostra a imagem em grande escala.  Esta exibição pode ser conveniente para examinar grandes partes de dados \(buffers ou grandes cadeias de caracteres, por exemplo\) que não são exibidas corretamente nas outras janelas.  Entretanto, a janela **Memória** não é limitada para exibir dados.  Ela exibirá tudo no espaço de memória, não importa se o conteúdo for dados, código ou bits aleatórios de lixo na memória não atribuída.  
+---
+# <a name="use-the-memory-windows-in-the-visual-studio-debugger"></a>Use the Memory Windows in the Visual Studio Debugger
+The **Memory** window provides a view into the memory space that is used by your application. The **Watch** window, **QuickWatch** dialog box, **Autos** window, and **Locals** window show you the content of variables, which are stored at specific locations in memory. But the **Memory** window shows you the large-scale picture. This view can be convenient for examining large pieces of data (buffers or large strings, for example) that do not display well in the other windows. However, the **Memory** window is not limited to displaying data. It displays everything in the memory space, whether the content is data, code, or random bits of garbage in unassigned memory.  
   
- A janela **Memória** estará disponível apenas se a depuração do nível de endereços estiver habilitada na caixa de diálogo **Opções**, nó **Depuração**.  A janela **Memória** não está disponível para Script ou SQL, que são as linguagens que não reconhecem o conceito de memória.  
+ The **Memory** window is available only if address-level debugging is enabled in the **Options** dialog box, **Debugging** node. The **Memory** window is not available for Script or SQL, which are languages that do not recognize the concept of memory.  
   
-## Abrindo uma janela de memória  
+## <a name="opening-a-memory-window"></a>Opening a Memory Window  
   
-#### Para abrir uma janela de memória  
+#### <a name="to-open-a-memory-window"></a>To open a Memory window  
   
-1.  Inicie a depuração, se você já não estiver no modo de depuração.  
+1.  Start debugging, if you are not already in debug mode.  
   
-2.  No menu **Depurar**, aponte para **Janelas**.  Em seguida, aponte para **Memória** e clique em **Memória 1**, **Memória 2**, **Memória 3** ou **Memória 4**. \(As edições de nível inferior do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] têm apenas uma única janela **Memória**.  Se você estiver usando uma dessas edições, basta clicar em **Memória**\).  
+2.  In the **Debug** menu, point to **Windows**. Then, point to **Memory** and then click **Memory 1**, **Memory 2**, **Memory 3**, or **Memory 4**. (Lower-level editions of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] have only a single **Memory** window. If you are using one of those editions, just click **Memory**.)  
   
-## Paginação na janela de memória  
- A janela **Memória** tem uma barra de rolagem vertical que opera de uma maneira não padrão.  O espaço de endereço de um computador moderno é muito grande e você pode preferir arrastar a caixa de rolagem para um local aleatório.  Por esse motivo, a caixa de rolagem é carregada e sempre permanece no centro da barra de rolagem.  Em aplicativos de código nativo, você pode rolar a página para cima ou para baixo, mas não pode rolar livremente.  
+## <a name="paging-in-the-memory-window"></a>Paging in the Memory Window  
+ The **Memory** window has a vertical scrollbar that operates in a nonstandard manner. The address space of a modern computer is very large, and you could easily get lost by grabbing the scrollbar thumb and dragging it to a random location. For that reason, the thumb is "spring-loaded" and always remains in the center of the scrollbar. In native code applications, you can page up or down, but cannot scroll about freely.  
   
- Um endereço de memória mais alto aparece na parte inferior da janela.  Para exibir um endereço mais alto, role para baixo, não para cima.  
+ Higher memory addresses appear at the bottom of the window. To view a higher address, scroll down, not up.  
   
-#### Para mover para cima ou para baixo na memória  
+#### <a name="to-page-up-or-down-in-memory"></a>To page up or down in memory  
   
-1.  Para rolar a página para baixo \(mover para um endereço de memória mais alto\), clique abaixo da caixa de rolagem na barra de rolagem vertical.  
+1.  To page down (move to a higher memory address), click under the thumb in the vertical scrollbar.  
   
-2.  Para rolar a página para cima \(mover para um endereço de memória mais baixo\), clique acima da caixa de rolagem na barra de rolagem vertical.  
+2.  To page up (move to a lower memory address), click above the thumb the vertical scrollbar.  
   
-## Selecionando um local de memória  
- Se você quiser mover imediatamente para um local selecionado na memória, poderá fazer isso usando uma operação de arrastar e soltar ou editando o valor na caixa **Endereço**.  A caixa **Endereço** não aceita somente valores numéricos, mas também expressões que são avaliadas como endereços.  Por padrão, a janela **Memória** trata uma expressão **Endereço** como uma expressão dinâmica, que é reavaliada à medida que seu programa é executado.  As expressões dinâmicas podem ser muito úteis.  Por exemplo, você pode usá\-las para exibir a memória que é tocada por um ponteiro.  
+## <a name="selecting-a-memory-location"></a>Selecting a Memory Location  
+ If you want to move instantly to a selected location in memory, you can do so by using a drag-and-drop operation or by editing the value in the **Address** box. The **Address** box accepts not only numeric values but also expressions that evaluate to addresses. By default, the **Memory** window treats an **Address** expression as a live expression, which is reevaluated as your program executes. Live expressions can be very useful. For example, you can use them to view the memory that is touched by a pointer.  
   
-#### Para selecionar um local de memória arrastando e soltando  
+#### <a name="to-select-a-memory-location-by-dragging-and-dropping"></a>To select a memory location by dragging and dropping  
   
-1.  Em qualquer janela, selecione um endereço de memória ou variável de ponteiro que contém um endereço de memória.  
+1.  In any window, select a memory address or pointer variable that contains a memory address.  
   
-2.  Arraste o endereço ou ponteiro para a janela **Memória**.  
+2.  Drag the address or pointer to the **Memory** window.  
   
-#### Para selecionar um local de memória editando  
+#### <a name="to-select-a-memory-location-by-editing"></a>To select a memory location by editing  
   
-1.  Na janela **Memória**, marque a caixa **Endereço**.  
+1.  In the **Memory** window, select the **Address** box.  
   
-2.  Digite ou cole o endereço que você quer ver e pressione **ENTER**.  
+2.  Type or paste the address you want to see, and then press **ENTER**.  
   
-## Alterando o modo como a janela de memória exibe informações  
- Você pode personalizar a maneira como a janela **Memória** mostra o conteúdo da memória.  Por padrão, o conteúdo da memória aparece como inteiros de um byte em formato hexadecimal e o número de colunas é determinado automaticamente pela largura atual da janela.  
+## <a name="changing-the-way-the-memory-window-displays-information"></a>Changing the Way the Memory Window Displays Information  
+ You can customize the way the **Memory** window shows memory contents. By default, memory contents appear as one-byte integers in hexadecimal format, and the number of columns is determined automatically by the current width of the window.  
   
-#### Para alterar o formato do conteúdo de memória  
+#### <a name="to-change-the-format-of-the-memory-contents"></a>To change the format of the memory contents  
   
-1.  Clique com o botão direito na janela **Memória**.  
+1.  Right-click the **Memory** window.  
   
-2.  Escolha o formato que você deseja.  
+2.  Choose the format that you want.  
   
-#### Para alterar o número de colunas na janela de memória  
+#### <a name="to-change-the-number-of-columns-in-the-memory-window"></a>To change the number of columns in the Memory window  
   
-1.  Na barra de ferramentas na parte superior da janela **Memória**, localize a lista **Colunas**.  
+1.  In the toolbar at the top of the **Memory** window, locate the **Columns** list.  
   
-2.  Na lista **Colunas**, selecione o número de colunas que você deseja exibir ou selecione **Automático** para ajustar automaticamente na largura da janela.  
+2.  In the **Columns** list, select the number of columns that you want to display or select **Auto** for automatic adjustment to fit the width of the window.  
   
- Se não quiser que o conteúdo da janela **Memória** seja alterado à medida que seu programa é executado, você poderá desativar a avaliação da expressão dinâmica.  
+ If you do not want the contents of the **Memory** window to change as your program executes, you can turn off live expression evaluation.  
   
-#### Para ativar\/desativar a avaliação dinâmica  
+#### <a name="to-toggle-live-evaluation"></a>To toggle live evaluation  
   
-1.  Clique com o botão direito na janela **Memória**.  
+1.  Right-click the **Memory** window.  
   
-2.  No menu de atalho exibido, clique em **Reavaliar Automaticamente**.  
+2.  On the shortcut menu, click **Reevaluate Automatically**.  
   
-     Se a avaliação dinâmica estiver ativa, a opção será selecionada e clicar nela a desativará.  Se a avaliação dinâmica estiver inativa, a opção não será selecionada e clicar nela a ativará.  
+     If live evaluation is on, the option will be selected, and clicking it turns off live evaluation. If live evaluation is off, the option is not selected, and clicking it turns on live evaluation.  
   
- Você pode ocultar ou exibir a barra de ferramentas na parte superior da janela **Memória**.  Você não terá acesso à caixa de endereço ou outras ferramentas enquanto a barra de ferramentas estiver oculta.  
+ You can hide or display the toolbar at the top of the **Memory** window. You will not have access to Address box or other tools as long as the toolbar is hidden.  
   
-#### Para ativar\/desativar a barra de ferramentas  
+#### <a name="to-toggle-the-toolbar"></a>To toggle the toolbar  
   
-1.  Clique com o botão direito em uma janela **Memória**.  
+1.  Right-click a **Memory** window.  
   
-2.  No menu de atalho, clique em **Mostrar Barra de Ferramentas**.  
+2.  On the shortcut menu, click **Show Toolbar**.  
   
-     A barra de ferramentas é exibida ou desaparece, dependendo do seu estado anterior.  
+     The toolbar appears or disappears, depending on its previous state.  
   
-## Seguindo um ponteiro pela memória  
- Em aplicativos de código nativo, você poderá usar nomes de registro como expressões dinâmicas.  Por exemplo, você pode usar o ponteiro de pilhas para seguir a pilha.  
+## <a name="following-a-pointer-through-memory"></a>Following a Pointer Through Memory  
+ In native code applications, you can use register names as live expressions. For example, you can use the stack pointer to follow the stack.  
   
-#### Para seguir um ponteiro pela memória  
+#### <a name="to-follow-a-pointer-through-memory"></a>To follow a pointer through memory  
   
-1.  Na caixa **Endereço** da janela **Memória**, digite uma expressão de ponteiro.  A variável de ponteiro deve estar no escopo atual.  Dependendo da linguagem, você poderá ter que remover a referência a ele.  
+1.  In the **Memory** window **Address** box, type a pointer expression. The pointer variable must be in the current scope. Depending on the language, you might have to dereference it.  
   
-2.  Pressione **ENTER**.  
+2.  Press **ENTER**.  
   
-     Agora, quando você usa um comando de execução, como, por exemplo, **Etapa**, o endereço de memória que é exibido mudará automaticamente quando o ponteiro for alterado.  
+     Now, when you use an execution command such as **Step**, the memory address that is displayed will automatically change as the pointer changes.  
   
-## Consulte também  
- [Exibindo dados no depurador](../debugger/viewing-data-in-the-debugger.md)
+## <a name="see-also"></a>See Also  
+ [Viewing Data in the Debugger](../debugger/viewing-data-in-the-debugger.md)

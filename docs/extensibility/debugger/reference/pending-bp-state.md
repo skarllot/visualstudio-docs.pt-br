@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE | Documentos do Microsoft
+title: PENDING_BP_STATE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e5d592002dc39425638f22ca276f3883ac81ce22
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2f051b6f265ab8e7aa60f7218066b5dcbe05b675
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="pendingbpstate"></a>PENDING_BP_STATE
-Especifica o estado de um ponto de interrupção pendente (um ponto de interrupção que ainda não foram ligado).  
+Specifies the state of a pending breakpoint (a breakpoint that has not yet been bound).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_PENDING_BP_STATE {   
    PBPS_NONE     = 0x0000,  
    PBPS_DELETED  = 0x0001,  
@@ -51,7 +52,7 @@ enum enum_PENDING_BP_STATE {
 typedef DWORD PENDING_BP_STATE;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_PENDING_BP_STATE {   
    PBPS_NONE     = 0x0000,  
    PBPS_DELETED  = 0x0001,  
@@ -60,29 +61,29 @@ public enum enum_PENDING_BP_STATE {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  PBPS_NONE  
- Espaço reservado para zero. Esse valor nunca é retornado.  
+ Placeholder for zero. This value is never returned.  
   
  PBPS_DELETED  
- Indica que o ponto de interrupção pendente foi excluído.  
+ Indicates that the pending breakpoint has been deleted.  
   
  PBPS_DISABLED  
- Indica que o ponto de interrupção pendente está desabilitado.  
+ Indicates that the pending breakpoint is disabled.  
   
  PBPS_ENABLED  
- Indica que o ponto de interrupção pendente está habilitado.  
+ Indicates that the pending breakpoint is enabled.  
   
-## <a name="remarks"></a>Comentários  
- Usar como o `state` membro do [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) estrutura.  
+## <a name="remarks"></a>Remarks  
+ Use as the `state` member of the [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) structure.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

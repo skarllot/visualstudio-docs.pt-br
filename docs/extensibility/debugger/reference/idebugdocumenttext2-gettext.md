@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetText | Documentos do Microsoft
+title: IDebugDocumentText2::GetText | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 41a68901a012453109a252369a64a5da5dd9f1d0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: a7e950fbf8667ee85f992ab8406dfdd9d7442555
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
-Recupera o texto da posição especificada no documento.  
+Retrieves the text from the specified position in the document.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetText(   
    TEXT_POSITION pos,  
    ULONG         cMaxChars,  
@@ -50,7 +51,7 @@ HRESULT GetText(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetText(   
    eumn_TEXT_POSITION pos,  
    uint               cMaxChars,  
@@ -59,26 +60,26 @@ int GetText(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pos`  
- [in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) estrutura que indica o local do texto a ser recuperado.  
+ [in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that indicates the location of the text to be retrieved.  
   
  `cMaxChars`  
- [in] O número máximo de caracteres do texto a ser recuperado.  
+ [in] The maximum number of characters of the text to be retrieved.  
   
  `pText`  
- [no, out] Um ponteiro para um buffer que é preenchido com o texto desejado. Esse buffer deve ser capaz de conter pelo menos `cMaxChars` número de caracteres largos.  
+ [in, out] A pointer to a buffer that is to be filled in with the desired text. This buffer must be able to contain at least `cMaxChars` number of wide characters.  
   
  `pcNumChars`  
- [out] Retorna o número de caracteres realmente recuperados.  
+ [out] Returns the number of characters actually retrieved.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="example"></a>Exemplo  
- Este exemplo mostra como esse método pode ser chamado do c#.  
+## <a name="example"></a>Example  
+ This example shows how this method can be called from C#.  
   
-```c#  
+```csharp  
 using System.Runtime.Interop.Services;  
 using Microsoft.VisualStudio;  
 using Microsoft.VisualStudio.Debugger.Interop;  
@@ -114,6 +115,6 @@ namespace Mynamespace
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)   
  [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

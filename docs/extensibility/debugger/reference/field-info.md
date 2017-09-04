@@ -1,5 +1,5 @@
 ---
-title: FIELD_INFO | Documentos do Microsoft
+title: FIELD_INFO | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 28e412d0447670ce739a58b2216ba588e1f169a1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 749381a752521bcf728ecf1fb88583bdcbabbb00
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="fieldinfo"></a>FIELD_INFO
-Essa estrutura descreve uma variável local, parâmetro ou outro campo.  
+This structure describes a local variable, parameter, or other field.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 typedef struct _tagFieldInfo {   
    FIELD_INFO_FIELDS dwFields;  
    BSTR              bstrFullName;  
@@ -51,7 +52,7 @@ typedef struct _tagFieldInfo {
 } FIELD_INFO;  
 ```  
   
-```c#  
+```csharp  
 public struct FIELD_INFO {  
    public uint   dwFields;  
    public string bstrFullName;  
@@ -61,34 +62,34 @@ public struct FIELD_INFO {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  dwFields  
- Uma combinação de sinalizadores do [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) enumeração que especifica quais membros são preenchidos.  
+ A combination of flags from the [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) enumeration that specifies which members are filled in.  
   
  bstrFullName  
- O nome completo do campo.  
+ The full name of the field.  
   
  bstrName  
- O nome curto do campo.  
+ The short name of the field.  
   
  bstrType  
- O tipo do campo.  
+ The type of the field.  
   
  dwModifiers  
- Uma combinação de sinalizadores do [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) enumeração que descreve o campo.  
+ A combination of flags from the [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) enumeration that describes the field.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é passada para o [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) método onde ele é preenchido.  
+## <a name="remarks"></a>Remarks  
+ This structure is passed to the [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) method where it is filled in.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)   
  [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)

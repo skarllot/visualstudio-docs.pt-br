@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_ARRAYELEM | Documentos do Microsoft
+title: METADATA_ADDRESS_ARRAYELEM | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: eae86146d4b7fa2290a5610463bbf75ddda82bad
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: df941d56a1b9baf8ffa15b022e0b9577da143fc8
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="metadataaddressarrayelem"></a>METADATA_ADDRESS_ARRAYELEM
-Esta estrutura representa um elemento de matriz em uma matriz.  
+This structure represents an array element within an array.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_ARRAYELEM {  
@@ -48,33 +49,33 @@ typedef struct _tagMETADATA_ADDRESS_ARRAYELEM {
 } METADATA_ADDRESS_ARRAYELEM;  
 ```  
   
-```c#  
+```csharp  
 public struct METADATA_ADDRESS_ARRAYELEM {  
    public int  tokMethod;  
    public uint dwIndex;  
 }  
 ```  
   
-## <a name="terms"></a>Termos  
+## <a name="terms"></a>Terms  
  tokMethod  
- A ID da matriz esse elemento é uma parte.  
+ The ID of the array this element is a part of.  
   
  [C++] `_mdToken` is a `typedef` for a 32-bit `int`.  
   
  dwIndex  
- O índice deste elemento dentro da matriz.  
+ The index of this element within the array.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é parte da união no [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura quando o `dwKind` campo o `DEBUG_ADDRESS_UNION` estrutura é definida como `ADDRESS_KIND_ARRAYELEM` (um valor da [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração).  
+## <a name="remarks"></a>Remarks  
+ This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_ARRAYELEM` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
  [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

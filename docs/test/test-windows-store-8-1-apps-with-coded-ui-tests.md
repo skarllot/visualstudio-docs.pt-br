@@ -1,5 +1,5 @@
 ---
-title: Testar aplicativos Windows UWP e 8.1 da Windows Store com testes de UI codificados | Microsoft Docs
+title: Test Windows UWP and 8.1 Store Apps with Coded UI Tests | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,38 +27,38 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 806c1b22718a26e02916ada853372df4f11fb6cd
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2a9dc338ce3d08ac61ecc77da8df96d9261b7e62
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="test-windows-uwp-and-81-store-apps-with-coded-ui-tests"></a>Testar aplicativos Windows UWP e 8.1 da Windows Store com testes de UI codificados
+# <a name="test-windows-uwp-and-81-store-apps-with-coded-ui-tests"></a>Test Windows UWP and 8.1 Store Apps with Coded UI Tests
 
-Use este passo a passo para criar testes de interface do usuário para aplicativos UWP e aplicativos Store 8.1 baseados em XAML. 
+Use this walkthrough for creating UI tests for UWP apps and XAML-based Store 8.1 apps. 
   
-## <a name="create-a-simple-windows-store-app"></a>Criar um aplicativo simples da Windows Store  
+## <a name="create-a-simple-windows-store-app"></a>Create a simple Windows Store app  
   
-1.  Se desejar executar testes de IU codificados no aplicativo da Windows Store baseado em XAML, será necessário [definir uma propriedade de automação exclusiva que identifica cada controle](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md).  
+1.  If you want to run coded UI tests for your XAML-based Windows Store app, you must [set a unique automation property that identifies each control](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md).  
   
-     No menu **Ferramentas**, aponte para **Opções** e escolha **Editor de Texto**, **XAML** e **Diversos**.  
+     On the **Tools** menu, point to **Options** and then choose **Text Editor**, then **XAML**, and finally **Miscellaneous**.  
   
-     Marque a caixa de seleção para nomear automaticamente elementos interativos na criação.  
+     Select the check box to automatically name interactive elements on creation.  
   
-     ![Opções diversas de XAML](../test/media/cuit_windowsstoreapp_b.png "CUIT_WindowsStoreApp_B")  
+     ![XAML Miscellaneous options](../test/media/cuit_windowsstoreapp_b.png "CUIT_WindowsStoreApp_B")  
   
-2.  Crie um novo projeto para um aplicativo da Windows Store baseado em XAML usando um modelo Visual C# ou Visual Basic.  
+2.  Create a new project for a blank XAML based Windows Store app using either Visual C# or Visual Basic template.  
   
-     ![Criar um aplicativo em branco da Windows Store &#40;XAML&#41;](../test/media/cuit_windowsstoreapp_newproject_blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")  
+     ![Create a Windows Store Blank App &#40;XAML&#41;](../test/media/cuit_windowsstoreapp_newproject_blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")  
   
-3.  No Gerenciador de Soluções, abra MainPage.xaml. Na Caixa de Ferramentas, arraste um controle de botão e um controle de caixa de texto para a superfície do design.  
+3.  In Solution Explorer, open MainPage.xaml. From the Toolbox, drag a button control and a textbox control to the design surface.  
   
-     ![Criar o aplicativo da Windows Store](../test/media/cuit_windowsstoreapp_design.png "CUIT_WindowsStoreApp_Design")  
+     ![Design the Windows Store app](../test/media/cuit_windowsstoreapp_design.png "CUIT_WindowsStoreApp_Design")  
   
-4.  Clique duas vezes no controle de botão e adicione o código a seguir:  
+4.  Double-click the button control and add the following code:  
   
-    ```c#  
+    ```csharp  
     private void button_Click_1(object sender, RoutedEventArgs e)  
     {  
         this.textBox.Text = this.button.Name;  
@@ -66,7 +66,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
   
     ```  
   
-    ```vb#  
+    ```vb  
     Public NotInheritable Class MainPage  
         Inherits Page  
   
@@ -76,62 +76,62 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
     End Class  
     ```  
   
-5.  Pressione F5 para executar o aplicativo da Windows Store.  
+5.  Press F5 to run your Windows Store app.  
   
-## <a name="create-and-run-a-coded-ui-test-for-the-windows-store-app"></a>Crie e execute um teste de IU codificado no aplicativo da Windows Store  
+## <a name="create-and-run-a-coded-ui-test-for-the-windows-store-app"></a>Create and run a coded UI test for the Windows Store app  
 
-[Como criar testes de IU codificados para aplicativos UWP (Plataforma Universal do Windows)?](#uwpapps)
+[How do I create coded UI tests for Universal Windows Platform (UWP) apps?](#uwpapps)
   
-1.  Crie um novo projeto de teste de IU codificado para o aplicativo da Windows Store.  
+1.  Create a new coded UI test project for the Windows Store app.  
   
-     ![Novo projeto de teste de IU codificado &#40;Aplicativos da Windows Store&#41;](~/test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
+     ![New coded UI tet project &#40;Windows Store Apps&#41;](../test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
   
-2.  Escolha editar o mapa de interface do usuário usando a ferramenta de fios.  
+2.  Choose to edit the UI map using the cross-hair tool.  
   
-     ![Optar por editar o mapa de interface do usuário ou adicionar declarações](~/test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")  
+     ![Choose edit UI map or add assertions](../test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")  
   
-3.  Use a ferramenta de fios no Construtor de Teste de IU Codificado para selecionar o bloco de aplicativos, clique com o botão direito do mouse em **AutomationId** e escolha **Copiar Valor para a Área de Transferência**. O valor na área de transferência será usado mais tarde para gravar a ação para ativar o aplicativo para teste.  
+3.  Use the cross-hair tool in the Coded UI Test Builder to select the app tile, right-click **AutomationId** and choose **Copy Value to Clipboard**. The value in the clipboard will be used later for writing action to launch the app for testing.  
   
-     ![Copiar AutomationId para a área de transferência](../test/media/cuit_windows_store_tileautomationid.png "CUIT_Windows_Store_TileAutomationID")  
+     ![Copy AutomationId to clipboard](../test/media/cuit_windows_store_tileautomationid.png "CUIT_Windows_Store_TileAutomationID")  
   
-4.  No aplicativo da Windows Store em execução, use a ferramenta de fios para selecionar o controle de botão e o controle de caixa de texto. Depois de adicionar cada controle, escolha o botão **Adicionar controle ao mapa de controle de interface do usuário** na barra de ferramentas do Construtor de Teste de IU Codificado.  
+4.  In the running Windows Store app, use the cross-hair tool to select the button control and the textbox control. After adding each control, choose the **Add control to UI control map** button in the Coded UI Test Builder toolbar.  
   
-     ![Adicionar controle ao mapa de interface do usuário](../test/media/cuit_windowsstoreapp_uimap.png "CUIT_WindowsStoreApp_UIMap")  
+     ![Add control to UI map](../test/media/cuit_windowsstoreapp_uimap.png "CUIT_WindowsStoreApp_UIMap")  
   
-5.  Escolha o botão **Gerar Código** na barra de ferramentas do Construtor de Teste de IU Codificado e escolha **Gerar** para criar o código para alterações no mapa de controle de interface do usuário.  
+5.  Choose the **Generate Code** button in the Coded UI Test Builder toolbar and then choose **Generate** to create code for changes to the UI control map.  
   
-     ![Gerar código para o mapa de interface do usuário](../test/media/cuit_windowsstoreapp_generate.png "CUIT_WindowsStoreApp_Generate")  
+     ![Generate code for the UI map](../test/media/cuit_windowsstoreapp_generate.png "CUIT_WindowsStoreApp_Generate")  
   
-6.  Escolha o botão para definir um valor na caixa de texto.  
+6.  Choose the button to set a value in the textbox.  
   
-     ![Clicar em um controle de botão para definir o valor da caixa de texto](../test/media/cuit_windowsstoreapp_clickbutton.png "CUIT_WindowsStoreApp_ClickButton")  
+     ![Click button control to set textbox value](../test/media/cuit_windowsstoreapp_clickbutton.png "CUIT_WindowsStoreApp_ClickButton")  
   
-7.  Use a ferramenta de fios para selecionar o controle de caixa de texto e, em seguida, selecione a propriedade **Text**.  
+7.  Use the cross-hair tool to select the textbox control, and then select the **Text** property.  
   
-     ![Selecionar a propriedade Text](../test/media/cuit_windowsstoreapp_selecttextproperty.png "CUIT_WindowsStoreApp_SelectTextProperty")  
+     ![Select the Text property](../test/media/cuit_windowsstoreapp_selecttextproperty.png "CUIT_WindowsStoreApp_SelectTextProperty")  
   
-8.  Adicione uma asserção. Ela será usada no teste para verificar se o valor está correto.  
+8.  Add an assertion. It will be used in the test to verify that the value is correct.  
   
-     ![Escolher a caixa de texto com fios e adicionar declaração](../test/media/cuit_windowsstoreapp_textbox_addassertion.png "CUIT_WindowsStoreApp_Textbox_AddAssertion")  
+     ![Choose testbox with cross&#45;hair and add assertion](../test/media/cuit_windowsstoreapp_textbox_addassertion.png "CUIT_WindowsStoreApp_Textbox_AddAssertion")  
   
-9. Adicione e gere o código para a asserção.  
+9. Add and generate code for the assertion.  
   
-     ![Gerar código para a declaração de caixa de texto](~/test/media/cuit_windowsstoreapp_textbox_generate_assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")  
+     ![Generate code for textbox assertion](../test/media/cuit_windowsstoreapp_textbox_generate_assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")  
   
 10. **Visual C#**  
   
-     No Gerenciador de Soluções, abra o arquivo UIMap.Designer.cs para exibir o código adicionado aos controles e ao método assert.  
+     In Solution Explorer, open the UIMap.Designer.cs file to view the added code for the assert method and the controls.  
   
      **Visual Basic**  
   
-     No Gerenciador de Soluções, abra o arquivo CodedUITest1.vb e, no código do método de teste CodedUITestMethod1(), clique com o botão direito do mouse na chamada ao método de declaração adicionado automaticamente `Me.UIMap.AssertMethod1()` e escolha **Ir para Definição**. Isso abrirá o arquivo UIMap.Designer.vb no editor de código para ser possível exibir o código adicionado aos controles e ao método assert.  
+     In Solution Explorer, open the CodedUITest1.vb file and then in the CodedUITestMethod1() test method code, right-click the call to the assertion method that was automatically added `Me.UIMap.AssertMethod1()` and choose **Go To Definition**. This will open the UIMap.Designer.vb file in the code editor so you can view the view the added code for the assert method and the controls.  
   
     > [!WARNING]
-    >  Não modifique o arquivo UIMap.designer.cs ou UIMap.Designer.vb diretamente. Se fizer isso, as alterações no arquivo serão substituídas sempre que o teste for gerado.  
+    >  Do not modify the UIMap.designer.cs or UIMap.Designer.vb file directly. If you do this, the changes to the file will be overwritten each time the test is generated.  
   
-     **Método assert**  
+     **Assert method**  
   
-    ```c#  
+    ```csharp  
     public void AssertMethod1()  
     {  
         #region Variable Declarations  
@@ -143,7 +143,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
     }  
     ```  
   
-    ```vb#  
+    ```vb  
     Public Sub AssertMethod1()  
         Dim uITextBoxEdit As XamlEdit = Me.UIApp2Window.UITextBoxEdit  
   
@@ -152,9 +152,9 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
     End Sub  
     ```  
   
-     **Controles**  
+     **Controls**  
   
-    ```c#  
+    ```csharp  
     #region Properties  
     public XamlButton UIButtonButton  
     {  
@@ -196,7 +196,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
     #endregion  
     ```  
   
-    ```vb#  
+    ```vb  
     #Region "Properties"  
     Public ReadOnly Property UIButtonButton() As XamlButton  
         Get  
@@ -228,41 +228,41 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
     #End Region  
     ```  
   
-11. No Gerenciador de Soluções, abra o arquivo CodedUITest1.cs ou CodedUITest1.vb. Agora, é possível adicionar código ao método CodedUTTestMethod1 para as ações necessárias para executar o teste usando os controles adicionados ao UIMap:  
+11. In Solution Explorer, open the CodedUITest1.cs or CodedUITest1.vb file. You can now add code to the CodedUTTestMethod1 method for the actions need to run the test using the controls added to the UIMap:  
   
-    1.  Ative o aplicativo da Windows Store usando a propriedade de ID de automação copiada anteriormente na área de transferência.  
+    1.  Launch the Windows Store app using the automation ID property you copied to the clipboard previously:  
   
-        ```c#  
+        ```csharp  
         XamlWindow.Launch("8ebca7c4-effe-4c86-9998-068daccee452_cyrqexqw8cc7c!App")  
         ```  
   
-        ```vb#  
+        ```vb  
         XamlWindow myAppWindow = XamlWindow.Launch("7254db3e-20a7-424e-8e05-7c4dabf4f28d_cyrqexqw8cc7c!App");  
         ```  
   
-    2.  Adicione um gesto para tocar no controle de botão:  
+    2.  Add a gesture to tap the button control:  
   
-        ```c#  
+        ```csharp  
         Gesture.Tap(this.UIMap.UIApp1Window. UIButtonButton);  
         ```  
   
-        ```vb#  
+        ```vb  
         Gesture.Tap(Me.UIMap.UIApp2Window. UIButtonButton)  
         ```  
   
-    3.  Verifique se a chamada ao método de asserção gerada automaticamente vem depois da inicialização do aplicativo e do gesto de toque no botão:  
+    3.  Verify that the call to the assert method that was automatically generated comes after launching the app and tap gesture on the button:  
   
-        ```c#  
+        ```csharp  
         this.UIMap.AssertMethod1();  
         ```  
   
-        ```vb#  
+        ```vb  
         Me.UIMap.AssertMethod1()  
         ```  
   
-     Depois de adicionar o código, o método de teste CodedUITestMethod1 deve aparecer da seguinte maneira:  
+     After adding the code, the CodedUITestMethod1 test method should appear as follows:  
   
-    ```c#  
+    ```csharp  
     [TestMethod]  
     public void CodedUITestMethod1()  
     {  
@@ -278,7 +278,7 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
     }  
     ```  
   
-    ```vb#  
+    ```vb  
     <CodedUITest(CodedUITestType.WindowsStore)>  
     Public Class CodedUITest1  
   
@@ -298,48 +298,48 @@ Use este passo a passo para criar testes de interface do usuário para aplicativ
         End Sub  
     ```  
   
-12. Compile seu teste e execute-o usando o gerenciador de testes.  
+12. Build your test and then run the test using the test explorer.  
   
-     ![Executar o teste de IU codificado no Gerenciador de Testes](../test/media/cuit_windowsstoreapp_runtest.png "CUIT_WindowsStoreApp_RunTest")  
+     ![Run the coded UI test from Test Explorer](../test/media/cuit_windowsstoreapp_runtest.png "CUIT_WindowsStoreApp_RunTest")  
   
-     O aplicativo da Windows Store é ativado, a ação de toque no botão é concluída e a propriedade Texto da caixa de texto é populada e validada com o método de asserção.  
+     The Windows Store app launches, the action to tap the button is completed, and the textbox's Text property is populated and validated using the assert method.  
   
-     ![Executando um teste de IU codificado](../test/media/cuit_windowsstoreapp_running.png "CUIT_WindowsStoreApp_Running")  
+     ![Running coded UI test](../test/media/cuit_windowsstoreapp_running.png "CUIT_WindowsStoreApp_Running")  
   
-     Depois da conclusão do teste, o gerenciador de testes exibe que o teste foi aprovado.  
+     After the test completes, the test explorer displays that the test passed.  
   
-     ![Exibições de teste aprovado no Gerenciador de Testes](../test/media/cuit_windowsstorapp_passedtest.png "CUIT_WindowsStorApp_PassedTest")  
+     ![Passed test displays in Test Explorer](../test/media/cuit_windowsstorapp_passedtest.png "CUIT_WindowsStorApp_PassedTest")  
   
-## <a name="q--a"></a>Perguntas e respostas  
+## <a name="q--a"></a>Q & A  
   
-#### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>P: Por que não vejo a opção de registrar meu teste de IU codificado no diálogo Gerar Código para Teste de IU Codificado?**  
+#### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>Q: Why don't I see the option to record my coded UI test in the Generate Code for a Coded UI Test dialog?**  
   
-**R**: Não há suporte para a opção de registro em aplicativos da Windows Store.  
+**A**: The option to record is not supported for Windows Store apps.  
   
-#### <a name="q-can-i-create-a-coded-ui-test-for-my-windows-store-apps-based-on-winjs"></a>P: Posso criar um teste de IU codificado para meus aplicativos da Windows Store baseados em WinJS?**  
+#### <a name="q-can-i-create-a-coded-ui-test-for-my-windows-store-apps-based-on-winjs"></a>Q: Can I create a coded UI test for my Windows Store apps based on WinJS?**  
 
-**R**: Não. Há suporte apenas para aplicativos baseados em XAML.  
+**A**: No, only XAML based apps are supported.  
   
-#### <a name="q-can-i-create-coded-ui-tests-for-my-windows-store-apps-on-a-system-that-is-not-running-windows-81-or-windows-10"></a>P: Posso criar testes de IU codificados para meus aplicativos da Windows Store em um sistema que não executa o Windows 8.1 nem o Windows 10?**  
+#### <a name="q-can-i-create-coded-ui-tests-for-my-windows-store-apps-on-a-system-that-is-not-running-windows-81-or-windows-10"></a>Q: Can I create coded UI tests for my Windows Store apps on a system that is not running Windows 8.1 or Windows 10?**  
   
-**R**: Não, os modelos de Projeto de Teste de IU Codificado estão disponíveis somente no Windows 8.1 e Windows 10. Para criar a automação para aplicativos UWP (Plataforma Universal do Windows), você precisará do Windows 10.  
+**A**: No, the Coded UI Test Project templates are only available on Windows 8.1 and Windows 10. To create automation for Universal Windows Platform (UWP) apps, you'll need Windows 10.  
 
 <a name="uwpapps"></a>  
-#### <a name="q-how-do-i-create-coded-ui-tests-for-universal-windows-platform-uwp-apps"></a>P: Como fazer para criar testes de IU codificados para aplicativos UWP (Plataforma Universal do Windows)?**  
+#### <a name="q-how-do-i-create-coded-ui-tests-for-universal-windows-platform-uwp-apps"></a>Q: How do I create coded UI tests for Universal Windows Platform (UWP) apps?**  
   
-**R**: Dependendo da plataforma em que você está testando o aplicativo UWP, crie o projeto de teste de IU codificado de uma destas maneiras:  
+**A**: Depending on the platform where you're testing your UWP app, create coded UI test project in one of these ways:  
   
-- Um aplicativo UWP em execução no computador local será executado como um aplicativo da Loja. Para testar isso, é necessário usar o modelo **Projeto de Teste de IU Codificado (Windows)**. Para encontrar esse modelo ao criar um novo projeto, acesse o nó **Windows**, **Universal**. Se preferir, acesse o nó **Windows**, **Windows 8**, **Windows**.  
+- A UWP app running on local machine will run as a Store app. To test this, you must use the **Coded UI Test Project (Windows)** template. To find this template when you create a new project, go to the **Windows**, **Universal** node. Or go to the **Windows**, **Windows 8**, **Windows** node.  
   
-- Um aplicativo UWP em execução em um emulador ou dispositivo móvel será executado como um aplicativo do Windows Phone. Para testar isso, é necessário usar o modelo **Projeto de Teste de IU Codificado (Windows Phone)**. Para encontrar esse modelo ao criar um novo projeto, acesse o nó **Windows**, **Universal**. Se preferir, acesse o nó **Windows**, **Windows 8**, **Windows Phone**.  
+- A UWP app running on mobile device or emulator will run as a Phone app. To test this, you must use the **Coded UI Test Project (Windows Phone)** template. To find this template when you create a new project, go to the **Windows**, **Universal** node. Or go to the **Windows**, **Windows 8**, **Windows Phone** node.  
   
-Depois de criar o projeto, a criação de um teste permanece a mesma que antes.  
+After you create the project, authoring a test stays the same as before.  
   
-#### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>P: Por que não posso modificar o código do arquivo UIMap.Designer?**  
+#### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q: Why can't I modify the code in the UIMap.Designer file?**  
   
-**R**: Todas as alterações de código feitas no arquivo UIMapDesigner.cs serão substituídas sempre que você gerenciar o código usando o UIMap – Construtor de Teste de IU Codificado. Se você tiver de modificar um método gravado, copie-o para o arquivo UIMap.cs e renomeie-o. O arquivo UIMap.cs pode ser usado para substituir métodos e propriedades no arquivo UIMapDesigner.cs. Você deve remover a referência para o método original no arquivo Coded UITest.cs e substituí-la pelo nome do método renomeado.  
+**A**: Any code changes you make in the UIMapDesigner.cs file will be overwritten every time you generate code using the UIMap - Coded UI Test Builder. If you have to modify a recorded method, you must copy it to UIMap.cs file and rename it. The UIMap.cs file can be used to override methods and properties in the UIMapDesigner.cs file. You must remove the reference to the original method in the Coded UITest.cs file and replace it with the renamed method name.  
   
-## <a name="see-also"></a>Consulte também  
- [Usar a automação de interface do usuário para testar o código](../test/use-ui-automation-to-test-your-code.md)   
- [Definir uma propriedade de automação exclusiva para controles da Windows Store para teste](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)
+## <a name="see-also"></a>See Also  
+ [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md)   
+ [Set a Unique Automation Property for Windows Store Controls for Testing](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)
 

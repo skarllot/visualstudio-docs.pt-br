@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetLocalVariablelayout | Documentos do Microsoft
+title: IDebugComPlusSymbolProvider::GetLocalVariablelayout | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,18 +29,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 244b55a7daa18d202f590ff5cef06b24c044fe00
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4776f56ea10c6b99cc59761139e9112d9a8780b2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugcomplussymbolprovidergetlocalvariablelayout"></a>IDebugComPlusSymbolProvider::GetLocalVariablelayout
-Recupera o layout de variáveis locais para um conjunto de métodos.  
+Retrieves the layout of local variables for a set of methods.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetLocalVariablelayout(  
    ULONG32   ulAppDomainID,  
    GUID      guidModule,  
@@ -50,7 +51,7 @@ HRESULT GetLocalVariablelayout(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetLocalVariablelayout(  
    uint        ulAppDomainID,  
    Guid        guidModule,  
@@ -60,29 +61,29 @@ int GetLocalVariablelayout(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- [in] Identificador do domínio do aplicativo.  
+ [in] Identifier of the application domain.  
   
  `guidModule`  
- [in] Identificador exclusivo do módulo.  
+ [in] Unique identifier of the module.  
   
  `cMethods`  
- [in] Número de método tokens na `rgMethodTokens` matriz.  
+ [in] Number of method tokens in the `rgMethodTokens` array.  
   
  `rgMethodTokens`  
- [in] Matriz de tokens do método.  
+ [in] Array of method tokens.  
   
  `pStreamLayout`  
- [out] Um fluxo de texto que contém o layout de variável.  
+ [out] A text stream that contains the variable layout.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::GetLocalVariablelayout(  
     ULONG32 ulAppDomainID,   
     GUID guidModule,   
@@ -127,5 +128,5 @@ HRESULT CDebugSymbolProvider::GetLocalVariablelayout(
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

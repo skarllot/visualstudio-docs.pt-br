@@ -1,5 +1,5 @@
 ---
-title: Elemento extern | Documentos do Microsoft
+title: Elemento externo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,17 +31,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6100c64359a154afa356fe4411d2426d4bc2f696
+ms.translationtype: MT
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d4559aa03af16faf955594c3850281e6cf7b4903
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="extern-element"></a>Elemento extern
-O elemento externo faz referência a arquivos externos de cabeçalho (. h) para mesclar com o arquivo. VSCT em tempo de compilação. Os arquivos a serem mescladas devem estar no caminho de inclusão fornecido ao compilador VSCT ou referenciado por um [incluem o elemento](../extensibility/include-element.md). Os arquivos podem ser outros arquivos. VSCT ou arquivos de cabeçalho C++.  
+O elemento externo faz referência a qualquer arquivo de cabeçalho externo (. h) para mesclar com o arquivo. VSCT em tempo de compilação. Os arquivos a serem mescladas devem estar no caminho de inclusão fornecida ao compilador VSCT ou referenciada por uma [incluir elemento](../extensibility/include-element.md). Os arquivos podem ser outros arquivos. VSCT ou arquivos de cabeçalho do C++.  
   
- Definições em arquivos de cabeçalho devem estar no formato "#define [símbolo] [valor]" o valor pode ser outro símbolo, caso ele seja definido anteriormente. Definições podem ser usadas em instruções condicionais de itens do comando. Qualquer símbolo usado na verdade não será descartado.  
+ Definições em arquivos de cabeçalho devem estar no formato "#define [símbolo] [valor]" o valor pode ser outro símbolo se ele for definido anteriormente. Definições podem ser usadas em instruções condicionais de itens do comando. Nenhum símbolo usado na verdade não será descartado.  
   
  Elemento CommandTable  
 Elemento extern  
@@ -67,13 +67,13 @@ Elemento extern
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|Nenhum.|Nenhum.|  
+|nenhuma.|nenhuma.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Elemento CommandTable](../extensibility/commandtable-element.md)|Define todos os elementos que representam os comandos — ou seja, itens de menu, menus, barras de ferramentas e caixas de combinação — que fornece um VSPackage ao IDE.|  
+|[Elemento CommandTable](../extensibility/commandtable-element.md)|Define todos os elementos que representam comandos — ou seja, itens de menu, menus, barras de ferramentas e caixas de combinação, que fornece um VSPackage ao IDE.|  
   
 ## <a name="example"></a>Exemplo  
   
@@ -89,5 +89,5 @@ Elemento extern
   
 ## <a name="see-also"></a>Consulte também  
  [Tabela de comando do Visual Studio (. Arquivos de VSCT)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
- [Como os VSPackages adicionar elementos de Interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
- [Barras de ferramentas, Menus e comandos](../extensibility/internals/commands-menus-and-toolbars.md)
+ [Como VSPackages adicionar elementos da Interface do usuário](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [Comandos, menus e barras de ferramentas](../extensibility/internals/commands-menus-and-toolbars.md)

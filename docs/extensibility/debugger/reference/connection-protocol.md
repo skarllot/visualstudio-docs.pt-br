@@ -1,5 +1,5 @@
 ---
-title: CONNECTION_PROTOCOL | Documentos do Microsoft
+title: CONNECTION_PROTOCOL | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ed80d3caee3a0e407e42670adcabb0e2710bd59d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2be5678704e9a5899c4ce7f5caba8cec1d8a21e6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="connectionprotocol"></a>CONNECTION_PROTOCOL
-Indica o protocolo usado para se comunicar entre um servidor de depuração e o pacote de depuração (DE).  
+# CONNECTION_PROTOCOL
+Indicates the protocol being used to communicate between a debug server and the debug package (DE).  
   
-## <a name="syntax"></a>Sintaxe  
+## Syntax  
   
 ```cpp  
 typedef enum tagCONNECTION_PROTOCOL {  
@@ -53,7 +54,7 @@ typedef enum tagCONNECTION_PROTOCOL {
 } CONNECTION_PROTOCOL;  
 ```  
   
-```c#  
+```csharp  
 public enum CONNECTION_PROTOCOL {  
    CONNECTION_NONE    = 0,  
    CONNECTION_UNKNOWN = 1,  
@@ -65,38 +66,38 @@ public enum CONNECTION_PROTOCOL {
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### Parameters  
  CONNECTION_NONE  
- Nenhuma conexão foi feita em um servidor.  
+ No connection has been made to a server.  
   
  CONNECTION_UNKNOWN  
- Foi feita uma conexão, mas ele é de um tipo desconhecido.  
+ A connection has been made, but it is of an unknown type.  
   
  CONNECTION_LOCAL  
- Conexão é um servidor local.  
+ Connection is to a local server.  
   
  CONNECTION_PIPE  
- Conexão é por meio de um pipe nomeado.  
+ Connection is through a named pipe.  
   
  CONNECTION_TCPIP  
- Conexão usa TCP/IP.  
+ Connection uses TCP/IP.  
   
  CONNECTION_HTTP  
- Conexão usa HTTP (por meio de um servidor Web).  
+ Connection uses HTTP (through a Web server).  
   
  CONNECTION_OTHER  
- Algum outro tipo de conexão foi estabelecido (esse valor não é usado atualmente).  
+ Some other type of connection has been established (this value is not currently used).  
   
-## <a name="remarks"></a>Comentários  
- Esses valores são retornados do [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) método.  
+## Remarks  
+ These values are returned from the [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)

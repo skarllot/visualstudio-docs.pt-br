@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::SetValueAsReference | Documentos do Microsoft
+title: IDebugProperty2::SetValueAsReference | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7be49c141968830afc261baea2ff091c4b68ccea
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 58cc520d773d65cc3eba0588c2b8763079019018
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugproperty2setvalueasreference"></a>IDebugProperty2::SetValueAsReference
-Define o valor dessa propriedade para o valor da referência fornecida.  
+Sets the value of this property to the value of the given reference.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT SetValueAsReference(  
    IDebugReference2** rgpArgs,  
    DWORD              dwArgCount,  
@@ -50,7 +51,7 @@ HRESULT SetValueAsReference(
 );  
 ```  
   
-```c#  
+```csharp  
 int SetValueAsReference(  
    IDebugReference2[] rgpArgs,  
    uint               dwArgCount,  
@@ -59,29 +60,29 @@ int SetValueAsReference(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `rgpArgs`  
- [in] Uma matriz de argumentos para passar para o setter da propriedade de código gerenciado. Se a propriedade setter não leva argumentos ou se esse [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto não faz referência a tal um setter de propriedade `rgpArgs` deve ser um valor nulo. Normalmente, este parâmetro é um valor nulo.  
+ [in] An array of arguments to pass to the managed code property setter. If the property setter does not take arguments or if this [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object does not refer to such a property setter, `rgpArgs` should be a null value. This parameter is typically a null value.  
   
  `dwArgCount`  
- [in] O número de argumentos a `rgpArgs` matriz.  
+ [in] The number of arguments in the `rgpArgs` array.  
   
  `pValue`  
- [in] Uma referência, na forma de um [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto, o valor a ser usado para definir essa propriedade.  
+ [in] A reference, in the form of an [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object, to the value to use to set this property.  
   
  `dwTimeout`  
- [in] Quanto tempo para definir o valor, em milissegundos. Um valor típico é `INFINITE`. Isso afeta o período de tempo que pode executar qualquer avaliação possível.  
+ [in] How long to take to set the value, in milliseconds. A typical value is `INFINITE`. This affects the length of time that any possible evaluation can take.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará um erro de código, geralmente um dos seguintes:  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns an error code, typically one of the following:  
   
-|Erro|Descrição|  
+|Error|Description|  
 |-----------|-----------------|  
-|`E_SETVALUEASREFERENCE_NOTSUPPORTED`|Não há suporte para a definição do valor de uma referência.|  
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|O valor não pode ser definido como essa propriedade se refere a um método.|  
-|`E_SETVALUE_VALUE_IS_READONLY`|O valor é somente leitura e não pode ser definido.|  
-|`E_NOTIMPL`|O método não está implementado.|  
+|`E_SETVALUEASREFERENCE_NOTSUPPORTED`|Setting the value from a reference is not supported.|  
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|The value cannot be set, as this property refers to a method.|  
+|`E_SETVALUE_VALUE_IS_READONLY`|The value is read-only and cannot be set.|  
+|`E_NOTIMPL`|The method is not implemented.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

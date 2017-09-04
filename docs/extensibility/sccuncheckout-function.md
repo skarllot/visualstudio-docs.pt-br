@@ -1,5 +1,5 @@
 ---
-title: "Função SccUncheckout | Documentos do Microsoft"
+title: SccUncheckout Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 36b814be1c5515e1d9929c3a0cdb83631bbf12d7
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5db90c033a03605369c19bf358b0642f9f80163b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sccuncheckout-function"></a>Função SccUncheckout
-Essa função desfazer uma operação de check-out anterior, restaurando assim o conteúdo do arquivo selecionado ou arquivos para o estado antes do check-out. Todas as alterações feitas no arquivo desde o check-out serão perdidas.  
+# <a name="sccuncheckout-function"></a>SccUncheckout Function
+This function undoes a previous checkout operation, thereby restoring the contents of the selected file or files to the state prior to the checkout. All changes made to the file since the checkout are lost.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccUncheckout (  
    LPVOID    pvContext,  
    HWND      hWnd,  
@@ -52,41 +53,41 @@ SCCRTN SccUncheckout (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- [in] A estrutura de contexto de plug-in de controle de origem.  
+ [in] The source control plug-in context structure.  
   
  hWnd  
- [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para as caixas de diálogo que ele fornece.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  nFiles  
- [in] Número de arquivos especificados na `lpFileNames` matriz.  
+ [in] Number of files specified in the `lpFileNames` array.  
   
  lpFileNames  
- [in] Matriz de nomes de caminho local totalmente qualificado dos arquivos para os quais desfazer um check-out.  
+ [in] Array of fully qualified local path names of files for which to undo a checkout.  
   
  fOptions  
- [in] Sinalizadores de comando (não usados).  
+ [in] Command flags (not used).  
   
  pvOptions  
- [in] Opções de plug-in específico de controle de origem.  
+ [in] Source control plug-in-specific options.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|SCC_OK|Desfazer check-out foi bem-sucedida.|  
-|SCC_E_FILENOTCONTROLLED|O arquivo selecionado não está sob controle do código fonte.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
-|SCC_E_NONSPECIFICERROR|Falha não específica. Desfazer check-out não teve êxito.|  
-|SCC_E_NOTCHECKEDOUT|O usuário não tem o arquivo com check-out.|  
-|SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|  
-|SCC_E_PROJNOTOPEN|O projeto do controle de origem não foi aberto.|  
-|SCC_I_OPERATIONCANCELED|A operação foi cancelada antes da conclusão.|  
+|SCC_OK|Undo checkout was successful.|  
+|SCC_E_FILENOTCONTROLLED|The selected file is not under source code control.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure. Undo checkout did not succeed.|  
+|SCC_E_NOTCHECKEDOUT|The user does not have the file checked out.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
+|SCC_E_PROJNOTOPEN|The project has not been opened from source control.|  
+|SCC_I_OPERATIONCANCELED|The operation was cancelled before completion.|  
   
-## <a name="remarks"></a>Comentários  
- Após essa operação, o `SCC_STATUS_CHECKEDOUT` e `SCC_STATUS_MODIFIED` sinalizadores serão ambos ser desmarcados para os arquivos no qual desfazer check-out foi executado.  
+## <a name="remarks"></a>Remarks  
+ After this operation, the `SCC_STATUS_CHECKEDOUT` and `SCC_STATUS_MODIFIED` flags will both be cleared for the files on which the undo checkout was performed.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)

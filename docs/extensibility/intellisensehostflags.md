@@ -1,5 +1,5 @@
 ---
-title: IntelliSenseHostFlags | Documentos do Microsoft
+title: IntelliSenseHostFlags | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,18 +31,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c99fa72e45e9b0c37bda598e021a8c055f89487f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7d8b5a5a7b35d4fd23b5c81607f2bc9486aefc2a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
-Especifica os sinalizadores de host do IntelliSense.  
+Specifies IntelliSense host flags.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum IntellisenseHostFlags  
 {  
     IHF_READONLYCONTEXT      = 0x00000001  
@@ -53,18 +54,18 @@ enum IntellisenseHostFlags
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
   
-|Membros|Descrição|  
+|Members|Description|  
 |-------------|-----------------|  
-|`IHF_READONLYCONTEXT`|Buffer de contexto é somente leitura.|  
-|`IHF_NOSEPARATESUBJECT`|Nenhum texto de assunto. Buffer de contexto contém destino de IntelliSense (implica `!IHF_READONLYCONTEXT`).|  
-|`IHF_SINGLELINESUBJECT`|Texto do assunto não tem multi-linha capacidade.|  
-|`IHF_FORCECOMMITTOCONTEXT`|Mesmo que `CanCommitIntoReadOnlyBuffer`.|  
-|`IHF_OVERTYPE`|Edição (no assunto ou contexto) deve ser feito no modo sobrescrever.|  
+|`IHF_READONLYCONTEXT`|Context buffer is read-only.|  
+|`IHF_NOSEPARATESUBJECT`|No subject text. Context buffer contains IntelliSense-target (implies `!IHF_READONLYCONTEXT`).|  
+|`IHF_SINGLELINESUBJECT`|Subject text is not multi-line-capable.|  
+|`IHF_FORCECOMMITTOCONTEXT`|Same as `CanCommitIntoReadOnlyBuffer`.|  
+|`IHF_OVERTYPE`|Editing (in subject or context) should be done in overtype mode.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requirements  
  SingleFileeditor.idl  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualStudio.TextManager.Interop></xref:Microsoft.VisualStudio.TextManager.Interop>
+## <a name="see-also"></a>See Also  
+ <xref:Microsoft.VisualStudio.TextManager.Interop>

@@ -1,5 +1,5 @@
 ---
-title: THREADPROPERTY_FIELDS | Documentos do Microsoft
+title: THREADPROPERTY_FIELDS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 232106157f782e13c111589f36ed7b1583854299
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f92f2e749cbba7431d1be2daa3ada0c26bd7157c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="threadpropertyfields"></a>THREADPROPERTY_FIELDS
-Especifica quais informações sobre um segmento a ser recuperado.  
+Specifies what information about a thread is to be retrieved.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_THREADPROPERTY_FIELDS {   
    TPF_ID           = 0x0001,  
    TPF_SUSPENDCOUNT = 0x0002,  
@@ -54,7 +55,7 @@ enum enum_THREADPROPERTY_FIELDS {
 typedef DWORD THREADPROPERTY_FIELDS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_THREADPROPERTY_FIELDS {   
    TPF_ID           = 0x0001,  
    TPF_SUSPENDCOUNT = 0x0002,  
@@ -66,43 +67,43 @@ public enum enum_THREADPROPERTY_FIELDS {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  TPF_ID  
- Inicializar/usar o `dwThreadId` campo o [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) estrutura.  
+ Initialize/use the `dwThreadId` field of the [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) structure.  
   
  TPF_SUSPENDCOUNT  
- Inicializar/usar o `dwSuspendCount` campo o `THREADPROPERTIE`estrutura.  
+ Initialize/use the `dwSuspendCount` field of the `THREADPROPERTIE`S structure.  
   
  TPF_STATE  
- Inicializar/usar o `dwThreadState` campo o `THREADPROPERTIE`estrutura.  
+ Initialize/use the `dwThreadState` field of the `THREADPROPERTIE`S structure.  
   
  TPF_PRIORITY  
- Inicializar/usar o `bstrPriority` campo o `THREADPROPERTIE`estrutura.  
+ Initialize/use the `bstrPriority` field of the `THREADPROPERTIE`S structure.  
   
  TPF_NAME  
- Inicializar/usar o `bstrName` campo o `THREADPROPERTIE`estrutura.  
+ Initialize/use the `bstrName` field of the `THREADPROPERTIE`S structure.  
   
  TPF_LOCATION  
- Inicializar/usar o `bstrLocation` campo o `THREADPROPERTIE`estrutura.  
+ Initialize/use the `bstrLocation` field of the `THREADPROPERTIE`S structure.  
   
  TPF_ALLFIELDS  
- Especifica todos os campos.  
+ Specifies all fields.  
   
-## <a name="remarks"></a>Comentários  
- Esses valores são passados como um argumento para o [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) método para indicar quais campos do [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) estrutura devem ser inicializado.  
+## <a name="remarks"></a>Remarks  
+ These values are passed as an argument to the [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) method to indicate which fields of the [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) structure are to be initialized.  
   
- Esses valores também são usados em `dwFields` membro o `THREADPROPERTIES` estrutura para indicar quais campos são usados e válido.  
+ These values are also used in `dwFields` member of the `THREADPROPERTIES` structure to indicate which fields are used and valid.  
   
- Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
+ These flags may be combined with a bitwise `OR`.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)   
  [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)

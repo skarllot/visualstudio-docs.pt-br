@@ -1,5 +1,5 @@
 ---
-title: UNMANAGED_ADDRESS_PHYSICAL | Documentos do Microsoft
+title: UNMANAGED_ADDRESS_PHYSICAL | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c8374fe14efb66ea0a18be29260132e32a3e1108
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4995ebde9cd99732bb02f0711c9af8c9c023cbad
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="unmanagedaddressphysical"></a>UNMANAGED_ADDRESS_PHYSICAL
-Esta estrutura representa um endereço físico.  
+This structure represents a physical address.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagUNMANAGED_ADDRESS_PHYSICAL {  
@@ -47,26 +48,26 @@ typedef struct _tagUNMANAGED_ADDRESS_PHYSICAL {
 } UNMANAGED_ADDRESS_PHYSICAL;  
 ```  
   
-```c#  
+```csharp  
 public struct UNMANAGED_ADDRESS_PHYSICAL {  
    public ulong offset;  
 }  
 ```  
   
-## <a name="terms"></a>Termos  
- deslocamento  
- Um deslocamento de 64 bits em um espaço de endereço físico.  
+## <a name="terms"></a>Terms  
+ offset  
+ A 64-bit offset into a physical address space.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é parte da união no [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura quando o `dwKind` campo o `DEBUG_ADDRESS_UNION` estrutura é definida como `ADDRESS_KIND_UNMANAGED_PHYSICAL` (um valor da [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração).  
+## <a name="remarks"></a>Remarks  
+ This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_UNMANAGED_PHYSICAL` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)

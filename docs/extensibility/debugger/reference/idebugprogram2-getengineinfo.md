@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetEngineInfo | Documentos do Microsoft
+title: IDebugProgram2::GetEngineInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,43 +30,44 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e02b00e3b6ca16f305baca19890595608ed3f97a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f031cbe124765d44c116d3af35a877712cbe4502
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprogram2getengineinfo"></a>IDebugProgram2::GetEngineInfo
-Obtém o nome e a GUID do mecanismo de depuração (DE) executando esse programa.  
+Gets the name and GUID of the debug engine (DE) running this program.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetEngineInfo(   
    BSTR* pbstrEngine,  
    GUID* pguidEngine  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetEngineInfo(   
    out string pbstrEngine,  
    out GUID   pguidEngine  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pbstrEngine`  
- [out] Retorna o nome do DE executar este programa.  
+ [out] Returns the name of the DE running this program.  
   
  `pguidEngine`  
- [out] Retorna o GUID DE executar este programa.  
+ [out] Returns the GUID of the DE running this program.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Cada DE define sua própria GUID para identificação.  
+## <a name="remarks"></a>Remarks  
+ Each DE defines its own GUID for identification.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

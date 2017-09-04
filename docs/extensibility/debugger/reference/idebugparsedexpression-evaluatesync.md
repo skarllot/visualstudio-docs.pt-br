@@ -1,5 +1,5 @@
 ---
-title: IDebugParsedExpression::EvaluateSync | Documentos do Microsoft
+title: IDebugParsedExpression::EvaluateSync | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 99fb359057c3f910c03111da030a6c04767b0e64
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5afd11ea876e30a16a1eedf3c7cc0968096ad8e7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugparsedexpressionevaluatesync"></a>IDebugParsedExpression::EvaluateSync
-Esse método avalia a expressão analisada e, opcionalmente, converte o resultado para outro tipo de dados.  
+This method evaluates the parsed expression and optionally casts the result to another data type.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT EvaluateSync(   
    DWORD                 dwEvalFlags,  
    DWORD                 dwTimeout,  
@@ -53,7 +54,7 @@ HRESULT EvaluateSync(
 );  
 ```  
   
-```c#  
+```csharp  
 int EvaluateSync(  
    uint                 dwEvalFlags,   
    uint                 dwTimeout,   
@@ -65,35 +66,35 @@ int EvaluateSync(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `dwEvalFlags`  
- [in] Uma combinação de [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) constantes que controlam como a expressão será avaliada.  
+ [in] A combination of [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) constants that control how the expression is to be evaluated.  
   
  `dwTimeout`  
- [in] Especifica o tempo máximo, em milissegundos, para aguardar antes de retornar desse método. Use `INFINITE` para aguardar indefinidamente.  
+ [in] Specifies the maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
   
  `pSymbolProvider`  
- [in] O provedor de símbolo, expressado como uma [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) interface.  
+ [in] The symbol provider, expressed as an [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) interface.  
   
  `pAddress`  
- [in] O local atual de execução dentro de um método, expressado como uma [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
+ [in] The current execution location within a method, expressed as an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
   
  `pBinder`  
- [in] O fichário, expressado como uma [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) interface.  
+ [in] The binder, expressed as an [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) interface.  
   
  `bstrResultType`  
- [in] O resultado deve ser convertido em. Esse argumento pode ser um valor nulo.  
+ [in] The type the result should be cast to. This argument can be a null value.  
   
  `ppResult`  
- [out] Retorna o [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) interface que representa os resultados da avaliação.  
+ [out] Returns the [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) interface that represents the results of evaluation.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- O contexto de avaliação de expressão é determinado pela `pAddress`, que torna possível determinar o método de inclusão e, em seguida, regras de escopo do idioma usado para determinar o valor dos símbolos na expressão.  
+## <a name="remarks"></a>Remarks  
+ The expression evaluation context is given by `pAddress`, which makes it possible to determine the containing method and then use language scoping rules to determine the value of the symbols in the expression.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)   

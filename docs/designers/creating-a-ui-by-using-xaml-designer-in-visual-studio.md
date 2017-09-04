@@ -1,7 +1,7 @@
 ---
 title: "Criando uma interface do usuário usando o Designer XAML no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 7/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,32 +18,17 @@ caps.latest.revision: 29
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 0b6b302637113be1fb2700100124cf4079c06298
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 0122714fa0c932a1fba849226e1200795ff20cfa
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="creating-a-ui-by-using-xaml-designer-in-visual-studio"></a>Criando uma interface de usuário usando o XAML Designer no Visual Studio
-O Designer XAML no Visual Studio fornece uma interface visual para ajudá-lo a criar aplicativos da Windows Store, Windows Phone, WPF e Silverlight baseados em XAML. Você pode criar interfaces do usuário para seus aplicativos arrastando controles da **Caixa de Ferramentas** e configurando propriedades na janela **Propriedades**. Você também pode editar XAML diretamente no modo de exibição XAML.  
+O Designer XAML no Visual Studio fornece uma interface visual para ajudá-lo a criar aplicativos Web e Windows baseados em XAML. Você pode criar interfaces do usuário para seus aplicativos arrastando controles da **Caixa de Ferramentas** e configurando propriedades na janela **Propriedades**. Você também pode editar XAML diretamente no modo de exibição XAML.  
   
- Para tarefas avançadas de design XAML como animações e comportamentos, consulte [Criando uma interface do usuário usando o Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md).  
+ Para tarefas avançadas de design XAML como animações e comportamentos, consulte [Criando uma interface do usuário usando o Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md). Consulte também [Criando o XAML no Visual Studio e no Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md) para obter uma comparação entre as ferramentas.
   
 ## <a name="xaml-designer-workspace"></a>Espaço de trabalho do Designer XAML  
  O espaço de trabalho no Designer XAML consiste em vários elementos da interface visual. Esses elementos incluem a prancheta, o Editor XAML, a janela Dispositivo, a janela Estrutura de Tópicos de Documento e a janela Propriedades. Para abrir o Designer XAML, clique com o botão direito do mouse em um arquivo XAML no **Gerenciador de Soluções** e selecione **Exibir Designer**.  
@@ -53,7 +38,7 @@ O Designer XAML no Visual Studio fornece uma interface visual para ajudá-lo a c
   
  No modo de exibição de Design, a janela que contém a *prancheta* é a janela ativa e você pode usá-la como superfície de trabalho primária. Você pode usá-la para criar visualmente uma página em seu aplicativo adicionando ou desenhando elementos e depois modificando-os. Para obter mais informações, consulte [Trabalhando com elementos no Designer XAML](../designers/working-with-elements-in-xaml-designer.md). Esta ilustração mostra o artboard no modo Design.  
   
- ![Modo de Exibição de Design do Designer XAML](~/designers/media/xaml_editor_design_view.png "xaml_editor_design_view")  
+ ![Modo de Exibição de Design do Designer XAML](../designers/media/xaml_editor_design_view.png "xaml_editor_design_view")  
   
  Estas funcionalidades estão disponíveis no artboard:  
   
@@ -61,7 +46,7 @@ O Designer XAML no Visual Studio fornece uma interface visual para ajudá-lo a c
  As guias de alinhamento são *limites de alinhamento* que são exibidos como linhas vermelho-tracejadas para mostrar quando as bordas dos controles estão alinhadas ou quando as linhas de base de texto estão alinhadas. Os limites de alinhamento só são exibidos quando a opção de **ajuste a guias de alinhamento** está habilitada.  
   
  **Rails de grade**  
-Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Grade](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx). Você pode criar e excluir linhas e colunas, bem como ajustar suas larguras e alturas relativas. O rail de Grade vertical, exibido à esquerda da planilha, é usado para linhas e a linha horizontal, exibida na parte superior, é usada para colunas.  
+ Rails de `Grid` são usados para gerenciar linhas e colunas em um painel de [Grade](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx). Você pode criar e excluir linhas e colunas, bem como ajustar suas larguras e alturas relativas. O rail de Grade vertical, exibido à esquerda da planilha, é usado para linhas e a linha horizontal, exibida na parte superior, é usada para colunas.  
   
  **Adornos de grade**  
  Um adorno `Grid` é exibido como um triângulo que tem uma linha vertical ou horizontal anexada a ele no rail `Grid`. Quando você arrasta um adorno `Grid`, as larguras ou alturas das linhas ou colunas adjacentes são atualizadas enquanto o mouse é movimentado.  
@@ -82,7 +67,7 @@ Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Gr
   
  No modo Design, os comandos adicionais do artboard estão disponíveis na área esquerda inferior da tela, como mostrado aqui:  
   
- ![Comandos do modo de exibição de Design](~/designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
+ ![Comandos do modo de exibição de Design](../designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
   
  Estes comandos estão disponíveis na barra de ferramentas:  
   
@@ -100,7 +85,7 @@ Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Gr
   
  No modo de exibição XAML, a janela que contém o editor XAML é a janela ativa, e o editor XAML é a ferramenta de criação primária. A linguagem XAML fornece um vocabulário declarativo, com base em XML, para especificar a interface do usuário de um aplicativo. O modo de exibição XAML inclui o IntelliSense, formatação automática, realce de sintaxe e navegação de marcação. Esta ilustração mostra o modo de exibição XAML:  
   
- ![Exibição XAML](~/designers/media/xaml_editor.png "xaml_editor")  
+ ![Exibição XAML](../designers/media/xaml_editor.png "xaml_editor")  
   
  **Barra do modo divisão**  
  A barra do modo divisão é exibida na parte superior do modo de exibição XAML quando o editor XAML está na janela inferior. A barra do modo divisão permite controlar os tamanhos relativos do modo Design e do modo de exibição XAML. Você também pode trocar os locais das exibições (usando o botão **Alternar Painéis**), especificar se as exibições são organizadas horizontal ou verticalmente e recolher a exibição.  
@@ -109,9 +94,9 @@ Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Gr
  O zoom de marcação permite dimensionar o modo de exibição XAML. Você pode aplicar zoom de 20% a 400%.  
   
 ## <a name="device-window"></a>Janela Dispositivo  
- A janela Dispositivo no Designer XAML permite simular em tempo de design vários modos de exibição, vídeos e opções de exibição para seu projeto da Windows Store ou do Windows Phone. A janela Dispositivo está disponível no menu **Design** quando você estiver trabalhando no Designer XAML. Veja como ela se parece:  
+ A janela Dispositivo no Designer XAML permite simular em tempo de design vários modos de exibição, vídeos e opções de exibição para seu projeto. A janela Dispositivo está disponível no menu **Design** quando você estiver trabalhando no Designer XAML. Veja como ela se parece:  
   
- ![Janela Dispositivo](~/designers/media/xaml_editor_device_panel.png "xaml_editor_device_panel")  
+ ![Janela Dispositivo](../designers/media/xaml_editor_device_panel.png "xaml_editor_device_panel")  
   
  Estas são as opções disponíveis na janela Dispositivo:  
   
@@ -155,7 +140,7 @@ Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Gr
   
  Para exibir a janela de Estrutura de tópicos do documento na barra de menus, escolha **Exibição**, **Outras Janelas**, **Estrutura de Tópicos do Documento**.  
   
- ![Janela de Estrutura de tópicos do documento](~/designers/media/xaml_editor_doc_outline.png "xaml_editor_doc_outline")  
+ ![Janela de Estrutura de tópicos do documento](../designers/media/xaml_editor_doc_outline.png "xaml_editor_doc_outline")  
   
  Estas são as opções disponíveis na janela Estrutura de Tópicos de Documento:  
   
@@ -174,7 +159,7 @@ Rails de  `Grid` são usados para gerenciar linhas e colunas em um painel de [Gr
 ## <a name="properties-window"></a>Janela de Propriedades  
  A janela Propriedades permite definir valores de propriedade em controles. Veja como ela se parece:  
   
- ![Janela Propriedades](~/designers/media/xaml_editor_prop_window.png "xaml_editor_prop_window")  
+ ![Janela Propriedades](../designers/media/xaml_editor_prop_window.png "xaml_editor_prop_window")  
   
  Há várias opções na parte superior da janela Propriedades. Você pode alterar o nome do elemento atualmente selecionado usando a caixa **Nome**. No canto esquerdo superior, há um ícone que representa o elemento atualmente selecionado. Para organizar as propriedades por categoria ou em ordem alfabética, clique em **Categoria**, **Nome** ou **Fonte** na lista **Organizar por**. Para ver a lista de eventos de um controle, clique no botão **Eventos**, que exibe um símbolo de relâmpago. Para pesquisar uma propriedade, comece a digitar o nome da propriedade na caixa **Propriedades de Pesquisa**. A janela Propriedades exibe as propriedades que correspondem à pesquisa à medida que você digita. Algumas propriedades permitem que você defina propriedades avançadas selecionando um botão de seta para baixo. Para obter mais informações sobre como usar propriedades e manipular eventos, veja o artigo sobre [Guia de início rápido: adicionando controles e manipulando eventos](http://go.microsoft.com/fwlink/?LinkID=247983)  
   

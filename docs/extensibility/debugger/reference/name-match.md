@@ -1,5 +1,5 @@
 ---
-title: NAME_MATCH | Documentos do Microsoft
+title: NAME_MATCH | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: cae44c561a72a94680f6a456cb9faa58ab914437
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0b978feb1b38c87c2ca7e0616953856556144f21
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="namematch"></a>NAME_MATCH
-Seleciona a opção caso para correspondência de nomes.  
+Selects the case option for matching names.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 typedef enum {   
    nmNone            = 0,  
    nmCaseSensitive   = 1,  
@@ -49,7 +50,7 @@ typedef enum {
 } NAME_MATCH;  
 ```  
   
-```c#  
+```csharp  
 public enum NameMatchOptions {   
    nmNone            = 0,  
    nmCaseSensitive   = 1,  
@@ -57,18 +58,18 @@ public enum NameMatchOptions {
 }  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  nmNone  
- Nenhuma opção é especificada.  
+ No options are specified.  
   
  nmCaseSensitive  
- Indica que os nomes a serem correspondidos diferenciam maiusculas de minúsculas.  
+ Indicates that names to be matched are case-sensitive.  
   
  nmCaseInsensitive  
- Indica que os nomes a serem correspondidos não diferenciam maiusculas de minúsculas.  
+ Indicates that names to be matched are not case-sensitive.  
   
-## <a name="remarks"></a>Comentários  
- Passada como um argumento para os métodos a seguir:  
+## <a name="remarks"></a>Remarks  
+ Passed as an argument to the following methods:  
   
 -   [GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)  
   
@@ -78,15 +79,15 @@ public enum NameMatchOptions {
   
 -   [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)   
  [GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)   
  [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)   

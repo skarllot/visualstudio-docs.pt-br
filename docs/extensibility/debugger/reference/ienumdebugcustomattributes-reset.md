@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugCustomAttributes::Reset | Documentos do Microsoft
+title: IEnumDebugCustomAttributes::Reset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,31 +30,32 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f15c747305633fe9337c0675da54600e951163d8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 787a2e2832ce75371ad8e17e90fdcee67fd9f128
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="ienumdebugcustomattributesreset"></a>IEnumDebugCustomAttributes::Reset
-Redefine a sequência de enumeração para o início.  
+Resets the enumeration sequence to the beginning.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT Reset(void);  
 ```  
   
-```c#  
+```csharp  
 int Reset();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Depois que esse método é chamado, a próxima chamada para o [próxima](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) método retorna o primeiro elemento da enumeração.  
+## <a name="remarks"></a>Remarks  
+ After this method is called, the next call to the [Next](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) method returns the first element of the enumeration.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)   
- [Avançar](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md)
+ [Next](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md)

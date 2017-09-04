@@ -1,5 +1,5 @@
 ---
-title: BPREQI_FIELDS | Documentos do Microsoft
+title: BPREQI_FIELDS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c44847ef0f5f15e4c8b966b067feb89e91230b96
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 76ff03498b0bb6953024f03a9535e47346da38b5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="bpreqifields"></a>BPREQI_FIELDS
-Especifica as informações a serem recuperadas sobre uma solicitação de ponto de interrupção.  
+Specifies the information to be retrieved about a breakpoint request.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 enum enum_BPREQI_FIELDS {   
@@ -61,7 +62,7 @@ enum enum_BPREQI_FIELDS {
 typedef DWORD BPREQI_FIELDS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_BPREQI_FIELDS {   
    BPREQI_BPLOCATION   = 0x0001,  
    BPREQI_LANGUAGE     = 0x0002,  
@@ -80,65 +81,65 @@ public enum enum_BPREQI_FIELDS {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  BPREQI_BPLOCATION  
- Inicializar/usar o `bpLocation` campo (localização do ponto de interrupção) do [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) ou [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estrutura.  
+ Initialize/use the `bpLocation` (breakpoint location) field of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) or [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) structure.  
   
  BPREQI_LANGUAGE  
- Inicializar/usar o `guidLanguage` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `guidLanguage` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI_PROGRAM  
- Inicializar/usar o `pProgram` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `pProgram` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI_PROGRAMNAME  
- Inicializar/usar o `bstrProgramName` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `bstrProgramName` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI_THREAD  
- Inicializar/usar o `pThread` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `pThread` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI_THREADNAME  
- Inicializar/usar o `bstrThreadName` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `bstrThreadName` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI_PASSCOUNT  
- Inicializar/usar o `bpPassCount` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `bpPassCount` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI_CONDITION  
- Inicializar/usar o `bpCondition` campo (condição de ponto de interrupção) do `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `bpCondition` (breakpoint condition) field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI_FLAGS  
- Inicializar/usar o `dwFlags` campo o `BP_REQUEST_INFO` ou `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `dwFlags` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI_ALLOLDFIELDS  
- Inicializar/usar todos os campos para o do `BP_REQUEST_INFO` estrutura.  
+ Initialize/use all fields for the of the `BP_REQUEST_INFO` structure.  
   
  BPREQI_VENDOR  
- Inicializar/usar o `guidVendor` campo `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `guidVendor` field of `BP_REQUEST_INFO2` structure.  
   
  BPREQI_CONSTRAINT  
- Inicializar/usar o `bstrConstraint` campo `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `bstrConstraint` field of `BP_REQUEST_INFO2` structure.  
   
  BPREQI_TRACEPOINT  
- Inicializar/usar o `bstrTracepoint` campo `BP_REQUEST_INFO2` estrutura.  
+ Initialize/use the `bstrTracepoint` field of `BP_REQUEST_INFO2` structure.  
   
  BPREQI_ALLFIELDS  
- Especifica todos os campos para o `BP_REQUEST_INFO2` estrutura.  
+ Specifies all fields for the `BP_REQUEST_INFO2` structure.  
   
-## <a name="remarks"></a>Comentários  
- Passada como um argumento para o [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) e [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) métodos para especificar quais campos do [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas devem ser inicializado.  
+## <a name="remarks"></a>Remarks  
+ Passed as an argument to the [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) and [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) methods to specify which fields of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) and [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) structures are to be initialized.  
   
- Esses sinalizadores também são usados para indicar quais campos do `BP_REQUEST_INFO` e `BP_REQUEST_INFO2` estruturas são usados e válidos quando cada estrutura é retornada.  
+ These flags are also used to indicate which fields of the `BP_REQUEST_INFO` and `BP_REQUEST_INFO2` structures are used and valid when each structure is returned.  
   
- Esses valores podem ser combinados com um bit a bit `OR`.  
+ These values may be combined with a bitwise `OR`.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)   
  [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
  [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

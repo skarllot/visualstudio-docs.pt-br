@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetValueFromStringCaseInsensitive | Documentos do Microsoft
+title: IDebugEnumField::GetValueFromStringCaseInsensitive | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,44 +30,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: cac471a6a3ea7cdbdeee90abfee42375d09859a3
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 68a5f199f389cb5bc24f0e648bb4719c1ad79545
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugenumfieldgetvaluefromstringcaseinsensitive"></a>IDebugEnumField::GetValueFromStringCaseInsensitive
-Esse método usa uma pesquisa diferencia maiusculas de minúsculas para retornar o valor associado ao nome de uma constante de enumeração.  
+This method uses a case-insensitive search to return the value associated with the name of an enumeration constant.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetValueFromStringCaseInsensitive(  
    LPCOLESTR  pszValue,  
    ULONGLONG* pvalue  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetValueFromStringCaseInsensitive(  
    string    pszValue,   
    out ulong pValue  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pszValue`  
- [in] Uma cadeia de caracteres especificando o nome para o qual obter o valor. Observe que para C++, essa é uma cadeia de caracteres largos.  
+ [in] A string specifying the name for which to get the value. Note that for C++, this is a wide character string.  
   
  `pValue`  
- [out] Retorna o valor numérico associado.  
+ [out] Returns the associated numerical value.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE`, se o nome não é parte de enumeração ou um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns `S_FALSE`, if the name is not part of the enumeration, or an error code.  
   
-## <a name="remarks"></a>Comentários  
- Esse método diferencia maiusculas de minúsculas. Se for necessária uma pesquisa diferencia maiusculas de minúsculas (por exemplo, em uma linguagem como C++ onde os nomes diferenciam maiusculas de minúsculas), use [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md).  
+## <a name="remarks"></a>Remarks  
+ This method is case-insensitive. If a case-sensitive search is needed (for example, in a language such as C++ where names are case-sensitive), use [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)

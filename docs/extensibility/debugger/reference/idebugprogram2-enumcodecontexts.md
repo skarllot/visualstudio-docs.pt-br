@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumCodeContexts | Documentos do Microsoft
+title: IDebugProgram2::EnumCodeContexts | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,45 +30,46 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e3fdd055c4c3eecf80825fc8468ebc84fab0a2c8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5d223dc90ef7f336365b41d289763895e250fdff
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprogram2enumcodecontexts"></a>IDebugProgram2::EnumCodeContexts
-Recupera uma lista dos contextos de código para uma posição especificada em um arquivo de origem.  
+Retrieves a list of the code contexts for a given position in a source file.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT EnumCodeContexts(   
    IDebugDocumentPosition2*  pDocPos,  
    IEnumDebugCodeContexts2** ppEnum  
 );  
 ```  
   
-```c#  
+```csharp  
 int EnumCodeContexts(   
    IDebugDocumentPosition2     pDocPos,  
    out IEnumDebugCodeContexts2 ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pDocPos`  
- [in] Um [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) objeto que representa uma posição abstrata em um arquivo de origem conhecida para o IDE.  
+ [in] An [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) object representing an abstract position in a source file known to the IDE.  
   
  `ppEnum`  
- [out] Retorna um [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) objeto que contém uma lista de contextos de código.  
+ [out] Returns an [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) object that contains a list of the code contexts.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Este método permite a depuração de sessão Gerenciador (SDM) ou IDE para mapear uma posição de arquivo de origem em uma posição de código. Mais de um contexto de código é retornado se a origem gera vários blocos de código (por exemplo, modelos de C++).  
+## <a name="remarks"></a>Remarks  
+ This method allows the session debug manager (SDM) or IDE to map a source file position into a code position. More than one code context is returned if the source generates multiple blocks of code (for example, C++ templates).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)   
  [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

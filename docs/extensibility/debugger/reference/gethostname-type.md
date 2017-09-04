@@ -1,5 +1,5 @@
 ---
-title: GETHOSTNAME_TYPE | Documentos do Microsoft
+title: GETHOSTNAME_TYPE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d3e32612fe3d9a63b41d8a2a4d78b7dd0ef2dfab
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 103423e638e83954d7cfb44a49264dadd6729eb5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="gethostnametype"></a>GETHOSTNAME_TYPE
-Especifica o tipo de nome de host.  
+Specifies the type of host name.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_GETHOSTNAME_TYPE {   
    GHN_FRIENDLY_NAME = 0,  
    GHN_FILE_NAME     = 1  
@@ -49,30 +50,30 @@ enum enum_GETHOSTNAME_TYPE {
 typedef DWORD GETHOSTNAME_TYPE;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_GETHOSTNAME_TYPE {   
    GHN_FRIENDLY_NAME = 0,  
    GHN_FILE_NAME     = 1  
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  GHN_FRIENDLY_NAME  
- Especifica um nome amigável do host.  
+ Specifies a friendly name of the host.  
   
  GHN_FILE_NAME  
- Especifica um nome de arquivo do host.  
+ Specifies a file name of the host.  
   
-## <a name="remarks"></a>Comentários  
- Esses valores são passados como um argumento para o [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) método para recuperar um nome de host em formatos diferentes.  
+## <a name="remarks"></a>Remarks  
+ These values are passed as an argument to the [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) method to retrieve a host name in different formats.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md)

@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO_FLAGS | Documentos do Microsoft
+title: PROCESS_INFO_FLAGS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b463e647d12a7d3eaf25185ef2f910c4f9befc8d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f1bd6e203424bdc53e6af0aa97d320b80ee9d911
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="processinfoflags"></a>PROCESS_INFO_FLAGS
-Descreve ou especifica as propriedades de um processo.  
+Describes or specifies properties of a process.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_PROCESS_INFO_FLAGS {   
    PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
    PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
@@ -51,7 +52,7 @@ enum enum_PROCESS_INFO_FLAGS {
 typedef DWORD PROCESS_INFO_FLAGS;  
 ```  
   
-```c#  
+```csharp  
 enum enum_PROCESS_INFO_FLAGS {   
    PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
    PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
@@ -60,31 +61,31 @@ enum enum_PROCESS_INFO_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  PIFLAG_SYSTEM_PROCESS  
- Indica que o processo é um processo do sistema.  
+ Indicates that the process is a system process.  
   
  PIFLAG_DEBUGGER_ATTACHED  
- Indica que o processo está sendo depurado por um depurador. Pode ser um [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] depurador ou pode ser algum outro depurador, por exemplo, WinDbg.  
+ Indicates that the process is being debugged by a debugger. It may be a [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] debugger, or it may be some other debugger, for example, WinDbg.  
   
  PIFLAG_PROCESS_STOPPED  
- Indica que o processo é interrompido. Válido somente se `PIFLAG_DEBUGGER_ATTACHED` também for especificado. Disponível em [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] e posterior.  
+ Indicates the process is stopped. Valid only if `PIFLAG_DEBUGGER_ATTACHED` is also specified. Available in [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] and later.  
   
  PIFLAG_PROCESS_RUNNING  
- Indica que o processo está em execução. Válido somente se `PIFLAG_DEBUGGER_ATTACHED` também for especificado. Disponível em [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] e posterior.  
+ Indicates the process is running. Valid only if `PIFLAG_DEBUGGER_ATTACHED` is also specified. Available in [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] and later.  
   
-## <a name="remarks"></a>Comentários  
- Usado para o `Flags` membro do [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) estrutura.  
+## <a name="remarks"></a>Remarks  
+ Used for the `Flags` member of the [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) structure.  
   
- Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
+ These flags may be combined with a bitwise `OR`.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPosition2::GetFileName | Documentos do Microsoft
+title: IDebugDocumentPosition2::GetFileName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a56a7e397924608e6cf86757ba51a95834105f13
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c6b4aa6ced94961f928efc0fed59a8db06a33609
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugdocumentposition2getfilename"></a>IDebugDocumentPosition2::GetFileName
-Obtém o nome do arquivo do arquivo de origem que contém a posição do documento.  
+Gets the file name of the source file that contains the document position.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetFileName(   
    BSTR* pbstrFileName  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetFileName(   
    out string pbstrFileName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pbstrFileName`  
- [out] Retorna o nome de arquivo do arquivo de origem.  
+ [out] Returns the file name of the source file.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Um arquivo de origem não pode ter sempre um nome de arquivo (o arquivo de origem pode não existir no disco, por exemplo).  
+## <a name="remarks"></a>Remarks  
+ A source file may not always have a file name (the source file may not exist on disk, for example).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)

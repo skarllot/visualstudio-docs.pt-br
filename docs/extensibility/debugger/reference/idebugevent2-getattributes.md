@@ -1,5 +1,5 @@
 ---
-title: IDebugEvent2::GetAttributes | Documentos do Microsoft
+title: IDebugEvent2::GetAttributes | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,40 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4ac88f7030109c21a3b9654efbd4d8eb31a0acc2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3e1d742354a9d972cf0bba336cea78beb7d4fad2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugevent2getattributes"></a>IDebugEvent2::GetAttributes
-Obtém os atributos para este evento de depuração.  
+Gets the attributes for this debug event.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetAttribute(   
    DWORD* pdwAttrib  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetAttribute(   
    out uint pdwAttrib  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pdwAttrib`  
- [out] Uma combinação de sinalizadores do [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) enumeração.  
+ [out] A combination of flags from the [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) enumeration.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- O [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface é comum a todos os eventos. Esse método descreve o tipo de evento. Por exemplo, é o evento síncrono ou assíncrono e é um evento de parada.  
+## <a name="remarks"></a>Remarks  
+ The [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface is common to all events. This method describes the type of event; for example, is the event synchronous or asynchronous and is it a stopping event.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md)

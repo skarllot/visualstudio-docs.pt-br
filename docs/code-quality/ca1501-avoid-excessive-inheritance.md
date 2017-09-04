@@ -1,51 +1,67 @@
 ---
-title: "CA1501: evitar heran&#231;a excessiva | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1501"
-  - "AvoidExcessiveInheritance"
-helpviewer_keywords: 
-  - "AvoidExcessiveInheritance"
-  - "CA1501"
+title: 'CA1501: Avoid excessive inheritance | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1501
+- AvoidExcessiveInheritance
+helpviewer_keywords:
+- AvoidExcessiveInheritance
+- CA1501
 ms.assetid: 9e934746-1a4d-492a-91e4-085201abafa4
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1501: evitar heran&#231;a excessiva
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: f91e28a9d0a44195e3a5e2c66fff14cb5bb27a6d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1501-avoid-excessive-inheritance"></a>CA1501: Avoid excessive inheritance
 |||  
 |-|-|  
 |TypeName|AvoidExcessiveInheritance|  
 |CheckId|CA1501|  
-|Categoria|Microsoft.Maintainability|  
-|Alteração Significativa|Quebra|  
+|Category|Microsoft.Maintainability|  
+|Breaking Change|Breaking|  
   
-## Causa  
- Um tipo é mais de quatro níveis abaixo na hierarquia de herança.  
+## <a name="cause"></a>Cause  
+ A type is more than four levels deep in its inheritance hierarchy.  
   
-## Descrição da Regra  
- As hierarquias profundamente aninhadas de classificação podem ser difíceis de seguida, compreendam, e manter.  Essa análise de limites de regra hierarquias no mesmo módulo.  
+## <a name="rule-description"></a>Rule Description  
+ Deeply nested type hierarchies can be difficult to follow, understand, and maintain. This rule limits analysis to hierarchies in the same module.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, derivar o tipo de um tipo de base que seja menor profundo na hierarquia de herança ou eliminar qualquer um dos tipos de base intermediários.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, derive the type from a base type that is less deep in the inheritance hierarchy or eliminate some of the intermediate base types.  
   
-## Quando Suprimir Alertas  
- É seguro suprimir um aviso desta regra.  Porém, o código pode ser mais difícil de manter.  Observe que, como a visibilidade dos tipos de base, resolvendo violações desta regra pode criar alterações.  Por exemplo, remova os tipos de base públicos é uma alteração.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule. However, the code might be more difficult to maintain. Note that, depending on the visibility of base types, resolving violations of this rule might create breaking changes. For example, removing public base types is a breaking change.  
   
-## Exemplo  
- O exemplo a seguir mostra um tipo que viola a regra.  
+## <a name="example"></a>Example  
+ The following example shows a type that violates the rule.  
   
- [!code-cs[FxCop.Maintainability.ExcessiveInheritance#1](../code-quality/codesnippet/CSharp/ca1501-avoid-excessive-inheritance_1.cs)]
- [!code-vb[FxCop.Maintainability.ExcessiveInheritance#1](../code-quality/codesnippet/VisualBasic/ca1501-avoid-excessive-inheritance_1.vb)]
+ [!code-csharp[FxCop.Maintainability.ExcessiveInheritance#1](../code-quality/codesnippet/CSharp/ca1501-avoid-excessive-inheritance_1.cs)] [!code-vb[FxCop.Maintainability.ExcessiveInheritance#1](../code-quality/codesnippet/VisualBasic/ca1501-avoid-excessive-inheritance_1.vb)]

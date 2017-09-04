@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::IsUserData | Documentos do Microsoft
+title: IDebugObject2::IsUserData | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 084354da478813408259d7ca558bc42aca13f45d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: d11a71b08910425f1b3c399dfc665ae629f7316d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugobject2isuserdata"></a>IDebugObject2::IsUserData
-Determina se o objeto representa dados de usuário.  
+Determines whether the object represents user data.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT IsUserData(  
@@ -47,21 +48,21 @@ HRESULT IsUserData(
 );  
 ```  
   
-```c#  
+```csharp  
 int IsUserData(  
    out int pfUser  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pfUser`  
- [out] Retorna zero (`TRUE`) se o objeto representa dados de usuário; zero (`FALSE`) se não existir.  
+ [out] Returns nonzero (`TRUE`) if the object represents user data; zero (`FALSE`) if it does not.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Dados do usuário são qualquer objeto que faz parte de um módulo designado como JustMyCode (uma opção configurável pelo usuário que marca um módulo como código de usuário e, portanto, visíveis em um rastreamento de pilha).  
+## <a name="remarks"></a>Remarks  
+ User data is any object that is part of a module designated as JustMyCode (a user-configurable option that marks a module as user code and therefore visible in a stack trace).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

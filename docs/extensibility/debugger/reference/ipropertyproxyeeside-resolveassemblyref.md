@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::ResolveAssemblyRef | Documentos do Microsoft
+title: IPropertyProxyEESide::ResolveAssemblyRef | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b9e0b4cb6294b0437366282fd0d5f82feea14f5a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e71bb5aa2954c609cff4a3afbfba981bade3122c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="ipropertyproxyeesideresolveassemblyref"></a>IPropertyProxyEESide::ResolveAssemblyRef
-Determina o local da referência de assembly gerenciado especificado.  
+Determines the location of the specified managed assembly reference.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT ResolveAssemblyRef(  
    BSTR*                  assemName,  
    IEEDataStorage**       assemBytes,  
@@ -51,7 +52,7 @@ HRESULT ResolveAssemblyRef(
 );  
 ```  
   
-```c#  
+```csharp  
 int ResolveAssemblyRef(  
    ref string                     assemName,  
    out IEEDataStorage             assemBytes,  
@@ -61,29 +62,29 @@ int ResolveAssemblyRef(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `assemName`  
- [in] Nome do assembly para resolver.  
+ [in] Name of the assembly to resolve.  
   
  `assemBytes`  
- [out] Retorna um [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) que contém os bytes de assembly associados à referência de objeto.  
+ [out] Returns an [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) object containing the assembly bytes associated with the reference.  
   
  `assemPdb`  
- [out] Retorna um `IEEDataStorage` objeto que contém o símbolo de armazena dados associados a essa referência.  
+ [out] Returns an `IEEDataStorage` object containing the symbol store data associated with this reference.  
   
  `assemLocation`  
- [out] Retorna o local do caminho dessa referência.  
+ [out] Returns the path location of this reference.  
   
  `alr`  
- [out] Retorna um valor da [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) enumeração que indica o local do assembly dessa referência.  
+ [out] Returns a value from the [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) enumeration indicating the location of this reference's assembly.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Normalmente, esse método não é implementado por um avaliador de expressão personalizada.  
+## <a name="remarks"></a>Remarks  
+ This method is not typically implemented by a custom expression evaluator.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)

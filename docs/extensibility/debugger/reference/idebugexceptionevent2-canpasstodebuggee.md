@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::CanPassToDebuggee | Documentos do Microsoft
+title: IDebugExceptionEvent2::CanPassToDebuggee | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,33 +30,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e522e16c33cb0ebedc09eb3112e54af0f41e3869
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2e6505e1779c881141ca17f33ec0ad1ffcf7a42b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugexceptionevent2canpasstodebuggee"></a>IDebugExceptionEvent2::CanPassToDebuggee
-Determina se o mecanismo de depuração (DE) oferece suporte à opção de passar essa exceção para o programa que está sendo depurado quando a execução é retomada.  
+Determines whether or not the debug engine (DE) supports the option of passing this exception to the program being debugged when execution resumes.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT CanPassToDebuggee(  
    void  
 );  
 ```  
   
-```c#  
+```csharp  
 int CanPassToDebuggee();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Retorna um `S_OK` (a exceção pode ser passada para o programa) ou `S_FALSE` (a exceção não pode ser passada).  
+## <a name="return-value"></a>Return Value  
+ Returns either `S_OK` (the exception can be passed to the program) or `S_FALSE` (the exception cannot be passed on).  
   
-## <a name="remarks"></a>Comentários  
- O DE deve ter uma ação padrão para passar para o elemento a ser depurado. O IDE pode receber o [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) eventos e chamadas de [continuar](../../../extensibility/debugger/reference/idebugprocess3-continue.md) método sem chamar o `CanPassToDebuggee` método. Portanto, o DE deve ter um caso de padrão para passar a exceção ou não.  
+## <a name="remarks"></a>Remarks  
+ The DE must have a default action for passing to the debuggee. The IDE may receive the [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) event and call the [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md) method without calling the `CanPassToDebuggee` method. Therefore, the DE should have a default case for passing the exception on or not.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   
- [Continuar](../../../extensibility/debugger/reference/idebugprocess3-continue.md)
+ [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)

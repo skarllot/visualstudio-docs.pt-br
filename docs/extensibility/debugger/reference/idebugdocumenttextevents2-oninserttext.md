@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents2::onInsertText | Documentos do Microsoft
+title: IDebugDocumentTextEvents2::onInsertText | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,41 +30,42 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: beb6e8706608a482643c868911c1f8ad11db18d7
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f851ac5f28d1f6b7e06fe5bd9fb74f3f27aa1771
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugdocumenttextevents2oninserttext"></a>IDebugDocumentTextEvents2::onInsertText
-Notifica o pacote de depuração que o texto foi inserido no documento.  
+Notifies the debug package that text has been inserted into the document.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT onInsert(   
    TEXT_POSITION pos,  
    DWORD         dwNumToInsert  
 );  
 ```  
   
-```c#  
+```csharp  
 int onInsert(   
    enum_TEXT_POSITION pos,  
    uint               dwNumToInsert  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pos`  
- [in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) estrutura que indica onde o texto foi inserido.  
+ [in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that indicates where the text was inserted.  
   
  `dwNumToInsert`  
- [in] Especifica o número de caracteres de texto que foram inseridas.  
+ [in] Specifies the number of characters of text that were inserted.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   
  [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

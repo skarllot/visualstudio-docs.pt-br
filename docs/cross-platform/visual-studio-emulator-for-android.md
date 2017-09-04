@@ -1,7 +1,7 @@
 ---
 title: Emulador do Visual Studio para Android | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 07f3e972f06707f21543b5a70c9712d9706a3980
+ms.translationtype: HT
+ms.sourcegitcommit: fd35d38110fdd82d8748a57701d15dcc1933053e
+ms.openlocfilehash: 9a0dc7e7d771fa13300c8287096e330633461400
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="visual-studio-emulator-for-android"></a>Emulador do Visual Studio para Android
@@ -39,23 +39,10 @@ O Emulador do Visual Studio para Android é um aplicativo de área de trabalho q
   
  O Emulador do Visual Studio para Android foi projetado para fornecer um desempenho comparável a um dispositivo real. Porém, antes de publicar seu aplicativo, recomendamos que você teste-o em um dispositivo físico.  
   
- Teste seu aplicativo em um perfil de dispositivo exclusivo para cada uma das plataformas Android, resoluções de tela e outras propriedades de hardware com suporte do Emulador do Visual Studio para Android.  
-  
- Este tópico contém as seções a seguir.  
-  
--   [Instalação e desinstalação](#Installing)  
-  
--   [Requisitos do sistema e compatibilidade com versões anteriores](#Requirements)  
-  
--   [Rede no Emulador do Visual Studio para Android](#Networking)  
-  
--   [Configurar o Emulador do Visual Studio para Android](#Configuring)  
-  
--   [Recursos que você pode testar no emulador](#FeaturesTest)  
-  
--   [Recursos que você não pode testar no emulador](#FeaturesNonTest)  
-  
--   [Recursos de suporte](#Support)  
+ Teste seu aplicativo em um perfil de dispositivo exclusivo para cada uma das plataformas Android, resoluções de tela e outras propriedades de hardware com suporte do Emulador do Visual Studio para Android.
+
+> [!NOTE]
+> O emulador do Google Android é recomendado para uso com as Ferramentas do Visual Studio para Apache Cordova. Para saber mais, confira [Executar seu aplicativo Apache Cordova no Android](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#a-idgoogle-android-emulatora-run-on-the-google-android-emulator).
   
 ##  <a name="Installing"></a>Instalação e desinstalação  
  Instalando o  

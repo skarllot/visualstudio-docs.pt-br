@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::SetObjectForVisualizer | Documentos do Microsoft
+title: IEEVisualizerDataProvider::SetObjectForVisualizer | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a7935d07bc667d03ff6fe6a4efe07f3fe46f768d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 235fe7aa4f21068f3b218a4286d457a02940a335
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="ieevisualizerdataprovidersetobjectforvisualizer"></a>IEEVisualizerDataProvider::SetObjectForVisualizer
-Esse método altera o objeto que representa o visualizador.  
+This method changes the object that the visualizer represents.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT SetObjectForVisualizer(  
@@ -49,7 +50,7 @@ HRESULT SetObjectForVisualizer(
 );  
 ```  
   
-```c#  
+```csharp  
 int SetObjectForVisualizer(  
    IDebugObject     pNewObject,  
    out string       error,  
@@ -57,22 +58,22 @@ int SetObjectForVisualizer(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pNewObject`  
- [in] O objeto a ser definido.  
+ [in] The object to set.  
   
  `error`  
- [out] Se houver um erro ao configurar o objeto, essa cadeia de caracteres contém a mensagem de erro.  
+ [out] If there was an error setting the object, this string holds the error message.  
   
  `pException`  
- [out] Se houver um erro, esse objeto contém as informações de exceção.  
+ [out] If there was an error, this object holds the exception information.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Cabe ao implementador para determinar como as informações de erro são retornadas. No entanto, é possível que alguns chamadores podem apenas verificar se um objeto de exceção foi retornado sabemos que existe foi um erro, então esse método sempre deve retornar um objeto de exceção se ocorreu um erro. A cadeia de caracteres de erro também deve ser fornecida caso o chamador quiser tornar usá-lo.  
+## <a name="remarks"></a>Remarks  
+ It is up to the implementer to determine how error information is returned. However, it is possible that some callers may only look to see if an exception object was returned to know there was an error, so this method should always return an exception object if there was an error. The error string should also be supplied in case the caller wants to make use of it.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

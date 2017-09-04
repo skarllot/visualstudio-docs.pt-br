@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumCodePaths | Documentos do Microsoft
+title: IDebugProgram2::EnumCodePaths | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5184e2d8e2e6589091fcc215ed789a4d679c2988
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: a70dc85a37f593fc56751a2890b85422b0d193d0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprogram2enumcodepaths"></a>IDebugProgram2::EnumCodePaths
-Recupera uma lista dos caminhos de código para uma posição especificada em um arquivo de origem.  
+Retrieves a list of the code paths for a given position in a source file.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT EnumCodePaths(   
    LPCOLESTR            pszHint,  
    IDebugCodeContext2*  pStart,  
@@ -52,7 +53,7 @@ HRESULT EnumCodePaths(
 );  
 ```  
   
-```c#  
+```csharp  
 int EnumCodePaths(   
    string                 pszHint,  
    IDebugCodeContext2     pStart,  
@@ -63,32 +64,32 @@ int EnumCodePaths(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pszHint`  
- [in] A palavra sob o cursor no **fonte** ou **desmontagem** exibição no IDE.  
+ [in] The word under the cursor in the **Source** or **Disassembly** view in the IDE.  
   
  `pStart`  
- [in] Um [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objeto que representa o contexto de código atual.  
+ [in] An [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) object representing the current code context.  
   
  `pFrame`  
- [in] Um [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) que representa o quadro de pilha associado com o ponto de interrupção atual do objeto.  
+ [in] An [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) object representing the stack frame associated with the current breakpoint.  
   
  `fSource`  
- [in] Diferente de zero (`TRUE`) se estiver no **fonte** exibição ou zero (`FALSE`) se estiver no **desmontagem** exibição.  
+ [in] Nonzero (`TRUE`) if in the **Source** view, or zero (`FALSE`) if in the **Disassembly** view.  
   
  `ppEnum`  
- [out] Retorna um [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md) objeto que contém uma lista dos caminhos de código.  
+ [out] Returns an [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md) object containing a list of the code paths.  
   
  `ppSafety`  
- [out] Retorna um [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) do objeto que representa um contexto de código adicional a ser definido como um ponto de interrupção no caso de caminho de código escolhida é ignorada. Isso pode ocorrer no caso de uma expressão booleana curto-circuitada, por exemplo.  
+ [out] Returns an [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) object representing an additional code context to be set as a breakpoint in case the chosen code path is skipped. This can happen in the case of a short-circuited Boolean expression, for example.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Um caminho de código descreve o nome de um método ou função que foi chamada para chegar ao ponto atual na execução do programa. Uma lista de caminhos de código representa a pilha de chamadas.  
+## <a name="remarks"></a>Remarks  
+ A code path describes the name of a method or function that was called to get to the current point in the execution of the program. A list of code paths represents the call stack.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   

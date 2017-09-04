@@ -1,62 +1,80 @@
 ---
-title: "InvokeMethod Activity Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "System.Activities.Statements.InvokeMethod.UI"
+title: InvokeMethod Activity Designer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- System.Activities.Statements.InvokeMethod.UI
 ms.assetid: 15e6efdc-52ca-46d8-9c5e-063f7c8265a6
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: d89a87b211a25845c6656087c1997784dfdc3dc0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
+
 ---
-# InvokeMethod Activity Designer
-o designer de**InvokeMethod** é usado para criar e configurar uma atividade de <xref:System.Activities.Statements.InvokeMethod> .  
+# <a name="invokemethod-activity-designer"></a>InvokeMethod Activity Designer
+**InvokeMethod** designer is used to create and configure an <xref:System.Activities.Statements.InvokeMethod> activity.  
   
-## A atividade de InvokeMethod  
- <xref:System.Activities.Statements.InvokeMethod> chama um método público de um objeto ou tipo especificado.  
+## <a name="the-invokemethod-activity"></a>The InvokeMethod Activity  
+ The <xref:System.Activities.Statements.InvokeMethod> calls a public method of a specified object or type.  
   
-### Usando o designer de atividade de InvokeMethod  
- O designer de atividade de **InvokeMethod** pode ser encontrado na categoria de **Primitivas** de **Caixa de Ferramentas**, que é acessada clicando na guia [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] de **Caixa de Ferramentas** \(como alternativa, **Barra de Ferramentas** partir do menu de **Modo de Visualização** , ou CRTL\+ALT\+X.\)  
+### <a name="using-the-invokemethod-activity-designer"></a>Using the InvokeMethod Activity Designer  
+ The **InvokeMethod** activity designer can be found in the **Primitives** category of the **Toolbox**, which is accessed by clicking the **Toolbox** tab [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (Alternatively, select **Toolbar** from the **View** menu, or CRTL+ALT+X.)  
   
- O designer de atividade de **InvokeMethod** pode ser arrastado de **Caixa de Ferramentas** e ser solto sobre a superfície de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] onde as atividades nunca são colocadas em geral, como em <xref:System.Activities.Statements.Sequence>.  Isso cria uma atividade de <xref:System.Activities.Statements.InvokeMethod> com <xref:System.Activities.Activity.DisplayName%2A> padrão de InvokeMethod.  <xref:System.Activities.Activity.DisplayName%2A> pode ser editado no cabeçalho do designer de atividade de **InvokeMethod** ou na caixa de **DisplayName** da grade de propriedade.  
+ The **InvokeMethod** activity designer can be dragged from the **Toolbox** and dropped on to the [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] surface where ever activities are usually placed, such as inside a <xref:System.Activities.Statements.Sequence>. This creates an <xref:System.Activities.Statements.InvokeMethod> activity with a default <xref:System.Activities.Activity.DisplayName%2A> of InvokeMethod. The <xref:System.Activities.Activity.DisplayName%2A> can be edited in the header of the **InvokeMethod** activity designer or in the **DisplayName** box of the property grid.  
   
-### As propriedades de InvokeMethod  
- A tabela a seguir mostra as propriedades de <xref:System.Activities.Statements.InvokeMethod> e descreve como elas são usadas no designer.  Essas propriedades podem ser editadas na grade de propriedade e alguns podem ser editados na superfície do designer de [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)].  
+### <a name="the-invokemethod-properties"></a>The InvokeMethod Properties  
+ The following table shows the <xref:System.Activities.Statements.InvokeMethod> properties and describes how they are used in the designer. These properties can be edited in property grid and some can be edited on [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]designer surface.  
   
-|Nome da propriedade|Obrigatório|Uso|  
-|-------------------------|-----------------|---------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|O nome amigável de atividade de <xref:System.Activities.Statements.InvokeMethod> .  O valor padrão é InvokeMethod.<br /><br /> Embora não seja necessário <xref:System.Activities.Activity.DisplayName%2A> restrita, é uma prática recomendada usar um.|  
-|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|True|O nome do método a ser chamado quando a atividade executar.  O método chamado deve ser declarado como **public**.  Esta propriedade pode ser editada na superfície de designer.  Esta é uma propriedade imperativa.|  
-|<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|False|A coleção de parâmetros do método chamado.  Os parâmetros devem ser adicionados à coleção na mesma ordem que eles aparecem na assinatura de método.  Na grade de propriedade, clique no botão de reticências no campo de **Parâmetros** , ele exibe a caixa de diálogo **Parâmetros** para permitir que você definir essa propriedade.  Clique no botão de **Criar Argumento** para adicionar os parâmetros.|  
-|<xref:System.Activities.Statements.InvokeMethod.Result%2A>|False|O valor de retorno de chamada de método.|  
-|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|True|Especifica se o método é chamado de forma assíncrona.  O valor padrão é **False**.|  
-|<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|False|O objeto que contém o método para chamar.  Esta propriedade pode ser editada na superfície de designer.<br /><br /> <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> ou <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> são necessários para ser definidos.|  
-|<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|False|O tipo de <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>.  Esta propriedade pode ser editada na superfície de designer.  Esta propriedade deve ser definida somente se o método é chamado estático.|  
+|Property Name|Required|Usage|  
+|-------------------|--------------|-----------|  
+|<xref:System.Activities.Activity.DisplayName%2A>|False|The friendly name of the <xref:System.Activities.Statements.InvokeMethod> activity. The default value is InvokeMethod.<br /><br /> Although the <xref:System.Activities.Activity.DisplayName%2A> is not strictly required, it is a best practice to use one.|  
+|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|True|The name of the method to be called when the activity executes. The called method must be declared as **public**. This property can be edited on designer surface. This is a mandatory property.|  
+|<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|False|The parameter collection of the called method. The parameters must be added to the collection in the same order that they appear in the method signature. In the property grid, click the ellipsis button in the **Parameters** field, it displays the **Parameters** dialog to let you set this property. Click the **Create Argument** button to add the parameters.|  
+|<xref:System.Activities.Statements.InvokeMethod.Result%2A>|False|The return value of the method call.|  
+|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|True|Specifies whether the method is called asynchronously. The default value is **False**.|  
+|<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|False|The object that contains the method to call. This property can be edited on designer surface.<br /><br /> Either the <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> or the <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> is required to be set.|  
+|<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|False|The type of <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>. This property can be edited on the designer surface. This property must only be set if the method called is static.|  
   
- Para passar parâmetros como um parâmetro C\# **out** \(por exemplo, `Method1(out myParam)),` você deve usar **OutArgument** em vez de **InOutArgument**  
+ To pass parameters as a C# **out** parameter (for example, `Method1(out myParam)),` you should use **OutArgument** instead of **InOutArgument**  
   
- Os métodos com argumentos chamaram **TargetObject** ou **Result** não pode ser chamado usando a atividade de <xref:System.Activities.Statements.InvokeMethod> .  A razão para isso é que registros de atividade de <xref:System.Activities.Statements.InvokeMethod> <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A>, <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> e <xref:System.Activities.Statements.InvokeMethod.Result%2A> em <xref:System.Activities.Activity.CacheMetadata%2A>.  
+ Methods with arguments called **TargetObject** or **Result** cannot be invoked using the <xref:System.Activities.Statements.InvokeMethod> activity. The reason for this is that <xref:System.Activities.Statements.InvokeMethod> activity registers the <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A>, <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> and <xref:System.Activities.Statements.InvokeMethod.Result%2A> in <xref:System.Activities.Activity.CacheMetadata%2A>.  
   
- O algoritmo para registrar os parâmetros em <xref:System.Activities.Activity.CacheMetadata%2A> é mostrado na lista a seguir:  
+ The algorithm for registering the parameters in <xref:System.Activities.Activity.CacheMetadata%2A> is shown in the following list:  
   
-1.  Argumento de <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> do registro.  
+1.  Register <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> argument.  
   
-2.  Argumento de <xref:System.Activities.Statements.InvokeMethod.Result%2A> do registro.  
+2.  Register <xref:System.Activities.Statements.InvokeMethod.Result%2A> argument.  
   
-3.  Iterar através da coleção de <xref:System.Activities.Statements.InvokeMethod.Parameters%2A> e registrar cada argumento.  
+3.  Iterate through the <xref:System.Activities.Statements.InvokeMethod.Parameters%2A> collection and register each argument.  
   
- A exceção resultante é do tipo <xref:System.Activities.InvalidWorkflowException> com a seguinte mensagem: “InvokeMethod”: Uma variável, RuntimeArgument ou um DelegateArgument já existem com o nome “TargetObject”.  Nomes devem ser exclusivos dentro do escopo de ambiente.  
+ The resulting exception is of type <xref:System.Activities.InvalidWorkflowException> with the following message: 'InvokeMethod': A variable, RuntimeArgument or a DelegateArgument already exists with the name 'TargetObject'. Names must be unique within an environment scope.  
   
- Essa limitação não se aplica a <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> e a <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A> porque não são argumentos de fluxo de trabalho e portanto não são registrados na coleção de <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> de atividade de <xref:System.Activities.Statements.InvokeMethod> no método de <xref:System.Activities.Activity.CacheMetadata%2A> .  
+ This restriction does not apply to <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> and <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A> because they are not workflow arguments and therefore are not registered in the <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> collection of <xref:System.Activities.Statements.InvokeMethod> activity in <xref:System.Activities.Activity.CacheMetadata%2A> method.  
   
-## Consulte também  
+## <a name="see-also"></a>See Also  
  [Primitives](../workflow-designer/primitives-activity-designers.md)   
  [Assign](../workflow-designer/assign-activity-designer.md)   
  [Delay](../workflow-designer/delay-activity-designer.md)   

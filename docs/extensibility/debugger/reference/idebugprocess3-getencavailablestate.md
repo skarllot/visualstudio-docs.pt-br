@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::GetENCAvailableState | Documentos do Microsoft
+title: IDebugProcess3::GetENCAvailableState | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 716df9e224a90706c4ebd1102b2b5a2a5dbe218f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 27b6a70b0c262170a3797ba10e1833efe9c6e780
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprocess3getencavailablestate"></a>IDebugProcess3::GetENCAvailableState
-Esse método obtém o estado atual de editar e continuar o processo. Um fornecedor de porta personalizada deve retornar sempre `E_NOTIMPL`.  
+This method gets the current Edit and Continue state of the process. A custom port supplier should always return `E_NOTIMPL`.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetENCAvailableState(  
@@ -47,26 +48,26 @@ HRESULT GetENCAvailableState(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetENCAvailableState(  
    EncUnavailableReason[] pReason  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pReason`  
- [out] Um valor a partir de [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) enumeração.  
+ [out] A value from the [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) enumeration.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns error code.  
   
 > [!NOTE]
->  Um fornecedor de porta personalizada deve retornar sempre `E_NOTIMPL`.  
+>  A custom port supplier should always return `E_NOTIMPL`.  
   
-## <a name="remarks"></a>Comentários  
- Esse estado pode ser afetado por [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md).  
+## <a name="remarks"></a>Remarks  
+ This state can be affected by [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)   
  [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md)

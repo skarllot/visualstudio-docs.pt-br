@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::EvaluateSync | Documentos do Microsoft
+title: IDebugExpression2::EvaluateSync | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f9a3117bf8cf90a4d883f61cd2703e76762dd23e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 9bed4781641156603e0624b4b8635faaa5d82e06
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
-Esse método avalia a expressão de forma síncrona.  
+This method evaluates the expression synchronously.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT EvaluateSync(   
    EVALFLAGS             dwFlags,  
    DWORD                 dwTimeout,  
@@ -50,7 +51,7 @@ HRESULT EvaluateSync(
 );  
 ```  
   
-```c#  
+```csharp  
 int EvaluateSync(  
    enum_EVALFLAGS       dwFlags,   
    uint                 dwTimeout,   
@@ -59,34 +60,34 @@ int EvaluateSync(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `dwFlags`  
- [in] Uma combinação de sinalizadores do [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeração que controlam a avaliação da expressão.  
+ [in] A combination of flags from the [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeration that control expression evaluation.  
   
  `dwTimeout`  
- [in] Tempo máximo, em milissegundos, para aguardar antes de retornar desse método. Use `INFINITE` para aguardar indefinidamente.  
+ [in] Maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
   
  `pExprCallback`  
- [in] Esse parâmetro é sempre um valor nulo.  
+ [in]This parameter is always a null value.  
   
  `ppResult`  
- [out] Retorna o [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto que contém o resultado da avaliação de expressão.  
+ [out] Returns the [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object that contains the result of the expression evaluation.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Alguns códigos de erro comum são:  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns an error code. Some typical error codes are:  
   
-|Erro|Descrição|  
+|Error|Description|  
 |-----------|-----------------|  
-|E_EVALUATE_BUSY_WITH_EVALUATION|Outra expressão atualmente está sendo avaliada, e não há suporte para a avaliação da expressão simultâneas.|  
-|E_EVALUATE_TIMEOUT|Avaliação expirou.|  
+|E_EVALUATE_BUSY_WITH_EVALUATION|Another expression is currently being evaluated, and simultaneous expression evaluation is not supported.|  
+|E_EVALUATE_TIMEOUT|Evaluation timed out.|  
   
-## <a name="remarks"></a>Comentários  
- Para avaliação síncrona, não é necessário enviar um evento ao Visual Studio após a conclusão da avaliação.  
+## <a name="remarks"></a>Remarks  
+ For synchronous evaluation, it is not necessary to send an event back to Visual Studio upon completion of the evaluation.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um simples `CExpression` objeto que implementa o [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) interface.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CExpression` object that implements the [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CExpression::EvaluateSync(EVALFLAGS dwFlags,  
                                   DWORD dwTimeout,  
                                   IDebugEventCallback2* pExprCallback,  
@@ -131,7 +132,7 @@ HRESULT CExpression::EvalExpression(BOOL bSynchronous,
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   
  [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   

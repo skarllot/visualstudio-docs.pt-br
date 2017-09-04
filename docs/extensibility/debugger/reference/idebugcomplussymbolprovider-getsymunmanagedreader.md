@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetSymUnmanagedReader | Documentos do Microsoft
+title: IDebugComPlusSymbolProvider::GetSymUnmanagedReader | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,18 +29,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a0eee5bfddbabad273866d70c07009140ff383f4
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: d48e01442cca27e602e8c726db7ebd3997b33d8c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugcomplussymbolprovidergetsymunmanagedreader"></a>IDebugComPlusSymbolProvider::GetSymUnmanagedReader
-Recupera o leitor de símbolo a ser usado pelo código não gerenciado.  
+Retrieves the symbol reader to be used by unmanaged code.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetSymUnmanagedReader(  
    ULONG32    ulAppDomainID,  
    GUID       guidModule,  
@@ -48,7 +49,7 @@ HRESULT GetSymUnmanagedReader(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetSymUnmanagedReader(  
    uint       ulAppDomainID,  
    Guid       guidModule,  
@@ -56,23 +57,23 @@ int GetSymUnmanagedReader(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- [in] Identificador do domínio do aplicativo.  
+ [in] Identifier of the application domain.  
   
  `guidModule`  
- [in] Identificador exclusivo do módulo.  
+ [in] Unique identifier of the module.  
   
  `ppSymUnmanagedReader`  
- [out] Retorna o objeto que representa o leitor do símbolo.  
+ [out] Returns the object that represents the symbol reader.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::GetSymUnmanagedReader(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -95,5 +96,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

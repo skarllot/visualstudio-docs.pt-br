@@ -1,70 +1,85 @@
 ---
-title: "CA2236: chamar m&#233;todos de classe base em tipos ISerializable | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2236"
-  - "CallBaseClassMethodsOnISerializableTypes"
-helpviewer_keywords: 
-  - "CA2236"
-  - "CallBaseClassMethodsOnISerializableTypes"
+title: 'CA2236: Call base class methods on ISerializable types | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2236
+- CallBaseClassMethodsOnISerializableTypes
+helpviewer_keywords:
+- CA2236
+- CallBaseClassMethodsOnISerializableTypes
 ms.assetid: 5a15b20d-769c-4640-b31a-36e07077daae
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2236: chamar m&#233;todos de classe base em tipos ISerializable
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: ae87df4ff5efceee22fc76f6449ac8c3c9993e8b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2236-call-base-class-methods-on-iserializable-types"></a>CA2236: Call base class methods on ISerializable types
 |||  
 |-|-|  
 |TypeName|CallBaseClassMethodsOnISerializableTypes|  
 |CheckId|CA2236|  
-|Categoria|Microsoft.Usage|  
-|Alteração Significativa|Sem Quebra|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## Causa  
- Um tipo é derivado de um tipo que implementa a interface de <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> , e uma das seguintes condições for verdadeira:  
+## <a name="cause"></a>Cause  
+ A type derives from a type that implements the <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> interface, and one of the following conditions is true:  
   
--   O tipo implementa o construtor de serialização, isto é, um construtor com <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>, assinatura do parâmetro de <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> , mas não chama o construtor de serialização do tipo de base.  
+-   The type implements the serialization constructor, that is, a constructor with the <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>, <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> parameter signature, but does not call the serialization constructor of the base type.  
   
--   O tipo implementa o método de <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> mas não chama o método de <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> do tipo de base.  
+-   The type implements the <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> method but does not call the <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method of the base type.  
   
-## Descrição da Regra  
- Em um processo de serialização personalizada, um tipo implementa o método de <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> para serializar seus campos e o construtor de serialização MDS para serializar os campos.  Se o tipo se deriva de um tipo que implementa a interface de <xref:System.Runtime.Serialization.ISerializable> , o construtor do método e de serialização do <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> do tipo de base deve ser chamado a serialize\/de\-serialize os campos de tipo base.  Caso contrário, o tipo não será serializado e o MDS não será serializado corretamente.  Observe que se o tipo derivado não adiciona os novos campos, o tipo não precisa implementar o método de <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> nem o construtor de serialização ou de chamar os equivalentes do tipo de base.  
+## <a name="rule-description"></a>Rule Description  
+ In a custom serialization process, a type implements the <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method to serialize its fields and the serialization constructor to de-serialize the fields. If the type derives from a type that implements the <xref:System.Runtime.Serialization.ISerializable> interface, the base type <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method and serialization constructor should be called to serialize/de-serialize the fields of the base type. Otherwise, the type will not be serialized and de-serialized correctly. Note that if the derived type does not add any new fields, the type does not need to implement the <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method nor the serialization constructor or call the base type equivalents.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, chame o método ou do construtor de serialização do <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> do tipo de base do método correspondentes derivado do tipo ou o construtor.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, call the base type <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method or serialization constructor from the corresponding derived type method or constructor.  
   
-## Quando Suprimir Alertas  
- Não elimine um alerta desta regra.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Exemplo  
- O exemplo a seguir mostra um tipo derivado que satisfaça a regra chamando o método do construtor e de <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> de serialização da classe base.  
+## <a name="example"></a>Example  
+ The following example shows a derived type that satisfies the rule by calling the serialization constructor and <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method of the base class.  
   
- [!code-vb[FxCop.Usage.CallBaseISerializable#1](../code-quality/codesnippet/VisualBasic/ca2236-call-base-class-methods-on-iserializable-types_1.vb)]
- [!code-cs[FxCop.Usage.CallBaseISerializable#1](../code-quality/codesnippet/CSharp/ca2236-call-base-class-methods-on-iserializable-types_1.cs)]  
+ [!code-vb[FxCop.Usage.CallBaseISerializable#1](../code-quality/codesnippet/VisualBasic/ca2236-call-base-class-methods-on-iserializable-types_1.vb)] [!code-csharp[FxCop.Usage.CallBaseISerializable#1](../code-quality/codesnippet/CSharp/ca2236-call-base-class-methods-on-iserializable-types_1.cs)]  
   
-## Regras Relacionadas  
- [CA2240: implementar ISerializable corretamente](../Topic/CA2240:%20Implement%20ISerializable%20correctly.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA2240: Implement ISerializable correctly](../code-quality/ca2240-implement-iserializable-correctly.md)  
   
- [CA2229: implementar construtores de serialização](../code-quality/ca2229-implement-serialization-constructors.md)  
+ [CA2229: Implement serialization constructors](../code-quality/ca2229-implement-serialization-constructors.md)  
   
- [CA2238: implementar métodos de serialização corretamente](../code-quality/ca2238-implement-serialization-methods-correctly.md)  
+ [CA2238: Implement serialization methods correctly](../code-quality/ca2238-implement-serialization-methods-correctly.md)  
   
- [CA2235: marcar todos os campos não serializáveis](../code-quality/ca2235-mark-all-non-serializable-fields.md)  
+ [CA2235: Mark all non-serializable fields](../code-quality/ca2235-mark-all-non-serializable-fields.md)  
   
- [CA2237: marcar tipos ISerializable com SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)  
+ [CA2237: Mark ISerializable types with SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)  
   
- [CA2239: fornecer métodos de desserialização para campos opcionais](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)  
+ [CA2239: Provide deserialization methods for optional fields](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)  
   
- [CA2120: proteger construtores de serialização](../Topic/CA2120:%20Secure%20serialization%20constructors.md)
+ [CA2120: Secure serialization constructors](../code-quality/ca2120-secure-serialization-constructors.md)

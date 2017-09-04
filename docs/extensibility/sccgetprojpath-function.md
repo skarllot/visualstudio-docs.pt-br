@@ -1,5 +1,5 @@
 ---
-title: "Função SccGetProjPath | Documentos do Microsoft"
+title: SccGetProjPath Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,24 +30,25 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 551fe26fe20da62d6892a8c7e807cf6c22600fc8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b45e9a9f33bd5f1b30ee0f300385ef984ce1bc0b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sccgetprojpath-function"></a>Função SccGetProjPath
-Essa função solicita ao usuário um caminho de projeto, que é uma cadeia de caracteres que é significativa apenas para o plug-in de controle de origem. Ele é chamado quando o usuário é:  
+# <a name="sccgetprojpath-function"></a>SccGetProjPath Function
+This function prompts the user for a project path, which is a string that is meaningful only to the source control plug-in. It is called when the user is:  
   
--   Criar um novo projeto  
+-   Creating a new project  
   
--   Adicionar um projeto existente para controle de versão  
+-   Adding an existing project to version control  
   
--   A tentativa de encontrar um projeto de controle de versão existente  
+-   Attempting to find an existing version control project  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccGetProjPath (  
    LPVOID pvContext,  
    HWND   hWnd,  
@@ -60,68 +61,68 @@ SCCRTN SccGetProjPath (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- [in] A estrutura de contexto de plug-in de controle de origem.  
+ [in] The source control plug-in context structure.  
   
  hWnd  
- [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para as caixas de diálogo que ele fornece.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  lpUser  
- [no, out] O nome de usuário (não deve exceder SCC_USER_SIZE, incluindo o terminador nulo)  
+ [in, out] The user name (not to exceed SCC_USER_SIZE, including the NULL terminator)  
   
  lpProjName  
- [no, out] O nome do projeto IDE, espaço de trabalho do projeto ou makefile (não deve exceder SCC_PRJPATH_SIZE, incluindo o terminador nulo).  
+ [in, out] The name of the IDE project, project workspace, or makefile (not to exceed SCC_PRJPATH_SIZE, including the NULL terminator).  
   
  lpLocalPath  
- [no, out] Caminho de trabalho do projeto. Se `bAllowChangePath` é `TRUE`, o plug-in de controle de origem pode modificar essa cadeia de caracteres (não deve exceder MAX_PATH, incluindo o terminador nulo).  
+ [in, out] The project's working path. If `bAllowChangePath` is `TRUE`, the source control plug-in can modify this string (not to exceed _MAX_PATH, including the null-terminator).  
   
  lpAuxProjPath  
- [no, out] Um buffer para o caminho retornado do projeto (não deve exceder SCC_PRJPATH_SIZE, incluindo o terminador nulo).  
+ [in, out] A buffer for the returned project path (not to exceed SCC_PRJPATH_SIZE, including the NULL terminator).  
   
  bAllowChangePath  
- [in] Se isso for `TRUE`, o plug-in de controle de origem pode solicitar e modificar o `lpLocalPath` cadeia de caracteres.  
+ [in] If this is `TRUE`, the source control plug-in can prompt for and modify the `lpLocalPath` string.  
   
  pbNew  
- [no, out] Valor que indica se para criar um novo projeto. Valor retornado indica o êxito da criação de um projeto:  
+ [in, out] Value coming in indicates whether to create a new project. Value returned indicates success of creating a project:  
   
-|Entrada|Interpretação|  
+|Incoming|Interpretation|  
 |--------------|--------------------|  
-|TRUE|O usuário pode criar um novo projeto.|  
-|FALSE|O usuário não pode criar um novo projeto.|  
+|TRUE|The user may create a new project.|  
+|FALSE|The user may not create a new project.|  
   
-|Saída|Interpretação|  
+|Outgoing|Interpretation|  
 |--------------|--------------------|  
-|TRUE|Um novo projeto foi criado.|  
-|FALSE|Um projeto existente foi selecionado.|  
+|TRUE|A new project was created.|  
+|FALSE|An existing project was selected.|  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|SCC_OK|O projeto foi criado com êxito ou recuperado.|  
-|SCC_I_OPERATIONCANCELED|A operação foi cancelada.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção.|  
-|SCC_E_CONNECTIONFAILURE|Houve um problema ao tentar se conectar ao sistema de controle de origem.|  
-|SCC_E_NONSPECIFICERROR|Ocorreu um erro não especificado.|  
+|SCC_OK|The project was successfully created or retrieved.|  
+|SCC_I_OPERATIONCANCELED|The operation was canceled.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues.|  
+|SCC_E_CONNECTIONFAILURE|There was a problem trying to connect to the source control system.|  
+|SCC_E_NONSPECIFICERROR|An unspecified error occurred.|  
   
-## <a name="remarks"></a>Comentários  
- O objetivo dessa função é o IDE adquirir os parâmetros `lpProjName` e `lpAuxProjPath`. Depois que o plug-in de controle de origem solicita ao usuário essas informações, ele passa essas duas cadeias de caracteres para o IDE. O IDE persistir essas cadeias de caracteres em seu arquivo de solução e os passa para o [SccOpenProject](../extensibility/sccopenproject-function.md) sempre que o usuário abre este projeto. Essas cadeias de caracteres habilitem o plug-in acompanhar informações associadas a um projeto.  
+## <a name="remarks"></a>Remarks  
+ The purpose of this function is for the IDE to acquire the parameters `lpProjName` and `lpAuxProjPath`. After the source control plug-in prompts the user for this information, it passes these two strings back to the IDE. The IDE persists these strings in its solution file and passes them to the [SccOpenProject](../extensibility/sccopenproject-function.md) whenever the user opens this project. These strings enable the plug-in to track information associated with a project.  
   
- Quando a função é chamada pela primeira vez, `lpAuxProjPath` é definido como uma cadeia de caracteres vazia. `lProjName`também pode ser vazio, ou pode conter o nome do projeto IDE que o plug-in de controle de origem pode usar ou ignorar. Quando a função retorna com êxito, o plug-in retorna as duas cadeias de caracteres correspondentes. O IDE não faz nenhuma suposição sobre essas cadeias de caracteres, não irá usá-los e não permitirá que o usuário para modificá-las. Se o usuário deseja alterar as configurações, o IDE irá chamar `SccGetProjPath` novamente, passando os mesmos valores ele recebeu a hora anterior. Assim, o plug-in controle total sobre essas duas cadeias de caracteres.  
+ When the function is first called, `lpAuxProjPath` is set to an empty string. `lProjName` may also be empty, or it may contain the IDE project name, which the source control plug-in may use or ignore. When the function successfully returns, the plug-in returns the two corresponding strings. The IDE makes no assumptions about these strings, will not use them, and will not allow the user to modify them. If the user wants to change the settings, the IDE will call `SccGetProjPath` again, passing in the same values it had received the previous time. This gives the plug-in complete control over these two strings.  
   
- Para `lpUser`, o IDE pode passar um nome de usuário ou pode simplesmente passar em um ponteiro para uma cadeia de caracteres vazia. Se houver um nome de usuário, o plug-in de controle de origem deve usá-lo como um padrão. No entanto, se nenhum nome foi aprovado ou falha de logon com o nome especificado, o plug-in deve solicitar ao usuário um logon e passar o nome de volta `lpUser` quando ele recebe um logon válido. Como o plug-in pode alterar essa cadeia de caracteres, o IDE sempre será alocar um buffer de tamanho (`SCC_USER_LEN`+&1;).  
+ For `lpUser`, the IDE may pass in a user name, or it may simply pass in a pointer to an empty string. If there is a user name, the source control plug-in should use it as a default. However, if no name was passed or if the login failed with the given name, the plug-in should prompt the user for a login and pass the name back in `lpUser` when it receives a valid login. Because the plug-in may change this string, the IDE will always allocate a buffer of size (`SCC_USER_LEN`+1).  
   
 > [!NOTE]
->  A primeira ação que executa o IDE pode ser uma chamada para o `SccOpenProject` função ou o `SccGetProjPath` função. Portanto, ambos têm um idênticos `lpUser` parâmetro, que permite que o controle de origem plug-in para conectar o usuário a qualquer momento. Mesmo que o retorno da função indica uma falha, o plug-in deve preencher essa cadeia de caracteres com um nome de logon válido.  
+>  The first action that the IDE performs may be a call to either the `SccOpenProject` function or the `SccGetProjPath` function. Hence, both of them have an identical `lpUser` parameter, which enables the source control plug-in to log the user in at either time. Even if the return from the function indicates a failure, the plug-in must fill this string with a valid login name.  
   
- `lpLocalPath`é o diretório onde o usuário mantém o projeto. Pode ser uma cadeia de caracteres vazia. Se não houver nenhum diretório definido atualmente (como no caso de um usuário tentar baixar um projeto do sistema de controle de origem) e se `bAllowChangePath` é `TRUE`, o plug-in de controle de origem pode solicitar entrada do usuário ou usar algum outro método para inserir sua própria cadeia de caracteres em `lpLocalPath`. Se `bAllowChangePath` é `FALSE`, o plug-in não deve alterar a cadeia de caracteres, porque o usuário já estiver trabalhando no diretório especificado.  
+ `lpLocalPath` is the directory where the user keeps the project. It may be an empty string. If there is no directory currently defined (as in the case of a user attempting to download a project from the source control system) and if `bAllowChangePath` is `TRUE`, the source control plug-in can prompt the user for input or use some other method to place its own string into `lpLocalPath`. If `bAllowChangePath` is `FALSE`, the plug-in should not change the string, because the user is already working in the specified directory.  
   
- Se o usuário cria um novo projeto a ser colocado sob controle de origem, o plug-in de controle de origem pode não realmente criá-lo no sistema de controle de origem no momento `SccGetProjPath` é chamado. Em vez disso, ele passa de volta a cadeia de caracteres juntamente com um valor diferente de zero para `pbNew`, indicando que o projeto será criado no sistema de controle de origem.  
+ If the user creates a new project to be put under source control, the source control plug-in might not actually create it in the source control system at the time `SccGetProjPath` is called. Instead, it passes back the string along with a nonzero value for `pbNew`, indicating that the project will be created in the source control system.  
   
- Por exemplo, se um usuário no **novo projeto** assistente no Visual Studio adiciona seu projeto ao controle de origem, o Visual Studio chama essa função e o plug-in determina se é okey criar um novo projeto no sistema de controle de origem para conter o projeto do Visual Studio. Se o usuário clicar **Cancelar** antes de concluir o assistente, o projeto nunca é criado. Se o usuário clicar **Okey**, o Visual Studio chama `SccOpenProject`, passando `SCC_OPT_CREATEIFNEW`, e o projeto de origem controlada é criado nesse momento.  
+ For example, if a user in the **New Project** wizard in Visual Studio adds his or her project to source control, Visual Studio calls this function, and the plug-in determines if it is okay to create a new project in the source control system to contain the Visual Studio project. If the user clicks **Cancel** before completing the wizard, the project is never created. If the user clicks **OK**, Visual Studio calls `SccOpenProject`, passing in `SCC_OPT_CREATEIFNEW`, and the source controlled project is created at that time.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)

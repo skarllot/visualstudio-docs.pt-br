@@ -1,0 +1,59 @@
+---
+title: 'How to: Programmatically Copy and Paste Shapes in a Visio Document | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- shapes [Office development in Visual Studio], copying and pasting Visio shapes
+- Visio [Office development in Visual Studio], copying and pasting Visio shapes
+ms.assetid: 762d95cf-2d5c-4dea-988b-8f4da88fa1f1
+caps.latest.revision: 15
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0a2603284a790ee940b8b20126e5994f35c59b65
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
+
+---
+# <a name="how-to-programmatically-copy-and-paste-shapes-in-a-visio-document"></a>How to: Programmatically Copy and Paste Shapes in a Visio Document
+  You can programmatically copy shapes on one page of a document and paste them into a new page in the same document. You can choose to paste them into the default location (the center of the active window) or into the same coordinate locations as they had on the original page.  
+  
+## <a name="copying-and-pasting-shapes"></a>Copying and Pasting Shapes  
+ For details about the object model, see the VBA reference documentation for the [Microsoft.Office.Interop.Visio.Shape.DrawRectangle](https://msdn.microsoft.com/library/office/ff765757.aspx), [Microsoft.Office.Interop.Visio.Shape.DrawOval](https://msdn.microsoft.com/library/office/ff767121.aspx), [Microsoft.Office.Interop.Visio.Shape.Copy](https://msdn.microsoft.com/library/office/ff765638.aspx), and [Microsoft.Office.Interop.Visio.Shape.Paste](https://msdn.microsoft.com/library/office/ff768361.aspx) methods and the [Microsoft.Office.Interop.Visio.VisCutCopyPasteCodes.visCopyPasteNormal](https://msdn.microsoft.com/library/office/ff765187.aspx) flag.  
+  
+#### <a name="to-copy-shapes-to-the-center-of-another-page"></a>To copy shapes to the center of another page  
+  
+-   The following example demonstrates how to copy the shapes from the first page and paste them into the center of the second page.  
+  
+     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#14](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#14)]  [!code-vb[Trin_VstcoreVisioAutomationAddIn#14](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#14)]  
+  
+## <a name="copying-and-pasting-shapes-with-the-same-positions"></a>Copying and Pasting Shapes With the Same Positions  
+ For details about the object model, see the VBA reference documentation for the [Microsoft.Office.Interop.Visio.Shape.DrawRectangle](https://msdn.microsoft.com/library/office/ff765757.aspx), [Microsoft.Office.Interop.Visio.Shape.DrawOval](https://msdn.microsoft.com/library/office/ff767121.aspx), [Microsoft.Office.Interop.Visio.Shape.Copy](https://msdn.microsoft.com/library/office/ff765638.aspx), and [Microsoft.Office.Interop.Visio.Shape.Paste](https://msdn.microsoft.com/library/office/ff768361.aspx) methods and the [Microsoft.Office.Interop.Visio.VisCutCopyPasteCodes.visCopyPasteNoTranslate](https://msdn.microsoft.com/library/office/ff765187.aspx) flag.  
+  
+ If you need to control the format of the pasted information and (optionally) establish a link to a source file (for example, a Microsoft Office Word document), use the PasteSpecial method.  
+  
+#### <a name="to-copy-shapes-and-shape-locations-to-another-page"></a>To copy shapes and shape locations to another page  
+  
+-   The following example demonstrates how to copy the shapes from the first page and paste them into the second page with their original coordinate locations.  
+  
+     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#15](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#15)]  [!code-vb[Trin_VstcoreVisioAutomationAddIn#15](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#15)]  
+  
+## <a name="see-also"></a>See Also  
+ [Visio Solutions](../vsto/visio-solutions.md)   
+ [Visio Object Model Overview](../vsto/visio-object-model-overview.md)   
+ [Working with Visio Shapes](../vsto/working-with-visio-shapes.md)   
+ [How to: Programmatically Add Shapes to a Visio Document](../vsto/how-to-programmatically-add-shapes-to-a-visio-document.md)  
+  
+  

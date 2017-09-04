@@ -1,5 +1,5 @@
 ---
-title: "Como: gerar modelos a partir de modelos usando sequências de Escape | Documentos do Microsoft"
+title: 'How to: Generate Templates from Templates By Using Escape Sequences | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,18 +27,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 28a209321553cb308c170451825b9991264ec5ee
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: dc21bd9f67cf13948477e8bf08e3ab79d021f603
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>Como gerar modelos a partir de modelos usando sequências de escape
-Você pode criar um modelo de texto que cria outro modelo de texto como sua saída de texto gerada. Para fazer isso, você deve usar sequências de escape para delimitar as marcas de modelo de texto. Se você não usar sequências de escape, o modelo de texto gerada terá um significado predefinido. Para obter mais informações sobre o uso de sequências de escape em modelos de texto, consulte [usando sequências de Escape em modelos de texto](../modeling/using-escape-sequences-in-text-templates.md).  
+# <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>How to: Generate Templates from Templates By Using Escape Sequences
+You can create a text template that creates another text template as its generated text output. To do this, you must use escape sequences to delineate the text template tags. If you do not use escape sequences, your generated text template will have a pre-defined meaning. For more information about using escape sequences in text templates, see [Using Escape Sequences in Text Templates](../modeling/using-escape-sequences-in-text-templates.md).  
   
-### <a name="to-generate-a-text-template-from-within-a-text-template"></a>Para gerar um modelo de texto de dentro de um modelo de texto  
+### <a name="to-generate-a-text-template-from-within-a-text-template"></a>To generate a text template from within a text template  
   
--   Use a barra invertida (\\) como um caractere de escape para produzir as marcas necessárias dentro do modelo de texto para expressões, instruções, diretivas e recursos em um arquivo de modelo de texto separado da classe.  
+-   Use the backslash (\\) as an escape character to produce the necessary markup tags within the text template for directives, statements, expressions, and class features in a separate text template file.  
   
     ```  
     \<#@ directive \#>  
@@ -47,10 +48,10 @@ Você pode criar um modelo de texto que cria outro modelo de texto como sua saí
     \<#+ classfeature \#>  
     ```  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir usa caracteres de escape para produzir um modelo de texto de um modelo de texto. A `output` diretiva define o tipo de arquivo de destino para o tipo de arquivo de modelo de texto (. TT).  
+## <a name="example"></a>Example  
+ The following example uses escape characters to produce a text template from a text template. The `output` directive sets the destination file type to the text template file type (.tt).  
   
-```c#  
+```csharp  
 \<#@ output extension=".tt" \#>  
 \<#@ assembly name="System.Xml.dll" \#>  
 \<#@ import namespace="System.Xml" \#>  
@@ -69,7 +70,7 @@ XmlDocument xDoc = new XmlDocument();
 \#>  
 ```  
   
- A saída de texto gerado é um modelo de texto.  
+ The generated text output is a text template.  
   
 ```  
 <#@ output extension=".tt" #>  

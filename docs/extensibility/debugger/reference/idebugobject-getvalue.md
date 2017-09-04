@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetValue | Documentos do Microsoft
+title: IDebugObject::GetValue | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,43 +30,44 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ec2710844dc0346520432baacc9395942b67b515
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f18feac64690b31f7c589afd9b17368adbf5261c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
-Obtém o valor do objeto consecutivos de bytes.  
+Gets the value of the object as a consecutive series of bytes.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetValue(   
    BYTE* pValue,  
    UINT  nSize  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetValue(  
    ref byte[] pValue,   
    uint nSize  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pValue`  
- [no, out] Uma matriz é preenchida com consecutivos de bytes que representa o valor do objeto.  
+ [in, out] An array that is filled in with a consecutive series of bytes representing the value of the object.  
   
  `nSize`  
- [in] O número máximo de bytes de busca.  
+ [in] The maximum number of bytes to fetch.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Obter o número total de bytes do valor que pode ser obtido chamando o [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) método.  
+## <a name="remarks"></a>Remarks  
+ Get the total number of value bytes that can be fetched by calling the [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) method.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

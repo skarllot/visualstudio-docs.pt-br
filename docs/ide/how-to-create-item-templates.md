@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 3524c21503d0432d509c607ea157f3fe675b443d
+ms.translationtype: HT
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 60732a1fbe7379b43d2856a62d5cd459165dd9a3
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="how-to-create-item-templates"></a>Como criar modelos de item
@@ -58,7 +58,7 @@ As etapas no [primeiro procedimento](../ide/how-to-create-item-templates.md#expo
 
 3.  Modifique o arquivo de código para indicar em que ponto a substituição de parâmetro deve ocorrer. Para obter mais informações, consulte [Como substituir parâmetros em um modelo](../ide/how-to-substitute-parameters-in-a-template.md).  
 
-4.  No menu **Arquivo**, clique em **Exportar Modelo**.  
+4.  No menu **Projeto**, clique em **Exportar Modelo**.  
 
 5.  Clique em **Modelo de Item**, selecione o projeto que contém o item e clique em **Próximo**.  
 
@@ -166,7 +166,7 @@ As etapas no [primeiro procedimento](../ide/how-to-create-item-templates.md#expo
 
 2.  Modifique o item de projeto até que ele esteja pronto para ser salvo como um modelo.  
 
-3.  Conforme apropriado, modifique o arquivo de código para indicar o ponto em que a substituição de parâmetro deve ocorrer. Para obter mais informações sobre substituição de parâmetro, consulte Como substituir parâmetros em um modelo.  
+3.  Conforme apropriado, modifique o arquivo de código para indicar o ponto em que a substituição de parâmetro deve ocorrer. Para saber mais sobre substituição de parâmetro, confira [Como substituir parâmetros em um modelo.](../ide/how-to-substitute-parameters-in-a-template.md)
 
 4.  Crie um arquivo XML e salve-o usando uma extensão de nome de arquivo .vstemplate no mesmo diretório que o novo modelo de item.  
 

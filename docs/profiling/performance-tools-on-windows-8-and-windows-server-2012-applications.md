@@ -1,7 +1,7 @@
 ---
 title: Ferramentas de Desempenho em aplicativos do Windows 8 e Windows Server 2012 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,18 +28,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 65bceca75b87aaf187926ebbed1a54ce4f0e8eec
-ms.openlocfilehash: c1b3058b6a1af9161f71cbea995c562670013e86
+ms.translationtype: Human Translation
+ms.sourcegitcommit: baf12bba10dfba15f10d75fd1f7a4cdc4000e441
+ms.openlocfilehash: a5d885f8604bdb52907adae4f231b41e0881017f
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/21/2017
 
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Ferramentas de desempenho em aplicativos do Windows 8 e Windows Server 2012
-Os recursos de segurança avançada do Windows 8 e Windows Server 2012 exigiam alterações significativas na maneira como as ferramentas de desempenho do Visual Studio coletam dados dessas plataformas. Os aplicativos da Windows Store também requerem novas técnicas de coleta. Este tópico descreve as alterações das ferramentas de desempenho em plataformas Windows 8 e Windows Server 2012.  
+Os recursos de segurança avançada a partir do Windows 8 e Windows Server 2012 exigiam alterações significativas na maneira como as ferramentas de desempenho do Visual Studio coletam dados dessas plataformas. Os aplicativos da Windows Store também requerem novas técnicas de coleta. Este tópico descreve as alterações das ferramentas de desempenho a partir das plataformas Windows 8 e Windows Server 2012.
   
 > [!NOTE]
->  As ferramentas de desempenho para outras versões do Windows com suporte (Windows 7 e Windows Server 2008 R2) não foram alteradas.  
+>  As ferramentas de desempenho para outras versões do Windows com suporte (Windows 7 e Windows Server 2008 R2) não foram alteradas.
   
-##  <a name="a-namebkmkinthistopica-in-this-topic"></a><a name="BKMK_In_this_topic"></a> Neste tópico  
+##  <a name="BKMK_In_this_topic"></a> Neste tópico  
  [Coletando dados nos aplicativos da Windows Store no IDE do Visual Studio](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [Coletar dados em aplicativos em execução na área de trabalho do Windows 8 ou no Windows Server 2012 do IDE do Visual Studio](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
@@ -50,7 +52,7 @@ Os recursos de segurança avançada do Windows 8 e Windows Server 2012 exigiam a
   
  [Coletando dados de interação entre camadas (TIP)](#BKMK_Collecting_tier_interaction__TIP__data)  
   
-##  <a name="a-namebkmkprofilingwindowsstoreappsfromthevisualstudioidea-collecting-data-on-windows-store-apps-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a> Coletando dados nos aplicativos da Windows Store no IDE do Visual Studio  
+##  <a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a> Coletando dados nos aplicativos da Windows Store no IDE do Visual Studio  
  Ao analisar um aplicativo da Windows Store escrito em JavaScript e HTML 5, você coleta dados de instrumentação para o código JavaScript. Ao analisar um componente ou aplicativo da Windows Store escrito em Visual C++, Visual C# ou Visual Basic, você coleta dados de amostragem para os códigos nativo e gerenciado. Você pode analisar seu aplicativo localmente ou em um computador remoto.  
   
  Não há suporte para esses recursos e opções de criação de perfil ao criar perfil de aplicativos da Windows Store:  
@@ -87,19 +89,19 @@ Os recursos de segurança avançada do Windows 8 e Windows Server 2012 exigiam a
   
  [Neste tópico](#BKMK_In_this_topic)  
   
-##  <a name="a-namebkmkprofilingappsrunningonthewindows8desktoporonwindowsserver2012fromthevisualstudioidea-collecting-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a> Coletar dados em aplicativos em execução na área de trabalho do Windows 8 ou no Windows Server 2012 do IDE do Visual Studio  
+##  <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a> Coletar dados em aplicativos em execução na área de trabalho do Windows 8 ou no Windows Server 2012 do IDE do Visual Studio  
  A criação de perfil usando o método de instrumentação não mudou para o Windows 8.  
   
  Não há suporte para TIP (criação de perfil de interação entre camadas) usando o método de amostragem.  
   
-###  <a name="a-namebkmkprofilingappsrunningonthewindows8desktoporonwindowsserver2012byusingsamplingfromthevisualstudioidea-collecting-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-by-using-sampling-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE"></a> Coletar dados em aplicativos em execução na área de trabalho do Windows 8 ou no Windows Server 2012 usando amostragem do IDE do Visual Studio  
- Não há suporte para os recursos e opções de criação de perfil ao criar o perfil de aplicativos de área de trabalho do Windows 8 ou aplicativos do Windows Server 2012 usando o método de amostragem:  
+###  <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE"></a> Coletar dados em aplicativos em execução na área de trabalho do Windows 8 ou no Windows Server 2012 usando amostragem do IDE do Visual Studio  
+ Não há suporte para os recursos e opções de criação de perfil ao criar o perfil de aplicativos de área de trabalho do Windows 8 ou aplicativos do Windows Server 2012 usando o método de amostragem:
   
--   TIP (criação de perfil de interação entre camadas). Há suporte para a coleta de dados TIP usando instrumentação.  
+-   TIP (criação de perfil de interação entre camadas). Há suporte para a coleta de dados TIP usando instrumentação.
   
 -   Opções de amostragem como configurar o evento de amostragem e o intervalo de tempo ou coletar dados do contador de desempenho adicional.  
   
-##  <a name="a-namebkmkprofilingfromthecommandlinea-profiling-from-the-command-line"></a><a name="BKMK_Profiling_from_the_command_line"></a> Criação de perfil da linha de comando  
+##  <a name="BKMK_Profiling_from_the_command_line"></a> Criação de perfil da linha de comando  
  Você pode usar duas ferramentas de linha de comando para coletar dados de criação de perfil em dispositivos Windows 8 e Windows Server 2012, incluindo dispositivos que não têm uma instalação do Visual Studio:  
   
 |Nome da ferramenta|Descrição|  
@@ -126,7 +128,7 @@ Os recursos de segurança avançada do Windows 8 e Windows Server 2012 exigiam a
   
 -   Opções de amostragem como configurar o evento de amostragem e o intervalo de tempo ou coletar dados do contador de desempenho adicional.  
   
-##  <a name="a-namebkmkcollectingtierinteractiontipdataa-collecting-tier-interaction-tip-data"></a><a name="BKMK_Collecting_tier_interaction__TIP__data"></a> Coletando dados de interação entre camadas (TIP)  
+##  <a name="BKMK_Collecting_tier_interaction__TIP__data"></a> Coletando dados de interação entre camadas (TIP)  
  A criação de perfil de interação de camadas fornece informações adicionais sobre os tempos de execução de funções de aplicativos de várias camadas que se comunicam com os bancos de dados por meio de serviços do ADO.NET. Os dados são coletados apenas para chamadas de função síncronas.  
   
  **Edições do Visual Studio**  
@@ -159,8 +161,3 @@ Os recursos de segurança avançada do Windows 8 e Windows Server 2012 exigiam a
  [Gerenciador de Desempenho](../profiling/performance-explorer.md)   
  [Configurando sessões de desempenho](../profiling/configuring-performance-sessions.md)   
  [Criando perfil na linha de comando](../profiling/using-the-profiling-tools-from-the-command-line.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

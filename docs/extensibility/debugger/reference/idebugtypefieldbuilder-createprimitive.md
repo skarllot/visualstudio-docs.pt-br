@@ -1,5 +1,5 @@
 ---
-title: IDebugTypeFieldBuilder::CreatePrimitive | Documentos do Microsoft
+title: IDebugTypeFieldBuilder::CreatePrimitive | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,40 +29,41 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f94c7961454b048b71eaab1746f886bb4fef364a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0d6b49d8721d112b642459b3fc0d517fe0668094
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugtypefieldbuildercreateprimitive"></a>IDebugTypeFieldBuilder::CreatePrimitive
-Cria um objeto que representa um tipo primitivo.  
+Creates an object that represents a primitive type.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT CreatePrimitive (  
    DWORD          dwElementType,  
    IDebugField ** pTypeField  
 );  
 ```  
   
-```c#  
+```csharp  
 int CreatePrimitive (  
    uint            dwElementType,  
    out IDebugField pTypeField  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `dwElementType`  
- [in] O valor do [enumeração CorElementType](CorElementType%20Enumeration.xml) que representa o tipo primitivo.  
+ [in] Value from the [CorElementType Enumeration](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) that represents the primitive type.  
   
  `pTypeField`  
- [out] Retorna a interface IDebugField para o novo tipo.  
+ [out] Returns the IDebugField interface for the new type.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetValueAsString | Documentos do Microsoft
+title: IDebugReference2::SetValueAsString | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c7f6f31a34127e8533cfa77ff4d47143c578f24c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c70ee1f6cc80ff2fdaa6c22bea813c8d4d8951d3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugreference2setvalueasstring"></a>IDebugReference2::SetValueAsString
-Define o valor de uma referência de uma cadeia de caracteres. Reservado para uso futuro.  
+Sets the value of a reference from a string. Reserved for future use.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT SetValueAsString (   
    LPCOLESTR pszValue,  
    DWORD     dwRadix,  
@@ -49,7 +50,7 @@ HRESULT SetValueAsString (
 );  
 ```  
   
-```c#  
+```csharp  
 int SetValueAsString (   
    string pszValue,  
    uint   dwRadix,  
@@ -57,18 +58,18 @@ int SetValueAsString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pszValue`  
- [in] O valor como uma cadeia de caracteres.  
+ [in] The value as a string.  
   
  `dwRadix`  
- [in] A base a ser usada na formatação de todas as informações numéricas.  
+ [in] The radix to be used in formatting any numerical information.  
   
  `dwTimeout`  
- [in] Tempo máximo, em milissegundos, para aguardar antes de retornar desse método. Use `INFINITE` para aguardar indefinidamente.  
+ [in] Maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
   
-## <a name="return-value"></a>Valor de retorno  
- Sempre retorna `E_NOTIMPL`.  
+## <a name="return-value"></a>Return Value  
+ Always returns `E_NOTIMPL`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

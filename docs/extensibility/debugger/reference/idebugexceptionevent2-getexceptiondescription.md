@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::GetExceptionDescription | Documentos do Microsoft
+title: IDebugExceptionEvent2::GetExceptionDescription | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0984d5c47f2ec2e8b75c770f53d6ef71882eeafe
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c7279e8aef6d903e2836a3f6025f550eb89e1bab
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugexceptionevent2getexceptiondescription"></a>IDebugExceptionEvent2::GetExceptionDescription
-Obtém uma exibição Descrição da exceção.  
+Gets a displayable description of the exception.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetExceptionDescription(   
    BSTR* pbstrDescription  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetExceptionDescription(   
    out string pbstrDescription  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pbstrDescription`  
- [out] Retorna uma descrição de exibição da exceção.  
+ [out] Returns a displayable description of the exception.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- A cadeia de caracteres retornada pelo método é normalmente o nome da exceção e é mostrada no **saída** janela quando a exceção ocorrer.  
+## <a name="remarks"></a>Remarks  
+ The string returned from this method is typically the name of the exception and is shown in the **Output** window when the exception occurs.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugErrorEvent2::GetErrorMessage | Documentos do Microsoft
+title: IDebugErrorEvent2::GetErrorMessage | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 310432b8c2c728fa930d0955d5234dd389ff21b0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: a4c15d3a000a1b960bfcf3f7f3a0d46708718bda
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
-Retorna informações que permite a construção de uma mensagem de erro legível.  
+Returns information that allows construction of a human-readable error message.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetErrorMessage(  
    MESSAGETYPE* pMessageType,  
    BSTR*        pbstrErrorFormat,  
@@ -52,7 +53,7 @@ HRESULT GetErrorMessage(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetErrorMessage(  
    out enum_MESSAGETYPE   pMessageType,  
    out string             pbstrErrorFormat,  
@@ -63,31 +64,31 @@ int GetErrorMessage(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pMessageType`  
- [out] Retorna um valor a partir de [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) enumeração, que descreve o tipo de mensagem.  
+ [out] Returns a value from the [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) enumeration, describing the type of message.  
   
  `pbstrErrorFormat`  
- [out] O formato da mensagem para o usuário final (consulte "Comentários" para obter detalhes).  
+ [out] The format of the final message to the user (see "Remarks" for details).  
   
  `hrErrorReason`  
- [out] O código de erro, a mensagem é sobre.  
+ [out] The error code the message is about.  
   
  `pdwType`  
- [out] Gravidade do erro (use as constantes MB_XXX para `MessageBox`; por exemplo, `MB_EXCLAMATION` ou `MB_WARNING`).  
+ [out] Severity of the error (use the MB_XXX constants for `MessageBox`; for example, `MB_EXCLAMATION` or `MB_WARNING`).  
   
  `pbstrHelpFileName`  
- [out] Caminho para um arquivo de Ajuda (definido como um valor nulo se não houver nenhum arquivo de Ajuda).  
+ [out] Path to a help file (set to a null value if there is no help file).  
   
  `pdwHelpId`  
- [out] ID do tópico da Ajuda para exibir (definido como 0 se não houver nenhum tópico da Ajuda).  
+ [out] ID of the help topic to display (set to 0 if there is no help topic).  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- A mensagem de erro deve ser formatada ao longo das linhas de `"What I was doing.  %1"`. O `"%1"` deve ser substituído pelo chamador com a mensagem de erro derivada do código de erro (que é retornado no `hrErrorReason`). O `pMessageType` parâmetro informa o chamador como a mensagem de erro final deve ser exibida.  
+## <a name="remarks"></a>Remarks  
+ The error message should be formatted along the lines of `"What I was doing.  %1"`. The `"%1"` would then be replaced by the caller with the error message derived from the error code (which is returned in `hrErrorReason`). The `pMessageType` parameter tells the caller how the final error message should be displayed.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)   
  [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)

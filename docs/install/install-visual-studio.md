@@ -1,8 +1,8 @@
 ---
-title: Instalar o Visual Studio 2017 | Microsoft Docs
-description: Saiba como instalar o Visual Studio, passo a passo.
+title: Install Visual Studio 2017 | Microsoft Docs
+description: Learn how to install Visual Studio, step-by-step.
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -21,104 +21,113 @@ ms.assetid: 8d4297e4-9f43-4f12-95ec-22e61154480e
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 9f7c1d33191adf3fb54cf59cd98ae5fffe14eee4
+ms.translationtype: HT
+ms.sourcegitcommit: 7adecc638a0ea4b198501752930a5c92c9db282c
+ms.openlocfilehash: db6c415762bce85b2384358347310f93a056ec87
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="install-visual-studio-2017"></a>Instalar o Visual Studio 2017
-Bem-vindo a uma nova maneira de instalar o Visual Studio! Em nossa versão mais recente, tornamos mais fácil para você selecionar e instalar apenas os recursos que precisa — e reduzimos os requisitos mínimos do Visual Studio para que ele seja instalado mais rapidamente e com menos impacto no sistema do que nunca.
+# <a name="install-visual-studio-2017"></a>Install Visual Studio 2017
+Welcome to a new way to install Visual Studio! In our newest version, we've made it easier for you to select and install just the features you need. We've also reduced the minimum footprint of Visual Studio so that it installs more quickly and with less system impact than ever before.
 
-Quer saber mais sobre quais são as outras novidades? Consulte nossas [notas de versão](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes). E para obter informações mais detalhadas sobre como reformulamos a experiência de instalação, consulte nossas postagens no blog, “[Faster and leaner Visual Studio installer](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer/)” (Instalador do Visual Studio mais rápido e enxuto) e “[Anatomy of a low-impact Visual Studio installation](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install/)” (Anatomia de uma instalação do Visual Studio de baixo impacto).  
+Want to know more about what else is new in this version? See our [release notes](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes).   
 
-Pronto para instalar? Guiaremos você no processo, passo a passo.
+Ready to install? We'll walk you through it, step-by-step.
 
-## <a name="check-system-requirements"></a>Verificar os requisitos de sistema
-Antes de começar, verifique os [requisitos de sistema](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs) para garantir que seu computador esteja pronto para instalar o Visual Studio 2017.
+## <a name="step-1---make-sure-your-computer-is-ready-for-visual-studio"></a>Step 1 - Make sure your computer is ready for Visual Studio
+Before you begin installing Visual Studio
 
-## <a name="download-visual-studio"></a>Baixe o Visual Studio
-Para iniciar, convém baixar o Visual Studio. Para fazer isso, clique no botão a seguir, clique em **Salvar** e, em seguida, em **Abrir pasta**.
+1. Check the [system requirements](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs). This helps you know whether your computer supports Visual Studio 2017.
+2. Apply the latest Windows Updates. This ensures that your computer has both the latest security updates and the required system components for Visual Studio.
+3. Reboot. This ensures that any pending installs or updates don't hinder the Visual Studio install.
+4. Free up space. Remove unneeded files and applications from your %SystemDrive% by, for example, running the Disk Cleanup app.
+
+For questions about running previous versions of Visual Studio side-by-side with Visual Studio 2017, see the [Visual Studio compatibility details](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs#compatibility-with-previous-releases).
+
+## <a name="step-2---download-visual-studio"></a>Step 2 - Download Visual Studio
+Next, download the Visual Studio bootstrapper file. To do so, click the following button, select the edition of Visual Studio 2017 that you want, click **Save**, and then click **Open folder**.
 
  > [!div class="button"]
- > [Baixe o Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ > [Download Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+<br/>
 
-## <a name="install-the-installer"></a>Instalar o instalador  
-Ao baixar o Visual Studio 2017, você receberá um arquivo bootstrapper que, por sua vez, instala nosso novo instalador leve. Esse novo instalador inclui tudo o que você precisa para personalizar a instalação.  
 
-> [!IMPORTANT]
-> Se você tiver uma Visualização do Visual Studio 2017 instalada no computador, deverá removê-la antes de instalar o Visual Studio 2017.
+|         |         |
+|---------|---------|
+|  ![film icon for video](media/video-icon.png "Watch a video")  |    [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Download-the-Visual-Studio-Installer-GgrESHD6D_3311787171) on how to download the Visual Studio bootstrapper file and select the edition of Visual Studio that's right for you. |
 
-1.  Da sua pasta **Downloads**, clique duas vezes no arquivo inicializador que corresponde ou é semelhante a um dos seguintes:
+## <a name="step-3---install-the-visual-studio-installer"></a>Step 3 - Install the Visual Studio installer  
+Then, run the bootstrapper file to install the Visual Studio Installer. This new lightweight installer includes everything you need to both install and customize Visual Studio 2017.
 
-  * **vs_enterprise.exe** para Visual Studio Enterprise
-  * **vs_professional.exe** para Visual Studio Professional
-  * **vs_community.exe** para Visual Studio Community  <br><br>
+1.  From your **Downloads** folder, double-click the bootstrapper that matches or is similar to one of the following files:
 
-  Se você receber um aviso de Controle de Conta de Usuário, clique em **Sim**.  
+  * **vs_enterprise.exe** for Visual Studio Enterprise
+  * **vs_professional.exe** for Visual Studio Professional
+  * **vs_community.exe** for Visual Studio Community  <br><br>
 
-2.  Solicitaremos sua confirmação dos [Termos de Licença](https://www.visualstudio.com/license-terms/) da Microsoft e da [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkID=824704) da Microsoft. Clique em **Continue**.  
+  If you receive a User Account Control notice, click **Yes**.  
 
-   ![Termos de Licença e Política de Privacidade](~/install/media/vs2017-privacy-and-license-terms.PNG "Termos de Licença e Política de Privacidade da Microsoft")  
+2.  We'll ask you to acknowledge the Microsoft [License Terms](https://www.visualstudio.com/license-terms/) and the Microsoft [Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=824704). Click **Continue**.  
 
-Você verá várias telas de status que mostram o progresso da instalação. Depois que instalador concluir a instalação, é hora de escolher os conjuntos de recursos — ou cargas de trabalho — desejados.
+   ![License Terms and Privacy Statement](media/vs2017-privacy-and-license-terms.PNG "Microsoft License Terms and Privacy Statement")
 
-## <a name="install-workloads"></a>Instalar as cargas de trabalho  
- Você pode personalizar a instalação usando as cargas de trabalho. Selecione uma ou mais das cargas de trabalho desejadas. Cada carga de trabalho contém os recursos necessários para a linguagem de programação ou plataforma de sua preferência.  
+## <a name="step-4---select-workloads"></a>Step 4 - Select workloads
 
- Veja como obtê-las.  
+After the installer is installed, you can use it to customize your installation by selecting the feature sets—or workloads—that you want. Here's how.
 
-1.  Encontre a carga de trabalho desejada na tela **Instalando o Visual Studio**.  
+1.  Find the workload you want in the **Installing Visual Studio** screen.
 
-  ![Caixa de diálogo de instalação do Visual Studio 2017](~/install/media/vs2017-workloads.PNG "Instalar cargas de trabalho do Visual Studio")
+  ![Visual Studio 2017 setup dialog](media/vs2017-workloads.PNG "Install Visual Studio workloads")
 
-     Por exemplo, escolha a carga de trabalho de desenvolvimento de área de trabalho do .NET. Ela vem com o editor de núcleo padrão, que inclui o suporte à edição de código básico para mais de 20 linguagens, a capacidade de abrir e editar o código de qualquer pasta sem precisar de um projeto e o controle do código-fonte integrado.  
+     For example, choose the .NET desktop development workload. It comes with the default core editor, which includes basic code editing support for over 20 languages, the ability to open and edit code from any folder without requiring a project, and integrated source code control.  
 
-2.  Depois de selecionar as cargas desejadas, clique em **Instalar**.  
+2.  After you select the workload(s) you want, click **Install**.  
 
-    Em seguida, serão exibidas telas de status que mostram o progresso da instalação do Visual Studio.
+    Next, status screens appear that show the progress of your Visual Studio installation.
 
-3.  Depois que as novas cargas de trabalho e os componentes forem instalados, clique em **Inicializar**.
+3.  After the new workloads and components are installed, click **Launch**.
 
-## <a name="install-individual-components"></a>Instalar componentes individuais
+|         |         |
+|---------|---------|
+|  ![film icon for video](media/video-icon.png "Watch a video")  |    [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Install-Workloads-in-Visual-Studio-2017-jHE19HD6D_1611787171) on how to install the Visual Studio Installer and then install a workload. |
 
-Se você não quiser usar o recurso útil Cargas de Trabalho para personalizar a instalação do Visual Studio, clique na opção **Componentes individuais** do Instalador do Visual Studio, selecione o que deseja e siga os prompts.
+## <a name="step-5---select-individual-components-optional"></a>Step 5 - Select individual components (Optional)
 
-  ![Visual Studio 2017 — Instalar componentes individuais](~/install/media/vs2017-components.PNG "Instalar componentes individuais do Visual Studio")
+If you don't want to use the Workloads feature to customize your Visual Studio installation, you can do so by installing individual components instead. To do this, click the **Individual components** option from the Visual Studio Installer, select what you want, and then follow the prompts.
 
-## <a name="install-language-packs"></a>Instalar pacotes de idiomas
+  ![Visual Studio 2017 - Install individual components](media/vs2017-components.PNG "Install Visual Studio individual components")
 
-Para instalar o Visual Studio 2017 em um idioma de sua escolha, clique na opção **Pacotes de idioma** do Instalador do Visual Studio e siga os prompts.
+  |         |         |
+  |---------|---------|
+  |  ![film icon for video](media/video-icon.png "Watch a video")  |   [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Install-Components-in-Visual-Studio-2017-ZMfaVID6D_7411787171) on how to install an individual component by using the Visual Studio Installer. |
 
-  ![Visual Studio 2017 — Instalar pacotes de idiomas](~/install/media/vs2017-languages.PNG "Instalar pacotes de idiomas do Visual Studio")
+## <a name="step-6---install-language-packs-optional"></a>Step 6 - Install language packs (Optional)
 
-### <a name="change-the-installer-language"></a>Alterar o idioma do instalador
+By default, the installer program tries to match the language of the operating system when it runs for the first time. To install Visual Studio 2017 in a language of your choosing, click the **Language packs** option from the Visual Studio Installer, and follow the prompts.
 
-Por padrão, o programa do instalador tenta encontrar a correspondência do idioma do sistema operacional quando ele é executado pela primeira vez. O instalador memoriza essa configuração. Você pode alterar essa configuração executando o instalador da linha de comando. Por exemplo, é possível forçar o instalador a ser executado em inglês usando o seguinte comando: `vs_installer.exe --locale en-US`. O instalador memorizará essa configuração quando for executado na próxima vez. O instalador dá suporte aos seguintes tokens de idioma: zh-CN, zh-TW, cs-CZ, en-US, fr-FR, de-DE, it-IT, ja-JP, ko-KR, pl-PL, pt-BR, ru-RU, es-ES e tr-TR.
+  ![Visual Studio 2017 - Install language packs](media/vs2017-languages.PNG "Install Visual Studio language packs")
 
-## <a name="get-support"></a>Obter suporte
-Às vezes, as coisas podem dar errado. Caso a instalação do Visual Studio falhe, consulte a página [Solução de problemas de instalação e atualização do Visual Studio 2017](troubleshooting-installation-issues.md) para obter dicas de solução de problemas.
+  |         |         |
+  |---------|---------|
+  |  ![film icon for video](media/video-icon.png "Watch a video")  |   [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Install-Language-Packs-in-Visual-Studio-2017-ByT7yID6D_9011787171) on how to install a language pack by using the Visual Studio Installer. |
 
-## <a name="see-also"></a>Consulte também  
-* [Modificar o Visual Studio 2017](modify-visual-studio.md)
-* [Atualizar o Visual Studio 2017](update-visual-studio.md)
-* [Desinstalar o Visual Studio 2017](uninstall-visual-studio.md)
-* [Guia do administrador do Visual Studio 2017](visual-studio-administrator-guide.md)
-* [Como relatar um problema com o Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+### <a name="change-the-installer-language-from-the-command-line"></a>Change the installer language from the command line
+
+Another way that you can change the default language is by running the installer from the command line. For example, you can force the installer to run in English by using the following command: `vs_installer.exe --locale en-US`. The installer will remember this setting when it is run the next time. The installer supports the following language tokens: zh-cn, zh-tw, cs-cz, en-us, es-es, fr-fr, de-de, it-it, ja-jp, ko-kr, pl-pl, pt-br, ru-ru, and tr-tr.
+
+## <a name="step-7---launch-visual-studio"></a>Step 7 - Launch Visual Studio
+
+After Visual Studio installation is complete, click the **Launch** button to [Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md).
+
+## <a name="get-support"></a>Get support
+Sometimes, things can go wrong. If your Visual Studio installation fails, see the [Troubleshooting Visual Studio 2017 installation and upgrade issues](troubleshooting-installation-issues.md) page for troubleshooting tips.
+
+## <a name="see-also"></a>See also  
+* [Modify Visual Studio 2017](modify-visual-studio.md)
+* [Update Visual Studio 2017](update-visual-studio.md)
+* [Uninstall Visual Studio 2017](uninstall-visual-studio.md)
+* [Visual Studio 2017 administrator guide](visual-studio-administrator-guide.md)
+  * [Use command-line parameters to install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)
+* [How to report a problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

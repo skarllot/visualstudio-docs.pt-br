@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::CauseBreak | Documentos do Microsoft
+title: IDebugEngine2::CauseBreak | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,33 +30,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1385dd7d1cda48f39c17615755fc07c7c7570eea
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 9f9026984b37d273b455229c09f52b4fd5fb8416
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugengine2causebreak"></a>IDebugEngine2::CauseBreak
-Solicitações de todos os programas que estão sendo depurado por esse mecanismo de depuração (DE) para interromper a execução da próxima vez que um de seus threads tentará executar.  
+Requests that all programs being debugged by this debug engine (DE) to stop execution the next time one of their threads attempts to run.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT CauseBreak(   
    void   
 );  
 ```  
   
-```c#  
+```csharp  
 int CauseBreak();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Esse método é assíncrono: um [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) evento é enviado quando o programa tenta executar depois que este método é chamado em seguida.  
+## <a name="remarks"></a>Remarks  
+ This method is asynchronous: an [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) event is sent when the program next attempts to execute after this method is called.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)   
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

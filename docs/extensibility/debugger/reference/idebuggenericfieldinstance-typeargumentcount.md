@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldInstance::TypeArgumentCount | Documentos do Microsoft
+title: IDebugGenericFieldInstance::TypeArgumentCount | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,38 +29,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 70377197c83dec7196b3f1e287930f7f4e760efd
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: bfd419af233f5f9725499313af8003e952509af0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
-Retorna o número do tipo de argumentos de parâmetro para essa instância.  
+Returns the number of type parameter arguments for this instance.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT TypeArgumentCount(  
    ULONG32* pcArgs  
 );  
 ```  
   
-```c#  
+```csharp  
 int TypeArgumentCount(  
    ref uint pcArgs  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pcArgs`  
- [no, out] Número de argumentos de parâmetro de tipo para essa instância.  
+ [in, out] Number of type parameter arguments for this instance.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Por exemplo, se lista\<int >, esse método retornará 1 e, se lista\<int, float2 > esse método retorna 2. Esse método retorna 0 se não houver nenhum argumento de tipo.  
+## <a name="remarks"></a>Remarks  
+ For example, if List\<int>, this method returns 1, and, if List\<int,float2> this method returns 2. This method returns 0 if there are no type arguments.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

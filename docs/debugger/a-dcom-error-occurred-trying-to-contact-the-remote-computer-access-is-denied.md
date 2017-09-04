@@ -1,56 +1,73 @@
 ---
-title: "Ocorreu um erro de DCOM durante a tentativa de entrar em contato com o computador remoto. O acesso &#233; negado. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.remote.dcom_access_denied"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "DCOM, erros de acesso"
-  - "erro de acesso negado DCOM remoto"
-  - "depuração remota, Erro DCOM"
+title: A DCOM error occurred trying to contact the remote computer. Access is denied. | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.remote.dcom_access_denied
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- remote debugging, DCOM error
+- remote DCOM access denied error
+- DCOM, access errors
 ms.assetid: 9d7dfc1b-9fe0-4f54-9c50-9c0e0f8358c5
 caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Ocorreu um erro de DCOM durante a tentativa de entrar em contato com o computador remoto. O acesso &#233; negado.
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: cc8adff7c0c5d7e1595f59c6571a5670c9f7163f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Depuração remota usa DCOM para se comunicar entre os computadores locais e remotos nas situações a seguir:  
+---
+# <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>A DCOM error occurred trying to contact the remote computer. Access is denied.
+Remote debugging uses DCOM to communicate between the local and remote computers in the following situations:  
   
--   O depurador é definido como **modo de compatibilidade nativa** ou **modo de compatibilidade gerenciado** check\-in a **Ferramentas \/ opções \/ depuração** página  
+-   The debugger is set to **Native Compatibility Mode** or **Managed Compatibility Mode** is checked in the **Tools > Options > Debugging** page  
   
--   Você está depurando C\+\+ gerenciado \(C \+ \+ \/ CLI\) código.  
+-   You are debugging managed C++ (C++/CLI) code.  
   
--   No Visual Studio 2013, quando **Ativar nativo Edit and Continue** check\-in a **Ferramentas \/ opções \/ depuração** página  
+-   In Visual Studio 2013, when **Enable native Edit and Continue** is checked in the **Tools > Options > Debugging** page  
   
--   Alguns cenários de depuração de terceiros  
+-   Some third party debugging scenarios  
   
- Esse erro ocorre quando o processo do Visual Studio não pode autenticar \(ou as credenciais fornecidas forem julgadas insuficientes\) para o processo do depurador remoto através de DCOM. Uma ou mais das seguintes alternativas podem resolver o problema:  
+ This error occurs when the Visual Studio process cannot authenticate itself (or the supplied credentials were deemed insufficient) to the remote debugger process over DCOM. One or more of the following workarounds might resolve the issue:  
   
--   Desativar  **modo de compatibilidade nativa** e **modo de compatibilidade gerenciado**.  
+-   Turn off  **Native Compatibility Mode** and **Managed Compatibility Mode**.  
   
--   No Visual Studio 2013, desative **Ativar nativo Edit and Continue**.  
+-   In Visual Studio 2013, turn off **Enable native Edit and Continue**.  
   
--   Reinicialize ambos os computadores.  
+-   Reboot both computers.  
   
--   Se a depuração remota exige a inserir credenciais, marque a opção para salvar as credenciais.  
+-   If remote debugging requires entering credentials, check the option to save the credentials.  
   
-## Consulte também  
- [Erros de depuração remota e solução de problemas](../debugger/remote-debugging-errors-and-troubleshooting.md)   
- [Depuração remota](../debugger/remote-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Remote Debugging Errors and Troubleshooting](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+ [Remote Debugging](../debugger/remote-debugging.md)

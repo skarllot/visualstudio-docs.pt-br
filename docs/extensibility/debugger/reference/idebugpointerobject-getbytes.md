@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::GetBytes | Documentos do Microsoft
+title: IDebugPointerObject::GetBytes | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 26b360104aaf5777337a5c8d3a6bc4d629eb5a0d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: be7648362f250dfba00a244e3d21aff2824eb325
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugpointerobjectgetbytes"></a>IDebugPointerObject::GetBytes
-Obtém o valor apontado como uma série de bytes consecutivos.  
+Gets the value pointed to as a series of consecutive bytes.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetBytes(   
    DWORD  dwStart,  
    DWORD  dwCount,  
@@ -50,7 +51,7 @@ HRESULT GetBytes(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetBytes(  
    uint       dwStart,   
    uint       dwCount,   
@@ -59,25 +60,25 @@ int GetBytes(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `dwStart`  
- [in] Um deslocamento, em bytes, desde o início do objeto apontado.  
+ [in] An offset, in bytes, from the start of the object pointed to.  
   
  `dwCount`  
- [in] O número de bytes a serem recuperados.  
+ [in] The number of bytes to retrieve.  
   
  `pBytes`  
- [no, out] Uma matriz que é preenchida com o valor como uma série de bytes consecutivos, começando no deslocamento especificado do objeto apontado.  
+ [in, out] An array that is filled in with the value as a series of consecutive bytes, starting at the given offset from the object pointed to.  
   
  `pdwBytes`  
- [out] Retorna o número de bytes realmente recuperados.  
+ [out] Returns the number of bytes actually retrieved.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Esse método é usado se o ponteiro, conforme representado por esse [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) aponta para um tipo primitivo ou uma matriz de tipos primitivos (ou seja, uma matriz que pode ser representado por uma simple sequência de bytes).  
+## <a name="remarks"></a>Remarks  
+ This method is used if the pointer as represented by this [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) points to a primitive type or a simple array of primitive types (that is, an array that can be represented by a simple sequence of bytes).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)   
  [SetBytes](../../../extensibility/debugger/reference/idebugpointerobject-setbytes.md)

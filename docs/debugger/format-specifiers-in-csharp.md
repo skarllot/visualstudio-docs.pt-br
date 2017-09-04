@@ -1,71 +1,92 @@
 ---
-title: "Especificadores de formato em C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "CSharp"
-helpviewer_keywords: 
-  - "depurador, especificadores de formato reconhecidos por"
-  - "expressões [C#], formatando valores"
-  - "especificadores de formato, depurador"
-  - "QuickWatch (caixa de diálogo), especificadores de formato em C#"
-  - "QuickWatch (caixa de diálogo), usando especificadores de formato"
-  - "especificadores"
-  - "especificadores, formato de variável de inspeção"
-  - "símbolos, formatação de variável de inspeção"
-  - "variáveis [depurador], símbolos de variável de inspeção"
-  - "símbolos de variável de inspeção"
-  - "Janela Inspecionar, especificadores de formato em C#"
+title: Format specifiers in the debugger (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- expressions [C#], formatting values
+- variables [debugger], watch variable symbols
+- symbols, watch variable formatting
+- QuickWatch dialog box, using format specifiers
+- specifiers, watch variable format
+- QuickWatch dialog box, format specifiers in C#
+- specifiers
+- watch variable symbols
+- Watch window, format specifiers in C#
+- format specifiers, debugger
+- debugger, format specifiers recognized by
 ms.assetid: 345c8589-5f36-4d34-a58c-e56271687dd6
 caps.latest.revision: 29
-caps.handback.revision: 29
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Especificadores de formato em C# #
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 969a1ccc042ba453fed1f7f774b23a5c8ba971a4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Você pode alterar o formato no qual um valor é exibido no **inspeção** janela usando especificadores de formato. Você também pode usar especificadores de formato no **imediato** janela, o **comando** janela e até mesmo em janelas de origem. Se você pausar em uma expressão nessas janelas, o resultado será exibido em um DataTip. DataTips refletirão o especificador de formato na tela DataTip.  
+---
+# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Format specifiers in C# in the Visual Studio debugger
+You can change the format in which a value is displayed in the **Watch** window using format specifiers. You can also use format specifiers in the **Immediate** window, the **Command** window, and even in source windows. If you pause on an expression in those windows, the result will appear in a DataTip. DataTips will reflect the format specifier in the DataTip display.  
   
- Para usar um especificador de formato, digite a expressão seguida por uma vírgula. Após a vírgula, adicione o especificador apropriado.  
+ To use a format specifier, type the expression followed by a comma. After the comma, add the appropriate specifier.  
   
-## Usando especificadores de formato  
- Se você tiver o código a seguir:  
+## <a name="using-format-specifiers"></a>Using Format Specifiers  
+ If you have the following code:  
   
+```CSharp  
+{  
+        int my_var1 = 0x0065;  
+        int my_var2 = 0x0066;  
+        int my_var3 = 0x0067;  
+}  
 ```  
-{ int my_var1 = 0x0065; int my_var2 = 0x0066; int my_var3 = 0x0067; }  
-```  
   
- Adicionar o `my_var1` variável à janela Inspeção \(durante a depuração, **Debug \/ Windows \/ Assista \/ Assista 1**\) e defina a exibição hexadecimal \(no **inspeção** janela, a variável e selecione **Exibir Hexadecimal**\). Agora o **inspeção** janela mostra que ela contém o valor 0x0065. Para ver esse valor é expresso como um inteiro decimal em vez de um inteiro hexadecimal, na coluna Nome, após o nome da variável, adicione o especificador de formato decimal: **, d**. A coluna valor agora mostra o valor decimal 101  
+ Add the `my_var1` variable to the Watch window (while debugging, **Debug > Windows > Watch > Watch 1**) and set the display to hexadecimal (in the **Watch** window, right-click the variable and select **Hexadecimal Display**). Now the **Watch** window shows that it contains the value 0x0065. To see this value expressed as a decimal integer instead of a hexadecimal integer, in the Name column, after the variable name, add the decimal format specifier: **, d**. The Value column now displays the decimal value 101  
   
  ![WatchFormatCSharp](../debugger/media/watchformatcsharp.png "WatchFormatCSharp")  
   
-## Especificadores de formato  
- A tabela a seguir mostra os especificadores de formato em c\# reconhecidos pelo depurador.  
+## <a name="format-specifiers"></a>Format Specifiers  
+ The following table shows the C# format specifiers recognized by the debugger.  
   
-|Especificador|Formato|Valor original de inspeção|Exibe|  
-|-------------------|-------------|--------------------------------|-----------|  
-|CA|Forçar a avaliação de uma expressão. Isso pode ser útil quando a avaliação implícita das propriedades e das chamadas de função implícitas é desativada. Consulte [Efeitos colaterais e expressões](../Topic/Side%20Effects%20and%20Expressions.md).|Mensagem "avaliação da função implícita está desativada pelo usuário"|\< valor \>|  
-|d|inteiro decimal|0x0065|101|  
-|dinâmica|Exibe o objeto especificado usando uma exibição dinâmica|Exibe todos os membros do objeto, incluindo o modo de exibição dinâmico|Exibe somente a visualização dinâmica|  
-|h|inteiro hexadecimal|61541|0x0000F065|  
-|Nq|cadeia de caracteres sem aspas|"Minha cadeia de caracteres"|Minha cadeia de caracteres|  
-|oculto|Exibe todos os membros públicos e não público|Exibe os membros públicos|Exibe todos os membros|  
-|bruto|Exibe o item como ele aparece no nó bruto do item. Válido somente em objetos proxy.|Dicionário \< T \>|Exibição bruta do Dictionary \< T \>|  
-|resultados|Usado com uma variável de um tipo que implemente IEnumerable ou IEnumerable \< T \>, geralmente o resultado de uma expressão de consulta. Exibe somente os membros que contém o resultado da consulta.|Exibe todos os membros.|Exibe os membros que atendam as condições da consulta.|  
+|Specifier|Format|Original Watch Value|Displays|  
+|---------------|------------|--------------------------|--------------|  
+|ac|Force evaluation of an expression. This can be useful when implicit evaluation of properties and implicit function calls is turned off.|Message "Implicit function evaluation is turned off by the user"|\<value>|  
+|d|decimal integer|0x0065|101|  
+|dynamic|Displays the specified object using a Dynamic View|Displays all the members of the object, including the Dynamic View|Displays only the Dynamic View|  
+|h|hexadecimal integer|61541|0x0000F065|  
+|nq|string with no quotes|"My String"|My String|  
+|hidden|Displays all public and non-public members|Displays public members|Displays all members|  
+|raw|Displays item as it appears in the raw item node. Valid on proxy objects only.|Dictionary\<T>|Raw View of Dictionary\<T>|  
+|results|Used with a variable of a type that implements IEnumerable or IEnumerable\<T>, usually the result of a query expression. Displays only the members that contain the query result.|Displays all the members.|Displays the members the meet the conditions of the query.|  
   
-## Consulte também  
- [Inspeção e Windows QuickWatch](../debugger/watch-and-quickwatch-windows.md)   
- [Janelas de variável](../Topic/Variable%20Windows.md)
+## <a name="see-also"></a>See Also  
+ [Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md)   
+ [Autos and Locals Windows](../debugger/autos-and-locals-windows.md)
+

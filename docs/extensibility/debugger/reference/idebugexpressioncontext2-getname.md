@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2::GetName | Documentos do Microsoft
+title: IDebugExpressionContext2::GetName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,42 +30,43 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1ed5efcbc18dc7443bb0dff92ab5628ee81d9fbf
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: fa2e97ef660c4872e234e386b5b2513551551c7c
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugexpressioncontext2getname"></a>IDebugExpressionContext2::GetName
-Recupera o nome do contexto de avaliação.  
+Retrieves the name of the evaluation context.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetName(   
    BSTR* pbstrName  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetName(   
    out string pbstrName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pbstrName`  
- [out] Retorna o nome do contexto de avaliação.  
+ [out] Returns the name of the evaluation context.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- O nome é a descrição do contexto de avaliação. Geralmente, é algo que podem ser analisados por um avaliador de expressão que se refere a esse contexto de avaliação exato. Por exemplo, em C++ o nome é da seguinte maneira:  
+## <a name="remarks"></a>Remarks  
+ The name is the description of this evaluation context. It is typically something that can be parsed by an expression evaluator that refers to this exact evaluation context. For example, in C++ the name is as follows:  
   
 ```  
 "{ function-name, source-file-name, module-file-name }"  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)

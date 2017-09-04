@@ -1,5 +1,5 @@
 ---
-title: PROGRAM_DESTROY_FLAGS | Documentos do Microsoft
+title: PROGRAM_DESTROY_FLAGS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,18 +28,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e9a3acc2d684bd5fe36610676a54493d8c0a8ef8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 82f7330108481959b457c0f69d80c355c69831c3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="programdestroyflags"></a>PROGRAM_DESTROY_FLAGS
-Enumera válidos valores do programa destruir sinalizadores.  
+Enumerates the valid values of the program destroy flags.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_PPROGRAM_DESTROY_FLAGS  
 {  
    PROGRAM_DESTROY_CONTINUE_DEBUGGING = 0x1  
@@ -47,27 +48,27 @@ enum enum_PPROGRAM_DESTROY_FLAGS
 typedef DWORD PROGRAM_DESTROY_FLAGS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_PPROGRAM_DESTROY_FLAGS  
 {  
    PROGRAM_DESTROY_CONTINUE_DEBUGGING = 0x1  
 };  
 ```  
   
-## <a name="terms"></a>Termos  
+## <a name="terms"></a>Terms  
  PROGRAM_DESTROY_CONTINUE_DEBUGGING  
- Destruir o programa, mas continuar a depuração.  
+ Destroy program, but continue to debug.  
   
-## <a name="remarks"></a>Comentários  
- A enumeração é retornada pelo [GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md) método.  
+## <a name="remarks"></a>Remarks  
+ The enumeration is returned by the [GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md) method.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: Msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: Msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)

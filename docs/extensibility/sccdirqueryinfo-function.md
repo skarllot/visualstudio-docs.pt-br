@@ -1,5 +1,5 @@
 ---
-title: "Função SccDirQueryInfo | Documentos do Microsoft"
+title: SccDirQueryInfo Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1b83fff70e81739afd021e603687014169da8eeb
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e8e155075ebf6e619c6504b24381bd3349b1c48b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sccdirqueryinfo-function"></a>Função SccDirQueryInfo
-Essa função examina uma lista de diretórios totalmente qualificados de seu status atual.  
+# <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo Function
+This function examines a list of fully qualified directories for their current status.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccDirQueryInfo(  
 LPVOID  pContext,  
 LONG    nDirs,  
@@ -50,37 +51,37 @@ LPLONG  lpStatus
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  pContext  
- [in] A estrutura de contexto de plug-in de controle de origem.  
+ [in] The source control plug-in context structure.  
   
  nDirs  
- [in] O número de diretórios selecionados a serem consultados.  
+ [in] The number of directories selected to be queried.  
   
  lpDirNames  
- [in] Uma matriz de caminhos totalmente qualificados dos diretórios a serem consultados.  
+ [in] An array of fully qualified paths of the directories to be queried.  
   
  lpStatus  
- [no, out] Uma estrutura de matriz para o plug-in para retornar os sinalizadores de status de controle de origem (consulte [código de Status do diretório](../extensibility/directory-status-code-enumerator.md) para obter detalhes).  
+ [in, out] An array structure for the source control plug-in to return the status flags (see [Directory Status Code](../extensibility/directory-status-code-enumerator.md) for details).  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|SCC_OK|A consulta foi bem-sucedida.|  
-|SCC_E_OPNOTSUPPORTED|O sistema de controle de código fonte não oferece suporte a esta operação.|  
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Falha não específica.|  
+|SCC_OK|The query was successful.|  
+|SCC_E_OPNOTSUPPORTED|The source code control system does not support this operation.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nonspecific failure.|  
   
-## <a name="remarks"></a>Comentários  
- A função preenche uma matriz de retorno com uma máscara de bits dos bits do `SCC_DIRSTATUS` família (consulte [código de Status do diretório](../extensibility/directory-status-code-enumerator.md)), uma entrada para cada diretório fornecido. A matriz de status é alocada pelo chamador.  
+## <a name="remarks"></a>Remarks  
+ The function fills the return array with a bitmask of bits from the `SCC_DIRSTATUS` family (see [Directory Status Code](../extensibility/directory-status-code-enumerator.md)), one entry for each directory given. The status array is allocated by the caller.  
   
- O IDE usa essa função antes de um diretório é renomeado para verificar se o diretório está sob controle do código-fonte consultando se ele tem um projeto correspondente. Se o diretório não está sob controle de origem, o IDE pode fornecer o aviso apropriado para o usuário.  
+ The IDE uses this function before a directory is renamed to check whether the directory is under source control by querying whether it has a corresponding project. If the directory is not under source control, the IDE can provide the proper warning to the user.  
   
 > [!NOTE]
->  Se um plug-in de controle de origem optar por não implementar um ou mais dos valores de status, o bits não implementados devem ser definidos como zero.  
+>  If a source control plug-in chooses to not implement one or more of the status values, unimplemented bits should be set to zero.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
- [Código de Status do diretório](../extensibility/directory-status-code-enumerator.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ [Directory Status Code](../extensibility/directory-status-code-enumerator.md)

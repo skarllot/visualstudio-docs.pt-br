@@ -1,99 +1,113 @@
 ---
-title: "Ferramentas do conjunto de dados no Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.data.DataSet"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "conjuntos de dados não tipados"
-  - "conjuntos de dados [Visual Basic], propriedades estendidas"
-  - "conjuntos de dados tipados"
-  - "registro atual no conjunto de dados"
-  - "XML [Visual Basic], conjuntos de dados"
-  - "Classe de conjunto de dados, sobre conjuntos de dados"
-  - "restrições exclusivas (conjuntos de dados)"
-  - "relacionamentos de dados"
-  - "registros pai em conjuntos de dados"
-  - "propriedades estendidas, em datasets tipados"
-  - "conjuntos de dados [Visual Basic]"
-  - "esquemas [Visual Basic], conjuntos de dados"
-  - "conjuntos de dados [Visual Basic] msprop"
-  - "tabelas de detalhes mestre, conjuntos de dados"
-  - "bancos de dados [Visual Basic], atualizando"
-  - "msprop"
-  - "chaves estrangeiras, conjuntos de dados"
-  - "Classe DataSet"
-  - "conjuntos de dados [Visual Basic], preenchendo"
-  - "maiúsculas e minúsculas, conjuntos de dados"
-  - "restrições [Visual Basic], conjuntos de dados"
-  - "registros filho"
-  - "tabelas relacionadas, conjuntos de dados"
-  - "atualizando conjuntos de dados, sobre atualizações de conjunto de dados"
-  - "dados em cache, conjuntos de dados"
-  - "Objeto DataRelation, conjuntos de dados"
-  - "datasets não digitados, em comparação a datasets tipados"
-  - "cache [Visual Studio], conjuntos de dados"
-  - "conjuntos de dados [Visual Basic], relações"
-  - "tabelas relacionadas"
-  - "Esquemas XML, sobre esquemas XML e conjuntos de dados"
-  - "relações, conjuntos de dados"
-  - "conjuntos de dados tipados, em comparação com conjuntos de dados não tipados"
-  - "conjuntos de dados [Visual Basic], preenchendo"
-  - "conjuntos de dados [Visual Basic] namespace"
-  - "adaptadores de dados, preenchendo conjuntos de dados"
+title: Dataset tools in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.data.DataSet
+helpviewer_keywords:
+- untyped datasets
+- datasets [Visual Basic], extended properties
+- typed datasets
+- current record in dataset
+- XML [Visual Basic], datasets
+- DataSet class, about datasets
+- unique constraints (datasets)
+- data relationships
+- parent records in datasets
+- extended properties, in typed datasets
+- datasets [Visual Basic]
+- schemas [Visual Basic], datasets
+- datasets [Visual Basic], msprop
+- master-detail tables, datasets
+- databases [Visual Basic], updating
+- msprop
+- foreign keys, datasets
+- DataSet class
+- datasets [Visual Basic], filling
+- case sensitivity, datasets
+- constraints [Visual Basic], datasets
+- child records
+- related tables, datasets
+- updating datasets, about dataset updates
+- data caching, datasets
+- DataRelation object, datasets
+- untyped datasets, compared to typed datasets
+- cache [Visual Studio], datasets
+- datasets [Visual Basic], relationships
+- related tables
+- XML schemas, about XML schemas and datasets
+- relationships, datasets
+- typed datasets, compared to untyped datasets
+- datasets [Visual Basic], populating
+- datasets [Visual Basic], namespace
+- data adapters, populating datasets
 ms.assetid: ee57f4f6-9fe1-4e0a-be9a-955c486ff427
 caps.latest.revision: 49
-caps.handback.revision: 39
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: 06754cd3678d8a045e78bb04ad881e2dc59f51c6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
+
 ---
-# Ferramentas do conjunto de dados no Visual Studio
+# <a name="dataset-tools-in-visual-studio"></a>Dataset tools in Visual Studio
 > [!NOTE]
->  Conjuntos de dados e classes relacionadas são herdadas tecnologias .NET no início dos anos 2000 que permitem que aplicativos trabalhar com dados na memória enquanto estiver desconectado do banco de dados. Eles são especialmente úteis para aplicativos que permitem que os usuários modifiquem dados e manter as alterações no banco de dados. Embora Datasets provaram para ser uma tecnologia muito bem\-sucedida, é recomendável que novos aplicativos .NET usam o Entity Framework. O Entity Framework fornece uma forma mais natural para trabalhar com dados tabulares como modelos de objeto e tem uma interface de programação mais simples.  
+>  Datasets and related classes are legacy .NET technologies from the early 2000s that enable applications to work with data in memory while the applications are disconnected from the database. They are especially useful for applications that enable users to modify data and persist the changes back to the database. Although datasets have proven to be a very successful technology, we recommend that new .NET applications use Entity Framework. Entity Framework provides a more natural way to work with tabular data as object models, and it has a simpler programming interface.  
   
- Um conjunto de dados é um objeto de memória que é essencialmente um banco de dados simplificado. Ele contém objetos DataTable, DataRow e de DataColumn em que você pode armazenar e modificar dados de um ou mais bancos de dados sem a necessidade de manter uma conexão aberta.  O conjunto de dados mantém informações sobre alterações em seus dados, portanto, as atualizações podem ser rastreadas e enviadas de volta para o banco de dados quando seu aplicativo se torna reconectado.  
+ A DataSet object is an in-memory object that is essentially a mini-database. It contains DataTable, DataColumn, and DataRow objects in which you can store and modify data from one or more databases without having to maintain an open connection. The dataset maintains information about changes to its data, so updates can be tracked and sent back to the database when your application becomes reconnected.  
   
- Conjuntos de dados e classes relacionadas são definidos no namespace System. Data na biblioteca de classes do .NET Framework. Você pode criar e modificar conjuntos de dados dinamicamente no código; Para obter mais informações sobre como fazer isso, consulte ADO.NET. A documentação nesta seção mostra como trabalhar com conjuntos de dados com designers do Visual Studio. Uma coisa a saber: conjuntos de dados feitos com os designers usam TableAdapters para interagir com o banco de dados, enquanto os conjuntos de dados feitas por meio de programação usar DataAdapters. Para obter informações em Criando conjuntos de dados programaticamente, consulte [DataAdapters e DataReaders](../Topic/DataAdapters%20and%20DataReaders.md)  
+ Datasets and related classes are defined in the System.Data namespace in the .NET Framework class library. You can create and modify datasets dynamically in code. For more information about how to do that, see ADO.NET. The documentation in this section shows how to work with datasets by using Visual Studio designers. One thing to know: datasets that are made through designers use TableAdapter objects to interact with the database, whereas datasets that are made programmatically use DataAdapter objects. For information about creating datasets programmatically, see [DataAdapters and DataReaders](/dotnet/framework/data/adonet/dataadapters-and-datareaders).  
   
- Se seu aplicativo só precisa ler dados de um banco de dados e não executar atualizações, adiciona ou exclui, geralmente pode obter um melhor desempenho usando um DataReader para recuperar dados em uma lista genérica ou outro objeto de coleção. Se você estiver exibindo os dados, você pode vincular dados a interface do usuário à coleção.  
+ If your application needs to only read data from a database, and not perform updates, adds, or deletes, you can usually get better performance by using a DataReader object to retrieve data into a generic List object or another collection object. If you are displaying the data, you can data-bind the user interface to the collection.  
   
-## Fluxos de trabalho do conjunto de dados  
- O Visual Studio fornece muitas ferramentas para simplificar o trabalho com conjuntos de dados. O fluxo de trabalho de ponta a ponta básico é:  
+## <a name="dataset-workflow"></a>Dataset workflow  
+ Visual Studio provides a lot of tooling to simplify working with datasets. The basic end-to-end workflow is:  
   
--   Use a janela de fonte de dados para criar um novo conjunto de dados de uma ou mais fontes de dados. Use o Designer de conjunto de dados para configurar o conjunto de dados e definir suas propriedades. Por exemplo, você precisa especificar quais tabelas da fonte de dados para incluir e quais colunas de cada tabela. Escolha cuidadosamente reduzir a quantidade de memória que exigirá que o conjunto de dados. Consulte [Criar e configurar conjuntos de dados](../data-tools/create-and-configure-datasets-in-visual-studio.md).  
+-   Use the **Data Source** window to create a new dataset from one or more data sources. Use the **Dataset Designer** to configure the dataset and set its properties. For example, you need to specify which tables from the data source to include, and which columns from each table. Choose carefully to conserve the amount of memory that the dataset will require. For more information, see [Create and configure datasets](../data-tools/create-and-configure-datasets-in-visual-studio.md).  
   
--   Especifica as relações entre as tabelas para que as chaves estrangeiras são tratadas corretamente. Consulte [Preencher datasets usando TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md).  
+-   Specify the relationships between the tables so that foreign keys are handled correctly. For more information, see [Fill datasets by using TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md).  
   
--   Use o Assistente de configuração do TableAdapter para especificar a consulta ou procedimento armazenado que preencherá o conjunto de dados, e quais operações de banco de dados \(update, delete e assim por diante\) para implementar. Consulte estes tópicos:  
+-   Use the **TableAdapter Configuration Wizard** to specify the query or stored procedure that will populate the dataset, and what database operations (update, delete, and so on) to implement. For more information, see these topics:  
   
-    -   [Preencher datasets usando TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md)  
+    -   [Fill datasets by using TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md)  
   
-    -   [Editar dados em conjuntos de dados](../data-tools/edit-data-in-datasets.md)  
+    -   [Edit data in datasets](../data-tools/edit-data-in-datasets.md)  
   
-    -   [Validar dados em conjuntos de dados](../data-tools/validate-data-in-datasets.md)  
+    -   [Validate data in datasets](../data-tools/validate-data-in-datasets.md)  
   
-    -   [Salvar dados no banco de dados](../data-tools/save-data-back-to-the-database.md)  
+    -   [Save data back to the database](../data-tools/save-data-back-to-the-database.md)  
   
--   Consultar e pesquisar os dados no conjunto de dados. Consulte [Conjuntos de dados de consulta](../data-tools/query-datasets.md).[!INCLUDE[linq_dataset](../data-tools/includes/linq_dataset_md.md)] permite [LINQ \(Consulta Integrada à Linguagem\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md) sobre os dados em um <xref:System.Data.DataSet> objeto. Para obter mais informações, consulte [LINQ to DataSet](../Topic/LINQ%20to%20DataSet.md).  
+-   Query and search the data in the dataset. For more information, see [Query datasets](../data-tools/query-datasets.md). [!INCLUDE[linq_dataset](../data-tools/includes/linq_dataset_md.md)] enables [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d) over data in a <xref:System.Data.DataSet> object. For more information, see [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset).  
   
--   Use a janela fontes de dados para associar controles de interface do usuário para o conjunto de dados ou suas colunas individuais e especifique quais colunas são editáveis pelo usuário. Consulte [Associar controles a dados no Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).  
+-   Use the **Data Sources** window to bind user-interface controls to the dataset or its individual columns, and to specify which columns are user-editable. For more information, see [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).  
   
-## Arquitetura de conjuntos de dados e de N camadas  
- Para obter informações sobre conjuntos de dados em aplicativos de N camadas, consulte [Trabalhar com conjuntos de dados em aplicativos de n camadas](../data-tools/work-with-datasets-in-n-tier-applications.md)  
+## <a name="datasets-and-n-tier-architecture"></a>Datasets and N-tier architecture  
+ For information about datasets in N-tier applications, see [Work with datasets in n-tier applications](../data-tools/work-with-datasets-in-n-tier-applications.md).  
   
-## DataSets e XML  
- Para obter informações sobre a conversão de conjuntos de dados para e do XML, consulte [Ler dados XML em um dataset](../data-tools/read-xml-data-into-a-dataset.md) e [Como salvar um conjunto de dados como XML](../data-tools/save-a-dataset-as-xml.md).  
+## <a name="datasets-and-xml"></a>Datasets and XML  
+ For information about converting datasets to and from XML, see [Read XML data into a dataset](../data-tools/read-xml-data-into-a-dataset.md) and [Save a dataset as XML](../data-tools/save-a-dataset-as-xml.md).  
   
-## Consulte também  
- [Ferramentas de dados do Visual Studio para .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)
+## <a name="see-also"></a>See Also  
+ [Visual Studio data tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)

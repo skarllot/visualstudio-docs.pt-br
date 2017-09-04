@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::SetLocale | Documentos do Microsoft
+title: IDebugProgramProvider2::SetLocale | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 257983806bbecc26dc331e4d67ccbde8864371da
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: cdf04823a35a09ed6c9dfa08864c39548a57696f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprogramprovider2setlocale"></a>IDebugProgramProvider2::SetLocale
-Estabelece uma localidade a ser usado para todos os recursos específicos da localidade.  
+Establishes a locale to be used for any locale-specific resources.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT SetLocale(  
@@ -47,18 +48,18 @@ HRESULT SetLocale(
 );  
 ```  
   
-```c#  
+```csharp  
 int SetLocale(  
    ushort wLangID  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `wLangID`  
- [in] ID de idioma para estabelecer. Por exemplo, 1033 para inglês.  
+ [in] Language ID to establish. For example, 1033 for English.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

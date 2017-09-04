@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar um Atom Feed para uma galeria privada | Documentos do Microsoft'
+title: 'Como: criar um Atom Feed para uma galeria privada | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,20 +29,20 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 751b440d51756a98844c0fdd51995dd51a0576ad
+ms.translationtype: MT
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 62714327dfc3ebc84d624c21c8ff63bdb5bc440c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Como: criar um Atom Feed para uma galeria privada
-Você pode criar um átomo (RSS) para um local de intranet que contém as extensões e adicionar o feed para **extensões e atualizações** como uma galeria privada. Para obter mais informações, consulte [galerias particular](../extensibility/private-galleries.md).  
+Você pode criar um Atom (RSS) para um local de intranet que contém as extensões e adicionar o feed para **extensões e atualizações** como uma galeria privada. Para obter mais informações, consulte [Galerias privadas](../extensibility/private-galleries.md).  
   
 ## <a name="creating-an-atom-feed"></a>Criar um Atom Feed  
- Para criar um feed como uma galeria privada Atom, primeiro, reúna as extensões (arquivos. VSIX) em uma pasta. Você pode organizá-los em subpastas, se desejar. Você precisará também os seguintes recursos:  
+ Para criar um feed como uma galeria privada Atom, você primeiro reunir suas extensões (.vsix arquivos) em uma pasta. Você pode organizá-los em subpastas, se desejar. Você precisará também os seguintes recursos:  
   
--   Um arquivo atom.xml que torna as extensões disponíveis como uma galeria privada. Para obter informações sobre como conectar-se o arquivo atom.xml **extensões e atualizações**, consulte [galerias particular](../extensibility/private-galleries.md).  
+-   Um arquivo de atom.xml que faz com que as extensões disponíveis como uma galeria privada. Para obter informações sobre como conectar-se o arquivo atom.xml **extensões e atualizações**, consulte [galerias privadas](../extensibility/private-galleries.md).  
   
 -   Uma pasta que contém os arquivos de imagem que foram extraídos das extensões (por exemplo, capturas de tela). O arquivo atom.xml contém links relativos para essas imagens para que elas estão disponíveis em **extensões e atualizações**.  
   
@@ -52,7 +52,7 @@ Você pode criar um átomo (RSS) para um local de intranet que contém as extens
   
 -   SelectionHighlight.vsix, que é uma ferramenta para realçar todas as instâncias de uma palavra selecionada.  
   
- O conteúdo do arquivo atom.xml seria semelhante a exemplo a seguir:  
+ O conteúdo do arquivo atom.xml seria semelhante o exemplo a seguir:  
   
 ```  
   <?xml version="1.0" encoding="utf-8" ?>   
@@ -89,7 +89,7 @@ Você pode criar um átomo (RSS) para um local de intranet que contém as extens
   
 ```  
   
- Observe que as marcas de dois link consultem capturas de tela na pasta gerada de imagens.  
+ Observe que as marcas de dois link consultem capturas de tela na pasta de imagens gerada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Galerias privadas](../extensibility/private-galleries.md)

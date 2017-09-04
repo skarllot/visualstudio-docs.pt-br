@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_FIELDS | Documentos do Microsoft
+title: DISASSEMBLY_STREAM_FIELDS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2505b8d771218fa2ebe9a77b0eb3c92678a676d9
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c1681a66953db211dba3f9cc93235b15083a73a4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="disassemblystreamfields"></a>DISASSEMBLY_STREAM_FIELDS
-Especifica quais informações devem ser recuperadas sobre um campo de desmontagem.  
+Specifies what information to retrieve about a disassembly field.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_DISASSEMBLY_STREAM_FIELDS {   
    DSF_ADDRESS          = 0x00000001,  
    DSF_ADDRESSOFFSET    = 0x00000002,  
@@ -60,7 +61,7 @@ enum enum_DISASSEMBLY_STREAM_FIELDS {
 typedef DWORD DISASSEMBLY_STREAM_FIELDS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_DISASSEMBLY_STREAM_FIELDS {   
    DSF_ADDRESS          = 0x00000001,  
    DSF_ADDRESSOFFSET    = 0x00000002,  
@@ -78,62 +79,62 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS {
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  DSF_ADDRESS  
- Inicializar/usar o `bstrAddress` campo.  
+ Initialize/use the `bstrAddress` field.  
   
  DSF_ADDRESSOFFSET  
- Inicializar/usar o `bstrAddressOffset` campo.  
+ Initialize/use the `bstrAddressOffset` field.  
   
  DSF_CODEBYTES  
- Inicializar/usar o `bstrCodeBytes` campo.  
+ Initialize/use the `bstrCodeBytes` field.  
   
  DSF_OPCODE  
- Inicializar/usar o `bstrOpCode` campo.  
+ Initialize/use the `bstrOpCode` field.  
   
  DSF_OPERANDS  
- Inicializar/usar o `bstrOperands` campo.  
+ Initialize/use the `bstrOperands` field.  
   
  DSF_SYMBOL  
- Inicializar/usar o `bstrSymbol` campo.  
+ Initialize/use the `bstrSymbol` field.  
   
  DSF_CODELOCATIONID  
- Inicializar/usar o `uCodeLocationId` campo.  
+ Initialize/use the `uCodeLocationId` field.  
   
  DSF_POSITION  
- Inicializar/usar o `posBeg` e `posEnd` campos.  
+ Initialize/use the `posBeg` and `posEnd` fields.  
   
  DSF_DOCUMENTURL  
- Inicializar/usar o `bstrDocumentUrl` campo.  
+ Initialize/use the `bstrDocumentUrl` field.  
   
  DSF_BYTEOFFSET  
- Inicializar/usar o `dwByteOffset` campo.  
+ Initialize/use the `dwByteOffset` field.  
   
  DSF_FLAGS  
- Inicializar/usar o `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) campo.  
+ Initialize/use the `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) field.  
   
  DSF_OPERANDS_SYMBOLS  
- Incluir nomes de símbolos no `bstrOperands` campo.  
+ Include symbol names in the `bstrOperands` field.  
   
  DSF_ALL  
- Especifica todos os campos para o fluxo de desmontagem.  
+ Specifies all fields for the disassembly stream.  
   
-## <a name="remarks"></a>Comentários  
- Passado como um parâmetro para o [leitura](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) método para indicar quais campos do [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estrutura devem ser inicializado.  
+## <a name="remarks"></a>Remarks  
+ Passed as a parameter to the [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) method to indicate which fields of the [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) structure are to be initialized.  
   
- Usado para o `dwFields` membro o `DisassemblyData` estrutura para indicar quais campos são usados e válida quando a estrutura é retornada.  
+ Used for the `dwFields` member of the `DisassemblyData` structure to indicate which fields are used and valid when the structure is returned.  
   
- Esses valores podem ser combinados com um bit a bit `OR`.  
+ These values may be combined with a bitwise `OR`.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
- [Leitura](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)   
+ [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)   
  [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)

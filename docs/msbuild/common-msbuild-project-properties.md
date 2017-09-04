@@ -37,11 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7ec5dd2249f67a2aa23dc42b1f4065bc5d9a318c
+ms.translationtype: HT
+ms.sourcegitcommit: 1c2afd23f9f6a7444b723a0f7d93ababad2624e7
+ms.openlocfilehash: 15e453ace87993aae4ecf80e37cf97e4afce2f28
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="common-msbuild-project-properties"></a>Propriedades de projeto comuns do MSBuild
@@ -78,6 +78,7 @@ A tabela a seguir lista propriedades frequentemente usadas que são definidas no
 |DefineTrace|Um valor booliano que indica se você deseja que a constante TRACE seja definida.|  
 |DebugType|Define o nível de informações de depuração que você deseja que seja gerado. Os valores válidos são "full," "pdbonly" e "none".|  
 |DelaySign|Um valor booliano que indica se você deseja atrasar a assinatura do assembly em vez de fazer a assinatura completa.|  
+|Determinista|Um valor booliano que indica se o compilador deve gerar assemblies idênticos para entradas idênticas. Esse parâmetro corresponde à opção `/deterministic` dos compiladores `vbc.exe` e `csc.exe`.|
 |DisabledWarnings|Suprime os avisos especificados. Somente a parte numérica do identificador de aviso deve ser especificada. Vários avisos são separados por ponto e vírgula. Esse parâmetro corresponde à opção `/nowarn` do compilador vbc.exe.|  
 |DisableFastUpToDateCheck|Um valor booliano que se aplica apenas a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. O gerenciador de build [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] usa um processo chamado FastUpToDateCheck para determinar se um projeto deve ser reconstruído para ser atualizado. Esse processo é mais rápido que usar [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] para determinar isso. Configurar a propriedade DisableFastUpToDateCheck para `true` permite ignorar o gerenciador de build [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e forçá-lo a usar [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] para determinar se o projeto está atualizado.|  
 |DocumentationFile|O nome do arquivo que é gerado como o arquivo de documentação XML. Esse nome inclui o nome de arquivo e não tem nenhuma informação de caminho.|  
@@ -85,7 +86,7 @@ A tabela a seguir lista propriedades frequentemente usadas que são definidas no
 |ExcludeDeploymentUrl|A [tarefa GenerateDeploymentManifest](../msbuild/generatedeploymentmanifest-task.md) adicionará uma marca deploymentProvider ao manifesto de implantação se o arquivo de projeto incluir qualquer um dos seguintes elementos:<br /><br /> -   UpdateUrl<br />-   InstallUrl<br />-   PublishUrl<br /><br /> Entretanto, ao usar ExcludeDeploymentUrl, você poderá impedir que a marca deploymentProvider seja adicionada ao manifesto de implantação, mesmo se qualquer uma das URLs acima for especificada. Para fazer isso, adicione a propriedade a seguir ao arquivo de projeto:<br /><br /> `<ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>`**Observação:** ExcludeDeploymentUrl não é exposto no IDE [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e pode ser definido apenas editando manualmente o arquivo de projeto. A configuração dessa propriedade não afeta a publicação em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]; ou seja, a marca deploymentProvider ainda será adicionada à URL especificada pelo PublishUrl.|  
 |FileAlignment|Especifica, em bytes, onde alinhar as seções do arquivo de saída. Os valores válidos são 512, 1024, 2048, 4096, 8192. Essa propriedade é equivalente à opção do compilador `/filealignment`.|  
 |FrameworkPathOverride|Especifica o local de mscorlib.dll e microsoft.visualbasic.dll. Esse parâmetro corresponde à opção `/sdkpath` do compilador vbc.exe.|  
-|GenerateDocumentation|Um parâmetro booliano que indica se a documentação é gerada pelo build. Se `true`, o build gerará informações sobre a documentação e as colocará em um arquivo .xml junto com o nome do arquivo executável ou a biblioteca que a tarefa de build criou.|  
+|GenerateDocumentation|(somente Visual Basic .NET) Um parâmetro booliano que indica se a documentação é gerada pelo build. Se `true`, o build gerará informações sobre a documentação e as colocará em um arquivo .xml junto com o nome do arquivo executável ou a biblioteca que a tarefa de build criou.|
 |IntermediateOutputPath|O caminho de saída completo intermediário conforme derivado de `BaseIntermediateOutputPath`, se nenhum caminho for especificado. Por exemplo, \obj\debug\\. Se essa propriedade for substituída, então a configuração de `BaseIntermediateOutputPath` não terá efeito.|  
 |KeyContainerName|O nome do contêiner de chave de nome forte.|  
 |KeyOriginatorFile|O nome do arquivo de chave de nome forte.|  
@@ -105,6 +106,7 @@ A tabela a seguir lista propriedades frequentemente usadas que são definidas no
 |OverwriteReadOnlyFiles|Um valor booliano que indica se você deseja habilitar o build para substituir arquivos somente leitura ou disparar um erro.|  
 |PdbFile|O nome do arquivo .pdb que você está emitindo. Essa propriedade corresponde à opção `/pdb` do compilador csc.exe.|  
 |Plataforma|O sistema operacional que você está compilando. Os valores válidos são "Any CPU", "x86" e "x64".|  
+|ProduceReferenceAssembly|Um valor booliano que, quando definido como `true`, permite a produção de [assemblies de referência](https://github.com/dotnet/roslyn/blob/master/docs/features/refout.md) para o assembly atual. `Deterministic` deve ser `true` ao usar esse recurso. Essa propriedade corresponde à opção `/refout` dos compiladores `vbc.exe` e `csc.exe`.|
 |RemoveIntegerChecks|Um valor booliano que indica se é necessário desabilitar a verificação de erro de estouro de inteiro. O valor padrão é `false`. Essa propriedade corresponde à opção `/removeintchecks` do compilador vbc.exe.|  
 |SGenUseProxyTypes|Um valor booliano que indica se os tipos de proxy devem ser gerados por SGen.exe.<br /><br /> O destino SGen usa essa propriedade para definir o sinalizador UseProxyTypes. Essa propriedade assume true como padrão e não há nenhuma interface do usuário para alterar isso. Para gerar o assembly de serialização para tipos não webservice, adicione essa propriedade ao arquivo de projeto e defina-o como false antes de importar o Microsoft.Common.Targets ou o C#/VB.targets.|  
 |SGenToolPath|Um caminho de ferramenta opcional que indica onde obter SGen.exe quando a versão atual do SGen.exe for substituída.|  

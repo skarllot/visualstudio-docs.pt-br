@@ -1,76 +1,106 @@
 ---
-title: "Como depurar a partir de um projeto de DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "depurando [Visual Studio], DLLs"
-  - "depurando DLLs"
-  - "projetos DLL, depuração"
-  - "DLLs, depurando projetos"
+title: 'How to: Debug from a DLL Project | Microsoft Docs'
+ms.custom: 
+ms.date: 05/24/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- DLL projects, debugging
+- debugging DLLs
+- DLLs, debugging projects
+- debugging [Visual Studio], DLLs
 ms.assetid: 40a94339-d3f7-4ab9-b8a1-b8cf82942f44
 caps.latest.revision: 30
-caps.handback.revision: 30
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Como depurar a partir de um projeto de DLL
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 62f65784f36031eb754252f385f7c78c821fc5ec
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Para iniciar a depuração de um projeto DLL, você deve especificar o aplicativo de chamada nas propriedades do projeto.  As páginas de propriedade do C\+\+ diferem no layout e o conteúdo do c\# e Visual Basic páginas de propriedades.  
+---
+# <a name="how-to-debug-from-a-dll-project-in-visual-studio"></a>How to: Debug from a DLL Project in Visual Studio
+One way to debug a DLL project is to specify the calling application in the project properties of the DLL project and then you can start debugging from the DLL project itself. For this method to work, the application must call the DLL, and the DLL must be in the location where the application expects to find it (otherwise, the application might find a different version of the DLL and load that instead, and it won't hit your breakpoints). For other methods of debugging DLLs, see [Debugging DLL Projects](../debugger/debugging-dll-projects.md).
   
- Se uma DLL gerenciada é chamada pelo código nativo e você deseja depurar ambos, você pode especificar isso nas propriedades do projeto.  Para obter mais informações, consulte [Como depurar no modo misto](../debugger/how-to-debug-in-mixed-mode.md).  
+If a managed DLL is called by native code and you want to debug both, you can specify this in the project properties. For more information, see [How to: Debug in Mixed Mode](../debugger/how-to-debug-in-mixed-mode.md).   
+
+The C++ property pages differ in layout and content from the C# and Visual Basic property pages. 
   
-> [!NOTE]
->  Você não pode especificar um aplicativo de chamada externa nas edições Express do Visual Studio.  Em vez disso, você precisa adicionar um projeto executável à solução, defini\-lo como o projeto de inicialização e chamar métodos na DLL do projeto executável.  
+### <a name="to-specify-the-calling-application-in-a-c-project"></a>To specify the calling application in a C++ project  
   
-### Para especificar o aplicativo de chamada em um projeto C\+\+  
+1.  Right-click the project node in the **Solution Explorer** and select **Properties**.  
   
-1.  Com o botão direito no nó do projeto no **Solution Explorer** e selecione **propriedades**.  Vá para o **Depurar** guia.  
+2.  Make sure that the **Configuration** field at the top of the window is set to **Debug**. 
+
+    A **Debug** configuration is required for this method. 
   
-2.  Verifique se o **configuração** campo na parte superior da janela é definido como **Depurar**.  
+3.  Go to **Configuration Properties > Debugging**.  
   
-3.  Vá para **Propriedades de configuração \/ depuração**.  
+4.  In the **Debugger to launch** list, choose **Local Windows Debugger** or **Remote Windows Debugger**.  
   
-4.  Na lista **Depurador a iniciar**, escolha **Depurador Local do Windows** ou **Depurador Remoto do Windows**.  
+5.  In the **Command** or **Remote Command** box, add the fully-qualified path name of the calling application (such as an .exe file).
+
+    ![Debugging Properties Window](../debugger/media/dbg-debugging-properties-dll.png "DebuggingPropertiesWindow")  
   
-5.  No **comando** ou **comando remoto** caixa, adicione o nome do caminho totalmente qualificado do aplicativo.  
+6.  Add any necessary program arguments to the **Command Arguments** box.  
   
-6.  Adicionar quaisquer argumentos necessários do programa para o **argumentos de comando** caixa.  
+### <a name="to-specify-the-calling-application-in-a-c-or-visual-basic-project"></a>To specify the calling application in a C# or Visual Basic project  
   
-### Para especificar o aplicativo de chamada em um projeto C\# ou Visual Basic  
+1.  Right-click the project node in the **Solution Explorer** and select **Properties**, and then select the **Debug** tab.
+
+2.  Make sure that the **Configuration** field at the top of the window is set to **Debug**.
+
+3.  (.NET Framework) Select **Start external program**, and add the fully-qualified path name of the calling application.
+
+4.  (.NET Core) Select **Executable** from the **Launch** list, and then add the fully-qualified path name of the calling application in the **Executable** field. 
   
-1.  Com o botão direito no nó do projeto no **Solution Explorer** e selecione **propriedades**.  Vá para o **Depurar** guia.  
+     If you need to add the external program's command line arguments, add them in the **Command line arguments** (or **Application arguments**) field.
+
+    ![Debugging Properties Window](../debugger/media/dbg-debugging-properties-dll-csharp.png "DebuggingPropertiesWindow") 
+
+5.  If you need to, you can also call an application as a URL. (You might want to do this if you are debugging a managed DLL used by a local ASP.NET application.)  
   
-     Selecione **Iniciar programa externo**, e adicione o nome de caminho totalmente qualificado do programa a ser executado.  
+     Under **Start Action**, select the **Start browser with URL:** radio button and fill in the URL.
   
-     Se você precisar adicionar argumentos de linha de comando do programa externo, adicioná\-las a **argumentos de linha de comando** campo.  
+### <a name="to-start-debugging-from-the-dll-project"></a>To start debugging from the DLL project  
   
-2.  Você também pode chamar um aplicativo como uma URL.  \(Você poderá fazer isso se estiver depurando uma DLL gerenciada usada por um aplicativo local do ASP.NET.\)  
+1.  Set breakpoints in the DLL project. 
+
+2.  Right-click the DLL project and choose **Set as Startup Project**. 
+
+    (Also, make sure that the **Solutions Configuration** field is still set to **Debug**.)   
   
-     Em **Iniciar ação**, selecione o **Iniciar navegador na URL:** botão de opção e preencha a URL.  
+3.  Start debugging (press F5, click the green arrow, or click **Debug > Start Debugging**).
+
+    You will hit the breakpoints in your DLL. If you aren't able to hit the breakpoints, make sure that your DLL output (by default, the **project\Debug** folder) is in a location that the calling application expects to find it.
   
-### Para iniciar a depuração do projeto da DLL  
-  
-1.  Defina pontos de interrupção conforme necessário.  
-  
-2.  Iniciar a depuração \(pressione F5, clique na seta verde ou clique **Depurar \/ iniciar depuração**\).  
-  
-## Consulte também  
- [Depurando projetos de DLL](../debugger/debugging-dll-projects.md)   
- [Definições do projeto para configurações de depuração do C\#](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Definições do projeto para uma configuração de depuração do Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [Definições do projeto para uma configuração de depuração do C\+\+](../debugger/project-settings-for-a-cpp-debug-configuration.md)
+## <a name="see-also"></a>See Also  
+ [Debugging DLL Projects](../debugger/debugging-dll-projects.md)   
+ [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md)

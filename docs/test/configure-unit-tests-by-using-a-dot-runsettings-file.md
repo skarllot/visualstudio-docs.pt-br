@@ -27,24 +27,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 1600207e0c504f4b4dcbf620e92bcc06e14ec035
+ms.translationtype: HT
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 4401606f97452de235b8a2d406451e5481518006
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Configurar testes de unidade usando um arquivo .runsettings
-Os testes de unidade no Visual Studio podem ser configurados com um arquivo *.runsettings. (O nome do arquivo não importa, contanto que você use a extensão ‘.runsettings’). Por exemplo, é possível alterar o .NET Framework em que os testes serão executados, o diretório para o qual os resultados de teste serão enviados e os dados coletados durante uma execução de teste.  
+Os testes de unidade no Visual Studio podem ser configurados com um arquivo \*.runsettings. (O nome do arquivo não importa, contanto que você use a extensão ‘.runsettings’). Por exemplo, é possível alterar o .NET Framework em que os testes serão executados, o diretório para o qual os resultados de teste serão enviados e os dados coletados durante uma execução de teste.  
   
- Se você não desejar adicionar nenhuma configuração especial, não será preciso ter um arquivo *.runsettings. O uso mais frequente é para personalizar a [Cobertura de Código](../test/customizing-code-coverage-analysis.md).  
+ Se você não desejar adicionar nenhuma configuração especial, não será preciso ter um arquivo \*.runsettings. O uso mais frequente é para personalizar a [Cobertura de Código](../test/customizing-code-coverage-analysis.md).  
   
 > [!NOTE]
 >  **.runsettings e .testsettings**  
 >   
->  Há dois tipos de arquivo para a configuração de testes. *.runsettings são usados para testes de unidade. E \*.testsettings para [testes de ambiente de laboratório](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests), testes de carga e desempenho da Web e para personalizar alguns tipos de adaptadores de dados de diagnóstico, como adaptadores de log de evento e IntelliTrace.  
+>  Há dois tipos de arquivo para a configuração de testes. \*.runsettings são usados para testes de unidade. E \*.testsettings para [testes de ambiente de laboratório](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests), testes de carga e desempenho da Web e para personalizar alguns tipos de adaptadores de dados de diagnóstico, como adaptadores de log de evento e IntelliTrace.  
 >   
->  Em edições anteriores do Visual Studio até 2010, os testes de unidade também eram personalizados com arquivos *.testsettings. Ainda é possível fazer isso, mas os testes serão executados mais lentamente do que usando as configurações equivalentes em um arquivo \*.runsettings.  
+>  Em edições anteriores do Visual Studio até 2010, os testes de unidade também eram personalizados com arquivos \*.testsettings. Ainda é possível fazer isso, mas os testes serão executados mais lentamente do que usando as configurações equivalentes em um arquivo \*.runsettings.  
   
 ## <a name="customizing-tests-with-a-runsettings-file"></a>Personalizando testes com um arquivo .runsettings  
   
@@ -58,10 +58,10 @@ Os testes de unidade no Visual Studio podem ser configurados com um arquivo *.ru
   
  É possível criar mais de um arquivo \*.runsettings em sua solução e habilitá-los ou desabilitá-los em momentos diferentes com o menu **Configurações de Teste**.  
   
- ![Habilitando um arquivo de configurações de execução](~/test/media/runsettings-1.png "RunSettings-1")  
+ ![Habilitando um arquivo de configurações de execução](../test/media/runsettings-1.png "RunSettings-1")  
   
 ##  <a name="example"></a> Copiar este exemplo de arquivo .runsettings  
- Veja um arquivo *.runsettings típico. Cada elemento do arquivo é opcional, porque cada valor possui um padrão.  
+ Veja um arquivo \*.runsettings típico. Cada elemento do arquivo é opcional, porque cada valor possui um padrão.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

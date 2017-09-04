@@ -1,11 +1,11 @@
 ---
-title: IDs de carga de trabalho e de componente do Feedback Client do Visual Studio 2017 | Microsoft Docs
-description: "Usar IDs de carga de trabalho e de componente do Visual Studio para fornecer comentários detalhados para o Visual Studio Team Services ou o Team Foundation Server"
+title: Visual Studio Feedback Client 2017 workload and component IDs | Microsoft Docs
+description: Use Visual Studio workload and component IDs to provide rich feedback for Visual Studio Team Services or Team Foundation Server
 keywords: 
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 05/10/2017
+ms.date: 08/30/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -31,50 +31,52 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 5d9a1cd072ce56e0695240febdaff6fe6aa3f12f
+ms.translationtype: HT
+ms.sourcegitcommit: 96018963278cd1d53b226473baade41da1e98111
+ms.openlocfilehash: 9bc2b7440f61e4940b4ef0b1396724a716f34e84
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 
-# <a name="visual-studio-feedback-client-2017-component-directory"></a>Diretório de componentes do Feedback Client do Visual Studio 2017
+# <a name="visual-studio-feedback-client-2017-component-directory"></a>Visual Studio Feedback Client 2017 component directory
 
-As tabelas desta página listam as IDs que podem ser usadas para instalar o Visual Studio usando a linha de comando. Observe que adicionaremos outros componentes conforme atualizações forem liberadas para o Visual Studio.
+The tables on this page list the IDs that you can use to install Visual Studio by using the command line. Note that we will add additional components as we release updates to Visual Studio.
 
-Além disso, observe o seguinte sobre a página:
+Also note the following about the page:
 
-* Cada carga de trabalho tem sua própria seção, seguida pela ID da carga de trabalho e por uma tabela dos componentes que estão disponíveis para a carga de trabalho.
-* Por padrão, os componentes **Obrigatórios** serão instalados durante a instalação da carga de trabalho. Se preferir, também será possível instalar os componentes **Recomendados** e **Opcionais**.
-* Também adicionamos uma seção que lista os componentes adicionais que não são afiliados a nenhuma carga de trabalho.
+* Each workload has its own section, followed by the workload ID and a table of the components that are available for the workload.
+* By default, the **Required** components will be installed when you install the workload. If you choose to, you can also install the **Recommended** and **Optional** components.
+* We've also added a section that lists the additional components that are not affiliated with any workload.
 
-Para obter mais informações sobre como usar essas IDs, consulte a página [Usar parâmetros de linha de comando para instalar o Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md). Além disso, para obter uma lista de IDs de carga de trabalho e de componente para outros produtos, consulte a página [IDs de carga de trabalho e de componente do Visual Studio 2017](workload-and-component-ids.md).
+For more information about how to use these IDs, see [Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) page. And, for a list of workload and component IDs for other products, see [Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md) page.
 
 ## <a name="feedback-client"></a>Feedback Client
 
 **ID:** Microsoft.VisualStudio.Workload.FeedbackClient
 
-**Descrição:** o Feedback Client permite que os participantes forneçam comentários detalhados para o Visual Studio Team Services ou o Team Foundation Server.
+**Description:** Feedback client allows Stakeholders to provide rich feedback for Visual Studio Team Services or Team Foundation Server.
 
-### <a name="components-included-by-this-workload"></a>Componentes incluídos por essa carga de trabalho
+### <a name="components-included-by-this-workload"></a>Components included by this workload
 
-ID do componente | Nome | Versão | Tipo de dependência
+Component ID | Name | Version | Dependency type
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26208.0 | Necessária
-## <a name="unaffiliated-components"></a>Componentes não afiliados
+Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26711.1 | Required
 
-Estes são os componentes que não são incluídos com nenhuma carga de trabalho, mas que podem ser selecionados como um componente individual.
+## <a name="unaffiliated-components"></a>Unaffiliated components
 
-ID do componente | Nome | Versão
+These are components that are not included with any workload, but may be selected as an individual component.
+
+Component ID | Name | Version
 --- | --- | ---
-N/D | N/D | N/D
+n/a | n/a | n/a
 
-## <a name="see-also"></a>Consulte também
 
-* [Carga de trabalho do Visual Studio e IDs do componente](workload-and-component-ids.md)
-* [Guia do administrador do Visual Studio](visual-studio-administrator-guide.md)
-* [Usar parâmetros de linha de comando para instalar o Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
-  * [Exemplos de parâmetro de linha de comando](command-line-parameter-examples.md)
-* [Criar uma instalação offline do Visual Studio](create-an-offline-installation-of-visual-studio.md)
+## <a name="see-also"></a>See also
+
+* [Visual Studio workload and component IDs](workload-and-component-ids.md)
+* [Visual Studio administrator guide](visual-studio-administrator-guide.md)
+* [Use command-line parameters to install Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+  * [Command-line parameter examples](command-line-parameter-examples.md)
+* [Create an offline installation of Visual Studio](create-an-offline-installation-of-visual-studio.md)
 

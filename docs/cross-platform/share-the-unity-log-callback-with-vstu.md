@@ -1,5 +1,5 @@
 ---
-title: Compartilhar o retorno de log do Unity com o VSTU | Microsoft Docs
+title: Share the Unity Log Callback with VSTU | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,21 +27,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b4362bcbd04411be4db296fc5996232fd61f5d7f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 138cd3c911d9e97e16c5fbe64a3526101cece0b2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="share-the-unity-log-callback-with-vstu"></a>Compartilhar o retorno de chamada de log do Unity com o VSTU
-As Ferramentas do Visual Studio para Unity registram um retorno de chamada de log do Unity para transmitir seu console para o Visual Studio. Se os scripts do seu editor também registram um retorno de chamada de log do Unity, o retorno de chamada VSTU pode interferir em seu retorno de chamada. Para evitar essa possibilidade, use o evento `VisualStudioIntegration.LogCallback` para cooperar com VSTU.  
+# <a name="share-the-unity-log-callback-with-vstu"></a>Share the Unity Log Callback with VSTU
+Visual Studio Tools for Unity registers a log callback with Unity to be able to stream its console to Visual Studio. If your editor scripts also register a log callback with Unity, the VSTU callback might interfere with your callback. To prevent this possibility, use the `VisualStudioIntegration.LogCallback` event to cooperate with VSTU.  
   
-## <a name="demonstrates"></a>Demonstra  
- Como compartilhar o retorno de chamada de log do Unity criado pelas Ferramentas do Visual Studio para Unity.  
+## <a name="demonstrates"></a>Demonstrates  
+ How to share the Unity Log Callback created by Visual Studio Tools for Unity.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
-```c#  
+```csharp  
 using System;  
   
 using UnityEngine;  
@@ -62,5 +63,5 @@ public class LogCallbackHook
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo: geração de arquivo de projeto](../cross-platform/customize-project-files-created-by-vstu.md)
+## <a name="see-also"></a>See Also  
+ [Example: Project File Generation](../cross-platform/customize-project-files-created-by-vstu.md)

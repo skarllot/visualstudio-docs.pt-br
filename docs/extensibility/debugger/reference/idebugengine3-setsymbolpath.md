@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine3::SetSymbolPath | Documentos do Microsoft
+title: IDebugEngine3::SetSymbolPath | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 71b71d9b2ee610fd14394fdb2476bfb05357714e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 63c68eab87ec26d3cf20c66e7a53061e8be79186
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugengine3setsymbolpath"></a>IDebugEngine3::SetSymbolPath
-Define o caminho ou caminhos que são pesquisados para símbolos de depuração.  
+Sets the path or paths that are searched for debugging symbols.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT SetSymbolPath (  
    LPOLESTR            szSymbolSearchPath,  
    LPOLESTR            szSymbolCachePath,  
@@ -49,7 +50,7 @@ HRESULT SetSymbolPath (
 );  
 ```  
   
-```c#  
+```csharp  
 int SetSymbolPath(  
    string                    szSymbolSearchPath,   
    string                    szSymbolCachePath,   
@@ -57,28 +58,28 @@ int SetSymbolPath(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
   
-|Parâmetro|Descrição|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`szSymbolSearchPath`|[in] Cadeia de caracteres que contém o caminho de pesquisa do símbolo ou os caminhos. Consulte "Comentários" para obter detalhes. Não pode ser nulo.|  
-|`szSymbolCachePath`|[in] Cadeia de caracteres que contém o caminho local onde símbolos podem ser armazenados em cache. Não pode ser nulo.|  
-|`Flags`|[in] Não usado; sempre definido como 0.|  
+|`szSymbolSearchPath`|[in] String containing the symbol search path or paths. See "Remarks" for details. Cannot be null.|  
+|`szSymbolCachePath`|[in] String containing the local path where symbols can be cached. Cannot be null.|  
+|`Flags`|[in] Not used; always set to 0.|  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- A cadeia de caracteres `szSymbolSearchPath` é uma lista de um ou mais caminhos, separados por ponto e vírgula, procure por símbolos. Esses caminhos podem ser uma URL, um caminho UNC no estilo ou um caminho local. Esses caminhos também podem ser uma mistura de tipos diferentes. Se o caminho UNC (por exemplo, \\\Symserver\Symbols), em seguida, o mecanismo de depuração deve determinar se o caminho é um servidor de símbolos e deve ser capaz de carregar símbolos de servidor, armazenamento em cache no caminho especificado por `szSymbolCachePath`.  
+## <a name="remarks"></a>Remarks  
+ The string `szSymbolSearchPath` is a list of one or more paths, separated by semicolons, to search for symbols. These paths can be a local path, a UNC-style path, or a URL. These paths can also be a mix of different types. If the path is UNC (for example, \\\Symserver\Symbols), then the debug engine should determine if the path is to a symbol server and should be able to load symbols from that server, caching them in the path specified by `szSymbolCachePath`.  
   
- O caminho de símbolo também pode conter um ou mais locais de cache. Os caches são listados em ordem de prioridade, com o cache de prioridade mais alto primeiro e separados por * símbolos. Por exemplo:  
+ The symbol path can also contain one or more cache locations. Caches are listed in priority order, with the highest priority cache first, and separated by * symbols. For example:  
   
 ```  
 \\symbols\symbols;\\someotherserver\symbols;c:\symbols\httpsymbols*http://msdl.microsoft.com  
 ```  
   
- O [LoadSymbols](../../../extensibility/debugger/reference/idebugengine3-loadsymbols.md) método executa a carga real dos símbolos.  
+ The [LoadSymbols](../../../extensibility/debugger/reference/idebugengine3-loadsymbols.md) method performs the actual load of the symbols.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [LoadSymbols](../../../extensibility/debugger/reference/idebugengine3-loadsymbols.md)   
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

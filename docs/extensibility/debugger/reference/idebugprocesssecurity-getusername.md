@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessSecurity::GetUserName | Documentos do Microsoft
+title: IDebugProcessSecurity::GetUserName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,38 +28,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7d28882bb12a5429bc12f8eb6f3fa6d0c53a0eb0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 081f073ba59021ca56dd084bd2cef0fde6c5c32e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
-Obtém o nome de usuário do fornecedor de porta.  
+Gets the user name from the port supplier.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetUserName(  
     BSTR *pbstrUserName  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetUserName (  
     string pbstrUserName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pbstrUserName`  
- [out] Uma cadeia de caracteres que contém o nome de usuário.  
+ [out] A string containing the user name.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, ele retornará `S_OK`. Caso contrário, ele retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns `S_OK`. Otherwise it returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- `GetUserName`Retorna o nome de usuário que é exibido no **nome de usuário** coluna o **anexar ao processo** caixa de diálogo. Para exibir o **anexar ao processo** caixa de diálogo, clique em **anexar ao processo** no **ferramentas** menu o [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ambiente de desenvolvimento integrado (IDE).  
+## <a name="remarks"></a>Remarks  
+ `GetUserName` returns the user name that is displayed in the **User Name** column of the **Attach to Process** dialog box. To view the **Attach to Process** dialog box, click **Attach to Process** on the **Tools** menu in the [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] integrated development environment (IDE).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

@@ -1,188 +1,221 @@
 ---
-title: "Caixa de di&#225;logo Geral, Depura&#231;&#227;o, Op&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.options.General"
-  - "VS.ToolsOptionsPages.Debugger.General"
-  - "VS.ToolsOptionsPages.Debugger.ENC"
-  - "vs.debug.options.ENC"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "caixa de diálogo Opções, depuração"
+title: General, Debugging, Options Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 05/23/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.options.General
+- VS.ToolsOptionsPages.Debugger.General
+- VS.ToolsOptionsPages.Debugger.ENC
+- vs.debug.options.ENC
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- Options dialog box, debugging
 ms.assetid: b33aee0b-43c3-4c26-8ed4-bc673f491503
 caps.latest.revision: 46
-caps.handback.revision: 46
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Caixa de di&#225;logo Geral, Depura&#231;&#227;o, Op&#231;&#245;es
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 643d1892815822b6616d379d07909731c6100ba4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-O**Ferramentas \/ opções \/ depuração \/ geral** página permite que você defina as seguintes opções:  
+---
+# <a name="general-debugging-options-dialog-box"></a>General, Debugging, Options Dialog Box
+The **Tools > Options > Debugging > General** page lets you set the following options:  
   
- **Perguntar antes de excluir todos os pontos de interrupção**  
- Requer confirmação antes de concluir o **Excluir todos os pontos de interrupção** comando.  
+**Ask before deleting all breakpoints**  
+Requires confirmation before completing the **Delete All Breakpoints** command.  
   
- **Interromper todos os processos quando um processo for interrompido**  
- Interrompe simultaneamente todos os processos ao qual o depurador é anexado, quando ocorre uma interrupção.  
+**Break all processes when one process breaks**  
+Simultaneously breaks all processes to which the debugger is attached, when a break occurs.  
   
- **Interromper quando as exceções cruzarem AppDomain ou limites gerenciados\/nativos**  
- Na depuração gerenciada ou modo misto, o common language runtime pode capturar exceções que ultrapassam os limites de domínio de aplicativo ou limites gerenciados\/nativos quando as seguintes condições forem verdadeiras:  
+**Break when exceptions cross AppDomain or managed/native boundaries**  
+In managed or mixed-mode debugging, the common language runtime can catch exceptions that cross application domain boundaries or managed/native boundaries when the following conditions are true:  
   
- 1\) quando o código nativo chama código gerenciado usando interoperabilidade COM e o código gerenciado lança uma exceção. Consulte [Introdução à interoperabilidade COM](/dotnet/visual-basic/programming-guide/com-interop/introduction-to-com-interop).  
+1\) When native code calls managed code by using COM Interop and the managed code throws an exception. See [Introduction to COM Interop](/dotnet/articles/visual-basic/programming-guide/com-interop/introduction-to-com-interop).  
   
- 2\) quando o código gerenciado em execução no domínio do aplicativo 1 chama código gerenciado no domínio do aplicativo 2 e o código no domínio do aplicativo 2 lança uma exceção. Consulte [programação com domínios de aplicativo](http://msdn.microsoft.com/pt-br/bd36055b-56bd-43eb-b4d8-820c37172131).  
+2\) When managed code running in application domain 1 calls managed code in application domain 2, and the code in application domain 2 throws an exception. See [Programming with Application Domains](/dotnet/articles/framework/app-domains/index).  
+
+3\) When code calls a function by using reflection, and the function throws an exception. See [Reflection](/dotnet/framework/reflection-and-codedom/reflection).  
   
- 3\) quando o código chama uma função usando reflexão e a função lançará uma exceção. Consulte [Reflexão](../Topic/Reflection%20in%20the%20.NET%20Framework.md).  
+In condition 2 and 3, the exception is sometimes caught by managed code in `mscorlib` instead of the common language runtime. This option does not affect breaking on exceptions caught by `mscorlib`.  
   
- Em 2\) e 3\), às vezes, a exceção é detectada pelo código gerenciado em `mscorlib` em vez do common language runtime. Essa opção não afeta a quebra em exceções capturadas por `mscorlib`.  
+**Enable address-level debugging**  
+ Enables advanced features for debugging at the address level (the **Disassembly** window, the **Registers** window, and address breakpoints).  
   
- **Habilitar depuração no nível do endereço**  
- Habilita recursos avançados para depuração no nível do endereço \(o **desmontagem** janela, o **registra** janela e pontos de interrupção de endereço\).  
+- **Show disassembly if source is not available**  
+    Automatically shows the **Disassembly** window when you try to debug code for which source is unavailable.  
   
- **Mostrar desmontagem se a fonte não está disponível**  
- Mostra automaticamente o **desmontagem** janela quando você tenta depurar o código fonte não está disponível.  
+**Enable breakpoint filters**  
+Enables you to set filters on breakpoints so that they will affect only specific processes, threads, or computers.  
+ 
+**Use the new Exception Helper**  
+Enables the Exception Helper (Visual Studio 2017) that replaces the exception assistant.
   
- **Habilitar filtros de ponto de interrupção**  
- Permite que você defina filtros em pontos de interrupção para que eles afetem somente processos específicos, threads ou computadores.  
+> [!NOTE]
+> For managed code, this option was previously called **Enable the exception assistant** . 
   
- **Habilitar o Assistente de exceção**  
- Somente para código gerenciado. Gerenciado exceções abrir a caixa de diálogo Assistente de exceção.  Consulte [Exception Assistant](../Topic/Exception%20Assistant.md).  
+**Enable Just My Code**  
+The debugger displays and steps into user code ("My Code") only, ignoring system code and other code that is optimized or that does not have debugging symbols.
+
+- **Warn if no user code on launch (Managed only)**  
+    When debugging starts with Just My Code enabled, this option warns you if there is no user code ("My Code"). 
+
+**Enable .NET Framework source stepping**  
+Allows the debugger to step into .NET Framework source. Enabling this option automatically disables Just My Code .NET Framework symbols will be downloaded to a cache location. You can change the cache location in the **Options** dialog box, **Debugging** category, **Symbols** page.  
   
- **Desenrolar a pilha de chamadas em exceções não tratadas**  
- Faz com que o **pilha de chamadas** janela para reverter a pilha de chamadas para o ponto antes da exceção não tratada.  
+**Step over properties and operators (Managed only)**  
+Prevents the debugger from stepping into properties and operators in managed code.  
   
- **Habilitar Just My Code**  
- O depurador exibe e as etapas no código do usuário \("My Code"\), ignorando o código de sistema e outro código que é otimizado ou que não tem símbolos de depuração.  
+**Enable property evaluation and other implicit function calls**  
+Turns on automatic evaluation of properties and implicit function calls in variables windows and the **QuickWatch** dialog box.  
   
- **Mostrar todos os membros dos objetos não usuário nas janelas de variáveis \(somente Visual Basic\)**  
- Ativa a exibição de membros não públicos em objetos que estão no código de não usuário \(não "My Code"\).  
+- **Call string conversion function on objects in variables windows (C# and JavaScript only)**  
+    Executes an implicit string conversion call when evaluating objects in variables windows. Therefore, that result is displayed as a string instead of the type name. Only applies while debugging in C# code. This setting may be overridden by the DebuggerDisplay attribute (see [Using the DebuggerDisplay Attribute](../debugger/using-the-debuggerdisplay-attribute.md)).  
   
- **Avisar se não houver código do usuário na inicialização**  
- Quando a depuração começa com Just My Code ativado, esta opção avisa se não há nenhum código de usuário \("meu código"\).  
-  
- **Habilitar o .NET Framework depuração da origem**  
- Permite que o depurador entrar na origem do .NET Framework. Habilitar esta opção desabilita automaticamente apenas meu código do .NET Framework símbolos serão baixados para um local de cache. Você pode alterar o local do cache no **opções** caixa de diálogo, **depuração** categoria, **símbolos** página.  
-  
- **Depurar propriedades e operadores \(somente gerenciado\)**  
- Impede que o depurador de depuração de propriedades e operadores no código gerenciado.  
-  
- **Habilitar a avaliação de propriedade e outras chamadas de função implícitas**  
- Ativa a avaliação automática de propriedades e de função implícitas chama nas janelas de variáveis e o **QuickWatch** caixa de diálogo.  
-  
- **Chamar a função de conversão de cadeia de caracteres em objetos em janelas variáveis \(c\# e JavaScript somente\)**  
- Executa uma chamada de conversão de cadeia de caracteres implícita ao avaliar objetos em janelas variáveis. Portanto, esse resultado é exibido como uma cadeia de caracteres em vez do nome do tipo. Aplica\-se somente durante a depuração em código c\#. Essa configuração pode ser substituída pelo atributo DebuggerDisplay \(consulte [Usando o atributo DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)\).  
-  
- **Habilitar o suporte do servidor de origem**  
- Informa o depurador do Visual Studio para obter arquivos de origem de servidores de origem que implementam o SrcSrv \(`srcsrv.dll`\) protocolo. Team Foundation Server e as ferramentas de depuração para Windows são dois servidores de origem que implementam o protocolo. Para obter mais informações sobre a configuração de SrcSrv, consulte a documentação de ferramentas de depuração para Windows. Além disso, consulte [Especificar arquivos de símbolo \(.pdb\) e de origem](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
+**Enable source server support**  
+Tells the Visual Studio debugger to get source files from source servers that implement the SrcSrv (`srcsrv.dll`) protocol. Team Foundation Server and the Debugging Tools for Windows are two source servers that implement the protocol. For more information about SrcSrv setup, see the [SrcSrv](hhttps://msdn.microsoft.com/en-us/library/windows/hardware/ff558791(v=vs.85).aspx) documentation. In addition, see [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
 > [!IMPORTANT]
->  Como ler arquivos. PDB pode executar código arbitrário em arquivos, certifique\-se de que você confia no servidor.  
+>  Because reading .pdb files can execute arbitrary code in the files, make sure that you trust the server.  
   
- **Imprimir mensagens de diagnóstico de servidor de origem na janela Saída**  
- Quando o suporte do servidor de origem está habilitada, essa configuração ativa ao diagnóstico.  
+- **Print source server diagnostic messages to the Output window**  
+    When source server support is enabled, this setting turns on diagnostic display.  
   
- **Permitir que o servidor de origem para assemblies de confiança parcial \(somente gerenciado\)**  
- Quando o suporte do servidor de origem está habilitada, essa configuração substitui o comportamento padrão de não recuperar as fontes para assemblies de confiança parcial.  
+- **Allow source server for partial trust assemblies (Managed only)**  
+    When source server support is enabled, this setting overrides the default behavior of not retrieving sources for partial trust assemblies.  
+
+- **Enable source link support**  
+    Tells the Visual Studio debugger to download source files for .pdb files that contain Source Link information. For more information about Source Link, see the [Source Link Specification](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/source_link.md).
+
+    > [!IMPORTANT]
+    >  Because Source Link will download files using http or https, make sure you trust the .pdb file.  
   
- **Realçar a linha inteira para pontos de interrupção e instrução atual**  
- Quando o depurador realça um ponto de interrupção ou instrução atual, ele destaca a linha inteira.  
+**Highlight entire line for breakpoints and current statement (C++ only)**  
+When the debugger highlights a breakpoint or current statement, it highlights the entire line.  
   
- **Requer arquivos de origem correspondam exatamente à versão original**  
- Informa o depurador para verificar se um arquivo de origem corresponde à versão do código\-fonte usado para criar o arquivo executável que você está depurando. Se a versão não corresponde, será solicitado que você localize uma origem correspondente. Se uma origem correspondente não for encontrada, o código\-fonte não será exibido durante a depuração.  
+**Require source files to exactly match the original version**  
+Tells the debugger to verify that a source file matches the version of the source code used to build the executable you are debugging. If the version does not match, you'll be prompted to find a matching source. If a matching source is not found, the source code will not be displayed during debugging. 
   
- **Redirecionar todo o texto da janela Saída para a janela imediata**  
- Envia todas as mensagens do depurador que normalmente apareceriam no **saída** janela para o **imediato** janela em vez disso.  
+**Redirect all Output window text to the Immediate window**  
+Sends all debugger messages that would ordinarily appear in the **Output** window to the **Immediate** window instead.  
   
- **Mostrar estrutura bruta de objetos em janelas variáveis**  
- Desativa todas as personalizações de exibição de estrutura de objeto. Para obter mais informações sobre personalizações de exibição, consulte [Exibindo tipos de dados personalizados](../debugger/create-custom-views-of-dot-managed-objects.md).  
+**Show raw structure of objects in variables windows**  
+Turns off all object structure view customizations. For more information about view customizations, see [Create custom views of .managed objects](../debugger/create-custom-views-of-dot-managed-objects.md).  
   
- **Suprimir a otimização JIT na carga do módulo \(somente gerenciada\)**  
- Desabilita a otimização JIT de código gerenciado quando um módulo é carregado e JIT é compilado enquanto o depurador é anexado. Desativar a otimização pode facilitar a depuração de alguns problemas, embora às custas do desempenho. Se você estiver usando o Just My Code, suprimindo JIT otimização pode causar o código não\-usuário apareça como código de usuário \("meu código"\).  
+**Suppress JIT optimization on module load (Managed only)**  
+Disables the JIT optimization of managed code when a module is loaded and JIT is compiled while the debugger is attached. Disabling optimization may make it easier to debug some problems, although at the expense of performance. If you are using Just My Code, suppressing JIT optimization can cause non-user code to appear as user code ("My Code").
+
+**Enable JavaScript debugging for ASP.NET (Chrome and IE)** Enables the script debugger for ASP.NET apps. On first use in Chrome, you may need to sign into the browser on first use to enable Chrome extensions that you have installed. Disable this option to revert to legacy behavior.    
+
+**Load dll exports**  
+Loads dll export tables. Symbol information from dll export tables can be useful if you are working with Windows messages, Windows procedures (WindowProcs), COM objects, or marshaling, or any dll for which you do not have symbols. Reading dll export information involves some overhead. Therefore, this capability is turned off by default.  
   
- **Avisar se não houver símbolos na inicialização \(somente nativo\)**  
- Exibe uma caixa de diálogo de aviso quando você tenta depurar um programa para o qual o depurador não tem nenhuma informação de símbolo.  
+To see what symbols are available in the export table of a dll, use `dumpbin /exports`. Symbols are available for any 32-bit system dll. By reading the `dumpbin /exports` output, you can see the exact function name, including non-alphanumeric characters. This is useful for setting a breakpoint on a function. Function names from dll export tables might appear truncated elsewhere in the debugger. The calls are listed in the calling order, with the current function (the most deeply nested) at the top. For more information, see [dumpbin /exports](/cpp/build/reference/dash-exports).  
   
- **Avisar se a depuração de script está desabilitada na inicialização**  
- Exibe uma caixa de diálogo de aviso quando o depurador é iniciado com a depuração de script desabilitada.  
+**Show parallel stacks diagram bottom-up**  
+Controls the direction in which stacks are displayed in the **Parallel Stacks** window.  
   
- **Carregar exportações de dll**  
- Carrega as tabelas de exportação de dll. Informações de símbolo de tabelas de exportação de dll podem ser útil se você estiver trabalhando com mensagens do Windows, procedimentos do Windows \(WindowProcs\), objetos COM, ou marshaling ou qualquer dll para o qual você não tem símbolos. Informações sobre exportação de dll de leitura envolve alguma sobrecarga. Portanto, esse recurso está desativado por padrão.  
+**Ignore GPU memory access exceptions if the data written didn't change the value**  
+Ignores race conditions that were detected during debugging if the data didn't change. For more information, see [Debugging GPU Code](../debugger/debugging-gpu-code.md).  
   
- Para ver quais símbolos estão disponíveis na tabela de exportação de uma dll, use `dumpbin /exports`. Símbolos estão disponíveis para qualquer dll do sistema de 32 bits. Lendo o `dumpbin /exports` de saída, você pode ver o nome exato da função, incluindo caracteres não alfanuméricos. Isso é útil para definir um ponto de interrupção em uma função. Nomes de função de tabelas de exportação de dll podem aparecer truncados em outro lugar no depurador. As chamadas são listadas na ordem de chamada, com a função atual \(a mais profundamente aninhada\) na parte superior. Para obter mais informações, consulte [dumpbin\/exportações](/visual-cpp/build/reference/dash-exports).  
+**Use Managed Compatibility Mode**  
+Replaces the default debugging engine with a legacy version to enable these scenarios:  
   
- **Mostrar diagrama de pilhas paralelas baixo para cima**  
- Controla a direção na qual as pilhas são exibidas no **pilhas paralelas** janela.  
+- You are using a .NET Framework language other than C#, VB, or F# that provides its own Expression Evaluator (this includes C++/CLI).  
   
- **Ignorar as exceções de acesso de memória GPU se os dados gravados não altera o valor**  
- Ignora as condições de corrida que foram detectadas durante a depuração caso os dados não foram alterados. Para obter mais informações, consulte [Depurando código de GPU](../debugger/debugging-gpu-code.md).  
+- You want to enable Edit and Continue for C++ projects while mixed mode debugging.  
   
- **Use o modo de compatibilidade gerenciado**  
- Substitui o padrão do mecanismo com uma versão herdada para habilitar estes cenários de depuração:  
+Note that choosing Managed Compatibility mode disables some features that are implemented only in the default debugging engine. 
+
+**Use the legacy C# and VB expression evaluators**  
+The debugger will use the Visual Studio 2013 C#/VB expression evaluators instead of the Visual Studio 2015 Roslyn-based expression evaluators.    
   
--   Você está usando uma linguagem .NET Framework diferente de c\#, VB ou F \#, que fornece seu próprio avaliador de expressão \(Isso inclui C \+ \+ \/ CLI\).  
+**Warn when using custom debugger visualizers against potentially unsafe processes (Managed only)**  
+Visual Studio warns you when you are using a custom debugger visualizer that is running code in the debuggee process, because it could be running unsafe code.  
   
--   Você deseja habilitar editar e continuar para projetos do C\+\+ durante a depuração de modo misto.  
+**Enable Windows debug heap allocator (Native only)**  
+Enables the windows debug heap to improve heap diagnostics. Enabling this option will impact debugging performance.  
   
- Observe que a modo escolhendo compatibilidade gerenciada desativa alguns recursos que são implementados somente no mecanismo de depuração padrão.  
+**Enable UI Debugging Tools for XAML**  
+The Live Visual Tree and the Live Property Explore windows will appear when you start debugging (F5) a supported project type. For more information, see [Inspect XAML properties while debugging](../debugger/inspect-xaml-properties-while-debugging.md).  
   
- **Use o modo de compatibilidade nativa**  
- Quando essa opção é selecionada, o depurador usa o depurador nativo do Visual Studio 2010, em vez do novo depurador nativo.  
+- **Preview selected elements in Live Visual Tree**  
+    The XAML element whose context is selected is also selected in the **Live Visual Tree** window.  
   
- Você deve usar essa opção quando você estiver depurando código C\+\+ .NET, porque o novo mecanismo de depuração não oferece suporte para avaliar expressões C\+\+ .NET. No entanto, habilitar o modo de compatibilidade nativa desativa muitos recursos que dependem da implementação atual do depurador para operar. Por exemplo, o mecanismo herdado não tem muitos visualizadores para tipos internos como `std::string` em projetos do Visual Studio 2015.   Use projetos do Visual Studio 2013 para a melhor experiência de depuração nesses casos.  
+- **Show runtime tools in application**  
+    Shows the **Live Visual Tree** commands in a toolbar on the main window of the XAML application that is being debugged. This option was introduced in Visual Studio 2015 Update 2. 
+
+- **Enable XAML Edit and Continue** Allows you to use Edit and Continue feature for XAML code. 
   
- **Use os avaliadores de expressão c\# e VB herdados**  
- O depurador usará os avaliadores de expressão c\# \/VB Visual Studio 2013 C em vez dos avaliadores de expressão com base no Roslyn de 2015 do Visual Studio.  
+**Enable Diagnostic Tools while debugging**  
+The **Diagnostic Tools** window appears while you are debugging.
   
- **Avisar ao usar os visualizadores do depurador personalizados contra código potencialmente não seguro**  
- Visual Studio o avisa quando você estiver usando um visualizador de depurador personalizada que está executando o código do processo de depuração, porque ele pode estar executando o código não seguro.  
+**Show elapsed time PerfTip while debugging**  
+The code window displays the elapsed time of a given method call when you are debugging.  
   
- **Habilitar o alocador de heap de depuração do Windows \(somente nativo\)**  
- Permite que o heap de depuração do windows melhorar o diagnóstico de heap. Habilitar essa opção afetará o desempenho de depuração.  
+**Enable Edit and Continue**  
+You can use the Edit and Continue functionality while debugging .  
   
- **Habilitar ferramentas de depuração para XAML da interface do usuário**  
- A Live Visual Tree e os windows Live propriedade explorar aparecerá quando você iniciar a depuração \(F5\) um tipo de projeto com suporte. Para obter mais informações, consulte [Inspecione as propriedades XAML durante a depuração](../debugger/inspect-xaml-properties-while-debugging.md).  
+- **Enable Native Edit and Continue**  
+    You can use the Edit and Continue functionality while debugging native C++ code. For more information, see [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md).  
   
- **Visualizar os elementos selecionados na árvore Visual em tempo real**  
- O elemento XAML cujo contexto está selecionado também está selecionado no **Live Visual Tree** janela.  
+- **Apply changes on continue (Native only)**  
+    Visual Studio automatically compiles and applies any outstanding code changes you have made when continuing the process from a break state. If not selected, you can choose to apply changes using the "Apply Code Changes" item under the Debug menu.  
   
- **Mostrar ferramentas de tempo de execução no aplicativo**  
- Mostra o **Live Visual Tree** comandos em uma barra de ferramentas na janela principal do aplicativo XAML que está sendo depurado. Essa opção foi introduzida na atualização 2 do Visual Studio 2015.  
+- **Warn about stale code (Native only)**  
+    Get warnings about stale code.    
+
+**Show run to click button in editor while debugging** When this option is selected, the [Run to Click](debugger-feature-tour.md#run-to-a-point-in-your-code-quickly-using-the-mouse) button will be shown while debugging.
+
+## <a name="options-supported-in-older-versions-of-visual-studio"></a>Options supported in older versions of Visual Studio
+
+If you are using an older version of Visual Studio, some additional options might be present.
+
+**Enable the exception assistant**  
+For managed code, enabled the exception assistant. In Visual Studio 2017, the Exception Helper replaced the exception assistant.
+
+**Unwind the call stack on unhandled exceptions**  
+Causes the **Call Stack** window to roll back the call stack to the point before the unhandled exception occurred. 
+
+**Warn if no symbols on launch (native only)**  
+Displays a warning dialog box when you try to debug a program for which the debugger has no symbol information. 
+
+**Warn if script debugging is disabled on launch**  
+Displays a warning dialog box when the debugger is launched with script debugging disabled.
+
+**Use Native Compatibility Mode**  
+When this option is selected, the debugger uses the Visual Studio 2010 native debugger instead of the new native debugger.  
   
- **Habilitar ferramentas de diagnóstico durante a depuração**  
- O **Ferramentas de diagnóstico** janela é exibida enquanto você está depurando. Para obter mais informações, consulte [Diagnóstico integrado do depurador](../Topic/Debugger-integrated%20profiling.md).  
+You should use this option when you are debugging .NET C++ code, because the new debugging engine does not support evaluating .NET C++ expressions. However, enabling Native Compatibility Mode disables many features that depend on the current debugger implementation to operate. For example, the legacy engine lacks many visualizers for built-in types like `std::string` in Visual Studio 2015 projects.   Please use Visual Studio 2013 projects for the optimal debugging experience in these cases.
   
- **Mostrar PerfTip de tempo decorrido durante a depuração**  
- A janela de código exibe o tempo decorrido de uma chamada de método em questão quando você está depurando.  
-  
- **Habilitar Editar e continuar**  
- Você pode usar o editar e continuar funcionalidade durante a depuração.  
-  
- **Habilitar nativo editar e continuar**  
- Você pode usar o editar e continuar funcionalidade durante a depuração de código C\+\+ nativo. Para obter mais informações, consulte [Editar e continuar \(Visual C\+\+\)](../debugger/edit-and-continue-visual-cpp.md).  
-  
- **Aplicar alterações em continuar \(somente nativo\)**  
- Visual Studio compila automaticamente e aplica as alterações de código pendentes feitas ao continuar o processo de um estado de interrupção. Se não estiver selecionada, você pode optar por aplicar as alterações usando o item "Aplicar alterações de código" no menu Depurar.  
-  
- **Avisar sobre código obsoleto \(somente nativo\)**  
- Receba avisos sobre código obsoleto.  
-  
- **Permitir pré\-compilação \(somente nativo\)**  
- Pré\-compilação é permitida.  
-  
-## Consulte também  
- [Depurando no Visual Studio](../debugger/debugging-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Debugging in Visual Studio](../debugger/index.md) [Debugger Feature Tour](../debugger/debugger-feature-tour.md)

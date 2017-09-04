@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 541d456cf774081d905127301d3079e8c71c0209
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -41,7 +42,7 @@ Recomendamos as seguintes práticas recomendadas para escrever scripts MSBuild:
   
 -   Os valores de propriedade padrão são mais facilmente tratados usando o atributo `Condition` e não declarando uma propriedade cujo valor padrão pode ser substituído na linha de comando. Por exemplo, use  
   
-     `<MyProperty Condition="$(MyProperty)" == ''>`  
+     `<MyProperty Condition="'$(MyProperty)' == ''">`  
   
      `MyDefaultValue`  
   
@@ -51,3 +52,4 @@ Recomendamos as seguintes práticas recomendadas para escrever scripts MSBuild:
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos avançados](../msbuild/msbuild-advanced-concepts.md)
+

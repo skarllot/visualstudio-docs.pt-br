@@ -1,12 +1,13 @@
 ---
 title: "Formatando o código do Python no Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 4/10/2017
+ms.date: 7/12/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d0f1631-360b-45d4-a0cb-01c3c10d25f2
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: a14bc7e8c9194fff3a1bec2739c9e9c2480e905b
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 9d04c52a595014d06b38205913e3eb1cdd264019
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -43,9 +30,9 @@ O Visual Studio permite reformatar rapidamente o código para que ele correspond
 - Para formatar uma seleção: selecione **Editar > Avançado > Seleção de Formato** ou pressione Ctrl+E, F.
 - Para formatar todo o arquivo: selecione **Editar > Avançado > Formatar Documento** ou pressione Ctrl+E, D.
 
-As opções são definidas por meio de **Ferramentas > Opções > Editor de Texto > Python > Formatação** e suas subguias e, por padrão, são definidas para corresponderem a um superconjunto do [guia de estilo do PEP 8](http://www.python.org/dev/peps/pep-0008/). A guia **Geral** determina quando a formatação é aplicada; as outras três subpáginas são definidas nas próximas seções.
+As opções são definidas por meio de **Ferramentas > Opções > Editor de Texto > Python > Formatação** e suas guias aninhadas e, por padrão, são definidas para corresponderem a um superconjunto do [Guia de estilo do PEP 8](http://www.python.org/dev/peps/pep-0008/). A guia **Geral** determina quando a formatação é aplicada, as configurações das outras três guias são descritas neste tópico.
 
-[O suporte do Python no Visual Studio](installation.md) também adiciona o comando útil [Preencher Parágrafo de Comentário](#fill-comment-paragraph-command) ao menu **Editar > Avançado**, conforme descrito abaixo.
+O [suporte do Python no Visual Studio](installation.md) também adiciona o comando útil [Preencher Parágrafo de Comentário](#fill-comment-paragraph-command) ao menu **Editar > Avançado**, conforme descrito a seguir.
 
 ## <a name="spacing"></a>Espaçamento
 
@@ -55,7 +42,7 @@ O **espaçamento** controla o local em que espaços são inseridos ou removidos 
 - Desmarcado: remove o espaçamento.
 - Indeterminado: deixa a formatação original em vigor.
 
-Exemplos para as várias opções são fornecidos nas tabelas a seguir.
+Exemplos para as várias opções são fornecidos nas tabelas a seguir:
 
 | Opção Definições de Classe | Selecionado | Limpo |
 | --- | --- | --- | 
@@ -99,7 +86,7 @@ Exemplos para as várias opções são fornecidos nas tabelas a seguir.
 
 ## <a name="statements"></a>Instruções
 
-As **instruções** controlam a reescrita automática de várias instruções em formatos mais apropriados para o Python.
+As opções de **Instruções** controlam a reescrita automática de várias instruções em formatos mais apropriados para o Python.
 
 | Opção | Antes da formatação | Após a formatação |
 | --- | --- | --- |
@@ -110,7 +97,7 @@ As **instruções** controlam a reescrita automática de várias instruções em
 
 ## <a name="wrapping"></a>Disposição
 
-O **encapsulamento** permite definir a **Largura máxima do comentário** (o padrão é 80), para que se a opção **Encapsular comentários que são muito largos** for definida, o Visual Studio reformate os comentários para que eles não excedam essa largura.
+O **Encapsulamento** permite que você defina a **Largura máxima do comentário** (o padrão é 80). Se a opção **Encapsular comentários que são muito largos** for definida, o Visual Studio reformatará os comentários para não excederem essa largura máxima.
 
 ```python
 # Wrapped to 40 columns
@@ -127,7 +114,7 @@ O **encapsulamento** permite definir a **Largura máxima do comentário** (o pad
 
 ## <a name="fill-comment-paragraph-command"></a>Comando Preencher Parágrafo de Comentário
 
-A opção **Editar > Avançado > Preencher Parágrafo de Comentário** (Ctrl+E, Ctrl+P) reflui e formata o texto de comentário, combinando linhas curtas e dividindo as longas.
+A opção **Editar > Avançado > Preencher Parágrafo de Comentário** (Ctrl+E, P) reflui e formata o texto de comentário, combinando linhas curtas e dividindo as longas.
 
 Por exemplo:
 

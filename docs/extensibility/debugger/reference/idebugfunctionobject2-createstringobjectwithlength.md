@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject2::CreateStringObjectWithLength | Documentos do Microsoft
+title: IDebugFunctionObject2::CreateStringObjectWithLength | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,18 +29,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 667bb5659f774bb41cf9696cd7ead22a1ea7fae1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7db805085c5b5a81b37be04f4eabeacefee0a684
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugfunctionobject2createstringobjectwithlength"></a>IDebugFunctionObject2::CreateStringObjectWithLength
-Cria um objeto de cadeia de caracteres que tem o comprimento especificado.  
+Creates a string object that has the specified length.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT CreateStringObjectWithLength (  
    LPCOLESTR      pcstrString,  
    UINT           uiLength,  
@@ -48,7 +49,7 @@ HRESULT CreateStringObjectWithLength (
 );  
 ```  
   
-```c#  
+```csharp  
 int CreateStringObjectWithLength (  
    string           pcstrString,  
    uint             uiLength,  
@@ -56,18 +57,18 @@ int CreateStringObjectWithLength (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pcstrString`  
- [in] O valor de cadeia de caracteres para o objeto de cadeia de caracteres.  
+ [in] The string value for the string object.  
   
  `uiLength`  
- [in] O comprimento da cadeia de caracteres em bytes.  
+ [in] The length of the string in bytes.  
   
  `ppObject`  
- [out] Retorna um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objeto que representa o objeto de cadeia de caracteres criada recentemente.  
+ [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object that represents the newly created string object.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

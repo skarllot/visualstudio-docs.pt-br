@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 203e1e27cc892e96b103fc6cb22a73672a8e16af
-ms.openlocfilehash: aa15581df771128117b0e4c75f5ddd749cdf5702
-ms.lasthandoff: 03/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3fb5627d2cc92c36e9dcf34f4b94796b6620321f
+ms.openlocfilehash: e212fafb9eaf7891ff75084d4d5dd8b492718049
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="msbuild-targets-files"></a>Arquivos .targets do MSBuild
@@ -59,8 +60,8 @@ O [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md
 |Microsoft.CSharp.targets|Define as etapas no processo de build padrão de projetos do Visual C#.<br /><br /> Importado pelos arquivos de projeto do Visual C# (.csproj), que incluem a seguinte instrução: `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`|  
 |Microsoft.VisualBasic.targets|Define as etapas no processo de build padrão de projetos do Visual Basic.<br /><br /> Importado pelos arquivos de projeto do Visual Basic (.vbproj), que incluem a seguinte instrução: `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`|
 
-## <a name="directorybuildprops"></a>Directory.Build.Props
-Directory.Build.Props é um arquivo definido pelo usuário que fornece personalizações de projetos em um diretório. Esse arquivo é importado automaticamente de Microsoft.Common.targets, a menos que a propriedade **ImportDirectoryBuildTargets** seja definida como **false**.
+## <a name="directorybuildtargets"></a>Directory.Build.targets
+Directory.Build.targets é um arquivo definido pelo usuário que fornece personalizações de projetos em um diretório. Esse arquivo é importado automaticamente de Microsoft.Common.targets, a menos que a propriedade **ImportDirectoryBuildTargets** seja definida como **false**.
 
 ## <a name="see-also"></a>Consulte também  
  [Elemento Import (MSBuild)](../msbuild/import-element-msbuild.md)   

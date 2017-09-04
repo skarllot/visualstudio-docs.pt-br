@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FLAGS | Documentos do Microsoft
+title: MACHINE_INFO_FLAGS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,44 +30,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 008a1257806df12e90de52ede604ccc5d547bee1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 9ed09c8e2edee00f685b48b2b124bc83e66b97df
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="machineinfoflags"></a>MACHINE_INFO_FLAGS
-Usado para descrever uma máquina.  
+Used to describe a machine.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_MACHINE_INFO_FLAGS {   
    MCIFLAG_TERMINAL_SERVICES_AVAILABLE = 0x00000001  
 };  
 typedef DWORD MACHINE_INFO_FLAGS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_MACHINE_INFO_FLAGS {   
    MCIFLAG_TERMINAL_SERVICES_AVAILABLE = 0x00000001  
 };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  MCIFLAG_TERMINAL_SERVICES_AVAILABLE  
- Indica que os serviços de terminal estão disponíveis.  
+ Indicates that terminal services are available.  
   
-## <a name="remarks"></a>Comentários  
- Usado como o `Flags` membro do [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) estrutura.  
+## <a name="remarks"></a>Remarks  
+ Used as the `Flags` member of the [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) structure.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::Parse | Documentos do Microsoft
+title: IDebugExpressionEvaluator::Parse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fa32dd167af32170316adeaab7ccb49d107e3869
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3fc2616f840a79bbda012f943f40c4744a39bf35
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugexpressionevaluatorparse"></a>IDebugExpressionEvaluator::Parse
-Esse método converte uma cadeia de caracteres de expressão em uma expressão analisada.  
+This method converts an expression string to a parsed expression.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT Parse(   
    LPCOLESTR                upstrExpression,  
    PARSEFLAGS               dwFlags,  
@@ -52,7 +53,7 @@ HRESULT Parse(
 );  
 ```  
   
-```c#  
+```csharp  
 int Parse(  
    string                     upstrExpression,   
    enum_PARSEFLAGS            dwFlags,   
@@ -63,32 +64,32 @@ int Parse(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `upstrExpression`  
- [in] A cadeia de caracteres de expressão a ser analisado.  
+ [in] The expression string to be parsed.  
   
  `dwFlags`  
- [in] Uma coleção de [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) constantes que determinam como a expressão deve ser analisada.  
+ [in] A collection of [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) constants that determine how the expression is to be parsed.  
   
  `nRadix`  
- [in] Base a ser usado para interpretar as informações numéricas.  
+ [in] Radix to be used to interpret any numerical information.  
   
  `pbstrError`  
- [out] Retorna o erro como texto legível.  
+ [out] Returns the  error as human-readable text.  
   
  `pichError`  
- [out] Retorna a posição do caractere do início do erro na cadeia de caracteres de expressão.  
+ [out] Returns the character position of the start of the error in the expression string.  
   
  `ppParsedExpression`  
- [out] Retorna a expressão analisada em um [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) objeto.  
+ [out] Returns the parsed expression in an [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) object.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Este método gera uma expressão analisada, não um valor real. Uma expressão analisada está pronta para ser avaliada, ou seja, convertido em um valor.  
+## <a name="remarks"></a>Remarks  
+ This method produces a parsed expression, not an actual value. A parsed expression is ready to be evaluated, that is, converted to a value.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)   
  [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)   
  [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)

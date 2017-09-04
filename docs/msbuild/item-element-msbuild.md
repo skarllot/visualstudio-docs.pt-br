@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 203e1e27cc892e96b103fc6cb22a73672a8e16af
-ms.openlocfilehash: 927d80ec00ee69ca6aa59f257826307bcd3fe513
-ms.lasthandoff: 03/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
+ms.openlocfilehash: 2430531e4ddb3a5ef40cd773327311fa7b85ce48
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="item-element-msbuild"></a>Elemento Item (MSBuild)
@@ -112,7 +113,7 @@ No entanto, é possível passar os metadados `Version` como um atributo, como na
 ## <a name="remarks"></a>Comentários  
  Os elementos `Item` definem entradas no sistema de compilação e são agrupados em coleções de itens com base em seus nomes de coleção definida pelo usuário. Essas coleções de itens podem ser usadas como parâmetros para [tarefas](../msbuild/msbuild-tasks.md), que usam os itens individuais nas coleções para executar as etapas do processo de build. Para obter mais informações, consulte [Itens](../msbuild/msbuild-items.md).  
 
- O uso da notação `@(`*myType*`)` permite que uma coleção de itens do tipo *myType* seja expandida em uma lista de cadeias de caracteres delimitada por ponto e vírgula e passada para um parâmetro. Se o parâmetro for do tipo `string`, então o valor do parâmetro será a lista de elementos, separados por ponto e vírgula. Se o parâmetro for uma matriz de cadeias de caracteres (`string[]`), então cada elemento será inserido na matriz com base na localização dos pontos e vírgulas. Se o parâmetro de tarefa for do tipo <xref:Microsoft.Build.Framework.ITaskItem>`[]`, então o valor será o conteúdo da coleção de itens com quaisquer metadados anexados. Para delimitar cada item usando um caractere que não seja ponto e vírgula, use a sintaxe `@(`*myType*`, '`*separator*`')`.  
+ O uso da notação `@(`*myType*`)` permite que uma coleção de itens do tipo *myType* seja expandida em uma lista de cadeias de caracteres delimitada por ponto e vírgula e passada para um parâmetro. Se o parâmetro for do tipo `string`, então o valor do parâmetro será a lista de elementos, separados por ponto e vírgula. Se o parâmetro for uma matriz de cadeias de caracteres (`string[]`), então cada elemento será inserido na matriz com base na localização dos pontos e vírgulas. Se o parâmetro de tarefa for do tipo <xref:Microsoft.Build.Framework.ITaskItem>`[]`, então o valor é o conteúdo da coleção de itens juntamente com quaisquer metadados anexados. Para delimitar cada item usando um caractere que não seja ponto e vírgula, use a sintaxe `@(`*myType*`, '`*separator*`')`.  
 
  O mecanismo [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] pode avaliar curingas como `*` e `?`, bem como curingas recursivos como `/**/*.cs`. Para obter mais informações, consulte [Itens](../msbuild/msbuild-items.md).  
 

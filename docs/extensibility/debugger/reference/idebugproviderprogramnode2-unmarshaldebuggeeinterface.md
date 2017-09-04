@@ -1,5 +1,5 @@
 ---
-title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Documentos do Microsoft
+title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7d150deea6bb0aa4a77e54ff3c8b888cc9a4cf5d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 089e6ab76e1f3fe3ae251e5b1506a25ca98278c1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
-Obtém uma interface especificada nos limites do processo.  
+Obtains a specified interface across process boundaries.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT UnmarshalDebuggeeInterface(  
@@ -48,25 +49,25 @@ HRESULT UnmarshalDebuggeeInterface(
 );  
 ```  
   
-```c#  
+```cs  
 int UnmarshalDebuggeeInterface(  
    ref Guid   riid,  
    out IntPtr ppvObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `riid`  
- [in] GUID da interface para obter.  
+ [in] GUID of the interface to obtain.  
   
  `ppvObject`  
- [out] Retorna o objeto que implementa a interface desejada. [C++] isso pode ser convertido diretamente para o tipo de interface desejada. Use [c#] o <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A>método para obter a interface desejada.</xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A>  
+ [out] Returns the object implementing the desired interface. [C++] this can be cast directly to the desired interface type. [C#] use the <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> method to get the desired interface.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Esse método é usado quando o mecanismo de depuração estiver em execução [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] espaço de processo e o programa que está sendo depurado está sendo executado em seu próprio espaço de processo.  
+## <a name="remarks"></a>Remarks  
+ This method is used when the debug engine is running in the [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] process space and the program being debugged is running in its own process space.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)

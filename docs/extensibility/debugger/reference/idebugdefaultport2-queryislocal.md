@@ -1,5 +1,5 @@
 ---
-title: IDebugDefaultPort2::QueryIsLocal | Documentos do Microsoft
+title: IDebugDefaultPort2::QueryIsLocal | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,29 +30,30 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6465ad9c3999e073da811bc0014ba77420e9a80d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 169a4975770ea0704ebaf59d9fa5b621f30bd014
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugdefaultport2queryislocal"></a>IDebugDefaultPort2::QueryIsLocal
-Este método determina se essa porta está na máquina local.  
+This method determines whether this port is on the local machine.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT QueryIsLocal(  
    void  
 );  
 ```  
   
-```c#  
+```csharp  
 int QueryIsLocal();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Retorna `S_OK` se essa porta é local (no mesmo computador que o chamador) ou `S_FALSE` se a porta estiver em outra máquina.  
+## <a name="return-value"></a>Return Value  
+ Returns `S_OK` if this port is local (on the same machine as the caller) or `S_FALSE` if the port is on another machine.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)

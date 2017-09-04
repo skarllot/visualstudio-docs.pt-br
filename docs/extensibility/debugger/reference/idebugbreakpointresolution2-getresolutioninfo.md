@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointResolution2::GetResolutionInfo | Documentos do Microsoft
+title: IDebugBreakpointResolution2::GetResolutionInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,43 +30,44 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7c8ca0d889a4e930d9c4d8e78620b84502c655ba
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 80c7869b4cc916e99dee099703dd66ea8056853d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugbreakpointresolution2getresolutioninfo"></a>IDebugBreakpointResolution2::GetResolutionInfo
-Obtém as informações de resolução de ponto de interrupção que descreve este ponto de interrupção.  
+Gets the breakpoint resolution information that describes this breakpoint.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetResolutionInfo(   
    BPRESI_FIELDS       dwFields,  
    BP_RESOLUTION_INFO* pBPResolutionInfo  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetResolutionInfo(   
    enum BPRESI_FIELDS   dwFields,  
    BP_RESOLUTION_INFO[] pBPResolutionInfo  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `dwFields`  
- [in] Uma combinação de sinalizadores do [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) que determinam quais campos de enumeração de `pBPResolutionInfo` parâmetro devem ser preenchidos.  
+ [in] A combination of flags from the [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) enumeration that determine which fields of the `pBPResolutionInfo` parameter are to be filled out.  
   
  `pBPResolutionInfo`  
- [out] O [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) estrutura a ser preenchido com informações sobre este ponto de interrupção.  
+ [out] The [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) structure to be filled in with information about this breakpoint.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns an error code.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir implementa esse método para um simples `CDebugBreakpointResolution` objeto expõe o [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) interface.  
+## <a name="example"></a>Example  
+ The following example implements this method for a simple `CDebugBreakpointResolution` object that exposes the [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) interface.  
   
 ```  
 HRESULT CDebugBreakpointResolution::GetResolutionInfo(  
@@ -155,7 +156,7 @@ HRESULT CDebugBreakpointResolution::CopyBP_RESOLUTION_INFO(
 }    
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)   
  [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)   
  [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)

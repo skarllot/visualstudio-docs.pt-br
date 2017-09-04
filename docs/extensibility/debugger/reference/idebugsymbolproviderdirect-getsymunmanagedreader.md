@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetSymUnmanagedReader | Documentos do Microsoft
+title: IDebugSymbolProviderDirect::GetSymUnmanagedReader | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,18 +29,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: cf31cf6f43d8ec6ab64e92df28d5b7994d07a7df
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4d72d8ef00090168a9c27d93eecf3578ae9d9130
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugsymbolproviderdirectgetsymunmanagedreader"></a>IDebugSymbolProviderDirect::GetSymUnmanagedReader
-Recupera um leitor de símbolos para código não gerenciado.  
+Retrieves a symbol reader for unmanaged code.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetSymUnmanagedReader (  
    ULONG32    ulAppDomainID,  
    GUID       guidModule,  
@@ -48,7 +49,7 @@ HRESULT GetSymUnmanagedReader (
 );  
 ```  
   
-```c#  
+```csharp  
 int GetSymUnmanagedReader (  
    uint       ulAppDomainID,  
    Guid       guidModule,  
@@ -56,18 +57,18 @@ int GetSymUnmanagedReader (
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- [in] Identificador do domínio do aplicativo.  
+ [in] Identifier of the application domain.  
   
  `guidModule`  
- [in] Identificador exclusivo do módulo.  
+ [in] Unique identifier of the module.  
   
  `ppSymUnmanagedReader`  
- [out] Retorna um objeto que representa o leitor do símbolo para código não gerenciado.  
+ [out] Returns an object that represents the symbol reader for unmanaged code.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

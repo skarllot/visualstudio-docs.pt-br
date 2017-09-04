@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::GetProviderProgramNode | Documentos do Microsoft
+title: IDebugProgramProvider2::GetProviderProgramNode | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4b7b4667637a9f45f2f8d9b5cb3dd0737f2f414d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 21543a7b9d6a26998045cf4f42354085f622fb56
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
-Recupera o nó de programa para um programa específico.  
+Retrieves the program node for a specific program.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetProviderProgramNode(  
@@ -52,7 +53,7 @@ HRESULT GetProviderProgramNode(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetProviderProgramNode(  
    enum_PROVIDER_FLAGS    Flags,  
    IDebugDefaultPort2     pPort,  
@@ -63,35 +64,35 @@ int GetProviderProgramNode(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `Flags`  
- [in] Uma combinação de sinalizadores do [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) enumeração. Os seguintes sinalizadores são típicos para essa chamada:  
+ [in] A combination of flags from the [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) enumeration. The following flags are typical for this call:  
   
-|Sinalizador|Descrição|  
+|Flag|Description|  
 |----------|-----------------|  
-|`PFLAG_REMOTE_PORT`|Chamador está em execução no computador remoto.|  
-|`PFLAG_DEBUGGEE`|No momento está sendo depurado chamador (informações adicionais sobre empacotamento serão retornadas para cada nó).|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Chamador foi anexado ao, mas não iniciado pelo depurador.|  
+|`PFLAG_REMOTE_PORT`|Caller is running on remote machine.|  
+|`PFLAG_DEBUGGEE`|Caller is currently being debugged (additional information about marshalling will be returned for each node).|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Caller was attached to but not launched by the debugger.|  
   
  `pPort`  
- [in] A porta que o processo de chamada está em execução.  
+ [in] The port the calling process is running on.  
   
  `processId`  
- [in] Um [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura que contém a ID do processo que contém o programa em questão.  
+ [in] An [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure holding the ID of the process that contains the program in question.  
   
  `guidEngine`  
- [in] GUID do mecanismo de depuração que o programa está associado (se houver).  
+ [in] GUID of the debug engine that the program is attached to (if any).  
   
  `programId`  
- [in] ID do programa para o qual obter o nó de programa.  
+ [in] ID of the program for which to get the program node.  
   
  `ppProgramNode`  
- [out] Um [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objeto que representa o nó de programa solicitado.  
+ [out] An [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) object representing the requested program node.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   
  [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)   
  [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)   

@@ -1,65 +1,87 @@
 ---
-title: "Depurar threads e processos no Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "depurando [Visual Studio], threads"
-  - "depurando threads"
-  - "depuração multiprocesso"
-  - "processos, depuração"
-  - "threading [Visual Studio], depuração"
+title: Tools to debug threads and processes | Microsoft Docs
+ms.custom: 
+ms.date: 04/21/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- multiprocess debugging
+- threading [Visual Studio], debugging
+- processes, debugging
+- debugging threads
+- debugging [Visual Studio], threads
 ms.assetid: 9f0c8505-b6b2-452b-adfd-076db14d8115
-caps.latest.revision: 15
-caps.handback.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Depurar threads e processos no Visual Studio
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+caps.latest.revision: 14
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 394fcc0339f4ce2bef4aca64efc5bc8bcf1e3e00
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-*Threads* e *processos* são conceitos relacionados à ciência da computação.  Ambos representam sequências de instruções que devem executar em uma ordem específica.  Instruções em threads ou processos separados, entretanto, podem ser executados em paralelo.  
+---
+# <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Tools to debug threads and processes in Visual Studio
+*Threads* and *processes* are related concepts in computer science. Both represent sequences of instructions that must execute in a specific order. Instructions in separate threads or processes, however, can execute in parallel.  
   
- Os processos existem no sistema operacional e correspondem ao que os usuários veem como programas ou aplicativos.  Um thread, por outro lado, existe dentro de um processo.  Por esse motivo, os threads são às vezes chamados de *processos leves*.  Cada processo consiste em um ou mais threads.  
+ Processes exist in the operating system and correspond to what users see as programs or applications. A thread, on the other hand, exists within a process. For this reason, threads are sometimes referred to as *light-weight processes*. Each process consists of one or more threads.  
   
- A existência de vários processos permite que um computador execute mais de uma tarefa de cada vez.  A existência de vários threads permite que um processo separe o trabalho a ser executado paralelamente.  Em um computador com multiprocessadores, os processos ou threads podem ser executados em processadores diferentes.  Isso permite o verdadeiro processamento paralelo.  
+ The existence of multiple processes enables a computer to perform more than one task at a time. The existence of multiple threads enables a process to separate work to be performed in parallel. On a computer with multiprocessors, processes or threads can run on different processors. This enables true parallel processing.  
   
- O processamento paralelo perfeito não é sempre possível.  Às vezes os threads devem ser sincronizados.  Um thread pode ter que aguardar um resultado de outro thread, ou um thread pode precisar de acesso exclusivo a um recurso que outro thread está usando.  Problemas de sincronização são uma causa comum de erro em aplicativos com multithreads.  Em alguns casos, os threads podem interromper espera de um recurso que nunca fica disponível.  Isso resulta em uma condição chamada *deadlock*.  
+ Perfect parallel processing is not always possible. Threads sometimes must be synchronized. One thread may have to wait for a result from another thread, or one thread may need exclusive access to a resource that another thread is using. Synchronization problems are a common cause of bugs in multithreaded applications. Sometimes threads may end up waiting for a resource that never becomes available. This results in a condition called *deadlock*.  
   
- O depurador do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] fornece ferramentas avançadas e mas fáceis de usar para depurar threads e processos.  
+ The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger provides powerful but easy-to-use tools for debugging threads and processes.  
   
-## Ferramentas para depurar threads e processos no Visual Studio  
- As principais ferramentas para trabalhar com processos no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] são a caixa de diálogo **Anexar ao Processo**, a janela de **Processos**, e a barra de ferramentas **Local de Depuração**.  As ferramentas principais para depurar threads são a janela de **Threads**, marcadores de thread em janelas de origem, e a barra de ferramentas de **Local de Depuração**.  
+## <a name="tools-and-features"></a>Tools and features
+The tools you need to use in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] depend on what type of code you are trying to debug:
+
+- For processes, the primary tools are the **Attach to Process** dialog box, the **Processes** window, and the **Debug Location** toolbar.
+
+- For threads, the primary tools for debugging threads are the **Threads** window, thread markers in source windows, **Parallel Stacks** window, **Parallel Watch** window, and the **Debug Location** toolbar.  
   
- As ferramentas principais para depurar aplicativos multissegmentados são **Pilhas Paralelas** e **Tarefas Paralelas**, **Inspeção Paralela**, e as janelas de **Threads da GPU**.  
+- For code that uses the <xref:System.Threading.Tasks.Task> in the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl), the [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime/) (native code), the primary tools for debugging multithreaded applications are the **Parallel Stacks** window, the **Parallel Watch** window, and the **Tasks** window (the **Tasks** window also supports the JavaScript promise object).
+
+- For debugging threads on the GPU, the primary tool is the **GPU Threads** windows.  
   
- A tabela a seguir mostra as informações disponíveis e as ações que você pode executar em cada um desses locais:  
+ The following table shows the information available and the actions you can perform in each of these places:  
   
-|Interface do Usuário|Informação disponível|Ações que você pode executar|  
-|--------------------------|---------------------------|----------------------------------|  
-|Caixa de diálogo **Anexar ao Processo**|Processos disponíveis você pode anexar:<br /><br /> -   Nome do Processo \(exe\)<br />-   Número de identificação de processo<br />-   Título da barra de menus<br />-   Tipo \(v4.0 gerenciado; V2.0 gerenciado, v1.1, v1.0; x86; x64; IA64\)<br />-   Nome de usuário \(nome de conta\)<br />-   Número da sessão|Selecione um processo anexar.<br /><br /> Selecione um computador remoto<br /><br /> Altere o tipo de transporte para se conectar a computadores remotos|  
-|Janela **Processos**|Processos anexados:<br /><br /> -   Nome do Processo<br />-   Número de identificação de processo<br />-   Caminho para processar .exe<br />-   Título da barra de menus<br />-   Estado \(interrupção.  em execução\)<br />-   Depurando \(nativo, gerenciado etc.\)<br />-   Tipo de transporte \(padrão, nativo sem autenticação\)<br />-   Qualificador de transporte \(computador remoto\)|Ferramentas:<br /><br /> -   Attach<br />-   Detach<br />-   Terminate<br /><br /> O menu de atalho:<br /><br /> -   Attach<br />-   Detach<br />-   Desanexe quando a depuração for interrompida<br />-   Terminate|  
-|**Janela** de Threads|Threads durante o processo atual:<br /><br /> -   Identificação do Thread<br />-   ID gerenciada<br />-   Categoria \(thread principal, thread de interface, manipulador de chamada de procedimento remoto ou thread de trabalho\)<br />-   Nome do Thread<br />-   Local onde o thread é criado<br />-   Prioridade<br />-   Máscara de Afinidade<br />-   Contagem suspensa<br />-   Nome do Processo<br />-   Indicador de Sinalização<br />-   Indexador suspenso|Ferramentas:<br /><br /> -   Pesquisar<br />-   Pesquisar pilha de chamadas<br />-   Sinalizar Apenas Meu Código<br />-   Sinalizar Seleção de Módulo Personalizada<br />-   Group by<br />-   Colunas<br />-   Expandir\/Recolher pilhas de chamadas<br />-   Expandir\/Recolher grupos<br />-   Congelar\/descongelar threads<br /><br /> O menu de atalho:<br /><br /> -   Mostrar threads na origem<br />-   Alternar para um segmento<br />-   Congelar um thread em execução<br />-   Descongelar um thread congelado<br />-   Sinaliza um thread para estudos adicionais<br />-   Remover a sinalização de um segmento<br />-   Renomear um thread<br />-   Exibir e ocultar threads<br /><br /> Outras ações:<br /><br /> -   Exibir a pilha de chamadas para um segmento em um DataTip|  
-|Janela de origem|Indexadores de threads na medianiz esquerda indicam um ou vários segmentos \(desativado por padrão, ativado usando o menu de atalho na janela **Threads**\)|O menu de atalho:<br /><br /> -   Alternar para um segmento<br />-   Sinaliza um thread para estudos adicionais<br />-   Remover a sinalização de um segmento|  
-|Barra de ferramentas **Local de Depuração**|-   Processo atual<br />-   Mostrar a miniatura do aplicativo<br />-   Suspenda o aplicativo<br />-   Retomar o aplicativo<br />-   Suspenda e feche o aplicativo<br />-   Thread atual<br />-   Alterne o estado atual do sinalizador do segmento<br />-   Mostrar somente threads sinalizados<br />-   Mostrar o só o processo atual<br />-   Quadro de pilha atual|-   Alternar para outro processo<br />-   Suspenda, retome ou feche o aplicativo<br />-   Alterne para outro thread no processo atual<br />-   Alterne para outro quadro de pilha no thread atual<br />-   Sinalizar ou remover sinalização de threads atuais<br />-   Mostrar somente threads sinalizados<br />-   Mostrar somente o processo atual|  
-|Janela de **Pilhas Paralelas**|-   Pilhas de chamadas para vários threads em uma janela.<br />-   Quadro de pilha ativo para cada segmento.<br />-   Chamadores e receptores de qualquer método.|-   Remover threads especificados<br />-   Alterne para modo de exibição de Tarefas paralelas<br />-   Sinalizar ou remover sinalização de um thread<br />-   Aplicar zoom|  
-|Janela **Tarefas Paralelas**|-   Exibir informações sobre os objetos de <xref:System.Threading.Tasks.Task>, incluindo ID de tarefa, status de tarefa \(agendada, executando, em espera, em deadlock\), e qual segmento está atribuído à tarefa.<br />-   Local atual na pilha de chamadas.<br />-   O delegado passado para a tarefa no horário de criação|-   Alterne para a tarefa atual<br />-   Sinalizar ou remover sinalização de uma tarefa<br />-   Congelar ou descongelar uma tarefa|  
-|Janela **Inspeção Paralela** window|-   A coluna do sinalizador, na qual você pode marcar um thread ao qual deseja prestar atenção especial.<br />-   A coluna do quadro, na qual uma seta indica o quadro selecionado.<br />-   Uma coluna configurável que pode exibir o computador, o processo, o bloco, a tarefa e o thread.|-   Sinalizar ou remover sinalização de um thread<br />-   Exibir somente threads sinalizados<br />-   Quadros de opção<br />-   Classificar uma coluna<br />-   Agrupar threads<br />-   Congelar ou descongelar threads<br />-   exporte os dados na janela de Inspeção Paralela|  
-|Janela **Threads da GPU**|-   A coluna do sinalizador, na qual você pode marcar um thread ao qual deseja prestar atenção especial.<br />-   A coluna thread ativo, em que uma seta amarela indica um thread ativo.  Uma seta indica um thread onde a execução interrompe no depurador.<br />-   A coluna **Contagem de Threads**, que exibe o número de segmentos no mesmo local.<br />-   A coluna de **Linha**, que exibe a linha de código onde cada grupo de segmentos está localizado.<br />-   A coluna de **Endereço**, que exibe o endereço da instrução onde cada grupo de threads está localizado.<br />-   A coluna **Local**, que é o local no código do endereço.<br />-   A coluna **Status**, que mostra se o segmento está ativo ou bloqueado.<br />-   A coluna **Lado a lado**, que mostra o índice lado a lado para os segmentos na linha.|-   Altere para um thread ativo diferente<br />-   Exibir um determinado ladrilho e o thread<br />-   Exibir ou ocultar uma coluna<br />-   Classificar por coluna<br />-   Agrupar threads<br />-   Congelar ou descongelar threads<br />-   Sinalizar ou remover sinalização de um thread<br />-   Exibir somente threads sinalizados|  
+|User Interface|Information Available|Actions You Can Perform|  
+|--------------------|---------------------------|-----------------------------|  
+|**Attach to Process** dialog box|Available Processes you can attach to:<br /><br /> -   Process name (.exe)<br />-   Process ID number<br />-   Menubar Title<br />-   Type (Managed v4.0; Managed v2.0, v1.1, v1.0; x86; x64; IA64)<br />-   User Name (account name)<br />-   Session number|Select a process to attach to<br /><br /> Select a remote computer<br /><br /> Change transport type for connecting to remote computers|  
+|**Processes** window|Attached Processes:<br /><br /> -   Process Name<br />-   Process ID number<br />-   Path to process .exe<br />-   Menubar Title<br />-   State (Break. Running)<br />-   Debugging (Native, Managed, and so on.)<br />-   Transport type (default, native with no authentication)<br />-   Transport Qualifier (remote computer)|Tools:<br /><br /> -   Attach<br />-   Detach<br />-   Terminate<br /><br /> Shortcut menu:<br /><br /> -   Attach<br />-   Detach<br />-   Detach when debugging stopped<br />-   Terminate|  
+|**Threads** window|Threads in current process:<br /><br /> -   Thread ID<br />-   Managed ID<br />-   Category (main thread, interface thread, remote procedure call handler, or worker thread)<br />-   Thread Name<br />-   Location where thread is created<br />-   Priority<br />-   Affinity Mask<br />-   Suspended Count<br />-   Process Name<br />-   Flag Indicator<br />-   Suspended indicator|Tools:<br /><br /> -   Search<br />-   Search Call Stack<br />-   Flag Just My Code<br />-   Flag Custom Module Selection<br />-   Group by<br />-   Columns<br />-   Expand/Collapse callstacks<br />-   Expand/Collapse groups<br />-   Freeze/Thaw Threads<br /><br /> Shortcut menu:<br /><br /> -   Show threads in source<br />-   Switch to a thread<br />-   Freeze a running thread<br />-   Thaw a frozen thread<br />-   Flag a thread for additional study<br />-   Unflag a thread<br />-   Rename a thread<br />-   Show and hide threads<br /><br /> Other actions:<br /><br /> -   View the call stack for a thread in a DataTip|  
+|Source window|Thread indicators in left gutter indicate single or multiple threads (off by default, turned on by using shortcut menu in **Threads** window)|Shortcut menu:<br /><br /> -   Switch to a thread<br />-   Flag a thread for additional study<br />-   Unflag a thread|  
+|**Debug Location** toolbar|-   Current process<br />-   Suspend the application<br />-   Resume the application<br />-   Suspend and shut down the application<br />-   Current thread<br />-   Toggle current thread flag state<br />-   Show only flagged threads<br />-   Show only current process<br />-   Current stack frame|-   Switch to another process<br />-   Suspend, resume, or shut down the application<br />-   Switch to another thread in current process<br />-   Switch to another stack frame in current thread<br />-   Flag or unflag current threads<br />-   Show only flagged threads<br />-   Show only the current process|  
+|**Parallel Stacks** window|-   Call stacks for multiple threads in one window.<br />-   Active stack frame for each thread.<br />-   Callers and callees for any method.|-   Filter out specified threads<br />-   Switch to Tasks view<br />-   Flag or unflag a thread<br />-   Zoom|   
+|**Parallel Watch** window|-   The flag column, in which you can mark a thread that you want to pay special attention to.<br />-   The frame column, in which an arrow indicates the selected frame.<br />-   A configurable column that can display the machine, process, tile, task, and thread.|-   Flag or unflag a thread<br />-   Display only flagged threads<br />-   Switch frames<br />-   Sort a column<br />-   Group threads<br />-   Freeze or thaw threads<br />-   export the data in the Parallel Watch window| 
+|**Tasks** window|-   View information about <xref:System.Threading.Tasks.Task> objects including task ID, task status (scheduled, running, waiting, deadlocked), and which thread is assigned to the task.<br />-   Current location in call stack.<br />-   Delegate passed to the task at creation time|-   Switch to current task<br />-   Flag or unflag a task<br />-   Freeze or thaw a task|  
+|**GPU Threads** window|-   The flag column, in which you can mark a thread that you want to pay special attention to.<br />-   The current thread column, in which a yellow arrow indicates the current thread.<br />-   The **Thread Count** column, which displays the number of threads at the same location.<br />-   The **Line** column, which displays the line of code where each group of threads is located.<br />-   The **Address** column, which displays the instruction address where each group of threads is located.<br />-   The **Location** column, which is the location in the code of the address.<br />-   The **Status** column, which shows whether the thread is active or blocked.<br />-   The **Tile** column, which shows the tile index for the threads in the row.|-   Change to a different thread<br />-   Display a particular tile and thread<br />-   Display or hide a column<br />-   Sort by a column<br />-   Group threads<br />-   Freeze or thaw threads<br />-   Flag or unflag a thread<br />-   Display only flagged threads|  
   
-## Consulte também  
- [Anexar a processos em execução](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
- [Depurar aplicativos multithread](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [Depurando código de GPU](../debugger/debugging-gpu-code.md)
+## <a name="see-also"></a>See Also  
+ [Attach to Running Processes](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+ [Debug Multithreaded Applications](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [Debugging GPU Code](../debugger/debugging-gpu-code.md)

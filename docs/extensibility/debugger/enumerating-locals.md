@@ -1,5 +1,5 @@
 ---
-title: Enumerando locais | Documentos do Microsoft
+title: Enumerating Locals | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,38 +29,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 72b61b195c58a62b212fd9bcca3c7c8de201b18b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 6221af5116f27cd64b644d06c2a21acb51d16923
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="enumerating-locals"></a>Enumerando locais
+# <a name="enumerating-locals"></a>Enumerating Locals
 > [!IMPORTANT]
->  No Visual Studio 2015, essa forma de implementar os avaliadores de expressão foi preterida. Para obter informações sobre como implementar os avaliadores de expressão do CLR, consulte [avaliadores de expressão de CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  In Visual Studio 2015, this way of implementing expression evaluators is deprecated. For information about implementing CLR expression evaluators, please see [CLR Expression Evaluators](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) and [Managed Expression Evaluator Sample](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Quando o Visual Studio está pronto para preencher o **locais** janela, ele chama [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) no [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objeto retornado de [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) (consulte [GetMethodProperty implementando](../../extensibility/debugger/implementing-getmethodproperty.md)). `IDebugProperty2::EnumChildren`Retorna um [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) objeto.  
+ When Visual Studio is ready to populate the **Locals** window, it calls [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) on the [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) object returned from [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) (see [Implementing GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)). `IDebugProperty2::EnumChildren` returns an [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) object.  
   
- Essa implementação do `IDebugProperty2::EnumChildren` realiza as seguintes tarefas:  
+ This implementation of `IDebugProperty2::EnumChildren` performs the following tasks:  
   
-1.  Garante que isso é que representa um método.  
+1.  Ensures this is representing a method.  
   
-2.  Usa o `guidFilter` argumento para determinar qual método de chamar o [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) objeto. Se `guidFilter` é igual a:  
+2.  Uses the `guidFilter` argument to determine which method to call on the [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) object. If `guidFilter` equals:  
   
-    1.  `guidFilterLocals`, chame [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) para obter um [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) objeto.  
+    1.  `guidFilterLocals`, call [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) to obtain an [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) object.  
   
-    2.  `guidFilterArgs`, chame [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) para obter uma `IEnumDebugFields` objeto.  
+    2.  `guidFilterArgs`, call [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) to obtain an `IEnumDebugFields` object.  
   
-    3.  `guidFilterLocalsPlusArgs`, sintetizar uma enumeração que combina os resultados de `IDebugMethodField::EnumLocals` e `IDebugMethodField::EnumArguments`. Este síntese é representado pela classe `CEnumMethodField`.  
+    3.  `guidFilterLocalsPlusArgs`, synthesize an enumeration that combines the results from `IDebugMethodField::EnumLocals` and `IDebugMethodField::EnumArguments`. This synthesis is represented by the class `CEnumMethodField`.  
   
-3.  Cria uma instância de uma classe (chamado `CEnumPropertyInfo` neste exemplo) que implementa o `IEnumDebugPropertyInfo2` de interface e contém o `IEnumDebugFields` objeto.  
+3.  Instantiates a class (called `CEnumPropertyInfo` in this example) that implements the `IEnumDebugPropertyInfo2` interface and contains the `IEnumDebugFields` object.  
   
-4.  Retorna o `IEnumDebugProperty2Info2` de interface do `CEnumPropertyInfo` objeto.  
+4.  Returns the `IEnumDebugProperty2Info2` interface from the `CEnumPropertyInfo` object.  
   
-## <a name="managed-code"></a>Código gerenciado  
- Este exemplo mostra uma implementação de `IDebugProperty2::EnumChildren` em código gerenciado.  
+## <a name="managed-code"></a>Managed Code  
+ This example shows an implementation of `IDebugProperty2::EnumChildren` in managed code.  
   
-```c#  
+```csharp  
 namespace EEMC  
 {  
     public class CFieldProperty : IDebugProperty2  
@@ -136,10 +137,10 @@ namespace EEMC
 }  
 ```  
   
-## <a name="unmanaged-code"></a>Código não gerenciado  
- Este exemplo mostra uma implementação de `IDebugProperty2::EnumChildren` em código não gerenciado.  
+## <a name="unmanaged-code"></a>Unmanaged Code  
+ This example shows an implementation of `IDebugProperty2::EnumChildren` in unmanaged code.  
   
-```cpp#  
+```cpp  
 STDMETHODIMP CFieldProperty::EnumChildren(   
         in DEBUGPROP_INFO_FLAGS        infoFlags,  
         in DWORD                       radix,  
@@ -262,7 +263,7 @@ STDMETHODIMP CFieldProperty::EnumChildren(
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Implementação de exemplo de locais](../../extensibility/debugger/sample-implementation-of-locals.md)   
- [Implementando GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)   
- [Contexto de avaliação](../../extensibility/debugger/evaluation-context.md)
+## <a name="see-also"></a>See Also  
+ [Sample Implementation of Locals](../../extensibility/debugger/sample-implementation-of-locals.md)   
+ [Implementing GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)   
+ [Evaluation Context](../../extensibility/debugger/evaluation-context.md)

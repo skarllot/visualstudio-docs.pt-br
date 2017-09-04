@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetENCUpdate | Documentos do Microsoft
+title: IDebugProgram2::GetENCUpdate | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e7a51b41e0b65135a3b9d902cda9e0e77f22f0e0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: a3cf362657225ed6d7173431152e4fdb40ebd314
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprogram2getencupdate"></a>IDebugProgram2::GetENCUpdate
-Esse método obtém a atualização de editar e continuar (ENC) para este programa. Um mecanismo de depuração personalizado sempre retorna `E_NOTIMPL`.  
+This method gets the Edit and Continue (ENC) update for this program. A custom debug engine always returns `E_NOTIMPL`.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetENCUpdate(   
    IUnknown** ppUpdate  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetENCUpdate(  
    out object ppUpdate  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `ppUpdate`  
- [out] Retorna uma interface interna que pode ser usada para atualizar esse programa.  
+ [out] Returns an internal interface that can be used to update this program.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
 > [!NOTE]
->  Um mecanismo de depuração personalizado deve sempre retornar `E_NOTIMPL`.  
+>  A custom debug engine should always return `E_NOTIMPL`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

@@ -1,5 +1,5 @@
 ---
-title: "Como: identificar símbolos em uma biblioteca | Documentos do Microsoft"
+title: 'How to: Identify Symbols in a Library | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,28 +29,29 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2c4eb059df179cd593e2737c4cd75339269c42b2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 099af7cc3e5f77041f95f72e7b42fd6bfb324fdc
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="how-to-identify-symbols-in-a-library"></a>Como: identificar símbolos em uma biblioteca
-Ferramentas de navegação de símbolo exibem exibições hierárquicas de símbolos. Os símbolos representam espaços para nomes, objetos, classes, membros de classe e outros elementos de linguagem.  
+# <a name="how-to-identify-symbols-in-a-library"></a>How to: Identify Symbols in a Library
+Symbol-browsing tools display hierarchical views of symbols. The symbols represent namespaces, objects, classes, class members, and other language elements.  
   
- Cada símbolo na hierarquia pode ser identificado pelas informações de navegação passadas pela biblioteca do símbolo para o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Gerenciador de objetos por meio das seguintes interfaces:  
+ Each symbol in the hierarchy can be identified by the navigation information passed by the symbol library to the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] object manager through the following interfaces:  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo></xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo>  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo>  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfoNode></xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfoNode>  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfoNode>  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes>.</xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes>  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes>.  
   
- O local do símbolo na hierarquia distingue um símbolo. Ele permite que ferramentas de navegação de símbolo navegar até um símbolo específico. O caminho exclusivo, totalmente qualificado para o símbolo determina o local. Cada elemento no caminho é um nó. O caminho começa com o nó de nível superior e termina com o símbolo específico. Por exemplo, se o método M1 é um membro da classe C1 e C1 está no namespace N1, o caminho completo do método M1 é N1. C1. M1. Esse caminho contém três nós: N1, C1 e M1.  
+ The location of the symbol in the hierarchy distinguishes a symbol. It allows symbol-browsing tools to navigate to a specific symbol. The unique, fully qualified path to the symbol determines the location. Each element in the path is a node. The path starts with the top-level node and ends with the specific symbol. For example, if the M1 method is a member of the C1 class and C1 is in N1 namespace, the full path of the M1 method is N1.C1.M1. This path contains three nodes: N1, C1, and M1.  
   
- As informações de navegação permite que o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] para localizar, selecionar e manter o Gerenciador de objetos selecionados os símbolos na hierarquia. Ele permite navegar de uma ferramenta de navegação para outro. Ao usar **Pesquisador de objetos** para procurar símbolos em um [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projeto, você pode clique com botão direito um método e iniciar o **Pesquisador de chamadas** ferramenta para exibir o método em um gráfico de chamada.  
+ The navigation information allows the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] object manager to locate, select and keep selected the symbols in the hierarchy. It allows navigating from one browsing tool to another. While using **Object Browser** to browse symbols in a [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] project, you can right click a method and start the **Call Browser** tool to display the method in a call graph.  
   
- Duas formas descrevem o local do símbolo. A forma canônica baseia-se no caminho totalmente qualificado do símbolo. Representa uma posição exclusiva do símbolo na hierarquia. Isso é independente da ferramenta de navegação de símbolo. Para obter as informações de forma canônica, o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] chamadas de Gerenciador de objeto <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A>método.</xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> O formato de apresentação descreve o local do símbolo em uma ferramenta de navegação de símbolo específico. A posição do símbolo é relativo a posição de outros símbolos no hierarchicy. Um determinado símbolo pode ter vários caminhos de apresentação, mas apenas um caminho canônico. Por exemplo, se C1 classe é herdada da classe C2 e ambas as classes no namespace N1, o **Pesquisador de objetos** exibe a árvore hierárquica do seguinte:  
+ Two forms describe the symbol location. The canonical form is based on the fully qualified path of the symbol. It represents a unique position of the symbol in the hierarchy. It is independent of the symbol-browsing tool. To obtain the canonical form information, the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] object manager calls <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> method. The presentation form describes the location of the symbol within a specific symbol-browsing tool. The position of the symbol is relative to the position of other symbols in the hierarchicy. A given symbol may have several presentation paths, but only one canonical path. For example, if C1 class is inherited from C2 class and both classes are in N1 namespace, the **Object Browser** displays the following hierarchical tree:  
   
 ```  
 N1  
@@ -63,19 +64,19 @@ N1
   
 ```  
   
- O caminho da classe C2, neste exemplo canônico é N1 + C2. O caminho da apresentação de C2 inclui nós de "Bases e Interfaces" e C1: N1 + C1 + "Bases e Interfaces" + C2.  
+ The canonical path of C2 class, in this example, is N1 + C2. The presentation path of C2 includes C1 and "Bases and Interfaces" nodes: N1 + C1 + "Bases and Interfaces" + C2.  
   
- Para obter as informações de formato de apresentação, as chamadas do Gerenciador de objeto <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A>método.</xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A>  
+ To obtain the presentation form information, the object manager calls <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> method.  
   
-## <a name="identifying-a-symbol-in-the-hierarchy"></a>Identificando um símbolo na hierarquia  
+## <a name="identifying-a-symbol-in-the-hierarchy"></a>Identifying a Symbol in the Hierarchy  
   
-#### <a name="to-obtain-canonical-and-presentation-forms-information"></a>Para obter canônicos e informações de formulários de apresentação  
+#### <a name="to-obtain-canonical-and-presentation-forms-information"></a>To obtain canonical and presentation forms information  
   
-1.  Implementar o <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A>método.</xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A>  
+1.  Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> method.  
   
-     O Gerenciador de objetos chama esse método para obter a lista de nós contidos no caminho canônico do símbolo.  
+     The object manager calls this method to obtain the list of nodes contained in the canonical path of the symbol.  
   
-    ```vb#  
+    ```vb  
     Public Function EnumCanonicalNodes(ByRef ppEnum As Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes) As Integer  
         Dim EnumNavInfoNodes As CallBrowserEnumNavInfoNodes = _New CallBrowserEnumNavInfoNodes(m_strMethod)  
         ppEnum = CType(EnumNavInfoNodes, IVsEnumNavInfoNodes)  
@@ -83,7 +84,7 @@ N1
     End Function  
     ```  
   
-    ```c#  
+    ```csharp  
     public int EnumCanonicalNodes(out Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes ppEnum)  
     {  
         CallBrowserEnumNavInfoNodes EnumNavInfoNodes =  
@@ -94,11 +95,11 @@ N1
   
     ```  
   
-2.  Implementar o <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A>método.</xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A>  
+2.  Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> method.  
   
-     O Gerenciador de objetos chama esse método para obter a lista de nós contidos no caminho de apresentação do símbolo.  
+     The object manager calls this method to obtain the list of nodes contained in the presentation path of the symbol.  
   
-## <a name="see-also"></a>Consulte também  
- [Suporte a ferramentas de navegação de símbolo](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
- [Como: registrar uma biblioteca com o Gerenciador de objeto](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
- [Como: expor listas de símbolos fornecidos pela biblioteca para o Gerenciador de objetos](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
+## <a name="see-also"></a>See Also  
+ [Supporting Symbol-Browsing Tools](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
+ [How to: Register a Library with the Object Manager](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)   
+ [How to: Expose Lists of Symbols Provided by the Library to the Object Manager](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

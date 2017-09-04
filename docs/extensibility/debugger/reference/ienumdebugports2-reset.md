@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPorts2::Reset | Documentos do Microsoft
+title: IEnumDebugPorts2::Reset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,32 +30,33 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 531645adde43b4ac8e73fa2802ece3c9e56ce98e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 306e9117fa5f33617d595df98bd92e68bb192819
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="ienumdebugports2reset"></a>IEnumDebugPorts2::Reset
-Redefine a enumeração para o primeiro elemento.  
+Resets the enumeration to the first element.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT Reset(  
    void  
 );  
 ```  
   
-```c#  
+```csharp  
 int Reset();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Depois que esse método é chamado, a próxima chamada para o [próxima](../../../extensibility/debugger/reference/ienumdebugports2-next.md) método retorna o primeiro elemento da enumeração.  
+## <a name="remarks"></a>Remarks  
+ After this method is called, the next call to the [Next](../../../extensibility/debugger/reference/ienumdebugports2-next.md) method returns the first element of the enumeration.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)

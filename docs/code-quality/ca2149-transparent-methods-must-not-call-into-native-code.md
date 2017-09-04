@@ -1,44 +1,60 @@
 ---
-title: "CA2149: os m&#233;todos transparentes n&#227;o devem chamar c&#243;digo nativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2149"
+title: 'CA2149: Transparent methods must not call into native code | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2149
 ms.assetid: 28951bd7-f3db-4871-99aa-bad68d1ead80
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2149: os m&#233;todos transparentes n&#227;o devem chamar c&#243;digo nativo
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 71ec50be4ff379c67cc775d61903a37e8bd2a773
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2149-transparent-methods-must-not-call-into-native-code"></a>CA2149: Transparent methods must not call into native code
 |||  
 |-|-|  
 |TypeName|TransparentMethodsMustNotCallNativeCode|  
 |CheckId|CA2149|  
-|Categoria|Microsoft.Security|  
-|Alteração Significativa|Quebra|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## Causa  
- Um método chama uma função nativo através de um stub do método como P\/Invoke.  
+## <a name="cause"></a>Cause  
+ A method calls a native function through a method stub such as P/Invoke.  
   
-## Descrição da Regra  
- Esta regra é acionado em qualquer método transparente que chamar diretamente em código nativo, por exemplo, com um P\/Invoke.  As violações desta regra resultam em <xref:System.MethodAccessException> na transparência de nível 2 modelo, e uma procura completa para <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> no modelo de transparência de nível 1.  
+## <a name="rule-description"></a>Rule Description  
+ This rule fires on any transparent method which calls directly into native code, for example, through a P/Invoke. Violations of this rule lead to a <xref:System.MethodAccessException> in the level 2 transparency model, and a full demand for <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> in the level 1 transparency model.  
   
-## Como Corrigir Violações  
- Para corrigir uma violação desta regra, marque o método que chama o código nativo com o atributo de <xref:System.Security.SecurityCriticalAttribute> ou de <xref:System.Security.SecuritySafeCriticalAttribute> .  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, mark the method that calls the native code with the <xref:System.Security.SecurityCriticalAttribute> or <xref:System.Security.SecuritySafeCriticalAttribute> attribute.  
   
-## Quando Suprimir Alertas  
- Não elimine um alerta desta regra.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Exemplo  
- [!CODE [FxCop.Security.CA2149.TransparentMethodsMustNotCallNativeCode#1](../CodeSnippet/VS_Snippets_CodeAnalysis/fxcop.security.ca2149.transparentmethodsmustnotcallnativecode#1)]
+## <a name="example"></a>Example  
+ [!code-csharp[FxCop.Security.CA2149.TransparentMethodsMustNotCallNativeCode#1](../code-quality/codesnippet/CSharp/ca2149-transparent-methods-must-not-call-into-native-code_1.cs)]

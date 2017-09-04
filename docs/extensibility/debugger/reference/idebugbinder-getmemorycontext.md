@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::GetMemoryContext | Documentos do Microsoft
+title: IDebugBinder::GetMemoryContext | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f9837cfa7600f3b26be795ccbb02f43437d14c9f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: cc67341253d4f5a48f7b482b3b26ec3499b01419
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugbindergetmemorycontext"></a>IDebugBinder::GetMemoryContext
-Esse método converte um objeto local ou um endereço de memória em um contexto de memória.  
+This method converts either an object location or a memory address to a memory context.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetMemoryContext(   
    IDebugField*           pField,  
    DWORD                  dwConstant,  
@@ -49,7 +50,7 @@ HRESULT GetMemoryContext(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetMemoryContext(  
    IDebugField              pField,   
    uint                     dwConstant,   
@@ -57,20 +58,20 @@ int GetMemoryContext(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pField`  
- [in] Um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) descrevendo o objeto a ser localizado. Se `NULL`, em seguida, use `dwConstant` em vez disso.  
+ [in] An [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) describing the object to locate. If `NULL`, then use `dwConstant` instead.  
   
  `dwConstant`  
- [in] Um endereço de memória constante, como 0x5000.  
+ [in] A constant memory address, such as 0x5000.  
   
  `ppMemCxt`  
- [out] Retorna o [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) interface que representa o endereço do objeto ou o endereço na memória.  
+ [out] Returns the [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) interface that represents the address of the object, or the address in memory.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

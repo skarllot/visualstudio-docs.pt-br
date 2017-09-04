@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugAddresses::Reset | Documentos do Microsoft
+title: IEnumDebugAddresses::Reset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,34 +30,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bb7196ea9ff3532d742a6843ef013b0b7a39b249
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: d015a331c794f173cd316a03c7d6bdd784d161f4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="ienumdebugaddressesreset"></a>IEnumDebugAddresses::Reset
-Este método redefine a enumeração para o primeiro elemento.  
+This method resets the enumeration to the first element.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT Reset(void);  
 ```  
   
-```c#  
+```csharp  
 int Reset();  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- Nenhum  
+#### <a name="parameters"></a>Parameters  
+ None  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Depois que esse método é chamado, a próxima chamada para [próxima](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md) retorna o primeiro elemento da enumeração.  
+## <a name="remarks"></a>Remarks  
+ After this method is called, the next call to [Next](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md) returns the first element of the enumeration.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)   
- [Avançar](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md)
+ [Next](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md)

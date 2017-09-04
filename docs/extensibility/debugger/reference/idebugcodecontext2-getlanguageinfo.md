@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2::GetLanguageInfo | Documentos do Microsoft
+title: IDebugCodeContext2::GetLanguageInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,43 +30,44 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a840c7ac29cfb900716f163c0fb77cd8f4c35751
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: cf86b37c40e103a61a08f7f34bd11dead7e2598e
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugcodecontext2getlanguageinfo"></a>IDebugCodeContext2::GetLanguageInfo
-Obtém as informações de idioma para este contexto de código.  
+Gets the language information for this code context.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetLanguageInfo(   
    BSTR* pbstrLanguage,  
    GUID* pguidLanguage  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetLanguageInfo(   
    ref string pbstrLanguage,  
    ref Guid pguidLanguage  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pbstrLanguage`  
- [no, out] Retorna uma cadeia de caracteres que contém o nome do idioma, como "C++".  
+ [in, out] Returns a string that contains the name of the language, such as "C++."  
   
  `pguidLanguage`  
- [no, out] Retorna o GUID para o idioma do contexto do código, por exemplo, `guidCPPLang`.  
+ [in, out] Returns the GUID for the language of the code context, for example, `guidCPPLang`.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Pelo menos um dos parâmetros deve retornar um valor não nulo.  
+## <a name="remarks"></a>Remarks  
+ At least one of the parameters must return a non-null value.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

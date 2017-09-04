@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetMetric | Documentos do Microsoft
+title: IDebugEngine2::SetMetric | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,44 +30,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 48349f2e926ad23f2d8c694834614346a54eb702
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c7b73130574492b74e4a1cdb4859aa1c612d7be5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugengine2setmetric"></a>IDebugEngine2::SetMetric
-Esse método define um valor de registro conhecido como uma métrica.  
+This method sets a registry value known as a metric.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT SetMetric(  
    LPCOLESTR pszMetric,  
    VARIANT   varValue  
 );  
 ```  
   
-```c#  
+```csharp  
 int SetMetric(  
    string pszMetric,  
    object varValue  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pszMetric`  
- [in] O nome da métrica.  
+ [in] The metric name.  
   
  `varValue`  
- [in] Especifica o valor de métrica.  
+ [in] Specifies the metric value.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Uma métrica é um valor do registro usado para alterar o comportamento de um mecanismo depuração ou para anunciar a funcionalidade com suporte. Esse método pode encaminhar a chamada para o formulário apropriado do [SDK auxiliares para depuração](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) função `SetMetric`.  
+## <a name="remarks"></a>Remarks  
+ A metric is a registry value used to change a debug engine's behavior or to advertise supported functionality. This method can forward the call to the appropriate form of the [SDK Helpers for Debugging](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) function, `SetMetric`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
- [Auxiliares do SDK para depuração](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
+ [SDK Helpers for Debugging](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

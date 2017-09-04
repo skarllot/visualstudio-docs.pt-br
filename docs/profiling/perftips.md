@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 65bceca75b87aaf187926ebbed1a54ce4f0e8eec
-ms.openlocfilehash: db7c9121beea3b6a27a435680dfe01cbc8cba8b6
+ms.translationtype: HT
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: b19a309f403daa0a3881ec154aa4cd3f5e4d97dc
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="perftips"></a>PerfTips
@@ -44,7 +46,7 @@ O depurador do Visual Studio *PerfTips* e as **Ferramentas de Diagnóstico** int
  ![PerfTip](../profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")  
   
 ## <a name="diagnostics-tools-window"></a>Janela Ferramentas de Diagnóstico  
- Pontos de interrupção e dados de tempo associados são registrados na janela Ferramentas de Diagnóstico  
+ Pontos de interrupção associados são registrados na janela Ferramentas de Diagnóstico  
   
  O gráfico a seguir mostra a janela Ferramentas de Diagnóstico no Visual Studio 2015 Atualização 1:  
   
@@ -72,7 +74,6 @@ O depurador do Visual Studio *PerfTips* e as **Ferramentas de Diagnóstico** int
   
 2.  Marque ou desmarque **Habilitar ferramentas de diagnóstico durante a depuração**.
 
-
-<!--HONumber=Feb17_HO4-->
-
+## <a name="see-also"></a>Consulte também
+ [Criação de perfil no Visual Studio](../profiling/index.md) [Tour pelos recursos de criação de perfil](../profiling/profiling-feature-tour.md)
 

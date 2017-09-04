@@ -1,5 +1,5 @@
 ---
-title: "Função SccCloseProject | Documentos do Microsoft"
+title: SccCloseProject Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,41 +30,42 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: da9ec8fd9798f468d8062ebeef3b63241d920d94
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: bcdc0cbc2916c9efa6224a26abae94b75832c33a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="scccloseproject-function"></a>Função SccCloseProject
-Essa função fecha um projeto, marca o final de uma determinada sessão.  
+# <a name="scccloseproject-function"></a>SccCloseProject Function
+This function closes a project, marking the end of a particular session.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccCloseProject (  
    LPVOID pvContext  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- A estrutura de contexto de plug-in de controle de origem.  
+ The source control plug-in context structure.  
   
-## <a name="return-value"></a>Valor de retorno  
- A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|SCC_OK|O projeto foi fechado com êxito.|  
-|SCC_E_PROJNOTOPEN|Nenhum projeto está aberto.|  
-|SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|  
-|SCC_E_NONSPECIFICERROR|Falha não específica.|  
+|SCC_OK|The project was successfully closed.|  
+|SCC_E_PROJNOTOPEN|No project is currently open.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
   
-## <a name="remarks"></a>Comentários  
- O [SccOpenProject](../extensibility/sccopenproject-function.md) é sempre chamado antes dessa função. Uma chamada para essa função é seguida por uma chamada para o `SccOpenProject` função ou o [SccUninitialize](../extensibility/sccuninitialize-function.md), que termina a conexão ao sistema de controle de origem completamente.  
+## <a name="remarks"></a>Remarks  
+ The [SccOpenProject](../extensibility/sccopenproject-function.md) is always called before this function. A call to this function is then followed by a call to either the `SccOpenProject` function or the [SccUninitialize](../extensibility/sccuninitialize-function.md), which ends the connection to the source control system completely.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)

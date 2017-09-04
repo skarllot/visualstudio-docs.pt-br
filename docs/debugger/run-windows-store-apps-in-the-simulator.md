@@ -1,157 +1,174 @@
 ---
-title: "Executar aplicativos da Windows Store no simulador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Run Windows Store apps in the simulator | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 81b69bf8-ec87-4bb6-9ad4-1fa7b7802d16
 caps.latest.revision: 42
-caps.handback.revision: 42
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Executar aplicativos da Windows Store no simulador
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 0f5be765217f8139e6918bf63fe1548e4b48c2a3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-O simulador do Visual Studio para aplicativos da Windows Store é um aplicativo da área de trabalho que simula um aplicativo da Windows Store. Você pode executar aplicativos e simular eventos de rotação e toque comum no computador de desenvolvimento. Você também pode escolher o tamanho da tela física e a resolução que você deseja emular e simular propriedades de conexão de rede.  
+---
+# <a name="run-windows-store-apps-in-the-simulator"></a>Run Windows Store apps in the simulator
+The Visual Studio simulator for Windows Store apps is a desktop application that simulates a Windows Store app. You can run applications and simulate common touch and rotation events on your development computer. You can also choose the physical screen size and resolution that you want to emulate and simulate network connection properties.  
   
- O simulator oferece um ambiente no qual você pode criar, desenvolver, depurar e testar aplicativos da Windows Store. No entanto, antes de publicar um aplicativo na Windows Store, convém testá\-lo em um dispositivo real.  
+ The simulator provides an environment in which you can design, develop, debug, and test Windows Store apps. However, before you publish your app to the Windows Store, you should test your app on an actual device.  
   
- O simulador do Visual Studio para aplicativos da Windows Store não é executado em um ambiente isolado na máquina local. Portanto, os erros que ocorrem no simulador, como um erro não recuperável geral do sistema, também podem afetar o computador inteiro.  
+ The Visual Studio simulator for Windows Store apps does not run in an isolated environment on your local machine. Therefore, errors that occur in the simulator, such as a non-recoverable system-wide error, can also affect the entire machine.  
   
- Veja [Executar aplicativos do Windows Phone no emulador](../debugger/run-windows-phone-apps-in-the-emulator.md) para obter informações do Windows Phone.  
+ See [Run Windows Phone apps in the emulator](../debugger/run-windows-phone-apps-in-the-emulator.md) for Windows Phone information.  
   
 > [!IMPORTANT]
->  Simulador do Visual Studio 2015 não inclui o botão de localização geográfica. Isso ocorre porque o simulador do Windows 10 não inclui a simulação de localização geográfica. Se você precisar fazer esse tipo de simulação, você pode usar o simulador do Visual Studio 2013 no Windows 8.1 ou sistemas operacionais anteriores.  
+>  The Visual Studio 2015 simulator does not include the geolocation button. This is because the Windows 10 simulator does not include geolocation simulation. If you need to do this kind of simulation, you can use the Visual Studio 2013 simulator on Windows 8.1 or earlier operating systems.  
   
-##  <a name="BKMK_Set_the_simulator_as_the_target"></a> Definir o simulador como o destino  
- Para executar seu aplicativo da Windows Store no simulador, selecione **Simulador** na lista suspensa ao lado do botão **Iniciar Depuração** na barra de ferramentas **Padrão** do depurador.  
+##  <a name="BKMK_Set_the_simulator_as_the_target"></a> Set the simulator as the target  
+ To run your Windows Store app in the simulator, select **Simulator** from the drop-down list next to the **Start Debugging** button on the debugger **Standard** toolbar.  
   
- ![Em execução no simulador](~/debugger/media/vsrun_f5_simulator.png "VSRUN\_F5\_Simulator")  
+ ![Running in the Simulator](../debugger/media/vsrun_f5_simulator.png "VSRUN_F5_Simulator")  
   
-##  <a name="BKMK_Choose_an_interaction_mode"></a> Escolher um modo de interação  
- Você pode escolher os seguintes modos de interação  
+##  <a name="BKMK_Choose_an_interaction_mode"></a> Choose an interaction mode  
+ You can choose the following interaction modes  
   
--   ![Botão de modo](~/debugger/media/simulator_mousemodebtn.png "SIMULATOR\_MouseModeBtn") Modo de mouse: define o modo de interação para gestos de mouse. Esses gestos incluem cliques, cliques duplos e arrastos.  
+-   ![Mouse mode button](../debugger/media/simulator_mousemodebtn.png "SIMULATOR_MouseModeBtn") Mouse mode: sets the interaction mode to mouse gestures. Mouse gestures include clicks, double-clicks, and drags.  
   
--   ![Toque emulação botão Iniciar](~/debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR\_StartTouchEmulationBtn") Iniciar a emulação de toque: define o modo de interação para gestos de um único dedo. Os eventos desse tipo incluem tocar, arrastar e passar o dedo.  
+-   ![Start touch emulation button](../debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR_StartTouchEmulationBtn") Start touch emulation: sets the interaction mode to touch gestures of a single finger. Single-finger events include tapping, dragging, and swiping.  
   
-     ![Simulator one finger target](../debugger/media/simulator_onefinger.png "SIMULATOR\_OneFinger") O ícone de destino único indica o local de eventos no simulador. Use o mouse para posicionar o ponteiro.  
+     ![Simulator one finger target](../debugger/media/simulator_onefinger.png "SIMULATOR_OneFinger") The single target icon indicates the location of events in the simulator. Use the mouse to position the pointer.  
   
-     ![One finger touch target](../debugger/media/simulator_onefingerengaged.png "SIMULATOR\_OneFingerEngaged") Pressione o botão esquerdo do mouse para ativar o modo de toque. Por exemplo, clique no botão para simular um gesto de tocar, ou pressione e segure o botão enquanto você arrasta ou passa o dedo.  
+     ![One finger touch target](../debugger/media/simulator_onefingerengaged.png "SIMULATOR_OneFingerEngaged") Press the left mouse button to activate the touch mode. For example, click the button to simulate a tap, or press and hold the button as you drag or swipe.  
   
-## Aperto e zoom  
- Defina o modo de interação como sendo gestos de aperto e zoom com dois dedos.  
+## <a name="pinch-and-zoom"></a>Pinch and Zoom  
+ Sets the interaction mode to pinch and zoom gestures of two fingers.  
   
--   ![Siimulator two finger target](~/debugger/media/simulator_twofinger.png "SIMULATOR\_TwoFinger")  
+-   ![Siimulator two finger target](../debugger/media/simulator_twofinger.png "SIMULATOR_TwoFinger")  
   
-     O ícone de alvo duplo indica o local de dois dedos na tela do dispositivo.  
+     The double target icon indicates the location of two fingers on the device screen.  
   
-    -   Mova o mouse para posicionar os ícones sobre o objeto na tela do dispositivo.  
+    -   Move the mouse to position the icons over the object on the device screen.  
   
-    -   Gire a roda do mouse para trás ou para a frente a fim de alterar a distância simulada dos dois dedos antes de apertar ou aplicar zoom.  
+    -   Rotate the mouse wheel backward or forward to change the simulated distance of the two fingers before you pinch or zoom.  
   
--   -   ![Pinch, zoom, and rotate targets](../debugger/media/simulator_twofingerengaged.png "SIMULATOR\_TwoFingerEngaged")  
+-   -   ![Pinch, zoom, and rotate targets](../debugger/media/simulator_twofingerengaged.png "SIMULATOR_TwoFingerEngaged")  
   
-         Pressione o botão esquerdo e gire a roda para trás \(na sua direção\) a fim de ampliar a exibição \(aperto\).  
+         Press the left button and rotate the wheel backward (towards you) to zoom in (pinch).  
   
-    -   Pressione o botão esquerdo e gire a roda do mouse para a frente \(afastada de você\) a fim de reduzir a exibição \(zoom\).  
+    -   Press the left button and rotate the mouse wheel forward (away from you) to zoom out (zoom).  
   
-## Rotação de objeto  
- O **emulação de toque girar** botão define o modo de interação para gestos de rotação usando dois dedos.  
+## <a name="object-rotation"></a>Object rotation  
+ The **Touch emulation rotate** button sets the interaction mode to rotation gestures using two fingers.  
   
--   -   Mova o mouse para posicionar os ícones sobre o objeto na tela do dispositivo.  
+-   -   Move the mouse to position the icons over the object on the device screen.  
   
-    -   Gire a roda do mouse para trás ou para frente para alterar a orientação simulada dos dois dedos antes de girar o objeto.  
+    -   Rotate the mouse wheel backward or forward to change the simulated orientation of the two fingers before you rotate the object.  
   
--   -   Pressione o botão esquerdo e gire a roda para trás \(na sua direção\) a fim de girar o objeto no sentido anti\-horário. Conforme você gira a roda do mouse, um dos dois ícones de alvo gira em torno do outro para indicar o tamanho relativo da rotação.  
+-   -   Press the left button and rotate the wheel backward (towards you) to rotate the object counter-clockwise. As you rotate the mouse wheel, one of the two target icons rotates around the other to indicate the relative size of the rotation.  
   
-    -   Pressione o botão esquerdo e gire a roda do mouse para a frente \(afastada de você\) a fim de girar o objeto no sentido horário.  
+    -   Press the left button and rotate the mouse wheel forward (away from you) to rotate the object clockwise.  
   
-##  <a name="BKMK_Enable_or_disable_Always_on_top_mode"></a> Habilitar ou desabilitar o modo Sempre visível  
- Você pode configurar a janela do simulador para ficar sempre por cima das outras janelas. O **janela superior alternância** botão habilita ou desabilita o **sempre visível** modo da janela do simulador.  
+##  <a name="BKMK_Enable_or_disable_Always_on_top_mode"></a> Enable or disable Always on top mode  
+ You can set the simulator window to always be on top of other windows. The **Toggle Topmost Window** button enables or disables the **Always on top** mode of the simulator window.  
   
-##  <a name="BKMK_Change_the_device_orientation"></a> Alterar a orientação do dispositivo  
- Você pode alternar a orientação do dispositivo entre retrato e paisagem girando o simulador 90 graus em qualquer direção.  
-  
-> [!NOTE]
->  O simulator não respeitam [DisplayProperties.AutoRotationPreferences](http://go.microsoft.com/fwlink/?LinkId=249460) propriedade de um projeto. Por exemplo, se o projeto define a orientação como `Landscape` e você gira o simulador até a orientação retrato, a imagem de exibição do simulador também é girada e redimensionada. Teste essas configurações em um dispositivo real.  
+##  <a name="BKMK_Change_the_device_orientation"></a> Change the device orientation  
+ You can switch the device orientation between portrait and landscape by rotating the simulator 90 degrees in any direction.  
   
 > [!NOTE]
->  Se você gira o simulador de modo que uma borda dele fica maior do que a tela em que ele é exibido, o simulador é automaticamente redimensionado para caber na tela. O simulador não é redimensionado para o tamanho original se você o gira novamente.  
-  
-##  <a name="BKMK_Change_the_simulated_screen_size_and_resolution"></a> Alterar o tamanho e a resolução de tela simulados  
- Para alterar o tamanho da tela simulados e a resolução, escolha o **Alterar resolução** botão na paleta e escolha um novo tamanho e resolução da lista.  
-  
- O tamanho e a resolução da tela são listados como *Largura da tela em polegadas, largura em pixel X altura em pixel*. Observe que tanto o tamanho como a resolução da tela são simulados. As coordenadas de local no simulador são convertidas nas coordenadas do tamanho e da resolução do dispositivo selecionado.  
+>  The simulator does not respect [DisplayProperties.AutoRotationPreferences](http://go.microsoft.com/fwlink/?LinkId=249460) property of a project. For example, if your project sets the orientation to `Landscape`, and you then rotate the simulator to a portrait orientation, the simulator display image will also be rotated and resized. Test these settings on an actual device.  
   
 > [!NOTE]
->  Você pode salvar versões dimensionadas de imagens de bitmap em seu aplicativo, e o Windows carregará a imagem correta para a escala atual. Para obter mais informações, consulte [101 de Design responsivo](https://msdn.microsoft.com/en-us/library/windows/apps/dn958435.aspx). No entanto, se você alterar a resolução do simulador de modo que o Windows selecione uma imagem diferente para ajustar à resolução, será preciso parar e reiniciar a sessão de depuração para exibir a nova imagem.  
+>  If you rotate the simulator so that one edge of the simulator is larger than the screen it is displayed on, the simulator is automatically resized to fit within the screen. The simulator is not resized to its original size if you rotate it again.  
   
-##  <a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a> Fazer uma captura de tela do aplicativo para envio ao Windows Store  
- Quando você envia um aplicativo da Windows store, você deve incluir capturas de tela do aplicativo.  
+##  <a name="BKMK_Change_the_simulated_screen_size_and_resolution"></a> Change the simulated screen size and resolution  
+ To change the simulated screen size and resolution, choose the **Change Resolution** button  on the palette and choose a new size and resolution from the list.  
+  
+ The screen size and resolution are listed as *Screen width inches, pixel width X pixel height*. Note that both the screen size and the resolution are simulated. Location co-ordinates on the simulator are translated to the co-ordinates of the selected device size and resolution.  
   
 > [!NOTE]
->  A captura de tela é salva na resolução atual do simulador. Para alterar a resolução, escolha o botão **Alterar Resolução**.  
+>  You can save scaled versions of bitmap images in your app and Windows will load the correct image for the current scale. For more information, see [Design and UI intro](/windows/uwp/layout/design-and-ui-intro). However, if you change the simulator resolution so that Windows picks a different image to fit the resolution, you have to stop and restart your debug session to view the new image.  
   
--   Para criar capturas de tela do aplicativo a partir do simulador, escolha o botão **Capturar tela na área de transferência**.  
+##  <a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a> Capture a screenshot of your app for submission to the Windows Store  
+ When you submit an app to the Windows app store, you must include screenshots of the app.  
   
--   Para definir o local onde se encontram as capturas de tela, escolha o **configurações de captura de tela** botão e escolha o local no menu de atalho.  
+> [!NOTE]
+>  The screenshot is saved at the current resolution of the simulator. To change the resolution, choose the **Change Resolution** button.  
   
-     ![Screenshot settings context menu](../debugger/media/simulator_screenshotsettingscntxmnu.png "SIMULATOR\_ScreenShotSettingsCntxMnu")  
+-   To create screenshots of your app from the simulator, choose the **Capture screenshot to clipboard** button.  
   
-##  <a name="BKMK_Simulate_network_connection_properties"></a> Simular propriedades de conexão de rede  
- Você pode ajudar os usuários de seu aplicativo a gerenciar o custo de conexões de rede limitadas mantendo a percepção do custo da conexão de rede ou as alterações de status do plano de dados e habilitando o aplicativo para usar essas informações para evitar a cobrança de custos adicionais para roaming ou exceder um limite especificado de transferência de dados. O [Windows.Networking.Connectivity](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.aspx) APIs permite que você responda às [NetworkStatusChanged](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) e [TriggerType](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.systemtrigger.triggertype.aspx) eventos que entrarem. Consulte [início rápido: as restrições de custo do gerenciamento de rede limitada](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx).  
+-   To set the location where screenshots are located, choose the **Screenshot settings** button and choose the location from the shortcut menu.  
   
- Para depurar ou testar seu código com reconhecimento de custo da rede, o simulator pode simular propriedades de uma rede que são expostos por meio de [ConnectionProfile](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) objeto retornado por [GetInternetConnectionProfile](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.networkinformation.getinternetconnectionprofile.aspx)...  
+     ![Screenshot settings context menu](../debugger/media/simulator_screenshotsettingscntxmnu.png "SIMULATOR_ScreenShotSettingsCntxMnu")  
   
- Para simular propriedades de rede:  
+##  <a name="BKMK_Simulate_network_connection_properties"></a> Simulate network connection properties  
+ You can help your app's users manage the cost of metered network connections by maintaining awareness of network connection cost or data plan status changes and enabling your app to use this information to avoid incurring additional costs for roaming or exceeding a specified data transfer limit. The [Windows.Networking.Connectivity](/uwp/api/windows.networking.connectivity) APIs lets you respond to [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) and [TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger) events that sign. See [Quickstart: Managing metered network cost constraints](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx).  
   
-1.  Na barra de ferramentas do simulador, escolha o **alterar propriedades de rede** botão.  
+ To debug or test your network cost-aware code, the simulator can mimic properties of a network that are exposed through the [ConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile) object returned by [GetInternetConnectionProfile](/uwp/api/windows.networking.connectivity.networkinformation).
   
-2.  Sobre o **definir propriedades de rede** caixa de diálogo, selecione **uso simulado propriedades de rede**.  
+ To simulate network properties:  
   
-     Desmarque a caixa de seleção para remover a simulação e retornar às propriedades de rede da interface atualmente conectada.  
+1.  On the simulator toolbar, choose the **Change network properties** button.  
   
-3.  Digite um **Nome de Perfil** para a rede simulada. É recomendável usar um nome exclusivo que você pode usar para identificar a simulação no [ProfileName](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.connectionprofile.profilename.aspx) propriedade o [ConnectionProfile](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) objeto.  
+2.  On the **Set Network Properties** dialog box, select **Use simulated network properties**.  
   
-4.  Selecione o [NetworkCostType](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.networkcosttype.aspx) valor para o perfil do **tipo de custo de rede** lista.  
+     Clear the check box to remove the simulation and return to the network properties of the currently connected interface.  
   
-5.  Do **sinalizador de Status de limite de dados** lista, você pode definir o [ApproachingDataLimit](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.connectioncost.approachingdatalimit.aspx) propriedade ou o [OverDataLimit](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.connectioncost.overdatalimit.aspx)propriedade como true, ou você pode escolher **sob o limite de dados** para definir os dois valores como false.  
+3.  Enter a **Profile Name** for the simulated network. We recommend using a unique name that you can use to identify the simulation in the [ProfileName](/uwp/api/windows.networking.connectivity.connectionprofile) property of the [ConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile) object.  
   
-6.  Do **Roaming estado** lista, defina o [Roaming](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.connectioncost.roaming.aspx) propriedade.  
+4.  Select the [NetworkCostType](/uwp/api/windows.networking.connectivity.networkcosttype) value for the profile from the **Network Cost Type** list.  
   
-7.  Escolha **definir propriedades** para simular as propriedades de rede Disparando um primeiro plano [NetworkStatusChanged](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) eventos e um plano de fundo [SystemTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.systemtrigger.aspx) do tipo **NetworkStateChange**.  
+5.  From the **Data Limit Status Flag** list, you can set the [ApproachingDataLimit](/uwp/api/windows.networking.connectivity.connectioncost) property or the [OverDataLimit](/uwp/api/windows.networking.connectivity.connectioncost) property to true, or you can choose **Under Data Limit** to set both values to false.  
   
- **Mais informações sobre como gerenciar conexões de rede**  
+6.  From the **Roaming State** list, set the [Roaming](/uwp/api/windows.networking.connectivity.connectioncost) property.  
   
- [Início rápido: Gerenciando monitorados restrições de custo de rede](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)  
+7.  Choose **Set Properties** to simulate the network properties by triggering a foreground [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) event and a background [SystemTrigger](/uwp/api/windows.applicationmodel.background.systemtrigger) of type **NetworkStateChange**.  
   
- [Exemplo de informações de rede](http://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)  
+ **More information about managing network connections**  
   
- [Analisar o uso de energia](../profiling/analyze-energy-use-in-store-apps.md)  
+ [Quickstart: Managing metered network cost constraints](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)  
   
- [Windows.Networking.Connectivity](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.aspx)  
+ [Network information sample](http://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)  
   
- [Como responder a eventos do sistema com tarefas em segundo plano](http://msdn.microsoft.com/pt-br/f7c86e86-a7ae-4abb-a923-76b03337a80a)  
+ [Analyze energy use](../profiling/analyze-energy-use-in-store-apps.md)  
   
- [Como disparar suspender, continuar e eventos em aplicativos da Windows Store do plano de fundo](http://msdn.microsoft.com/library/windows/apps/hh974425.aspx)  
+ [Windows.Networking.Connectivity](/uwp/api/windows.networking.connectivity)  
   
-##  <a name="BKMK_Navigate_the_simulator_with_the_keyboard"></a> Navegar no simulador com o teclado  
- Você pode navegar a barra de ferramentas do simulador pressionando **CTRL \+ ALT \+ seta acima** para alternar o foco da janela simulator na barra de ferramentas do simulador. Use a **seta para cima** e a **seta para baixo** para se movimentar entre os botões da barra de ferramentas.  
+ [How to respond to system events with background tasks](http://msdn.microsoft.com/en-us/f7c86e86-a7ae-4abb-a923-76b03337a80a)  
   
- Você pode desligar o simulator pressionando **CTRL \+ ALT \+ F4**.  
+ [How to trigger suspend, resume, and background events in Windows Store apps](http://msdn.microsoft.com/library/windows/apps/hh974425.aspx)  
   
-## Consulte também  
- [Executar aplicativos pelo Visual Studio](../debugger/run-store-apps-from-visual-studio.md)
+##  <a name="BKMK_Navigate_the_simulator_with_the_keyboard"></a> Navigate the simulator with the keyboard  
+ You can navigate the simulator toolbar by pressing **CTRL + ALT + Up Arrow** to switch focus from the simulator window to the simulator toolbar. Use the **Up Arrow** and the **Down Arrow** to move between toolbar buttons.  
+  
+ You can shut down the simulator by pressing **CTRL + ALT + F4**.  
+  
+## <a name="see-also"></a>See Also  
+ [Run apps from Visual Studio](../debugger/run-store-apps-from-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::Stop | Documentos do Microsoft
+title: IDebugEngineProgram2::Stop | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,35 +30,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fafc59b1e9a16fe333532a7aecd48a1c2034a2fc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e8a1d5fd980d50326c11101acc54146e4de03258
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugengineprogram2stop"></a>IDebugEngineProgram2::Stop
-Interrompe todos os threads em execução nesse programa.  
+Stops all threads running in this program.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT Stop(   
    void   
 );  
 ```  
   
-```c#  
+```csharp  
 int Stop();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Comentários  
- Esse método é chamado quando este programa está sendo depurado em um ambiente de vários programa. Quando um evento de parada de algum outro programa é recebido, este método é chamado neste programa. A implementação desse método deve ser assíncrona; ou seja, nem todos os threads é necessárias para ser interrompido antes que este método retorna. A implementação desse método pode ser tão simple quanto chamar o [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) método neste programa.  
+## <a name="remarks"></a>Remarks  
+ This method is called when this program is being debugged in a multi-program environment. When a stopping event from some other program is received, this method is called on this program. The implementation of this method should be asynchronous; that is, not all threads should be required to be stopped before this method returns. The implementation of this method may be as simple as calling the [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) method on this program.  
   
- Nenhum evento de depuração é enviado em resposta a esse método.  
+ No debug event is sent in response to this method.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   
  [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)

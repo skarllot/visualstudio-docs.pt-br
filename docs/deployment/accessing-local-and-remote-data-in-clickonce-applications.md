@@ -1,113 +1,130 @@
 ---
-title: "Acessando dados locais e remotos em aplicativos ClickOnce | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Implantação do ClickOnce, dados"
-  - "acesso a dados, os aplicativos ClickOnce"
+title: Accessing Local and Remote Data in ClickOnce Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce deployment, data
+- data access, ClickOnce applications
 ms.assetid: be5cbe12-6cb6-49c9-aa59-a1624e1eef3d
 caps.latest.revision: 21
-caps.handback.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# Acessando dados locais e remotos em aplicativos ClickOnce
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 471b2a77d60576caacfe8d89dd711fc1aaedd9e6
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
-A maioria dos aplicativos consomem ou gerar dados.[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Fornece uma variedade de opções para ler e gravar dados, local e remotamente.  
+---
+# <a name="accessing-local-and-remote-data-in-clickonce-applications"></a>Accessing Local and Remote Data in ClickOnce Applications
+Most applications consume or produce data. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] gives you a variety of options for reading and writing data, both locally and remotely.  
   
-## Dados locais  
- Com [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], você pode carregar e armazenar dados localmente usando qualquer um dos seguintes métodos:  
+## <a name="local-data"></a>Local Data  
+ With [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], you can load and store data locally by using any one of the following methods:  
   
--   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Diretório de dados  
+-   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Data Directory  
   
--   Armazenamentos isolado  
+-   Isolated Storage  
   
--   Outros arquivos locais  
+-   Other Local Files  
   
-### Diretório de dados ClickOnce  
- Cada [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo instalado em um computador local tem um diretório de dados, armazenado na pasta de documentos e configurações do usuário. Qualquer arquivo incluído em um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] de aplicativo e marcado como um arquivo de "dados" é copiado para esse diretório quando um aplicativo é instalado. Arquivos de dados podem ser de qualquer tipo de arquivo usado com mais frequência sendo texto, XML e arquivos de banco de dados, como arquivos. mdb do Microsoft Access.  
+### <a name="clickonce-data-directory"></a>ClickOnce Data Directory  
+ Every [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application installed on a local computer has a data directory, stored in the user's Documents and Settings folder. Any file included in a [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application and marked as a "data" file is copied to this directory when an application is installed. Data files can be of any file type, the most frequently used being text, XML, and database files such as Microsoft Access .mdb files.  
   
- O diretório de dados destina\-se a dados de aplicativos gerenciados, que são dados que explicitamente, o aplicativo armazena e mantém. Todos estáticos, os arquivos nondependency não marcados como "data" no manifesto do aplicativo em vez disso, residirá no diretório do aplicativo. Esse diretório é onde residem os arquivos executáveis \(.exe\) e assemblies do aplicativo.  
-  
-> [!NOTE]
->  Quando um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo for desinstalado, o diretório de dados também é removido. Nunca use o diretório de dados para armazenar dados de usuário de final – gerenciados, como documentos.  
-  
-#### Marcar os arquivos de dados em uma distribuição do ClickOnce  
- Para colocar um arquivo existente dentro do diretório de dados, você deve marcar o arquivo como um arquivo de dados no seu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] arquivo de manifesto de aplicativo do aplicativo. Para obter mais informações, consulte [Como incluir um arquivo de dados em um aplicativo ClickOnce](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).  
-  
-#### Leitura e gravação para o diretório de dados  
- Lendo a partir do diretório de dados requer que seu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] solicitação de emprego de permissão de leitura; da mesma forma, a gravação para o diretório requer permissão de gravação. Seu aplicativo automaticamente terá essa permissão se ele está configurado para ser executado com confiança total. Para obter mais informações sobre elevar permissões para seu aplicativo usando a implantação de aplicativos confiáveis ou elevação de permissões, consulte [Protegendo aplicativos ClickOnce](../deployment/securing-clickonce-applications.md).  
+ The data directory is intended for application-managed data, which is data that the application explicitly stores and maintains. All static, nondependency files not marked as "data" in the application manifest will instead reside in the Application Directory. This directory is where the application's executable (.exe) files and assemblies reside.  
   
 > [!NOTE]
->  Se sua organização não usa implantação de aplicativos confiáveis e tenha desativado a elevação de permissões, declarando permissões irá falhar.  
+>  When a [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application is uninstalled, its Data Directory is also removed. Never use the Data Directory to store end-user-managed data, such as documents.  
   
- Depois que seu aplicativo tiver essas permissões, ele pode acessar o diretório de dados por meio de chamadas de método em classes dentro do <xref:System.IO>. Você pode obter o caminho do diretório de dados dentro de um Windows Forms [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativos usando o <xref:System.Deployment.Application.ApplicationDeployment.DataDirectory%2A> propriedade definida no <xref:System.Deployment.Application.ApplicationDeployment.CurrentDeployment%2A> propriedade <xref:System.Deployment.Application.ApplicationDeployment>. Essa é a maneira mais conveniente e recomendada para acessar seus dados. O exemplo de código a seguir demonstra como fazer isso para um arquivo de texto chamado CSV.txt que você incluiu na implantação como um arquivo de dados.  
+#### <a name="marking-data-files-in-a-clickonce-distribution"></a>Marking Data Files in a ClickOnce Distribution  
+ To put an existing file inside the Data Directory, you must mark the existing file as a data file in your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application's application manifest file. For more information, see [How to: Include a Data File in a ClickOnce Application](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).  
   
- [!CODE [ClickOnce.OpenDataFile#1](../CodeSnippet/VS_Snippets_Winforms/ClickOnce.OpenDataFile#1)]  
+#### <a name="reading-from-and-writing-to-the-data-directory"></a>Reading from and Writing to the Data Directory  
+ Reading from the Data Directory requires that your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application request Read permission; similarly, writing to the directory requires Write permission. Your application will automatically have this permission if it is configured to run with Full Trust. For more information about elevating permissions for your application by using either Permission Elevation or Trusted Application Deployment, see [Securing ClickOnce Applications](../deployment/securing-clickonce-applications.md).  
   
- Para obter mais informações sobre a marcação de arquivos em sua implantação, como arquivos de dados, consulte [Como incluir um arquivo de dados em um aplicativo ClickOnce](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).  
+> [!NOTE]
+>  If your organization does not use Trusted Application Deployment and has turned off Permission Elevation, asserting permissions will fail.  
   
- Você também pode obter o caminho do diretório de dados usando as variáveis relevantes no <xref:System.Windows.Forms.Application> classe, como <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A>.  
+ After your application has these permissions, it can access the Data Directory by using method calls on classes within the <xref:System.IO>. You can obtain the path of the Data Directory within a Windows Forms [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application by using the <xref:System.Deployment.Application.ApplicationDeployment.DataDirectory%2A> property defined on the <xref:System.Deployment.Application.ApplicationDeployment.CurrentDeployment%2A> property of <xref:System.Deployment.Application.ApplicationDeployment>. This is the most convenient and recommended way to access your data. The following code example demonstrates how to do this for a text file named CSV.txt that you have included in your deployment as a data file.  
   
- Manipulação de outros tipos de arquivos pode exigir permissões adicionais. Por exemplo, se você quiser usar um arquivo de banco de dados \(. mdb\) do Access, seu aplicativo deve declarar confiança total para poder usar o relevantes <xref:System.Data> classes.  
+ [!code-csharp[ClickOnce.OpenDataFile#1](../deployment/codesnippet/CSharp/accessing-local-and-remote-data-in-clickonce-applications_1.cs)] [!code-vb[ClickOnce.OpenDataFile#1](../deployment/codesnippet/VisualBasic/accessing-local-and-remote-data-in-clickonce-applications_1.vb)]  
   
-#### Diretório de dados e versões de aplicativos  
- Cada versão de um aplicativo tem seu próprio diretório de dados, que é isolado de outras versões.[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] cria esse diretório independentemente se os arquivos de dados são incluídos na implantação para que o aplicativo tem um local para criar novos arquivos de dados em tempo de execução. Quando uma nova versão de um aplicativo é instalada, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] copiará todos os arquivos de dados existentes do diretório de dados da versão anterior para diretório a nova versão de dados — eles foram incluídos na implantação original ou criados pelo aplicativo.  
+ For more information on marking files in your deployment as data files, see [How to: Include a Data File in a ClickOnce Application](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] substituirá a versão mais antiga do arquivo com a versão mais recente do servidor se um arquivo de dados tem um valor de hash diferente na versão antiga do aplicativo como a nova versão. Além disso, se a versão anterior do aplicativo que criou um novo arquivo que tem o mesmo nome como um arquivo incluído na implantação da nova versão, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] substituirá o arquivo da versão antiga com o novo arquivo. Em ambos os casos, os arquivos antigos serão incluídos em um subdiretório no diretório de dados denominado `.pre`, de modo que o aplicativo ainda pode acessar os dados antigos para fins de migração.  
+ You can also obtain the data directory path using the relevant variables on the <xref:System.Windows.Forms.Application> class, such as <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A>.  
   
- Se você precisar de mais refinado de migração de dados, você pode usar o [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] API de implantação para executar migração personalizada do diretório de dados antigo para o novo diretório de dados. Você precisará testar para um download disponível usando <xref:System.Deployment.Application.ApplicationDeployment.IsFirstRun%2A>, baixe a atualização usando <xref:System.Deployment.Application.ApplicationDeployment.Update%2A> ou <xref:System.Deployment.Application.ApplicationDeployment.UpdateAsync%2A>, e faça qualquer migração de dados funcionam no seu próprio após a atualização for concluída.  
+ Manipulating other types of files might require additional permissions. For example, if you want to use an Access database (.mdb) file, your application must assert full trust in order to use the relevant <xref:System.Data> classes.  
   
-### Armazenamentos isolado  
- Armazenamento isolado fornece uma API para criar e acessar arquivos por meio de uma API simples. O local real dos arquivos armazenados é ocultado do desenvolvedor e o usuário.  
+#### <a name="data-directory-and-application-versions"></a>Data Directory and Application Versions  
+ Each version of an application has its own Data Directory, which is isolated from other versions. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] creates this directory regardless of whether any data files are included in the deployment so that the application has a location to create new data files at run time. When a new version of an application is installed, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] will copy all the existing data files from the previous version's Data Directory into the new version's Data Directory—whether they were included in the original deployment or created by the application.  
   
- Isolar trabalhos de armazenamento em todas as versões do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]. Armazenamento isolado também funciona em aplicativos parcialmente confiáveis sem a necessidade de concessões de permissão adicional. Se seu aplicativo deve ser executado em confiança parcial, mas deve manter dados específicos do aplicativo, você deve usar armazenamento isolado.  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] will replace the older version of the file with the newer version of the server if a data file has a different hash value in the old version of the application as in the new version. Also, if the earlier version of the application created a new file that has the same name as a file included in the new version's deployment, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] will overwrite the old version's file with the new file. In both cases, the old files will be included in a subdirectory inside the data directory named `.pre`, so that the application can still access the old data for migration purposes.  
   
- Para obter mais informações, consulte [Armazenamento isolado](../Topic/Isolated%20Storage.md).  
+ If you need finer-grained migration of data, you can use the [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Deployment API to perform custom migration from the old Data Directory to the new Data Directory. You will have to test for an available download by using <xref:System.Deployment.Application.ApplicationDeployment.IsFirstRun%2A>, download the update using <xref:System.Deployment.Application.ApplicationDeployment.Update%2A> or <xref:System.Deployment.Application.ApplicationDeployment.UpdateAsync%2A>, and do any custom data migration work in your own after the update is finished.  
   
-### Outros arquivos locais  
- Se seu aplicativo deve funcionar com ou salvar dados do usuário final, como relatórios, imagens, música e assim por diante, seu aplicativo exigirá <xref:System.Security.Permissions.FileIOPermission> para ler e gravar dados no sistema de arquivos local.  
+### <a name="isolated-storage"></a>Isolated Storage  
+ Isolated Storage provides an API for creating and accessing files by using a simple API. The actual location of the stored files is hidden from both the developer and the user.  
   
-## Dados remotos  
- Em algum momento, seu aplicativo provavelmente terá que recuperar informações de um site remoto, como informações de mercado ou de dados do cliente. Esta seção discute as técnicas mais comuns para recuperar dados remotos.  
+ Isolated Storage works in all versions of the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]. Isolated Storage also works in partially trusted applications without the need for additional permission grants. You should use Isolated Storage if your application must run in partial trust, but must maintain application-specific data.  
   
-### Acessando arquivos por meio de HTTP  
- Você pode acessar dados de um servidor Web usando o <xref:System.Net.WebClient> ou o <xref:System.Net.HttpWebRequest> classe o <xref:System.Net> namespace. Os dados podem ser qualquer um dos arquivos estáticos ou [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplicativos que retornam dados XML ou texto bruto. Se os dados estiverem em formato XML, a maneira mais rápida de recuperar os dados é usando o <xref:System.Xml.XmlDocument> classe cuja <xref:System.Xml.XmlDocument.Load%2A> método usa uma URL como um argumento. Para obter um exemplo, consulte [Reading an XML Document into the DOM](../Topic/Reading%20an%20XML%20Document%20into%20the%20DOM.md).  
+ For more information, see [Isolated Storage](/dotnet/standard/io/isolated-storage).  
   
- Você deve considerar a segurança quando o aplicativo acessa dados remotos por HTTP. Por padrão, o [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] acesso do aplicativo aos recursos da rede pode ser restringido, dependendo de como seu aplicativo foi implantado. Essas restrições são aplicadas para impedir que programas mal\-intencionados obtenham acesso a dados remotos com privilégios ou usando um computador do usuário para atacar outros computadores na rede.  
+### <a name="other-local-files"></a>Other Local Files  
+ If your application must work with or save end-user data such as reports, images, music, and so on, your application will require <xref:System.Security.Permissions.FileIOPermission> to read and write data to the local file system.  
   
- A tabela a seguir lista as estratégias de implantação, que você pode usar e suas permissões da Web padrão.  
+## <a name="remote-data"></a>Remote Data  
+ At some point, your application will likely have to retrieve information from a remote Web site, such as customer data or market information. This section discusses the most common techniques for retrieving remote data.  
   
-|Tipo de implantação|Permissões de rede padrão|  
-|-------------------------|-------------------------------|  
-|Instalação de Web|Só pode acessar o servidor Web do qual o aplicativo foi instalado|  
-|Instalação de compartilhamento de arquivo|Não é possível acessar todos os servidores da Web|  
-|Instalação do CD\-ROM|Pode acessar todos os servidores da Web|  
+### <a name="accessing-files-by-using-http"></a>Accessing Files by Using HTTP  
+ You can access data from a Web server by using either the <xref:System.Net.WebClient> or the <xref:System.Net.HttpWebRequest> class in the <xref:System.Net> namespace. The data can be either static files or [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] applications that return raw text or XML data. If your data is in XML format, the fastest way to retrieve the data is by using the <xref:System.Xml.XmlDocument> class, whose <xref:System.Xml.XmlDocument.Load%2A> method takes a URL as an argument. For an example, see [Reading an XML Document into the DOM](/dotnet/standard/data/xml/reading-an-xml-document-into-the-dom).  
   
- Se seu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo não pode acessar um servidor da Web devido a restrições de segurança, o aplicativo deve declarar <xref:System.Net.WebPermission> para esse site. Para obter mais informações sobre como aumentar as permissões de segurança para um [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo, consulte [Protegendo aplicativos ClickOnce](../deployment/securing-clickonce-applications.md).  
+ You have to consider security when your application accesses remote data over HTTP. By default, your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application's access to network resources may be restricted, depending on how your application was deployed. These restrictions are applied to prevent malicious programs from gaining access to privileged remote data or from using a user's computer to attack other computers on the network.  
   
-### Acessando dados através de um serviço Web XML  
- Se você expor seus dados como um serviço Web XML, você pode acessar os dados usando um proxy de serviço Web XML. O proxy é uma [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] classe criar usando o [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. As operações do serviço Web XML — como a recuperação de clientes, pedidos de colocação e assim por diante — são expostos como métodos no proxy. Isso torna muito mais fácil de usar do que texto bruto ou arquivos XML Web services.  
+ The following table lists the deployment strategies you might use and their default Web permissions.  
   
- Se seu Web service XML opera em HTTP, o serviço será limitado pelas mesmas restrições de segurança que o <xref:System.Net.WebClient> e <xref:System.Net.HttpWebRequest> classes.  
+|Deployment type|Default network permissions|  
+|---------------------|---------------------------------|  
+|Web Install|Can only access the Web server from which the application was installed|  
+|File Share Install|Cannot access any Web servers|  
+|CD-ROM Install|Can access any Web servers|  
   
-### Acessando um banco de dados diretamente  
- Você pode usar as classes dentro do <xref:System.Data> namespace para estabelecer conexões diretas com um servidor de banco de dados, como o SQL Server em sua rede, mas você deve considerar as questões de segurança. Ao contrário de solicitações HTTP, solicitações de conexão de banco de dados sempre são proibidas por padrão sob confiança parcial; Você somente terá essa permissão por padrão se você instalar o [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo de um CD\-ROM. Isso permite que seu aplicativo de confiança total. Para habilitar o acesso a um banco de dados do SQL Server, seu aplicativo deve solicitar <xref:System.Data.SqlClient.SqlClientPermission> a ele; para habilitar o acesso a um banco de dados diferente do SQL Server, ele deve solicitar <xref:System.Data.OleDb.OleDbPermission>.  
+ If your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application cannot access a Web server because of security restrictions, the application must assert <xref:System.Net.WebPermission> for that Web site. For more information about increasing security permissions for a [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application, see [Securing ClickOnce Applications](../deployment/securing-clickonce-applications.md).  
   
- Na maioria das vezes, não precisará acessar o banco de dados diretamente, mas será acessá\-lo em vez disso, por meio de um aplicativo de servidor da Web escrito em [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ou um serviço Web XML. Acessar o banco de dados dessa maneira com freqüência é o melhor método se seu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplicativo será implantado em um servidor Web. Você pode acessar o servidor em confiança parcial sem elevar as permissões do aplicativo.  
+### <a name="accessing-data-through-an-xml-web-service"></a>Accessing Data through an XML Web Service  
+ If you expose your data as an XML Web service, you can access the data by using an XML Web service proxy. The proxy is a [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] class you create by using either [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. The operations of the XML Web service—such as retrieving customers, placing orders, and so on—are exposed as methods on the proxy. This makes Web services much easier to use than raw text or XML files.  
   
-## Consulte também  
- [Como incluir um arquivo de dados em um aplicativo ClickOnce](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)
+ If your XML Web service operates over HTTP, the service will be bound by the same security restrictions as the <xref:System.Net.WebClient> and <xref:System.Net.HttpWebRequest> classes.  
+  
+### <a name="accessing-a-database-directly"></a>Accessing a Database Directly  
+ You can use the classes within the <xref:System.Data> namespace to establish direct connections with a database server such as SQL Server on your network, but you must account for the security issues. Unlike HTTP requests, database connection requests are always forbidden by default under partial trust; you will only have such permission by default if you install your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application from a CD-ROM. This gives your application full trust. To enable access to a specific SQL Server database, your application must request <xref:System.Data.SqlClient.SqlClientPermission> to it; to enable access to a database other than SQL Server, it must request <xref:System.Data.OleDb.OleDbPermission>.  
+  
+ Most of the time, you will not have to access the database directly, but will access it instead through a Web server application written in [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] or an XML Web service. Accessing the database in this manner is frequently the best method if your [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] application is deployed from a Web server. You can access the server in partial trust without elevating your application's permissions.  
+  
+## <a name="see-also"></a>See Also  
+ [How to: Include a Data File in a ClickOnce Application](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)

@@ -1,5 +1,5 @@
 ---
-title: EVALFLAGS90 | Documentos do Microsoft
+title: EVALFLAGS90 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,18 +28,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 757bb6db3cae804bfd6c6a5920dc3ed3d66010d9
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 25ff118d4cb3388798b456c516869d62b47ef4e3
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="evalflags90"></a>EVALFLAGS90
-Enumera os valores válidos para sinalizadores que controlam a avaliação da expressão. Esta enumeração estende o [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeração.  
+Enumerates the valid values for flags that control expression evaluation. This enumeration extends the [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeration.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_EVALFLAGS90  
 {  
    // VS 8.0 values  
@@ -59,7 +60,7 @@ enum enum_EVALFLAGS90
 typedef DWORD EVALFLAGS90;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_EVALFLAGS90  
 {  
    // VS 8.0 values  
@@ -78,43 +79,43 @@ public enum enum_EVALFLAGS90
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  EVAL90_RETURNVALUE  
- Especifica que o valor de retorno, se houver, deve ser avaliada.  
+ Specifies that the return value, if any, be evaluated.  
   
  EVAL90_NOSIDEEFFECTS  
- Especifica que efeitos colaterais não serão permitidas.  
+ Specifies that side effects not be allowed.  
   
  EVAL90_ALLOWBPS  
- Especifica parar em pontos de interrupção.  
+ Specifies stopping on breakpoints.  
   
  EVAL90_ALLOWERRORREPORT  
- Especifica que relatórios de erro para o host a ser permitido. Usada principalmente para a avaliação da expressão em script no Internet Explorer.  
+ Specifies that error reporting to the host to be allowed. Primarily used for expression evaluation in script in Internet Explorer.  
   
  EVAL90_FUNCTION_AS_ADDRESS  
- Funções de força a ser avaliada como endereços, em vez de chamar a função.  
+ Forces functions to be evaluated as addresses, instead of invoking the function.  
   
  EVAL90_NOFUNCEVAL  
- Impede que a função está sendo avaliada. Por exemplo, considere o `int` token na expressão `myExpression(int) + 10`. Essa função pode ser avaliada corretamente como um endereço, mas não como um valor.  
+ Prevents function from being evaluated. For example, consider the `int` token in the expression `myExpression(int) + 10`. This function can be correctly evaluated as an address, but not as a value.  
   
  EVAL90_NOEVENTS  
- Sinalizador para indicar que os eventos que ocorrem durante a avaliação de expressão não devem ser enviados para o Gerenciador de sessão de depuração (SDM) ou para o IDE.  
+ Flag to indicate that events that occur during the expression evaluation should not be sent to the session debug manager (SDM) or to the IDE.  
   
  EVAL90_DESIGN_TIME_EXPR_EVAL  
- Permite a avaliação de expressão em tempo de design.  
+ Enables design-time expression evaluation.  
   
  EVAL90_ALLOW_IMPLICIT_VARS  
- Permite a criação de variável implícita.  
+ Allows implicit variable creation.  
   
  EVAL90_FORCE_EVALUATION_NOW  
- Força a avaliação ocorrer imediatamente. Isso é útil quando a manutenção de uma solicitação, como uma solicitação de usuário.  
+ Forces evaluation to occur immediately. This is useful when servicing a request, such as a user request.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: Msdbg90.h  
+## <a name="requirements"></a>Requirements  
+ Header: Msdbg90.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

@@ -1,5 +1,5 @@
 ---
-title: "Geração de texto de tempo de execução com modelos de texto T4 | Documentos do Microsoft"
+title: Run-Time Text Generation with T4 Text Templates | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2d7a4c1dab4ac4a21c27a9d74526f4aac64fd020
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c40747ca3422bbb229c73f3a01a5f760a05f4fd0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="run-time-text-generation-with-t4-text-templates"></a>Geração de texto de tempo de execução com modelos de texto T4
-Você pode gerar cadeias de caracteres de texto em seu aplicativo em tempo de execução usando [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] modelos de texto de tempo de execução. O computador onde o aplicativo é executado não precisam ter [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Modelos de tempo de execução são chamados "modelos de texto pré-processados" porque em tempo de compilação, o modelo gera o código que é executado em tempo de execução.  
+# <a name="run-time-text-generation-with-t4-text-templates"></a>Run-Time Text Generation with T4 Text Templates
+You can generate text strings in your application at run time by using [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] runtime text templates. The computer where the application executes does not have to have [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Runtime templates are sometimes called "preprocessed text templates" because at compile time, the template generates code that is executed at run time.  
   
- Cada modelo é uma mistura do texto como ele aparecerá na cadeia de caracteres gerada e fragmentos de código de programa. Os fragmentos de programa fornecem valores para as partes da cadeia de caracteres variáveis e também controlam partes condicionais e repetidas.  
+ Each template is a mixture of the text as it will appear in the generated string, and fragments of program code. The program fragments supply values for the variable parts of the string, and also control conditional and repeated parts.  
   
- Por exemplo, o modelo a seguir pode ser usado em um aplicativo que cria um relatório HTML.  
+ For example, the following template could be used in an application that creates an HTML report.  
   
 ```  
 <#@ template language="C#" #>  
@@ -58,26 +59,26 @@ This report is Company Confidential.
 </body></html>  
 ```  
   
- Observe que o modelo é uma página HTML na qual as partes variável foram substituídas por código de programa. O design de uma página dessas poderia começar escrevendo um protótipo estático da página HTML. Em seguida, você poderia substituir a tabela e outras partes variáveis com código de programa que gera o conteúdo varia de uma vez para a próxima.  
+ Notice that the template is an HTML page in which the variable parts have been replaced with program code. You could begin the design of such a page by writing a static prototype of the HTML page. You could then replace the table and other variable parts with program code that generates the content that varies from one occasion to the next.  
   
- Usando um modelo no seu aplicativo faz é mais fácil de ver a forma final da saída do que seria possível em, por exemplo, uma longa série de instruções de gravação. Fazer alterações ao formulário da saída é mais fácil e confiável.  
+ Using a template in your application makes it is easier to see the final form of the output than you could in, for example, a long series of write statements. Making changes to the form of the output is easier and more reliable.  
   
-## <a name="creating-a-run-time-text-template-in-any-application"></a>Criando um modelo de texto de tempo de execução em qualquer aplicativo  
+## <a name="creating-a-run-time-text-template-in-any-application"></a>Creating a Run-Time Text Template in any Application  
   
-#### <a name="to-create-a-run-time-text-template"></a>Para criar um modelo de texto de tempo de execução  
+#### <a name="to-create-a-run-time-text-template"></a>To create a run-time text template  
   
-1.  No Solution Explorer, no menu de atalho do projeto, escolha **adicionar**, **Novo Item**.  
+1.  In Solution Explorer, on the shortcut menu of your project, choose **Add**, **New Item**.  
   
-2.  No **Adicionar Novo Item** caixa de diálogo, selecione **tempo de execução do modelo de texto**. (No [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] procure **Items\General comuns**.)  
+2.  In the **Add New Item** dialog box, select **Runtime Text Template**. (In [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] look under **Common Items\General**.)  
   
-3.  Digite um nome para o arquivo de modelo.  
+3.  Type a name for your template file.  
   
     > [!NOTE]
-    >  O nome do arquivo de modelo será ser usado como um nome de classe no código gerado. Portanto, não devem ter espaços ou pontuação.  
+    >  The template file name will be used as a class name in the generated code. Therefore, it should not have spaces or punctuation.  
   
-4.  Escolha **adicionar**.  
+4.  Choose **Add**.  
   
-     Um novo arquivo é criado com a extensão **. TT**. Seu **ferramenta personalizada** está definida como **TextTemplatingFilePreprocessor**. Ele contém as seguintes linhas:  
+     A new file is created that has extension **.tt**. Its **Custom Tool** property is set to **TextTemplatingFilePreprocessor**. It contains the following lines:  
   
     ```  
     <#@ template language="C#" #>  
@@ -87,37 +88,37 @@ This report is Company Confidential.
     <#@ import namespace="System.Collections.Generic" #>  
     ```  
   
-## <a name="converting-an-existing-file-to-a-run-time-template"></a>Convertendo um arquivo existente em um modelo de tempo de execução  
- É uma boa maneira de criar um modelo converter um exemplo existente da saída. Por exemplo, se seu aplicativo irá gerar arquivos HTML, você pode iniciar com a criação de um arquivo HTML simples. Certifique-se de que ele funciona corretamente e que sua aparência está correta. Em seguida, incluí-lo em seu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projeto e convertê-lo em um modelo.  
+## <a name="converting-an-existing-file-to-a-run-time-template"></a>Converting an Existing File to a Run-Time Template  
+ A good way to create a template is to convert an existing example of the output. For example, if your application will generate HTML files, you can start by creating a plain HTML file. Make sure that it works correctly and that its appearance is correct. Then include it into your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project and convert it to a template.  
   
-#### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>Para converter um arquivo de texto existente em um modelo de tempo de execução  
+#### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>To convert an existing text file to a run-time template  
   
-1.  Incluir o arquivo em seu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projeto. No Solution Explorer, no menu de atalho do projeto, escolha **adicionar**, **Item existente**.  
+1.  Include the file into your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project. In Solution Explorer, on the shortcut menu of the project, choose **Add**, **Existing Item**.  
   
-2.  Definir o arquivo **ferramentas personalizadas** propriedade **TextTemplatingFilePreprocessor**. No Solution Explorer, no menu de atalho do arquivo, escolha **propriedades**.  
+2.  Set the file's **Custom Tools** property to **TextTemplatingFilePreprocessor**. In Solution Explorer, on the shortcut menu of the file, choose **Properties**.  
   
     > [!NOTE]
-    >  Se a propriedade já estiver definida, certifique-se de que ele é **TextTemplatingFilePreprocessor** e não **TextTemplatingFileGenerator**. Isso pode acontecer se você incluir um arquivo que já tenha a extensão **. TT**.  
+    >  If the property is already set, make sure that it is **TextTemplatingFilePreprocessor** and not **TextTemplatingFileGenerator**. This can happen if you include a file that already has the extension **.tt**.  
   
-3.  Alterar a extensão de nome de arquivo para **. TT**. Embora esta etapa é opcional, ele ajuda a evitar abrir o arquivo em um editor incorreto.  
+3.  Change the file name extension to **.tt**. Although this step is optional, it helps you avoid opening the file in an incorrect editor.  
   
-4.  Remova a parte do nome do arquivo principal espaços ou pontuação. Por exemplo, "Meu Web Page.tt" seria incorreto, mas "MyWebPage.tt" está correto. O nome do arquivo será ser usado como um nome de classe no código gerado.  
+4.  Remove any spaces or punctuation from the main part of the file name. For example "My Web Page.tt" would be incorrect, but "MyWebPage.tt" is correct. The file name will be used as a class name in the generated code.  
   
-5.  Insira a seguinte linha no início do arquivo. Se você estiver trabalhando em um projeto do Visual Basic, substitua "C#" com "VB".  
+5.  Insert the following line at the beginning of the file. If you are working in a Visual Basic project, replace "C#" with "VB".  
   
      `<#@ template language="C#" #>`  
   
-## <a name="the-content-of-the-run-time-template"></a>O conteúdo do modelo de tempo de execução  
+## <a name="the-content-of-the-run-time-template"></a>The Content of the Run-Time Template  
   
-### <a name="template-directive"></a>Diretiva de modelo  
- Manter a primeira linha do modelo de quando você criou o arquivo:  
+### <a name="template-directive"></a>Template directive  
+ Keep the first line of the template as it was when you created the file:  
   
  `<#@ template language="C#" #>`  
   
- O parâmetro de idioma dependem do idioma do seu projeto.  
+ The language parameter will depend on the language of your project.  
   
-### <a name="plain-content"></a>Conteúdo simples  
- Editar o **. TT** arquivo para conter o texto que você deseja gerar seu aplicativo. Por exemplo:  
+### <a name="plain-content"></a>Plain content  
+ Edit the **.tt** file to contain the text that you want your application to generate. For example:  
   
 ```  
 <html><body>  
@@ -127,10 +128,10 @@ This report is Company Confidential.
 </body></html>  
 ```  
   
-### <a name="embedded-program-code"></a>Código de programa incorporado  
- Você pode inserir o código do programa entre `<#` e `#>`. Por exemplo:  
+### <a name="embedded-program-code"></a>Embedded program code  
+ You can insert program code between `<#` and `#>`. For example:  
   
-```c#  
+```csharp  
 <table>  
     <# for (int i = 1; i <= 10; i++)  
        { #>  
@@ -140,7 +141,7 @@ This report is Company Confidential.
  </table>  
 ```  
   
-```vb#  
+```vb  
 <table>  
 <#  
     For i As Integer = 1 To 10  
@@ -154,54 +155,54 @@ This report is Company Confidential.
   
 ```  
   
- Observe que as instruções são inseridas entre `<# ... #>` e expressões são inseridas entre `<#= ... #>`. Para obter mais informações, consulte [gravando um modelo de texto T4](../modeling/writing-a-t4-text-template.md).  
+ Notice that statements are inserted between `<# ... #>` and expressions are inserted between `<#= ... #>`. For more information, see [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md).  
   
-## <a name="using-the-template"></a>Usando o modelo  
+## <a name="using-the-template"></a>Using the Template  
   
-### <a name="the-code-built-from-the-template"></a>O código criado a partir do modelo  
- Sempre que você salva o **. TT** de arquivos, uma subsidiária **. CS** ou **. vb** arquivo será gerado. Para ver esse arquivo no Solution Explorer, expanda o **. TT** nó do arquivo. Em um projeto do Visual Basic, você poderá expandir o nó depois de clicar em **Show All Files** na barra de ferramentas Solution Explorer.  
+### <a name="the-code-built-from-the-template"></a>The code built from the template  
+ Whenever you save the **.tt** file, a subsidiary **.cs** or **.vb** file will be generated. To see this file in Solution Explorer, expand the **.tt** file node. In a Visual Basic project, you will be able to expand the node after you click **Show All Files** in the Solution Explorer toolbar.  
   
- Observe que este arquivo subsidiário contém uma classe parcial que contém um método chamado `TransformText()`. Você pode chamar esse método do seu aplicativo.  
+ Notice that this subsidiary file contains a partial class that contains a method called `TransformText()`. You can call this method from your application.  
   
-### <a name="generating-text-at-run-time"></a>Gerando texto em tempo de execução  
- No código do aplicativo, você pode gerar o conteúdo do modelo usando uma chamada como esta:  
+### <a name="generating-text-at-run-time"></a>Generating text at run time  
+ In your application code, you can generate the content of your template using a call like this:  
   
-```c#  
+```csharp  
 MyWebPage page = new MyWebPage();  
 String pageContent = page.TransformText();  
 System.IO.File.WriteAllText("outputPage.html", pageContent);  
   
 ```  
   
-```vb#  
+```vb  
 Dim page = New My.Templates.MyWebPage  
 Dim pageContent = page.TransformText()  
 System.IO.File.WriteAllText("outputPage.html", pageContent)  
   
 ```  
   
- Para colocar a classe gerada em um namespace específico, defina o **Namespace de ferramenta personalizada** propriedade do arquivo de modelo de texto.  
+ To place the generated class in a particular namespace, set the **Custom Tool Namespace** property of the text template file.  
   
-### <a name="debugging-runtime-text-templates"></a>Depuração de modelos de texto de tempo de execução  
- Depurar e testar modelos de texto de tempo de execução da mesma maneira como o código comum.  
+### <a name="debugging-runtime-text-templates"></a>Debugging Runtime Text Templates  
+ Debug and test runtime text templates in the same way as ordinary code.  
   
- Você pode definir um ponto de interrupção em um modelo de texto. Se você iniciar o aplicativo no modo de depuração do Visual Studio, você pode percorrer o código e avaliar expressões de inspeção da maneira usual.  
+ You can set a breakpoint in a text template. If you start the application in debugging mode from Visual Studio, you can step through the code and evaluate watch expressions in the usual way.  
   
-### <a name="passing-parameters-in-the-constructor"></a>Passando parâmetros no construtor  
- Normalmente um modelo deve importar alguns dados de outras partes do aplicativo. Para facilitar isso, o código criado pelo modelo é uma classe parcial. Você pode criar outra parte da mesma classe em outro arquivo no seu projeto. Esse arquivo pode incluir um construtor com parâmetros, propriedades e funções que podem acessadas o código que é inserido no modelo e o restante do aplicativo.  
+### <a name="passing-parameters-in-the-constructor"></a>Passing parameters in the constructor  
+ Usually a template must import some data from other parts of the application. To make this easy, the code built by the template is a partial class. You can create another part of the same class in another file in your project. That file can include a constructor with parameters, properties and functions that can accessed both by the code that is embedded in the template, and by the rest of the application.  
   
- Por exemplo, você pode criar um arquivo separado **MyWebPageCode.cs**:  
+ For example, you could create a separate file **MyWebPageCode.cs**:  
   
-```c#  
+```csharp  
 partial class MyWebPage  
 {  
     private MyData m_data;  
     public MyWebPage(MyData data) { this.m_data = data; }}  
 ```  
   
- Em seu arquivo de modelo **MyWebPage.tt**, você poderia escrever:  
+ In your template file **MyWebPage.tt**, you could write:  
   
-```c#  
+```csharp  
 <h2>Sales figures</h2>  
 <table>  
 <# foreach (MyDataItem item in m_data.Items)   
@@ -214,19 +215,19 @@ partial class MyWebPage
 </table>  
 ```  
   
- Para usar esse modelo no aplicativo:  
+ To use this template in the application:  
   
-```c#  
+```csharp  
 MyData data = ...;  
 MyWebPage page = new MyWebPage(data);  
 String pageContent = page.TransformText();  
 System.IO.File.WriteAllText("outputPage.html", pageContent);  
 ```  
   
-#### <a name="constructor-parameters-in-visual-basic"></a>Parâmetros do construtor no Visual Basic  
- Em [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], o arquivo separado **MyWebPageCode.vb** contém:  
+#### <a name="constructor-parameters-in-visual-basic"></a>Constructor parameters in Visual Basic  
+ In [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], the separate file **MyWebPageCode.vb** contains:  
   
-```vb#  
+```vb  
 Namespace My.Templates  
   Partial Public Class MyWebPage  
     Private m_data As MyData  
@@ -237,9 +238,9 @@ Namespace My.Templates
 End Namespace  
 ```  
   
- O arquivo de modelo pode conter:  
+ The template file could contain:  
   
-```vb#  
+```vb  
 <#@ template language="VB" #>  
 <html><body>  
 <h1>Sales for January</h2>  
@@ -258,9 +259,9 @@ This report is Company Confidential.
   
 ```  
   
- E o modelo seria invocado passando o parâmetro no construtor:  
+ And the template would be invoked by passing the parameter in the constructor:  
   
-```vb#  
+```vb  
 Dim data = New My.Templates.MyData  
     ' Add data values here ....  
 Dim page = New My.Templates.MyWebPage(data)  
@@ -269,55 +270,55 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
   
 ```  
   
-#### <a name="passing-data-in-template-properties"></a>Passando dados nas propriedades do modelo  
- Um método alternativo de passar dados para o modelo é adicionar propriedades públicas para a classe de modelo em uma definição de classe parcial. Seu aplicativo pode definir as propriedades antes de chamar `TransformText()`.  
+#### <a name="passing-data-in-template-properties"></a>Passing data in template properties  
+ An alternative method of passing data to the template is to add public properties to the template class in a partial class definition. Your application can set the properties before invoking `TransformText()`.  
   
- Você também pode adicionar campos à sua classe de modelo em uma definição parcial. Isso permite que você passar dados entre as execuções sucessivas do modelo.  
+ You can also add fields to your template class in a partial definition. This would enable you to pass data between successive executions of the template.  
   
-### <a name="use-partial-classes-for-code"></a>Usar as classes parciais para o código  
- Muitos desenvolvedores preferem não escrever grande corpo de código nos modelos. Em vez disso, defina métodos em uma classe parcial que tem o mesmo nome do arquivo de modelo. Chame esses métodos do modelo. Dessa forma, o modelo mostra mais claramente que o destino cadeia de saída terá a seguinte aparência. Discussões sobre a aparência do resultado podem ser separadas da lógica de criação dos dados que ele exibe.  
+### <a name="use-partial-classes-for-code"></a>Use partial classes for code  
+ Many developers prefer to avoid writing large bodies of code in templates. Instead, define methods in a partial class that has the same name as the template file. Call those methods from the template. In this way, the template shows you more clearly what the target output string will look like. Discussions about the appearance of the result can be separated from the logic of creating the data that it displays.  
   
-### <a name="assemblies-and-references"></a>Assemblies e referências  
- Se desejar que seu código de modelo para fazer referência a um .NET ou outro assembly como **System.Xml.dll**, você deve adicioná-lo ao seu projeto **referências** da maneira usual.  
+### <a name="assemblies-and-references"></a>Assemblies and references  
+ If you want your template code to reference a .NET or other assembly such as **System.Xml.dll**, you should add it to your project's **References** in the usual manner.  
   
- Se você deseja importar um namespace da mesma forma como uma `using` instrução, você pode fazer isso com o `import` diretiva:  
+ If you want to import a namespace in the same way as a `using` statement, you can do this with the `import` directive:  
   
 ```  
 <#@ import namespace="System.Xml" #>  
 ```  
   
- Essas diretivas devem ser colocadas no início do arquivo, imediatamente após a `<#@template` diretiva.  
+ These directives must be placed at the beginning of the file, immediately after the `<#@template` directive.  
   
-### <a name="shared-content"></a>Conteúdo compartilhado  
- Se você tiver o texto que é compartilhado entre vários modelos, você pode colocá-lo em um arquivo separado e incluí-lo em cada arquivo no qual ele deve aparecer:  
+### <a name="shared-content"></a>Shared content  
+ If you have text that is shared between several templates, you can place it in a separate file and include it in each file in which it should appear:  
   
 ```  
 <#@include file="CommonHeader.txt" #>  
 ```  
   
- O conteúdo incluído pode conter qualquer combinação de código do programa e texto sem formatação, e ele pode conter outros incluem diretivas e outras diretivas.  
+ The included content can contain any mixture of program code and plain text, and it can contain other include directives and other directives.  
   
- A diretiva de inclusão pode ser usada em qualquer lugar dentro do texto de um arquivo de modelo ou um arquivo incluído.  
+ The include directive can be used anywhere within the text of a template file or an included file.  
   
-### <a name="inheritance-between-run-time-text-templates"></a>Herança entre modelos de texto de tempo de execução  
- Você pode compartilhar conteúdo entre modelos de tempo de execução ao escrever um modelo de classe base, que pode ser abstrato. Use o `inherits` parâmetro o `<@#template#>` diretiva para fazer referência a outra classe de modelo de tempo de execução.  
+### <a name="inheritance-between-run-time-text-templates"></a>Inheritance between Run-Time Text Templates  
+ You can share content between run-time templates by writing a base class template, which can be abstract. Use the `inherits` parameter of the `<@#template#>` directive to reference another runtime template class.  
   
-#### <a name="inheritance-pattern-fragments-in-base-methods"></a>Padrão de herança: fragmentos em métodos Base  
- O padrão usado no exemplo a seguir, observe os seguintes pontos:  
+#### <a name="inheritance-pattern-fragments-in-base-methods"></a>Inheritance pattern: Fragments in Base Methods  
+ In the pattern used in the example that follows, notice the following points:  
   
--   A classe base `SharedFragments` define métodos dentro de blocos de recurso de classe `<#+ ... #>`.  
+-   The base class `SharedFragments` defines methods within class feature blocks `<#+ ... #>`.  
   
--   A classe base não contém nenhum texto livre. Em vez disso, todos os seus blocos de texto ocorrem dentro de métodos de classe de recursos.  
+-   The base class contains no free text. Instead, all its text blocks occur inside the class feature methods.  
   
--   A classe derivada invoca os métodos definidos em `SharedFragments`.  
+-   The derived class invokes the methods defined in `SharedFragments`.  
   
--   O aplicativo chama o `TextTransform()` método da classe derivada, mas não transforma a classe base `SharedFragments`.  
+-   The application calls the `TextTransform()` method of the derived class, but does not transform the base class `SharedFragments`.  
   
--   As classes base e derivadas são modelos de texto de tempo de execução: ou seja, o **ferramenta personalizada** está definida como **TextTemplatingFilePreprocessor**.  
+-   Both the base and derived classes are runtime text templates: that is, the **Custom Tool** property is set to **TextTemplatingFilePreprocessor**.  
   
  **SharedFragments.tt:**  
   
-```c#  
+```csharp  
 <#@ template language="C#" #>  
 <#+  
 protected void SharedText(int n)  
@@ -333,7 +334,7 @@ protected void SharedText(int n)
   
  **MyTextTemplate1.tt:**  
   
-```c#  
+```csharp  
 <#@ template language="C#" inherits="SharedFragments" #>  
 begin 1  
    <# SharedText(2); #>  
@@ -343,14 +344,14 @@ end 1
   
  **MyProgram.cs:**  
   
-```c#  
+```csharp  
 ...   
 MyTextTemplate1 t1  = new MyTextTemplate1();  
 string result = t1.TransformText();  
 Console.WriteLine(result);  
 ```  
   
- **A saída resultante:**  
+ **The resulting output:**  
   
 ```  
 begin 1  
@@ -358,12 +359,12 @@ begin 1
 end 1  
 ```  
   
-#### <a name="inheritance-pattern-text-in-base-body"></a>Padrão de herança: Texto no corpo de Base  
- Nessa abordagem alternativa para usar a herança de modelo, a maior parte do texto é definida no modelo de base. Modelos derivados fornecem dados e fragmentos de texto que ajustam o conteúdo de base.  
+#### <a name="inheritance-pattern-text-in-base-body"></a>Inheritance Pattern: Text in Base Body  
+ In this alternative approach to using template inheritance, the bulk of the text is defined in the base template. The derived templates provide data and text fragments that fit into the base content.  
   
  **AbstractBaseTemplate1.tt:**  
   
-```c#  
+```csharp  
 <#@ template language="C#" #>  
   
 Here is the description for this derived template:  
@@ -385,9 +386,9 @@ End of common template.
   
 ```  
   
- **Derivedtemplate1:**  
+ **DerivedTemplate1.tt:**  
   
-```c#  
+```csharp  
 <#@ template language="C#" inherits="AbstractBaseTemplate1" #>  
 <#   
   // Set the base template properties:  
@@ -412,16 +413,16 @@ protected override void SpecificFragment(int n)
   
 ```  
   
- **Código do aplicativo:**  
+ **Application code:**  
   
-```c#  
+```csharp  
 ...   
 DerivedTemplate1 t1 = new DerivedTemplate1();  
 string result = t1.TransformText();  
 Console.WriteLine(result);  
 ```  
   
- **Saída resultante:**  
+ **Resulting output:**  
   
 ```  
 Here is the description for this derived template:  
@@ -433,12 +434,12 @@ End of common template.
 End material for DerivedTemplate1.  
 ```  
   
-## <a name="related-topics"></a>Tópicos relacionados  
- Modelos de tempo de design: Se você quiser usar um modelo para gerar código que se torna parte do seu aplicativo, consulte [geração de código de tempo de Design usando modelos de texto T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md).  
+## <a name="related-topics"></a>Related Topics  
+ Design Time Templates: If you want to use a template to generate code that becomes part of your application, see [Design-Time Code Generation by using T4 Text Templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md).  
   
- Modelos de tempo de execução podem ser usados em qualquer aplicativo em que os modelos e seu conteúdo são determinados no momento da compilação. Mas se você quiser escrever um [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extensão que gera texto dos modelos que alterar o tempo de execução, consulte [invocando transformação de texto em uma extensão VS](../modeling/invoking-text-transformation-in-a-vs-extension.md).  
+ Runtime templates can be used in any application where the templates and their content are determined at compile time. But if you want to write a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extension that generates text from templates that change at run time, see [Invoking Text Transformation in a VS Extension](../modeling/invoking-text-transformation-in-a-vs-extension.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Geração de código e modelos de texto T4](../modeling/code-generation-and-t4-text-templates.md)   
- [Gravando um modelo de texto T4](../modeling/writing-a-t4-text-template.md)   
- [Noções básicas sobre T4: Modelos de texto pré-processado por Oleg Sych](http://www.olegsych.com/2009/09/t4-preprocessed-text-templates/)
+## <a name="see-also"></a>See Also  
+ [Code Generation and T4 Text Templates](../modeling/code-generation-and-t4-text-templates.md)   
+ [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md)   
+ [Understanding T4: Preprocessed Text Templates by Oleg Sych](http://www.olegsych.com/2009/09/t4-preprocessed-text-templates/)

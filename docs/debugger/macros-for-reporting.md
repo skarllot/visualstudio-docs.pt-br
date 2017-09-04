@@ -1,47 +1,62 @@
 ---
-title: "Macros para relat&#243;rios | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.macros"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "Macro _RPTFn"
-  - "Macro _RPTn"
-  - "CRT, macros de relatórios"
-  - "depuração [CRT], macros de relatórios"
-  - "Macros , macros de relatórios CRT"
-  - "Macros , depurando com"
+title: Macros for Reporting | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.macros
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- macros, CRT reporting macros
+- macros, debugging with
+- _RPTFn macro
+- CRT, reporting macros
+- debugging [CRT], reporting macros
+- _RPTn macro
 ms.assetid: f2085314-a3a8-4caf-a5a4-2af9ad5aad05
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Macros para relat&#243;rios
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: edb8feb8c8389936cc6e5b9f4da997d063eb5d47
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/22/2017
 
-Você pode usar as macros **\_RPTn** e **\_RPTFn** \(definidas em CRTDBG.H\), para substituir o uso de instruções `printf` para depuração.  Essas macros não desaparecem automaticamente na compilação de lançamento quando **\_DEBUG** não estiver definido, de modo que não há necessidade de incluí\-los em **\#ifdef**s.  
+---
+# <a name="macros-for-reporting"></a>Macros for Reporting
+You can use the **_RPTn**, and **_RPTFn** macros, defined in CRTDBG.H, to replace the use of `printf` statements for debugging. These macros automatically disappear in your release build when **_DEBUG** is not defined, so there is no need to enclose them in **#ifdef**s.  
   
-|Macro|Descrição|  
-|-----------|---------------|  
-|**\_RPT0**, **\_RPT1**, **\_RPT2**, **\_RPT3**, **\_RPT4**|Gera uma cadeia de caracteres de mensagem e zero a quatro argumentos.  Para \_RPT1 até **\_RPT4**, a cadeia de caracteres de mensagem funciona como uma cadeia de caracteres de formatação de estilo printf para os argumentos.|  
-|**\_RPTF0**, **\_RPTF1**, **,\_RPTF2**, **\_RPTF4**|Da mesma forma que **\_RPTn**, mas essas macros também geram a saída do nome do arquivo e o número da linha onde a macro está localizada.|  
+|Macro|Description|  
+|-----------|-----------------|  
+|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|Outputs a message string and zero to four arguments. For _RPT1 through **_RPT4**, the message string serves as a printf-style formatting string for the arguments.|  
+|**_RPTF0**, **_RPTF1**, **,_RPTF2**, **_RPTF4**|Same as **_RPTn**, but these macros also output the file name and line number where the macro is located.|  
   
- Considere o exemplo a seguir:  
+ Consider the following example:  
   
 ```  
 #ifdef _DEBUG  
@@ -52,13 +67,13 @@ Você pode usar as macros **\_RPTn** e **\_RPTFn** \(definidas em CRTDBG.H\), pa
 #endif  
 ```  
   
- Esse código gera os valores de `someVar` e `otherVar` a **stdout**.  Você pode usar a seguinte chamada para `_RPTF2` para reportar os mesmos valores e, além disso, o nome de arquivo e o número de linha:  
+ This code outputs the values of `someVar` and `otherVar` to **stdout**. You can use the following call to `_RPTF2` to report these same values and, additionally, the file name and line number:  
   
 ```  
 if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d, otherVar= %d\n", someVar, otherVar );  
 ```  
   
- Se você achar que um aplicativo específico precisa de um relatório de depuração que as macros fornecidas com a biblioteca em tempo de execução C não fornecem, poderá escrever uma macro criada especificamente para se adaptar a seus próprios requisitos.  Em um dos arquivos de cabeçalho, por exemplo, você pode incluir código como o seguinte para definir uma macro chamada **ALERT\_IF2**:  
+ If you find that a particular application needs debug reporting that the macros supplied with the C run-time library do not provide, you can write a macro designed specifically to fit your own requirements. In one of your header files, for example, you could include code like the following to define a macro called **ALERT_IF2**:  
   
 ```  
 #ifndef _DEBUG                  /* For RELEASE builds */  
@@ -74,14 +89,14 @@ if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d,
 #endif  
 ```  
   
- Uma chamada para **ALERT\_IF2** pode executar todas as funções de código **printf** no início deste tópico:  
+ One call to **ALERT_IF2** could perform all the functions of the **printf** code at the start of this topic:  
   
 ```  
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),   
 someVar=%d, otherVar=%d.\n", someVar, otherVar );  
 ```  
   
- Como uma macro personalizada pode ser alterada facilmente para reportar mais ou menos informações para os destinos diferentes \(dependendo do que é mais conveniente\), essa abordagem pode ser útil principalmente à medida que seus requisitos de depuração evoluem.  
+ Because a custom macro can easily be changed to report more or less information to different destinations (depending on what is more convenient), this approach can be particularly useful as your debugging requirements evolve.  
   
-## Consulte também  
- [Técnicas de depuração CRT](../debugger/crt-debugging-techniques.md)
+## <a name="see-also"></a>See Also  
+ [CRT Debugging Techniques](../debugger/crt-debugging-techniques.md)

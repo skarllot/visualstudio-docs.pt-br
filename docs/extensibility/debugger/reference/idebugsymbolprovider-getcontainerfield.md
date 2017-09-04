@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetContainerField | Documentos do Microsoft
+title: IDebugSymbolProvider::GetContainerField | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,42 +30,43 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 38867e575d2d52f364f730d33e2a9e7127831a4e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 09f48221dc42c6402c7f8da8d37072e2679c606b
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugsymbolprovidergetcontainerfield"></a>IDebugSymbolProvider::GetContainerField
-Esse método obtém o campo que contém o endereço de depuração.  
+This method gets the field that contains the debug address.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetContainerField(   
    IDebugAddress*         pAddress,  
    IDebugContainerField** ppContainerField  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetContainerField(  
    IDebugAddress            pAddress,   
    out IDebugContainerField ppContainerField  
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `pAddress`  
- [in] O endereço conforme representado por um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
+ [in] The address as represented by an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
   
  `ppContainerField`  
- [out] Retorna um campo contêiner representado por uma [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface.  
+ [out] Returns a container field represented by an [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface.  
   
-## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)   
  [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)

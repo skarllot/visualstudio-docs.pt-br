@@ -1,51 +1,68 @@
 ---
-title: "Vis&#227;o geral de supress&#227;o na origem | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Supressão da fonte, a análise de código"
-  - "análise de código, a supressão de origem"
+title: In Source Suppression Overview | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- source suppression, code analysis
+- code analysis, source suppression
 ms.assetid: f1a2dc6a-a9eb-408c-9078-2571e57d207d
 caps.latest.revision: 40
-caps.handback.revision: 40
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# Vis&#227;o geral de supress&#227;o na origem
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: fcecc6fda25f2c6553a99f5166154cec63197fb9
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
-a exclusão em origem é a capacidade de suprimir ou ignorar violações de análise de código em código gerenciado adicionando o atributo de **SuppressMessage** aos segmentos de código que fazem com que as violações.  O atributo é um atributo de **SuppressMessage** condicional que está incluído nos metadados de IL de seu assembly de código gerenciado apenas se o símbolo de compilação de CODE\_ANALYSIS é definido em tempo de compilação.  
+---
+# <a name="in-source-suppression-overview"></a>In Source Suppression Overview
+In-source suppression is the ability to suppress or ignore Code Analysis violations in managed code by adding the **SuppressMessage** attribute to the code segments that cause the violations. The **SuppressMessage** attribute is a conditional attribute which is included in the IL metadata of your managed code assembly only if the CODE_ANALYSIS compilation symbol is defined at compile time.  
   
- Em C\+\+\/CLI, use as macros CA\_SUPPRESS\_MESSAGE ou CA\_GLOBAL\_SUPPRESS\_MESSAGE no arquivo de cabeçalho, adicione o atributo.  
+ In C++/CLI, use the macros CA_SUPPRESS_MESSAGE or CA_GLOBAL_SUPPRESS_MESSAGE in the header file,  to add the attribute .  
   
- Você não deve usar exclusões em origem em construções de versão para evitar enviar os metadados de exclusão em origem acidentalmente.  Devido à despesa o custo de processamento de exclusão em origem, o desempenho de seu aplicativo também pode ser desatualizado incluindo os metadados de exclusão em origem.  
+ You should not use in-source suppressions on release builds to prevent shipping the in-source suppression metadata accidentally. Because of the processing cost of in-source suppression, the performance of your application can also be degraded by including the in-source suppression metadata.  
   
 > [!NOTE]
->  Você não precisa fornecer o código esses atributos você mesmo.  Para obter mais informações, consulte [Como suprimir avisos usando o item de menu](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md).  O item de menu não estará disponível para o código C\+\+.  
+>  You do not have to hand code these attributes yourself. For more information, see [How to: Suppress Warnings by Using the Menu Item](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md). The menu item is not available for C++ code.  
   
-## Atributo de SuppressMessage  
- Quando você clica com o botão direito do mouse em um aviso de análise de código em **Lista de Erros** e clique em **Suprimir Mensagem**, um atributo de **SuppressMessage** é adicionado ou em seu código ou ao projeto exclusões globais arquivo.  
+## <a name="suppressmessage-attribute"></a>SuppressMessage Attribute  
+ When you right-click a Code Analysis warning in the **Error List** and then click **Suppress Message(s)**, a **SuppressMessage** attribute is added either in your code or to the project's global suppressions file.  
   
- O atributo de **SuppressMessage** tem o seguinte formato:  
+ The **SuppressMessage** attribute has the following format:  
   
 ```vb  
 <Scope:SuppressMessage("Rule Category", "Rule Id", Justification = "Justification", MessageId = "MessageId", Scope = "Scope", Target = "Target")>  
 ```  
   
-```c#  
+```csharp  
 [Scope:SuppressMessage("Rule Category", "Rule Id", Justification = "Justification", MessageId = "MessageId", Scope = "Scope", Target = "Target")]  
   
 ```  
   
- \[C\+\+\]  
+ [C++]  
   
 ```  
 CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification", MessageId = "MessageId", Scope = "Scope", Target = "Target")  
@@ -54,74 +71,72 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
   
  Where:  
   
--   **Categoria de regra** \- A categoria na qual a regra é definida.  Para obter mais informações sobre categorias da regra de análise de código, consulte [Avisos da análise de código para código gerenciado](../code-quality/code-analysis-for-managed-code-warnings.md).  
+-   **Rule Category** - The category in which the rule is defined. For more information about code analysis rule categories, see [Code Analysis for Managed Code Warnings](../code-quality/code-analysis-for-managed-code-warnings.md).  
   
--   **Use a ID** \- O identificador da regra.  O suporte inclui um nome curto e longo para o identificador da regra.  O nome curto é CAXXXX; o nome longo é CAXXXX:FriendlyTypeName.  
+-   **Rule Id** - The identifier of the rule. Support includes both a short and long name for the rule identifier. The short name is CAXXXX; the long name is CAXXXX:FriendlyTypeName.  
   
--   **Justificação** \- O texto usado para documentar a razão para suprimir a mensagem.  
+-   **Justification** - The text that is used to document the reason for suppressing the message.  
   
--   **ID de mensagem** \- Identificador exclusivo de um problema para cada mensagem.  
+-   **Message Id** - Unique identifier of a problem for each message.  
   
--   **Escopo** \- O destino em que o aviso está sendo suprimido.  Se o destino não for especificado, será definido como o destino do atributo.  Os escopos com suporte incluem o seguinte:  
+-   **Scope** - The target on which the warning is being suppressed. If the target is not specified, it is set to the target of the attribute. Supported scopes include the following:  
   
     -   Module  
   
     -   Namespace  
   
-    -   Recurso  
+    -   Resource  
   
-    -   Tipo  
+    -   Type  
   
-    -   Membro  
+    -   Member  
   
--   **Destino** \- Um identificador que é usado para especificar o destino em que o aviso está sendo suprimido.  Deve conter um nome totalmente qualificada do item.  
+-   **Target** - An identifier that is used to specify the target on which the warning is being suppressed. It must contain a fully-qualified item name.  
   
-## Uso de SuppressMessage  
- Os avisos da análise do código são suprimidos no nível a que uma instância do atributo de **SuppressMessage** é aplicada.  O objetivo dessa é acoplar com segurança informações de exclusão ao código onde a violação ocorrer.  
+## <a name="suppressmessage-usage"></a>SuppressMessage Usage  
+ Code Analysis warnings are suppressed at the level to which an instance of the **SuppressMessage** attribute is applied. The purpose of this is to tightly couple the suppression information to the code where the violation occurs.  
   
- O formato geral de exclusão inclui a categoria de regra e um identificador da regra que contém uma representação legível opcional do nome da regra.  Por exemplo,  
+ The general form of suppression includes the rule category and a rule identifier which contains an optional human-readable representation of the rule name. For example,  
   
  `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`  
   
- Se houver motivo de desempenho restringidas para minimizar metadados de exclusão em origem, o próprio nome da regra pode ficar fora.  A categoria de regra e o ID da regra suficientemente juntos constituem um identificador exclusivo da regra.  Por exemplo,  
+ If there are strict performance reasons for minimizing in-source suppression metadata, the rule name itself can be left out. The rule category and its rule ID together constitute a sufficiently unique rule identifier. For example,  
   
  `[SuppressMessage("Microsoft.Design", "CA1039")]`  
   
- Esse formato não é recomendada devido a problemas de manutenibilidade.  
+ This format is not recommended because of maintainability issues.  
   
-## Suprimindo mais violações em um corpo do método  
- Os atributos só podem ser se aplicados a um método e não podem ser inseridas no corpo do método.  No entanto, você pode especificar o identificador como a ID de mensagem para distinguir várias ocorrências de uma violação dentro de um método.  
+## <a name="suppressing-multiple-violations-within-a-method-body"></a>Suppressing Multiple Violations within a method body  
+ Attributes can only be applied to a method and cannot be embedded within the method body. However, you can specify the identifier as the message ID to distinguish multiple occurrences of a violation within a method.  
   
- [!code-cpp[InSourceSuppression#1](../code-quality/codesnippet/CPP/in-source-suppression-overview_1.cpp)]
- [!code-vb[InSourceSuppression#1](../code-quality/codesnippet/VisualBasic/in-source-suppression-overview_1.vb)]
- [!code-cs[InSourceSuppression#1](../code-quality/codesnippet/CSharp/in-source-suppression-overview_1.cs)]  
+ [!code-cpp[InSourceSuppression#1](../code-quality/codesnippet/CPP/in-source-suppression-overview_1.cpp)] [!code-vb[InSourceSuppression#1](../code-quality/codesnippet/VisualBasic/in-source-suppression-overview_1.vb)] [!code-csharp[InSourceSuppression#1](../code-quality/codesnippet/CSharp/in-source-suppression-overview_1.cs)]  
   
-## Código gerado  
- Os compiladores de código gerenciado e algumas ferramentas de terceiros gerenciem o código para facilitar o desenvolvimento rápido de código.  o código gerado completo que aparecem nos arquivos de origem é marcado normalmente com o atributo de **GeneratedCodeAttribute** .  
+## <a name="generated-code"></a>Generated Code  
+ Managed code compilers and some third-party tools generate code to facilitate rapid code development. Compiler-generated code that appears in source files is usually marked with the **GeneratedCodeAttribute** attribute.  
   
- Você pode escolher se deseja suprimir avisos e erros de análise de código para o código gerado.  Para obter informações sobre como suprimir esses avisos e erros, consulte [Como suprimir avisos para código gerenciado](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md).  
+ You can choose whether to suppress Code Analysis warnings and errors for generated code. For information about how to suppress such warnings and errors, see [How to: Suppress Warnings for Generated Code](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md).  
   
- Observe que a análise de código ignora **GeneratedCodeAttribute** quando é aplicada a um assembly inteiro ou um único parâmetro.  Essas situações raramente ocorrem.  
+ Note that Code Analysis ignores **GeneratedCodeAttribute** when it is applied to either an entire assembly or a single parameter. These situations occur rarely.  
   
-## Exclusões de Global\- nível  
- A ferramenta análise de código gerenciado examina os atributos de **SuppressMessage** que são aplicados ao assembly, módulo, tipo, membro ou nível do parâmetro.  Também será acionado violações em recursos e namespaces.  Essas violações devem ser aplicadas no nível global e têm escopo e pretendido.  Por exemplo, a seguinte mensagem suprime uma violação de namespace:  
+## <a name="global-level-suppressions"></a>Global-Level Suppressions  
+ The managed code analysis tool examines **SuppressMessage** attributes that are applied at the assembly, module, type, member, or parameter level. It also fires violations against resources and namespaces. These violations must be applied at the global level and are scoped and targeted. For example, the following message suppresses a namespace violation:  
   
  `[module: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "MyNamespace")]`  
   
 > [!NOTE]
->  Quando você suprime um aviso com escopo do namespace, suprime o aviso no namespace próprio.  Não suprime o aviso em tipos no namespace.  
+>  When you suppress a warning with namespace scope, it suppresses the warning against the namespace itself. It does not suppress the warning against types within the namespace.  
   
- Qualquer exclusão pode ser expressada especificando um escopo explícito.  Essas exclusões devem viver no nível global.  Você não pode especificar a exclusão de membros de nível decorando um tipo.  
+ Any suppression can be expressed by specifying an explicit scope. These suppressions must live at the global level. You cannot specify member-level suppression by decorating a type.  
   
- Exclusões de Global\- nível é a única maneira de suprimir as mensagens que fazem referência ao código gerado completo que não é mapeado para a origem explicitamente fornecidas do usuário.  Por exemplo, o seguinte código suprime uma violação em um construtor completo emissor:  
+ Global-level suppressions are the only way to suppress messages that refer to compiler-generated code that does not map to explicitly provided user source. For example, the following code suppresses a violation against a compiler-emitted constructor:  
   
  `[module: SuppressMessage("Microsoft.Design", "CA1055:AbstractTypesDoNotHavePublicConstructors", Scope="member", Target="Microsoft.Tools.FxCop.Type..ctor()")]`  
   
 > [!NOTE]
->  O destino sempre contém o nome totalmente qualificada do item.  
+>  Target always contains the fully-qualified item name.  
   
-## Excluir Arquivo global  
- O arquivo global de exclusão mantém as exclusões que são exclusões de global\- nível ou exclusões que não especificam um destino.  Por exemplo, as exclusões para violações no nível de assembly são armazenadas no arquivo.  Além disso, algumas exclusões do ASP.NET são armazenadas no arquivo como as configurações de nível de projeto não estão disponíveis para o código atrás de um formulário.  Uma exclusão global é criada e adicionada a seu projeto na primeira vez que você seleciona a opção de **Na exclusão Arquivo de projeto** de comando de **Suprimir Mensagem** na janela da Lista de erros.  Para obter mais informações, consulte [Como suprimir avisos usando o item de menu](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md).  
+## <a name="global-suppression-file"></a>Global Suppression File  
+ The global suppression file maintains suppressions that are either global-level suppressions or suppressions that do not specify a target. For example, suppressions for assembly level violations are stored in this file. Additionally, some ASP.NET suppressions are stored in this file because project level settings are not available for code behind a form. A global suppression is created and added to your project the first time that you select the **In Project Suppression File** option of the **Suppress Message(s)** command in the Error List window. For more information, see [How to: Suppress Warnings by Using the Menu Item](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md).  
   
-## Consulte também  
+## <a name="see-also"></a>See Also  
  <xref:System.Diagnostics.CodeAnalysis>

@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_STRING | Documentos do Microsoft
+title: BP_LOCATION_CODE_STRING | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,41 +30,42 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7436d466d042f1b05ddde301acb90b1403f2c059
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 24c9215aee75d2a1bbc7e123aed4ce3838982cc0
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="bplocationcodestring"></a>BP_LOCATION_CODE_STRING
-Usada para definir pontos de interrupção do código com base em uma cadeia de caracteres que o usuário pode inserir do ambiente de desenvolvimento integrado (IDE).  
+Used for setting code breakpoints based on a string that the user can enter from the integrated development environment (IDE).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 typedef struct _BP_LOCATION_CODE_STRING {   
    BSTR bstrContext;  
    BSTR bstrCodeExpr;  
 } BP_LOCATION_CODE_STRING;  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
  `bstrContext`  
- O contexto do ponto de interrupção no código, geralmente um nome de função ou método como visto em uma pilha de chamadas.  
+ The context of the breakpoint within the code, typically a method or function name as seen on a call stack.  
   
  `bstrCodeExpr`  
- A cadeia de caracteres que o usuário digita para descrever o ponto de interrupção do código.  
+ The string that the user types in to describe the code breakpoint.  
   
-## <a name="remarks"></a>Comentários  
- Essa estrutura é membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
+## <a name="remarks"></a>Remarks  
+ This structure is a member of the [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) structure as part of a union.  
   
-## <a name="requirements"></a>Requisitos  
- Cabeçalho: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)
