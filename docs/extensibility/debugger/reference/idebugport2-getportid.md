@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::GetPortId | Microsoft Docs
+title: IDebugPort2::GetPortId | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,36 +30,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: f681e5a2b379909398599337bb684c792d0a2289
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: b95c593b0fcfc7869fdea0e5ac4de72f01c41539
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugport2getportid"></a>IDebugPort2::GetPortId
-Gets the port identifier.  
+Obtém o identificador de porta.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp#  
+```cpp  
 HRESULT GetPortId(   
    GUID* pguidPort  
 );  
 ```  
   
-```cs  
+```csharp  
 int GetPortId(   
    out Guid pguidPort  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pguidPort`  
- [out] Returns the GUID that identifies the port.  
+ [out] Retorna o GUID que identifica a porta.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)
