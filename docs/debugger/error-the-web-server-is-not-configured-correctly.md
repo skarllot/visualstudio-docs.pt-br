@@ -1,40 +1,56 @@
 ---
-title: "Erro: o servidor Web n&#227;o foi configurado corretamente | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.remote.projnotconfigured"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "depurador, erros de aplicativo Web"
+title: 'Error: The web server is not configured correctly | Microsoft Docs'
+ms.custom: 
+ms.date: 06/08/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.remote.projnotconfigured
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugger, Web application errors
 ms.assetid: 875ba87f-c372-4126-8fe3-e33931cf26c0
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Erro: o servidor Web n&#227;o foi configurado corretamente
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 1d4298d60886d8fe8b402b59b1838a4171532ab1
+ms.openlocfilehash: e98410b3b60f2f7259adf7de930ec32fb72fb376
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
 
-Possíveis causas do erro incluem:  
+---
+# <a name="error-the-web-server-is-not-configured-correctly"></a>Error: The web server is not configured correctly
+Possible causes of this error include:  
   
--   Tentando depurar um aplicativo da Web .NET que foi copiado para um computador diferente, renomeado manualmente ou movido.  
+-   Trying to debug a .NET Web application that was copied to a different machine, manually renamed, or moved.  
   
--   Não há conexões suficientes do IIS. Para obter mais informações sobre como implantar um site da web para o IIS, consulte [criar um Site](http://www.iis.net/learn/get-started/getting-started-with-iis/create-a-web-site).  
+-   Not having enough IIS connections. For more information about deploying a web site to IIS, see [IIS 8.0 Using ASP.NET 3.5 and ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) and, for ASP.NET Core, see [Host on Windows with IIS](https://docs.asp.net/en/latest/publishing/iis.html).  
   
--   Se você está tentando depurar um aplicativo ASP.NET, consulte [Publicar no IIS](https://docs.asp.net/en/latest/publishing/iis.html) para obter instruções sobre como implantar a um computador remoto executando o IIS 8 ou superior, ou [Depuração ASP.NET em um servidor remoto 7.5 remota do computador](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) para obter instruções sobre como implantar a um computador remoto executando o IIS 7.5.  
-  
-## Consulte também  
- [Depurando aplicativos Web: erros e solução de problemas](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+## <a name="see-also"></a>See Also  
+ [Remote Debugging ASP.NET on a Remote IIS Computer](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)   
+ [Debugging Web Applications: Errors and Troubleshooting](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
