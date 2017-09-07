@@ -19,4 +19,4 @@ ms.openlocfilehash: f13d060b089537109d021a166c29075e43d35ec8
 ms.contentlocale: pt-br
 
 ---
-Team Foundation Build
+Compilação do Team Foundation

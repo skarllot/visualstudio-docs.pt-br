@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8901f9fff01ecdfe21e3731df8b2d155fe250ac2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # IDebugCoreServer3::GetConnectionProtocol
-Returns a value indicating the protocol that is being used to communicate between the server and the debug package.  
+Retorna um valor que indica o protocolo que está sendo usado para comunicação entre o servidor e o pacote de depuração.  
   
-## Syntax  
+## Sintaxe  
   
 ```cpp  
 HRESULT GetConnectionProtocol(  
@@ -54,13 +54,13 @@ int GetConnectionProtocol(
 );  
 ```  
   
-#### Parameters  
+#### Parâmetros  
  `pProtocol`  
- [out] Returns one of the values from the [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) enumeration.  
+ [out] Retorna um dos valores a partir de [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) enumeração.  
   
-## Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retornará o código de erro.  
   
-## See Also  
+## Consulte também  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)

@@ -1,5 +1,5 @@
 ---
-title: SccQueryInfo Function | Microsoft Docs
+title: "Função SccQueryInfo | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 4efd9b29a89bc490255c35558e5862ebc14b7fec
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="sccqueryinfo-function"></a>SccQueryInfo Function
-This function obtains status information for a set of selected files under source control.  
+# <a name="sccqueryinfo-function"></a>Função SccQueryInfo
+Esta função obtém as informações de status para um conjunto de arquivos selecionados no controle de origem.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 SCCRTN SccQueryInfo(  
@@ -51,44 +51,44 @@ SCCRTN SccQueryInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  pvContext  
- [in] The source control plug-in context structure.  
+ [in] A estrutura de contexto de plug-in de controle de origem.  
   
  nFiles  
- [in] Number of files specified in the `lpFileNames` array and the length of the `lpStatus` array.  
+ [in] Número de arquivos especificados no `lpFileNames` matriz e o comprimento do `lpStatus` matriz.  
   
  lpFileNames  
- [in] An array of names of files to be queried.  
+ [in] Uma matriz de nomes de arquivos a ser consultado.  
   
  lpStatus  
- [in, out] An array in which the source control plug-in returns the status flags for each file. For more information, see [File Status Code](../extensibility/file-status-code-enumerator.md).  
+ [out no] Uma matriz na qual o plug-in de controle de origem retorna os sinalizadores de status para cada arquivo. Para obter mais informações, consulte [código de Status do arquivo](../extensibility/file-status-code-enumerator.md).  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## <a name="return-value"></a>Valor de retorno  
+ A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
   
-|Value|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|SCC_OK|Query was successful.|  
-|SCC_E_ACCESSFAILURE|There was a problem with accessing the source control system, probably caused by network or contention issues. A retry is recommended.|  
-|SCC_E_PROJNOTOPEN|The project is not open under source control.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
+|SCC_OK|Consulta foi bem-sucedida.|  
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente causado por problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
+|SCC_E_PROJNOTOPEN|O projeto não está aberto no controle de origem.|  
+|SCC_E_NONSPECIFICERROR|Falha não específica.|  
   
-## <a name="remarks"></a>Remarks  
- If `lpFileName` is an empty string, there is currently no status information to update. Otherwise, it is the full path name of the file for which the status information may have changed.  
+## <a name="remarks"></a>Comentários  
+ Se `lpFileName` é uma cadeia de caracteres vazia, atualmente, não há nenhuma informação de status para atualizar. Caso contrário, é o nome de caminho completo do arquivo para o qual as informações de status podem ter sido alterado.  
   
- The return array can be a bitmask of `SCC_STATUS_xxxx` bits. For more information, see [File Status Code](../extensibility/file-status-code-enumerator.md). A source control system may not support all bit types. For example, if `SCC_STATUS_OUTOFDATE` is not offered, the bit is just not set.  
+ A matriz de retorno pode ser um bitmask de `SCC_STATUS_xxxx` bits. Para obter mais informações, consulte [código de Status do arquivo](../extensibility/file-status-code-enumerator.md). Um sistema de controle do código-fonte não pode oferecer suporte a todos os tipos de bit. Por exemplo, se `SCC_STATUS_OUTOFDATE` não é oferecido, o bit não está definido.  
   
- When using this function to check out files, note the following `MSSCCI` status requirements:  
+ Ao usar essa função para check-out de arquivos, observe o seguinte `MSSCCI` requisitos de status:  
   
--   `SCC_STATUS_OUTBYUSER` is set when the current user has checked out the file.  
+-   `SCC_STATUS_OUTBYUSER`é definido quando o usuário atual fez check-out do arquivo.  
   
--   `SCC_STATUS_CHECKEDOUT` cannot be set unless `SCC_STATUS_OUTBYUSER` is set.  
+-   `SCC_STATUS_CHECKEDOUT`não é possível definir a menos que `SCC_STATUS_OUTBYUSER` está definido.  
   
--   `SCC_STATUS_CHECKEDOUT` is only set when the file is checked-out into the designated working directory.  
+-   `SCC_STATUS_CHECKEDOUT`só é definido quando o arquivo é extraído no diretório de trabalho designado.  
   
--   If the file is checked-out by the current user into a directory other than the working directory, `SCC_STATUS_OUTBYUSER` is set but `SCC_STATUS_CHECKEDOUT` is not.  
+-   Se o arquivo está com check-out pelo usuário atual em um diretório que não seja o diretório de trabalho, `SCC_STATUS_OUTBYUSER` está definida, mas `SCC_STATUS_CHECKEDOUT` não é.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
- [File Status Code](../extensibility/file-status-code-enumerator.md)
+## <a name="see-also"></a>Consulte também  
+ [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
+ [Código de Status do arquivo](../extensibility/file-status-code-enumerator.md)

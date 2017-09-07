@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3aa9ad51de0f929083457eed86d69cf23f99d10d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugarrayobject2getbaseindices"></a>IDebugArrayObject2::GetBaseIndices
-Retrieves the base indices (lower bounds) for each index given the number of dimensions in the array.  
+Recupera o índice de base (limites inferiores) para cada índice dado o número de dimensões da matriz.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetBaseIndices (  
@@ -55,18 +55,18 @@ int GetBaseIndices (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `dwRank`  
- [in] The number of dimensions (rank) of the array.  
+ [in] O número de dimensões (classificação) da matriz.  
   
  `dwIndices`  
- [out] The base indices (lower bounds) for the array.  
+ [out] Os índices base (limite inferior) para a matriz.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- As an example, this function would return '5' for the array created by the following C# code:  
+## <a name="remarks"></a>Comentários  
+ Por exemplo, essa função retornará 5 para a matriz criada por meio de código c# a seguir:  
   
 ```  
 int[] lengths = { 12 };  
@@ -74,5 +74,5 @@ int[] lowerbounds = { 5 };
 Array.CreateInstance(typeof(int), lengths, lowerbounds);  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugArrayObject2](../../../extensibility/debugger/reference/idebugarrayobject2.md)

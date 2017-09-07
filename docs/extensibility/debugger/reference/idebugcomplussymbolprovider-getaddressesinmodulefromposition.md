@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8f7e77903d98943b1f1d0d5b879656c67b1ac223
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovidergetaddressesinmodulefromposition"></a>IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
-Maps a document position in the specified module to an array of debug addresses.  
+Mapeia uma posição de documento no módulo especificado para uma matriz de endereços de depuração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 [C++]  
@@ -65,30 +65,30 @@ int GetAddressesInModuleFromPosition(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ulAppDomainID`  
- [in] Application domain identifier.  
+ [in] Identificador de domínio de aplicativo.  
   
  `guidModule`  
- [in] Unique identifier of the module.  
+ [in] Identificador exclusivo do módulo.  
   
  `pDocPos`  
- [in] The document position.  
+ [in] A posição do documento.  
   
  `fStatmentOnly`  
- [in] If `TRUE`, limits the debug addresses to a single statement.  
+ [in] Se `TRUE`, limita os endereços de depuração para uma única instrução.  
   
  `ppEnumBegAddresses`  
- [out] Returns an enumerator for the starting debug addresses that are associated with this statement or line.  
+ [out] Retorna um enumerador para os endereços iniciais de depuração que estão associados com esta declaração ou linha.  
   
  `ppEnumEndAddresses`  
- [out] Returns an enumerator for the ending debug addresses that are associated with this statement or line.  
+ [out] Retorna um enumerador para os endereços de depuração final que estão associados com esta declaração ou linha.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetAddressesInModuleFromPosition(  
@@ -239,5 +239,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

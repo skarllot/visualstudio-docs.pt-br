@@ -1,5 +1,5 @@
 ---
-title: Localizing Menu Commands | Microsoft Docs
+title: Localizando os comandos de Menu | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,32 +37,32 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 13910907c6041884cc0a1414fd0bfd82757a7639
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="localizing-menu-commands"></a>Localizing Menu Commands
-You can provide localized text for menu and toolbar commands by creating localized .vsct files and localized .resx files for your VSPackage, and then updating the project files to incorporate the changes.  
+# <a name="localizing-menu-commands"></a>Localizando os comandos de Menu
+Você pode fornecer o texto localizado para o menu e barra de ferramentas comandos por meio da criação de arquivos. VSCT localizada e localizados os arquivos. resx para seu VSPackage e, em seguida, atualizar os arquivos de projeto incorporar as alterações.  
   
- For information about how to localize the installation experience, see [Localizing VSIX Packages](../extensibility/localizing-vsix-packages.md).  
+ Para obter informações sobre como localizar a experiência de instalação, consulte [Localizando VSIX pacotes](../extensibility/localizing-vsix-packages.md).  
   
-## <a name="localizing-command-names"></a>Localizing Command Names  
- In VSPackages, menu commands and toolbar buttons are defined in the .vsct file.  
+## <a name="localizing-command-names"></a>Localizando os nomes de comando  
+ VSPackages, comandos de menu e botões de barra de ferramentas são definidas no arquivo. VSCT.  
   
-1.  In **Solution Explorer**, change the name of the .vsct file from *filename*.vsct to *filename*.en-US.vsct.  
+1.  Em **Solution Explorer**, altere o nome do arquivo. VSCT do *filename*. VSCT para *filename*.en US.vsct.  
   
-2.  Make a copy of *filename*.en-US.vsct for each localized language.  
+2.  Faça uma cópia do *filename*.en-US.vsct para cada idioma de localizado.  
   
-     Name each copy *filename*.*Locale*.vsct, where *Locale* is a particular culture name. For a list of culture name values, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/en-us/library/windows/apps/jj657969.aspx).  
+     Nome de cada cópia *filename*. *Localidade*. VSCT, onde *localidade* é um nome de cultura específica. Para obter uma lista de valores de nome de cultura, consulte [IDs de localidade atribuídas pela Microsoft](https://msdn.microsoft.com/en-us/library/windows/apps/jj657969.aspx).  
   
-     These *filename*.*Locale*.vsct files will contain the localized menu text for your package.  
+     Essas *filename*. *Localidade*arquivos. VSCT conterá o texto do menu localizada para o seu pacote.  
   
-3.  Open each *filename*.*Locale*.vsct file to localize the text.  
+3.  Abrir cada *filename*. *Localidade*arquivo. VSCT para localizar o texto.  
   
-    1.  Modify the [ButtonText](../extensibility/buttontext-element.md) element values as appropriate for the particular language.  
+    1.  Modificar o [ButtonText](../extensibility/buttontext-element.md) elemento valores conforme apropriado para o idioma específico.  
   
-    2.  If you will provide localized icons, modify the [Bitmap](../extensibility/bitmap-element.md) values to point to the target files.  
+    2.  Se você fornecerá ícones localizadas, modifique o [Bitmap](../extensibility/bitmap-element.md) valores para apontar para os arquivos de destino.  
   
-     The following example shows English and Spanish button text for a command to open a Family Tree Explorer tool window.  
+     O exemplo a seguir mostra o texto do botão espanhol e inglês de um comando Abrir uma janela de ferramenta do Gerenciador de árvore de família.  
   
      [FamilyTree.en-US.vsct]  
   
@@ -91,24 +91,24 @@ You can provide localized text for menu and toolbar commands by creating localiz
   
     ```  
   
-## <a name="localizing-other-text-resources"></a>Localizing Other Text Resources  
- Text resources other than command names are defined in resource (.resx) files.  
+## <a name="localizing-other-text-resources"></a>Localizando outros recursos de texto  
+ Recursos de texto diferentes nomes de comando são definidos em arquivos de recurso (. resx).  
   
-1.  Rename VSPackage.resx to VSPackage.en-US.resx.  
+1.  Renomeie VSPackage.resx para VSPackage.en-us.  
   
-2.  Make a copy of the VSPackage.en-US.resx file for each localized language.  
+2.  Faça uma cópia do arquivo VSPackage.en-US para cada idioma localizado.  
   
-     Name each copy VSPackage.*Locale*.resx, where *Locale* is a particular culture name.  
+     Nome de cada cópia VSPackage. *Localidade*. resx, onde *localidade* é um nome de cultura específica.  
   
-3.  Rename Resources.resx to Resources.en-US.resx.  
+3.  Renomear resx para Resources.en-us.  
   
-4.  Make a copy of the Resources.en-US.resx file for each localized language.  
+4.  Faça uma cópia do arquivo Resources.en-US para cada idioma localizado.  
   
-     Name each copy Resources.*Locale*.resx, where *Locale* is a particular culture name.  
+     Nome de cada cópia de recursos. *Localidade*. resx, onde *localidade* é um nome de cultura específica.  
   
-5.  Open each .resx file to modify the string values as appropriate for the particular language and culture. The following example shows the localized resource definition for the title bar of a tool window.  
+5.  Abra cada arquivo. resx para modificar os valores de cadeia de caracteres de acordo com o idioma específico e a cultura. O exemplo a seguir mostra a definição de recurso localizado para a barra de título de uma janela de ferramenta.  
   
-     [Resources.en-US.resx]  
+     [Resources.en-US]  
   
     ```xml  
     <data name="ToolWindowTitle" xml:space="preserve">  
@@ -125,26 +125,26 @@ You can provide localized text for menu and toolbar commands by creating localiz
   
     ```  
   
-## <a name="incorporating-localized-resources-into-the-project"></a>Incorporating Localized Resources into the Project  
- You must modify the assemblyinfo.cs file and the project file to incorporate the localized resources.  
+## <a name="incorporating-localized-resources-into-the-project"></a>A incorporação de recursos localizados no projeto  
+ Você deve modificar o arquivo assemblyinfo.cs e o arquivo de projeto para incorporar os recursos localizados.  
   
-1.  From the **Properties** node in **Solution Explorer**, open assemblyinfo.cs or assemblyinfo.vb in the editor.  
+1.  Do **propriedades** nó **Solution Explorer**, abra assemblyinfo.cs ou AssemblyInfo. vb no editor.  
   
-2.  Add the following entry.  
+2.  Adicione a seguinte entrada.  
   
     ```csharp  
     [assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]  
     ```  
   
-     This sets US English as the default language.  
+     Isso define o inglês (EUA) como o idioma padrão.  
   
-3.  Unload the project.  
+3.  Descarregue o projeto.  
   
-4.  Open the project file in the editor.  
+4.  Abra o arquivo de projeto no editor.  
   
-5.  Locate the `ItemGroup` element that contains `EmbeddedResource` elements.  
+5.  Localize o `ItemGroup` elemento que contém `EmbeddedResource` elementos.  
   
-6.  In the `EmbeddedResource` element that calls VSPackage.en-US.resx, replace the `ManifestResourceName` element with a `LogicalName` element, set to `VSPackage.en-US.Resources`, as follows.  
+6.  No `EmbeddedResource` elemento que chama VSPackage.en-US, substitua o `ManifestResourceName` elemento com um `LogicalName` elemento, definido como `VSPackage.en-US.Resources`, da seguinte maneira.  
   
     ```xml  
     <EmbeddedResource Include="VSPackage.en-US.resx">  
@@ -153,9 +153,9 @@ You can provide localized text for menu and toolbar commands by creating localiz
     </EmbeddedResource>  
     ```  
   
-7.  For each localized language, copy the  `EmbeddedResource` element for VsPackage.en-US, and set the **Include** attribute and **LogicalName** element of the copy to the target locale, as shown in the following example.  
+7.  Para cada idioma localizado, copie o `EmbeddedResource` elemento para VsPackage.en-US e defina o **incluir** atributo e **LogicalName** elemento da cópia para a localidade de destino, conforme mostrado no exemplo a seguir exemplo.  
   
-8.  To each localized `VSCTCompile` element, add a `ResourceName` element that points to `Menus.ctmenu`, as shown in the following example.  
+8.  Para cada um localizado `VSCTCompile` elemento, adicionar um `ResourceName` elemento que aponta para `Menus.ctmenu`, conforme mostrado no exemplo a seguir.  
   
     ```xml  
     <ItemGroup>  
@@ -165,13 +165,13 @@ You can provide localized text for menu and toolbar commands by creating localiz
     </ItemGroup>  
     ```  
   
-9. Save the project file and reload the project.  
+9. Salve o arquivo de projeto e recarregar o projeto.  
   
-10. Build the project.  
+10. Compile o projeto.  
   
-     This creates a main assembly, and resource assemblies for each language. For information on localizing the deployment process, see [Localizing VSIX Packages](../extensibility/localizing-vsix-packages.md)  
+     Isso cria um assembly principal e assemblies de recurso para cada idioma. Para obter informações sobre como localizar o processo de implantação, consulte [Localizando VSIX pacotes](../extensibility/localizing-vsix-packages.md)  
   
-## <a name="see-also"></a>See Also  
- [Extending Menus and Commands](../extensibility/extending-menus-and-commands.md)   
+## <a name="see-also"></a>Consulte também  
+ [Comandos e Menus estendendo](../extensibility/extending-menus-and-commands.md)   
  [MenuCommands Vs. OleMenuCommands](../extensibility/menucommands-vs-olemenucommands.md)   
- [Globalizing and Localizing Applications](../ide/globalizing-and-localizing-applications.md)
+ [Globalizando e localizando aplicativos](../ide/globalizing-and-localizing-applications.md)

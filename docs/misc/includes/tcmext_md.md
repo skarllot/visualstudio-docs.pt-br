@@ -15,8 +15,8 @@ translation.priority.ht:
 - zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f13d060b089537109d021a166c29075e43d35ec8
+ms.openlocfilehash: 249c2de091056b0278cc1c8ea54044f6b693e664
 ms.contentlocale: pt-br
 
 ---
-Compilação do Team Foundation
+Microsoft Test Manager

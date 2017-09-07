@@ -1,5 +1,5 @@
 ---
-title: 'Quick Start: Test Driven Development with Test Explorer | Microsoft Docs'
+title: "Início Rápido: desenvolvimento orientado por testes com Gerenciador de Testes | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,73 +31,73 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: af65c4f502cd36d00b031784dcda275abec3630a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="quick-start-test-driven-development-with-test-explorer"></a>Quick Start: Test Driven Development with Test Explorer
-We recommend that you create unit tests to help keep your code working correctly through many incremental steps of development. There are several frameworks that you can use to write unit tests, including some developed by third parties. Some test frameworks are   specialized to testing in different languages or platforms. Test Explorer provides a single interface for unit tests in any of these frameworks. Adapters are available for the most commonly-used frameworks, and you can write your own adapters for other frameworks.  
+# <a name="quick-start-test-driven-development-with-test-explorer"></a>Início rápido: desenvolvimento orientado por testes com o Gerenciador de Testes
+É recomendável que você crie testes de unidade para ajudar a manter seu código funcionando corretamente muitas etapas incrementais de desenvolvimento. Há várias estruturas que você pode usar para escrever testes de unidade, incluindo alguns desenvolvidos por terceiros. Algumas estruturas de teste são especializadas para testes em diferentes idiomas ou plataformas. O Gerenciador de Testes fornece uma interface única para testes de unidade em qualquer uma dessas estruturas. Adaptadores estão disponíveis para as estruturas comumente usadas e você pode escrever seus próprios adaptadores para outras estruturas.  
   
- Test Explorer supersedes the unit test windows found in earlier editions of Visual Studio. Its benefits include:  
+ O Gerenciador de Testes substitui as janelas de teste de unidade encontradas em edições anteriores do Visual Studio. Suas vantagens incluem:  
   
--   Run .NET, unmanaged, database and other kinds of tests using a single interface.  
+-   Executar o .NET, não gerenciado, o banco de dados e outros tipos de testes usando uma única interface.  
   
--   Use the unit test framework of your choice, such as NUnit or MSTest frameworks.  
+-   Use a estrutura de teste de unidade de sua escolha, como NUnit ou MSTest estruturas.  
   
--   See in one window all the information that you need.  
+-   Consulte todas as informações que você precisa em uma janela.  
   
-## <a name="using-test-explorer"></a>Using Test Explorer  
- ![Unit Test Explorer showing Run All button](../test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
+## <a name="using-test-explorer"></a>Usando o Gerenciador de Testes  
+ ![Gerenciador de Testes de unidade mostrando o Botão Executar Todos](../test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
   
-#### <a name="to-run-unit-tests-by-using-test-explorer"></a>To Run Unit Tests by using Test Explorer  
+#### <a name="to-run-unit-tests-by-using-test-explorer"></a>Para executar testes de unidade usando o Gerenciador de Testes  
   
-1.  Create unit tests that use the test frameworks of your choice.  
+1.  Crie testes de unidade que usam as estruturas de teste de sua escolha.  
   
-     For example, to create a test that uses the MSTest Framework:  
+     Por exemplo, para criar um teste que usa a estrutura MSTest:  
   
-    1.  Create a test project.  
+    1.  Criar um projeto de teste.  
   
-         In the **New Project** dialog box, expand **Visual Basic**, **Visual C#**, or **Visual C++**, and then choose **Test**.  
+         Na caixa de diálogo **Novo Projeto**, expanda **Visual Basic**, **Visual C#** ou **Visual C++** e escolha **Teste**.  
   
-         Select **Unit Test Project**.  
+         Selecione **Projeto de teste de unidade**.  
   
-    2.  Write each unit test as a method. Prefix each test method with the `[TestMethod]` attribute.  
+    2.  Grave cada teste de unidade como um método. Prefixe cada método de teste com o atributo `[TestMethod]`.  
   
-2.  If individual tests have no dependencies that prevent them from being run in any order, turn on parallel test execution with the ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") toggle button on the toolbar. This can noticeably reduce the time taken to run all the tests.  
+2.  Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o botão de alternância ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.  
   
-3.  On the menu bar, choose **Test**, **Run Unit Tests**, **All Tests**.  
+3.  Na barra de menus, escolha **Teste**, **Executar testes de unidade**, **Todos os testes**.  
   
-     The solution builds and the tests run.  
+     A solução é criada e os testes são executados.  
   
-     Test Explorer opens and displays a summary of the results.  
+     O Gerenciador de Testes abre e exibe um resumo dos resultados.  
   
- **To see a full list of tests:** Choose **Show All** in any category.  
+ **Para ver uma lista completa de testes,** escolha **Mostrar Tudo** em qualquer categoria.  
   
- **To see the details of a test result:** Select the test in Test Explorer to view details such as exception messages in the details pane.  
+ **Para ver os detalhes de um resultado do teste:** selecione o teste no Gerenciador de Testes para exibir detalhes como mensagens de exceção no painel de detalhes.  
   
- **To navigate to the code of a test:** Double-click the test in Test Explorer, or choose **Open Test** on the shortcut menu.  
+ **Para navegar para o código de um teste,** clique duas vezes no teste no Gerenciador de Testes ou escolha **Abrir Teste** no menu de atalho.  
   
- **To debug a test:** Open the shortcut menu for one or more tests, and then choose **Debug Selected Tests**.  
+ **Para depurar um teste,** abra o menu de atalho para um ou mais testes e escolha **Depurar Testes Selecionados**.  
   
 > [!IMPORTANT]
->  The results that are displayed are for the most recent run. The colored results bar shows only the results for the tests that ran. For example, if you run several tests and some of them fail, and then run only the successful tests, then the results bar will show all green.  
+>  Os resultados que são exibidos são para as execuções mais recentes. A barra colorida de resultados mostra somente os resultados dos testes que foram executados. Por exemplo, se você executar vários testes e alguns deles falharem e executar apenas os testes com sucesso, a barra de resultados mostrará todos na cor verde.  
   
 > [!NOTE]
->  If no test appears, make sure that you have installed an adapter to connect Test Explorer to the test framework that you are using. For more information, see [Using Different Test Frameworks with Test Explorer](#frameworks).  
+>  Se nenhum teste for exibido, certifique-se de que você tenha instalado um adaptador para conectar o Gerenciador de Testes a estruturas de teste que você está usando. Para obter mais informações, consulte [Usando diferentes estruturas de teste com o Gerenciador de Testes](#frameworks).  
   
-##  <a name="walkthrough"></a> Walkthrough: Using Unit Tests to Develop a Method  
- This walkthrough demonstrates how to develop a tested method in C# using the Microsoft Unit Test framework. You can easily adapt it for other languages, and to use other test frameworks such as NUnit. For more information, see [Using Different Test Frameworks](#frameworks).  
+##  <a name="walkthrough"></a> Passo a passo: Usando testes de unidade para desenvolver um método  
+ Este passo a passo demonstra como desenvolver um método testado em C# usando a estrutura de teste de unidade da Microsoft. Você pode adaptá-lo facilmente para outros idiomas e usar outras estruturas de teste como NUnit. Para obter mais informações, consulte [Usando diferentes estruturas de teste](#frameworks).  
   
-#### <a name="creating-the-test-and-method"></a>Creating the Test and Method  
+#### <a name="creating-the-test-and-method"></a>Criando o teste e o método  
   
-1.  Create a Visual C# Class Library project. This project will contain the code that we want to deliver. In this example, it is named `MyMath`.  
+1.  Crie um projeto de biblioteca de classes do Visual C#. Esse projeto conterá o código que queremos fornecer. Neste exemplo, o nome usado é `MyMath`.  
   
-2.  Create a Test project.  
+2.  Criar um projeto de teste.  
   
-    -   In the **New Project** dialog, choose **Visual C#**, **Test** and then choose **Unit Test Project**.  
+    -   Na caixa de diálogo **Novo Projeto**, escolha **Visual C#**, **Teste** e escolha **Projeto de Teste de Unidade**.  
   
-         ![New code and test projects](../test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")  
+         ![Novos projetos de código e teste](../test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")  
   
-3.  Write a basic test method. Verify the result obtained for a specific input:  
+3.  Escreva um método de teste básico. Verifique o resultado obtido para uma entrada específica:  
   
     ```csharp  
   
@@ -117,37 +117,37 @@ We recommend that you create unit tests to help keep your code working correctly
     }  
     ```  
   
-4.  Generate the method from the test.  
+4.  Gere o método do teste.  
   
-    1.  Place the cursor on `Rooter`, and then on the shortcut menu choose **Generate**, **New Type**.  
+    1.  Coloque o cursor em `Rooter`, em seguida, no menu de atalho, escolha **Gerar**, **Novo Tipo**.  
   
-    2.  In the **Generate New Type** dialog box, set **Project** to the class library project. In this example, it is `MyMath`.  
+    2.  Na caixa de diálogo **Gerar Novo Tipo**, defina **Projeto** para o projeto de biblioteca de classes. Neste exemplo, é `MyMath`.  
   
-    3.  Place the cursor on `SquareRoot`, and then on the shortcut menu choose **Generate**, **Method Stub**.  
+    3.  Coloque o cursor em `SquareRoot`, em seguida, no menu de atalho, escolha **Gerar**, **Stub do método**.  
   
-5.  Run the unit test.  
+5.  Execute o teste de unidade.  
   
-    1.  On the **Test** menu, choose **Run Unit Tests**, **All Tests**.  
+    1.  No menu **Teste**, escolha **Executar Testes de Unidade**, **Todos os Testes**.  
   
-         The solution builds and runs.  
+         A solução é criada e executada.  
   
-         Test Explorer opens and displays the results.  
+         O Gerenciador de Testes abre e exibe os resultados.  
   
-         The test appears under **Failed Tests**.  
+         Se um teste aparecer sob **Testes com Falha**.  
   
-6.  Select the name of the test.  
+6.  Selecione o nome do teste.  
   
-     The details of the test appear in the lower part of Test Explorer.  
+     Os detalhes do teste são exibidos na parte inferior do Gerenciador de Testes.  
   
-7.  Select the items under **Stack Trace** to see where the test failed.  
+7.  Selecione os itens em **Rastreamento de pilha** para ver onde o teste falhou.  
   
- ![Unit Test Explorer showing failed test.](../test/media/unittestexplorerwalkthrough2.png "UnitTestExplorerWalkthrough2")  
+ ![Gerenciador de Testes de unidade mostrando teste com falha.](../test/media/unittestexplorerwalkthrough2.png "UnitTestExplorerWalkthrough2")  
   
- At this point, you have created a test and a stub that you will modify so that the test passes.  
+ Neste ponto, você criou um teste e um stub que você modificará para que o teste seja aprovado.  
   
-#### <a name="after-every-change-make-all-the-tests-pass"></a>After every change, make all the tests pass  
+#### <a name="after-every-change-make-all-the-tests-pass"></a>Após cada alteração, faça todos os testes serem aprovados  
   
-1.  In `MyMath\Rooter.cs`, improve the code of `SquareRoot`:  
+1.  Em `MyMath\Rooter.cs`, aprimore o código de `SquareRoot`:  
   
     ```csharp  
     public double SquareRoot(double input)  
@@ -156,22 +156,22 @@ We recommend that you create unit tests to help keep your code working correctly
      }  
     ```  
   
-2.  In Test Explorer, choose **Run All**.  
+2.  No Gerenciador de Testes, escolha **Executar Todos**.  
   
-     The code builds and the test runs.  
+     Compila o código e o teste é executado.  
   
-     The test passes.  
+     O teste é aprovado.  
   
-     ![Unit Test Explorer showing a passing test.](../test/media/unittestexplorerwalkthrough3.png "UnitTestExplorerWalkthrough3")  
+     ![Gerenciador de Testes de unidade mostrando teste com aprovação.](../test/media/unittestexplorerwalkthrough3.png "UnitTestExplorerWalkthrough3")  
   
-#### <a name="add-tests-to-extend-the-range-of-inputs"></a>Add tests to extend the range of inputs  
+#### <a name="add-tests-to-extend-the-range-of-inputs"></a>Adicionar testes para estender o intervalo de entradas  
   
-1.  To improve your confidence that your code works in all cases, add tests that try a broader range of input values.  
+1.  Para aumentar sua confiança que seu código funciona em todos os casos, adicione os testes que tente uma variedade maior de valores de entrada.  
   
     > [!TIP]
-    >  Avoid altering existing tests that pass. Instead, add new tests. Change existing tests only when the user requirements change. This policy helps ensure that you don't lose existing functionality as you work to extend the code.  
+    >  Evite alterar testes existentes que foram aprovados. Em vez disso, adicione novos testes. Altere os testes existentes somente quando os requisitos de usuário forem alterados. Essa política ajuda a garantir que você não perca a funcionalidade existente enquanto trabalha para estender o código.  
   
-     In your test class, add the following test, which tries a range of input values:  
+     Na classe de teste, adicione o seguinte teste, que tenta um intervalo de valores de entrada:  
   
     ```csharp  
     [TestMethod]  
@@ -197,13 +197,13 @@ We recommend that you create unit tests to help keep your code working correctly
     }  
     ```  
   
-2.  In Test Explorer, choose **Run All**.  
+2.  No Gerenciador de Testes, escolha **Executar Todos**.  
   
-     The new test fails, although the first test still passes.  
+     O novo teste falha, embora o primeiro teste ainda seja aprovado.  
   
-     To find the point of failure, select the failing test and then in the lower part of Test Explorer, select the top item of the **Stack Trace**.  
+     Para localizar o ponto de falha, selecione o teste com falha e, em seguida, na parte inferior do Gerenciador de Testes, selecione o item superior do **Rastreamento de pilha**.  
   
-3.  Inspect the method under test to see what might be wrong. In the `MyMath.Rooter` class, rewrite the code:  
+3.  Inspecione o método sob teste para ver o que pode estar errado. Na classe `MyMath.Rooter`, reescreva o código:  
   
     ```  
     public double SquareRoot(double input)  
@@ -219,13 +219,13 @@ We recommend that you create unit tests to help keep your code working correctly
     }  
     ```  
   
-4.  In Test Explorer, choose **Run All**.  
+4.  No Gerenciador de Testes, escolha **Executar Todos**.  
   
-     Both tests now pass.  
+     Ambos os testes agora foram aprovados.  
   
-#### <a name="add-tests-for-exceptional-cases"></a>Add tests for exceptional cases  
+#### <a name="add-tests-for-exceptional-cases"></a>Adicionar testes para casos excepcionais  
   
-1.  Add a test for negative inputs:  
+1.  Adicione um teste para entradas negativas:  
   
     ```csharp  
     [TestMethod]  
@@ -244,15 +244,15 @@ We recommend that you create unit tests to help keep your code working correctly
      }  
     ```  
   
-2.  In Test Explorer, choose **Run All**.  
+2.  No Gerenciador de Testes, escolha **Executar Todos**.  
   
-     The method under test loops, and must be canceled manually.  
+     O método sob teste é executado em loop e deve ser cancelado manualmente.  
   
-3.  Choose **Cancel**.  
+3.  Escolha **Cancelar**.  
   
-     The test stops after 10 seconds.  
+     O teste para após 10 segundos.  
   
-4.  Fix the method code:  
+4.  Corrija o código do método:  
   
     ```csharp  
   
@@ -265,18 +265,18 @@ We recommend that you create unit tests to help keep your code working correctly
     ...  
     ```  
   
-5.  In Test Explorer, choose **Run All**.  
+5.  No Gerenciador de Testes, escolha **Executar Todos**.  
   
-     All the tests pass.  
+     Dessa vez os testes são aprovados.  
   
-#### <a name="refactor-without-changing-tests"></a>Refactor without changing tests  
+#### <a name="refactor-without-changing-tests"></a>Faça refatoração sem alterar os testes  
   
-1.  Simplify the code, but do not change the tests.  
+1.  Simplifique o código, mas não altere os testes.  
   
     > [!TIP]
-    >  A *refactoring* is a change that is intended to make the code perform better or to make the code easier to understand. It is not intended to alter the behavior of the code, and therefore the tests are not changed.  
+    >  Uma *refatoração* é uma alteração que é destinada para fazer o código funcionar melhor ou para tornar o código mais fácil de entender. Não deve alterar o comportamento do código e, portanto, os testes não são alterados.  
     >   
-    >  We recommend that you perform refactoring steps separately from steps that extend functionality. Keeping the tests unchanged gives you confidence that you have not accidentally introduced bugs while refactoring.  
+    >  É recomendável que você execute etapas de refatoração separadamente das etapas que estendem a funcionalidade. Manter os testes inalterados proporciona confiança que você não acidentalmente introduziu bugs durante a refatoração.  
   
     ```csharp  
     public class Rooter  
@@ -300,9 +300,9 @@ We recommend that you create unit tests to help keep your code working correctly
     }  
     ```  
   
-2.  Choose **Run All**.  
+2.  Escolha **Executar Todos**.  
   
-     All the tests still pass.  
+     Todos os testes ainda são aprovados.  
   
-     ![Unit Test Explorer showing 3 passed tests.](../test/media/unittestexplorerwalkthrough4.png "UnitTestExplorerWalkthrough4")
+     ![Gerenciador de Testes de unidade mostrando 3 testes com aprovação.](../test/media/unittestexplorerwalkthrough4.png "UnitTestExplorerWalkthrough4")
 

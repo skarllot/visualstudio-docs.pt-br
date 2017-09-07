@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPorts2::GetCount | Documentos do Microsoft
+title: IEnumDebugPorts2::GetCount | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,11 +30,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 75d372f14c0fbb673084135170d24c40526c2e5b
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5ef13141c17a5ce7be6c982f392243c213ed18c6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ienumdebugports2getcount"></a>IEnumDebugPorts2::GetCount
@@ -59,10 +59,10 @@ int GetCount(
  [out] Retorna o número de elementos na enumeração.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método não é parte da interface comum de enumeração COM que especifica que somente o `Next`, `Clone`, `Skip`, e `Reset` métodos precisam ser implementados.  
+ Este método não é parte da interface habitual de enumeração COM que especifica que somente o `Next`, `Clone`, `Skip`, e `Reset` métodos precisam ser implementado.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)

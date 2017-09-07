@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 22447cd6eadf1e4c094815112218bbd64877e9a3
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="constructorenum"></a>CONSTRUCTOR_ENUM
-Selects different types of constructors.  
+Seleciona os diferentes tipos de construtores.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 typedef enum ConstructorMatchOptions {   
@@ -58,26 +58,26 @@ public enum ConstructorMatchOptions {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  crAll  
- Selects all constructors.  
+ Seleciona todos os construtores.  
   
  crNonStatic  
- Selects non-static constructors.  
+ Seleciona os construtores não estático.  
   
  crStatic  
- Selects static constructors.  
+ Seleciona os construtores estáticos.  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) method.  
+## <a name="remarks"></a>Comentários  
+ Passado como um argumento para o [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) método.  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)

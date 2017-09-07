@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 6508286e277eb72dd9f0cb0810146dccd8ec59ee
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugprogram2candetach"></a>IDebugProgram2::CanDetach
-Determines if a debug engine (DE) can detach from the program.  
+Determina se um mecanismo de depuração (DE) poderá desanexar do programa.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT CanDetach(  
@@ -52,8 +52,8 @@ HRESULT CanDetach(
 int CanDetach();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If can detach, returns `S_OK`; otherwise, returns an error code. Returns `S_FALSE` if the DE cannot detach from the program.  
+## <a name="return-value"></a>Valor de retorno  
+ Se desanexar retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `S_FALSE` se a DE não é possível desanexar do programa.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

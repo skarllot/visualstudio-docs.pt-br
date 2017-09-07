@@ -35,13 +35,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 190d4dab907e1c0934cb91f7fef6f87989569cad
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugmessageevent2getmessage"></a>IDebugMessageEvent2::GetMessage
-Gets the message to be displayed.  
+Obtém a mensagem a ser exibida.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetMessage(   
@@ -63,26 +63,26 @@ int GetMessage(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pMessageType`  
- [out] Returns a value from the [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) enumeration that describes the type of the message.  
+ [out] Retorna um valor da [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) enumeração que descreve o tipo da mensagem.  
   
  `pbstrMessage`  
- [out] Returns the message.  
+ [out] Retorna a mensagem.  
   
  `pdwType`  
- [out] Returns the type of the message, using the conventions of the Win32 `MessageBox` function. See the [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8) function for details.  
+ [out] Retorna o tipo da mensagem, usando as convenções do Win32 `MessageBox` função. Consulte o [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8) função para obter detalhes.  
   
  `pbstrHelpFileName`  
- [in, out] Returns the help file name. May be a null (C++) or empty (C#) value if there is no help file.  
+ [out no] Retorna o nome do arquivo de Ajuda. Pode ser um valor vazio (c#) ou o nulo (C++), se não houver nenhum arquivo de Ajuda.  
   
  `pdwHelpId`  
- [in, out] Returns the help identifier. May be 0 if there is no help associated with this message.  
+ [out no] Retorna o identificador da Ajuda. Pode ser 0 se não houver nenhuma ajuda associada com esta mensagem.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)   
  [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)   
  [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8)

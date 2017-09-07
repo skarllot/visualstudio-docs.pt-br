@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 97bf05023ab5e97ae845ff6d62f873719e997e43
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugobject2createalias"></a>IDebugObject2::CreateAlias
-Creates a unique ID or alias for this object or returns an existing alias.  
+Cria uma ID exclusiva ou um alias para esse objeto ou retorna um alias existente.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT CreateAlias(  
@@ -54,16 +54,16 @@ int CreateAlias(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppAlias`  
- [out] The new (or existing) alias.  
+ [out] O alias do novo (ou existente).  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- An alias is a label that represents a particular object while the object is in memory.  
+## <a name="remarks"></a>Comentários  
+ Um alias é um rótulo que representa um objeto específico, enquanto o objeto está na memória.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

@@ -1,5 +1,5 @@
 ---
-title: Validating Breakpoints in a Legacy Language Service | Microsoft Docs
+title: "Validar os pontos de interrupção em um serviço de linguagem herdado | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,28 +33,28 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2a87c22948e710a3b95ee7f79b31626794dc7708
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="validating-breakpoints-in-a-legacy-language-service"></a>Validating Breakpoints in a Legacy Language Service
-A breakpoint indicates that program execution should stop at a particular point while it is being run in a debugger. A user can place a breakpoint on any line in the source file, since the editor has no knowledge of what constitutes a valid location for a breakpoint. When the debugger is launched, all of the marked breakpoints (called pending breakpoints) are bound to the appropriate location in the running program. At the same time the breakpoints are validated to ensure that they mark valid code  locations. For example, a breakpoint on a comment is not valid, because there is no code at that location in the source code. The debugger disables invalid breakpoints.  
+# <a name="validating-breakpoints-in-a-legacy-language-service"></a>Validar os pontos de interrupção em um serviço de linguagem herdado
+Um ponto de interrupção indica que a execução do programa deve parar em um momento específico, enquanto ele está sendo executado em um depurador. Um usuário pode colocar um ponto de interrupção em qualquer linha no arquivo de origem, desde que o editor não tem conhecimento sobre o que constitui um local válido para um ponto de interrupção. Quando o depurador é iniciado, todos os pontos de interrupção marcados (chamados pendentes pontos de interrupção) são vinculados para o local apropriado no programa em execução. Ao mesmo tempo em que os pontos de interrupção são validados para garantir que eles marcam os locais de código válido. Por exemplo, um ponto de interrupção em um comentário não é válido, porque não há nenhum código no local no código-fonte. O depurador desabilita os pontos de interrupção inválidos.  
   
- Since the language service knows about the source code being displayed, it can validate breakpoints before the debugger is launched. You can override the <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method to return a span specifying a valid location for a breakpoint. The breakpoint location is still validated when the debugger is launched, but the user is notified of invalid breakpoints without waiting for the debugger to load.  
+ Desde que o serviço de linguagem sabe sobre o código-fonte que está sendo exibido, poderá validar os pontos de interrupção antes do depurador é iniciado. Você pode substituir o <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> método para retornar um alcance especificando um local válido para um ponto de interrupção. O local do ponto de interrupção ainda será validado quando o depurador é iniciado, mas o usuário será notificado de pontos de interrupção inválida sem esperar que o depurador carregar.  
   
-## <a name="implementing-support-for-validating-breakpoints"></a>Implementing Support for Validating Breakpoints  
+## <a name="implementing-support-for-validating-breakpoints"></a>Implementando o suporte para validação de pontos de interrupção  
   
--   The <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method is given the position of the breakpoint. Your implementation must decide whether or not the location is valid, and indicate this by returning a text span that identifies the code associated with the line position the breakpoint.  
+-   O <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> método é dada a posição do ponto de interrupção. Sua implementação deve decidir se ou não o local é válido e indicar isso retornando um intervalo de texto que identifica o código associado com a posição da linha no ponto de interrupção.  
   
--   Return <xref:Microsoft.VisualStudio.VSConstants.S_OK> if the location is valid, or <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> if it is not valid.  
+-   Retornar <xref:Microsoft.VisualStudio.VSConstants.S_OK> se o local é válido, ou <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> se ele não é válido.  
   
--   If the breakpoint is valid the text span is highlighted along with the breakpoint.  
+-   Se o ponto de interrupção é válido do trecho de texto será realçado junto com o ponto de interrupção.  
   
--   If the breakpoint is invalid, an error message appears in the status bar.  
+-   Se o ponto de interrupção for inválido, uma mensagem de erro é exibida na barra de status.  
   
-### <a name="example"></a>Example  
- This example shows an implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method that calls the parser to obtain the span of code (if any) at the specified location.  
+### <a name="example"></a>Exemplo  
+ Este exemplo mostra uma implementação de <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> método que chama o analisador para obter o trecho de código (se houver) no local especificado.  
   
- This example assumes that you have added a `GetCodeSpan` method to the <xref:Microsoft.VisualStudio.Package.AuthoringSink> class that validates the text span and returns `true` if it is a valid breakpoint location.  
+ Este exemplo presume que você tenha adicionado um `GetCodeSpan` método para o <xref:Microsoft.VisualStudio.Package.AuthoringSink> classe que valida o trecho de texto e retorna `true` se ele é um local de ponto de interrupção válido.  
   
 ```csharp  
 using Microsoft VisualStudio;  
@@ -116,5 +116,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)
+## <a name="see-also"></a>Consulte também  
+ [Recursos de serviço de linguagem herdada](../../extensibility/internals/legacy-language-service-features1.md)
