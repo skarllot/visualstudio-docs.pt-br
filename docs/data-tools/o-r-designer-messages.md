@@ -1,30 +1,48 @@
 ---
-title: "O/R Designer Messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: O-R Designer Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 42178ae8-be6c-4df6-9b7a-cdac24d71dd2
 caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
+ms.openlocfilehash: bf4ba5fbd5b8183a5b5155ca49b33fabe21e8446
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
-# O/R Designer Messages
-Este tópico lista as mensagens que você pode encontrar quando você trabalha com object relational Designer de Objetos.  
+# <a name="or-designer-messages"></a>O/R Designer Messages
+This topic lists the messages that you can encounter when you work with the O/R Designer.  
   
-## Nesta seção  
- [Cannot create an association \<association name\> \- property listed twice](../Topic/Cannot%20create%20an%20association%20%3Cassociation%20name%3E%20-%20property%20listed%20twice.md)  
+## <a name="in-this-section"></a>In This Section  
+ [Cannot create an association \<association name> - property listed twice](../data-tools/cannot-create-an-association-association-name-property-listed-twice.md)  
   
- [Cannot create an association \<association name\> \- property types do not match](../data-tools/cannot-create-an-association-association-name-property-types-do-not-match.md)  
+ [Cannot create an association \<association name> - property types do not match](../data-tools/cannot-create-an-association-association-name-property-types-do-not-match.md)  
   
  [Changing the return type of a DataContext method cannot be undone](../data-tools/changing-the-return-type-of-a-datacontext-method-cannot-be-undone.md)  
   
- [Could not retrieve schema information for database object \<object name\>](../data-tools/could-not-retrieve-schema-information-for-database-object-object-name.md)  
+ [Could not retrieve schema information for database object \<object name>](../data-tools/could-not-retrieve-schema-information-for-database-object-object-name.md)  
   
  [One or more selected database objects return a schema that does not match the schema of the target class](../data-tools/one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class.md)  
   
@@ -36,9 +54,9 @@ Este tópico lista as mensagens que você pode encontrar quando você trabalha c
   
  [The objects you are adding to the designer use a different data connection than the designer is currently using](../data-tools/the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer-is-currently-using.md)  
   
- [The property \<property name\> cannot be deleted](../data-tools/the-property-property-name-cannot-be-deleted.md)  
+ [The property \<property name> cannot be deleted](../data-tools/the-property-property-name-cannot-be-deleted.md)  
   
- [The property \<property name\> cannot be deleted because it is participating in the association \<association name\>](../data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md)  
+ [The property \<property name> cannot be deleted because it is participating in the association \<association name>](../data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md)  
   
  [The selected class cannot be deleted because it is used as a return type for one or more DataContext methods](../data-tools/the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods.md)  
   
@@ -50,10 +68,10 @@ Este tópico lista as mensagens que você pode encontrar quando você trabalha c
   
  [You have selected a database object from an unsupported database provider](../data-tools/you-have-selected-a-database-object-from-an-unsupported-database-provider.md)  
   
-## Referência  
+## <a name="reference"></a>Reference  
  <xref:System.Data.Linq>  
   
-## Seções relacionadas  
- [LINQ to SQL Tools no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)  
+## <a name="related-sections"></a>Related Sections  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)  
   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)

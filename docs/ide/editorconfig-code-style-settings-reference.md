@@ -1,5 +1,5 @@
 ---
-title: .NET Coding Convention Settings For EditorConfig | Microsoft Docs
+title: "Configurações de Conversão de Codificação .NET para o EditorConfig | Microsoft Docs"
 ms.custom: 
 ms.date: 12/14/2016
 ms.reviewer: 
@@ -34,639 +34,639 @@ ms.translationtype: HT
 ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
 ms.openlocfilehash: ced437215b48c76e6df99699b4c6f9c916452d14
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
-# <a name="net-coding-convention-settings-for-editorconfig"></a>.NET Coding Convention Settings For EditorConfig
-.NET coding conventions are configured using an [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options) file. EditorConfig files allow you to **enable/disable individual .NET coding conventions** and **configure the degree at which you want the convention enforced** (via a severity level). To learn more about how to use EditorConfig to enforce consistency on your codebase, read [this article](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options).
+# <a name="net-coding-convention-settings-for-editorconfig"></a>Configurações de Conversão de Codificação .NET para o EditorConfig
+As convenções de codificação .NET são configuradas usando um arquivo [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options). Os arquivos EditorConfig permitem **habilitar/desabilitar conversões de codificação .NET individuais** e **configurar o grau de imposição da conversão** (por meio de um nível de gravidade). Para saber mais sobre como usar o EditorConfig para impor a consistência em sua base de código, leia [este artigo](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options).
 
-There are three supported .NET coding convention categories:
-- **[Language Conventions](#language)** are rules pertaining to the C# or Visual Basic language, for example, `var`/explicit type, use expression-bodied member.
-- **[Formatting Rules](#formatting)** are rules regarding the layout and structure of your code in order to make it easier to read, for example, Allman braces, spaces in control blocks.
-- **[Naming Conventions](#naming)** are rules respecting the way objects are named, for example, `async` methods must end in "Async". 
+Há três categorias de convenção de codificação .NET com suporte:
+- As **[Convenções de Linguagem](#language)** são regras referentes à linguagem C# ou Visual Basic, por exemplo, `var`/tipo explícito, usam um membro de expressão incorporada.
+- As **[Regras de Formatação](#formatting)** são regras referentes ao layout e estrutura do seu código para facilitar a leitura, por exemplo, chaves (Allman), espaços nos blocos de controle.
+- As **[Convenções de Nomenclatura](#naming)** são regras que respeitam a forma como os objetos são nomeados, por exemplo, os métodos `async` devem terminar com "Async". 
 
-# <a name="language"> Language Conventions </a>
-## <a name="overview"></a>Overview
-**Rule Format:**
+# <a name="language">Convenções de Linguagem</a>
+## <a name="overview"></a>Visão Geral
+**Formatação de Regra:**
 `options_name = false|true : none|suggestion|warning|error`
 
-For code style option, you must specify **true** (prefer this option) or **false** (do not prefer this option), a colon (`:`), and a severity (`none`, `silent`, `suggestion`, `warning`, or `error`). Severity means the level of enforcement for that style you want in your code base.
+Para a opção de estilo de código, é necessário especificar **true** (prefira essa opção) ou **false** (não prefira essa opção), dois-pontos (`:`) e uma gravidade (`none`, `silent`, `suggestion`, `warning` ou `error`). Gravidade significa que o nível de imposição desse estilo que você deseja em sua base de código.
 
-`none` and `silent` are synonymous and mean that no indication of any kind should be shown to the user. This has the effect of disabling this rule.
+`none` e `silent` são sinônimos e significam que nenhuma indicação de nenhum tipo deve ser mostrada para o usuário. Isso tem o efeito de desabilitar essa regra.
 
-Severity | effect
+Severidade | efeito
 ------------ | -------------
-none/silent | Do not show anything to the user when this style is not being followed, however code generation features generate in this style. 
-suggestion | When this style is not being followed, show it to the user as a suggestion (underlying dots on the first two characters).
-warning | When this style is not being followed, show a compiler warning.
-error | When this style is not being followed, show a compiler error.
+nenhum/silencioso | Não mostre nada ao usuário quando esse estilo não estiver sendo seguido. No entanto, os recursos de geração de código serão gerados nesse estilo. 
+sugestão | Quando esse estilo não estiver sendo seguido, mostre-o para o usuário como uma sugestão (pontos subjacentes nos dois primeiros caracteres).
+aviso | Quando esse estilo não estiver sendo seguido, mostre um aviso do compilador.
+erro | Quando esse estilo não estiver sendo seguido, mostre um erro do compilador.
 
-## <a name="net-language-convention-options"></a>.NET Language Convention Options
+## <a name="net-language-convention-options"></a>Opções de Convenção de Linguagem .NET
 
-- **[.NET Code Style Settings](#this_and_me)**
-    - ["This." and "Me." Qualification](#this_and_me)
-        - [Fields](#this_and_me_fields)
-        - [Properties](#this_and_me_properties)
-        - [Methods](#this_and_me_methods)
-        - [Events](#this_and_me_events)
-    - [Language keywords (int, string, etc.) vs framework type names for type references](#language_keywords)
-        - [Locals, parameters, and members](#language_keywords_variables)
-        - [Member access expressions](#language_keywords_member_access)
-    - [Expression-level Preferences](#expression_level)
-        - [Object initializers](#expression_level_object_initializers)
-        - [Collection initializers](#expression_level_collection_initializers)
-        - [Explicit tuple names](#expression_level_tuple_names)
-        - [Coalescing expressions in "null" checking](#expression_level_null_checking)
-        - [Null propagation in "null" checking](#expression_level_null_propogation)
-- **[CSharp Code Style Settings](#csharp_codestyle)**
+- **[Configurações de Estilo de Código .NET](#this_and_me)**
+    - ["This." e "Me." Qualificação](#this_and_me)
+        - [Campos](#this_and_me_fields)
+        - [Propriedades](#this_and_me_properties)
+        - [Métodos](#this_and_me_methods)
+        - [Eventos](#this_and_me_events)
+    - [Palavras-chave de linguagens (int, string, etc.) vs nomes de tipos de estrutura para referências de tipo](#language_keywords)
+        - [Locais, parâmetros e membros](#language_keywords_variables)
+        - [Expressões de acesso de membro](#language_keywords_member_access)
+    - [Preferências de nível de expressão](#expression_level)
+        - [Inicializadores de objeto](#expression_level_object_initializers)
+        - [Inicializadores de coleção](#expression_level_collection_initializers)
+        - [Nomes de tupla explícita](#expression_level_tuple_names)
+        - [Unindo expressões em verificação "null"](#expression_level_null_checking)
+        - [Propagação nula na verificação "null"](#expression_level_null_propogation)
+- **[Configurações de Estilo de Código CSharp](#csharp_codestyle)**
     - ["var"](#var)
-        - ["var" for built-in types](#var_built_in)
-        - ["var" when type is apparent](#var_apparent)
-        - ["var" elsewhere](#var_elsewhere)
-    - [Expression-bodied members](#expression_body)
-        - [Methods](#expression_bodied_members_methods)
-        - [Constructors](#expression_bodied_members_constructors)
-        - [Operators](#expression_bodied_members_operators)
-        - [Properties](#expression_bodied_members_properties)
-        - [Indexers](#expression_bodied_members_indexers)
-        - [Accessors](#expression_bodied_members_accessors)
-    - [Pattern matching](#pattern_matching)
-        - ["is" with "cast" checking](#pattern_matching_is_cast)
-        - ["as" with "null" checking](#pattern_matching_as_null)
-    - [Inlined variable declarations](#inlined_variable_declarations)
-    - [Expression-level Preferences](#expression_level_csharp) -[Simplify `default` expressions](#expression_level_default)
-    - ["Null" Checking Preferences](#null_checking)
-        - [Throw-expressions](#null_checking_throw_expressions)
-        - [Conditional delegate calls](#null_checking_conditional_delegate_calls)
-    - [Code Block Preferences](#code_block)
-        - [Prefer braces](#prefer_braces)
+        - ["var" para tipos internos](#var_built_in)
+        - ["var" quando o tipo é aparente](#var_apparent)
+        - ["var" em qualquer lugar](#var_elsewhere)
+    - [Membros de expressão incorporada](#expression_body)
+        - [Métodos](#expression_bodied_members_methods)
+        - [Construtores](#expression_bodied_members_constructors)
+        - [Operadores](#expression_bodied_members_operators)
+        - [Propriedades](#expression_bodied_members_properties)
+        - [Indexadores](#expression_bodied_members_indexers)
+        - [Acessadores](#expression_bodied_members_accessors)
+    - [Correspondência de padrões](#pattern_matching)
+        - [verificação "is" com "cast"](#pattern_matching_is_cast)
+        - [Verificação "as" com "null"](#pattern_matching_as_null)
+    - [Declarações de variável embutida](#inlined_variable_declarations)
+    - [Preferências de Nível de Expressão](#expression_level_csharp) -[Simplificar expressões `default`](#expression_level_default)
+    - [Preferências da verificação "null"](#null_checking)
+        - [Expressões throw](#null_checking_throw_expressions)
+        - [Chamadas de delegados condicionais](#null_checking_conditional_delegate_calls)
+    - [Preferências de Bloqueio de Código](#code_block)
+        - [Preferir chaves](#prefer_braces)
 
-## <a name="this_and_me">"This." and "Me." Qualification</a>
-### <a name="this_and_me_fields">Fields (IDE0003/IDE0009)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="this_and_me">"This." e "Me." Qualificação</a>
+### <a name="this_and_me_fields">Campos (IDE0003/IDE0009)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|  `dotnet_style_qualification_for_field` | C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|  `dotnet_style_qualification_for_field` | C# e Visual Basic | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer all non-static fields used in non-static methods to be prefaced with `this.` in C# or `Me.` in Visual Basic. | **C#:** <br>`this.capacity = 0;` <br><br> **Visual Basic:** <br> `Me.capacity = 0`
-| False | Prefer all non-static fields used in non-static methods to not be prefaced with `this.` in C# or `Me.` in Visual Basic. | **C#:** <br>`capacity = 0;` <br><br> **Visual Basic:** <br>`capacity = 0`
+| verdadeiro | Preferir que todos os campos não estáticos usados em métodos não estáticos sejam antecedidos por `this.` em C# ou `Me.` no Visual Basic. | **C#:** <br>`this.capacity = 0;` <br><br> **Visual Basic:** <br> `Me.capacity = 0`
+| False | Preferir que todos os campos não estáticos usados em métodos não estáticos não sejam antecedidos por `this.` em C# ou `Me.` no Visual Basic. | **C#:** <br>`capacity = 0;` <br><br> **Visual Basic:** <br>`capacity = 0`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_field = false:suggestion
 ```
 
-### <a name="this_and_me_properties">Properties (IDE0003/IDE0009) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="this_and_me_properties">Propriedades (IDE0003/IDE0009) </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_qualification_for_property`| C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|`dotnet_style_qualification_for_property`| C# e Visual Basic | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer the all non-static properties used in non-static methods to be prefaced with `this.` in C# or `Me.` in Visual Basic.| **C#:** <br>`this.ID = 0;` <br><br> **Visual Basic:** <br>`Me.ID = 0`
-| False | Prefer all non-static properties used in non-static methods to *not* be prefaced with `this.` in C# or `Me.` in Visual Basic. | **C#:** <br>`ID = 0;` <br><br> **Visual Basic:** <br> `ID = 0`
+| verdadeiro | Preferir que todas as propriedades não estáticas usadas em métodos não estáticos sejam antecedidas por `this.` em C# ou `Me.` no Visual Basic.| **C#:** <br>`this.ID = 0;` <br><br> **Visual Basic:** <br>`Me.ID = 0`
+| False | Preferir que todas as propriedades não estáticas usadas em métodos não estáticos *não* sejam antecedidas por `this.` em C# ou `Me.` no Visual Basic. | **C#:** <br>`ID = 0;` <br><br> **Visual Basic:** <br> `ID = 0`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_property = false:suggestion
 ```
 
-### <a name="this_and_me_methods">Methods (IDE0003/IDE0009) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="this_and_me_methods">Métodos (IDE0003/IDE0009) </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_qualification_for_method`| C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|`dotnet_style_qualification_for_method`| C# e Visual Basic | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer all non-static methods called from within non-static methods to be prefaced with `this.` in C# and `Me.` in VB.| **C#:** <br>`this.Display();` <br><br> **Visual Basic:** <br> `Me.Display()`
-| False | Prefer all non-static methods called from within non-static methods to *not* be prefaced with `this.`in C# and `Me.` in VB. | **C#:** <br>`Display();` <br><br> **Visual Basic:** <br> `Display()`
+| verdadeiro | Prefira que todos os métodos não estáticos chamados de dentro de métodos não estáticos sejam antecedidos por `this.` em C# e `Me.` no VB.| **C#:** <br>`this.Display();` <br><br> **Visual Basic:** <br> `Me.Display()`
+| False | Prefira que todos os métodos não estáticos chamados de dentro de métodos não estáticos *não* sejam antecedidos por `this.` em C# e `Me.` no VB. | **C#:** <br>`Display();` <br><br> **Visual Basic:** <br> `Display()`
 
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_method = false:suggestion
 ```
 
-### <a name="this_and_me_events">Events (IDE0003/IDE0009) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="this_and_me_events">Eventos (IDE0003/IDE0009) </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_qualification_for_event`| C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|`dotnet_style_qualification_for_event`| C# e Visual Basic | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer all non-static events referenced from within non-static methods to be prefaced with `this.` in C# and `Me.` in VB.| **C#:** <br>`this.Elapsed += Handler;` <br><br> **Visual Basic:** <br> `AddHandler Me.Elapsed, AddressOf Handler`
-| False | Prefer all non-static events referenced from within non-static methods to *not* be prefaced with `this.`in C# and `Me.` in VB. | **C#:** <br>`Elapsed += Handler;` <br><br> **Visual Basic:** <br>`AddHandler Elapsed, AddressOf Handler`
+| verdadeiro | Prefira que todos os eventos não estáticos referenciados de dentro de métodos não estáticos sejam antecedidos por `this.` em C# e `Me.` no VB.| **C#:** <br>`this.Elapsed += Handler;` <br><br> **Visual Basic:** <br> `AddHandler Me.Elapsed, AddressOf Handler`
+| False | Prefira que todos os eventos não estáticos referenciados de dentro de métodos não estáticos *não* sejam antecedidos por `this.` em C# e `Me.` no VB. | **C#:** <br>`Elapsed += Handler;` <br><br> **Visual Basic:** <br>`AddHandler Elapsed, AddressOf Handler`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_event = false:suggestion
 ```
 
-## <a name="language_keywords">Language keywords (int, string, etc.) vs framework type names for type references </a>
-### <a name="language_keywords_variables"> Locals, parameters, and members (IDE0012/IDE0014)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="language_keywords">Palavras-chave de linguagens (int, string, etc.) vs nomes de tipos de estrutura para referências de tipo </a>
+### <a name="language_keywords_variables"> Locais, parâmetros e membros (IDE0012/IDE0014)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_predefined_type_for_locals_parameters_members`| C# and Visual Basic | true:none | Visual Studio 2017 RTW |
+|`dotnet_style_predefined_type_for_locals_parameters_members`| C# e Visual Basic | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | For locals, parameters and type members, prefer types that have a language keyword to represent them (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`) to use the keyword instead of the type name (`Int32`, `Int64`, etc.).| **C#:** <br>`private int _member;` <br><br> **Visual Basic:** `Private _member As Integer`
-| False | For locals, parameters and type members, prefer types that have a language keyword to represent them (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`) to use the type name (`Int32`, `Int64`, etc.) instead of the keyword.  | **C#:** <br>`private Int32 _member;` <br><br> **Visual Basic:** <br> `Private _member As Int32`
+| verdadeiro | Para membros locais, de parâmetros e de tipo, prefira tipos que têm uma palavra-chave de linguagem para representá-los (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`) para usar a palavra-chave a usar o nome do tipo (`Int32`, `Int64`, etc.).| **C#:** <br>`private int _member;` <br><br> **Visual Basic:** `Private _member As Integer`
+| False | Para membros locais, de parâmetros e de tipo, prefira tipos que têm uma palavra-chave de linguagem para representá-los (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`) para usar o nome do tipo a usar a palavra-chave (`Int32`, `Int64`, etc.).  | **C#:** <br>`private Int32 _member;` <br><br> **Visual Basic:** <br> `Private _member As Int32`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 ``` 
 
-### <a name="language_keywords_member_access">Member access expressions (IDE0013/IDE0015)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="language_keywords_member_access">Expressões de acesso de membro (IDE0013/IDE0015)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_predefined_type_for_member_access`| C# and Visual Basic | true:none | Visual Studio 2017 RTW |
+|`dotnet_style_predefined_type_for_member_access`| C# e Visual Basic | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer the keyword whenever a member-access expression is used on a type with a keyword representation (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`).| **C#:** <br>`var local = int.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Integer.MaxValue`
-| False | Prefer the type name whenever a member access expression is used on a type with a keyword representation (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`). | **C#:** <br>`var local = Int32.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Int32.MaxValue`
+| verdadeiro | Prefira a palavra-chave sempre que uma expressão de acesso de membro for usada em um tipo com uma representação de palavra-chave (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`).| **C#:** <br>`var local = int.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Integer.MaxValue`
+| False | Prefira o nome do tipo sempre que uma expressão de acesso de membro for usada em um tipo com uma representação de palavra-chave (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`). | **C#:** <br>`var local = Int32.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Int32.MaxValue`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_predefined_type_for_member_access = true:suggestion
 ``` 
 
-## <a name="expression_level">Expression-level Preferences</a>
-### <a name="expression_level_object_initializers">Object initializers (IDE0017)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="expression_level">Preferências de nível de expressão</a>
+### <a name="expression_level_object_initializers">Inicializadores de objeto (IDE0017)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_object_initializer`| C# and Visual Basic | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_object_initializer`| C# e Visual Basic | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer objects to be initialized using object initializers when possible.| **C#:** <br>`var c = new Customer(){ Age = 21 };` <br><br> **Visual Basic:** <br> `Dim c = New Customer() With { .Age = 21 }`
-| False | Prefer objects to *not* be initialized using object initializers. | **C#:** <br>`var c = new Customer();`<br>`c.Age = 21;` <br><br> **Visual Basic:** <br>`Dim c = new Customer() `<br>`c.Age = 21`
+| verdadeiro | Prefira que objetos sejam inicializados usando inicializadores de objeto quando possível.| **C#:** <br>`var c = new Customer(){ Age = 21 };` <br><br> **Visual Basic:** <br> `Dim c = New Customer() With { .Age = 21 }`
+| False | Prefira que objetos *não* sejam inicializados usando inicializadores de objeto. | **C#:** <br>`var c = new Customer();`<br>`c.Age = 21;` <br><br> **Visual Basic:** <br>`Dim c = new Customer() `<br>`c.Age = 21`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_object_initializer = true:suggestion
 ``` 
 
-### <a name="expression_level_collection_initializers">Collection initializers (IDE0028)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_collection_initializers">Inicializadores de coleção (IDE0028)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_collection_initializer`| C# and Visual Basic | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_collection_initializer`| C# e Visual Basic | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer collections to be initialized using collection initializers when possible.| **C#:** <br>`var list = new List<int>{ 1, 2, 3 };` <br><br> **Visual Basic:** <br> `Dim list = new List(Of Integer) From { 1, 2, 3}`
-| False | Prefer objects to *not* be initialized using collection initializers. | **C#:** <br>`var list = new List<int>();`<br>`list.Add(1);`<br>`list.Add(2);`<br>`list.Add(3);` <br><br> **Visual Basic:** <br>`Dim list = new List(Of Integer)`<br>`list.Add(1)`<br>`list.Add(2)`<br>`list.Add(3)`
+| verdadeiro | Prefira que coleções sejam inicializadas usando inicializadores de coleção quando possível.| **C#:** <br>`var list = new List<int>{ 1, 2, 3 };` <br><br> **Visual Basic:** <br> `Dim list = new List(Of Integer) From { 1, 2, 3}`
+| False | Prefira que objetos *não* sejam inicializados usando inicializadores de coleção. | **C#:** <br>`var list = new List<int>();`<br>`list.Add(1);`<br>`list.Add(2);`<br>`list.Add(3);` <br><br> **Visual Basic:** <br>`Dim list = new List(Of Integer)`<br>`list.Add(1)`<br>`list.Add(2)`<br>`list.Add(3)`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_collection_initializer = true:suggestion
 ```
 
-### <a name="expression_level_tuple_names">Explicit tuple names (IDE0033)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_tuple_names">Nomes de tupla explícita (IDE0033)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_explicit_tuple_names`| C# 7.0+ and Visual Basic 15+ | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_explicit_tuple_names`| C# 7.0+ e Visual Basic 15+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer tuple names to ItemX properties.| **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.name;` <br><br> **Visual Basic:** <br> `Dim customer As (name As String, age As Integer) = GetCustomer()`<br>`Dim name = customer.name`
-| False | Prefer ItemX properties to tuple names. | **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.Item1;` <br><br> **Visual Basic:** <br>`Dim customer As (name As String, age As Integer) = GetCustomer()`<br> `Dim name = customer.Item1`
+| verdadeiro | Prefira nomes de tupla a propriedades ItemX.| **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.name;` <br><br> **Visual Basic:** <br> `Dim customer As (name As String, age As Integer) = GetCustomer()`<br>`Dim name = customer.name`
+| False | Prefira propriedades ItemX a nomes de tupla. | **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.Item1;` <br><br> **Visual Basic:** <br>`Dim customer As (name As String, age As Integer) = GetCustomer()`<br> `Dim name = customer.Item1`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_explicit_tuple_names = true:suggestion
 ``` 
 
-### <a name="expression_level_null_checking">Coalescing expressions in "null" checking (IDE0029)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_null_checking">Unindo expressões em verificação "null" (IDE0029)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_coalesce_expression`| C# and Visual Basic | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_coalesce_expression`| C# e Visual Basic | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer null coalescing expression to ternary operator checking.| **C#:** <br>`var v = x ?? y;` <br><br> **Visual Basic:** <br> `Dim v = If(x, y)`
-| False | Prefer ternary operator checking to null coalescing expression. | **C#:** <br>`var v = x != null ? x : y; // or`<br>`var v = x == null ? y : x;` <br><br> **Visual Basic:** <br>`Dim v = If(x Is Nothing, y, x) ' or`<br> `Dim v = If(x IsNot Nothing, x, y)`
+| verdadeiro | Prefira expressão de união nula a verificação do operador ternário.| **C#:** <br>`var v = x ?? y;` <br><br> **Visual Basic:** <br> `Dim v = If(x, y)`
+| False | Prefira verificação do operador ternário a expressão de união nula. | **C#:** <br>`var v = x != null ? x : y; // or`<br>`var v = x == null ? y : x;` <br><br> **Visual Basic:** <br>`Dim v = If(x Is Nothing, y, x) ' or`<br> `Dim v = If(x IsNot Nothing, x, y)`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_coalesce_expression = true:suggestion
 ``` 
 
-### <a name="expression_level_null_propogation">Null propagation in "null" checking (IDE0031)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_null_propogation">Propagação nula na verificação "null" (IDE0031)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_null_propagation`| C# 6.0+ and Visual Basic 14+ | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_null_propagation`| C# 6.0+ e Visual Basic 14+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer to use null-conditional operator where possible.| **C#:** <br>`var v = o?.ToString();` <br><br> **Visual Basic:** <br> `Dim v = o?.ToString()`
-| False | Prefer to use ternary null checking where possible. | **C#:** <br>`var v = o == null ? null : o.ToString(); // or`<br>`var v = o != null ? o.String() : null;` <br><br> **Visual Basic:** <br>`Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or`<br> `Dim v = If(o IsNot Nothing, o.ToString(), Nothing)`
+| verdadeiro | Prefira usar o operador condicional nulo sempre que possível.| **C#:** <br>`var v = o?.ToString();` <br><br> **Visual Basic:** <br> `Dim v = o?.ToString()`
+| False | Prefira usar verificação nula ternária quando possível. | **C#:** <br>`var v = o == null ? null : o.ToString(); // or`<br>`var v = o != null ? o.String() : null;` <br><br> **Visual Basic:** <br>`Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or`<br> `Dim v = If(o IsNot Nothing, o.ToString(), Nothing)`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_null_propagation = true:suggestion
 ``` 
 
-# <a name="csharp_codestyle">CSharp Code Style Settings</a>
-## <a name="var">"var" and Explicit Types</a>
-### <a name="var_built_in">"var" for built-in types (IDE0007, IDE0008)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+# <a name="csharp_codestyle">Configurações de estilo de código CSharp</a>
+## <a name="var">"var" e Tipos Explícitos</a>
+### <a name="var_built_in">"var" para tipos internos (IDE0007, IDE0008)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_var_for_built_in_types`| C# | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer `var` is used for built-in system types such as `int`.| **C#:** <br>`var x = 5;`
-| False | Prefer `var` not be used for built-in system types such as `int`. | **C#:** <br>`int x = 5;`
+| verdadeiro | Prefira que `var` seja usado para tipos de sistemas internos, como `int`.| **C#:** <br>`var x = 5;`
+| False | Prefira que `var` não seja usado para tipos de sistemas internos, como `int`. | **C#:** <br>`int x = 5;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_var_for_built_in_types = true:suggestion
 ``` 
 
-### <a name="var_apparent">"var" when type is apparent (IDE0007, IDE0008)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="var_apparent">"var" quando o tipo é aparente (IDE0007, IDE0008)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_var_when_type_is_apparent`| C# | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer `var` when the type is already mentioned on the right-hand side of a declaration expression.| **C#:** <br>`var obj = new C();`
-| False | Prefer to not use `var` when the type is already mentioned on the right-hand side of a declaration expression. | **C#:** <br>`C obj = new C();`
+| verdadeiro | Prefira `var` quando o tipo já tiver sido mencionado no lado direito de uma expressão de declaração.| **C#:** <br>`var obj = new C();`
+| False | Prefira não usar `var` quando o tipo já tiver sido mencionado no lado direito de uma expressão de declaração. | **C#:** <br>`C obj = new C();`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_var_when_type_is_apparent = true:suggestion
 ``` 
 
-### <a name="var_elsewhere">"var" elsewhere (IDE0007, IDE0008) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="var_elsewhere">"var" em outro lugar (IDE0007, IDE0008) </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_var_elsewhere`| C# | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer `var` in all cases unless overridden by another code style rule.| **C#:** <br>`var f = this.Init();`
-| False | Prefer to not use var in all cases unless overridden by another code style rule.| **C#:** <br>`bool f = this.Init();`
+| verdadeiro | Prefira `var` em todos os casos, exceto se substituído por outra regra de estilo de código.| **C#:** <br>`var f = this.Init();`
+| False | Prefira não usar var em todos os casos, exceto se substituído por outra regra de estilo de código.| **C#:** <br>`bool f = this.Init();`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_var_elsewhere = true:suggestion
 ``` 
 
-##<a name="expression_bodied_members">Expression-bodied Members</a>
-### <a name="expression_bodied_members_methods">Methods (IDE0022)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+##<a name="expression_bodied_members">Membros aptos para expressão</a>
+### <a name="expression_bodied_members_methods">Métodos (IDE0022)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_methods`| C# 6.0+ | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for methods.| **C#:** <br>`public int GetAge() => this.Age;`
-| False | Do not prefer expression-bodied members for methods.| **C#:** <br>`public int GetAge() { return this.Age; }`
+| verdadeiro | Prefira membros de expressão incorporada para métodos.| **C#:** <br>`public int GetAge() => this.Age;`
+| False | Não prefira membros de expressão incorporada para métodos.| **C#:** <br>`public int GetAge() { return this.Age; }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_methods = false:none
 ``` 
 
-### <a name="expression_bodied_members_constructors">Constructors (IDE0021)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_constructors">Construtores (IDE0021)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_constructors`| C# 7.0+ | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for constructors.| **C#:** <br>`public Customer(int age) => Age = age;`
-| False | Do not prefer expression-bodied members for constructors.| **C#:** <br>`public Customer(int age) { Age = age; }`
+| verdadeiro | Prefira membros de expressão incorporada para construtores.| **C#:** <br>`public Customer(int age) => Age = age;`
+| False | Não prefira membros de expressão incorporada para construtores.| **C#:** <br>`public Customer(int age) { Age = age; }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_constructors = false:none
 ``` 
 
-### <a name="expression_bodied_members_operators">Operators (IDE0023, IDE0024)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_operators">Operadores (IDE0023, IDE0024)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_operators` | C# 7.0+ | false:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for operators.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`=> new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);`
-| False | Do not prefer expression-bodied members for operators.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`{ return new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary); }`
+| verdadeiro | Prefira membros de expressão incorporada para operadores.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`=> new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);`
+| False | Não prefira membros de expressão incorporada para operadores.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`{ return new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary); }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_operators = false:none
 ``` 
 
-### <a name="expression_bodied_members_properties">Properties (IDE0025)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_properties">Propriedades (IDE0025)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_properties` | C# 7.0+ | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for properties.| **C#:** <br>`public int Age => _age;`
-| False | Do not prefer expression-bodied members for properties.| **C#:** <br>`public int Age { get { return _age; }}`
+| verdadeiro | Prefira membros de expressão incorporada para propriedades.| **C#:** <br>`public int Age => _age;`
+| False | Não prefira membros de expressão incorporada para propriedades.| **C#:** <br>`public int Age { get { return _age; }}`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_properties = true:none
 ``` 
 
-### <a name="expression_bodied_members_indexers">Indexers (IDE0026)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_indexers">Indexadores (IDE0026)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_indexers` | C# 7.0+ | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for indexers.| **C#:** <br>`public T this[int i] => _value[i];`
-| False | Do not prefer expression-bodied members for indexers.| **C#:** <br>`public T this[int i] { get { return _values[i]; } }`
+| verdadeiro | Prefira membros de expressão incorporada para indexadores.| **C#:** <br>`public T this[int i] => _value[i];`
+| False | Não prefira membros de expressão incorporada para indexadores.| **C#:** <br>`public T this[int i] { get { return _values[i]; } }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_indexers = false:none
 ``` 
 
-### <a name="expression_bodied_members_accessors">Accessors (IDE0027)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_accessors">Acessadores (IDE0027)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_expression_bodied_accessors` | C# 7.0+ | true:none | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for accessors.| **C#:** <br>`public int Age { get => _age; set => _age = value; }`
-| False | Do not prefer expression-bodied members for accessors.| **C#:** <br>`public int Age { get { return _age; } set { _age = value; } }`
+| verdadeiro | Prefira membros de expressão incorporada para acessadores.| **C#:** <br>`public int Age { get => _age; set => _age = value; }`
+| False | Não prefira membros de expressão incorporada para acessadores.| **C#:** <br>`public int Age { get { return _age; } set { _age = value; } }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_accessors = false:none
 ``` 
 
-## <a name="pattern_matching">Pattern matching</a>
-### <a name="pattern_matching_is_cast">"is" with "cast" checking (IDE0020)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="pattern_matching">Correspondência de padrões</a>
+### <a name="pattern_matching_is_cast">Verificação "is" com "cast" (IDE0020)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_pattern_matching_over_is_with_cast_check` | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer pattern matching instead of `is` expressions with type casts.| **C#:** <br>`if (o is int i) {...}`
-| False | Prefer `is` expressions with type casts instead of pattern matching.| **C#:** <br>`if (o is int) {var i = (int)o; ... }`
+| verdadeiro | Prefira a correspondência de padrões a expressões `is` com conversões de tipo.| **C#:** <br>`if (o is int i) {...}`
+| False | Prefira expressões `is` com conversões de tipo a correspondência de padrões.| **C#:** <br>`if (o is int) {var i = (int)o; ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 ```
 
-### <a name="pattern_matching_as_null">"as" with "null" checking (IDE0019)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="pattern_matching_as_null">Verificação "as" com "null" (IDE0019)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_pattern_matching_over_as_with_null_check` | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer pattern matching instead of `as` expressions with null checks to determine if something is of a particular type.| **C#:** <br>`if (o is string s) {...}`
-| False | Prefer `as` expressions with null checks instead of pattern matching to determine if something is of a particular type.| **C#:** <br>`var s = o as string; if (s != null) {...}`
+| verdadeiro | Prefira correspondência de padrões a expressões `as` com verificações nulas para determinar se algo é de um tipo específico.| **C#:** <br>`if (o is string s) {...}`
+| False | Prefira expressões `as` com verificações de null a correspondência de padrões para determinar se algo é de um tipo específico.| **C#:** <br>`var s = o as string; if (s != null) {...}`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 ```
 
-### <a name="inlined_variable_declarations">Inlined variable declarations (IDE0018)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="inlined_variable_declarations">Declarações de variável embutida (IDE0018)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_inlined_variable_declaration` | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer `out` variables to be declared inline when possible. | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
-| False | Prefer `out` variables to be declared explicitly.| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
+| verdadeiro | Prefira que as variáveis `out` sejam declaradas embutidas quando possível. | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
+| False | Prefira que as variáveis `out` sejam declaradas explicitamente.| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_inlined_variable_declaration = true:suggestion
 ```
-## <a name="expression_level_csharp">Expression-level Preferences</a>
-### <a name="expression_level_default">Simplify `default` expressions (IDE0034) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="expression_level_csharp">Preferências de nível de expressão</a>
+### <a name="expression_level_default">Simplificar expressões `default` (IDE0034) </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_prefer_simple_default_expression` | C# 7.1+ | true:suggestion | Visual Studio 2017 v. 15.3 |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer `default` over `default(T)` | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default){ ... }`
-| False | Prefer. | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default(CancellationToken)){ ... }`
+| verdadeiro | Prefira `default` a `default(T)` | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default){ ... }`
+| False | Prefira. | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default(CancellationToken)){ ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_prefer_simple_default_expression = true:suggestion
 ``` 
 
-## <a name="null_checking">"Null" Checking Preferences</a>
-### <a name="null_checking_throw_expressions">Throw-expressions (IDE0016)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="null_checking">Preferências da verificação "null"</a>
+### <a name="null_checking_throw_expressions">Expressões throw (IDE0016)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_throw_expression`  | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer to use `throw` expressions instead of `throw` statements. | **C#:** <br>`this.s = ss ?? throw new ArgumentNullException(nameof(s));`
-| False | Prefer to use `throw` statements instead of `throw` expressions.| **C#:** <br>`if (s==null) {throw new ArgumentNullException(nameof(s));} this.s = s;`
+| verdadeiro | Prefira usar expressões `throw` a usar instruções `throw`. | **C#:** <br>`this.s = ss ?? throw new ArgumentNullException(nameof(s));`
+| False | Prefira usar instruções `throw` a usar expressões `throw`.| **C#:** <br>`if (s==null) {throw new ArgumentNullException(nameof(s));} this.s = s;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_throw_expression = true:suggestion
 ```
 
-### <a name="null_checking_conditional_delegate_calls">Prefer conditional delegate calls (IDE0041)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="null_checking_conditional_delegate_calls">Prefira chamadas de delegados condicionais (IDE0041)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_style_conditional_delegate_call`  | C# 6.0+ | true:suggestion | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer to use conditional coalescing operation (`?.`) when invoking a lambda instead of performing a null check. | **C#:** <br>`func?.Invoke(args);`
-| False | Prefer to perform a null check before invoking a lambda instead of using the conditional coalescing operator (`?.`).| **C#:** <br>`if (func!=null) { func(args); }`
+| verdadeiro | Prefira usar a operação de união condicional (`?.`) ao invocar um lambda a executar uma verificação nula. | **C#:** <br>`func?.Invoke(args);`
+| False | Prefira realizar uma verificação nula antes de invocar um lambda a usar o operador de união condicional (`?.`).| **C#:** <br>`if (func!=null) { func(args); }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_conditional_delegate_call = false:suggestion
 ```
 
-## <a name="code_block">"Code Block Preferences</a>
-### <a name="prefer_braces">Prefer braces (IDE0011)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="code_block">"Preferências de Bloqueio de Código</a>
+### <a name="prefer_braces">Preferir chaves (IDE0011)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_prefer_braces`  | C#  | true:none | Visual Studio 2017 v. 15.3 |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Prefer braces | **C#:** <br>`if (test) { this.Display(); }`
-| False | Prefer no braces when possible | **C#:** <br>`if (test) this.Display();`
+| verdadeiro | Preferir chaves | **C#:** <br>`if (test) { this.Display(); }`
+| False | Preferir sem chaves quando possível | **C#:** <br>`if (test) this.Display();`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_prefer_braces = true:none
 ```
 
-# <a name="formatting"> Formatting Rules </a>
-## <a name="overview"></a>Overview
-**Rule Format:**
+# <a name="formatting"> Formatação de Regras </a>
+## <a name="overview"></a>Visão Geral
+**Formatação de Regra:**
 `options_name = false|true`
 
-For formatting options, you must specify **true** (prefer this option) or **false** (do not prefer this option) except in a couple cases where you must instead specify what conditions you want the rule applied to.
+Para opções de formatação, você deve especificar **true** (prefira essa opção) ou **false** (não prefira essa opção), exceto em alguns casos em que você deve especificar as condições às quais você deseja que a regra seja aplicada.
 
-## <a name="net-formatting-options"></a>.NET Formatting Options
+## <a name="net-formatting-options"></a>Opções de Formatação .NET
 
-- **[.NET Formatting Settings](#usings)**
-    - [Organize Usings](#usings)
-        - [Sort System Directives First](#usings_sort_system_first)
-- **[C# Formatting Settings](#newline)**
-    - [Newline Options](#newline)
-        - [Newline Before Open Brace (`{`)](#newline_before_brace)
-        - [Newline Before `else`](#newline_before_else)
-        - [Newline Before `catch`](#newline_before_catch)
-        - [Newline Before `finally`](#newline_before_finally)
-        - [Newline Before Members in Object Initializers](#newline_before_object)
-        - [Newline Before Members in Anonymous Types](#newline_before_anonymous)
-        - [Newline Before Members in Query Expression Clauses](#newline_before_query)
-    - [Indentation Options](#indent)
-        - [Indent `switch` Case Contents](#indent_switch)
-        - [Indent `switch` Labels](#indent_switch_labels)
-        - [Label Positioning](#label)
-    - [Spacing Options](#spacing)
-        - [Space After Cast](#space_after_cast)
-        - [Space After Keywords in Control Flow Statements](#space_control_flow)
-        - [Space Between Method Declaration Parameter-List Parentheses](#space_parameter_list)
-        - [Space Within Parentheses for Method Call Argument List](#space_method_call)
-        - [Space Within Parentheses for Other Options](#space_other)
-    - [Wrapping Options](#wrapping)
-        - [Leave Statements and Member Declarations on the Same Line](#wrapping_statement)
-        - [Leave Block on Single Line](#wrapping_block)
+- **[Configurações de Formatação .NET](#usings)**
+    - [Organizar Usos](#usings)
+        - [Classificar as Diretivas do Sistema Primeiro](#usings_sort_system_first)
+- **[Configurações de Formatação C#](#newline)**
+    - [Opções de Nova Linha](#newline)
+        - [Nova Linha Antes da Chave de Abertura (`{`)](#newline_before_brace)
+        - [Nova Linha Antes `else`](#newline_before_else)
+        - [Nova Linha Antes `catch`](#newline_before_catch)
+        - [Nova Linha Antes `finally`](#newline_before_finally)
+        - [Nova Linha Antes dos Membros em Inicializadores de Objetos](#newline_before_object)
+        - [Nova Linha Antes dos Membros nos Tipos Anônimos](#newline_before_anonymous)
+        - [Nova Linha Antes dos Membros em Cláusulas de Expressão de Consulta](#newline_before_query)
+    - [Opções de Recuo](#indent)
+        - [Recuar `switch` Conteúdo de Caso](#indent_switch)
+        - [Recuar `switch` Rótulos](#indent_switch_labels)
+        - [Posicionamento do Rótulo](#label)
+    - [Opções de Espaçamento](#spacing)
+        - [Espaço Após a Conversão](#space_after_cast)
+        - [Espaço após palavras-chaves em instruções de fluxo de controle](#space_control_flow)
+        - [Espaço Entre Parênteses de Lista de Parâmetros de Declaração de Método](#space_parameter_list)
+        - [Espaço Dentro dos Parênteses para a Lista de Argumentos de Chamada do Método](#space_method_call)
+        - [Espaço Dentro dos Parênteses para Outras Opções](#space_other)
+    - [Opções de Disposição](#wrapping)
+        - [Deixar Instruções e Declarações de Membros na Mesma Linha](#wrapping_statement)
+        - [Deixar Bloco em uma Linha Única](#wrapping_block)
 
-## <a name="usings">Organize Usings</a>
-### <a name="usings_sort_system_first">Sort System Directives First</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="usings">Organizar Usos</a>
+### <a name="usings_sort_system_first">Classificar as Diretivas do Sistema Primeiro</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_sort_system_directives_first`  |  C# and Visual Basic | true | Visual Studio 2017 v. 15.3  |
+|`dotnet_sort_system_directives_first`  |  C# e Visual Basic | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied 
+| Valor | Descrição | Aplicada 
 | ------------- |:-------------|:-------------|
-| True | Sort System.* usings alphabetically and place them before other usings.| **C#:** <br>`using System.Collections.Generic;`<br> `using System.Threading.Tasks;`<br> `using Octokit;`
-| False | Have no requirements on the ordering of usings | **C#:** <br>`using System.Collections.Generic;`<br> `using Octokit;` <br> `using System.Threading.Tasks;`
+| verdadeiro | Classificar os usos do Sistema.* em ordem alfabética e colocá-los antes de outros usos.| **C#:** <br>`using System.Collections.Generic;`<br> `using System.Threading.Tasks;`<br> `using Octokit;`
+| False | Não há nenhum requisito na classificação de usos | **C#:** <br>`using System.Collections.Generic;`<br> `using Octokit;` <br> `using System.Threading.Tasks;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # .NET formatting settings:
 [*.{cs,vb}]
 dotnet_sort_system_directives_first = true
 ``` 
 
-# <a name="csharp_formatting">C# Formatting Settings</a>
-## <a name="newline">Newline Options</a>
-### <a name="newline_before_brace"> Newline Before Open Brace (`{`)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+# <a name="csharp_formatting">Configurações de Formatação C#</a>
+## <a name="newline">Opções de Nova Linha</a>
+### <a name="newline_before_brace"> Nova Linha Antes da Chave de Abertura (`{`)</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_new_line_before_open_brace`  |  C#  | all | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| Valor | Descrição 
 | ------------- |:-------------|
-| accessors, anonymous_methods, anonymous_types, control_blocks, events, indexers, lambdas, local_functions, methods, object_collection, properties, types. (For multiple, separate with ','). | Require braces to be on a new line for the given expressions (Allman style) |
-| all | Require braces to be on a new line for all expressions (Allman) |
-| none | Require braces to be on the same line for all expressions (K&R) |
+| acessadores, métodos_anônimos, tipos_anônimos, blocos_de_controle, eventos, indexadores, lambdas, funções_locais, métodos, coleção_de_objetos, propriedades, tipos. (Para várias, separe com ','). | Requer que as chaves estejam em uma nova linha para as expressões de determinadas (estilo Allman) |
+| all | Requer que as chaves estejam em uma nova linha para todas as expressões (Allman) |
+| nenhum | Requer que as chaves estejam na mesma linha para todas as expressões (K&R) |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>Aplicado:
 ```csharp
 // csharp_new_line_before_open_brace = all
 void MyMethod() 
@@ -687,25 +687,25 @@ void MyMethod() {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_open_brace = methods, properties, control_blocks, types
 ``` 
 
-### <a name="newline_before_else"> Newline Before `else`</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_else"> Nova Linha Antes `else`</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_new_line_before_else` |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| Valor | Descrição 
 | ------------- |:-------------|
-| True | Place `else` statements on a new line.  |
-| False | Place `else` statements on the same line.  |
+| verdadeiro | Insira as instruções `else` em uma nova linha.  |
+| False | Insira as instruções `else` na mesma linha.  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>Aplicado:
 ```csharp
 // csharp_new_line_before_else = true
 if (...) {
@@ -725,25 +725,25 @@ if (...) {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_else = true
 ``` 
 
-### <a name="newline_before_catch"> Newline Before `catch`</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_catch"> Nova Linha Antes `catch`</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_catch`|  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| Valor | Descrição 
 | ------------- |:-------------|
-| True | Place `catch` statements on a new line.  |
-| False | Place `catch` statements on the same line. |
+| verdadeiro | Insira as instruções `catch` em uma nova linha.  |
+| False | Insira as instruções `catch` na mesma linha. |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>Aplicado:
 ```csharp
 // csharp_new_line_before_catch = true
 try {
@@ -763,25 +763,25 @@ try {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_catch = true
 ``` 
 
-### <a name="newline_before_finally"> Newline Before `finally`</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_finally"> Nova Linha Antes `finally`</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_finally`|  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| Valor | Descrição 
 | ------------- |:-------------|
-| True | Require `finally` statements to be on a new line after the closing brace.  |
-| False | Require `finally` statements to be on the same line as the closing brace.  |
+| verdadeiro | Exigir que as instruções `finally` estejam em uma nova linha após a chave de fechamento.  |
+| False | Exigir que as instruções `finally` estejam na mesma linha como a chave de fechamento.  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>Aplicado:
 ```csharp
 // csharp_new_line_before_finally = true
 try {
@@ -806,25 +806,25 @@ try {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_finally = true
 ``` 
 
-### <a name="newline_before_object"> Newline Before Members in Object Initializers</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_object"> Nova Linha Antes dos Membros em Inicializadores de Objetos</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_members_in_object_initializers`|  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| Valor | Descrição 
 | ------------- |:-------------|
-| True | Require members of object intializers to be on separate lines.  |
-| False | Require members of object initializers to be on the same line.  |
+| verdadeiro | Exigir que membros dos inicializadores de objetos estejam em linhas separadas.  |
+| False | Exigir que membros dos inicializadores de objetos estejam na mesma linha.  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>Aplicado:
 ```csharp
 // csharp_new_line_before_members_in_object_initializers = true
 var z = new B()
@@ -842,25 +842,25 @@ var z = new B()
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_members_in_object_initializers = true
 ``` 
 
-### <a name="newline_before_anonymous"> Newline Before Members in Anonymous Types</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_anonymous"> Nova Linha Antes dos Membros nos Tipos Anônimos</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_members_in_anonymous_types` |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| Valor | Descrição 
 | ------------- |:-------------|
-| True | Require members of anonymous types to be on separate lines.  |
-| False | Require members of anonymous types to be on the same line.  |
+| verdadeiro | Exigir que membros de tipos anônimos estejam em linhas separadas.  |
+| False | Exigir que membros de tipos anônimos estejam na mesma linha.  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>Aplicado:
 ```csharp
 // csharp_new_line_before_members_in_anonymous_types = true
 var z = new
@@ -878,25 +878,25 @@ var z = new
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_members_in_anonymous_types = true
 ``` 
 
-### <a name="newline_before_query"> Newline Before Members in Query Expression Clauses</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_query">Nova Linha Antes dos Membros em Cláusulas de Expressão de Consulta</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_new_line_within_query_expression_clauses`  |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| Valor | Descrição 
 | ------------- |:-------------|
-| True | Require elements of query expression clauses to be on separate lines.  |
-| False | Require elements of query expression clauses to be on the same line.  |
+| verdadeiro | Exigir que elementos das cláusulas de expressão de consulta estejam em linhas separadas.  |
+| False | Exigir que elementos das cláusulas de expressão de consulta estejam na mesma linha.  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>Aplicado:
 ```csharp
 // csharp_new_line_within_query_expression_clauses = true
 var q = from a in e
@@ -910,25 +910,25 @@ var q = from a in e from b in e
         select a * b;
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_within_query_expression_clauses = true
 ``` 
 
-## <a name="indent">Indentation Options</a>
-### <a name="indent_switch"> Indent `switch` Case Contents </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="indent">Opções de Recuo</a>
+### <a name="indent_switch"> Recuar `switch` Conteúdo de Caso </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_indent_case_contents`  |  C#  | true | Visual Studio 2017 v. 15.3  |
 
-| Value | Description 
+| Valor | Descrição 
 | ------------- |:-------------|
-| True | Indent `switch` case contents  |
-| False | Do not indent `switch` case contents |
+| verdadeiro | Recuar `switch` conteúdo de caso  |
+| False | Não recuar `switch` conteúdo de caso |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>Aplicado:
 ```csharp
 // csharp_indent_case_contents = true
 switch(c) {
@@ -959,24 +959,24 @@ switch(c) {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_indent_case_contents = true
 ``` 
 
-### <a name="indent_switch_labels"> Indent `switch` Labels </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="indent_switch_labels"> Recuar `switch` Rótulos </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_indent_switch_labels`  |  C#  | true | Visual Studio 2017 v. 15.3  |
 
-| Value | Description 
+| Valor | Descrição 
 | ------------- |:-------------|
-| True | Indent `switch` labels  |
-| False | Do not indent `switch` labels |
+| verdadeiro | Recuar `switch` rótulos  |
+| False | Não recue `switch` rótulos |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>Aplicado:
 ```csharp
 // csharp_indent_switch_labels = true
 switch(c) {
@@ -1007,25 +1007,25 @@ default:
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_indent_switch_labels = true
 ``` 
 
-### <a name="label">Label Positioning</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="label">Posicionamento do Rótulo</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_indent_labels`  |  C#  | one_less | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| Valor | Descrição 
 | ------------- |:-------------|
-| one_less | Labels are placed at one less indent to the current context |
-| no_change | Labels are placed at the same indent as the current context |
+| one_less | Os rótulos são posicionados em um recuo a menos do que o contexto atual |
+| no_change | Os rótulos são posicionados no mesmo recuo do contexto atual |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>Aplicado:
 ```csharp
 // csharp_indent_labels = one_less
 private string MyMethod(...) 
@@ -1051,118 +1051,118 @@ private string MyMethod(...)
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_indent_labels = one_less
 ``` 
 
-## <a name="spacing">Spacing Options</a>
-### <a name="space_after_cast"> Space After Cast </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="spacing">Opções de Espaçamento</a>
+### <a name="space_after_cast"> Espaço Após a Conversão </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_space_after_cast` |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| Valor | Descrição | Aplicada |
 | ------------- |:-------------|:-------------|
-| True | Require a space between a cast and the value  | **C#:** <br>`int y = (int) x;`
-| False | Require no space between the cast and the value | **C#:** <br>`int y = (int)x;`
+| verdadeiro | Requer um espaço entre uma conversão e o valor  | **C#:** <br>`int y = (int) x;`
+| False | Não requer nenhum espaço entre a conversão e o valor | **C#:** <br>`int y = (int)x;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_after_cast = true
 ``` 
 
-### <a name="space_control_flow"> Space After Keywords in Control Flow Statements </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_control_flow"> Espaço após palavras-chaves em instruções de fluxo de controle </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_space_after_keywords_in_control_flow_statements` |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| Valor | Descrição | Aplicada |
 | ------------- |:-------------|:-------------|
-| True | Require a space after a keyword | **C#:** <br>`for (int i;i<x;i++) { ... }`
-| False | Require no space after a keyword | **C#:** <br>`for(int i;i<x;i++) { ... }`
+| verdadeiro | Requer um espaço após uma palavra-chave | **C#:** <br>`for (int i;i<x;i++) { ... }`
+| False | Não requer nenhum espaço após uma palavra-chave | **C#:** <br>`for(int i;i<x;i++) { ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_after_keywords_in_control_flow_statements = true
 ``` 
 
-### <a name="space_parameter_list"> Space Between Method Declaration Argument-List Parentheses </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_parameter_list"> Espaço Entre Parênteses de Lista de Argumentos de Declaração de Método </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_space_between_method_declaration_parameter_list_parentheses` |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| Valor | Descrição | Aplicada |
 | ------------- |:-------------|:-------------|
-| True | Require a space after a keyword | **C#:** <br>`void Bark( int x ) { ... }`
-| False | Require no space after a keyword | **C#:** <br>`void Bark(int x) { ... }`
+| verdadeiro | Requer um espaço após uma palavra-chave | **C#:** <br>`void Bark( int x ) { ... }`
+| False | Não requer nenhum espaço após uma palavra-chave | **C#:** <br>`void Bark(int x) { ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_between_method_declaration_parameter_list_parentheses = true
 ```
 
-### <a name="space_method_call"> Space Within Parentheses for Method Call Argument List</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_method_call"> Espaço Dentro dos Parênteses para a Lista de Argumentos de Chamada do Método</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |  `csharp_space_between_method_call_parameter_list_parentheses` |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| Valor | Descrição | Aplicada |
 | ------------- |:-------------|:-------------|
-| true | Place space between parentheses of control flow statements | **C#:** <br>`MyMethod( argument );`
-| false | Place space between parentheses of expressions | **C#:** <br>`MyMethod(argument);`
+| true | Inserir espaço entre parênteses das instruções de fluxo de controle | **C#:** <br>`MyMethod( argument );`
+| false | Inserir espaço entre os parênteses das expressões | **C#:** <br>`MyMethod(argument);`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_between_method_call_parameter_list_parentheses = control_flow_statements, type_casts
 ```  
 
-### <a name="space_other"> Space Within Parentheses for Other Options </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_other"> Espaço Dentro dos Parênteses para Outras Opções </a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |  `csharp_space_between_parentheses`  |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| Valor | Descrição | Aplicada |
 | ------------- |:-------------|:-------------|
-| control_flow_statements | Place space between parentheses of control flow statements | **C#:** <br>`for( int i;i<x;i++ ) { ... }`
-| expressions | Place space between parentheses of expressions | **C#:** <br>`var z = ( x * y ) - ( ( y - x ) * 3);`
-| type_casts | Place space between parentheses in type casts | **C#:**<br>`int y = ( int )x;`
+| control_flow_statements | Inserir espaço entre parênteses das instruções de fluxo de controle | **C#:** <br>`for( int i;i<x;i++ ) { ... }`
+| expressões | Inserir espaço entre os parênteses das expressões | **C#:** <br>`var z = ( x * y ) - ( ( y - x ) * 3);`
+| type_casts | Inserir espaço entre os parênteses nas conversões de tipo | **C#:**<br>`int y = ( int )x;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_between_parentheses = control_flow_statements, type_casts
 ``` 
 
-## <a name="wrapping">Wrapping Options</a>
-### <a name="wrapping_statement">Leave Statements and Member Declarations on the Same Line</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="wrapping">Opções de Disposição</a>
+### <a name="wrapping_statement">Deixar Instruções e Declarações de Membros na Mesma Linha</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |  `csharp_preserve_single_line_statements`   |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description |
+| Valor | Descrição |
 | ------------- |:-------------|
-| True | Leave statements and member declarations on the same line  | 
-| False | Leave statements and member declarations on different lines | 
+| verdadeiro | Deixar instruções e declarações de membros na mesma linha  | 
+| False | Deixar instruções e declarações de membros em linhas diferentes | 
 
-#### <a name="applied"></a>Applied
+#### <a name="applied"></a>Aplicada
 ```csharp
 //csharp_preserve_single_line_statements = true
 int i = 0; string name = "John";
@@ -1174,25 +1174,25 @@ int i = 0;
 string name = "John";
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_preserve_single_line_statements = true
 ``` 
 
-### <a name="wrapping_block">Leave Block on Single Line</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="wrapping_block">Deixar Bloco em uma Linha Única</a>
+| **Nome da Opção** | **Linguagens aplicáveis** | **Padrão do Visual Studio** | **Versão com Suporte** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |   `csharp_preserve_single_line_blocks`    |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description |
+| Valor | Descrição |
 | ------------- |:-------------|
-| True | Leave block on single line | 
-| False | Leave block on separate lines | 
+| verdadeiro | Deixar bloco em uma linha única | 
+| False | Deixar bloco em linhas separadas | 
 
-#### <a name="applied"></a>Applied
+#### <a name="applied"></a>Aplicada
 ```csharp
 //csharp_preserve_single_line_blocks = true
 public int Foo { get; set; }
@@ -1206,16 +1206,16 @@ public int MyProperty
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>Exemplo de arquivo editorconfig:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_preserve_single_line_blocks = true
 ``` 
 
-# <a name="naming"> Naming Conventions </a>
-## <a name="overview"></a>Overview
-**Rule Format:**<br>
+# <a name="naming"> Convenções de Nomenclatura </a>
+## <a name="overview"></a>Visão Geral
+**Formatação de Regra:**<br>
 namingRuleTitle:<br>
 `dotnet_naming_rule.<namingRuleTitle>.symbols = <symbolTitle>`<br>
 `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>`<br>
@@ -1232,33 +1232,33 @@ styleTitle:<br>
 `dotnet_naming_style.<styleTitle>.required_suffix = string`<br>
 `dotnet_naming_style.<styleTitle>.word_separator = string`<br>
 
-## <a name="writing-a-naming-convention"></a>Writing a Naming Convention
-For naming conventions, you must specify **symbols**, **style**, and a **severity**. Naming conventions should be ordered from most-specific to least-specific. The first rule encountered that can be applied, is the only rule applied. 
+## <a name="writing-a-naming-convention"></a>Escrever Convenção de Nomenclatura
+Para convenções de nomenclatura, especifique os **símbolos**, **estilo** e uma **gravidade**. As convenções de nomenclatura devem ser ordenadas da mais específica à menos específica. A primeira regra encontrada que possa ser aplicada é a única regra aplicada. 
 
-### <a name="severity"></a>Severity
-The following are valid options for the severity of a naming style rule `none`, `silent`, `suggestion`, `warning`, `error`.
+### <a name="severity"></a>Severidade
+Estas são opções válidas para a gravidade de uma regra de estilo de nomenclatura `none`, `silent`, `suggestion`, `warning`, `error`.
 
- `none` and `silent` are synonymous and mean that no indication of any kind should be shown to the user. This has the effect of disabling this rule.
+ `none` e `silent` são sinônimos e significam que nenhuma indicação de nenhum tipo deve ser mostrada para o usuário. Isso tem o efeito de desabilitar essa regra.
 
- `suggestion` means that the user is shown the following in the Error List: and the following in the IDE. The `suggestion` severity allows the naming rule to run, but it doesn't cause the build to break.
+ `suggestion` significa que o usuário verá o seguinte na Lista de Erros: e o seguinte no IDE. A gravidade da `suggestion` permite que a regra de nomenclatura seja executada, mas não causa uma falha na build.
 
-Severity | effect
+Severidade | efeito
 ------------ | -------------
-none/silent | Do not show anything to the user when this style is not being followed, however code generation features generate in this style. 
-suggestion | When this style is not being followed, show it to the user as a suggestion (underlying dots on the first two characters).
-warning | When this style is not being followed, show a compiler warning.
-error | When this style is not being followed, show a compiler error.
+nenhum/silencioso | Não mostre nada ao usuário quando esse estilo não estiver sendo seguido. No entanto, os recursos de geração de código serão gerados nesse estilo. 
+sugestão | Quando esse estilo não estiver sendo seguido, mostre-o para o usuário como uma sugestão (pontos subjacentes nos dois primeiros caracteres).
+aviso | Quando esse estilo não estiver sendo seguido, mostre um aviso do compilador.
+erro | Quando esse estilo não estiver sendo seguido, mostre um erro do compilador.
 
-### <a name="symbol-specification"></a>Symbol Specification
-Identify _what_ symbols _with which_ modifiers and _at what_ accessibility level the naming rule should apply to.
+### <a name="symbol-specification"></a>Especificação de Símbolo
+Identifique _que_ símbolos, _com quais_ modificadores e _em que_ nível de acessibilidade a regra de nomenclatura deve ser aplicada.
 
-|  Option Name | `dotnet_naming_rule.<namingRuleTitle>.symbols` |
+|  Nome da opção | `dotnet_naming_rule.<namingRuleTitle>.symbols` |
 | ------------- |:-------------:|
 |  | `dotnet_naming_symbols.<symbolTitle>.applicable_kinds`
 |  | `dotnet_naming_symbols.<symbolTitle>.applicable_accessibilities`
 |  | `dotnet_naming_symbols.<symbolTitle>.required_modifiers`
 
-| Symbol | Accessibility | Modifiers
+| Símbolo | Acessibilidade | Modificadores
 | ------------- |------------- |------------- |
 | `*` | `*` |  `abstract` | 
 | `class` | `public` |  `must_inherit` | `async` | 
@@ -1272,10 +1272,10 @@ Identify _what_ symbols _with which_ modifiers and _at what_ accessibility level
 | `delegate` | | |
 
 
-### <a name="style-specification"></a>Style Specification
-Identify the naming style to apply to the symbols.
+### <a name="style-specification"></a>Especificação de Estilo
+Identifique o estilo de nomenclatura para aplicar aos símbolos.
 
-|  Option Name | `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>` |
+|  Nome da opção | `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>` |
 | ------------- |:-------------:|
 |  | `dotnet_naming_style.<styleTitle>.capitalization`|
 |  | `dotnet_naming_style.<styleTitle>.required_prefix`|
@@ -1283,15 +1283,15 @@ Identify the naming style to apply to the symbols.
 |  | `dotnet_naming_style.<styleTitle>.word_separator`|
 
 
-| Style | Description |
+| Estilo | Descrição |
 | ------------- |:-------------:|
-| Prefix | Required characters that must appear before the identifier. |
-| Suffix | Required characters that must appear after the identifier. |
-| Word Separator | Required separator between words in the identifier. |
-| Capitalization |`pascal_case`, `camel_case`, `first_word_upper`, `all_upper`, `all_lower` | 
+| Prefixo | Caracteres necessários que devem aparecer antes do identificador. |
+| Sufixo | Caracteres necessários que devem aparecer após o identificador. |
+| Separador de Palavras | Separador necessário entre as palavras no identificador. |
+| Uso de maiúsculas |`pascal_case`, `camel_case`, `first_word_upper`, `all_upper`, `all_lower` | 
 
 
-### <a name="example-naming-convention"></a>Example Naming Convention
+### <a name="example-naming-convention"></a>Exemplo de Convenção de Nomenclatura
 ```
 # Dotnet Naming Conventions
 [*.{cs,vb}] 

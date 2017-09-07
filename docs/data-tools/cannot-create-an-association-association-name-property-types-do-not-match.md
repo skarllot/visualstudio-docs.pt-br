@@ -1,37 +1,56 @@
 ---
-title: "N&#227;o &#233; poss&#237;vel criar um &lt;nome de associa&#231;&#227;o de associa&#231;&#227;o&gt; - os tipos de propriedade n&#227;o correspondem | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Cannot create an association &lt;association name&gt; - property types do not match | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 97ec5a04-6e23-45a2-9226-d77ead854392
 caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
+ms.openlocfilehash: 1537c9fa6f3271f8e2f000613f35616ac03f6bd9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
-# N&#227;o &#233; poss&#237;vel criar um &lt;nome de associa&#231;&#227;o de associa&#231;&#227;o&gt; - os tipos de propriedade n&#227;o correspondem
-Não é possível criar uma associação \< nome da associação> -tipos de propriedade não correspondem. Propriedades não têm tipos correspondentes: \< nomes de propriedade>.  
+# <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>Cannot create an association &lt;association name&gt; - property types do not match
+Cannot create an association \<association name> - property types do not match. Properties do not have matching types: \<property names>.  
   
- Associações são definidas por selecionado **Propriedades de associação** no **Editor de associação** caixa de diálogo. Propriedades em cada lado da associação devem ser do mesmo tipo de dados.  
+ Associations are defined by the selected **Association Properties** in the **Association Editor** dialog box. Properties on each side of the association must be of the same data type.  
   
- As propriedades listadas na mensagem não tem os mesmos tipos de dados.  
+ The properties listed in the message do not have the same data types.  
   
-### <a name="to-correct-this-error"></a>Para corrigir este erro  
+### <a name="to-correct-this-error"></a>To correct this error  
   
-1.  Examine a mensagem e observe as propriedades chamadas na mensagem.  
+1.  Examine the message and note the properties called out in the message.  
   
-2.  Clique em **OK** para descartar a caixa de diálogo.  
+2.  Click **OK** to dismiss the dialog box.  
   
-3.  Inspecione o **Propriedades de associação** e selecione Propriedades do mesmo tipo de dados.  
+3.  Inspect the **Association Properties** and select properties of the same data type.  
   
-4.  Clique em **OK**.  
+4.  Click **OK**.  
   
-## <a name="see-also"></a>Consulte também  
- [Como: criar uma associação (relação) entre classes LINQ to SQL (Object Relational Designer)](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)   
- [Passo a passo: Criando Classes LINQ to SQL (O R Designer)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)
+## <a name="see-also"></a>See Also  
+ [How to: Create an association (relationship) between LINQ to SQL classes (O/R Designer)](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)   
+ [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
