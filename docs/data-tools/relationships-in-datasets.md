@@ -15,8 +15,8 @@ helpviewer_keywords:
 - relationships, datasets
 ms.assetid: cfe274f0-71fe-40f6-994e-7c7f6273c9ba
 caps.latest.revision: 15
-author: mikeblome
-ms.author: mblome
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -34,10 +34,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 5ecf0d9b54061ee7ea0bcf6dc701578ddfa856ec
-ms.openlocfilehash: 730b64e1e855f24409e804a3c0dbbc2d356bff01
+ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
+ms.openlocfilehash: 7ceb9c3d3e37074197abca5b3883b4cdff18bb75
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="relationships-in-datasets"></a>Relationships in datasets
@@ -75,10 +75,10 @@ The rules that you can make are specified in the <xref:System.Data.Rule> enumera
   
 |Foreign-key constraint rule|Action|  
 |----------------------------------|------------|  
-|<xref:System.Data.Rule>|The change (update or delete) made to the parent record is also made in related records in the child table.|  
-|<xref:System.Data.Rule>|Child records are not deleted, but the foreign key in the child records is set to <xref:System.DBNull>. With this setting, child records can be left as "orphans"—that is, they have no relationship to parent records. **Note:**  Using this rule can result in invalid data in the child table.|  
-|<xref:System.Data.Rule>|The foreign key in the related child records is set to its default value (as established by the column's <xref:System.Data.DataColumn.DefaultValue%2A> property).|  
-|<xref:System.Data.Rule>|No change is made to related child records. With this setting, child records can contain references to invalid parent records.|  
+|<xref:System.Data.Rule.Cascade>|The change (update or delete) made to the parent record is also made in related records in the child table.|  
+|<xref:System.Data.Rule.SetNull>|Child records are not deleted, but the foreign key in the child records is set to <xref:System.DBNull>. With this setting, child records can be left as "orphans"—that is, they have no relationship to parent records. **Note:**  Using this rule can result in invalid data in the child table.|  
+|<xref:System.Data.Rule.SetDefault>|The foreign key in the related child records is set to its default value (as established by the column's <xref:System.Data.DataColumn.DefaultValue%2A> property).|  
+|<xref:System.Data.Rule.None>|No change is made to related child records. With this setting, child records can contain references to invalid parent records.|  
   
  For more information about updates in dataset tables, see [Save data back to the database](../data-tools/save-data-back-to-the-database.md).  
   

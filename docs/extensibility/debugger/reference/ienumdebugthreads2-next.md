@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 446f57d098ff5f8f85e7c061715eaae9ea3eb17a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ienumdebugthreads2next"></a>IEnumDebugThreads2::Next
-Returns the next set of elements from the enumeration.  
+Retorna o próximo conjunto de elementos da enumeração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT Next(  
@@ -58,19 +58,19 @@ int Next(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] The number of elements to retrieve. Also specifies the maximum size of the `rgelt` array.  
+ [in] O número de elementos para recuperar. Também especifica o tamanho máximo da `rgelt` matriz.  
   
  `rgelt`  
- [in, out] Array of [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) elements to be filled in.  
+ [out no] Matriz de [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) elementos devem ser preenchidos.  
   
  `pceltFetched`  
- [out] Returns the number of elements actually returned in `rgelt`.  
+ [out] Retorna o número de elementos realmente retornados em `rgelt`.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`. Returns `S_FALSE` if fewer than the requested number of elements could be returned; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se menos do que o número solicitado de elementos podem ser retornados; caso contrário, retornará um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

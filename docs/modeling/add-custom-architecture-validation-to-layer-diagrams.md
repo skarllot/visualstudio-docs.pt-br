@@ -1,5 +1,5 @@
 ---
-title: Add custom architecture validation to dependency diagrams | Microsoft Docs
+title: "Adicionar validação de arquitetura personalizada a diagramas de dependência | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,114 +32,114 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 25261e06fc2d5ef1d2850b8ecdf159b1085d8d83
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Add custom architecture validation to dependency diagrams
-In Visual Studio, users can validate the source code in a project against a layer model so that they can verify that the source code conforms to the dependencies on a dependency diagram. There is a standard validation algorithm, but you can define your own validation extensions.  
+# <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Adicionar validação de arquitetura personalizada a diagramas de dependência
+No Visual Studio, os usuários podem validar o código-fonte em um projeto em um modelo de camada para que ele podem verificar se o código-fonte está em conformidade com as dependências em um diagrama de dependência. Há um algoritmo de validação padrão, mas você pode definir suas próprias extensões de validação.  
   
- When the user selects the **Validate Architecture** command on a dependency diagram, the standard validation method is invoked, followed by any validation extensions that have been installed.  
+ Quando o usuário seleciona o **validar arquitetura** comando em um diagrama de dependência, o método de validação padrão é chamado, seguido por quaisquer extensões de validação que foram instalados.  
   
 > [!NOTE]
->  In a dependency diagram, the main purpose of validation is to compare the diagram with the program code in other parts of the solution.  
+>  Em um diagrama de dependência, o principal objetivo da validação é comparar o diagrama com o código de programa em outras partes da solução.  
   
- You can package your layer validation extension into a Visual Studio Integration Extension (VSIX), which you can distribute to other Visual Studio users. You can either place your validator in a VSIX by itself, or you can combine it in the same VSIX as other extensions. You should write the code of the validator in its own Visual Studio project, not in the same project as other extensions.  
+ Você pode empacotar sua extensão de validação de camada em um Visual Studio Integration extensão (VSIX), que você pode distribuir para outros usuários do Visual Studio. Você pode colocar o validador um VSIX sozinho ou combiná-los no mesmo VSIX como outras extensões. Você deve escrever o código do validador em seu próprio projeto do Visual Studio, não no mesmo projeto como outras extensões.  
   
 > [!WARNING]
->  After you have created a validation project, copy the [example code](#example) at the end of this topic and then edit that to your own needs.  
+>  Depois de você ter criado um projeto de validação, copie o [código de exemplo](#example) no final deste tópico e edite que suas próprias necessidades.  
   
-## <a name="requirements"></a>Requirements  
- See [Requirements](../modeling/extend-layer-diagrams.md#prereqs).  
+## <a name="requirements"></a>Requisitos  
+ Consulte [requisitos](../modeling/extend-layer-diagrams.md#prereqs).  
   
-## <a name="defining-a-layer-validator-in-a-new-vsix"></a>Defining a Layer Validator in a New VSIX  
- The quickest method of creating a validator is to use the project template. This places the code and the VSIX manifest into the same project.  
+## <a name="defining-a-layer-validator-in-a-new-vsix"></a>Definindo um validador de camada em um novo VSIX  
+ O método mais rápido de criar um validador é usar o modelo de projeto. Isso coloca o código e o manifesto do VSIX no mesmo projeto.  
   
-#### <a name="to-define-an-extension-by-using-a-project-template"></a>To define an extension by using a project template  
+#### <a name="to-define-an-extension-by-using-a-project-template"></a>Para definir uma extensão usando um modelo de projeto  
   
-1.  Create a project in a new solution, by using the **New Project** command on the **File** menu.  
+1.  Criar um projeto em uma nova solução, usando o **novo projeto** comando o **arquivo** menu.  
   
-2.  In the **New Project** dialog box, under **Modeling Projects**, select **Layer Designer Validation Extension**.  
+2.  No **novo projeto** caixa de diálogo **projetos de modelagem**, selecione **extensão de validação do Designer de camada**.  
   
-     The template creates a project that contains a small example.  
+     O modelo cria um projeto que contém um exemplo pequeno.  
   
     > [!WARNING]
-    >  To makethe template work properly:  
+    >  Modelo makethe funcione corretamente:  
     >   
-    >  -   Edit calls to `LogValidationError` to remove the optional arguments `errorSourceNodes` and `errorTargetNodes`.  
-    > -   If you use custom properties, apply the update mentioned in [Add custom properties to dependency diagrams](../modeling/add-custom-properties-to-layer-diagrams.md).  
+    >  -   Editar chamadas para `LogValidationError` para remover os argumentos opcionais `errorSourceNodes` e `errorTargetNodes`.  
+    > -   Se você usar as propriedades personalizadas, aplique a atualização mencionada na [adicionar propriedades personalizadas a diagramas de dependência](../modeling/add-custom-properties-to-layer-diagrams.md).  
   
-3.  Edit the code to define your validation. For more information, see [Programming Validation](#programming).  
+3.  Edite o código para definir a validação. Para obter mais informações, consulte [programação validação](#programming).  
   
-4.  To test the extension, see [Debugging Layer Validation](#debugging).  
+4.  Para testar a extensão, consulte [validação de camada de depuração](#debugging).  
   
     > [!NOTE]
-    >  Your method will be called only in specific circumstances, and breakpoints will not work automatically. For more information, see [Debugging Layer Validation](#debugging).  
+    >  O método será chamado apenas em determinadas circunstâncias, e os pontos de interrupção não funcionará automaticamente. Para obter mais informações, consulte [validação de camada de depuração](#debugging).  
   
-5.  To install the extension in the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], or on another computer, find the **.vsix** file in **bin\\\***. Copy it to the computer where you want to install it, and then double-click it. To uninstall it, use **Extensions and Updates** on the **Tools** menu.  
+5.  Para instalar a extensão na instância principal do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], ou em outro computador, localize o **.vsix** arquivo **bin\\\***. Copie-o para o computador onde você deseja instalá-lo e, em seguida, clique duas vezes nele. Para desinstalá-lo, use **extensões e atualizações** no **ferramentas** menu.  
   
-## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>Adding a Layer Validator to a Separate VSIX  
- If you want to create one VSIX that contains layer validators, commands, and other extensions, we recommend that you create one project to define the VSIX, and separate projects for the handlers. 
+## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>Adicionando um validador de camada para um VSIX separado  
+ Se você quiser criar um VSIX que contém os validadores de camada, comandos e outras extensões, é recomendável que você crie um projeto para definir o VSIX e projetos separados para os manipuladores. 
   
-#### <a name="to-add-layer-validation-to-a-separate-vsix"></a>To add layer validation to a separate VSIX  
+#### <a name="to-add-layer-validation-to-a-separate-vsix"></a>Adicionar validação de camada para um VSIX separado  
   
-1.  Create a Class Library project in a new or existing Visual Studio solution. In the **New Project** dialog box, click **Visual C#** and then click **Class Library**. This project will contain the layer validation class.  
+1.  Crie um projeto de biblioteca de classes em uma solução do Visual Studio nova ou existente. No **novo projeto** caixa de diálogo, clique em **Visual C#** e, em seguida, clique em **biblioteca de classes**. Este projeto contém a classe de validação de camada.  
   
-2.  Identify or create a VSIX project in your solution. A VSIX project contains a file that is named **source.extension.vsixmanifest**. If you have to add a VSIX project, follow these steps:  
+2.  Identifique ou crie um projeto do VSIX em sua solução. Um projeto do VSIX contém um arquivo chamado **source.extension.vsixmanifest**. Se você precisar adicionar um projeto VSIX, siga estas etapas:  
   
-    1.  In the **New Project** dialog box, choose **Visual C#**, **Extensibility**, **VSIX Project**.  
+    1.  No **novo projeto** caixa de diálogo caixa, escolha **Visual C#**, **extensibilidade**, **projeto VSIX**.  
   
-    2.  In **Solution Explorer**, on the shortcut menu of the VSIX project, **Set as Startup Project**.  
+    2.  Em **Solution Explorer**, no menu de atalho do projeto VSIX, **definir como projeto de inicialização**.  
   
-3.  In **source.extension.vsixmanifest**, under **Assets**, add the layer validation project as a MEF component:  
+3.  Em **source.extension.vsixmanifest**, em **ativos**, adicione o projeto de validação de camada como um componente MEF:  
   
-    1.  Choose **New**.  
+    1.  Escolha **novo**.  
   
-    2.  In the **Add New Asset** dialog box, set:  
+    2.  No **adicionar novo ativo** caixa de diálogo, defina:  
   
-         **Type** = **Microsoft.VisualStudio.MefComponent**  
+         **Tipo** = **Microsoft.VisualStudio.MefComponent**  
   
-         **Source** = **A project in current solution**  
+         **Origem** = **um projeto na solução atual**  
   
-         **Project** = *your validator project*  
+         **Projeto** = *seu projeto de validador*  
   
-4.  You must also add it as a layer validation:  
+4.  Você também deve adicioná-lo como uma validação de camada:  
   
-    1.  Choose **New**.  
+    1.  Escolha **novo**.  
   
-    2.  In the **Add New Asset** dialog box, set:  
+    2.  No **adicionar novo ativo** caixa de diálogo, defina:  
   
-         **Type** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**. This is not one of the options in the drop-down list. You must enter it from the keyboard.  
+         **Tipo** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**. Isso não é uma das opções na lista suspensa. Você deve inseri-lo do teclado.  
   
-         **Source** = **A project in current solution**  
+         **Origem** = **um projeto na solução atual**  
   
-         **Project** = *your validator project*  
+         **Projeto** = *seu projeto de validador*  
   
-5.  Return to the layer validation project, and add the following project references:  
+5.  Retornar para o projeto de validação de camada e, em seguida, adicione as seguintes referências de projeto:  
   
-    |**Reference**|**What this allows you to do**|  
+    |**Referência**|**O que isso permite que você faça**|  
     |-------------------|------------------------------------|  
-    |Microsoft.VisualStudio.GraphModel.dll|Read the architecture graph|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Read the code DOM associated with layers|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Read the Layer model|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Read and update shapes and diagrams.|  
-    |System.ComponentModel.Composition|Define the validation component using Managed Extensibility Framework (MEF)|  
-    |Microsoft.VisualStudio.Modeling.Sdk.[version]|Define modeling extensions|  
+    |Microsoft.VisualStudio.GraphModel.dll|Ler o gráfico de arquitetura|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Ler que o código DOM associado com camadas|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Ler o modelo de camada|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Ler e atualizar formas e diagramas.|  
+    |System.ComponentModel.Composition|Definir o componente de validação usando Managed Extensibility Framework (MEF)|  
+    |Microsoft.VisualStudio.Modeling.Sdk. [versão]|Definir as extensões de modelagem|  
   
-6.  Copy the example code at the end of this topic into the class file in the validator library project to contain the code for your validation. For more information, see [Programming Validation](#programming).  
+6.  Copie o código de exemplo no final deste tópico para o arquivo de classe no projeto de biblioteca de validador para conter o código para a validação. Para obter mais informações, consulte [programação validação](#programming).  
   
-7.  To test the extension, see [Debugging Layer Validation](#debugging).  
+7.  Para testar a extensão, consulte [validação de camada de depuração](#debugging).  
   
     > [!NOTE]
-    >  Your method will be called only in specific circumstances, and breakpoints will not work automatically. For more information, see [Debugging Layer Validation](#debugging).  
+    >  O método será chamado apenas em determinadas circunstâncias, e os pontos de interrupção não funcionará automaticamente. Para obter mais informações, consulte [validação de camada de depuração](#debugging).  
   
-8.  To install the VSIX in the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], or on another computer, find the **.vsix** file in the **bin** directory of the VSIX project. Copy it to the computer where you want to install the VSIX. Double-click the VSIX file in Windows Explorer. (File Explorer in Windows 8.)  
+8.  Para instalar o VSIX na instância principal do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], ou em outro computador, localize o **.vsix** arquivo o **bin** diretório do projeto VSIX. Copie-o para o computador onde você deseja instalar o VSIX. Clique duas vezes no arquivo VSIX no Windows Explorer. (Explorador de arquivos no Windows 8).  
   
-     To uninstall it, use **Extensions and Updates** on the **Tools** menu.  
+     Para desinstalá-lo, use **extensões e atualizações** no **ferramentas** menu.  
   
-##  <a name="programming"></a> Programming Validation  
- To define a layer validation extension, you define a class that has the following characteristics:  
+##  <a name="programming"></a>Validação de programação  
+ Para definir uma extensão de validação de camada, você define uma classe que tem as seguintes características:  
   
--   The overall form of the declaration is as follows:  
+-   A forma geral da declaração é a seguinte:  
   
     ```  
   
@@ -159,31 +159,31 @@ In Visual Studio, users can validate the source code in a project against a laye
       } }  
     ```  
   
--   When you discover an error, you can report it by using `LogValidationError()`.  
+-   Quando você descobrir um erro, você pode relatá-lo usando `LogValidationError()`.  
   
     > [!WARNING]
-    >  Do not use the optional parameters of `LogValidationError`.  
+    >  Não use os parâmetros opcionais de `LogValidationError`.  
   
- When the user invokes the **Validate Architecture** menu command, the layer runtime system analyses the layers and their artifacts to produce a graph. The graph has four parts:  
+ Quando o usuário chama o **validar arquitetura** menu de comando, o sistema de tempo de execução de camada analisa as camadas e seus artefatos para produzir um gráfico. O gráfico não tem quatro partes:  
   
--   The layer models of the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution that are represented as nodes and links in the graph.  
+-   Os modelos de camada do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solução são representados como nós e links no gráfico.  
   
--   The code, project items, and other artifacts that are defined in the solution and represented as nodes, and links that represent the dependencies discovered by the analysis process.  
+-   O código, itens de projeto e outros artefatos que são definidos na solução e são representados como nós e links que representam as dependências descobertas pelo processo de análise.  
   
--   Links from the layer nodes to the code artifact nodes.  
+-   Links de nós de camada para os nós de artefato de código.  
   
--   Nodes that represent errors discovered by the validator.  
+-   Nós que representam erros descobertos pelo validador.  
   
- When the graph has been constructed, the standard validation method is called. When this is complete, any installed extension validation methods are called in unspecified order. The graph is passed to each `ValidateArchitecture` method, which can scan the graph and report any errors that it finds.  
+ Quando o gráfico foi construído, é chamado o método de validação padrão. Quando isso for concluído, qualquer método de validação de extensão instalada é chamado em ordem não especificada. O gráfico é passado para cada `ValidateArchitecture` método, que pode verificar o gráfico e relatam erros que encontrar.  
   
 > [!NOTE]
->  This is not the same as the validation process that can be used in domain-specific languages.  
+>  Isso não é o mesmo que o processo de validação que pode ser usado em linguagens específicas de domínio.  
   
- Validation methods should not change the layer model or the code that is being validated.  
+ Métodos de validação não devem alterar o modelo de camada ou o código que está sendo validado.  
   
- The graph model is defined in <xref:Microsoft.VisualStudio.GraphModel>. Its principal classes are <xref:Microsoft.VisualStudio.GraphModel.GraphNode> and <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.  
+ O modelo de gráfico é definido em <xref:Microsoft.VisualStudio.GraphModel>. Suas classes de entidade são <xref:Microsoft.VisualStudio.GraphModel.GraphNode> e <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.  
   
- Each Node and each Link has one or more Categories which specify the type of element or relationship that it represents. The nodes of a typical graph have the following categories:  
+ Cada nó e cada Link tem uma ou mais categorias que especificam o tipo de elemento ou relação que ele representa. Os nós de um gráfico típico têm as seguintes categorias:  
   
 -   Dsl.LayerModel  
   
@@ -203,36 +203,36 @@ In Visual Studio, users can validate the source code in a project against a laye
   
 -   CodeSchema_Property  
   
- Links from layers to elements in the code have the category "Represents".  
+ Links de camadas para elementos no código apresentam a categoria "Representa".  
   
-##  <a name="debugging"></a> Debugging Validation  
- To debug your layer validation extension, press CTRL+F5. An experimental instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] opens. In this instance, open or create a layer model. This model must be associated with code, and must have at least one dependency.  
+##  <a name="debugging"></a>Validação de depuração  
+ Para depurar sua extensão de validação de camada, pressione CTRL + F5. Uma instância experimental do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] é aberto. Nesse caso, abra ou crie um modelo de camada. Esse modelo deve ser associado ao código e deve ter pelo menos uma dependência.  
   
-### <a name="test-with-a-solution-that-contains-dependencies"></a>Test with a Solution that contains Dependencies  
- Validation is not executed unless the following characteristics are present:  
+### <a name="test-with-a-solution-that-contains-dependencies"></a>Teste com uma solução que contém as dependências  
+ A validação não é executada, a menos que as seguintes características estão presentes:  
   
--   There is at least one dependency link on the dependency diagram.  
+-   Há pelo menos um link de dependência no diagrama de dependência.  
   
--   There are layers in the model that are associated with code elements.  
+-   Há camadas no modelo que estão associadas a elementos de código.  
   
- The first time that you start an experimental instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] to test your validation extension, open or create a solution that has these characteristics.  
+ Na primeira vez que você inicia uma instância experimental do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] para testar sua extensão de validação, abra ou crie uma solução que tem as seguintes características.  
   
-### <a name="run-clean-solution-before-validate-architecture"></a>Run Clean Solution before Validate Architecture  
- Whenever you update your validation code, use the **Clean Solution** command on the **Build** menu in the experimental solution, before you test the Validate command. This is necessary because the results of validation are cached. If you have not updated the test dependency diagram or its code, the validation methods will not be executed.  
+### <a name="run-clean-solution-before-validate-architecture"></a>Execução limpar solução antes de validar arquitetura  
+ Sempre que você atualizar seu código de validação, use o **limpar solução** comando o **criar** menu na solução experimental, antes de você testar o comando de validação. Isso é necessário porque os resultados da validação são armazenados em cache. Se você não tiver atualizado o diagrama de dependência de teste ou em seu código, os métodos de validação não serão executados.  
   
-### <a name="launch-the-debugger-explicitly"></a>Launch the Debugger Explicitly  
- Validation runs in a separate process. Therefore, the breakpoints in your validation method will not be triggered. You must attach the debugger to the process explicitly when validation has started.  
+### <a name="launch-the-debugger-explicitly"></a>Iniciar o depurador explicitamente  
+ A validação é executada em um processo separado. Portanto, os pontos de interrupção em seu método de validação não serão disparados. Você deve anexar o depurador ao processo explicitamente quando a validação é iniciada.  
   
- To attach the debugger to the validation process, insert a call to `System.Diagnostics.Debugger.Launch()` at the start of your validation method. When the debugging dialog box appears, select the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+ Para anexar o depurador ao processo de validação, inserir uma chamada a `System.Diagnostics.Debugger.Launch()` no início de seu método de validação. Quando for exibida a caixa de diálogo de depuração, selecione a instância principal do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
- Alternatively, you can insert a call to `System.Windows.Forms.MessageBox.Show()`. When the message box appears, go to the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] and on the **Debug** menu click **Attach to Process**. Select the process that is named **Graphcmd.exe**.  
+ Como alternativa, você pode inserir uma chamada para `System.Windows.Forms.MessageBox.Show()`. Quando for exibida a caixa de mensagem, vá para a instância principal do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e na **depurar** menu clique **anexar ao processo**. Selecione o processo é denominado **Graphcmd.exe**.  
   
- Always start the experimental instance by pressing CTRL+F5 (**Start without Debugging**).  
+ Sempre iniciar a instância experimental pressionando CTRL + F5 (**iniciar sem depuração**).  
   
-### <a name="deploying-a-validation-extension"></a>Deploying a Validation Extension  
- To install your validation extension on a computer on which a suitable version of Visual Studio is installed, open the VSIX file on the target computer. To install on a computer on which [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] is installed, you must manually extract the VSIX contents into an Extensions folder. For more information, see [Deploy a layer model extension](../modeling/deploy-a-layer-model-extension.md).  
+### <a name="deploying-a-validation-extension"></a>Implantando uma extensão de validação  
+ Para instalar a extensão de validação em um computador em que uma versão adequada do Visual Studio está instalada, abra o arquivo VSIX no computador de destino. Para instalar em um computador no qual [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] é instalado, copie manualmente o conteúdo do VSIX para uma pasta de extensões. Para obter mais informações, consulte [implantar uma extensão de modelo de camada](../modeling/deploy-a-layer-model-extension.md).  
   
-##  <a name="example"></a> Example code  
+##  <a name="example"></a>Exemplo de código  
   
 ```csharp  
 using System;  
@@ -293,6 +293,6 @@ namespace Validator3
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Extend dependency diagrams](../modeling/extend-layer-diagrams.md)
+## <a name="see-also"></a>Consulte também  
+ [Estender diagramas de dependência](../modeling/extend-layer-diagrams.md)
 

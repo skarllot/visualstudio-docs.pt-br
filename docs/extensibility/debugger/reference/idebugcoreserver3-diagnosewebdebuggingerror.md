@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2c9ed64c1db1472e334333f3c2cb6d1bfb017c25
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcoreserver3diagnosewebdebuggingerror"></a>IDebugCoreServer3::DiagnoseWebDebuggingError
-Attempts to determine why an auto-attach failed.  
+Falha nas tentativas de determinar o motivo pelo qual um auto-attach.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT DiagnoseWebDebuggingError(  
@@ -54,18 +54,18 @@ int DiagnoseWebDebuggingError(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pszUrl`  
- [in] Not currently used; should always be set to a null value.  
+ [in] Não usado no momento; deve ser sempre definido como um valor nulo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. The following are other typical return codes:  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Estes são os outros códigos de retorno típicos:  
   
-|Code|Description|  
+|Código|Descrição|  
 |----------|-----------------|  
-|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Cannot determine why the remote server failed to start debugging.|  
-|`S_WEBDBG_DEBUG_VERB_BLOCKED`|Cannot debug on remote server, possibly due to insufficient permissions or because the DEBUG verb is not enabled.|  
-|`E_WEBDBG_DEBUG_VERB_BLOCKED`|The web server has been locked down and is blocking the DEBUG verb, which is required to enable debugging.|  
+|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Não é possível determinar por que o servidor remoto falhou ao iniciar a depuração.|  
+|`S_WEBDBG_DEBUG_VERB_BLOCKED`|Não é possível depurar em um servidor remoto, possivelmente devido a permissões insuficientes ou porque o verbo DEBUG não está habilitado.|  
+|`E_WEBDBG_DEBUG_VERB_BLOCKED`|O servidor web foi bloqueado e está bloqueando o verbo DEBUG, que é necessário para habilitar a depuração.|  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

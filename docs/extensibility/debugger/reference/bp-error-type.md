@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ab0dc686c4d002733bf8501be042e33c500fb8e3
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="bperrortype"></a>BP_ERROR_TYPE
-Specifies the error type of a breakpoint.  
+Especifica o tipo de erro de um ponto de interrupção.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 enum enum_BP_ERROR_TYPE {   
@@ -75,53 +75,53 @@ public enum enum_BP_ERROR_TYPE {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  BPET_NONE  
- Specifies no breakpoint error.  
+ Não especifica que nenhum erro de ponto de interrupção.  
   
  BPET_TYPE_WARNING  
- Specifies a warning-style breakpoint error.  
+ Especifica um erro de ponto de interrupção de estilo de aviso.  
   
  BPET_TYPE_ERROR  
- Specifies an error-style breakpoint error.  
+ Especifica um erro de ponto de interrupção de estilo de erro.  
   
  BPET_SEV_HIGH  
- Specifies a high-severity breakpoint error.  
+ Especifica um erro de ponto de interrupção de severidade alta.  
   
  BPET_SEV_GENERAL  
- Specifies a medium-severity breakpoint error.  
+ Especifica um erro de média severidade de ponto de interrupção.  
   
  BPET_SEV_LOW  
- Specifies a low-severity breakpoint error.  
+ Especifica uma ponto de interrupção de baixa severidade de erro.  
   
  BPET_TYPE_MASK  
- Specifies a mask-style breakpoint error.  
+ Especifica um erro de ponto de interrupção de estilo de máscara.  
   
  BPET_SEV_MASK  
- Specifies a severity-mask-style breakpoint error.  
+ Especifica um erro de ponto de interrupção de gravidade de máscara de estilo.  
   
  BPET_GENERAL_WARNING  
- Specifies a general-warning-style breakpoint error.  
+ Especifica um erro geral de aviso de estilo de ponto de interrupção.  
   
  BPET_GENERAL_ERROR  
- Specifies a general-error-style breakpoint error.  
+ Especifica um erro de ponto de interrupção de estilo de erro geral.  
   
  BPET_ALL  
- Specifies all breakpoint error types.  
+ Especifica todos os tipos de erro do ponto de interrupção.  
   
-## <a name="remarks"></a>Remarks  
- These values may be combined with a bitwise `OR` and used for the `dwType` member of the [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) structure. Passed as a parameter to the [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) method.  
+## <a name="remarks"></a>Comentários  
+ Esses valores podem ser combinados com um bit a bit `OR` e usado para o `dwType` membro o [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) estrutura. Passado como um parâmetro para o [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) método.  
   
- A breakpoint error type is composed of a type and a severity. This means that a breakpoint error type is never just a type (for example, `BPET_TYPE_ERROR`,) or a severity (for example, `BPET_SEV_GENERAL`) by itself. `BPET_GENERAL_WARNING` and `BPET_GENERAL_ERROR` provide predefined values for general warning and error breakpoints.  
+ Um tipo de erro do ponto de interrupção é composto de um tipo e severidade. Isso significa que um tipo de erro do ponto de interrupção nunca é apenas um tipo (por exemplo, `BPET_TYPE_ERROR`,) ou uma severidade (por exemplo, `BPET_SEV_GENERAL`) por si só. `BPET_GENERAL_WARNING`e `BPET_GENERAL_ERROR` fornecem valores predefinidos para pontos de interrupção de aviso e erro geral.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)   
  [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)

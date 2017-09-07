@@ -1,5 +1,5 @@
 ---
-title: Service Essentials | Microsoft Docs
+title: "Conceitos básicos do serviço | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,31 +32,31 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 0b78b5f9bf1fb6d9c92657b99e6d21b58cab2728
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="service-essentials"></a>Service Essentials
-A service is a contract between two VSPackages. One VSPackage provides a specific set of interfaces for another VSPackage to consume. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] is itself a collection of VSPackages that provides services to other VSPackages.  
+# <a name="service-essentials"></a>Informações gerais de serviço
+Um serviço é um contrato entre dois VSPackages. Um VSPackage fornece um conjunto específico de interfaces para outro VSPackage consumir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]é uma coleção de VSPackages que fornece serviços a outros VSPackages.  
   
- For example, you can use the SVsActivityLog service to obtain an IVsActivityLog interface, which you can use to write to the activity log. For more information, see [How to: Use the Activity Log](../../extensibility/how-to-use-the-activity-log.md).  
+ Por exemplo, você pode usar o serviço de SVsActivityLog para obter uma interface IVsActivityLog, que você pode usar para gravar no log de atividade. Para obter mais informações, consulte [como: usar o Log de atividades](../../extensibility/how-to-use-the-activity-log.md).  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] also provides some built-in services which are not registered. VSPackages can replace built-in or other services by providing a service override. Only one service override is permitted for any service.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]também fornece alguns serviços internos que não estão registrados. VSPackages pode substituir internos ou outros serviços, fornecendo uma substituição de serviço. É permitida somente um serviço de substituição para qualquer serviço.  
   
- Services have no discoverability. Therefore, you must know the service identifier (SID) of a service that you want to consume, and you must know which interfaces it provides. The reference documentation for the service provides this information.  
+ Os serviços não têm nenhuma capacidade de descoberta. Portanto, você deve saber o identificador de serviço (SID) de um serviço que você deseja consumir e você deve saber quais interfaces que ele fornece. A documentação de referência para o serviço fornece essas informações.  
   
--   VSPackages that provide services are called service providers.  
+-   VSPackages que fornecem serviços são chamados de provedores de serviços.  
   
--   Services that are provided to other VSPackages are called global services.  
+-   Serviços que são fornecidos para outros VSPackages são chamados de serviços globais.  
   
--   Services that are available only to the VSPackage that implements them, or to any object it creates, are called local services.  
+-   Serviços que estão disponíveis somente para o VSPackage que implementá-las, ou para qualquer objeto que cria, são chamados de serviços locais.  
   
--   Services that replace built-in services or services provided by other packages, are called service overrides.  
+-   Serviços que substituam serviços internos ou serviços fornecidos por outros pacotes, são chamados de substituições de serviço.  
   
--   Services, or service overrides, are loaded on demand, that is, the service provider is loaded when the service it provides is requested by another VSPackage.  
+-   Serviços ou substituições de serviço, são carregadas sob demanda, ou seja, o provedor de serviços é carregado quando o serviço fornece é solicitado por outro VSPackage.  
   
--   To support on-demand loading, a service provider registers its global services with [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. For more information, see [How to: Provide a Service](../../extensibility/how-to-provide-a-service.md).  
+-   Para dar suporte a carregamento sob demanda, um provedor de serviços registra seus serviços globais com [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Para obter mais informações, consulte [como: fornece um serviço](../../extensibility/how-to-provide-a-service.md).  
   
--   After you obtain a service, use [QueryInterface](/cpp/atl/queryinterface) (unmanaged code) or casting (managed code) to get the desired interface, for example:  
+-   Depois de obter um serviço, use [QueryInterface](/cpp/atl/queryinterface) (código não gerenciado) ou projeção (código gerenciado) para obter a interface desejada, por exemplo:  
   
     ```vb  
     TryCast(GetService(GetType(SVsActivityLog)), IVsActivityLog)  
@@ -66,35 +66,35 @@ A service is a contract between two VSPackages. One VSPackage provides a specifi
     GetService(typeof(SVsActivityLog)) as IVsActivityLog;  
     ```  
   
--   Managed code refers to a service by its type, whereas unmanaged code refers to a service by its GUID.  
+-   Código gerenciado se refere a um serviço por seu tipo, enquanto o código não gerenciado se refere a um serviço pelo seu GUID.  
   
--   When [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] loads a VSPackage, it passes a service provider to the VSPackage to give the VSPackage access to global services. This is referred to as "siting" the VSPackage.  
+-   Quando [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] carrega um VSPackage, ele passa um provedor de serviços para o VSPackage para conceder o acesso de VSPackage a serviços globais. Isso é referido como "localização" o VSPackage.  
   
--   VSPackages can be service providers for the objects they create. For example, a form might send a request for a color service to its frame, which might pass the request to [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
+-   VSPackages pode ser provedores de serviços para os objetos que eles criam. Por exemplo, um formulário pode enviar uma solicitação para um serviço de cor para o período, o que pode passar a solicitação [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
   
--   Managed objects that are deeply nested, or not sited at all, may call <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> for direct access to global services.   
+-   Objetos gerenciados que estão profundamente aninhados ou não foi localizados, poderão chamar <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> para acesso direto aos serviços globais.   
   
 <a name="how-to-use-getglobalservice"></a>  
   
 ## <a name="use-getglobalservice"></a>Use GetGlobalService  
   
-Sometimes you may need to get a service from a tool window or control container that has not been sited, or else has been sited with a service provider that does not know about the service you want. For example, you might want to write to the activity log from within a control. For more information about these and other scenarios, see [How to: Troubleshoot Services](../../extensibility/how-to-troubleshoot-services.md).  
+Às vezes, talvez seja necessário obter um serviço em uma janela de ferramenta ou controle de contêiner que não foi localizado, ou então foi colocado no local com um provedor de serviço que não sabe sobre o serviço que desejar. Por exemplo, você talvez queira gravar o log de atividades de dentro de um controle. Para obter mais informações sobre esses e outros cenários, consulte [como: solucionar problemas de serviços](../../extensibility/how-to-troubleshoot-services.md).  
   
-You can get most Visual Studio services by calling the static <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> method.  
+Você pode obter a maioria dos serviços do Visual Studio chamando estático <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> método.  
   
-<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> relies on a cached service provider that is initialized the first time any VSPackage derived from Package is sited. You must guarantee that this condition is met, or else be prepared for a null service.  
+<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>se baseia em um serviço em cache o provedor que é inicializado na primeira vez que qualquer VSPackage derivado do pacote é localizado. Você deve garantir que essa condição for atendida, ou então ser preparada para um serviço nulo.  
   
-Fortunately, <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> works correctly most of the time.  
+Felizmente, <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> funciona corretamente na maioria das vezes.  
   
--   If a VSPackage provides a service known only to another VSPackage, the VSPackage requesting the service is sited before the VSPackage providing the service is loaded.  
+-   Se um VSPackage fornece um serviço conhecido apenas VSPackage outro, o VSPackage solicitando o serviço é colocado antes do VSPackage fornecendo que o serviço seja carregado.  
   
--   If a tool window is created by a VSPackage, the VSPackage is sited before the tool window is created.  
+-   Se uma janela de ferramenta é criada por um VSPackage, o VSPackage é colocado antes da janela da ferramenta é criada.  
   
--   If a control container is hosted by a tool window created by a VSPackage, the VSPackage is sited before the control container is created.  
+-   Se um contêiner de controle for hospedado por uma janela de ferramenta criada por um VSPackage, o VSPackage é colocado antes do contêiner de controle é criado.  
   
-### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>To get a service from within a tool window or control container  
+### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>Para obter um serviço de dentro de um contêiner de controle ou janela de ferramenta  
   
--   Insert this code in the constructor, tool window, or control container:  
+-   Inserir este código na janela da ferramenta, construtor ou contêiner de controle:  
   
     ```csharp  
     IVsActivityLog log = Package.GetGlobalService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -107,10 +107,10 @@ Fortunately, <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> wor
     End If
     ```  
     
-    This code obtains an SVsActivityLog service and casts it to an IVsActivityLog interface, which can be used to write to the activity log. For an example, see [How to: Use the Activity Log](../../extensibility/how-to-use-the-activity-log.md).  
+    Esse código obtém um serviço SVsActivityLog e converte-o em uma interface IVsActivityLog, que pode ser usada para gravar o log de atividades. Para obter um exemplo, consulte [como: usar o Log de atividades](../../extensibility/how-to-use-the-activity-log.md).  
   
-## <a name="see-also"></a>See Also  
- [List of Available Services](../../extensibility/internals/list-of-available-services.md)   
- [Using and Providing Services](../../extensibility/using-and-providing-services.md)   
- [Casting and Type Conversions](/dotnet/csharp/programming-guide/types/casting-and-type-conversions)   
- [Casting](/cpp/cpp/casting)
+## <a name="see-also"></a>Consulte também  
+ [Lista de serviços disponíveis](../../extensibility/internals/list-of-available-services.md)   
+ [Usando e fornecer serviços](../../extensibility/using-and-providing-services.md)   
+ [Conversões cast e conversões de tipo](/dotnet/csharp/programming-guide/types/casting-and-type-conversions)   
+ [Conversão](/cpp/cpp/casting)

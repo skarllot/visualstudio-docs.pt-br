@@ -1,5 +1,5 @@
 ---
-title: Registering and Unregistering VSPackages | Microsoft Docs
+title: Registrando e Cancelando o registro VSPackages | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,16 +33,16 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 312c06295492ac9bd1136ea7de9a0399f247c365
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="registering-and-unregistering-vspackages"></a>Registering and Unregistering VSPackages
-You use attributes to register a VSPackage, but  
+# <a name="registering-and-unregistering-vspackages"></a>Registrando e Cancelando o registro VSPackages
+Usar atributos para registrar um VSPackage, mas  
   
-## <a name="registering-a-vspackage"></a>Registering a VSPackage  
- You can use attributes to control the registration of managed VSPackages. All registration information is contained in a .pkgdef file. For more information on file-based registration, see [CreatePkgDef Utility](../extensibility/internals/createpkgdef-utility.md).  
+## <a name="registering-a-vspackage"></a>Registrando um VSPackage  
+ Você pode usar atributos para controlar o registro de VSPackages gerenciados. Todas as informações de registro estão contidas em um arquivo .pkgdef. Para obter mais informações sobre o registro com base em arquivo, consulte [CreatePkgDef utilitário](../extensibility/internals/createpkgdef-utility.md).  
   
- The following code shows how to use the standard registration attributes to register your VSPackage.  
+ O código a seguir mostra como usar os atributos padrão de registro para registrar seu VSPackage.  
   
 ```csharp  
 [PackageRegistration(UseManagedResourcesOnly = true)]  
@@ -51,16 +51,16 @@ public sealed class BasicPackage : Package
 {. . .}  
 ```  
   
-## <a name="unregistering-an-extension"></a>Unregistering an Extension  
- If you have been experimenting with a lot of different VSPackages and want to remove them from the experimental instance, you can just run the **Reset** command. Look for **Reset the Visual Studio Experimental Instance** on the start page of your computer, or run this command from the command line:  
+## <a name="unregistering-an-extension"></a>Cancelar o registro de uma extensão  
+ Se você testar para muita VSPackages diferentes e deseja removê-las da instância experimental, é possível executar o **redefinir** comando. Procure **redefinir a instância Experimental do Visual Studio** na página inicial do seu computador, ou executar este comando de linha de comando:  
   
 ```vb  
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe" /Reset /VSInstance=14.0 /RootSuffix=Exp  
 ```  
   
- If you want to uninstall an extension that you have installed on your development instance of Visual Studio, go to **Tools / Extensions and Updates**, find the extension, and click **Uninstall**.  
+ Se você deseja desinstalar uma extensão que você instalou na sua instância de desenvolvimento do Visual Studio, vá para **ferramentas / extensões e atualizações**, localizar a extensão e clique em **desinstalação**.  
   
- If for some reason neither of these methods succeeds at uninstalling the extension, you can unregister the VSPackage assembly from the command line as follows:  
+ Se por alguma razão nenhum desses métodos tiver êxito na desinstalação da extensão, você pode cancelar o registro do assembly VSPackage da linha de comando da seguinte maneira:  
   
 ```  
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\regpkg" /unregister <pathToVSPackage assembly>  
@@ -68,13 +68,13 @@ public sealed class BasicPackage : Package
   
 <a name="using-a-custom-registration-attribute-to-register-an-extension"></a>  
   
-## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>Use a custom registration attribute to register an extension  
+## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>Usar um atributo de registro personalizadas para registrar uma extensão  
   
-In certain cases you may need to create a new registration attribute for your extension. You can use registration attributes to add new registry keys or to add new values to existing keys. The new attribute must derive from <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>, and it must override the <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> and <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> methods.  
+Em certos casos, talvez seja necessário criar um novo atributo de registro para a sua extensão. Você pode usar atributos de registro para adicionar novas chaves de registro ou para adicionar novos valores para as chaves existentes. O novo atributo deve derivar de <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>, e deve substituir o <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> e <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> métodos.  
   
-### <a name="creating-a-custom-attribute"></a>Creating a Custom Attribute  
+### <a name="creating-a-custom-attribute"></a>Criando um atributo personalizado  
   
-The following code shows how to create a new registration attribute.  
+O código a seguir mostra como criar um novo atributo de registro.  
   
 ```csharp  
 [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = false)]  
@@ -83,11 +83,11 @@ The following code shows how to create a new registration attribute.
     }  
 ```  
   
- The <xref:System.AttributeUsageAttribute> is used on attribute classes to specify the program element (class, method, etc.) to which the attribute pertains, whether it can be used more than once, and whether it can be inherited.  
+ O <xref:System.AttributeUsageAttribute> é usado em classes de atributos para especificar o elemento do programa (classe, método, etc.) para que o atributo pertence, se ele pode ser usado mais de uma vez e se ele pode ser herdado.  
   
-### <a name="creating-a-registry-key"></a>Creating a Registry Key  
+### <a name="creating-a-registry-key"></a>Criar uma chave do registro  
   
-In the following code, the custom attribute creates a **Custom** subkey under the key for the VSPackage that is being registered.  
+No código a seguir, o atributo personalizado cria um **personalizado** subchave sob a chave para o VSPackage que está sendo registrado.  
   
 ```csharp  
 public override void Register(RegistrationAttribute.RegistrationContext context)  
@@ -111,9 +111,9 @@ public override void Unregister(RegistrationContext context)
 }  
 ```  
   
-### <a name="creating-a-new-value-under-an-existing-registry-key"></a>Creating a New Value Under an Existing Registry Key  
+### <a name="creating-a-new-value-under-an-existing-registry-key"></a>Criando um novo valor em uma chave do registro existente  
   
-You can add custom values to an existing key. The following code shows how to add a new value to a VSPackage registration key.  
+Você pode adicionar valores personalizados para uma chave existente. O código a seguir mostra como adicionar um novo valor a uma chave de registro VSPackage.  
   
 ```csharp  
 public override void Register(RegistrationAttribute.RegistrationContext context)  
@@ -137,5 +137,5 @@ public override void Unregister(RegistrationContext context)
 }  
 ```
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [VSPackages](../extensibility/internals/vspackages.md)

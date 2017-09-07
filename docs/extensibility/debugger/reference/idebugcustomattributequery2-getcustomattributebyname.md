@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 4d3b06a21b70934863403289fc549815ed515883
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
-Obtains the custom attributes bytes given the name of the custom attribute.  
+Obtém os bytes de atributos personalizados, considerando o nome do atributo personalizado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetCustomAttributeByName(   
@@ -58,26 +58,26 @@ int GetCustomAttributeByName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pszCustomAttributeName`  
- [in] A string containing the name of the custom attribute to look for.  
+ [in] Uma cadeia de caracteres que contém o nome do atributo personalizado a ser pesquisada.  
   
  `ppBlob`  
- [in, out] An array that is filled in with the custom attribute bytes.  
+ [out no] Uma matriz que é preenchida com os bytes de atributo personalizado.  
   
  `pdwLen`  
- [in, out] Specifies the maximum number of bytes to return in the `ppBlob` array and returns the number of bytes actually written to the array.  
+ [out no] Especifica o número máximo de bytes a serem retornados no `ppBlob` de matriz e retorna o número de bytes gravados para a matriz.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK or returns S_FALSE if the custom attribute does not exist. Otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK ou retornará S_FALSE se o atributo personalizado não existe. Caso contrário, retornará um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- Set the `ppBlob` parameter to a null value to return the number of attributes bytes available. Then allocate an array and pass that array in for the `ppBlob` parameter.  
+## <a name="remarks"></a>Comentários  
+ Definir o `ppBlob` atributos de parâmetro para um valor null para retornar o número de bytes disponíveis. Em seguida, aloque uma matriz e passar a matriz para o `ppBlob` parâmetro.  
   
- The attribute bytes represent the raw data of the custom attribute.  
+ Os bytes de atributo representam os dados brutos do atributo personalizado.  
   
- If the `ppBlob` and `pdwLen` parameters are set to a null value, this method can be used to determine if the custom attribute merely exists. An easier alternative, however, is to call the [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) method.  
+ Se o `ppBlob` e `pdwLen` parâmetros são definidos como um valor nulo, esse método pode ser usado para determinar se o atributo personalizado simplesmente existe. No entanto, é uma alternativa mais fácil chamar o [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) método.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)   
  [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)

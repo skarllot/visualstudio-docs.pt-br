@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: b1ca15613da3ddf666f86c78b54212a799a7fa40
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ienumdebugportsuppliers2clone"></a>IEnumDebugPortSuppliers2::Clone
-Returns a copy of the current enumeration as a separate object.  
+Retorna uma cópia da enumeração atual como um objeto separado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT Clone(  
@@ -54,15 +54,15 @@ int Clone(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppEnum`  
- [out] Returns a copy of this enumeration as a separate object.  
+ [out] Retorna uma cópia dessa enumeração como um objeto separado.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The copy of the enumeration has the same state as the original at the time this method is called. However, the copy's and the original's states are separate and can be changed individually.  
+## <a name="remarks"></a>Comentários  
+ A cópia da enumeração tem o mesmo estado original no momento em que este método é chamado. No entanto, o original e da cópia estados são separados e podem ser alterados individualmente.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)

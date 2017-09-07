@@ -31,38 +31,38 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: 0e266566372b8f8ba542493aa1908c81940c7872
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5ef13141c17a5ce7be6c982f392243c213ed18c6
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ienumdebugports2getcount"></a>IEnumDebugPorts2::GetCount
-Returns the number of elements in the enumeration.  
+Retorna o número de elementos na enumeração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp#  
+```cpp  
 HRESULT GetCount(  
    ULONG* pcelt  
 );  
 ```  
   
-```cs  
+```csharp  
 int GetCount(  
    out uint pcelt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pcelt`  
- [out] Returns the number of elements in the enumeration.  
+ [out] Retorna o número de elementos na enumeração.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- This method is not part of the customary COM enumeration interface which specifies that only the `Next`, `Clone`, `Skip`, and `Reset` methods need to be implemented.  
+## <a name="remarks"></a>Comentários  
+ Este método não é parte da interface habitual de enumeração COM que especifica que somente o `Next`, `Clone`, `Skip`, e `Reset` métodos precisam ser implementado.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)

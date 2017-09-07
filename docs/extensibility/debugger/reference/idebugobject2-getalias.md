@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3dea81100ee3b6d8a7ee8f1024f87784aadbe181
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugobject2getalias"></a>IDebugObject2::GetAlias
-Gets the alias associated with this object, if any.  
+Obtém o alias associado com esse objeto, se houver.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetAlias(  
@@ -54,16 +54,16 @@ int GetAlias(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppAlias`  
- [out] Returns an [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) object representing the alias for this object; otherwise, returns a null value.  
+ [out] Retorna um [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) objeto que representa o alias para esse objeto; caso contrário, retornará um valor nulo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- An alias for an object is created with a call to the [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) method.  
+## <a name="remarks"></a>Comentários  
+ Um alias para um objeto é criado com uma chamada para o [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) método.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

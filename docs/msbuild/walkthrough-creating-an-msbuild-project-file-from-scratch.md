@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Creating an MSBuild Project File from Scratch | Microsoft Docs'
+title: 'Passo a passo: Criando um arquivo de projeto do MSBuild do zero | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,50 +33,50 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 346c00891913ea2050f3e6790d738cccc5136c0a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>Walkthrough: Creating an MSBuild Project File from Scratch
-Programming languages that target the .NET Framework use MSBuild project files to describe and control the application build process. When you use Visual Studio to create an MSBuild project file, the appropriate XML is added to the file automatically. However, you may find it helpful to understand how the XML is organized and how you can change it to control a build.  
+# <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>Instruções passo a passo: criando um arquivo de projeto do MSBuild do zero
+As linguagens de programação que tenham como destino o .NET Framework usam arquivos de projetos do MSBuild para descrever e controlar o processo de compilação de aplicativos. Quando você usa o Visual Studio para criar um arquivo de projeto do MSBuild, o XML apropriado é adicionado ao arquivo automaticamente. Entretanto, talvez você ache útil compreender como o XML é organizado e como é possível alterá-lo para controlar uma compilação.  
   
- For information about creating a project file for a C++ project, see [MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp).  
+ Para obter informações sobre como criar um arquivo de projeto para um projeto em C++, consulte [MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp).  
   
- This walkthrough shows how to create a basic project file incrementally, by using only a text editor. The walkthrough follows these steps:  
+ Este passo a passo mostra como criar um arquivo de projeto básico de forma incremental, usando somente um editor de texto. Este passo a passo possui as seguintes etapas:  
   
--   Create a minimal application source file.  
+-   Criar um arquivo de origem de aplicativo mínimo.  
   
--   Create a minimal MSBuild project file.  
+-   Criar um arquivo de projeto MSBuild mínimo.  
   
--   Extend the PATH environment variable to include MSBuild.  
+-   Estender a variável de ambiente PATH para incluir MSBuild.  
   
--   Build the application by using the project file.  
+-   Compilar o aplicativo usando o arquivo de projeto.  
   
--   Add properties to control the build.  
+-   Adicionar propriedades para controlar a compilação.  
   
--   Control the build by changing property values.  
+-   Controlar a compilação alterando os valores de propriedade.  
   
--   Add targets to the build.  
+-   Adicionar destinos à compilação.  
   
--   Control the build by specifying targets.  
+-   Controlar a compilação especificando destinos.  
   
--   Build incrementally.  
+-   Compilar de forma incremental.  
   
- This walkthrough shows how to build the project at the command prompt and examine the results. For more information about MSBuild and how to run MSBuild at the command prompt, see [Walkthrough: Using MSBuild](../msbuild/walkthrough-using-msbuild.md).  
+ Este passo a passo mostra como compilar o projeto no prompt de comando e como examinar os resultados. Para obter mais informações sobre o MSBuild e como executá-lo no prompt de comandos, consulte [Passo a passo: Usando o MSBuild](../msbuild/walkthrough-using-msbuild.md).  
   
- To complete the walkthrough, you must have the .NET Framework (version 2.0, 3.5, 4.0, or 4.5) installed because it includes MSBuild and the Visual C# compiler, which are required for the walkthrough.  
+ Para concluir este passo a passo, você deve ter o .NET Framework (versão 2.0, 3.5, 4.0 ou 4.5) instalado, pois ele inclui o MSBuild, e o compilador do Visual C#.  
   
-## <a name="creating-a-minimal-application"></a>Creating a Minimal Application  
- This section shows how to create a minimal Visual C# application source file by using a text editor.  
+## <a name="creating-a-minimal-application"></a>Criando um aplicativo mínimo  
+ Esta seção mostra como criar um arquivo de origem de aplicativo mínimo do Visual C# usando um editor de texto.  
   
-#### <a name="to-create-the-minimal-application"></a>To create the minimal application  
+#### <a name="to-create-the-minimal-application"></a>Para criar o aplicativo mínimo  
   
-1.  At the command prompt, browse to the folder where you want to create the application, for example, \My Documents\ or \Desktop\\.  
+1.  No prompt de comando, navegue até a pasta na qual você deseja criar o aplicativo, por exemplo, \Meus Documentos\ ou \Área de Trabalho\\.  
   
-2.  Type **md HelloWorld** to create a subfolder named \HelloWorld\\.  
+2.  Digite **md HelloWorld** para criar uma subpasta chamada \HelloWorld\\.  
   
-3.  Type **cd HelloWorld** to change to the new folder.  
+3.  Digite **cd HelloWorld** para mudar para a nova pasta.  
   
-4.  Start Notepad or another text editor, and then type the following code.  
+4.  Inicie o Bloco de Notas ou outro editor de texto e digite o código a seguir.  
   
     ```csharp
     using System;  
@@ -94,39 +94,39 @@ Programming languages that target the .NET Framework use MSBuild project files t
     }  
     ```  
   
-5.  Save this source code file and name it Helloworld.cs.  
+5.  Salve esse arquivo de código-fonte e o nomeie como Helloworld.cs.  
   
-6.  Build the application by typing **csc helloworld.cs** at the command prompt.  
+6.  Compile o aplicativo digitando **csc helloworld.cs** no prompt de comando.  
   
-7.  Test the application by typing **helloworld** at the command prompt.  
+7.  Teste o aplicativo digitando **helloworld** no prompt de comando.  
   
-     The **Hello, world!** message should be displayed.  
+     A mensagem **Hello, world!** deve ser exibida.  
   
-8.  Delete the application by typing **del helloworld.exe** at the command prompt.  
+8.  Exclua o aplicativo digitando **del helloworld.exe** no prompt de comando.  
   
-## <a name="creating-a-minimal-msbuild-project-file"></a>Creating a Minimal MSBuild Project File  
- Now that you have a minimal application source file, you can create a minimal project file to build the application. This project file contains the following elements:  
+## <a name="creating-a-minimal-msbuild-project-file"></a>Criando um arquivo de projeto MSBuild mínimo  
+ Agora que você possui um arquivo de origem de aplicativo mínimo, poderá criar um arquivo de projeto mínimo para compilar o aplicativo. Esse arquivo de projeto contém os seguintes elementos:  
   
--   The required root `Project` node.  
+-   O nó raiz `Project` necessário.  
   
--   An `ItemGroup` node to contain item elements.  
+-   Um nó `ItemGroup` para conter elementos do item.  
   
--   An item element that refers to the application source file.  
+-   Um elemento do item que se refere ao arquivo de origem do aplicativo.  
   
--   A `Target` node to contain tasks that are required to build the application.  
+-   Um nó `Target` para conter tarefas que são necessárias para compilar o aplicativo.  
   
--   A `Task` element to start the Visual C# compiler to build the application.  
+-   Um elemento `Task` para iniciar o compilador do Visual C# para compilar o aplicativo.  
   
-#### <a name="to-create-a-minimal-msbuild-project-file"></a>To create a minimal MSBuild project file  
+#### <a name="to-create-a-minimal-msbuild-project-file"></a>Para criar um arquivo de projeto MSBuild mínimo  
   
-1.  In the text editor, replace the existing text by using these two lines:  
+1.  No editor de texto, substitua o texto existente usando estas duas linhas:  
   
     ```xml  
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     </Project>  
     ```  
   
-2.  Insert this `ItemGroup` node as a child element of the `Project` node:  
+2.  Insira este nó `ItemGroup` como um elemento filho do nó `Project`:  
   
     ```xml  
     <ItemGroup>  
@@ -134,24 +134,24 @@ Programming languages that target the .NET Framework use MSBuild project files t
     </ItemGroup>  
     ```  
   
-     Notice that this `ItemGroup` already contains an item element.  
+     Observe que este `ItemGroup` já contém um elemento do item.  
   
-3.  Add a `Target` node as a child element of the `Project` node. Name the node `Build`.  
+3.  Adicione um nó `Target` como um elemento filho do nó `Project`. Nomeie o nó `Build`.  
   
     ```xml  
     <Target Name="Build">  
     </Target>  
     ```  
   
-4.  Insert this task element as a child element of the `Target` node:  
+4.  Insira este elemento da tarefa como um elemento filho do nó `Target`:  
   
     ```xml  
     <Csc Sources="@(Compile)"/>  
     ```  
   
-5.  Save this project file and name it Helloworld.csproj.  
+5.  Salve esse arquivo de projeto e o nomeie como Helloworld.csproj.  
   
- Your minimal project file should resemble the following code:  
+ O seu arquivo de projeto mínimo deve se assemelhar ao seguinte código:  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -164,56 +164,56 @@ Programming languages that target the .NET Framework use MSBuild project files t
 </Project>  
 ```  
   
- Tasks in the Build target are executed sequentially. In this case, the Visual C# compiler `Csc` task is the only task. It expects a list of source files to compile, and this is given by the value of the `Compile` item. The `Compile` item references just one source file, Helloworld.cs.  
+ As tarefas no destino Compilar são executadas em sequência. Nesse caso, a tarefa `Csc` do compilador do Visual C# é a única tarefa. Ela espera que uma lista de arquivos de origem seja compilada e isso ocorre pelo valor do item `Compile`. O item `Compile` faz referências a apenas um arquivo de origem, Helloworld.cs.  
   
 > [!NOTE]
->  In the item element, you can use the asterisk wildcard character (*) to reference all files that have the .cs file name extension, as follows:  
+>  No elemento do item, você pode usar o caractere curinga de asterisco (*) para fazer referência a todos os arquivos que tenham a extensão de nome de arquivo .cs, como a seguir:  
 >   
 >  `<Compile Include="*.cs" />`  
 >   
->  However, we do not recommend the use of wildcard characters because it makes debugging and selective targeting more difficult if source files are added or deleted.  
+>  No entanto, não recomendamos o uso de caracteres curinga, pois eles tornam a depuração e o direcionamento seletivo mais difícil se arquivos de origem forem adicionados ou excluídos.  
   
-## <a name="extending-the-path-to-include-msbuild"></a>Extending the Path to Include MSBuild  
- Before you can access MSBuild, you must extend the PATH environment variable to include the .NET Framework folder.  
+## <a name="extending-the-path-to-include-msbuild"></a>Estendendo o caminho para incluir o MSBuild  
+ Para poder acessar o MSBuild, você deve estender a variável de ambiente PATH para incluir a pasta do .NET Framework.  
   
-#### <a name="to-add-msbuild-to-your-path"></a>To add MSBuild to your path  
+#### <a name="to-add-msbuild-to-your-path"></a>Para adicionar o MSBuild ao seu caminho  
   
--   Starting in Visual Studio 2013, you can find MSBuild.exe in the MSBuild folder (`%ProgramFiles%\MSBuild` on a 32-bit operating system, or `%ProgramFiles(x86)%\MSBuild` on a 64-bit operating system).  
+-   Iniciando no Visual Studio 2013, você pode localizar o MSBuild.exe na pasta do MSBuild (`%ProgramFiles%\MSBuild` em um sistema operacional de 32 bits ou `%ProgramFiles(x86)%\MSBuild` em um sistema operacional de 64 bits).  
   
-     At the command prompt, type **set PATH=%PATH%;%ProgramFiles%\MSBuild** or **set PATH=%PATH%;%ProgramFiles(x86)%\MSBuild**.  
+     No prompt de comando, digite **definir PATH=%PATH%;%ProgramFiles%\MSBuild** ou **definir PATH=%PATH%;%ProgramFiles(x86)%\MSBuild**.  
   
-     Alternatively, if you have Visual Studio installed, you can use the **Visual Studio Command Prompt**, which has a path that includes the MSBuild folder.  
+     Como alternativa, se você tiver o Visual Studio instalado, poderá usar o **Prompt de comando do Visual Studio**, que tem um caminho que inclui a pasta do MSBuild.  
   
-## <a name="using-the-project-file-to-build-the-application"></a>Using the Project File to Build the Application  
- Now, to build the application, use the project file that you just created.  
+## <a name="using-the-project-file-to-build-the-application"></a>Usando o arquivo de projeto para compilar o aplicativo  
+ Agora, para compilar o aplicativo, use o arquivo de projeto recém-criado.  
   
-#### <a name="to-build-the-application"></a>To build the application  
+#### <a name="to-build-the-application"></a>Para compilar o aplicativo  
   
-1.  At the command prompt, type **msbuild helloworld.csproj /t:Build**.  
+1.  No prompt de comando, digite **msbuild helloworld.csproj /t:Build**.  
   
-     This builds the Build target of the Helloworld project file by invoking the Visual C# compiler to create the Helloworld application.  
+     Ele compila o destino Compilar do arquivo de projeto Helloworld chamando o compilador do Visual C# para criar o aplicativo Helloworld.  
   
-2.  Test the application by typing **helloworld**.  
+2.  Teste o aplicativo digitando **helloworld**.  
   
-     The **Hello, world!** message should be displayed.  
+     A mensagem **Hello, world!** deve ser exibida.  
   
 > [!NOTE]
->  You can see more details about the build by increasing the verbosity level. To set the verbosity level to "detailed", type either of these commands at the command prompt:  
+>  Você pode ver mais detalhes sobre a compilação aumentando o nível de detalhamento. Para configurar o nível de detalhamento como "detalhado", digite um destes comandos no prompt de comando:  
 >   
 >  **msbuild helloworld.csproj /t:Build /verbosity:detailed**  
   
-## <a name="adding-build-properties"></a>Adding Build Properties  
- You can add build properties to the project file to further control the build. Now add these properties:  
+## <a name="adding-build-properties"></a>Adicionando propriedades de compilação  
+ Você pode adicionar propriedades de compilação ao arquivo de projeto para controlar ainda mais a compilação. Agora, adicione estas propriedades:  
   
--   An `AssemblyName` property to specify the name of the application.  
+-   Uma propriedade `AssemblyName` para especificar o nome do aplicativo.  
   
--   An `OutputPath` property to specify a folder to contain the application.  
+-   Uma propriedade `OutputPath` para especificar uma pasta para conter o aplicativo.  
   
-#### <a name="to-add-build-properties"></a>To add build properties  
+#### <a name="to-add-build-properties"></a>Para adicionar propriedades de compilação  
   
-1.  Delete the existing application by typing **del helloworld.exe** at the command prompt.  
+1.  Exclua o aplicativo existente digitando **del helloworld.exe** no prompt de comando.  
   
-2.  In the project file, insert this `PropertyGroup` element just after the opening `Project` element:  
+2.  No arquivo de projeto, insira este elemento `PropertyGroup` imediatamente depois de abrir o elemento `Project`:  
   
     ```xml  
     <PropertyGroup>  
@@ -222,25 +222,25 @@ Programming languages that target the .NET Framework use MSBuild project files t
     </PropertyGroup>  
     ```  
   
-3.  Add this task to the Build target, just before the `Csc` task:  
+3.  Adicione esta tarefa no destino Compilar, imediatamente antes da tarefa `Csc`:  
   
     ```xml  
     <MakeDir Directories="$(OutputPath)"      Condition="!Exists('$(OutputPath)')" />  
     ```  
   
-     The `MakeDir` task creates a folder that is named by the `OutputPath` property, provided that no folder by that name currently exists.  
+     A tarefa `MakeDir` cria uma pasta que é chamada pela propriedade `OutputPath`, contanto que não exista atualmente nenhuma pasta com esse nome.  
   
-4.  Add this `OutputAssembly` attribute to the `Csc` task:  
+4.  Adicione esse atributo `OutputAssembly` à tarefa `Csc`:  
   
     ```xml  
     <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />  
     ```  
   
-     This instructs the Visual C# compiler to produce an assembly that is named by the `AssemblyName` property and to put it in the folder that is named by the `OutputPath` property.  
+     Isso instrui o compilador do Visual C# a produzir um assembly que é chamado pela propriedade `AssemblyName` e para colocá-lo na pasta que é chamada pela propriedade `OutputPath`.  
   
-5.  Save your changes.  
+5.  Salve as alterações.  
   
- Your project file should now resemble the following code:  
+ O seu arquivo de projeto deve agora se assemelhar ao seguinte código:  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -259,45 +259,45 @@ Programming languages that target the .NET Framework use MSBuild project files t
 ```  
   
 > [!NOTE]
->  We recommend that you add the backslash (\\) path delimiter at the end of the folder name when you specify it in the `OutputPath` element, instead of adding it in the `OutputAssembly` attribute of the `Csc` task. Therefore,  
+>  Recomendamos que você adicione um delimitador de caminho de barra invertida (\\) no final do nome da pasta ao especificá-lo no elemento `OutputPath`, em vez de adicioná-lo ao atributo `OutputAssembly` da tarefa `Csc`. Portanto,  
 >   
 >  `<OutputPath>Bin\</OutputPath>`  
 >   
 >  `OutputAssembly=="$(OutputPath)$(AssemblyName).exe" />`  
 >   
->  is better than  
+>  é melhor que  
 >   
 >  `<OutputPath>Bin</OutputPath>`  
 >   
 >  `OutputAssembly=="$(OutputPath)\$(AssemblyName).exe" />`  
   
-## <a name="testing-the-build-properties"></a>Testing the Build Properties  
- Now you can build the application by using the project file in which you used build properties to specify the output folder and application name.  
+## <a name="testing-the-build-properties"></a>Testando as propriedades de compilação  
+ Agora, você pode compilar o aplicativo usando o arquivo de projeto no qual usou as propriedades de compilação para especificar a pasta de saída e o nome do aplicativo.  
   
-#### <a name="to-test-the-build-properties"></a>To test the build properties  
+#### <a name="to-test-the-build-properties"></a>Para testar as propriedades de compilação  
   
-1.  At the command prompt, type **msbuild helloworld.csproj /t:Build**.  
+1.  No prompt de comando, digite **msbuild helloworld.csproj /t:Build**.  
   
-     This creates the \Bin\ folder and then invokes the Visual C# compiler to create the MSBuildSample application and puts it in the \Bin\ folder.  
+     Com isso, você cria a pasta \Bin\ e chama o compilador do Visual C# para criar o aplicativo MSBuildSample e colocá-lo na pasta \Bin\.  
   
-2.  To verify that the \Bin\ folder has been created, and that it contains the MSBuildSample application, type **dir Bin**.  
+2.  Para verificar se a pasta \Bin\ foi criada e se ela contém o aplicativo MSBuildSample, digite **dir Bin**.  
   
-3.  Test the application by typing **Bin\MSBuildSample**.  
+3.  Exclua o aplicativo digitando **Bin\MSBuildSample**.  
   
-     The **Hello, world!** message should be displayed.  
+     A mensagem **Hello, world!** deve ser exibida.  
   
-## <a name="adding-build-targets"></a>Adding Build Targets  
- Next, add two more targets to the project file, as follows:  
+## <a name="adding-build-targets"></a>Adicionando destinos Compilar  
+ Em seguida, adicione mais dois destinos ao arquivo de projeto, como a seguir:  
   
--   A Clean target that deletes old files.  
+-   Um destino Limpar que exclui arquivos antigos.  
   
--   A Rebuild target that uses the `DependsOnTargets` attribute to force the Clean task to run before the Build task.  
+-   Um destino Recompilar que usa o atributo `DependsOnTargets` para forçar a tarefa Limpar a executar a tarefa Compilar.  
   
- Now that you have multiple targets, you can set the Build target as the default target.  
+ Agora que você tem vários destinos, poderá configurar o destino Compilar como o destino padrão.  
   
-#### <a name="to-add-build-targets"></a>To add build targets  
+#### <a name="to-add-build-targets"></a>Para adicionar destinos de compilação  
   
-1.  In the project file, add these two targets just after the Build target:  
+1.  No arquivo de projeto, adicione esses dois destinos imediatamente após o destino Compilar:  
   
     ```xml  
     <Target Name="Clean" >  
@@ -306,17 +306,17 @@ Programming languages that target the .NET Framework use MSBuild project files t
     <Target Name="Rebuild" DependsOnTargets="Clean;Build" />  
     ```  
   
-     The Clean target invokes the Delete task to delete the application. The Rebuild target does not run until both the Clean target and the Build target have run. Although the Rebuild target has no tasks, it causes the Clean target to run before the Build target.  
+     O destino Limpar chama a tarefa Excluir para excluir o aplicativo. O destino Recompilar não é executado até que o destino Limpar e o destino Compilar tenham sido executados. Embora o destino Recompilar não tenha tarefas, ele faz com que o destino Limpar seja executado antes do destino Compilar.  
   
-2.  Add this `DefaultTargets` attribute to the opening `Project` element:  
+2.  Adicione esse atributo `DefaultTargets` ao elemento `Project` inicial:  
   
     ```xml  
     <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     ```  
   
-     This sets the Build target as the default target.  
+     Isso configura o destino Compilar como o destino padrão.  
   
- Your project file should now resemble the following code:  
+ O seu arquivo de projeto deve agora se assemelhar ao seguinte código:  
   
 ```xml  
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -338,59 +338,59 @@ Programming languages that target the .NET Framework use MSBuild project files t
 </Project>  
 ```  
   
-## <a name="testing-the-build-targets"></a>Testing the Build Targets  
- You can exercise the new build targets to test these features of the project file:  
+## <a name="testing-the-build-targets"></a>Testando os destinos Compilar  
+ Você pode experimentar os novos destinos de compilação para testar esses recursos do arquivo de projeto:  
   
--   Building the default build.  
+-   Compilando a compilação padrão.  
   
--   Setting the application name at the command prompt.  
+-   Configurando o nome do aplicativo no prompt de comando.  
   
--   Deleting the application before another application is built.  
+-   Excluindo o aplicativo antes de outro aplicativo ser compilado.  
   
--   Deleting the application without building another application.  
+-   Excluindo o aplicativo sem compilar outro aplicativo.  
   
-#### <a name="to-test-the-build-targets"></a>To test the build targets  
+#### <a name="to-test-the-build-targets"></a>Para testar os destinos de compilação  
   
-1.  At the command prompt, type **msbuild helloworld.csproj /p:AssemblyName=Greetings**.  
+1.  No prompt de comando, digite **msbuild helloworld.csproj /p:AssemblyName=Greetings**.  
   
-     Because you did not use the **/t** switch to explicitly set the target, MSBuild runs the default Build target. The **/p** switch overrides the `AssemblyName` property and gives it the new value, `Greetings`. This causes a new application, Greetings.exe, to be created in the \Bin\ folder.  
+     Como você não usou a opção **/t** para configurar de forma explícita o destino, o MSBuild executa o destino de build padrão. A opção **/p** substitui a propriedade `AssemblyName` e dá a ela o novo valor, `Greetings`. Isso faz com que um novo aplicativo, Greetings.exe, seja criado na pasta \Bin\.  
   
-2.  To verify that the \Bin\ folder contains both the MSBuildSample application and the new Greetings application, type **dir Bin**.  
+2.  Para verificar se a pasta \Bin\ contém o aplicativo MSBuildSample e o novo aplicativo Greetings, digite **dir Bin**.  
   
-3.  Test the Greetings application by typing **Bin\Greetings**.  
+3.  Teste o aplicativo Greetings digitando **Bin\Greetings**.  
   
-     The **Hello, world!** message should be displayed.  
+     A mensagem **Hello, world!** deve ser exibida.  
   
-4.  Delete the MSBuildSample application by typing **msbuild helloworld.csproj /t:clean**.  
+4.  Exclua o aplicativo MSBuildSample digitando **msbuild helloworld.csproj /t:clean**.  
   
-     This runs the Clean task to remove the application that has the default `AssemblyName` property value, `MSBuildSample`.  
+     Isso executa a tarefa Limpar para remover o aplicativo que tem o `AssemblyName` valor da propriedade `MSBuildSample` padrão.  
   
-5.  Delete the Greetings application by typing **msbuild helloworld.csproj /t:clean /p:AssemblyName=Greetings**.  
+5.  Exclua o aplicativo Greetings digitando **msbuild helloworld.csproj /t:clean /p:AssemblyName=Greetings**.  
   
-     This runs the Clean task to remove the application that has the given **AssemblyName** property value, `Greetings`.  
+     Isso executa a tarefa Limpar para remover o aplicativo que tem o valor da propriedade especificado **AssemblyName**, `Greetings`.  
   
-6.  To verify that the \Bin\ folder is now empty, type **dir Bin**.  
+6.  Para verificar se a pasta \Bin\ está vazia agora, digite **dir Bin**.  
   
-7.  Type **msbuild**.  
+7.  Digite **msbuild**.  
   
-     Although a project file is not specified, MSBuild builds the helloworld.csproj file because there is only one project file in the current folder. This causes the MSBuildSample application to be created in the \Bin\ folder.  
+     Embora um arquivo de projeto não esteja especificado, o MSBuild compila o arquivo helloworld.csproj, pois há somente um arquivo na pasta atual. Isso faz com que um novo aplicativo MSBuildSample seja criado na pasta \Bin\.  
   
-     To verify that the \Bin\ folder contains the MSBuildSample application, type **dir Bin**.  
+     Para verificar se a pasta \Bin\ contém o aplicativo MSBuildSample, digite **dir Bin**.  
   
-## <a name="building-incrementally"></a>Building Incrementally  
- You can tell MSBuild to build a target only if the source files or target files that the target depends on have changed. MSBuild uses the time stamp of a file to determine whether it has changed.  
+## <a name="building-incrementally"></a>Compilando de forma incremental  
+ Você pode informar ao MSBuild para compilar um destino somente se os arquivos de origem ou os arquivos de destino do qual dependem o destino tiverem sido alterados. O MSBuild usa o carimbo de data/hora de um arquivo para determinar se ele foi alterado.  
   
-#### <a name="to-build-incrementally"></a>To build incrementally  
+#### <a name="to-build-incrementally"></a>Para compilar de forma incremental  
   
-1.  In the project file, add these attributes to the opening Build target:  
+1.  No arquivo de projeto, adicione esses atributos ao destino Compilar inicial:  
   
     ```  
     Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe"  
     ```  
   
-     This specifies that the Build target depends on the input files that are specified in the `Compile` item group, and that the output target is the application file.  
+     Isso especifica que o destino Compilar depende dos arquivos de entrada especificados no grupo de itens `Compile` e que o destino de saída é o arquivo de aplicativo.  
   
-     The resulting Build target should resemble the following code:  
+     O destino Compilar resultante deve se assemelhar ao seguinte código:  
   
     ```xml  
     <Target Name="Build" Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe">  
@@ -399,28 +399,28 @@ Programming languages that target the .NET Framework use MSBuild project files t
     </Target>  
     ```  
   
-2.  Test the Build target by typing **msbuild /v:d** at the command prompt.  
+2.  Teste o destino de build digitando **msbuild /v:d** no prompt de comando.  
   
-     Remember that helloworld.csproj is the default project file, and that Build is the default target.  
+     Lembre-se de que helloworld.csproj é o arquivo de projeto padrão e de que Compilar é o destino padrão.  
   
-     The **/v:d** switch specifies a verbose description for the build process.  
+     A opção **/v:d** especifica uma descrição detalhada do processo de build.  
   
-     These lines should be displayed:  
+     Estas linhas devem ser exibidas:  
   
-     **Skipping target "Build" because all output files are up-to-date with respect to the input files.**  
+     **Ignorando o destino de "Build" porque todos os arquivos de saída estão atualizados em relação aos arquivos de entrada.**  
   
-     **Input files: HelloWorld.cs**  
+     **Arquivos de entrada: HelloWorld.cs**  
   
-     **Output files: BinMSBuildSample.exe**  
+     **Arquivos de saída: BinMSBuildSample.exe**  
   
-     MSBuild skips the Build target because none of the source files have changed since the application was last built.  
+     O MSBuild ignora o destino Compilar, pois nenhum dos arquivos de origem foi alterado desde a última compilação do aplicativo.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
- The following example shows a project file that compiles a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] application and logs a message that contains the output file name.  
+### <a name="description"></a>Descrição  
+ O exemplo a seguir mostra um arquivo de projeto que compila um aplicativo [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] e registra uma mensagem que contém o nome do arquivo de saída.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>Código  
   
 ```xml
 <Project DefaultTargets = "Compile"  
@@ -453,14 +453,14 @@ Programming languages that target the .NET Framework use MSBuild project files t
 </Project>  
 ```  
   
-### <a name="comments"></a>Comments  
+### <a name="comments"></a>Comentários  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
- The following example shows a project file that compiles a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] application and logs a message that contains the output file name.  
+### <a name="description"></a>Descrição  
+ O exemplo a seguir mostra um arquivo de projeto que compila um aplicativo [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] e registra uma mensagem que contém o nome do arquivo de saída.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>Código  
   
 ```xml  
 <Project DefaultTargets = "Compile"  
@@ -493,9 +493,9 @@ Programming languages that target the .NET Framework use MSBuild project files t
 </Project>  
 ```  
   
-## <a name="whats-next"></a>What's Next?  
- Visual Studio can automatically do much of the work that is shown in this walkthrough. To learn how to use Visual Studio to create, edit, build, and test MSBuild project files, see [Walkthrough: Using MSBuild](../msbuild/walkthrough-using-msbuild.md).  
+## <a name="whats-next"></a>O que vem a seguir?  
+ O Visual Studio pode fazer automaticamente muito do trabalho que é mostrado neste passo a passo. Para saber como usar o Visual Studio para criar, editar, compilar e testar arquivos de projeto MSBuild, consulte [Passo a passo: Usando o MSBuild](../msbuild/walkthrough-using-msbuild.md).  
   
-## <a name="see-also"></a>See Also  
-[MSBuild Overview](../msbuild/msbuild.md)  
- [MSBuild Reference](../msbuild/msbuild-reference.md)
+## <a name="see-also"></a>Consulte também  
+[Visão geral do MSBuild](../msbuild/msbuild.md)  
+ [Referência do MSBuild](../msbuild/msbuild-reference.md)

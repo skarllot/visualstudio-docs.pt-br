@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetEELocalObject | Microsoft Docs
+title: IDebugSettingsCallback2::GetEELocalObject | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,19 +28,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: bdf465d678b75910bcad259acd763d2a23866a40
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: a8d0fa5425144b939a05aa913e63f9231cc71a1f
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugsettingscallback2geteelocalobject"></a>IDebugSettingsCallback2::GetEELocalObject
-Retrieves a expression evaluator local object given the metric name.  
+Recupera um objeto local de avaliador de expressão recebe o nome da métrica.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp#  
+```cpp  
 HRESULT GetEELocalObject(  
    REFGUID     guidLang,  
    REFGUID     guidVendor,  
@@ -49,7 +49,7 @@ HRESULT GetEELocalObject(
 );  
 ```  
   
-```cs  
+```csharp  
 private int GetEELocalObject(  
    ref Guid          guidLang,  
    ref Guid          guidVendor,  
@@ -58,21 +58,21 @@ private int GetEELocalObject(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `guidLang`  
- [in] Unique identifier of the programming language.  
+ [in] Identificador exclusivo da linguagem de programação.  
   
  `guidVendor`  
- [in] Unique identifier of the vendor.  
+ [in] Identificador exclusivo do fornecedor.  
   
  `pszMetric`  
- [in] Name of the metric.  
+ [in] Nome da métrica.  
   
  `ppUnk`  
- [out] Returns the expression evaluator local object.  
+ [out] Retorna a expressão de objeto local do avaliador.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

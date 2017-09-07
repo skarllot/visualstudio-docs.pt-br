@@ -32,13 +32,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5e958be77ca266af30556fa8c03c580eea94b903
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="bpflags90"></a>BP_FLAGS90
-Enumerates valid values for optional flags. The optional flags may be used to specify additional information when you set a breakpoint. This enumeration extends the [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) enumeration.  
+Enumera os valores válidos para sinalizadores opcionais. Os sinalizadores opcionais podem ser usados para especificar informações adicionais quando você definir um ponto de interrupção. Esta enumeração estende o [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) enumeração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 enum enum_BP_FLAGS90  
@@ -67,25 +67,25 @@ public enum enum_BP_FLAGS90
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  BP90_FLAG_NONE  
- Specifies no breakpoint flag.  
+ Não especifica que nenhum sinalizador de ponto de interrupção.  
   
  BP90_FLAG_MAP_DOCPOSITION  
- Specifies that the debug engine (DE) should map the breakpoint by using the document position. This is applicable only to breakpoints set in script-oriented source files such as Active Server Pages (ASP).  
+ Especifica que o mecanismo de depuração (DE) deve mapear o ponto de interrupção usando a posição do documento. Isso é aplicável somente a pontos de interrupção definidos nos arquivos de origem orientado por script, como páginas ASP (ASP).  
   
  BP90_FLAG_DONT_STOP  
- Specifies that the breakpoint should be processed by the debug engine, but that the debug engine ultimately should not stop there; that is, an [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) event object should not be sent. This flag is designed to be used primarily with trace points.  
+ Especifica que o ponto de interrupção deve ser processado pelo mecanismo de depuração, mas que o mecanismo de depuração, por fim, não deve parar lá; ou seja, um [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) o objeto de evento não deve ser enviado. Esse sinalizador é projetado para ser usado principalmente com pontos de rastreamento.  
   
  BP90_FLAG_TRACEPOINT_CONTINUE  
- Used by the native debug engine to determine whether the stepping state should be cleared. It differs from BP90_FLAG_DONT_STOP because BP90_FLAG_DONT_STOP is not set if the trace point executes a macro.  
+ Usado pelo mecanismo de depuração nativo para determinar se o estado de revisão deve ser desmarcado. Ele é diferente de BP90_FLAG_DONT_STOP porque BP90_FLAG_DONT_STOP não está definido se o ponto de rastreamento executa uma macro.  
   
-## <a name="requirements"></a>Requirements  
- Header: Msdbg90.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: Msdbg90.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

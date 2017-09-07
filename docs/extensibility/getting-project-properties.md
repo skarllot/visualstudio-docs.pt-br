@@ -1,5 +1,5 @@
 ---
-title: Getting Project Properties | Microsoft Docs
+title: Obtendo as propriedades do projeto | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,26 +33,26 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2384e27a9bb4f0aabf483bbbe0c14911e1380e32
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="getting-project-properties"></a>Getting Project Properties
-This walkthrough shows how to displays project properties in a tool window.  
+# <a name="getting-project-properties"></a>Obtendo as propriedades de projeto
+Este passo a passo mostra como exibe as propriedades do projeto em uma janela de ferramenta.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Pré-requisitos  
+ A partir do Visual Studio 2015, você não instalar o SDK do Visual Studio no Centro de download. Ele está incluído como um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS posteriormente. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).  
   
-### <a name="to-create-a-vsix-project-and-add-a-tool-window"></a>To create a VSIX Project and add a Tool Window  
+### <a name="to-create-a-vsix-project-and-add-a-tool-window"></a>Para criar um projeto do VSIX e adicionar uma janela de ferramenta  
   
-1.  Every Visual Studio extension starts with a VSIX deployment project which will contain the extension assets. Create a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX project named `ProjectPropertiesExtension`. You can find the VSIX project template in the **New Project** dialog under **Visual C# / Extensibility**.  
+1.  Cada extensão do Visual Studio inicia com um projeto de implantação do VSIX que conterá os ativos de extensão. Criar um [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projeto VSIX chamado `ProjectPropertiesExtension`. Você pode encontrar o modelo de projeto do VSIX no **novo projeto** caixa de diálogo em **Visual C# / extensibilidade**.  
   
-2.  Add a tool window by adding a Custom Tool Window item template named `ProjectPropertiesToolWindow`. In the **Solution Explorer**, right-click the project node and select **Add / New Item**. In the **Add New Item dialog**, go to **Visual C# Items / Extensibility** and select **Custom Tool Window**. In the **Name** field at the bottom of the dialog, change the file name to `ProjectPropertiesToolWindow.cs`. For more information about how to create a custom tool window, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md).  
+2.  Adicionar uma janela de ferramenta com a adição de um modelo de item da janela da ferramenta personalizada denominado `ProjectPropertiesToolWindow`. No **Solution Explorer**, com o botão direito no nó do projeto e selecione **Adicionar / Novo Item**. No **caixa de diálogo Adicionar Novo Item**, vá para **itens do Visual C# / extensibilidade** e selecione **janela da ferramenta personalizada**. No **nome** campo na parte inferior da caixa de diálogo, altere o nome de arquivo para `ProjectPropertiesToolWindow.cs`. Para obter mais informações sobre como criar uma janela de ferramenta personalizada, consulte [criando uma extensão com uma janela de ferramenta](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-3.  Build the solution and verify that it compiles without errors.  
+3.  Compile a solução e verifique se que ele foi compilado sem erros.  
   
-### <a name="to-display-project-properties-in-a-tool-window"></a>To display project properties in a tool window  
+### <a name="to-display-project-properties-in-a-tool-window"></a>Para exibir as propriedades de projeto em uma janela de ferramenta  
   
-1.  In the ProjectPropertiesToolWindowCommand.cs file add the following using statements.  
+1.  No arquivo ProjectPropertiesToolWindowCommand.cs, adicione o seguinte usando instruções.  
   
     ```csharp  
     using EnvDTE;  
@@ -60,9 +60,9 @@ This walkthrough shows how to displays project properties in a tool window.
   
     ```  
   
-2.  In ProjectPropertiesToolWindowControl.xaml, remove the existing button and add a TreeView from the Toolbox. You can also remove the click event handler from the ProjectPropertiesToolWindowControl.xaml.cs file.  
+2.  No ProjectPropertiesToolWindowControl.xaml, remova o botão existente e adicionar um modo de exibição de árvore da caixa de ferramentas. Você também pode remover o manipulador de eventos de clique do arquivo ProjectPropertiesToolWindowControl.xaml.cs.  
   
-3.  In ProjectPropertiesToolWindowCommand.cs, use the ShowToolWindow() method to open the project and read its properties, then add the properties to the TreeView. The code for ShowToolWindow should look like the following:  
+3.  Em ProjectPropertiesToolWindowCommand.cs, use o método ShowToolWindow() para abrir o projeto e suas propriedades de leitura e adicione as propriedades para o modo de exibição de árvore. O código para ShowToolWindow deve parecer com o seguinte:  
   
     ```csharp  
     private void ShowToolWindow(object sender, EventArgs e)  
@@ -109,10 +109,10 @@ This walkthrough shows how to displays project properties in a tool window.
     }  
     ```  
   
-4.  Build the project and start debugging. The experimental instance should appear.  
+4.  Compile o projeto e comece a depuração. A instância experimental deve aparecer.  
   
-5.  In the experimental instance open a project.  
+5.  Na instância experimental abra um projeto.  
   
-6.  In the **View / Other Windows** click **ProjectPropertiesToolWindow**.  
+6.  No **exibição / outras janelas** clique **ProjectPropertiesToolWindow**.  
   
-     You should see the tree control in the tool window together with the name of the first project and of all its project properties.
+     Você deve ver o controle de árvore na janela da ferramenta junto com o nome do primeiro projeto e de todas as propriedades do projeto.

@@ -34,47 +34,47 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 242221c8cc3ffad51fa21f71d6209208b58ae6e6
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
-This interface allows a debug engine (DE) or custom port suppliers to register programs for debugging.  
+Essa interface permite que um mecanismo de depuração (DE) ou fornecedores de porta personalizada para registrar os programas de depuração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 IDebugProgramPublisher2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Notes for Implementers  
- Visual Studio implements this interface to register programs being debugged in order to make them visible for debugging across multiple processes.  
+## <a name="notes-for-implementers"></a>Observações para implementadores  
+ O Visual Studio implementa essa interface para registrar os programas que está sendo depurados para torná-las visíveis para depuração entre vários processos.  
   
-## <a name="notes-for-callers"></a>Notes for Callers  
- Call COM's `CoCreateInstance` function with `CLSID_ProgramPublisher` to obtain this interface (see the Example). A DE or a custom port supplier uses this interface to register program nodes that represent programs being debugged.  
+## <a name="notes-for-callers"></a>Observações para chamadores  
+ Chame COM `CoCreateInstance` funcionar com `CLSID_ProgramPublisher` obter interface (veja o exemplo). Um fornecedor de porta personalizada ou um DE usa essa interface para registrar nós de programa que representam os programas que estiverem sendo depurados.  
   
-## <a name="methods-in-vtable-order"></a>Methods in Vtable order  
- This interface implements the following methods:  
+## <a name="methods-in-vtable-order"></a>Métodos na ordem Vtable  
+ Essa interface implementa os métodos a seguir:  
   
-|Method|Description|  
+|Método|Descrição|  
 |------------|-----------------|  
-|[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)|Makes a program node available to DEs and the session debug manager (SDM).|  
-|[UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)|Removes a program node so that it is no longer available.|  
-|[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)|Makes a program available to DEs and the SDM.|  
-|[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)|Removes a program so it is no longer available.|  
-|[SetDebuggerPresent](../../../extensibility/debugger/reference/idebugprogrampublisher2-setdebuggerpresent.md)|Sets a flag indicating that a debugger is present.|  
+|[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)|Disponibiliza um nó de programa para DEs e a sessão de depuração manager (SDM).|  
+|[UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)|Remove um nó de programa para que ele não está mais disponível.|  
+|[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)|Disponibiliza um programa para DEs e o SDM.|  
+|[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)|Remove um programa para que ele não está mais disponível.|  
+|[SetDebuggerPresent](../../../extensibility/debugger/reference/idebugprogrampublisher2-setdebuggerpresent.md)|Define um sinalizador que indica que um depurador está presente.|  
   
-## <a name="remarks"></a>Remarks  
- This interface makes programs and program nodes available (that is, "publishes" them) for use by DEs and the session debug manager (SDM). To access published programs and program nodes, use the [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) interface. This is the only way Visual Studio can recognize that a program is being debugged.  
+## <a name="remarks"></a>Comentários  
+ Essa interface disponibiliza programas e nós de programa (ou seja, "publique") para uso por DEs e o Gerenciador de sessão de depuração (SDM). Para acessar programas publicados e nós de programa, use o [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) interface. Este é o único modo que o Visual Studio pode reconhecer que um programa está sendo depurado.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="example"></a>Example  
- This example shows how to instantiate the program publisher and register a program node. This is taken from the Tutorial, [Publishing the Program Node](http://msdn.microsoft.com/en-us/d0100e02-4e2b-4e72-9e90-f7bc11777bae).  
+## <a name="example"></a>Exemplo  
+ Este exemplo mostra como instanciar o Editor de programa e registrar um nó de programa. Isso é obtido do Tutorial, [publicando o nó de programa](http://msdn.microsoft.com/en-us/d0100e02-4e2b-4e72-9e90-f7bc11777bae).  
   
 ```cpp  
 // This is how m_srpProgramPublisher is defined in the class definition:  
@@ -107,6 +107,6 @@ void CProgram::Start(IDebugEngine2 * pEngine)
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Core Interfaces](../../../extensibility/debugger/reference/core-interfaces.md)   
+## <a name="see-also"></a>Consulte também  
+ [Interfaces de núcleo](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

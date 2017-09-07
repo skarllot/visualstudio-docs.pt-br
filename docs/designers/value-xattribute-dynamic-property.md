@@ -47,8 +47,7 @@ attrib.Value
 ```  
   
 ## <a name="property-valuereturn-value"></a>Valor de propriedade/Valor de retorno  
- 
-          <xref:System.String> que contém o valor deste atributo.  
+ <xref:System.String> que contém o valor deste atributo.  
   
 ## <a name="exceptions"></a>Exceções  
   

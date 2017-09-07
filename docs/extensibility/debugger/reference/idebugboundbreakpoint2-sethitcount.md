@@ -35,13 +35,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 72f4f12aecaeb3b45af5950a9ec3bc45f37c1969
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugboundbreakpoint2sethitcount"></a>IDebugBoundBreakpoint2::SetHitCount
-Sets the hit count for the bound breakpoint.  
+Define a contagem de ocorrências para o ponto de interrupção associado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT SetHitCount(   
@@ -55,18 +55,18 @@ int SetHitCount(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `dwHitCount`  
- [in] The hit count to set.  
+ [in] A contagem de ocorrências para definir.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the state of the bound breakpoint object is set to `BPS_DELETED` (part of the [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeration).  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o estado do objeto de ponto de interrupção associado é definido como `BPS_DELETED` (parte do [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeração).  
   
-## <a name="remarks"></a>Remarks  
- The hit count is the number of times this breakpoint has fired during the current run of the session.  
+## <a name="remarks"></a>Comentários  
+ A contagem de ocorrências é o número de vezes que este ponto de interrupção foi disparado durante a execução da sessão atual.  
   
- This method is typically called by the debug engine to update the current hit count on this breakpoint.  
+ Normalmente, esse método é chamado pelo mecanismo de depuração para atualizar a contagem de ocorrências atual em que este ponto de interrupção.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
  [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

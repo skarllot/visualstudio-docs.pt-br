@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: e295ad3fd09a8b5dbaa17cdd6f10f3cb8a9ff1b9
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugreference2setvalueasreference"></a>IDebugReference2::SetValueAsReference
-Sets the value of a reference from another reference. Reserved for future use.  
+Define o valor de uma referência de outra referência. Reservado para uso futuro.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT SetValueAsReference (   
@@ -60,21 +60,21 @@ int SetValueAsReference (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `rgpArgs`  
- [in] An array of [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objects used to determine how to set the reference value.  
+ [in] Uma matriz de [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objetos usados para determinar como definir o valor de referência.  
   
  `dwArgCount`  
- [in] The number of references in the array.  
+ [in] O número de referências na matriz.  
   
  `pValue`  
- [in] An [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object from which to set the property value.  
+ [in] Um [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objeto do qual definir o valor da propriedade.  
   
  `dwTimeout`  
- [in] Maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
+ [in] Tempo máximo, em milissegundos, de espera antes de retornar desse método. Use `INFINITE` aguardar indefinidamente.  
   
-## <a name="return-value"></a>Return Value  
- Always returns `E_NOTIMPL`.  
+## <a name="return-value"></a>Valor de retorno  
+ Sempre retorna `E_NOTIMPL`.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

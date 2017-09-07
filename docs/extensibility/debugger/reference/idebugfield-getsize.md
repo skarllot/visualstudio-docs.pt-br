@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5f025b96c3a37cd55d8bc148d04196a862f7e7bc
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugfieldgetsize"></a>IDebugField::GetSize
-This method gets the size of a field, in bytes.  
+Esse método obtém o tamanho de um campo, em bytes.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetSize(   
@@ -54,15 +54,15 @@ int GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwSize`  
- [out] Returns the size.  
+ [out] Retorna o tamanho.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- All fields have a type and all types have a size. For example, a field with a type of byte has a size of 1 byte.  
+## <a name="remarks"></a>Comentários  
+ Todos os campos têm um tipo e todos os tipos têm um tamanho. Por exemplo, um campo com um tipo de bytes tem um tamanho de 1 byte.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

@@ -1,7 +1,7 @@
 ---
 title: "Atualizar uma instalação baseada em rede do Visual Studio | Microsoft Docs"
-description: "{{ESPAÇO RESERVADO}}"
-ms.date: 05/05/2017
+description: "Saiba como atualizar uma instalação do Visual Studio baseada em rede usando o comando --layout"
+ms.date: 08/14/2017
 ms.reviewer: tims
 ms.suite: 
 ms.technology:
@@ -15,26 +15,11 @@ ms.assetid: 1AF69C0E-0AC9-451B-845D-AE4EDBCEA65C
 author: timsneath
 ms.author: tims
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: 75c65d75ab751058ac435d62f253ead149ccfe42
+ms.translationtype: HT
+ms.sourcegitcommit: f23906933add1f4706d8786b2950fb3b5d2e6781
+ms.openlocfilehash: 55af5ee53ee49d83a301936a84c1aa3697568e3e
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Atualizar uma instalação em rede do Visual Studio
@@ -42,22 +27,48 @@ ms.lasthandoff: 05/09/2017
 É possível atualizar um layout de instalação de rede do Visual Studio com as últimas atualizações de produto, para que ele possa ser usado como um ponto de instalação para a atualização mais recente do Visual Studio e também manter instalações que já estão implantadas em estações de trabalho do cliente.
 
 ## <a name="how-to-update-a-network-layout"></a>Como atualizar um layout de rede
-Para atualizar o compartilhamento de instalação de rede para que ele inclua as atualizações mais recentes, execute o mesmo comando `--layout` executado ao criar inicialmente o layout para baixar pacotes atualizados de forma incremental.
+Para atualizar o compartilhamento de instalação de rede para que ele inclua as atualizações mais recentes, execute comando --layout para baixar pacotes atualizados de forma incremental. 
 
-Se você selecionou um layout parcial ao criar o layout de rede, use os mesmos parâmetros de linha de comando que usou ao criar o layout de instalação de rede (ou seja, as cargas de trabalho e as linguagens). Se você escolher opções diferentes, o segundo comando `--layout` não atualizará os pacotes que não foram especificados pela segunda vez.
+Se você selecionou um layout parcial quando criou o layout de rede, essas configurações são salvas.  Comandos de layout futuros usam as opções anteriores e quaisquer novas opções que você especificar.  (Isso é novidade no 15.3.)  Se você está usando um layout de uma versão mais antiga, use os mesmos parâmetros de linha de comando utilizados ao criar o layout de instalação de rede (ou seja, as mesmas cargas de trabalho e idiomas) para atualizar o seu conteúdo.
 
-Se você hospedar um layout em um compartilhamento de arquivo, será recomendável atualizar uma cópia privada do layout (por exemplo, `c:\vs2017offline`) e, depois que todo o conteúdo atualizado for baixado, copiá-lo para o compartilhamento de arquivo (por exemplo, `\\server\products\VS2017`).  Se você não fizer isso, haverá uma chance maior de que qualquer usuário que execute a instalação enquanto o layout está sendo atualizado não possa obter todo o conteúdo do layout, pois ele não está completamente atualizado.
+Se você hospedar um layout em um compartilhamento de arquivo, atualize uma cópia privada do layout (por exemplo, c:\vs2017offline) e, depois que todo o conteúdo atualizado for baixado, copie-a para o compartilhamento de arquivo (por exemplo, \\server\products\VS2017). Se você não fizer isso, haverá uma chance maior de que quaisquer usuários que executem a instalação enquanto o layout está sendo atualizado não consigam obter todo o conteúdo do layout, pois ele não estará completamente atualizado. 
+
+Vamos examinar como criar e, em seguida, atualizar um layout:
+
+* Primeiro, aqui está um exemplo de como criar um layout com uma carga de trabalho apenas para inglês:
+
+  ```
+  vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --lang en-US 
+  ```
+
+* Veja aqui como atualizar esse mesmo layout para uma versão mais recente. Você não precisa especificar parâmetros de linha de comando adicionais. As configurações anteriores foram salvas e serão usadas por quaisquer comandos de layout subsequentes nesta pasta de layout.  
+
+  ``` 
+  vs_enterprise.exe --layout c:\VS2017Layout  
+  ```
+
+* Veja aqui como adicionar uma carga de trabalho e idioma traduzido adicionais.  (Este comando adiciona a carga de trabalho do Azure.)  Agora, tanto a Área de Trabalho Gerenciada quanto o Azure são incluídos neste layout.  Os recursos de idioma para inglês e alemão também estão incluídos para todas essas cargas de trabalho.  Além disso, o layout é atualizado para a versão mais recente disponível. 
+
+  ``` 
+  vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE 
+  ``` 
+
+* E, finalmente, eis aqui como adicionar uma carga de trabalho e um idioma traduzido adicionais sem atualizar a versão. (Este comando adiciona a carga de trabalho do ASP.NET e Web.)  Agora, as cargas de trabalho da Área de Trabalho Gerenciada, do Azure e do ASP.NET e Web estão incluídas neste layout.  Os recursos de idioma para inglês, alemão e francês também estão incluídos para todas essas cargas de trabalho.  No entanto, o layout não foi atualizado para a versão mais recente disponível quando esse comando foi executado.  Ele permanece com a versão existente. 
+
+  ``` 
+  vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion 
+  ```
 
 ## <a name="how-to-deploy-an-update-to-client-machines"></a>Como implantar uma atualização em computadores cliente
-Dependendo de como o ambiente de rede é configurado, uma atualização pode ser implantada por um administrador de empresa ou iniciada de um computador cliente. 
+Dependendo de como o ambiente de rede é configurado, uma atualização pode ser implantada por um administrador de empresa ou iniciada de um computador cliente.
 
-- Os usuários podem atualizar uma instância do Visual Studio instalada de uma pasta de instalação offline:
-  - Execute o instalador do Visual Studio.
-  - Em seguida, clique em **Atualizar**.
+* Os usuários podem atualizar uma instância do Visual Studio instalada de uma pasta de instalação offline:
+  * Execute o instalador do Visual Studio.
+  * Em seguida, clique em **Atualizar**.
 
-- Os administradores podem atualizar implantações de cliente do Visual Studio sem qualquer interação do usuário com dois comandos separados:
-  - Primeiro, atualize o instalador do Visual Studio: <br>```vs_enterprise.exe --quiet --update```
-  - Depois, atualize o próprio aplicativo do Visual Studio: <br>```vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" --quiet --wait --norestart```
+* Os administradores podem atualizar implantações de cliente do Visual Studio sem qualquer interação do usuário com dois comandos separados:
+  * Primeiro, atualize o Instalador do Visual Studio: <br>```vs_enterprise.exe --quiet --update```
+  * Depois, atualize o aplicativo do Visual Studio em si: <br>```vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" --quiet --wait --norestart```
 
 > [!NOTE]
 > Use o [comando vswhere.exe](tools-for-managing-visual-studio-instances.md) para identificar o caminho de instalação de uma instância existente do Visual Studio em um computador cliente.
@@ -65,6 +76,54 @@ Dependendo de como o ambiente de rede é configurado, uma atualização pode ser
 > [!TIP]
 > Para obter detalhes sobre como controlar quando as notificações de atualização são apresentadas aos usuários, confira [Controlar as atualizações nas implantações do Visual Studio com base em rede](controlling-updates-to-visual-studio-deployments.md).
 
+## <a name="how-to-verify-a-layout"></a>Como verificar um layout 
+Use `--verify` para executar a verificação no cache offline fornecido. Ele verifica se os arquivos de pacotes estão ausentes ou são inválidos. No final da verificação, imprime a lista de arquivos ausentes e arquivos inválidos. 
+
+``` 
+vs_enterprise.exe --layout <layoutDir> --verify 
+``` 
+
+O vs_enterprise.exe pode ser invocado dentro do layoutDir. 
+
+
+> [!NOTE] 
+> Alguns arquivos de metadados importantes que são necessários para a opção `--verify` devem estar no cache offline do layout. Se esses arquivos de metadados estiverem ausentes, "--verify" não poderá ser executado e a instalação apresentará um erro. Se esse erro ocorrer, recrie um novo layout offline para uma pasta diferente (ou na mesma pasta de cache offline). Para fazer isso, execute o mesmo comando de layout que você usou para criar o layout offline inicial. Por exemplo, `Vs_enterprise.exe --layout <layoutDir>`.
+
+A Microsoft fornece atualizações para o Visual Studio periodicamente, portanto, o novo layout que você criar poderá não ser da mesma versão que o layout inicial.  
+
+## <a name="how-to-fix-a-layout"></a>Como corrigir um layout 
+Use `--fix` para executar a mesma verificação que `--verify` e também tentar corrigir os problemas identificados. O processo `--fix` precisa de uma conexão de Internet, portanto, verifique se o computador está conectado à Internet antes de você invocar `--fix`. 
+
+``` 
+vs_enterprise.exe --layout <layoutDir> --fix 
+``` 
+
+O vs_enterprise.exe pode ser invocado dentro do layoutDir. 
+
+## <a name="how-to-remove-older-versions-from-a-layout"></a>Como remover versões mais antigas de um layout
+Depois de executar atualizações de layout para um cache offline, a pasta de cache de layout pode ter alguns pacotes obsoletos que não são mais requeridos pela instalação do Visual Studio mais recente. Você pode usar a opção `--clean` para remover pacotes obsoletos de uma pasta de cache offline. 
+
+Para fazer isso, você precisará dos caminhos de arquivo para os manifestos de catálogo que contêm esses pacotes obsoletos. Você pode encontrar os que manifestos de catálogo em uma pasta "Arquivo morto" no cache de layout offline. Eles são salvos nela quando você atualiza um layout. Na pasta "Arquivo morto", há uma ou mais pastas chamadas "GUID", cada qual contendo um manifesto de catálogo obsoleto. O número de pastas "GUID" deve ser o mesmo que o número de atualizações feitas em seu cache offline. 
+
+Alguns arquivos são salvos dentro de cada pasta "GUID". Os dois arquivos mais interessantes são um arquivo "catalog.json" e um arquivo "version.txt". O arquivo "catalog.json" é o manifesto de catálogo obsoleto que você precisará passar para a opção `--clean`. O outro arquivo, version.txt, contém a versão deste manifesto de catálogo obsoleto. Com base no número de versão, você pode decidir se deseja remover pacotes obsoletos do manifesto de catálogo. Você pode fazer o mesmo ao percorrer as outras pastas "GUID". Depois de tomar a decisão sobre os catálogos que deseja limpar, execute o comando `--clean` fornecendo os caminhos de arquivos para esses catálogos.  
+
+Aqui estão alguns exemplos de como usar a opção --clean:   
+
+``` 
+vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> <file-path-of-catalog2> … 
+``` 
+
+``` 
+vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> --clean <file-path-of-catalog2> … 
+``` 
+
+Você também pode invocar vs_enterprise.exe dentro do &lt;layoutDir&gt;. Veja um exemplo:
+
+```  
+c:\VS2017Layout\vs_enterprise.exe --layout c:\VS2017Layout --clean c:\VS2017Layout\Archive\1cd70189-fc55-4583-8ad8-a2711e928325\Catalog.json --clean c:\VS2017Layout\Archive\d420889f-6aad-4ba4-99e4-ed7833795a10\Catalog.json 
+```  
+
+Quando você executa esse comando, a instalação analisa sua pasta de cache offline para localizar a lista de arquivos que ela removerá. Você terá a oportunidade de examinar os arquivos que serão excluídos e confirmar as exclusões. 
 
 ## <a name="see-also"></a>Consulte também
 * [Instalar o Visual Studio](install-visual-studio.md)

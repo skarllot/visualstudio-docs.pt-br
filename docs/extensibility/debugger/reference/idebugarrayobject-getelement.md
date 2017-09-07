@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: f1d56b32b91b840cc87bb3ba50107b65c54c79d5
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugarrayobjectgetelement"></a>IDebugArrayObject::GetElement
-Gets an element of the array.  
+Obtém um elemento da matriz.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetElement(   
@@ -56,18 +56,18 @@ int GetElement(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `dwIndex`  
- [in] The element index.  
+ [in] O índice do elemento.  
   
  `ppElement`  
- [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) interface that represents the element.  
+ [out] Retorna um [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) interface que representa o elemento.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- This method sees all of the elements of an array object as a one-dimensional array, even if the array object is multi-dimensional. For example, given the array `myarray[3][2][6]` and a `dwIndex` parameter of 20, this method would return the element from `myarray[1][1][2]`, and a `dwIndex` parameter of 21 would return the element from `myarray[1][1][3]`. Use the [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) method to determine the total number of elements in the array.  
+## <a name="remarks"></a>Comentários  
+ Esse método considera todos os elementos de um objeto de matriz como uma matriz unidimensional, mesmo se o objeto de matriz é multidimensional. Por exemplo, dada a matriz `myarray[3][2][6]` e um `dwIndex` parâmetro de 20, esse método retornará o elemento de `myarray[1][1][2]`e um `dwIndex` parâmetro 21 retornará o elemento de `myarray[1][1][3]`. Use o [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) método para determinar o número total de elementos na matriz.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

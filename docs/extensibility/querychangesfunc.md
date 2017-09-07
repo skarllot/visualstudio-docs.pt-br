@@ -31,9 +31,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 827a8bef2cf9de538cd0ba1fac5b5c2723723bbe
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -67,7 +68,7 @@ typedef BOOL (*QUERYCHANGESFUNC)(
 |SCC_I_OPERATIONCANCELED|Pare o processamento.|  
 |SCC_E_xxx|Qualquer erro de SCC apropriado deve parar o processamento.|  
   
-##  <a name="a-namelinkquerychangesdataa-querychangesdata-structure"></a><a name="LinkQUERYCHANGESDATA"></a>Estrutura QUERYCHANGESDATA  
+##  <a name="LinkQUERYCHANGESDATA"></a>Estrutura QUERYCHANGESDATA  
  A estrutura passada para cada arquivo é semelhante ao seguinte:  
   
 ```cpp#  

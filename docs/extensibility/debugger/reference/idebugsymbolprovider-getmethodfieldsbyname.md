@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3bf359535d5b11edb95910afe5a81ca048ab9c21
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugsymbolprovidergetmethodfieldsbyname"></a>IDebugSymbolProvider::GetMethodFieldsByName
-This method gets the field representing a fully qualified method name.  
+Esse método obtém o campo que representa um nome de método totalmente qualificado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetMethodFieldsByName(   
@@ -58,22 +58,22 @@ int GetMethodFieldsByName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pszFullName`  
- [in] The method name.  
+ [in] O nome do método.  
   
  `nameMatch`  
- [in] Selects the type of match, for example, case-sensitive.  
+ [in] Seleciona o tipo de correspondência, por exemplo, diferencia maiusculas de minúsculas.  
   
  `ppEnum`  
- [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerator for the fields associated with this method.  
+ [out] Retorna um [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerador para os campos associados a este método.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- A method can be associated with multiple fields if it is overloaded, for example.  
+## <a name="remarks"></a>Comentários  
+ Um método pode ser associado a vários campos, se ele está sobrecarregado, por exemplo.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

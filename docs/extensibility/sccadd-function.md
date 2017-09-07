@@ -30,9 +30,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 7a713757ca79f46aab2577bf1afbf4e82a854df0
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -41,7 +42,7 @@ Essa função adiciona novos arquivos ao sistema de controle de origem.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```cpp#  
+```cpp  
 SCCRTN SccAdd(  
    LPVOID    pvContext,  
    HWND      hWnd,  

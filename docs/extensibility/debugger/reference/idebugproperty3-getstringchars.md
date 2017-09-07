@@ -31,16 +31,16 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: d7c706c5f9b7b3e21bae4e5af1d2314f6db95734
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f84c744eef8dab863ec9a91aec621764dfa3c266
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
-Retrieves the string associated with this property and stores it in a user-supplied buffer.  
+Recupera a cadeia de caracteres associada a essa propriedade e o armazena em um buffer fornecido pelo usuário.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetStringChars(  
@@ -50,7 +50,7 @@ HRESULT GetStringChars(
 );  
 ```  
   
-```cs  
+```csharp  
 int GetStringChars(  
    uint       buflen,   
    out string rgString,   
@@ -58,28 +58,28 @@ int GetStringChars(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `buflen`  
- [in] Maximum number of characters the user-supplied buffer can hold.  
+ [in] Número máximo de caracteres que pode conter o buffer fornecido pelo usuário.  
   
  `rgString`  
- [out] Returns the string.  
+ [out] Retorna a cadeia de caracteres.  
   
- [C++ only], `rgString` is a pointer to a buffer that receives the Unicode characters of the string. This buffer must be at least `buflen` characters (not bytes) in size.  
+ [C++ apenas], `rgString` é um ponteiro para um buffer que recebe os caracteres Unicode da cadeia de caracteres. Esse buffer deve ser pelo menos `buflen` caracteres (não em bytes) de tamanho.  
   
  `pceltFetched`  
- [out] Where the number of characters actually stored in the buffer is returned. (Can be `NULL` in C++.)  
+ [out] Em que o número de caracteres de fato armazenados no buffer é retornado. (Pode ser `NULL` em C++.)  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- In C++, care must be taken to insure that the buffer is at least `buflen` Unicode characters long. Note that a Unicode character is 2 bytes long.  
+## <a name="remarks"></a>Comentários  
+ No C++, tome cuidado para garantir que o buffer é pelo menos `buflen` caracteres Unicode. Observe que um caractere Unicode é de 2 bytes de comprimento.  
   
 > [!NOTE]
->  In C++, the returned string does not include a terminating null character. If given, `pceltFetched` will specify the number of characters in the string.  
+>  No C++, a cadeia de caracteres retornada não inclui um caractere null de terminação. Se fornecido, `pceltFetched` especificará o número de caracteres na cadeia de caracteres.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Exemplo  
  
 ```cpp  
 CStringW RetrievePropertyString(IDebugProperty2 *pPropInfo)  
@@ -102,7 +102,7 @@ CStringW RetrievePropertyString(IDebugProperty2 *pPropInfo)
 }
 ```    
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [GetStringCharLength](../../../extensibility/debugger/reference/idebugproperty3-getstringcharlength.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

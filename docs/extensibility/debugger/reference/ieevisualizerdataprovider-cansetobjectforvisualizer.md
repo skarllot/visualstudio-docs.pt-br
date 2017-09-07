@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 424cdb45f91c59a3a72474fc6c7a0e41a4dc9e17
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
-This method determines whether the visualizer can have the data object it represents updated.  
+Este método determina se o visualizador pode ter o objeto de dados representa atualizado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT CanSetObjectForVisualizer(  
@@ -54,15 +54,15 @@ int CanSetObjectForVisualizer(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `b`  
- [out] Nonzero (`TRUE`) if the object on the visualizer can be updated, zero (`FALSE`) if it cannot.  
+ [out] Diferente de zero (`TRUE`) se o objeto sobre o visualizador pode ser atualizado, zero (`FALSE`) se ele não é possível.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- An object might not be changeable if it is bound to read-only memory, for example.  
+## <a name="remarks"></a>Comentários  
+ Um objeto pode não ser mutável se ele é associado à memória somente leitura, por exemplo.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

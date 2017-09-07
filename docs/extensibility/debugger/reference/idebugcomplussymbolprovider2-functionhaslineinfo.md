@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8fa84124925947ed8119b356ed8ee2c1bcff310a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovider2functionhaslineinfo"></a>IDebugComPlusSymbolProvider2::FunctionHasLineInfo
-Determines if the specified method has line information.  
+Determina se o método especificado tem informações de linha.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT FunctionHasLineInfo(  
@@ -53,15 +53,15 @@ int FunctionHasLineInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pAddress`  
- [in] The debug address that is represented by an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface. This address must be a METHOD_ADDRESS.  
+ [in] O endereço de depuração que é representado por um [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface. Esse endereço deve ser um METHOD_ADDRESS.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns `S_FALSE`.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna `S_FALSE`.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe o [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::FunctionHasLineInfo(  
@@ -100,5 +100,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

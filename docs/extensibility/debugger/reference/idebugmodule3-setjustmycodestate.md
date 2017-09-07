@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: dde5762e1f37b1690c3ffafb68b43380d8203cf2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugmodule3setjustmycodestate"></a>IDebugModule3::SetJustMyCodeState
-Marks the module as being user code or not.  
+Marca o módulo como sendo o código do usuário ou não.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT SetJustMyCodeState(  
@@ -54,12 +54,12 @@ int SetJustMyCodeState(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `fIsUserCode`  
- [in] Nonzero (`TRUE`) if the module should be considered user code, zero (`FALSE`) if it should not.  
+ [in] Diferente de zero (`TRUE`) se o módulo deve ser considerado código de usuário, zero (`FALSE`) se não for.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retornará o código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

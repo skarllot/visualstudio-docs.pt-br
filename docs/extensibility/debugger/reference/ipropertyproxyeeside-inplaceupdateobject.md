@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 1971b553a355b415543aba8ae8936a69e771976b
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ipropertyproxyeesideinplaceupdateobject"></a>IPropertyProxyEESide::InPlaceUpdateObject
-Updates the object's data with the given data object and returns a new data object representing the object's new data.  
+Atualiza os dados do objeto com o objeto de dados especificado e retorna um novo objeto de dados que representa os dados do objeto novo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT InPlaceUpdateObject(  
@@ -56,24 +56,24 @@ int InPlaceUpdateObject(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `dataIn`  
- [in] An [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) object containing the new data.  
+ [in] Um [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objeto que contém os novos dados.  
   
  `dataOut`  
- [out] Returns a new `IEEDataStorage` object containing the replaced data.  
+ [out] Retorna um novo `IEEDataStorage` objeto que contém os dados foram substituídos.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- This method actually updates the object's data. The data in the returned [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) object does not need to be the same as the data in the incoming `IEEDataStorage` object, but the returned object must reflect the property's current value.  
+## <a name="remarks"></a>Comentários  
+ Na verdade, este método atualizará os dados do objeto. Os dados em retornado [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objeto não precisa ser o mesmo que os dados de entrada `IEEDataStorage` objeto, mas o objeto retornado deve refletir o valor da propriedade atual.  
   
- The incoming data object is typically not implemented by the EE. However, the object returned by this method is always implemented by the EE, which lets the EE implement the `IEEDataStorage` interface on whatever class is desired.  
+ Normalmente, o objeto de dados de entrada não é implementado pelo EE. No entanto, o objeto retornado por esse método sempre é implementado por EE, que permite a implementar EE o `IEEDataStorage` interface em qualquer classe for desejada.  
   
- The [CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md) method creates a data object based on the incoming data object but does not affect the property's original data.  
+ O [CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md) método cria um objeto de dados com base no objeto de entrada de dados, mas não afeta os dados originais da propriedade.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)

@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: dee4f1909ec5f6e66c7f828b5552ff424b4d9edc
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugobjectisnullreference"></a>IDebugObject::IsNullReference
-Tests whether this object is a null reference.  
+Testa se este objeto é uma referência nula.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT IsNullReference(   
@@ -54,15 +54,15 @@ int IsNullReference(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pfIsNull`  
- [out] Returns non-zero (`TRUE`) if this object is a null reference; otherwise, returns zero (`FALSE`).  
+ [out] Retorna diferente de zero (`TRUE`) se esse objeto for uma referência nula; caso contrário, retorna zero (`FALSE`).  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- A null reference means an empty object or an object that has not been assigned to.  
+## <a name="remarks"></a>Comentários  
+ Uma referência nula significa que um objeto vazio ou um objeto que não foi atribuído a.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

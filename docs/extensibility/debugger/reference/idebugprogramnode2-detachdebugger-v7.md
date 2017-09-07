@@ -35,13 +35,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: a281d92d93473dffeb8f488cd802a9cee4a779d7
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugprogramnode2detachdebuggerv7"></a>IDebugProgramNode2::DetachDebugger_V7
-DEPRECATED. DO NOT USE.  
+PRETERIDO. NÃO USE.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT DetachDebugger_V7 (   
@@ -53,15 +53,15 @@ HRESULT DetachDebugger_V7 (
 int DetachDebugger_V7 ();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- An implementation should always return `E_NOTIMPL`.  
+## <a name="return-value"></a>Valor de retorno  
+ Uma implementação deve retornar sempre `E_NOTIMPL`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!WARNING]
->  As of [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)], this method is no longer used and should always return `E_NOTIMPL`.  
+>  Como de [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)], esse método não é mais usado e deve retornar sempre `E_NOTIMPL`.  
   
- This method is called when the debugger unexpectedly quits. When this method is called, the DE should resume the program as though the user detached from it. No more debug events should be sent. The program should be in a state where it is attachable from another instance of the debugger.  
+ Esse método é chamado quando o depurador inesperadamente. Quando este método é chamado, o DE deverá continuar o programa que o usuário desanexado dele. Não há mais eventos de depuração devem ser enviados. O programa deve estar em um estado em que ele é anexável de outra instância do depurador.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

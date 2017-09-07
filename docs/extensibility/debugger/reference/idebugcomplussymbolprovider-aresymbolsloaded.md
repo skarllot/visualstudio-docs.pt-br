@@ -30,45 +30,45 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: d1f6c3eab594ca927aa79b4ec618f799bf1336c7
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 065a32112c65e9730c5c492e954de5c1415ad3b5
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
-Determines if the debug symbols are loaded for the specified module given the application domain identifier.  
+Determina se os símbolos de depuração são carregados para o módulo especificado, considerando o identificador de domínio de aplicativo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp#  
+```cpp  
 HRESULT AreSymbolsLoaded (  
    ULONG32 ulAppDomainID,  
    GUID    guidModule  
 );  
 ```  
   
-```cs  
+```csharp  
 int AreSymbolsLoaded (  
    uint ulAppDomainID,  
    Guid guidModule  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ulAppDomainID`  
- [in] Identifier for the application domain.  
+ [in] Identificador para o domínio de aplicativo.  
   
  `guidModule`  
- [in] Unique identifier for the module.  
+ [in] Identificador exclusivo para o módulo.  
   
-## <a name="return-value"></a>Return Value  
- If the debug symbols are loaded, returns `S_OK`; otherwise, returns `S_FALSE`.  
+## <a name="return-value"></a>Valor de retorno  
+ Se os símbolos de depuração são carregados, retorna `S_OK`; caso contrário, retorna `S_FALSE`.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto que expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::AreSymbolsLoaded(  
     ULONG32 ulAppDomainID,  
     GUID guidModule  
@@ -88,5 +88,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

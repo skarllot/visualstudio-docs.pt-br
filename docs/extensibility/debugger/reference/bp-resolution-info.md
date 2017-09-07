@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 88d18b6262724e21602b87365d262c9422140abe
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="bpresolutioninfo"></a>BP_RESOLUTION_INFO
-Describes the bound breakpoint information for either a code breakpoint or a data breakpoint.  
+Descreve as informações de ponto de interrupção associado para um ponto de interrupção de código ou um ponto de interrupção de dados.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 typedef struct _BP_RESOLUTION_INFO {   
@@ -60,31 +60,31 @@ public struct BP_RESOLUTION_INFO {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  `dwFields`  
- A collection of flags from the [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) enumerations that specifies which fields are filled out.  
+ Uma coleção de sinalizadores do [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) enumerações que especifica quais campos são preenchidas.  
   
  `bpResLocation`  
- The [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) structure that specifies the location of the breakpoint in code or data.  
+ O [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) estrutura que especifica o local do ponto de interrupção no código ou dados.  
   
  `pProgram`  
- The [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object that represents the application in which the breakpoint error occurred.  
+ O [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto que representa o aplicativo no qual ocorreu o erro de ponto de interrupção.  
   
  `pThread`  
- The [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the thread in which the application that contains the breakpoint error is running.  
+ O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread em que o aplicativo que contém o erro de ponto de interrupção está em execução.  
   
-## <a name="remarks"></a>Remarks  
- This structure is returned by [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md).  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é retornada por [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md).  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)   
  [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)   
  [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)   

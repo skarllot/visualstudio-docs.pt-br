@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3926456c8b625102dfc5df4d8818f3cacc3a2ce3
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugthread2suspend"></a>IDebugThread2::Suspend
-Suspends a thread.  
+Suspende um thread.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT Suspend (   
@@ -54,18 +54,18 @@ HRESULT Suspend (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwSuspendCount`  
- [out] Returns the suspend count after the suspend operation.  
+ [out] Retorna a contagem de suspensão após a operação de suspensão.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- Each call to this method increments the suspend count above 0. This suspend count is displayed in the **Threads** debug window.  
+## <a name="remarks"></a>Comentários  
+ Cada chamada para esse método incrementa a contagem de suspensão acima de 0. Essa contagem suspend é exibida no **Threads** janela de depuração.  
   
- For each call to this method, there must be a later call to the [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) method.  
+ Para cada chamada para esse método, deve haver uma chamada posterior para o [retomar](../../../extensibility/debugger/reference/idebugthread2-resume.md) método.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)
