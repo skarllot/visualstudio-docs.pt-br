@@ -1,5 +1,5 @@
 ---
-title: "Instalação do Python no Visual Studio | Microsoft Docs"
+title: Installation for Python in Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 7/13/2017
 ms.prod: visual-studio-dev15
@@ -16,95 +16,95 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 613af31a2e44cc447980b68de4b0b5642dde1262
+ms.sourcegitcommit: 4013eb0b251985b0984d0cbf2a723175fe91aad5
+ms.openlocfilehash: e686fd03e4700baf36af3b4e353be2e1382a9e24
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 
-# <a name="installing-python-support-in-visual-studio-on-windows"></a>Instalando o suporte do Python no Visual Studio no Windows
+# <a name="installing-python-support-in-visual-studio-on-windows"></a>Installing Python support in Visual Studio on Windows
 
-Para instalar o suporte do Python para Visual Studio, siga as instruções da seção que corresponde à sua versão do Visual Studio:
+To install Python support for Visual Studio, follow the instructions in the section that matches your version of Visual Studio:
 
 - [Visual Studio 2017](#visual-studio-2017)
 - [Visual Studio 2015](#visual-studio-2015)
-- [Visual Studio 2013 e anterior](#visual-studio-2013-and-earlier)
+- [Visual Studio 2013 and earlier](#visual-studio-2013-and-earlier)
 
-Para o Visual Studio 2015 e anterior, também é necessário instalar separadamente um interpretador do Python de sua escolha. Para obter detalhes, consulte [Ambientes do Python](python-environments.md).
+For Visual Studio 2015 and earlier you also need to separately install a Python interpreter of your choice (Python  3.5 and earlier; 3.6 is not supported). For details, see [Python Environments](python-environments.md). The same page also contains instructions for adding an existing Python interpreter to Visual Studio 2017.
 
-Para testar rapidamente o suporte do Python depois de seguir as etapas de instalação, abra a janela Interativa do Python pressionando Alt-I e inserindo `2+2`. Se você não vir a saída de `4`, verifique as etapas novamente.
+To quickly test Python support after following the installation steps, Open the Python Interactive window by pressing Alt-I and entering `2+2`. If you don't see the output of `4`, recheck your steps.
 
 > [!Tip]
-> A carga de trabalho do Python inclui a extensão útil Cookiecutter, que fornece uma interface gráfica do usuário para descobrir modelos e opções de modelo de entrada e criar projetos e arquivos. Para obter detalhes, consulte [Usando o Cookiecutter](cookiecutter.md).
+> The Python workload includes the helpful Cookiecutter extension that provides a graphical user interface to discover templates, input template options, and create projects and files. For details, see [Using Cookiecutter](cookiecutter.md).
 
 > [!Note]
-> O suporte ao Python não está disponível atualmente no Visual Studio para Mac, mas está disponível no Mac e no Linux por meio do Visual Studio Code. Consulte [Perguntas e respostas](python-in-visual-studio.md#questions-and-answers).
+> Python support is not presently available in Visual Studio for Mac, but is available on Mac and Linux through Visual Studio Code. See [Questions and answers](python-in-visual-studio.md#questions-and-answers).
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Instale o Visual Studio 2017 em [https://www.visualstudio.com/vs/](https://www.visualstudio.com/vs/).
+1. Install the Visual Studio 2017 from [https://www.visualstudio.com/vs/](https://www.visualstudio.com/vs/).
 
-1. No instalador do Visual Studio, selecione a carga de trabalho **Web e Nuvem > Desenvolvimento do Python**.
+1. In the Visual Studio installer, select the **Web & Cloud > Python Development**  workload.
 
-    ![Carga de trabalho de desenvolvimento do Python no instalador do Visual Studio](media/installation-python-workload.png)
+    ![Python development workload in the Visual Studio installer](media/installation-python-workload.png)
 
     > [!Note]
-    > O Python também está incluído na carga de trabalho de **Ciência de dados e aplicativos analíticos**.
+    > Python is also included in the **Data science and analytical applications** workload.
 
-1. No lado direito do instalador, selecione os interpretadores do Python e outras ferramentas relacionadas que você deseja incluir. Por exemplo, se você pretende desenvolver extensões do C++ para o Python, inclua a opção **Ferramentas de desenvolvimento nativo do Python**.
+1. On the right side of the installer, select the Python interpreters and other related tools you want to include. For example, if you plan on developing C++ extensions for Python, include the **Python native development tools** option.
 
-    ![Opções de desenvolvimento do Python no instalador do Visual Studio](media/installation-python-options.png)
+    ![Python development options in the Visual Studio installer](media/installation-python-options.png)
 
-1. Se você já tiver interpretadores instalados em seu computador, consulte [Criando um ambiente para um interpretador existente](python-environments.md#creating-an-environment-for-an-existing-interpreter).
+1. If you already have interpreters installed on your computer, see [Creating an environment for an existing interpreter](python-environments.md#creating-an-environment-for-an-existing-interpreter).
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 
-1. Execute o instalador do Visual Studio por meio do **Painel de Controle > Programas e Recursos**, selecionando **Microsoft Visual Studio 2015** e, em seguida, **Alterar**.
+1. Run the Visual Studio installer through **Control Panel > Programs and Features**, selecting **Microsoft Visual Studio 2015** and then **Change**.
 
-1. No instalador, selecione **Modificar**.
+1. In the installer, select **Modify**.
 
-1. Selecione **Linguagens de Programação > Ferramentas Python para Visual Studio** e, em seguida, **Avançar**:
+1. Select **Programming Languages > Python Tools for Visual Studio** and then **Next**:
 
-    ![Opção PTVS no instalador do Visual Studio 2015](media/installation-vs2015.png)    
+    ![PTVS option in Visual Studio 2015 installer](media/installation-vs2015.png)    
 
-1. Depois que a instalação do Visual Studio for concluída, [instale um interpretador do Python de sua escolha](python-environments.md#selecting-and-installing-python-interpreters). Se você já tiver um interpretador instalado, consulte [Criando um ambiente para um interpretador existente](python-environments.md#creating-an-environment-for-an-existing-interpreter).
+1. Once Visual Studio setup is complete, [install a Python interpreter of your choice](python-environments.md#selecting-and-installing-python-interpreters). If you already have an interpreter installed, see [Creating an environment for an existing interpreter](python-environments.md#creating-an-environment-for-an-existing-interpreter).
 
-## <a name="visual-studio-2013-and-earlier"></a>Visual Studio 2013 e anterior
+## <a name="visual-studio-2013-and-earlier"></a>Visual Studio 2013 and earlier
 
-1. Instale a versão apropriada das Ferramentas Python para Visual Studio para sua versão do Visual Studio:
+1. Install the appropriate version of Python Tools for Visual Studio for your version of Visual Studio:
 
-    - Visual Studio 2013: [PTVS 2.2 para Visual Studio 2013](https://github.com/Microsoft/PTVS/releases/v2.2). A caixa de diálogo **Arquivo > Novo Projeto** no Visual Studio 2013 fornece um atalho para esse processo.
-    - Visual Studio 2012: [PTVS 2.1 para Visual Studio 2012](https://pytools.codeplex.com/downloads/get/920478)
-    - Visual Studio 2010: [PTVS 2.1 para Visual Studio 2010](https://pytools.codeplex.com/downloads/get/920479)
+    - Visual Studio 2013: [PTVS 2.2 for Visual Studio 2013](https://github.com/Microsoft/PTVS/releases/v2.2). The **File > New Project** dialog in Visual Studio 2013 gives you a shortcut for this process.
+    - Visual Studio 2012: [PTVS 2.1 for Visual Studio 2012](https://pytools.codeplex.com/downloads/get/920478)
+    - Visual Studio 2010: [PTVS 2.1 for Visual Studio 2010](https://pytools.codeplex.com/downloads/get/920479)
 
-1. [Instale um interpretador do Python de sua escolha](python-environments.md#selecting-and-installing-python-interpreters). Se você já tiver um interpretador instalado, consulte [Criando um ambiente para um interpretador existente](python-environments.md#creating-an-environment-for-an-existing-interpreter).
+1. [Install a Python interpreter of your choice](python-environments.md#selecting-and-installing-python-interpreters). If you already have an interpreter installed, see [Creating an environment for an existing interpreter](python-environments.md#creating-an-environment-for-an-existing-interpreter).
 
-## <a name="install-locations"></a>Locais de instalação
+## <a name="install-locations"></a>Install locations
 
-Por padrão, o suporte do Python é instalado para todos os usuários em um computador.
+By default, Python support is installed for all users on a computer.
 
-Para o Visual Studio 2017, a carga de trabalho do Python é instalada em `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\<VS_edition>Common7\IDE\Extensions\Microsoft\Python`, em que &lt;VS_edition&gt; é Community, Professional ou Enterprise.
+For Visual Studio 2017, the Python workload is installed in `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\<VS_edition>Common7\IDE\Extensions\Microsoft\Python` where &lt;VS_edition&gt; is Community, Professional, or Enterprise.
 
-Para o Visual Studio 2015 e anterior, os caminhos de instalação são os seguintes:
+For Visual Studio 2015 and earlier, installation paths are as follows:
 
-- 32 bits:
-  - Caminho: `%Program Files(x86)%\Microsoft Visual Studio <VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`
-  - Local do Registro do caminho: `HKEY_LOCAL_MACHINE\Software\Microsoft\PythonTools\<VS_ver>\InstallDir`
-- 64 bits:
-  - Caminho: `%Program Files%\Microsoft Visual Studio <VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`
-  - Local do Registro do caminho: `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\PythonTools\<VS_ver>\InstallDir`
+- 32-bit:
+  - Path: `%Program Files(x86)%\Microsoft Visual Studio <VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`
+  - Registry location of path: `HKEY_LOCAL_MACHINE\Software\Microsoft\PythonTools\<VS_ver>\InstallDir`
+- 64-bit:
+  - Path: `%Program Files%\Microsoft Visual Studio <VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`
+  - Registry location of path: `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\PythonTools\<VS_ver>\InstallDir`
 
-em que:
+where:
 
-- &lt;VS_ver&gt; é:    
-    - 14.0 para Visual Studio 2015
-    - 12.0 para Visual Studio 2013
-    - 11.0 para Visual Studio 2012
-    - 10.0 para Visual Studio 2010
-- &lt;PTVS_ver&gt; é um número de versão, como 2.2, 2.1, 2.0, 1.5, 1.1 ou 1.0.
+- &lt;VS_ver&gt; is:    
+    - 14.0 for Visual Studio 2015
+    - 12.0 for Visual Studio 2013
+    - 11.0 for Visual Studio 2012
+    - 10.0 for Visual Studio 2010
+- &lt;PTVS_ver&gt; is a version number, such as 2.2, 2.1, 2.0, 1.5, 1.1, or 1.0.
 
-### <a name="user-specific-installations-15-and-earlier"></a>Instalações específicas ao usuário (1.5 e anterior)
+### <a name="user-specific-installations-15-and-earlier"></a>User-specific installations (1.5 and earlier)
 
-A instalação das Ferramentas Python para o Visual Studio 1.5 e anteriores é permitida somente para o usuário atual. O caminho de instalação é `%LocalAppData%\Microsoft\VisualStudio\<VS_ver>\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`, em que &lt;VS_ver&gt; e &lt;PTVS_ver&gt; são iguais ao descrito acima.
+Python Tools for Visual Studio 1.5 and earlier allowed installation for the current user only, in which case the installation path is `%LocalAppData%\Microsoft\VisualStudio\<VS_ver>\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>` where &lt;VS_ver&gt; and &lt;PTVS_ver&gt; are the same as described above.
 

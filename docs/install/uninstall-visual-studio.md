@@ -17,10 +17,10 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 7adecc638a0ea4b198501752930a5c92c9db282c
-ms.openlocfilehash: c1b7c0aa1218090e328f90ca6d44e5a7a47ca219
+ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
+ms.openlocfilehash: c10b4cd0d892a27d1eaac1061e1b29567f22c560
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 
@@ -52,10 +52,10 @@ To completely remove all installations of Visual Studio 2017 as well as the Visu
 2. Find **Microsoft Visual Studio 2017**.  
 3. Click **Uninstall**.  
 
-
-## <a name="see-also"></a>See also  
+## <a name="see-also"></a>See also
 * [Install Visual Studio](install-visual-studio.md)
 * [Modify Visual Studio 2017](modify-visual-studio.md)
 * [Update Visual Studio](update-visual-studio.md)
+* [Clean up Visual Studio](remove-visual-studio.md)
 * [How to Report a Problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

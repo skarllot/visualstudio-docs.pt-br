@@ -10,9 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 65798d66-7a30-4359-b064-61a8660c1eed
 caps.latest.revision: 17
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 translation.priority.ht:
 - de-de
 - es-es
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/24/2017
   
 ### <a name="violation"></a>Violation  
   
-```cs  
+```csharp  
 using System.IO;   
 using System.Xml.Schema;   
   
@@ -116,7 +116,7 @@ class TestClass
   
 ### <a name="solution"></a>Solution  
   
-```cs  
+```csharp  
 using System.IO;   
 using System.Xml;   
 using System.Xml.Schema;   
@@ -139,7 +139,7 @@ class TestClass
   
 ### <a name="violation"></a>Violation  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 namespace TestNamespace   
@@ -157,7 +157,7 @@ namespace TestNamespace
   
 ### <a name="solution"></a>Solution  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 namespace TestNamespace   
@@ -179,7 +179,7 @@ namespace TestNamespace
   
 ### <a name="violations"></a>Violations  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 namespace TestNamespace   
@@ -195,7 +195,7 @@ namespace TestNamespace
 }  
 ```  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 namespace TestNamespace   
@@ -213,7 +213,7 @@ namespace TestNamespace
   
 ### <a name="solution"></a>Solution  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 public static void TestMethod(string xml)   
@@ -227,7 +227,7 @@ public static void TestMethod(string xml)
   
 ### <a name="violation"></a>Violation  
   
-```cs  
+```csharp  
 using System.IO;   
 using System.Xml;   
 using System.Xml.Serialization;   
@@ -247,7 +247,7 @@ namespace TestNamespace
   
 ### <a name="solution"></a>Solution  
   
-```cs  
+```csharp  
 using System.IO;   
 using System.Xml;   
 using System.Xml.Serialization;   
@@ -268,7 +268,7 @@ namespace TestNamespace
   
 ### <a name="violation"></a>Violation  
   
-```cs  
+```csharp  
 using System.Xml;   
 using System.Xml.XPath;   
   
@@ -286,7 +286,7 @@ namespace TestNamespace
   
 ### <a name="solution"></a>Solution  
   
-```cs  
+```csharp  
 using System.Xml;   
 using System.Xml.XPath;   
   
@@ -305,7 +305,7 @@ namespace TestNamespace
   
 ### <a name="violation"></a>Violation  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 namespace TestNamespace   
@@ -319,7 +319,7 @@ namespace TestNamespace
   
 ### <a name="solution"></a>Solution  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 namespace TestNamespace   
@@ -333,7 +333,7 @@ namespace TestNamespace
   
 ### <a name="violations"></a>Violations  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 namespace TestNamespace   
@@ -349,7 +349,7 @@ namespace TestNamespace
 }  
 ```  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 namespace TestNamespace   
@@ -364,7 +364,7 @@ namespace TestNamespace
 }  
 ```  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 namespace TestNamespace   
@@ -385,7 +385,7 @@ namespace TestNamespace
   
 ### <a name="solution"></a>Solution  
   
-```cs  
+```csharp  
 using System.Xml;   
   
 namespace TestNamespace   
