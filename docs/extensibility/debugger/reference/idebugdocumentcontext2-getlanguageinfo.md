@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetLanguageInfo | Microsoft Docs
+title: IDebugDocumentContext2::GetLanguageInfo | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,46 +30,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 36f39f83a1929c656fe541dc511beb0fad376831
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 1bb285981011920a5b5c2755bac7e0fdbf8e53d1
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugdocumentcontext2getlanguageinfo"></a>IDebugDocumentContext2::GetLanguageInfo
-Gets the language associated with this document context.  
+Obtém o idioma associado a esse contexto de documento.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetLanguageInfo(   
    BSTR* pbstrLanguage,  
    GUID* pguidLanguage  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetLanguageInfo(   
    out string pbstrLanguage,  
    out Guid   pguidLanguage  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pbstrLanguage`  
- [out] Returns the name of the language that implements the code at this document context.  
+ [out] Retorna o nome do idioma que implementa o código no contexto neste documento.  
   
  `pguidLanguage`  
- [out] Returns the GUID of the language that implements the code at this document context. For example, `guidVBScriptLang` or `guidCPPLang`. This GUID is not limited to the languages supplied by [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  
+ [out] Retorna o GUID da linguagem que implementa o código no contexto neste documento. Por exemplo, `guidVBScriptLang` ou `guidCPPLang`. Esse GUID não é limitado às linguagens fornecidas pelo [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CDebugContext` object that exposes the [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) interface.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um simples `CDebugContext` objeto expõe o [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) interface.  
   
-```cpp  
+```cpp#  
 HRESULT CDebugContext::GetLanguageInfo(BSTR* pbstrLanguage, GUID* pguidLanguage)    
 {    
    HRESULT hr;    
@@ -98,5 +97,5 @@ HRESULT CDebugContext::GetLanguageInfo(BSTR* pbstrLanguage, GUID* pguidLanguage)
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

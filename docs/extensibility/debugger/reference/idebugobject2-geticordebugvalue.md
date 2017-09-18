@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetICorDebugValue | Microsoft Docs
+title: IDebugObject2::GetICorDebugValue | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,16 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 477ce5c18672e8324667e28754810e66101e7b0c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: ee148302032f83ee553531f82fab82b7bfb9d428
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugobject2geticordebugvalue"></a>IDebugObject2::GetICorDebugValue
-Gets a managed code object representing the value associated with this object.  
+Obtém um objeto de código gerenciado que representa o valor associado a esse objeto.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetICorDebugValue(  
@@ -48,21 +47,21 @@ HRESULT GetICorDebugValue(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetICorDebugValue(  
    out object ppUnk  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppUnk`  
- [out] `IUnknown` interface that represents this alias. This interface can be queried for the `ICorDebugValue` interface.  
+ [out] `IUnknown` interface que representa este alias. Essa interface pode ser consultada para o `ICorDebugValue` interface.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The `ICorDebugValue` object is a Common Language Runtime interface that represents a value.  
+## <a name="remarks"></a>Comentários  
+ O `ICorDebugValue` objeto é uma interface de Common Language Runtime que representa um valor.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

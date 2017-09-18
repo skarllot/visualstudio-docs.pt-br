@@ -1,5 +1,5 @@
 ---
-title: IDebugFirewallConfigurationCallback2::EnsureDCOMUnblocked | Microsoft Docs
+title: IDebugFirewallConfigurationCallback2::EnsureDCOMUnblocked | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,30 +29,29 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d4299c135ef85798b9dcc3d660aea6ace6eb3f0c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: a1f19a20120f3ea97c7f4cdab7e138804c622ec3
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugfirewallconfigurationcallback2ensuredcomunblocked"></a>IDebugFirewallConfigurationCallback2::EnsureDCOMUnblocked
-Requests that the firewall not block remote debugging.  
+Solicita que o firewall não bloqueie a depuração remota.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT EnsureDCOMUnblocked(   
     Void  
 );  
 ```  
   
-```csharp  
+```c#  
 public int EnsureDCOMUnblocked();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugFirewallConfigurationCallback2](../../../extensibility/debugger/reference/idebugfirewallconfigurationcallback2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::GetSymbolInfo | Microsoft Docs
+title: IDebugModule3::GetSymbolInfo | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,26 +31,25 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: 4923c6f79299338b2e615a0c8cae25afe28f1c80
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/30/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: af2182c2f4214cfbd405c9275e7095822ef7cc5d
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
-Retrieves a list of paths that are searched for symbols as well as the results of searching each path.  
+Recupera uma lista de caminhos que são pesquisados para símbolos, bem como os resultados da pesquisa de cada caminho.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetSymbolInfo(  
    SYMBOL_SEARCH_INFO_FIELDS  dwFields,  
    MODULE_SYMBOL_SEARCH_INFO* pInfo  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetSymbolInfo(  
    enum_SYMBOL_SEARCH_INFO_FIELDS dwFields,   
    MODULE_SYMBOL_SEARCH_INFO[]    pinfo  
@@ -58,33 +57,33 @@ int GetSymbolInfo(
   
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `dwFields`  
- [in] A combination of flags from the [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) enumeration specifying which fields of `pInfo` are to be filled in.  
+ [in] Uma combinação de sinalizadores do [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) enumeração especificando quais campos de `pInfo` devem ser preenchidos.  
   
  `pInfo`  
- [out] A [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) structure whose members are to be filled in with the specified information. If this is a null value, this method returns `E_INVALIDARG`.  
+ [out] A [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) estrutura cujos membros são a ser preenchido com as informações especificadas. Se esse for um valor nulo, esse método retorna `E_INVALIDARG`.  
   
-## <a name="return-value"></a>Return Value  
- If the method succeeds, it returns `S_OK`; otherwise, it returns an error code.  
-  
-> [!NOTE]
->  The returned string (in the `MODULE_SYMBOL_SEARCH_INFO` structure) could be empty even if `S_OK` is returned. In this case, there was no search information to return.  
-  
-## <a name="remarks"></a>Remarks  
- If the `bstrVerboseSearchInfo` field of the `MODULE_SYMBOL_SEARCH_INFO` structure is not empty, then it contains a list of paths searched and the results of that search. The list is formatted with a path, followed by an ellipsis ("..."), followed by the result. If there is more than one path result pair, then each pair is separated by a "\r\n" (carriage-return/linefeed) pair. The pattern looks like this:  
-  
- \<path>...\<result>\r\n\<path>...\<result>\r\n\<path>...\<result>  
-  
- Note that the last entry does not have a \r\n sequence.  
-  
-## <a name="example"></a>Example  
- In this example, this method returns three paths with three different search results. Each line is terminated with a carriage-return/linefeed pair. The example output just prints the search results as a single string.  
+## <a name="return-value"></a>Valor de retorno  
+ Se o método for bem-sucedido, ele retorna `S_OK`; caso contrário, ele retorna um código de erro.  
   
 > [!NOTE]
->  A status result is everything immediately following the "..." up to the end of the line.  
+>  Cadeia de caracteres retornada (no `MODULE_SYMBOL_SEARCH_INFO` estrutura) pode estar vazio mesmo se `S_OK` é retornado. Nesse caso, não houve nenhuma informação de pesquisa para retornar.  
   
-```cpp  
+## <a name="remarks"></a>Comentários  
+ Se o `bstrVerboseSearchInfo` campo o `MODULE_SYMBOL_SEARCH_INFO` estrutura não estiver vazia, ele contém uma lista de caminhos pesquisados e os resultados da pesquisa. A lista é formatada com um caminho, seguido por reticências ("..."), seguidas pelo resultado. Se houver mais de um par de resultado de caminho, cada par é separado por um par de "\r\n" (carro-retorno/alimentação de linha). O padrão tem esta aparência:  
+  
+ \<caminho >... \<resultado > \r\n\<caminho >... \<resultado > \r\n\<caminho >... \<resultado >  
+  
+ Observe que a última entrada não tem uma sequência \r\n.  
+  
+## <a name="example"></a>Exemplo  
+ Neste exemplo, esse método retorna três caminhos com três diferentes resultados. Cada linha é encerrada com um par de carro-retorno/alimentação de linha. O exemplo de saída apenas imprime os resultados da pesquisa como uma única cadeia de caracteres.  
+  
+> [!NOTE]
+>  Um resultado de status é tudo imediatamente após o "…" até o final da linha.  
+  
+```cpp#  
 void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)  
 {  
     MODULE_SYMBOL_SEARCH_INFO ssi = { 0 };  
@@ -100,10 +99,10 @@ void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
 }  
 ```  
   
- **c:\symbols\user32.pdb... File not found.**  
-**c:\winnt\symbols\user32.pdb... Version does not match.**  
-**\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb... Symbols loaded.**   
-## <a name="see-also"></a>See Also  
+ **c:\symbols\user32.PDB... Arquivo não encontrado.**  
+**c:\winnt\symbols\user32.PDB... Versão não corresponde.**  
+**\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.PDB... Símbolos carregados.**   
+## <a name="see-also"></a>Consulte também  
  [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)   
  [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md)   
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

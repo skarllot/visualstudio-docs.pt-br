@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetTypeByName | Microsoft Docs
+title: IDebugSymbolProvider::GetTypeByName | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0026d816e9afb382fdc792e5fc397c03c028da17
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 10b804b0849343253a60d2142374e9c2489addd8
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugsymbolprovidergettypebyname"></a>IDebugSymbolProvider::GetTypeByName
-This method maps a symbol name to a symbol type.  
+Esse método mapeia um nome de símbolo em um tipo de símbolo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetTypeByName(   
    LPCOLESTR     pszClassName,  
    NAME_MATCH    nameMatch,  
@@ -50,7 +49,7 @@ HRESULT GetTypeByName(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetTypeByName(  
    string          pszClassName,   
    NAME_MATCH      nameMatch,   
@@ -58,23 +57,23 @@ int GetTypeByName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pszClassName`  
- [in] The symbol name.  
+ [in] O nome do símbolo.  
   
  `nameMatch`  
- [in] Selects the type of match, for example, case-sensitive. A value from the [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) enumeration.  
+ [in] Seleciona o tipo de correspondência, por exemplo, diferencia maiusculas de minúsculas. Um valor a partir de [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) enumeração.  
   
  `ppField`  
- [out] Returns the symbol type as an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object.  
+ [out] Retorna o tipo de símbolo como um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- This method is a generic version of [GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md).  
+## <a name="remarks"></a>Comentários  
+ Esse método é uma versão genérica do [GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md).  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md)   

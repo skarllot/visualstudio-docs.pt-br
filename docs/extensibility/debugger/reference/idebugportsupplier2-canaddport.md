@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::CanAddPort | Microsoft Docs
+title: IDebugPortSupplier2::CanAddPort | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,34 +30,33 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0616c22b758edae77521f40933fcb940f9d1437c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 1df781c3994bb37000d2054f45cc6d7e48503c26
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugportsupplier2canaddport"></a>IDebugPortSupplier2::CanAddPort
-Verifies that a port supplier can add new ports.  
+Verifica se um fornecedor de porta pode adicionar novas portas.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT CanAddPort(   
    void   
 );  
 ```  
   
-```csharp  
+```c#  
 int CanAddPort();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If the port can be added, returns `S_OK`; otherwise, returns `S_FALSE` to indicate no ports can be added to this port supplier.  
+## <a name="return-value"></a>Valor de retorno  
+ Se a porta pode ser adicionada, retornará `S_OK`; caso contrário, retorna `S_FALSE` para indicar que nenhuma porta pode ser adicionada a esse fornecedor de porta.  
   
-## <a name="remarks"></a>Remarks  
- Call this method before calling the [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) method since the latter method creates the port as well as adding it, which could be a time-consuming operation.  
+## <a name="remarks"></a>Comentários  
+ Chamar esse método antes de chamar o [adicionar porta](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) método desde o último método cria a porta, bem como adicionar, que pode ser uma operação demorada.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   
- [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)
+ [Adicionar porta](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)

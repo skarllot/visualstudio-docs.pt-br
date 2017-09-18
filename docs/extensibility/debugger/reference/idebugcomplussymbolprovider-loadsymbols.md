@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::LoadSymbols | Microsoft Docs
+title: IDebugComPlusSymbolProvider::LoadSymbols | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,19 +29,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ff0bef4429c39dfc1847774dd7f9cc4c3858f9b6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 2f5976a434c4e7ffbeceb86412bffcd85a7f571d
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugcomplussymbolproviderloadsymbols"></a>IDebugComPlusSymbolProvider::LoadSymbols
-Loads the specified debug symbols in memory.  
+Carrega os símbolos de depuração especificado na memória.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT LoadSymbols(  
    ULONG32   ulAppDomainID,  
    GUID      guidModule,  
@@ -52,7 +51,7 @@ HRESULT LoadSymbols(
 );  
 ```  
   
-```csharp  
+```c#  
 int LoadSymbols(  
    uint   ulAppDomainID,  
    Guid   guidModule,  
@@ -63,32 +62,32 @@ int LoadSymbols(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ulAppDomainID`  
- [in] Identifier of the application domain.  
+ [in] Identificador do domínio do aplicativo.  
   
  `guidModule`  
- [in] Unique identifier of the mondule.  
+ [in] Identificador exclusivo do mondule.  
   
  `baseAddress`  
- [in] Base memory address.  
+ [in] Endereço de memória de base.  
   
  `pUnkMetadataImport`  
- [in] Object that contains the symbol metadata.  
+ [in] Objeto que contém os metadados de símbolo.  
   
  `bstrModuleName`  
- [in] Name of the module.  
+ [in] Nome do módulo.  
   
  `bstrSymSearchPath`  
- [in] Path to search for the symbol file.  
+ [in] Caminho para procurar o arquivo de símbolo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::LoadSymbols(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -101,5 +100,5 @@ HRESULT CDebugSymbolProvider::LoadSymbols(
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

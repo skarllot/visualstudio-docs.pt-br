@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::SetThreadName | Microsoft Docs
+title: IDebugThread2::SetThreadName | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,40 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 3c6421fa7cbe8a152c8d75b72a9a4c1c60af461b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 69a8dc481d74fd6059b837dd292aa97182ba3e05
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugthread2setthreadname"></a>IDebugThread2::SetThreadName
-Sets the name of the thread.  
+Define o nome do thread.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT SetThreadName (   
    LPCOLESTR pszName  
 );  
 ```  
   
-```csharp  
+```c#  
 int SetThreadName (   
    string pszName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pszName`  
- [in] The name of the thread.  
+ [in] O nome do thread.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- To get the thread name, call the [GetName](../../../extensibility/debugger/reference/idebugthread2-getname.md) method.  
+## <a name="remarks"></a>Comentários  
+ Para obter o nome do thread, chame o [GetName](../../../extensibility/debugger/reference/idebugthread2-getname.md) método.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [GetName](../../../extensibility/debugger/reference/idebugthread2-getname.md)

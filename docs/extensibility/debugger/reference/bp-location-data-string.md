@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_DATA_STRING | Microsoft Docs
+title: BP_LOCATION_DATA_STRING | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 639ba9c6a51b1d6803f2ab83336d1ce098e70440
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 78837934ac1b8b28d1f3f302ed0e66995a0ffe09
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="bplocationdatastring"></a>BP_LOCATION_DATA_STRING
-Used for setting data breakpoints that are based on a string that the user can enter from the integrated development environment (IDE).  
+Usada para definir pontos de interrupção de dados se baseiam em uma cadeia de caracteres que o usuário pode inserir do ambiente de desenvolvimento integrado (IDE).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 typedef struct _BP_LOCATION_DATA_STRING {   
    IDebugThread2* pThread;  
    BSTR           bstrContext;  
@@ -51,30 +50,30 @@ typedef struct _BP_LOCATION_DATA_STRING {
 } BP_LOCATION_DATA_STRING;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  `pThread`  
- The [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the thread on which the breakpoint occurs.  
+ O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread no qual o ponto de interrupção ocorre.  
   
  `bstrContext`  
- The context of the breakpoint within the code, typically a method or function name as seen on a call stack.  
+ O contexto do ponto de interrupção no código, geralmente um nome de função ou método como visto em uma pilha de chamadas.  
   
  `bstrDataExpr`  
- The data string the user enters to set the breakpoint.  
+ A cadeia de caracteres de dados que o usuário insere para definir o ponto de interrupção.  
   
  `dwNumElements`  
- The number of elements in the data string in which the breakpoint occurs.  
+ O número de elementos na cadeia de dados no qual o ponto de interrupção ocorre.  
   
-## <a name="remarks"></a>Remarks  
- This structure is a member of the [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) structure as part of a union.  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é membro do [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura como parte de uma união.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

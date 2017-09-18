@@ -1,117 +1,100 @@
 ---
-title: Troubleshooting Service References | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- msvse_wcf.Err.ReferenceGroup_NamespaceConflictsOther
-- msvse_wcf.Err.AddSvcRefDlg_NothingSelectedOnGo
-- msvse_wcf.Err.ErrorOnOK
-- msvse_wcf.cfg.ConfigurationErrorsException
-helpviewer_keywords:
-- service references [Visual Studio], troubleshooting
-- WCF services, troubleshooting
+title: "Troubleshooting Service References | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "msvse_wcf.Err.ReferenceGroup_NamespaceConflictsOther"
+  - "msvse_wcf.Err.AddSvcRefDlg_NothingSelectedOnGo"
+  - "msvse_wcf.Err.ErrorOnOK"
+  - "msvse_wcf.cfg.ConfigurationErrorsException"
+helpviewer_keywords: 
+  - "service references [Visual Studio], troubleshooting"
+  - "WCF services, troubleshooting"
 ms.assetid: 3b531120-1325-4734-90c6-6e6113bd12ac
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 4ad3f60e52964f3e1e7b0919c5d5e18ecd5d3056
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 22
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="troubleshooting-service-references"></a>Troubleshooting Service References
-This topic lists common issues that may occur when you are working with [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] or [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] references in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+# Troubleshooting Service References
+Este tópico lista problemas comuns que podem ocorrer quando você estiver trabalhando com [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] ou [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] referências em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
-## <a name="error-returning-data-from-a-service"></a>Error Returning Data from a Service  
- When you return a `DataSet` or `DataTable` from a service, you may receive a "The maximum size quota for incoming messages has been exceeded" exception. By default, the `MaxReceivedMessageSize` property for some bindings is set to a relatively small value to limit exposure to denial-of-service attacks. You can increase this value to prevent the exception. For more information, see <xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>.  
+## Erro retornando dados de um serviço  
+ Ao retornar um `DataSet` ou `DataTable` de um serviço, você receberá uma exceção "a cota de tamanho máximo para mensagens de entrada foi excedida". Por padrão, o `MaxReceivedMessageSize` para algumas associações é definida como um valor relativamente pequeno para limitar a exposição a ataques de negação de serviço. Você pode aumentar esse valor para evitar a exceção. Para obter mais informações, consulte <xref:System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize%2A>.  
   
- To fix this error:  
+ Para corrigir esse erro:  
   
-1.  In **Solution Explorer**, double-click the app.config file to open it.  
+1.  Em **Solution Explorer**, clique duas vezes no arquivo App. config para abri\-lo.  
   
-2.  Locate the `MaxReceivedMessageSize` property and change it to a larger value.  
+2.  Localize o `MaxReceivedMessageSize` propriedade e alterá\-lo para um valor maior.  
   
-## <a name="cannot-find-a-service-in-my-solution"></a>Cannot Find a Service in My Solution  
- When you click the **Discover** button in the **Add Service References** dialog box, one or more WCF Service Library projects in the solution do not appear in the services list. This can occur if a Service Library has been added to the solution but has not yet been compiled.  
+## Não é possível localizar um serviço em minha solução  
+ Quando você clica o **Discover** no botão de **Adicionar referências de serviço** caixa de diálogo, um ou mais projetos de biblioteca de serviços WCF na solução não aparecem na lista de serviços. Isso pode ocorrer se uma biblioteca de serviço foi adicionada à solução, mas ainda não foram compilada.  
   
- To fix this error:  
+ Para corrigir esse erro:  
   
--   In **Solution Explorer**, right-click the WCF Service Library project and click **Build**.  
+-   Em **Solution Explorer**, com o botão direito no projeto da biblioteca de serviço do WCF e clique em **criar**.  
   
-## <a name="error-accessing-a-service-over-a-remote-desktop"></a>Error Accessing a Service over a Remote Desktop  
- When a user accesses a Web-hosted WCF service over a remote desktop connection and the user does not have administrative permissions, NTLM authentication is used. If the user does not have administrative permissions, the user may receive the following error message: "The HTTP request is unauthorized with client authentication scheme 'Anonymous'. The authentication header received from the server was 'NTLM'."  
+## Erro ao acessar um serviço em uma área de trabalho remota  
+ Quando um usuário acessa um serviço WCF hospedado na Web sobre uma conexão de área de trabalho remota e o usuário não tem permissões administrativas, a autenticação NTLM será usada. Se o usuário não tem permissões administrativas, o usuário pode receber a seguinte mensagem de erro: "a solicitação HTTP é autorizada no esquema de autenticação de cliente 'Anonymous'. O cabeçalho de autenticação recebido do servidor foi 'NTLM'."  
   
- To fix this error:  
+ Para corrigir esse erro:  
   
-1.  In the Web site project, open the **Properties** pages.  
+1.  No projeto de site da Web, abra o **propriedades** páginas.  
   
-2.  On the **Start Options** tab, clear the **NTLM Authentication** check box.  
+2.  Sobre o **Opções de inicialização** guia, desmarque o **autenticação NTLM** caixa de seleção.  
   
     > [!NOTE]
-    >  You should turn off NTLM authentication only for Web sites that exclusively contain WCF services. Security for WCF services is managed through the configuration in the web.config file. This makes NTLM authentication unnecessary.  
+    >  Você deve desativar a autenticação NTLM somente para sites que contêm exclusivamente os serviços WCF. Segurança para os serviços WCF é gerenciada por meio da configuração no arquivo Web. config. Isso torna desnecessária a autenticação NTLM.  
   
-## <a name="access-level-for-generated-classes-setting-has-no-effect"></a>Access Level for Generated Classes Setting Has No Effect  
- Setting the **Access level for generated classes** option in the **Configure Service References** dialog box to **Internal** or **Friend** may not always work. Even though the option appears to be set in the dialog box, the resulting support classes will be generated with an access level of `Public`.  
+ Para obter mais informações, consulte [Exceções de solução de problemas: System.ServiceModel.Security.MessageSecurityException](../misc/troubleshooting-exceptions-system-servicemodel-security-messagesecurityexception.md).  
   
- This is a known limitation of certain types, such as those serialized using the <xref:System.Xml.Serialization.XmlSerializer>.  
+## Nível de acesso para as Classes geradas configuração não tem efeito  
+ Definindo o **nível para as classes geradas de acesso** opção o **Configurar referências de serviço** caixa de diálogo **interno** ou **amigo** talvez não funcionem sempre. Embora a opção parece estar definida na caixa de diálogo, as classes de suporte resultante serão geradas com um nível de acesso de `Public`.  
   
-## <a name="error-debugging-service-code"></a>Error Debugging Service Code  
- When you step into the code for a WCF service from client code, you may receive an error related to missing symbols. This can occur when a service that was part of your solution was moved or removed from the solution.  
+ Isso é uma limitação conhecida de determinados tipos, como aqueles serializado usando o <xref:System.Xml.Serialization.XmlSerializer>.  
   
- When you first add a reference to a WCF service that is part of the current solution, an explicit build dependency is added between the service project and the service client project. This guarantees that that the client always accesses up-to-date service binaries, which is especially important for debugging scenarios such as stepping from client code into service code.  
+## Código de serviço de depuração de erro  
+ Quando você entra no código para um serviço WCF no código do cliente, você pode receber um erro relacionado à ausência de símbolos. Isso pode ocorrer quando um serviço que fazia parte de sua solução foi movido ou removido da solução.  
   
- If the service project is removed from the solution, this explicit build dependency is invalidated. Visual Studio can no longer guarantee that that the service project is rebuilt as necessary.  
+ Quando você primeiro adiciona uma referência a um serviço WCF que faz parte da solução atual, uma dependência de compilação explícita é adicionada entre o projeto de serviço e o projeto de cliente de serviço. Isso garante que o cliente acessa sempre binários de serviço atualizado, que é especialmente importante para cenários como entrar no código do cliente em código de serviço de depuração.  
   
- To fix this error, you have to manually rebuild the service project:  
+ Se o projeto de serviço é removido da solução, essa dependência de compilação explícita é invalidada. Visual Studio não pode mais garantir que o projeto de serviço reconstituído conforme necessário.  
   
-1.  On the **Tools** menu, click **Options**.  
+ Para corrigir esse erro, você deve recriar manualmente o projeto de serviço:  
   
-2.  In the **Options** dialog box, expand **Projects and Solutions**, and then select **General**.  
+1.  No menu **Ferramentas**, clique em **Opções**.  
   
-3.  Make sure that the **Show advanced build configurations** check box is selected, and then click **OK**.  
+2.  No **opções** caixa de diálogo caixa, expanda **projetos e soluções**, e, em seguida, selecione **geral**.  
   
-4.  Load the WCF service project. For more information, see [NIB How to: Create Multi-Project Solutions](http://msdn.microsoft.com/en-us/02ecd6dd-0114-46fe-b335-ba9c5e3020d6).  
+3.  Verifique se o **configurações de compilação Show advanced** caixa de seleção está selecionada e, em seguida, clique em **OK**.  
   
-5.  In the **Configuration Manager** dialog box, set the **Active solution configuration** to **Debug**. For more information, see [How to: Create and Edit Configurations](../ide/how-to-create-and-edit-configurations.md).  
+4.  Carregar o projeto de serviço do WCF. Para obter mais informações, consulte [PONTA como: criar soluções de multiprojetos](http://msdn.microsoft.com/pt-br/02ecd6dd-0114-46fe-b335-ba9c5e3020d6).  
   
-6.  In **Solution Explorer**, select the WCF service project.  
+5.  No **do Configuration Manager** caixa de diálogo, defina o **configuração de solução ativa** para **Depurar**. Para obter mais informações, consulte [Como criar e editar configurações de teste](../ide/how-to-create-and-edit-configurations.md).  
   
-7.  On the **Build** menu, click **Rebuild** to rebuild the WCF service project.  
+6.  Em **Solution Explorer**, selecione o projeto de serviço do WCF.  
   
-## <a name="wcf-data-services-do-not-display-in-the-browser"></a>WCF Data Services Do Not Display in the Browser  
- When it attempts to view an XML representation of data in a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)], Internet Explorer may misinterpret the data as an RSS feed. You must make sure that the option to display RSS feeds is disabled.  
+7.  No **criar** menu, clique em **recriar** para recompilar o projeto de serviço do WCF.  
   
- To fix this error, disable RSS feeds:  
+## WCF Data Services não são exibidos no navegador  
+ Quando ele tenta exibir uma representação XML dos dados em um [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)], Internet Explorer pode interpretar incorretamente os dados como um RSS feed. Você deve certificar\-se de que a opção para exibir RSS feeds está desabilitada.  
   
-1.  In Internet Explorer, on the **Tools** menu, click **Internet Options**.  
+ Para corrigir esse erro, desabilite feeds RSS:  
   
-2.  On the **Content** tab, in the **Feeds** section, click **Settings**.  
+1.  No Internet Explorer, no **ferramentas** menu, clique em **Opções da Internet**.  
   
-3.  In the **Feed Settings** dialog box, clear the **Turn on feed reading view** check box, and then click **OK**.  
+2.  Sobre o **conteúdo** guia o **Feeds** seção, clique em **configurações**.  
   
-4.  Click **OK** to close the **Internet Options** dialog box.  
+3.  No **configurações Feed** caixa de diálogo, desmarque o **Ativar o modo de exibição de leitura de feed** caixa de seleção e, em seguida, clique em **OK**.  
   
-## <a name="see-also"></a>See Also  
- [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+4.  Clique em **OK** para fechar o **Opções da Internet** caixa de diálogo.  
+  
+## Consulte também  
+ [Serviços do Windows Communication Foundation e WCF Data Services no Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

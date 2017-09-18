@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetAddressesFromContext | Microsoft Docs
+title: IDebugSymbolProvider::GetAddressesFromContext | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8801fe9d0541d0db127584d3e793e45c19eb6274
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 72fc9d2d9c0d216331bff5a26fa0c1562a3451c6
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugsymbolprovidergetaddressesfromcontext"></a>IDebugSymbolProvider::GetAddressesFromContext
-This method maps a document context into an array of debug addresses.  
+Esse método mapeia um contexto de documento em uma matriz de endereços de depuração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetAddressesFromContext(   
    IDebugDocumentContext2* pDocContext,  
    BOOL                    fStatmentOnly,  
@@ -51,7 +50,7 @@ HRESULT GetAddressesFromContext(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetAddressesFromContext(  
    IDebugDocumentContext2  pDocContext,  
    bool                    fStatmentOnly,  
@@ -60,28 +59,28 @@ int GetAddressesFromContext(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pDocContext`  
- [in] The document context.  
+ [in] O contexto do documento.  
   
  `fStatmentOnly`  
- [in] If TRUE, limits the debug addresses to a single statement.  
+ [in] Se TRUE, limita os endereços de depuração para uma única instrução.  
   
  `ppEnumBegAddresses`  
- [out] Returns an enumerator for the starting debug addresses associated with this statement or line.  
+ [out] Retorna um enumerador para os endereços iniciais de depuração associados com esta instrução ou linha.  
   
  `ppEnumEndAddresses`  
- [out] Returns an [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) enumerator for the ending debug addresses associated with this statement or line.  
+ [out] Retorna um [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) enumerador para os endereços de depuração final associados com esta instrução ou linha.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- A document context typically indicates a range of source lines. This method provides the starting and ending debug addresses associated with these lines. Some languages allow statements that span multiple lines, or lines that contains more than one statement. This method provides a flag to limit the debug addresses to a single statement.  
+## <a name="remarks"></a>Comentários  
+ Um contexto de documento normalmente indica um intervalo de linhas de origem. Este método fornece inicial e final depuração endereços associados a essas linhas. Algumas linguagens permitem que as instruções que abrangem várias linhas e linhas que contém mais de uma instrução. Este método fornece um sinalizador para limitar os endereços de depuração para uma única instrução.  
   
- It is possible for a single statement to have multiple debug addresses, as in the case of templates.  
+ É possível que uma única instrução ter vários endereços de depuração, como no caso de modelos.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [GetAddressesFromPosition](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition.md)   
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

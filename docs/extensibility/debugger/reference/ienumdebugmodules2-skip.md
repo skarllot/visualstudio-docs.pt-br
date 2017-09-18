@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugModules2::Skip | Microsoft Docs
+title: IEnumDebugModules2::Skip | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 325c508da58491661704bcb33bfa29a3933aa1ad
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: f6a76df892d358b2c2e541eb8489381551d098ee
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="ienumdebugmodules2skip"></a>IEnumDebugModules2::Skip
-Skips over the specified number of elements.  
+Ignora o número especificado de elementos.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT Skip(  
    ULONG celt  
 );  
 ```  
   
-```csharp  
+```c#  
 int Skip(  
    uint celt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] Number of elements to skip.  
+ [in] Número de elementos a serem ignorados.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`. Returns `S_FALSE` if `celt` is greater than the number of remaining elements; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se `celt` for maior que o número de elementos restantes; caso contrário, retornará um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- If `celt` specifies a value greater than the number of remaining elements, the enumeration is set to the end and `S_FALSE` is returned.  
+## <a name="remarks"></a>Comentários  
+ Se `celt` Especifica um valor maior que o número de elementos restantes, a enumeração está definida para o fim e `S_FALSE` é retornado.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)

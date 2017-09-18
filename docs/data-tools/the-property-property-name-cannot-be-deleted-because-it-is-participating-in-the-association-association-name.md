@@ -1,55 +1,36 @@
 ---
-title: The property &lt;property name&gt; cannot be deleted because it is participating in the association &lt;association name&gt; | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "The property &lt;property name&gt; cannot be deleted because it is participating in the association &lt;association name&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 389873cc-92dd-48da-bfca-0f6c8e0ae3c2
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: ba52151c1d92a648a3392507721a164b669071ea
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 3
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>The property &lt;property name&gt; cannot be deleted because it is participating in the association &lt;association name&gt;
-The selected property is set as the **Association Property** for the association between the classes indicated in the error message. Properties cannot be deleted if they are participating in an association between data classes.  
+# The property &lt;property name&gt; cannot be deleted because it is participating in the association &lt;association name&gt;
+A propriedade selecionada é definida como o **Propriedades de associação** para a associação entre as classes mencionadas na mensagem de erro. Propriedades não podem ser excluídas estão participando em uma associação entre classes de dados.  
   
- Set the **Association Property** to a different property of the data class to enable successful deletion of the desired property.  
+ Definir o **Propriedades de associação** a uma propriedade diferente da classe de dados para habilitar a exclusão com êxito da propriedade desejada.  
   
-### <a name="to-correct-this-error"></a>To correct this error  
+### Para corrigir este erro  
   
-1.  Select the association line on the O/R Designer that connects the data classes indicated in the error message.  
+1.  Selecione a linha de associação em Object Relational Designer que conecta as classes de dados indicadas na mensagem de erro.  
   
-2.  Double-click the line to open the **Association Editor** dialog box.  
+2.  Clique duas vezes na linha para abrir o **Editor de associação** caixa de diálogo.  
   
-3.  Remove the property from the **Association Properties**.  
+3.  Remova a propriedade do **Propriedades de associação**.  
   
-4.  Try to delete the property again.  
+4.  Tente excluir novamente a propriedade.  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [How to: Create an association (relationship) between LINQ to SQL classes (O/R Designer)](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)   
- [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+## Consulte também  
+ [LINQ to SQL Tools no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [Como: criar uma associação \(relação\) entre classes LINQ to SQL \(Object Relational Designer\)](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)   
+ [Walkthrough: Creating LINQ to SQL Classes \(O\/R Designer\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
+ [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Virtualize | Microsoft Docs
+title: IDebugPendingBreakpoint2::Virtualize | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,44 +31,43 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 71366ca42cba760f3aba1930ee6ada45a278c47b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 984a52310d98e27693850a118d15a4275a4b35a9
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
-Toggles the virtualized state of this pending breakpoint. When a pending breakpoint is virtualized, the debug engine will attempt to bind it every time new code loads into the program.  
+Alterna o estado virtualizado isso pendentes ponto de interrupção. Quando um ponto de interrupção pendente é virtualizado, o mecanismo de depuração tenta associá-lo sempre que o novo código é carregado no programa.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT Virtualize(   
    BOOL fVirtualize  
 );  
 ```  
   
-```cpp  
+```cpp#  
 int Virtualize(   
    int fVirtualize  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `fVirtualize`  
- [in] Set to nonzero (`TRUE`) to virtualize the pending breakpoint, or to zero (`FALSE`) to turn off virtualization.  
+ [in] Definido para zero (`TRUE`) para virtualizar o ponto de interrupção pendente ou zero (`FALSE`) para desativar a virtualização.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the breakpoint has been deleted.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Retorna `E_BP_DELETED` se o ponto de interrupção foi excluído.  
   
-## <a name="remarks"></a>Remarks  
- A virtualized breakpoint is bound every time code is loaded.  
+## <a name="remarks"></a>Comentários  
+ Um ponto de interrupção virtualizado é vinculado sempre que o código é carregado.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CPendingBreakpoint` object that exposes the [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um simples `CPendingBreakpoint` objeto expõe o [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface.  
   
-```cpp  
+```cpp#  
 HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)    
 {    
    HRESULT hr;    
@@ -100,5 +99,5 @@ HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

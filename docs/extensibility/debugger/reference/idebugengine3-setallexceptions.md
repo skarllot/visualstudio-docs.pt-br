@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine3::SetAllExceptions | Microsoft Docs
+title: IDebugEngine3::SetAllExceptions | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,16 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 63873031c8a6acfbb24f51694b2d415998a6e220
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 714152419bb8adf6074eac698805dfc106927d2c
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugengine3setallexceptions"></a>IDebugEngine3::SetAllExceptions
-This method sets the state of all outstanding exceptions.  
+Esse método define o estado de todas as exceções pendentes.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT SetAllExceptions(  
@@ -48,19 +47,19 @@ HRESULT SetAllExceptions(
 );  
 ```  
   
-```csharp  
+```c#  
 int SetAllExceptions(  
    enum_EXCEPTION_STATE dwState  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `dwState`  
- [in] One of the [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) values.  
+ [in] Um do [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) valores.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)   
  [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)

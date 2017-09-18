@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::Resume | Microsoft Docs
+title: IDebugThread2::Resume | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,42 +30,41 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 20f4c7ecbcd724ad10c54eea2046407db443bd24
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 2f1401c40b264cc36a2f72f33b3cd9ba8be2f6a5
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugthread2resume"></a>IDebugThread2::Resume
-Resumes execution of a thread.  
+Retoma a execução de um thread.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT Resume (   
    DWORD *pdwSuspendCount  
 );  
 ```  
   
-```csharp  
+```c#  
 int Resume (   
    out uint pdwSuspendCount  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwSuspendCount`  
- [out] Returns the suspend count after the resume operation.  
+ [out] Retorna a contagem de suspensões após a operação de retomada.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- Each call to this method decrements the suspend count until it reaches 0 at which time, execution is actually resumed. This suspend count is displayed in the **Threads** debug window.  
+## <a name="remarks"></a>Comentários  
+ Cada chamada para diminui esse método de contagem de suspensões até alcançar 0 nesse momento, a execução é retomada realmente. A contagem de suspensões é exibida no **Threads** janela de depuração.  
   
- For each call to this method, there must be a previous call to the [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md) method. The suspend count determines how many times the `IDebugThread2::Suspend` method has been called so far.  
+ Para cada chamada para esse método, deve haver uma chamada anterior a [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md) método. A contagem de suspensões determina quantas vezes o `IDebugThread2::Suspend` método foi chamado até o momento.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md)

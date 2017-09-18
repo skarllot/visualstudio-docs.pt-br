@@ -1,5 +1,5 @@
 ---
-title: CODE_PATH | Microsoft Docs
+title: CODE_PATH | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,50 +30,49 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 828ed054adb81597f32425cff134b0b0d682ecab
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3a9dd820a6910edb7aa8b7752d6fabbbb54179d5
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="codepath"></a>CODE_PATH
-Describes a method or function call.  
+Descreve uma chamada de método ou função.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 typedef struct tagCODE_PATH {   
    BSTR                bstrName;  
    IDebugCodeContext2* pCode;  
 } CODE_PATH;  
 ```  
   
-```csharp  
+```c#  
 public struct CODE_PATH {  
    public string            bstrName;  
    public IDebugCodeContext pCode;  
 }  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  bstrName  
- The name of the code path.  
+ O nome do caminho de código.  
   
  pCode  
- The [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) object that identifies where in the code to step into a function.  
+ O [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objeto que identifica onde no código para entrar em uma função.  
   
-## <a name="remarks"></a>Remarks  
- This structure is used to implement stepping into a function. [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) returns all the calls from the current location in the program being debugged. This structure represents one such call.  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é usada para implementar a depuração em uma função. [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) retorna todas as chamadas do local atual no programa que está sendo depurado. Esta estrutura representa uma chamada.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   
  [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md)

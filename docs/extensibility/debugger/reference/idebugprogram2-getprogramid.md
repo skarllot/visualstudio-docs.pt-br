@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetProgramId | Microsoft Docs
+title: IDebugProgram2::GetProgramId | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,41 +30,40 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4de4120528f5ecfda0d3e0ef373582a98d511bc2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 9f92fd5dd6fa60a1fae789416b26c02a0e85e54a
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprogram2getprogramid"></a>IDebugProgram2::GetProgramId
-Gets a GUID for this program.  
+Obtém um GUID para este programa.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetProgramId(   
    GUID* pguidProgramId  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetProgramId(   
    out Guid pguidProgramId  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pguidProgramId`  
- [out] Returns the `GUID` for this program.  
+ [out] Retorna o `GUID` para este programa.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- A debug engine (DE) must return the program identifier originally passed to the [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) or [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) methods. This allows identification of the program across debugger components.  
+## <a name="remarks"></a>Comentários  
+ Um mecanismo de depuração (DE) deve retornar o identificador de programa originalmente passado para o [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) ou [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) métodos. Isso permite a identificação do programa entre depurador componentes.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)   
- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [Anexar](../../../extensibility/debugger/reference/idebugengine2-attach.md)

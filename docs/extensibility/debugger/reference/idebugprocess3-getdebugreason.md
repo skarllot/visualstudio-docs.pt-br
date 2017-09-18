@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::GetDebugReason | Microsoft Docs
+title: IDebugProcess3::GetDebugReason | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,16 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 18c88ee00372b8669aa700824c225afacc4c48bb
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 01056dd9c43c301cfbb0bc3e2af8f53c05f426e9
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprocess3getdebugreason"></a>IDebugProcess3::GetDebugReason
-This method returns the reason that the process was launched for debugging.  
+Esse método retorna o motivo que o processo foi iniciado para depuração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetDebugReason(  
@@ -48,19 +47,19 @@ HRESULT GetDebugReason(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetDebugReason(  
    out enum_DEBUG_REASON pReason  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pReason`  
- [out] Returns a value from the [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) enumeration.  
+ [out] Retorna um valor a partir de [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) enumeração.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md)

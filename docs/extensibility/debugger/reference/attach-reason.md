@@ -1,5 +1,5 @@
 ---
-title: ATTACH_REASON | Microsoft Docs
+title: ATTACH_REASON | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 918c276f4a15a36bdaa54a64670a77da953440b4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 4b612b1af74298d2c3ef97611c262a6c31cb6db1
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="attachreason"></a>ATTACH_REASON
-Specifies the reason for the debug engine (DE) to attach to a program node.  
+Especifica o motivo para o mecanismo de depuração (DE) para anexar a um nó de programa.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_ATTACH_REASON {   
    ATTACH_REASON_LAUNCH = 0x0001,  
    ATTACH_REASON_USER   = 0x0002,  
@@ -51,7 +50,7 @@ enum enum_ATTACH_REASON {
 typedef DWORD ATTACH_REASON;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_ATTACH_REASON {   
    ATTACH_REASON_LAUNCH = 0x0001,  
    ATTACH_REASON_USER   = 0x0002,  
@@ -59,27 +58,27 @@ public enum enum_ATTACH_REASON {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  ATTACH_REASON_AUTO  
- Attach because the process is currently in debug mode.  
+ Anexe porque o processo está em modo de depuração.  
   
  ATTACH_REASON_LAUNCH  
- Attach because the process has been launched.  
+ Anexe porque o processo foi iniciado.  
   
  ATTACH_REASON_USER  
- Attach because of a user request.  
+ Anexe devido a uma solicitação de usuário.  
   
-## <a name="remarks"></a>Remarks  
- These values are used as a parameter to the [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) and [Attach](../../../extensibility/debugger/reference/idebugprogramex2-attach.md) methods.  
+## <a name="remarks"></a>Comentários  
+ Esses valores são usados como um parâmetro para o [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) e [Attach](../../../extensibility/debugger/reference/idebugprogramex2-attach.md) métodos.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)   
- [Attach](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Anexar](../../../extensibility/debugger/reference/idebugengine2-attach.md)   
+ [Anexar](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)

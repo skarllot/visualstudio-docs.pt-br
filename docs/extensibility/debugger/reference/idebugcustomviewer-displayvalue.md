@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomViewer::DisplayValue | Microsoft Docs
+title: IDebugCustomViewer::DisplayValue | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c3bc315c94dabe095ee1c95d13877b87b1ebbd70
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: af30c4a05cd5b74c27cb23e98ae0c1a8532f37f5
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugcustomviewerdisplayvalue"></a>IDebugCustomViewer::DisplayValue
-This method is called to display the specified value.  
+Esse método é chamado para exibir o valor especificado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT DisplayValue(  
    HWND             hwnd,  
    DWORD            dwID,  
@@ -51,7 +50,7 @@ HRESULT DisplayValue(
 );  
 ```  
   
-```csharp  
+```c#  
 int DisplayValue(  
    IntPtr          hwnd,   
    uint            dwID,   
@@ -60,28 +59,28 @@ int DisplayValue(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `hwnd`  
- [in] Parent window  
+ [in] Janela pai  
   
  `dwID`  
- [in] ID for custom viewers that support more than one type.  
+ [in] ID de visualizadores personalizados que oferecem suporte a mais de um tipo.  
   
  `pHostServices`  
- [in] Reserved. Always set to null.  
+ [in] Reservado. Sempre definido como null.  
   
  `pDebugProperty`  
- [in] Interface that can be used to retrieve the value to be displayed.  
+ [in] Interface que pode ser usado para recuperar o valor a ser exibido.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna o código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The display is "modal" in that this method will create the necessary window, display the value, wait for input, and close the window, all before returning to the caller. This means the method must handle all aspects of displaying the property's value, from creating a window for output, to waiting for user input, to destroying the window.  
+## <a name="remarks"></a>Comentários  
+ A exibição é "restrita", esse método cria a janela necessária, exibir o valor, aguarda a entrada e feche a janela, todos antes de retornar ao chamador. Isso significa que o método deve tratar todos os aspectos de exibir o valor da propriedade, desde a criação de uma janela de saída, aguardando a entrada do usuário, a destruição de janela.  
   
- To support changing the value on the given [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) object, you can use the [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) method —if the value can be expressed as a string. Otherwise, it is necessary to create a custom interface—exclusive to the expression evaluator implementing this `DisplayValue` method—on the same object that implements the `IDebugProperty3` interface. This custom interface would supply methods for changing the data of an arbitrary size or complexity.  
+ Para oferecer suporte a alteração do valor na determinado [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) do objeto, você pode usar o [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) método — se o valor pode ser expressa como uma cadeia de caracteres. Caso contrário, será necessário criar uma interface personalizada — exclusivo para o avaliador de expressão fazendo essa implementação `DisplayValue` método — no mesmo objeto que implementa o `IDebugProperty3` interface. Essa interface personalizada fornece métodos para alterar os dados de um tamanho arbitrário ou complexidade.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugCustomViewer](../../../extensibility/debugger/reference/idebugcustomviewer.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)

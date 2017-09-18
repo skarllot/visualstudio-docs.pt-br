@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REASON | Microsoft Docs
+title: DEBUG_REASON | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e6d6e969b3829222043f789556d26843297d25db
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 938f52dc7472c700c0cf7150f53f4220a59e181a
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="debugreason"></a>DEBUG_REASON
-Specifies why the process was launched for debugging.  
+Especifica por que o processo foi iniciado para depuração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_DEBUG_REASON {  
    DEBUG_REASON_ERROR         = 0,  
    DEBUG_REASON_USER_LAUNCHED = 1,  
@@ -53,7 +52,7 @@ enum enum_DEBUG_REASON {
 typedef DWORD DEBUG_REASON;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_DEBUG_REASON {  
    DEBUG_REASON_ERROR         = 0,  
    DEBUG_REASON_USER_LAUNCHED = 1,  
@@ -63,32 +62,32 @@ public enum enum_DEBUG_REASON {
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  DEBUG_REASON_ERROR  
- A non-specific error occurred (this is used as a default condition when none of the other reasons fit).  
+ Ocorreu um erro não específico (Isso é usado como uma condição padrão quando nenhuma das outras razões de ajuste).  
   
  DEBUG_REASON_USER_LAUNCHED  
- The process was launched at the user's request.  
+ O processo foi iniciado por solicitação do usuário.  
   
  DEBUG_REASON_USER_ATTACHED  
- The already-running process was attached to by the user.  
+ O processo de execução já foi anexado pelo usuário.  
   
  DEBUG_REASON_AUTO_ATTACHED  
- The process was automatically attached to when it was launched.  
+ O processo foi anexado automaticamente a quando ele foi iniciado.  
   
  DEBUG_REASON_CAUSALITY  
- The process was launched due to a *Just-In-Time* (JIT) debugging event.  
+ O processo foi iniciado devido a um *Just-In-Time* eventos de depuração (JIT).  
   
-## <a name="remarks"></a>Remarks  
- Returned from the [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) method.  
+## <a name="remarks"></a>Comentários  
+ Retornado do [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) método.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)

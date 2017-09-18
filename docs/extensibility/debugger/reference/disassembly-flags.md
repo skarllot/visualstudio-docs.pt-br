@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_FLAGS | Microsoft Docs
+title: DISASSEMBLY_FLAGS | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c2e591340d80d2c17b214a0328cbdb0f0c121d81
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3d6d1a9a142e6ca47bf866e69bb808ca58d50e1b
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="disassemblyflags"></a>DISASSEMBLY_FLAGS
-Specifies the flags for disassembly.  
+Especifica os sinalizadores de desmontagem.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_DISASSEMBLY_FLAGS {   
    DF_DOCUMENTCHANGE     = 0x00000001,  
    DF_DISABLED           = 0x00000002,  
@@ -54,7 +53,7 @@ enum enum_DISASSEMBLY_FLAGS {
 typedef DWORD DISASSEMBLY_FLAGS;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_DISASSEMBLY_FLAGS {   
    DF_DOCUMENTCHANGE     = 0x00000001,  
    DF_DISABLED           = 0x00000002,  
@@ -65,37 +64,37 @@ public enum enum_DISASSEMBLY_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  DF_DOCUMENTCHANGE  
- Indicates that this instruction is in a different document than the previous one.  
+ Indica que essa instrução está em outro documento que o anterior.  
   
  DF_DISABLED  
- Indicates that this instruction will not be executed.  
+ Indica que esta instrução não será executada.  
   
  DF_INSTRUCTION_ACTIVE  
- Indicates that this instruction is one of the next instructions to be executed (there may be more than one).  
+ Indica que essa instrução é uma das próximas instruções para ser executado (pode haver mais de um).  
   
  DF_DATA  
- Indicates that this instruction is really data (not code).  
+ Indica que essa instrução é realmente dados (não o código).  
   
  DF_HASSOURCE  
- Indicates that this instruction has source. Some instructions, such as profiling or garbage collection code, have no corresponding source.  
+ Indica que esta instrução tem origem. Algumas instruções, como código de coleta de lixo ou criação de perfil não tem nenhuma fonte correspondente.  
   
  DF_DOCUMENT_CHECKSUM  
- Indicates that `bstrDocumentUrl` field contains checksum data after the document URL. See the Remarks section for the [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) structure for how the checksum data is stored.  
+ Indica que `bstrDocumentUrl` campo contém dados de soma de verificação após a URL do documento. Consulte a seção comentários para o [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estrutura como os soma de verificação dados são armazenados.  
   
-## <a name="remarks"></a>Remarks  
- Used as the `dwFlags` member of the [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) structure.  
+## <a name="remarks"></a>Comentários  
+ Usado como o `dwFlags` membro do [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) estrutura.  
   
- These flags may be combined with a bitwise `OR`.  
+ Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)

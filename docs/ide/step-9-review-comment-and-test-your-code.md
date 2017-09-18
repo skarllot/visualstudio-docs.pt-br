@@ -1,5 +1,5 @@
 ---
-title: 'Step 9: Review, Comment, and Test Your Code | Microsoft Docs'
+title: "Etapa 9: examinar, comentar e testar o código | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,85 +27,85 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 877ced9f35d8195fe33838fb2544600aad736642
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 982c224f4ec28664758d05409b9107f2e6a2b1b8
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 05/19/2017
 
 ---
-# <a name="step-9-review-comment-and-test-your-code"></a>Step 9: Review, Comment, and Test Your Code
-You next add a comment to your code. A comment is a note that doesn't change the way the program behaves. It makes it easier for someone who is reading your code to understand what it does. Adding comments to your code is a good habit to get into. In Visual C#, two forward slashes (//) mark a line as a comment. In Visual Basic, a single quotation mark (') is used to mark a line as a comment. After you add a comment, you test your program. It's good practice to run and test your code frequently while you're working on your projects, so you can catch and fix any problems early, before the code gets more complicated. This is called *iterative testing*.  
+# <a name="step-9-review-comment-and-test-your-code"></a>Etapa 9: Revisar, comentar e testar o código
+Em seguida, adicione um comentário ao seu código. Um comentário é uma observação que não modifica a maneira que o programa se comporta. Facilita para alguém que esteja lendo o código para entender o que ele faz. Recomendamos que você tenha o hábito de adicionar comentários ao seu código. No Visual C#, duas barras (//) marcam uma linha como um comentário. No Visual Basic, aspas simples (') são usadas para marcar uma linha como um comentário. Após adicionar um comentário, teste seu programa. É uma prática recomendável executar e testar seu código com frequência enquanto trabalha em seus projetos e, portanto, você pode capturar e corrigir os problemas no início, antes que o código fique mais complicado. Isso é chamado de *teste iterativo*.  
   
- You just built something that works, and although it's not done yet, it can already load a picture. Before you add a comment to your code and test it, take time to review the code concepts, because you will use these concepts frequently:  
+ Você acabou de criar algo que funciona e que, embora ainda não esteja pronto, já pode carregar uma imagem. Antes de adicionar um comentário ao seu código e testá-lo, leva tempo para examinar os conceitos de código, pois você usará esses conceitos frequentemente:  
   
--   When you double-clicked the **Show a picture** button in Windows Forms Designer, the IDE automatically added a *method* to your program's code.  
+-   Quando você clica duas vezes no botão **Mostrar uma imagem** no Designer de Formulários do Windows, o IDE adiciona automaticamente um *método* para o código do seu programa.  
   
--   Methods are how you organize your code: It's how your code is grouped together.  
+-   Os métodos são a forma como você organiza seu código: é como o código é agrupado.  
   
--   Most of the time, a method does a small number of things in a specific order, like how your `showButton_Click()` method shows a dialog box and then loads a picture.  
+-   Na maioria das vezes, um método faz um pequeno número de coisas em uma ordem específica, como a forma como o seu método `showButton_Click()` mostra uma caixa de diálogo e carrega uma imagem.  
   
--   A method is made up of code *statements*, or lines of code. Think of a method as a way to bundle code statements together.  
+-   Um método é composto por *declarações* de código, ou linhas de código. Pense em um método como uma maneira de empacotar as instruções de código juntas.  
   
--   When a method is executed, or *called*, the statements in the method are executed in order, one after another, starting with the first one.  
+-   Quando um método é executado, ou *chamado*, as instruções no método são excluídas em ordem, uma após a outra, começando com a primeira.  
   
-     The following is an example of a statement.  
+     A seguir veja um exemplo de uma declaração.  
   
-    ```csharp  
+    ```c#  
     pictureBox1.Load(openFileDialog1.FileName);  
     ```  
   
-    ```vb  
+    ```vb#  
     pictureBox1.Load(openFileDialog1.FileName)  
     ```  
   
-     Statements are what make your programs do things. In Visual C#, a statement always ends in a semicolon. In Visual Basic, the end of a line is the end of a statement. (No semicolon is needed in Visual Basic.) The preceding statement tells your `PictureBox` control to load the file that the user selected with the **OpenFileDialog** component.  
+     As instruções fazem com que seus programas funcionem. No Visual C#, uma instrução sempre termina em um ponto-e-vírgula. No Visual Basic, o final de uma linha é o fim de uma declaração. (Nenhuma vírgula é necessária no Visual Basic.) A instrução anterior diz ao controle `PictureBox` para carregar o arquivo que o usuário selecionou com o componente **OpenFileDialog**.  
   
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 5](http://go.microsoft.com/fwlink/?LinkId=205216) or [Tutorial 1: Create a Picture Viewer in C# - Video 5](http://go.microsoft.com/fwlink/?LinkId=205206). These videos use an earlier version of Visual Studio, so there are slight differences in some menu commands and other user interface elements. However, the concepts and procedures work similarly in the current version of Visual Studio.  
+ ![link para vídeo](~/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 5](http://go.microsoft.com/fwlink/?LinkId=205216) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 5](http://go.microsoft.com/fwlink/?LinkId=205206). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
   
-### <a name="to-add-comments"></a>To add comments  
+### <a name="to-add-comments"></a>Para adicionar comentários  
   
-1.  Add the following comment to your code.  
+1.  Adicione o seguinte comentário ao seu código.  
   
-     [!code-vb[VbExpressTutorial1Step9_10#1](../ide/codesnippet/VisualBasic/step-9-review-comment-and-test-your-code_1.vb)]  [!code-csharp[VbExpressTutorial1Step9_10#1](../ide/codesnippet/CSharp/step-9-review-comment-and-test-your-code_1.cs)]  
+     [!code-vb[VbExpressTutorial1Step9_10#1](../ide/codesnippet/VisualBasic/step-9-review-comment-and-test-your-code_1.vb)]  [!code-cs[VbExpressTutorial1Step9_10#1](../ide/codesnippet/CSharp/step-9-review-comment-and-test-your-code_1.cs)]  
   
     > [!NOTE]
-    >  Your **showButton** button's Click event handler is now finished, and it works. You have started writing code, starting with an `if` statement. An `if` statement is how you tell your program, "Check this one thing, and if it's true, do these actions." In this case, you tell your program to open the **Open File** dialog box, and if the user selects a file and chooses the **OK** button, load that file in the PictureBox.  
+    >  O manipulador de eventos de Clique do botão **showButton** foi concluído e funciona. Você começou a escrever código, começando com uma instrução `if`. Uma instrução `if` é como você dizer a seu programa, "Verifique isso, e se for verdadeiro, faça o seguinte". Nesse caso, você informa o programa para abrir a caixa de diálogo **Abrir Arquivo** e, se o usuário selecionar um arquivo e escolher o botão **OK**, carregue o arquivo na PictureBox.  
   
     > [!TIP]
-    >  The IDE is built to make it easy for you to write code, and *code snippets* are one way it does that. A snippet is a shortcut that gets expanded into a small block of code.  
+    >  O IDE foi criado para facilitar o processo de escrever código, e os *trechos de código* são uma maneira de fazer isso. Um trecho é um atalho que é expandido em um pequeno bloco de código.  
     >   
-    >  You can see all of the snippets available. On the menu bar, choose **Tools**, **Code Snippets Manager**. For Visual C#, the `if` snippet is in **Visual C#** . For Visual Basic, the `if` snippets are in **Conditionals and Loops**, **Code Patterns**. You can use this manager to browse existing snippets or add your own snippets.  
+    >  Você pode ver todos os trechos disponíveis. Na barra de menus, escolha **Ferramentas**, **Gerenciador de Trechos de Código**. Para o Visual C#, o trecho `if` está no **Visual C#**. Para o Visual Basic, os trechos `if` estão em **Condicionais e Loops**, **Padrões de Código**. Você pode usar esse aplicativo para procurar por trechos existentes ou para adicionar seus próprios trechos.  
     >   
-    >  To activate a snippet when typing code, type it and choose the TAB key. Many snippets appear in the **IntelliSense** window, which is why you choose the TAB key twice: first to select the snippet from the **IntelliSense** window, and then to tell the IDE to use the snippet. (IntelliSense supports the `if` snippet, but not the `ifelse` snippet.)  
+    >  Para ativar um trecho ao digitar o código, digite-o e pressione a tecla TAB. Muitos trechos aparecem na janela **IntelliSense**, e é por isso que você escolhe a tecla TAB duas vezes: primeiro para selecionar o trecho na janela **IntelliSense** e depois para mandar o IDE para usar o trecho. (O IntelliSense oferece suporte a trechos de `if`, mas não a trechos de `ifelse`.)  
   
-2.  Before you run your program, save your program by choosing the **Save All** toolbar button, which appears as follows.  
+2.  Antes de executar o programa, salve seu programa clicando no botão **Salvar Todos** na barra de ferramentas, que aparece da seguinte forma.  
   
-     ![Save All toolbar button](../ide/media/express_iconsaveall.png "Express_IconSaveAll")  
-Save All button  
+     ![Botão de barra de ferramentas Salvar Todos](~/ide/media/express_iconsaveall.png "Express_IconSaveAll")  
+Botão Salvar todos  
   
-     Alternatively, to save your program, on the menu bar, choose **File**, **Save All**. It's a best practice to save early and often.  
+     Como alternativa para salvar seu programa, na barra de menus, escolha **Arquivo**, **Salvar todos**. É uma prática recomendada salvar no início e com frequência.  
   
-     When it's running, your program should look like the following picture.  
+     Quando estiver em execução, seu programa deve estar como a imagem a seguir.  
   
-     ![Picture Viewer](../ide/media/express_pictureviewerdonerun.png "Express_PictureViewerDoneRun")  
-Picture Viewer  
+     ![Visualizador de imagem](~/ide/media/express_pictureviewerdonerun.png "Express_PictureViewerDoneRun")  
+Visualizador de imagem  
   
-### <a name="to-test-your-program"></a>To test your program  
+### <a name="to-test-your-program"></a>Para testar o programa  
   
-1.  Choose the F5 key or choose the **Start Debugging** toolbar button.  
+1.  Escolha a tecla F5 ou escolha o botão de barra de ferramentas **Iniciar Depuração**.  
   
-2.  Choose the **Show a picture** button to run the code you just wrote. First, the program opens an **Open File** dialog box. Verify that your filters appear in the **Files of type** drop-down list at the bottom of the dialog box. Then navigate to a picture and open it. You can usually find sample pictures that ship with the Windows operating system in your **My Documents** folder, inside the **My Pictures\Sample Pictures** folder.  
+2.  Escolha o botão **Mostrar uma imagem** para executar o código que você acabou de escrever. Primeiro, o programa abre uma caixa de diálogo **Abrir Arquivo**. Verifique se seus filtros aparecem na lista suspensa **Arquivos de tipo** na parte inferior da caixa de diálogo. Em seguida, navegue para uma imagem e abra-a. Geralmente você pode localizar as imagens de exemplo fornecidas com o sistema operacional Windows em sua pasta de **Meus Documentos**, dentro da pasta **My Pictures\Sample Pictures**.  
   
     > [!NOTE]
-    >  If you don't see any images in the **Select a picture file** dialog box, be sure that the "All files (*.\*)" filter is selected in the drop-down list on the lower right side of the dialog box.  
+    >  Se você não vir nenhuma imagem na caixa de diálogo **Selecione um arquivo de imagem**, verifique se o filtro "Todos os arquivos (*.\*)" está selecionado na lista suspensa no canto inferior direito da caixa de diálogo.  
   
-3.  Load a picture, and it appears in your PictureBox. Then try resizing your form by dragging its borders. Because you have your PictureBox docked inside a TableLayoutPanel, which itself is docked inside the form, your picture area will resize itself so that it's as wide as the form, and fills the top 90 percent of the form. That's why you used the TableLayoutPanel and FlowLayoutPanel containers: They keep your form sized correctly when the user resizes it.  
+3.  Carregue uma imagem e ela aparecerá em sua PictureBox. Tente redimensionar o formulário arrastando suas bordas. Como você tem seu PictureBox encaixado em um TableLayoutPanel, que está encaixado no formulário, sua área de imagem se redimensionará de modo que seja tão larga quando o formulário, e preencherá 90% da parte superior do formulário. É por isso que você usou os recipientes TableLayoutPanel e FlowLayoutPanel: eles mantêm seu formato dimensionado corretamente quando o usuário o redimensiona.  
   
-     Right now, larger pictures go beyond the borders of your picture viewer. In the next step, you'll add code to make pictures fit in the window.  
+     Agora, imagens maiores vão além das bordas do visualizador de imagens. Na próxima etapa, você adicionará código para fazer as imagens caberem na janela.  
   
-### <a name="to-continue-or-review"></a>To continue or review  
+### <a name="to-continue-or-review"></a>Para continuar ou revisar  
   
--   To go to the next tutorial step, see [Step 10: Write Code for Additional Buttons and a Check Box](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md).  
+-   Para ir para a etapa seguinte do tutorial, consulte [Etapa 10: escrever código para botões adicionais e uma caixa de seleção](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md).  
   
--   To return to the previous tutorial step, see [Step 8: Write Code for the Show a Picture Button Event Handler](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md).
+-   Para voltar à próxima anterior do tutorial, consulte [Etapa 8: escrever código para o manipulador de eventos do botão Mostrar uma Imagem](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md).

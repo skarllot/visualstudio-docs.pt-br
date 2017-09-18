@@ -1,5 +1,5 @@
 ---
-title: SccProperties Function | Microsoft Docs
+title: "Função SccProperties | Documentos do Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ce333ce31ffb7f265677837dc7fc27b0ac502c0b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: a0f896c32829c240cfbc5de8347230e4df089cce
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="sccproperties-function"></a>SccProperties Function
-This function displays source control properties for a file or project.  
+# <a name="sccproperties-function"></a>Função SccProperties
+Esta função exibe propriedades de controle de origem para um arquivo ou projeto.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 SCCRTN SccProperties (  
    LPVOID pvContext,  
    HWND   hWnd,  
@@ -50,32 +49,32 @@ SCCRTN SccProperties (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  pvContext  
- [in] The source control plug-in context structure.  
+ [in] A estrutura de contexto de plug-in de controle de origem.  
   
  hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para as caixas de diálogo que ele fornece.  
   
  lpFileName  
- [in] The fully qualified path name of the file or project.  
+ [in] O nome de caminho totalmente qualificado do arquivo ou projeto.  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## <a name="return-value"></a>Valor de retorno  
+ A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
   
-|Value|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|SCC_OK|Properties were successfully displayed.|  
-|SCC_I_RELOADFILE|The version control system has modified the file properties, so the IDE should reload this file.|  
-|SCC_E_PROJNOTOPEN|The specified project has not been opened in source control.|  
-|SCC_E_NOTAUTHORIZED|The user is not authorized to view properties of this file or project.|  
-|SCC_E_FILENOTCONTROLLED|The specified file or project is not under source control.|  
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|An unknown or general error occurred.|  
+|SCC_OK|As propriedades foram exibidas com êxito.|  
+|SCC_I_RELOADFILE|O sistema de controle de versão tiver modificado as propriedades do arquivo, para que o IDE deve recarregar o arquivo.|  
+|SCC_E_PROJNOTOPEN|O projeto especificado não foi aberto no controle de origem.|  
+|SCC_E_NOTAUTHORIZED|O usuário não está autorizado para exibir as propriedades deste arquivo ou projeto.|  
+|SCC_E_FILENOTCONTROLLED|O projeto ou arquivo especificado não está sob controle de origem.|  
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Ocorreu um erro desconhecido ou geral.|  
   
-## <a name="remarks"></a>Remarks  
- The source control plug-in displays the properties in its own dialog box.  
+## <a name="remarks"></a>Comentários  
+ O plug-in de controle do código-fonte exibe as propriedades em sua própria caixa de diálogo.  
   
- The properties are defined by the source control plug-in and may differ from plug-in to plug-in. If the plug-in allows the user to change the source control properties of a file, it should return `SCC_I_RELOAD` to signal the IDE that this file or project needs to be reloaded.  
+ As propriedades são definidas, o plug-in de controle de origem e podem diferir de plug-in para o plug-in. Se o plug-in permite que o usuário altere as propriedades de controle de origem de um arquivo, ele deverá retornar `SCC_I_RELOAD` para sinalizar o IDE que este arquivo ou projeto precisa ser recarregado.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>Consulte também  
+ [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)

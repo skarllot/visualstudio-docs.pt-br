@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetHostMachineName_V7 | Microsoft Docs
+title: IDebugProgramNode2::GetHostMachineName_V7 | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,41 +31,40 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 55e6bdf7cb97ae9a288a8f8ce502244b0f0dbdad
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 331529bbc29823b681532f4015fe6ea8b255962f
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprogramnode2gethostmachinenamev7"></a>IDebugProgramNode2::GetHostMachineName_V7
-DEPRECATED. DO NOT USE.  
+PRETERIDO. NÃO USE.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetHostMachineName_V7 (   
    BSTR* pbstrHostMachineName  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetHostMachineName_V7 (   
    out string pbstrHostMachineName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pbstrHostMachineName`  
- [out] Returns the name of the machine in which the program is running.  
+ [out] Retorna o nome do computador no qual o programa está em execução.  
   
-## <a name="return-value"></a>Return Value  
- An implementation should always return `E_NOTIMPL`.  
+## <a name="return-value"></a>Valor de retorno  
+ Uma implementação deve retornar sempre `E_NOTIMPL`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!WARNING]
->  As of [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)], this method is no longer used and should always return `E_NOTIMPL`.  
+>  Como de [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)], esse método não é mais usado e deve retornar sempre `E_NOTIMPL`.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

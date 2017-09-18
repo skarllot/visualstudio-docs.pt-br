@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplierDescription2::GetDescription | Microsoft Docs
+title: IDebugPortSupplierDescription2::GetDescription | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,41 +28,40 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 675685e143078906623c3487ee4c108cd1d5fa87
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: eb12be31bb9cb0ed62e8787478054b129982e334
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugportsupplierdescription2getdescription"></a>IDebugPortSupplierDescription2::GetDescription
-Retrieves the description and description metadata for the port supplier.  
+Recupera a descrição e a descrição de metadados para o fornecedor de porta.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetDescription(  
    PORT_SUPPLIER_DESCRIPTION_FLAGS *pdwFlags,  
    BSTR *pbstrText  
 );  
 ```  
   
-```csharp  
+```c#  
 public int GetDescription(  
    out enum_PORT_SUPPLIER_DESCRIPTION_FLAGS pdwFlags,  
    out string pbstrText  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwFlags`  
- [out] Metadata flags for the description.  
+ [out] Sinalizadores de metadados para a descrição.  
   
  `pbstrText`  
- [out] Description of the port supplier.  
+ [out] Descrição do fornecedor de porta.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPortSupplierDescription2](../../../extensibility/debugger/reference/idebugportsupplierdescription2.md)

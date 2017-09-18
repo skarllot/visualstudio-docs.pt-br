@@ -1,65 +1,48 @@
 ---
-title: Saving Data | Microsoft Docs
-ms.custom: 
-ms.date: 10/19/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- DataRow.RowState
-- DataSet.GetChanges
-helpviewer_keywords:
-- DBDirect methods
-- updating data
-- data [Visual Studio], saving
-- TableAdapter DBDirect methods
-- databases, updating
-- TableAdapter.Update method
-- data [Visual Studio], updating
-- saving data
-- updating databases
+title: "Salvando dados | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "DataRow.RowState"
+  - "DataSet.GetChanges"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "dados [Visual Studio], salvar"
+  - "dados [Visual Studio], atualizando"
+  - "bancos de dados, atualizando"
+  - "Métodos DBDirect"
+  - "salvando dados"
+  - "métodos DBDirect TableAdapter"
+  - "Método TableAdapter.Update"
+  - "atualizando dados"
+  - "atualizando bancos de dados"
 ms.assetid: 21d2b115-62e4-4ac9-a873-dcbb535b8af8
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
-manager: ghogen
+caps.handback.revision: 13
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 robots: noindex,nofollow
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: be46f7044ca55841ae2fbbfed2e9ea334e263134
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
 ---
-# <a name="saving-data"></a>Saving Data
-Saving data is the process of persisting changed data in an application's data model back to the original data store, typically a relational database such as SQL Server.  
+# Salvando dados
+Salvar dados é que o processo de persistência alterado dados no modelo de dados do aplicativo para o armazenamento de dados original, geralmente um banco de dados relacional, como SQL Server.  
   
- Updating a data source by means of a data model is typically a two-step process. The first step is to update the data model with new information — new records, changed records, or deleted records. The second step is to save the changes in your data model back to the database.  
+ Atualizar uma fonte de dados por meio de um modelo de dados normalmente é um processo de duas etapas.  A primeira etapa é atualizar o modelo de dados com novas informações — novos registros, registros alterados ou registros excluídos.  A segunda etapa é salvar as alterações no seu modelo de dados no banco de dados.  
   
- The following topics describe the concepts and tasks associated with saving data.  
+ Os tópicos a seguir descrevem os conceitos e tarefas associadas ao salvar dados.  
   
-## <a name="related-topics"></a>Related Topics  
-[Save data back to the database](../data-tools/save-data-back-to-the-database.md)  
- Provides an overview of how changes are made in a dataset and how the dataset tracks information about changes in order to save those changes to a database.  
+## Tópicos relacionados  
+ [Salvar dados no banco de dados](../data-tools/save-data-back-to-the-database.md)  
+ Fornece uma visão geral de como as alterações são feitas em um dataset e como o dataset rastreia informações sobre alterações para salvar essas alterações em um banco de dados.  
   
-[How to: Add, Modify, and Delete Entities (WCF Data Services)](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)  
-Shows how to create, update, and delete entity data in a data service.  
-  
-[How to: Execute Data Service Queries (WCF Data Services)](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services)  
-Shows how to query a data service from a data service application.  
-
+ [Salvando dados de entidade](../data-tools/saving-entity-data.md)  
+ Descreve como salvar alterações em [ADO.NET Entity Framework](../Topic/ADO.NET%20Entity%20Framework.md) e [WCF Data Services 4.5](../Topic/WCF%20Data%20Services%204.5.md) aplicativos.

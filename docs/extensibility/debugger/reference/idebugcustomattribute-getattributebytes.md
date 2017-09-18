@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetAttributeBytes | Microsoft Docs
+title: IDebugCustomAttribute::GetAttributeBytes | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,46 +30,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0b153e2ee1f5e01f8016de8c45fc2ba45c431cbd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3999e70219855e7b84faf37d8eb6f1b9f58203c8
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugcustomattributegetattributebytes"></a>IDebugCustomAttribute::GetAttributeBytes
-Gets the attribute information as a blob of bytes.  
+Obtém as informações do atributo como um blob de bytes.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetAttributeBytes(   
    BYTE*  ppBlob,  
    DWORD* pdwLen  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetAttributeBytes(  
    ref byte[] ppBlob,   
    ref uint   pdwLen  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppBlob`  
- [in, out] An array that is filled in with the attribute bytes.  
+ [no, out] Uma matriz é preenchida com os bytes de atributo.  
   
  `pdwLen`  
- [in, out] Specifies the maximum number of bytes to return in the `ppBlob` array and returns the number of bytes actually written to the array.  
+ [no, out] Especifica o número máximo de bytes a retornar o `ppBlob` de matriz e retorna o número de bytes gravados na matriz.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- Set the `ppBlob` parameter to a null value to return the number of attributes bytes available. Then allocate an array and pass that array in for the `ppBlob` parameter.  
+## <a name="remarks"></a>Comentários  
+ Definir o `ppBlob` atributos de parâmetro para um valor null para retornar o número de bytes disponíveis. Em seguida, alocar uma matriz e passar a matriz em para o `ppBlob` parâmetro.  
   
- The attribute bytes represent the raw data of the custom attribute.  
+ Os bytes de atributo representam os dados brutos do atributo personalizado.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

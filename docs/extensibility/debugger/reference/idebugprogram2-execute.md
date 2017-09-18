@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Execute | Microsoft Docs
+title: IDebugProgram2::Execute | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,41 +30,40 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e9f7b21134d6c71d18b4ebd567136aa8af5fd9f8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: ff8d556246425f5f52643ce47ffad5ae0b49e241
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprogram2execute"></a>IDebugProgram2::Execute
-Continues running this program from a stopped state. Any previous execution state (such as a step) is cleared, and the program starts executing again.  
+Continua a execução deste programa de um estado parado. Qualquer estado de execução anterior (como uma etapa) está desmarcado, e o programa começa a ser executada novamente.  
   
 > [!NOTE]
->  This method is deprecated. Use the [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md) method instead.  
+>  Este método foi preterido. Use o [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md) método em vez disso.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT Execute(  
    void  
 );  
 ```  
   
-```csharp  
+```c#  
 int Execute();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- When the user starts execution from a stopped state in some other program's thread, this method is called on this program. This method is also called when the user selects the **Start** command from the **Debug** menu in the IDE. The implementation of this method may be as simple as calling the [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) method on the current thread in the program.  
+## <a name="remarks"></a>Comentários  
+ Quando o usuário inicia a execução de um estado parado no thread do outro programa, esse método é chamado neste programa. Esse método também é chamado quando o usuário seleciona o **iniciar** comando o **depurar** menu no IDE. A implementação desse método pode ser tão simple quanto chamar o [retomar](../../../extensibility/debugger/reference/idebugthread2-resume.md) método no thread atual no programa.  
   
 > [!WARNING]
->  Do not send a stopping event or an immediate (synchronous) event to [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) while handling this call; otherwise the debugger may hang.  
+>  Não enviar um evento de parada ou um evento (síncrono) imediato [evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) ao tratar essa chamada; caso contrário, o depurador pode travar.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
- [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)
+ [Evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
+ [Retomar](../../../extensibility/debugger/reference/idebugthread2-resume.md)

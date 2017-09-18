@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetTypeArguments | Microsoft Docs
+title: IDebugBinder3::GetTypeArguments | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,16 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0abbea4c880f3cec8969a4ece484d5b333bc8638
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 10a38c4b28e27bdabdecc994b05bcd1443a42c6b
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugbinder3gettypearguments"></a>IDebugBinder3::GetTypeArguments
-This method retrieves a list of argument types associated with this object.  
+Esse método recupera uma lista de tipos de argumento associado a este objeto.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetTypeArguments(  
@@ -51,7 +50,7 @@ HRESULT GetTypeArguments(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetTypeArguments(  
    uint          skip,  
    uint          count,  
@@ -60,25 +59,25 @@ int GetTypeArguments(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `skip`  
- [in]Number of fields to skip before getting argument types.  
+ [in] Número de campos a serem ignorados antes de obter tipos de argumento.  
   
  `count`  
- [in] The number of argument fields to return (also specifies the size of the `ppFields` array).  
+ [in] O número de campos de argumento para retornar (também especifica o tamanho da `ppFields` matriz).  
   
  `ppFields`  
- [in, out] An array of fields that will be filled in on return of this method.  
+ [no, out] Uma matriz de campos que serão preenchidos no retorno desse método.  
   
  `pFetched`  
- [out] \(optional) The number of argument type fields actually returned.  
+ [out] (opcional) O número de argumento de tipo campos retornados na verdade.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The number of argument types can be obtained beforehand with [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md).  
+## <a name="remarks"></a>Comentários  
+ O número de tipos de argumento pode ser obtido com antecedência com [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md).  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)

@@ -1,5 +1,5 @@
 ---
-title: THREADPROPERTIES | Microsoft Docs
+title: THREADPROPERTIES | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a759b577e9b1af18773744dd2f391a570683876f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 674c0fefa41f6c193bf4f603fc0af23de12eb454
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
-Describes the properties of a thread.  
+Descreve as propriedades de um thread.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 typedef struct _tagTHREADPROPERTIES {   
    THREADPROPERTY_FIELDS dwFields;  
    DWORD                 dwThreadId;  
@@ -54,7 +53,7 @@ typedef struct _tagTHREADPROPERTIES {
 } THREADPROPERTIES;  
 ```  
   
-```csharp  
+```c#  
 public struct THREADPROPERTIES {   
    public uint   dwFields;  
    public uint   dwThreadId;  
@@ -66,40 +65,40 @@ public struct THREADPROPERTIES {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  dwFields  
- A combination of flags from the [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) enumeration, describing which fields in this structure are valid.  
+ Uma combinação de sinalizadores do [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) enumeração, que descreve os campos nessa estrutura são válidos.  
   
  dwThreadId  
- The thread ID.  
+ A ID do thread.  
   
  dwSuspendCount  
- The thread suspend count.  
+ Contagem de suspensões do thread.  
   
  dwThreadState  
- A value from the [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md) enumeration indicating the state of the operating thread.  
+ Um valor a partir de [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md) enumeração que indica o estado do thread operacional.  
   
  bstrPriority  
- A string specifying the thread priority; for example, "Above Normal", "Normal", or "Time Critical".  
+ Uma cadeia de caracteres que especifica a prioridade de thread; Por exemplo, "Acima do Normal", "Normal" ou "Tempo crítico".  
   
  bstName  
- The thread name.  
+ O nome do thread.  
   
  bstrLocation  
- The thread location (usually the topmost stack frame), typically expressed as the name of the method where execution is currently halted.  
+ O local de thread (geralmente o quadro de pilha mais alto), geralmente expressado como o nome do método em que a execução é interrompida no momento.  
   
-## <a name="remarks"></a>Remarks  
- This structure is filled in by a call to the [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) method. The information so returned is typically used in populating the **Threads** window.  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é preenchida por uma chamada para o [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) método. As informações retornadas então normalmente são usadas para popular o **Threads** janela.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)   
  [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)   
  [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)

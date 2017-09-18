@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier3::CanPersistPorts | Microsoft Docs
+title: IDebugPortSupplier3::CanPersistPorts | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,34 +30,33 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9c61891876f3e27753283042b0b24dd7d7d60dfd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 76d15628d163ff33284ab4c47591f1a7476f236d
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugportsupplier3canpersistports"></a>IDebugPortSupplier3::CanPersistPorts
-This method determines whether the port supplier can persist ports (by writing them to disk) between invocations of the debugger.  
+Este método determina se o fornecedor de porta pode persistir portas (gravando-los em disco) entre invocações do depurador.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT CanPersistPorts();  
 ```  
   
-```csharp  
+```c#  
 int CanPersistPorts();  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- None.  
+#### <a name="parameters"></a>Parâmetros  
+ Nenhum.  
   
-## <a name="return-value"></a>Return Value  
- `S_OK` if ports can be persisted, or `S_FALSE` to indicate that ports cannot be persisted.  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK`Se as portas podem ser persistentes, ou `S_FALSE` para indicar que as portas não podem ser mantidas.  
   
-## <a name="remarks"></a>Remarks  
- If the port supplier can persist ports, it should do so when it is destroyed and then reload them when it is instantiated once again.  
+## <a name="remarks"></a>Comentários  
+ Se o fornecedor de porta pode persistir portas, ele deve fazer isso quando ele é destruído e recarregá-las, em seguida, quando ela é instanciada novamente.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)

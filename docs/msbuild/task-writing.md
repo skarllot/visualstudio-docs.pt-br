@@ -1,5 +1,5 @@
 ---
-title: Task Writing | Microsoft Docs
+title: "Gravação de Tarefa| Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,28 +31,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: e9757d10249e3a8d6b06804623a06ab971e86d89
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/30/2017
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: 2ebc4bacb2f90bc0f15e2178126e383e8c43e2f1
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="task-writing"></a>Task Writing
-Tasks provide the code that runs during the build process. Tasks are contained in targets. A library of typical tasks is included with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], and you can also create your own tasks. For more information about the library of tasks that are included with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], see [Task Reference](../msbuild/msbuild-task-reference.md).  
+# <a name="task-writing"></a>Escrevendo tarefas
+Tarefas fornecem o código que é executado durante o processo de build. Tarefas estão contidas nos destinos. Uma biblioteca de tarefas típicas está incluída no [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] e você também pode criar suas próprias tarefas. Para obter mais informações sobre a biblioteca de tarefas que estão incluídos no [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], consulte [referência à tarefa](../msbuild/msbuild-task-reference.md).  
   
-## <a name="tasks"></a>Tasks  
- Examples of tasks include [Copy](../msbuild/copy-task.md), which copies one or more files, [MakeDir](../msbuild/makedir-task.md), which creates a directory, and [Csc](../msbuild/csc-task.md), which compiles [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] source code files. Each task is implemented as a .NET class that implements the <xref:Microsoft.Build.Framework.ITask> interface, which is defined in the Microsoft.Build.Framework.dll assembly.  
+## <a name="tasks"></a>Tarefas  
+ Exemplos de tarefas incluem [Copiar](../msbuild/copy-task.md), que copia um ou mais arquivos, [MakeDir](../msbuild/makedir-task.md), que cria um diretório e [Csc](../msbuild/csc-task.md), que compila arquivos de código-fonte [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]. Cada tarefa é implementada como uma classe .NET que implementa a interface <xref:Microsoft.Build.Framework.ITask>, que é definida no assembly Microsoft.Build.Framework.dll.  
   
- There are two approaches you can use when implementing a task:  
+ Há duas abordagens que você pode usar ao implementar uma tarefa:  
   
--   Implement the <xref:Microsoft.Build.Framework.ITask> interface directly.  
+-   Implementar a interface <xref:Microsoft.Build.Framework.ITask> diretamente.  
   
--   Derive your class from the helper class, <xref:Microsoft.Build.Utilities.Task>, which is defined in the Microsoft.Build.Utilities.dll assembly. Task implements ITask and provides default implementations of some ITask members. Additionally, logging is easier.  
+-   Deriva sua classe da classe auxiliar, <xref:Microsoft.Build.Utilities.Task>, que é definida no assembly Microsoft.Build.Utilities.dll. Tarefa implementa ITask e fornece implementações padrão de alguns membros do ITask. Além disso, o registro em log é mais fácil.  
   
- In both cases, you must add to your class a method named `Execute`, which is the method that is called when the task runs. This method takes no parameters and returns a `Boolean` value: `true` if the task succeeded or `false` if it failed. The following example shows a task that performs no action and returns `true`.  
+ Em ambos os casos, você deve adicionar à sua classe um método chamado `Execute`, que é o método que é chamado quando a tarefa é executada. Esse método não usa nenhum parâmetro e retorna um `Boolean` valor: `true` se a tarefa foi bem-sucedida ou `false` se falhou. O exemplo a seguir mostra uma tarefa que não executa nenhuma ação e retorna `true`.  
   
-```csharp
+```cs
 using System;  
 using Microsoft.Build.Framework;  
 using Microsoft.Build.Utilities;  
@@ -69,7 +68,7 @@ namespace MyTasks
 }  
 ```  
   
- The following project file runs this task:  
+ O arquivo de projeto a seguir executa essa tarefa:  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -79,9 +78,9 @@ namespace MyTasks
 </Project>  
 ```  
   
- When tasks run, they can also receive inputs from the project file if you create .NET properties on the task class. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sets these properties immediately before calling the task's `Execute` method. To create a string property, use task code such as:  
+ Quando executar tarefas, elas também poderá receber entradas do arquivo de projeto se você criar propriedades .NET na classe task. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] define essas propriedades imediatamente antes de chamar o método de tarefa `Execute`. Para criar uma propriedade de cadeia de caracteres, use o código da tarefa como:  
   
-```csharp
+```cs
 using System;  
 using Microsoft.Build.Framework;  
 using Microsoft.Build.Utilities;  
@@ -105,7 +104,7 @@ namespace MyTasks
 }  
 ```  
   
- The following project file runs this task and sets `MyProperty` to the given value:  
+ O seguinte arquivo de projeto executa essa tarefa e define `MyProperty` como o valor especificado:  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -115,18 +114,18 @@ namespace MyTasks
 </Project>  
 ```  
   
-## <a name="registering-tasks"></a>Registering Tasks  
- If a project is going to run a task, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] must know how to locate the assembly that contains the task class. Tasks are registered using the [UsingTask Element (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+## <a name="registering-tasks"></a>Registrando tarefas  
+ Se um projeto for executar uma tarefa, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] deverá saber como localizar o assembly que contém a classe de tarefa. Tarefas são registradas usando o [elemento UsingTask (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
   
- The [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] file Microsoft.Common.Tasks is a project file that contains a list of `UsingTask` elements that register all the tasks that are supplied with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. This file is automatically included when building every project. If a task that is registered in Microsoft.Common.Tasks is also registered in the current project file, the current project file takes precedence; that is, you can override a default task with your own task that has the same name.  
+ O arquivo [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Microsoft.Common.Tasks é um arquivo de projeto que contém uma lista de elementos `UsingTask` que registra todas as tarefas que são fornecidas com [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Esse arquivo é incluído automaticamente na criação de cada projeto. Se uma tarefa que está registrada no Microsoft.Common.Tasks também é registrada no arquivo de projeto atual, o arquivo de projeto atual tem precedência; ou seja, você pode substituir uma tarefa padrão com sua própria tarefa que tem o mesmo nome.  
   
 > [!TIP]
->  You can see a list of the tasks that are supplied with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] by viewing the contents of Microsoft.Common.Tasks.  
+>  Você pode ver uma lista de tarefas que são fornecidos com [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] exibindo o conteúdo de Microsoft.Common.Tasks.  
   
-## <a name="raising-events-from-a-task"></a>Raising Events from a Task  
- If your task derives from the <xref:Microsoft.Build.Utilities.Task> helper class, you can use any of the following helper methods on the <xref:Microsoft.Build.Utilities.Task> class to raise events that will be caught and displayed by any registered loggers:  
+## <a name="raising-events-from-a-task"></a>Gerando eventos de uma tarefa  
+ Se a tarefa deriva a classe auxiliar <xref:Microsoft.Build.Utilities.Task>, você pode usar qualquer um dos seguintes métodos auxiliares na classe <xref:Microsoft.Build.Utilities.Task> para gerar eventos que serão capturados e exibidos por quaisquer agentes registrados:  
   
-```csharp
+```cs
 public override bool Execute()  
 {  
     Log.LogError("messageResource1", "1", "2", "3");  
@@ -136,9 +135,9 @@ public override bool Execute()
 }  
 ```  
   
- If your task implements <xref:Microsoft.Build.Framework.ITask> directly, you can still raise such events but you must use the IBuildEngine interface. The following example shows a task that implements ITask and raises a custom event:  
+ Se a tarefa implementa <xref:Microsoft.Build.Framework.ITask> diretamente, você ainda pode gerar eventos, mas você deve usar a interface IBuildEngine. O exemplo a seguir mostra uma tarefa que implementa ITask e gera um evento personalizado:  
   
-```csharp
+```cs
 public class SimpleTask : ITask  
 {  
     private IBuildEngine buildEngine;  
@@ -160,10 +159,10 @@ public class SimpleTask : ITask
 }  
 ```  
   
-## <a name="requiring-task-parameters-to-be-set"></a>Requiring Task Parameters to be Set  
- You can mark certain task properties as "required" so that any project file that runs the task must set values for these properties or the build fails. Apply the `[Required]` attribute to the .NET property in your task as follows:  
+## <a name="requiring-task-parameters-to-be-set"></a>Parâmetros de tarefa necessários a serem definidos  
+ Você pode marcar determinadas propriedades de tarefa como "necessárias" para que qualquer arquivo de projeto que executa a tarefa deve definir valores para essas propriedades ou o build falhará. Aplicar o atributo `[Required]` à propriedade .NET em sua tarefa da seguinte maneira:  
   
-```csharp
+```cs
 private string requiredProperty;  
   
 [Required]  
@@ -174,16 +173,16 @@ public string RequiredProperty
 }  
 ```  
   
- The `[Required]` attribute is defined by <xref:Microsoft.Build.Framework.RequiredAttribute> in the <xref:Microsoft.Build.Framework> namespace.  
+ O atributo `[Required]` é definido por <xref:Microsoft.Build.Framework.RequiredAttribute> no namespace <xref:Microsoft.Build.Framework>.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
- This following [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] class demonstrates a task deriving from the <xref:Microsoft.Build.Utilities.Task> helper class. This task returns `true`, indicating that it succeeded.  
+### <a name="description"></a>Descrição  
+ Essa classe a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] seguir demonstra uma tarefa derivando da classe auxiliar <xref:Microsoft.Build.Utilities.Task>. Esta tarefa retorna `true`, indicando que foi bem-sucedida.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>Código  
   
-```csharp
+```cs
 using System;  
 using Microsoft.Build.Utilities;  
   
@@ -200,14 +199,14 @@ namespace SimpleTask1
 }  
 ```  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
- This following [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] class demonstrates a task implementing the <xref:Microsoft.Build.Framework.ITask> interface. This task returns `true`, indicating that it succeeded.  
+### <a name="description"></a>Descrição  
+ Essa classe a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] seguir demonstra uma tarefa implementado a interface <xref:Microsoft.Build.Framework.ITask>. Esta tarefa retorna `true`, indicando que foi bem-sucedida.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>Código  
   
-```csharp
+```cs
 using System;  
 using Microsoft.Build.Framework;  
   
@@ -258,20 +257,20 @@ namespace SimpleTask2
 }  
 ```  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
- This [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] class demonstrates a task that derives from the <xref:Microsoft.Build.Utilities.Task> helper class. It has a required string property, and raises an event that is displayed by all registered loggers.  
+### <a name="description"></a>Descrição  
+ Essa classe a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] seguir demonstra uma tarefa derivando da classe auxiliar <xref:Microsoft.Build.Utilities.Task> helper class. Tem uma propriedade de cadeia de caracteres obrigatória e gera um evento que é exibido por todos os agentes registrados.  
   
-### <a name="code"></a>Code  
- [!code-csharp[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]  
+### <a name="code"></a>Código  
+ [!code-cs[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
- The following example shows a project file invoking the previous example task, SimpleTask3.  
+### <a name="description"></a>Descrição  
+ O exemplo a seguir mostra um arquivo de projeto invocando a tarefa de exemplo anterior, SimpleTask3.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>Código  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -284,6 +283,6 @@ namespace SimpleTask2
 </Project>  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Task Reference](../msbuild/msbuild-task-reference.md)   
- [Task Reference](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de tarefas](../msbuild/msbuild-task-reference.md)   
+ [Referência de tarefas](../msbuild/msbuild-task-reference.md)

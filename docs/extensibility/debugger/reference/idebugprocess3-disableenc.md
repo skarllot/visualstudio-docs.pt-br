@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::DisableENC | Microsoft Docs
+title: IDebugProcess3::DisableENC | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,16 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 1182d60d57dba3f1ee49f5a119ef19de6f7ae9c1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: cc695ecc5d3a328d5a6071766b6bbad8049635fc
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
-This method explicitly disables Edit and Continue on this process (and all programs it contains). A custom port supplier should always return `E_NOTIMPL`.  
+Esse método explicitamente desabilita editar e continuar esse processo (e todos os programas que ele contém). Um fornecedor de porta personalizada deve retornar sempre `E_NOTIMPL`.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT DisableENC(  
@@ -48,24 +47,24 @@ HRESULT DisableENC(
 );  
 ```  
   
-```csharp  
+```c#  
    EncUnavailableReason reason  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `reason`  
- [in] A value from the [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) enumeration.  
+ [in] Um valor a partir de [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) enumeração.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retornará o código de erro.  
   
 > [!NOTE]
->  A custom port supplier should always return `E_NOTIMPL`.  
+>  Um fornecedor de porta personalizada deve retornar sempre `E_NOTIMPL`.  
   
-## <a name="remarks"></a>Remarks  
- Once Edit and Continue is disabled for a process, it can be re-enabled only by restarting the process.  
+## <a name="remarks"></a>Comentários  
+ Uma vez editar e continuar está desabilitada para um processo, ele poderá ser habilitado novamente reiniciando o processo.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md)

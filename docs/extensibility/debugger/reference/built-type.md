@@ -1,5 +1,5 @@
 ---
-title: BUILT_TYPE | Microsoft Docs
+title: BUILT_TYPE | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b934ec1b4701a174db5b90dd0b24c3dcc02ae759
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8c8dbfc7f444d5f0ab41c94844f8659bf754166a
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="builttype"></a>BUILT_TYPE
-This structure specifies information about a field type taken from metadata.  
+Essa estrutura Especifica informações sobre um tipo de campo obtido de metadados.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 typedef struct _tagTYPE_BUILT {  
    ULONG32      ulAppDomainID;  
    GUID         guidModule;  
@@ -50,7 +49,7 @@ typedef struct _tagTYPE_BUILT {
 } BUILT_TYPE;  
 ```  
   
-```csharp  
+```c#  
 public struct BUILT_TYPE {  
    public uint        ulAppDomainID;  
    public Guid        guidModule;  
@@ -58,28 +57,28 @@ public struct BUILT_TYPE {
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  ulAppDomainID  
- ID of the application from which the symbol came. This is used to uniquely identify an instance of the application.  
+ ID do aplicativo de onde veio o símbolo. Isso é usado para identificar exclusivamente uma instância do aplicativo.  
   
  guidModule  
- The GUID of the module that contains this field.  
+ O GUID do módulo que contém esse campo.  
   
  pUnderlyingField  
- An [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object identifying the underlying field associated with this built field.  
+ Um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objeto identifica o campo subjacente associado a esse campo interno.  
   
-## <a name="remarks"></a>Remarks  
- This structure appears as part of the union in the [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) structure when the `dwKind` field of the `TYPE_INFO` structure is set to `TYPE_KIND_BUILT` (a value from the [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) enumeration).  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é exibido como parte da união no [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) estrutura quando o `dwKind` campo o `TYPE_INFO` estrutura é definida como `TYPE_KIND_BUILT` (um valor da [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) enumeração).  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)   
  [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

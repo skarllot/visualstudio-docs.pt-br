@@ -1,5 +1,5 @@
 ---
-title: STEPKIND | Microsoft Docs
+title: STEPKIND | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f17bfba794d5b001b20c421210214a9f3ec0ef74
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 1365ba8a43bcd8b997bae460a4300ccd81c0e688
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="stepkind"></a>STEPKIND
-Specifies the step kind for stepping.  
+Especifica o tipo de etapa de revisão.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_STEPKIND {   
    STEP_INTO      = 0,  
    STEP_OVER      = 1,  
@@ -52,7 +51,7 @@ enum enum_STEPKIND {
 typedef DWORD STEPKIND;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_STEPKIND {   
    STEP_INTO      = 0,  
    STEP_OVER      = 1,  
@@ -61,29 +60,29 @@ public enum enum_STEPKIND {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  STEP_INTO  
- Steps into a function.  
+ Etapas em uma função.  
   
  STEP_OVER  
- Steps over a function.  
+ Etapas em uma função.  
   
  STEP_OUT  
- Steps out of a function.  
+ Etapas de uma função.  
   
  STEP_BACKWARDS  
- Steps backward into a function.  
+ Etapas para trás em uma função.  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) method.  
+## <a name="remarks"></a>Comentários  
+ Passada como um argumento para o [etapa](../../../extensibility/debugger/reference/idebugprocess3-step.md) método.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Etapa](../../../extensibility/debugger/reference/idebugprocess3-step.md)

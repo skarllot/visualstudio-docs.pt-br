@@ -1,5 +1,5 @@
 ---
-title: BP_PASSCOUNT_STYLE | Microsoft Docs
+title: BP_PASSCOUNT_STYLE | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e76b64fc0ca35d442d654964f6bfc831b727d0e2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 441963c3981f7fde21a2c466496d02bfe6d0ecca
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="bppasscountstyle"></a>BP_PASSCOUNT_STYLE
-Specifies the condition associated with the breakpoint pass count that causes the breakpoint to fire.  
+Especifica a condição associada com a contagem de passagem de ponto de interrupção que faz com que o ponto de interrupção seja acionado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_BP_PASSCOUNT_STYLE {   
    BP_PASSCOUNT_NONE             = 0x0000,  
    BP_PASSCOUNT_EQUAL            = 0x0001,  
@@ -52,7 +51,7 @@ enum enum_BP_PASSCOUNT_STYLE {
 typedef DWORD BP_PASSCOUNT_STYLE;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_BP_PASSCOUNT_STYLE {   
    BP_PASSCOUNT_NONE             = 0x0000,  
    BP_PASSCOUNT_EQUAL            = 0x0001,  
@@ -61,31 +60,31 @@ public enum enum_BP_PASSCOUNT_STYLE {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  BP_PASSCOUNT_NONE  
- Specifies no breakpoint pass count style.  
+ Não especifica nenhum estilo de contagem de passagem de ponto de interrupção.  
   
  BP_PASSCOUNT_EQUAL  
- Sets the breakpoint pass count style to equal. The breakpoint fires when the number of times the breakpoint is hit equals the pass count.  
+ Define o estilo de contagem de passagem de ponto de interrupção igual. O ponto de interrupção é disparado quando o número de vezes que o ponto de interrupção é atingido igual à contagem de passagem.  
   
  BP_PASSCOUNT_EQUAL_OR_GREATER  
- Sets the breakpoint pass count style to equal or greater. The breakpoint fires when the number of times the breakpoint is hit is equal to or greater than the pass count.  
+ Define o estilo de contagem de passagem de ponto de interrupção como igual ou maior. O ponto de interrupção é disparado quando o número de vezes que o ponto de interrupção é atingido é igual ou maior que a contagem de passagem.  
   
  BP_PASSCOUNT_MOD  
- Specifies a modulo pass count. For example, if the pass count is of the type `BP_PASSCOUNT_MOD` and the pass count value is 4, the breakpoint fires every time the hit count is a multiple of 4.  
+ Especifica um módulo passar contagem. Por exemplo, se a contagem de passagem é do tipo `BP_PASSCOUNT_MOD` e o valor de contagem de passagem é 4, o ponto de interrupção é disparado sempre que a contagem de ocorrências é um múltiplo de 4.  
   
-## <a name="remarks"></a>Remarks  
- Used for the `stylePassCount` member of the [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) structure that is in turn a member of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) and [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) structures.  
+## <a name="remarks"></a>Comentários  
+ Usado para o `stylePassCount` membro do [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) que por sua vez é um membro da estrutura a [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
  [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
  [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

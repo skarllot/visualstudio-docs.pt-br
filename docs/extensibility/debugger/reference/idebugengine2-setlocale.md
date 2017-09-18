@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetLocale | Microsoft Docs
+title: IDebugEngine2::SetLocale | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6b655d95dacbaf5142c6be70141420e553012d73
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 85412459d6765d84e7bdf609cb834b263042d1c6
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugengine2setlocale"></a>IDebugEngine2::SetLocale
-Sets the locale of the debug engine (DE).  
+Define a localidade do mecanismo de depuração (DE).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT SetLocale(   
    WORD wLangID  
 );  
 ```  
   
-```csharp  
+```c#  
 int SetLocale(   
    ushort wLangID  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `wLangID`  
- [in] Specifies the language locale. For example, 1033 for English.  
+ [in] Especifica a localidade do idioma. Por exemplo, 1033 para inglês.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- This method is called by the session debug manager (SDM) to propagate the locale settings of the IDE so that strings returned by the DE are properly localized.  
+## <a name="remarks"></a>Comentários  
+ Este método é chamado pelo Gerenciador de depuração de sessão (SDM) para propagar as configurações de localidade do IDE para que as cadeias de caracteres retornadas por DE estão traduzidas corretamente.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

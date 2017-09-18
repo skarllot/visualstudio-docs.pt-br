@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetMetricGuid | Microsoft Docs
+title: IDebugSettingsCallback2::GetMetricGuid | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,19 +28,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d1423bc575cc70703a6c1e99fde8d8776055519f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: bb96e99b4ab6a002c8b061761fd797ed09d0272a
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugsettingscallback2getmetricguid"></a>IDebugSettingsCallback2::GetMetricGuid
-Retrieves the unique identifier of a metric given its name.  
+Recupera o identificador exclusivo de uma métrica recebe seu nome.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetMetricGuid(  
    LPCWSTR pszType,  
    REFGUID guidSection,  
@@ -49,7 +48,7 @@ HRESULT GetMetricGuid(
 );  
 ```  
   
-```csharp  
+```c#  
 private int GetMetricGuid(  
    string   pszType,  
    ref Guid guidSection,  
@@ -58,21 +57,21 @@ private int GetMetricGuid(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pszType`  
- [in] Type of the metric.  
+ [in] Tipo da métrica.  
   
  `guidSection`  
- [in] Unique identifier of the section.  
+ [in] Identificador exclusivo da seção.  
   
  `pszMetric`  
- [in] Name of the metric.  
+ [in] Nome da métrica.  
   
  `pguidValue`  
- [out] Returns the unique identifier of the metric.  
+ [out] Retorna o identificador exclusivo da métrica.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

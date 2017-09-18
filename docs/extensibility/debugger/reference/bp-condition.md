@@ -1,5 +1,5 @@
 ---
-title: BP_CONDITION | Microsoft Docs
+title: BP_CONDITION | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 7913b12a72ac269f543fcaa3ac7a8ca355b969ce
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: e37b4681e140cd3c9a16f66adbd74614fddd2e27
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="bpcondition"></a>BP_CONDITION
-Describes the conditions under which a breakpoint fires.  
+Descreve as condições sob as quais um ponto de interrupção é disparado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 typedef struct _BP_CONDITION {   
    IDebugThread2* pThread;  
    BP_COND_STYLE  styleCondition;  
@@ -52,7 +51,7 @@ typedef struct _BP_CONDITION {
 } BP_CONDITION;  
 ```  
   
-```csharp  
+```c#  
 public struct BP_CONDITION {   
    public IDebugThread2 pThread;  
    public uint          styleCondition;  
@@ -62,36 +61,36 @@ public struct BP_CONDITION {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  `pThread`  
- The [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the active thread for the application that contains the breakpoint.  
+ O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread ativo para o aplicativo que contém o ponto de interrupção.  
   
  `styleCondition`  
- A value from the [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) enumeration describing the style of this breakpoint condition.  
+ Um valor a partir de [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) enumeração que descreve o estilo dessa condição de ponto de interrupção.  
   
  `bstrContext`  
- The location of the breakpoint.  
+ O local do ponto de interrupção.  
   
  `bstrCondition`  
- The firing condition of the breakpoint.  
+ A condição de disparo do ponto de interrupção.  
   
  `nRadix`  
- Radix to be used in evaluating any numerical information.  
+ Base a ser usado na avaliação de todas as informações numéricas.  
   
-## <a name="remarks"></a>Remarks  
- This structure is a member of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) and [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) structures.  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é membro do [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) estruturas.  
   
- This structure is also passed as a parameter to the [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) and [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) methods.  
+ Essa estrutura também é passada como um parâmetro para o [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) e [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) métodos.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
  [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)   
  [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md)   

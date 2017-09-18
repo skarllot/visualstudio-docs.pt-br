@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::QueryIsLocal | Microsoft Docs
+title: IDebugCoreServer3::QueryIsLocal | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,30 +30,29 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b619407d870344ba99d8fab87718857a0658e4ee
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 546610580f7a95e3018f207260b83326d90bdc6c
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugcoreserver3queryislocal"></a>IDebugCoreServer3::QueryIsLocal
-Determines if the server is local to the caller.  
+Determina se o servidor é local para o chamador.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT QueryIsLocal(  
    void  
 );  
 ```  
   
-```csharp  
+```c#  
 int QueryIsLocal();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- Returns `S_OK` to indicate the server is local. Returns `S_FALSE` if the server is running from an instance of msvsmon.exe, which is typically used for remote debugging.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna `S_OK` para indicar que o servidor é local. Retorna `S_FALSE` se o servidor estiver em execução de uma instância do msvsmon.exe, que normalmente é usado para depuração remota.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

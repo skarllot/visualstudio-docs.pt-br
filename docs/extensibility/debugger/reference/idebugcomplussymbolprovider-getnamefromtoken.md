@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetNameFromToken | Microsoft Docs
+title: IDebugComPlusSymbolProvider::GetNameFromToken | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,19 +29,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 236c16c8cac80c4d6ef50ed956591ca6222660df
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 52863cde99006b182045609b9bc9fce6aed0b72f
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugcomplussymbolprovidergetnamefromtoken"></a>IDebugComPlusSymbolProvider::GetNameFromToken
-Returns the name associated with the specified token given its metadata object.  
+Retorna o nome associado ao token especificado, dado seu objeto de metadados.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetNameFromToken (  
    IUnknown* pMetadataImport,  
    DWORD     dwToken,  
@@ -49,7 +48,7 @@ HRESULT GetNameFromToken (
 );  
 ```  
   
-```csharp  
+```c#  
 int GetNameFromToken (  
    object     pMetadataImport,  
    uint       dwToken,  
@@ -57,23 +56,23 @@ int GetNameFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pMetadataImport`  
- [in] Object that contains the metadata information.  
+ [in] Objeto que contém as informações de metadados.  
   
  `dwToken`  
- [in] Token to be named.  
+ [in] Token a ser chamado.  
   
  `pbstrName`  
- [out] Name that corresponds to the token.  
+ [out] Nome que corresponde ao token.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::GetNameFromToken(  
     IUnknown* pMetadataImport,  
     DWORD dwToken,  
@@ -137,5 +136,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

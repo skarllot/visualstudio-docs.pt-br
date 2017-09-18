@@ -1,5 +1,5 @@
 ---
-title: Utilization Navigator | Microsoft Docs
+title: "Navegador da Utilização | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,25 +30,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
-ms.openlocfilehash: 49fde5b95e12d40af4778d182058f0ae3204e3b8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/31/2017
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 409235fbd88b1857858e7b99d331daa1f5f00c15
 
 ---
-# <a name="utilization-navigator"></a>Utilization Navigator
-You can use the Utilization Navigator in the Concurrency Visualizer to select an interval of time in a trace. The Concurrency Visualizer shows the utilization of CPU cores by the target process over time. This makes it easier to examine CPU utilization patterns and also enables comparison between the utilization data and the data in other views. The Utilization Navigator appears at the top of every view in the Concurrency Visualizer. The following illustration shows the Utilization Navigator.  
+# <a name="utilization-navigator"></a>Navegador da utilização
+É possível usar o Navegador da Utilização na Visualização Simultânea para selecionar um intervalo de tempo em um rastreamento. A Visualização Simultânea mostra o uso dos núcleos da CPU pelo processe de destino ao longo do tempo. Assim, fica mais fácil examinar os padrões de uso da CPU e comparar os dados de uso e dados de outras exibições. O Navegador da Utilização aparece na parte superior de cada exibição da Visualização Simultânea. A ilustração a seguir mostra o Navegador da Utilização.  
   
- ![Utilization Navigator showing selected timeframe](../profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator")  
-Utilization Navigator and a selected time frame  
+ ![Navegador da Utilização mostrando o período de tempo selecionado](~/profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator")  
+Navegador da Utilização e período de tempo selecionado  
   
- In the illustration, the selected interval is defined by a red rectangle, known as the *thumb*.  
+ Na ilustração, o intervalo selecionado é definido por um retângulo vermelho, conhecido como *elevador*.  
   
- Here's how you can use the Utilization Navigator to manipulate the displayed time range:  
+ Veja como usar o Navegador da Utilização para manipular o intervalo de tempo exibido:  
   
--   You can pan by dragging the thumb left or right. (Keyboard: Move the focus to the thumb and then press the left or right arrow key.)  
+-   É possível ter uma vista panorâmica ao arrastar o elevador para a esquerda ou direita. (Teclado: mova o foco para o elevador e, em seguida, pressione a tecla de direção para a esquerda ou direita.)  
   
--   You can change the extent of the interval by dragging one of the handles. (Keyboard: Move the focus to a handle and then press the right or left arrow key.)  
+-   É possível alterar a extensão do intervalo arrastando um dos identificadores. (Teclado: mova o foco para um identificador e, em seguida, pressione a tecla de direção para a direita ou esquerda.)  
   
- If you change the interval by using a different Concurrency Visualizer zoom control, the Utilization Navigator updates to reflect the change.
+ Se o intervalo for alterado por meio de um controle de zoom diferente da Visualização Simultânea, o Navegador da Utilização se atualizará para refletir a mudança.
+
+
+<!--HONumber=Feb17_HO4-->
+
+

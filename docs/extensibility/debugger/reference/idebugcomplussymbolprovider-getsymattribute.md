@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetSymAttribute | Microsoft Docs
+title: IDebugComPlusSymbolProvider::GetSymAttribute | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,19 +29,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0f4f2c9435ff4fd195aab7b0b3193c498841b5d5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 5f78a50a5263a8a083daa275465315f1617d9868
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugcomplussymbolprovidergetsymattribute"></a>IDebugComPlusSymbolProvider::GetSymAttribute
-Retrieves the debug symbols with the given parent attribute for the specified module.  
+Recupera os símbolos de depuração com o atributo pai determinado para o módulo especificado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetSymAttribute (  
    ULONG32  ulAppDomainID,  
    GUID     guidModule,  
@@ -53,7 +52,7 @@ HRESULT GetSymAttribute (
 );  
 ```  
   
-```csharp  
+```c#  
 int GetSymAttribute (  
    uint      ulAppDomainID,  
    Guid      guidModule,  
@@ -65,35 +64,35 @@ int GetSymAttribute (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ulAppDomainID`  
- [in] Identifier of the application domain.  
+ [in] Identificador do domínio do aplicativo.  
   
  `guidModule`  
- [in] Unique identifier of the module.  
+ [in] Identificador exclusivo do módulo.  
   
  `tokParent`  
- [in] Token for the parent attribute.  
+ [in] Token para o atributo pai.  
   
  `pstrName`  
- [in] Name of the module.  
+ [in] Nome do módulo.  
   
  `cBuffer`  
- [in] Number of bytes required for the output `buffer`.  
+ [in] Número de bytes necessários para a saída `buffer`.  
   
  `pcBuffer`  
- [out] Length of the output `buffer`.  
+ [out] Comprimento da saída `buffer`.  
   
  `buffer`  
- [out] Array that contains the symbols.  
+ [out] Matriz que contém os símbolos.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::GetSymAttribute(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -121,5 +120,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugObjects::Clone | Microsoft Docs
+title: IEnumDebugObjects::Clone | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f5ed922108e5481d9045028b919373f30c4ff86f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: a82a3fa247ab2da9fb8c409b7cf09c0dffc55a14
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="ienumdebugobjectsclone"></a>IEnumDebugObjects::Clone
-This method returns a copy of the current enumeration as a separate object.  
+Esse método retorna uma cópia da enumeração atual como um objeto separado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT Clone(  
    IEnumDebugObjects** ppEnum  
 );  
 ```  
   
-```csharp  
+```c#  
 int Clone(  
    out IEnumDebugObjects ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppEnum`  
- [out] Returns a copy of this enumeration as a separate object.  
+ [out] Retorna uma cópia dessa enumeração como um objeto separado.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The copy of the enumeration has the same state as the original at the time this method is called. However, the copy's and the original's states are separate and can be changed individually.  
+## <a name="remarks"></a>Comentários  
+ A cópia da enumeração tem o mesmo estado original no momento em que este método é chamado. No entanto, a cópia e o original estados são separados e podem ser alterados individualmente.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)

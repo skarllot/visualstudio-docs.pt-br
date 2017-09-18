@@ -1,5 +1,5 @@
 ---
-title: AsyncTaskMethodBuilder&lt;TResult&gt;.ObjectIdForDebugger Property | Microsoft Docs
+title: AsyncTaskMethodBuilder&lt;TResult&gt;. Propriedade ObjectIdForDebugger | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,28 +28,27 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 34897ff3766f6e30176b08720063f9c6115857c8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 84c880dabfb65afcf72d9552448e0b2ec2f45feb
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="asynctaskmethodbuilderlttresultgtobjectidfordebugger-property"></a>AsyncTaskMethodBuilder&lt;TResult&gt;.ObjectIdForDebugger Property
-Gets an object that may be used to uniquely identify this builder to the debugger.  
+# <a name="asynctaskmethodbuilderlttresultgtobjectidfordebugger-property"></a>AsyncTaskMethodBuilder&lt;TResult&gt;. Propriedade ObjectIdForDebugger
+Obtém um objeto que pode ser usado para identificar com exclusividade este construtor para o depurador.  
   
- **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ **Namespace:**<xref:System.Runtime.CompilerServices?displayProperty=fullName></xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **Assembly:** mscorlib (in mscorlib.dll)  
+ **Assembly:** mscorlib (em mscorlib. dll)  
   
- Because you cannot access this internal member from the .NET Framework, the following syntax is provided in Common Intermediate Language (CIL).  
+ Porque você não pode acessar esse membro interno do .NET Framework, a sintaxe a seguir é fornecida idioma intermediário comum (CIL).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```csharp  
+```c#  
 private object ObjectIdForDebugger  
 ```  
   
-## <a name="see-also"></a>See Also  
- <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>   
- [Parallel Extension Internals for the .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+## <a name="see-also"></a>Consulte também  
+ <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601></xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>   
+ [Elementos internos de extensões paralelas para o .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

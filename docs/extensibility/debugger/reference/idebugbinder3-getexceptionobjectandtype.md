@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetExceptionObjectAndType | Microsoft Docs
+title: IDebugBinder3::GetExceptionObjectAndType | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,16 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a2464bd638f57c059755fbe2659a4317af0ec0de
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 1233b672a376e8af76214ec6a35985dc98f3e850
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
-This method retrieves the exception associated with an object, if any.  
+Esse método recupera a exceção associada a um objeto, se houver.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetExceptionObjectAndType(  
@@ -49,25 +48,25 @@ HRESULT GetExceptionObjectAndType(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetExceptionObjectAndType(  
    out IDebugObject ppException,  
    out IDebugField  ppField  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppException`  
- [out] Returns the object representing the exception.  
+ [out] Retorna o objeto que representa a exceção.  
   
  `ppField`  
- [out] Returns the object representing a specific field that may have caused the exception (this may be a null value).  
+ [out] Retorna o objeto que representa um campo que pode ter causado a exceção (Isso pode ser um valor nulo).  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
 > [!NOTE]
->  To verify whether there is an exception, check the value returned by `ppException`: if it is a null value, then no exception is associated with this object.  
+>  Para verificar se há uma exceção, verifique o valor retornado por `ppException`: se ele é um valor nulo, nenhuma exceção é associada este objeto.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

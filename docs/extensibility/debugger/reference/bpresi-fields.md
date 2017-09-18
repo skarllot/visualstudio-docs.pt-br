@@ -1,5 +1,5 @@
 ---
-title: BPRESI_FIELDS | Microsoft Docs
+title: BPRESI_FIELDS | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 7bf02f2da4f11c5e0c702f331b9960d30f9b282f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3c3ac9ed474c8980a1b4ea3fe8f27dcd579679a7
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="bpresifields"></a>BPRESI_FIELDS
-Specifies the information  to be retrieved about the successful resolution of a breakpoint.  
+Especifica as informações a serem recuperadas sobre a resolução bem-sucedida de um ponto de interrupção.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_BPRESI_FIELDS {   
    BPRESI_BPRESLOCATION = 0x0001,  
    BPRESI_PROGRAM       = 0x0002,  
@@ -52,7 +51,7 @@ enum enum_BPRESI_FIELDS {
 typedef DWORD BPRESI_FIELDS;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_BPRESI_FIELDS {   
    BPRESI_BPRESLOCATION = 0x0001,  
    BPRESI_PROGRAM       = 0x0002,  
@@ -61,34 +60,34 @@ public enum enum_BPRESI_FIELDS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  BPRESI_BPRESLOCATION  
- Initialize/use the `bpResLocation` (breakpoint resolution location) field of the [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) structure.  
+ Inicializar/usar o `bpResLocation` campo (localização de resolução do ponto de interrupção) do [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) estrutura.  
   
  BPRESI_PROGRAM  
- Initialize/use the `pProgram` field of the `BP_RESOLUTION_INFO` structure.  
+ Inicializar/usar o `pProgram` campo o `BP_RESOLUTION_INFO` estrutura.  
   
  BPRESI_THREAD  
- Initialize/use the `pThread` field of the `BP_RESOLUTION_INFO` structure.  
+ Inicializar/usar o `pThread` campo o `BP_RESOLUTION_INFO` estrutura.  
   
  BPRESI_ALLFIELDS  
- Specifies all fields.  
+ Especifica todos os campos.  
   
-## <a name="remarks"></a>Remarks  
- Passed to the [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) method to indicate which fields of the [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) structure are to be initialized.  
+## <a name="remarks"></a>Comentários  
+ Passado para o [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) método para indicar quais campos do [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) estrutura devem ser inicializado.  
   
- These flags are also used to indicate which fields of the `BP_RESOLUTION_INFO` structure are used and valid when that structure is returned.  
+ Esses sinalizadores também são usados para indicar quais campos do `BP_RESOLUTION_INFO` estrutura são usados e válido quando essa estrutura é retornada.  
   
- These values may be combined with a bitwise `OR`.  
+ Esses valores podem ser combinados com um bit a bit `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)   
  [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)

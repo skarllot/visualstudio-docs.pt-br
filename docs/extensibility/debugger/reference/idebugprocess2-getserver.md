@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetServer | Microsoft Docs
+title: IDebugProcess2::GetServer | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,40 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a9f6575b8f6266149f4b9ba1c49d3a0a33359c68
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 6f1f9f3cdca87a36fd595bf362d142bdcc4097bd
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprocess2getserver"></a>IDebugProcess2::GetServer
-Gets the server that this process is running on.  
+Obtém esse processo em execução no servidor.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetServer(   
    IDebugCoreServer2** ppServer  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetServer(   
    out IDebugCoreServer2 ppServer  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppServer`  
- [out] Returns an [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) object that represents the server on which this process is running.  
+ [out] Retorna um [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) objeto que representa o servidor no qual esse processo está em execução.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- More than one server can be running on a single machine.  
+## <a name="remarks"></a>Comentários  
+ Mais de um servidor pode ser executado em um único computador.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugCustomAttributes::Next | Microsoft Docs
+title: IEnumDebugCustomAttributes::Next | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 77404e6e1fb8c3d0d0598bfdba2973bb14a3c328
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: eaaf6d746d5745fd1e6d5fa2583620e3cc250e5a
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="ienumdebugcustomattributesnext"></a>IEnumDebugCustomAttributes::Next
-Retrieves a specified number of custom attributes in an enumeration sequence.  
+Recupera um número especificado de atributos personalizados em uma sequência de enumeração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT Next (   
    ULONG      celt,  
    CODE_PATH* rgelt,  
@@ -50,7 +49,7 @@ HRESULT Next (
 );  
 ```  
   
-```csharp  
+```c#  
 int Next(  
    uint                        celt,   
    out IDebugCustomAttribute[] rgelt,   
@@ -58,19 +57,19 @@ int Next(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] The number of elements to retrieve. Also specifies the maximum size of the `rgelt` array.  
+ [in] O número de elementos para recuperar. Também especifica o tamanho máximo da `rgelt` matriz.  
   
  `rgelt`  
- [out] An array of [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md) objects to be filled in.  
+ [out] Uma matriz de [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md) objetos a serem preenchidos.  
   
  `pceltFetched`  
- [out] Returns the number of elements actually returned in `rgelt`.  
+ [out] Retorna o número de elementos realmente retornados em `rgelt`.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`. Returns `S_FALSE` if fewer than the requested number of elements could be returned; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se menor do que o número solicitado de elementos podem ser retornados; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)   
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

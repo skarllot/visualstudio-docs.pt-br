@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumModules | Microsoft Docs
+title: IDebugProgram2::EnumModules | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,40 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 1798f5ec2ad4a7fdd95f683aff7eb3c61aac94c3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 5a0b80acd2180c345a683c930683a86d0b516ef7
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprogram2enummodules"></a>IDebugProgram2::EnumModules
-Retrieves a list of the modules that this program has loaded and is executing.  
+Recupera uma lista dos módulos que este programa foi carregado e está em execução.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT EnumModules(   
    IEnumDebugModules2** ppEnum  
 );  
 ```  
   
-```csharp  
+```c#  
 int EnumModules(   
    out IEnumDebugModules2 ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppEnum`  
- [out] Returns an [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) object that contains a list of the modules.  
+ [out] Retorna um [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) objeto que contém uma lista dos módulos.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- A module is a DLL or assembly and is typically listed in the **Modules** debug window.  
+## <a name="remarks"></a>Comentários  
+ Um módulo é uma DLL ou assembly e normalmente é listado no **módulos** janela de depuração.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)

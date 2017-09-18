@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetDimensions | Microsoft Docs
+title: IDebugArrayObject::GetDimensions | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,44 +30,43 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 05ff3521879afe821fbac681a89ad993f5a18000
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: d496b0ad82a9026e0c37af5f77f8a6e5249d8944
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
-Gets the dimensions of the array.  
+Obtém as dimensões da matriz.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetDimensions(   
    DWORD dwCount,  
    DWORD dwDimensions[]  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetDimensions(  
    [In] uint    dwCount,   
    [Out] uint[] dwDimensions  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `dwCount`  
- [in] The number of dimensions to retrieve.  
+ [in] O número de dimensões para recuperar.  
   
  `dwDimensions`  
- [in, out] An array that is filled in with the sizes of each dimension. `dwCount` specifies the maximum size of the `dwDimensions` array.  
+ [no, out] Uma matriz é preenchida com os tamanhos de cada dimensão. `dwCount`Especifica o tamanho máximo da `dwDimensions` matriz.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- A multi-dimensional array can have different sizes for each dimension. For example, given the three-dimensional array `myarray[3][2][6]`, this method would return 3, 2, and 6 in the `dwDimensions` parameter in that order.  
+## <a name="remarks"></a>Comentários  
+ Uma matriz multidimensional pode ter tamanhos diferentes para cada dimensão. Por exemplo, dada a matriz tridimensional `myarray[3][2][6]`, esse método retorna 3, 2 e 6 a `dwDimensions` parâmetro nessa ordem.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

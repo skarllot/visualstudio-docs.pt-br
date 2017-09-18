@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FIELDS | Microsoft Docs
+title: MACHINE_INFO_FIELDS | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: bc4aef9381443cbdc0e83d37f9cadb9a4634a1d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 499810945caa898848c9d4d8a849e772ee4065c7
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="machineinfofields"></a>MACHINE_INFO_FIELDS
-Specifies what kind of information to retrieve for a particular machine.  
+Especifica o tipo de informação para recuperar para um determinado computador.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_MACHINE_INFO_FIELDS {   
    MCIF_NAME  = 0x00000001,  
    MCIF_FLAGS = 0x00000002,  
@@ -51,7 +50,7 @@ enum enum_MACHINE_INFO_FIELDS {
 typedef DWORD MACHINE_INFO_FIELDS;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_MACHINE_INFO_FIELDS {   
    MCIF_NAME  = 0x00000001,  
    MCIF_FLAGS = 0x00000002,  
@@ -59,31 +58,31 @@ public enum enum_MACHINE_INFO_FIELDS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  MCIF_NAME  
- Initialize/use the `bstrName` field in the structure.  
+ Inicializar/usar o `bstrName` campo na estrutura.  
   
  MCIF_FLAGS  
- Initialize/use the `Flags` field in the structure.  
+ Inicializar/usar o `Flags` campo na estrutura.  
   
  MIF_ALL  
- Initialize/use all of the fields in the structure.  
+ Inicializar/usar todos os campos na estrutura.  
   
-## <a name="remarks"></a>Remarks  
- These values are passed to the [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) method to indicate which members of the [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) structure are to be initialized.  
+## <a name="remarks"></a>Comentários  
+ Esses valores são passados para o [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) método para indicar quais membros do [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) estrutura devem ser inicializado.  
   
- Also used in the `Fields` member of the `MACHINE_INFO` structure to indicate which fields are used and valid.  
+ Também é usado no `Fields` membro o `MACHINE_INFO` estrutura para indicar quais campos são usados e válido.  
   
- These flags may be combined with a bitwise `OR`.  
+ Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md)   
  [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md)

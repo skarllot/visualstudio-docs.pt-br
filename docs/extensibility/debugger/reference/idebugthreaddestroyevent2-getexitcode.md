@@ -1,5 +1,5 @@
 ---
-title: IDebugThreadDestroyEvent2::GetExitCode | Microsoft Docs
+title: IDebugThreadDestroyEvent2::GetExitCode | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,36 +30,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2cc9cf03aebd0393e397efda6bb8d6fda2805aea
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 33e835afa24cad5d290ef9ec3408d31e3d298f07
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugthreaddestroyevent2getexitcode"></a>IDebugThreadDestroyEvent2::GetExitCode
-Gets the exit code for a thread.  
+Obtém o código de saída para um thread.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetExitCode (   
    DWORD* pdwExit  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetExitCode (   
    out uint pdwExit  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwExit`  
- [out] Returns the thread's exit code.  
+ [out] Retorna o código de saída do thread.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugThreadDestroyEvent2](../../../extensibility/debugger/reference/idebugthreaddestroyevent2.md)

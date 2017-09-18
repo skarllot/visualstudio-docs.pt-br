@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::EnumEEs | Microsoft Docs
+title: IDebugSettingsCallback2::EnumEEs | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,19 +28,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 352f465ead2af45be120a78b2bea025dd72892dd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 5167ed353089718ac179f8b138183ef594f6057d
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugsettingscallback2enumees"></a>IDebugSettingsCallback2::EnumEEs
-Enumerates the available expression evaluators given the language and vendor identifiers.  
+Enumera os avaliadores de expressão disponível considerando os identificadores de idioma e o fornecedor.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT EnumEEs(  
    DWORD  celtBuffer,  
    GUID*  rgguidLang,  
@@ -49,7 +48,7 @@ HRESULT EnumEEs(
 );  
 ```  
   
-```csharp  
+```c#  
 public int EnumEEs(  
    uint       celtBuffer,  
    ref Guid   rgguidLang,  
@@ -58,21 +57,21 @@ public int EnumEEs(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `celtBuffer`  
- [in] Number of elements in the `pceltEEs` buffer.  
+ [in] Número de elementos a `pceltEEs` buffer.  
   
  `rgguidLang`  
- [in, out] Unique identifier for the programming language.  
+ [no, out] Identificador exclusivo para a linguagem de programação.  
   
  `rgguidVendor`  
- [in, out] Unique identifier for the vendor.  
+ [no, out] Identificador exclusivo para o fornecedor.  
   
  `pceltEEs`  
- [in, out] Array of expression evaluators.  
+ [no, out] Matriz de avaliadores de expressão.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

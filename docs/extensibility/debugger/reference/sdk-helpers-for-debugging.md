@@ -1,5 +1,5 @@
 ---
-title: SDK Helpers for Debugging | Microsoft Docs
+title: "Auxiliares do SDK para depuração | Documentos do Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,29 +32,28 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 36ca85f08c86a38f2400a10387b031d77721c4b7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8978ddf94cf37d13d7e70e5503a4821415f10977
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="sdk-helpers-for-debugging"></a>SDK Helpers for Debugging
-These functions and declarations are global helper functions for implementing debug engines, expression evaluators, and symbol providers in C++.  
+# <a name="sdk-helpers-for-debugging"></a>Auxiliares do SDK para depuração
+Essas funções e as declarações são funções de auxiliar global para implementar mecanismos de depuração, avaliadores de expressão e provedores de símbolo em C++.  
   
 > [!NOTE]
->  There are no managed versions of these functions and declarations at this time.  
+>  Há não gerenciados versões dessas funções e declarações neste momento.  
   
-## <a name="overview"></a>Overview  
- In order for debug engines, expression evaluators, and symbol providers to be used by Visual Studio, they must be registered. This is done by setting registry subkeys and entries, otherwise known as "setting metrics." The following global functions are designed to ease the process of updating these metrics. See the section on Registry Locations to find out the layout of each registry subkey that is updated by these functions.  
+## <a name="overview"></a>Visão Geral  
+ Em ordem para mecanismos de depuração, avaliadores de expressão e provedores de símbolo a ser usado pelo Visual Studio, eles devem ser registrados. Isso é feito definindo subchaves do registro e entradas, também conhecidas como "métricas de configuração". As seguintes funções globais são criadas para facilitar o processo de atualizar essas métricas. Consulte a seção sobre locais do registro para descobrir o layout de cada subchave do registro que é atualizado por essas funções.  
   
-## <a name="general-metric-functions"></a>General Metric Functions  
- These are general functions used by debug engines. Specialized functions for expression evaluators and symbol providers are detailed later.  
+## <a name="general-metric-functions"></a>Funções de métrica geral  
+ Essas são funções gerais usadas pelos mecanismos de depuração. Especializado funções de avaliadores de expressão e provedores de símbolo detalhados posteriormente.  
   
-### <a name="getmetric-method"></a>GetMetric Method  
- Retrieves a metric value from the registry.  
+### <a name="getmetric-method"></a>Método GetMetric  
+ Recupera um valor de métrica do registro.  
   
-```cpp  
+```cpp#  
 HRESULT GetMetric(  
    LPCWSTR pszMachine,  
    LPCWSTR pszType,  
@@ -65,19 +64,19 @@ HRESULT GetMetric(
 );  
 ```  
   
-|Parameter|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
-|pszMachine|[in] Name of a possibly remote machine whose register will be written (`NULL` means local machine).|  
-|pszType|[in] One of the metric types.|  
-|guidSection|[in] GUID of a specific engine, evaluator, exception, etc. This specifies a subsection under a metric type for a specific element.|  
-|pszMetric|[in] The metric to be obtained. This corresponds to a specific value name.|  
-|pdwValue|[in] The storage location of the value from the metric. There are several flavors of GetMetric that can return a DWORD (as in this example), a BSTR, a GUID, or an array of GUIDs.|  
-|pszAltRoot|[in] An alternate registry root to use. Set to `NULL` to use the default.|  
+|pszMachine|[in] Nome de uma máquina remota possivelmente cujo registro será gravado (`NULL` significa computador local).|  
+|pszType|[in] Um dos tipos de métrica.|  
+|guidSection|[in] GUID de um mecanismo específico, avaliador, exceção etc. Especifica uma subseção em um tipo de métrica para um elemento específico.|  
+|pszMetric|[in] A métrica a ser obtido. Isso corresponde a um nome de valor específico.|  
+|pdwValue|[in] O local de armazenamento do valor de métrica. Existem vários tipos de GetMetric que pode retornar uma matriz de GUIDs, BSTR, um GUID ou uma DWORD (como neste exemplo).|  
+|pszAltRoot|[in] Uma raiz de registro alternativo para usar. Definido como `NULL` para usar o padrão.|  
   
-### <a name="setmetric-method"></a>SetMetric Method  
- Sets the specified metric value in the registry.  
+### <a name="setmetric-method"></a>Método SetMetric  
+ Define o valor da métrica especificado no registro.  
   
-```cpp  
+```cpp#  
 HRESULT SetMetric(  
          LPCWSTR pszType,  
          REFGUID guidSection,  
@@ -88,19 +87,19 @@ HRESULT SetMetric(
 );  
 ```  
   
-|Parameter|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
-|pszType|[in] One of the metric types.|  
-|guidSection|[in] GUID of a specific engine, evaluator, exception, etc. This specifies a subsection under a metric type for a specific element.|  
-|pszMetric|[in] The metric to be obtained. This corresponds to a specific value name.|  
-|dwValue|[in] The storage location of the value in the metric. There are several flavors of SetMetric that can store a DWORD (in this example), a BSTR, a GUID, or an array of GUIDs.|  
-|fUserSpecific|[in] TRUE if the metric is user-specific and if it should be written to the user's hive instead of the local machine hive.|  
-|pszAltRoot|[in] An alternate registry root to use. Set to `NULL` to use the default.|  
+|pszType|[in] Um dos tipos de métrica.|  
+|guidSection|[in] GUID de um mecanismo específico, avaliador, exceção etc. Especifica uma subseção em um tipo de métrica para um elemento específico.|  
+|pszMetric|[in] A métrica a ser obtido. Isso corresponde a um nome de valor específico.|  
+|dwValue|[in] O local de armazenamento do valor de métrica. Existem vários tipos de SetMetric que pode armazenar um DWORD (no exemplo), um BSTR, um GUID ou uma matriz de GUIDs.|  
+|fUserSpecific|[in] TRUE se a métrica é específico do usuário e se ele deve ser escrito de hive do usuário em vez do hive do computador local.|  
+|pszAltRoot|[in] Uma raiz de registro alternativo para usar. Definido como `NULL` para usar o padrão.|  
   
-### <a name="removemetric-method"></a>RemoveMetric Method  
- Removes the specified metric from the registry.  
+### <a name="removemetric-method"></a>Método RemoveMetric  
+ Remove a métrica especificada do registro.  
   
-```cpp  
+```cpp#  
 HRESULT RemoveMetric(  
    LPCWSTR pszType,  
    REFGUID guidSection,  
@@ -109,17 +108,17 @@ HRESULT RemoveMetric(
 );  
 ```  
   
-|Parameter|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
-|pszType|[in] One of the metric types.|  
-|guidSection|[in] GUID of a specific engine, evaluator, exception, etc. This specifies a subsection under a metric type for a specific element.|  
-|pszMetric|[in] The metric to be removed. This corresponds to a specific value name.|  
-|pszAltRoot|[in] An alternate registry root to use. Set to `NULL` to use the default.|  
+|pszType|[in] Um dos tipos de métrica.|  
+|guidSection|[in] GUID de um mecanismo específico, avaliador, exceção etc. Especifica uma subseção em um tipo de métrica para um elemento específico.|  
+|pszMetric|[in] A métrica a ser removido. Isso corresponde a um nome de valor específico.|  
+|pszAltRoot|[in] Uma raiz de registro alternativo para usar. Definido como `NULL` para usar o padrão.|  
   
-### <a name="enummetricsections-method"></a>EnumMetricSections Method  
- Enumerates the various metric sections in the registry.  
+### <a name="enummetricsections-method"></a>Método EnumMetricSections  
+ Enumera as várias seções de métrica no registro.  
   
-```cpp  
+```cpp#  
 HRESULT EnumMetricSections(  
    LPCWSTR pszMachine,  
    LPCWSTR pszType,  
@@ -129,135 +128,135 @@ HRESULT EnumMetricSections(
 );  
 ```  
   
-|Parameter|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
-|pszMachine|[in] Name of a possibly remote machine whose register will be written (`NULL` means local machine).|  
-|pszType|[in] One of the metric types.|  
-|rgguidSections|[in, out] Preallocated array of GUIDs to be filled in.|  
-|pdwSize|[in] The maximum number of GUIDs that can be stored in the `rgguidSections` array.|  
-|pszAltRoot|[in] An alternate registry root to use. Set to `NULL` to use the default.|  
+|pszMachine|[in] Nome de uma máquina remota possivelmente cujo registro será gravado (`NULL` significa computador local).|  
+|pszType|[in] Um dos tipos de métrica.|  
+|rgguidSections|[no, out] Pré-alocados matriz de GUIDs para ser preenchido.|  
+|pdwSize|[in] O número máximo de GUIDs que podem ser armazenados na `rgguidSections` matriz.|  
+|pszAltRoot|[in] Uma raiz de registro alternativo para usar. Definido como `NULL` para usar o padrão.|  
   
-## <a name="expression-evaluator-functions"></a>Expression Evaluator Functions  
+## <a name="expression-evaluator-functions"></a>Funções do avaliador de expressão  
   
-|Function|Description|  
+|Função|Descrição|  
 |--------------|-----------------|  
-|GetEEMetric|Retrieves a metric value from the registry.|  
-|SetEEMetric|Sets the specified metric value in the registry.|  
-|RemoveEEMetric|Removes the specified metric from the registry.|  
-|GetEEMetricFile|Gets a file name from the specified metric and loads it, returning the file contents as a string.|  
+|GetEEMetric|Recupera um valor de métrica do registro.|  
+|SetEEMetric|Define o valor da métrica especificado no registro.|  
+|RemoveEEMetric|Remove a métrica especificada do registro.|  
+|GetEEMetricFile|Obtém um nome de arquivo a métrica especificada e o carrega, retornando o conteúdo do arquivo como uma cadeia de caracteres.|  
   
-## <a name="exception-functions"></a>Exception Functions  
+## <a name="exception-functions"></a>Funções de exceção  
   
-|Function|Description|  
+|Função|Descrição|  
 |--------------|-----------------|  
-|GetExceptionMetric|Retrieves a metric value from the registry.|  
-|SetExceptionMetric|Sets the specified metric value in the registry.|  
-|RemoveExceptionMetric|Removes the specified metric from the registry.|  
-|RemoveAllExceptionMetrics|Removes all exception metrics from the registry.|  
+|GetExceptionMetric|Recupera um valor de métrica do registro.|  
+|SetExceptionMetric|Define o valor da métrica especificado no registro.|  
+|RemoveExceptionMetric|Remove a métrica especificada do registro.|  
+|RemoveAllExceptionMetrics|Remove todas as métricas de exceção do registro.|  
   
-## <a name="symbol-provider-functions"></a>Symbol Provider Functions  
+## <a name="symbol-provider-functions"></a>Funções de símbolo do provedor  
   
-|Function|Description|  
+|Função|Descrição|  
 |--------------|-----------------|  
-|GetSPMetric|Retrieves a metric value from the registry.|  
-|SetSPMetric|Sets the specified metric value in the registry.|  
-|RemoveSPMetric|Removes the specified metric from the registry.|  
+|GetSPMetric|Recupera um valor de métrica do registro.|  
+|SetSPMetric|Define o valor da métrica especificado no registro.|  
+|RemoveSPMetric|Remove a métrica especificada do registro.|  
   
-## <a name="enumeration-functions"></a>Enumeration Functions  
+## <a name="enumeration-functions"></a>Funções de enumeração  
   
-|Function|Description|  
+|Função|Descrição|  
 |--------------|-----------------|  
-|EnumMetricSections|Enumerates all metrics for a specified metric type.|  
-|EnumDebugEngine|Enumerates the registered debug engines.|  
-|EnumEEs|Enumerates the registered expression evaluators.|  
-|EnumExceptionMetrics|Enumerates all exception metrics.|  
+|EnumMetricSections|Enumera todas as métricas para um tipo específico de métrica.|  
+|EnumDebugEngine|Enumera os mecanismos de depuração registrado.|  
+|EnumEEs|Enumera os avaliadores de expressão registrado.|  
+|EnumExceptionMetrics|Enumera todas as métricas de exceção.|  
   
-## <a name="metric-definitions"></a>Metric Definitions  
- These definitions can be used for predefined metric names. The names correspond to various registry keys and value names and are all defined as wide character strings: for example, `extern LPCWSTR metrictypeEngine`.  
+## <a name="metric-definitions"></a>Definições de métricas  
+ Essas definições podem ser usadas para nomes de métrica predefinidos. Os nomes correspondem aos nomes de valor e várias chaves de registro e são definidos como cadeias de caracteres largos: por exemplo, `extern LPCWSTR metrictypeEngine`.  
   
-|Predefined Metric Types|Description: The base key for....|  
+|Tipos predefinidos de métricos|Descrição: A chave base para...|  
 |-----------------------------|---------------------------------------|  
-|metrictypeEngine|All debug engine metrics.|  
-|metrictypePortSupplier|All port supplier metrics.|  
-|metrictypeException|All exception metrics.|  
-|metricttypeEEExtension|All expression evaluator extensions.|  
+|metrictypeEngine|Todas as métricas do mecanismo de depuração.|  
+|metrictypePortSupplier|Todas as métricas de fornecedor de porta.|  
+|metrictypeException|Todas as métricas de exceção.|  
+|metricttypeEEExtension|Todas as extensões do avaliador de expressão.|  
   
-|Debug Engine Properties|Description|  
+|Propriedades do mecanismo de depuração|Descrição|  
 |-----------------------------|-----------------|  
-|metricAddressBP|Set to nonzero to indicate support for address breakpoints.|  
-|metricAlwaysLoadLocal|Set to nonzero in order to always load the debug engine locally.|  
-|metricLoadInDebuggeeSession|NOT USED|  
-|metricLoadedByDebuggee|Set to nonzero to indicate that the debug engine will always be loaded with or by the program being debugged.|  
-|metricAttach|Set to nonzero to indicate support for attachment to existing programs.|  
-|metricCallStackBP|Set to nonzero to indicate support for call stack breakpoints.|  
-|metricConditionalBP|Set to nonzero to indicate support for the setting of conditional breakpoints.|  
-|metricDataBP|Set to nonzero to indicate support for the setting of breakpoints on changes in data.|  
-|metricDisassembly|Set to nonzero to indicate support for the production of a disassembly listing.|  
-|metricDumpWriting|Set to nonzero to indicate support for dump writing (the dumping of memory to an output device).|  
-|metricENC|Set to nonzero to indicate support for Edit and Continue. **Note:**  A custom debug engine should never set this or should always set it to 0.|  
-|metricExceptions|Set to nonzero to indicate support for exceptions.|  
-|metricFunctionBP|Set to nonzero to indicate support for named breakpoints (breakpoints that break when a certain function name is called).|  
-|metricHitCountBP|Set to nonzero to indicate support for the setting of "hit point" breakpoints (breakpoints that are triggered only after being hit a certain number of times).|  
-|metricJITDebug|Set to nonzero to indicate support for just-in-time debugging (the debugger is launched when an exception occurs in a running process).|  
-|metricMemory|NOT USED|  
-|metricPortSupplier|Set this to the CLSID of the port supplier if one is implemented.|  
-|metricRegisters|NOT USED|  
-|metricSetNextStatement|Set to nonzero to indicate support for setting the next statement (which skips execution of intermediate statements).|  
-|metricSuspendThread|Set to nonzero to indicate support for suspending thread execution.|  
-|metricWarnIfNoSymbols|Set to nonzero to indicate that the user should be notified if there are no symbols.|  
-|metricProgramProvider|Set this to the CLSID of the program provider.|  
-|metricAlwaysLoadProgramProviderLocal|Set this to nonzero to indicate that the program provider should always be loaded locally.|  
-|metricEngineCanWatchProcess|Set this to nonzero to indicate that the debug engine will watch for process events instead of the program provider.|  
-|metricRemoteDebugging|Set this to nonzero to indicate support for remote debugging.|  
-|metricEncUseNativeBuilder|Set this to nonzero to indicate that the Edit and Continue Manager should use the debug engine's encbuild.dll to build for Edit and Continue. **Note:**  A custom debug engine should never set this or should always set it to 0.|  
-|metricLoadUnderWOW64|Set this to nonzero to indicate that the debug engine should be loaded in the debuggee process under WOW when debugging a 64-bit process; otherwise, the debug engine will be loaded in the Visual Studio process (which is running under WOW64).|  
-|metricLoadProgramProviderUnderWOW64|Set this to nonzero to indicate that the program provider should be loaded in the debuggee process when debugging a 64-bit process under WOW; otherwise, it will be loaded in the Visual Studio process.|  
-|metricStopOnExceptionCrossingManagedBoundary|Set this to nonzero to indicate that the process should stop if an unhandled exception is thrown across managed/unmanaged code boundaries.|  
-|metricAutoSelectPriority|Set this to a priority for automatic selection of the debug engine (higher values equals higher priority).|  
-|metricAutoSelectIncompatibleList|Registry key containing entries that specify GUIDs for debug engines to be ignored in automatic selection. These entries are a number (0, 1, 2, and so on) with a GUID expressed as a string.|  
-|metricIncompatibleList|Registry key containing entries that specify GUIDs for debug engines that are incompatible with this debug engine.|  
-|metricDisableJITOptimization|Set this to nonzero to indicate that just-in-time optimizations (for managed code) should be disabled during debugging.|  
+|metricAddressBP|Defina como zero para indicar o suporte para pontos de interrupção de endereço.|  
+|metricAlwaysLoadLocal|Defina como zero para sempre carregar o mecanismo de depuração localmente.|  
+|metricLoadInDebuggeeSession|NÃO USADO|  
+|metricLoadedByDebuggee|Defina como zero para indicar que o mecanismo de depuração sempre será carregado com ou o programa que está sendo depurado.|  
+|metricAttach|Defina como zero para indicar o suporte para conexão com os programas existentes.|  
+|metricCallStackBP|Defina como zero para indicar o suporte para pontos de interrupção de pilha de chamada.|  
+|metricConditionalBP|Defina como zero para indicar o suporte para a configuração de pontos de interrupção condicionais.|  
+|metricDataBP|Defina como zero para indicar o suporte para a configuração dos pontos de interrupção em alterações nos dados.|  
+|metricDisassembly|Defina como zero para indicar o suporte para a produção de uma listagem de desmontagem.|  
+|metricDumpWriting|Defina como zero para indicar o suporte para despejo de gravação (o despejo de memória para um dispositivo de saída).|  
+|metricENC|Defina como zero para indicar o suporte para editar e continuar. **Observação:** um mecanismo personalizado de depuração nunca deve definir isso ou sempre deverá defini-lo como 0.|  
+|metricExceptions|Defina como zero para indicar o suporte para exceções.|  
+|metricFunctionBP|Definido como zero para indicar o suporte para pontos de interrupção nomeados (pontos de interrupção falhar quando um determinado nome de função é chamado).|  
+|metricHitCountBP|Defina como zero para indicar o suporte para a configuração dos pontos de interrupção "de acertos do ponto" (os pontos de interrupção são disparados somente após visitado um determinado número de vezes).|  
+|metricJITDebug|Defina como zero para indicar o suporte de depuração just-in-time (o depurador é iniciado quando ocorre uma exceção em um processo em execução).|  
+|metricMemory|NÃO USADO|  
+|metricPortSupplier|Defina isso para o CLSID do fornecedor de porta, se uma estiver implementada.|  
+|metricRegisters|NÃO USADO|  
+|metricSetNextStatement|Defina como zero para indicar o suporte para definir a próxima instrução (que ignora a execução de instruções intermediárias).|  
+|metricSuspendThread|Defina como zero para indicar o suporte para suspender a execução do thread.|  
+|metricWarnIfNoSymbols|Defina como zero para indicar que o usuário será notificado se não houver nenhum símbolo.|  
+|metricProgramProvider|Defina o CLSID do provedor do programa.|  
+|metricAlwaysLoadProgramProviderLocal|Defina como zero para indicar que os do provedor de programa deve sempre ser carregado localmente.|  
+|metricEngineCanWatchProcess|Defina como zero para indicar que o mecanismo de depuração irá observar para processar eventos em vez do provedor do programa.|  
+|metricRemoteDebugging|Defina como zero para indicar o suporte para depuração remota.|  
+|metricEncUseNativeBuilder|Defina como zero para indicar que o editar e continuar Manager devem usar encbuild.dll do mecanismo de depuração para criar para editar e continuar. **Observação:** um mecanismo personalizado de depuração nunca deve definir isso ou sempre deverá defini-lo como 0.|  
+|metricLoadUnderWOW64|Defina-o como diferente de zero para indicar que o mecanismo de depuração deve ser carregado no processo a ser depurado em WOW durante a depuração de um processo de 64 bits. Caso contrário, o mecanismo de depuração será carregado no processo do Visual Studio (que é executado no WOW64).|  
+|metricLoadProgramProviderUnderWOW64|Defina-o como diferente de zero para indicar que o provedor do programa deve ser carregado no processo a ser depurado durante a depuração de um processo de 64 bits em WOW; Caso contrário, ele será carregado no processo do Visual Studio.|  
+|metricStopOnExceptionCrossingManagedBoundary|Defina como zero para indicar que o processo deve ser interrompida se uma exceção não tratada é lançada limites gerenciados/código.|  
+|metricAutoSelectPriority|Defina a prioridade para a seleção automática do mecanismo de depuração (mais altos valores igual a prioridade mais alta).|  
+|metricAutoSelectIncompatibleList|Chave do registro que contém entradas que especificam as GUIDs para os mecanismos de depuração a ser ignorada na seleção automática. Essas entradas são um número (0, 1, 2 e assim por diante) com um GUID expressado como uma cadeia de caracteres.|  
+|metricIncompatibleList|Chave do registro que contém entradas que especificam as GUIDs para os mecanismos de depuração que são incompatíveis com o mecanismo de depuração.|  
+|metricDisableJITOptimization|Defina como zero para indicar que as otimizações just-in-time (para código gerenciado) devem ser desabilitadas durante a depuração.|  
   
-|Expression Evaluator Properties|Description|  
+|Propriedades do avaliador de expressão|Descrição|  
 |-------------------------------------|-----------------|  
-|metricEngine|This holds the number of debug engines that support the specified expression evaluator.|  
-|metricPreloadModules|Set this to nonzero to indicate that modules should be preloaded when an expression evaluator is launched against a program.|  
-|metricThisObjectName|Set this to the "this" object name.|  
+|metricEngine|Isso mantém o número de mecanismos de depuração que suportam o avaliador da expressão especificada.|  
+|metricPreloadModules|Defina como zero para indicar que módulos devem ser pré-carregado quando um avaliador de expressão é iniciado em um programa.|  
+|metricThisObjectName|Defina o nome do objeto "this".|  
   
-|Expression Evaluator Extension Properties|Description|  
+|Propriedades de extensão do avaliador de expressão|Descrição|  
 |-----------------------------------------------|-----------------|  
-|metricExtensionDll|Name of the dll that supports this extension.|  
-|metricExtensionRegistersSupported|List of registers supported.|  
-|metricExtensionRegistersEntryPoint|Entry point for accessing registers.|  
-|metricExtensionTypesSupported|List of types supported.|  
-|metricExtensionTypesEntryPoint|Entry point for accessing types.|  
+|metricExtensionDll|Nome da dll que oferece suporte a essa extensão.|  
+|metricExtensionRegistersSupported|Lista de registros com suporte.|  
+|metricExtensionRegistersEntryPoint|Ponto de entrada para acessar registros.|  
+|metricExtensionTypesSupported|Lista de tipos com suporte.|  
+|metricExtensionTypesEntryPoint|Ponto de entrada para acessar tipos.|  
   
-|Port Supplier Properties|Description|  
+|Propriedades da porta de fornecedor|Descrição|  
 |------------------------------|-----------------|  
-|metricPortPickerCLSID|The CLSID of the port picker (a dialog box the user can use to select ports and add ports to use for debugging).|  
-|metricDisallowUserEnteredPorts|Nonzero if the user-entered ports cannot be added to the port supplier (this makes the port-picker dialog box essentially read-only).|  
-|metricPidBase|The base process ID used by the port supplier when allocating process IDs.|  
+|metricPortPickerCLSID|O CLSID do seletor de porta (uma caixa de diálogo, o usuário pode usar para selecionar portas e adicionar portas a serem usadas para depuração).|  
+|metricDisallowUserEnteredPorts|Diferente de zero se as portas de entrada do usuário não podem ser adicionadas ao fornecedor porta (Isso torna a caixa de diálogo Seletor de porta essencialmente somente leitura).|  
+|metricPidBase|A ID de processo base usada pelo fornecedor de porta ao alocar identificadores de processo.|  
   
-|Predefined SP Store Types|Description|  
+|Tipos de armazenamento de SP predefinidos|Descrição|  
 |-------------------------------|-----------------|  
-|storetypeFile|The symbols are stored in a separate file.|  
-|storetypeMetadata|The symbols are stored as metadata in an assembly.|  
+|storetypeFile|Os símbolos são armazenados em um arquivo separado.|  
+|storetypeMetadata|Os símbolos são armazenados como metadados em um assembly.|  
   
-|Miscellaneous Properties|Description|  
+|Propriedades variadas|Descrição|  
 |------------------------------|-----------------|  
-|metricShowNonUserCode|Set this to nonzero to show nonuser code.|  
-|metricJustMyCodeStepping|Set this to nonzero to indicate that stepping can occur only in user code.|  
-|metricCLSID|CLSID for an object of a specific metric type.|  
-|metricName|User-friendly name for an object of a specific metric type.|  
-|metricLanguage|Language name.|  
+|metricShowNonUserCode|Defina isso para mostrar o código nonuser diferente de zero.|  
+|metricJustMyCodeStepping|Defina como zero para indicar que a revisão pode ocorrer somente no código do usuário.|  
+|metricCLSID|CLSID para um objeto de um tipo específico de métrica.|  
+|metricName|Nome amigável de um objeto de um tipo específico de métrica.|  
+|metricLanguage|Nome do idioma.|  
   
-## <a name="registry-locations"></a>Registry Locations  
- The metrics are read from and written to the registry, specifically in the `VisualStudio` subkey.  
+## <a name="registry-locations"></a>Locais do registro  
+ As métricas são ler e gravadas no registro, especificamente ao `VisualStudio` subchave.  
   
 > [!NOTE]
->  Most of the time, the metrics will be written to the HKEY_LOCAL_MACHINE key. However, sometimes HKEY_CURRENT_USER will be the destination key. Dbgmetric.lib handles both keys. When getting a metric, it searches HKEY_CURRENT_USER first, then HKEY_LOCAL_MACHINE. When it is setting a metric, a parameter specifies which top-level key to use.  
+>  Na maioria das vezes, as métricas serão gravadas na chave HKEY_LOCAL_MACHINE. No entanto, às vezes, HKEY_CURRENT_USER será a chave de destino. Dbgmetric.lib manipula as duas chaves. Ao obter uma métrica, ele procura HKEY_CURRENT_USER e, depois, HKEY_LOCAL_MACHINE. Quando ele é definir uma métrica, um parâmetro especifica qual chave de nível superior para usar.  
   
- *[registry key]*\  
+ *[chave]*\  
   
  `Software`\  
   
@@ -265,182 +264,182 @@ HRESULT EnumMetricSections(
   
  `VisualStudio`\  
   
- *[version root]*\  
+ *[raiz versão]*\  
   
- *[metric root]*\  
+ *[raiz métrica]*\  
   
- *[metric type]*\  
+ *[tipo de métrica]*\  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
-|Placeholder|Description|  
+|Espaço reservado|Descrição|  
 |-----------------|-----------------|  
-|*[registry key]*|`HKEY_CURRENT_USER` or `HKEY_LOCAL_MACHINE`.|  
-|*[version root]*|The version of Visual Studio (for example, `7.0`, `7.1`, or `8.0`). However, this root can also be modified using the **/rootsuffix** switch to **devenv.exe**. For VSIP, this modifier is typically **Exp**, so the version root would be, for example, 8.0Exp.|  
-|*[metric root]*|This is either `AD7Metrics` or `AD7Metrics(Debug)`, depending on whether the debug version of dbgmetric.lib is used. **Note:**  Whether or not dbgmetric.lib is used, this naming convention should be adhered to if you have differences between debug and release versions that must be reflected in the registry.|  
-|*[metric type]*|The type of metric to be written: `Engine`, `ExpressionEvaluator`, `SymbolProvider`, etc. These are all defined as in dbgmetric.h as `metricTypeXXXX`, where `XXXX` is the specific type name.|  
-|*[metric]*|The name of an entry to be assigned a value in order to set the metric. The actual organization of the metrics depends on the metric type.|  
-|*[metric value]*|The value assigned to the metric. The type the value should have (string, number, etc.) depends on the metric.|  
+|*[chave]*|`HKEY_CURRENT_USER` ou `HKEY_LOCAL_MACHINE`.|  
+|*[raiz versão]*|A versão do Visual Studio (por exemplo, `7.0`, `7.1`, ou `8.0`). No entanto, essa raiz também pode ser modificada usando o **/rootsuffix** alternar para **devenv.exe**. VSIP, esse modificador normalmente é **Exp**, portanto, a raiz de versão deve ser, por exemplo, 8.0Exp.|  
+|*[raiz métrica]*|Isso é `AD7Metrics` ou `AD7Metrics(Debug)`, dependendo se a versão de depuração de dbgmetric.lib é usada. **Observação:** se dbgmetric.lib for usado, ou não essa convenção de nomenclatura deverão ser seguida se houver diferenças entre debug e release versões que deverá ser refletidas no registro.|  
+|*[tipo de métrica]*|O tipo de métrica a ser gravado: `Engine`, `ExpressionEvaluator`, `SymbolProvider`, etc. Estes são definidos como dbgmetric.h como `metricTypeXXXX`, onde `XXXX` é o nome do tipo específico.|  
+|*[métrica]*|O nome de uma entrada a ser atribuído um valor para definir a métrica. A organização real das métricas depende do tipo de métrica.|  
+|*[valor de métrica]*|O valor atribuído para a métrica. O tipo que de valor deve ter (string), números, etc. depende a métrica.|  
   
 > [!NOTE]
->  All GUIDs are stored in the format of `{GUID}`. For example, `{123D150B-FA18-461C-B218-45B3E4589F9B}`.  
+>  Todos os GUIDs são armazenados no formato de `{GUID}`. Por exemplo, `{123D150B-FA18-461C-B218-45B3E4589F9B}`.  
   
-### <a name="debug-engines"></a>Debug Engines  
- The following is the organization of the debug engines metrics in the registry. `Engine` is the metric type name for a debug engine and corresponds to *[metric type]* in the above registry subtree.  
+### <a name="debug-engines"></a>Os mecanismos de depuração  
+ A seguir está a organização das métricas de mecanismos de depuração no registro. `Engine`é o nome do tipo de métrica para um mecanismo de depuração e corresponde à *[tipo de métrica]* na subárvore de registro acima.  
   
  `Engine`\  
   
- *[engine guid]*\  
+ *[mecanismo guid]*\  
   
- `CLSID` = *[class guid]*  
+ `CLSID` = *[guid de classe]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[metric] = [metric value]*  
-  
- `PortSupplier`\  
-  
- `0` = *[port supplier guid]*  
-  
- `1` = *[port supplier guid]*  
-  
-|Placeholder|Description|  
-|-----------------|-----------------|  
-|*[engine guid]*|The GUID of the debug engine.|  
-|*[class guid]*|The GUID of the class that implements this debug engine.|  
-|*[port supplier guid]*|The GUID of the port supplier, if any. Many debug engines use the default port supplier and therefore do not specify their own supplier. In this case, the subkey `PortSupplier` will be absent.|  
-  
-### <a name="port-suppliers"></a>Port Suppliers  
- The following is the organization of the port supplier metrics in the registry. `PortSupplier` is the metric type name for a port supplier and corresponds to *[metric type]*.  
+ *[métrica] = [valor de métrica]*  
   
  `PortSupplier`\  
   
- *[port supplier guid]*\  
+ `0` = *[guid do fornecedor de porta]*  
   
- `CLSID` = *[class guid]*  
+ `1` = *[guid do fornecedor de porta]*  
   
- *[metric] = [metric value]*  
-  
- *[metric] = [metric value]*  
-  
-|Placeholder|Description|  
+|Espaço reservado|Descrição|  
 |-----------------|-----------------|  
-|*[port supplier guid]*|The GUID of the port supplier|  
-|*[class guid]*|The GUID of the class that implements this port supplier|  
+|*[mecanismo guid]*|O GUID do mecanismo de depuração.|  
+|*[guid de classe]*|O GUID da classe que implementa esse mecanismo de depuração.|  
+|*[guid do fornecedor de porta]*|O GUID do fornecedor de porta, se houver. Vários mecanismos de depuração usam o fornecedor de porta padrão e, portanto, não especifique seu próprio fornecedor. Nesse caso, a subchave `PortSupplier` estará ausente.|  
   
-### <a name="symbol-providers"></a>Symbol Providers  
- The following is the organization of the symbol supplier metrics in the registry. `SymbolProvider` is the metric type name for the symbol provider and corresponds to *[metric type]*.  
+### <a name="port-suppliers"></a>Fornecedores de porta  
+ A seguir está a organização das métricas de fornecedor de porta no registro. `PortSupplier`é o nome do tipo de métrica para um fornecedor de porta e corresponde à *[tipo de métrica]*.  
+  
+ `PortSupplier`\  
+  
+ *[guid do fornecedor de porta]*\  
+  
+ `CLSID` = *[guid de classe]*  
+  
+ *[métrica] = [valor de métrica]*  
+  
+ *[métrica] = [valor de métrica]*  
+  
+|Espaço reservado|Descrição|  
+|-----------------|-----------------|  
+|*[guid do fornecedor de porta]*|O GUID do fornecedor de porta|  
+|*[guid de classe]*|O GUID da classe que implementa esse fornecedor de porta|  
+  
+### <a name="symbol-providers"></a>Provedores de símbolo  
+ A seguir está a organização das métricas de fornecedor de símbolo no registro. `SymbolProvider`é o nome do tipo de métrica para o provedor de símbolo e corresponde à *[tipo de métrica]*.  
   
  `SymbolProvider`\  
   
- *[symbol provider guid]*\  
+ *[guid do provedor de símbolo]*\  
   
  `file`\  
   
- `CLSID` = *[class guid]*  
+ `CLSID` = *[guid de classe]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
  `metadata`\  
   
- `CLSID` = *[class guid]*  
+ `CLSID` = *[guid de classe]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
-|Placeholder|Description|  
+|Espaço reservado|Descrição|  
 |-----------------|-----------------|  
-|*[symbol provider guid]*|The GUID of the symbol provider|  
-|*[class guid]*|The GUID of the class that implements this symbol provider|  
+|*[guid do provedor de símbolo]*|O GUID do provedor de símbolo|  
+|*[guid de classe]*|O GUID da classe que implementa esse provedor de símbolo|  
   
-### <a name="expression-evaluators"></a>Expression Evaluators  
- The following is the organization of the expression evaluator metrics in the registry. `ExpressionEvaluator` is the metric type name for the expression evaluator and corresponds to *[metric type]*.  
+### <a name="expression-evaluators"></a>Avaliadores de expressão  
+ A seguir está a organização das métricas de avaliador de expressão no registro. `ExpressionEvaluator`é o nome do tipo de métrica para o avaliador de expressão e corresponde à *[tipo de métrica]*.  
   
 > [!NOTE]
->  The metric type for `ExpressionEvaluator` is not defined in dbgmetric.h, as it is assumed that all metric changes for expression evaluators will go through the appropriate expression evaluator metric functions (the layout of the `ExpressionEvaluator` subkey is somewhat complicated, so the details are hidden inside dbgmetric.lib).  
+>  O tipo de métrica para `ExpressionEvaluator` não é definida no dbgmetric.h, como presume-se que todas as alterações de métrica de avaliadores de expressão irão por meio das funções de métrica de avaliador de expressão apropriada (o layout do `ExpressionEvaluator` subchave é um pouco complicada, portanto, os detalhes estão ocultos dentro de dbgmetric.lib).  
   
  `ExpressionEvaluator`\  
   
- *[language guid]*\  
+ *[linguagem guid]*\  
   
- *[vendor guid]*\  
+ *[fornecedor guid]*\  
   
- `CLSID` = *[class guid]*  
+ `CLSID` = *[guid de classe]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
  `Engine`\  
   
- `0` = *[debug engine guid]*  
+ `0` = *[guid do mecanismo de depuração]*  
   
- `1` = *[debug engine guid]*  
+ `1` = *[guid do mecanismo de depuração]*  
   
-|Placeholder|Description|  
+|Espaço reservado|Descrição|  
 |-----------------|-----------------|  
-|*[language guid]*|The GUID of a language|  
-|*[vendor guid]*|The GUID of a vendor|  
-|*[class guid]*|The GUID of the class that implements this expression evaluator|  
-|*[debug engine guid]*|The GUID of a debug engine that this expression evaluator works with|  
+|*[linguagem guid]*|O GUID de um idioma|  
+|*[fornecedor guid]*|O GUID de um fornecedor|  
+|*[guid de classe]*|O GUID da classe que implementa esse avaliador de expressão|  
+|*[guid do mecanismo de depuração]*|O GUID de um mecanismo de depuração que este avaliador de expressão funciona com|  
   
-### <a name="expression-evaluator-extensions"></a>Expression Evaluator Extensions  
- The following is the organization of the expression evaluator extension metrics in the registry. `EEExtensions` is the metric type name for the expression evaluator extensions and corresponds to *[metric type]*.  
+### <a name="expression-evaluator-extensions"></a>Extensões do avaliador de expressão  
+ A seguir está a organização das métricas de extensão do avaliador de expressão no registro. `EEExtensions`é o nome do tipo de métrica para a expressão de extensões do avaliador e corresponde à *[tipo de métrica]*.  
   
  `EEExtensions`\  
   
- *[extension guid]*\  
+ *[extensão guid]*\  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
-|Placeholder|Description|  
+|Espaço reservado|Descrição|  
 |-----------------|-----------------|  
-|*[extension guid]*|The GUID of an expression evaluator extension|  
+|*[extensão guid]*|O GUID de uma extensão do avaliador de expressão|  
   
-### <a name="exceptions"></a>Exceptions  
- The following is the organization of the exceptions metrics in the registry. `Exception` is the metric type name for the exceptions and corresponds to *[metric type]*.  
+### <a name="exceptions"></a>Exceções  
+ A seguir está a organização das métricas de exceções no registro. `Exception`é o nome do tipo de métrica para as exceções e corresponde à *[tipo de métrica]*.  
   
  `Exception`\  
   
- *[debug engine guid]*\  
+ *[guid do mecanismo de depuração]*\  
   
- *[exception types]*\  
+ *[tipos de exceção]*\  
   
- *[exception]*\  
+ *[exceção]*\  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[exception]*\  
+ *[exceção]*\  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
- *[metric] = [metric value]*  
+ *[métrica] = [valor de métrica]*  
   
-|Placeholder|Description|  
+|Espaço reservado|Descrição|  
 |-----------------|-----------------|  
-|*[debug engine guid]*|The GUID of a debug engine that supports exceptions.|  
-|*[exception types]*|A general title for the subkey identifying the class of exceptions that can be handled. Typical names are **C++ Exceptions**, **Win32 Exceptions**, **Common Language Runtime Exceptions**, and **Native Run-Time Checks**. These names are also used to identify a particular class of exception to the user.|  
-|*[exception]*|A name for an exception: for example, **_com_error** or **Control-Break**. These names are also used to identify a particular exception to the user.|  
+|*[guid do mecanismo de depuração]*|O GUID de um mecanismo de depuração que oferece suporte a exceções.|  
+|*[tipos de exceção]*|Um título geral da subchave identifica a classe de exceções que podem ser manipulados. Nomes típicos são **exceções C++**, **exceções Win32**, **exceções do Common Language Runtime**, e **verificações de tempo de execução nativo**. Esses nomes também são usados para identificar uma determinada classe de exceção para o usuário.|  
+|*[exceção]*|Um nome para uma exceção: por exemplo, **com_error** ou **Control-Break**. Esses nomes também são usados para identificar uma exceção em particular para o usuário.|  
   
-## <a name="requirements"></a>Requirements  
- These files are located in the [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] SDK installation directory (by default, *[drive]*\Program Files\Microsoft Visual Studio 2010 SDK\\).  
+## <a name="requirements"></a>Requisitos  
+ Esses arquivos estão localizados na [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] diretório de instalação do SDK (por padrão, *[unidade]*\Program Files\Microsoft SDK do Visual Studio 2010\\).  
   
- Header: includes\dbgmetric.h  
+ Cabeçalho: includes\dbgmetric.h  
   
- Library: libs\ad2de.lib, libs\dbgmetric.lib  
+ Biblioteca: libs\ad2de.lib, libs\dbgmetric.lib  
   
-## <a name="see-also"></a>See Also  
- [API Reference](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência da API](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

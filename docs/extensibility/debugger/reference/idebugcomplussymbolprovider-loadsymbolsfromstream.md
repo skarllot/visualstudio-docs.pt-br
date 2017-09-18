@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::LoadSymbolsFromStream | Microsoft Docs
+title: IDebugComPlusSymbolProvider::LoadSymbolsFromStream | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,19 +29,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 645d69f6449a7017b286c41994c75242fec48e60
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 638b60ebc401adaa71a9c20872b49d8eb119db18
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugcomplussymbolproviderloadsymbolsfromstream"></a>IDebugComPlusSymbolProvider::LoadSymbolsFromStream
-Loads debug symbols given the data stream.  
+O fluxo de dados de símbolos de depuração de cargas.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT LoadSymbolsFromStream(  
    ULONG32   ulAppDomainID,  
    GUID      guidModule,  
@@ -51,7 +50,7 @@ HRESULT LoadSymbolsFromStream(
 );  
 ```  
   
-```csharp  
+```c#  
 int LoadSymbolsFromStream(  
    uint    ulAppDomainID,  
    Guid    guidModule,  
@@ -61,29 +60,29 @@ int LoadSymbolsFromStream(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ulAppDomainID`  
- [in] Identifier of the application domain.  
+ [in] Identificador do domínio do aplicativo.  
   
  `guidModule`  
- [in] Unique identifier of the module.  
+ [in] Identificador exclusivo do módulo.  
   
  `baseAddress`  
- [in] Base memory address.  
+ [in] Endereço de memória de base.  
   
  `pUnkMetadataImport`  
- [in] Object that contains the symbol metadata.  
+ [in] Objeto que contém os metadados de símbolo.  
   
  `pStream`  
- [in] Data stream that contains the symbols.  
+ [in] Fluxo de dados que contém os símbolos.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface. The method calls the [LoadSymbolsFromStreamWithCorModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md) method.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugSymbolProvider** objeto expõe o [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface. O método chama o [LoadSymbolsFromStreamWithCorModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md) método.  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStream(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -96,5 +95,5 @@ HRESULT CDebugSymbolProvider::LoadSymbolsFromStream(
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

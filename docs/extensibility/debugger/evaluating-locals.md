@@ -1,5 +1,5 @@
 ---
-title: Evaluating Locals | Microsoft Docs
+title: Avaliar locais | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,33 +29,32 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8e2e4c4f00e37a4f81244dc7905996889a2055b0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: f4c8b7d2e35f9e593e52c3a4cf704f9d0d1892a2
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="evaluating-locals"></a>Evaluating Locals
+# <a name="evaluating-locals"></a>Avaliar locais
 > [!IMPORTANT]
->  In Visual Studio 2015, this way of implementing expression evaluators is deprecated. For information about implementing CLR expression evaluators, please see [CLR Expression Evaluators](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) and [Managed Expression Evaluator Sample](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  No Visual Studio 2015, essa forma de implementar os avaliadores de expressão foi preterida. Para obter informações sobre como implementar os avaliadores de expressão do CLR, consulte [avaliadores de expressão de CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [amostra do avaliador de expressão gerenciado](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) is called to obtain the value of a local, as well as the local's name and type. Since the value of a local is dependent on the current state of the program, the local's value must be obtained from memory. The [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) object is used to bind the [IDebugField](../../extensibility/debugger/reference/idebugfield.md) object representing the local to the appropriate location in memory containing the value. This location in memory is represented by an [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) object.  
+ [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) é chamado para obter o valor de um local, bem como o nome do local e o tipo. Como o valor do local é dependente do estado atual do programa, o valor do local deve ser obtido da memória. O [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) objeto é usado para ligar o [IDebugField](../../extensibility/debugger/reference/idebugfield.md) que representa o local para o local apropriado na memória que contém o valor do objeto. Este local na memória é representado por um [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) objeto.  
   
- This functionality of retrieving the value of a local is encapsulated in a helper function that performs the following tasks:  
+ Essa funcionalidade de recuperar o valor do local é encapsulada em uma função auxiliar que realiza as seguintes tarefas:  
   
-1.  Binds the `IDebugField` object to memory to obtain an `IDebugObject` object.  
+1.  Associa o `IDebugField` objeto na memória para obter um `IDebugObject` objeto.  
   
-2.  Gets the value from memory. This value is represented as a series of bytes.  
+2.  Obtém o valor da memória. Esse valor é representado como uma série de bytes.  
   
-3.  Formats the value based on the local's type.  
+3.  Formata o valor com base no tipo do local.  
   
-4.  Returns a generic object that contains the local's value. In C#, this is an `object`, and in C++, this is a `VARIANT`.  
+4.  Retorna um objeto genérico que contém o valor do local. No c#, isso é uma `object`, e em C++, isso é um `VARIANT`.  
   
-## <a name="managed-code"></a>Managed Code  
- This is an implementation of a function that retrieves the value of a local in managed code.  
+## <a name="managed-code"></a>Código gerenciado  
+ Esta é uma implementação de uma função que recupera o valor de um local em código gerenciado.  
   
-```csharp  
+```c#  
 namespace EEMC  
 {  
     internal class Field  
@@ -94,10 +93,10 @@ namespace EEMC
 }  
 ```  
   
-## <a name="unmanaged-code"></a>Unmanaged Code  
- This is an implementation of a function that retrieves the value of a local in unmanaged code. `FieldGetType` is shown in [Getting Local Values](../../extensibility/debugger/getting-local-values.md).  
+## <a name="unmanaged-code"></a>Código não gerenciado  
+ Esta é uma implementação de uma função que recupera o valor de um local em código não gerenciado. `FieldGetType`é mostrado na [Obtendo valores locais](../../extensibility/debugger/getting-local-values.md).  
   
-```cpp  
+```cpp#  
 HRESULT FieldGetPrimitiveValue(  
     in  IDebugBinder* pbinder,  
     in  IDebugField*  pfield,  
@@ -207,7 +206,7 @@ HRESULT FieldGetPrimitiveValue(
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Sample Implementation of Locals](../../extensibility/debugger/sample-implementation-of-locals.md)   
- [Getting Local Values](../../extensibility/debugger/getting-local-values.md)   
- [Evaluation Context](../../extensibility/debugger/evaluation-context.md)
+## <a name="see-also"></a>Consulte também  
+ [Implementação de exemplo de locais](../../extensibility/debugger/sample-implementation-of-locals.md)   
+ [Obtendo valores de Local](../../extensibility/debugger/getting-local-values.md)   
+ [Contexto de avaliação](../../extensibility/debugger/evaluation-context.md)

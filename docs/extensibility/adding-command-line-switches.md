@@ -1,5 +1,5 @@
 ---
-title: Adding Command-Line Switches | Microsoft Docs
+title: "Adicionando opções de linha de comando | Documentos do Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,57 +31,56 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d7fc73fd531382f90e710fa029b90b93b6055eeb
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 6327d5c9d1ca2074e93e502c061ba7c0c991f4be
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="adding-command-line-switches"></a>Adding Command-Line Switches
-You can add command-line switches that apply to your VSPackage when devenv.exe is executed. Use <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> to declare the name of the switch and its properties. In this example, the MySwitch switch is added for a subclass of VSPackage named **AddCommandSwitchPackage** with no arguments and with the VSPackage loaded automatically.  
+# <a name="adding-command-line-switches"></a>Adicionando opções de linha de comando
+Você pode adicionar opções de linha de comando que se aplicam ao seu VSPackage quando devenv.exe é executado. Use <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>para declarar o nome do comutador e suas propriedades.</xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> Neste exemplo, a opção MySwitch é adicionada para uma subclasse de VSPackage chamado **AddCommandSwitchPackage** sem argumentos e com o VSPackage carregados automaticamente.  
   
-```csharp  
+```c#  
 [ProvideAppCommandLine("MySwitch", typeof(AddCommandSwitchPackage), Arguments = "0", DemandLoad = 1)]  
 ```  
   
- The named parameters are shown in the following table  
+ Os parâmetros nomeados são mostrados na tabela a seguir  
   
  Arguments  
- The number of arguments for the switch. Can be "*", or a list of arguments.  
+ O número de argumentos para o comutador. Pode ser "*", ou uma lista de argumentos.  
   
  DemandLoad  
- Load the VSPackage automatically if this is set to 1, otherwise set to 0.  
+ Carrega o VSPackage automaticamente se for definido como 1, caso contrário, defina como 0.  
   
  HelpString  
- The help string or resource ID of the string to display with **devenv /?**.  
+ A cadeia de caracteres ou recurso ID da Ajuda da cadeia de caracteres para exibir com **devenv /?**.  
   
- Name  
- The switch.  
+ Nome  
+ O comutador.  
   
  PackageGuid  
- The GUID of the package.  
+ O GUID do pacote.  
   
- The first value of Arguments is usually 0 or 1. A special value of '*' can be used to indicate that the entire remainder of the command line is the argument. This can be useful for debugging scenarios where a user must pass in a debugger command string.  
+ O primeiro valor de argumentos geralmente é 0 ou 1. Um valor especial ' *' pode ser usado para indicar que o resto inteiro de linha de comando é o argumento. Isso pode ser útil para cenários em que um usuário deve passar uma cadeia de caracteres de comando do depurador de depuração.  
   
- The DemandLoad value is either `true` (1) or `false` (0) indicates that the VSPackage should be loaded automatically.  
+ O valor de DemandLoad é `true` (1) ou `false` (0) indica que o VSPackage deve ser carregado automaticamente.  
   
- The HelpString value is the resource ID of the string that appears in the devenv /?Help display. This value should be in the form "#nnn" where nnn is an integer. The string value in the resource file should end in a new line character.  
+ O valor de HelpString é a ID de recurso da cadeia de caracteres que aparece no devenv /? Exibição de Ajuda. Esse valor deve estar no formato "#nnn" onde nnn é um inteiro. O valor de cadeia de caracteres no arquivo de recurso deve terminar com um caractere de nova linha.  
   
- The Name value is the name of the switch.  
+ O valor do nome é o nome do comutador.  
   
- The PackageGuid value is the GUID of the package that implements this switch. The IDE uses this GUID to find the VSPackage in the registry to which the command-line switch applies.  
+ O valor de PackageGuid é o GUID do pacote que implementa essa opção. O IDE usa esse GUID para encontrar o VSPackage no registro ao qual se aplica a opção de linha de comando.  
   
-## <a name="retrieving-command-line-switches"></a>Retrieving Command-Line Switches  
- When your package is loaded, you can retrieve the command-line switches by completing the following steps.  
+## <a name="retrieving-command-line-switches"></a>Recuperando opções de linha de comando  
+ Quando o pacote é carregado, você pode recuperar as opções de linha de comando, executando as etapas a seguir.  
   
-1.  In your VSPackage's <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> implementation, call `QueryService` on <xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine> to get the <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine> interface.  
+1.  Em seu VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>implementação, chamada `QueryService` em <xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine>para obter o <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>interface.</xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine> </xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine> </xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>  
   
-2.  Call <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A> to retrieve the command-line switches that the user entered.  
+2.  Chamar <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A>para recuperar as opções de linha de comando que o usuário inseriu.</xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A>  
   
- The following code shows how to find out whether the MySwitch command-line switch was entered by the user:  
+ O código a seguir mostra como descobrir se a opção de linha de comando MySwitch foi inserida pelo usuário:  
   
-```csharp  
+```c#  
 IVsAppCommandLine cmdline = (IVsAppCommandLine)GetService(typeof(SVsAppCommandLine));  
   
 int isPresent = 0;  
@@ -90,11 +89,11 @@ string optionValue = "";
 cmdline.GetOption("MySwitch", out isPresent, out optionValue);  
 ```  
   
- It is your responsibility to check for your command-line switches each time your package is loaded.  
+ É sua responsabilidade verificar as opções de linha de comando sempre que o pacote é carregado.  
   
-## <a name="see-also"></a>See Also  
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>   
- [Devenv Command Line Switches](../ide/reference/devenv-command-line-switches.md)   
- [CreatePkgDef Utility](../extensibility/internals/createpkgdef-utility.md)   
- [.Pkgdef Files](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md)
+## <a name="see-also"></a>Consulte também  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine></xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>   
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A></xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>   
+ [Opções de linha de comando devenv](../ide/reference/devenv-command-line-switches.md)   
+ [Utilitário de CreatePkgDef](../extensibility/internals/createpkgdef-utility.md)   
+ [. Arquivos de Pkgdef](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md)

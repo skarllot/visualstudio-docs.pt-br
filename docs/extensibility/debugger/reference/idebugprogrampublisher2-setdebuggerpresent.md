@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::SetDebuggerPresent | Microsoft Docs
+title: IDebugProgramPublisher2::SetDebuggerPresent | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,16 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: fec0ef60049f664f04bf889336ebff97cc966ab9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: fabd89b862835d040d4015d3c97af70d72ffdb51
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprogrampublisher2setdebuggerpresent"></a>IDebugProgramPublisher2::SetDebuggerPresent
-Tells the program publisher that a debugger is present and running.  
+Informa o programa que um depurador esteja presente e em execução.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT SetDebuggerPresent(  
@@ -48,22 +47,22 @@ HRESULT SetDebuggerPresent(
 );  
 ```  
   
-```csharp  
+```c#  
 int SetDebuggerPresent(  
    int fDebuggerPresent  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `fDebuggerPresent`  
- [in] Non-zero (`TRUE`) if a debugger is present, zero (`FALSE`) if it is not.  
+ [in] Diferente de zero (`TRUE`) se um depurador estiver presente, zero (`FALSE`) se não for.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The presence or absence of a debugger is reflected in the data returned from the [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) method: the value returned there is set or cleared by a prior call to the `SetDebuggerPresent` method.  
+## <a name="remarks"></a>Comentários  
+ A presença ou ausência de um depurador é refletida nos dados retornados do [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) método: o valor retornado lá está definido ou desmarcado por uma chamada anterior para o `SetDebuggerPresent` método.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   
  [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)

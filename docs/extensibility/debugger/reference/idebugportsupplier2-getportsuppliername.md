@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::GetPortSupplierName | Microsoft Docs
+title: IDebugPortSupplier2::GetPortSupplierName | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,36 +30,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8510de3817c7290e7a4ec47446e8f3f3ebbd1769
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: a95337dc06c30a0aa6526f395922dd46bc64ef27
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugportsupplier2getportsuppliername"></a>IDebugPortSupplier2::GetPortSupplierName
-Gets the port supplier name.  
+Obtém o nome do fornecedor de porta.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetPortSupplierName(   
    BSTR* pbstrName  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetPortSupplierName(   
    out string pbstrName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pbstrName`  
- [out] Returns the name of the port supplier.  
+ [out] Retorna o nome do fornecedor de porta.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

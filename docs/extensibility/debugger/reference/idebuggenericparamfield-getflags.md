@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField::GetFlags | Microsoft Docs
+title: IDebugGenericParamField::GetFlags | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,44 +29,43 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: eb93388573116ad45cee2e9746d991f699c21eb3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 357adaef6c6c330b34f652491260c35e7f6fbc5a
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebuggenericparamfieldgetflags"></a>IDebugGenericParamField::GetFlags
-Retrieves the flags for this generic parameter.  
+Recupera os sinalizadores para esse parâmetro genérico.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetFlags(  
    DWORD* pdwFlags  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetFlags(  
    ref uint pdwFlags  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwFlags`  
- [out] Returns the flags for this generic parameter.  
+ [out] Retorna os sinalizadores para esse parâmetro genérico.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- These flags contain information about various special constraints.  
+## <a name="remarks"></a>Comentários  
+ Esses sinalizadores contêm informações sobre várias restrições especiais.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugGenericParamFieldType** object that exposes the [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um **CDebugGenericParamFieldType** objeto expõe o [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
   
-```cpp  
+```cpp#  
 HRESULT CDebugGenericParamFieldType::GetFlags(DWORD *pdwFlags)  
 {  
     HRESULT hr = S_OK;  
@@ -84,5 +83,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

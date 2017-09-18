@@ -1,5 +1,5 @@
 ---
-title: BP_REQUEST_INFO2 | Microsoft Docs
+title: BP_REQUEST_INFO2 | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4afebff82e866e01c866d1ed2f344ead13dcea14
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3236de2e9f8120d6caf69a96cf05b42b8860c199
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="bprequestinfo2"></a>BP_REQUEST_INFO2
-Contains the information required to implement a breakpoint, including vendor GUID, constraint and tracepoint.  
+Contém as informações necessárias para implementar um ponto de interrupção, incluindo fornecedor GUID, restrição e tracepoint.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 typedef struct _BP_REQUEST_INFO2 {  
    BPREQI_FIELDS   dwFields;  
    GUID            guidLanguage;  
@@ -60,7 +59,7 @@ typedef struct _BP_REQUEST_INFO2 {
 } BP_REQUEST_INFO2;  
 ```  
   
-```csharp  
+```c#  
 public struct BP_REQUEST_INFO2 {  
    public uint           dwFields;  
    public Guid           guidLanguage;  
@@ -78,58 +77,58 @@ public struct BP_REQUEST_INFO2 {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  `dwFields`  
- A combination of flags from the [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) enumeration that specifies which fields are filled out.  
+ Uma combinação de sinalizadores do [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) enumeração que especifica quais campos estão preenchidos.  
   
  `guidLanguage`  
- The language GUID.  
+ O GUID do idioma.  
   
  `bpLocation`  
- The [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) structure that specifies the type of the breakpoint location.  
+ O [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) estrutura que especifica o tipo do local do ponto de interrupção.  
   
  `pProgram`  
- The [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object that represents the application in which the breakpoint occurs.  
+ O [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto que representa o aplicativo no qual o ponto de interrupção ocorre.  
   
  `bstrProgramName`  
- The name of the application in which the breakpoint occurs.  
+ O nome do aplicativo no qual o ponto de interrupção ocorre.  
   
  `pThread`  
- The [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the thread in which the breakpoint occurs.  
+ O [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objeto que representa o thread no qual o ponto de interrupção ocorre.  
   
  `bstrThreadName`  
- The name of the thread in which the breakpoint occurs.  
+ O nome do thread no qual o ponto de interrupção ocorre.  
   
  `bpCondition`  
- The [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) structure that describes the conditions under which the breakpoint will fire.  
+ O [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) estrutura que descreve as condições sob as quais o ponto de interrupção será acionado.  
   
  `bpPassCount`  
- The [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) structure that contains the pass count information of the breakpoint.  
+ O [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) estrutura que contém as informações de contagem de passagem do ponto de interrupção.  
   
  `dwFlags`  
- A combination of flags from the [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) enumeration that specifies the flags for the requested breakpoint.  
+ Uma combinação de sinalizadores do [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) enumeração que especifica os sinalizadores para o ponto de interrupção solicitado.  
   
  `guidVendor`  
- GUID of vendor. May be a null value.  
+ GUID do fornecedor. Pode ser um valor nulo.  
   
  `bstrConstraint`  
- Name of breakpoint constraint. May be a null value.  
+ Nome da restrição de ponto de interrupção. Pode ser um valor nulo.  
   
  `bstrTracepoint`  
- Name of trace point. May be a null value.  
+ Nome do ponto de rastreamento. Pode ser um valor nulo.  
   
-## <a name="remarks"></a>Remarks  
- This structure is returned by the [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) method.  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é retornada pelo [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) método.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)   
  [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
  [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   

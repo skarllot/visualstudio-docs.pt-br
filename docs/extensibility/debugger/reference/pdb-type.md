@@ -1,5 +1,5 @@
 ---
-title: PDB_TYPE | Microsoft Docs
+title: PDB_TYPE | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 59f2a994987bf3259129c4338e007774467ad4a4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: ab59a91657e47e4b23f3d970a68a591e0550cd2f
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="pdbtype"></a>PDB_TYPE
-This structure specifies information about a field type taken from a PDB symbol.  
+Essa estrutura Especifica informações sobre um tipo de campo obtido um símbolo PDB.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 typedef struct _tagTYPE_PDB {  
    ULONG32 ulAppDomainID;  
    GUID    guidModule;  
@@ -50,7 +49,7 @@ typedef struct _tagTYPE_PDB {
 } PDB_TYPE;  
 ```  
   
-```csharp  
+```c#  
 public struct PDB_TYPE {  
    public uint ulAppDomainID;  
    public Guid guidModule;  
@@ -58,27 +57,27 @@ public struct PDB_TYPE {
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  ulAppDomainID  
- ID of the application from which the symbol came. This is used to uniquely identify an instance of the application.  
+ ID do aplicativo de onde veio o símbolo. Isso é usado para identificar exclusivamente uma instância do aplicativo.  
   
  guidModule  
- The GUID of the module that contains this field.  
+ O GUID do módulo que contém esse campo.  
   
  symid  
- The ID of the symbol that corresponds to this field.  
+ A ID do símbolo que corresponde a esse campo.  
   
-## <a name="remarks"></a>Remarks  
- This structure appears as part of the union in the [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) structure when the `dwKind` field of the `TYPE_INFO` structure is set to `TYPE_KIND_PDB` (a value from the [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) enumeration).  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é exibido como parte da união no [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) estrutura quando o `dwKind` campo o `TYPE_INFO` estrutura é definida como `TYPE_KIND_PDB` (um valor da [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) enumeração).  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)   
  [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)

@@ -1,57 +1,38 @@
 ---
-title: The connection string contains credentials with a clear text password and is not using integrated security | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "The connection string contains credentials with a clear text password and is not using integrated security | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/23/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 501d85af-92e0-4471-b280-8a59c0688575
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: f4981240d341aa1f2b8c0753b95d1f34e69cb031
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 3
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="the-connection-string-contains-credentials-with-a-clear-text-password-and-is-not-using-integrated-security"></a>The connection string contains credentials with a clear text password and is not using integrated security
-Do you want to save the connection string to the current DBML file and application configuration files with this sensitive information?  Click No to save the connection string without the sensitive information.  
+# The connection string contains credentials with a clear text password and is not using integrated security
+Você deseja salvar a cadeia de conexão para o arquivo DBML atual e os arquivos de configuração do aplicativo com essas informações confidenciais?  Clique em não para salvar a cadeia de conexão sem as informações confidenciais.  
   
- When working with data connections that include sensitive information (passwords that are included in the connection string), you are given the option of saving the connection string into a project's DBML file and application configuration file with or without the sensitive information.  
+ Ao trabalhar com conexões de dados que contêm informações confidenciais \(senhas que são incluídos na cadeia de conexão\), você terá a opção de salvar a cadeia de conexão no arquivo DBML de um projeto e o arquivo de configuração do aplicativo com ou sem as informações confidenciais.  
   
 > [!WARNING]
->  Explicitly setting the **Connection** properties **Application Settings** property to **False** will add the password to the DBML file.  
+>  Definir explicitamente o **conexão** propriedades **configurações do aplicativo** propriedade **False** adicionará a senha para o arquivo DBML.  
   
-### <a name="to-save-the-connection-string-with-the-sensitive-information-in-the-projects-application-settings"></a>To save the connection string with the sensitive information in the project's application settings  
+### Para salvar a cadeia de conexão com informações sigilosas nas configurações do aplicativo do projeto  
   
--   Click **Yes**.  
+-   Clique em **Sim**.  
   
-     The connection string is stored as an application setting. The connection string includes the sensitive information in plain text. The DBML file does not contain the sensitive information.  
+     A cadeia de conexão é armazenada como uma configuração de aplicativo. A cadeia de conexão inclui as informações confidenciais em texto sem formatação. O arquivo DBML não contém as informações confidenciais.  
   
-### <a name="to-save-the-connection-string-without-the-sensitive-information-in-the-projects-application-settings"></a>To save the connection string without the sensitive information in the project's application settings  
+### Para salvar a cadeia de conexão sem informações sigilosas nas configurações do aplicativo do projeto  
   
--   Click **No**.  
+-   Clique em **não**.  
   
-     The connection string is stored as an application setting, but the password is not included.  
+     A cadeia de conexão é armazenada como uma configuração de aplicativo, mas a senha não está incluída.  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+## Consulte também  
+ [LINQ to SQL Tools no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
