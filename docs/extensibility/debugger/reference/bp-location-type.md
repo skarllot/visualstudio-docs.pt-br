@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_TYPE | Microsoft Docs
+title: BP_LOCATION_TYPE | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9c3360a18f206c6b28d7fcf60f227579e99e6967
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8e4a4aea7b35a7e20bdbc9e790061b0159b2ac18
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="bplocationtype"></a>BP_LOCATION_TYPE
-Specifies the location type of the breakpoint for a breakpoint request.  
+Especifica o tipo de local do ponto de interrupção de uma solicitação de ponto de interrupção.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_BP_LOCATION_TYPE {   
    BPLT_NONE               = 0x00000000,  
    BPLT_FILE_LINE          = 0x00010000,  
@@ -63,7 +62,7 @@ enum enum_BP_LOCATION_TYPE {
 typedef DWORD BP_LOCATION_TYPE;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_BP_LOCATION_TYPE {   
    BPLT_NONE               = 0x00000000,  
    BPLT_FILE_LINE          = 0x00010000,  
@@ -83,67 +82,67 @@ public enum enum_BP_LOCATION_TYPE {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  BPLT_NONE  
- Specifies no breakpoint location.  
+ Não especifica que nenhum local de ponto de interrupção.  
   
  BPLT_FILE_LINE  
- Specifies the location type of the breakpoint as a file line.  
+ Especifica o tipo de local do ponto de interrupção como uma linha do arquivo.  
   
  BPLT_FUNC_OFFSET  
- Specifies the location type of the breakpoint as a function offset.  
+ Especifica o tipo de local do ponto de interrupção como um deslocamento de função.  
   
  BPLT_CONTEXT  
- Specifies the location type of the breakpoint as a context.  
+ Especifica o tipo de local do ponto de interrupção como um contexto.  
   
  BPLT_STRING  
- Specifies the location type of the breakpoint as a string.  
+ Especifica o tipo de local do ponto de interrupção como uma cadeia de caracteres.  
   
  BPLT_ADDRESS  
- Specifies the location type of the breakpoint as an address.  
+ Especifica o tipo de local do ponto de interrupção como um endereço.  
   
  BPLT_RESOLUTION  
- Specifies the location type of the breakpoint as a resolution.  
+ Especifica o tipo de local do ponto de interrupção como uma resolução.  
   
  BPLT_CODE_FILE_LINE  
- Specifies the location type of the breakpoint as a line of source code.  
+ Especifica o tipo de local do ponto de interrupção como uma linha de código-fonte.  
   
  BPLT_CODE_FUNC_OFFSET  
- Specifies the location type of the breakpoint as a code function offset.  
+ Especifica o tipo de local do ponto de interrupção como um deslocamento de função do código.  
   
  BPLT_CODE_CONTEXT  
- Specifies the location type of the breakpoint as a code context.  
+ Especifica o tipo de local do ponto de interrupção de contexto de código.  
   
  BPLT_CODE_STRING  
- Specifies the location type of the breakpoint as a code string.  
+ Especifica o tipo de local do ponto de interrupção como uma cadeia de caracteres do código.  
   
  BPLT_CODE_ADDRESS  
- Specifies the location type of the breakpoint as a code address.  
+ Especifica o tipo de local do ponto de interrupção como um endereço de código.  
   
  BPLT_DATA_STRING  
- Specifies the location type of the breakpoint as a data string.  
+ Especifica o tipo de local do ponto de interrupção como uma cadeia de caracteres de dados.  
   
  BPLT_TYPE_MASK  
- Specifies a bit mask, so that the breakpoint type can be extracted out of the value.  
+ Especifica uma máscara de bits para que o tipo de ponto de interrupção pode ser extraído fora do valor.  
   
  BPLT_LOCATION_TYPE_MASK  
- Specifies a bit mask, so that the breakpoint location type can be extracted out of the value.  
+ Especifica uma máscara de bits para que o tipo de local de ponto de interrupção pode ser extraído fora do valor.  
   
-## <a name="remarks"></a>Remarks  
- Passed as a parameter to the [GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md) method.  
+## <a name="remarks"></a>Comentários  
+ Passado como um parâmetro para o [GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md) método.  
   
- A breakpoint location type is composed of a breakpoint type and a location type. This means that a breakpoint location type is never just a breakpoint type (for example, `BPT_CODE`) or a location type (for example, `BPLT_FILE_LINE`). Predefined constants for all breakpoint location types currently supported are included in this enumeration (`BPLT_CODE_FILE_LINE` through `BPLT_DATA_STRING`).  
+ Um tipo de local de ponto de interrupção é composto de um tipo de ponto de interrupção e um tipo de local. Isso significa que um tipo de local de ponto de interrupção nunca é apenas um tipo de ponto de interrupção (por exemplo, `BPT_CODE`) ou um tipo de local (por exemplo, `BPLT_FILE_LINE`). Constantes predefinidas para todos os tipos de local de ponto de interrupção atualmente com suporte estão incluídos nesta enumeração (`BPLT_CODE_FILE_LINE` por meio de `BPLT_DATA_STRING`).  
   
- `BPT_CODE` and `BPT_DATA` are members of the [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) enumeration.  
+ `BPT_CODE`e `BPT_DATA` são membros do [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) enumeração.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md)   
  [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)

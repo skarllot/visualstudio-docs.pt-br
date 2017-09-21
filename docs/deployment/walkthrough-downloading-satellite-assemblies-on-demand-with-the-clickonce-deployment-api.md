@@ -1,88 +1,72 @@
 ---
-title: 'Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-helpviewer_keywords:
-- ClickOnce deployment, globalization
-- localization, Windows Forms
-- Windows Forms, localization
-- globalization, ClickOnce
-- satellite assemblies, ClickOnce
-- ClickOnce deployment, on-demand download
-- localization, ClickOnce deployment
-- ClickOnce deployment, localization
+title: "Instru&#231;&#245;es passo a passo: baixando assemblies sat&#233;lite por demanda com a API de implanta&#231;&#227;o do ClickOnce | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-deployment"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+helpviewer_keywords: 
+  - "implantação ClickOnce, globalização"
+  - "implantação ClickOnce, localização"
+  - "implantação ClickOnce, download sob demanda"
+  - "globalização, ClickOnce"
+  - "localização, implantação ClickOnce"
+  - "localização, Windows Forms"
+  - "assemblies satélites, ClickOnce"
+  - "Windows Forms, localização"
 ms.assetid: fdaa553f-a27e-44eb-a4e2-08c122105a87
 caps.latest.revision: 11
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 617b8edabe41382c298ee70b68c304cfdc51eb6f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/30/2017
-
+caps.handback.revision: 11
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
 ---
-# <a name="walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API
-Windows Forms applications can be configured for multiple cultures through the use of satellite assemblies. A *satellite assembly* is an assembly that contains application resources for a culture other than the application's default culture.  
+# Instru&#231;&#245;es passo a passo: baixando assemblies sat&#233;lite por demanda com a API de implanta&#231;&#227;o do ClickOnce
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+Aplicativos do Windows Forms podem ser configurados para várias culturas com o uso de assemblies satélites. Um *assembly satélite* é um assembly que contém recursos do aplicativo para uma cultura diferente de cultura do padrão do aplicativo.  
   
- As discussed in [Localizing ClickOnce Applications](../deployment/localizing-clickonce-applications.md), you can include multiple satellite assemblies for multiple cultures within the same [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] deployment. By default, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] will download all of the satellite assemblies in your deployment to the client machine, although a single client will probably require only one satellite assembly.  
+ Conforme discutido em [Localização de aplicativos ClickOnce](../deployment/localizing-clickonce-applications.md), você pode incluir vários assemblies satélite para várias culturas dentro do mesmo [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] implantação. Por padrão, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] baixará todos os assemblies satélite em sua implantação para o computador cliente, embora um único cliente provavelmente exigirá assembly satélite apenas um.  
   
- This walkthrough demonstrates how to mark your satellite assemblies as optional, and download only the assembly a client machine needs for its current culture settings. The following procedure uses the tools available in the [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]. You can also perform this task in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  Also see [Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API Using the Designer](http://msdn.microsoft.com/library/ms366788\(v=vs.110\)) or [Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API Using the Designer](http://msdn.microsoft.com/library/ms366788\(v=vs.120\)).  
+ Este passo a passo demonstra como marcar seus assemblies satélites como opcional e baixar apenas o assembly precisa de um computador cliente para suas configurações de cultura atual. O procedimento a seguir usa as ferramentas disponíveis no [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]. Você também pode executar essa tarefa em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  Consulte também [passo a passo: baixando Assemblies satélite por demanda com o ClickOnce implantação API usando o Designer](http://msdn.microsoft.com/library/ms366788\(v=vs.110\)) ou [passo a passo: baixando Assemblies satélite por demanda com o ClickOnce implantação API usando o Designer](http://msdn.microsoft.com/library/ms366788\(v=vs.120\)).  
   
 > [!NOTE]
->  For testing purposes, the following code example programmatically sets the culture to `ja-JP`. See the "Next Steps" section later in this topic for information on how to adjust this code for a production environment.  
+>  Para fins de teste, o exemplo de código a seguir programaticamente define a cultura `ja-JP`. Consulte a seção "Próximas etapas" neste tópico para obter informações sobre como ajustar esse código para um ambiente de produção.  
   
-## <a name="prerequisites"></a>Prerequisites  
- This topic assumes that you know how to add localized resources to your application using Visual Studio. For detailed instructions, see [Walkthrough: Localizing Windows Forms](https://msdn.microsoft.com/en-us/library/vstudio/y99d1cd3\(v=vs.100\).aspx).  
+## Pré-requisitos  
+ Este tópico pressupõe que você saiba como adicionar recursos localizados ao seu aplicativo usando o Visual Studio. Para obter instruções detalhadas, consulte [passo a passo: Localizando Windows Forms](https://msdn.microsoft.com/en-us/library/vstudio/y99d1cd3\(v=vs.100\).aspx).  
   
-### <a name="to-download-satellite-assemblies-on-demand"></a>To download satellite assemblies on demand  
+### Para baixar os assemblies satélite por demanda  
   
-1.  Add the following code to your application to enable on-demand downloading of satellite assemblies.  
+1.  Adicione o seguinte código ao seu aplicativo para habilitar o download sob demanda dos assemblies satélites.  
   
-     [!code-csharp[ClickOnce.SatelliteAssembliesSDK#1](../deployment/codesnippet/CSharp/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]  [!code-vb[ClickOnce.SatelliteAssembliesSDK#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]  
+     [!code-cs[ClickOnce.SatelliteAssembliesSDK#1](../deployment/codesnippet/CSharp/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]
+     [!code-vb[ClickOnce.SatelliteAssembliesSDK#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]  
   
-2.  Generate satellite assemblies for your application by using [Resgen.exe (Resource File Generator)](/dotnet/framework/tools/resgen-exe-resource-file-generator) or [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+2.  Gerar assemblies satélite para seu aplicativo usando [Resgen.exe \(Gerador de Arquivo de Recurso\)](../Topic/Resgen.exe%20\(Resource%20File%20Generator\).md) ou [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
-3.  Generate an application manifest, or open your existing application manifest, by using MageUI.exe. For more information about this tool, see [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).  
+3.  Gerar um manifesto de aplicativo, ou abrir o manifesto do aplicativo existente, usando MageUI.exe. Para obter mais informações sobre essa ferramenta, consulte [MageUI.exe \(Ferramenta de Geração e Edição de Manifesto, cliente gráfico\)](../Topic/MageUI.exe%20\(Manifest%20Generation%20and%20Editing%20Tool,%20Graphical%20Client\).md).  
   
-4.  Click the **Files** tab.  
+4.  Clique o **arquivos** guia.  
   
-5.  Click the **ellipsis** button (**...**) and select the directory containing all of your application's assemblies and files, including the satellite assemblies you generated using Resgen.exe. (A satellite assembly will have a name in the form *isoCode*\ApplicationName.resources.dll, where *isoCode* is a language identifier in RFC 1766 format.)  
+5.  Clique o **reticências** botão \(**...**\) e selecione o diretório que contém todos os assemblies e arquivos, incluindo os assemblies satélite gerado usando Resgen.exe seu aplicativo. \(Um assembly satélite terá um nome no formato *isoCode*\\ApplicationName.resources.dll, onde *isoCode* é um identificador de idioma no formato RFC 1766.\)  
   
-6.  Click **Populate** to add the files to your deployment.  
+6.  Clique em **popular** para adicionar arquivos à sua implantação.  
   
-7.  Select the **Optional** check box for each satellite assembly.  
+7.  Selecione o **opcional** caixa de seleção para cada assembly satélite.  
   
-8.  Set the group field for each satellite assembly to its ISO language identifier. For example, for a Japanese satellite assembly, you would specify a download group name of `ja-JP`. This will enable the code you added in step 1 to download the appropriate satellite assembly, depending upon the user's <xref:System.Threading.Thread.CurrentUICulture%2A> property setting.  
+8.  Defina o campo de grupo para cada assembly satélite para seu identificador de idioma ISO. Por exemplo, para um assembly satélite japonês, você especificaria o nome de um grupo de download do `ja-JP`. Isso permitirá que o código adicionado na etapa 1 para baixar o assembly satélite adequado, dependendo do usuário <xref:System.Threading.Thread.CurrentUICulture%2A> configuração de propriedade.  
   
-## <a name="next-steps"></a>Next Steps  
- In a production environment, you will likely need to remove the line in the code example that sets <xref:System.Threading.Thread.CurrentUICulture%2A> to a specific value, because client machines will have the correct value set by default. When your application runs on a Japanese client machine, for example, <xref:System.Threading.Thread.CurrentUICulture%2A> will be `ja-JP` by default. Setting this value programmatically is a good way to test your satellite assemblies before you deploy your application.  
+## Próximas etapas  
+ Em um ambiente de produção, você provavelmente precisará remover a linha no exemplo de código define <xref:System.Threading.Thread.CurrentUICulture%2A> para um valor específico, porque será de máquinas cliente tiver o valor correto definido por padrão. Quando seu aplicativo é executado em uma máquina cliente japonês, por exemplo, <xref:System.Threading.Thread.CurrentUICulture%2A> será `ja-JP` por padrão. Definir esse valor por meio de programação é uma boa maneira de testar seus assemblies satélites antes de implantar seu aplicativo.  
   
-## <a name="see-also"></a>See Also  
- [Localizing ClickOnce Applications](../deployment/localizing-clickonce-applications.md)
+## Consulte também  
+ [Localização de aplicativos ClickOnce](../deployment/localizing-clickonce-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_RETVAL | Microsoft Docs
+title: METADATA_ADDRESS_RETVAL | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,16 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c7da8b57554d8d9dca3dd7973d1afc7e7205bfc0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 7effb37c1f2a654015756bb69c5f4975e9d62949
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="metadataaddressretval"></a>METADATA_ADDRESS_RETVAL
-This structure represents a return value from a method or function.  
+Esta estrutura representa um valor de retorno de um método ou função.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_RETVAL {  
@@ -51,7 +50,7 @@ typedef struct _tagMETADATA_ADDRESS_RETVAL {
 } METADATA_ADDRESS_RETVAL;  
 ```  
   
-```csharp  
+```c#  
 public struct METADATA_ADDRESS_RETVAL {  
    public int    tokMethod;  
    public uint   dwCorType;  
@@ -60,30 +59,30 @@ public struct METADATA_ADDRESS_RETVAL {
 }  
 ```  
   
-## <a name="terms"></a>Terms  
+## <a name="terms"></a>Termos  
  tokMethod  
- The ID of the method this return value is for.  
+ A ID do método esse valor de retorno é para.  
   
  dwCorType  
- The base type of return value. This is a value from the `CorElementType` enumeration defined in the [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK corhdr.h file.  
+ O tipo base do valor de retorno. Este é um valor da `CorElementType` enumeração definida no [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] arquivo de corhdr. h SDK.  
   
  dwSigSize  
- The size of the return value signature (as stored in `rgSig`).  
+ O tamanho da assinatura do valor de retorno (conforme armazenado em `rgSig`).  
   
  rgSig  
- An array of bytes forming the signature of the return value.  
+ Uma matriz de bytes que formam a assinatura do valor de retorno.  
   
-## <a name="remarks"></a>Remarks  
- This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_RETVAL` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é parte da união no [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) estrutura quando o `dwKind` campo o `DEBUG_ADDRESS_UNION` estrutura é definida como `ADDRESS_KIND_RETVAL` (um valor da [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeração).  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
  [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

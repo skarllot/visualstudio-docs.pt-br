@@ -1,5 +1,5 @@
 ---
-title: DisplayKind | Microsoft Docs
+title: DisplayKind | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,19 +28,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 308c14f97f33a0f4e454380e4bb00d4731d4482d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 675af4c67121b212332f564ea2e9169fbb552e88
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="displaykind"></a>DisplayKind
-Enumerates the valid values that represent the kinds of information to take from an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object and display to the user.  
+Enumera os valores válidos que representam os tipos de informações para colocar um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) de objeto e exibir para o usuário.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_DisplayKind  
 {  
    DisplayKind_Value = 0x1,  
@@ -50,7 +49,7 @@ enum enum_DisplayKind
 typedef DWORD DisplayKind;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_DisplayKind  
 {  
    DisplayKind_Value = 0x1,  
@@ -59,23 +58,23 @@ public enum enum_DisplayKind
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  DisplayKind_Value  
- Value of the field.  
+ Valor do campo.  
   
  DisplayKind_Name  
- Name of the field.  
+ Nome do campo.  
   
  DisplayKind_Type  
- Type of field.  
+ Tipo de campo.  
   
-## <a name="requirements"></a>Requirements  
- Header: Ee.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: Ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetValueDisplayStringCount](../../../extensibility/debugger/reference/ieevisualizerservice-getvaluedisplaystringcount.md)

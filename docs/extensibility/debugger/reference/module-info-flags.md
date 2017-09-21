@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO_FLAGS | Microsoft Docs
+title: MODULE_INFO_FLAGS | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,45 +30,44 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 58f83b9592771c5517f6988d51fc047052a1f75f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 4e1c0eb4eebc8b6a8b55ef1845d755881748c2dd
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="moduleinfoflags"></a>MODULE_INFO_FLAGS
-Specifies the state of symbols for a module.  
+Especifica o estado de símbolos para um módulo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_MODULE_INFO_FLAGS {  
    MIF_SYMBOLS_LOADED = 0x0001  
 };  
 typedef DWORD MODULE_INFO_FLAGS;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_MODULE_INFO_FLAGS {  
    MIF_SYMBOLS_LOADED = 0x0001  
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  MIF_SYMBOLS_LOADED  
- At least one set of symbols was loaded by the module (otherwise no symbols were loaded).  
+ Pelo menos um conjunto de símbolos foi carregado pelo módulo (caso contrário, nenhum símbolo foi carregado).  
   
-## <a name="remarks"></a>Remarks  
- This value is returned by the [GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) method.  
+## <a name="remarks"></a>Comentários  
+ Esse valor é retornado pelo [GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) método.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)

@@ -1,5 +1,5 @@
 ---
-title: SccRemove Function | Microsoft Docs
+title: "Função SccRemove | Documentos do Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 02a6aedc192bed7dbe0947ceae1ea55d9f50e3ed
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 9c8e222817a527f03bda2746a9fe8abe0e4642ef
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="sccremove-function"></a>SccRemove Function
-This function deletes files from the source control system.  
+# <a name="sccremove-function"></a>Função SccRemove
+Esta função exclui os arquivos do sistema de controle de origem.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 SCCRTN SccRemove(  
    LPVOID    pvContext,  
    HWND      hWnd,  
@@ -54,44 +53,44 @@ SCCRTN SccRemove(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  pvContext  
- [in] The source control plug-in context structure.  
+ [in] A estrutura de contexto de plug-in de controle de origem.  
   
  hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para as caixas de diálogo que ele fornece.  
   
  nFiles  
- [in] Number of files specified in the `lpFileNames` array.  
+ [in] Número de arquivos especificados na `lpFileNames` matriz.  
   
  lpFileNames  
- [in] Array of fully qualified local path names of files to be removed.  
+ [in] Matriz de nomes de caminho local totalmente qualificado dos arquivos a serem removidos.  
   
  lpComment  
- [in] The comment to be applied to each file being removed.  
+ [in] O comentário a ser aplicado a cada arquivo que está sendo removido.  
   
  fOptions  
- [in] Command flags (unused).  
+ [in] Sinalizadores de comando (não usados).  
   
  pvOptions  
- [in] Source control plug-in-specific options.  
+ [in] Opções de plug-in específico de controle de origem.  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## <a name="return-value"></a>Valor de retorno  
+ A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
   
-|Value|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|SCC_OK|Removal was successful.|  
-|SCC_E_FILENOTCONTROLLED|The selected file is not under source control.|  
-|SCC_E_OPNOTSUPPORTED|The source control system does not support this operation.|  
-|SCC_E_ISCHECKEDOUT|Cannot remove a file because a user currently has it checked out.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure; file was not removed.|  
-|SCC_I_OPERATIONCANCELED|The operation was cancelled before completion.|  
+|SCC_OK|Remoção foi bem-sucedida.|  
+|SCC_E_FILENOTCONTROLLED|O arquivo selecionado não está sob controle de origem.|  
+|SCC_E_OPNOTSUPPORTED|O sistema de controle de origem não oferece suporte a esta operação.|  
+|SCC_E_ISCHECKEDOUT|Não é possível remover um arquivo, porque um usuário tiver feito check-out no momento.|  
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção.|  
+|SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|  
+|SCC_E_NONSPECIFICERROR|Falha não específica; arquivo não foi removido.|  
+|SCC_I_OPERATIONCANCELED|A operação foi cancelada antes da conclusão.|  
   
-## <a name="remarks"></a>Remarks  
- This function removes the files from the source control system but does not delete them from the user's local hard drive.  
+## <a name="remarks"></a>Comentários  
+ Esta função remove os arquivos do sistema de controle de origem, mas não excluí-los do disco rígido local do usuário.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>Consulte também  
+ [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)

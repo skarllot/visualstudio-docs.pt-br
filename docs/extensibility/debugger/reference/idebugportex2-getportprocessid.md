@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::GetPortProcessId | Microsoft Docs
+title: IDebugPortEx2::GetPortProcessId | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: bb01d686214dfe14362db8404c87ddcd2d7e5c4d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 7b75b1e91e6a9c30477ce17b775cfd622162544f
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugportex2getportprocessid"></a>IDebugPortEx2::GetPortProcessId
-Gets the process ID of the port itself.  
+Obtém a ID do processo da porta em si.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetPortProcessId (   
    DWORD* pdwProcessId  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetPortProcessId (   
    out uint pdwProcessId  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwProcessId`  
- [out] Returns the physical process ID of the port itself.  
+ [out] Retorna a ID de processo física da porta em si.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- In the Win32 runtime for example, this method typically calls the Win32 function `GetCurrentProcessId` to get the physical process ID.  
+## <a name="remarks"></a>Comentários  
+ Em tempo de execução do Win32 por exemplo, esse método normalmente chama a função Win32 `GetCurrentProcessId` para obter o ID de processo físico.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::Subtract | Microsoft Docs
+title: IDebugMemoryContext2::Subtract | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,46 +31,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 43704f0c63c2ae08b759a3a7648f81dc8d682236
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3ca21047d59aad2462be7d4aee285431502dce1f
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugmemorycontext2subtract"></a>IDebugMemoryContext2::Subtract
-Subtracts the specified value from the current context and returns a new context.  
+Subtrai o valor especificado do contexto atual e retorna um novo contexto.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT Subtract(   
    UINT64                 dwCount,  
    IDebugMemoryContext2** ppMemCxt  
 );  
 ```  
   
-```csharp  
+```c#  
 int Subtract(  
    ulong                    dwCount,   
    out IDebugMemoryContext2 ppMemCxt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `dwCount`  
- [in] The number of memory bytes to decrement.  
+ [in] O número de bytes de memória para diminuir.  
   
  `ppMemCxt`  
- [out] Returns a new [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object.  
+ [out] Retorna um novo [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objeto.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- A memory context is an address, so subtracting a value from an address produces a new address that requires a new context interface.  
+## <a name="remarks"></a>Comentários  
+ Um contexto de memória é um endereço para que subtrair um valor de um endereço produz um novo endereço que exige uma nova interface de contexto.  
   
- This method must always produce a new context, even if the resulting address is outside the memory space associated with this context. The only exception to this is if no memory can be allocated for the new context or if `ppMemCxt` is a null value (which is an error).  
+ Esse método sempre deve gerar um novo contexto, mesmo se o endereço resultante está fora do espaço de memória associado a esse contexto. A única exceção a isso é se a memória não pode ser alocada para o novo contexto ou `ppMemCxt` é um valor nulo (que é um erro).  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

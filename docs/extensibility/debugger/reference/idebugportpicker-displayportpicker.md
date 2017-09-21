@@ -1,5 +1,5 @@
 ---
-title: IDebugPortPicker::DisplayPortPicker | Microsoft Docs
+title: IDebugPortPicker::DisplayPortPicker | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,41 +29,40 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: bf9e3ffdfe0598718a3b8bc9857c350d5d673ba7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 91f27b781b1cda122b2960fa0964e29df2ded14b
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugportpickerdisplayportpicker"></a>IDebugPortPicker::DisplayPortPicker
-Displays the specified dialog box that allows the user to select a port.  
+Exibe a caixa de diálogo especificada que permite ao usuário selecionar uma porta.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT DisplayPortPicker(  
    HWND hwndParentDialog,  
    BSTR* pbstrPortId  
 );  
 ```  
   
-```csharp  
+```c#  
 public int DisplayPortPicker(  
    int hwndParentDialog,  
    out string pbstrPortId  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `hwndParentDialog`  
- [in] Handle for the parent dialog box.  
+ [in] Identificador para a caixa de diálogo pai.  
   
  `pbstrPortId`  
- [out] Port identifier string.  
+ [out] Cadeia de caracteres de identificador de porta.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. A return value of `S_FALSE` (or a return value of `S_OK` with the `BSTR` set to `NULL`) indicates that the user  clicked **Cancel**.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro. Um valor de retorno de `S_FALSE` (ou um valor de retorno de `S_OK` com o `BSTR` definida como `NULL`) indica que o usuário clicou **Cancelar**.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPortPicker](../../../extensibility/debugger/reference/idebugportpicker.md)

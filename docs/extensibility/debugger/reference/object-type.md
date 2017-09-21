@@ -1,5 +1,5 @@
 ---
-title: OBJECT_TYPE | Microsoft Docs
+title: OBJECT_TYPE | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5cb562b54d088e5f5c5fdb300a8f897e35f82f17
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: b6d1c9eea719af6a01ce4ad4da4d5dab0c7bf38f
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="objecttype"></a>OBJECT_TYPE
-Specifies the type of an object from the expression evaluator.  
+Especifica o tipo de um objeto do avaliador de expressão.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_OBJECT_TYPE {   
    OBJECT_TYPE_BOOLEAN = 0x0,  
    OBJECT_TYPE_CHAR    = 0x1,  
@@ -63,7 +62,7 @@ enum enum_OBJECT_TYPE {
 typedef DWORD OBJECT_TYPE;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_OBJECT_TYPE {   
    OBJECT_TYPE_BOOLEAN = 0x0,  
    OBJECT_TYPE_CHAR    = 0x1,  
@@ -83,63 +82,63 @@ public enum enum_OBJECT_TYPE {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  OBJECT_TYPE_BOOLEAN  
- Indicates that the object is a Boolean.  
+ Indica que o objeto é um valor booleano.  
   
  OBJECT_TYPE_CHAR  
- Indicates that the object is a character.  
+ Indica que o objeto é um caractere.  
   
  OBJECT_TYPE_I1  
- Indicates that the object is a one-byte signed integer.  
+ Indica que o objeto é um inteiro assinado de&1; byte.  
   
  OBJECT_TYPE_U1  
- Indicates that the object is a one-byte unsigned integer.  
+ Indica que o objeto é um inteiro não assinado de&1; byte.  
   
  OBJECT_TYPE_I2  
- Indicates that the object is a two-byte signed integer.  
+ Indica que o objeto é um inteiro assinado de dois bytes.  
   
  OBJECT_TYPE_U2  
- Indicates that the object is a two-byte unsigned integer.  
+ Indica que o objeto é um inteiro não assinado de dois bytes.  
   
  OBJECT_TYPE_I4  
- Indicates that the object is a four-byte signed integer.  
+ Indica que o objeto é um inteiro assinado de quatro bytes.  
   
  OBJECT_TYPE_U4  
- Indicates that the object is a four-byte unsigned integer.  
+ Indica que o objeto é um inteiro não assinado de quatro bytes.  
   
  OBJECT_TYPE_I8  
- Indicates that the object is an eight-byte signed integer.  
+ Indica que o objeto é um inteiro assinado de oito bytes.  
   
  OBJECT_TYPE_U8  
- Indicates that the object is an eight-byte unsigned integer.  
+ Indica que o objeto é um inteiro não assinado de oito bytes.  
   
  OBJECT_TYPE_R4  
- Indicates that the object is a four-byte floating-point number.  
+ Indica que o objeto é um número de ponto flutuante de&4; bytes.  
   
  OBJECT_TYPE_R8  
- Indicates that the object is an eight-byte floating-point number.  
+ Indica que o objeto é um número de ponto flutuante de oito bytes.  
   
  OBJECT_TYPE_OBJECT  
- Indicates that the object is an object.  
+ Indica que o objeto é um objeto.  
   
  OBJECT_TYPE_NULL  
- Indicates that the object is NULL.  
+ Indica que o objeto é nulo.  
   
  OBJECT_TYPE_CLASS  
- Indicates that the object is a class.  
+ Indica que o objeto é uma classe.  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) and [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) methods.  
+## <a name="remarks"></a>Comentários  
+ Passada como um argumento para o [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) e [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) métodos.  
   
-## <a name="requirements"></a>Requirements  
- Header: ee.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: ee.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md)   
  [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)

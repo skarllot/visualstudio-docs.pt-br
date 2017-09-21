@@ -1,5 +1,5 @@
 ---
-title: OPTNAMECHANGEPFN | Microsoft Docs
+title: OPTNAMECHANGEPFN | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9bdd0dfb945e35580a04630cbb0f47830959e5a7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: f4a7adda4b71cc8a4b8cefac065cbec0dd72c83f
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
-This is a callback function specified in a call to the [SccSetOption](../extensibility/sccsetoption-function.md) (using option `SCC_OPT_NAMECHANGEPFN`) and is used to communicate name changes made by the source control plug-in back to the IDE.  
+Essa é uma função de retorno de chamada especificada em uma chamada para o [SccSetOption](../extensibility/sccsetoption-function.md) (usando a opção `SCC_OPT_NAMECHANGEPFN`) e é usado para comunicar alterações de nome feitas pelo controle de origem plug-in para o IDE.  
   
-## <a name="signature"></a>Signature  
+## <a name="signature"></a>Assinatura  
   
-```cpp  
+```cpp#  
 typedef void (*OPTNAMECHANGEPFN)(  
    LPVOID pvCallerData,  
    LPCSTR pszOldName,  
@@ -50,24 +49,24 @@ typedef void (*OPTNAMECHANGEPFN)(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parâmetros  
  pvCallerData  
- [in] User value specified in a previous call to the [SccSetOption](../extensibility/sccsetoption-function.md) (using option `SCC_OPT_USERDATA`).  
+ [in] Valor de usuário especificado em uma chamada anterior para o [SccSetOption](../extensibility/sccsetoption-function.md) (usando a opção `SCC_OPT_USERDATA`).  
   
  pszOldName  
- [in] The original name of the file.  
+ [in] O nome original do arquivo.  
   
  pszNewName  
- [in] The name the file was renamed to.  
+ [in] O nome do arquivo foi renomeado para.  
   
-## <a name="return-value"></a>Return Value  
- None.  
+## <a name="return-value"></a>Valor de retorno  
+ Nenhum.  
   
-## <a name="remarks"></a>Remarks  
- If a file is renamed during a source control operation, the source control plug-in can notify the IDE about the name change through this callback.  
+## <a name="remarks"></a>Comentários  
+ Se um arquivo é renomeado durante uma operação de controle de origem, o plug-in de controle de origem pode notificar o IDE sobre a alteração do nome por meio desse retorno de chamada.  
   
- If the IDE does not support this callback, it will not call the [SccSetOption](../extensibility/sccsetoption-function.md) to specify it. If the plug-in does not support this callback, it will return `SCC_E_OPNOTSUPPORTED` from the `SccSetOption` function when the IDE attempts to set the callback.  
+ Se o IDE não oferece suporte para esse retorno de chamada, ele não chamará o [SccSetOption](../extensibility/sccsetoption-function.md) especificá-lo. Se o plug-in não suporta esse retorno de chamada, ele retornará `SCC_E_OPNOTSUPPORTED` da `SccSetOption` quando o IDE tenta definir o retorno de chamada de função.  
   
-## <a name="see-also"></a>See Also  
- [Callback Functions Implemented by the IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funções de retorno de chamada implementadas pelo IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccSetOption](../extensibility/sccsetoption-function.md)

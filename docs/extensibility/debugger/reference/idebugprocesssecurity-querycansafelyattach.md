@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Docs
+title: IDebugProcessSecurity::QueryCanSafelyAttach | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,34 +28,33 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8f0e6f4942a9151bb95d4f14e074355562016096
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: bd37974453939cb0af7d5a4ff2cd1ff2b5d0315c
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprocesssecurityquerycansafelyattach"></a>IDebugProcessSecurity::QueryCanSafelyAttach
-This method allows the port supplier to display a warning before the user attaches to an unsafe process.  
+Esse método permite que o fornecedor de porta exibir um aviso antes do usuário anexar a um processo não é seguro.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT QueryCanSafelyAttach();  
 ```  
   
-```csharp  
+```c#  
 int QueryCanSafelyAttach();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- The return values are as follows:  
+## <a name="return-value"></a>Valor de retorno  
+ Os valores de retorno são os seguintes:  
   
--   `S_OK`: Attaching to process is safe and no warning dialog box is shown.  
+-   `S_OK`: Anexar a processo é seguro e nenhuma caixa de diálogo de aviso é mostrada.  
   
--   `S_FALSE`: Attaching could be a security problem and a dialog box with a warning is shown.  
+-   `S_FALSE`: Anexando poderia ser um problema de segurança e uma caixa de diálogo com um aviso é mostrada.  
   
--   `FAILURE`: Attaching to process fails.  
+-   `FAILURE`: Anexar a processo falhará.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

@@ -1,5 +1,5 @@
 ---
-title: Customizing the Properties Window | Microsoft Docs
+title: Personalizando a janela Properties | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,126 +18,125 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 82a3e26ffcc0bfaa25efcdc5b57976733fe2af05
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: f8c541d836e2add8233116d285f8a0a4e6be2079
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="customizing-the-properties-window"></a>Customizing the Properties Window
-You can customize the appearance and behavior of the properties window in your domain-specific language (DSL) in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. In your DSL Definition, you define domain properties on each domain class. By default, when you select an instance of the class, either on a diagram or in Model Explorer, every domain property is listed in the properties window. This lets you see and edit the values of domain properties, even if you have not mapped them to shape fields on the diagram.  
+# <a name="customizing-the-properties-window"></a>Personalizando a janela de propriedades
+Você pode personalizar a aparência e o comportamento da janela Propriedades em sua linguagem específica do domínio (DSL) em [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Em sua definição de DSL, você pode definir propriedades de domínio em cada classe de domínio. Por padrão, quando você seleciona uma instância da classe, em um diagrama ou no Gerenciador de modelos, cada propriedade de domínio é listada na janela Propriedades. Isso permite ver e editar os valores das propriedades de domínio, mesmo se você não tiver mapeado-los aos campos de forma no diagrama.  
   
-## <a name="names-descriptions-and-categories"></a>Names, Descriptions, and Categories  
- **Name and Display Name**. In your definition of a domain property, the Display Name of the property is the name that appears at runtime in the properties window. By contrast, the Name is used when you write program code to update the property. The Name must be a correct CLR alphanumeric name, but the Display Name can contain spaces.  
+## <a name="names-descriptions-and-categories"></a>Nomes, descrições e categorias  
+ **Nome e nome para exibição**. Em sua definição de uma propriedade de domínio, o nome para exibição da propriedade é o nome que aparece no tempo de execução na janela Propriedades. Por outro lado, o nome é usado quando você escreve um código de programa para atualizar a propriedade. O nome deve ser um nome alfanumérico correto do CLR, mas o nome de exibição pode conter espaços.  
   
- When you set the Name of a property in the DSL Definition, its Display Name is automatically set to a copy of the Name. If you write a Pascal cased name such as "FuelGauge", the Display Name will automatically contain a space: "Fuel Gauge". However, you can set the Display Name explicitly to another value.  
+ Quando você define o nome de uma propriedade na definição de DSL, seu nome de exibição é definido automaticamente para uma cópia do nome. Se você escrever um nome de maiusculas e minúsculas de Pascal como "FuelGauge", o nome de exibição conterá automaticamente um espaço: "Medidor de combustível". No entanto, você pode definir o nome de exibição explicitamente para outro valor.  
   
- **Description**. The Description of a domain property appears in two places:  
+ **Descrição**. A descrição de uma propriedade de domínio aparece em dois lugares:  
   
--   In the bottom of the properties window when the user selects the property. You can use it to explain to the user what the property represents.  
+-   Na parte inferior da janela Propriedades quando o usuário seleciona a propriedade. Você pode usá-lo para explicar para o usuário que representa a propriedade.  
   
--   In the generated program code. If you use the documentation facilities to extract API documentation, it will appear as the description of this property in the API.  
+-   No código do programa gerado. Se você usar os recursos de documentação para extrair a documentação da API, ele será exibido como a descrição dessa propriedade na API.  
   
- **Category**. A category is a heading in the Properties window.  
+ **Categoria**. Uma categoria é um cabeçalho na janela Propriedades.  
   
-## <a name="exposing-style-features"></a>Exposing Style Features  
- Some of the dynamic features of graphical elements can be represented or *exposed* as domain properties. A feature that has been exposed in this manner can be updated by the user and can more easily be updated by program code.  
+## <a name="exposing-style-features"></a>Expor recursos de estilo  
+ Alguns dos recursos dinâmicos de elementos gráficos podem ser representado ou *expostos* como propriedades do domínio. Um recurso que foi exposto dessa maneira pode ser atualizado pelo usuário e podem mais facilmente ser atualizado pelo código do programa.  
   
- Right-click a shape class in DSL Definition, point to **Add Exposed**, and then choose a feature.  
+ Clique em uma classe de forma na definição de DSL, aponte para **adicionar exposto**e, em seguida, escolha um recurso.  
   
- On shapes you can expose the **FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** and **FillGradientMode** properties. On connectors you can expose the **Color**`,`**TextColor**, **DashStyle**, and **Thickness** properties. On diagrams you can expose the **FillColor** and **TextColor** properties.  
+ Nas formas, você pode expor o **FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** e **FillGradientMode** propriedades. Sobre conectores, você pode expor o **cor**`,`**TextColor**, **DashStyle**, e **espessura** propriedades. Em diagramas pode expor o **FillColor** e **TextColor** propriedades.  
   
-## <a name="forwarding-displaying-properties-of-related-elements"></a>Forwarding: Displaying Properties of Related Elements  
- When the user of your DSL selects an element in a model, that element's properties are displayed in the properties window. However, you can also display the properties of specified related elements. This is useful if you have defined a group of elements that works together. For example, you might define a main element and an optional plug-in element. If the main element is mapped to a shape and the other is not, it is useful to see all their properties as if they were on one element.  
+## <a name="forwarding-displaying-properties-of-related-elements"></a>Encaminhamento: Exibindo propriedades de elementos relacionados  
+ Quando o usuário de sua DSL seleciona um elemento em um modelo, as propriedades do elemento são exibidas na janela Propriedades. No entanto, você também pode exibir as propriedades dos elementos relacionados especificados. Isso é útil se você tiver definido um grupo de elementos que funciona em conjunto. Por exemplo, você pode definir um elemento principal e um elemento de plug-in opcional. Se o elemento principal é mapeado para uma forma e o outro não, é útil ver todas as suas propriedades, como se estivessem em um elemento.  
   
- This effect is named *property forwarding*, and it happens automatically in several cases. In other cases, you can achieve property forwarding by defining a domain type descriptor.  
+ Esse efeito é chamado *encaminhamento de propriedade*, e isso ocorre automaticamente em vários casos. Em outros casos, você pode obter a propriedade encaminhamento definindo um descritor de tipo de domínio.  
   
-### <a name="default-property-forwarding-cases"></a>Default Property Forwarding Cases  
- When the user selects a shape or connector, or an element in the Explorer, the following properties are displayed in the Properties window:  
+### <a name="default-property-forwarding-cases"></a>Casos de encaminhamento de propriedade padrão  
+ Quando o usuário seleciona uma forma ou conector ou um elemento no Explorer, as seguintes propriedades são exibidas na janela Propriedades:  
   
--   The domain properties that are defined on the domain class of the model element, including those that are defined in base classes. An exception is domain properties for which you have set **Is Browsable** to `False`.  
+-   As propriedades do domínio que são definidas na classe de domínio do elemento de modelo, incluindo aqueles que são definidos nas classes base. Uma exceção é propriedades do domínio para o qual você definiu **é navegável** para `False`.  
   
--   The names of elements that are linked through relationships that have a multiplicity of 0..1. This provides a convenient method of seeing optionally linked elements, even if you have not defined a connector mapping for the relationship.  
+-   Os nomes dos elementos que estão vinculados por meio de relações que tenham uma multiplicidade de 0..1. Isso fornece um método conveniente de ver opcionalmente vinculado elementos, mesmo se você não definiu um mapeamento de conector para a relação.  
   
--   Domain properties of the embedding relationship that targets the element. Because embedding relationships are usually not displayed explicitly, this lets the user see their properties.  
+-   Propriedades do domínio da relação de incorporação que tem como alvo o elemento. Como relações de incorporação não são geralmente exibidas explicitamente, isso permite que o usuário ver suas propriedades.  
   
--   Domain properties that are defined on the selected shape or connector.  
+-   Propriedades de domínio que são definidas na forma selecionada ou conector.  
   
-### <a name="adding-property-forwarding"></a>Adding Property Forwarding  
- To forward a property, you define a domain type descriptor. If you have a domain relationship between two domain classes, you can use a domain type descriptor to set a domain property in the first class to the value of a domain property in the second domain class. For example, if you have a relationship between a **Book** domain class and an **Author** domain class, you can use a domain type descriptor to make the **Name** property of a Book's **Author** appear in the Properties window when the user selects the Book.  
+### <a name="adding-property-forwarding"></a>Adicionando o encaminhamento de propriedade  
+ Para encaminhar uma propriedade, você deve definir um descritor de tipo de domínio. Se você tiver uma relação de domínio entre duas classes de domínio, você pode usar um descritor de tipo de domínio para definir uma propriedade de domínio na primeira classe para o valor de uma propriedade de domínio na segunda classe de domínio. Por exemplo, se você tiver uma relação entre um **livro** classe de domínio e um **autor** classe de domínio, você pode usar um descritor de tipo de domínio para fazer o **nome** propriedade de um livro **autor** aparecem na janela de propriedades quando o usuário seleciona o catálogo.  
   
 > [!NOTE]
->  Property forwarding affects only the Properties window when the user is editing a model. It does not define a domain property on the receiving class. If you want to access the forwarded domain property in other parts of the DSL Definition or in program code, you must access the forwarding element.  
+>  Encaminhamento de propriedade afeta somente a janela de propriedades quando o usuário está editando um modelo. Ele não define uma propriedade de domínio na classe receptora. Se você quiser acessar a propriedade de domínio encaminhados em outras partes da definição de DSL ou no código do programa, você deve acessar o elemento de encaminhamento.  
   
- The following procedure assumes that you have created a DSL. The first few steps summarize the prerequisites.  
+ O procedimento a seguir pressupõe que você tenha criado uma DSL. As primeiro algumas etapas resumem os pré-requisitos.  
   
-##### <a name="to-forward-a-property-from-another-element"></a>To forward a property from another element  
+##### <a name="to-forward-a-property-from-another-element"></a>Para encaminhar uma propriedade de outro elemento  
   
-1.  Create a [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] solution that contains at least two classes, which in this example are called **Book** and **Author**. There should be a relationship of either kind between **Book** and **Author**.  
+1.  Criar um [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] solução que contém pelo menos duas classes, que, neste exemplo, é chamado **livro** e **autor**. Deve haver uma relação de qualquer tipo entre **livro** e **autor**.  
   
-     The multiplicity of the source role (the role at the **Book** side) should be 0..1 or 1..1, so that each **Book** has one **Author**.  
+     A multiplicidade da função de origem (a função no **livro** lado) deve ser 0..1 ou 1..1, então cada **livro** tem um **autor**.  
   
-2.  In **DSL Explorer**, right-click the **Book** domain class, and then click **Add New DomainTypeDescriptor**.  
+2.  Em **Gerenciador de DSL**, com o botão direito do **livro** classe de domínio e clique **adicionar novo DomainTypeDescriptor**.  
   
-     A node named **Paths of Custom Property Descriptors** appears under the **Custom Type Descriptor** node.  
+     Um nó chamado **caminhos de descritores de propriedade personalizada** aparece sob o **descritor de tipo personalizado** nó.  
   
-3.  Right-click the **Custom Type Descriptor** node, and then click **Add New PropertyPath**.  
+3.  Clique com botão direito do **descritor de tipo personalizado** nó e depois clique em **adicionar novo PropertyPath**.  
   
-     A new property path appears under the **Paths Of Custom Property Descriptors** node.  
+     Um novo caminho de propriedade aparece sob o **caminhos de descritores de propriedade personalizada** nó.  
   
-4.  Select the new property path, and in the **Properties** window, set **Path to Property** to the path of the appropriate model element.  
+4.  Selecione o novo caminho de propriedade e no **propriedades** janela, defina **caminho para a propriedade** para o caminho do elemento de modelo apropriado.  
   
-     You can edit the path in a tree view by clicking the down arrow to the right of this property. For more information about domain paths, see [Domain Path Syntax](../modeling/domain-path-syntax.md). When you have edited it, the path should resemble **BookReferencesAuthor.Author/!Author**.  
+     Você pode editar o caminho em uma exibição em árvore clicando na seta para baixo à direita da propriedade. Para obter mais informações sobre os caminhos de domínio, consulte [sintaxe de caminho do domínio](../modeling/domain-path-syntax.md). Quando tiver editado, o caminho deve se parecer com **BookReferencesAuthor.Author/! Autor**.  
   
-5.  Set **Property** to the **Name** domain property of **Author**.  
+5.  Definir **propriedade** para o **nome** propriedade domain da **autor**.  
   
-6.  Set **Display Name** to **Author Name**.  
+6.  Definir **exibir nome** para **nome do autor**.  
   
-7.  Transform All Templates, build and run the DSL.  
+7.  Transformar todos os modelos, compile e execute a DSL.  
   
-8.  In a model diagram, create a book, an author, and link them using the reference relationship. Select the book element, and in the Properties window you should see Author Name in addition to the properties of the book. Change the name of the linked author, or link the book to a different author, and observe that the Author Name of the book changes.  
+8.  Em um diagrama de modelo, crie um livro, um autor e vinculá-los usando a relação de referência. Selecione o elemento de livro e na janela Propriedades, você verá o nome do autor além das propriedades do livro. Alterar o nome do autor vinculado, ou vincular o catálogo para um autor diferente e observe que altera o nome do autor do livro.  
   
-## <a name="custom-property-editors"></a>Custom Property Editors  
- The property window provides an appropriate default editing experience for the type of each domain property. For example, for an enumerated type, the user sees a drop-down list, and for a numeric property, the user can enter digits. This is only true for the built-in types. If you specify an external type, the user will be able to see the property's values, but not edit it.  
+## <a name="custom-property-editors"></a>Editores de propriedade personalizada  
+ A janela de propriedade fornece um padrão apropriado editando experiência para o tipo de cada propriedade de domínio. Por exemplo, para um tipo enumerado, o usuário vê uma lista suspensa, e para uma propriedade numérica, o usuário pode inserir dígitos. Isso é verdadeiro somente para os tipos internos. Se você especificar um tipo externo, o usuário será capaz de ver os valores da propriedade, mas não editá-lo.  
   
- However, you can specify the following editors and types:  
+ No entanto, você pode especificar os editores e tipos a seguir:  
   
-1.  Another editor that is used with a standard type. For example, you could specify a file path editor for a string property.  
+1.  Outro editor que é usado com um tipo padrão. Por exemplo, você pode especificar um editor de caminho de arquivo para uma propriedade de cadeia de caracteres.  
   
-2.  An external type for the domain property, and an editor for it.  
+2.  Um tipo externo para a propriedade de domínio e um editor para ele.  
   
-3.  A .NET editor such as the file path editor, or you can create your own custom property editor.  
+3.  Um editor de .NET, como o editor de caminho de arquivo, ou você pode criar sua própria propriedade personalizada editor.  
   
-     A conversion between an external type and an type such as String, which has a default editor.  
+     A conversão entre um tipo externo e um tipo como cadeia de caracteres, que tem um editor padrão.  
   
- In a DSL, an *external type* is any type that is not one of the simple types (such as Boolean or Int32) or String.  
+ Em uma DSL, uma *tipo externo* é qualquer tipo que não é um dos tipos simples (como Int32 ou boolianos) ou cadeia de caracteres.  
   
-#### <a name="to-define-a-domain-property-that-has-an-external-type"></a>To define a domain property that has an external type  
+#### <a name="to-define-a-domain-property-that-has-an-external-type"></a>Para definir uma propriedade de domínio que tenha um tipo externo  
   
-1.  In **Solution Explorer**, add a reference to the assembly (DLL) that contains the external type, in the **Dsl** project.  
+1.  Em **Solution Explorer**, adicione uma referência ao assembly (DLL) que contém o tipo externo, o **Dsl** projeto.  
   
-     The assembly can be a .NET assembly, or an assembly supplied by you.  
+     O assembly pode ser um .NET assembly ou um assembly fornecido por você.  
   
-2.  Add the type to the **Domain Types** list, unless you have already done so.  
+2.  Adicione o tipo para o **tipos de domínio** lista, a menos que você já tiver feito isso.  
   
-    1.  Open DslDefinition.dsl, and in **DSL Explorer**, right-click the root node, and then click **Add New External Type**.  
+    1.  Abra o Dsldefinition e em **Gerenciador de DSL**, com o botão direito no nó raiz e, em seguida, clique em **adicionar novo tipo externo**.  
   
-         A new entry appears under the **Domain Types** node.  
+         Uma nova entrada aparece sob o **tipos de domínio** nó.  
   
         > [!WARNING]
-        >  The menu item is on the DSL root node, not the **Domain Types** node.  
+        >  O item de menu não está no nó raiz do DSL, o **tipos de domínio** nó.  
   
-    2.  Set the name and the namespace of the new type in the Properties window.  
+    2.  Na janela Propriedades, defina o nome e o namespace do novo tipo.  
   
-3.  Add a domain property to a domain class in the usual manner.  
+3.  Adicione uma propriedade de domínio a uma classe de domínio da maneira usual.  
   
-     In the Properties window, select the external type from the drop-down list in the **Type** field.  
+     Na janela Propriedades, selecione o tipo externo da lista suspensa no **tipo** campo.  
   
- At this stage, users can view the values of the property, but they cannot edit it. The displayed values are obtained from the `ToString()` function. You could write program code that sets the value of the property, for example in a command or rule.  
+ Nesse estágio, os usuários podem exibir os valores da propriedade, mas eles não podem editá-lo. Os valores exibidos são obtidos de `ToString()` função. Você pode escrever o código do programa que define o valor da propriedade, por exemplo, em um comando ou uma regra.  
   
-### <a name="setting-a-property-editor"></a>Setting a Property Editor  
- Add a CLR attribute to the domain property, in the following form:  
+### <a name="setting-a-property-editor"></a>Um Editor de propriedade de configuração  
+ Adicione um atributo CLR para a propriedade de domínio, da seguinte forma:  
   
 ```  
 [System.ComponentModel.Editor (  
@@ -146,17 +145,17 @@ You can customize the appearance and behavior of the properties window in your d
   
 ```  
   
- You can set the attribute on a property by using the **Custom Attribute** entry in the Properties window.  
+ Você pode definir o atributo em uma propriedade usando o **atributo personalizado** entrada na janela Propriedades.  
   
- The type of `AnEditor` must be derived from the type specified in the second parameter. The second parameter should be either <xref:System.Drawing.Design.UITypeEditor> or <xref:System.ComponentModel.ComponentEditor>. For more information, see <xref:System.ComponentModel.EditorAttribute>.  
+ O tipo de `AnEditor` deve ser derivado do tipo especificado no segundo parâmetro. O segundo parâmetro deve ser um <xref:System.Drawing.Design.UITypeEditor>ou <xref:System.ComponentModel.ComponentEditor>.</xref:System.ComponentModel.ComponentEditor> </xref:System.Drawing.Design.UITypeEditor> Para obter mais informações, consulte <xref:System.ComponentModel.EditorAttribute>.</xref:System.ComponentModel.EditorAttribute>  
   
- You can specify either your own editor, or an editor supplied in the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)], such as <xref:System.Windows.Forms.Design.FileNameEditor> or <xref:System.Drawing.Design.ImageEditor>. For example, use the following procedure to have a property in which the user can enter a file name.  
+ Você pode especificar seu próprio editor ou um editor fornecido no [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)], como <xref:System.Windows.Forms.Design.FileNameEditor>ou <xref:System.Drawing.Design.ImageEditor>.</xref:System.Drawing.Design.ImageEditor> </xref:System.Windows.Forms.Design.FileNameEditor> Por exemplo, use o procedimento a seguir para ter uma propriedade na qual o usuário pode digitar um nome de arquivo.  
   
-##### <a name="to-define-a-file-name-domain-property"></a>To define a file name domain property  
+##### <a name="to-define-a-file-name-domain-property"></a>Para definir uma propriedade de domínio de nome de arquivo  
   
-1.  Add a domain property to a domain class in your DSL Definition.  
+1.  Adicione uma propriedade de domínio a uma classe de domínio em sua definição de DSL.  
   
-2.  Select the new property. In the **Custom Attribute** field in the Properties window, enter the following attribute. To enter this attribute, click the ellipsis **[...]** and then enter the attribute name and the parameters separately:  
+2.  Selecione a nova propriedade. No **atributo personalizado** na janela Propriedades, insira o seguinte atributo. Para inserir esse atributo, clique no botão de reticências **[...] ** e insira o nome do atributo e os parâmetros separadamente:  
   
     ```  
     [System.ComponentModel.Editor (  
@@ -165,31 +164,31 @@ You can customize the appearance and behavior of the properties window in your d
   
     ```  
   
-3.  Leave the Type of the domain property at its default setting of **String**.  
+3.  Deixe o tipo da propriedade de domínio em sua configuração padrão de **cadeia de caracteres**.  
   
-4.  To test the editor, verify that users can open the file name editor to edit your domain property.  
+4.  Para testar o editor, verifique se que os usuários podem abrir o editor de nome de arquivo para editar a propriedade de domínio.  
   
-    1.  Press CTRL+F5 or F5. In the debugging solution, open a test file. Create an element of the domain class and select it.  
+    1.  Pressione CTRL + F5 ou F5. Na solução de depuração, abra um arquivo de teste. Crie um elemento da classe de domínio e selecioná-lo.  
   
-    2.  In the Properties window, select the domain property. The value field shows an ellipsis **[...]**.  
+    2.  Na janela Propriedades, selecione a propriedade de domínio. O campo de valor mostra uma elipse **[...] **.  
   
-    3.  Click the ellipsis. A file dialog box appears. Select a file and close the dialog box. The file path is now the value of the domain property.  
+    3.  Clique no botão de reticências. Uma caixa de diálogo é exibida. Selecione um arquivo e feche a caixa de diálogo. O caminho do arquivo agora é o valor da propriedade de domínio.  
   
-### <a name="defining-your-own-property-editor"></a>Defining your own property editor  
- You can define your own editor. You would do this to  allow the user either to edit a type that you have defined, or to edit a standard type in a special way. For example, you could allow the user to input a string that represents a formula.  
+### <a name="defining-your-own-property-editor"></a>Definir seu próprio editor de propriedade  
+ Você pode definir seu próprio editor. Você faria isso para permitir ao usuário editar um tipo que você definiu ou editar um tipo de padrão de uma maneira especial. Por exemplo, você pode permitir que o usuário insira uma cadeia de caracteres que representa uma fórmula.  
   
- You define an editor by writing a class that is derived from <xref:System.Drawing.Design.UITypeEditor>. Your class must override:  
+ Define um editor, escrevendo uma classe que é derivada de <xref:System.Drawing.Design.UITypeEditor>.</xref:System.Drawing.Design.UITypeEditor> Sua classe deve substituir:  
   
--   <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>, to interact with the user and update the property value.  
+-   <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>, para interagir com o usuário e atualizar o valor da propriedade.</xref:System.Drawing.Design.UITypeEditor.EditValue%2A>  
   
--   <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>, to specify whether your editor will open a dialog or provide a drop-down menu.  
+-   <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>, para especificar se o editor será abrir uma caixa de diálogo ou fornecer um menu suspenso.</xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>  
   
- You can also provide a graphical representation of the property's value that will be displayed in the property grid. To do this, override `GetPaintValueSupported`, and `PaintValue`.  For more information, see <xref:System.Drawing.Design.UITypeEditor>.  
+ Você também pode fornecer uma representação gráfica do valor da propriedade que será exibido na grade de propriedade. Para fazer isso, substitua `GetPaintValueSupported`, e `PaintValue`.  Para obter mais informações, consulte <xref:System.Drawing.Design.UITypeEditor>.</xref:System.Drawing.Design.UITypeEditor>  
   
 > [!NOTE]
->  Add the code in a separate code file in the **Dsl** project.  
+>  Adicione o código em um arquivo de código separado no **Dsl** projeto.  
   
- For example:  
+ Por exemplo:  
   
 ```  
 internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor  
@@ -204,7 +203,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- To use this editor, set the **Custom Attribute** of a domain property to:  
+ Para usar este editor, defina o **atributo personalizado** de uma propriedade de domínio para:  
   
 ```  
 [System.ComponentModel.Editor (  
@@ -213,15 +212,15 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- For more information, see <xref:System.Drawing.Design.UITypeEditor>.  
+ Para obter mais informações, consulte <xref:System.Drawing.Design.UITypeEditor>.</xref:System.Drawing.Design.UITypeEditor>  
   
-## <a name="providing-a-drop-down-list-of-values"></a>Providing a drop-down list of values  
- You can provide a list of values for a user to choose from.  
+## <a name="providing-a-drop-down-list-of-values"></a>Fornecendo uma lista suspensa de valores  
+ Você pode fornecer uma lista de valores para um usuário à sua escolha.  
   
 > [!NOTE]
->  This technique provides a list of values that can change at runtime. If you want to provide a list that does not change, consider instead using an enumerated type as the type of your domain property.  
+>  Essa técnica fornece uma lista de valores que podem ser alterados em tempo de execução. Se você quiser fornecer uma lista que não são alterados, em vez disso, considere usar um tipo enumerado como o tipo de propriedade de seu domínio.  
   
- To define a list of standard values, you add to your domain property a CLR attribute that has the following form:  
+ Para definir uma lista de valores padrão, você adicionar à sua propriedade de domínio um atributo CLR que tem a seguinte forma:  
   
 ```  
 [System.ComponentModel.TypeConverter   
@@ -229,9 +228,9 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- Define a class that derives from <xref:System.ComponentModel.TypeConverter>. Add the code in a separate file in the **Dsl** project. For example:  
+ Definir uma classe que deriva de <xref:System.ComponentModel.TypeConverter>.</xref:System.ComponentModel.TypeConverter> Adicione o código em um arquivo separado no **Dsl** projeto. Por exemplo:  
   
-```csharp  
+```c#  
 /// <summary>  
 /// Type converter that provides a list of values   
 /// to be displayed in the property grid.  
@@ -323,5 +322,5 @@ public class MyTypeConverter : System.ComponentModel.TypeConverter
   
 ```  
   
-## <a name="see-also"></a>See Also  
- [Navigating and Updating a Model in Program Code](../modeling/navigating-and-updating-a-model-in-program-code.md)
+## <a name="see-also"></a>Consulte também  
+ [Navegando por um modelo no código do programa e atualizando-o](../modeling/navigating-and-updating-a-model-in-program-code.md)

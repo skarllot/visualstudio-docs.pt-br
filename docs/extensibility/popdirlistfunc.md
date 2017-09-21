@@ -1,5 +1,5 @@
 ---
-title: POPDIRLISTFUNC | Microsoft Docs
+title: POPDIRLISTFUNC | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,21 +30,20 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: cb56a3e8f90ed31d051f28fe7cfe99be154d2696
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 52eccf6e4cccffa894707672b3d48e8f176fff32
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="popdirlistfunc"></a>POPDIRLISTFUNC
-This is a callback function given to the [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) function to update a collection of directories and (optionally) file names to find out which are under source control.  
+Essa é uma função de retorno de chamada fornecida para o [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) função para atualizar um conjunto de diretórios e (opcionalmente) nomes de arquivo para descobrir que estão sob controle de origem.  
   
- The `POPDIRLISTFUNC` callback should be called only for those directories and file names (in the list given to the `SccPopulateDirList` function) that are actually under source control.  
+ O `POPDIRLISTFUNC` retorno de chamada deve ser chamado somente para os nomes dos arquivos e diretórios (na lista fornecida para a `SccPopulateDirList` função) que são realmente sob controle de origem.  
   
-## <a name="signature"></a>Signature  
+## <a name="signature"></a>Assinatura  
   
-```cpp  
+```cpp#  
 typedef BOOL (*POPDIRLISTFUNC)(  
    LPVOID pvCallerData,  
    BOOL bFolder,  
@@ -52,29 +51,29 @@ typedef BOOL (*POPDIRLISTFUNC)(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parâmetros  
  pvCallerData  
- [in] User value given to [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md).  
+ [in] Valor de usuário fornecido para [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md).  
   
- bFolder  
- [in] `TRUE` if the name in `lpDirectoryOrFileName` is a directory; otherwise the name is a file name.  
+ bOpções de pasta  
+ [in] `TRUE` se o nome no `lpDirectoryOrFileName` é um diretório; caso contrário, o nome é um nome de arquivo.  
   
  lpDirectoryOrFileName  
- [in] Full local path to a directory or file name that is under source code control.  
+ [in] Caminho local completo para um nome de diretório ou arquivo que está sob controle do código fonte.  
   
-## <a name="return-value"></a>Return Value  
- The IDE returns an appropriate error code:  
+## <a name="return-value"></a>Valor de retorno  
+ O IDE retorna um código de erro apropriado:  
   
-|Value|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|SCC_OK|Continue processing.|  
-|SCC_I_OPERATIONCANCELED|Stop processing.|  
-|SCC_E_xxx|Any appropriate source control error should stop processing.|  
+|SCC_OK|Continue o processamento.|  
+|SCC_I_OPERATIONCANCELED|Pare o processamento.|  
+|SCC_E_xxx|Qualquer erro de controle de origem apropriada deve parar o processamento.|  
   
-## <a name="remarks"></a>Remarks  
- If the `fOptions` parameter of the `SccPopulateDirList` function contains the `SCC_PDL_INCLUDEFILES` flag, then the list will possibly contain file names as well as directory names.  
+## <a name="remarks"></a>Comentários  
+ Se o `fOptions` parâmetro o `SccPopulateDirList` função contém o `SCC_PDL_INCLUDEFILES` sinalizador, em seguida, a lista possivelmente contém nomes de arquivo, como também os nomes de diretório.  
   
-## <a name="see-also"></a>See Also  
- [Callback Functions Implemented by the IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funções de retorno de chamada implementadas pelo IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)   
- [Error Codes](../extensibility/error-codes.md)
+ [Códigos de erro](../extensibility/error-codes.md)

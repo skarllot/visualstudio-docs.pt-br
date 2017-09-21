@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetDebugProperty | Microsoft Docs
+title: IDebugProgram2::GetDebugProperty | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,43 +30,42 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 3b7025ba661a864cecd4f7fc32a69486746b776c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: f37c9611cf3f93f3b2ca15be0c3b58ac5d6ec630
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprogram2getdebugproperty"></a>IDebugProgram2::GetDebugProperty
-Gets the program's properties.  
+Obtém as propriedades do programa.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetDebugProperty(   
    IDebugProperty2** ppProperty  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetDebugProperty(   
    out IDebugProperty2 ppProperty  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppProperty`  
- [out] Returns an [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object that represents the program's properties.  
+ [out] Retorna um [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto que representa as propriedades do programa.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The properties returned by this method are specific to the program. If the program needs to return more than one property, then the [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object returned by this method is a container of additional properties and calling the [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) method returns a list of all properties.  
+## <a name="remarks"></a>Comentários  
+ As propriedades retornadas por esse método são específicas para o programa. Se o programa precisa retornar mais de uma propriedade, o [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objeto retornado por esse método é um recipiente de propriedades adicionais e chamar o [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) método retorna uma lista de todas as propriedades.  
   
- A program may expose any number and type of additional properties that can be described through the `IDebugProperty2` interface. An IDE might display the additional program properties through a generic property browser user interface.  
+ Um programa pode expor qualquer número e tipo de propriedades adicionais que podem ser descritas por meio de `IDebugProperty2` interface. Um IDE pode exibir as propriedades adicionais do programa por meio de uma interface de usuário do navegador de propriedade genérica.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)

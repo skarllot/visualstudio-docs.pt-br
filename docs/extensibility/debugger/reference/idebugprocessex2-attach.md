@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2::Attach | Microsoft Docs
+title: IDebugProcessEx2::Attach | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 44e7b5313b0efeb4895cfa53ebacd5397ef97bc5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: e8928974462eb8e75f3cd75432c697ac0969e67e
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprocessex2attach"></a>IDebugProcessEx2::Attach
-This method informs the process that a session is now debugging the process.  
+Esse método informa o processo que uma sessão agora depurar o processo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT Attach(   
    IDebugSession2* pSession  
 );  
 ```  
   
-```csharp  
+```c#  
 int Attach(  
    IDebugSession2 pSession  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pSession`  
- [in] A value that uniquely identifies the session attaching to this process.  
+ [in] Um valor que identifica exclusivamente a sessão anexar a esse processo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The interface passed in `pSession` is to be treated only as a cookie, a value that uniquely identifies the session debug manager attaching to this process; none of the methods on the supplied interface are functional.  
+## <a name="remarks"></a>Comentários  
+ A interface passado `pSession` deve ser tratada apenas como um cookie, um valor que identifica exclusivamente o Gerenciador de sessão de depuração anexar a esse processo; nenhum dos métodos na interface fornecido está funcional.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

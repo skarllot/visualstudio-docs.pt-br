@@ -1,5 +1,5 @@
 ---
-title: Persisting the Property of a Project Item | Microsoft Docs
+title: Mantendo a propriedade de um Item de projeto | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,25 +29,24 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9693a6e79af44f7e71aeea75f7a490bc500e72d7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 2edc6e8d6ddc1001dd2859b121ede3b8703118d7
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="persisting-the-property-of-a-project-item"></a>Persisting the Property of a Project Item
-You may want to persist a property you add to a project item, such as the author of a source file. You can do this by storing the property in the project file.  
+# <a name="persisting-the-property-of-a-project-item"></a>Mantendo a propriedade de um Item de projeto
+Você talvez queira manter uma propriedade que você adicionar a um item de projeto, como o autor de um arquivo de origem. Você pode fazer isso com o armazenamento de propriedade no arquivo de projeto.  
   
- The first step to persist a property in a project file is to obtain the hierarchy of the project as an <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> interface. You can obtain this interface either by using Automation or by using <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>. Once you obtain the interface, you can use it to determine which project item is currently selected. Once you have the project item ID, you can use <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> to add the property.  
+ A primeira etapa para manter uma propriedade em um arquivo de projeto é obter a hierarquia do projeto como um <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>interface.</xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> Você pode obter essa interface usando automação ou usando <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>.</xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> Depois de obter a interface, você pode usá-lo para determinar qual item de projeto está selecionado no momento. Uma vez que a ID do item de projeto, você pode usar <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A>para adicionar a propriedade.</xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A>  
   
- In the following procedures, you persist the VsPkg.cs property `Author` with the value `Tom` in the project file.  
+ Nos procedimentos a seguir, você manter a propriedade de VsPkg.cs `Author` com o valor `Tom` no arquivo de projeto.  
   
-### <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>To obtain the project hierarchy with the DTE object  
+### <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>Para obter a hierarquia de projeto com o objeto DTE  
   
-1.  Add the following code to your VSPackage:  
+1.  Adicione o seguinte código para o VSPackage:  
   
-    ```csharp  
+    ```c#  
     EnvDTE.DTE dte = (EnvDTE.DTE)Package.GetGlobalService(typeof(EnvDTE.DTE));  
     EnvDTE.Project project = dte.Solution.Projects.Item(1);  
   
@@ -57,11 +56,11 @@ You may want to persist a property you add to a project item, such as the author
     solution.GetProjectOfUniqueName(uniqueName, out hierarchy);  
     ```  
   
-### <a name="to-persist-the-project-item-property-with-the-dte-object"></a>To persist the project item property with the DTE object  
+### <a name="to-persist-the-project-item-property-with-the-dte-object"></a>Para manter a propriedade de item de projeto com o objeto DTE  
   
-1.  Add the following code to the code given in the method in the previous procedure:  
+1.  Adicione o seguinte código para o código fornecido no método no procedimento anterior:  
   
-    ```csharp  
+    ```c#  
     IVsBuildPropertyStorage buildPropertyStorage =   
         hierarchy as IVsBuildPropertyStorage;  
     if (buildPropertyStorage != null)  
@@ -74,11 +73,11 @@ You may want to persist a property you add to a project item, such as the author
     }  
     ```  
   
-### <a name="to-obtain-the-project-hierarchy-using-ivsmonitorselection"></a>To obtain the project hierarchy using IVsMonitorSelection  
+### <a name="to-obtain-the-project-hierarchy-using-ivsmonitorselection"></a>Para obter a hierarquia de projeto usando IVsMonitorSelection  
   
-1.  Add the following code to your VSPackage:  
+1.  Adicione o seguinte código para o VSPackage:  
   
-    ```csharp  
+    ```c#  
     IVsHierarchy hierarchy = null;  
     IntPtr hierarchyPtr = IntPtr.Zero;  
     IntPtr selectionContainer = IntPtr.Zero;  
@@ -120,9 +119,9 @@ You may want to persist a property you add to a project item, such as the author
   
 2.  
   
-### <a name="to-persist-the-selected-project-item-property-given-the-project-hierarchy"></a>To persist the selected project item property, given the project hierarchy  
+### <a name="to-persist-the-selected-project-item-property-given-the-project-hierarchy"></a>Para manter a propriedade de item de projeto selecionado, dada a hierarquia de projeto  
   
-1.  Add the following code to the code given in the method in the previous procedure:  
+1.  Adicione o seguinte código para o código fornecido no método no procedimento anterior:  
   
     ```  
     IVsBuildPropertyStorage buildPropertyStorage =   
@@ -133,18 +132,18 @@ You may want to persist a property you add to a project item, such as the author
     }  
     ```  
   
-### <a name="to-verify-that-the-property-is-persisted"></a>To verify that the property is persisted  
+### <a name="to-verify-that-the-property-is-persisted"></a>Para verificar se a propriedade é persistida  
   
-1.  Start [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] and then open or create a solution.  
+1.  Iniciar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e, em seguida, abra ou crie uma solução.  
   
-2.  Select the project item VsPkg.cs in **Solution Explorer**.  
+2.  Selecione o projeto item VsPkg.cs na **Solution Explorer**.  
   
-3.  Use a breakpoint or otherwise determine that your VSPackage is loaded and that SetItemAttribute runs.  
+3.  Use um ponto de interrupção ou caso contrário, determinar que o VSPackage é carregado e SetItemAttribute é executado.  
   
     > [!NOTE]
-    >  You can autoload a VSPackage in the UI context <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT_SolutionExists>. For more information, see [Loading VSPackages](../extensibility/loading-vspackages.md).  
+    >  Você pode carregar um VSPackage automaticamente no contexto da interface do usuário <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT_SolutionExists>.</xref:Microsoft.VisualStudio.VSConstants.UICONTEXT_SolutionExists> Para obter mais informações, consulte [VSPackages Carregando](../extensibility/loading-vspackages.md).  
   
-4.  Close [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] and then open the project file in Notepad. You should see the \<Author> tag with the value Tom, as follows:  
+4.  Fechar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e, em seguida, abra o arquivo de projeto no bloco de notas. Você deve ver o \<autor > marca com o valor de Tom, da seguinte maneira:  
   
     ```  
     <Compile Include="VsPkg.cs">  
@@ -152,5 +151,5 @@ You may want to persist a property you add to a project item, such as the author
     </Compile>  
     ```  
   
-## <a name="see-also"></a>See Also  
- [Custom Tools](../extensibility/internals/custom-tools.md)
+## <a name="see-also"></a>Consulte também  
+ [Ferramentas personalizadas](../extensibility/internals/custom-tools.md)

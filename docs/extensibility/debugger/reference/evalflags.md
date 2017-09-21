@@ -1,5 +1,5 @@
 ---
-title: EVALFLAGS | Microsoft Docs
+title: EVALFLAGS | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c9b711eb4ac8eea64c797c533528069807a1d18a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 794ef7e68c60f2958dcbb3dcf7c6b4c069a09e41
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="evalflags"></a>EVALFLAGS
-Specifies flags that control expression evaluation.  
+Especifica sinalizadores que controlam a avaliação da expressão.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_EVALFLAGS {  
    EVAL_RETURNVALUE = 0x0002,  
    EVAL_NOSIDEEFFECTS = 0x0004,  
@@ -55,7 +54,7 @@ enum enum_EVALFLAGS {
 typedef DWORD EVALFLAGS;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_EVALFLAGS {  
    EVAL_RETURNVALUE = 0x0002,  
    EVAL_NOSIDEEFFECTS = 0x0004,  
@@ -67,41 +66,41 @@ public enum enum_EVALFLAGS {
 }  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  EVAL_RETURNVALUE  
- Specifies that the return value, if any, be evaluated.  
+ Especifica que o valor de retorno, se houver, deve ser avaliada.  
   
  EVAL_NOSIDEEFFECTS  
- Specifies that side effects not be allowed.  
+ Especifica que efeitos colaterais não serão permitidas.  
   
  EVAL_ALLOWBPS  
- Specifies stopping on breakpoints.  
+ Especifica parar em pontos de interrupção.  
   
  EVAL_ALLOWERRORREPORT  
- Specifies error reporting to the host to be allowed. Primarily used for expression evaluation in script in Internet Explorer.  
+ Especifica o relatório de erros para o host a ser permitido. Usada principalmente para a avaliação da expressão em script no Internet Explorer.  
   
  EVAL_FUNCTION_AS_ADDRESS  
- Forces functions to be evaluated as addresses, instead of invoking the function.  
+ Funções de força a ser avaliada como endereços, em vez de chamar a função.  
   
  EVAL_NOFUNCEVAL  
- Prevents function from being evaluated. For example, consider the `int` token in the expression `myExpression(int) + 10`. This function can be correctly evaluated as an address, but not as a value.  
+ Impede que a função está sendo avaliada. Por exemplo, considere o `int` token na expressão `myExpression(int) + 10`. Essa função pode ser avaliada corretamente como um endereço, mas não como um valor.  
   
  EVAL_NOEVENTS  
- Flag to indicate that events that occur during the expression evaluation should not be sent to the session debug manager (SDM) or to the IDE.  
+ Sinalizador para indicar que os eventos que ocorrem durante a avaliação de expressão não devem ser enviados para o Gerenciador de sessão de depuração (SDM) ou para o IDE.  
   
-## <a name="remarks"></a>Remarks  
- These flags are passed as an argument to the [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) and [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) methods.  
+## <a name="remarks"></a>Comentários  
+ Esses sinalizadores são passados como um argumento para o [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) e [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) métodos.  
   
- These flags may be combined with a bitwise OR.  
+ Esses sinalizadores podem ser combinados com um OR bit a bit.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)   
  [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)

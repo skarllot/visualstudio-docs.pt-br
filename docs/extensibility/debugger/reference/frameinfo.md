@@ -1,5 +1,5 @@
 ---
-title: FRAMEINFO | Microsoft Docs
+title: FRAMEINFO | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e89914747024ad23185ed1f6cc92e808d7703702
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 77b2e6c80628cb54c7c77cc9dac4bf7be1f3d193
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="frameinfo"></a>FRAMEINFO
-Describes a stack frame.  
+Descreve um quadro de pilha.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 typedef struct tagFRAMEINFO {   
    FRAMEINFO_FLAGS    m_dwValidFields;  
    BSTR               m_bstrFuncName;  
@@ -60,7 +59,7 @@ typedef struct tagFRAMEINFO {
 } FRAMEINFO;  
 ```  
   
-```csharp  
+```c#  
 public struct FRAMEINFO {   
    public uint              m_dwValidFields;  
    public string            m_bstrFuncName;  
@@ -78,58 +77,58 @@ public struct FRAMEINFO {
 } FRAMEINFO;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  m_dwValidFields  
- A combination of flags from the [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) enumeration that specifies which fields are filled in.  
+ Uma combinação de sinalizadores do [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) enumeração que especifica quais campos estão preenchidos.  
   
  m_bstrFuncName  
- The function name associated with the stack frame.  
+ O nome da função associado ao quadro de pilha.  
   
  m_bstrReturnType  
- The return type associated with the stack frame.  
+ O tipo de retorno associado com o quadro de pilha.  
   
  m_bstrArgs  
- The arguments to the function associated with the stack frame.  
+ Os argumentos para a função associada ao quadro de pilha.  
   
  m_bstrLanguage  
- The language in which the function is implemented.  
+ O idioma no qual a função é implementada.  
   
  m_bstrModule  
- The module name associated with the stack frame.  
+ O nome do módulo associado com o quadro de pilha.  
   
  m_addrMin  
- The minimum physical stack address.  
+ O endereço de pilha física mínimo.  
   
  m_addrMAX  
- The maximum physical stack address.  
+ O endereço físico máximo da pilha.  
   
  m_pFrame  
- The [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) object that represents this stack frame.  
+ O [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) objeto que representa esse quadro de pilha.  
   
  m_pFrame  
- The [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) object that represents the module that contains this stack frame.  
+ O [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) objeto que representa o módulo que contém esse quadro de pilha.  
   
  m_fHasDebugInfo  
- Non-zero (`TRUE`) if debug information exists in the given frame.  
+ Diferente de zero (`TRUE`) se houver informações de depuração em determinado quadro.  
   
  m_fHasDebugInfo  
- Non-zero (`TRUE`) if the stack frame is associated with code that is no longer valid.  
+ Diferente de zero (`TRUE`) se o quadro de pilha é associado com o código que não é mais válido.  
   
  m_fHasDebugInfo  
- Non-zero (`TRUE`) if the stack frame is annotated by the session debug manager (SDM).  
+ Diferente de zero (`TRUE`) se o quadro de pilha é anotado, o Gerenciador de sessão de depuração (SDM).  
   
-## <a name="remarks"></a>Remarks  
- This structure is passed to the [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) method to be filled in. This structure is also contained in a list that is contained in the [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) interface which, in turn, is returned from a call to the [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) method.  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é passada para o [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) método a ser preenchido. Essa estrutura também está contida em uma lista que está contida no [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) interface que, por sua vez, é retornado de uma chamada para o [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) método.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)   
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)   

@@ -1,71 +1,52 @@
 ---
-title: 'How to: Create an association (relationship) between LINQ to SQL classes (O-R Designer) | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Como: criar uma associa&#231;&#227;o (rela&#231;&#227;o) entre classes LINQ to SQL (Object Relational Designer) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 56133e65-81f3-44c3-bc28-ffdd0671a0d2
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 5d7e9a7e4552cccfddef0f3d7a0b110aa1baf3ec
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 3
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="how-to-create-an-association-relationship-between-linq-to-sql-classes-or-designer"></a>How to: Create an association (relationship) between LINQ to SQL classes (O/R Designer)
-Associations between entity classes in [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] are analogous to relationships between tables in a database. You can create associations between entity classes by using the **Association Editor** dialog box.  
+# Como: criar uma associa&#231;&#227;o (rela&#231;&#227;o) entre classes LINQ to SQL (Object Relational Designer)
+Associações entre classes de entidade em [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] são análogas às relações entre tabelas em um banco de dados. Você pode criar associações entre classes de entidade usando o **Editor de associação** caixa de diálogo.  
   
- You must select a parent class and child class when you use the **Association Editor** dialog box to create an association. The parent class is the entity class that contains the primary key; the child class is the entity class that contains the foreign-key. For example, if entity classes were created that map to the Northwind Customers and Orders tables, the Customer class would be the parent class and the Order class would be the child class.  
+ Você deve selecionar uma classe pai e filho, quando você usa o **Editor de associação** caixa de diálogo para criar uma associação. A classe pai é a classe de entidade que contém a chave primária; a classe filho é a classe de entidade que contém a chave estrangeira. Por exemplo, se a classes de entidade criadas que mapeiam para as tabelas Northwind Customers e Orders, a classe Customer seria a classe pai e a classe Order seria a classe filho.  
   
 > [!NOTE]
->  When you drag tables from **Server Explorer**/**Database Explorer** onto the [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] ([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]), associations are automatically created based on the existing foreign-key relationships in the database.  
+>  Quando você arrasta tabelas de **Server Explorer**\/**Database Explorer** até o [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] \([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]\), associações são criadas automaticamente com base nas relações de chave estrangeira existentes no banco de dados.  
   
- After you create an association, when you select the association in the O/R Designer, there are some configurable properties in the **Properties** window. (The association is the line between the related classes.) The following table provides descriptions for the properties of an association.  
+ Depois de criar uma associação, quando você seleciona a associação em Object Relational Designer, há algumas propriedades configuráveis do **propriedades** janela. \(A associação é a linha entre as classes relacionadas.\) A tabela a seguir fornece descrições das propriedades de uma associação.  
   
-|Property|Description|  
-|--------------|-----------------|  
-|**Cardinality**|Controls whether the association is one-to-many or one-to-one.|  
-|**Child Property**|Specifies whether to create a property on the parent that is a collection or reference to the child records on the foreign-key side of the association. For example, in the association between Customer and Order, if the **Child Property** is set to **True**, a property named Orders is created on the parent class.|  
-|**Parent Property**|The property on the child class that references the associated parent class. For example, in the association between Customer and Order, a property named Customer that references the associated customer for an order is created on the Order class.|  
-|**Participating Properties**|Displays the association properties and provides an **ellipsis** button (...) that re-opens the **Association Editor** dialog box.|  
-|**Unique**|Specifies whether the foreign target columns have a uniqueness constraint.|  
+|Propriedade|Descrição|  
+|-----------------|---------------|  
+|**Cardinalidade**|Controla se a associação um\-para\-muitos ou um para um.|  
+|**Propriedade filho**|Especifica se deve criar uma propriedade no pai que é uma coleção ou referência para os registros filho no lado de chave estrangeira da associação. Por exemplo, na associação entre Customer e Order, se o **propriedade filho** é definido como **True**, uma propriedade chamada Orders é criada na classe pai.|  
+|**Propriedade pai**|A propriedade na classe filho que referencia a classe pai associada. Por exemplo, a associação entre Customer e Order, uma propriedade chamada Customer que referencia o cliente associado para um pedido é criada na classe Order.|  
+|**Propriedades participantes**|Exibe as propriedades de associação e fornece um **reticências** botão \(...\) que reabre o **Editor de associação** caixa de diálogo.|  
+|**Exclusivo**|Especifica se as colunas de destino estrangeiras têm uma restrição de exclusividade.|  
   
-### <a name="to-create-an-association-between-entity-classes"></a>To create an association between entity classes  
+### Para criar uma associação entre classes de entidade  
   
-1.  Right-click the entity class that represents the parent class in the association, point to **Add**, and then click **Association**.  
+1.  A classe de entidade que representa a classe pai na associação de atalho, aponte para **Add**, e, em seguida, clique em **associação**.  
   
-2.  Verify that the correct **Parent Class** is selected in the **Association Editor** dialog box.  
+2.  Verifique a correta **classe pai** selecionado no **Editor de associação** caixa de diálogo.  
   
-3.  Select the **Child Class** in the combo box.  
+3.  Selecione o **classe filha** na caixa de combinação.  
   
-4.  Select the **Association Properties** that relate the classes. Typically, this maps to the foreign-key relationship defined in the database. For example, in the Customers and Orders association, the **Association Properties** are the CustomerID for each class.  
+4.  Selecione o **Propriedades de associação** que relacionam as classes. Normalmente, isso mapeia para a relação de chave estrangeira definida no banco de dados. Por exemplo, na associação Customers e Orders, o **Propriedades de associação** são a CustomerID para cada classe.  
   
-5.  Click **OK** to create the association.  
+5.  Clique em **OK** para criar a associação.  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
- [DataContext Methods (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md)   
- [How to: Represent Primary Keys](/dotnet/framework/data/adonet/sql/linq/how-to-represent-primary-keys)
+## Consulte também  
+ [LINQ to SQL Tools no Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [Walkthrough: Creating LINQ to SQL Classes \(O\/R Designer\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
+ [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
+ [DataContext Methods \(O\/R Designer\)](../data-tools/datacontext-methods-o-r-designer.md)   
+ [How to: Represent Primary Keys](../Topic/How%20to:%20Represent%20Primary%20Keys.md)

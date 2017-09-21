@@ -1,5 +1,5 @@
 ---
-title: IDebugPortNotify2::RemoveProgramNode | Microsoft Docs
+title: IDebugPortNotify2::RemoveProgramNode | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,41 +30,40 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 56e68d79036593bb76c475c60fc431f409f31e3b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 42f3fe03559c3ac4671a48d697aa738748b45253
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugportnotify2removeprogramnode"></a>IDebugPortNotify2::RemoveProgramNode
-Unregisters a program that can be debugged from the port it is running on.  
+Cancela o registro de um programa que possa ser depurado da porta está em execução no.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT RemoveProgramNode(   
    IDebugProgramNode2* pProgramNode  
 );  
 ```  
   
-```csharp  
+```c#  
 int RemoveProgramNode(   
    IDebugProgramNode2 pProgramNode  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pProgramNode`  
- [in] An [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objecy that represents the program to be unregistered.  
+ [in] Um [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objecy que representa o programa a ser cancelado.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- This method removes a program node that was added with a call to the [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) method.  
+## <a name="remarks"></a>Comentários  
+ Esse método Remove um nó de programa que foi adicionado com uma chamada para o [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) método.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)

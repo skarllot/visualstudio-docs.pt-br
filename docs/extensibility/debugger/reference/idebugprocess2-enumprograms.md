@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::EnumPrograms | Microsoft Docs
+title: IDebugProcess2::EnumPrograms | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,37 +30,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0ad06deabca9c25a6fbef19bca5ce9b00a864a29
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: ae14f720fe00721de8e364d3d1d12a4346e81fc4
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprocess2enumprograms"></a>IDebugProcess2::EnumPrograms
-Retrieves a list of all the programs contained by this process.  
+Recupera uma lista de todos os programas contidos por esse processo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT EnumPrograms(   
    IEnumDebugPrograms2** ppEnum  
 );  
 ```  
   
-```csharp  
+```c#  
 int EnumPrograms(   
    out IEnumDebugPrograms2 ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppEnum`  
- [out] Returns an [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) object that contains a list of all the programs in the process.  
+ [out] Retorna um [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) objeto que contém uma lista de todos os programas no processo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)

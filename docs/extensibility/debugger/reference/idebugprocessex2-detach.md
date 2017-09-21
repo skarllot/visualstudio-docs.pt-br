@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2::Detach | Microsoft Docs
+title: IDebugProcessEx2::Detach | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d3ba5d8ea92200a70623a6e53ceb484aadfc3af2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 579b8a5aaf4aff6c2629a7bcc2cc92d66b208870
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprocessex2detach"></a>IDebugProcessEx2::Detach
-This method informs the process that a session is no longer debugging the process.  
+Esse método informa o processo que uma sessão não está depurando o processo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT Detach(   
    IDebugSession2* pSession  
 );  
 ```  
   
-```csharp  
+```c#  
 int Detach(  
    IDebugSession2 pSession  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pSession`  
- [in] A value that uniquely identifies the session to detach this process from.  
+ [in] Um valor que identifica exclusivamente a sessão para desanexar este processo de.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The interface passed in `pSession` is to be treated only as a cookie, a value that uniquely identifies the session debug manager that originally attached to this process; none of the methods on the supplied interface are functional.  
+## <a name="remarks"></a>Comentários  
+ A interface passado `pSession` é deve ser tratada apenas como um cookie, um valor que identifica exclusivamente o Gerenciador de sessão de depuração que originalmente anexado a esse processo; nenhum dos métodos na interface fornecida é funcional.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

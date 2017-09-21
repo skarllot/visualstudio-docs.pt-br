@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetName | Microsoft Docs
+title: IDebugProgram2::GetName | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a3bb22f707add6b743bb161d47d7cbeed0356c6d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3b23002614f0b6790898d81a3b548c4748b53b35
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprogram2getname"></a>IDebugProgram2::GetName
-Gets the name of the program.  
+Obtém o nome do programa.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetName(   
    BSTR* pbstrName  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetName(   
    out string pbstrName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pbstrName`  
- [out] Returns the name of the program.  
+ [out] Retorna o nome do programa.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The name returned by this method is always a friendly, user-displayable name that describes the program.  
+## <a name="remarks"></a>Comentários  
+ O nome retornado por esse método sempre é um nome de exibição do usuário amigável que descreve o programa.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

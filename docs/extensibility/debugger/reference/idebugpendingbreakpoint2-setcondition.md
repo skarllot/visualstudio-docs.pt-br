@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::SetCondition | Microsoft Docs
+title: IDebugPendingBreakpoint2::SetCondition | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,40 +31,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e418fc46dc04e4271954782ba7fe9cb8e2e652c7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8990f4459e812e79fd7062482a142dc4f60e5ffd
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugpendingbreakpoint2setcondition"></a>IDebugPendingBreakpoint2::SetCondition
-Sets or changes the condition associated with the pending breakpoint.  
+Define ou altera a condição associada com o ponto de interrupção pendente.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT SetCondition(   
    BP_CONDITION bpCondition  
 );  
 ```  
   
-```csharp  
+```c#  
 int SetCondition(   
    BP_CONDITION bpCondition  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `bpCondition`  
- [in] A [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) structure that specifies the condition to set.  
+ [in] A [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) estrutura que especifica a condição a ser definido.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- Any condition that was previously associated with the pending breakpoint is lost. All breakpoints bound from this pending breakpoint are called to set their condition to the value specified in the `bpCondition` parameter.  
+## <a name="remarks"></a>Comentários  
+ Qualquer condição que foi previamente associada com o ponto de interrupção pendente é perdida. Todos os pontos de interrupção associados desse pendentes ponto de interrupção são chamados para definir sua condição para o valor especificado no `bpCondition` parâmetro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)

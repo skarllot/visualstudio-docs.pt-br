@@ -1,5 +1,5 @@
 ---
-title: IDebugDocument2::GetDocumentClassID | Microsoft Docs
+title: IDebugDocument2::GetDocumentClassID | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2e214bcde4161c676c8f312d607732077e79c56f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8901d3e14957adf14dfe0e9414927ef4ba6de345
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugdocument2getdocumentclassid"></a>IDebugDocument2::GetDocumentClassID
-Gets the class identifier of the document.  
+Obtém o identificador de classe do documento.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetDocumentClassID(   
    CLSID* pclsid  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetDocumentClassID(   
    out Guid pclsid  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pclsid`  
- [out] Returns a GUID that is the class ID of the document.  
+ [out] Retorna um GUID que é a ID de classe do documento.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The class GUID can be used to instantiate individual classes each of which represents a document.  
+## <a name="remarks"></a>Comentários  
+ A classe GUID pode ser usada para instanciar classes individuais, cada um deles representa um documento.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

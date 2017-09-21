@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::ReadAt | Microsoft Docs
+title: IDebugMemoryBytes2::ReadAt | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,19 +31,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2c92d1be776d3d8e9db23a3871f0f3775dd84397
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8d89bcaa34e62141e5cbe21ee09e9fdb219f7d76
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
-Reads a sequence of bytes, starting at a given location.  
+Lê uma sequência de bytes, começando em um local especificado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT ReadAt(   
    IDebugMemoryContext2* pStartContext,  
    DWORD                 dwCount,  
@@ -53,7 +52,7 @@ HRESULT ReadAt(
 );  
 ```  
   
-```csharp  
+```c#  
 int ReadAt(  
    IDebugMemoryContext2 pStartContext,  
    uint                 dwCount,  
@@ -63,34 +62,34 @@ int ReadAt(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pStartContext`  
- [in] The [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object that specifies where to start reading bytes.  
+ [in] O [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objeto que especifica onde iniciar a leitura de bytes.  
   
  `dwCount`  
- [in] The number of bytes to read. Also specifies the length of the `rgbMemory` array.  
+ [in] O número de bytes a serem lidos. Também especifica o comprimento da `rgbMemory` matriz.  
   
  `rgbMemory`  
- [in, out] Array filled in with the bytes actually read.  
+ [no, out] Matriz preenchido com os bytes realmente lidos.  
   
  `pdwRead`  
- [out] Returns the number of contiguous bytes actually read.  
+ [out] Retorna o número de bytes contíguos realmente lidos.  
   
  `pdwUnreadable`  
- [in, out] Returns the number of unreadable bytes. May be a null value if the client is uninterested in the number of unreadable bytes.  
+ [no, out] Retorna o número de bytes ilegíveis. Pode ser um valor nulo se o cliente não tem interesse em número de bytes ilegíveis.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- If 100 bytes are requested and the first 50 are readable, the next 20 are unreadable, and the remaining 30 are readable, this method returns:  
+## <a name="remarks"></a>Comentários  
+ Se 100 bytes são solicitados e os 50 primeiro são legíveis, os próximos 20 são ilegíveis e os 30 restantes são legíveis, esse método retorna:  
   
  *`pdwRead` = 50  
   
  *`pdwUnreadable` = 20  
   
- In this case, because `*pdwRead + *pdwUnreadable < dwCount`, the caller must make an additional call to read the remaining 30 bytes of the original 100 requested and the [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object passed in the `pStartContext` parameter must be advanced by 70.  
+ Nesse caso, porque `*pdwRead + *pdwUnreadable < dwCount`, o chamador deve fazer uma chamada adicional para ler os bytes restantes 30 a 100 original solicitada e o [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objeto passado a `pStartContext` parâmetro deve ser avançado por 70.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

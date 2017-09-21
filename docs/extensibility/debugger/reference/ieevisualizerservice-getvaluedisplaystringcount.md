@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerService::GetValueDisplayStringCount | Microsoft Docs
+title: IEEVisualizerService::GetValueDisplayStringCount | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,19 +29,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5cfe28abb387bf6b2500286bbc6c56943bdbe810
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 9b354b9070444edd3855665e6563c70a24a461fc
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="ieevisualizerservicegetvaluedisplaystringcount"></a>IEEVisualizerService::GetValueDisplayStringCount
-Retrieves the number of value strings to display for the specified property or field.  
+Recupera o número de cadeias de caracteres do valor a ser exibida para o campo ou propriedade especificada.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetValueDisplayStringCount (  
    DWORD         displayKind,   
    IDebugField * propertyOrField,   
@@ -49,7 +48,7 @@ HRESULT GetValueDisplayStringCount (
 );  
 ```  
   
-```csharp  
+```c#  
 int GetValueDisplayStringCount (  
    uint        displayKind,   
    IDebugField propertyOrField,   
@@ -57,18 +56,18 @@ int GetValueDisplayStringCount (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `displayKind`  
- [in] Value from the [DisplayKind](../../../extensibility/debugger/reference/displaykind.md) enumeration.  
+ [in] O valor do [DisplayKind](../../../extensibility/debugger/reference/displaykind.md) enumeração.  
   
  `propertyOrField`  
- [in] An [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface that represents a property or field.  
+ [in] Um [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface que representa uma propriedade ou campo.  
   
  `pcelt`  
- [out] Returns the number of value strings to display.  
+ [out] Retorna o número de cadeias de caracteres de valor para exibir.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

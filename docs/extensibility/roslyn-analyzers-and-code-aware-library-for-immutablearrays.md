@@ -1,5 +1,5 @@
 ---
-title: Roslyn Analyzers and Code-aware Library for ImmutableArrays | Microsoft Docs
+title: "Analisadores de Roslyn e reconhecimento de código de biblioteca para ImmutableArrays | Documentos do Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,311 +26,259 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: 8007474097883daea39e656cdab8ffe608f4e578
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/30/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 76cde01ecd3151fd29f848509dc1ca0518705b04
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn Analyzers and Code-aware Library for ImmutableArrays
-
-The [.NET Compiler Platform](https://github.com/dotnet/roslyn) ("Roslyn") helps you build code-aware libraries.  A code-aware library provides functionality you can use and tooling (Roslyn analyzers) to help you use the library in the best way or to avoid errors.  This topic shows you how to build a real world Roslyn analyzer to catch common errors when using the [System.Collections.Immutable](https://www.nuget.org/packages/System.Collections.Immutable) NuGet package.  The example also demonstrates how to provide a code fix for a code issue found by the analyzer.  Users see code fixes in the Visual Studio light bulb UI and can apply a fix for the code automatically.
-
-## <a name="getting-started"></a>Getting Started
-
-You need the following to build this example:
-
-* Visual Studio 2015 (not an Express Edition) or a later version.  You can use the free [Visual Studio Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs)
-* [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  You can also, when installing Visual Studio, check Visual Studio Extensibility Tools under Common Tools to install the SDK at the same time.  If you have already installed Visual Studio, you can also install this SDK by going to the main menu **File &#124; New &#124;Project ...**, choosing C# in the left navigation pane, and then choosing Extensibility.  When you choose the "**Install the Visual Studio Extensibility Tools**" breadcrumb project template, it prompts you to download and install the SDK.
-* [.NET Compiler Platform ("Roslyn") SDK](http://aka.ms/roslynsdktemplates).  You can also install this SDK by going to the main menu **File &#124; New &#124; Project ...**, choosing **C#** in the left navigation pane, and then choosing **Extensibility**.  When you choose "**Download the .NET Compiler Platform SDK**" breadcrumb project template, it prompts you to download and install the SDK.  This SDK includes the [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer).  This extremely useful tool helps you figure out what code model types you should look for in your analyzer.  The analyzer infrastructure calls into your code for specific code model types, so your code only executes when necessary and can focus only on analyzing relevant code.
-
-## <a name="whats-the-problem"></a>What's the Problem?
-
-Imagine you provide a library with ImmutableArray (for example, <xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName>) support.  C# developers have lots of experience with .NET arrays.  However, due to the nature of ImmutableArrays and optimization techniques used in the implementation, C# developer intuitions cause users of your library to write broken code, as explained below.  Furthermore, users do not see their errors until run time, which isn't the quality experience they are used to in Visual Studio with .NET.
-
-Users are familiar with writing code like the following:
-
-```csharp
-var a1 = new int[0];
-Console.WriteLine("a1.Length = { 0}", a1.Length);
-var a2 = new int[] { 1, 2, 3, 4, 5 };
-Console.WriteLine("a2.Length = { 0}", a2.Length);
-```
-
-Creating empty arrays to fill in with subsequent lines of code and using collection initializer syntax are very familiar to C# developers.  However, writing the same code for an ImmutableArray crashes at runtime:
-
-```csharp
-var b1 = new ImmutableArray<int>();
-Console.WriteLine("b1.Length = { 0}", b1.Length);
-var b2 = new ImmutableArray<int> { 1, 2, 3, 4, 5 };
-Console.WriteLine("b2.Length = { 0}", b2.Length);
-```
-
-The first error is due to ImmutableArray implementation's using a struct to wrap the underlying data storage. Structs must have parameter-less constructors so that `default(T)` expressions can return structs with all zero or null members.  When the code accesses `b1.Length`, there is a run time null dereference error because there is no underlying storage array in the ImmutableArray struct.  The correct way to create an empty ImmutableArray is `ImmutableArray<int>.Empty`.
-
-The error with collection initializers happens because the ImmutableArray.Add method returns new instances each time you call it.  Because ImmutableArrays never change, when you add a new element, you get back a new ImmutableArray object (which may share storage for performance reasons with a previously existing ImmutableArray).  Because `b2` points to the first ImmutableArray before calling `Add()` five times, `b2` is a default ImmutableArray.  Calling Length on it also crashes with a null dereference error.  The correct way to initialize an ImmutableArray without manually calling Add is to use `ImmutableArray.CreateRange(new int[] {1, 2, 3, 4, 5})`.
-
-## <a name="finding-relevant-syntax-node-types-to-trigger-your-analyzer"></a>Finding Relevant Syntax Node Types to Trigger Your Analyzer
-
- To begin to build the analyzer, first figure out what type of SyntaxNode you need to look for. Launch the Syntax Visualizer from the menu **View &#124; Other Windows &#124; Roslyn Syntax Visualizer**.
-
-Place the editor's caret on the line that declares `b1`.  You'll see the Syntax Visualizer shows you are in a `LocalDeclarationStatement` node of the syntax tree.  This node has a `VariableDeclaration`, which in turn has a `VariableDeclarator`, which in turn has an `EqualsValueClause`, and finally there is an `ObjectCreationExpression`.  As you click in the Syntax Visualizer tree of nodes, the syntax in the editor window highlights to show you the code represented by that node.  The names of the SyntaxNode sub types match the names used in the C# grammar.
-
-## <a name="creating-the-analyzer-project"></a>Creating the Analyzer Project
-
-From the main menu choose **File &#124; New &#124; Project ...**.  In the **New Project** dialog, under **C#** projects in the left navigation bar, choose Extensibility, and in the right pane choose the **Analyzer with Code Fix** project template.  Enter a name and confirm the dialog.
-
-The template opens a DiagnosticAnalyzer.cs file.  Choose that editor buffer tab.  This file has an analyzer class (formed from the name you gave the project) that derives from `DiagnosticAnalyzer` (a Roslyn API type).  Your new class has a `DiagnosticAnalyzerAttribute` declaring your analyzer is relevant to the C# language so that the compiler discovers and loads your analyzer.
-
-```csharp
-[DiagnosticAnalyzer(LanguageNames.CSharp)]
-public class ImmutableArrayAnalyzerAnalyzer : DiagnosticAnalyzer
-{}
-```
-
-You can implement an analyzer using Visual Basic that targets C# code, and vice versa.  It is more important in the DiagnosticAnalyzerAttribute to choose whether your analyzer targets one language or both.  More sophisticated analyzers that require detailed modeling of the language can only target a single language.  If your analyzer, for example, only checks type names or public member names, it may be possible to use the common language model Roslyn offers across Visual Basic and C#.  For example, FxCop warns that a class implements <xref:System.Runtime.Serialization.ISerializable>, but the class does not have the <xref:System.SerializableAttribute> attribute is language-independent and works for both Visual Basic and C# code.
-
-## <a name="initalizing-the-analyzer"></a>Initalizing the Analyzer
-
- Scroll down a little in the `DiagnosticAnalyzer` class to see the `Initialize` method.  The compiler calls this method when activating an analyzer.  The method takes an `AnalysisContext` object that allows your analyzer to get at context information and to register callbacks for events for the kinds of code you want to analyze.
-
-```csharp
-public override void Initialize(AnalysisContext context) {}
-
-```
-
-Open a new line in this method and type "context." to see an IntelliSense completion list.  You can see in the completion list there are many `Register...` methods to handle various kinds of events.  For example, the first one, `RegisterCodeBlockAction`, calls back to your code for a block, which is usually code between curly braces.  Registering for a block also calls back to your code for the initializer of a field, the value given to an attribute, or the value of an optional parameter.
-
-As another example, `RegisterCompilationStartAction`, calls back to your code at the start of a compilation, which is useful when you need to collect state over many locations.  You can create a data structure, say, to collect all symbols used, and each time your analyzer is called back for some syntax or symbol, you can save information about each location in your data structure.  When you're called back due to the compilation ending, you can analyze all the locations you saved, for example, to report what symbols the code uses from each `using` statement.
-
-Using the **Syntax Visualizer**, you learned that you want to be called when the compiler processes an ObjectCreationExpression.  You use this code to set up the callback:
-
-```csharp
-context.RegisterSyntaxNodeAction(c => AnalyzeObjectCreation(c),
-                                 SyntaxKind.ObjectCreationExpression);
-```
-
-You register for a syntax node and filter for only object creation syntax nodes.  By convention, analyzer authors use a lambda when registering actions, which helps to keep analyzers stateless.  You can use the Visual Studio feature **Generate From Usage** to create the `AnalyzeObjectCreation` method.  This generates the correct type of context parameter for you too.
-
-## <a name="setting-properties-for-users-of-your-analyzer"></a>Setting Properties for Users of Your Analyzer
-
-So that your Analyzer shows up in Visual Studio UI appropriately, look for and modify the following line of code to identify your analyzer:
-
-```csharp
-internal const string Category = "Naming";
-```
-
-Change `"Naming"` to `"API Guidance"`.
-
-Next find and open the `Resources.resx` file in your project using the **Solution Explorer**.  You can put in a description for your Analyzer, title, etc.  You can change the value for all of these to `"Don't use ImmutableArray<T> constructor"` for now.  You can put string formatting arguments in your string ({0}, {1}, etc.), and later when you call `Diagnostic.Create()`, you can supply a `params` array of arguments to be passed.
-
-## <a name="analyzing-an-object-creation-expression"></a>Analyzing an Object Creation Expression
-
-The `AnalyzeObjectCreation` method takes a different type of context supplied by the code analyzer framework.  The Initialize method's `AnalysisContext` allows you to register action callbacks to set up your analyzer.  The `SyntaxNodeAnalysisContext`, for example, has a `CancellationToken` that you can pass around.  If a user starts typing in the editor, Roslyn will cancel running analyzers to save work and improve performance.  As another example, this context has a Node property that returns the object creation syntax node.
-
-Get the node, which you can assume is the type for which you filtered the syntax node action:
-
-```csharp
-var objectCreation = (ObjectCreationExpressionSyntax)context.Node;
-```
-
-### <a name="launching-visual-studio-with-your-analyzer-the-first-time"></a>Launching Visual Studio with Your Analyzer the First Time
-
-Launch Visual Studio by building and executing your analyzer (press **F5**).  Because the startup project in the **Solution Explorer** is the VSIX project, running your code builds your code and a VSIX, and then launches Visual Studio with that VSIX installed.  When you launch Visual Studio in this way, it launches with a distinct registry hive so that your main use of Visual Studio will not be affected by your testing instances while building analyzers.  The first time you launch this way, Visual Studio does several initializations similar to when you first launched Visual Studio after installing it.
-
-Create a console project and then enter the array code into your console applications Main method:
-
-```csharp
-var b1 = new ImmutableArray<int>();
-Console.WriteLine("b1.Length = {0}", b1.Length);
-var b2 = new ImmutableArray<int> { 1, 2, 3, 4, 5 };
-Console.WriteLine("b2.Length = {0}", b2.Length);
-```
-
-The lines of code with `ImmutableArray` have squiggles because you need to get the immutable NuGet package and add a `using` statement to your code.  Press the right pointer button on the project node in the **Solution Explorer** and choose **Manage NuGet Packages ...**.  In the NuGet manager, type "Immutable" into the search box, and choose the item "System.Collections.Immutable" (do not choose "Microsoft.Bcl.Immutable") in the left pane and press the Install button in the right pane.  Installing the package adds a reference to your project references.
-
-You still see red squiggles under `ImmutableArray`, so place the caret in that identifier and press **CTRL+.** (period) to bring up the suggested fix menu and choose to add the appropriate `using` statement.
-
-**Save All and Close** the second instance of Visual Studio for now to put you in a clean state to continue.
-
-## <a name="finishing-the-analyzer-using-edit-and-continue"></a>Finishing the Analyzer Using Edit and Continue
-
-In the first instance of Visual Studio, set a breakpoint at the beginning of your `AnalyzeObjectCreation` method by pressing **F9** with the caret on the first line.
-
-Launch your analyzer again with **F5**, and in the second instance of Visual Studio, re-open your console application you created last time.
-
-You return to the first instance of Visual Studio at the breakpoint because the Roslyn compiler saw an Object creation expression and called into your analyzer.
-
-**Get the object creation node.** Step over the line that sets the `objectCreation` variable by pressing **F10**, and in the **Immediate Window** evaluate the expression `"objectCreation.ToString()"`.  You see that the syntax node the variable points to is the code `"new ImmutableArray<int>()"`, just what you are looking for.
-
-**Get ImmutableArray<T\> Type object.** You need to check if the type being created is ImmutableArray.  First, you get the object that represents this type.  You check types using the semantic model to ensure you have exactly the right type, and you don't compare the string from ToString().  Enter the following line of code at the end of the function:
-
-```csharp
-var immutableArrayOfTType =
-    context.SemanticModel
-           .Compilation
-           .GetTypeByMetadataName("System.Collections.Immutable.ImmutableArray`1");
-```
-
-You designate generic types in metadata with backquotes (`) and the number of generic parameters.  That is why you do not see "...ImmutableArray\<T>" in the metadata name.
-
-The semantic model has many useful things on it that let you ask questions about symbols, data flow, variable lifetime, etc.  Roslyn separates syntax nodes from the semantic model for various engineering reasons (performance, modeling erroneous code, etc.).  You want the compilation model to look up information contained in references for accurate comparison.
-
-You can drag the yellow execution pointer on the left side of the editor window.  Drag it up to the line that sets the `objectCreation` variable and step over your new line of code using **F10**.  If you hover the mouse pointer over the variable `immutableArrayOfType`, you see that we found the exact type in the semantic model.
-
-**Get the object creation expression's type.** "Type" is used in a few ways in this article, but this means if you have "new Foo" expression, you need to get a model of Foo.  You need to get the type of the object creation expression to see if it is the ImmutableArray\<T> type.  Use the semantic model again to get symbol information for the type symbol (ImmutableArray) in the object creation expression.  Enter the following line of code at the end of the function:
-
-```csharp
-var symbolInfo = context.SemanticModel.GetSymbolInfo(objectCreation.Type).Symbol as INamedTypeSymbol;
-```
-
-Because your analyzer needs to handle incomplete or incorrect code in editor buffers (for example, there is a missing `using` statement), you should check for `symbolInfo` being `null`.  You need to get a named type (INamedTypeSymbol) from the symbol information object to finish the analysis.
-
-**Compare the Types.** Because there is an open generic type of T that we are looking for, and the type in the code is a concrete generic type, you query the symbol information for what the type is constructed from (an open generic type) and compare that result with `immutableArrayOfTType`.  Enter the following at the end of the method:
-
-```csharp
-if (symbolInfo != null &&
-    symbolInfo.ConstructedFrom.Equals(immutableArrayOfTType))
-{}
-```
-
-**Report the Diagnostic.** Reporting the diagnostic is pretty easy.  You use the Rule created for you in the project template, which is defined before the Initialize method.  Because this situation in the code is an error, you can change the line that initialized Rule to replace `DiagnosticSeverity.Warning` (green squiggle) with `DiagnosticSeverity.Error` (red squiggle).  The rest of the Rule initializes from the resources you edited near the beginning of the walkthrough.  You also need to report the location for the squiggle, which is the location of the object creation expresssion's type specification.  Enter this code in the `if` block:
-
-```csharp
-context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));
-```
-
-Your function should look like this (perhaps formatted differently):
-
-```csharp
-private void AnalyzeObjectCreation(SyntaxNodeAnalysisContext context)
-{
-    var objectCreation = (ObjectCreationExpressionSyntax)context.Node;
-    var immutableArrayOfTType =
-        context.SemanticModel
-               .Compilation
-               .GetTypeByMetadataName(
-                   "System.Collections.Immutable.ImmutableArray`1");
-    var symbolInfo = context.SemanticModel.GetSymbolInfo(objectCreation.Type).Symbol as
-        INamedTypeSymbol;
-    if (symbolInfo != null &&
-        symbolInfo.ConstructedFrom.Equals(immutableArrayOfTType))
-    {
-        context.ReportDiagnostic(
-            Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));
-    }
-}
-```
-
-Remove the breakpoint so that you can see your analyzer working (and stop returning to the first instance of Visual Studio).  Drag the execution pointer to the beginning of your method, and press **F5** to continue execution.  When you switch back to the second instance of Visual Studio, the compiler will start to examine the code again, and it will call into your analyzer.  You can see a squiggle under `ImmutableType<int>`.
-
-## <a name="adding-a-code-fix-for-the-code-issue"></a>Adding a "Code Fix" for the Code Issue
-
-Before you begin, close the second instance of Visual Studio and stop debugging in the first instance of Visual Studio (where you are developing the analyzer).
-
-**Add a new class.** Use the shortcut menu (right pointer button) on your project node in the Solution Explorer and choose to add a new item.  Add a class called `BuildCodeFixProvider`.  This class needs to derive from `CodeFixProvider`, and you will need to use **CTRL+.** (period) to invoke the code fix that adds the correct `using` statement.  This class also needs to be annotated with `ExportCodeFixProvider` attribute, and you will need to add a `using` statement to resolve the `LanguageNames` enum.  You should have a class file with the following code in it:
-
-```csharp
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CodeFixes;
-
-namespace ImmutableArrayAnalyzer
-{
-    [ExportCodeFixProvider(LanguageNames.CSharp)]
-    class BuildCodeFixProvider : CodeFixProvider
-    {}
-
-```
-
-**Stub out derived members.** Now, place the editor's caret in the identifier `CodeFixProvider` and press **CTRL+.** (period) to stub out the implementation for this abstract base class.  This generates a property and a method for you.
-
-**Implement the property.** Fill in the `FixableDiagnosticIds` property's `get` body with the following code:
-
-```csharp
-return ImmutableArray.Create(ImmutableArrayAnalyzerAnalyzer.DiagnosticId);
-```
-
-Roslyn brings together diagnostics and fixes by matching these identifiers, which are just strings.  The project template generated a diagnostic ID for you, and you are free to change it.  The code in the property just returns the ID from the analyzer class.
-
-**The RegisterCodeFixAsync method takes a context.** The context is important because a code fix can apply to multiple diagnostics, or there could be more than one issue on a line of code.  If you type "context." in the body of the method, the IntelliSense completion list will show you some useful members.  There's a CancellationToken member that you can check to see if something wants to cancel the fix.  There's a Document member that has lots of useful members and lets you get to the project and solution model objects.  There's a Span member that is the start and end of the code location specified when you reported the diagnostic.
-
-**Make the method be async.** The first thing you need to do is fix the generated method declaration to be an `async` method.  The code fix for stubbing out the implementation of an abstract class doesn't include the `async` keyword even though the method returns a `Task`.
-
-**Get the root of the syntax tree.** To modify code you need to produce a new syntax tree with the changes your code fix makes.  You need the `Document` from the context to call `GetSyntaxRootAsync`.  This is an async method because there is unknown work to get the syntax tree, possibly including getting the file from disk, parsing it, and building the Roslyn code model for it.  The Visual Studio UI should be responsive during this time, which using `async` enables.  Replace the line of code in the method with the following:
-
-```csharp
-var root = await context.Document
-                        .GetSyntaxRootAsync(context.CancellationToken);
-```
-
-**Find the node with the issue.** You pass in the context's span, but the node you find may not be the code you have to change.  The reported diagnostic only provided the span for the type identifier (where the squiggle belonged), but you need to replace the entire object creation expression, including the `new` keyword at the beginning and the parentheses at the end.  Add the following code to your method (and use **CTRL+.** to add a `using` statement for `ObjectCreationExpressionSyntax`):
-
-```csharp
-var objectCreation = root.FindNode(context.Span)
-                         .FirstAncestorOrSelf<ObjectCreationExpressionSyntax>();
-```
-
-**Register your code fix for the light bulb UI.** When you register your code fix, Roslyn plugs into the Visual Studio light bulb UI automatically.  End users will see they can use **CTRL+.** (period) when your analyzer squiggles a bad `ImmutableArray<T>` constructor use.  Because your code fix provider only executes when there is an issue, you can assume you have the object creation expression you were looking for.  From the context parameter, you can register the new code fix by adding the following code to the end of `RegisterCodeFixAsync` method:
-
-```csharp
-context.RegisterCodeFix(
-            CodeAction.Create("Use ImmutableArray<T>.Empty",
-                              c => ChangeToImmutableArrayEmpty(objectCreation,
-                                                               context.Document,
-                                                               c)),
-            context.Diagnostics[0]);
-```
-
-You need to place the editor's caret in the identifier, `CodeAction`, then use **CTRL+.** (period) to add the appropriate `using` statement for this type.
-
-Then place the editor's caret in the `ChangeToImmutableArrayEmpty` identifier and use **CTRL+.** again to generate this method stub for you.
-
-This last code snippet you added registers the code fix by passing a `CodeAction` and the diagnostic ID for the kind of issue found.  In this example, there is only one diagnostic ID that this code provides fixes for, so you can just pass the first element of the diagnostic IDs array.  When you create the `CodeAction`, you pass in the text that the light bulb UI should use as a description of the code fix.  You also pass in a function that takes a CancellationToken and returns a new Document.  The new Document has a new syntax tree that includes your patched code that calls `ImmutableArray.Empty`.  This code snippet uses a lambda so that it can close over the objectCreation node and the context's Document.
-
-**Construct the new syntax tree.** In the `ChangeToImmutableArrayEmpty` method whose stub you generated earlier, enter the line of code: `ImmutableArray<int>.Empty;`.  If you view the Syntax Visualizer tool window again, you can see this syntax is a SimpleMemberAccessExpression node.  That's what this method needs to construct and return in a new Document.
-
-The first change to `ChangeToImmutableArrayEmpty` is to add `async` before `Task<Document>` because the code generators cannot assume the method should be async.
-
-Fill in the body with the following code so that your method looks similar to the following:
-
-```csharp
-private async Task<Document> ChangeToImmutableArrayEmpty(
-    ObjectCreationExpressionSyntax objectCreation, Document document,
-    CancellationToken c)
-{
-    var generator = SyntaxGenerator.GetGenerator(document);
-    var memberAccess =
-        generator.MemberAccessExpression(objectCreation.Type, "Empty");
-    var oldRoot = await document.GetSyntaxRootAsync(c);
-    var newRoot = oldRoot.ReplaceNode(objectCreation, memberAccess);
-    return document.WithSyntaxRoot(newRoot);
-}
-```
-
-You will need to put the editor's caret in the `SyntaxGenerator` identifier and use **CTRL+.** (period) to add the appropriate `using` statement for this type.
-
-This code uses `SyntaxGenerator`, which is a very useful type for constructing new code.  After getting a generator for the document that has the code issue, `ChangeToImmutableArrayEmpty` calls `MemberAccessExpression`, passing the type that has the member we want to access and passing the name of the member as a string.
-
-Next, the method fetches the root of the document, and because this can involve arbitrary work in the general case, the code awaits this call and passes the cancellation token.  Roslyn code models are immutable, like working with a .NET string; when you update the string, you get a new string object in return.  When you call `ReplaceNode`, you get back a new root node.  Most of the syntax tree is shared (because it is immutable), but the `objectCreation` node is replaced with the `memberAccess` node, as well as all the parent nodes up to the syntax tree root.
-
-## <a name="trying-your-code-fix"></a>Trying Your Code Fix
-
-You can now press **F5** to execute your analyzer in a second instance of Visual Studio.  Open the console project you used before.  Now you should see the light bulb appear where your new object creation expression is for `ImmutableArray<int>`.  If you press **CTRL+.** (period), then you will see your code fix, and you will see an automatically generated code difference preview in the light bulb UI.  Roslyn creates this for you.
-
-**Pro Tip:** If you launch the second instance of Visual Studio, and you don't see the light bulb with your code fix, then you may need to clear the Visual Studio component cache.  Clearing the cache forces Visual Studio to re-examine the components, so Visual Studio should then pick up your latest component.  First, shut down the second instance of Visual Studio.  Then in Windows Explorer, go to your user directory (c:\users\\<userid\>) and find AppData\Local\Microsoft\VisualStudio\14.0Roslyn\\.  In this directory, delete the sub directory ComponentModelCache.  The "14" changes version to version with Visual Studio.
-
-## <a name="talk-video-and-finish-code-project"></a>Talk Video and Finish Code Project
-
-You can see this example developed and discussed further in [this talk](http://channel9.msdn.com/events/Build/2015/3-725).  The talk demonstrates the working analyzer and walks you through building it.
-
-You can see all the finished code [here](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers).  The sub folders DoNotUseImmutableArrayCollectionInitializer and DoNotUseImmutableArrayCtor each have a C# file for finding issues and a C# file that implements the code fixes that show up in the Visual Studio light bulb UI.  Note, the finished code has a little more abstraction to avoid fetching the ImmutableArray\<T> type object over and over.  It uses nested registered actions to save the type object in a context that is available whenever the sub actions (analyze object creation and analyze collection initializations) execute.
-
-## <a name="see-also"></a>See Also
-
-* [\\\Build 2015 talk](http://channel9.msdn.com/events/Build/2015/3-725)
-* [Completed code on GitHub](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)
-* [Several examples on GitHub, grouped into three kinds of analyzers](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
-* [Other docs on the GitHub OSS site](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
-* [FxCop rules implemented with Roslyn analyzers on GitHub](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)
-
+# <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Analisadores de Roslyn e reconhecimento de código de biblioteca para ImmutableArrays
+O [.NET Compiler Platform](https://github.com/dotnet/roslyn) ("Roslyn") ajuda a criar bibliotecas de código.  Uma biblioteca de código fornece funcionalidade que você pode usar e ferramentas (Roslyn analisadores) para ajudá-lo a usar a biblioteca da melhor maneira ou para evitar erros.  Este tópico mostra como criar um analisador de Roslyn do mundo real para capturar erros comuns ao usar o [NIB: coleções imutáveis](../Topic/NIB:%20Immutable%20Collections.md) pacote do NuGet.  O exemplo também demonstra como fornecer uma correção de código para um problema de código encontrado pelo analisador.  Os usuários veem código correções a lâmpada da interface do usuário do Visual Studio e podem aplicar uma correção para o código automaticamente.  
+  
+## <a name="getting-started"></a>Guia de Introdução  
+ É necessário o seguinte para criar este exemplo:  
+  
+-   O Visual Studio 2015 (não uma edição Express) ou uma versão posterior.  Você pode usar o livre [Visual Studio Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs)  
+  
+-   [SDK do Visual Studio](../extensibility/visual-studio-sdk.md).  Você também pode, ao instalar o Visual Studio, verificar ferramentas de extensibilidade do Visual Studio em ferramentas comuns para instalar o SDK ao mesmo tempo.  Se você já tiver instalado o Visual Studio, você também pode instalar esse SDK, vá ao menu principal **arquivo | Novo | Projeto... **, escolhendo c# no painel de navegação esquerdo e, em seguida, extensibilidade.  Quando você escolhe o "**instalar as ferramentas de extensibilidade do Visual Studio**" modelo de projeto de navegação estrutural, solicitando que você baixe e instale o SDK.  
+  
+-   [.NET compiler Platform ("Roslyn") SDK](http://aka.ms/roslynsdktemplates).  Você também pode instalar esse SDK, vá ao menu principal **arquivo | Novo | Projeto... **, escolhendo **c#** no painel de navegação esquerdo e, em seguida, escolhendo **extensibilidade**.  Quando você escolhe "**baixar o SDK de plataforma do compilador .NET**" modelo de projeto de navegação estrutural, solicitando que você baixe e instale o SDK.  Esse SDK inclui o [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer).  Esta Ajuda da ferramenta extremamente útil descobrir quais tipos de modelo de código você deve procurar no seu analisador.  As chamadas de infraestrutura do analisador em seu código para tipos de modelo de código específico, para que seu código apenas executa quando necessário e pode se concentrar apenas na análise de código relevante.  
+  
+## <a name="whats-the-problem"></a>Qual é o problema?  
+ Imagine que você fornecer uma biblioteca com ImmutableArray (por exemplo, <xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName>) suporte.</xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName>  Os desenvolvedores de c# têm muita experiência com as matrizes do .NET.  No entanto, devido à natureza das técnicas de ImmutableArrays e otimização usada na implementação, intuitions de desenvolvedores do c# levar os usuários da sua biblioteca escrever códigos quebrados, conforme explicado abaixo.  Além disso, os usuários não veem seus erros até que o tempo de execução, o que não é a experiência de qualidade que são usados para no Visual Studio com .NET.  
+  
+ Os usuários estão familiarizados com a escrita de código semelhante ao seguinte:  
+  
+<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+ Criação de matrizes vazias preencherem com linhas subsequentes de código e usando a sintaxe do inicializador de coleção são bastante familiares para os desenvolvedores de c#.  No entanto, o código para um ImmutableArray escrevendo o mesmo falhas em tempo de execução:  
+  
+<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+ O primeiro erro ocorre devido a ImmutableArray da implementação usando uma estrutura para encapsular o armazenamento de dados subjacente.  Estruturas devem ter construtores sem parâmetros para que `default(T)` expressões podem retornar todas as estruturas zero ou membros nulos.  Quando o código que acessa `b1.Length`, há uma tempo de execução cancelamento de referência nula erro porque não há nenhuma matriz de armazenamento subjacente na estrutura ImmutableArray.  É a maneira correta de criar um vazio ImmutableArray `ImmutableArray<int>.Empty`.  
+  
+ O erro com inicializadores de coleção acontece porque o método ImmutableArray.Add retorna novas instâncias de cada vez que é chamado.  Como ImmutableArrays nunca mudam, quando você adiciona um novo elemento, você obtém um novo objeto de ImmutableArray (que pode compartilhar o armazenamento por motivos de desempenho com um ImmutableArray preexistentes).  Porque `b2` aponta para o primeiro ImmutableArray antes de chamar `Add()` cinco vezes, `b2` é um padrão ImmutableArray.  Chamando comprimento nele também falhas com um valor nulo desreferência de erro.  A maneira correta de inicializar um ImmutableArray sem chamar o método Add manualmente é usar `ImmutableArray.CreateRange(new int[] {1, 2, 3, 4, 5})`.  
+  
+## <a name="finding-relevant-syntax-node-types-to-trigger-your-analyzer"></a>Localizar tipos de nós de sintaxe relevante para acionar seu analisador  
+ Para começar a criar o analisador, primeiro descobrir que tipo de SyntaxNode você precisa procurar.    Inicie o Visualizador de sintaxe no menu **exibir | Outras janelas | Visualizador do Roslyn Syntax**.  
+  
+ Coloque o cursor do editor na linha que declara `b1`.  Você verá o Syntax Visualizer mostra estão em um `LocalDeclarationStatement` nó da árvore de sintaxe.  Este nó tem um `VariableDeclaration`, que por sua vez tem uma `VariableDeclarator`, que por sua vez tem uma `EqualsValueClause`, finalmente, há um `ObjectCreationExpression`.  Ao clicar na árvore do Syntax Visualizer de nós, a sintaxe na janela do editor realça para mostrar o código representado por esse nó.  Os nomes dos tipos SyntaxNode sub correspondem aos nomes usados na gramática do c#.  
+  
+## <a name="creating-the-analyzer-project"></a>Criando o projeto do analisador  
+ No menu principal, escolha **arquivo | Novo | Projeto... **.  No **novo projeto** caixa de diálogo, em **c#** projetos na barra de navegação à esquerda, escolha extensibilidade em no painel direito, escolha o **Analyzer com código corrigir** modelo de projeto.  Insira um nome e confirmar a caixa de diálogo.  
+  
+ O modelo é aberto um arquivo DiagnosticAnalyzer.cs.  Escolha esse editor guia de buffer.  Esse arquivo tem uma classe de analisador (formado do nome que você atribuiu o projeto) que deriva de `DiagnosticAnalyzer` (um tipo de Roslyn API).  A nova classe tem um `DiagnosticAnalyzerAttribute` declarar seu analisador é relevante para a linguagem c# para que o compilador detecta e carrega o analisador.  
+  
+<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+ Você pode implementar um analisador usando o Visual Basic que se destina ao código c#, e vice-versa.  É mais importante em DiagnosticAnalyzerAttribute para escolher se o analisador direcionado para um idioma ou ambos.  Analisadores mais sofisticadas que exigem modelagem detalhada da linguagem podem direcionar apenas um único idioma.  Se o analisador, por exemplo, só verifica os nomes de tipo ou membro público, é possível usar o modelo de linguagem comum que roslyn oferece em Visual Basic e c#.  Por exemplo, o FxCop avisa que implementa uma classe <xref:System.Runtime.Serialization.ISerializable>, mas a classe não tem o <xref:System.SerializableAttribute>atributo é independente de linguagem e funciona em código do Visual Basic e c#.</xref:System.SerializableAttribute> </xref:System.Runtime.Serialization.ISerializable>  
+  
+## <a name="initalizing-the-analyzer"></a>Como inicializar o analisador  
+ Role um pouco o `DiagnosticAnalyzer` classe para ver o `Initialize` método.  O compilador chama esse método ao ativar um analisador.  O método utiliza um `AnalysisContext` objeto que permite que seu analisador para obter informações de contexto e registrar retornos de chamada de eventos para os tipos de código que você deseja analisar.  
+  
+<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+ Abrir uma nova linha neste método e o tipo de "contexto." Para ver uma lista de conclusão do Intellisense.  Você pode ver na lista de preenchimento, há muitas `Register…` métodos para lidar com vários tipos de eventos.  Por exemplo, o primeiro deles, `RegisterCodeBlockAction`, chamadas de volta ao seu código para um bloco, o que geralmente é código entre chaves.  Registrar-se para um bloco também chama de volta ao seu código para o inicializador de um campo, o valor atribuído a um atributo ou o valor de um parâmetro opcional.  
+  
+ Como outro exemplo, `RegisterCompilationStartAction`, chamadas de volta ao seu código no início de uma compilação, o que é útil quando você precisa coletar estado em vários locais.  Você pode criar uma estrutura de dados, digamos, para coletar todos os símbolos usados, e cada vez que o analisador é o retorno de chamada para alguns sintaxe ou símbolo, você pode salvar informações sobre cada local em sua estrutura de dados.  Quando você volta devido a fim de compilação, você pode analisar todos os locais que você salvou, por exemplo, para relatar os símbolos que usa o código de cada `using` instrução.  
+  
+ Usando o **Syntax Visualizer**, você sabe que você deseja ser chamado quando o compilador processa um ObjectCreationExpression.  Use este código para configurar o retorno de chamada:  
+  
+<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
+ Você se registrar para um nó de sintaxe e filtrar somente objeto criação nós de sintaxe.  Por convenção, os autores de analisador usam uma lambda ao registrar ações, que ajuda a manter os analisadores sem monitoração de estado.  Você pode usar o recurso do Visual Studio **Generate From Usage** para criar o `AnalyzeObjectCreation` método.  Isso gera o tipo de parâmetro de contexto certo para você muito.  
+  
+## <a name="setting-properties-for-users-of-your-analyzer"></a>Propriedades de configuração para os usuários do seu analisador  
+ Para que o analisador apareça na interface de usuário do Visual Studio adequadamente, procure e modifique a seguinte linha de código para identificar seu analisador:  
+  
+<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
+ Change `"Naming"` to `"API Guidance"`.  
+  
+ Em seguida localize e abra o arquivo resx em seu projeto usando o **Solution Explorer**.  Você pode colocar uma descrição para o analisador, título, etc.  Você pode alterar o valor de todos eles para `“Don’t use ImmutableArray<T> constructor”` por enquanto.  Você pode colocar a cadeia de caracteres de formatação argumentos na cadeia de caracteres ({0}, \ {1 \, etc.) e posteriormente quando você chamar `Diagnostic.Create()`, você pode fornecer uma matriz params de argumentos a serem passados.  
+  
+## <a name="analyzing-an-object-creation-expression"></a>Analisar uma expressão de criação de objeto  
+ O `AnalyzeObjectCreation` método usa um tipo diferente de contexto fornecido pela estrutura de analisador de código.  O método Initialize `AnalysisContext` permite registrar retornos de chamada de ação para configurar seu analisador.  O `SyntaxNodeAnalysisContext`, por exemplo, tem um `CancellationToken` que você pode passar ao redor.  Se um usuário começa a digitar no editor, o Roslyn cancelará analisadores em execução para salvar o trabalho e melhorar o desempenho.  Como outro exemplo, este contexto tem uma propriedade de nó que retorna o nó de sintaxe de criação do objeto.  
+  
+ Obtenha o nó, que pode assumir que é o tipo para o qual você filtrado a ação de nó de sintaxe:  
+  
+<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+### <a name="launching-visual-studio-with-your-analyzer-the-first-time"></a>Iniciar o Visual Studio com o analisador na primeira vez  
+ Inicie o Visual Studio, criando e executando seu analisador (pressione **F5**).  Porque a inicialização do projeto no **Solution Explorer** é o projeto do VSIX, executando suas compilações de código, seu código e um VSIX e, em seguida, inicia o Visual Studio com esse VSIX instalado.  Quando você inicia o Visual Studio dessa forma, ele inicia com um hive do registro distintos para que seu uso principal do Visual Studio não será afetado por suas instâncias de testes ao criar os analisadores.  Na primeira vez que você iniciar dessa forma, o Visual Studio faz várias inicializações semelhantes quando você primeiro iniciei o Visual Studio depois de instalá-lo.  
+  
+ Crie um projeto de console e, em seguida, insira o código de matriz para o método de principal de aplicativos de console:  
+  
+<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
+ As linhas de código com `ImmutableArray` tem rabiscos porque você precisa obter o pacote do NuGet imutável e adicionar um `using` instrução ao seu código.  Pressione o botão à direita do ponteiro no nó do projeto no **Solution Explorer** e escolha **Manage NuGet Packages... **.  No Gerenciador do NuGet, digite "Imutável" na caixa de pesquisa e escolha o item "System.Collections.Immutable" (não escolher "Microsoft.Bcl.Immutable") no painel esquerdo e pressione o botão instalar no painel à direita.  Instalando o pacote adiciona uma referência para as referências do projeto.  
+  
+ Você ainda verá rabiscos vermelhos em `ImmutableArray`, então colocar o cursor nesse identificador e pressione **CTRL +.** (ponto) para abrir o menu de correção sugerida e escolha Adicionar apropriado `using` instrução.  
+  
+ **Salve e feche** a segunda instância do Visual Studio por enquanto para colocá-lo em um estado limpo para continuar.  
+  
+## <a name="finishing-the-analyzer-using-edit-and-continue"></a>Concluindo o analisador usando editar e continuar  
+ Na primeira instância do Visual Studio, defina um ponto de interrupção no início de seu `AnalyzeObjectCreation` método pressionando **F9** com o cursor na primeira linha.  
+  
+ Inicie o seu analisador novamente com **F5**e a segunda instância do Visual Studio, reabra seu aplicativo de console é criada na última vez.  
+  
+ Retornar para a primeira instância do Visual Studio no ponto de interrupção porque o compilador Roslyn viu uma expressão de criação de objeto e chamadas para o seu analisador.  
+  
+ **Obter o nó de criação do objeto.** Passar sobre a linha que define o `objectCreation` variável pressionando **F10**e no **janela imediata** avaliar a expressão `“objectCreation.ToString()”`.  Você vê que a variável aponta para o nó de sintaxe é o código `"new ImmutableArray<int>()"`, apenas o que você está procurando.  
+  
+ **Obter ImmutableArray<> </> \> o objeto de tipo.** Você precisa verificar se o tipo que está sendo criado é ImmutableArray.  Primeiro, você obtém o objeto que representa esse tipo.  Verificar tipos usando o modelo semântico para garantir que você tem exatamente o tipo correto e não comparar a cadeia de caracteres de ToString ().  Digite a seguinte linha de código no final da função:  
+  
+<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+ Designar tipos genéricos em metadados com backquotes (') e o número de parâmetros genéricos.  Isso é porque você não vê "... ImmutableArray\<T > "no nome de metadados.  
+  
+ O modelo semântico tem muitas coisas úteis que permitem que você faça perguntas sobre símbolos, fluxo de dados, vida útil da variável, etc.  Roslyn separa os nós de sintaxe de modelo semântico por vários motivos engineering (desempenho, modelagem códigos incorretos, etc.).  Deseja que o modelo de compilação para procurar informações contidas nas referências para comparação de precisa.  
+  
+ Você pode arrastar o ponteiro de execução amarelo no lado esquerdo da janela do editor.  Arraste-o até a linha que define o `objectCreation` variável e passar sobre a nova linha de código usando **F10**.  Se você passar o ponteiro do mouse sobre a variável `immutableArrayOfType`, você vê que encontramos o tipo exato no modelo semântico.  
+  
+ **Obtenha o tipo da expressão de criação de objeto.** "Tipo" é usado em algumas maneiras neste artigo, mas isso significa que se você tiver "nova Foo" expressão, você precisa obter um modelo de Foo.  Você precisa obter o tipo da expressão de criação de objeto para ver se ele é o ImmutableArray\<T > tipo.  Use o modelo semântico novamente para obter informações de símbolo para o símbolo de tipo (ImmutableArray) na expressão de criação de objeto.  Digite a seguinte linha de código no final da função:  
+  
+```c#  
+var symbolInfo = context.SemanticModel.GetSymbolInfo(objectCreation.Type) as INamedTypeSymbol;  
+  
+```  
+  
+ Porque seu analisador precisa lidar com código incompleto ou incorreto nos buffers de editor (por exemplo, há uma falta `using` instrução), você deve verificar por `symbolInfo` sendo `null`.  Você precisa obter um tipo nomeado (INamedTypeSymbol) do objeto de informações de símbolo para concluir a análise.  
+  
+ **Compare os tipos.** Como há um tipo genérico aberto de T que estamos procurando e o tipo no código é um tipo genérico concreto, consultar as informações de símbolo para que o tipo é construído a partir (um tipo genérico aberto) e comparar esse resultado com `immutableArrayOfTType`.  Digite o seguinte no final do método:  
+  
+```c#  
+if (symbolInfo != null &&   
+    symbolInfo.ConstructedFrom.Equals(immutableArrayOfTType))  
+{}  
+```  
+  
+ **Relatório de diagnóstico.** O diagnóstico de emissão de relatórios é muito fácil.  Use a regra criada no modelo de projeto, que é definido antes do método Initialize.  Como essa situação no código é um erro, você pode alterar a linha que inicializado regra substituir `DiagnosticSeverity.Warning` (Rabisco verde) com `DiagnosticSeverity.Error` (Rabisco vermelho).  Inicializa o resto da regra dos recursos que você editou próximo ao início do passo a passo.  Você também precisa informar o local para o rabisco, que é o local da especificação do tipo da expressão de criação de objeto.  Digite esse código de `if` bloco:  
+  
+```c#  
+context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));  
+```  
+  
+ A função deve ser assim (talvez formatados de maneira diferente):  
+  
+```c#  
+private void AnalyzeObjectCreation(SyntaxNodeAnalysisContext context)  
+{  
+    var objectCreation = (ObjectCreationExpressionSyntax)context.Node;  
+    var immutableArrayOfTType =   
+        context.SemanticModel  
+               .Compilation  
+               .GetTypeByMetadataName(  
+                   "System.Collections.Immutable.ImmutableArray`1");  
+    var symbolInfo = context.SemanticModel.GetSymbolInfo(objectCreation.Type) as  
+        INamedTypeSymbol;  
+    if (symbolInfo != null &&   
+        symbolInfo.ConstructedFrom.Equals(immutableArrayOfTType))  
+    {  
+        context.ReportDiagnostic(  
+            Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));  
+    }  
+}  
+  
+```  
+  
+ Remova o ponto de interrupção para que você possa ver seu trabalho analyzer (e parar de retornar para a primeira instância do Visual Studio).  Arraste o ponteiro de execução para o início do método e pressione **F5** continuar a execução.  Quando você voltar para a segunda instância do Visual Studio, o compilador será iniciado examinar o código novamente, e ele chamará seu analisador.  Você pode ver um rabisco em `ImmutableType<int>`.  
+  
+## <a name="adding-a-code-fix-for-the-code-issue"></a>Adicionando uma "correção de código" para o problema de código  
+ Antes de começar, feche a segunda instância do Visual Studio e parar a depuração na primeira instância do Visual Studio (onde você está desenvolvendo o analyzer).  
+  
+ **Adicione uma nova classe.** Use o menu de atalho (botão de ponteiro à direita) no nó do projeto no Gerenciador de soluções e escolha Adicionar um novo item.  Adicione uma classe chamada `BuildCodeFixProvider`.  Essa classe deve derivar de `CodeFixProvider`, e você precisará usar **CTRL +.** (ponto) para invocar a correção de código que adiciona o correto `using` instrução.  Essa classe também precisa ser anotada com `ExportCodeFixProvider` atributo e você precisará adicionar uma `using` instrução para resolver o `LanguageNames` enum.  Você deve ter um arquivo de classe com o seguinte código:  
+  
+```c#  
+using Microsoft.CodeAnalysis;  
+using Microsoft.CodeAnalysis.CodeFixes;  
+  
+namespace ImmutableArrayAnalyzer  
+{  
+    [ExportCodeFixProvider(LanguageNames.CSharp)]  
+    class BuildCodeFixProvider : CodeFixProvider  
+    {}  
+  
+```  
+  
+ **Um stub membros derivados.** Agora, coloque o cursor do editor no identificador de `CodeFixProvider` e pressione **CTRL +.** (ponto) para a implementação para essa classe base abstrata de stub.  Isso gera uma propriedade e um método para você.  
+  
+ **Implemente a propriedade.** Preencha o `FixableDiagnosticIds` da propriedade `get` corpo com o código a seguir:  
+  
+```c#  
+return ImmutableArray.Create(ImmutableArrayAnalyzerAnalyzer.DiagnosticId);  
+```  
+  
+ Roslyn reúne diagnósticos e correções combinando esses identificadores que são apenas cadeias de caracteres.  O modelo de projeto gerado uma ID de diagnóstico para você, e você é livre para alterá-lo.  O código na propriedade apenas retorna a ID da classe do analisador.  
+  
+ **O método RegisterCodeFixAsync usa um contexto.** O contexto é importante porque uma correção de código pode ser aplicadas a vários diagnóstico ou pode haver mais de um problema em uma linha de código.  Se você digitar "contexto". no corpo do método, a lista de preenchimento Intellisense mostrará alguns membros útil.  Há um membro CancellationToken que você pode verificar para ver se algo que deseja cancelar a correção.  Há um membro de documento que tem muitos membros úteis e permite que você obtenha a objetos de modelo de projeto e solução.  Há um Span membro que é o início e final do local do código especificado quando você relatou o diagnóstico.  
+  
+ **Definir o método assíncrono.** A primeira coisa que você precisa fazer é corrigir a declaração do método gerado para ser um `async` método.  A correção de código para arrancar a implementação de uma classe abstrata não inclui o `async` palavra-chave mesmo que o método retorna um `Task`.  
+  
+ **Obter a raiz da árvore de sintaxe.** Para modificar o código que necessário para produzir uma nova árvore de sintaxe com as alterações a correção de código faz.  É necessário o `Document` do contexto para chamar `GetSyntaxRootAsync`.  Isso é um método assíncrono porque há trabalho desconhecido para obter a árvore de sintaxe, incluindo possivelmente obtendo o arquivo de disco, analisá-lo e criar o modelo de código do Roslyn para ele.  UI do Visual Studio deve ser responsivo durante esse tempo, qual usando `async` permite.  Substitua a linha de código no método a seguir:  
+  
+```c#  
+var root = await context.Document  
+                        .GetSyntaxRootAsync(context.CancellationToken);  
+```  
+  
+ **Localize o nó com o problema.** Você passa no período do contexto, mas o nó que você achar que talvez não seja o código que você precisa alterar.  O diagnóstico relatado fornecido apenas a extensão para o identificador de tipo (em que o Rabisco pertencia), mas você precisa substituir a expressão de criação de objeto inteiro, incluindo o `new` keywoard no início e os parênteses no final.  Adicione o seguinte código ao método (e usar **CTRL +.** Para adicionar um `using` instrução para `ObjectCreationExpressionSyntax`):  
+  
+```c#  
+  
+var objectCreation = root.FindNode(context.Span)  
+                         .FirstAncestorOrSelf<ObjectCreationExpressionSyntax>();  
+```  
+  
+ **Registre a correção de código para a lâmpada da interface do usuário.** Quando você registra a correção de código, Roslyn encaixa a lâmpada da interface do usuário do Visual Studio automaticamente.  Os usuários finais verão usarem **CTRL +.** (ponto) quando o analisador rabisca uma má `ImmutableArray<T>` uso do construtor.  Como o provedor de correção de código é executado somente quando houver um problema, você pode assumir que a expressão de criação de objeto que estava procurando.  Do parâmetro de contexto, você pode registrar a nova correção de código, adicionando o seguinte código ao final do `RegisterCodeFixAsync` método:  
+  
+```c#  
+  
+context.RegisterCodeFix(  
+            CodeAction.Create("Use ImmutableArray<T>.Empty",  
+                              c => ChangeToImmutableArrayEmpty(objectCreation,  
+                                                               context.Document,  
+                                                               c)),  
+            context.Diagnostics[0]);  
+```  
+  
+ Você precisa colocar o cursor do editor no identificador de `CodeAction`, em seguida, use **CTRL +.** (ponto) para adicionar apropriado `using` instrução para esse tipo.  
+  
+ Em seguida, coloque o cursor do editor no `ChangeToImmutableArrayEmpty` identificador e uso **CTRL +.** novamente para gerar esse stub do método para você.  
+  
+ Este último trecho de código adicionado registra a correção de código, passando um `CodeAction` e a ID de diagnóstico para o tipo de problema encontrado.  Neste exemplo, há apenas um ID de diagnóstico que esse código fornece correções, portanto você pode apenas passar o primeiro elemento da matriz de IDs de diagnóstico.  Quando você cria o `CodeAction`, você passa o texto que deve usar a lâmpada da interface do usuário como uma descrição da correção do código.  Você também pode passar em uma função que usa um CancellationToken e retorna um novo documento.  O novo documento terá uma nova árvore de sintaxe que inclui o código corrigido que chama `ImmutableArray.Empty`.  Este trecho de código usa uma lambda para que ele pode fechar o nó objectCreation e documento do contexto.  
+  
+ **Construa a nova árvore de sintaxe.** No `ChangeToImmutableArrayEmpty` método cujo stub gerado anteriormente, digite a linha de código: `ImmutableArray<int>.Empty;`.  Se você exibir a janela da ferramenta Syntax Visualizer novamente, você pode ver que essa sintaxe é um nó de SimpleMemberAccessExpression.  Isso é o que esse método precisa construir e retornar em um novo documento.  
+  
+ A primeira alteração `ChangeToImmutableArrayEmpty` é adicionar `async` antes de `Task<Document>` porque os geradores de código não podem assumir o método deve ser assíncrona.  
+  
+ Preencha o corpo com o código a seguir para que o método é semelhante ao seguinte:  
+  
+```c#  
+  
+private async Task<Document> ChangeToImmutableArrayEmpty(  
+    ObjectCreationExpressionSyntax objectCreation, Document document,  
+    CancellationToken c)  
+{  
+    var generator = SyntaxGenerator.GetGenerator(document);  
+    var memberAccess =   
+        generator.MemberAccessExpression(objectCreation.Type, "Empty");  
+    var oldRoot = await document.GetSyntaxRootAsync(c);  
+    var newRoot = oldRoot.ReplaceNode(objectCreation, memberAccess);  
+    return document.WithSyntaxRoot(newRoot);  
+}  
+```  
+  
+ Você terá que colocar o cursor do editor `SyntaxGenerator` identificador e uso **CTRL +.** (ponto) para adicionar apropriado `using` instrução para esse tipo.  
+  
+ Esse código usa `SyntaxGenerator`, que é um tipo muito útil para a criação de novo código.  Depois de obter um gerador para o documento que tem o problema de código, `ChangeToImmutableArrayEmpty` chamadas `MemberAccessExpression`, passando o tipo que possui o membro que deseja acessar e passando o nome do membro como uma cadeia de caracteres.  
+  
+ Em seguida, o método busca a raiz do documento, e como isso pode envolver trabalho arbitrário em geral, o código aguarda essa chamada e passa o token de cancelamento.  Modelos de código Roslyn são imutáveis, semelhante a trabalhar com uma cadeia de caracteres do .NET; Quando você atualiza a cadeia de caracteres, obtenha um novo objeto de cadeia de caracteres de retorno.  Quando você chama `ReplaceNode`, você recebe um novo nó de raiz.  A maioria da árvore de sintaxe é compartilhado (porque é imutável), mas o `objectCreation` nó é substituído com o `memberAccess` nó, bem como todos os nós pai até a raiz da árvore de sintaxe.  
+  
+## <a name="trying-your-code-fix"></a>Testar a correção de código  
+ Agora, você pode pressionar **F5** para executar o analisador em uma segunda instância do Visual Studio.  Abra o projeto de console usado anteriormente.  Agora você deve ver a lâmpada aparecer onde sua nova expressão de criação de objeto é para `ImmutableArray<int>`.  Se você pressionar **CTRL +.** (ponto final), em seguida, você verá seu código corrigir e você verá uma visualização de diferença do código gerado automaticamente na lâmpada da interface do usuário.  Roslyn cria para você.  
+  
+ Dica Pro: Se você iniciar a segunda instância do Visual Studio, e você não vê a lâmpada com a correção de código, em seguida, você precisará limpar o cache de componente do Visual Studio.  A limpeza do cache força o Visual Studio para examinar novamente os componentes para que o Visual Studio deve pegar seu componente mais recente.  Primeiro, desligue a segunda instância do Visual Studio.  No Windows Explorer, vá para seu diretório de usuário (c:\users\\<>\>) e encontre AppData\Local\Microsoft\VisualStudio\14.0Roslyn\\.  Nesse diretório, exclua o subdiretório ComponentModelCache.  As alterações a versão com o Visual Studio "14".  
+  
+## <a name="talk-video-and-finish-code-project"></a>Vídeo de conversa e projetos de código de término  
+ Você pode ver esse exemplo desenvolvido e discutido posteriormente [essa conversa](http://channel9.msdn.com/events/Build/2015/3-725).  A conversa demonstra o analisador de trabalho e orienta você criá-lo.  
+  
+ Você pode ver o código concluído [aqui](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers).  As subpastas DoNotUseImmutableArrayCollectionInitializer e DoNotUseImmutableArrayCtor possuem um arquivo c# para localizar problemas e um arquivo em c# que implementa as correções do código que aparecem na lâmpada da interface do usuário do Visual Studio.  Observe que o código concluído tem um pouco mais de abstração para evitar a busca de ImmutableArray\<T > tipo object repetidamente.  Ele usa ações registradas aninhadas para salvar o objeto de tipo em um contexto que está disponível sempre que as ações sub (analisar a criação do objeto e analisar inicializações de coleção) executar.  
+  
+## <a name="see-also"></a>Consulte também  
+ [\\Palestra de \Build 2015](http://channel9.msdn.com/events/Build/2015/3-725)   
+ [Código concluído no github](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)   
+ [Vários exemplos no github, agrupados em três tipos de analisadores](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)   
+ [Outros documentos no site do github OSS](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)   
+ [Regras FxCop implementadas com analisadores de Roslyn no github](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)

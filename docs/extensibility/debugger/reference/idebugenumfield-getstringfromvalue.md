@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetStringFromValue | Microsoft Docs
+title: IDebugEnumField::GetStringFromValue | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,44 +30,43 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c721a1ee298eba5e948b42c29d9746e61122008b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 025fac3b5705e783d123a9d8c918620bc7519265
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
-This method obtains the name of the enumeration constant given its value.  
+Esse método obtém o nome da constante de enumeração recebe seu valor.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetStringFromValue(  
    ULONGLONG value,  
    BSTR*     pbstrValue  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetStringFromValue(  
    ulong      value,  
    out string pbstrValue  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `value`  
- [in] The value for which to get the name of the enumeration constant.  
+ [in] O valor para o qual obter o nome da enumeração constante.  
   
  `pbstrValue`  
- [out] Returns the name of the enumeration constant.  
+ [out] Retorna o nome da constante de enumeração.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns `S_FALSE` if the value has no associated name, or returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna `S_FALSE` se o valor sem nome associado ou retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- If there is more than one name associated with the same value, the first name defined in the enumeration will be returned.  
+## <a name="remarks"></a>Comentários  
+ Se houver mais de um nome associado com o mesmo valor, será retornado o primeiro nome definido na enumeração.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

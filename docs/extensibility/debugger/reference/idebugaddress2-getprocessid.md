@@ -1,5 +1,5 @@
 ---
-title: IDebugAddress2::GetProcessID | Microsoft Docs
+title: IDebugAddress2::GetProcessID | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,16 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 1585d47a3d32c7a5df1173b03a6791cd85d66640
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: a1bffaac59baf40db94037697775ad4ba005f5c7
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugaddress2getprocessid"></a>IDebugAddress2::GetProcessID
-Retrieves the ID of the process that owns the object represented by this [IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md) interface.  
+Recupera a ID do processo que possui o objeto representado por esse [IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md) interface.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetProcessID (  
@@ -48,18 +47,18 @@ HRESULT GetProcessID (
 );  
 ```  
   
-```csharp  
+```c#  
 int GetProcessID (  
    out uint pProcID  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pProcID`  
- [out] The process ID.  
+ [out] A ID de processo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)

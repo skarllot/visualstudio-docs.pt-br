@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetProgramName | Microsoft Docs
+title: IDebugProgramNode2::GetProgramName | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,44 +30,43 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 31598f3e18afdfd7d5842ce192b817dbdb8d3747
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 434e46dcc8897c4614492ff94b0b930c51159564
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprogramnode2getprogramname"></a>IDebugProgramNode2::GetProgramName
-Gets the name of the program.  
+Obtém o nome do programa.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetProgramName (   
    BSTR* pbstrProgramName  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetProgramName (   
    out string pbstrProgramName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pbstrProgramName`  
- [out] Returns the name of the program.  
+ [out] Retorna o nome do programa.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The name of a program is not the same thing as the path to the program, although the name of the program may be part of such a path.  
+## <a name="remarks"></a>Comentários  
+ O nome de um programa não é a mesma coisa que o caminho para o programa, embora o nome do programa pode ser parte de um caminho.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CProgram` object that implements the [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) interface. The `MakeBstr` function allocates a copy of the specified string as a BSTR.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um simples `CProgram` objeto que implementa o [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) interface. O `MakeBstr` função aloca uma cópia da cadeia de caracteres especificada como um BSTR.  
   
-```cpp  
+```cpp#  
 HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {    
    if (!pbstrProgramName)    
       return E_INVALIDARG;    
@@ -78,5 +77,5 @@ HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

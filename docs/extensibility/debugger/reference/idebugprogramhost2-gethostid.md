@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramHost2::GetHostId | Microsoft Docs
+title: IDebugProgramHost2::GetHostId | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,37 +30,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8ee475f02211c4b0100f65c22a3243728bf0b152
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 4bc790c9571e407654a7e2a33435c66774a30fe8
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprogramhost2gethostid"></a>IDebugProgramHost2::GetHostId
-Gets the process identifier of the process hosting this program.  
+Obtém o identificador do processo que hospeda este programa.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetHostId(   
    AD_PROCESS_ID* pdwId  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetHostId(   
    AD_PROCESS_ID[] pdwId  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwId`  
- [in, out] An [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure that is filled in with the process identifier information.  
+ [no, out] Um [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) estrutura é preenchida com as informações de identificador de processo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)   
  [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

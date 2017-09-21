@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_SCOPE | Microsoft Docs
+title: DISASSEMBLY_STREAM_SCOPE | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5383c2dfce7e6d50df6926cdcdfc0caf22754d65
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: d988c7a9f639e36b73a6052e9cdbb013c3d2d92d
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="disassemblystreamscope"></a>DISASSEMBLY_STREAM_SCOPE
-Specifies the scope of the disassembly stream.  
+Especifica o escopo do fluxo de desmontagem.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_DISASSEMBLY_STREAM_SCOPE {   
    DSS_HUGE     = 0x10000000,  
    DSS_FUNCTION = 0x0001,  
@@ -52,7 +51,7 @@ enum enum_DISASSEMBLY_STREAM_SCOPE {
 typedef DWORD DISASSEMBLY_STREAM_SCOPE;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_DISASSEMBLY_STREAM_SCOPE {   
    DSS_HUGE     = 0x10000000,  
    DSS_FUNCTION = 0x0001,  
@@ -61,32 +60,32 @@ public enum enum_DISASSEMBLY_STREAM_SCOPE {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  DSS_HUGE  
- Specifies that disassembling the code context would generate more output than a client would typically want to retrieve in a single call.  
+ Especifica que desmontar o contexto do código geram saída mais que um cliente normalmente deseja recuperar em uma única chamada.  
   
  DSS_FUNCTION  
- Specifies that the function contained by the code context should be disassembled. Specifies that the disassembly stream represents a function, when returned by the [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) method.  
+ Especifica que a função contida pelo contexto de código deve ser desmontada. Especifica que o fluxo de desmontagem representa uma função, quando retornado pelo [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) método.  
   
  DSS_MODULE  
- When returned by the `IDebugDisassemblyStream2::GetScope` method, specifies that the disassembly stream represents a module.  
+ Quando retornado pelo `IDebugDisassemblyStream2::GetScope` método, especifica que o fluxo de desmontagem representa um módulo.  
   
  DSS_ALL  
- Specifies disassembly for the entire address space.  
+ Especifica a desmontagem para o espaço de endereço inteiro.  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md) method and returned by the [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) method.  
+## <a name="remarks"></a>Comentários  
+ Passada como um argumento para o [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md) método e retornado pelo [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) método.  
   
- These values may be combined with a bitwise `OR`.  
+ Esses valores podem ser combinados com um bit a bit `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)   
  [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)

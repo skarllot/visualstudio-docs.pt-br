@@ -1,5 +1,5 @@
 ---
-title: SccCheckout Function | Microsoft Docs
+title: "Função SccCheckout | Documentos do Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 32349017e005654d269f9dca7bd7d29c0985bc78
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 91f9bb8bc5c51f6bee857b19fa3853e168ccf858
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="scccheckout-function"></a>SccCheckout Function
-Given a list of fully qualified file names, this function checks them out to the local drive. The comment applies to all files being checked out. The comment argument can be a `null` string.  
+# <a name="scccheckout-function"></a>Função SccCheckout
+Dada uma lista de nomes de arquivo totalmente qualificado, essa função verifica no disco local. O comentário se aplica a todos os arquivos que está sendo feito check-out. O argumento de comentário pode ser um `null` cadeia de caracteres.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 SCCRTN SccCheckout (  
    LPVOID    pvContext,  
    HWND      hWnd,  
@@ -54,43 +53,43 @@ SCCRTN SccCheckout (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  pvContext  
- [in] The source control plug-in context structure.  
+ [in] A estrutura de contexto de plug-in de controle de origem.  
   
  hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para as caixas de diálogo que ele fornece.  
   
  nFiles  
- [in] Number of files selected to be checked out.  
+ [in] Número de arquivos selecionados para fazer check-out.  
   
  lpFileNames  
- [in] Array of fully qualified local path names of files to be checked out.  
+ [in] Matriz de nomes de caminho local totalmente qualificado dos arquivos para fazer check-out.  
   
  lpComment  
- [in] Comment to be applied to each of the selected files being checked out.  
+ [in] Comentário a ser aplicado a cada um dos arquivos selecionados check-out.  
   
  fOptions  
- [in] Command flags (see [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md)).  
+ [in] Sinalizadores de comando (consulte [os sinalizadores de bit usados pelos comandos específicos](../extensibility/bitflags-used-by-specific-commands.md)).  
   
  pvOptions  
- [in] Source control plug-in-specific options.  
+ [in] Opções de plug-in específico de controle de origem.  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## <a name="return-value"></a>Valor de retorno  
+ A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
   
-|Value|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|SCC_OK|Check out was successful.|  
-|SCC_E_FILENOTCONTROLLED|The selected file is not under source code control.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure. The file was not checked out.|  
-|SCC_E_ALREADYCHECKEDOUT|The user already has the file checked out.|  
-|SCC_E_FILEISLOCKED|The file is locked, prohibiting the creation of new versions.|  
-|SCC_E_FILEOUTEXCLUSIVE|Another user has done an exclusive checkout on this file.|  
-|SCC_I_OPERATIONCANCELED|The operation was cancelled before completion.|  
+|SCC_OK|Check-out foi bem-sucedida.|  
+|SCC_E_FILENOTCONTROLLED|O arquivo selecionado não está sob controle do código fonte.|  
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle de origem, provavelmente devido a problemas de rede ou de contenção. Recomenda-se uma nova tentativa.|  
+|SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|  
+|SCC_E_NONSPECIFICERROR|Falha não específica. O arquivo não foi extraído.|  
+|SCC_E_ALREADYCHECKEDOUT|O usuário já tiver o check-out do arquivo.|  
+|SCC_E_FILEISLOCKED|O arquivo está bloqueado, proibindo a criação de novas versões.|  
+|SCC_E_FILEOUTEXCLUSIVE|Outro usuário fez um check-out exclusivo nesse arquivo.|  
+|SCC_I_OPERATIONCANCELED|A operação foi cancelada antes da conclusão.|  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
- [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md)
+## <a name="see-also"></a>Consulte também  
+ [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
+ [Sinalizadores de bit usados pelos comandos específicos](../extensibility/bitflags-used-by-specific-commands.md)

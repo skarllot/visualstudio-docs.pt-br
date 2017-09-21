@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine3::LoadSymbols | Microsoft Docs
+title: IDebugEngine3::LoadSymbols | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,35 +30,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5f2804506fa68972062c53d8aca72bf9f3138099
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 5555264d7cd63c612ce2cbde13c5ccdda63c056c
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugengine3loadsymbols"></a>IDebugEngine3::LoadSymbols
-Loads (as necessary) symbols for all modules being debugged by this debugging engine.  
+Símbolos de cargas (conforme necessário) para todos os módulos que está sendo depurados por este mecanismo de depuração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT LoadSymbols();  
 ```  
   
-```csharp  
+```c#  
 int LoadSymbols();  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- None.  
+#### <a name="parameters"></a>Parâmetros  
+ Nenhum.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise returns error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retornará o código de erro.  
   
-## <a name="remarks"></a>Remarks  
- This loads debugging symbols for all modules referenced by this debugging engine. The symbols are loaded only if they have not already been loaded. Symbols are searched on the paths set by a call to [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md).  
+## <a name="remarks"></a>Comentários  
+ Isso carrega os símbolos de depuração para todos os módulos referenciados por esse mecanismo de depuração. Os símbolos são carregados somente se eles ainda não foram carregados. Símbolos são pesquisados nos caminhos definidos por uma chamada para [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md).  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)   
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

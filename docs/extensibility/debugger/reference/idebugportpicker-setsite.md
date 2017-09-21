@@ -1,5 +1,5 @@
 ---
-title: IDebugPortPicker::SetSite | Microsoft Docs
+title: IDebugPortPicker::SetSite | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,39 +28,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: dc499310ae51cd10f64cf39a1cb7396bc2423a76
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 4a5170ec9f5ad3bbe10291567b654e5e47dc891a
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugportpickersetsite"></a>IDebugPortPicker::SetSite
-Sets the service provider.  
+Define o provedor de serviço.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT SetSite(  
    IServiceProvider * pSP  
 );  
 ```  
   
-```csharp  
+```c#  
 public int SetSite(  
    IServiceProvider pSP  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pSP`  
- [in] Reference to the interface of the service provider.  
+ [in] Referência para a interface do provedor de serviços.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- This method will be called before any other methods are called.  
+## <a name="remarks"></a>Comentários  
+ Esse método será chamado antes de quaisquer outros métodos são chamados.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugPortPicker](../../../extensibility/debugger/reference/idebugportpicker.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolSearchEvent2::GetSymbolSearchInfo | Microsoft Docs
+title: IDebugSymbolSearchEvent2::GetSymbolSearchInfo | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,16 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 923693683194b452881a562e5957ccc036deda45
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: ffd68306778dede018826e2d702d1618e4edd20a
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugsymbolsearchevent2getsymbolsearchinfo"></a>IDebugSymbolSearchEvent2::GetSymbolSearchInfo
-Called by an event handler to retrieve results about a symbol load process.  
+Chamado por um manipulador de eventos para recuperar resultados sobre um processo de carregamento do símbolo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetSymbolSearchInfo(  
@@ -50,7 +49,7 @@ HRESULT GetSymbolSearchInfo(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetSymbolSearchInfo(  
    IDebugModule3              pModule,   
    ref string                 pbstrDebugMessage,   
@@ -59,26 +58,26 @@ int GetSymbolSearchInfo(
   
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pModule`  
- [out] An IDebugModule3 object representing the module for which the symbols were loaded.  
+ [out] Um objeto IDebugModule3 que representa o módulo para o qual os símbolos foram carregados.  
   
  `pbstrDebugMessage`  
- [in, out] Returns a string containing any error messages from the module. If there is no error, then this string will just contain the module's name but it is never empty.  
+ [no, out] Retorna uma cadeia de caracteres que contém as mensagens de erro do módulo. Se não houver nenhum erro, essa cadeia de caracteres conterá apenas o nome do módulo, mas nunca está vazia.  
   
 > [!NOTE]
->  [C++] `pbstrDebugMessage` cannot be `NULL` and must be freed with `SysFreeString`.  
+>  [C++] `pbstrDebugMessage` não pode ser `NULL` e deve ser liberado com `SysFreeString`.  
   
  `pdwModuleInfoFlags`  
- [out] A combination of flags from the [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) enumeration indicating whether any symbols were loaded.  
+ [out] Uma combinação de sinalizadores do [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) enumeração que indica se todos os símbolos foram carregados.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- When a handler receives the [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) event after an attempt is made to load debugging symbols for a module, the handler can call thismethod to determine the results of that load.  
+## <a name="remarks"></a>Comentários  
+ Quando um manipulador recebe o [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) evento após uma tentativa de carregar símbolos de depuração para um módulo, o manipulador pode chamar esse método para determinar os resultados da carga.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)   
  [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md)   
  [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md)

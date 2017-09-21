@@ -1,68 +1,52 @@
 ---
-title: 'How to: Publish a Project That Has a Specific Locale | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-helpviewer_keywords:
-- publishing, localized projects
-- locales, publishing for
-- deploying applications [ClickOnce], localized projects
-- locales, deploying for
-- publishing localized projects
-- macros, deploying with
-- macros, publishing with
+title: "Como publicar um projeto que tem uma localidade espec&#237;fica | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-deployment"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+helpviewer_keywords: 
+  - "implantando aplicativos [ClickOnce], projetos localizados"
+  - "localidades, implantando para"
+  - "localidades, publicando para"
+  - "macros, implantando com"
+  - "macros, publicando com"
+  - "publicando projetos localizados"
+  - "publicando, projetos localizados"
 ms.assetid: 7c4cd83a-f985-4c85-9022-fadb5dbd2b39
 caps.latest.revision: 11
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: cd6d798da4699116a75a486e2aaeac5ff17e577b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/24/2017
-
+caps.handback.revision: 11
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
 ---
-# <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>How to: Publish a Project That Has a Specific Locale
-It is not uncommon for an application to contain components that have different locales. In this scenario, you would create a solution that has several projects, and then publish separate projects for each locale. This procedure shows how to use a macro to publish the first project in a solution by using the 'en' locale. If you want to try this procedure with a locale other than 'en', make sure to set `localeString` in the macro to match the locale that you are using (for example, 'de' or 'de-DE').  
+# Como publicar um projeto que tem uma localidade espec&#237;fica
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+Não é incomum para um aplicativo conter componentes que possuem diversas localidades.  Nesse cenário, seria criada uma solução que possui diversos projetos e publicados projetos separados para cada localização.  Esse procedimento mostra como usar uma macro para publicar o primeiro projeto em uma solução usando a localização 'en'.  Se desejar tentar esse procedimento com outra localidade além de 'en', certifique\-se de definir `localeString` na macro para corresponder à localidade que estiver usando \(por exemplo, 'de' ou 'de\-DE'\).  
   
 > [!NOTE]
->  When you use this macro, the Publish Location should be a valid URL or Universal Naming Convention (UNC) share. Also, Internet Information Services (IIS) has to be installed on your computer. To install IIS, on the **Start** menu, click **Control Panel**. Double-click **Add or Remove Programs**. In **Add or Remove Programs**, click **Add/Remove Windows Components**. In the **Windows Components Wizard**, select the **Internet Information Services (IIS)** check box in the **Components** list. Then click **Finish** to close the wizard.  
+>  Ao usar essa macro, o Local de Publicação deve ser uma URL válida ou um compartilhamento Universal Naming Convention \(UNC\).  Além disso, Serviços de Informações da Internet \(IIS\) deve estar instalado no computador.  Para instalar o IIS, no menu **Iniciar**, clique em **Painel de Controle**.  Clique duas vezes em **Adicionar ou remover Programas**.  Em **Adicionar ou Remover Programas**, clique em **Adicionar\/Remover Componentes do Windows**.  No **Assistente de Componentes do Windows**, selecione a caixa de seleção **Serviços de Informações da Internet \(IIS\)** na lista **Componentes**.  Clique em **Concluir** para fechar o assistente.  
   
-### <a name="to-create-the-publishing-macro"></a>To create the publishing macro  
+### Criar a macro de publicação  
   
-1.  To open the Macro Explorer, on the **Tools** menu, point to **Macros**, and then click **Macro Explorer**.  
+1.  Para abrir o Gerenciador de Macro, no menu **Ferramentas**, aponte para **Macros** e clique em **Gerenciador de Macro**.  
   
-2.  Create a new macro module. In the Macro Explorer, select **MyMacros**. On the **Tools** menu, point to **Macros**, and then click **New Macro Module**. Name the module **PublishSpecificCulture**.  
+2.  Criar um novo módulo de macro.  No Gerenciador de Macro, selecione **MyMacros**.  No menu **Ferramentas**, aponte para **Macros** e clique em **Novo Módulo de Macro**.  Nomeie o módulo PublishSpecificCulture.  
   
-3.  In the Macro Explorer, expand the **MyMacros** node, and then open the **PublishAllProjects** module by double-clicking it (or, from the **Tools** menu, point to **Macros**, and then click **Macros IDE**).  
+3.  No Gerenciador de Macro, expanda o nó **MyMacros** e abra o módulo **PublishAllProjects** clicando duas vezes \(ou, no menu **Ferramentas**, aponte para **Macros** e clique em **Macros IDE**\).  
   
-4.  In the Macros IDE, add the following code to the module, after the `Import` statements:  
+4.  No Macros IDE, adicione o seguinte código ao módulo, após as instruções `Import`:  
   
-    ```vb  
+    ```vb#  
     Module PublishSpecificCulture  
         Sub PublishProjectFirstProjectWithEnLocale()  
             ' Note: You should publish projects by using the IDE at least once  
@@ -154,34 +138,34 @@ It is not uncommon for an application to contain components that have different 
     End Module  
     ```  
   
-5.  Close the Macros IDE. The focus will return to Visual Studio.  
+5.  Feche o Macros IDE.  O foco retornará ao Visual Studio.  
   
-### <a name="to-publish-a-project-for-a-specific-locale"></a>To publish a project for a specific locale  
+### Publicar um projeto para uma localização específica  
   
-1.  To create a Visual Basic Windows Application project, on the **File** menu, point to **New**, and then click **Project**.  
+1.  Para criar um projeto de Aplicativo do Windows do Visual Basic, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
   
-2.  In the **New Project** dialog box, select **Windows Application** from the **Visual Basic** node. Name the project **PublishLocales**.  
+2.  Na caixa de diálogo **Novo Projeto**, selecione **Aplicativo do Windows** no nó **Visual Basic**.  Nomeie o projeto PublishLocales.  
   
-3.  Click Form1. In the **Properties** window, under **Design**, change the **Language** property from **(Default)** to **English**. Change the **Text** property of the form to **MyForm**.  
+3.  Clique em Form1.  Na janela **Propriedades**, em **Design**, altere a propriedade **Idioma** de **\(Padrão\)** para **Inglês**.  Altere a propriedade **Texto** do formulário para MyForm.  
   
-     Note that the localized resource DLLs are not created until they are needed. For example, they are created when you change the text of the form or one of its controls after you have specified the new locale.  
+     Observe que as DLLs do recurso localizado não são criadas até serem necessárias.  Por exemplo, são criadas ao alterar o texto do formulário ou um de seus controles após especificar a nova localização.  
   
-4.  Publish PublishLocales by using the Visual Studio IDE.  
+4.  Publicar PublishLocales usando o Visual Studio IDE.  
   
-     In **Solution Explorer**, select PublishLocales. On the **Project** menu, select **Properties**. In the Project Designer, on the **Publish** page, specify a publishing location of **http://localhost/PublishLocales**, and then click **Publish Now**.  
+     No **Gerenciador de Soluções**, selecione PublishLocales.  No menu **Projeto**, selecione **Propriedades**.  No Designer de Projeto, na página **Publicar**, especifique um local de publicação de http:\/\/localhost\/PublishLocales e clique em **Publicar Agora**.  
   
-     When the publish Web page appears, close it. (For this step, you only have to publish the project; you do not have to install it.)  
+     Quando a página Web publicar for exibida, feche\-a.  \(Para esta etapa, é necessário apenas publicar o projeto; não é necessário instalar.\)  
   
-5.  Publish PublishLocales again by invoking the macro in the Visual Studio Command Prompt window. To view the Command Prompt window, on the **View** menu, point to **Other Windows** and then click **Command Window**, or press CTRL+ALT+A. In the Command Prompt window, type `macros`; auto-complete will provide a list of available macros. Select the following macro and press ENTER:  
+5.  Publique PublishLocales novamente invocando a macro na janela do Prompt de Comando do Visual Studio.  Para visualizar a janela do Prompt de Comando, no menu **Visualizar**, aponte para **Outras Janelas** e clique em **Janela de Comando** ou pressione CTRL\+ALT\+A.  Na janela do Prompt de Comando, digite `macros`; auto\-completar fornecerá uma lista de macros disponíveis.  Selecione a seguinte macro e pressione ENTER:  
   
      `Macros.MyMacros.PublishSpecificCulture.PublishProjectFirstProjectWithEnLocale`  
   
-6.  When the publish process succeeds, it will generate a message that says "Publish succeeded for PublishLocales\PublishLocales.vbproj. Publish language was 'en'." Click **OK** in the message box. When the publish Web page appears, click **Install**.  
+6.  Quando o processo de publicação for bem\-sucedido, gerará uma mensagem que diz "Publicação bem\-sucedida para PublishLocales\\PublishLocales.vbproj.  O idioma de publicação foi 'en'." Clique em **OK** na caixa de mensagem.  Quando a página Web publicar for exibida, clique em **Instalar**.  
   
-7.  Look in C:\Inetpub\wwwroot\PublishLocales\en. You should see the installed files such as the manifests, setup.exe, and the publish Web page file, in addition to the localized resource DLL. (By default ClickOnce appends a .deploy extension on EXEs and DLLs; you can remove this extension after deployment.)  
+7.  Procure em C:\\Inetpub\\wwwroot\\PublishLocales\\en.  Deverá ser possível visualizar os arquivos instalados como os manifestos, setup.exe e o arquivo da página Web publicar, além da DLL do recurso localizado.  \(Por padrão, ClickOnce anexa uma extensão .deploy em EXEs e DLLs; é possível remover essa extensão após a implantação.\)  
   
-## <a name="see-also"></a>See Also  
- [Publishing ClickOnce Applications](../deployment/publishing-clickonce-applications.md)   
- [Macros Development Environment](http://msdn.microsoft.com/en-us/d23105d8-34fe-4ad9-8278-fae2c660aeac)   
- [Macro Explorer Window](http://msdn.microsoft.com/en-us/762169e6-f83f-44b4-bffa-d0f107cae9a3)   
- [How to: Edit and Programmatically Create Macros](http://msdn.microsoft.com/en-us/6716f820-1feb-48ad-a718-27eb6b473c5a)
+## Consulte também  
+ [Publicando aplicativos ClickOnce](../deployment/publishing-clickonce-applications.md)   
+ [Macros Development Environment](http://msdn.microsoft.com/pt-br/d23105d8-34fe-4ad9-8278-fae2c660aeac)   
+ [Macro Explorer Window](http://msdn.microsoft.com/pt-br/762169e6-f83f-44b4-bffa-d0f107cae9a3)   
+ [How to: Edit and Programmatically Create Macros](http://msdn.microsoft.com/pt-br/6716f820-1feb-48ad-a718-27eb6b473c5a)

@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayField::GetNumberOfElements | Microsoft Docs
+title: IDebugArrayField::GetNumberOfElements | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 947e4b498c0fa7a936bf5a7c15f39c4aeb0ed9b4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 96580107297c9ee0f992c777701aac99cfa2a7fc
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugarrayfieldgetnumberofelements"></a>IDebugArrayField::GetNumberOfElements
-Gets the number of elements in the array.  
+Obtém o número de elementos na matriz.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetNumberOfElements(   
    DWORD* pdwNumElements  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetNumberOfElements(  
    out uint pdwNumElements  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwNumElements`  
- [out] Returns the number of elements in the array.  
+ [out] Retorna o número de elementos na matriz.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The value returned is the total number of elements in the array, regardless of the number of dimensions.  
+## <a name="remarks"></a>Comentários  
+ O valor retornado é o número total de elementos na matriz, independentemente do número de dimensões.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

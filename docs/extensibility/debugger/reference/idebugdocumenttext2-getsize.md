@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetSize | Microsoft Docs
+title: IDebugDocumentText2::GetSize | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,46 +30,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b017d9a867dd9d441eade16a980f605f3ef40c45
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: f5af97d594d7160d33628c8a8248decb4f2a1e91
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugdocumenttext2getsize"></a>IDebugDocumentText2::GetSize
-Retrieves the size of the text at this position in the document.  
+Recupera o tamanho do texto nessa posição no documento.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetSize(   
    ULONG* pcNumLines,  
    ULONG* pcNumChars  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetSize(   
    ref uint pcNumLines,  
    ref uint pcNumChars  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pcNumLines`  
- [out] Returns the number of lines of text.  
+ [out] Retorna o número de linhas de texto.  
   
  `pcNumChars`  
- [out] Returns the number of characters of text.  
+ [out] Retorna o número de caracteres de texto.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- [C++ only] If a particular value is not desired, pass a NULL for the parameter.  
+## <a name="remarks"></a>Comentários  
+ [C++] Se um valor específico não for desejado, passe um valor nulo para o parâmetro.  
   
- [C# only] Both parameters must be specified.  
+ [Apenas c#] Ambos os parâmetros devem ser especificados.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)

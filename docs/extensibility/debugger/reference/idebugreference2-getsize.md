@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetSize | Microsoft Docs
+title: IDebugReference2::GetSize | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,36 +30,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b09816a1ed57f8b4fd5fdd475406786cb39198a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 247176a99398a29ac2ff2e9a390370cd8cdf9af4
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugreference2getsize"></a>IDebugReference2::GetSize
-Gets the size, in bytes, of the value of the reference. Reserved for future use.  
+Obtém o tamanho, em bytes, do valor de referência. Reservado para uso futuro.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetSize (   
    DWORD* pdwSize  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetSize (   
    out uint pdwSize  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwSize`  
- [out] Returns the size, in bytes, of the value of the reference.  
+ [out] Retorna o tamanho, em bytes, do valor de referência.  
   
-## <a name="return-value"></a>Return Value  
- Always returns `E_NOTIMPL`.  
+## <a name="return-value"></a>Valor de retorno  
+ Sempre retorna `E_NOTIMPL`.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

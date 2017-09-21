@@ -1,5 +1,5 @@
 ---
-title: MODULE_FLAGS | Microsoft Docs
+title: MODULE_FLAGS | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2bb42c4a29330d2f554c2f2f05273349747addf9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 31c3782eb1d6cc82a4ffea5b5b6f98c5f2829470
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="moduleflags"></a>MODULE_FLAGS
-Used to describe a module.  
+Usado para descrever um módulo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_MODULE_FLAGS {   
    MODULE_FLAG_NONE        = 0x0000,  
    MODULE_FLAG_SYSTEM      = 0x0001,  
@@ -54,7 +53,7 @@ enum enum_MODULE_FLAGS {
 typedef DWORD MODULE_FLAGS;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_MODULE_FLAGS {   
    MODULE_FLAG_NONE        = 0x0000,  
    MODULE_FLAG_SYSTEM      = 0x0001,  
@@ -65,37 +64,37 @@ public enum enum_MODULE_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  MODULE_FLAG_NONE  
- Specifies no module.  
+ Não especifica que nenhum módulo.  
   
  MODULE_FLAG_SYSTEM  
- Specifies a system module.  
+ Especifica um módulo do sistema.  
   
  MODULE_FLAG_SYMBOLS  
- Specifies a symbol module.  
+ Especifica um módulo de símbolo.  
   
  MODULE_FLAG_64BIT  
- Specifies a 64-bit module.  
+ Especifica um módulo de 64 bits.  
   
  MODULE_FLAG_OPTIMIZED  
- Specifies the module has been optimized. This state is reflected in the **Modules** window.  
+ Especifica que o módulo foi otimizado. Esse estado é refletido no **módulos** janela.  
   
  MODULE_FLAG_UNOPTIMIZED  
- Specifies the module has not been optimized. This state is reflected in the **Modules** window. This is the default state.  
+ Especifica que o módulo não foi otimizado. Esse estado é refletido no **módulos** janela. Este é o estado padrão.  
   
-## <a name="remarks"></a>Remarks  
- Used for the `m_dwModuleFlags` member of the [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) structure.  
+## <a name="remarks"></a>Comentários  
+ Usado para o `m_dwModuleFlags` membro do [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) estrutura.  
   
- These flags may be combined with a bitwise `OR`.  
+ Esses sinalizadores podem ser combinados com um bit a bit `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)

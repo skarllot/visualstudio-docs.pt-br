@@ -1,5 +1,5 @@
 ---
-title: IDebugExtendedField::GetExtendedKind | Microsoft Docs
+title: IDebugExtendedField::GetExtendedKind | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,36 +29,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: bbf1ab74d1a1eeeaab4e61792b9e723bc9c9313f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: f3395776f349431e64e3d1ff74851e7856b24cff
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugextendedfieldgetextendedkind"></a>IDebugExtendedField::GetExtendedKind
-Retrieves the specified extended field kind.  
+Recupera o tipo de campo estendido especificado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetExtendedKind(  
    FIELD_KIND_EX* pdwKind  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetExtendedKind(  
    ref enum_FIELD_KIND_EX pdwKind  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pdwKind`  
- [in, out] Value from the [FIELD_KIND_EX](../../../extensibility/debugger/reference/field-kind-ex.md) enumeration that defines the kind of field.  
+ [no, out] O valor do [FIELD_KIND_EX](../../../extensibility/debugger/reference/field-kind-ex.md) enumeração que define o tipo de campo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugExtendedField](../../../extensibility/debugger/reference/idebugextendedfield.md)

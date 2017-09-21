@@ -1,5 +1,5 @@
 ---
-title: IDebugManagedObject::SetFromManagedObject | Microsoft Docs
+title: IDebugManagedObject::SetFromManagedObject | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d19df4fd8726ed3e59d57b314e19684b0a7f6a5e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 2885b77a760ee696359fd57284b6d51d222071ab
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugmanagedobjectsetfrommanagedobject"></a>IDebugManagedObject::SetFromManagedObject
-Sets the value of the instance of the value class object from the instance of the value class provided as a parameter.  
+Define o valor da instância do objeto de classe de valor da instância da classe de valor fornecida como um parâmetro.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT SetFromManagedObject(   
    IUnknown* pManagedObject  
 );  
 ```  
   
-```csharp  
+```c#  
 int SetFromManagedObject(  
    object pManagedObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pManagedObject`  
- [in] An interface that represents the managed object containing the new value.  
+ [in] Uma interface que representa o objeto gerenciado que contém o novo valor.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará S_OK; Caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- This method is used to change the managed object as represented by the [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) object.  
+## <a name="remarks"></a>Comentários  
+ Esse método é usado para alterar o objeto gerenciado conforme representado pelo [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) objeto.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

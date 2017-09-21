@@ -1,5 +1,5 @@
 ---
-title: IDebugSourceServerModule::GetSourceServerData | Microsoft Docs
+title: IDebugSourceServerModule::GetSourceServerData | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,46 +28,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f441d4d3dd8f242ad66c425079916d35faedf7b3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 2c285bb3edd258e5a354883e81074589b0abce86
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugsourceservermodulegetsourceserverdata"></a>IDebugSourceServerModule::GetSourceServerData
-Retrieves an array of source server information.  
+Recupera uma matriz de informações do servidor de origem.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetSourceServerData(  
    ULONG* pDataByteCount,   
    BYTE** ppData  
 );  
 ```  
   
-```csharp  
+```c#  
 public int GetSourceServerData(  
    out uint  pDataByteCount,   
    out int[] ppData  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pDataByteCount`  
- [out] Number of bytes in the data array.  
+ [out] Número de bytes na matriz de dados.  
   
  `ppData`  
- [out] Reference to the data array.  
+ [out] Referência para a matriz de dados.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CModule** object that exposes the [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md) interface.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como implementar esse método para um **CModule** objeto expõe o [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md) interface.  
   
-```cpp  
+```cpp#  
 HRESULT CModule::GetSourceServerData(ULONG* pDataByteCount, BYTE** ppData)  
 {  
     HRESULT hr = S_OK;  
@@ -89,5 +88,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md)

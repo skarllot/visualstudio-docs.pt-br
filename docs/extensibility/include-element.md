@@ -1,5 +1,5 @@
 ---
-title: Include Element | Microsoft Docs
+title: Incluir elemento | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,49 +31,48 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 92ac563092cae75cd32a5722a7f9f850545fcad9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 9a57551660b09d23833da0d9dd41ed16d34aaeb7
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="include-element"></a>Include Element
-The Include element specifies a file that can be located on the supplied include path for insertion into the current file.  All symbols and types defined will become part of the compiled result.  
+# <a name="include-element"></a>Incluir elemento
+O elemento Include Especifica um arquivo que pode ser localizado em fornecido incluir o caminho para inserção no arquivo atual.  Todos os símbolos e tipos definidos se tornará parte do resultado compilado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```csharp  
+```c#  
 <Include href="stdidcmd.h" />  
 ```  
   
-## <a name="attributes-and-elements"></a>Attributes and Elements  
- The following sections describe attributes, child elements, and parent elements.  
+## <a name="attributes-and-elements"></a>Atributos e elementos  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>Atributos  
   
-|Attribute|Description|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
-|href|Required. The path to the header file:<br /><br /> href="stdidcmd.h"|  
-|Condition|Optional. See [Conditional Attributes](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|href|Necessário. O caminho para o arquivo de cabeçalho:<br /><br /> href="stdidcmd.h"|  
+|Condição|Opcional. Consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
-### <a name="child-elements"></a>Child Elements  
+### <a name="child-elements"></a>Elementos filho  
   
-|Element|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
-|None.|None.|  
+|Nenhum.|Nenhum.|  
   
-### <a name="parent-elements"></a>Parent Elements  
+### <a name="parent-elements"></a>Elementos pai  
   
-|Element|Description|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
-|[CommandTable Element](../extensibility/commandtable-element.md)|Defines all of the elements that represent commands — that is, menu items, menus, toolbars, and combo boxes — that a VSPackage provides to the IDE.|  
+|[Elemento CommandTable](../extensibility/commandtable-element.md)|Define todos os elementos que representam os comandos — ou seja, itens de menu, menus, barras de ferramentas e caixas de combinação — que fornece um VSPackage ao IDE.|  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Exemplo  
   
 ```  
 <Include href="PackagePlacements.vsct"/>  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Consulte também  
+ [Tabela de comando do Visual Studio (. Arquivos de VSCT)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

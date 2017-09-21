@@ -1,5 +1,5 @@
 ---
-title: Registering the Program | Microsoft Docs
+title: Registrando o programa | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,36 +29,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 939b047c531ef365ef9a57b8b0947ffa8b0e1575
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 1bc19623ac675252587b714de504022020b44ce2
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="registering-the-program"></a>Registering the Program
-After the debug engine has acquired a port, represented by an [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) interface, the next step in enabling the program to be debugged is to register it with the port. Once registered, the program is available for debugging by one of the following means:  
+# <a name="registering-the-program"></a>Registrando o programa
+Depois que o mecanismo de depuração adquiriu uma porta, representado por um [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) interface, a próxima etapa para habilitar o programa a ser depurado é registrá-lo com a porta. Depois de registrado, o programa está disponível para depuração por um dos seguintes meios:  
   
--   The process of attaching, which allows the debugger to gain complete debugging control of a running application.  
+-   O processo de anexação, que permite que o depurador obtivesse o controle de depuração completo de um aplicativo em execução.  
   
--   Just-in-time (JIT) debugging, which allows for after-the-fact debugging of a program that runs independently of a debugger. When the run-time architecture catches a fault, the debugger is notified before the operating system or runtime environment releases the memory and resources of the faulting program.  
+-   Just-in-time (JIT) depuração, que permite a depuração após o fato de um programa executado independentemente de um depurador. Quando a arquitetura de tempo de execução detecta uma falha, o depurador é notificado antes do sistema operacional ou do ambiente de execução libera a memória e os recursos do programa com falha.  
   
-## <a name="registering-procedure"></a>Registering Procedure  
+## <a name="registering-procedure"></a>Procedimento de registro  
   
-#### <a name="to-register-your-program"></a>To register your program  
+#### <a name="to-register-your-program"></a>Para registrar o seu programa  
   
-1.  Call the [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) method implemented by the port.  
+1.  Chamar o [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) método implementado pela porta.  
   
-     `IDebugPortNotify2::AddProgramNode` requires a pointer to an [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) interface.  
+     `IDebugPortNotify2::AddProgramNode`requer um ponteiro para um [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) interface.  
   
-     Typically, when the operating system or run-time environment loads a program, it creates the program node. If the debug engine (DE) is asked to load the program then the DE creates and registers the program node.  
+     Normalmente, quando o sistema operacional ou o ambiente de tempo de execução carrega um programa, ele cria o nó do programa. Se o mecanismo de depuração (DE) é solicitado a carregar o programa o DE cria e registra o nó do programa.  
   
-     The following example shows the debug engine launching the program and registering it with a port.  
+     O exemplo a seguir mostra o mecanismo de depuração, ative o programa e registrá-lo com uma porta.  
   
     > [!NOTE]
-    >  This is not the only way to launch and resume a process; this is mainly an example of registering a program with a port.  
+    >  Isso não é a única maneira de iniciar e reiniciar um processo; Isso é principalmente um exemplo de registro de um programa com uma porta.  
   
-    ```cpp  
+    ```cpp#  
     // This is an IDebugEngineLaunch2 method.  
     HRESULT CDebugEngine::LaunchSuspended(/* omitted parameters */,  
                                           IDebugPort2 *pPort,  
@@ -122,6 +121,6 @@ After the debug engine has acquired a port, represented by an [IDebugPort2](../.
   
     ```  
   
-## <a name="see-also"></a>See Also  
- [Getting a Port](../../extensibility/debugger/getting-a-port.md)   
- [Enabling a Program to Be Debugged](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
+## <a name="see-also"></a>Consulte também  
+ [Obtendo uma porta](../../extensibility/debugger/getting-a-port.md)   
+ [Habilitar um programa a ser depurado](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

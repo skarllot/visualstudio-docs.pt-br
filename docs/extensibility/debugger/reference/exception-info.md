@@ -1,5 +1,5 @@
 ---
-title: EXCEPTION_INFO | Microsoft Docs
+title: EXCEPTION_INFO | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: fbc402041df0633038681eb64583e9a9b41fb28c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8fab538425beba08fcf58aeef80cb9065ccf6768
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="exceptioninfo"></a>EXCEPTION_INFO
-Describes an exception or run-time error thrown by the program being debugged.  
+Descreve uma exceção ou erro de tempo de execução gerado pelo programa que está sendo depurado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 typedef struct tagEXCEPTION_INFO {   
    IDebugProgram2* pProgram;  
    BSTR            bstrProgramName;  
@@ -53,7 +52,7 @@ typedef struct tagEXCEPTION_INFO {
 } EXCEPTION_INFO;  
 ```  
   
-```csharp  
+```c#  
 public struct EXCEPTION_INFO {   
    public IDebugProgram2 pProgram;  
    public string         bstrProgramName;  
@@ -64,37 +63,37 @@ public struct EXCEPTION_INFO {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  pProgram  
- The [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object that represents the program in which the exception occurred.  
+ O [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objeto que representa o programa no qual a exceção ocorreu.  
   
  bstrProgramName  
- The name of the program in which the exception occurred.  
+ O nome do programa no qual a exceção ocorreu.  
   
  bstrExceptionName  
- The name of the exception.  
+ O nome da exceção.  
   
  dwCode  
- The identification code for the exception or run-time error.  
+ O código de identificação para o erro de exceção ou tempo de execução.  
   
  dwState  
- A value from the [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) enumeration that defines the state of the exception.  
+ Um valor a partir de [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) enumeração que define o estado da exceção.  
   
  guidType  
- The GUID language identifier, either `guidLang` or `guidEng`.  
+ O identificador de idioma GUID, `guidLang` ou `guidEng`.  
   
-## <a name="remarks"></a>Remarks  
- This structure is passed as a parameter to the [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) and the [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) methods. This structure is also passed to the [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) method to be filled in.  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é passada como um parâmetro para o [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) e [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) métodos. Essa estrutura também é passada para o [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) método a ser preenchido.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)   

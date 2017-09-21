@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetLanguage | Microsoft Docs
+title: IDebugSymbolProvider::GetLanguage | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ac300d90d6cd6841cdcc7213a5a6004a29b5a6f6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8e94ee7d67095e3aefe909e266192a48784bcb4a
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugsymbolprovidergetlanguage"></a>IDebugSymbolProvider::GetLanguage
-This method gets the language that was used to compile the code at the debug address.  
+Esse método obtém o idioma usado para compilar o código no endereço de depuração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetLanguage(   
    IDebugAddress* pAddress,  
    GUID*          pguidLanguage,  
@@ -50,7 +49,7 @@ HRESULT GetLanguage(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetLanguage(  
    IDebugAddress pAddress,   
    out Guid      pguidLanguage,   
@@ -58,22 +57,22 @@ int GetLanguage(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pAddress`  
- [in] An address object represented by an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
+ [in] Um objeto de endereço representado por uma [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
   
  `pguidLanguage`  
- [out] Returns a `GUID` that specifies the language.  
+ [out] Retorna um `GUID` que especifica o idioma.  
   
  `pguidLanguageVendor`  
- [out] Returns a `GUID` that specifies the language vendor.  
+ [out] Retorna um `GUID` que especifica o fornecedor do idioma.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- The debug engine calls this method to obtain the information it needs to select the correct expression evaluator.  
+## <a name="remarks"></a>Comentários  
+ O mecanismo de depuração chama esse método para obter as informações necessárias para selecionar o avaliador de expressão correta.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)

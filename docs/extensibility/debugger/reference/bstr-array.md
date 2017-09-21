@@ -1,5 +1,5 @@
 ---
-title: BSTR_ARRAY | Microsoft Docs
+title: BSTR_ARRAY | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,51 +30,50 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0e1d2b2228085505971102494522cdf9085d4a67
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 1dff5f1955e89c7d8da61a2decdc13a5a0e80570
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="bstrarray"></a>BSTR_ARRAY
-A structure that describes an array of strings.  
+Uma estrutura que descreve uma matriz de cadeias de caracteres.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 typedef struct tagBSTR_ARRAY {  
    DWORD dwCount;  
    BSTR* Members;  
 } BSTR_ARRAY;  
 ```  
   
-```csharp  
+```c#  
 struct BSTR_ARRAY {  
    DWORD    dwCount;  
    string[] Members;  
 }  
 ```  
   
-## <a name="terms"></a>Terms  
+## <a name="terms"></a>Termos  
  dwCount  
- Number of strings in `Members` array.  
+ Número de cadeias de caracteres em `Members` matriz.  
   
- Members  
- Array of strings.  
+ Membros  
+ Matriz de cadeias de caracteres.  
   
-## <a name="remarks"></a>Remarks  
- This structure is returned from the [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) method.  
+## <a name="remarks"></a>Comentários  
+ Essa estrutura é retornada a partir de [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) método.  
   
- [C++ only] Each individual string must be freed using `SysFreeString`, and the `Members` array must be freed with `CoTaskMemFree`.  
+ [C++] Cada cadeia de caracteres individual deve ser liberada usando `SysFreeString`e o `Members` matriz deve ser liberada com `CoTaskMemFree`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Estruturas e uniões](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)

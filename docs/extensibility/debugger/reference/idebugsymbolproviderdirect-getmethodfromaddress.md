@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetMethodFromAddress | Microsoft Docs
+title: IDebugSymbolProviderDirect::GetMethodFromAddress | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,19 +29,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a2979c305bd8db9700f55e799de26fe4ce1422d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 11b58f37eead4b9f637e503336730a353ddb0637
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugsymbolproviderdirectgetmethodfromaddress"></a>IDebugSymbolProviderDirect::GetMethodFromAddress
-Retrieves information about the method at the specified debug address.  
+Recupera informações sobre o método no endereço especificado de depuração.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetMethodFromAddress(  
    IDebugAddress* pAddress,  
    GUID*          pGuid,  
@@ -53,7 +52,7 @@ HRESULT GetMethodFromAddress(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetMethodFromAddress(  
    IDebugAddress pAddress,  
    out Guid      pGuid,  
@@ -65,30 +64,30 @@ int GetMethodFromAddress(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pAddress`  
- [in] Debug address that is represented by the [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
+ [in] Depurar o endereço é representado pelo [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
   
  `pGuid`  
- [out] Unique identifier of the module.  
+ [out] Identificador exclusivo do módulo.  
   
  `pAppID`  
- [out] Identifier of the application domain.  
+ [out] Identificador do domínio do aplicativo.  
   
  `pTokenClass`  
- [out] Token that represents the containing class.  
+ [out] Token que representa a classe recipiente.  
   
  `pTokenMethod`  
- [out] Token that represents the module.  
+ [out] Token que representa o módulo.  
   
  `pdwOffset`  
- [out] An offset in bytes from the start of the `pAddress` parameter.  
+ [out] Um deslocamento em bytes do início o `pAddress` parâmetro.  
   
  `pdwVersion`  
- [out] Version number of the method.  
+ [out] Número de versão do método.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

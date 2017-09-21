@@ -1,5 +1,5 @@
 ---
-title: Creating a Basic Project System, Part 1 | Microsoft Docs
+title: "Criando um sistema de projeto básico, parte 1 | Documentos do Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,77 +30,76 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 100561bf7532efebf95d1c8cfda143f454a02197
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 88ab81d3262b194e64a94a8a7681c00dc0153089
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="creating-a-basic-project-system-part-1"></a>Creating a Basic Project System, Part 1
-In Visual Studio, projects are the containers that developers use to organize source code files and other assets. Projects appear as children of solutions in the **Solution Explorer**. Projects let you organize, build, debug, and deploy source code and create references to Web services, databases, and other resources.  
+# <a name="creating-a-basic-project-system-part-1"></a>Criando um sistema de projeto básico, parte 1
+No Visual Studio, os projetos são contêineres que os desenvolvedores usam para organizar arquivos de código fonte e outros ativos. Projetos aparecem como filhos das soluções de **Solution Explorer**. Projetos permitem organizar, compilar, depurar e implantar o código-fonte e criar referências para serviços da Web, bancos de dados e outros recursos.  
   
- Projects are defined in project files, for example a .csproj file for a Visual C# project. You can create your own project type that has your own project file name extension. For more information about project types, see [Project Types](../extensibility/internals/project-types.md).  
-  
-> [!NOTE]
->  If you need to extend Visual Studio with a custom project type, we strongly recommend leveraging the [Visual Studio Project System](https://github.com/Microsoft/VSProjectSystem) which has a number of advantages over building a project system from scratch:  
->   
->  -   Easier onboarding.  Even a basic project system requires tens of thousands of lines of code.  Leveraging CPS reduces the onboarding cost to a few clicks before you are ready to customize it to your needs.  
-> -   Easier maintenance.  By leveraging CPS, you only need to maintain your own scenarios.  We handle the upkeep of all of the project system infrastructure.  
->   
->  If you need to target versions of Visual Studio older than Visual Studio 2013, you will not be able to leverage CPS in a Visual Studio extension.  If that is the case, this walkthrough is a good place to get started.  
-  
- This walkthrough shows you how to create a project type that has the project file name extension .myproj. This walkthrough borrows from the existing Visual C# project system.  
+ Projetos são definidos em arquivos de projeto, por exemplo, um arquivo. csproj para um projeto Visual c#. Você pode criar seu próprio tipo de projeto que tem sua própria extensão de nome de arquivo de projeto. Para obter mais informações sobre tipos de projeto, consulte [tipos de projeto](../extensibility/internals/project-types.md).  
   
 > [!NOTE]
->  For more examples of extension projects, see [VSSDK Samples](http://aka.ms/vs2015sdksamples).  
+>  Se for necessário estender o Visual Studio com um tipo de projeto personalizado, é altamente recomendável utilizar o [sistema de projetos do Visual Studio](https://github.com/Microsoft/VSProjectSystem) que tem uma série de vantagens sobre a criação de um sistema de projeto a partir do zero:  
+>   
+>  -   Integração mais fácil.  Até mesmo um sistema de projeto básico requer dezenas de milhares de linhas de código.  Aproveitar o CPS reduz o custo de integração para alguns cliques, antes que você está pronto para personalizá-lo às suas necessidades.  
+> -   Manutenção mais fácil.  Aproveitando o CPS, você somente precisa manter seus próprios cenários.  Podemos lidar com a manutenção de toda a infra-estrutura de sistema de projeto.  
+>   
+>  Se você precisar de direcionar às versões do Visual Studio anteriores ao Visual Studio 2013, você não poderá aproveitar o CPS em uma extensão do Visual Studio.  Se esse for o caso, este passo a passo é um bom lugar para começar.  
   
- This walkthrough teaches how to accomplish these tasks:  
+ Este passo a passo mostra como criar um tipo de projeto que tem o .myproj de extensão de nome de arquivo de projeto. Este passo a passo usa do sistema de projeto Visual c# existente.  
   
--   Create a basic project type.  
+> [!NOTE]
+>  Para ver um exemplo de ponta a ponta de um sistema de projeto de linguagem completa, consulte o exemplo de IronPython Deep Dive no [VSSDK exemplos](../misc/vssdk-samples.md).  
   
--   Create a basic project template.  
+ Este passo a passo ensina como realizar essas tarefas:  
   
--   Register the project template with Visual Studio.  
+-   Crie um tipo de projeto básico.  
   
--   Create a project instance by opening the **New Project** dialog box and then using your template.  
+-   Crie um modelo de projeto básico.  
   
--   Create a project factory for your project system.  
+-   Registre o modelo de projeto com o Visual Studio.  
   
--   Create a project node for your project system.  
+-   Criar uma instância de projeto abrindo o **novo projeto** caixa de diálogo e, em seguida, usando o modelo.  
   
--   Add custom icons for the project system.  
+-   Crie uma fábrica de projeto para o seu sistema de projeto.  
   
--   Implement basic template parameter substitution.  
+-   Crie um nó de projeto para o seu sistema de projeto.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+-   Adicione ícones personalizados para o sistema de projeto.  
   
- You must also download the source code for the [Managed Package Framework for Projects](http://mpfproj12.codeplex.com/). Extract the file to a location that is accessible to the solution you are going to create.  
+-   Implementar a substituição de parâmetro do modelo básico.  
   
-## <a name="creating-a-basic-project-type"></a>Creating a Basic Project Type  
- Create a C# VSIX project named **SimpleProject**. (**File, New, Project** and then **C#, Extensibility, Visual Studio Package**). Add a Visual Studio Package project item template (on the Solution Explorer, right-click the project node and select **Add / New Item**, then go to **Extensibility / Visual Studio Package**). Name the file **SimpleProjectPackage**.  
+## <a name="prerequisites"></a>Pré-requisitos  
+ A partir do Visual Studio 2015, você não instale o SDK do Visual Studio no Centro de download. Ele é fornecido como um recurso opcional na instalação do Visual Studio. Você também pode instalar o SDK do VS mais tarde. Para obter mais informações, consulte [instalar o SDK do Visual Studio](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-basic-project-template"></a>Creating a Basic Project Template  
- Now, you can modify this basic VSPackage to implement the new .myproj project type. To create a project that is based on the .myproj project type, Visual Studio has to know which files, resources, and references to add to the new project. To provide this information, put project files in a project template folder. When a user uses the .myproj project to create a project, the files are copied to the new project.  
+ Você também deve baixar o código-fonte para o [estrutura de pacote gerenciado para projetos](http://mpfproj12.codeplex.com/). Extraia o arquivo para um local que seja acessível para a solução que você pretende criar.  
   
-#### <a name="to-create-a-basic-project-template"></a>To create a basic project template  
+## <a name="creating-a-basic-project-type"></a>Criando um tipo de projeto básico  
+ Crie um projeto do VSIX c# chamado **SimpleProject**. (**, Novo, projeto** e **o pacote do Visual Studio c#, extensibilidade,**). Adicionar um modelo de item de projeto do Visual Studio Package (no Gerenciador de soluções, clique com botão direito no nó do projeto e selecione **Adicionar / Novo Item**, em seguida, vá para **extensibilidade / pacote do Visual Studio**). Nomeie o arquivo **SimpleProjectPackage**.  
   
-1.  Add three folders to the project, one under the other: **Templates\Projects\SimpleProject**. (In **Solution Explorer**, right-click the **SimpleProject** project node, point to **Add**, and then click **New Folder**. Name the folder `Templates`. In the **Templates** folder, add a folder named `Projects`. In the **Projects** folder, add a folder named `SimpleProject`.)  
+## <a name="creating-a-basic-project-template"></a>Criando um modelo de projeto básico  
+ Agora, você pode modificar este VSPackage básica para implementar o novo tipo de projeto .myproj. Para criar um projeto com base no tipo de projeto .myproj, Visual Studio precisa saber quais arquivos, recursos e referências para adicionar ao novo projeto. Para fornecer essas informações, coloque os arquivos de projeto em uma pasta de modelo de projeto. Quando um usuário utiliza o projeto .myproj para criar um projeto, os arquivos são copiados para o novo projeto.  
   
-2.  In the **Projects\SimpleProject** folder add an icon file named `SimpleProject.ico`. When you click **Add**, the icon editor opens.  
+#### <a name="to-create-a-basic-project-template"></a>Para criar um modelo de projeto básico  
   
-3.  Make the icon distinctive. This icon will appear in the **New Project** dialog box later in the walkthrough.  
+1.  Adicione três pastas ao projeto, um sob o outro: **Templates\Projects\SimpleProject**. (No **Solution Explorer**, com o botão direito do **SimpleProject** nó do projeto, aponte para **adicionar**e, em seguida, clique em **nova pasta**. Nomeie a pasta `Templates`. No **modelos** pasta, adicione uma pasta chamada `Projects`. Além de **projetos** pasta, adicione uma pasta chamada `SimpleProject`.)  
   
-     ![Simple Project Icon](../extensibility/media/simpleprojicon.png "SimpleProjIcon")  
+2.  No **Projects\SimpleProject** pasta adicionar um arquivo de ícone denominado `SimpleProject.ico`. Quando você clica em **adicionar**, abre o editor de ícone.  
   
-4.  Save the icon and close the icon editor.  
+3.  Para exibir o ícone diferente. Esse ícone aparecerá no **novo projeto** caixa de diálogo posteriormente no passo a passo.  
   
-5.  In the **Projects\SimpleProject** folder, add a **Class** item named `Program.cs`.  
+     ![Ícone de projeto simples](~/extensibility/media/simpleprojicon.png "SimpleProjIcon")  
   
-6.  Replace the existing code with the following lines.  
+4.  Salve o ícone e feche o editor de ícone.  
   
-    ```csharp  
+5.  No **Projects\SimpleProject** pasta, adicione um **classe** item chamado `Program.cs`.  
+  
+6.  Substitua o código existente com as seguintes linhas.  
+  
+    ```c#  
     using System;  
     using System.Collections.Generic;  
     using System.Text;  
@@ -119,18 +118,18 @@ In Visual Studio, projects are the containers that developers use to organize so
     ```  
   
     > [!IMPORTANT]
-    >  This is not the final form of the Program.cs code; the replacement parameters will be dealt with in a later step. You may see compile errors, but as long as the file's **BuildAction** is **Content**, you should be able to build and run the project as usual.  
+    >  Isso não é a forma final do código Program.cs; os parâmetros de substituição serão abordados em uma etapa posterior. Você pode ver erros de compilação, mas desde que o arquivo **BuildAction** é **conteúdo**, você deve ser capaz de compilar e executar o projeto como de costume.  
   
-1.  Save the file.  
+1.  Salve o arquivo.  
   
-2.  Copy the AssemblyInfo.cs file from the **Properties** folder to the **Projects\SimpleProject** folder.  
+2.  Copiar o arquivo AssemblyInfo.cs do **propriedades** pasta para o **Projects\SimpleProject** pasta.  
   
-3.  In the **Projects\SimpleProject** folder add an XML file named `SimpleProject.myproj`.  
+3.  No **Projects\SimpleProject** pasta adicionar um arquivo XML denominado `SimpleProject.myproj`.  
   
     > [!NOTE]
-    >  The file name extension for all projects of this type is .myproj. If you want to change it, you must change it everywhere it is mentioned in the walkthrough.  
+    >  A extensão de nome de arquivo para todos os projetos desse tipo é .myproj. Se você quiser alterá-lo, você deve alterar everywhere que é mencionada no passo a passo.  
   
-4.  Replace the existing content with the following lines.  
+4.  Substitua o conteúdo existente com as seguintes linhas.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -170,36 +169,36 @@ In Visual Studio, projects are the containers that developers use to organize so
     </Project>  
     ```  
   
-5.  Save the file.  
+5.  Salve o arquivo.  
   
-6.  In the **Properties** window, set the **Build Action** of AssemblyInfo.cs, Program.cs, SimpleProject.ico, and SimpleProject.myproj to **Content**, and set their **Include in VSIX** properties to **True**.  
+6.  No **propriedades** janela, defina a **Build Action** de AssemblyInfo.cs, Program.cs, SimpleProject.ico e SimpleProject.myproj para **conteúdo**e defina seus **incluir na VSIX** propriedades **True**.  
   
- This project template describes a basic Visual C# project that has both a Debug configuration and a Release configuration. The project includes two source files, AssemblyInfo.cs and Program.cs, and several assembly references. When a project is created from the template, the ProjectGuid value is automatically replaced by a new GUID.  
+ Este modelo de projeto descreve um projeto Visual c# básico que tem uma configuração de depuração e uma configuração de versão. O projeto inclui dois arquivos de origem, AssemblyInfo.cs e Program.cs e assembly várias referências. Quando um projeto é criado a partir do modelo, o valor de ProjectGuid automaticamente é substituído por um novo GUID.  
   
- In **Solution Explorer**, the expanded **Templates** folder should appear as follows:  
+ Em **Solution Explorer**, expandida **modelos** pasta deve aparecer da seguinte maneira:  
   
- Templates  
+ Modelos  
   
- Projects  
+ Projetos  
   
  SimpleProject  
   
  AssemblyInfo.cs  
   
- Program.cs  
+ Module.vb  
   
  SimpleProject.ico  
   
  SimpleProject.myproj  
   
-## <a name="creating-a-basic-project-factory"></a>Creating a Basic Project Factory  
- You must tell Visual Studio the location of your project template folder. To do this, add an attribute to the VSPackage class that implements the project factory so that the template location is written to the system registry when the VSPackage is built. Start by creating a basic project factory that is identified by a project factory GUID. Use the <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> attribute to connect the project factory to the SimpleProjectPackage class.  
+## <a name="creating-a-basic-project-factory"></a>Criação de uma fábrica de projeto básico  
+ Você deve informar o local da pasta do modelo de projeto do Visual Studio. Para fazer isso, adicione um atributo para a classe de VSPackage que implementa a fábrica de projeto para que o local do modelo é gravado no registro do sistema quando o VSPackage é criado. Comece criando uma fábrica de projeto básico que é identificada por uma GUID de fábrica do projeto. Use o <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute>atributo para conectar-se a fábrica de projeto à classe SimpleProjectPackage.</xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute>  
   
-#### <a name="to-create-a-basic-project-factory"></a>To create a basic project factory  
+#### <a name="to-create-a-basic-project-factory"></a>Para criar uma fábrica de projeto básico  
   
-1.  Open SimpleProjectPackageGuids.cs in the code editor.  
+1.  Abra SimpleProjectPackageGuids.cs no editor de códigos.  
   
-2.  Create GUIDs for your project factory (on the **Tools** menu, click **Create GUID**), or use the one in the following example. Add the GUIDs to the SimpleProjectPackageGuids class. The GUIDs must be in both GUID form and string form. The resulting code should resemble the following example.  
+2.  Criar GUIDs da sua fábrica de projeto (sobre o **ferramentas** menu, clique em **criar GUID**), ou usar o exemplo a seguir. Adicione os GUIDs para a classe SimpleProjectPackageGuids. Os GUIDs devem estar no formato de GUID e o formato de cadeia de caracteres. O código resultante deve se parecer com o exemplo a seguir.  
   
     ```  
     static class SimpleProjectPackageGuids  
@@ -218,16 +217,16 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-3.  Add a class to the top **SimpleProject** folder named `SimpleProjectFactory.cs`.  
+3.  Adicione uma classe na parte superior **SimpleProject** pasta chamada `SimpleProjectFactory.cs`.  
   
-4.  Add the following using statements:  
+4.  Adicione as seguintes instruções using:  
   
     ```  
     using System.Runtime.InteropServices;  
     using Microsoft.VisualStudio.Shell;  
     ```  
   
-5.  Add a Guid attribute to the SimpleProjectFactory class. The value of the attribute is the new project factory GUID.  
+5.  Adicione um atributo de Guid para a classe SimpleProjectFactory. O valor do atributo é fábrica do novo projeto GUID.  
   
     ```  
     [Guid(SimpleProjectGuids.guidSimpleProjectFactoryString)]  
@@ -236,11 +235,11 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
- Now you can register your project template.  
+ Agora você pode registrar o modelo de projeto.  
   
-#### <a name="to-register-the-project-template"></a>To register the project template  
+#### <a name="to-register-the-project-template"></a>Para registrar o modelo de projeto  
   
-1.  In SimpleProjectPackage.cs, add a <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> attribute to the SimpleProjectPackage class, as follows.  
+1.  No SimpleProjectPackage.cs, adicione um <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute>atributo à classe SimpleProjectPackage, da seguinte maneira.</xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute>  
   
     ```  
     [ProvideProjectFactory(    typeof(SimpleProjectFactory),     "Simple Project",   
@@ -250,31 +249,31 @@ In Visual Studio, projects are the containers that developers use to organize so
     public sealed class SimpleProjectPackage : Package  
     ```  
   
-2.  Rebuild the solution and verify that it builds without errors.  
+2.  Recompile a solução e verifique se ele é compilado sem erros.  
   
-     Rebuilding registers the project template.  
+     Recriando registra o modelo de projeto.  
   
- The parameters `defaultProjectExtension` and `possibleProjectExtensions` are set to the project file name extension (.myproj). The `projectTemplatesDirectory` parameter is set to the relative path of the Templates folder. During the build, this path will be converted to a full build and added to the registry to register the project system.  
+ Os parâmetros `defaultProjectExtension` e `possibleProjectExtensions` são definidos para a extensão de nome de arquivo de projeto (.myproj). O `projectTemplatesDirectory` parâmetro for definido como o caminho relativo da pasta modelos. Durante a compilação, esse caminho será convertido em uma compilação completa e adicionado ao registro para registrar o sistema de projeto.  
   
-## <a name="testing-the-template-registration"></a>Testing the Template Registration  
- Template registration tells Visual Studio the location of your project template folder so that Visual Studio can display the template name and icon in the **New Project** dialog box.  
+## <a name="testing-the-template-registration"></a>Teste o registro do modelo  
+ Registro de modelo informa ao Visual Studio o local da pasta do modelo de projeto para que o Visual Studio possa exibir o nome do modelo e o ícone no **novo projeto** caixa de diálogo.  
   
-#### <a name="to-test-the-template-registration"></a>To test the template registration  
+#### <a name="to-test-the-template-registration"></a>Para testar o registro de modelo  
   
-1.  Press F5 to start debugging an experimental instance of Visual Studio.  
+1.  Pressione F5 para iniciar a depuração de uma instância experimental do Visual Studio.  
   
-2.  In the experimental instance, create a new project of your newly-created project type. In the **New Project** dialog box, you should see **SimpleProject** under **Installed templates**.  
+2.  Na instância experimental, crie um novo projeto do seu tipo de projeto recém-criado. No **novo projeto** caixa de diálogo, você deve ver **SimpleProject** em **modelos instalados**.  
   
- Now you have a project factory that is registered. However, it cannot yet create a project. The project package and project factory work together to create and initialize a project.  
+ Agora você tem uma fábrica de projeto que está registrada. No entanto, ele ainda não é possível criar um projeto. O pacote de projeto e uma fábrica de projeto trabalham juntos para criar e inicializar um projeto.  
   
-## <a name="add-the-managed-package-framework-code"></a>Add the Managed Package Framework code  
- Implement the connection between the project package and the project factory.  
+## <a name="add-the-managed-package-framework-code"></a>Adicione o código de estrutura de pacote gerenciado  
+ Implemente a conexão entre o pacote de projeto e a fábrica do projeto.  
   
--   Import the source-code files for the Managed Package Framework.  
+-   Importe os arquivos de código-fonte para a estrutura de pacote gerenciado.  
   
-    1.  Unload the SimpleProject project (in **Solution Explorer**, select the project node and on the context menu click **Unload Project**.) and open the project file in the XML editor.  
+    1.  Descarregar projeto SimpleProject (no **Solution Explorer**, selecione o nó do projeto e no menu de contexto, clique em **descarregar projeto**.) e abra o arquivo de projeto no editor XML.  
   
-    2.  Add the following blocks to the project file (just above the \<Import> blocks). Set ProjectBasePath to the location of the ProjectBase.files file in the Managed Package Framework code you just downloaded. You might have to add a backslash to the pathname. If you do not, the project might fail to find the Managed Package Framework code.  
+    2.  Adicionar blocos a seguir ao arquivo de projeto (acima de \<importação > blocos). Defina ProjectBasePath para o local do arquivo ProjectBase.files no código de estrutura de pacote gerenciado que você acabou de baixar. Você talvez precise adicionar uma barra invertida para o nome do caminho. Se você não fizer isso, o projeto pode falhar localizar o código de estrutura de pacote gerenciado.  
   
         ```  
         <PropertyGroup>  
@@ -285,61 +284,61 @@ In Visual Studio, projects are the containers that developers use to organize so
         ```  
   
         > [!IMPORTANT]
-        >  Don't forget the backslash at the end of the path.  
+        >  Não se esqueça de barra invertida no final do caminho.  
   
-    3.  Reload the project.  
+    3.  Recarregue o projeto.  
   
-    4.  Add references to the following assemblies:  
+    4.  Adicione referências aos assemblies a seguir:  
   
-        -   Microsoft.VisualStudio.Designer.Interfaces (in \<VSSDK install>\VisualStudioIntegration\Common\Assemblies\v2.0)  
+        -   Microsoft.VisualStudio.Designer.Interfaces (em \<VSSDK install>\VisualStudioIntegration\Common\Assemblies\v2.0)  
   
         -   WindowsBase  
   
         -   Microsoft.Build.Tasks.v4.0  
   
-#### <a name="to-initialize-the-project-factory"></a>To initialize the project factory  
+#### <a name="to-initialize-the-project-factory"></a>Para inicializar a fábrica de projeto  
   
-1.  In the SimpleProjectPackage.cs file, add the following `using` statement.  
+1.  No arquivo SimpleProjectPackage.cs, adicione o seguinte `using` instrução.  
   
     ```  
     using Microsoft.VisualStudio.Project;  
     ```  
   
-2.  Derive the `SimpleProjectPackage` class from `Microsoft.VisualStudio.Package.ProjectPackage`.  
+2.  Derivar o `SimpleProjectPackage` classe a partir do `Microsoft.VisualStudio.Package.ProjectPackage`.  
   
     ```  
     public sealed class SimpleProjectPackage : ProjectPackage  
     ```  
   
-3.  Register the project factory. Add the following line to the `SimpleProjectPackage.Initialize` method, just after `base.Initialize`.  
+3.  Registre o alocador do projeto. Adicione a seguinte linha para o `SimpleProjectPackage.Initialize` método, logo após `base.Initialize`.  
   
     ```  
     base.Initialize();  
     this.RegisterProjectFactory(new SimpleProjectFactory(this));  
     ```  
   
-4.  Implement the abstract property `ProductUserContext`:  
+4.  Implementar a propriedade abstrata `ProductUserContext`:  
   
-    ```csharp  
+    ```c#  
     public override string ProductUserContext  
         {  
             get { return ""; }  
     }  
     ```  
   
-5.  In SimpleProjectFactory.cs, add the following `using` statement after the existing `using` statements.  
+5.  Em SimpleProjectFactory.cs, adicione o seguinte `using` instrução depois do `using` instruções.  
   
     ```  
     using Microsoft.VisualStudio.Project;  
     ```  
   
-6.  Derive the `SimpleProjectFactory` class from `ProjectFactory`.  
+6.  Derivar o `SimpleProjectFactory` classe a partir do `ProjectFactory`.  
   
     ```  
     class SimpleProjectFactory : ProjectFactory  
     ```  
   
-7.  Add the following dummy method to the `SimpleProjectFactory` class. You will implement this method in a later section.  
+7.  Adicione o seguinte método fictício para o `SimpleProjectFactory` classe. Você irá implementar esse método em uma seção posterior.  
   
     ```  
     protected override ProjectNode CreateProject()  
@@ -348,7 +347,7 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-8.  Add the following field and constructor to the `SimpleProjectFactory` class. This `SimpleProjectPackage` reference is cached in a private field so that it can be used in setting a service provider site.  
+8.  Adicione o campo e o construtor para seguir o `SimpleProjectFactory` classe. Isso `SimpleProjectPackage` referência é armazenado em cache em um campo particular para que ele pode ser usado na configuração de um site do provedor de serviço.  
   
     ```  
     private SimpleProjectPackage package;  
@@ -360,45 +359,45 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-9. Rebuild the solution and verify that it builds without errors.  
+9. Recompile a solução e verifique se ele é compilado sem erros.  
   
-## <a name="testing-the-project-factory-implementation"></a>Testing the Project Factory Implementation  
- Test whether the constructor for your project factory implementation is called.  
+## <a name="testing-the-project-factory-implementation"></a>Testando a implementação de fábrica de projeto  
+ Teste se o construtor para a implementação de fábrica de projeto é chamado.  
   
-#### <a name="to-test-the-project-factory-implementation"></a>To test the project factory implementation  
+#### <a name="to-test-the-project-factory-implementation"></a>Para testar a implementação de fábrica de projeto  
   
-1.  In the SimpleProjectFactory.cs file, set a breakpoint on the following line in the `SimpleProjectFactory` constructor.  
+1.  No arquivo SimpleProjectFactory.cs, defina um ponto de interrupção na linha seguinte a `SimpleProjectFactory` construtor.  
   
     ```  
     this.package = package;  
     ```  
   
-2.  Press F5 to start an experimental instance of Visual Studio.  
+2.  Pressione F5 para iniciar uma instância experimental do Visual Studio.  
   
-3.  In the experimental instance, start to create a new project.In the **New Project** dialog box, select the SimpleProject project type and then click **OK**. Execution stops at the breakpoint.  
+3.  Na instância experimental, comece a criar um novo projeto. No **novo projeto** caixa de diálogo, selecione o SimpleProject tipo de projeto e, em seguida, clique em **Okey**. A execução para no ponto de interrupção.  
   
-4.  Clear the breakpoint and stop debugging. Since we have not created a project node yet, the project creation code still throws exceptions.  
+4.  Limpe o ponto de interrupção e parar a depuração. Uma vez que não criamos um nó de projeto ainda, o código de criação do projeto ainda lança exceções.  
   
-## <a name="extending-the-project-node-class"></a>Extending the Project Node Class  
- Now you can implement the `SimpleProjectNode` class, which derives from the `ProjectNode` class. The `ProjectNode` base class handles the following tasks of project creation:  
+## <a name="extending-the-project-node-class"></a>Estendendo a classe do nó do projeto  
+ Agora você pode implementar o `SimpleProjectNode` classe, que deriva de `ProjectNode` classe. O `ProjectNode` classe base trata as seguintes tarefas de criação do projeto:  
   
--   Copies the project template file, SimpleProject.myproj, to the new project folder. The copy is renamed according to the name that is entered in the **New Project** dialog box. The `ProjectGuid` property value is replaced by a new GUID.  
+-   Copia o arquivo de modelo de projeto, SimpleProject.myproj, para a nova pasta de projeto. A cópia é renomeada de acordo com o nome inserido na **novo projeto** caixa de diálogo. O `ProjectGuid` valor da propriedade é substituído por um novo GUID.  
   
--   Traverses the MSBuild elements of the project template file, SimpleProject.myproj, and looks for `Compile` elements. For each `Compile` target file, copies the file to the new project folder.  
+-   Percorre os elementos do MSBuild do arquivo de modelo de projeto, SimpleProject.myproj e procura `Compile` elementos. Para cada `Compile` arquivo de destino, copia o arquivo para a nova pasta de projeto.  
   
- The derived `SimpleProjectNode` class handles these tasks:  
+ Derivado `SimpleProjectNode` classe trata essas tarefas:  
   
--   Enables icons for project and file nodes in **Solution Explorer** to be created or selected.  
+-   Permite que os ícones para os nós de projeto e arquivo em **Solution Explorer** a ser criado ou selecionado.  
   
--   Enables additional project template parameter substitutions to be specified.  
+-   Permite substituições de parâmetro de modelo de projeto adicional seja especificada.  
   
-#### <a name="to-extend-the-project-node-class"></a>To extend the project node class  
+#### <a name="to-extend-the-project-node-class"></a>Estender a classe do nó de projeto  
   
 1.  
   
-2.  Add a class named `SimpleProjectNode.cs`.  
+2.  Adicione uma classe chamada `SimpleProjectNode.cs`.  
   
-3.  Replace the existing code with the following code.  
+3.  Substitua o código existente pelo código a seguir.  
   
     ```  
     using System;  
@@ -434,27 +433,27 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
- This `SimpleProjectNode` class implementation has these overridden methods:  
+ Isso `SimpleProjectNode` implementação da classe tem esses métodos substituídos:  
   
--   `ProjectGuid`, which returns the project factory GUID.  
+-   `ProjectGuid`, que retorna a GUID da fábrica de projeto.  
   
--   `ProjectType`, which returns the localized name of the project type.  
+-   `ProjectType`, que retorna o nome localizado do tipo de projeto.  
   
--   `AddFileFromTemplate`, which copies selected files from the template folder to the destination project. This method is further implemented in a later section.  
+-   `AddFileFromTemplate`, que copia arquivos selecionados da pasta do modelo para o projeto de destino. Além disso, esse método é implementado em uma seção posterior.  
   
- The `SimpleProjectNode` constructor, like the `SimpleProjectFactory` constructor, caches a `SimpleProjectPackage` reference in a private field for later use.  
+ O `SimpleProjectNode` construtor, como o `SimpleProjectFactory` construtor, armazena em cache uma `SimpleProjectPackage` referência em um campo particular para uso posterior.  
   
- To connect the `SimpleProjectFactory` class to the `SimpleProjectNode` class, you must instantiate a new `SimpleProjectNode` in the `SimpleProjectFactory.CreateProject` method and cache it in a private field for later use.  
+ Para conectar-se a `SimpleProjectFactory` de classe para o `SimpleProjectNode` classe, você deve criar um novo `SimpleProjectNode` no `SimpleProjectFactory.CreateProject` método e armazená-los em um campo particular para uso posterior.  
   
-#### <a name="to-connect-the-project-factory-class-and-the-node-class"></a>To connect the project factory class and the node class  
+#### <a name="to-connect-the-project-factory-class-and-the-node-class"></a>Para conectar-se a classe de fábrica do projeto e a classe do nó  
   
-1.  In the SimpleProjectFactory.cs file, add the following `using` statement:  
+1.  No arquivo SimpleProjectFactory.cs, adicione o seguinte `using` instrução:  
   
     ```  
     using IOleServiceProvider =    Microsoft.VisualStudio.OLE.Interop.IServiceProvider;  
     ```  
   
-2.  Replace the `SimpleProjectFactory.CreateProject` method by using the following code.  
+2.  Substitua o `SimpleProjectFactory.CreateProject` método usando o código a seguir.  
   
     ```  
     protected override ProjectNode CreateProject()  
@@ -466,40 +465,40 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-3.  Rebuild the solution and verify that it builds without errors.  
+3.  Recompile a solução e verifique se ele é compilado sem erros.  
   
-## <a name="testing-the-project-node-class"></a>Testing the Project Node Class  
- Test your project factory to see whether it creates a project hierarchy.  
+## <a name="testing-the-project-node-class"></a>Testando a classe do nó do projeto  
+ Teste sua fábrica de projeto para ver se ele cria uma hierarquia de projeto.  
   
-#### <a name="to-test-the-project-node-class"></a>To test the project node class  
+#### <a name="to-test-the-project-node-class"></a>Para testar a classe do nó de projeto  
   
-1.  Press F5 to start debugging. In the experimental instance, create a new SimpleProject.  
+1.  Pressione F5 para iniciar a depuração. Na instância experimental, crie um novo SimpleProject.  
   
-2.  Visual Studio should call your project factory to create a project.  
+2.  O Visual Studio deve chamar sua fábrica de projeto para criar um projeto.  
   
-3.  Close the experimental instance of Visual Studio.  
+3.  Feche a instância experimental do Visual Studio.  
   
-## <a name="adding-a-custom-project-node-icon"></a>Adding a Custom Project Node Icon  
- The project node icon in the earlier section is a default icon. You can change it to a custom icon.  
+## <a name="adding-a-custom-project-node-icon"></a>Adicionando um ícone de nó de projeto personalizado  
+ O ícone do nó do projeto na seção anterior é um ícone padrão. Você pode alterá-lo para um ícone personalizado.  
   
-#### <a name="to-add-a-custom-project-node-icon"></a>To add a custom project node icon  
+#### <a name="to-add-a-custom-project-node-icon"></a>Para adicionar um ícone de nó de projeto personalizado  
   
-1.  In the **Resources** folder, add a bitmap file named SimpleProjectNode.bmp.  
+1.  No **recursos** pasta, adicione um arquivo de bitmap denominado SimpleProjectNode.bmp.  
   
-2.  In the **Properties** windows, reduce the bitmap to 16 by 16 pixels. Make the bitmap distinctive.  
+2.  No **propriedades** windows, reduza o bitmap para 16 por 16 pixels. Verifique o bitmap distintas.  
   
-     ![Simple Project Comm](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
+     ![Comando de projeto simples](~/extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
   
-3.  In the **Properties** window, change the **Build action** of the bitmap to **Embedded Resource**.  
+3.  No **propriedades** janela, alterar o **ação de compilação** do bitmap para **Embedded Resource**.  
   
-4.  In SimpleProjectNode.cs, add the following `using` statements:  
+4.  Em SimpleProjectNode.cs, adicione o seguinte `using` instruções:  
   
     ```  
     using System.Drawing;  
     using System.Windows.Forms;  
     ```  
   
-5.  Add the following static field and constructor to the `SimpleProjectNode` class.  
+5.  Adicione o seguinte campo estático e o construtor para o `SimpleProjectNode` classe.  
   
     ```  
     private static ImageList imageList;  
@@ -510,7 +509,7 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-6.  Add the following property to the beginning of the `SimpleProjectNode` class.  
+6.  Adicione a seguinte propriedade para o início do `SimpleProjectNode` classe.  
   
     ```  
     internal static int imageIndex;  
@@ -520,7 +519,7 @@ In Visual Studio, projects are the containers that developers use to organize so
        }  
     ```  
   
-7.  Replace the instance constructor with the following code.  
+7.  Substitua o construtor de instância com o código a seguir.  
   
     ```  
     public SimpleProjectNode(SimpleProjectPackage package)  
@@ -536,7 +535,7 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
- During static construction, `SimpleProjectNode` retrieves the project node bitmap from the assembly manifest resources and caches it in a private field for later use. Notice the syntax of the <xref:System.Reflection.Assembly.GetManifestResourceStream%2A> image path. To see the names of the manifest resources embedded in an assembly, use the <xref:System.Reflection.Assembly.GetManifestResourceNames%2A> method. When this method is applied to the `SimpleProject` assembly, the results should be as follows:  
+ Durante a construção estática, `SimpleProjectNode` recupera o bitmap de nó do projeto de recursos do manifesto do assembly e o armazena em um campo particular para uso posterior. Observe a sintaxe do <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>caminho de imagem.</xref:System.Reflection.Assembly.GetManifestResourceStream%2A> Para ver os nomes dos recursos de manifesto inseridos em um assembly, use o <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>método.</xref:System.Reflection.Assembly.GetManifestResourceNames%2A> Quando esse método é aplicado para a `SimpleProject` conjunto, os resultados devem ser da seguinte maneira:  
   
 -   SimpleProject.Resources.resources  
   
@@ -552,20 +551,20 @@ In Visual Studio, projects are the containers that developers use to organize so
   
 -   SimpleProject.Resources.SimpleProjectNode.bmp  
   
- During instance construction, the `ProjectNode` base class loads Resources.imagelis.bmp, in which are embedded commonly used 16 x 16 bitmaps from Resources\imagelis.bmp. This bitmap list is made available to `SimpleProjectNode` as ImageHandler.ImageList. `SimpleProjectNode` appends the project node bitmap to the list. The offset of the project node bitmap in the image list is cached for later use as the value of the public `ImageIndex` property. Visual Studio uses this property to determine which bitmap to display as the project node icon.  
+ Durante a construção da instância, a `ProjectNode` classe base carrega Resources.imagelis.bmp, no qual são bitmaps de 16x16 comumente usados incorporado de Resources\imagelis.bmp. Esta lista de bitmap é disponibilizada para `SimpleProjectNode` como ImageHandler.ImageList. `SimpleProjectNode`acrescenta o bitmap de nó do projeto na lista. O deslocamento do bitmap de nó do projeto na lista de imagens é armazenado em cache para uso posterior, como o valor do público `ImageIndex` propriedade. Visual Studio usa essa propriedade para determinar quais bitmap para exibir como o ícone de nó do projeto.  
   
-## <a name="testing-the-custom-project-node-icon"></a>Testing the Custom Project Node Icon  
- Test your project factory to see whether it creates a project hierarchy that has your custom project node icon.  
+## <a name="testing-the-custom-project-node-icon"></a>Teste o ícone do nó de projeto personalizado  
+ Teste sua fábrica de projeto para ver se ele cria uma hierarquia de projeto que tem o ícone do nó de projeto personalizado.  
   
-#### <a name="to-test-the-custom-project-node-icon"></a>To test the custom project node icon  
+#### <a name="to-test-the-custom-project-node-icon"></a>Para testar o ícone do nó de projeto personalizado  
   
-1.  Start debugging, and in the experimental instance create a new SimpleProject.  
+1.  Inicie a depuração e na instância experimental, criar um novo SimpleProject.  
   
-2.  In the newly-created project, notice that SimpleProjectNode.bmp is used as the project node icon.  
+2.  No projeto recém-criado, observe que SimpleProjectNode.bmp é usado como o ícone de nó do projeto.  
   
-     ![Simple Project New Project Node](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
+     ![Projeto simples novo nó do projeto](~/extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
   
-3.  Open Program.cs in the code editor. You should see source code that resembles the following code.  
+3.  Abra Program.cs no editor de códigos. Você deve ver o código-fonte que se parece com o código a seguir.  
   
     ```  
     using System;  
@@ -585,22 +584,22 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-     Notice that the template parameters $nameSpace$ and $className$ do not have new values. You will learn how to implement template parameter substitution in the next section.  
+     Observe que os parâmetros do modelo $nameSpace$ e $ $className não tem novos valores. Você aprenderá como implementar a substituição de parâmetro de modelo na próxima seção.  
   
-## <a name="substituting-template-parameters"></a>Substituting Template Parameters  
- In an earlier section, you registered the project template with Visual Studio by using the `ProvideProjectFactory` attribute. Registering the path of a template folder in this manner lets you enable basic template parameter substitution by overriding and expanding the `ProjectNode.AddFileFromTemplate` class. For more information, see [New Project Generation: Under the Hood, Part Two](../extensibility/internals/new-project-generation-under-the-hood-part-two.md).  
+## <a name="substituting-template-parameters"></a>Substituindo parâmetros de modelo  
+ Em uma seção anterior, você registrou o modelo de projeto com o Visual Studio usando o `ProvideProjectFactory` atributo. Registrar o caminho de uma pasta de modelo dessa maneira permite que você ative a substituição de parâmetro do modelo básico substituindo e expandindo o `ProjectNode.AddFileFromTemplate` classe. Para obter mais informações, consulte [nova geração de projeto: parte&2;, sob o escopo](../extensibility/internals/new-project-generation-under-the-hood-part-two.md).  
   
- Now add replacement code to the `AddFileFromTemplate` class.  
+ Agora, adicione código de substituição para o `AddFileFromTemplate` classe.  
   
-#### <a name="to-substitute-template-parameters"></a>To substitute template parameters  
+#### <a name="to-substitute-template-parameters"></a>Substituir parâmetros de modelo  
   
-1.  In the SimpleProjectNode.cs file, add the following `using` statement.  
+1.  No arquivo SimpleProjectNode.cs, adicione o seguinte `using` instrução.  
   
     ```  
     using System.IO;  
     ```  
   
-2.  Replace the `AddFileFromTemplate` method by using the following code.  
+2.  Substitua o `AddFileFromTemplate` método usando o código a seguir.  
   
     ```  
     public override void AddFileFromTemplate(  
@@ -618,30 +617,30 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-3.  Set a breakpoint in the method, just after the `className` assignment statement.  
+3.  Definir um ponto de interrupção no método, logo após o `className` instrução de atribuição.  
   
- The assignment statements determine reasonable values for a namespace and a new class name. The two `ProjectNode.FileTemplateProcessor.AddReplace` method calls replace the corresponding template parameter values by using these new values.  
+ As instruções de atribuição determinam valores aceitáveis para um namespace e um novo nome de classe. Os dois `ProjectNode.FileTemplateProcessor.AddReplace` chamadas de método substitua os valores de parâmetro de modelo correspondente usando esses novos valores.  
   
-## <a name="testing-the-template-parameter-substitution"></a>Testing the Template Parameter Substitution  
- Now you can test template parameter substitution.  
+## <a name="testing-the-template-parameter-substitution"></a>Testando a substituição de parâmetro de modelo  
+ Agora você pode testar a substituição de parâmetro de modelo.  
   
-#### <a name="to-test-the-template-parameter-substitution"></a>To test the template parameter substitution  
+#### <a name="to-test-the-template-parameter-substitution"></a>Para testar a substituição de parâmetro de modelo  
   
-1.  Start debugging, and in the experimental instance create a new SimpleProject.  
+1.  Inicie a depuração e na instância experimental, criar um novo SimpleProject.  
   
-2.  Execution stops at the breakpoint in the `AddFileFromTemplate` method.  
+2.  A execução é interrompida no ponto de interrupção no `AddFileFromTemplate` método.  
   
-3.  Examine the values for the `nameSpace` and `className` parameters.  
+3.  Examine os valores para o `nameSpace` e `className` parâmetros.  
   
-    -   `nameSpace` is given the value of the \<RootNamespace> element in the \Templates\Projects\SimpleProject\SimpleProject.myproj project template file. In this case, the value is "MyRootNamespace".  
+    -   `nameSpace`é atribuído o valor de \<RootNamespace > elemento no arquivo de modelo de projeto \Templates\Projects\SimpleProject\SimpleProject.myproj. Nesse caso, o valor é "MyRootNamespace".  
   
-    -   `className` is given the value of the class source file name, without the file name extension. In this case, the first file to be copied to the destination folder is AssemblyInfo.cs; therefore, the value of className is "AssemblyInfo".  
+    -   `className`recebe o valor do nome de arquivo de fonte da classe, sem a extensão de nome de arquivo. Nesse caso, o primeiro arquivo a ser copiado para a pasta de destino é AssemblyInfo.cs; Portanto, o valor do nome da classe é "AssemblyInfo".  
   
-4.  Remove the breakpoint and press F5 to continue execution.  
+4.  Remova o ponto de interrupção e pressione F5 para continuar a execução.  
   
-     Visual Studio should finish creating a project.  
+     O Visual Studio deve terminar de criar um projeto.  
   
-5.  Open Program.cs in the code editor. You should see source code that resembles the following code.  
+5.  Abra Program.cs no editor de códigos. Você deve ver o código-fonte que se parece com o código a seguir.  
   
     ```  
     using System;  
@@ -662,10 +661,10 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-     Notice that the namespace is now "MyRootNamespace" and the class name is now "Program".  
+     Observe que o namespace é "MyRootNamespace" e o nome da classe agora é "Programa".  
   
-6.  Start debugging the project. The new project should compile, run, and display "Hello VSX!!!" in the console window.  
+6.  Inicie a depuração do projeto. O novo projeto deve compilar, executar e exibir "Hello VSX!!!" Na janela do console.  
   
-     ![Simple Project Command](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
+     ![Comando de projeto simples](~/extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
   
- Congratulations! You have implemented a basic managed project system.
+ Parabéns! Você implementou um sistema básico de projeto gerenciado.

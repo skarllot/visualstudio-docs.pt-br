@@ -1,5 +1,5 @@
 ---
-title: SYMBOL_SEARCH_INFO_FIELDS | Microsoft Docs
+title: SYMBOL_SEARCH_INFO_FIELDS | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 799fe42709a0536dbe8389054da32b29e5791d8c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 94b1ae1a90df2b8b58eb004f981b7413dcd78ce9
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="symbolsearchinfofields"></a>SYMBOL_SEARCH_INFO_FIELDS
-Specifies the kind of symbol information to retrieve.  
+Especifica o tipo de informações de símbolo para recuperar.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_SYMBOL_SEARCH_INFO_FIELDS  
 {  
    SSIF_NONE                = 0x00000000,  
@@ -51,7 +50,7 @@ enum enum_SYMBOL_SEARCH_INFO_FIELDS
 typedef DWORD SYMBOL_SEARCH_INFO_FIELDS;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_SYMBOL_SEARCH_INFO_FIELDS  
 {  
    SSIF_NONE                = 0x00000000,  
@@ -60,26 +59,26 @@ public enum enum_SYMBOL_SEARCH_INFO_FIELDS
   
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  SSIF_NONE  
- Indicates no flags  
+ Não indica nenhum sinalizador  
   
  SSIF_VERBOSE_SEARCH_INFO  
- Returns all search paths used for finding symbols  
+ Retorna que todos os caminhos usados para localizar símbolos de pesquisa  
   
-## <a name="remarks"></a>Remarks  
- These flags are passed as a parameter to the [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) method to determine the amount of information returned.  
+## <a name="remarks"></a>Comentários  
+ Esses sinalizadores são passados como um parâmetro para o [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) retornado do método para determinar a quantidade de informações.  
   
 > [!NOTE]
->  Currently, only `SSIF_VERBOSE_SEARCH_INFO` is supported, and it must be specified as the `dwFlags` parameter to `IDebugModule3::GetSymbolInfo`. All other values return an error.  
+>  Atualmente, apenas `SSIF_VERBOSE_SEARCH_INFO` é suportado, e ele deve ser especificado como o `dwFlags` parâmetro para `IDebugModule3::GetSymbolInfo`. Todos os outros valores retornarão um erro.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)

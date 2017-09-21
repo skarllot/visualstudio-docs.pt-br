@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumNestedClasses | Microsoft Docs
+title: IDebugClassField::EnumNestedClasses | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,41 +30,40 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 756d6783a7990d5ad06ed86dc243cc2c08646f7e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 007c55d7c7e03777dd40ec7fef91479486dd7bab
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugclassfieldenumnestedclasses"></a>IDebugClassField::EnumNestedClasses
-Creates an enumerator for the classes nested in this class.  
+Cria um enumerador para as classes aninhadas nessa classe.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT EnumNestedClasses(   
    IEnumDebugFields** ppEnum  
 );  
 ```  
   
-```csharp  
+```c#  
 int EnumNestedClasses(  
    out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppEnum`  
- [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing the list of nested classes. Returns a null value if there are no nested classes.  
+ [out] Retorna um [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objeto que representa a lista de classes aninhadas. Retorna um valor nulo se não houver nenhuma classe aninhada.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK or returns S_FALSE if there are no nested classes. Otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, Retorna S_OK ou retorna S_FALSE se não houver nenhuma classe aninhada. Caso contrário, retornará um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- Each element of the enumeration is an [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) object describing a nested class.  
+## <a name="remarks"></a>Comentários  
+ Cada elemento da enumeração é uma [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objeto que descreve uma classe aninhada.  
   
- A nested class is a class defined inside another class. For example:  
+ Uma classe aninhada é uma classe definida dentro de outra classe. Por exemplo:  
   
 ```  
 class RootClass {  
@@ -72,8 +71,8 @@ class RootClass {
 };  
 ```  
   
- The [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumeration would contain one object representing the `NestedClass` class.  
+ O [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumeração contém um objeto representando o `NestedClass` classe.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetMachineName | Microsoft Docs
+title: IDebugCoreServer2::GetMachineName | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,36 +30,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: dc69eb6fbdefffa1dd9190f6bd5458f5ce189ec2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 39d540925ffc1588cd02fcd93195cebe59e7ec8d
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugcoreserver2getmachinename"></a>IDebugCoreServer2::GetMachineName
-Gets the name of the machine the core server is running on.  
+Obtém o nome da máquina que do servidor núcleo está em execução no.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetName(   
    BSTR* pbstrName  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetName(   
    out string pbstrName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pbstrName`  
- [out] Returns a string containing the name of the machine.  
+ [out] Retorna uma cadeia de caracteres que contém o nome da máquina.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

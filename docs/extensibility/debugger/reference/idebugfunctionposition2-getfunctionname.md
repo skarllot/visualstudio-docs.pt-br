@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionPosition2::GetFunctionName | Microsoft Docs
+title: IDebugFunctionPosition2::GetFunctionName | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,36 +30,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: eeb946a2077c0db5bff47b2ee6884649372011c3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: a775c37f595748e12955db28fcb0a609f54adb72
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugfunctionposition2getfunctionname"></a>IDebugFunctionPosition2::GetFunctionName
-Gets the name of the function to which this position points.  
+Obtém o nome da função para o qual aponta nessa posição.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetFunctionName(   
    BSTR* pbstrFunctionName  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetFunctionName(  
    out string pbstrFunctionName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pbstrFunctionName`  
- [out] Returns the name of the function.  
+ [out] Retorna o nome da função.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)

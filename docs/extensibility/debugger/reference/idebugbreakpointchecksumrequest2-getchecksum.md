@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointChecksumRequest2::GetChecksum | Microsoft Docs
+title: IDebugBreakpointChecksumRequest2::GetChecksum | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,46 +28,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 32988f396d6fdb4433599edd651f79883013e55e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 4afe9cd2638be21069cfa21a033e37ffe8c75953
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugbreakpointchecksumrequest2getchecksum"></a>IDebugBreakpointChecksumRequest2::GetChecksum
-Retrieves the document checksum for a breakpoint request given the unique identifier of the checksum algorithm to use.  
+Recupera a soma de verificação de documento para uma solicitação de ponto de interrupção recebe o identificador exclusivo do algoritmo de soma de verificação para usar.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetChecksum(   
    REFGUID        guidAlgorithm,  
    CHECKSUM_DATA *pChecksumData  
 );  
 ```  
   
-```csharp  
+```c#  
 public int GetChecksum(   
    ref Guid               guidAlgorithm,  
    out enum_CHECKSUM_DATA pChecksumData  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `guidAlgorithm`  
- [in] Unique identifier of the checksum algorithm.  
+ [in] Identificador exclusivo do algoritmo de soma de verificação.  
   
  `pChecksumData`  
- [out] Document checksum for the breakpoint request.  
+ [out] Soma de verificação de documento para a solicitação de ponto de interrupção.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="example"></a>Example  
- The following example shows a function that checks whether the checksum of a document, which is about to be bound, matches one from the UI.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra uma função que verifica se a soma de verificação de um documento que está prestes a ser vinculado, corresponde a um da interface do usuário.  
   
-```cpp  
+```cpp#  
 bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCodeContext *pContext)  
 {  
     bool fRet = false;  
@@ -119,5 +118,5 @@ bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCo
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugBreakpointChecksumRequest2](../../../extensibility/debugger/reference/idebugbreakpointchecksumrequest2.md)

@@ -1,5 +1,5 @@
 ---
-title: SccInitialize Function | Microsoft Docs
+title: "Função SccInitialize | Documentos do Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 76235f932ccaac04672e50f8d349ab6fcd55cd4d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: de8ef785b4bcab16a9484df675a463edfd73539c
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="sccinitialize-function"></a>SccInitialize Function
-This function initializes the source control plug-in and provides capabilities and limits to the integrated development environment (IDE).  
+# <a name="sccinitialize-function"></a>Função SccInitialize
+Essa função inicializa o plug-in de controle de origem e fornece recursos e limites para o ambiente de desenvolvimento integrado (IDE).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 SCCRTN SccInitialize (  
    LPVOID* ppvContext,  
    HWND    hWnd,  
@@ -55,54 +54,54 @@ SCCRTN SccInitialize (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppvContext`  
- [in] The source control plug-in can place a pointer to its context structure here.  
+ [in] O plug-in de controle de origem pode colocar um ponteiro para sua estrutura de contexto aqui.  
   
  `hWnd`  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ [in] Um identificador para a janela do IDE que o plug-in de controle de origem pode usar como um pai para as caixas de diálogo que ele fornece.  
   
  `lpCallerName`  
- [in] The name of the program calling the source control plug-in.  
+ [in] O nome do programa chamar o controle da fonte de plug-in.  
   
  `lpSccName`  
- [in, out] The buffer where the source control plug-in puts its own name (not to exceed `SCC_NAME_LEN`).  
+ [no, out] O buffer onde o plug-in de controle de origem coloca seu próprio nome (não deve exceder `SCC_NAME_LEN`).  
   
  `lpSccCaps`  
- [out] Returns the source control plug-in's capability flags.  
+ [out] Retorna o controle de origem sinalizadores de recurso do plug-in.  
   
  `lpAuxPathLabel`  
- [in, out] The buffer where the source control plug-in puts a string that describes the `lpAuxProjPath` parameter returned by the [SccOpenProject](../extensibility/sccopenproject-function.md) and the [SccGetProjPath](../extensibility/sccgetprojpath-function.md) (not to exceed `SCC_AUXLABEL_LEN`).  
+ [no, out] O buffer onde o plug-in de controle de origem coloca uma cadeia de caracteres que descreve o `lpAuxProjPath` parâmetro retornado pelo [SccOpenProject](../extensibility/sccopenproject-function.md) e [SccGetProjPath](../extensibility/sccgetprojpath-function.md) (não deve exceder `SCC_AUXLABEL_LEN`).  
   
  `pnCheckoutCommentLen`  
- [out] Returns the maximum permissible length for a checkout comment.  
+ [out] Retorna o comprimento máximo permitido para um comentário de check-out.  
   
  `pnCommentLen`  
- [out] Returns the maximum permissible length for other comments.  
+ [out] Retorna o comprimento máximo permitido para outros comentários.  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## <a name="return-value"></a>Valor de retorno  
+ A implementação de plug-in de controle de origem dessa função deve retornar um dos seguintes valores:  
   
-|Value|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|SCC_OK|Source control initialization succeeded.|  
-|SCC_E_INITIALIZEFAILED|System could not be initialized.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform the specified operation.|  
-|SCC_E_NONSPECFICERROR|Nonspecific failure; source control system was not initialized.|  
+|SCC_OK|Inicialização de controle de origem foi bem-sucedida.|  
+|SCC_E_INITIALIZEFAILED|Não foi possível inicializar o sistema.|  
+|SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar a operação especificada.|  
+|SCC_E_NONSPECFICERROR|Falha não específica; sistema de controle do código-fonte não foi inicializado.|  
   
-## <a name="remarks"></a>Remarks  
- The IDE calls this function when it first loads the source control plug-in. It enables the IDE to pass certain information, such as the caller name, to the plug-in. The IDE also gets back certain information such as the maximum allowable length for comments and the plug-in's capabilities.  
+## <a name="remarks"></a>Comentários  
+ O IDE chama essa função ao primeiro carregar o plug-in de controle de origem. Ele permite que o IDE passar certas informações, como o nome do chamador para o plug-in. O IDE também volta obtém informações específicas, como o comprimento máximo permitido para recursos do plug-in e comentários.  
   
- The `ppvContext` points to a `NULL` pointer. The source control plug-in can allocate a structure for its own use and store a pointer to that structure in `ppvContext`. The IDE will pass this pointer to every other VSSCI API function, allowing the plug-in to have context information available without resorting to global storage and to support multiple instances of the plug-in. This structure should be deallocated when the [SccUninitialize](../extensibility/sccuninitialize-function.md) is called.  
+ O `ppvContext` aponta para um `NULL` ponteiro. O plug-in de controle de origem pode alocar uma estrutura para seu próprio uso e armazenar um ponteiro para a estrutura em `ppvContext`. O IDE irá passar esse ponteiro para todas as outras funções de API de VSSCI, permitindo que o plug-in para que as informações de contexto disponíveis sem recorrer a armazenamento global e para oferecer suporte a várias instâncias do plug-in. Essa estrutura deve ser desalocada quando o [SccUninitialize](../extensibility/sccuninitialize-function.md) é chamado.  
   
- The `lpCallerName` and `lpSccName` parameters enable the IDE and the source control plug-in to exchange names. These names may be used simply to distinguish among multiple instances, or they may actually appear in menus or dialog boxes.  
+ O `lpCallerName` e `lpSccName` parâmetros permitem que o IDE e o plug-in de controle de origem para nomes do exchange. Esses nomes podem ser usados apenas para distinguir entre várias instâncias, ou, na verdade, eles podem aparecer nos menus ou caixas de diálogo.  
   
- The `lpAuxPathLabel` parameter is a string used as a comment to identify the auxiliary project path that is stored in the solution file and passed to the source control plug-in in a call to the [SccOpenProject](../extensibility/sccopenproject-function.md). [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] uses the string "SourceSafe Project:"; other source control plug-ins should refrain from using this particular string.  
+ O `lpAuxPathLabel` parâmetro é uma cadeia de caracteres usada como um comentário para identificar o caminho do projeto auxiliar que é armazenado no arquivo de solução e passado para o controle da fonte de plug-in em uma chamada para o [SccOpenProject](../extensibility/sccopenproject-function.md). [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)]usa a cadeia de caracteres "projeto do SourceSafe:"; outros plug-ins de controle de origem deve abster-se de usar essa cadeia de caracteres específica.  
   
- The `lpSccCaps` parameter gives the source control plug-in a place to store bitflags indicating the plug-in's capabilities. (For a full list of capability bitflags, see [Capability Flags](../extensibility/capability-flags.md)). For instance, if the plug-in plans to write results into a caller-provided callback function, the plug-in would set the capability bit SCC_CAP_TEXTOUT. This would signal the IDE to create a window for version control results.  
+ O `lpSccCaps` parâmetro fornece o controle de origem plug-in um local para armazenar os sinalizadores de bit que indica os recursos do plug-in. (Para obter uma lista completa de recurso os sinalizadores de bit, consulte [sinalizadores de recurso](../extensibility/capability-flags.md)). Por exemplo, se os planos de plug-in para gravar resultados em uma função de retorno de chamada fornecida pelo chamador, o plug-in definiria o recurso bit SCC_CAP_TEXTOUT. Isso seria sinalizar o IDE para criar uma janela de resultados de controle de versão.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Funções de API de plug-in de controle de origem](../extensibility/source-control-plug-in-api-functions.md)   
  [SccUninitialize](../extensibility/sccuninitialize-function.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   
- [Capability Flags](../extensibility/capability-flags.md)
+ [Sinalizadores de recurso](../extensibility/capability-flags.md)

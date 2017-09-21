@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetContainer | Microsoft Docs
+title: IDebugField::GetContainer | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,40 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a76f02a1edd4a51d28e6667a9662d8db8c570068
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 2d55f12e3a147085ef8fecf8890f2f992f11c311
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugfieldgetcontainer"></a>IDebugField::GetContainer
-This method gets the container of a field.  
+Esse método obtém o contêiner de um campo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetContainer(   
    IDebugContainerField** ppContainerField  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetContainer(  
    out IDebugContainerField ppContainerField  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `ppContainerField`  
- [out] Returns the container as represented by the [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface.  
+ [out] Retorna o contêiner conforme representado pelo [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interface.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- If this field does not have a container, the returned `ppContainerField` will be a null value.  
+## <a name="remarks"></a>Comentários  
+ Se esse campo não tem um contêiner, retornado `ppContainerField` será um valor nulo.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)

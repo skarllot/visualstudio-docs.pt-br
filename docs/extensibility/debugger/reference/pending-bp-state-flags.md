@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE_FLAGS | Microsoft Docs
+title: PENDING_BP_STATE_FLAGS | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 65f0037632918ed02ac12decd46e5b7beffbf1c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 20f671110afae9490f26a0cc26e9995c3c24c7a6
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="pendingbpstateflags"></a>PENDING_BP_STATE_FLAGS
-Specifies the pending breakpoint state flags.  
+Especifica os sinalizadores de estado do ponto de interrupção pendente.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_PENDING_BP_STATE_FLAGS {   
    PBPSF_NONE        = 0x0000,  
    PBPSF_VIRTUALIZED = 0x0001  
@@ -50,30 +49,30 @@ enum enum_PENDING_BP_STATE_FLAGS {
 typedef DWORD PENDING_BP_STATE_FLAGS;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_PENDING_BP_STATE_FLAGS {   
    PBPSF_NONE        = 0x0000,  
    PBPSF_VIRTUALIZED = 0x0001  
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  PBPSF_NONE  
- Placeholder.  
+ Espaço reservado.  
   
  PBPSF_VIRTUALIZED  
- Specifies a virtualized pending breakpoint, one that is to be bound every time new code is loaded.  
+ Especifica um virtualizado pendentes ponto de interrupção, que é vinculado sempre que o novo código é carregado.  
   
-## <a name="remarks"></a>Remarks  
- Used for the `flags` member of the [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) structure.  
+## <a name="remarks"></a>Comentários  
+ Usado para o `flags` membro do [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) estrutura.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

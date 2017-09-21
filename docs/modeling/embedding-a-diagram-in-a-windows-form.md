@@ -1,5 +1,5 @@
 ---
-title: Embedding a Diagram in a Windows Form | Microsoft Docs
+title: "Inserindo um diagrama em um formulário do Windows | Documentos do Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,31 +25,30 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6d74b2c7a41907a9efce77628b30a5d22493eafb
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 695d2bc18486cb50c85c0490c59e714aca087ad4
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="embedding-a-diagram-in-a-windows-form"></a>Embedding a Diagram in a Windows Form
-You can embed a DSL diagram in a Windows Control, which appears in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] window.  
+# <a name="embedding-a-diagram-in-a-windows-form"></a>Inserindo um diagrama em um formulário do Windows Forms
+Você pode incorporar um diagrama DSL em um controle do Windows, que aparece no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] janela.  
   
-## <a name="embedding-a-diagram"></a>Embedding a Diagram  
+## <a name="embedding-a-diagram"></a>Inserindo um diagrama  
   
-#### <a name="to-embed-a-dsl-diagram-in-a-windows-control"></a>To embed a DSL diagram in a Windows Control  
+#### <a name="to-embed-a-dsl-diagram-in-a-windows-control"></a>Para inserir um diagrama DSL em um controle do Windows  
   
-1.  Add a new **User Control** file to the DslPackage project.  
+1.  Adicione um novo **controle de usuário** arquivo no projeto DslPackage.  
   
-2.  Add a Panel control to the User Control. This panel will contain the DSL Diagram.  
+2.  Adicione um controle de painel ao controle de usuário. Este painel contém o diagrama DSL.  
   
-     Add other controls that you require.  
+     Adicione outros controles que você precisa.  
   
-     Set the Anchor properties of the controls.  
+     Defina as propriedades de ancoragem de controles.  
   
-3.  In Solution Explorer, right-click the user control file and click **View Code**. Add this constructor and variable to the code:  
+3.  No Solution Explorer, clique no arquivo de controle de usuário e clique em **Exibir código**. Adicione esse construtor e a variável no código:  
   
-    ```csharp  
+    ```c#  
   
     internal UserControl1(MyDSLDocView docView, Control content)  
       : this()  
@@ -61,7 +60,7 @@ You can embed a DSL diagram in a Windows Control, which appears in the [!INCLUDE
   
     ```  
   
-4.  Add a new file to the DslPackage project, with the following content:  
+4.  Adicione um novo arquivo ao projeto DslPackage, com o seguinte conteúdo:  
   
     ```  
     using System.Windows.Forms;  
@@ -85,13 +84,13 @@ You can embed a DSL diagram in a Windows Control, which appears in the [!INCLUDE
   
     ```  
   
-5.  To test the DSL, press F5 and open a sample model file. The diagram appears inside the control. The toolbox and other features work normally.  
+5.  Para testar o DSL, pressione F5 e abrir um arquivo de modelo de exemplo. O diagrama é exibido dentro do controle. A caixa de ferramentas e outros recursos funcionam normalmente.  
   
-#### <a name="updating-the-form-using-store-events"></a>Updating the Form using Store Events  
+#### <a name="updating-the-form-using-store-events"></a>Atualizando o formulário usando eventos de armazenamento  
   
-1.  In the form designer, add a **ListBox** named `listBox1`. This will display a list of the elements in the model. It will be kept in synchronism with the model using *store events*. For more information, see [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
+1.  No designer de formulário, adicione um **ListBox** chamado `listBox1`. Isso exibirá uma lista dos elementos no modelo. Seja mantido em synchronism com o modelo usando *armazenar eventos*. Para obter mais informações, consulte [manipuladores de propagar alterações fora do modelo de evento](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
   
-2.  In the custom code file, override further methods to the DocView class:  
+2.  No arquivo de código personalizado, mais substitua métodos à classe DocView:  
   
     ```  
   
@@ -134,7 +133,7 @@ You can embed a DSL diagram in a Windows Control, which appears in the [!INCLUDE
   
     ```  
   
-3.  In the code behind the user control, insert methods to listen for elements added and removed:  
+3.  No code-behind do controle de usuário, insira métodos para escutar elementos adicionados e removidos:  
   
     ```  
   
@@ -163,10 +162,10 @@ You can embed a DSL diagram in a Windows Control, which appears in the [!INCLUDE
   
     ```  
   
-4.  To test the DSL, press F5 and in the experimental instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], open a sample model file.  
+4.  Para testar o DSL, pressione F5 e na instância experimental do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], abra um arquivo de modelo de exemplo.  
   
-     Notice that the list box shows a list of the elements in the model, and that it is correct after any addition or deletion, and after Undo and Redo.  
+     Observe que a caixa de listagem mostra uma lista dos elementos no modelo e se ela está correta, depois de qualquer adição ou exclusão e desfazer e refazer.  
   
-## <a name="see-also"></a>See Also  
- [Navigating and Updating a Model in Program Code](../modeling/navigating-and-updating-a-model-in-program-code.md)   
- [Writing Code to Customise a Domain-Specific Language](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+## <a name="see-also"></a>Consulte também  
+ [Navegando e atualizando um modelo no código de programa](../modeling/navigating-and-updating-a-model-in-program-code.md)   
+ [Escrevendo código para personalizar uma linguagem específica de domínio](../modeling/writing-code-to-customise-a-domain-specific-language.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetInfo | Microsoft Docs
+title: IDebugProcess2::GetInfo | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,43 +30,42 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d9c598fcb146eee29adf8f766909378a3a0c05f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 9d24c2c31d1f519561d2df8fc453bfbc38dff5c6
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="idebugprocess2getinfo"></a>IDebugProcess2::GetInfo
-Gets a description of the process.  
+Obtém uma descrição do processo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 HRESULT GetInfo(  
    PROCESS_INFO_FIELDS  Fields,  
    PROCESS_INFO*        pProcessInfo  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetInfo(  
    enum_PROCESS_INFO_FIELDS  Fields,  
    PROCESS_INFO[]            pProcessInfo  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `Fields`  
- [in] A combination of values from the [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) enumeration that specifies which fields of the `pProcessInfo` parameter are to be filled in.  
+ [in] Uma combinação de valores de [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) enumeração que especifica quais campos do `pProcessInfo` parâmetro devem ser preenchidos.  
   
  `pProcessInfo`  
- [out] A [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) structure that is filled in with a description of the process.  
+ [out] A [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) estrutura é preenchida com uma descrição do processo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)   
  [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

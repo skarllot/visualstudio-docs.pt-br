@@ -1,5 +1,5 @@
 ---
-title: STEPUNIT | Microsoft Docs
+title: STEPUNIT | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: dfa4ba22c8d56de8948c86fb6133f30e938564d8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: f36028b1837b32059b799a670e2cf31976b559e9
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="stepunit"></a>STEPUNIT
-Specifies the step unit for stepping.  
+Especifica a unidade de etapa de revisão.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_STEPUNIT {   
    STEP_STATEMENT   = 0,  
    STEP_LINE        = 1,  
@@ -51,7 +50,7 @@ enum enum_STEPUNIT {
 typedef DWORD STEPUNIT;  
 ```  
   
-```csharp  
+```c#  
 enum enum_STEPUNIT {   
    STEP_STATEMENT   = 0,  
    STEP_LINE        = 1,  
@@ -59,26 +58,26 @@ enum enum_STEPUNIT {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  STEP_STATEMENT  
- Steps by statement.  
+ Etapas de instrução.  
   
  STEP_LINE  
- Steps by line.  
+ Etapas por linha.  
   
  STEP_INSTRUCTION  
- Steps by instruction.  
+ Etapas de instrução.  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) method.  
+## <a name="remarks"></a>Comentários  
+ Passada como um argumento para o [etapa](../../../extensibility/debugger/reference/idebugprocess3-step.md) método.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Etapa](../../../extensibility/debugger/reference/idebugprocess3-step.md)

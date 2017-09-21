@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_COMPARE | Microsoft Docs
+title: CONTEXT_COMPARE | Documentos do Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: eaab64144ad0978a589f69005aea561c7bd74519
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 79ade56fcf1b2de38f8d1026df43a2ac75676ec3
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="contextcompare"></a>CONTEXT_COMPARE
-Specifies the criteria for comparing two memory contexts.  
+Especifica os critérios para comparar dois contextos de memória.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp  
+```cpp#  
 enum enum_CONTEXT_COMPARE {   
    CONTEXT_EQUAL                 = 0x0001,  
    CONTEXT_LESS_THAN             = 0x0002,  
@@ -57,7 +56,7 @@ enum enum_CONTEXT_COMPARE {
 typedef DWORD CONTEXT_COMPARE;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_CONTEXT_COMPARE {   
    CONTEXT_EQUAL                 = 0x0001,  
    CONTEXT_LESS_THAN             = 0x0002,  
@@ -71,46 +70,46 @@ public enum enum_CONTEXT_COMPARE {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membros  
  CONTEXT_EQUAL  
- Find the first memory context in the list that is equal to the target memory context.  
+ Localize o contexto de memória primeiro na lista que é igual ao contexto de memória de destino.  
   
  CONTEXT_LESS_THAN  
- Find the first memory context in the list that is less than the target memory context.  
+ Localize o contexto de memória primeiro na lista que é menor que o contexto de memória de destino.  
   
  CONTEXT_GREATER_THAN  
- Find the first memory context in the list that is greater than the target memory context.  
+ Localize o contexto de memória primeiro na lista que é maior do que o contexto de memória de destino.  
   
  CONTEXT_LESS_THAN_OR_EQUAL  
- Find the first memory context in the list that is less than or equal to the target memory context.  
+ Localize o contexto de memória primeiro na lista que seja menor ou igual ao contexto de memória de destino.  
   
  CONTEXT_GREATER_THAN_OR_EQUAL  
- Find the first memory context in the list that is greater than or equal to the target memory context.  
+ Localize o contexto de memória primeiro na lista que é maior que ou igual ao contexto de memória de destino.  
   
  CONTEXT_SAME_SCOPE  
- Find the first memory context in the list that is in the same scope as the target memory context.  
+ Localize o contexto de memória primeiro na lista que está no mesmo escopo de contexto de memória de destino.  
   
  CONTEXT_SAME_FUNCTION  
- Find the first memory context in the list that is in the same function as the target memory scope.  
+ Localize o contexto de memória primeiro na lista que está na mesma função que o escopo de memória de destino.  
   
  CONTEXT_SAME_MODULE  
- Find the first memory context in the list that is in the same module as the target memory context.  
+ Localize o contexto de memória primeiro na lista que está no mesmo módulo que o contexto de memória de destino.  
   
  CONTEXT_SAME_PROCESS  
- Find the first memory context in the list that is in the same process as the target memory context.  
+ Localize o contexto de memória primeiro na lista que está no mesmo processo que o contexto de memória de destino.  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) method.  
+## <a name="remarks"></a>Comentários  
+ Passada como um argumento para o [comparar](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) método.  
   
- These values are used to find the first memory context in a list that satisfies the specified comparison criteria. A memory context is given a list of memory contexts to compare itself against through the `IDebugMemoryContext2::Compare` method. The first memory context in the list for which the comparison operator is `true` is then returned.  
+ Esses valores são usados para localizar o contexto de memória primeiro em uma lista que satisfazem os critérios de comparação especificada. Um contexto de memória tem uma lista de contextos de memória de comparar a próprio contra por meio de `IDebugMemoryContext2::Compare` método. O contexto de memória primeiro na lista para a qual o operador de comparação é `true` é retornado.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisitos  
+ Cabeçalho: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Consulte também  
+ [Enumerações](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)
