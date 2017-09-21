@@ -87,7 +87,7 @@ manager: "ghogen"
   
 ### Criar comentários de documentação XML para uma função sobrecarregada  
   
-1.  Na função, adicionar um [\< assinatura \>](../Topic/%3Csignature%3E%20\(JavaScript\).md) elemento para cada sobrecarga.  Esses elementos, adicionar outros elementos, como `<summary>`, `<param>`, e `<returns>`, precedendo cada elemento com três barras \(\/ \/ \/\).  
+1.  Na função, adicionar um [\< assinatura \>](../ide/signature-javascript.md) elemento para cada sobrecarga.  Esses elementos, adicionar outros elementos, como `<summary>`, `<param>`, e `<returns>`, precedendo cada elemento com três barras \(\/ \/ \/\).  
   
      O exemplo a seguir mostra uma função sobrecarregada do JavaScript.  Neste exemplo, as sobrecargas diferem pelo tipo de parâmetro.  
   
