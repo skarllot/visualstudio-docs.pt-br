@@ -40,7 +40,7 @@ No JavaScript, você pode criar a documentação para seu código incluindo marc
   
 -   [\< retorna \>](../ide/returns-javascript.md)  
   
--   [\< assinatura \>](../Topic/%3Csignature%3E%20\(JavaScript\).md)  
+-   [\< assinatura \>](../ide/signature-javascript.md)  
   
 -   [\< resumo \>](../ide/summary-javascript.md)  
   
