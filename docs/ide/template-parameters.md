@@ -15,8 +15,8 @@ helpviewer_keywords:
 - item templates, parameters
 ms.assetid: 1b567143-08c6-4d7a-b484-49f0671754fe
 caps.latest.revision: 24
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 87fc94378b0a2c4a12de4da57ac20dcf5bb5c5aa
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

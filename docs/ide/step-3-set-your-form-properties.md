@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 634ef037-1525-48c8-ac7f-abf04be69376
 caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -27,16 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 14b6e401d454e5f837c7e77e306c4ff7205ab712
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="step-3-set-your-form-properties"></a>Etapa 3: Definir as propriedades do formulário
 Em seguida, use a janela **Propriedades** para alterar a aparência do seu formulário.  
   
- ![link para vídeo](~/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205209) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205199). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
+ ![link para vídeo](../data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205209) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205199). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
   
 ### <a name="to-set-your-form-properties"></a>Para definir suas propriedades de formulário  
   
@@ -49,7 +50,7 @@ Em seguida, use a janela **Propriedades** para alterar a aparência do seu formu
   
 3.  Depois que o formulário for selecionado, localize a propriedade de **Texto** na janela **Propriedades**. Dependendo de como a lista estiver classificada, talvez seja necessário rolar para baixo. Escolha **Texto**, digite **Visualizador de Imagens** e escolha ENTER.  Agora seu formulário deve ter o texto **Visualizador de Imagens** em sua barra de título, e a aparência da janela **Propriedades** deveria ser semelhante à seguinte imagem.  
   
-     ![Janela Propriedades](~/ide/media/express_edittextproperty.png "Express_EditTextProperty")  
+     ![Janela Propriedades](../ide/media/express_edittextproperty.png "Express_EditTextProperty")  
 Janela de Propriedades  
   
     > [!NOTE]
@@ -57,7 +58,7 @@ Janela de Propriedades
   
 4.  Volte ao Windows Forms Designer. Escolha a alça inferior direita do formulário, que é o pequeno quadrado branco no canto inferior direito do formulário e aparece da seguinte maneira.  
   
-     ![Arraste a alça](~/ide/media/express_bottomrt_drag.png "Express_BottomRT_Drag")  
+     ![Arraste a alça](../ide/media/express_bottomrt_drag.png "Express_BottomRT_Drag")  
 Arraste a alça  
   
      Arraste a alça para redimensionar o formulário para que o formulário fique mais amplo e um pouco mais alto.  
@@ -72,7 +73,7 @@ Arraste a alça
   
     -   Na barra de ferramentas, clique no botão **Iniciar Depuração**, que aparece da seguinte maneira.  
   
-         ![Botão de barra de ferramentas Iniciar Depuração](~/ide/media/express_icondebug.png "Express_IconDebug")  
+         ![Botão de barra de ferramentas Iniciar Depuração](../ide/media/express_icondebug.png "Express_IconDebug")  
 Botão da barra de ferramentas Iniciar Depuração  
   
      Assim como antes, o IDE compila e executa o programa e uma janela aparece.  

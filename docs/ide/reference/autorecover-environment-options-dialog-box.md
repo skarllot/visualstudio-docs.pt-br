@@ -20,8 +20,8 @@ helpviewer_keywords:
 - files, saving automatically
 ms.assetid: 397e5e44-4bbe-4289-94d1-642b466c9111
 caps.latest.revision: 14
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -44,8 +44,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/24/2017
 
 ---
-# AutoRecover, Caixa de diálogo Opções, Ambiente
-<a id="autorecover-environment-options-dialog-box" class="xliff"></a>
+# <a name="autorecover-environment-options-dialog-box"></a>AutoRecover, Caixa de diálogo Opções, Ambiente
 Use essa página da caixa de diálogo Opções para especificar se os arquivos passam por backup automático ou não. Essa página também permite especificar se arquivos modificados são restaurados ou não quando o IDE (ambiente de desenvolvimento integrado) é desligado inesperadamente. Você pode acessar essa caixa de diálogo selecionando o menu **Ferramentas** e escolhendo **Opções** e, em seguida, selecionando a pasta **Ambiente** e a página **AutoRecuperação**. Se essa página não aparecer na lista, selecione **Mostrar todas as configurações** na caixa de diálogo **Opções**.  
   
 > [!NOTE]
@@ -57,6 +56,5 @@ Use essa página da caixa de diálogo Opções para especificar se os arquivos p
  **Manter informações de AutoRecuperação por \<n> dias**  
  Use esta opção para especificar por quanto tempo o Visual Studio manterá arquivos criados para AutoRecuperação.  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo Opções](../../ide/reference/options-dialog-box-visual-studio.md)

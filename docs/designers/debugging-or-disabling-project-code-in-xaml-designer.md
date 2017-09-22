@@ -8,8 +8,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 caps.latest.revision: 5
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -26,9 +26,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 138f318b84044a1ed8a92f9b2ee7b47b2211cdb7
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -47,7 +48,7 @@ Em muitos casos, exceções sem tratamento no designer XAML podem ser causadas q
   
  Quando o código do projeto é desabilitado, o Visual Studio mostrará espaços reservados, como o nome da propriedade para uma associação em que os dados não estejam mais disponíveis; ou um espaço reservado para um controle que não esteja mais em execução.  
   
- ![Caixa de diálogo de exceção sem tratamento](~/designers/media/xaml_unhandledexception.png "XAML_UnhandledException")  
+ ![Caixa de diálogo de exceção sem tratamento](../designers/media/xaml_unhandledexception.png "XAML_UnhandledException")  
   
 #### <a name="to-determine-if-project-code-is-causing-an-exception"></a>Para determinar se o código do projeto está causando uma exceção  
   
@@ -63,7 +64,7 @@ Em muitos casos, exceções sem tratamento no designer XAML podem ser causadas q
   
 2.  No Gerenciador de tarefas do Windows, selecione o botão **Finalizar Tarefa** para fechar todas as instâncias do Designer XAML do Visual Studio que estão sendo executadas.  
   
-     ![Instâncias de designer XAML no Gerenciador de tarefas](~/designers/media/xaml_taskmanager.png "XAML_TaskManager")  
+     ![Instâncias de designer XAML no Gerenciador de tarefas](../designers/media/xaml_taskmanager.png "XAML_TaskManager")  
   
 3.  No Visual Studio, abra a página XAML que contém o código ou o controle que deseja depurar.  
   
@@ -75,7 +76,7 @@ Em muitos casos, exceções sem tratamento no designer XAML podem ser causadas q
   
 7.  Na caixa de diálogo **Anexar ao Processo**, na lista de **Processos Disponíveis** selecione **XDesProc.exe** e, em seguida, selecione o botão **Anexar**.  
   
-     ![O processo de designer XAML](~/designers/media/xaml_attach.png "XAML_Attach")  
+     ![O processo de designer XAML](../designers/media/xaml_attach.png "XAML_Attach")  
   
      Este é o processo para o designer XAML na primeira instância do Visual Studio.  
   
@@ -89,7 +90,7 @@ Em muitos casos, exceções sem tratamento no designer XAML podem ser causadas q
   
 -   Como alternativa, na barra de ferramentas do designer XAML, selecione o botão **Desabilitar código de projeto**.  
   
-     ![O botão Desabilitar código de projeto](~/designers/media/xaml_disablecode.png "XAML_DisableCode")  
+     ![O botão Desabilitar código de projeto](../designers/media/xaml_disablecode.png "XAML_DisableCode")  
   
      Você pode alternar o botão novamente para reabilitar o código do projeto.  
   

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-help-viewer
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,8 +13,8 @@ helpviewer_keywords:
 - Help Viewer 2.0, troubleshooting
 ms.assetid: 461a4553-064a-4142-a2d2-058658b9ba12
 caps.latest.revision: 13
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 944c3270a33f7eedc47ca4beced0fdaafdf519bc
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

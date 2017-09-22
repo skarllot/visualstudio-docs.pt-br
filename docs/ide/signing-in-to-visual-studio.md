@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 caps.latest.revision: 30
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 ms.translationtype: HT
 ms.sourcegitcommit: c3521e1de25854db012cb91bbe09d9463ecb42c7
@@ -47,7 +47,7 @@ Será possível personalizar e otimizar sua experiência de desenvolvimento do V
 
  Depois de fornecer as configurações, o Visual Studio é iniciado, e você está conectado e pronto para começar. Para verificar se você entrou, procure seu nome de perfil no canto superior direito do ambiente do Visual Studio.  
 
- ![Usuário atualmente conectado no VS2017](~/ide/media/vs2017_username.png)
+ ![Usuário atualmente conectado no VS2017](../ide/media/vs2017_username.png)
 
  A menos que você se desconecte, você será conectado automaticamente ao Visual Studio sempre que o iniciar, e todas as alterações nas configurações sincronizadas são aplicadas automaticamente. Para se desconectar, escolha a seta para baixo próxima do seu nome de perfil no ambiente do Visual Studio, escolha o comando **Configurações da conta** e escolha o link **Sair**. Para entrar novamente, escolha o comando **Entrar** no canto superior direito do ambiente do Visual Studio.  
 

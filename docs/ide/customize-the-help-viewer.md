@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-help-viewer
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +15,8 @@ helpviewer_keywords:
 - Viewer Options [Help Viewer 2.0]
 ms.assetid: 9c0bc950-7323-4f0f-8de2-0b0af9a42b85
 caps.latest.revision: 11
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 8f38c679a18e43637a84bda0660de403f5e1c580
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

@@ -58,8 +58,8 @@ helpviewer_keywords:
 - Resource Compiler
 ms.assetid: f382fd40-a98f-4934-8c9a-5aeae881acde
 caps.latest.revision: 38
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -82,12 +82,10 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/24/2017
 
 ---
-# Gerenciar ferramentas externas
-<a id="manage-external-tools" class="xliff"></a>
+# <a name="manage-external-tools"></a>Gerenciar ferramentas externas
 Você pode chamar ferramentas externas de dentro do Visual Studio usando o menu **Ferramentas**. Algumas ferramentas padrão estão disponíveis no menu **Ferramentas**, mas é possível adicionar outros executáveis de sua preferência.  
 
-## Ferramentas disponíveis no menu das Ferramentas do Visual Studio
-<a id="tools-available-on-the-visual-studio-tools-menu" class="xliff"></a>
+## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Ferramentas disponíveis no menu das Ferramentas do Visual Studio
  O menu **Ferramentas** contém vários comandos internos, como:
 
 *  **Extensões e Atualizações** para [gerenciamento de Extensões do Visual Studio](finding-and-using-visual-studio-extensions.md)
@@ -96,8 +94,7 @@ Você pode chamar ferramentas externas de dentro do Visual Studio usando o menu 
 *  **Personalizar...** para [personalizar menus e barras de ferramentas](how-to-customize-menus-and-toolbars-in-visual-studio.md)
 *  **Opções...** para [configurar uma variedade de opções diferentes para o IDE do Visual Studio e outras ferramentas](reference/options-dialog-box-visual-studio.md)
 
-## Adicionar novas ferramentas ao menu Ferramentas
-<a id="add-new-tools-to-the-tools-menu" class="xliff"></a> 
+## <a name="add-new-tools-to-the-tools-menu"></a>Adicionar novas ferramentas ao menu Ferramentas 
  É possível adicionar uma ferramenta externa ao menu **Ferramentas**. Abra a caixa de diálogo **Ferramentas Externas...**, clique em **Adicionar** e, em seguida, preencha as informações. Por exemplo, a seguinte entrada faz com que o Windows Explorer abra o diretório do arquivo atualmente aberto no Visual Studio:  
   
 1.  Título: *Abrir local do arquivo*
@@ -130,7 +127,6 @@ Você pode chamar ferramentas externas de dentro do Visual Studio usando o menu 
 |Diretório da solução|$(SolutionDir)|O diretório da solução atual (unidade + caminho).|  
 |Nome de arquivo da solução|$(SolutionFileName)|O nome de arquivo da solução atual (unidade + caminho + nome de arquivo).|  
 
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
  [Ferramentas de build do C/C++](/cpp/build/reference/c-cpp-build-tools)
 

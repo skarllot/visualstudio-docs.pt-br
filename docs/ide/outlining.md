@@ -18,8 +18,8 @@ helpviewer_keywords:
 - outlining code
 ms.assetid: d1476758-9d35-4d74-b63c-310661932ecd
 caps.latest.revision: 34
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -36,9 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: de6abe0ffe91152980342410e28d3c2b7b9baad0
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="outlining"></a>Estrutura de tópicos
@@ -67,8 +69,3 @@ Você pode optar por ocultar a exibição de algum código recolhendo uma regiã
 |Recolher tudo: \<estruturas lógicas>|(Visual C++) Recolhe todas as estruturas de dentro da função.|  
   
  Você também pode usar o SDK do Visual Studio para definir as regiões de texto que deseja expandir ou recolher. Consulte [Instruções passo a passo: estrutura de tópicos](../extensibility/walkthrough-outlining.md).
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -19,8 +19,8 @@ helpviewer_keywords:
 - Visual Studio, line break characters
 ms.assetid: 8f9b3ffc-7b8d-44f4-87cb-dc29105be12d
 caps.latest.revision: 8
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -43,8 +43,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/24/2017
 
 ---
-# Codificações e quebras de linha
-<a id="encodings-and-line-breaks" class="xliff"></a>
+# <a name="encodings-and-line-breaks"></a>Codificações e quebras de linha
 No Visual Studio, é possível usar os configurações **Arquivo/Opções avançadas de salvamento** configurações para determinar o tipo de quebra de linha caracteres que você deseja. Também é possível alterar a codificação de um arquivo com as mesmas configurações.  
   
 > [!NOTE]

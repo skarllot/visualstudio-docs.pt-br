@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f779b1fd-82a9-4a11-8ab7-c1c9caabc883
 caps.latest.revision: 17
-author: BrianPeek
-ms.author: brpeek
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: a8038057c2e896468ffe3125121a2dd0092bd994
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="how-to-model-3-d-terrain"></a>Como modelar terreno 3D
@@ -53,7 +55,7 @@ Este documento demonstra como usar o Editor de Modelo para criar um modelo de te
   
  Ao terminar, o modelo deve ter esta aparência:  
   
- ![Cena&3;D que mostra um modelo de terreno](~/designers/media/digit-terrain-model.png "Digit-Terrain-Model")  
+ ![Cena&3;D que mostra um modelo de terreno](../designers/media/digit-terrain-model.png "Digit-Terrain-Model")  
   
  Antes de começar, verifique se a janela **Propriedades** e a **Caixa de Ferramentas** estão sendo exibidas.  
   
@@ -81,14 +83,9 @@ Este documento demonstra como usar o Editor de Modelo para criar um modelo de te
   
  O modelo de terreno está concluído. Aqui está o modelo final novamente, com sombreamento Phong aplicado:  
   
- ![Cena&3;D que mostra um modelo de terreno](~/designers/media/digit-terrain-model.png "Digit-Terrain-Model")  
+ ![Cena&3;D que mostra um modelo de terreno](../designers/media/digit-terrain-model.png "Digit-Terrain-Model")  
   
  Você pode usar esse modelo de terreno para demonstrar o efeito do sombreador de gradiente descrito em [Como criar um sombreador de gradiente com base na geometria](../designers/how-to-create-a-geometry-based-gradient-shader.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Editor de modelo](../designers/model-editor.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

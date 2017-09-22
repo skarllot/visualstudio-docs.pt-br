@@ -12,8 +12,8 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.Notifications
 ms.assetid: 71cf7380-f2c6-436f-a17c-fdd5f90f5865
 caps.latest.revision: 2
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 384931bb8df98849edbc6bc4016205b66d7ea3bb
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

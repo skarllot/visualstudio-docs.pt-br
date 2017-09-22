@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da54db0b-3a3d-48dc-858c-7ac43aa04b13
 caps.latest.revision: 10
-author: BrianPeek
-ms.author: brpeek
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: f2e48189ce49e48d13a616508dbba4686d2f957d
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="parameter-nodes"></a>Nós de parâmetro
@@ -49,8 +51,3 @@ No Designer de Sombreador, os nós de parâmetro representam entradas no sombrea
 |**Material Energia Especular**|Um valor escalar que descreve a intensidade dos realces especulares.<br /><br /> Quanto maior a energia especular, mais intensa e abrangente se tornam os realces especulares.<br /><br /> **Saída:**<br /><br /> `Output`: `float`<br /> O termo exponencial que define a intensidade dos realces especulares no do pixel atual.|**Access**<br /> **Public** para permitir que esta propriedade possa ser configurada pelo Editor de Modelo; caso contrário, **Private**.<br /><br /> **Value**<br /> O expoente que define a intensidade dos realces especulares no pixel atual.|  
 |**Tempo Normalizado**|O tempo, em segundos, normalizado no intervalo [0, 1], de modo que quando tempo atinge 1, ele é redefinido como 0.<br /><br /> Você pode usar isso como um parâmetro em cálculos de sombreamento, por exemplo, para animar coordenadas de textura, valores de cor ou outros atributos.<br /><br /> **Saída:**<br /><br /> `Output`: `float`<br /> O tempo normalizado, em segundos.|Nenhum|  
 |**Time**|O tempo em segundos.<br /><br /> Você pode usar isso como um parâmetro em cálculos de sombreamento, por exemplo, para animar coordenadas de textura, valores de cor ou outros atributos.<br /><br /> **Saída:**<br /><br /> `Output`: `float`<br /> O tempo em segundos.|Nenhum|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

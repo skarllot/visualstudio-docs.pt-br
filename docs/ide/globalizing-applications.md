@@ -14,8 +14,8 @@ helpviewer_keywords:
 - Visual C#, international applications
 ms.assetid: 8e1b9920-e1ac-4691-928e-cd95bfc6550b
 caps.latest.revision: 9
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -38,17 +38,14 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/30/2017
 
 ---
-# Globalizando aplicativos
-<a id="globalizing-applications" class="xliff"></a>
+# <a name="globalizing-applications"></a>Globalizando aplicativos
 Globalização é o processo de projetar e desenvolver um produto de software que funciona para várias culturas. Esta seção se aplica a páginas do Windows Forms e do Web Forms.  
   
-## Nesta seção
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>Nesta seção  
  [Classes específicas de cultura para Windows Forms e Web Forms globais](../ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md)  
  Aborda classes que formatam datas, hora, números, moeda e outras informações de acordo com a configuração de cultura.  
   
-## Seções relacionadas
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>Seções relacionadas  
  [Globalizando o Windows Forms](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
  Fornece links para páginas de Ajuda sobre a globalização do Windows Forms.  
   

@@ -13,8 +13,8 @@ helpviewer_keywords:
 - IntelliSense [Visual Studio], Visual Basic
 ms.assetid: 4dec8753-05e5-4f74-b304-5f8c4ed8723b
 caps.latest.revision: 10
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 2369d65e74ef46299b6379286ea6a647afef9355
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

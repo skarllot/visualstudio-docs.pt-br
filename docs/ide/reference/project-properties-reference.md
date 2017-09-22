@@ -13,8 +13,8 @@ helpviewer_keywords:
 - projects [Visual Studio], user interface
 ms.assetid: eec49aec-5474-48a7-889d-709045b9a475
 caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -37,12 +37,10 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/24/2017
 
 ---
-# Referência de propriedades de projeto
-<a id="project-properties-reference" class="xliff"></a>
+# <a name="project-properties-reference"></a>Referência de propriedades de projeto
 Saiba mais sobre como configurar e personalizar as propriedades do projeto.  
   
-## Páginas de propriedades do projeto
-<a id="project-properties-pages" class="xliff"></a>  
+## <a name="project-properties-pages"></a>Páginas de propriedades do projeto  
   
 |Título|Descrição|  
 |-----------|-----------------|  
@@ -59,9 +57,7 @@ Saiba mais sobre como configurar e personalizar as propriedades do projeto.
 |[Página Referências, Designer de Projeto (Visual Basic)](../../ide/reference/references-page-project-designer-visual-basic.md)|Use essa página para gerenciar as referências usadas por um projeto.|  
 |[Página Segurança, Designer de Projeto](../../ide/reference/security-page-project-designer.md)|Use essa página para definir as configurações de segurança de acesso do código para aplicativos implantados usando a implantação [!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)].|  
 |[Página de Assinatura, Designer de Projeto](../../ide/reference/signing-page-project-designer.md)|Use essa página para assinar manifestos do aplicativo e de implantação e assinar o assembly.|  
-|||  
-|||  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
  [Soluções e projetos](../../ide/solutions-and-projects-in-visual-studio.md)
+

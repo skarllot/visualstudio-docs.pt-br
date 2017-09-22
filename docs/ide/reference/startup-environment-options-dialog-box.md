@@ -12,8 +12,8 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.Startup
 ms.assetid: 9d517203-3c62-4660-b7b4-ea7d032dcb1e
 caps.latest.revision: 2
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: acf6e2c989c67c72778c5f3122e6f797fd9b17fd
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

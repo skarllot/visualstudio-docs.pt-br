@@ -28,8 +28,8 @@ helpviewer_keywords:
 - toolbox
 ms.assetid: 82e7cb43-4d0b-4e17-b7b0-43f96c22c3c2
 caps.latest.revision: 20
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -52,16 +52,14 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/24/2017
 
 ---
-# Usando a caixa de ferramentas
-<a id="using-the-toolbox" class="xliff"></a>
+# <a name="using-the-toolbox"></a>Usando a caixa de ferramentas
 Você pode usar a caixa de ferramentas para adicionar controles e outros itens ao seu projeto. Você pode arrastar e soltar diferentes controles na superfície do designer que você está usando, redimensionar e posicionar os controles.  
   
  A caixa de ferramentas aparece com as exibições de designer, como a exibição de designer de um arquivo XAML. A caixa de ferramentas exibe apenas os controles que podem ser usados ​​no designer atual.  
   
  A versão .NET Framework de destino do seu projeto também afeta o conjunto de controles visíveis na caixa de ferramentas. Por padrão, os projetos [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] têm como destino o .NET Framework 4.5.1. Você pode configurar seu projeto para ter como destino uma versão diferente do .NET Framework selecionando o nó do projeto no **Gerenciador de Soluções** e navegando até **Propriedades/Aplicativo/Estrutura de Destino**.  
   
-## Gerenciando a caixa de ferramentas e seus controles
-<a id="managing-the-toolbox-and-its-controls" class="xliff"></a>  
+## <a name="managing-the-toolbox-and-its-controls"></a>Gerenciando a caixa de ferramentas e seus controles  
  Por padrão, a caixa de ferramentas fica recolhida no lado esquerdo do IDE do Visual Studio e aparece quando o cursor é movido sobre ela. É possível fixar a caixa de ferramentas (clicando no ícone **Fixar** na barra de ferramentas da caixa de ferramentas) para que ela permaneça aberta quando você move o cursor. Você também pode desencaixar a janela da caixa de ferramentas e arrastá-la para qualquer lugar na tela. Você pode encaixar, desencaixar e ocultar a caixa de ferramentas, clicando com o botão direito na barra de ferramentas da caixa de ferramentas e selecionando uma das opções.  
   
  Você pode reorganizar os itens em uma guia de caixa de ferramentas ou adicionar guias e itens personalizados usando os seguintes comandos no menu de contexto:  
@@ -84,6 +82,5 @@ Você pode usar a caixa de ferramentas para adicionar controles e outros itens a
   
 -   **Mover para Baixo** – move o item selecionado para baixo.  
   
-## Criando e distribuindo controles da caixa de ferramentas
-<a id="creating-and-distributing-custom-toolbox-controls" class="xliff"></a>  
+## <a name="creating-and-distributing-custom-toolbox-controls"></a>Criando e distribuindo controles da caixa de ferramentas  
  Você pode criar um controle de caixa de ferramentas personalizado no Visual Basic ou Visual C#, e pode começar com um modelo de projeto baseado no [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) ou no [Windows Forms](../extensibility/creating-a-windows-forms-toolbox-control.md). Você pode distribuir o controle para seus colegas de equipe ou publicá-lo na Web usando o [Instalador de Controles da Caixa de Ferramentas](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx).

@@ -17,8 +17,8 @@ helpviewer_keywords:
 - security [.NET Framework], maintaining after deployment
 ms.assetid: 621d10c1-842b-4902-be60-bb9719591751
 caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 16d6817f3da3379b80549163734328664a011a87
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

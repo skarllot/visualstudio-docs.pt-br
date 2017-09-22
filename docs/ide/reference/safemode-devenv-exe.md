@@ -14,8 +14,8 @@ helpviewer_keywords:
 - SafeMode switch
 ms.assetid: b191f6a5-8f12-47ec-bcc7-b68149a22aa8
 caps.latest.revision: 5
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 79d468d30cbbb7f69ff6f87a4809b9fe1bf957b5
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

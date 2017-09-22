@@ -12,8 +12,8 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.Keyboard
 ms.assetid: 038da8dc-6126-4f3e-a361-a58cc04cafb3
 caps.latest.revision: 2
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 0267a0e39fe1ca65c86cc25301c5eb5520603e0c
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

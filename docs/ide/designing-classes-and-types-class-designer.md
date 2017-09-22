@@ -13,8 +13,8 @@ helpviewer_keywords:
 - classes [Visual Studio], designing
 ms.assetid: 381481a2-87f4-475b-a780-18e85c8af350
 caps.latest.revision: 21
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 9346b1a84aa6bcef31a4dd627ced7a9678bed9dd
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
