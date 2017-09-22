@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b73c865c-74e0-420e-89cc-43524f4aafd0
 caps.latest.revision: 13
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 592cde9dac7ea7b49934200469e85caf1fd58f82
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="work-with-multiple-user-accounts"></a>Trabalhar com várias contas de usuário
@@ -53,7 +55,7 @@ Se você tem várias contas da Microsoft e/ou contas corporativas ou de estudant
 
  Na primeira vez que você usar o Visual Studio em qualquer dispositivo específico, a caixa de diálogo mostrará apenas as assinaturas registradas na ID que você usou para entrar no IDE. Você pode acessar os recursos de qualquer uma das outras contas diretamente do **Gerenciador de Servidores** clicando com o botão direito do mouse no nó do Azure e escolhendo **Gerenciar e Filtrar Assinaturas** e, em seguida, adicionar suas contas do controle de seletor de conta. Você pode escolher outra conta, se desejar, clicando na seta para baixo e escolhendo na lista de contas. Depois de escolher a conta, é possível escolher qual assinatura dessa conta você deseja exibir no Gerenciador de Servidores.  
 
- ![Caixa de diálogo Gerenciar Assinaturas do Azure](~/ide/media/vs2015_manage_subs.png "vs2015_manage_subs")  
+ ![Caixa de diálogo Gerenciar Assinaturas do Azure](../ide/media/vs2015_manage_subs.png "vs2015_manage_subs")  
 
  Na próxima vez que você abrir o Gerenciador de Servidores, os recursos dessa(s) assinatura(s) serão exibidos.  
 
@@ -66,7 +68,7 @@ Se você tem várias contas da Microsoft e/ou contas corporativas ou de estudant
     > [!WARNING]
     >  Se esta for a primeira vez que você está criando um aplicativo da Store no Visual Studio em um computador específico, você será solicitado a habilitar o dispositivo para o modo de desenvolvimento indo até **Configurações &#124; Atualizações e Segurança &#124; Para Desenvolvedores** em seu computador. Para obter mais informações, consulte [Habilitar seu dispositivo para desenvolvimento](https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx).  
 
-###  <a name="a-nameaccessazurea-access-azure-active-directory-in-a-web-project"></a><a name="access_azure"></a> Acessar o Azure Active Directory em um projeto Web  
+###  <a name="access_azure"></a> Acessar o Azure Active Directory em um projeto Web  
  O Azure AD habilita o suporte para o logon única do usuário final em aplicativos Web ASP.NET MVC ou autenticação AD nos serviços de API Web. A autenticação de domínio é diferente da autenticação de conta de usuário individual. Os usuários que têm acesso ao seu domínio do Active Directory podem usar suas contas existentes do Azure AD para conectar-se aos aplicativos Web. Os aplicativos do Office 365 também podem usar a autenticação de domínio. Para ver isso em ação, crie um aplicativo Web (**Arquivo, Novo Projeto, C#, Nuvem, Aplicativo Web ASP .NET**). Na caixa de diálogo Novo Projeto ASP.NET escolha **Alterar Autenticação**. O assistente de autenticação aparece e habilita você a escolher o tipo de autenticação a ser usado em seu aplicativo.  
 
  ![Caixa de diálogo Alterar autenticação para o ASP.NET](../ide/media/vs2015_change_authentication.png "VS2015_change_authentication")  
@@ -87,9 +89,4 @@ Se você tem várias contas da Microsoft e/ou contas corporativas ou de estudant
 
 ## <a name="revisit-the-add-connected-services-wizard-and-server-explorer"></a>Rever o Assistente para Adicionar Serviços Conectados e o Gerenciador de Servidores  
  Vá novamente até o **Gerenciador de Servidores**, clique com botão direito do mouse no nó do Azure e escolha **Gerenciar e filtrar assinaturas**. Escolha a nova conta, clicando na seta suspensa ao lado da conta atual e, em seguida, escolha quais assinaturas você deseja exibir no Gerenciador de Servidores. Você deve ver todos os serviços associados à assinatura especificada. Mesmo que você não esteja conectado ao IDE do Visual Studio com a segunda conta, você está conectado aos serviços e recursos dessa conta. O mesmo se aplica para **Projeto, Adicionar Serviço Conectado** e **Equipe, Conectar-se ao Team Foundation Server**.
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

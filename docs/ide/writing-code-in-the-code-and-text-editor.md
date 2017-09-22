@@ -61,8 +61,8 @@ helpviewer_keywords:
 - code
 ms.assetid: cb53ab9a-5b76-4759-b9e8-7bf32298ecbe
 caps.latest.revision: 44
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -141,11 +141,11 @@ O editor do Visual Studio fornece muitos recursos que facilitam escrever e geren
 ## <a name="navigate-and-find-code"></a>Navegar e localizar código  
 Você pode se mover em um documento de várias maneiras diferentes. Além das operações padrão, você pode usar os botões **Navegar para Trás** (CTRL + SINAL DE SUBTRAÇÃO) e **Navegar para Frente** (CTRL + SHIFT + SINAL DE SUBTRAÇÃO) na barra de ferramentas para mover o ponto de inserção para locais anteriores ou retornar para locais mais recentes no documento ativo. Esses botões retém os últimos 20 locais do ponto de inserção.
 
-![Botões de navegação para frente e para trás](~/ide/media/vs2017_nav_buttons.png)
+![Botões de navegação para frente e para trás](../ide/media/vs2017_nav_buttons.png)
 
 O recurso Visualizador de Estrutura no editor de código exibe *linhas de guia de estrutura* – linhas verticais tracejadas que indicam a correspondência de chaves na base de código. Isso facilita ver onde os blocos lógicos começam e terminam.
 
-![Visualizador de Estrutura](~/ide/media/vside_structure_visualizer.png)
+![Visualizador de Estrutura](../ide/media/vside_structure_visualizer.png)
 
 Para desabilitar as linhas de guia de estrutura, vá até **Ferramentas**, **Opções**, **Editor de Texto**, **Geral** e limpe a caixa **Mostrar linhas de guia de estrutura**.
 
@@ -167,7 +167,7 @@ Os comandos a seguir são métodos de navegação específicos do código:
 
  Você também pode usar a **barra de navegação** (caixas suspensas na parte superior da janela de código) para localizar códigos em uma base de código. É possível escolher um tipo ou membro para ir diretamente a ele. A barra de navegação é exibida ao editar códigos no Visual Basic, C# ou base de código C++.
 
- ![Barra de navegação de código](~/ide/media/vside_navigation_bar.png)
+ ![Barra de navegação de código](../ide/media/vside_navigation_bar.png)
 
  Para ocultar a barra de navegação, altere a opção **Barra de navegação** na configuração Todas as Linguagens do Editor de Texto (**Ferramentas**, **Opções**, **Editor de Texto**, **Todas as Linguagens** ou você pode alterar as configurações de linguagens individuais). Você pode navegar nas caixas suspensas da seguinte maneira:  
 
@@ -194,7 +194,7 @@ Os comandos **Ir Para** do Visual Studio executam uma pesquisa restrita do seu c
 1. No menu principal, escolha **Editar**, **Ir Para**. Uma pequena caixa de texto é exibida no canto superior do editor de código.
 1. Na caixa de texto, digite o nome do elemento de código que você deseja localizar.
 
-    ![Janela Navegar Para](~/ide/media/vside_navigatetowindow.png "Janela Navegar Para")
+    ![Janela Navegar Para](../ide/media/vside_navigatetowindow.png "Janela Navegar Para")
 
     Conforme você digita, os resultados são exibidos em uma lista suspensa abaixo da caixa de texto.
 1. Para ir até um elemento, escolha-o na lista.
@@ -217,11 +217,11 @@ Por exemplo, para limitar sua pesquisa para somente símbolos de códigos, abra 
 
 É possível também alterar rapidamente o filtro de pesquisa ao escolher botões na barra de ferramentas da caixa de diálogo Ir Para. Botões que alteram os filtros estão do lado esquerdo e botões que alteram o escopo da pesquisa estão do lado direito.
 
-![](~/ide/media/vside_navigation_toolbar.png)
+![](../ide/media/vside_navigation_toolbar.png)
 
 Se você usar [minúsculas concatenadas](https://en.wikipedia.org/wiki/Camel_case) em seu código, será possível encontrar elementos de código de forma mais rápida, inserindo somente as letras maiúsculas do nome do elemento de código. Por exemplo, se o código tem um tipo chamado `CredentialViewModel`, é possível refinar a pesquisa ao escolher o filtro Tipo ("t") e, em seguida, inserir apenas as letras maiúsculas do nome (`CVM`) na caixa de diálogo Ir Para.
 
-![Janela Navegar Para – pesquisando com letras maiúsculas](~/ide/media/vside_capitalsearch.png)
+![Janela Navegar Para – pesquisando com letras maiúsculas](../ide/media/vside_capitalsearch.png)
 
 Esse recurso pode ser útil caso seu código tenha nomes longos.
 
@@ -239,7 +239,7 @@ Os resultados são exibidos em uma janela de ferramentas chamada  **'*{element}*
 
 Também é possível passar o mouse por qualquer resultado de pesquisa para obter uma visualização do item devolvido.
 
-![Janela de ferramentas Localizar Todas as Referências](~/ide/media/vside_findallreferences.png)
+![Janela de ferramentas Localizar Todas as Referências](../ide/media/vside_findallreferences.png)
 
 Para manter os resultados da pesquisa, selecione o botão **Manter resultados**. Ao selecionar este botão, os resultados da pesquisa atual ficam nessa janela, e novos resultados da pesquisa são exibidos em uma nova janela de ferramentas.
 

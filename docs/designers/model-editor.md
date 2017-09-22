@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,8 +13,8 @@ f1_keywords:
 - vs.graphics.modelviewer
 ms.assetid: 5edf1a30-9307-43c3-9b8b-831217be0104
 caps.latest.revision: 36
-author: BrianPeek
-ms.author: brpeek
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
@@ -66,7 +66,7 @@ Este documento descreve como trabalhar com o Editor de Modelos do [!INCLUDE[vspr
   
  Esta é a barra de ferramentas **Modo do Editor de Modelos**:  
   
- ![A barra de ferramentas modal do Visualizador do Modelo.](~/designers/media/digit-mre-modal-toolbar.png "Digit-MRE-Modal-Toolbar")  
+ ![A barra de ferramentas modal do Visualizador do Modelo.](../designers/media/digit-mre-modal-toolbar.png "Digit-MRE-Modal-Toolbar")  
   
  Esta tabela descreve os itens na barra de ferramentas **Modo do Editor de Modelos**, que são listados na ordem em que aparecem, da esquerda para a direita.  
   
@@ -94,7 +94,7 @@ Este documento descreve como trabalhar com o Editor de Modelos do [!INCLUDE[vspr
   
  Veja a barra de ferramentas **Editor de Modelos**:  
   
- ![Barra de ferramentas do Visualizador de Modelos](~/designers/media/digit-mre-toolbar.png "Digit-MRE-Toolbar")  
+ ![Barra de ferramentas do Visualizador de Modelos](../designers/media/digit-mre-toolbar.png "Digit-MRE-Toolbar")  
   
  A tabela a seguir descreve os itens da barra de ferramentas **Editor de Modelos**, que são listados na ordem em que aparecem, de cima para baixo.  
   

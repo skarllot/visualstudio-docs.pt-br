@@ -14,8 +14,8 @@ helpviewer_keywords:
 - ResetSkipPkgs switch
 ms.assetid: 7ece64f9-cfa4-4b34-b0d9-1c338b9557b3
 caps.latest.revision: 3
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: eb71419d10744143d246a0c0753a545fd9d8400f
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

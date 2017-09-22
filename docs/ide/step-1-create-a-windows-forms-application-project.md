@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 caps.latest.revision: 22
-author: kempb
-ms.author: kempb
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -28,15 +28,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: fc20c01f7bb5a6f9065494994308adbee023462d
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="step-1-create-a-windows-forms-application-project"></a>Etapa 1: Criar um projeto de aplicativo do Windows Forms
 Ao criar um visualizador de imagens, a primeira etapa é criar um projeto de aplicativo do Windows Forms.  
   
- ![link para vídeo](~/data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205209) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205199). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
+ ![link para vídeo](../data-tools/media/playvideo.gif "PlayVideo")Para uma versão em vídeo deste tópico, consulte o [Tutorial 1: criar um Visualizador de Imagens no Visual Basic – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205209) ou o [Tutorial 1: criar um Visualizador de Imagens em C# – Vídeo 1](http://go.microsoft.com/fwlink/?LinkId=205199). Esses vídeos usam uma versão anterior do Visual Studio, portanto, existem pequenas diferenças em alguns comandos de menu e em outros elementos da interface do usuário. No entanto, os conceitos e procedimentos funcionam de maneiras semelhantes na versão atual do Visual Studio.  
   
 ### <a name="to-create-a-windows-forms-application-project"></a>Para criar um projeto de aplicativo do Windows Forms  
   
@@ -56,7 +58,7 @@ Caixa de diálogo Novo Projeto
     > [!NOTE]
     >  O layout da janela pode não ser exatamente como esta ilustração. O layout preciso da janela depende da versão do Visual Studio, da linguagem de programação usada e de outros fatores. Entretanto, você deve verificar que todas as três janelas aparecem.  
   
-     ![Janela IDE](~/ide/media/express_ideoverview_visio.png "Express_IDEOverview_Visio")  
+     ![Janela IDE](../ide/media/express_ideoverview_visio.png "Express_IDEOverview_Visio")  
 Janela IDE  
   
      A interface contém três janelas: uma janela principal, o **Gerenciador de Soluções** e a janela **Propriedades**.  
@@ -78,7 +80,7 @@ Janela IDE
   
      Como alternativa, escolha o botão **Salvar Todos** na barra de ferramentas, demostrado na ilustração a seguir.  
   
-     ![Botão de barra de ferramentas Salvar Todos](~/ide/media/express_iconsaveall.png "Express_IconSaveAll")  
+     ![Botão de barra de ferramentas Salvar Todos](../ide/media/express_iconsaveall.png "Express_IconSaveAll")  
 Botão da barra de ferramentas Salvar todos  
   
      O Visual Studio preenche automaticamente o nome da pasta e o nome do projeto e, em seguida, salva o projeto na sua pasta de projeto.  
@@ -88,8 +90,3 @@ Botão da barra de ferramentas Salvar todos
 -   Para ir para a próxima etapa do tutorial, consulte [Etapa 2: executar o programa](../ide/step-2-run-your-program.md).  
   
 -   Para retornar ao tópico de visão geral, consulte [Tutorial 1: criar um visualizador de imagens](../ide/tutorial-1-create-a-picture-viewer.md).
-
-
-<!--HONumber=Feb17_HO4-->
-
-

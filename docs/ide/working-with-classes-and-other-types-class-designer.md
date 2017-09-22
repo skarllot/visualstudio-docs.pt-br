@@ -26,8 +26,8 @@ helpviewer_keywords:
 - Class Designer [Visual Studio], about
 ms.assetid: 4909e38d-2ea8-4caf-92b1-857bd162ab7c
 caps.latest.revision: 32
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -43,9 +43,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: c6324c5dcf46c684ce271fd1b82163a7126c1350
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

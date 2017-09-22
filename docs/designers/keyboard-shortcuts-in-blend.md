@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3a1b6830-30c2-4a36-bd14-6961f5edf9cb
 caps.latest.revision: 5
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: d8b0e91600acf5fb492e263aca334aeb2452d4c1
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="keyboard-shortcuts-in-blend"></a>Atalhos de teclado no Blend
@@ -134,8 +136,3 @@ ms.openlocfilehash: d8b0e91600acf5fb492e263aca334aeb2452d4c1
 |Redefinir o layout do espaço de trabalho ativo|CTRL+SHIFT+R|  
 |Aplicar movimento panorâmico no espaço de trabalho|Manter a barra de espaços pressionada|  
 |Usar temporariamente a ferramenta **Seleção** (enquanto uma ferramenta diferente permanece selecionada)|Manter a tecla CTRL pressionada|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

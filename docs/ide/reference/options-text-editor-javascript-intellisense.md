@@ -13,8 +13,8 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Intellisense.General
 ms.assetid: b4a9816d-cf87-4dc6-a8d4-1591d6a48103
 caps.latest.revision: 20
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -31,9 +31,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: ab08ff8cfc6abf369d5743d6bab2fafbd77d534a
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

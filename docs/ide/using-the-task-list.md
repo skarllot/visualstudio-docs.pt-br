@@ -17,8 +17,8 @@ helpviewer_keywords:
 - Visual Studio, task list
 ms.assetid: f46a75a8-47b3-4cb6-bb59-b72e3356a664
 caps.latest.revision: 29
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -35,9 +35,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 01e8f3cc1bbcc2bc4b2fc94df1dad7d248b67290
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -65,7 +66,7 @@ Use a **Lista de Tarefas** para rastrear comentários de código que usam tokens
   
 -   No menu **Exibir**, escolha **Lista de Tarefas** (Teclado: Ctrl+\\,T).  
   
-     ![Janela Lista de Tarefas](~/ide/media/vs2015_task_list.png "vs2015_task_list")  
+     ![Janela Lista de Tarefas](../ide/media/vs2015_task_list.png "vs2015_task_list")  
   
 #### <a name="to-change-the-sort-order-of-the-list"></a>Para alterar a ordem de classificação da lista  
   
@@ -114,7 +115,7 @@ Use a **Lista de Tarefas** para rastrear comentários de código que usam tokens
   
      A [Caixa de diálogo Lista de Tarefas, Ambiente, Opções](../ide/reference/task-list-environment-options-dialog-box.md) é exibida.  
   
-     ![Lista de tarefas do Visual Studio](~/ide/media/vs2015_task_list_options.png "vs2015_task_list_options")  
+     ![Lista de tarefas do Visual Studio](../ide/media/vs2015_task_list_options.png "vs2015_task_list_options")  
   
 3.  Na categoria **Tokens**, na caixa de texto **Nome**, insira o nome do seu token, por exemplo, “BUG”.  
   
@@ -134,7 +135,7 @@ Use a **Lista de Tarefas** para rastrear comentários de código que usam tokens
 ##  <a name="shortcuts"></a> Atalhos  
  Um *atalho* é um indicador no código que é controlado na **Lista de Tarefas**; ele tem um ícone diferente de um indicador normal. Clique duas vezes no atalho na **Lista de Tarefas** para ir até o local correspondente no código.  
   
- ![Ícone de atalho de lista de tarefas do Visual Studio](~/ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")  
+ ![Ícone de atalho de lista de tarefas do Visual Studio](../ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")  
   
 #### <a name="to-create-a-shortcut"></a>Para criar um atalho  
   

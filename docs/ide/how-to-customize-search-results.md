@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-help-viewer
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,8 +13,8 @@ helpviewer_keywords:
 - customizing search results [Help Viewer 2.0]
 ms.assetid: 3431ec03-0221-4be2-9936-887a1c36db89
 caps.latest.revision: 6
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -31,9 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 5d8b0cded371eb77b9956fa701df9c8a79b5c0ff
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="how-to-customize-search-results"></a>Como personalizar resultados de pesquisa
@@ -66,8 +68,3 @@ Você pode personalizar a aparência dos resultados da pesquisa na guia **Pesqui
   
 ## <a name="see-also"></a>Consulte também  
  [Dicas de pesquisa de texto completo](../ide/full-text-search-tips.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -15,8 +15,8 @@ helpviewer_keywords:
 - projects [Visual Studio], multi-targeting
 ms.assetid: 91e77ad4-4da3-419d-85fb-9036f0e5c330
 caps.latest.revision: 26
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -39,22 +39,19 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/30/2017
 
 ---
-# Direcionamento de uma versão específica do .NET Framework
-<a id="targeting-a-specific-net-framework-version" class="xliff"></a>
+# <a name="targeting-a-specific-net-framework-version"></a>Direcionamento de uma versão específica do .NET Framework
 No Visual Studio, é possível especificar a versão ou o perfil do .NET Framework que você deseja que o projeto tenha como destino. Para que um aplicativo seja executado em outro computador, a versão do Framework de destino do aplicativo deve ser compatível com a versão do Framework instalada no computador.  
   
  Esta seção contém tópicos que descrevem como definir versões específicas do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] como destino nos projetos.  
   
-## Nesta seção
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>Nesta seção  
  [Visão Geral do Visual Studio Multiplataforma](../ide/visual-studio-multi-targeting-overview.md)  
  Fornece uma visão geral dos recursos multiplataforma do Visual Studio.  
   
  [Como definir uma versão do .NET Framework como destino](../ide/how-to-target-a-version-of-the-dotnet-framework.md)  
  Fornece detalhes sobre como especificar um [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] específico para o projeto do Visual Basic, Visual C# ou Visual F#.  
   
-## Seções relacionadas
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>Seções relacionadas  
  [.NET Framework Multi-Targeting para projetos Web do ASP.NET](http://msdn.microsoft.com/Library/8b8145a9-62f6-4fc4-8a83-47b0487cbe76)  
  Explica como usar essa versão do Visual Studio para desenvolver aplicativos Web executados em versões anteriores do .NET Framework.  
   

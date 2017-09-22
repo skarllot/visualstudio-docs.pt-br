@@ -13,8 +13,8 @@ helpviewer_keywords:
 - Visual Studio templates, customizing
 ms.assetid: d7344a0a-d93f-4b69-bbc4-0c2d67ef272b
 caps.latest.revision: 10
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -37,8 +37,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/19/2017
 
 ---
-# Personalizando modelos de projeto e de item
-<a id="customizing-project-and-item-templates" class="xliff"></a>
+# <a name="customizing-project-and-item-templates"></a>Personalizando modelos de projeto e de item
 Depois que os modelos de projeto e de item tiverem sido criados, você ainda poderá personalizá-los ainda mais para atender às suas necessidades.  
   
  Por exemplo, é possível executar as seguintes tarefas:  
@@ -55,8 +54,7 @@ Depois que os modelos de projeto e de item tiverem sido criados, você ainda pod
   
      Para obter mais informações, consulte [Como: usar assistentes com modelos de projeto](../extensibility/how-to-use-wizards-with-project-templates.md).  
   
-## Seções relacionadas
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>Seções relacionadas  
  [Criando modelos de projeto e de item](../ide/creating-project-and-item-templates.md)  
   
  [Como solucionar problemas de modelos](../ide/how-to-troubleshoot-templates.md)  

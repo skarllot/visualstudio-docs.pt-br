@@ -14,8 +14,8 @@ helpviewer_keywords:
 - Devenv, /setup switch
 ms.assetid: 87608b7f-a156-400c-80f5-fc823f843e61
 caps.latest.revision: 14
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -32,9 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 5a3ede0727ad9e4aa9dc4f7c470bd6e44fdb3df5
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="setup-devenvexe"></a>/Setup (devenv.exe)
@@ -60,8 +62,3 @@ devenv /setup
   
 ## <a name="see-also"></a>Consulte também  
  [Opções de linha de comando devenv](../../ide/reference/devenv-command-line-switches.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

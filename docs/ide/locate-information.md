@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-help-viewer
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea9770eb-bf41-4a52-a673-07beaa663df3
 caps.latest.revision: 9
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: aa5feab1459c345fda02c9b76de66702454123c3
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

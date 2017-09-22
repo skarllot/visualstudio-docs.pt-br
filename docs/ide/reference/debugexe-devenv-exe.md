@@ -14,8 +14,8 @@ helpviewer_keywords:
 - /DebugExe [devenv.exe]
 ms.assetid: cd700006-1648-418f-924b-4b1e5c1412ab
 caps.latest.revision: 4
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: d949dbd34e98e7480824ab3990093b5cd66955fb
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

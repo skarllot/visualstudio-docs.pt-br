@@ -29,8 +29,8 @@ helpviewer_keywords:
 - object browser
 ms.assetid: e6064f58-5ad9-4f05-8c3f-12e994b6583f
 caps.latest.revision: 28
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/13/2017
   
  Você pode exibir a janela **Hierarquia de Chamada** selecionando um método (ou propriedade ou construtor) e, em seguida, escolhendo **Exibir Hierarquia de Classe** no menu de atalho. A exibição deve se parecer com a imagem a seguir.  
   
- ![Hierarquia de Chamada com vários nós abertos](~/ide/media/multiplenodes.png "MultipleNodes")  
+ ![Hierarquia de Chamada com vários nós abertos](../ide/media/multiplenodes.png "MultipleNodes")  
 Janela de Hierarquia de Chamada  
   
  Usando a lista suspensa na barra de ferramentas, é possível especificar o escopo da hierarquia: a solução, o projeto atual ou o documento atual.  

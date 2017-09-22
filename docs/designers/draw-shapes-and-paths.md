@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5378c59-e2e5-49f0-91f1-aa82d984a33c
 caps.latest.revision: 10
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -57,7 +57,7 @@ No Designer XAML, uma *forma* é exatamente o que se espera que seja. Por exempl
 ##  <a name="Shape"></a> Desenhar uma forma  
  É possível encontrar formas no painel **Ativos**.  
   
- ![Categoria Formas no painel Ativos](~/designers/media/b4_shapes_assetspanel.png "b4_Shapes_AssetsPanel")  
+ ![Categoria Formas no painel Ativos](../designers/media/b4_shapes_assetspanel.png "b4_Shapes_AssetsPanel")  
   
  Arraste a forma desejada para a prancheta. Então, será possível usar identificadores na forma para ajustar a escala, girar, mover ou distorcer a forma.  
   
@@ -68,7 +68,7 @@ No Designer XAML, uma *forma* é exatamente o que se espera que seja. Por exempl
   
  É possível desenhar um caminho usando uma linha, caneta ou lápis. Essas ferramentas podem ser encontradas no painel **Ferramentas**.  
   
- ![](../designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8-b6a5-4e37-8af3-70bcfc78c82a") ![](~/designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21-be83-4cf6-903b-3a49f00c9860")  
+ ![](../designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8-b6a5-4e37-8af3-70bcfc78c82a") ![](../designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21-be83-4cf6-903b-3a49f00c9860")  
   
 ### <a name="draw-a-straight-line"></a>Desenhar uma linha reta  
  Use a ferramenta **Caneta** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")ou a ferramenta **Linha** ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397-5283-48be-8396-3449be7b6fbf").  
@@ -116,12 +116,12 @@ No Designer XAML, uma *forma* é exatamente o que se espera que seja. Por exempl
 ##  <a name="Convert"></a> Converter uma forma em um caminho  
  Para modificar uma forma da mesma maneira que um caminho, converta a forma em um caminho.  
   
- **Assista a um breve vídeo:** ![Configurar Recursos Instalados](~/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: converter uma forma em um caminho](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: converter uma forma em um caminho](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).  
   
 ##  <a name="Combine"></a> Combinar caminhos  
  É possível combinar caminhos e formas em um único caminho.  
   
- ![](~/designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png "2df17a5d-a338-4ef4-96c5-dae51cc1ca8a")  
+ ![](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png "2df17a5d-a338-4ef4-96c5-dae51cc1ca8a")  
   
 |||||  
 |-|-|-|-|  
@@ -129,7 +129,7 @@ No Designer XAML, uma *forma* é exatamente o que se espera que seja. Por exempl
 |![](../designers/media/b1_2.png "B1_2")|União|![](../designers/media/b1_5.png "B1_5")|Excluir Sobreposição|  
 |![](../designers/media/b1_3.png "B1_3")|Divisão|![](../designers/media/b1_6.png "B1_6")|Subtração|  
   
- **Assista a um breve vídeo:** ![Configurar Recursos Instalados](~/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: combinar caminhos](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: combinar caminhos](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).  
   
 ##  <a name="Compound"></a> Criar um caminho composto  
  Quando você cria um caminho composto, todas as partes de interseção dos caminhos são subtraídas do resultado e o caminho resultante assume as propriedades visuais do caminho mais baixo.  
@@ -138,14 +138,14 @@ No Designer XAML, uma *forma* é exatamente o que se espera que seja. Por exempl
   
  ![](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png "2157a8aa-d9a7-4de4-8de5-b10d28f08a84")  
   
- **Assista a um breve vídeo:** ![Configurar Recursos Instalados](~/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: criar um caminho composto](https://www.youtube.com/watch?v=Io5bC0-nH6Q).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: criar um caminho composto](https://www.youtube.com/watch?v=Io5bC0-nH6Q).  
   
 ##  <a name="Clipping"></a> Criar um caminho de recorte  
  Um caminho de recorte é um caminho ou uma forma que é aplicada a outro objeto, o que oculta as partes do objeto mascarado que fica fora do caminho de recorte.  
   
  ![](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png "22471e98-a841-4f39-a3ef-36090cf5a625")  
   
- **Assista a um breve vídeo:** ![Configurar Recursos Instalados](~/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: criar um caminho de recorte](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).  
+ **Assista a um breve vídeo:** ![Configurar Recursos Instalados](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Trabalhando com caminhos: criar um caminho de recorte](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando uma interface do usuário usando o Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

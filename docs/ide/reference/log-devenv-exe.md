@@ -14,8 +14,8 @@ helpviewer_keywords:
 - /Log Devenv switch
 ms.assetid: ae23c4ae-2376-4fe3-b8d2-81d34e61c8ba
 caps.latest.revision: 8
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: ee7fbd0b7cd145c489376b0ef2441a9fb500945c
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---

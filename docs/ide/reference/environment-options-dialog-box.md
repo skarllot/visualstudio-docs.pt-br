@@ -13,8 +13,8 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment
 ms.assetid: 3f463cf0-734b-4fdc-b4ff-b47f9bb99069
 caps.latest.revision: 29
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -37,8 +37,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/24/2017
 
 ---
-# Caixa de diálogo Opções do Ambiente
-<a id="environment-options-dialog-box" class="xliff"></a>
+# <a name="environment-options-dialog-box"></a>Caixa de diálogo Opções do Ambiente
 Você pode usar as páginas da pasta **Ambiente** na caixa de diálogo **Opções** para definir como determinados elementos do IDE (ambiente de desenvolvimento integrado) são exibidos e se comportam. Na barra de menus, é possível acessar as páginas Ambiente escolhendo **Ferramentas**, **Opções** e selecionando **Ambiente**.  
   
 > [!NOTE]
@@ -62,6 +61,5 @@ Você pode usar as páginas da pasta **Ambiente** na caixa de diálogo **Opçõe
 |Definir opções para tarefas e listas de tarefas|[Caixa de diálogo Lista de Tarefas, Ambiente, Opções](../../ide/reference/task-list-environment-options-dialog-box.md)|  
 |Alterar sua home page e páginas de pesquisa padrão, alterando o editor de código-fonte do sistema e configurando as opções do Internet Explorer.|[Caixa de diálogo Navegador da Web, Ambiente, Opções](../../ide/reference/web-browser-environment-options-dialog-box.md)|  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo Opções](../../ide/reference/options-dialog-box-visual-studio.md)

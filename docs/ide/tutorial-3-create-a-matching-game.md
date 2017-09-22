@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525815c8-2845-45e8-be96-100d1f144725
 caps.latest.revision: 13
-author: kempb
-ms.author: kempb
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: c5f6933f6fd8226a3fd3eed0c809f29f92672c31
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -48,7 +49,7 @@ Neste tutorial, você cria um jogo da memória, onde o jogador deve combinar par
   
  Quando terminar este tutorial, seu programa se parecerá com a imagem a seguir.  
   
- ![Jogo criado neste tutorial](~/ide/media/express_finishedgame.png "Express_FinishedGame")  
+ ![Jogo criado neste tutorial](../ide/media/express_finishedgame.png "Express_FinishedGame")  
 Jogo que você cria neste tutorial  
   
  Para baixar uma versão completa do exemplo, consulte [Complete Matching Game tutorial sample (Exemplo de tutorial completo de jogo da memória)](http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba).  

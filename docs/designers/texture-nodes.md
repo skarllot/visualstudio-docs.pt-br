@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7df5ef3-dd4f-4964-9d96-34e0e180515e
 caps.latest.revision: 12
-author: BrianPeek
-ms.author: brpeek
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: c91450664c9fd8e317af668521d5a52a1082da42
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="texture-nodes"></a>Nós de textura
@@ -49,8 +51,3 @@ No Designer de Sombreador, os nós de textura coletam amostram de vários tipos 
 |**Dimensões de textura**|Gera a largura e a altura de um mapa de textura 2D.<br /><br /> É possível usar as dimensões de textura para considerar a largura e a altura da textura em um sombreador.<br /><br /> **Saída:**<br /><br /> `Output`: `float2`<br /> A largura e a altura da textura, expressas como um vetor. A largura é armazenada no primeiro elemento do vetor. A altura é armazenada no segundo elemento.|**Textura**<br /> O registro de textura associado às dimensões de textura.|  
 |**Texel Delta**|Gera o delta (distância) entre os texels de um mapa de textura 2D.<br /><br /> É possível usar o texel delta para coletar amostras de valores de texel vizinhos em um sombreador.<br /><br /> **Saída:**<br /><br /> `Output`: `float2`<br /> O delta (distância) de um texel até o próximo texel (movendo diagonalmente na direção positiva), expresso como um vetor no espaço de textura normalizado. É possível derivar as posições de todos os texels vizinhos ignorando ou negando seletivamente as coordenadas U ou V do delta.|**Textura**<br /> O registro de textura associado ao textel delta.|  
 |**Amostra de textura**|Usa uma amostra de cor de um mapa de textura 2D nas coordenadas especificadas.<br /><br /> É possível usar um mapa de textura para fornecer detalhes de cor na superfície de um objeto.<br /><br /> **Entrada:**<br /><br /> `UV`: `float2`<br /> As coordenadas nas quais a amostra é coletada.<br /><br /> **Saída:**<br /><br /> `Output`: `float4`<br /> A amostra de cor.|**Textura**<br /> O registro de textura associado à amostra.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

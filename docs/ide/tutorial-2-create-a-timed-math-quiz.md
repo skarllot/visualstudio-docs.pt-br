@@ -5,13 +5,13 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7165d08-ace3-457d-b57d-fb8f80760a6f
 caps.latest.revision: 17
-author: kempb
-ms.author: kempb
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 8be8666b38d4c63834ae2cc8869cb7a4e4cbd43e
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>Tutorial 2: Criar um teste de matemática com cronômetro
@@ -46,7 +48,7 @@ Neste tutorial, você cria um teste no qual o tomador de teste deve responder a 
   
  Quando você terminar, seu teste ficará parecido com a imagem a seguir, mas com números diferentes.  
   
- ![Teste de matemática com quatro problemas](~/ide/media/express_finishedquiz.png "Express_FinishedQuiz")  
+ ![Teste de matemática com quatro problemas](../ide/media/express_finishedquiz.png "Express_FinishedQuiz")  
 Teste que você cria neste tutorial  
   
  Para baixar uma versão concluída do teste, consulte [Exemplo de tutorial de teste completo de matemática](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).  
@@ -66,8 +68,3 @@ Teste que você cria neste tutorial
 |[Etapa 6: adicionar um problema de subtração](../ide/step-6-add-a-subtraction-problem.md)|Adicione um problema de subtração que gerencia números aleatórios, usa o timer, e o verifica se as respostas estão corretas.|  
 |[Etapa 7: adicionar problemas de multiplicação e divisão](../ide/step-7-add-multiplication-and-division-problems.md)|Adicione problemas de divisão e multiplicação que geram números aleatórios, usam o timer, e verificam se as respostas estão corretas.|  
 |[Etapa 8: personalizar o teste](../ide/step-8-customize-the-quiz.md)|Tente outros recursos, como alterar cores e adicionar uma dica.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

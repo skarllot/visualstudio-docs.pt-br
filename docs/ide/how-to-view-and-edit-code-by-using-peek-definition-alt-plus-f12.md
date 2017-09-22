@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 45f3dd20-902a-4047-8cca-9f18216123f4
 caps.latest.revision: 16
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -70,7 +70,7 @@ Você pode usar o comando **Inspecionar Definição** para exibir e editar códi
   
 -   Se você usar **Inspecionar Definição** no código com mais de uma definição (por exemplo, classes parciais), uma lista de resultados aparecerá à direita do modo de exibição de definição de código. É possível escolher qualquer resultado na lista para exibir sua definição.  
   
-     ![Janela de inspeção de vários resultados](~/ide/media/peekmultiple.png "PeekMultiple")  
+     ![Janela de inspeção de vários resultados](../ide/media/peekmultiple.png "PeekMultiple")  
   
 #### <a name="to-edit-inside-the-peek-definition-window"></a>Para editar dentro da janela Inspecionar Definição  
   

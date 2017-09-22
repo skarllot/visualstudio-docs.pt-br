@@ -17,8 +17,8 @@ helpviewer_keywords:
 - international applications [Visual Studio]
 ms.assetid: 4d9815ae-3e80-4b4d-933d-f8309aee18d5
 caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -41,14 +41,12 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/30/2017
 
 ---
-# Aplicativos de globalização e localização
-<a id="globalizing-and-localizing-applications" class="xliff"></a>
+# <a name="globalizing-and-localizing-applications"></a>Aplicativos de globalização e localização
 Se você pretender distribuir o aplicativo para um público internacional, precisará considerar várias coisas durante as fases de design e desenvolvimento. Mesmo se você não tiver esses planos, um pequeno esforço adiantado poderá facilitar as coisas consideravelmente se os planos mudarem em versões futuras do aplicativo. Os serviços internos do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] facilitam o desenvolvimento de um único aplicativo que pode se adaptar a localidades diferentes usando o desenvolvimento gerenciado com o Visual Studio.  
   
  O Visual Studio foi projetado desde o início para facilitar o desenvolvimento para um público internacional, aproveitando os serviços internos do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]. As próximas páginas ajudarão a apresentar para você os recursos de internacionalização internos do Visual Studio.  
   
-## Nesta seção
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>Nesta seção  
  [Introdução a aplicativos internacionais com base no .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)  
  Apresenta os conceitos relacionados ao desenvolvimento de software para um mercado internacional usando o Visual Studio e o [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
@@ -58,8 +56,7 @@ Se você pretender distribuir o aplicativo para um público internacional, preci
  [Globalizando aplicativos](../ide/globalizing-applications.md)  
  Fornece links para páginas que explicam como criar aplicativos que dão suporte a várias culturas.  
   
-## Seções relacionadas
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>Seções relacionadas  
  [Globalizando seu aplicativo (Aplicativos da Windows Store que usam JavaScript e HTML)](http://go.microsoft.com/fwlink/?LinkId=258266)  
  Contém tópicos de instruções e diretrizes para ajudá-lo a globalizar e localizar seu aplicativo [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] criado com o JavaScript e HTML.  
   

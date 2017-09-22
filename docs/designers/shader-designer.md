@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,8 +13,8 @@ f1_keywords:
 - vs.graphics.shaderdesigner
 ms.assetid: 5db09a16-b82c-4ba3-8ec9-630cdc109397
 caps.latest.revision: 32
-author: BrianPeek
-ms.author: brpeek
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -79,7 +79,7 @@ Este documento descreve como trabalhar com o Designer de Sombreador [!INCLUDE[vs
   
  Aqui está a barra de ferramentas **Modo de Designer de Sombreador**:  
   
- ![Barra de ferramentas de Modo do Designer de Sombreador](~/designers/media/digit-dsd-modal-toolbar.png "Barra de ferramentas de modo DSD de dígito")  
+ ![Barra de ferramentas de Modo do Designer de Sombreador](../designers/media/digit-dsd-modal-toolbar.png "Barra de ferramentas de modo DSD de dígito")  
   
  Esta tabela descreve os itens na barra de ferramentas **Modo do Designer de Sombreador**, que são listados na ordem em que aparecem, da esquerda para a direita:  
   

@@ -14,8 +14,8 @@ helpviewer_keywords:
 - Call Hierarchy
 ms.assetid: c55bda01-d7de-4823-8f9a-1bcc37dbb74a
 caps.latest.revision: 40
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 952364e6c72b66ab8a534884c8c299561f9fd3b5
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -47,7 +48,7 @@ A Hierarquia de Chamada permite navegar pelo seu código exibindo todas as chama
   
  O nome do membro é exibido em um painel de modo de exibição de árvore na janela **Hierarquia de Chamada**. Se você expandir o nó membro, os subnós **Chamadas para***nome do membro* e **Chamadas de***nome do membro* serão exibidos. A ilustração a seguir mostra esses nós na janela **Hierarquia de Chamada**.  
   
- ![Hierarquia de Chamada com um nó aberto](~/ide/reference/media/onenode.png "OneNode")  
+ ![Hierarquia de Chamada com um nó aberto](../../ide/reference/media/onenode.png "OneNode")  
 Janela de Hierarquia de Chamada  
   
 -   Se você expandir o nó **Chamadas para**, todos os membros que chamam o membro selecionado serão exibidos.  
@@ -56,7 +57,7 @@ Janela de Hierarquia de Chamada
   
  Você pode, então, expandir cada um dos membros desses subnós em nós **Chamadas para** e **Chamadas de**. Isso permite navegar pela pilha de chamadores, conforme mostrado na ilustração a seguir.  
   
- ![Hierarquia de Chamada com vários nós abertos](~/ide/media/multiplenodes.png "MultipleNodes")  
+ ![Hierarquia de Chamada com vários nós abertos](../../ide/media/multiplenodes.png "MultipleNodes")  
 Janela de Hierarquia de Chamada  
   
  Para membros definidos como virtuais ou abstratos, um nó **Substitui o nome do método** é exibido. Para membros de interface, um nó **Implementa o nome do método** é exibido. Esses nós expansíveis aparecem no mesmo nível que os nós **Chamadas para** e **Chamadas de**.  
