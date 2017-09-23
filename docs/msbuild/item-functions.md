@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: 9e7dabb10b46d11a16b3351f01056ac63e5b63e3
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -78,9 +79,9 @@ Começando com o MSBuild 4.0, o código em tarefas e destinos pode chamar funç�
 |`Reverse`|`@(MyItem->Reverse())`|Retorna os itens em ordem inversa.|  
 |`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|Retorna um `boolean` para indicar se qualquer item tem o valor e o nome de metadados especificado. A comparação não diferencia maiúsculas de minúsculas.|  
 |`ClearMetadata`|`@(MyItem->ClearMetadata())`|Retorna os itens com seus metadados desmarcados. Somente o `itemspec` é mantido.|  
-|`HasMetadata`|`@(MyItem->HasMetadataValue("MetadataName")`|Retorna os itens que têm o nome de metadados especificado. A comparação não diferencia maiúsculas de minúsculas.|  
+|`HasMetadata`|`@(MyItem->HasMetadataValue("MetadataName"))`|Retorna os itens que têm o nome de metadados especificado. A comparação não diferencia maiúsculas de minúsculas.|  
 |`Metadata`|`@(MyItem->Metadata("MetadataName"))`|Retorna os valores dos metadados que têm o nome de metadados.|  
-|`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue")`|Retorna os itens que têm o nome e o valor de metadados especificado. A comparação não diferencia maiúsculas de minúsculas.|  
+|`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue"))`|Retorna os itens que têm o nome e o valor de metadados especificado. A comparação não diferencia maiúsculas de minúsculas.|  
   
  O exemplo a seguir mostra como usar funções intrínsecas de item.  
   
