@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5bfeb8ea94b457114d7ba6ab74b783972e64350c
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>Instruções passo a passo: conectando um host a um processador de diretriz gerado
@@ -96,7 +96,7 @@ Você pode escrever seu próprio host que processa os modelos de texto. Um host 
   
 1.  Abra a solução CustomHost.  
   
-2.  Sobre o **projeto** menu, clique em **adicionar referência**.  
+2.  No menu **Projeto**, clique em **Adicionar Referência**.  
   
      O **adicionar referência** caixa de diálogo é aberta com o **.NET** guia exibida.  
   

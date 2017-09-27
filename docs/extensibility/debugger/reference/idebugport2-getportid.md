@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::GetPortId | Documentos do Microsoft
+title: IDebugPort2::GetPortId | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,11 +30,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b95c593b0fcfc7869fdea0e5ac4de72f01c41539
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b6195c0bcafc0e02881ef7d8b727cb91c4461265
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="idebugport2getportid"></a>IDebugPort2::GetPortId
@@ -59,7 +59,7 @@ int GetPortId(
  [out] Retorna o GUID que identifica a porta.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

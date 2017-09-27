@@ -12,7 +12,6 @@
 
 # [Personalizando o IDE](customizing-the-ide.md)
 ## [Estendendo o Visual Studio para Mac](extending-visual-studio-mac.md)
-### [Passo a passo: estendendo o Visual Studio para Mac](extending-visual-studio-mac-walkthrough.md)
 
 
 # [Projetos e Soluções](projects-and-solutions.md)
@@ -46,7 +45,7 @@
 # [Controle de versão](version-control.md)
 ## [Configurando um repositório Git](set-up-git-repository.md)
 ## [Trabalhando com Git](working-with-git.md)
-## [Configurando um repositório do Subversion](set-up-subversion-repository.md)
+## [Configurando um Repositório do Subversion](set-up-subversion-repository.md)
 ## [Trabalhando com o Subversion](working-with-subversion.md)
 
 # [Cargas de trabalho](workloads.md)
@@ -54,6 +53,8 @@
 ## [Desenvolvimento de jogos Unity](unity-tools.md)
 ### [Instalação](setup-vsmac-tools-unity.md)
 ### [Usando ferramentas do Unity](using-vsmac-tools-unity.md)
+
+# [Acessibilidade](accessibility.md)
 
 # [Solução de problemas](troubleshooting.md)
 ## [Relatar um problema](report-a-problem.md)

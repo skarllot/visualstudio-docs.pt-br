@@ -30,7 +30,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: c1836489b1845bca9e57daf83fc97bafeaf9da72
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>Passo a passo: Criando um adorno de exibição, comandos e configurações (guias de coluna)
@@ -68,13 +68,13 @@ Você pode estender o editor de texto/código do Visual Studio com comandos e ef
   
 -   Há um `ColumnGuideCommands` objeto que implementa os comandos do usuário e conecta os manipuladores de comando para comandos declarado no arquivo. VSCT.  
   
- **VSIX**.  Use **arquivo &#124; Novo...**  comando para criar um projeto.  Escolha o nó de extensibilidade em c# no painel de navegação à esquerda e escolha **projeto VSIX** no painel direito.  Digite o nome ColumnGuides e escolha **Okey** para criar o projeto.  
+ **VSIX**.  Use **arquivo &#124; Novo... ** comando para criar um projeto.  Escolha o nó de extensibilidade em c# no painel de navegação à esquerda e escolha **projeto VSIX** no painel direito.  Digite o nome ColumnGuides e escolha **Okey** para criar o projeto.  
   
- **Exibir adornos**.  Pressione o botão direito do ponteiro no nó do projeto no Gerenciador de soluções.  Escolha o **Adicionar &#124; Novo Item...**  comando para adicionar um novo item de adorno de exibição.  Escolha **extensibilidade &#124; Editor de** no painel de navegação à esquerda e escolha **Editor visor adorno** no painel direito.  Digite o nome ColumnGuideAdornment como o nome do item e escolha **adicionar** para adicioná-lo.  
+ **Exibir adornos**.  Pressione o botão direito do ponteiro no nó do projeto no Gerenciador de soluções.  Escolha o **Adicionar &#124; Novo Item... ** comando para adicionar um novo item de adorno de exibição.  Escolha **extensibilidade &#124; Editor de** no painel de navegação à esquerda e escolha **Editor visor adorno** no painel direito.  Digite o nome ColumnGuideAdornment como o nome do item e escolha **adicionar** para adicioná-lo.  
   
  Você pode ver este modelo de item adicionado dois arquivos ao projeto (bem como referências e assim por diante): ColumnGuideAdornment.cs e ColumnGuideAdornmentTextViewCreationListener.cs.  Os modelos apenas desenhar um retângulo de roxo no modo de exibição.  Abaixo você alterar algumas linhas no ouvinte de criação de exibição e substituir o conteúdo de ColumnGuideAdornment.cs.  
   
- **Comandos**.  Pressione o botão direito do ponteiro no nó do projeto no Gerenciador de soluções.  Escolha o **Adicionar &#124; Novo Item...**  comando para adicionar um novo item de adorno de exibição.  Escolha **extensibilidade &#124; VSPackage** no painel de navegação à esquerda e escolha **comando personalizado** no painel direito.  Digite o nome ColumnGuideCommands como o nome do item e escolha **adicionar** para adicioná-lo.  Além de várias referências, adicionar o pacote e os comandos adicionados ColumnGuideCommands.cs, ColumnGuideCommandsPackage.cs e ColumnGuideCommandsPackage.vsct.  A seguir, você substituirá o conteúdo dos arquivos e o sobrenome para definir e implementar os comandos.  
+ **Comandos**.  Pressione o botão direito do ponteiro no nó do projeto no Gerenciador de soluções.  Escolha o **Adicionar &#124; Novo Item... ** comando para adicionar um novo item de adorno de exibição.  Escolha **extensibilidade &#124; VSPackage** no painel de navegação à esquerda e escolha **comando personalizado** no painel direito.  Digite o nome ColumnGuideCommands como o nome do item e escolha **adicionar** para adicioná-lo.  Além de várias referências, adicionar o pacote e os comandos adicionados ColumnGuideCommands.cs, ColumnGuideCommandsPackage.cs e ColumnGuideCommandsPackage.vsct.  A seguir, você substituirá o conteúdo dos arquivos e o sobrenome para definir e implementar os comandos.  
   
 ## <a name="setting-up-the-text-view-creation-listener"></a>Configurar o ouvinte de criação de exibição de texto  
  Abra ColumnGuideAdornmentTextViewCreationListener.cs no editor.  Esse código implementa um manipulador para sempre que o Visual Studio cria os modos de exibição de texto.  Há atributos que controlam quando o manipulador é chamado dependendo das características do modo de exibição.  
@@ -532,7 +532,7 @@ namespace ColumnGuides
  O código de pacote é declarações boilerplate que são necessárias para o Visual Studio descobrir que a extensão oferece comandos e onde colocar os comandos.  Quando o pacote é inicializado, criar uma instância da classe de implementação de comandos.  Consulte os comandos no link acima para obter mais informações sobre os pacotes relacionados aos comandos.  
   
 ### <a name="a-common-commands-pattern"></a>Um padrão comum de comandos  
- Os comandos na extensão de guias de coluna são um exemplo de um padrão bastante comum no Visual Studio.  Colocar comandos relacionados em um grupo e grupo você colocar em um menu principal, geralmente com "`<CommandFlag>CommandWellOnly</CommandFlag>`" definida para tornar o comando invisível.  Colocar os comandos nos menus principais (como **editar**) dessa maneira dá a eles nomes adequados (como **Edit.AddColumnGuide**) que são úteis para localizar os comandos ao atribuir novamente as associações de chave no  **Opções de ferramentas** e obter conclusão ao invocar comandos o **janela de comando**.  
+ Os comandos na extensão de guias de coluna são um exemplo de um padrão bastante comum no Visual Studio.  Colocar comandos relacionados em um grupo e grupo você colocar em um menu principal, geralmente com "`<CommandFlag>CommandWellOnly</CommandFlag>`" definida para tornar o comando invisível.  Colocar os comandos nos menus principais (como **editar**) dessa maneira dá a eles nomes adequados (como **Edit.AddColumnGuide**) que são úteis para localizar os comandos ao atribuir novamente as associações de chave no ** Opções de ferramentas** e obter conclusão ao invocar comandos o **janela de comando**.  
   
  Você, em seguida, adicione o grupo de comandos a menus de contexto ou sub onde você espera que o usuário para usar os comandos de menus.  Visual Studio trata `CommandWellOnly` como um sinalizador de invisibilidade de menus principais somente.  Quando você coloca o mesmo grupo de comandos em um menu de contexto ou submenu, os comandos são visíveis.  
   
@@ -1184,7 +1184,7 @@ namespace ColumnGuides
   
 ```  
   
- **Corrigir referências**.  Falta uma referência neste momento.  Pressione o botão direito do ponteiro no nó referências no Gerenciador de soluções.  Escolha o **adicionar...**  comando.  O **adicionar referência** caixa de diálogo possui uma caixa de pesquisa no canto superior direito.  Insira "editor" (sem as aspas).  Escolha o **Microsoft.VisualStudio.Editor** item (você deve marcar a caixa à esquerda do item, não basta selecionar o item) e escolha **Okey** para adicionar a referência.  
+ **Corrigir referências**.  Falta uma referência neste momento.  Pressione o botão direito do ponteiro no nó referências no Gerenciador de soluções.  Escolha o **adicionar... ** comando.  O **adicionar referência** caixa de diálogo possui uma caixa de pesquisa no canto superior direito.  Insira "editor" (sem as aspas).  Escolha o **Microsoft.VisualStudio.Editor** item (você deve marcar a caixa à esquerda do item, não basta selecionar o item) e escolha **Okey** para adicionar a referência.  
   
  **Inicialização**.  Quando a classe de pacote inicia, ele chama `Initialize` na classe de implementação de comandos.  O `ColumnGuideCommands` cria uma instância da classe de inicialização e salva a instância da classe e a referência de pacote em membros de classe.  
   

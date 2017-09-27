@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPropertyInfo2::Next | Documentos do Microsoft
+title: IEnumDebugPropertyInfo2::Next | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,10 +30,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fd15120c8e291c85c8ec072ff7b126bf353d7378
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5f97a63ae9da055d40b1c6cbe3d91bf343aee067
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="ienumdebugpropertyinfo2next"></a>IEnumDebugPropertyInfo2::Next
@@ -41,7 +42,7 @@ Retorna o próximo conjunto de elementos da enumeração.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```cpp#  
+```cpp  
 HRESULT Next(  
    ULONG                 celt,  
    DEBUG_PROPERTY_INFO** rgelt,  
@@ -49,7 +50,7 @@ HRESULT Next(
 );  
 ```  
   
-```c#  
+```csharp  
 int Next(  
    uint                  celt,  
    DEBUG_PROPERTY_INFO[] rgelt,  
@@ -62,13 +63,13 @@ int Next(
  [in] O número de elementos para recuperar. Também especifica o tamanho máximo da `rgelt` matriz.  
   
  `rgelt`  
- [no, out] Matriz de [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) elementos a serem preenchidos.  
+ [out no] Matriz de [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) elementos devem ser preenchidos.  
   
  `pceltFetched`  
  [out] Retorna o número de elementos realmente retornados em `rgelt`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se menor do que o número solicitado de elementos podem ser retornados; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retornará `S_OK`. Retorna `S_FALSE` se menos do que o número solicitado de elementos podem ser retornados; caso contrário, retornará um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)   
