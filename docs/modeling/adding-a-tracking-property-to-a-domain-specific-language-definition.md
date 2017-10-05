@@ -33,7 +33,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ef5f86cb3b41af6cc9e7432cdbfb7365471320b8
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Adicionando uma propriedade de acompanhamento a uma definição de linguagem específica do domínio
@@ -120,7 +120,7 @@ Este passo a passo mostra como adicionar uma propriedade de controle a um modelo
   
 3.  Para o **ExampleElement** domínio classe, adicione uma propriedade de domínio chamada `Namespace`.  
   
-     No **propriedades** janela para a nova propriedade, defina **é navegável** para **False**e defina **tipo** para **CustomStorage** .  
+     No **propriedades** janela para a nova propriedade, defina **é navegável** para **False**e defina **tipo** para **CustomStorage **.  
   
 4.  Para o **ExampleElement** domínio classe, adicione uma propriedade de domínio chamada `IsNamespaceTracking`.  
   
@@ -748,7 +748,7 @@ Este passo a passo mostra como adicionar uma propriedade de controle a um modelo
   
 4.  Arraste um **ExampleElement** elemento a partir de **caixa de ferramentas** à superfície do diagrama.  
   
-5.  No **propriedades** janela para o elemento, selecione o **Namespace do elemento** propriedade e altere o valor de **DefaultNamespace** para  **OtherNamespace**.  
+5.  No **propriedades** janela para o elemento, selecione o **Namespace do elemento** propriedade e altere o valor de **DefaultNamespace** para ** OtherNamespace**.  
   
      Observe que o valor de **Namespace do elemento** agora é mostrado em negrito.  
   
@@ -766,7 +766,7 @@ Este passo a passo mostra como adicionar uma propriedade de controle a um modelo
   
 9. Alterar **Namespace padrão** para o diagrama de **DefaultNamespace** para **NewNamespace**.  
   
-     O **Namespace** as faixas de elemento primeiro o **Namespace padrão** propriedade, enquanto o **Namespace** do segundo elemento retém seu valor de usuário atualizadas de  **OtherNamespace**.  
+     O **Namespace** as faixas de elemento primeiro o **Namespace padrão** propriedade, enquanto o **Namespace** do segundo elemento retém seu valor de usuário atualizadas de ** OtherNamespace**.  
   
 10. Salve a solução e, em seguida, feche a compilação experimental.  
   

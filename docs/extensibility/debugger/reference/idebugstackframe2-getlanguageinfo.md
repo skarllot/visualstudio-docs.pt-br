@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetLanguageInfo | Documentos do Microsoft
+title: IDebugStackFrame2::GetLanguageInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,25 +30,26 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f2badf82502bc8244448eba60d9fdbc4e80c859c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 460979d28bfc9244726ea3345c8a435de87a6c29
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="idebugstackframe2getlanguageinfo"></a>IDebugStackFrame2::GetLanguageInfo
-Obtém o idioma associado a esse quadro de pilha.  
+Obtém o idioma associado deste quadro de pilhas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```cpp#  
+```cpp  
 HRESULT GetLanguageInfo (   
    BSTR* pbstrLanguage,  
    GUID* pguidLanguage  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetLanguageInfo (   
    ref string pbstrLanguage,  
    ref Guid   pguidLanguage  
@@ -57,10 +58,10 @@ int GetLanguageInfo (
   
 #### <a name="parameters"></a>Parâmetros  
  `pbstrLanguage`  
- [out] Retorna o nome do idioma que implementa o método associado a esse quadro de pilha.  
+ [out] Retorna o nome do idioma que implementa o método associado deste quadro de pilhas.  
   
  `pguidLanguage`  
- [out] Retorna o `GUID` da linguagem. Para o [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] linguagens, por exemplo, o seguinte pode ser retornado:  
+ [out] Retorna o `GUID` do idioma. Para o [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] idiomas, por exemplo, o seguinte pode ser retornado:  
   
 -   `guidVBScriptLang`  
   
@@ -75,7 +76,7 @@ int GetLanguageInfo (
 -   `guidScriptLang`  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

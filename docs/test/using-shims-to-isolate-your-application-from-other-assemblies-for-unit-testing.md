@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 9e27f528abfa41621b840756f11bc139e82708d0
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>Usando shims para isolar seu aplicativo de outros assemblies para teste de unidade
@@ -133,7 +133,7 @@ using (ShimsContext.Create()
   
 3.  No menu de atalhos, escolha **Adicionar Assembly do Fakes**.  
   
-###  <a name="ShimsContext"></a> Usar ShimsContext  
+###  <a name="ShimsContext"></a> Use ShimsContext  
  Ao usar tipos de shim em uma estrutura de teste de unidade, você deverá encapsular o código de teste em um `ShimsContext` para controlar o tempo de vida dos shims. Se não exigíssemos isso, seus shims durariam até o AppDomain ser desligado. A maneira mais fácil de criar um `ShimsContext` é usando o método estático `Create()` mostrado no código abaixo:  
   
 ```csharp  
@@ -566,7 +566,7 @@ ShimFile.WriteAllTextStringString = shim;
  [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testando para entrega contínua com o Visual Studio 2012 – Capítulo 2: Teste de unidade: testando o interior)  
   
 ## <a name="see-also"></a>Consulte também  
- [Isolamento de código em teste com o Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)   
+ [Isolando código em teste com o Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)   
  [Peter Provost's blog: Visual Studio 2012 Shims](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)  (Blog do Peter Provost: Shims no Visual Studio 2012)  
  [Vídeo (1:16): testando códigos que não podem ser testados com o Fakes no Visual Studio 2012](http://go.microsoft.com/fwlink/?LinkId=261837)
 

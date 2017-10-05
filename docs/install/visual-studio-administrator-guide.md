@@ -3,7 +3,6 @@ title: Guia do administrador do Visual Studio | Microsoft Docs
 description: Saiba mais sobre como implantar o Visual Studio em um ambiente corporativo.
 ms.custom: 
 ms.date: 05/15/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

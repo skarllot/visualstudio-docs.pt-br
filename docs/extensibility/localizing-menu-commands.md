@@ -37,7 +37,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 13910907c6041884cc0a1414fd0bfd82757a7639
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="localizing-menu-commands"></a>Localizando os comandos de Menu
@@ -52,11 +52,11 @@ Você pode fornecer o texto localizado para o menu e barra de ferramentas comand
   
 2.  Faça uma cópia do *filename*.en-US.vsct para cada idioma de localizado.  
   
-     Nome de cada cópia *filename*. *Localidade*. VSCT, onde *localidade* é um nome de cultura específica. Para obter uma lista de valores de nome de cultura, consulte [IDs de localidade atribuídas pela Microsoft](https://msdn.microsoft.com/en-us/library/windows/apps/jj657969.aspx).  
+     Nome de cada cópia *filename*.* Localidade*. VSCT, onde *localidade* é um nome de cultura específica. Para obter uma lista de valores de nome de cultura, consulte [IDs de localidade atribuídas pela Microsoft](https://msdn.microsoft.com/en-us/library/windows/apps/jj657969.aspx).  
   
-     Essas *filename*. *Localidade*arquivos. VSCT conterá o texto do menu localizada para o seu pacote.  
+     Essas *filename*.* Localidade*arquivos. VSCT conterá o texto do menu localizada para o seu pacote.  
   
-3.  Abrir cada *filename*. *Localidade*arquivo. VSCT para localizar o texto.  
+3.  Abrir cada *filename*.* Localidade*arquivo. VSCT para localizar o texto.  
   
     1.  Modificar o [ButtonText](../extensibility/buttontext-element.md) elemento valores conforme apropriado para o idioma específico.  
   

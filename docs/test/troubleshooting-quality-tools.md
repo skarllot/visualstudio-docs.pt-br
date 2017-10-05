@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: ed84473108addb803110d5b39cdf8391903a56d6
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="troubleshooting-quality-tools"></a>Solucionando problemas de ferramentas de qualidade

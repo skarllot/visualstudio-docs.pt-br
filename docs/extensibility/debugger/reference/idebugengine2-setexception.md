@@ -31,39 +31,39 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: f63df6e184be9312982c13b962b830d596052e6b
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2d7d1631c1b5179d51a80b2094766c4ed053ac36
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="idebugengine2setexception"></a>IDebugEngine2::SetException
-Specifies how the debug engine (DE) should handle a given exception.  
+Especifica como o mecanismo de depuração (DE) deve tratar uma exceção especificada.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
-```cpp#  
+```cpp  
 HRESULT SetException(   
    EXCEPTION_INFO* pException  
 );  
 ```  
   
-```cs  
+```csharp  
 int SetException(   
    EXCEPTION_INFO[] pException  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parâmetros  
  `pException`  
- [in] An [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure that describes the exception and how to debug it.  
+ [in] Um [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) estrutura que descreve a exceção e depurá-lo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
-## <a name="remarks"></a>Remarks  
- A DE could be instructed to stop the program generating an exception at first chance, second chance, or not at all.  
+## <a name="remarks"></a>Comentários  
+ A DE pode ser instruída para parar o programa de gerar uma exceção na primeira instância, a segunda oportunidade, ou não.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Consulte também  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Documentos do Microsoft
+title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,11 +30,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7d150deea6bb0aa4a77e54ff3c8b888cc9a4cf5d
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 1801f2df2dfff7667e8a9991892b3218dc3bb71a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
@@ -61,13 +61,13 @@ int UnmarshalDebuggeeInterface(
  [in] GUID da interface para obter.  
   
  `ppvObject`  
- [out] Retorna o objeto que implementa a interface desejada. [C++] isso pode ser convertido diretamente para o tipo de interface desejada. Use [c#] o <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A>método para obter a interface desejada.</xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A>  
+ [out] Retorna o objeto que implementa a interface desejada. [C++] isso pode ser convertido diretamente para o tipo de interface desejado. [C#] usam o <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> método para obter a interface desejada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é usado quando o mecanismo de depuração estiver em execução [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] espaço de processo e o programa que está sendo depurado está sendo executado em seu próprio espaço de processo.  
+ Esse método é usado quando o mecanismo de depuração estiver em execução no [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] espaço de processo e o programa que está sendo depurado está em execução em seu próprio espaço de processo.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)

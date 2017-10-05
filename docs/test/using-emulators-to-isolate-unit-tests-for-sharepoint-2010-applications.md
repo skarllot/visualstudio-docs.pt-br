@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 478415dee5bcf1b37277f84ad0a49240bfc21a16
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>Usando emuladores para isolar testes de unidade para aplicativos do Sharepoint 2010
@@ -45,7 +45,7 @@ O pacote Microsoft.SharePoint.Emulators fornece um conjunto de bibliotecas que a
   
  [Convertendo um teste existente](#BKMK_Converting_an_existing_test)  
   
--   [Adicionar o pacote de emuladores a um projeto de teste](#BKMK_Adding_the_Emulators_package_to_a_test_project)  
+-   [Adicionando o pacote de Emuladores a um projeto de teste](#BKMK_Adding_the_Emulators_package_to_a_test_project)  
   
 -   [Executando um método de teste com emulação](#BKMK__Running_a_test_method_in_the_emulation_context)  
   
@@ -159,7 +159,7 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
   
 1.  Selecione o projeto de teste no Gerenciador de Soluções.  
   
-2.  Escolha **Gerenciar pacotes NuGet...**  no menu de atalho.  
+2.  Escolha **Gerenciar pacotes NuGet... ** no menu de atalho.  
   
 3.  Pesquise `Microsoft.SharePoint.Emulators` na categoria **Online** e escolha **Instalar**.  
   

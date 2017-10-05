@@ -5,16 +5,16 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual Studio ALM, developing the application
 ms.assetid: 535b9e67-ce9e-4a3e-8d28-9365f257036e
 caps.latest.revision: 17
-author: erickson-doug
-ms.author: douge
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ed84473108addb803110d5b39cdf8391903a56d6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
+ms.openlocfilehash: 67ee9ecb3af5f50ad57cda6995fcef00c6640456
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="troubleshooting-quality-tools"></a>Solucionando problemas de ferramentas de qualidade

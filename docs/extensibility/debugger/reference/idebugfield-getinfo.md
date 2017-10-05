@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetInfo | Documentos do Microsoft
+title: IDebugField::GetInfo | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,10 +30,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5acb594bbc3b632892b0e4c21196ef30f5f7cfa1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 60eb5889f197af894dc07478a08ede828090f8c2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
@@ -41,14 +42,14 @@ Esse método obtém informações de exibição sobre o campo.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```cpp#  
+```cpp  
 HRESULT GetInfo(   
    FIELD_INFO_FIELDS dwFields,  
    FIELD_INFO* pFieldInfo  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetInfo(  
    enum_FIELD_INFO_FIELDS dwFields,  
    FIELD_INFO[] pFieldInfo  
@@ -57,13 +58,13 @@ int GetInfo(
   
 #### <a name="parameters"></a>Parâmetros  
  `dwFields`  
- [in] Uma combinação de [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) constantes que seleciona as informações a serem exibidas. Se o campo representa um símbolo, normalmente é o nome do símbolo e o tipo.  
+ [in] Uma combinação de [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) constantes que seleciona as informações a serem exibidos. Se o campo representa um símbolo, normalmente é o nome de símbolo e o tipo.  
   
  `pFieldInfo`  
  [out] Retorna as informações no fornecido [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) estrutura.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   

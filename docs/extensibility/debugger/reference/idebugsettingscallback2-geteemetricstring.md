@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetEEMetricString | Documentos do Microsoft
+title: IDebugSettingsCallback2::GetEEMetricString | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,15 +28,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 49f0720d2956135084320e924d4fa1073fde9b7c
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 60fe2d13216964c2132901f92f762824bcba9ef3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="idebugsettingscallback2geteemetricstring"></a>IDebugSettingsCallback2::GetEEMetricString
-Recupera a cadeia de caracteres do valor de uma métrica do avaliador de expressão recebe seu nome.  
+Recupera a cadeia de caracteres do valor de uma métrica de avaliador de expressão recebe seu nome.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,7 +72,7 @@ private int GetEEMetricString(
  [out] Retorna a cadeia de caracteres do valor de métrica.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

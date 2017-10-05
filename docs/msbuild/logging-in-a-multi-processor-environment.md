@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 7fefa5483ece9c0f32c93addee44c10652175268
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e78d6c35fa294d2f1a39c91af5e278e9e4519d2d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="logging-in-a-multi-processor-environment"></a>Registrando em logs em um ambiente multiprocessador
@@ -49,9 +50,9 @@ A capacidade do MSBuild de usar vários processadores pode diminuir bastante o t
   
  Quando ocorre um build, os agentes secundários encaminham o tráfego de eventos para os agentes centrais. Como eventos se originam em vários nós secundários, os dados chegam ao nó central simultaneamente, mas intercalados. Para resolver referências de evento para projeto e evento para destino, os argumentos do evento incluem informações adicionais de contexto do evento de build.  
   
- Embora somente <xref:Microsoft.Build.Framework.ILogger> seja necessário ser implementado pelo agente central, é recomendável que você implemente também <xref:Microsoft.Build.Framework.INodeLogger> se desejar que o agente central inicialize com o número de nós que participam do build. A seguinte sobrecarga do método <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> é chamada quando o mecanismo inicializa o agente:  
+ Embora somente <xref:Microsoft.Build.Framework.ILogger> é necessária para ser implementada pelo agente de log central, é recomendável que você implemente também <xref:Microsoft.Build.Framework.INodeLogger> se você quiser que o agente de log central ao inicializar com o número de nós que participam da compilação. Procedimentos de sobrecarga do <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> método é invocado quando o mecanismo inicializa o agente de log:  
   
-```cs
+```csharp
 public interface INodeLogger: ILogger  
 {  
     public void Initialize(IEventSource eventSource, int nodeCount);  
@@ -63,9 +64,9 @@ public interface INodeLogger: ILogger
   
  Para reduzir esse problema, o MSBuild também permite um "modelo de registro em log distribuído" que estende o modelo de registro em log central, permitindo criar agentes de encaminhamento. Um agente de encaminhamento está conectado a um nó secundário e recebe eventos de build de entrada desse nó. O agente de encaminhamento é como um agente comum, exceto que pode filtrar os eventos e, em seguida, encaminhar somente os desejados para o nó central. Isso reduz o tráfego de mensagens no nó central e, portanto, permite um melhor desempenho.  
   
- Você pode criar um agente de encaminhamento ao implementar a interface <xref:Microsoft.Build.Framework.IForwardingLogger>, que deriva de <xref:Microsoft.Build.Framework.ILogger>. A interface é definida como:  
+ Você pode criar um agente de log de encaminhamento ao implementar o <xref:Microsoft.Build.Framework.IForwardingLogger> interface, que deriva de <xref:Microsoft.Build.Framework.ILogger>. A interface é definida como:  
   
-```cs
+```csharp
 public interface IForwardingLogger: INodeLogger  
 {  
     public IEventRedirector EventRedirector { get; set; }  
@@ -73,7 +74,7 @@ public interface IForwardingLogger: INodeLogger
 }  
 ```  
   
- Para encaminhar eventos em um agente de encaminhamento, chame o método <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> da interface <xref:Microsoft.Build.Framework.IEventRedirector>. Passe o <xref:Microsoft.Build.Framework.BuildEventArgs> adequado ou um derivativo, como o parâmetro.  
+ Para encaminhar eventos em um agente de log de encaminhamento, chame o <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> método o <xref:Microsoft.Build.Framework.IEventRedirector> interface. Passar apropriada <xref:Microsoft.Build.Framework.BuildEventArgs>, ou um derivado, como o parâmetro.  
   
  Para obter mais informações, consulte [Criando Agentes de Encaminhamento](../msbuild/creating-forwarding-loggers.md).  
   

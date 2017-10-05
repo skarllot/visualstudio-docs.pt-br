@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 541d456cf774081d905127301d3079e8c71c0209
+ms.translationtype: HT
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: a48867456cd6ac60c5fc6ca53fcadbc4ad787711
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="msbuild-best-practices"></a>Práticas recomendadas do MSBuild

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::UnpublishProgramNode | Documentos do Microsoft
+title: IDebugProgramPublisher2::UnpublishProgramNode | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,14 +30,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: edfa4f6356134faec62aeec1a8c04f54687ccb7f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 786fb9d80f66def99fc457019f276b239b077602
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="idebugprogrampublisher2unpublishprogramnode"></a>IDebugProgramPublisher2::UnpublishProgramNode
-Remove um nó do programa especificado de disponibilidade para depurar mecanismos (DEs) e o Gerenciador de sessão de depuração (SDM).  
+Remove um nó de programa especificado de disponibilidade para depurar mecanismos (DEs) e o Gerenciador de sessão de depuração (SDM).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +48,7 @@ HRESULT UnpublishProgramNode(
 );  
 ```  
   
-```c#  
+```csharp  
 int UnpublishProgramNode(  
    IDebugProgramNode2 pProgramNode  
 );  
@@ -58,10 +59,10 @@ int UnpublishProgramNode(
  [in] Um [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objeto que representa o nó do programa que está sendo removido.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará `S_OK`; caso contrário, retorna um código de erro.  
+ Se for bem-sucedido, retorna `S_OK`; caso contrário, retorna um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Uma vez removido, o nó de programa não está mais disponível para ser consultado para informações sobre o programa.  
+ Depois de removidas, o nó de programa não está mais disponível para ser consultado para informações sobre o programa.  
   
  Para disponibilizar um nó de programa, chame o [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md) método.  
   
